@@ -1,0 +1,12 @@
+sr:
+  data:
+    parameter_names:
+      actor: учесник
+      counter: бројач
+      height: висина
+      honey: мед
+      left: лево
+      length: дужина
+      min: мин
+      size: величина
+      speed: брзина

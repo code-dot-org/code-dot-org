@@ -1,0 +1,28 @@
+name 'cspu5_assess3_loopValue3_2018_2019_virtual'
+wrong '0'
+wrong '4'
+wrong '5'
+wrong '6'
+right 'Infinite loop'
+
+markdown <<MARKDOWN
+What will be displayed as a result of the javascript code below executing?
+
+    var a = 0;
+    while( a != 5 ){
+    	a = a+2;
+    }
+    console.log(a);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 11**
+
+Going through the code line by line:
+
+* The var _a_ is set to the value of 0
+* The while loop will run as long as _a_ does not equal 5
+* Inside the loop, _a_ is increment by 2 each time 
+* However, _a_ will equal 2 on the 1st loop, 4 on the 2nd loop, and 6 on the 3rd loop but it will never equal 5
+* Therefore, it will never exit the while loop and instead, an infinite loop is created
+MARKDOWN

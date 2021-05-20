@@ -1,0 +1,29 @@
+he:
+  data:
+    variable_names:
+      Blue: כחולים
+      Green: ירוקים
+      Red: אדומים
+      actor: שחקן
+      cats: כל החתולים
+      color: צבע
+      counter: סופר
+      dogs: כל הכלבים
+      height: גובה
+      honey: דבש
+      i: i
+      left: שמאלה
+      length: אורך
+      name: שם
+      nectar: צוף
+      points: נקודות
+      random: אקראי
+      repeat: חזור שוב
+      right: ימינה
+      score: ציון
+      size: גודל
+      speed: מהירות
+      variable: משתנה.
+      width: רוחב
+      wizard: אשף
+      x: x

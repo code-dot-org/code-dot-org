@@ -2,6 +2,47 @@
 uk:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: "{GROUP} чергують кожні {N} \nтакти {MOVE1} та {MOVE2}"
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
+          MOVE1:
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
+          MOVE2:
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_atTimestamp:
         text: після {TIMESTAMP} {UNIT}
         options:
@@ -20,24 +61,33 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
             '"UNICORN"': всі єдинороги
           MOVE:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
             '"rand"': "(Випадковий)"
-          DIR:
-            '1': "→"
-            "-1": "←"
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_changeMoveLR:
         text: "{SPRITE} виконувати рух {MOVE} {DIR} завжди"
         options:
@@ -45,12 +95,44 @@ uk:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
             '"rand"': "(Випадковий)"
-          DIR:
-            '1': "→"
-            "-1": "←"
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+      Dancelab_changePropEachBy:
+        text: змінити {GROUP} {PROPERTY} на {VAL}
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -63,32 +145,75 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           MOVE:
             '"rand"': "(Випадковий)"
-          DIR:
-            '1': "→"
-            "-1": "←"
+            MOVES.XBend: Вигин
+            MOVES.Roll: Хвиля
+            MOVES.XClapSide: Плескання
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.XFever: Диско
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.XHeadHips: Голова + стегна
+            MOVES.XHop: Стрибок
+            MOVES.XHighKick: Удар
+            MOVES.XKnee: Коліно
+            MOVES.XKneel: На коліно
+            MOVES.XOle: Оле
+            MOVES.XArmsSide: Руки вбік
+            MOVES.XSlide: Слайд
+            MOVES.Kick: Зірка
+            MOVES.XArmsUp: Руки вгору
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_doMoveLR:
         text: "{SPRITE} виконує рух {MOVE} {DIR} один раз"
         options:
           MOVE:
             '"rand"': "(Випадковий)"
-          DIR:
-            '1': "→"
-            "-1": "←"
+            MOVES.XBend: Вигин
+            MOVES.Roll: Хвиля
+            MOVES.XClapSide: Плескання
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.XFever: Диско
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.XHeadHips: Голова + стегна
+            MOVES.XHop: Стрибок
+            MOVES.XHighKick: Удар
+            MOVES.XKnee: Коліно
+            MOVES.XKneel: На коліно
+            MOVES.XOle: Оле
+            MOVES.XArmsSide: Руки вбік
+            MOVES.XSlide: Слайд
+            MOVES.Kick: Зірка
+            MOVES.XArmsUp: Руки вгору
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
+      Dancelab_everyMeasuresRange:
+        text: 'повторювати кожні {N} такти після {START} '
       Dancelab_everySeconds:
-        text: 'кожні {N} {UNIT} '
+        text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
             '"measures"': кроків
@@ -113,6 +238,7 @@ uk:
             '"mid"': середні тони
             '"high"': високі тони
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': розмір
@@ -132,6 +258,19 @@ uk:
         text: |-
           якщо {SPRITE} виконує рух {DANCE}
           {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Roll: Хвиля
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
       Dancelab_ifTime:
         text: |-
           якщо {UNIT} має значення {OP} {N}
@@ -140,6 +279,10 @@ uk:
           UNIT:
             '"measures"': кроків
             '"seconds"': секунди
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
         options:
@@ -154,32 +297,93 @@ uk:
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
+      Dancelab_jumpToEach:
+        text: стрибнути {GROUP} до {LOCATION}
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
+          LOCATION:
+            "{x: 200, y: 100}": вгорі
+            "{x: 200, y: 300}": вниз
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
+            "{x: 200, y: 200}": посередині
+            "{x: 100, y: 100}": верхній лівий кут
+            "{x: 300, y: 100}": верхній правий кут
+            "{x: 100, y: 300}": нижній лівий кут
+            "{x: 300, y: 300}": нижній правий кут
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": випадковий
       Dancelab_layoutSprites:
         text: розмістити {GROUP} у формі {FORMAT}
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           FORMAT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
+            '"diamond"': діамант
             '"circle"': коло
             '"grid"': сітка
+            '"top"': верхня шеренга
             '"row"': ряд
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
             '"column"': колона
+            '"right"': права колона
             '"x"': хрестик
             '"plus"': плюс
             '"random"': випадковий
+      Dancelab_makeAnonymousDanceSprite:
+        text: створити нового {COSTUME} в {LOCATION}
+        options:
+          COSTUME:
+            '"ALIEN"': інопланетянин
+            '"BEAR"': Ведмідь
+            '"CAT"': кіт
+            '"DOG"': пес
+            '"DUCK"': качку
+            '"FROG"': Жаба
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': Ананас
+            '"ROBOT"': робот
+            '"SHARK"': Акула
+            '"SLOTH"': лінивець
+            '"UNICORN"': єдиноріг
+          LOCATION:
+            "{x: 200, y: 100}": вгорі
+            "{x: 200, y: 300}": вниз
+            "{x: 100, y: 200}": ліворуч
+            "{x: 300, y: 200}": праворуч
+            "{x: 200, y: 200}": посередині
+            "{x: 100, y: 100}": верхній лівий кут
+            "{x: 300, y: 100}": верхній правий кут
+            "{x: 100, y: 300}": нижній лівий кут
+            "{x: 300, y: 300}": нижній правий кут
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": випадковий
       Dancelab_makeNewDanceSprite:
         text: |-
           створити новий {COSTUME}
@@ -196,6 +400,7 @@ uk:
             '"PINEAPPLE"': Ананас
             '"ROBOT"': Робот
             '"SHARK"': Акула
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдиноріг
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -244,14 +449,20 @@ uk:
             '"PINEAPPLE"': Ананаси
             '"ROBOT"': Роботи
             '"SHARK"': Акули
+            '"SLOTH"': лінивець
             '"UNICORN"': Єдинороги
           LAYOUT:
             '"border"': рамка
             '"inner"': внутрішній квадрат
+            '"diamond"': діамант
             '"circle"': коло
             '"grid"': сітка
+            '"top"': верхня шеренга
             '"row"': ряд
+            '"bottom"': нижня шеренга
+            '"left"': ліва колона
             '"column"': колона
+            '"right"': права колона
             '"x"': хрестик
             '"plus"': плюс
             '"random"': випадковий
@@ -275,31 +486,76 @@ uk:
           {EFFECT} {PALETTE}
         options:
           EFFECT:
+            '"none"': Немає
+            '"circles"': Коло
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
             '"swirl"': Гіпноз
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
             '"splatter"': Бульбашки
             '"rainbow"': Веселка
             '"snowflakes"': Сніг
+            '"text"': Назва пісні
             '"galaxy"': Відступ
+            '"sparkles"': Блискітки
             '"spiral"': Спіраль
             '"disco"': Квадрати
+            '"stars"': Зірки
+          PALETTE:
+            '"rave"': Чорний та білий
+            '"cool"': Холодний
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"default"': Світлий
+            '"neon"': Неоновий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
-          встановити ефект тла
-          {EFFECT} {PALETTE}
+          "установити фоновий ефект
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
+            '"none"': Немає
             '"rand"': "(Випадковий)"
+            '"circles"': Коло
+            '"quads"': Кути
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
+            '"flowers"': Квіти
+            '"growing_stars"': Зірки, які ростуть
             '"swirl"': Гіпноз
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
             '"splatter"': Бульбашки
             '"rainbow"': Веселка
+            '"ripples_random"': Випадкові брижі
+            '"ripples"': Брижі
             '"snowflakes"': Сніг
+            '"text"': Назва пісні
+            '"squiggles"': Звивання
             '"galaxy"': Відступ
+            '"sparkles"': Блискітки
             '"spiral"': Спіраль
             '"disco"': Квадрати
+            '"stars"': Зірки
+            '"music_wave"': Хвилі
+          PALETTE:
+            '"rave"': Чорний та білий
+            '"cool"': Холодний
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"default"': Світлий
+            '"neon"': Неоновий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
       Dancelab_setDanceSpeed:
         text: змінити для {SPRITE} швидкість танцю на {SPEED}
         options:
@@ -314,17 +570,18 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           SPEED:
             '1': нормальний
             '2': швидко
@@ -335,18 +592,42 @@ uk:
         text: встановити ефект переднього плану {EFFECT}
         options:
           EFFECT:
+            '"none"': Немає
             '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts_red"': Серця
+            '"music_notes"': Музичні ноти
             '"pineapples"': Ананаси
+            '"pizzas"': Піцци
+            '"smiling_poop"': Какашка
             '"rain"': Дощ
+            '"floating_rainbows"': Райдуги
+            '"smile_face"': Смайли
+            '"spotlight"': Прожектор
+            '"color_lights"': Софіти
             '"raining_tacos"': Тако
       Dancelab_setForegroundEffectExtended:
         text: встановити ефект переднього плану {EFFECT}
         options:
           EFFECT:
+            '"none"': Немає
             '"rand"': "(Випадковий)"
             '"bubbles"': Бульбашки
+            '"hearts_colorful"': Різнокольорові серця
+            '"confetti"': Конфеті
+            '"emojis"': Емодзі
+            '"hearts_red"': Серця
+            '"music_notes"': Музичні ноти
+            '"paint_drip"': Патьоки фарби
             '"pineapples"': Ананаси
+            '"pizzas"': Піцци
+            '"smiling_poop"': Какашка
             '"rain"': Дощ
+            '"floating_rainbows"': Райдуги
+            '"smile_face"': Смайли
+            '"spotlight"': Прожектор
+            '"color_lights"': Софіти
+            '"exploding_stars"': Вибухаюча зірка
             '"raining_tacos"': Тако
       Dancelab_setProp:
         text: 'встановити {SPRITE} {PROPERTY} у {VAL} '
@@ -358,23 +639,23 @@ uk:
             '"rotation"': поворот
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
-            '"tint"': відтінок
       Dancelab_setPropEach:
         text: встановити {GROUP} {PROPERTY} у {VAL}
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -394,6 +675,31 @@ uk:
             '"x"': горизонтальне положення
             '"y"': вертикальне положення
             '"tint"': відтінок
+      Dancelab_setPropRandomEach:
+        text: рандомізувати {GROUP} {PROPERTY}
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+            '"tint"': відтінок
       Dancelab_setTint:
         text: встановити для {SPRITE} відтінок {VAL}
       Dancelab_setTintEach:
@@ -401,16 +707,35 @@ uk:
         options:
           THIS:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
+      Dancelab_setTintEachInline:
+        text: встановити для {THIS} відтінок у {VAL}
+        options:
+          THIS:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
       Dancelab_setTintInline:
         text: встановити для {SPRITE} відтінок {VAL}
       Dancelab_setVisible:
@@ -424,23 +749,53 @@ uk:
         options:
           THIS:
             sprites: усі
-            '"ALIEN"': всі прибульці
-            '"BEAR"': всі ведмеді
-            '"CAT"': всі коти
-            '"DOG"': всі собаки
-            '"DUCK"': всі качки
-            '"FROG"': всі жаби
-            '"MOOSE"': всі лосі
-            '"PINEAPPLE"': всі ананаси
-            '"ROBOT"': всі роботи
-            '"SHARK"': всі акули
-            '"UNICORN"': всі єдинороги
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           VISIBILITY:
             'true': видимий
             'false': невидимий
       Dancelab_startMapping:
         text: "{SPRITE} змінює {PROPERTY} відповідно {RANGE}"
         options:
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+            '"tint"': відтінок
+          RANGE:
+            '"bass"': низькі тони
+            '"mid"': середні тони
+            '"treble"': високі тони
+      Dancelab_startMappingEach:
+        text: "{GROUP} починають {PROPERTY} після {RANGE}"
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
@@ -469,6 +824,82 @@ uk:
             '"bass"': низькі тони
             '"mid"': середні тони
             '"treble"': високі тони
+      Dancelab_stopMappingEach:
+        text: "{GROUP} припиняють {PROPERTY} після {RANGE}"
+        options:
+          GROUP:
+            sprites: усі
+            '"ALIEN"': прибульці
+            '"BEAR"': ведмеді
+            '"CAT"': коти
+            '"DOG"': собаки
+            '"DUCK"': качки
+            '"FROG"': жаби
+            '"MOOSE"': лосі
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': акули
+            '"SLOTH"': лінивець
+            '"UNICORN"': Єдинороги
+          PROPERTY:
+            '"scale"': розмір
+            '"width"': ширина
+            '"height"': висота
+            '"rotation"': поворот
+            '"x"': горизонтальне положення
+            '"y"': вертикальне положення
+            '"direction"': напрямок руху
+            '"tint"': відтінок
+          RANGE:
+            '"bass"': низькі тони
+            '"mid"': середні тони
+            '"treble"': високі тони
+      Dancelab_translateStrings:
+        text: перекладіть {STRING}
+        options:
+          STRING:
+            '"music_wave"': Хвилі
+            '"ripples"': Брижі
+            '"ripples_random"': Випадкові брижі
+            '"quads"': Кути
+            '"flowers"': Квіти
+            '"popsicles"': Морозиво на паличці
+            '"squiggles"': Звивання
+            '"growing_stars"': Зірки, які ростуть
+            '"emojis"': Емодзі
+            '"hearts_colorful"': Серця
+            '"paint_drio"': Патьоки фарби
+            '"exploding_stars"': Вибухаюча зірка
+            '"row_top"': верхня шеренга
+            '"row_bottom"': нижня шеренга
+            '"column_left"': ліва колона
+            '"column_right"': права колона
+            '"diamond"': діамант
+            '"mural"': Розпис стін
+            '"safari"': Сафарі
+            '"network"': Мережа
+            '"highway"': Шосе
+            '"stream"': Потік
+            '"tile"': Плитка
+            '"shadow"': Тінь
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': у
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: коли натиснуто {KEY}
         options:
@@ -478,10 +909,43 @@ uk:
             '"down"': вниз
             '"right"': праворуч
             '"space"': космос
+            '"enter"': enter
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': у
+            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: коли досягаємо кінця {RANGE}
         options:
@@ -491,6 +955,25 @@ uk:
             '2': високі тони
       Dancelab_whenSetup:
         text: налаштування
+      Dancelab_whenSetup2:
+        text: налаштування
+      gamelab_addBehaviorSimple:
+        text: спрайт {SPRITE} починає {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE} дістався до цілі {TARGET}"
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        text: у {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': секунди
+            '"frames"': кадри
+      gamelab_beginCollectingData:
+        text: почати збір даних [BREAK] [0] значення [VALUE] [1] з міткою [LABEL]
+          [2]
+      gamelab_bounceOff:
+        text: "{SPRITE} відбивається від {TARGET}"
       gamelab_changePropBy:
         text: змінити {SPRITE} {PROPERTY} на {VAL}
         options:
@@ -500,14 +983,38 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+            '"speed"': швидкість
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} торкається {SPRITE2}"
         options:
           CONDITION:
             '"when"': коли
             '"while"': поки
       gamelab_clickedOn:
         text: коли клацнули {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_comment:
+        text: 'коментар: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: кількість {SPRITE}
+      gamelab_createNewSprite:
+        text: "створити новий спрайт \n з іменем {NAME} \n з костюмом {COSTUME} \n
+          у {LOCATION}"
+      gamelab_destroy:
+        text: видалити {THIS}
+      gamelab_draggable:
+        text: будучи перетягуваним
+      gamelab_edgesDisplace:
+        text: краї блокують рух {SPRITE}
+      gamelab_followingTargets:
+        text: наступні цілі
+      gamelab_getAllSprites:
+        text: всі спрайти
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': розмір
@@ -516,9 +1023,70 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
             '"tint"': відтінок
+            '"speed"': швидкість
+      gamelab_getThisSprite:
+        text: "[CHOICE]спрайт[0]"
+        options:
+          CHOICE:
+            '"this"': це
+            '"other"': інше
+      gamelab_getTime:
+        text: час у {UNIT}
+        options:
+          UNIT:
+            '"seconds"': секунди
+            '"frames"': кадри
+      gamelab_hideTitleScreen:
+        text: приховати заголовок екрана
+      gamelab_ifVarEquals:
+        text: |-
+          якщо {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} костюм є {COSTUME}"
+      gamelab_isKeyPressed:
+        text: "{KEY} натиснуто"
+        options:
+          KEY:
+            '"up"': вгору
+            '"down"': вниз
+            '"left"': ліворуч
+            '"right"': праворуч
+            '"space"': космос
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': у
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} торкається країв"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} торкається {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} стрибає до {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} натиснуто"
         options:
           CONDITION:
             '"when"': коли
@@ -529,29 +1097,143 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': у
+            '"z"': z
+      gamelab_locationAt:
+        text: 'місце розташування x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} пікселів {DIRECTION} з {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      gamelab_locationMouse:
+        text: розташування миші
+      gamelab_locationOf:
+        text: розташування {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
+      gamelab_makeNumSprites:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів
       gamelab_mirrorSprite:
+        text: повернути {SPRITE} у напрямку {DIRECTION}
         options:
           DIRECTION:
             '"right"': праворуч
             '"left"': ліворуч
+      gamelab_mouseLocation:
+        text: розташування миші
+      gamelab_moveBackward:
+        text: перемістити {SPRITE} на {DISTANCE} пікселів назад
+      gamelab_moveForward:
+        text: переміститись на {SPRITE} {DISTANCE} пікселі вперед
+      gamelab_moveInDirection:
+        text: переміститись на {SPRITE} {DISTANCE} пікселів {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      gamelab_moveToward:
+        text: переміститись на {SPRITE} пікселів {DISTANCE} до {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: патрулювання вгору та вниз
+      gamelab_playSound:
+        text: грати звук {SOUND}
+      gamelab_pointInDirection:
+        text: Точки {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      gamelab_printText:
+        text: друк {TEXT}
       gamelab_randColor:
         text: випадковий колір
       gamelab_randomColor:
         text: випадковий колір
+      gamelab_randomLocation:
+        text: випадкове розташування
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} все зупиняє"
+      gamelab_removeBehaviorSimple:
+        text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
+      gamelab_removeTint:
+        text: зняти колір з {THIS}
+      gamelab_repeatForever:
+        text: повторювати завжди
+      gamelab_setAnimation:
+        text: змінити {THIS} костюм на {ANIMATION}
       gamelab_setBackground:
         text: встановити колір тла {COLOR}
       gamelab_setBackgroundImage:
+        text: встановити фон {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': печера
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': суду
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустеля
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галактики
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сітка
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': веселка
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': науково-фантастичного
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': зірки
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
+            undefined: немає
+      gamelab_setBackgroundImageAs:
+        text: встановити фон {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: встановити новий розмір спрайта за замовчуванням як [SIZE] [0]
+        options:
+          SIZE:
+            '25': дуже маленький
+            '50': маленький
+            '75': середньо
+            '100': великий
+      gamelab_setPrompt:
+        text: запитати користувача {QUESTION} значення змінної {VAR}
+      gamelab_setPromptWithChoices:
+        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами
+          {A}{B}{C}
       gamelab_setProp:
+        text: встановити {SPRITE} властивість {PROPERTY} у {VAL}
         options:
           PROPERTY:
             '"scale"': розмір
@@ -559,22 +1241,51 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
             '"direction"': напрямок руху
+            '"speed"': швидкість
       gamelab_setSizes:
+        text: встановити {SPRITE} властивість {PROPERTY} у {N}%
         options:
           PROPERTY:
             '"scale"': розмір
             '"width"': ширина
             '"height"': висота
+      gamelab_setTint:
+        text: змінити колір {THIS} до {COLOR}
+      gamelab_setupSim:
+        text: |-
+          моделювання установки з
+          {SPRITE1N}{SPRITE1COSTUME}Швидкість{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Швидкість{SPRITE2SPEED}
+          Збір
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} натиснуто"
         options:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_stopCollectingData:
+        text: припинити збір даних
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: спотикатись
       gamelab_turn:
+        text: повернути на {SPRITE} {DIRECTION} {N} градусів
         options:
           DIRECTION:
             '"right"': праворуч
             '"left"': ліворуч
+      gamelab_updateTitleWithColor:
+        text: показати початковий екран {BREAK} заголовок {TITLE} колір {COLOR}
+      gamelab_whenDownArrow:
+        text: при натисканні стрілки вниз
       gamelab_whenKey:
         text: коли натиснуто {KEY}
         options:
@@ -584,7 +1295,26 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: коли натиснуто ліву стрілку
+      gamelab_whenPromptAnswered:
+        text: коли відповідь {VAR}
+      gamelab_whenRightArrow:
+        text: при натисканні стрілки праворуч
+      gamelab_whenSpriteCreated:
+        text: коли {SPRITE} створили
+      gamelab_whenTouching:
+        text: коли {SPRITE1} торкається {SPRITE2}
+      gamelab_whenUpArrow:
+        text: при натисканні стрілки вгору
+      gamelab_whileDownArrow:
+        text: при натисканні стрілки вниз
       gamelab_whileKey:
+        text: в той час як [KEY]натиснуто[0]
         options:
           KEY:
             '"up"': вгору
@@ -592,6 +1322,44 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: у той час як натиснута ліва стрілка
+      gamelab_whileRightArrow:
+        text: у той час як натиснута стрілка праворуч
+      gamelab_whileTouching:
+        text: Хоча {SPRITE1} зворушливо {SPRITE2}
+      gamelab_whileUpArrow:
+        text: у той час як натиснута стрілка вгору
+      gamelab_withPercentChance:
+        text: |-
+          якщо {NUM}% ймовірність
+          {STATEMENT}
+      gamelab_xLocationOf:
+        text: x координата {SPRITE}
+      gamelab_yLocationOf:
+        text: y координата {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: спрайт {SPRITE} починає {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'додати навчальні дані: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": об'єкта
+            "{x: 200, y: 100}": риби
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": риби
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не риба
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": мітка
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не мітка
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами
+          {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -612,6 +1380,8 @@ uk:
             "{x: 300, y: 100}": верхній правий кут
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
+      Mikelab_getNext:
+        text: отримати наступний об'єкт
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -621,13 +1391,17 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupChangeAnim:
+        text: змінити {SELECT} {COSTUME} на {COSTUME2}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupChangePropBy:
+        text: Змінити {PROPERTY} з {SELECT} {COSTUME} за {VAL}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
           PROPERTY:
             '"scale"': розмір
             '"rotation"': поворот
@@ -635,6 +1409,7 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupCreateNewSprite:
+        text: створити нового {COSTUME} в {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -647,11 +1422,21 @@ uk:
             "{x: 100, y: 300}": нижній лівий кут
             "{x: 300, y: 300}": нижній правий кут
       Mikelab_groupDestroy:
+        text: Видалити {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
+      Mikelab_groupDisplace:
+        text: Всі {COSTUME} Блок {COSTUME2} від переміщення
+      Mikelab_groupEdgesDisplace:
+        text: краї блокують рух {COSTUME}
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}Це {PROPERTY}"
         options:
+          SELECT:
+            '"average"': середньому
+            '"this"': це
           PROPERTY:
             '"scale"': розмір
             '"rotation"': поворот
@@ -659,21 +1444,29 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupRemoveAllBehaviors:
+        text: зупинити поведінку {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} Зупиняється {BEHAVIOR}"
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupRemoveTint:
+        text: зняти колір з {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
       Mikelab_groupSetProp:
+        text: встановити {PROPERTY} з {SELECT} {COSTUME} у {VAL}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
           PROPERTY:
             '"scale"': розмір
             '"rotation"': поворот
@@ -681,15 +1474,86 @@ uk:
             '"y"': позиція по осі y
             '"direction"': напрямок руху
       Mikelab_groupSetTint:
+        text: змінити колір {SELECT} {COSTUME} до {COLOR}
         options:
           SELECT:
             '"all"': усі
+            '"this"': це
+      Mikelab_groupWhenClickedOn:
+        text: коли натиснуто {COSTUME}
+      Mikelab_groupWhenXTouchesY:
+        text: коли{COSTUME} торкається{COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: при натисканні на {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          Хоча{COSTUME} зворушливо {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} в даний час {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: видалити {TRASH}
+        options:
+          TRASH:
+            object: об'єкта
+            fish: риби
       Mikelab_ifDanceIs:
         text: |-
           якщо {SPRITE} виконує рух {DANCE}
           {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Дроп
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Roll: Хвиля
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Rest: Немає
+      Mikelab_ifLabel:
+        text: |-
+          Якщо {DANCE}
+          Зробити {DO1} Ще {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риби
+            MOVES.Clown: мітка
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          Якщо розпізнати об'єкт як {DANCE}
+          Зробити {DO1} Ще {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риби
+            MOVES.Clown: мітка
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          Якщо розпізнати об'єкт як {DANCE}
+          Зробити {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: риби
+            MOVES.Clown: не мітка
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
+      Mikelab_locationAt:
+        text: 'місце розташування x: {X} Y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: випадковий колір
+      Mikelab_removeBehaviorSimple:
+        text: Спрайт {SPRITE} Зупиняється {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: повторювати завжди
+      Mikelab_sendBad:
+        text: пересунути об' єкт ліворуч
+      Mikelab_sendGood:
+        text: пересунути об' єкт праворуч
       Mikelab_setBG:
         options:
           BG:
@@ -708,6 +1572,7 @@ uk:
             '"right"': праворуч
             '"left"': ліворуч
       Mikelab_sprite:
+        text: Новий {COSTUME} спрайт на {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -744,6 +1609,14 @@ uk:
             '"a"': А
             '"s"': Пд
             '"d"': Г
+      Mikelab_whenMouseClicked:
+        text: при натисканні миші
+      Mikelab_whenYesNoClicked:
+        text: коли натиснуто {KEY}
+        options:
+          KEY:
+            '"yes"': так
+            '"no"': ні
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -751,76 +1624,118 @@ uk:
             '"down"': стрілка вниз
             '"left"': стрілка ліворуч
             '"right"': стрілка праворуч
+      Mikelab_xLocationOf:
+        text: x координата {SPRITE}
+      Mikelab_yLocationOf:
+        text: y координата {SPRITE}
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:
         text: повернути ліворуч
       RyanLab_turnRight:
         text: повернути праворуч
+      SpriteLab2Beta_spriteSay:
+        text: Спрайт {SPRITE} Сказати {TEXT} Для {SECONDS} Секунд
+      Vector_createSpriteWith:
+        text: |-
+          створіть спрайт
+          зробити{STATEMENT}
+      Vector_log:
+        text: повідомлення журналу {MESSAGE}
       Vector_positionCenter:
         text: посередині
+      Vector_push:
+        text: встановити швидкість {VECTOR}
+      Vector_randomLocation:
+        text: випадкове розташування
+      Vector_setColor:
+        text: набір кольору {COLOR}
       Vector_setSize:
         text: встановити ширину {WIDTH} висоту {HEIGHT}
-      aalab_changePropByFlexible:
-        text: змінити {SPRITE} {PROPERTY} на {VAL}
+      Vector_teleportTo:
+        text: встановити положення {POSITION}
+      Vector_vectorNorth:
+        text: на північ
+      Vector_where:
+        text: Кожен спрайт, де {PROPERTY} є {VALUE} Зробити{STATEMENT}
         options:
           PROPERTY:
-            '"scale"': розмір
-            '"rotation"': поворот
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-      aalab_checkTouching:
+            "'shapeColor'": колір
+      aalab_addBehaviorForDuration:
+        text: спрайт алаб {SPRITE} починає {BEHAVIOR} на {SECONDS} секунд
+      aalab_addBehaviorUntilBoolean:
+        text: спрайт {SPRITE} починає {BEHAVIOR} поки {CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: новий спрайт під назвою{SPRITE_NAME} з костюмом{ANIMATION_NAME} в локації{LOCATION}
+      aalab_goToScene:
+        text: перейти до сцени {SCENE}
         options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-      aalab_clickedOn:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_moveInDirection:
+        text: переміститись на {SPRITE} {DISTANCE} пікселів {DIRECTION}
         options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-      aalab_jumpTo:
-        text: "{SPRITE} стрибає до {LOCATION}"
-      aalab_keyPressed:
+          DIRECTION:
+            '"North"': Північ
+            '"East"': Схід
+            '"South"': Південь
+            '"West"': Захід
+      aalab_prompt:
+        text: задати питання {MESSAGE}
+      aalab_scene:
+        text: сцена {SCENE}
         options:
-          CONDITION:
-            '"when"': коли
-            '"while"': поки
-          KEY:
-            '"up"': вгору
-            '"down"': вниз
-            '"left"': ліворуч
-            '"right"': праворуч
-            '"space"': космос
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': місто
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Істина
-            '"false"': Хибність
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': розмір
-            '"rotation"': поворот
-            '"x"': позиція по осі x
-            '"y"': позиція по осі y
-            '"direction"': напрямок руху
-            '"tint"': відтінок
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': постійно
-      aalab_toggleHideCustomText:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_setupStory:
+        text: історія налаштування
+      aalab_starwars_playSound:
+        text: грати звук {OPTION}
         options:
           OPTION:
-            '"show"': показати
-            '"hide"': приховати
+            '"random"': випадковий
+            '"R2-D2 random"': R2-D2 випадковий
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
+      binary_drawBin:
+        text: малювати двійково {BIN}
+      binary_drawBinScreen:
+        text: |-
+          намалювати екран
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: малювати десятково {DEC}
+      binary_drawPixelHere:
+        text: встановити піксел {VAL}
+        options:
+          VAL:
+            '0': вимкнено
+            '1': далі
+            '"toggle"': перемикач
+      binary_drawString:
+        text: малювати рядок {STR}
+      binary_goTo:
+        text: перейти до {LOC}
+      binary_goToHome:
+        text: перейти до верхньої лівої частини
+      binary_gridSize:
+        text: набір розмір сітки {SIZE}
       binary_move:
+        text: рухатися {DIR}
         options:
           DIR:
             '"up"': вгору
@@ -836,6 +1751,10 @@ uk:
             '"left"': ліворуч
             '"right"': праворуч
             '"space"': космос
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           якщо є шлях {DIR}
@@ -866,6 +1785,8 @@ uk:
             "'sand'": пісок
             "'darkPrismarine'": темний призмарин
             "'seaLantern'": морський ліхтар
+      craft_log:
+        text: повідомлення журналу {MESSAGE}
       craft_moveForward:
         text: рухатись вперед
       craft_placeBlock:
@@ -877,7 +1798,7 @@ uk:
             '"stoneBricks"': кам'яні цеглини
             '"mossyStoneBricks"': кам'яні цеглини з мохом
             '"crackedStoneBricks"': тріснуті кам'яні цеглини
-            '"decorativeStoneBricks"': декоративні кам'яні цеглини
+            '"chiseledStoneBricks"': декоративні кам'яні цеглини
             '"blueCoralBlock"': блок синього коралу
             '"pinkCoralBlock"': блок рожевого коралу
             '"magentaCoralBlock"': блок фіолетового коралу

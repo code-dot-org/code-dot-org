@@ -1,5 +1,6 @@
 import {commands as actionCommands} from './commands/actionCommands';
 import {commands as behaviorCommands} from './commands/behaviorCommands';
+import {commands as customLessonCommands} from './commands/customLessonCommands';
 import {commands as eventCommands} from './commands/eventCommands';
 import {commands as locationCommands} from './commands/locationCommands';
 import {commands as spriteCommands} from './commands/spriteCommands';
@@ -19,105 +20,184 @@ function drawBackground() {
   }
 }
 
-function updateTitle() {
-  this.fill('black');
-  this.textAlign(this.CENTER, this.CENTER);
-  this.textSize(50);
-  this.text(coreLibrary.title, 0, 0, 400, 200);
-  this.textSize(35);
-  this.text(coreLibrary.subtitle, 0, 200, 400, 200);
-}
-
 export const commands = {
   executeDrawLoopAndCallbacks() {
     drawBackground.apply(this);
     coreLibrary.runBehaviors();
     coreLibrary.runEvents(this);
     this.drawSprites();
-    updateTitle.apply(this);
+    if (coreLibrary.screenText.title || coreLibrary.screenText.subtitle) {
+      worldCommands.drawTitle.apply(this);
+    }
+    if (coreLibrary.screenText.haiku) {
+      customLessonCommands.drawHaiku.apply(this);
+    }
   },
 
   // Action commands
-  changePropBy(spriteId, prop, val) {
-    actionCommands.changePropBy(spriteId, prop, val);
+  addTarget(spriteArg, targetArg, targetType) {
+    actionCommands.addTarget(spriteArg, targetArg, targetType);
   },
 
-  edgesDisplace(spriteId) {
-    actionCommands.edgesDisplace.apply(this, [spriteId]);
+  bounceOff(spriteArg, targetArg) {
+    actionCommands.bounceOff(spriteArg, targetArg);
+  },
+  changePropBy(spriteArg, prop, val) {
+    actionCommands.changePropBy(spriteArg, prop, val);
   },
 
-  isTouchingEdges(spriteId) {
-    return actionCommands.isTouchingEdges.apply(this, [spriteId]);
+  edgesDisplace(spriteArg) {
+    actionCommands.edgesDisplace.apply(this, [spriteArg]);
   },
 
-  jumpTo(spriteId, location) {
-    actionCommands.jumpTo(spriteId, location);
+  isCostumeEqual(spriteArg, costumeName) {
+    return actionCommands.isCostumeEqual(spriteArg, costumeName);
   },
 
-  mirrorSprite(spriteId, direction) {
-    actionCommands.mirrorSprite(spriteId, direction);
+  isKeyPressed(key) {
+    return actionCommands.isKeyPressed.apply(this, [key]);
   },
 
-  moveInDirection(spriteId, distance, direction) {
-    actionCommands.moveInDirection(spriteId, distance, direction);
+  isTouchingEdges(spriteArg) {
+    return actionCommands.isTouchingEdges.apply(this, [spriteArg]);
   },
 
-  moveForward(spriteId, distance) {
-    actionCommands.moveForward(spriteId, distance);
+  isTouchingSprite(spriteArg, targetArg) {
+    return actionCommands.isTouchingSprite(spriteArg, targetArg);
   },
 
-  moveToward(spriteId, distance, target) {
-    actionCommands.moveToward(spriteId, distance, target);
+  jumpTo(spriteArg, location) {
+    actionCommands.jumpTo(spriteArg, location);
   },
 
-  removeTint(spriteId) {
-    actionCommands.setProp(spriteId, 'tint', null);
+  mirrorSprite(spriteArg, direction) {
+    actionCommands.mirrorSprite(spriteArg, direction);
   },
 
-  setProp(spriteId, prop, val) {
-    actionCommands.setProp.apply(this, [spriteId, prop, val]);
+  moveBackward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, -1 * distance);
   },
 
-  setTint(spriteId, color) {
-    actionCommands.setProp(spriteId, 'tint', color);
+  moveInDirection(spriteArg, distance, direction) {
+    actionCommands.moveInDirection(spriteArg, distance, direction);
   },
 
-  turn(spriteId, n, direction) {
-    actionCommands.turn(spriteId, n, direction);
+  moveForward(spriteArg, distance) {
+    actionCommands.moveForward(spriteArg, distance);
+  },
+
+  moveToward(spriteArg, distance, target) {
+    actionCommands.moveToward(spriteArg, distance, target);
+  },
+
+  removeTint(spriteArg) {
+    actionCommands.setProp(spriteArg, 'tint', null);
+  },
+
+  setDefaultSpriteSize(size) {
+    actionCommands.setDefaultSpriteSize(size);
+  },
+
+  setProp(spriteArg, prop, val) {
+    actionCommands.setProp.apply(this, [spriteArg, prop, val]);
+  },
+
+  setPrompt(promptText, variableName, callback) {
+    worldCommands.setPrompt(promptText, variableName, callback);
+  },
+
+  setPromptWithChoices(
+    promptText,
+    variableName,
+    choice1,
+    choice2,
+    choice3,
+    callback
+  ) {
+    worldCommands.setPromptWithChoices(
+      promptText,
+      variableName,
+      [choice1, choice2, choice3],
+      callback
+    );
+  },
+
+  setTint(spriteArg, color) {
+    actionCommands.setProp(spriteArg, 'tint', color);
+  },
+
+  turn(spriteArg, n, direction) {
+    actionCommands.turn(spriteArg, n, direction);
   },
 
   // Behavior commands
-  addBehaviorSimple(spriteId, behavior) {
-    behaviorCommands.addBehavior(spriteId, behavior);
+  addBehaviorSimple(spriteArg, behavior) {
+    behaviorCommands.addBehavior(spriteArg, behavior);
+  },
+
+  avoidingTargetsFunc(spriteArg) {
+    return behaviorCommands.avoidingTargetsFunc(this);
   },
 
   Behavior(callback) {
     return behaviorCommands.Behavior(callback);
   },
 
-  draggableFunc(spriteId) {
+  draggableFunc(spriteArg) {
     return behaviorCommands.draggableFunc(this);
   },
 
-  removeAllBehaviors(spriteId) {
-    behaviorCommands.removeAllBehaviors(spriteId);
+  followingTargetsFunc(spriteArg) {
+    return behaviorCommands.followingTargetsFunc(this);
   },
 
-  removeBehaviorSimple(spriteId, behavior) {
-    behaviorCommands.removeBehavior(spriteId, behavior);
+  removeAllBehaviors(spriteArg) {
+    behaviorCommands.removeAllBehaviors(spriteArg);
+  },
+
+  removeBehaviorSimple(spriteArg, behavior) {
+    behaviorCommands.removeBehavior(spriteArg, behavior);
   },
 
   // Event commands
+  atTime(n, unit, callback) {
+    eventCommands.atTime(n, unit, callback);
+  },
+
   checkTouching(condition, sprite1, sprite2, callback) {
     eventCommands.checkTouching(condition, sprite1, sprite2, callback);
+  },
+
+  collectData(callback) {
+    eventCommands.collectData(callback);
   },
 
   keyPressed(condition, key, callback) {
     eventCommands.keyPressed(condition, key, callback);
   },
 
-  spriteClicked(condition, spriteId, callback) {
-    eventCommands.spriteClicked(condition, spriteId, callback);
+  repeatForever(callback) {
+    eventCommands.repeatForever(callback);
+  },
+
+  stopCollectingData() {
+    eventCommands.stopCollectingData();
+  },
+
+  spriteClicked(condition, spriteArg, callback) {
+    eventCommands.spriteClicked(condition, spriteArg, callback);
+  },
+
+  whenAllPromptsAnswered(callback) {
+    eventCommands.whenAllPromptsAnswered(callback);
+  },
+
+  whenSpriteCreated(spriteArg, callback) {
+    eventCommands.whenSpriteCreated(spriteArg, callback);
+  },
+
+  whenPromptAnswered(variableName, callback) {
+    eventCommands.whenPromptAnswered(variableName, callback);
   },
 
   // Location commands
@@ -125,12 +205,16 @@ export const commands = {
     return locationCommands.locationAt(x, y);
   },
 
+  locationModifier(distance, direction, location) {
+    return locationCommands.locationModifier(distance, direction, location);
+  },
+
   locationMouse() {
     return locationCommands.locationMouse.apply(this);
   },
 
-  locationOf(spriteId) {
-    return locationCommands.locationOf(spriteId);
+  locationOf(spriteArg) {
+    return locationCommands.locationOf(spriteArg);
   },
 
   randomLocation() {
@@ -138,30 +222,26 @@ export const commands = {
   },
 
   // Sprite commands
-  countByAnimation(animation) {
-    return spriteCommands.countByAnimation(animation);
+  countByAnimation(spriteArg) {
+    return spriteCommands.countByAnimation(spriteArg);
   },
 
-  /**
-   * name parameter is unused but needs to be here because the generated code
-   * calls createNewSprite() with name as an argument.
-   * TODO (ajpal): change generated code to not pass assignment arguments
-   * to the generated function.
-   */
   createNewSprite(name, animation, location) {
-    return spriteCommands.makeSprite.apply(this, [animation, location]);
+    return spriteCommands.makeSprite.apply(this, [
+      {name: name.name, animation: animation, location: location}
+    ]);
   },
 
-  destroy(spriteId) {
-    spriteCommands.destroy(spriteId);
+  destroy(spriteArg) {
+    spriteCommands.destroy(spriteArg);
   },
 
-  displace(spriteId, targetSpriteIndex) {
-    spriteCommands.displace(spriteId, targetSpriteIndex);
+  displace(spriteArg, targetSpriteIndex) {
+    spriteCommands.displace(spriteArg, targetSpriteIndex);
   },
 
-  getProp(spriteId, prop) {
-    return spriteCommands.getProp(spriteId, prop);
+  getProp(spriteArg, prop) {
+    return spriteCommands.getProp(spriteArg, prop);
   },
 
   getThisSprite(which, extraArgs) {
@@ -169,16 +249,30 @@ export const commands = {
   },
 
   makeNewSpriteAnon(animation, location) {
-    spriteCommands.makeSprite.apply(this, [animation, location]);
+    spriteCommands.makeSprite.apply(this, [
+      {animation: animation, location: location}
+    ]);
   },
 
-  setAnimation(spriteId, animation) {
-    spriteCommands.setAnimation(spriteId, animation);
+  makeNumSprites(num, animation) {
+    for (let i = 0; i < num; i++) {
+      spriteCommands.makeSprite.apply(this, [
+        {animation: animation, location: locationCommands.randomLocation()}
+      ]);
+    }
+  },
+
+  setAnimation(spriteArg, animation) {
+    spriteCommands.setAnimation(spriteArg, animation);
   },
 
   // World commands
   comment(text) {
     worldCommands.comment(text);
+  },
+
+  getTime(unit) {
+    return worldCommands.getTime.apply(this, [unit]);
   },
 
   hideTitleScreen() {
@@ -195,8 +289,19 @@ export const commands = {
   setBackgroundImage(img) {
     worldCommands.setBackgroundImage.apply(this, [img]);
   },
+  setBackgroundImageAs(img) {
+    worldCommands.setBackgroundImageAs.apply(this, [img]);
+  },
   showTitleScreen(title, subtitle) {
     worldCommands.showTitleScreen(title, subtitle);
+  },
+
+  textJoin(text1, text2) {
+    return worldCommands.textJoin(text1, text2);
+  },
+
+  textVariableJoin(text1, text2) {
+    return worldCommands.textJoin(text1, text2);
   },
 
   // Validation commands
@@ -208,6 +313,10 @@ export const commands = {
     return validationCommands.getBackground();
   },
 
+  getEventLog() {
+    return validationCommands.getEventLog();
+  },
+
   getNumBehaviorsForAnimation(animation) {
     return validationCommands.getNumBehaviorsForAnimation(animation);
   },
@@ -216,7 +325,44 @@ export const commands = {
     return validationCommands.getNumBehaviorsForSpriteId(spriteId);
   },
 
+  getBehaviorsForSpriteId(spriteId) {
+    return validationCommands.getBehaviorsForSpriteId(spriteId);
+  },
+
+  getPrintLog() {
+    return validationCommands.getPrintLog();
+  },
+
+  getPromptVars() {
+    return validationCommands.getPromptVars();
+  },
+
   getSpriteIdsInUse() {
     return validationCommands.getSpriteIdsInUse();
+  },
+
+  getTitle() {
+    return validationCommands.getTitle();
+  },
+
+  // Custom Lesson Commands
+  // These are blocks that are custom built for a particular lesson
+  getHaiku() {
+    return customLessonCommands.getHaiku();
+  },
+
+  hideHaiku() {
+    customLessonCommands.hideHaiku();
+  },
+
+  printHaiku(title, author, line1, line2, line3) {
+    customLessonCommands.printHaiku.apply(this, [
+      // default to empty string for any args not provided
+      title || '',
+      author || '',
+      line1 || '',
+      line2 || '',
+      line3 || ''
+    ]);
   }
 };

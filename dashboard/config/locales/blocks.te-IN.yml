@@ -2,27 +2,361 @@
 te:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          MOVE1:
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+          MOVE2:
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+      Dancelab_atTimestamp:
+        text: తరుగాత {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
+      Dancelab_changeColorBy:
+        text: మార్చు {COLOR} {METHOD} by {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': హ్యూ
+            '"saturation"': శాచురేషన్
+            '"brightness"': బ్రైట్‌నెస్
       Dancelab_changeMoveEachLR:
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          MOVE:
+            '"next"': "(తరువాత)"
+            '"prev"': "(ముందటి)"
+            '"rand"': "(రాండమ్)"
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
       Dancelab_changeMoveLR:
+        text: "{SPRITE} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"next"': "(తరువాత)"
+            '"prev"': "(ముందటి)"
+            '"rand"': "(రాండమ్)"
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+      Dancelab_changePropBy:
+        text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
       Dancelab_doMoveEachLR:
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఒకసారి"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          MOVE:
+            '"rand"': "(రాండమ్)"
+            MOVES.XBend: బెండ్
+            MOVES.Roll: బాడీ రోల్
+            MOVES.XClapSide: క్లాప్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.XFever: డిస్కో
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.XHeadHips: హెడ్ + హిప్స్
+            MOVES.XHop: హాప్
+            MOVES.XHighKick: కిక్
+            MOVES.XKnee: నీ
+            MOVES.XKneel: నీల్
+            MOVES.XOle: ఓలే
+            MOVES.XArmsSide: రీచ్
+            MOVES.XSlide: స్లైడ్
+            MOVES.Kick: స్టార్
+            MOVES.XArmsUp: స్ట్రెచ్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
       Dancelab_doMoveLR:
+        text: "{SPRITE} చేయండి {MOVE} {DIR} ఒకసారి"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"rand"': "(రాండమ్)"
+            MOVES.XBend: బెండ్
+            MOVES.Roll: బాడీ రోల్
+            MOVES.XClapSide: క్లాప్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.XFever: డిస్కో
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.XHeadHips: హెడ్ + హిప్స్
+            MOVES.XHop: హాప్
+            MOVES.XHighKick: కిక్
+            MOVES.XKnee: నీ
+            MOVES.XKneel: నీల్
+            MOVES.XOle: ఓలే
+            MOVES.XArmsSide: రీచ్
+            MOVES.XSlide: స్లైడ్
+            MOVES.Kick: స్టార్
+            MOVES.XArmsUp: స్ట్రెచ్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+      Dancelab_everySeconds:
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
+      Dancelab_everySecondsRange:
+        text: 'ప్రతిదీ {N} {UNIT} నుండి {START} వరకు {STOP} '
+        options:
+          UNIT:
+            measures: మెజర్స్
+            seconds: సెకండ్లు
+      Dancelab_everyVerseChorus:
+        text: 'ప్రతి {UNIT} '
+        options:
+          UNIT:
+            '"verse"': వెర్స్
+            '"chorus"': కోరస్
+      Dancelab_getEnergy:
+        text: పొందండి {RANGE}
+        options:
+          RANGE:
+            '"low"': బాస్
+            '"mid"': మిడ్
+            '"high"': ట్రెబుల్
+      Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"tint"': టింట్
+      Dancelab_getTime:
+        text: ప్రస్తుత సమయం {UNIT} లో
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
+      Dancelab_ifDanceIs:
+        text: |-
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Roll: బాడీ రోల్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+      Dancelab_ifTime:
+        text: |-
+          ఒకవేళ {UNIT} అయితే {OP} {N}
+          {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
+      Dancelab_jumpTo:
+        text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
+      Dancelab_layoutSprites:
+        text: లేఔట్ {GROUP} ఒక {FORMAT} లాగా
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          FORMAT:
+            '"border"': బార్డర్
+            '"inner"': లోపలి స్క్వైర్
+            '"circle"': సర్కిల్
+            '"grid"': గ్రిడ్
+            '"row"': రో
+            '"column"': కాలమ్
+            '"x"': క్రిస్-క్రాస్
+            '"plus"': క్రిస్-క్రాస్
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"BEAR"': బేర్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          "ఒక కొత్తది {COSTUME} చేయండి
+          {NAME} అని పిలువబడే {LOCATION} లో"
+        options:
+          COSTUME:
+            '"BEAR"': బేర్
+            '"DOG"': డాగ్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          "చేయండి {N} కొత్త {COSTUME}
+           {LAYOUT} లో"
         options:
           N:
             '2': '2'
@@ -44,19 +378,704 @@ te:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          LAYOUT:
+            '"border"': బార్డర్
+            '"inner"': లోపలి స్క్వైర్
+            '"circle"': సర్కిల్
+            '"grid"': గ్రిడ్
+            '"row"': రో
+            '"column"': కాలమ్
+            '"x"': క్రిస్-క్రాస్
+            '"plus"': క్రిస్-క్రాస్
+      Dancelab_mixColors:
+        text: మిక్స్ చేయండి {COLOR1} మరియు {COLOR2}
+      Dancelab_nMeasures:
+        text: "{N} మెజర్స్"
+      Dancelab_onPointerDown:
+        text: ఆన్ పాయింటర్ డౌన్
+      Dancelab_onPointerDrag:
+        text: ఆన్ పాయింటర్ డ్రాగ్
+      Dancelab_onPointerUp:
+        text: ఆన్ పాయింటర్ అప్
+      Dancelab_setBackground:
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
+      Dancelab_setBackgroundEffect:
+        text: "\"బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{EFFECT} {PALETTE} సెట్ చేయండి\""
+        options:
+          EFFECT:
+            '"none"': ఏదీ కాదు
+            '"circles"': సర్కిల్స్
+            '"color_cycle"': రంగులు
+            '"diamonds"': డైమండ్స్
+            '"disco_ball"': డిస్కో బాల్
+            '"fireworks"': ఫైర్‌వర్క్స్
+            '"swirl"': హిప్నో
+            '"lasers"': లేజర్ డాన్స్ ఫ్లోర్
+            '"splatter"': పెయింట్ స్ప్లాట్టర్
+            '"rainbow"': రెయిన్‌బో
+            '"snowflakes"': స్నో
+            '"text"': పాట పేర్లు
+            '"galaxy"': స్పేస్
+            '"sparkles"': స్పార్కల్స్
+            '"spiral"': స్పైరల్
+            '"disco"': స్క్వైర్స్
+            '"stars"': స్టార్స్
+          PALETTE:
+            '"rave"': బ్లాక్ అండ్ వైట్
+            '"cool"': కూల్
+            '"electronic"': ఎలక్ట్రానిక్
+            '"iceCream"': ఐస్ క్రీమ్
+            '"default"': లైట్
+            '"neon"': నియోన్
+            '"tropical"': ట్రాపికల్
+            '"vintage"': వింటేజ్
+            '"warm"': వామ్
+      Dancelab_setBackgroundEffectWithPalette:
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
+        options:
+          EFFECT:
+            '"none"': ఏదీ కాదు
+            '"rand"': "(రాండమ్)"
+            '"circles"': సర్కిల్స్
+            '"color_cycle"': రంగులు
+            '"diamonds"': డైమండ్స్
+            '"disco_ball"': డిస్కో బాల్
+            '"fireworks"': ఫైర్‌వర్క్స్
+            '"swirl"': హిప్నో
+            '"lasers"': లేజర్ డాన్స్ ఫ్లోర్
+            '"splatter"': పెయింట్ స్ప్లాట్టర్
+            '"rainbow"': రెయిన్‌బో
+            '"snowflakes"': స్నో
+            '"text"': పాట పేర్లు
+            '"galaxy"': స్పేస్
+            '"sparkles"': స్పార్కల్స్
+            '"spiral"': స్పైరల్
+            '"disco"': స్క్వైర్స్
+            '"stars"': స్టార్స్
+          PALETTE:
+            '"rave"': బ్లాక్ అండ్ వైట్
+            '"cool"': కూల్
+            '"electronic"': ఎలక్ట్రానిక్
+            '"iceCream"': ఐస్ క్రీమ్
+            '"default"': లైట్
+            '"neon"': నియోన్
+            '"tropical"': ట్రాపికల్
+            '"vintage"': వింటేజ్
+            '"warm"': వామ్
       Dancelab_setDanceSpeed:
+        text: సెట్ చేయండి {SPRITE} డాన్స్ స్పీడ్ {SPEED} కు
         options:
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': ఫాస్ట్
+            '4': వెరీ ఫాస్ట్
+            '0.5': స్లో
+            '0.25': వెరీ స్లో
       Dancelab_setDanceSpeedEach:
+        text: సెట్ చేయండి {GROUP} డాన్స్ స్పీడ్{SPEED} కు
         options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': ఫాస్ట్
+            '4': వెరీ ఫాస్ట్
+            '0.5': స్లో
+            '0.25': వెరీ స్లో
+      Dancelab_setForegroundEffect:
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {EFFECT}
+        options:
+          EFFECT:
+            '"none"': ఏదీ కాదు
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+            '"hearts_red"': హార్ట్స్
+            '"music_notes"': మ్యూజిక్ నోట్సు
+            '"pineapples"': పైన్‌ఆపిల్
+            '"pizzas"': పిజ్జాస్
+            '"smiling_poop"': పూప్
+            '"rain"': రెయిన్
+            '"floating_rainbows"': రెయిన్‌బోస్
+            '"smile_face"': స్మైల్స్
+            '"spotlight"': స్పాట్‌లైట్
+            '"color_lights"': స్టేజ్ లైట్స్
+            '"raining_tacos"': టాకోస్
+      Dancelab_setForegroundEffectExtended:
+        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {EFFECT}
+        options:
+          EFFECT:
+            '"none"': ఏదీ కాదు
+            '"rand"': "(రాండమ్)"
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+            '"hearts_red"': హార్ట్స్
+            '"music_notes"': మ్యూజిక్ నోట్సు
+            '"pineapples"': పైన్‌ఆపిల్
+            '"pizzas"': పిజ్జాస్
+            '"smiling_poop"': పూప్
+            '"rain"': రెయిన్
+            '"floating_rainbows"': రెయిన్‌బోస్
+            '"smile_face"': స్మైల్స్
+            '"spotlight"': స్పాట్‌లైట్
+            '"color_lights"': స్టేజ్ లైట్స్
+            '"raining_tacos"': టాకోస్
+      Dancelab_setProp:
+        text: 'సెట్ చేయండి {SPRITE} {PROPERTY} ని {VAL} కు '
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+      Dancelab_setPropEach:
+        text: సెట్ చేయండి {GROUP} {PROPERTY} ని {VAL} కు
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"tint"': టింట్
+      Dancelab_setPropRandom:
+        text: రాండమైజ్ {SPRITE} {PROPERTY}
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"tint"': టింట్
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"tint"': టింట్
+      Dancelab_setTint:
+        text: సెట్ చేయండి {SPRITE} టింట్ ను {VAL} కు
+      Dancelab_setTintEach:
+        text: సెట్ చేయండి {THIS} టింట్ ను {VAL} కు
+        options:
+          THIS:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+      Dancelab_setTintEachInline:
+        text: సెట్ చేయండి {THIS} టింట్ ను {VAL} కు
+        options:
+          THIS:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+      Dancelab_setTintInline:
+        text: సెట్ చేయండి {SPRITE} టింట్ ను {VAL} కు
+      Dancelab_setVisible:
+        text: సెట్ చేయండి {SPRITE} విజిబుల్ ను {VISIBILITY} కు
+        options:
+          VISIBILITY:
+            'true': విజిబుల్
+            'false': ఇన్‌విజిబుల్
+      Dancelab_setVisibleEach:
+        text: సెట్ చేయండి {THIS} విజిబిలిటిని{VISIBILITY} కు
+        options:
+          THIS:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          VISIBILITY:
+            'true': విజిబుల్
+            'false': ఇన్‌విజిబుల్
+      Dancelab_startMapping:
+        text: "{SPRITE} ప్రారంభిస్తుంది {PROPERTY} ని {RANGE} తరువాత"
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"tint"': టింట్
+          RANGE:
+            '"bass"': బాస్
+            '"mid"': మిడ్
+            '"treble"': ట్రెబుల్
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"tint"': టింట్
+          RANGE:
+            '"bass"': బాస్
+            '"mid"': మిడ్
+            '"treble"': ట్రెబుల్
+      Dancelab_stopMapping:
+        text: "{SPRITE} ఆపివేస్తుంది {PROPERTY} ను {RANGE} తరువాత"
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+            '"tint"': టింట్
+          RANGE:
+            '"bass"': బాస్
+            '"mid"': మిడ్
+            '"treble"': ట్రెబుల్
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': ఏలియన్
+            '"BEAR"': బేర్
+            '"CAT"': క్యాట్
+            '"DOG"': డాగ్
+            '"DUCK"': డక్
+            '"FROG"': ఫ్రాగ్
+            '"MOOSE"': మూస్
+            '"PINEAPPLE"': పైన్‌ఆపిల్
+            '"ROBOT"': రోబో
+            '"SHARK"': షార్క్
+            '"UNICORN"': యూనికార్న్
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+            '"rotation"': రొటేషన్
+            '"x"': సమాంతర పొజిషన్
+            '"y"': నిలువు పొజిషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+            '"tint"': టింట్
+          RANGE:
+            '"bass"': బాస్
+            '"mid"': మిడ్
+            '"treble"': ట్రెబుల్
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': హార్ట్స్
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenKey:
+        text: నొక్కినప్పుడు {KEY} కీ
+        options:
+          KEY:
+            '"up"': అప్
+            '"left"': ఎడమ
+            '"down"': డౌన్
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"enter"': ఎంటర్
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: ఉన్నప్పుడు {RANGE} పీక్
+        options:
+          RANGE:
+            '0': బాస్
+            '1': మిడ్
+            '2': ట్రెబుల్
+      Dancelab_whenSetup:
+        text: సెటప్
+      Dancelab_whenSetup2:
+        text: సెటప్
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
+      gamelab_changePropBy:
+        text: మార్చండి {SPRITE} {PROPERTY} దీనితో {VAL}
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+            '"tint"': టింట్
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
+      gamelab_jumpTo:
+        text: "{SPRITE} జంప్ చేయండి {LOCATION} కు"
+      gamelab_keyPressed:
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': కుడి
+            '"left"': ఎడమ
+      gamelab_setBackground:
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': గ్రిడ్
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"width"': వెడల్పు
+            '"height"': ఎత్తు
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': కుడి
+            '"left"': ఎడమ
+      gamelab_whenKey:
+        text: నొక్కినప్పుడు {KEY} కీ
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_ifDanceIs:
+        text: |-
+          ఒకవేళ {SPRITE} చేస్తుంటే {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Roll: బాడీ రోల్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
+            '"rotation"': రొటేషన్
+            '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': కుడి
+            '"left"': ఎడమ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": టాప్
+            "{x: 200, y: 300}": బాటమ్
+            "{x: 100, y: 200}": ఎడమ
+            "{x: 300, y: 200}": కుడి
+      Mikelab_whenKeyPressed:
+        text: నొక్కినప్పుడు {KEY} కీ
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      binary_move:
+        options:
+          DIR:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+      binary_whenKey:
+        text: నొక్కినప్పుడు {KEY} కీ
+        options:
+          KEY:
+            '"up"': అప్
+            '"down"': డౌన్
+            '"left"': ఎడమ
+            '"right"': కుడి
+            '"space"': స్పేస్
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d

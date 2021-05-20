@@ -1,7 +1,5 @@
 ---
 title: Інструкції Години коду для районів
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Залучіть кожну школу до участі, кожного учня — до навчання!
 
-### 1. Recruit local schools
+### 1. Залучення місцевих шкіл
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

@@ -1,10 +1,8 @@
 ---
 title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Past Hour of Code Posters
 
@@ -16,4 +14,4 @@ nav: promote_nav
 
 {{ promote_posters }}
 
-{{ signup_button }}
+{{ tilmeld_knap }}

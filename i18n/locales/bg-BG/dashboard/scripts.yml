@@ -1,21 +1,23 @@
+---
 bg:
   data:
     script:
       category:
         csf_category_name: CS основи
-        csp_category_name: "\"15-\" 16 CS принципи"
+        csp_category_name: '"15-" 16 CS принципи'
         cspexams_category_name: CS принципи практически тест
         csp17_category_name: '"15-" 16 CS принципи'
         hoc_category_name: Hour of Code
         math_category_name: Математика
+        other_category_name: Друго
       name:
         course1:
           description: Курс 1 е предназначен за децата, които се учат да четат, но искат и да създават компютърни програми. Курсът ще им помогне да се научат да си сътрудничат с други ученици, ще подпомогне развитието на умения за решаване на проблеми и взимане на решения при решаване на трудни ситуации. До края на този курс, учениците ще могат да създават собствени персонализирани игри или истории, които могат да споделят. Препоръчва се за K-1/I клас/.
           description_short: Курс 1 е предназначен за учещи се да четат деца.
           description_audience: Възраст 4 + (за учещи се да четат)
-          stages:
+          lessons:
             'Artist: Loops':
-              name: 'Художник - цикли'
+              name: Художник - цикли
             'Artist: Sequence':
               name: 'Художник: последователност'
             'Artist: Shapes':
@@ -50,16 +52,17 @@ bg:
               name: 'Театрална лаборатория: Създаване на история'
             The Big Event:
               name: Голямото събитие
+          student_description: Курс 1 е предназначен за децата, които се учат да четат, но искат и да създават компютърни програми. Курсът ще им помогне да се научат да си сътрудничат с други ученици, ще подпомогне развитието на умения за решаване на проблеми и взимане на решения при решаване на трудни ситуации. До края на този курс, учениците ще могат да създават собствени персонализирани игри или истории, които могат да споделят. Препоръчва се за K-1/I клас/.
         course2:
           title: Курс 2
           description: Курс 2 е предназначен за ученици, които могат да четат, но нямат предишен опит в програмирането. В този курс те ще създават програми, за да решават проблемни ситуации и ще разработват интерактивни игри или истории, които ще могат да споделят с приятели. Препоръчва се за 2-5 клас.
           description_short: Курс 2 е предназначен за ученици, които могат да четат.
           description_audience: Възраст 6 + (необходими са умения за четене)
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'Художник: отстраняване на грешки'
             'Artist: Loops':
-              name: 'Художник - цикли'
+              name: Художник - цикли
             'Artist: Nested Loops':
               name: 'Художник: въвеждане на цикли'
             'Artist: Sequence':
@@ -94,12 +97,13 @@ bg:
               name: Голямото събитие
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
+          student_description: Курс 2 е предназначен за ученици, които могат да четат, но нямат предишен опит в програмирането. В този курс те ще създават програми, за да решават проблемни ситуации и ще разработват интерактивни игри или истории, които ще могат да споделят с приятели. Препоръчва се за 2-5 клас.
         course3:
           title: Курс 3
           description: Курс 3 е предназначен за ученици, които са приключили курс 2. Учениците ще задълбочат знанията си в програмирането, за да могат да вземат гъвкави решения при по-сложни проблеми. До края на този курс учениците ще създават интерактивни истории и игри, които да споделят. Препоръчва се за 4-ти и 5-ти клас.
           description_short: Курс 3 е продължение на курс 2.
           description_audience: Възраст 8 + (след курс 2)
-          stages:
+          lessons:
             Artist:
               name: Художник
             'Artist: Functions':
@@ -127,7 +131,7 @@ bg:
             Digital Citizenship:
               name: Цифрови граждани
             'Farmer: While Loops':
-              name: 'Фермер - цикли "докато"'
+              name: Фермер - цикли "докато"
             Functional Suncatchers:
               name: Функционални ловци на слънце
             Internet:
@@ -139,53 +143,58 @@ bg:
             Songwriting:
               name: Писане на песен
             'Studio: Create a Game':
-              name: 'Театрална лаборатория - Създаване на игра'
+              name: Театрална лаборатория - Създаване на игра
             'Studio: Create a Story':
               name: 'Театрална лаборатория: Създаване на история'
+          student_description: Курс 3 е предназначен за ученици, които са приключили курс 2. Учениците ще задълбочат знанията си в програмирането, за да могат да вземат гъвкави решения при по-сложни проблеми. До края на този курс учениците ще създават интерактивни истории и игри, които да споделят. Препоръчва се за 4-ти и 5-ти клас.
         playlab:
           title: Театрална лаборатория
           description: Създайте история или направете игра с Театрална лаборатория!
           description_short: Създайте история или направете игра с Театрална лаборатория!
-          stages:
+          lessons:
             Play Lab:
               name: Театрална лаборатория
+          student_description: Създайте история или направете игра с Театрална лаборатория!
         artist:
           title: Художник
           description: Начертайте готини картинки и дизайни с художника!
           description_short: Начертайте готини картинки и дизайни с художника!
-          stages:
+          lessons:
             Artist:
               name: Художник
+          student_description: Начертайте готини картинки и дизайни с художника!
         hourofcode:
           title: Класически лабиринт
           description: Опитайте основите на програмирането с героите отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
           description_short: Опитайте основите на програмирането с много забавни герои!
-          stages:
+          lessons:
             Maze:
               name: Лабиринт
+          student_description: Опитайте основите на програмирането с героите отAngry Birds, Plants vs. Zombies и Scrat от Ледена епоха!
         frozen:
           title: Код с Анна и Елза
           description: Нека да използваме кода, за да се присъединим към Анна и Елза, които опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, които след това можете да споделите с приятелите си!
           description_short: Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.
-          stages:
+          lessons:
             Artist:
               name: Художник
+          student_description: Нека да използваме кода, за да се присъединим към Анна и Елза, които опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, които след това можете да споделите с приятелите си!
         course4:
           title: Курс 4
           description: Курс 4 е предназначен за ученици, които са покрили курсове 2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност, тъй като ще се научат как да съчетават няколко концепции при решаване на предизвикателство. След завършване на този курс, учениците ще могат да създават програми, в които да покажат няколко умения, като цикли и функции с параметри. Препоръчва се за класове 4-8.
           description_short: Учениците, изучаващи курс 4 трябва да са взели вече курсове 2 и 3.
           description_audience: Възраст 10 + (след курс 3)
-          stages:
+          lessons:
             Artist:
               name: Художник
             Artist Binary:
               name: 'Художник: Бинарен код'
             'Artist: For Loops':
-              name: 'Художник - за циклите'
+              name: Художник - за циклите
             'Artist: Functions':
               name: 'Художник: функции'
             'Artist: Functions with Parameters':
-              name: 'Художник - Функции с Параметри'
+              name: Художник - Функции с Параметри
             'Artist: Variables':
               name: 'Художник: променливи'
             'Bee: For Loops':
@@ -220,15 +229,16 @@ bg:
               name: 'Ънплъгд: Писане на песни с параметри'
             'Unplugged: Tangrams':
               name: 'Ънплъгд: Танграмите'
+          student_description: Курс 4 е предназначен за ученици, които са покрили курсове 2 и 3. Учениците ще научат как да се справят с пъзели с повишена сложност, тъй като ще се научат как да съчетават няколко концепции при решаване на предизвикателство. След завършване на този курс, учениците ще могат да създават програми, в които да покажат няколко умения, като цикли и функции с параметри. Препоръчва се за класове 4-8.
         Course4pre:
           title: Курс 4 предпоставка (необходимо условие)
           description: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
           description_short: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
-          stages:
+          lessons:
             'Artist: Functions':
               name: 'Художник: функции'
             'Artist: Loops':
-              name: 'Художник - цикли'
+              name: Художник - цикли
             'Artist: Nested Loops':
               name: 'Художник: въвеждане на цикли'
             'Artist: Sequence':
@@ -240,13 +250,14 @@ bg:
             'Bee: Nested Loops':
               name: 'Пчела:  въвеждане на цикли'
             'Farmer: While Loops':
-              name: 'Фермер - цикли "докато"'
+              name: Фермер - цикли "докато"
             'Maze: Sequence':
               name: 'Лабиринт: последователност'
+          student_description: Кратък курс за концепциите, предназначен за ученици, които не са взели курс 2 и 3.
         usability:
           title: Тест за приложимост
           description: Селектирани нива от курс 4 нива за тестване на приложимостта.
-          stages:
+          lessons:
             Binary:
               name: Двоичен код
             For Loops:
@@ -257,11 +268,12 @@ bg:
               name: Въведение
             Variables:
               name: Променливи
+          student_description: Селектирани нива от курс 4 нива за тестване на приложимостта.
         algebra:
           title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
           description_short: Научете функционално програмиране чрез алгебра
-          stages:
+          lessons:
             'Calc: Defining Variables':
               name: Определяне на променливи и заместване
             'Calc: Evaluation Blocks':
@@ -302,18 +314,20 @@ bg:
               name: 'Ънплъгд: Напиши рецепта'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Ънплъгд: видео игрите и координатните системи'
+          student_description: Научете функционално програмиране чрез алгебра
         infinity:
           title: Дисни Инфинити Игрална лаборатория
           description: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
           description_short: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
-          stages:
+          lessons:
             Infinity:
               name: Инфинити
+          student_description: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
         algebrademo:
           title: 'Алгебра: демо'
           description: Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата
           description_short: Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата
-          stages:
+          lessons:
             Defining Simple Functions:
               name: Дефиниране на прости функции
             Defining Variables:
@@ -324,10 +338,11 @@ bg:
               name: Правене на снимки
             The Design Recipe:
               name: Рецепта за дизайн
+          student_description: Една шепа  пъзели, за демонстриране на  средата и езика за програмиране, които се използвт в Code.org CS и в алгебрата
         K5PD:
           title: K5 Професионално развитие
-          description: 'K5 курсове за професионално развитие'
-          stages:
+          description: K5 курсове за професионално развитие
+          lessons:
             Computer Science Pedagogy:
               name: Педагогика на Компютърните науки
             Introduction to PD:
@@ -352,11 +367,12 @@ bg:
               name: Уроци без компютър
             Writing computer programs:
               name: Писане на компютърни програми
+          student_description: K5 курсове за професионално развитие
         netsim:
           title: Интернет симулатор
           description: Научете как работи Интернет
           description_short: Научете как работи Интернет
-          stages:
+          lessons:
             Broadcasting messages:
               name: Съобщения за излъчване
             Internet Simulator Freeplay:
@@ -373,23 +389,25 @@ bg:
               name: Peer to Peer - изпращане на битове на споделена връзка
             Routers and addresses:
               name: Маршрутизатори и адреси
+          student_description: Научете как работи Интернет
         pixelation:
           title: Пикселизация
           description: Създаване на изображения с битове и байтове.
           description_short: Създаване на изображения с битове и байтове.
-          stages:
+          lessons:
             Black & White Pixelation Freeplay:
               name: Черно & бяла пикселизация
             Black & White Pixelation Tutorial:
               name: Черно & бяла пикселизация урок
             Color Pixelation Examples:
               name: Цветна пикселизация примери
+          student_description: Създаване на изображения с битове и байтове.
         20-hour:
           title: 20-часов въвеждащ курс
           description: Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3. Курсът е предназначен най-вече за използване  от  учениците на възраст 10 -18 години. Проверете курсове 2-4 за по-задълбочено обучение.
           description_short: Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3.
           description_audience: Възраст 10 + (след курс 3)
-          stages:
+          lessons:
             Abstraction:
               name: Абстракция
             Algorithms:
@@ -430,11 +448,12 @@ bg:
               name: Лабиринт
             Wrap-up:
               name: Изводи
+          student_description: Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3. Курсът е предназначен най-вече за използване  от  учениците на възраст 10 -18 години. Проверете курсове 2-4 за по-задълбочено обучение.
         edit-code:
           title: Редактиране на кода
           description: Редактиране на кода
           description_short: Редактиране на кода
-          stages:
+          lessons:
             Applab:
               name: Лаборатория за приложения
             Play Lab:
@@ -443,11 +462,12 @@ bg:
               name: Художникът
             The Maze:
               name: Лабиринт
+          student_description: Редактиране на кода
         events:
           title: Събития
           description: Събития
           description_short: Събития
-          stages:
+          lessons:
             Bounce:
               name: Bounce
             Calc:
@@ -456,53 +476,60 @@ bg:
               name: Оценяване
             Studio:
               name: Студио
+          student_description: Събития
         flappy:
           title: Flappy код
           description: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
           description_short: Напишете своя собствена Flappy игра по-малко от 10 минути!
-          stages:
+          lessons:
             Flappy Code:
               name: Flappy код
+          student_description: Искате ли да напишете своя собствена игра за по-малко от 10 минути? Опитайте нашите Flappy код уроци!
         jigsaw:
           title: Мозайка
           description: Опитайте нашите уроци тип "мозайка"
           description_short: Опитайте нашите уроци тип "мозайка"
-          stages:
+          lessons:
             Jigsaw:
               name: Мозайка
+          student_description: Опитайте нашите уроци тип "мозайка"
         step:
           title: Стъпка
           description: Стъпка от урока
           description_short: Стъпка от урока
-          stages:
+          lessons:
             Step:
               name: Стъпка
+          student_description: Стъпка от урока
         Hour of Code:
           title: Час на кодирането 2013
           description: Опитайте основите на компютърните науки с герои от Angry Birds и Plants vs. Zombies!
           description_short: Опитайте основите на програмирането с много забавни герои!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Час на кодирането 2013
+          student_description: Опитайте основите на компютърните науки с герои от Angry Birds и Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           title: 'Код студио: Пъзел предизвикателство'
           description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!
           description_short: Предизвикай себе си!
-          stages:
+          lessons:
             Puzzles:
               name: Пъзели
+          student_description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!
         Tutorial Video - Code Studio Puzzle Challenge:
           title: 'Урок - Студио по кодиране: пъзел предизвикателство'
           description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!
           description_short: Предизвикай себе си!
-          stages:
+          lessons:
             Puzzles:
               name: Пъзели
+          student_description: Опитайте тези забавни пъзели за кодиране. Дайте най-доброто от себе си!
         cspunit1:
-          title: "CSP Част 1 - Дигитална информация"
+          title: CSP Част 1 - Дигитална информация
           description: Тази част изследва техническите предизвикателства и въпроси, които възникват от необходимостта да се въвежда цифровата информация в компютрите, и как се предава тя между хората и изчислителните устройства.
           description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
-          stages:
+          lessons:
             Binary Numbers:
               name: Бинарни числа
             Encoding B&W Images:
@@ -525,11 +552,12 @@ bg:
               name: Изпращане на числа
             Text Compression:
               name: Компресия на текста
+          student_description: Тази част изследва техническите предизвикателства и въпроси, които възникват от необходимостта да се въвежда цифровата информация в компютрите, и как се предава тя между хората и изчислителните устройства.
         algebraPD:
           title: Компютърни науки в алгебрата
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
-          stages:
+          lessons:
             Course Overview:
               name: Преглед на курса
             Evaluation Blocks:
@@ -542,11 +570,12 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
+          student_description: 'Фаза 1: Представяне онлайн'
         algPDmiami:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
           description_short: Научи алгебра чрез функционално програмиране
-          stages:
+          lessons:
             Booleans:
               name: Booleans
             Design Recipe Practice:
@@ -569,18 +598,20 @@ bg:
               name: Вашата игра - Collision Detection
             Your Game - Player Movement:
               name: Вашата игра - движение на героя
+          student_description: Научи алгебра чрез функционално програмиране
         text-compression:
           title: Компресия на текста
           description: Компресиране на текст чрез идентифициране на повтарящи се модели.
           description_short: Компресиране на текст чрез идентифициране на повтарящи се модели.
-          stages:
+          lessons:
             Text Compression:
               name: Компресия на текста
+          student_description: Компресиране на текст чрез идентифициране на повтарящи се модели.
         CSPPD:
-          title: ' PD принципите на Компютърни науки'
+          title: " PD принципите на Компютърни науки"
           description: 'Фаза 1: Онлайн въведение в ECP'
           description_short: 'Фаза 1: Онлайн въведение в ECP'
-          stages:
+          lessons:
             Exploring CSP Instructional Materials:
               name: Проучване на CSP учебни материали
             Growth Mindset:
@@ -595,18 +626,19 @@ bg:
               name: Стратегии за преподаване
             What is CSP?:
               name: Какво е CSP?
+          student_description: 'Фаза 1: Онлайн въведение в ECP'
         CSPLessonSamples:
           title: CSP пробни уроци
-          stages:
+          lessons:
             Lesson 14:
               name: Урок 14
             Lesson 15:
               name: Урок 15
         ECSPD:
           title: Проучване на компютърни науки PD
-          description: 'Онлайн въведение в ECS'
+          description: Онлайн въведение в ECS
           description_short: 'Фаза 1: Представяне онлайн'
-          stages:
+          lessons:
             Growth Mindset:
               name: Нагласи за разтеж
             Impact of Computer Science:
@@ -619,11 +651,12 @@ bg:
               name: Стратегии за преподаване
             What is ECS?:
               name: Какво е ECS?
+          student_description: 'Фаза 1: Представяне онлайн'
         sciencePD:
           title: Компютърни науки в науката PD
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
-          stages:
+          lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
             Computational Thinking And The Framework For K-12 Science Education:
@@ -648,19 +681,20 @@ bg:
               name: Използване на модели в класната стая
             What to Expect:
               name: Какво да очаквате
+          student_description: 'Фаза 1: Представяне онлайн'
         rbo-reference:
-          stages:
+          lessons:
             reference:
               name: препратка
         Test Wednesday:
-          stages:
+          lessons:
             PDK5 Intro:
               name: PDK5 интро
         cspunit3:
-          title: "CSP блок 3 - програмиране"
+          title: CSP блок 3 - програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
-          stages:
+          lessons:
             APIs and Function Parameters:
               name: API и параметри на функцията
             Beyond Buttons Toward Apps:
@@ -679,11 +713,14 @@ bg:
               name: Използване на прости команди
             While Loops:
               name: Докато цикли
+            Creating Functions with Parameters:
+              name: Създаване на функции с параметри
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
         algebraPD3:
           title: Фаза 3 PD
           description: Научи алгебра чрез блок базирано функционално програмиране
           description_short: Научи алгебра чрез блок базирано функционално програмиране
-          stages:
+          lessons:
             Computer Science Pedagogy:
               name: Педагогика на Компютърните науки
             Course Overview:
@@ -700,12 +737,13 @@ bg:
               name: Голямата игра
             The Design Recipe:
               name: Рецепта за дизайн
+          student_description: Научи алгебра чрез блок базирано функционално програмиране
         ECSPD-NexTech:
           title: Проучване на компютърни науки PD
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
           logo_image: nextech_logo.png
-          stages:
+          lessons:
             Growth Mindset:
               name: Нагласи за разтеж
             Impact of Computer Science:
@@ -718,12 +756,13 @@ bg:
               name: Стратегии за преподаване
             What is ECS?:
               name: Какво е ECS?
+          student_description: 'Фаза 1: Представяне онлайн'
         ECSPD-iZone:
           title: Проучване на компютърни науки PD
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
           logo_image: izone_logo.png
-          stages:
+          lessons:
             Growth Mindset:
               name: Нагласи за разтеж
             Impact of Computer Science:
@@ -736,12 +775,13 @@ bg:
               name: Стратегии за преподаване
             What is ECS?:
               name: Какво е ECS?
+          student_description: 'Фаза 1: Представяне онлайн'
         algebraPD-NexTech:
           title: Компютърни науки в алгебрата
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
           logo_image: nextech_logo.png
-          stages:
+          lessons:
             Course Overview:
               name: Преглед на курса
             Evaluation Blocks:
@@ -754,12 +794,13 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
+          student_description: 'Фаза 1: Представяне онлайн'
         algebraPD-iZone:
           title: Компютърни науки в алгебрата
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
           logo_image: izone_logo.png
-          stages:
+          lessons:
             Course Overview:
               name: Преглед на курса
             Evaluation Blocks:
@@ -772,12 +813,13 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
+          student_description: 'Фаза 1: Представяне онлайн'
         sciencePD-NexTech:
           title: Компютърни науки в науката PD
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
           logo_image: nextech_logo.png
-          stages:
+          lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
             Computational Thinking And The Framework For K-12 Science Education:
@@ -802,12 +844,13 @@ bg:
               name: Използване на модели в класната стая
             What to Expect:
               name: Какво да очаквате
+          student_description: 'Фаза 1: Представяне онлайн'
         sciencePD-iZone:
           title: Компютърни науки в науката PD
           description: 'Фаза 1: Представяне онлайн'
           description_short: 'Фаза 1: Представяне онлайн'
           logo_image: izone_logo.png
-          stages:
+          lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
             Computational Thinking And The Framework For K-12 Science Education:
@@ -832,27 +875,29 @@ bg:
               name: Използване на модели в класната стая
             What to Expect:
               name: Какво да очаквате
+          student_description: 'Фаза 1: Представяне онлайн'
         sciencePD2:
-          title: 'Компютърни науки в науката PD'
+          title: Компютърни науки в науката PD
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         sciencePD3:
-          title: 'Компютърни науки в науката PD'
+          title: Компютърни науки в науката PD
         cspunit2:
           description_short: В този курс се въвеждат фундаменталните понятия на компютърното програмиране, които отключват възможността да се създават стойностни, интерактивни приложения.
-          stages:
+          lessons:
             The Internet:
               name: Интернет
         algebraPD2a:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Booleans:
               name: Booleans
             Defining Variables:
@@ -871,11 +916,12 @@ bg:
               name: Стрингове и изображения
             The Design Recipe:
               name: Рецепта за дизайн
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         allthethings:
           title: Всички неща!
           description: Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).
           description_short: Всички типове нива за тестване на потребителски интерфейс
-          stages:
+          lessons:
             AppLab:
               name: Лаборатория за приложения
             Artist:
@@ -910,11 +956,12 @@ bg:
               name: Компресия на текста
             Web Lab:
               name: Web Lab
+          student_description: Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Booleans:
               name: Booleans
             Course Overview:
@@ -937,8 +984,9 @@ bg:
               name: Учителско табло
             Writing Contracts:
               name: Писане на Договори
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: Лаборатория за приложения
             Internet Simulator:
@@ -946,7 +994,7 @@ bg:
             Welcome!:
               name: Добре дошли!
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: Основи на компютърните науки
             Next Steps:
@@ -954,85 +1002,74 @@ bg:
         ECSPD2:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
               name: Изводи
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         algebraPD2:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Teacher Dashboard:
               name: Учителско табло
             The Design Recipe:
               name: Рецепта за дизайн
             Welcome!:
               name: Добре дошли!
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         sciencePD2b:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         science-PD2:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         Equity-OnlinePD:
-          stages:
+          lessons:
             Next Steps:
               name: Следващи стъпки
         sciencePD2b-iZone:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         ECSPD2-iZone:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
               name: Изводи
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         ECSPD2-NexTech:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
               name: Изводи
+          student_description: 'Фаза 2 онлайн: Смесено лятно учене'
         asUnplugged:
-          stages:
+          lessons:
             Binary Bracelets:
               name: Двоични гривни
             Building a Foundation:
@@ -1054,24 +1091,24 @@ bg:
         algebraPD3a:
           title: Компютърни науки в алгебрата
         ECSPD3-Unit2:
-          stages:
+          lessons:
             Teaching Strategies:
               name: Стратегии за преподаване
         ECSPD3-Unit3:
-          stages:
+          lessons:
             Teaching Strategies:
               name: Стратегии за преподаване
         ECSPD3-Unit4:
-          stages:
+          lessons:
             Teaching Strategies:
               name: Стратегии за преподаване
         cspunit4draft:
           description_short: Данни
-          stages:
+          lessons:
             Permanent Data Storage and Clicker Completion:
               name: 'Постоянно съхраняване на данни и кликър: завършване'
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
@@ -1086,46 +1123,52 @@ bg:
           title: 'Ледена епоха: игрална лаборатория'
           description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
           description_short: Създай история или си направи игра с Ледена епоха игрална лаборатория!
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: 'Ледена епоха: игрална лаборатория'
+          student_description: Създай история или си направи игра с Ледена епоха игрална лаборатория!
         cspunit3temp:
-          title: "CSP блок 3 - програмиране"
+          title: CSP блок 3 - програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: Програмиране
-          stages:
+          lessons:
             While Loops:
               name: Докато цикли
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
         gumball:
           title: Гъмбол- игрална лаборатория
           description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
           description_short: Създай история или си направи игра с Гъмбол в игралната лаборатория!
-          stages:
+          lessons:
             Gumball Play Lab:
               name: Гъмбол- игрална лаборатория
+          student_description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
         starwars:
           title: 'Междузвездни войни: Изграждане на галактика с код'
           description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Часът на кодирането 2015
+          student_description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
         starwarsblocks:
           title: 'Междузвездни войни: Изграждане на галактика с код'
           description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Часът на кодирането 2015
+          student_description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
         mc:
           title: Minecraft Hour of Code
           description: Използвайте блокове с код, за да преведете Steve или Alex през приключението в този Minecraft свят
           description_short: Изследвайте Minecraft света чрез код
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Часът на кодирането 2015
+          student_description: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
         ScienceP3OLPT3:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
@@ -1137,7 +1180,7 @@ bg:
         AlgebraA:
           description: Научете функционално програмиране чрез алгебра
           description_short: Научете функционално програмиране чрез алгебра
-          stages:
+          lessons:
             'Calc: Defining Variables':
               name: 'Изчисление: Определяне на променливите'
             'Calc: Evaluation Blocks':
@@ -1156,11 +1199,12 @@ bg:
               name: 'Ънплъгд: договори'
             'Unplugged: The Design Recipe':
               name: 'Ънплъгд: Напиши рецепта'
+          student_description: Научете функционално програмиране чрез алгебра
         AlgebraB:
-          title: 'Компютърни науки в алгебрата'
+          title: Компютърни науки в алгебрата
           description: Научете функционално програмиране чрез алгебра
           description_short: Научете функционално програмиране чрез алгебра
-          stages:
+          lessons:
             'Eval: Boolean Operators':
               name: 'Оценка: Булеви оператори'
             'Eval: Conditionals':
@@ -1183,11 +1227,12 @@ bg:
               name: 'Ънплъгд: Условия и Piecewise функции'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Ънплъгд: видео игрите и координатните системи'
+          student_description: Научете функционално програмиране чрез алгебра
         algebraPD1:
           title: Компютърни науки в алгебрата
           description: Научи алгебра чрез функционално програмиране
           description_short: 'Фаза 1: Представяне онлайн'
-          stages:
+          lessons:
             Course Overview:
               name: Преглед на курса
             Evaluation Blocks:
@@ -1200,10 +1245,14 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
+          student_description: Научи алгебра чрез функционално програмиране
         algebraPD3c:
           title: Компютърни науки в алгебрата
         csp1-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Binary Numbers:
               name: Бинарни числа
             Number Systems:
@@ -1215,7 +1264,10 @@ bg:
             The Internet:
               name: Интернет
         csp2-2017:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Encoding B&W Images:
               name: Кодиране черно-бели изображения
             Encoding Color Images:
@@ -1224,9 +1276,12 @@ bg:
               name: Компресия на текста
         csp3-2017:
           title: CSP блок 3 - програмиране
-          description: "Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти."
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: Програмиране
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             APIs and Function Parameters:
               name: API и параметри на функцията
             Creating Functions:
@@ -1239,8 +1294,18 @@ bg:
               name: Използване на прости команди
             Creating Functions with Parameters:
               name: Създаване на функции с параметри
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+        csp4-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csp5-2017:
-          stages:
+          lesson_groups:
+            csp5_2:
+              display_name: 'Глава 2: Програмиране със структури от данни'
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Beyond Buttons Toward Apps:
               name: Отвъд бутоните на приложенията
             Events Unplugged:
@@ -1249,13 +1314,13 @@ bg:
               name: Докато цикли
         CSDU3-Draft:
           description_short: Програмиране
-          stages:
+          lessons:
             Functions:
               name: Функции
             Velocity:
               name: Скорост
         2016_sciencePD_phase1:
-          stages:
+          lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
             Computational Thinking And The Framework For K-12 Science Education:
@@ -1289,7 +1354,7 @@ bg:
         algebraFacilitator:
           description: Научи алгебра чрез функционално програмиране
           description_short: Научи алгебра чрез функционално програмиране
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Блокове за оценка
             Introduction to PD:
@@ -1298,9 +1363,10 @@ bg:
               name: Учителско табло
             Why Computer Science belongs in Algebra:
               name: Защо компютърните науки са част от алгебрата
+          student_description: Научи алгебра чрез функционално програмиране
         sciencePD1:
           description_short: 'Фаза 1: Представяне онлайн'
-          stages:
+          lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Моделиране на базата на сложни адаптивни системи
             Computational Thinking And The Framework For K-12 Science Education:
@@ -1326,31 +1392,54 @@ bg:
             What to Expect:
               name: Какво да очаквате
         cspunit1-support:
-          stages:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
+          lessons:
             Sending Binary Messages:
               name: Изпращане на бинарни съобщения
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
         allthehiddenthings:
-          stages:
+          lessons:
             Game Lab:
               name: Играта лаборатория
         CSDU2-Draft:
-          stages:
+          lessons:
             Peer Review:
               name: Вашаят отзив
         CSDU5-Draft:
           description_short: Данни
         MikeTest:
-          stages:
+          lessons:
             Artist Functions:
               name: 'Художник: функции'
         artistExemplar:
           description_audience: Възраст 8 + (след курс 2)
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
         kinderTest:
-          stages:
+          lessons:
             'Bee: Conditionals':
               name: 'Пчела: условия'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: Събития
             Events Unplugged:
@@ -1364,13 +1453,13 @@ bg:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Цифрови граждани
             Songwriting:
               name: Писане на песен
         grade1:
-          stages:
+          lessons:
             Events:
               name: Събития
             Events Unplugged:
@@ -1384,11 +1473,11 @@ bg:
             Unspotted Bugs:
               name: Незабележивите бъгове
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
-              name: 'Художник - за циклите'
+              name: Художник - за циклите
             'Artist: Functions with Parameters':
-              name: 'Художник - Функции с Параметри'
+              name: Художник - Функции с Параметри
             'Artist: Variables':
               name: 'Художник: променливи'
             'Bee: For Loops':
@@ -1406,31 +1495,25 @@ bg:
             'Unplugged: Songwriting with Parameters':
               name: 'Ънплъгд: Писане на песни с параметри'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-up:
               name: Изводи
         ecs-unit2:
-          stages:
+          lessons:
             Teaching Strategies:
               name: Стратегии за преподаване
         ecs-unit3:
-          stages:
+          lessons:
             Teaching Strategies:
               name: Стратегии за преподаване
         ecs-unit4:
-          stages:
+          lessons:
             Teaching Strategies:
               name: Стратегии за преподаване
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'Художник: въвеждане на цикли'
             Bee Debugging:
@@ -1438,10 +1521,21 @@ bg:
             Bounce:
               name: Bounce
             'Farmer: While Loops':
-              name: 'Фермер - цикли "докато"'
+              name: Фермер - цикли "докато"
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
         csd3-2017:
           description_short: Програмиране
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Velocity:
               name: Скорост
             Functions:
@@ -1451,7 +1545,7 @@ bg:
             Conditionals:
               name: Условия
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -1461,7 +1555,7 @@ bg:
             The Big Event:
               name: Голямото събитие
         k5concepts:
-          stages:
+          lessons:
             Binary:
               name: Двоичен код
             Conditionals:
@@ -1484,60 +1578,82 @@ bg:
               name: Докато цикли
         algebrapdnext:
           description: Научи алгебра чрез функционално програмиране
-          stages:
+          lessons:
             Teacher Dashboard:
               name: Учителско табло
             The Design Recipe:
               name: Рецепта за дизайн
             Welcome!:
               name: Добре дошли!
+          student_description: Научи алгебра чрез функционално програмиране
+        csd1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
         basketball:
           title: Направете баскетболна игра
           description_short: Направете баскетболна игра
           description: Направете баскетболна игра
-          stages:
+          lessons:
             Bounce:
               name: Bounce
-        fesbinary:
-          title: Двоичен код
-          stages:
-            Binary Bracelets:
-              name: Двоични гривни
-            Binary Images:
-              name: Бинарни образи(картини)
-            Play Lab:
-              name: Театрална лаборатория
+          student_description: Направете баскетболна игра
         csd2-2017:
-          stages:
+          lessons:
             Peer Review:
               name: Вашаят отзив
             Lists:
               name: Списъци
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
         minecraft:
           title: Minecraft Hour of Code Дизайнер
           description_short: Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft.
           description: Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft.
-          stages:
+          lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft Hour of Code Дизайнер
+          student_description: Програмирай животни и други Minecraft същества в своя собствена версия на Minecraft.
         flappy-impact-study:
-          stages:
+          lessons:
             Flappy Code:
               name: Flappy код
         coursea-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
             Going Places Safely:
               name: Достигаме безопасно до места
         courseb-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
             Your Digital Footprint:
               name: Вашите дигитални отпечатъци
         coursec-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
             Binary Bracelets:
@@ -1547,7 +1663,7 @@ bg:
             Building a Foundation:
               name: Изграждане на база
         coursed-draft:
-          stages:
+          lessons:
             Conditionals with Cards:
               name: Условия с карти
             Digital Citizenship:
@@ -1561,7 +1677,12 @@ bg:
             Introduction:
               name: Въведение
         coursee-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+            extra_course_content:
+              display_name: Допълнително учебно съдържание
+          lessons:
             Digital Citizenship:
               name: Цифрови граждани
             Internet:
@@ -1573,7 +1694,10 @@ bg:
             Conditionals:
               name: Условия
         coursef-draft:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+          lessons:
             Digital Citizenship:
               name: Цифрови граждани
             Envelope Variables:
@@ -1588,57 +1712,91 @@ bg:
               name: 'Ледена епоха: игрална лаборатория'
         classic-hoc-impact-study:
           description_short: Опитайте основите на програмирането с много забавни герои!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Час на кодирането 2013
         hoc-impact-study:
           description_short: Опитайте основите на програмирането с много забавни герои!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Час на кодирането 2013
         sports:
           title: Програмирай своя спортна игра
           description_short: Програмирай свой собствен спорт
           description: Програмирай свой собствен спорт
-          stages:
+          lessons:
             Sports:
               name: Спорт
+          student_description: Програмирай свой собствен спорт
         2016_sciencePD-phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
         2016_sciencePD_phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
         sciencepd4:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
         csf2harvey:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+          lessons:
             Binary:
               name: Двоичен код
         sciencepd5:
-          stages:
+          lessons:
             Welcome!:
               name: Добре дошли!
             Wrap-Up:
               name: Заключение
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+            practice:
+              display_name: Учителски практики
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+            cspSurvey:
+              display_name: Проучване
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Списъци
             For Loops:
@@ -1646,15 +1804,15 @@ bg:
             Functions with Parameters:
               name: Функции с параметри
         workshop-gamelab:
-          stages:
+          lessons:
             Introduction:
               name: Въведение
         coursed-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Въведение
         coursee-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Въведение
             Conditionals:
@@ -1662,7 +1820,7 @@ bg:
             'Real Life Algorithms: Dice Race':
               name: 'Алгоритми от реалния живот: игра на зарове'
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Списъци
             For Loops:
@@ -1672,7 +1830,7 @@ bg:
             Functions with Parameters_:
               name: Функции с параметри
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Променливи
             Conditionals:
@@ -1682,17 +1840,17 @@ bg:
             Functions:
               name: Функции
         csd3-old:
-          stages:
+          lessons:
             Velocity:
               name: Скорост
             Functions:
               name: Функции
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Списъци
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Променливи
             Conditionals:
@@ -1702,19 +1860,23 @@ bg:
             Functions:
               name: Функции
             'null':
-              name: 'нула'
+              name: нула
         coursef-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Въведение
             Ice Age Play Lab:
               name: 'Ледена епоха: игрална лаборатория'
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csd2-old:
-          stages:
+          lessons:
             Peer Review:
               name: Вашаят отзив
         artist-and-bb8:
-          stages:
+          lessons:
             F5 Minecraft:
               name: F5 Minecraft
             Ice Age Play Lab:
@@ -1722,23 +1884,26 @@ bg:
             Bounce:
               name: Bounce
         coursea-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
         courseb-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
         coursec-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
         coursed-2017:
-          stages:
+          lessons:
             Nested Loops:
               name: Вмъкнати цикли
         coursee-2017:
-          stages:
+          lesson_groups:
+            extra_course_content:
+              display_name: Допълнително учебно съдържание
+          lessons:
             Ice Age Play Lab:
               name: 'Ледена епоха: игрална лаборатория'
             Envelope Variables:
@@ -1752,15 +1917,94 @@ bg:
             Nested Loops:
               name: Вмъкнати цикли
         coursef-2017:
-          stages:
+          lessons:
             Conditionals in Minecraft:
               name: Условия в Minecraft
               description_student: Избегни лавата! Тук ще научиш за условията в света на Minecraft.
               description_teacher: Този урок дава на учевиците възможност да учат и практикуват с услонията. Той предлага герои и настройки от Minecraft, и учениците ще извършват задачи като минни и строителни конструкции, като използват свои програми.
             Building a Foundation:
               name: Изграждане на база
+        csp-ap:
+          lesson_groups:
+            csp_ap_1:
+              display_name: 'Глава 1: AP техническа настройка'
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
         express-2017:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+          lessons:
             Introduction:
               name: Въведение
             Internet:
@@ -1782,17 +2026,23 @@ bg:
             Nested Loops:
               name: Вмъкнати цикли
         pre-express-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
             Spelling Bee:
               name: Правопис
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: Благодаря
         csp3-research-mxghyt:
-          stages:
+          title: CSP блок 3 - програмиране
+          description_short: Програмиране
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             The Need For Programming Languages:
               name: Нуждата от програмни езици
             Using Simple Commands:
@@ -1803,11 +2053,12 @@ bg:
               name: API и параметри на функцията
             Looping and Random Numbers:
               name: Цикли и случайни числа
-          title: CSP блок 3 - програмиране
-          description_short: Програмиране
-          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
         e-f-ramp:
-          stages:
+          lesson_groups:
+            extra_course_content:
+              display_name: Допълнително учебно съдържание
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Nested Loops:
@@ -1819,7 +2070,7 @@ bg:
             Crowdsourcing:
               name: Crowdsourcing кампания
         new-d:
-          stages:
+          lessons:
             Introduction:
               name: Въведение
             Nested Loops:
@@ -1835,7 +2086,10 @@ bg:
             Building a Foundation:
               name: Изграждане на база
         new-express:
-          stages:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+          lessons:
             Introduction:
               name: Въведение
             Conditionals in Minecraft:
@@ -1845,7 +2099,10 @@ bg:
             Nested Loops:
               name: Вмъкнати цикли
         new-e:
-          stages:
+          lesson_groups:
+            extra_course_content:
+              display_name: Допълнително учебно съдържание
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Conditionals:
@@ -1855,7 +2112,7 @@ bg:
             Crowdsourcing:
               name: Crowdsourcing кампания
         new-f:
-          stages:
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Ice Age Play Lab:
@@ -1869,7 +2126,7 @@ bg:
             Songwriting with Parameters:
               name: Композиране на песен с параметри
         csp3-staging:
-          stages:
+          lessons:
             The Need For Programming Languages:
               name: Нуждата от програмни езици
             Using Simple Commands:
@@ -1881,16 +2138,28 @@ bg:
             Looping and Random Numbers:
               name: Цикли и случайни числа
         hero:
-          stages:
+          title: 'Minecraft: Пътуването на героя'
+          description_short: Minecraft се завръща с чисто нова дейност за часът на кода!
+          description: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код.
+          lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: Пътуването на героя в часът на кода'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
-          title: 'Minecraft: Пътуването на героя'
-          description_short: Minecraft се завръща с чисто нова дейност за часът на кода!
-          description: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код.
+          student_description: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код.
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         course-e-2018:
-          stages:
+          lesson_groups:
+            extra_course_content:
+              display_name: Допълнително учебно съдържание
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Nested Loops:
@@ -1904,7 +2173,7 @@ bg:
             Crowdsourcing:
               name: Crowdsourcing кампания
         course-f-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Introduction:
@@ -1920,13 +2189,17 @@ bg:
             Songwriting with Parameters:
               name: Композиране на песен с параметри
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: Списъци
             For Loops:
               name: За циклите
         csd3-1819draft:
-          stages:
+          description_short: Програмиране
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Variables:
               name: Променливи
             Conditionals:
@@ -1935,10 +2208,12 @@ bg:
               name: Скорост
             Functions:
               name: Функции
-          description_short: "Програмиране"
         csd3-2018:
-          description_short: "Програмиране"
-          stages:
+          description_short: Програмиране
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Variables:
               name: Променливи
             Conditionals:
@@ -1948,11 +2223,14 @@ bg:
             Functions:
               name: Функции
         csd2-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Lists:
               name: Списъци
         coursea-2018:
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: Незабележивите бъгове
             'Persistence & Frustration: Stevie and the Marbles':
@@ -1964,7 +2242,7 @@ bg:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стив и Големият проект
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Програмиране на милиметрова хартия
             Introduction:
@@ -2002,7 +2280,7 @@ bg:
             Graph Paper Programming:
               name: Програмиране на милиметрова хартия
         courseb-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
             Your Digital Footprint:
@@ -2010,7 +2288,7 @@ bg:
             Move It, Move It:
               name: Преместете го, преместете го
         coursed-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Програмиране на милиметрова хартия
             Introduction:
@@ -2030,7 +2308,7 @@ bg:
             Relay Programming:
               name: Повтори програмирането
         coursec-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             'Loops: Getting Loopy':
@@ -2040,11 +2318,17 @@ bg:
             Binary Bracelets:
               name: Двоични гривни
         csd6-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Functions with Parameters:
               name: Функции с параметри
         coursee-2018:
-          stages:
+          lesson_groups:
+            extra_course_content:
+              display_name: Допълнително учебно съдържание
+          lessons:
             'Programming: My Robotic Friends':
               name: Моите приятели роботи
             Building a Foundation:
@@ -2062,7 +2346,7 @@ bg:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Моите приятели роботи
             Building a Foundation:
@@ -2084,7 +2368,10 @@ bg:
             Conditionals with Cards:
               name: Условия с карти
         csp1-2018:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Sending Binary Messages:
               name: Изпращане на бинарни съобщения
             Number Systems:
@@ -2095,8 +2382,23 @@ bg:
               name: Изпращане на числа
             The Internet:
               name: Интернет
+        csd1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csp2-2018:
-          stages:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: Част 1 - Дигитална информация
+          lessons:
             Text Compression:
               name: Компресия на текста
             Encoding B&W Images:
@@ -2107,7 +2409,10 @@ bg:
           title: CSP блок 3 - програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: Програмиране
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             The Need For Programming Languages:
               name: Нуждата от програмни езици
             Using Simple Commands:
@@ -2120,12 +2425,136 @@ bg:
               name: Цикли и случайни числа
             Creating Functions with Parameters:
               name: Създаване на функции с параметри
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csp5-2018:
-          stages:
+          lesson_groups:
+            csp5_2:
+              display_name: 'Глава 2: Програмиране със структури от данни'
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             While Loops:
               name: Докато цикли
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
         pre-express-2018:
-          stages:
+          lessons:
             'Debugging: Unspotted Bugs':
               name: Незабележивите бъгове
             'Persistence & Frustration: Stevie and the Marbles':
@@ -2140,22 +2569,47 @@ bg:
               name: Вашите дигитални отпечатъци
             'Persistence & Frustration: Stevie and the Big Project':
               name: Стив и Големият проект
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
         frozen-2018:
-          stages:
+          lessons:
             Artist:
               name: Художник
         frozen-2018-test:
-          stages:
+          lessons:
             Artist:
               name: Художник
         frozen-2018-test-b:
-          stages:
+          lessons:
             Artist:
               name: Художник
         aquatic:
           title: 'Minecraft: Подводното пътешествие'
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: Променливи
+            csf_data:
+              display_name: Данни
+            csf_for_loops:
+              display_name: За циклите
+            csf_internet:
+              display_name: Интернет
+            csf_digcit:
+              display_name: Цифрови граждани
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Conditionals with Cards:
@@ -2171,7 +2625,18 @@ bg:
             Crowdsourcing:
               name: Crowdsourcing кампания
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_binary:
+              display_name: Двоичен код
+            csf_digcit:
+              display_name: Цифрови граждани
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Програмиране на милиметрова хартия
             Relay Programming:
@@ -2185,7 +2650,14 @@ bg:
             Artist Binary:
               name: 'Художник: Бинарен код'
         coursee-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_nested_loops:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+          lessons:
             Building a Foundation:
               name: Изграждане на база
             Nested Loops:
@@ -2203,7 +2675,18 @@ bg:
             Songwriting:
               name: Писане на песен
         express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+          lessons:
             Relay Programming:
               name: Повтори програмирането
             Conditionals with Cards:
@@ -2222,28 +2705,66 @@ bg:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing кампания
+        csd1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         andrea-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+          lessons:
             'null':
-              name: 'нула'
+              name: нула
         coursec-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_binary:
+              display_name: Двоичен код
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Реални алгоритми: Хартиени самолети'
             'Events: The Big Event':
               name: Голямото събитие
             Binary Bracelets:
               name: Двоични гривни
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         gamelab:
           title: Играта лаборатория
         coursea-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+          lessons:
             'Programming: Happy Maps':
               name: Щастливи карти
             Going Places Safely:
               name: Достигаме безопасно до места
         courseb-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+          lessons:
             Move It, Move It:
               name: Преместете го, преместете го
             Your Digital Footprint:
@@ -2251,7 +2772,12 @@ bg:
             'Loops: Getting Loopy':
               name: Да повтаряме
         pre-express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+          lessons:
             Move It, Move It:
               name: Преместете го, преместете го
             Your Digital Footprint:
@@ -2259,16 +2785,22 @@ bg:
             Spelling Bee:
               name: Правопис
         removed19:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Реални алгоритми: Засадете семената'
         csd2-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Lists:
               name: Списъци
         csd3-2019:
-          description_short: "Програмиране"
-          stages:
+          description_short: Програмиране
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Variables:
               name: Променливи
             Conditionals:
@@ -2277,16 +2809,39 @@ bg:
               name: Скорост
             Functions:
               name: Функции
+        csd4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csd6-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Functions with Parameters:
               name: Функции с параметри
         csp4-pilot:
-          stages:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+            required:
+              display_name: Общ преглед
+          lessons:
             Surveys:
               name: Проучвания
         csp1-2019:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Sending Binary Messages:
               name: Изпращане на бинарни съобщения
             Number Systems:
@@ -2298,7 +2853,12 @@ bg:
             The Internet:
               name: Интернет
         csp2-2019:
-          stages:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: Част 1 - Дигитална информация
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Text Compression:
               name: Компресия на текста
             Encoding B&W Images:
@@ -2309,7 +2869,10 @@ bg:
           title: CSP блок 3 - програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
           description_short: Програмиране
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             The Need For Programming Languages:
               name: Нуждата от програмни езици
             Using Simple Commands:
@@ -2320,12 +2883,39 @@ bg:
               name: API и параметри на функцията
             Looping and Random Numbers:
               name: Цикли и случайни числа
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+        csp4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csp5-2019:
-          stages:
+          lesson_groups:
+            csp5_2:
+              display_name: 'Глава 2: Програмиране със структури от данни'
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             While Loops:
               name: Докато цикли
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csp1-pilot:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            required:
+              display_name: Общ преглед
+          lessons:
             Number Systems:
               name: Бройни системи
             Sending Binary Messages:
@@ -2333,24 +2923,124 @@ bg:
             Binary Numbers:
               name: Бинарни числа
         time4csdemo:
-          stages:
+          lessons:
             Crowdsourcing:
               name: Crowdsourcing кампания
             Conditionals with Cards:
               name: Условия с карти
             Building a Foundation:
               name: Изграждане на база
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: Програмиране на милиметрова хартия
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+            required:
+              display_name: Общ преглед
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
         csd2-pilot:
-          stages:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Lists:
               name: Списъци
         csd3-pilot:
-          description_short: "Програмиране"
-          stages:
+          description_short: Програмиране
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
             Variables:
               name: Променливи
             Conditionals:
@@ -2361,9 +3051,747 @@ bg:
               name: Функции
             Sprite Properties:
               name: Свойства на Спрайта
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+            required:
+              display_name: Общ преглед
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+          lessons:
+            Focus Area 1:
+              name: Учебна програма
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+            content:
+              display_name: Съдържание
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+            required:
+              display_name: Общ преглед
         peru-2019:
-          stages:
+          lessons:
             Introduction:
               name: Въведение
             Nested Loops:
               name: Вмъкнати цикли
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+            required:
+              display_name: Общ преглед
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: Следващи стъпки
+          lessons:
+            Computer Science Fundamentals:
+              name: Основи на компютърните науки
+            Next Steps:
+              name: Следващи стъпки
+            Loops:
+              name: Повторения
+            Conditionals:
+              name: Условия
+            Events:
+              name: Събития
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        time4cs-original-unit-1:
+          lessons:
+            Conditionals:
+              name: Условия
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_conditionals:
+              display_name: Условия
+            csf_nested_loops:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+          lessons:
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+            Conditionals with Cards:
+              name: Условия с карти
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_events:
+              display_name: Събития
+            csf_digcit:
+              display_name: Цифрови граждани
+          lessons:
+            Conditionals:
+              name: Условия
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_events:
+              display_name: Събития
+            csf_digcit:
+              display_name: Цифрови граждани
+          lessons:
+            Conditionals:
+              name: Условия
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Общ преглед
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+        csd2-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd4-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd6-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
+            Functions with Parameters:
+              name: Функции с параметри
+        csd3-2020:
+          description_short: Програмиране
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+          lessons:
+            Variables:
+              name: Променливи
+            Sprite Properties:
+              name: Свойства на Спрайта
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+            Text:
+              name: Текст
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+          lessons:
+            Going Places Safely:
+              name: Достигаме безопасно до места
+            'Programming: Happy Maps':
+              name: Щастливи карти
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+          lessons:
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+            Move It, Move It:
+              name: Преместете го, преместете го
+            'Loops: Getting Loopy':
+              name: Да повтаряме
+        coursec-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_binary:
+              display_name: Двоичен код
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+          lessons:
+            Binary Bracelets:
+              name: Двоични гривни
+            'Events: The Big Event':
+              name: Голямото събитие
+        coursed-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_binary:
+              display_name: Двоичен код
+            csf_digcit:
+              display_name: Цифрови граждани
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
+            Relay Programming:
+              name: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+            'Unplugged: Binary':
+              name: Бинарни образи(картини)
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+            Digital Citizenship:
+              name: Цифрови граждани
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_nested_loops:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+          lessons:
+            'Functions: Songwriting':
+              name: Писане на песен
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_variables:
+              display_name: Променливи
+            csf_data:
+              display_name: Данни
+            csf_for_loops:
+              display_name: За циклите
+          lessons:
+            Envelope Variables:
+              name: Плик с променливи
+            For Loop Fun:
+              name: Повторения за забавление
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+          lessons:
+            Spelling Bee:
+              name: Правопис
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
+            cspSurvey:
+              display_name: Проучване
+          lessons:
+            Binary Numbers:
+              name: Бинарни числа
+        csp3-virtual:
+          description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+          description_short: Програмиране
+          lessons:
+            The Need For Programming Languages:
+              name: Нуждата от програмни езици
+            Using Simple Commands:
+              name: Използване на прости команди
+            Creating Functions:
+              name: Създаване на функции
+            APIs and Function Parameters:
+              name: API и параметри на функцията
+            Looping and Random Numbers:
+              name: Цикли и случайни числа
+          student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
+        csp5-virtual:
+          lessons:
+            While Loops:
+              name: Докато цикли
+            Variables:
+              name: Променливи
+        virtual-holding-place:
+          lesson_groups:
+            content:
+              display_name: Съдържание
+          lessons:
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+        code-break:
+          lessons:
+            Algorithms:
+              name: Алгоритми
+            Events:
+              name: Събития
+        csp5-virtual-part2:
+          lesson_groups:
+            csp5_2:
+              display_name: 'Глава 2: Програмиране със структури от данни'
+          lessons:
+            While Loops:
+              name: Докато цикли
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Повторения
+            Events:
+              name: Събития
+            Conditionals:
+              name: Условия
+            Functions:
+              name: Функции
+            Variables:
+              name: Променливи
+            For Loops:
+              name: За циклите
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Следващи стъпки
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd3-virtual:
+          description_short: Програмиране
+          lessons:
+            Variables:
+              name: Променливи
+            Sprite Properties:
+              name: Свойства на Спрайта
+            Text:
+              name: Текст
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции
+          lesson_groups:
+            csd3_1:
+              display_name: Съдържание
+            csd3_2:
+              display_name: Съдържание
+            cspSurvey:
+              display_name: Съдържание
+        ui-test-script-in-course-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-script-in-course-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-versioned-script-2017:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        ui-test-versioned-script-2019:
+          lesson_groups:
+            lg_1:
+              display_name: Съдържание
+        curriculum-sandbox-levels:
+          lessons:
+            csf:
+              name: CS основи
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Урок 14
+            lesson15:
+              name: Урок 15
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Въведение
+            lessonGroup-3:
+              display_name: Променливи
+        csd1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd3-2021:
+          description_short: Програмиране
+          lessons:
+            Variables:
+              key: Променливи
+              name: Променливи
+            Sprite Properties:
+              key: Свойства на Спрайта
+              name: Свойства на Спрайта
+            Text:
+              key: Текст
+              name: Текст
+            Conditionals:
+              key: Условия
+              name: Условия
+            Velocity:
+              key: Скорост
+              name: Скорост
+            Functions:
+              key: Функции
+              name: Функции
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Функции с параметри
+              name: Функции с параметри
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Бинарни числа
+              name: Бинарни числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Щастливи карти
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Преместете го, преместете го
+              name: Преместете го, преместете го
+            'Loops: Getting Loopy':
+              name: Да повтаряме
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Двоични гривни
+              name: Двоични гривни
+            'Events: The Big Event':
+              name: Голямото събитие
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_binary:
+              display_name: Двоичен код
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
+            Relay Programming:
+              key: Повтори програмирането
+              name: Повтори програмирането
+            Conditionals with Cards:
+              key: Условия с карти
+              name: Условия с карти
+            'Unplugged: Binary':
+              key: 'Ънплъгд: двоичен код'
+              name: Бинарни образи(картини)
+            Artist Binary:
+              key: 'Художник: Бинарен код'
+              name: 'Художник: Бинарен код'
+          lesson_groups:
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_binary:
+              display_name: Двоичен код
+            csf_digcit:
+              display_name: Цифрови граждани
+            lessonGroup-6:
+              display_name: Цифрови граждани
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Условия
+            'Functions: Songwriting':
+              name: Писане на песен
+          lesson_groups:
+            ramp_up:
+              display_name: Вмъкнати цикли
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_nested_loops:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Плик с променливи
+              name: Плик с променливи
+            Internet:
+              key: Интернет
+              name: Интернет
+            For Loop Fun:
+              key: Повторения за забавление
+              name: Повторения за забавление
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_variables:
+              display_name: За циклите
+            csf_data:
+              display_name: Данни
+            csf_for_loops:
+              display_name: За циклите
+            lessonGroup-8:
+              display_name: Променливи
+            lessonGroup-9:
+              display_name: изтрива
+            lessonGroup-7:
+              display_name: Цифрови граждани
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Въведение
+            lessonGroup-3:
+              display_name: Променливи
+            variables:
+              display_name: Променливи
+        csd4-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csdSurvey:
+              display_name: Проучване
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Урок 14
+            lesson15:
+              name: Урок 15
+            lesson17:
+              name: Урок 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Съдържание
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Въведение
+            Loops:
+              key: Повторения
+              name: Повторения
+            Events:
+              key: Събития
+              name: Събития
+            Conditionals:
+              key: Условия
+              name: Условия
+            Functions:
+              key: Функции
+              name: Функции
+            Variables:
+              key: Променливи
+              name: Променливи
+            For Loops:
+              key: За циклите
+              name: За циклите
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Въведение
+            k5_next_steps_1:
+              display_name: Следващи стъпки
+            Introduction:
+              display_name: Въведение
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Проучване

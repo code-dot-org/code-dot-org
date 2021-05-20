@@ -11,12 +11,14 @@ theme: responsive
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.37"}
-%script{type: "text/javascript", src: "/js/maplace.min.js"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
-%script{type: "text/javascript", src: "/js/class-search.js"}
 %script{type: "text/javascript", src: "/js/jquery.colorbox-min.js"}
 %script{type: "text/javascript", src: "/js/jquery.sticky.js"}
+%link{href:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css', rel:'stylesheet'}
+%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
+%script{src:'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js'}
+%link{href:'https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css', rel:'stylesheet', type:'text/css'}
+%script{type: "text/javascript", src: webpack_asset_path('js/code.org/public/learn/local.js')}
 %link{rel: "stylesheet", type: "text/css", href: "/css/selectize.bootstrap3.css"}/
 %link{rel: "stylesheet", type: "text/css", href: "/css/colorbox.css"}/
 %link{rel: "stylesheet", type: "text/css", href: "/css/class-search.css"}/
@@ -25,6 +27,29 @@ theme: responsive
   %script{src: "/js/es5-shim.min.js"}
 
 %link{href: "/css/learn-tabs.css", rel: "stylesheet"}
+:css
+  .geocoder {
+    z-index: 1;
+    left: 50%;
+    margin-top: 0px;
+    display: none;
+  }
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+  }
+  .mapboxgl-ctrl-geocoder--button {
+    height: 0;
+  }
+  .suggestions li {
+    text-indent: 0;
+    padding-left: 0;
+  }
+  .suggestions li:before {
+    content: none;
+  }
+  .selectize-input {
+    z-index: 0;
+  }
 
 %h1 Find a Local Computer Science Class
 
@@ -36,7 +61,7 @@ theme: responsive
   .form-section.row
     .form-group.col-xs-6
       %div
-        %input#location.form-control.input-lg{name: "location", placeholder: "Search my location", type: "text", value: search_location}/
+        %div#mapboxgeocoder{class: 'geocoder'}
     .form-group.submit-btn
       %button#btn-submit.input-lg{type: "submit", style: "margin-top: 0px"} Search
   #class-search-facets.form-section.row
@@ -75,8 +100,10 @@ theme: responsive
   #class-search-controls.col-xs-5
     #controls
   #class-search-map.col-xs-7
-    #gmap{style: "width: 553px; height: 640px; padding: 10px; padding: 3px; border: 3px solid #ddd;"}
+    #map{style: "width: 553px; height: 640px; padding: 10px; padding: 3px; border: 3px solid #ddd;"}
 .row
   #class-search-error.col-xs-12{style: 'margin-top: 2em; display: none;'}
 
 #location-details{style: 'display: none'}
+:javascript
+    mapboxgl.accessToken = "#{CDO.mapbox_access_token}";

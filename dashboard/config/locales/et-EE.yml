@@ -24,6 +24,8 @@ et:
         parent_email: Lapsevanema/hooldaja e-posti aadress
         personal_email: Isiklik e-posti aadress <a href="%{url}"> (vajuta siia, kui
           teil ei ole e-posti aadressi)</a>
+        personal_email_markdown: Isiklik e-posti aadress [(vajuta siia, kui teil ei
+          ole e-posti aadressi)](%{url})
         username: Kasutajanimi
         password: Salasõna
         password_confirmation: Salasõna kinnitus
@@ -48,14 +50,10 @@ et:
   okay: Olgu
   or: või
   heading_x_of_y: "%{heading} (leht %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Lisa õpetaja:'
       placeholder: Üksuse kood (ABCDEF)
-      instructions: Palun sisesta kood, mille andis sulle su õpetaja. See on 6-kohaline
-        tähtedest koosnev kood, näiteks "ABCDEF".
       instructions_short: Sisestage oma 6-täheline sektsiooni kood
-    submit: Lisa õpetaja
   add_hint_form:
     placeholder: Palun sisesta oma vihje siia
     submit: Lisa vihje
@@ -83,9 +81,6 @@ et:
   auth:
     sign_in_with: Logige sisse %{provider}
     signed_in: Olete sisse logitud!
-    signed_out: Olete välja loginud <a href="%{url}">Code.org</a>.
-    sign_out_of: Kasutasid %{provider} sisselogimiseks. <a href="%{url}">Vajuta siia</a>
-      et logida välja%{provider}.
     already_signedup: Oled juba registreerunud?
     notyet_signedup: Pole veel liitunud?
     google_oauth2: Google'i konto
@@ -105,6 +100,9 @@ et:
     overview: Registreeri kasutajaks, et oma edusamme jälgida ja tundi planeerida.
       <a href="/">Mõistatusi ja nende erinevaid etappe on võimalik</a> ilma kasutajakontota
       sirvida, kuid projektide edusammude salvestamiseks on vaja kasutajat.
+    overview_markdown: Registreeri kasutajaks, et oma edusamme jälgida ja tundi planeerida.
+      [Mõistatusi ja nende erinevaid etappe on võimalik](/) ilma kasutajakontota sirvida,
+      kuid projektide edusammude salvestamiseks on vaja kasutajat.
     hoc_already_signed_up_heading: Alusta ilma sisse logimata
     hoc_already_signed_up_content: Olete registreerinud KoodiTunni külalisõpetajaks!
       Sina ja sinu õpilased ei pea Code Studiosse sisse logima, et sellest üritusest
@@ -129,14 +127,16 @@ et:
     valid_password: Sobilik salasõna!
     invalid_password: Salasõna peab olema vähemalt 6 tähemärgi pikkune
     mismatch_password: Sinu poolt sisestatud salasõnad ei ühti
-    student_terms: Nõustun Code.org<a href='http://code.org/tos'>teenusetingimustega</a>.
-      Kui ma olen alla 13 aasta vana, kinnitan ma käesoleva vormi esitamisega, et
-      mul on enda vanema või seadusliku eestkostja luba Code.org teenuseid kasutada.<br/><br/>E-posti
-      aadresse ei salvestata viisil, mis lubaks meil õpilastega ühendust võtta. Õpilased
-      ei saa Code.org'ilt e-kirju v.a parooli seadistamiseks. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>,
-      et saada rohkem informatsiooni.
-    teacher_terms: Nõustun Code.org teenusetingimustega. Vaata meie<a href='http://code.org/privacy'>privaatsuspoliitikat</a>,
-      et saada rohkem informatsiooni.
+    agree_us_data_transfer_student: "**Nõustun, et Code.org võib edastada andmeid
+      (muu hulgas isikuandmeid) selle kohta, kuidas ma seda saiti kasutan, Ameerika
+      Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda."
+    agree_us_data_transfer_teacher: "**Nõustun, et Code.org võib edastada andmeid
+      (muu hulgas isikuandmeid) selle kohta, kuidas ma (ja minu õpilased) seda saiti
+      kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda."
+    data_collection_us: Saan aru, et Code.org on Ameerika Ühendriikide mittetulunduslik
+      veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda
+      minu koduriigis kehtivatest.
+    visit_privacy: Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).
     additional_information: Meil on vaja täiendavat teavet, et sind registreerida.
     user_type_label: Konto tüüp
     user_type_teacher: Õpetaja
@@ -196,6 +196,8 @@ et:
       ja Plants vs Zombielt! :-) %{name}
 
 '
+  parent_mailer:
+    parent_email_added_subject: Tere tulemast Code.org!
   teacher_mailer:
     new_teacher_subject: Tere tulemast Code.org!
   section:
@@ -204,6 +206,7 @@ et:
       word: Salajane sõna
       email: E-post
       google_classroom: Google Classroom
+      clever: Tark konto
   follower:
     invite_sent: Kutse saadetud
     added_teacher: "%{name} lisatud kui sinu õpetaja"
@@ -253,6 +256,8 @@ et:
       educate_hoc: KoodiTund
       teach: Õpeta
       about: Info
+      legal_privacy: Privaatsuspoliitika
+      legal_tos: Teenuse tingimused
     user:
       classroom: Õpetaja kodulehekülg
       district_dashboard: Piirkondlik juhtpaneel
@@ -340,16 +345,15 @@ et:
     create_personal_login: Loo isiklik login
     create_personal_login_under_13_username: Kasutajanimi (ärge kasutage oma pärisnime!)
     create_personal_login_under_13_parent_email: Lapsevanem/hooldaja e-posti aadress
+    update_email: Uuenda
+    parent_guardian_email_label: Lapsevanema/hooldaja e-posti aadress
+    none: Mitte ükski
+    encrypted: krüpteeritud
   user_level:
     completed: Tehtud
     tried: Proovisin
   home:
     title: Code Studio
-    description: Code Stuudio on koduks online kursustele, mis on loodud Code.org
-      poolt.
-    lines_of_code: "%{lines_count} RIDA KOODI ON ÕPILASTE POOLT KIRJUTATUD"
-    lines_of_code_linebreak: "%{lines_count} koodiread <br/> kirjutatud %{students_count}
-      miljonite õpilaste poolt"
     all_courses: Kursuste 1, 2 ja 3 ülevaade
     lesson_plans: Tunnikavad
     signin_message: Oled juba registreerunud? %{link}
@@ -388,12 +392,6 @@ et:
     test_videos_help: Proovige meie uut videomängijat enda koolis
     try_beta_courses: Uus! Proovi meie beta kursuseid õpilastele kuni 5. klassini
     use_as_teacher: Kasuta seda lehte kui õpetaja
-    heading_hoc2014: "<h2>Koodi Tund </h2><h1>Kõikidele vanustele</h1>"
-    heading_elementary: "<h2>20-tunnised kursused </h2><h1> Arvutiteaduse Põhialused
-      (kõik vanused)</h1>"
-    heading_apps: "<h2>Lõbu</h2> <h1>Kõigile</h1>"
-    heading_tools: "<h2>Valmis järgmiseks sammuks?</h2><h1>Tööriistad keskkoolile</h1>"
-    heading_legacy: "<h2>Meie kiirendatud kursus</h2> <h1>Igas vanuses</h1>"
     your_gallery: Galerii
     no_primary_course: Proovige Code Studio kursust
     choose_next_course: Proovige Code Studio kursuseid. Selleks valige üks altpoolt
@@ -481,6 +479,7 @@ et:
     download: Lae video alla
     show_notes: Näita märkmeid
     show_video: Näita videot
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Sinu veebilehitsejat ei toetata. Palun asenda oma veebilehitseja<a
@@ -531,6 +530,8 @@ et:
       audience: Vanus 13+
       cta: Õpi kuidas
     dance:
+      title: Tantsuõhtu
+    dance-2019:
       title: Tantsuõhtu
     hoc:
       title: Klassikaline labürint
@@ -594,36 +595,14 @@ et:
       title: Vidinad
       audience: Vanuses 14 +
       cta: Õpi kuidas
-  gallery:
-    students_drew_these_with_code: Õpilased joonistasid need koodi kasutades!
-    students_made_these_with_code: Õpilased tegid need koodiga!
-    picture_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
-      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel, et nende programmide
-      tööd ise näha.
-    activity_count: Viimastel <b>%{days}</b> päevadel on õpilased joonistanud <b>%{count}</b>
-      pilte oma enda kirjutatud arvutiprogrammidega. Klikka piltidel ja ekraanipiltidel,
-      et näha nende programmide tööd.
-    want_to_make_your_own: Tahad teha enda oma?
-    how_to_save: Nende juhendite viimases staadiumis vajuta "Lõpeta" ja "Salvesta",
-      et oma töö galeriisse salvestada.
-    more: Rohkem &rarr;
-    caption_by_name_age: 'Nimi: %{name}, Vanus: %{age}'
-    caption_time_ago: "%{time_ago} tagasi"
-    header: Galerii
-    header_playlab: Play Lab
-    header_artist: Kunstnik
-    report_abuse: Teata rikkumisest
   landing:
-    prerelease: See kursus on <span class='betatext'> beeta</span>.  See tähendab,
-      et see ei ole  lõplik versioon ja  tuleb läbi vaadata, kui saadakse tagasisidet
-      ja parandused on tehtud.
-    prerelease_hoc2014: See õpetus on <span class='betatext'> Beta</span>.  Tuleb
-      läbi vaadata, kui on saabunud tagasiside ja parandused on tehtud.
     report_bug: Raporteeri veast
     support: Abi saamine
     help_resources: Abiinfo ja ressursid
     help_support: Abi & Klienditugi
     documentation: Dokumentatsioon
+  free_response:
+    placeholder: Sisesta siia oma vastus
   multi:
     wrong_title: Vale vastus
     wrong_body: Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!
@@ -691,16 +670,17 @@ et:
   age_interstitial:
     age: Sinu vanus
     header: Konto teabe värskendamine
-    message: Me uuendame praegu oma kogemust, et tagada teie turvalisus veel suuremal
-      määral. Selle jaoks vajame me, et kasutajad sisestaks siia oma vanuse.<br/>Nagu
-      alati, code.org ei rendi, müü ega jaga kasutajalt saadud informatsiooni kolmanda
-      osapoolega.
-    sign_out: Kui te ei soovi oma vanust avaldada, võite <a href="%{url}">välja logida</a>.
   terms_interstitial:
     title: Uuendatud teenusetingimused ja privaatsustingimused
     intro_desc: 'Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi. Muudatused
       kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta enam Code
       Studios <i> õpilaste kasutajakontode jaoks nende e-posti aadresse. </i> See
+      on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste
+      privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti
+      aadressile.'
+    intro_desc_markdown: 'Oleme uuendanud oma Teenusetingimusi ja Privaatsustingimusi.
+      Muudatused kehtivad alates 24. augustist 2016. Suurim muutus: me ei salvesta
+      enam Code Studios _õpilaste kasutajakontode jaoks nende e-posti aadresse._ See
       on meile oluline ja me loodame, et sellest saab haridustehnoloogias õpilaste
       privaatsuse uus standard. Kokkuvõtte teistest muudatustest saatsime teile e-posti
       aadressile.'
@@ -714,6 +694,7 @@ et:
     privacy_notice: Privaatsuse teade
     accept_label: Olen uuendustega nõus<a href="%{tos_url}" target="_blank">Teenusetingimused</a>ja<a
       href="%{privacy_url}" target="_blank">Privaatsustingimused</a>
+    accept_label_markdown: Olen uuendustega nõus[Teenusetingimused](%{tos_url})ja[Privaatsustingimused](%{privacy_url})
     accept: Nõustu
     print: Trüki välja
     reminder_desc: Oleme uuendanud oma<a href="%{tos_url}" target="_blank">Teenusetingimusi</a>ja<a
@@ -721,6 +702,10 @@ et:
       neid hoolikalt enne tingimustega nõustumist. Pange tähele, et meie nõuanded
       JavaScripti õpetamiseks ei pruugi teie õpilastele olla kättesaadavad enne, kui
       olete uuendatud tingimustega nõustunud.
+    reminder_desc_markdown: Oleme uuendanud oma[Teenusetingimusi](%{tos_url})ja[Privaatsustingimusi](%{privacy_url}).
+      Palun lugege neid hoolikalt enne tingimustega nõustumist. Pange tähele, et meie
+      nõuanded JavaScripti õpetamiseks ei pruugi teie õpilastele olla kättesaadavad
+      enne, kui olete uuendatud tingimustega nõustunud.
     review_terms: Vaata muudetud tingimusi
   school_info_interstitial:
     save: Salvesta
@@ -741,6 +726,9 @@ et:
     decline: Sulge
   zendesk_too_young_message: Vabandame, nooremad kasutajad ei saa meie kasutajatoe
     lehele sisse logida. Võid sirvida <a href="http://support.code.org"> support.code.org</a>
+    ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.
+  zendesk_too_young_message_markdown: Vabandame, nooremad kasutajad ei saa meie kasutajatoe
+    lehele sisse logida. Võid sirvida [support.code.org](http://support.code.org)
     ilma sisse logimata või paluda oma emal ja isal või õpetajal meiega ühendust võtta.
   progress:
     not_started: pole alustatud
@@ -812,40 +800,15 @@ et:
   peer_review:
     accepted:
       name: Nõustutud
-      description: "<strong>Jah</strong>, esitatud töö <strong>vastab</strong> vastab
-        nõuetele"
     rejected:
       name: Tagasi lükatud
-      description: "<strong>Ei</strong>, esitatud töö <strong>ei vasta</strong> nõuetele"
     escalated:
       name: Hoogustus
       description: Ma tahaksin, et juhendaja esitatud töö üle vaataks
     instructor_feedback: Õpetaja tagasiside
     peer_feedback: Kaaslaste tagasiside
     outdated: See tagasiside lisati varem esitatud versioonile
-  flex_category:
-    required: Ülevaade
-    content: Sisu
-    practice: Õpetamise tavad
     peer_review: Vastastikune hindamine
-    csf_f_2: Kursuse F sisu
-    csf_digcit: Digitaalne kodakondsus
-    csf_jigsaw: Pusle
-    csf_loops: Tsüklid
-    csf_events: Sündmused
-    csf_binary: Binaarne
-    csf_conditionals: Tingimuslaused
-    csf_nested_loops: Korduvad tsüklid
-    csf_functions: Funktsioonid
-    csf_variables: Muutujad
-    csf_for_loops: For tsükkel
-    csf_internet: Internet
-    cspSurvey: Uuring
-    csp_variables: Muutujad
-    csp_conditionals: Tingimuslaused
-    csp_functions: Funktsioonid
-    csp_lists: Loendid
-    csp_loops: Tsüklid
   external_links:
     disclaimer: Lahtiütlemine
     leaving_domain: Olete lahkumas sellest domeenist leheküljele, mida ei halda Code.org.
@@ -919,6 +882,7 @@ et:
     vaadata.
   hidden_stage: Õpetaja ei oodanud, et sa sind siin. Palun küsi oma õpetajalt, millises
     tunnis sa peaksid olema.
+  return_unit_overview: Mine teema ülevaatesse
   return_course_overview: Mine teema ülevaatesse
   view_all_units: Vaata kõik
   view_teacher_guide: Vaata juhendit õpetajatele
@@ -926,6 +890,7 @@ et:
     form_labels:
       email: E-post
       school_name: Kooli nimi
+      colombian_school_name: Kooli nimi
     form_entries:
       gender:
         male: Mees
@@ -937,6 +902,7 @@ et:
         science: Teadus
         la: Keeled
       resources:
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
       robotics:
@@ -946,5 +912,4 @@ et:
         opt_in_no: Ei
   cookie_banner:
     accept: Olen nõus
-  gdpr_dialog:
-    true: Jah
+  copy: Kopeeri

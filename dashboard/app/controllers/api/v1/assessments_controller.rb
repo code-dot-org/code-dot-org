@@ -24,7 +24,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
   # GET '/dashboardapi/assessments'
   def index
     # Only authorized teachers have access to locked question and answer data.
-    render status: :forbidden unless current_user.authorized_teacher?
+    render status: :forbidden unless current_user&.authorized_teacher?
 
     assessment_script_levels = @script.get_assessment_script_levels
 
@@ -52,9 +52,9 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       end
 
       assessments[level_group.id] = {
-        id: level_group.id,
+        id: level_group.id.to_s,
         questions: questions,
-        name: script_level.stage.localized_title,
+        name: script_level.lesson.localized_title,
       }
     end
 
@@ -149,7 +149,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                 level_result[:student_result] = []
                 level_result[:status] = "unsubmitted"
               # Deep comparison of arrays of indexes
-              elsif student_result.present? && student_result - answer_indexes == []
+              elsif student_result.present? && student_result - answer_indexes == [] && answer_indexes.length == student_result.length
                 multi_count_correct += 1
                 level_result[:status] = "correct"
               else
@@ -190,7 +190,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         timestamp = last_attempt[:updated_at].to_datetime
 
         responses_by_level_group[level_group.id] = {
-          stage: script_level.stage.localized_title,
+          stage: script_level.lesson.localized_title,
           puzzle: script_level.position,
           question: level_group.properties["title"],
           url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),

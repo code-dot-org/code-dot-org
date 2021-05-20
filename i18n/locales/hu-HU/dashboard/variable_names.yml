@@ -1,0 +1,33 @@
+hu:
+  data:
+    variable_names:
+      Blue: Kék
+      Green: Zöld
+      Red: Piros
+      actor: szereplő
+      armlength: kar hossza
+      birds: madarak
+      bodylength: test hossza
+      cats: összes macska
+      color: szín
+      counter: számláló
+      dogs: összes kutya
+      height: magasság
+      honey: méz
+      i: i
+      left: balra
+      length: length
+      name: név
+      nectar: nektár
+      points: pontok
+      random: véletlen
+      repeat: ismételd
+      right: jobbra
+      score: pontszám
+      shout: kiáltás
+      size: méret
+      speed: sebesség
+      variable: változó
+      width: szélesség
+      wizard: varázsló
+      x: x

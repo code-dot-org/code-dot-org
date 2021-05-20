@@ -1,0 +1,284 @@
+{
+  "zh-TW": {
+    "data": {
+      "behavior_names": {
+        "CourseE_Project_SpriteLab": {
+          "shrinking": "縮小"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "shrinking": "縮小"
+        },
+        "CourseE_hoops": {
+          "shrinking": "縮小"
+        },
+        "CourseF_Project_SpriteLab": {
+          "shrinking": "縮小"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 2": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 2_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 2_2020": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 3_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 3_2020": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 4_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 4_2020": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 5_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 5_2020": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 6": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 6_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 6_2020": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 7_2019": {
+          "shrinking": "縮小"
+        },
+        "Dance Party 7_2020": {
+          "shrinking": "縮小"
+        },
+        "Dance Party Freeplay": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 2-validated_2019": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 2-validated_2020": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 3-validated_2019": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 3-validated_2020": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 4-validated_2019": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 4-validated_2020": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 5-validated_2019": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 5-validated_2020": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 6-validated_2019": {
+          "shrinking": "縮小"
+        },
+        "Fish Tank 6-validated_2020": {
+          "shrinking": "縮小"
+        },
+        "OPD-K5-spritelab-2": {
+          "shrinking": "縮小"
+        },
+        "OPD-K5-spritelab-3": {
+          "shrinking": "縮小"
+        },
+        "OPD-K5-spritelab-4": {
+          "shrinking": "縮小"
+        },
+        "OPD-K5-spritelab-6": {
+          "shrinking": "縮小"
+        },
+        "OPD-K5-spritelab-7": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 1_2019": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 1_2020": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 2": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 2_2019": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 2_2020": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 3_2019": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 3_2020": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 4": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 4_2019": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 4_2020": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 5": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet 6": {
+          "shrinking": "縮小"
+        },
+        "Virtual Pet Freeplay": {
+          "shrinking": "縮小"
+        },
+        "behaviors 1": {
+          "shrinking": "縮小"
+        },
+        "behaviors 1_2020": {
+          "shrinking": "縮小"
+        },
+        "behaviors 2": {
+          "shrinking": "縮小"
+        },
+        "behaviors 2_2020": {
+          "shrinking": "縮小"
+        },
+        "behaviors 3": {
+          "shrinking": "縮小"
+        },
+        "behaviors 3_2020": {
+          "shrinking": "縮小"
+        },
+        "behaviors 3a": {
+          "shrinking": "縮小"
+        },
+        "behaviors 3a_2020": {
+          "shrinking": "縮小"
+        },
+        "behaviors 4": {
+          "shrinking": "縮小"
+        },
+        "behaviors 4_2020": {
+          "shrinking": "縮小"
+        },
+        "behaviors 6": {
+          "shrinking": "縮小"
+        },
+        "behaviors 6_2020": {
+          "shrinking": "縮小"
+        },
+        "behaviors 7": {
+          "shrinking": "縮小"
+        },
+        "behaviors 7_2020": {
+          "shrinking": "縮小"
+        },
+        "courseE_Dogger_2": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_1": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_1_2020": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_2": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_2_2020": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_3": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_3_2020": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_4": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_4_2020": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_5": {
+          "shrinking": "縮小"
+        },
+        "courseE_aboutme_5_2020": {
+          "shrinking": "縮小"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "到處走走 2",
+          "wandering 1": "到處走走 1"
+        },
+        "courseF_project_1": {
+          "shrinking": "縮小"
+        },
+        "outbreak4": {
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "outbreak7": {
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "outbreak8": {
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "outbreak_freeplay": {
+          "shrinking": "縮小",
+          "recovering": "恢復",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
+        },
+        "outbreak1": {
+          "recovering": "恢復"
+        },
+        "outbreak2": {
+          "recovering": "恢復"
+        },
+        "outbreak3": {
+          "recovering": "恢復"
+        },
+        "outbreak5": {
+          "recovering": "恢復"
+        },
+        "outbreak6": {
+          "recovering": "恢復"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "shrinking": "縮小"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "shrinking": "縮小"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "moving left and right": "左右移動",
+          "moving with arrow keys": "使用方向鍵移動"
+        }
+      }
+    }
+  }
+}

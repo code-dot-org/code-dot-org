@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -27,14 +27,14 @@ require "csv"
 
 class Multi < Match
   def dsl_default
-    <<ruby
-name 'unique level name here'
-title 'title'
-description 'description here'
-question 'Question'
-wrong 'wrong answer'
-right 'right answer'
-ruby
+    <<~ruby
+      name 'unique level name here'
+      title 'title'
+      description 'description here'
+      question 'Question'
+      wrong 'wrong answer'
+      right 'right answer'
+    ruby
   end
 
   # Return a string containing the correct indexes.  e.g. "3" or "0,1"
@@ -64,5 +64,13 @@ ruby
       question_text = properties['markdown']
     end
     return question_text
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        questionText: get_question_text
+      }
+    )
   end
 end

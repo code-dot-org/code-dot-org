@@ -9,6 +9,7 @@ import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import RubricField from './RubricField';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CommentArea} from './CommentArea';
 
 const styles = {
@@ -31,6 +32,9 @@ const styles = {
     fontStyle: 'italic',
     fontSize: 12,
     color: color.cyan
+  },
+  timeTeacherStudentSeen: {
+    color: '#25c23c'
   },
   timeStudent: {
     fontStyle: 'italic',
@@ -71,8 +75,14 @@ const styles = {
   commentAndFooter: {
     margin: '8px 16px 8px 16px'
   },
+  checkboxIcon: {
+    color: '#25c23c'
+  },
   form: {
     margin: 0
+  },
+  timestamp: {
+    fontFamily: '"Gotham 7r", sans-serif'
   }
 };
 
@@ -96,13 +106,14 @@ export class TeacherFeedback extends Component {
     visible: PropTypes.bool.isRequired,
     //Provided by Redux
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
+    serverScriptId: PropTypes.number,
     serverLevelId: PropTypes.number,
-    serverScriptLevelId: PropTypes.number,
     teacher: PropTypes.number,
     verifiedTeacher: PropTypes.bool,
     displayKeyConcept: PropTypes.bool,
     latestFeedback: PropTypes.array,
-    token: PropTypes.string
+    token: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   constructor(props) {
@@ -131,17 +142,19 @@ export class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
-    window.addEventListener('beforeunload', event => {
-      if (!this.feedbackIsUnchanged()) {
-        event.preventDefault();
-        event.returnValue = i18n.feedbackNotSavedWarning();
-      }
-    });
+    window.addEventListener('beforeunload', this.onUnload);
   };
 
   componentWillUnmount() {
-    window.removeEventListener('beforeunload');
+    window.removeEventListener('beforeunload', this.onUnload);
   }
+
+  onUnload = event => {
+    if (!this.feedbackIsUnchanged()) {
+      event.preventDefault();
+      event.returnValue = i18n.feedbackNotSavedWarning();
+    }
+  };
 
   onCommentChange = value => {
     this.setState({comment: value});
@@ -161,10 +174,11 @@ export class TeacherFeedback extends Component {
     const payload = {
       comment: this.state.comment,
       student_id: this.state.studentId,
+      script_id: this.props.serverScriptId,
       level_id: this.props.serverLevelId,
-      script_level_id: this.props.serverScriptLevelId,
       teacher_id: this.props.teacher,
-      performance: this.state.performance
+      performance: this.state.performance,
+      analytics_section_id: this.props.selectedSectionId
     };
 
     $.ajax({
@@ -211,6 +225,73 @@ export class TeacherFeedback extends Component {
     return feedbackUnchanged;
   };
 
+  getFriendlyDate(feedbackSeen) {
+    const now = moment();
+    const dateFeedbackSeen = moment(feedbackSeen);
+    const daysApart = now.diff(dateFeedbackSeen, 'days');
+
+    if (daysApart === 0) {
+      return i18n.today();
+    } else if (daysApart === 1) {
+      return i18n.yesterday();
+    } else {
+      return dateFeedbackSeen.format('l');
+    }
+  }
+
+  //sub-render method invoked by getFeedbackText()
+  displayFeedbackMessage([style, message, studentSeen, time]) {
+    return (
+      <div style={style} id="ui-test-feedback-time">
+        {studentSeen && (
+          <FontAwesome
+            icon="check"
+            className="fa-check"
+            style={styles.checkboxIcon}
+          />
+        )}
+        {`${message} `}
+        {time && <span style={styles.timestamp}>{time}</span>}
+      </div>
+    );
+  }
+
+  getFeedbackText = (latestFeedback, studentSawFeedback) => {
+    let timeStyle;
+    let time;
+    let feedbackMessage;
+    let currentTeacherStudentSeen = false;
+
+    //Student view indicates when feedback was last updated
+    if (this.props.viewAs === ViewType.Student) {
+      timeStyle = styles.timeStudent;
+      time = moment.min(moment(), moment(latestFeedback.created_at)).fromNow();
+      feedbackMessage = i18n.lastUpdated();
+    } else if (this.props.viewAs === ViewType.Teacher) {
+      timeStyle = styles.timeTeacher;
+      //Teacher view if current teacher left feedback & student viewed
+      if (studentSawFeedback) {
+        timeStyle = {
+          ...timeStyle,
+          ...styles.timeTeacherStudentSeen
+        };
+        feedbackMessage = i18n.seenByStudent();
+        time = this.getFriendlyDate(latestFeedback.student_seen_feedback);
+        currentTeacherStudentSeen = true;
+      } else {
+        //Teacher view if current teacher left feedback & student did not view
+        feedbackMessage = i18n.lastUpdatedCurrentTeacher();
+        time = this.getFriendlyDate(latestFeedback.created_at);
+      }
+    }
+    return this.displayFeedbackMessage([
+      timeStyle,
+      feedbackMessage,
+      currentTeacherStudentSeen,
+      time
+    ]);
+  };
+
   render() {
     const latestFeedback = this.latestFeedback();
     const feedbackUnchanged = this.feedbackIsUnchanged();
@@ -244,16 +325,15 @@ export class TeacherFeedback extends Component {
       'performanceLevel4'
     ];
 
+    const studentSawFeedback =
+      this.state.latestFeedback.length > 0 &&
+      !!latestFeedback.student_seen_feedback;
+
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
     const tabVisible = this.props.visible
       ? styles.tabAreaVisible
       : styles.tabAreaHidden;
-
-    const timeStyle =
-      this.props.viewAs === ViewType.Student
-        ? styles.timeStudent
-        : styles.timeTeacher;
 
     // If a student has rubric feedback we want to expand that field
     const expandPerformanceLevelForStudent =
@@ -314,6 +394,7 @@ export class TeacherFeedback extends Component {
               {this.props.viewAs === ViewType.Teacher && (
                 <div style={styles.button}>
                   <Button
+                    __useDeprecatedTag
                     id="ui-test-submit-feedback"
                     text={buttonText}
                     onClick={this.onSubmitFeedback}
@@ -328,15 +409,8 @@ export class TeacherFeedback extends Component {
                   )}
                 </div>
               )}
-              {this.state.latestFeedback.length > 0 && (
-                <div style={timeStyle} id="ui-test-feedback-time">
-                  {i18n.lastUpdated({
-                    time: moment
-                      .min(moment(), moment(latestFeedback.created_at))
-                      .fromNow()
-                  })}
-                </div>
-              )}
+              {this.state.latestFeedback.length > 0 &&
+                this.getFeedbackText(latestFeedback, studentSawFeedback)}
             </div>
           </div>
         )}
@@ -347,8 +421,7 @@ export class TeacherFeedback extends Component {
 export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(state => ({
   viewAs: state.viewAs,
-  serverLevelId: state.pageConstants.serverLevelId,
-  serverScriptLevelId: state.pageConstants.serverScriptLevelId,
-  teacher: state.pageConstants.userId,
-  verifiedTeacher: state.pageConstants.verifiedTeacher
+  verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+  selectedSectionId:
+    state.teacherSections && state.teacherSections.selectedSectionId
 }))(TeacherFeedback);

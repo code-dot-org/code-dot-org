@@ -6,44 +6,44 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# Írj egy véleményt a Computer Science Education Week eseményre
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Lejjebb egy mintát olvashatunk a Computer Science Education Week és annak céljainak támogatására írt véleményre (Op-Ed - külső véleménynek fenntartott rovat).
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### Látogasd meg az [advocacy.code.org]({{ urls/advocacy }}) oldalt, hogy számítástechnikával kapcsolatos információkat találj.
 
----
+* * *
 
-#### Title: Computing…Where the Jobs Are
+#### Cím: Számítástechnika... Ahol van munka
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### Írta [NAME] és [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+A számítógépek mindenhol ott vannak. A zsebünkben vannak. A falainkon vannak. Az autóinkban vannak. Fontos részei az infrastruktúránknak, az erőművektől és közlekedési lámpáktól a pénzügyi piacunk legbelsőbb részletéig. És mindezen számítógépekben van egy dolog, ami közös. Szoftvertől függ a működésük, az mondja meg neki, hogy mit csináljon.
 
-But who exactly is going to write this software?
+De ki írja meg ezt a szoftvert?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Figyelembe véve, hogy világunkat milyen gyorsan alakítja át a technológia, talán arra számítasz, hogy az általános iskolás és középiskolás számítástechnika diákok száma manapság az eddigi legmagasabb. De tévednél. Kevesebb diák tanul számítástechnikát, és kevesebb iskola oktatja, mint tíz esztendővel ezelőtt.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+Kevesebb számítástechnikust termelünk ki egy olyan időben, amikor több képzett programozóra van szükség, mint valaha. Még a jelenlegi magas munkanélküliséggel, több ezer munkahely, sok közülük **Budapesten** nincsenek betöltve, mert nincsen elég szakképzett munkaerő a megfelelő képességekkel.
 
-Why is this? And how can we address it?
+Miért van ez? Hogyan tudjuk ezt kezelni?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+A probléma általános iskola felső tagozattal és középiskolával kezdődik. Tízből kilenc iskola nem biztosít programozási órákat. **Budapesten** tavaly csak **[NUMBER]** diák indult számítástechnika felé egyetemi képzés tekintetében, amely az összes felvételiző csupán **[%]**-a. Egyszerűen nem teszünk eleget a diákjaink felkészítéséhez és biztatásához, hogy ezen a magas jövedelmű és fontos karrier úton elinduljanak.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Majdnem minden jelentős számítástechnikai innovációt ebben az országban találtak fel, de ha most nem teszünk valamit, akkor ezt a vezető szerepünket elveszíthetjük.
 
-We need to make some changes.
+Változtatnunk kell.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[ALKALMAZÁSA ORSZÁGONKÉNT OPCIONÁLIS]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Egy igazán pozitív változás az lenne, ha lehetővé tennék azt, hogy bizonyos informatikai tanfolyamok kielégíthessék a középiskolai matematikai vagy természettudományi érettségi követelményeket. Egyes **országokban** a számítástechnika tanfolyamok választhatóak. Az egyetemek adottságai miatt, a hallgatók nem engedhetik meg maguknak, hogy válogassanak az egyes informatikai tanfolyamok között. Ez a változás nagy hatással lehetne erre. Azokban az államokban, ahol a számítástechnika tanfolyamok beleszámítanak az érettségi követelményekbe, a tanfolyamok ötven százalékkal nagyobbak, sőt ezekben a kisebbségi tanulók sokkal magasabb arányban vesznek részt azokhoz az államokhoz képest, ahol a számítástechnika csak választható.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+A fiatalabb diákokkal is szeretnénk együttműködni, hogy felkeltsük érdeklődésüket a számítástechnika és a kódolás iránt. Gyermekeinknek nemcsak az alkalmazásokat és a videojátékokat kell megismerniük, hanem azt is, hogy miként kell létrehozniuk őket. A gyerekek már a második évfolyamon elsajátíthatják a kódolás alapjait.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Több informatikatanárt kell toboroznunk, és ösztönöznünk kell a szakterületen belüli szakmai fejlődést. Manapság számos olyan online erőforrás létezik, amelyek segíthetnek a tanároknak a legfrissebb technológiák elérésében és naprakészen tartásában.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+A Munkaügyi Statisztikai Hivatal adatai szerint 2020-ig 9,2 millió munkahely lesz informatikai területen. A munkahelyek fele - 4,6 millió - számítástechnika vagy információs technológia lesz. A számítástechnika pedig egyre inkább alapvető tudás a 21. századi ember számára. Kérdés,hogy ki tölti be majd ezeket a munkahelyeket, ha gyermekeink nem kapnak lehetőséget a szükséges készségek megszerzésére?
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Ez a hét (z) {{campaign_date / full}} a Számítástechnika Oktatási Hét. Ezen a rendezvényen az egész országból érkező diákok résztvesznek a Kódolás Óráján, demisztifikálva számukra a számítástechnika témáját, és remélhetőleg felkeltik az érdeklődésüket a továbbtanuláshoz. Én csatlakozom hozzájuk, és meghívlak benneteket is. Mert mindenkinek meg kéne tanulnia, hogyan kell kódolni. Látogass el a https://hourofcode.com/hungary oldalra további információkért és az indulás részleteiért. Támogasd erőfeszítéseink, hogy a számítástechnika több iskolába is eljuthasson Magyarországon.
 
 {{ signup_button }}

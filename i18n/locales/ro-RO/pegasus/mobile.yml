@@ -12,12 +12,12 @@
   csedweek_dates: "8-14 decembrie 2014"
   csedweek_banner_hoc: 'Se apropie <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Ora de cod</a>. Chemăm toți profesorii şi organizatorii, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planificați-vă Ora de cod</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Ești profesor de informatică ? Vezi alte resurse CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ești profesor de informatică ? Vezi alte resurse CSEdWeek"
   n_have_learned_an_hoc: "<h1>Încearcă o</h1><h2>Ora de cod</h2><h3># servit</h3>"
   anybody_can_learn: "Oricine poate învăța."
   learn_now: "Învaţă Acum"
   petition_message: "Fiecare elev din fiecare şcoală ar trebui să aibă posibilitatea de a învăța informatică"
   petition_sign_message: 'Dacă ești de acord, semnează-te cu numele. Alătură-te # celorlalți.'
-  petition_sign_message_support: 'Dacă ne sprijini, completează-ți numele. Alătură-te # celorlalți.'
   petition_join_others: 'Alătură-te altor #'
   name: "Nume"
   email: "Email"
@@ -148,6 +148,7 @@
   thanks_for_submitting: "Mulţumim pentru transmitere!"
   if_you_enjoyed: "Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi să încerce acest lucru. Vrem ca toată lumea să învețe."
   personalize_certificate: "Personalizează-ți certificatul"
+  print_certificates: "Tipărește certificatele"
   share_achievement: "Distribuie realizarea personală"
   beyond_hour_message: "Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a> ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa mai mult de O Oră</a>."
   leaderboards_for_hoc: "Clasamentele pentru Ora de Cod."
@@ -228,7 +229,8 @@
   studiobar_title_nolink: "Explorează cursurile Code.org"
   studiobar_elementary_title: "Cursuri elementare"
   studiobar_elementary_body: "Cele trei cursuri noi ale noastre pentru K&#8209;5"
-  studiobar_dance_title: "Petrecere cu dans"
+  studiobar_dance_title: "Petrecere dansantă"
+  studiobar_dance_body: "Vytvoř a sdílej vlastní Dance Party"
   studiobar_hoc_title: "Ora de Programare"
   studiobar_hoc_body: "Învaţă să programezi cu Angry Birds"
   studiobar_flappy_title: "Codul Flappy"
@@ -306,6 +308,7 @@
   homepage_action_text_signpetition: "Semnează petiția"
   homepage_action_text_wincelebritychat: "Câștigă un chat cu o celebritate"
   homepage_signpetition_dropdown: "Sunt de acord &#x25BE;"
+  homepage_signpetition_dropdown_text: "Sunt de acord"
   homepage_diversity_pledge: "Ia-ti angajamentul diversitatii"
   homepage_banner_text_prizes: 'Ora de cod revine, 7-13 decembrie. '
   homepage_banner_link_prizes: 'Alatura-te celui mai mare eveniment educational din istorie. '
@@ -912,9 +915,30 @@
   coursed-2017_name: Curs D (2017)
   coursee-2017_name: Curs E (2017)
   coursef-2017_name: Curs F (2017)
+  coursea-2018_name: "	\nCurs A (2018)"
+  courseb-2018_name: Curs B (2018)
+  coursec-2018_name: Curs C (2018)
+  coursed-2018_name: Curs D (2018)
+  coursee-2018_name: Curs E (2018)
+  coursef-2018_name: Curs F (2018)
+  coursea-2019_name: Curs A (2019)
+  courseb-2019_name: Curs B (2019)
+  coursec-2019_name: Curs C (2019)
+  coursed-2019_name: Curs D (2019)
+  coursee-2019_name: Curs E (2019)
+  coursef-2019_name: Curs F (2019)
+  coursea-2020_name: Curs A (2020)
+  courseb-2020_name: Curs B (2020)
+  coursec-2020_name: Curs C (2020)
+  coursed-2020_name: Curs D (2020)
+  coursee-2020_name: Curs E (2020)
+  coursef-2020_name: Curs F (2020)
   pre-express-2018_name: Curs Expres pentru preșcolari (2018)
+  express-2019_name: Curs expres (2019)
+  pre-express-2019_name: Curs expres pentru preșcolari 2019)
+  pre-express-2020_name: Curs expres pentru preșcolari 2020)
   accelerated_name: "Curs intensiv"
-  express_name: "Curs Expres"
+  pre-express_name: Curs expres pentru preșcolari
   20-hour_name: Curs intensiv
   algebra_name: "CS în Algebră"
   AlgebraA_name: "CS în algebră Curs A"
@@ -1008,6 +1032,12 @@
   coursed-2019_gradelevel: Gradele 8+
   coursee-2019_gradelevel: Vârste 8-12 ani
   coursef-2019_gradelevel: Clasele 10+
+  coursea-2020_gradelevel: Clasele 5+
+  courseb-2020_gradelevel: Clasele 6+
+  coursec-2020_gradelevel: Clasele 7+
+  coursed-2020_gradelevel: Gradele 8+
+  coursee-2020_gradelevel: Vârste 8-12 ani
+  coursef-2020_gradelevel: Clasele 10+
   accelerated_gradelevel: "Vârste 10 - 18 ani"
   codeorg_platformtext: "Browsere web moderne, smartphone-uri, tablete"
   codeintl_platformtext: "Browsere web moderne, smartphone-uri, tablete"
@@ -1110,24 +1140,34 @@
   course4_shortdescription_congrats: "Gata pentru urmatorul nivel? Elevii se vor infiltra mai adanc in subiectele programarii introduse în cursuri anterioare pentru a găsi soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs, elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva. Recomandat pentru clasele 4-8."
   coursea_shortdescription_congrats: "O introducere în informatică pentru preșcolari."
   courseb_shortdescription_congrats: "O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)"
+  coursec_shortdescription_congrats: "Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri."
   coursed_shortdescription_congrats: "Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele."
   coursee_shortdescription_congrats: "Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii."
   coursef_shortdescription_congrats: "Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc."
   coursea-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2017_shortdescription_congrats: O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2017_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
   coursed-2017_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
   coursee-2017_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
   coursef-2017_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
   coursea-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2018_shortdescription_congrats: O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2018_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
   coursed-2018_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
   coursee-2018_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
   coursef-2018_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
   coursea-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari.
   courseb-2019_shortdescription_congrats: O introducere în informatică pentru preșcolari. (Similar cu cursul A, dar cu mai multă varietate pentru elevii mai în vârstă.)
+  coursec-2019_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
   coursed-2019_shortdescription_congrats: Acoperiți rapid conceptele din cursul C, apoi mergeți mai departe cu algoritmi, bucle imbricate, condiționări și multe altele.
   coursee-2019_shortdescription_congrats: Acoperiți rapid concepte în cursul C & D şi apoi mergeți mai departe cu funcţii.
   coursef-2019_shortdescription_congrats: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+  coursea-2020_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+  courseb-2020_shortdescription_congrats: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+  coursec-2020_shortdescription_congrats: Creează programe cu secvențiere, bucle și evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți!
+  coursed-2020_shortdescription_congrats: Elevii învață despre bucle, relații de condiționalitate și evenimente. În afară de cod, elevii vor învăța și despre Cetățenia digitală.
+  coursee-2020_shortdescription_congrats: Începe să scrii cod cu algoritmi, bucle, relații de condiționalitate și evenimente, după care vei trece la funcții. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
+  coursef-2020_shortdescription_congrats: Învață să folosești diferite tipuri de bucle, evenimente, funcții și relații de condiționalitate. Analizează diverse tehnici de rezolvare a problemelor și discută despre impactul social al computerelor și al Internetului. În a doua parte a acestui curs, concepe și creează un proiect de final de curs pe care să-l partajezi cu prietenii și familia.
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   codeintl_longdescription: "Învață conceptele de bază ale programării cu o metodă simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs. Zombies. Învață algoritmi de bază, bucle repetate și conditionale. \nDisponibil în 34 de limbi."
   thinkersmithspanish_longdescription: "Folosind un limbaj predefinit \"Vocabularul Robotului\", elevii vor descoperi; mijloace prin care care să se ghideze pentru a duce la bun sfârșit anumite acțiuni specifice, fără a le discuta în prealabil. Această segment învață copiii legătura dintre simboluri și acțiuni, precum și deprinderea atât de necesară de debugging."
@@ -1378,18 +1418,21 @@
   header_help_us: "Ajutați-ne"
   header_about: "Despre"
   header_teacher_community: "Comunitate profesori"
-  header_help_support: 'Ajutor şi suport '
-  header_report_bug: "Raporteazã eroare"
+  header_help_support: 'Ajutor și asistență '
+  header_report_bug: "Raportare problemă"
+  header_legal_privacy: "Politică de confidențialitate"
+  header_legal_tos: "Termeni şi condiţii de utilizare"
   header_tutorials: "Tutoriale"
   header_documentation: "Documentație"
   user_header_label: "Salut %{username}"
   user_header_team: "Echipa"
   user_header_settings: "Contul meu"
   user_header_logout: "Deloghează-te"
-  user_header_signin: "Loghează-te"
+  user_header_signin: "Autentificare"
+  user_header_create: 'Creare '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Laborator de Joacă"
-  user_header_dance: "Petrecere cu dans"
+  user_header_dance: "Petrecere dansantă"
   user_header_spritelab: "Laborator Sprite"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
@@ -1425,11 +1468,15 @@
   applab_tile_start_tutorial: "Începe"
   account_sign_up_email_opt_in: "Sunteți de acord să vă trimitem prin e-mail actualizări cu privire la cursurile noastre, oportunitățile locale sau alte știri din domeniul informaticii?"
   account_sign_up_child_accept_terms: "Confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
-  hoc_overview_dance_title: "Petrecere cu dans"
+  hoc_overview_dance_title: "Petrecere dansantă"
+  hoc_overview_dance_subtitle: "Codează o petrecere dansantă pentru a o partaja cu prietenii. Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara și încă 25!"
+  hoc_overview_dance_2019_subtitle: "Codează o petrecere dansantă pentru a o partaja cu prietenii. Împreună cu Katy Perry, Shawn Mendes, Panic! La discotecă, Lil Nas X, Jonas Brothers, Nicki Minaj și încă 34!"
   hoc_overview_start_tutorial: "Începe"
+  hoc_overview_more_resources: "Pentru mai multe resurse despre modul în care să te implici în clasa ta la distanță, vezi ghidul nostru despre găzduirea unei [Hour of Code virtuală](https://hourofcode.com/us/how-to/virtual). Pentru elevii cu o tehnologie limitată sau fără tehnologie sau conectivitate, distribuie acest pachet de [Activități Hour of Code fără calculator](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc2018_creativity: "creativitate"
   hoc2018_creativity_create: "Crează"
   hoc2018_creativity_what_will_you_create: "Ce vei creea?"
+  hoc2018_creativity_courses_link: "Mergeți mai departe cu <a href=\"https://studio.code.org/courses\">cursurile Code.org</a>"
   hoc2018_mc_page_title: "Tutoriale Hour of Code Minecraft"
   hoc2018_mc_details: "Mai multe limbi | Browsere moderne și tablete | Clasele 2+"
   hoc2018_mc_aquatic_announcement: "Înregistrează-ţi clasa pentru a încerca peste 150 de activităţi noi în cadrul Orei de cod (3+9 decembrie). Fi sigur că verifici noua noastră activitate Minecraft pentru 2018, Aventura acvatică! Înregistrează-ţi clasa astăzi."
@@ -1465,11 +1512,11 @@
   hoc2018_mc_minecraft_education: "Educație cu Minecraft"
   hoc2018_mc_continue_learning: "Continuă să înveți cu Minecraft."
   hoc2018_mc_go_to_mc_education: "Mergi la Minecraft Education"
-  hoc2018_dance_party_main_heading: "Petrecere cu dans"
+  hoc2018_dance_party_main_heading: "Petrecere dansantă"
   hoc2018_dance_party_landing_title: "Dans"
   hoc2018_dance_party_subheading: "Ajută la traducerea Petreceii cu dans"
   hoc2018_dance_create_your_own_dance_title: "Crează propria Petrecere cu dans"
-  hoc2018_dance_party_box_title: "Petrecere cu dans"
+  hoc2018_dance_party_box_title: "Petrecere dansantă"
   hoc2018_dance_party_box_description: "Programează o Petrecere cu dans pentru a o partaja cu prietenii!"
   hoc2018_dance_party_specs: "Limbă | Format | Vârsta 6-106"
   hoc2018_dance_party_button: "Începe"
@@ -1512,3 +1559,13 @@
   hoc2018_dance_video3: "Petrecere cu dans - Proprietăţi"
   hoc2018_dance_video4: "Petrecere cu dans - Felicitări"
   hoc2018_mc_with_microsoft: "În parteneriat cu â"
+  hoc2018_mc_thank_microsoft: "Mulțumim Microsoft pentru că ne susține viziunea și misiunea de a ne asigura că fiecare copil are oportunitatea să învețe informatică și aptitudinile să reușească în secolul 21."
+  ! '': '[șir gol]'
+  footer_powered_by_aws: "Susținut de Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Doar în engleză"
+  footer_privacy_policy: "Politică de confidențialitate"
+  footer_about: "Despre"
+  footer_partners: "Parteneri"
+  footer_donate: "Donează"
+  footer_support: "Ajutor şi comunitate"
+  footer_terms: "Termeni"

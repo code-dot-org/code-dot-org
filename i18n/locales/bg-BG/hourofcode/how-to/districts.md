@@ -1,7 +1,5 @@
 ---
 title: Hour of Code упътване за общини/области
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

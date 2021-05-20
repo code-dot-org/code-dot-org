@@ -1,6 +1,6 @@
 /** @file Tests for NetSimLogPanel */
 import $ from 'jquery';
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimLogPanel = require('@cdo/apps/netsim/NetSimLogPanel');
 var DataConverters = require('@cdo/apps/netsim/DataConverters');

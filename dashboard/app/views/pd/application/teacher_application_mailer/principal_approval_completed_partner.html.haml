@@ -1,0 +1,22 @@
+%p
+  Hi
+  = @application.effective_regional_partner_name + ','
+
+%p
+  = @application.principal_greeting
+  has completed the principal approval form for
+  = @application.applicant_full_name + '.'
+  You can view
+  = @application.teacher_first_name + "'s"
+  = link_to('application here', CDO.studio_url("/pd/application_dashboard/#{@application.id}", CDO.default_scheme)) + '.'
+
+%p
+  Best,
+
+%p
+  Jared Fritz
+  %br
+  Program Manager, District & School Recruitment
+  %br
+  Code.org
+

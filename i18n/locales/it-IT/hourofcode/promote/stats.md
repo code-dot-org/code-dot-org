@@ -1,28 +1,26 @@
 ---
-title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
+title: Statistiche Utili
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Statistiche Utili
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### Usa i seguenti messaggi per promuovere l'Ora del Codice nelle tue newsletter ed in altre comunicazioni.
 
 * * *
 
 ## Utilizza questa breve descrizione nelle newsletter
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Porta l'informatica nella tua scuola. Inizia con un'Ora del Codice!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Ma meno della metà delle scuole insegna informatica! La buona notizia è che intendiamo cambiare rotta. Se l'anno scorso hai sentito parlare dell'Ora del Codice, potresti già sapere che ha fatto storia. 100 milioni gli studenti hanno scoperto come può essere accessibile e divertente l'informatica effettuando una sola Ora del Codice.
+Con la tecnologia ogni industria del pianeta sta cambiando e le conoscenze informatiche sono diventate parte integrante delle competenze necessarie in ogni ambito. Ma meno della metà delle scuole insegna informatica! La buona notizia è che intendiamo cambiare rotta. Se l'anno scorso hai sentito parlare dell'Ora del Codice, potresti già sapere che ha fatto storia. 100 milioni gli studenti hanno scoperto come può essere accessibile e divertente l'informatica effettuando una sola Ora del Codice.
 
-L'Ora del Codice è un'introduzione di un'ora all'informatica, progettata per sollevare il velo di mistero che avvolge la programmazione e dimostrare che chiunque può impararne le basi. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+L'Ora del Codice è un'introduzione di un'ora all'informatica, progettata per sollevare il velo di mistero che avvolge la programmazione e dimostrare che chiunque può impararne le basi. Visita [HourofCode.com](https://hourofcode.com/it) e <a href="https://www.programmailfuturo.it/come/ora-del-codice/introduzione" target="_blank">www.ProgrammailFuturo.it</a> per ulteriori informazioni, prova un'ora tu stesso o fai ospitare un evento dell'Ora del Codice per introdurre gli altri nel mondo dell'informatica!
 
-## Messaging for frequently asked questions
+## Risposte a domande frequenti
 
 #### Perché la vostra scuola organizza un'Ora del Codice?
 
@@ -32,23 +30,23 @@ Speriamo che stimoli l'interesse degli studenti a continuare ad imparare. Le ric
 
 #### Perché è importante tutto questo?
 
-La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di posti di lavoro vacanti, tra cui arte e design, richiedevano competenze di programmazione. But 65 percent of schools in the U.S. don't teach computer science. È ora di superare questo divario e prendere il treno del XXI secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti faranno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e delle competenze fondamentali per avere successo nel loro campo. <br /> <br />
+La tecnologia sta trasformando ogni azienda del pianeta. Nel 2015, 7 milioni di posti di lavoro vacanti, tra cui arte e design, richiedevano competenze di programmazione. But 53 percent of schools in the U.S. don't teach computer science. È ora di superare questo divario e prendere il treno del XXI secolo. Sappiamo che, indipendentemente da ciò che i nostri studenti faranno quando saranno cresciuti, sia che vogliano lavorare nel campo della medicina, degli affari, della politica o delle arti, sapere come si costruiscono degli strumenti tecnologi fornirà loro la fiducia in se stessi necessaria e delle competenze fondamentali per avere successo nel loro campo. <br /> <br />
 
-#### A quote you can use in materials
+#### Una citazione che puoi utilizzare nei tuoi messaggi
 
-"L'Ora del Codice è stata progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi," ha affermato Hadi Partovi, fondatore e CEO di Code.org. "Più di 100 milioni di studenti in tutto il mondo hanno provato l'Ora del Codice. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"L'Ora del Codice è stata progettata per rimuovere l'alone di mistero che spesso avvolge la programmazione dei computer e per mostrare che l'informatica non è affatto difficile da capire, chiunque può impararne le basi," ha affermato Hadi Partovi, fondatore e CEO di Code.org. "Più di 100 milioni di studenti in tutto il mondo hanno provato l'Ora del Codice. La richiesta di una rilevante istruzione in informatica nel XXI secolo attraversa tutti i confini e non conosce limiti." <br /> <br />
 
 #### Chi siamo
 
-Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusione dell'interesse nell'informatica e all'aumento della partecipazione in essa di donne e studenti delle minoranze etniche. Its vision is that every student in every school has the opportunity to learn computer programming. Dopo il lancio nel 2013, Code.org ha organizzato la campagna "L'Ora del Codice" – che ad oggi ha introdotto oltre 100 milioni di studenti all'informatica – e collaborato con 70 distretti della scuola pubblica a livello nazionale negli USA per espandere i programmi di informatica. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org® è un'associazione 501c3 senza scopo di lucro, dedicata alla diffusione dell'interesse nell'informatica e all'aumento della partecipazione in essa di donne e studenti delle minoranze etniche. La sua visione è che ogni studente di ogni scuola debba avere l'opportunità di imparare la programmazione. Dopo il lancio nel 2013, Code.org ha organizzato la campagna "L'Ora del Codice" – che ad oggi ha introdotto oltre 100 milioni di studenti all'informatica – e collaborato con 70 distretti della scuola pubblica a livello nazionale negli USA per espandere i programmi di informatica. Code.org è sostenuta da donazioni filantropiche di società, fondazioni e persone generose, tra cui Microsoft, Facebook, Infosys Foundation USA, Amazon e altri. Per ulteriori informazioni, visita: [www.code.org]({{ codeorg_link }})
 
-## Share these on social media and in emails
+## Condividi queste informazioni sui social media e via email
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![immagine](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![immagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografica
 
 {{ stats_carousel }}
 

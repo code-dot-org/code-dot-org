@@ -1,0 +1,36 @@
+name 'csp-u5-exam1-fill-in-thelist-traversal_2021'
+editor_experiment ''
+wrong '`i < list[list.length]`'
+right '`i < list.length`'
+wrong '`i < list[0]`'
+wrong '`i < list[1]`'
+
+
+
+markdown <<MARKDOWN
+```
+list = [10, 5, 15];
+
+for(var i = 0; <INSERT CODE>; i++){
+  console.log(list[i]);
+}
+```
+
+Which of the following will result in ONLY all the items in `list` being printed to the console if placed where the program reads `<INSERT CODE>` and the program is run?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** All choices except `i < list.length` will result in something other than the just the list of elements in `list` being printed.. A will print nothing because `list[3]` is undefined and therefore the code inside the for loop will not execute. C and D will print all the items in `list` followed by some number of `undefined` elements since the variable i increases in value beyond the last index of `list`. 
+
+Students practice writing for-loops in [Lesson 7 - Loops Practice](https://curriculum.code.org/csp-20/unit5/7/)  
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* CRD-2.I: For errors in an algorithm or program: 
+a. Identify the error.
+b. Correct the error.
+:::
+
+
+MARKDOWN

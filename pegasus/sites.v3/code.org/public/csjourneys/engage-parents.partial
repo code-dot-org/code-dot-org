@@ -1,0 +1,55 @@
+---
+title: Resources for engaging parents in their children's CS Journeys
+video_player: true
+theme: responsive
+social:
+  "og:title": "CS Journeys Resources: Engage parents"
+  "og:description": "Resources for engaging parents in their children's CS Journeys"
+  "twitter:title": "CS Journeys Resources: Engage parents"
+  "twitter:description": "GResources for engaging parents in their children's CS Journeys"
+  "twitter:image": "/images/csjourneys/og-internships.jpg"
+  "og:image": "/images/csjourneys/og-internships.jpg"
+  "og:image:width": 1200
+  "og:image:height": 630
+---
+<a id="top"></a>
+<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>Letters home</h1>
+<p>Did you know students who hear from parents that they would be good at computer science are <a href="https://services.google.com/fh/files/misc/encouraging-students-toward-computer-science-learning-brief.pdf" target="_blank">2-3 times more likely</a> to be interested in learning it? Connect with parents and recruit their help in encouraging students to learn and continue on their computer science journey.</p>
+<p>Here’s some template language you can include in your emails and letters home.</p>
+
+<ul>
+  <li><a class="linktag" id="csf-letters-nav" href="#fundamentals">CS Fundamentals</a></li>
+  <li><a class="linktag" id="csd-letters-nav"href="#discoveries">CS Discoveries</a></li>
+  <li><a class="linktag" id="csp-letters-nav" href="#principles">CS Principles</a></li>
+</ul>
+
+<a id="fundamentals"></a>
+<h2>CS Fundamentals Teachers</h2>
+<p style="margin-left:50px; margin-right:30%"><strong>End of year message to send home</strong></p>
+<p style="margin-left:50px; margin-right:30%">This year, the students were excited to learn about computer science. Elementary school is a great time for students to start getting exposed to this subject essential for them to learn in today’s world.</p>
+<p style="margin-left:50px; margin-right:30%">Computer science teaches students critical thinking and problem solving. In fact, studies show that students who learn computer science do better in other subjects.</p>
+<p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning. So ask your child what they learned and created in our computer science lessons.</p>
+<p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project—like a Dance Party Creation—or a link to a login]</i></p>
+<p style="margin-left:50px; margin-right:30%">Take some time this summer to check out resources for <a href="https://code.org/athome?utm_source=letters-home&utm_medium=web&utm_campaign=csjourneys&utm_content=at-home" target="_blank">learning CS at home</a>. Watch some videos to spark their imagination or do some of the activities on the page to learn together. Encourage them to keep learning, and have fun while you’re at it!</p>
+
+<a id="discoveries"></a>
+<h2>CS Discoveries Teachers</h2>
+<p style="margin-left:50px; margin-right:30%"><strong>End of year message to send home</strong></p>
+<p style="margin-left:50px; margin-right:30%">It’s been a pleasure to see your students engage with computer science this year. They’ve learned about programming and how computers work, and they’ve also been inspired to build their own websites, apps, animations, and games!</p>
+<p style="margin-left:50px; margin-right:30%">Computer science teaches students critical thinking and problem solving. In fact, studies show that students who learn computer science do better in other subjects, excel at problem solving, and are more likely to go to college.</p>
+<p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning and success. So ask your child to see something they created in class. Or ask them what makes a computer a computer?</p>
+<p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project or a link to a login]</i></p>
+<p style="margin-left:50px; margin-right:30%">Take some time this summer to check out resources for <a href="https://code.org/athome?utm_source=letters-home&utm_medium=web&utm_campaign=csjourneys&utm_content=at-home" target="_blank">learning CS at home</a>. There are videos to spark your child’s imagination and activities to keep learning. You can even learn together, and have fun doing it!</p>
+<p style="margin-left:50px; margin-right:30%">For students who are curious about where their CS journey could lead them, there are <a href="https://code.org/beyond?utm_source=letters-home&utm_medium=web&utm_campaign=csjourneys&utm_content=beyond" target="_blank">additional resources to explore pathways and careers</a>.</p>
+
+<a id="principles"></a>
+<h2>CS Principles Teachers</h2>
+<p style="margin-left:50px; margin-right:30%"><strong>End of year message to send home</strong></p>
+<p style="margin-left:50px; margin-right:30%">It’s been a pleasure to see your students engage with computer science this year. They’ve learned foundational concepts of computer science and programming skills, and they’ve explored how computing and technology can impact the world they live in.</p>
+<p style="margin-left:50px; margin-right:30%">Computer science teaches students critical thinking and problem solving. In fact, studies show that students who learn computer science do better in other subjects, excel at problem solving, and are more likely to go to college.</p>
+<p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning and success. So ask your student to see something they created in class.</p>
+<p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project or a link to a login]</i></p>
+<p style="margin-left:50px; margin-right:30%">And take some time with them this summer to check out resources to continue <a href="https://code.org/athome?utm_source=letters-home&utm_medium=web&utm_campaign=csjourneys&utm_content=at-home" target="_blank">learning CS at home</a>. There are videos to spark your child’s imagination and activities to keep learning.</p>
+<p style="margin-left:50px; margin-right:30%">For students ready to consider the next part of their CS journey, encourage them to check out scholarship, internship, and mentorship opportunities from these <a href="https://code.org/beyond?utm_source=letters-home&utm_medium=web&utm_campaign=csjourneys&utm_content=beyond" target="_blank">additional resources to explore pathways and careers.</a></p>
+
+<br>

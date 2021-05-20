@@ -5,26 +5,6 @@ import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {Unit6Intention} from '../util/discountLogic';
 
-const styles = {
-  unit6Form: {
-    marginTop: 15
-  },
-  question: {
-    marginBottom: 5,
-    // bolder
-    fontFamily: '"Gotham 7r", sans-serif'
-  },
-  radio: {
-    margin: '0px 10px'
-  },
-  submit: {
-    marginTop: 5
-  },
-  errorText: {
-    color: 'red'
-  }
-};
-
 export default class Unit6ValidationStep extends Component {
   static propTypes = {
     showRadioButtons: PropTypes.bool.isRequired,
@@ -57,7 +37,10 @@ export default class Unit6ValidationStep extends Component {
       }
     })
       .done(data => {
-        this.props.onSubmit(data.eligible);
+        this.props.onSubmit({
+          eligible: data.eligible,
+          unit6Intention: this.state.choice
+        });
         this.setState({
           submitting: false,
           errorText: ''
@@ -92,9 +75,18 @@ export default class Unit6ValidationStep extends Component {
               </strong>
               {[
                 [Unit6Intention.NO, i18n.eligibilityYearNo()],
-                [Unit6Intention.YES_18_19, i18n.eligibilityYearYes1819()],
-                [Unit6Intention.YES_19_20, i18n.eligibilityYearYes1920()],
-                [Unit6Intention.YES_AFTER, i18n.eligibilityYearAfter()],
+                [
+                  Unit6Intention.YES_SPRING_2020,
+                  i18n.eligibilityYearYesSpring2020()
+                ],
+                [
+                  Unit6Intention.YES_FALL_2020,
+                  i18n.eligibilityYearYesFall2020()
+                ],
+                [
+                  Unit6Intention.YES_SPRING_2021,
+                  i18n.eligibilityYearYesSpring2021()
+                ],
                 [Unit6Intention.UNSURE, i18n.eligibilityYearUnknown()]
               ].map(([value, description]) => (
                 <label key={value}>
@@ -113,6 +105,7 @@ export default class Unit6ValidationStep extends Component {
               {/* Remove button after choice is made */}
               {stepStatus === Status.UNKNOWN && (
                 <Button
+                  __useDeprecatedTag
                   style={styles.submit}
                   color={Button.ButtonColor.orange}
                   text={
@@ -133,3 +126,23 @@ export default class Unit6ValidationStep extends Component {
     );
   }
 }
+
+const styles = {
+  unit6Form: {
+    marginTop: 15
+  },
+  question: {
+    marginBottom: 5,
+    // bolder
+    fontFamily: '"Gotham 7r", sans-serif'
+  },
+  radio: {
+    margin: '0px 10px'
+  },
+  submit: {
+    marginTop: 5
+  },
+  errorText: {
+    color: 'red'
+  }
+};

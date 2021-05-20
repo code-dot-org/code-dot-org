@@ -1,0 +1,18 @@
+{
+  "category": "Experimental",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "stopFollowing",
+    "blockText": "{SPRITE} stops following other sprites",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

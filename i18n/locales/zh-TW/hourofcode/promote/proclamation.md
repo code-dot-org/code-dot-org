@@ -1,7 +1,5 @@
 ---
 title: 支持計算機科學教育周和小時代的示例解決方案
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

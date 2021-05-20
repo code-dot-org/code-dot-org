@@ -2,35 +2,107 @@
 sr:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          MOVE1:
+            MOVES.Kick: Звезда
+          MOVE2:
+            MOVES.Kick: Звезда
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': секунде
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': нијанса
+            '"brightness"': осветљеност
       Dancelab_changeMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          MOVE:
+            '"next"': "(Наредни)"
+            '"prev"': "(Претходни)"
+            '"rand"': "(Насумичан)"
+            MOVES.Kick: Звезда
       Dancelab_changeMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"next"': "(Наредни)"
+            '"prev"': "(Претходни)"
+            '"rand"': "(Насумичан)"
+            MOVES.Kick: Звезда
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
       Dancelab_doMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          MOVE:
+            '"rand"': "(Насумичан)"
+            MOVES.Kick: Звезда
       Dancelab_doMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"rand"': "(Насумичан)"
+            MOVES.Kick: Звезда
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -40,10 +112,16 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
       Dancelab_getTime:
         options:
           UNIT:
             '"seconds"': секунде
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Kick: Звезда
       Dancelab_ifTime:
         options:
           UNIT:
@@ -54,83 +132,265 @@ sr:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": насумичан
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
           FORMAT:
+            '"diamond"': дијамант
             '"random"': насумичан
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': патка
+            '"MOOSE"': Лосови
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': патка
+            '"MOOSE"': Лосови
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
+          COSTUME:
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
           LAYOUT:
+            '"diamond"': дијамант
             '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': "(Насумичан)"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
             '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': "(Насумичан)"
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
       Dancelab_setPropEach:
         options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: све
+            '"ALIEN"': ванземаљци
+            '"BEAR"': медведи
+            '"CAT"': мачке
+            '"DOG"': пси
+            '"DUCK"': патке
+            '"FROG"': жабе
+            '"MOOSE"': Лосови
+            '"PINEAPPLE"': ананаси
+            '"ROBOT"': роботи
+            '"SHARK"': ајкуле
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+            '"x"': хоризонтална позиција
+            '"y"': вертикална позиција
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': дијамант
+            '"x"': x
+            '"y"': у
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,10 +400,16 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
+            '"y"': у
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': величина
+            '"speed"': брзина
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -153,6 +419,21 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"speed"': брзина
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
+            '"x"': x
+            '"y"': у
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -165,6 +446,7 @@ sr:
             '"right"': десно
             '"space"': Простор
             '"x"': x
+            '"y"': у
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -174,6 +456,8 @@ sr:
         text: насумична боја
       gamelab_randomColor:
         text: насумична боја
+      gamelab_repeatForever:
+        text: понављај заувек
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -184,10 +468,18 @@ sr:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Под
               водом
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Зима
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средње
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': величина
+            '"speed"': брзина
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -232,8 +524,14 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_groupChangePropBy:
         options:
+          SELECT:
+            '"all"': све
           PROPERTY:
             '"scale"': величина
       Mikelab_groupCreateNewSprite:
@@ -241,16 +539,44 @@ sr:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': све
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': све
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': све
       Mikelab_groupSetProp:
         options:
+          SELECT:
+            '"all"': све
           PROPERTY:
             '"scale"': величина
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': све
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Kick: Звезда
       Mikelab_randomColor:
         text: насумична боја
+      Mikelab_repeatUntilComplete:
+        text: понављај заувек
       Mikelab_setBG:
         options:
           BG:
@@ -277,7 +603,9 @@ sr:
             '"left"': стрелица лево
             '"right"': стрелица десно
             '"w"': w
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -286,7 +614,9 @@ sr:
             '"left"': стрелица лево
             '"right"': стрелица десно
             '"w"': w
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -300,53 +630,10 @@ sr:
         text: окрени се лево
       RyanLab_turnRight:
         text: окрени се десно
-      aalab_changePropByFlexible:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': када
-            '"while"': док је
-          KEY:
-            '"up"': горе
-            '"down"': доле
-            '"left"': лево
-            '"right"': десно
-            '"space"': Простор
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Град
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': тачно
-            '"false"': нетачно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': заувек
-      aalab_toggleHideCustomText:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': прикажи
-            '"hide"': сакриј
+            '"random"': насумичан
       binary_move:
         options:
           DIR:

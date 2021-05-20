@@ -1,0 +1,52 @@
+:css
+  body {
+    font-family: Gotham, sans-serif;
+  }
+
+%p
+  Hi
+  = @user.name + ','
+
+%p
+  Thank you for facilitating a
+  = @workshop.subject
+  = @workshop.course_name
+  workshop
+  - if @regional_partner_name
+    = 'with ' + @regional_partner_name
+  on
+  = @workshop_date + '!'
+  When you have a moment, please take 5 minutes to complete
+  = link_to('this survey', @survey_url)
+  so that our team can better understand how your workshop went and how you feel you're developing as a facilitator.
+  We ask that you please submit this by
+  = @deadline + '.'
+
+%p
+As a reminder, there are a number of ways for you to get support between workshops. You can:
+%ul
+  %li Contact your Regional Partner directly
+  %li
+    Engage with other facilitators in the
+    = link_to('Facilitator Forum', 'https://forum.code.org/c/facilitators') + ' and'
+    = link_to('Facilitator Slack channel', 'https://codefacilitators6-12.slack.com/messages')
+  %li
+    Email
+    = mail_to('facilitators@code.org')
+  %li
+    Schedule a 1:1 with Andrea via this
+    = link_to('scheduling tool', 'https://calendly.com/andrea-fac-supp/30min')
+
+%p
+  Lastly, if your workshop travel qualifies for reimbursement under the
+  = link_to('Facilitator Travel Policy', 'https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo') + ','
+  please remember to submit an expense report via Certify within 30 days of your workshop.
+
+%p
+Best,
+%br
+Andrea Robertson-Nottingham
+%br
+Education Programs
+%br
+Code.org

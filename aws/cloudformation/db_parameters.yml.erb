@@ -107,7 +107,7 @@ Primary: &primary
   slave_compressed_protocol: 1
 
 # System variables used by read-replica RDS instance.
-Replica:
+Reporting:
   # Merge all primary variables into replica.
   <<: *primary
 
@@ -115,6 +115,10 @@ Replica:
   performance_schema: null
   # No max execution time on reporting DB.
   max_execution_time: null
+  # Note: as of Nov. 18, 2020, the statement below is no longer true.
+  # New version of contact rollups no longer needs write access to
+  # a reporting DB, but leaving this code in tact until
+  # these outdated database configurations are fully removed.
   # Reporting DB currently needs write access for contact rollup staging table.
   read_only: 0
 
@@ -143,16 +147,8 @@ Replica:
 
 # System variables for the Aurora DB cluster.
 AuroraCluster: &aurora
-  # When using row-based logging, the master writes events to the binary log that indicate how individual table rows are changed.
-  # Replication of the master to the slave works by copying the events representing the changes to the table rows to the slave.
-  # ROW required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_format: ROW
-  # When enabled, this variable causes the master to write a checksum for each event in the binary log.
-  # When disabled (value NONE), write and check the event length (rather than a checksum) for each event.
-  # NONE required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_checksum: NONE
+  # Disable binary logging to improve write performance.
+  binlog_format: 'OFF'
 
   # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
   gtid-mode: ON_PERMISSIVE
@@ -165,7 +161,7 @@ AuroraCluster: &aurora
 
   # Improve insert/update concurrency for autoincrement tables.
   innodb_autoinc_lock_mode: 2 # not dynamic
-  
+
   # With a setting of 0, logs are written and flushed to disk once per second.
   # Transactions for which logs have not been flushed can be lost in a crash.
   # Reduces durability for better performance.
@@ -195,3 +191,10 @@ AuroraReportingReplica:
   max_execution_time: null
   # Use 8 parallel worker threads for replication.
   slave_parallel_workers: 8
+  # Relax transaction isolation for improved concurrency under load:
+  # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Reference.html#AuroraMySQL.Reference.IsolationLevels.relaxed
+  # The `aurora_read_replica_read_committed` parameter is only present in Aurora engine 2.07 or greater,
+  # and due to this constraint it is not available in the `aurora-mysql5.7` Parameter Group.
+  # As a workaround, apply to all client sessions using `init_connect`.
+  init_connect: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED";'
+  tx_isolation: READ-COMMITTED

@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 mi:
   slides:
     maze_intro:
@@ -815,10 +820,12 @@ mi:
       2:
       3:
       4:
+        text: "Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata kua tuhia ki raro."
       5:
       6:
         text: "Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
       7:
+        text: "Hei tīmatanga, me tūhono i o paraka ki te paraka \"ina whakahaerehia\" karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri."
       8:
       9:
         text: "Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi piro, ka whakanumi rānei i a rātou anō. Kei a koe te tikanga!"
@@ -843,10 +850,12 @@ mi:
       2:
       3:
       4:
+        text: "Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio, ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata kua tuhia ki raro."
       5:
       6:
         text: "Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei te wāhi ka hanga tātou i tā tātou papatono."
       7:
+        text: "Hei tīmatanga, me tūhono i o paraka ki te paraka \"ina whakahaerehia\" karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri."
       8:
       9:
         text: "Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi piro, ka whakanumi rānei i a rātou anō. Kei a koe te tikanga!"
@@ -925,3 +934,13 @@ mi:
       11:
         text: "Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe."
       12:
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi tauira o te takahanga e whakarongo ana."
+      5:
+      6:
+      7:
+      8:

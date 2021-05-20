@@ -3,235 +3,238 @@ vi-VN:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Nhiều lựa chọn
-        questions:
-        - text: Chọn thuật toán cho hình đã cho sẵn.
         answers:
         - text: Bắt đầu với một hình vuông <br/> đặt một hình tam giác trên hình vuông
             <br/> đặt một tam giác bên dưới hình vuông
-        - {}
+        - correct: true
         - text: Bắt đầu với một hình vuông <br/> đặt một hình bình hành trên hình
             vuông <br/> đặt một tam giác bên phải của hình bình hành
         - text: Bắt đầu với một hình vuông <br/> đặt một tam giác bên dưới hình vuông
             <br/> đặt một hình bình hành bên phải của tam giác
-      2-3 Algorithms Multi 2:
+        questions:
+        - text: Chọn thuật toán cho hình đã cho sẵn.
         title: Nhiều lựa chọn
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         content1: Bắt đầu với một hình tam giác <br/> đặt một hình vuông bên dưới
           khu vực tam giác <br/> đặt một tam giác bên dưới hình vuông
         questions:
         - text: Hiện hình ảnh nào <em>không</em> làm theo thuật toán này?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Nhiều lựa chọn
       2-3 Big Event Match 1:
-        title: Phù hợp với/ khớp với / Chính xác với
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - {}
+        - {}
         content2: Ghép tổ hợp phím với các bước nhảy phù hợp.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - {}
-        - {}
-      2-3 Binary Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
+      2-3 Binary Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: sử dụng chìa khóa để nối mật mã với ký hiệu của nó
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Phù hợp với/ khớp với / Chính xác với
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Nhiều lựa chọn
         questions:
         - text: Theo các quy tắc của trò chơi, bộ thẻ nào được ghi một cách chính
             xác?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: Nhiều lựa chọn
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Bạn sẽ đơn giản hóa trình tự này với vòng như thế nào?
+        title: Nhiều lựa chọn
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Phù hợp với/ khớp với / Chính xác với
         content1: Nối hình với chương trình phù hợp.
         questions:
         - {}
         - {}
         - {}
+        title: Phù hợp với/ khớp với / Chính xác với
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Nhiều lựa chọn
         questions:
         - text: Chương trình nào làm nên hình ảnh này?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Nhiều lựa chọn
       2-3 Maze Match 2:
-        title: Nối Mê Cung
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Nối các câu đố với các khối phù hợp
-        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Nối Mê Cung
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: Mê cung nhiều sự lựa chọn
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Nhiều lựa chọn
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: Nhiều lựa chọn
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Kết hợp hình ảnh chương trình nào không chứa lỗi?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Nhiều lựa chọn
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        title: 'Nghệ sĩ - Hàm: Chọn đáp án đúng - Phần 1'
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Chọn khối lệnh đúng để vẽ hình này sử dụng nhữ hàm đã cho
+        title: 'Nghệ sĩ - Hàm: Chọn đáp án đúng - Phần 1'
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: Nối vòng lặp với hình phù hợp
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
         questions:
         - text: Hình nào tạo bởi vòng lặp này?
+        title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        - correct: true
         questions:
         - text: Hình nào tạo bởi chương trình này?
+        title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: Nối vói nghệ sĩ phù hợp
         content1: Nối hình với khối phù hợp.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Nối vói nghệ sĩ phù hợp
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: So sánh nào đúng?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Chọn các khối tốt nhất.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: 'Ong - Vòng lặp: Chọn đáp án đúng - Phần 1'
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Khối lệnh nào sẽ thu thập hết mật ong?
+        title: 'Ong - Vòng lặp: Chọn đáp án đúng - Phần 1'
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: Nối các mê cung - Phần 1
         content1: Nối các câu đố với các khối phù hợp
         questions:
         - {}
         - {}
         - {}
+        title: Nối các mê cung - Phần 1
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: 'Mê cung: Chọn đáp án đúng - Phần 1'
         questions:
         - text: Khối lệnh nào đúng?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Mê cung: Chọn đáp án đúng - Phần 1'
       4-5 Algorithms Match 1:
-        title: Phù hợp với/ khớp với / Chính xác với
+        answers:
+        - text: "<h4>Đặt điểm người chơi 1 bằng 0</h4>"
+        - text: "<h4>Người chơi 1 gieo xúc xắc</h4>"
+        - text: "<h4>Thêm số xúc xắc Người chơi 1 vừa tung vào tổng số điểm</h4>"
+        - text: "<h4>So sánh điểm số của tất cả các người chơi để xem ai thắng</h4>"
         content1: Nối những bước của trò "Đua xúc xắc" sao cho chúng xuất hiện lần
           lượt từ đầu đến cuối như trong thuật toán.
         questions:
@@ -239,22 +242,23 @@ vi-VN:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Đặt điểm người chơi 1 bằng 0</h4>"
-        - text: "<h4>Người chơi 1 gieo xúc xắc</h4>"
-        - text: "<h4>Thêm số xúc xắc Người chơi 1 vừa tung vào tổng số điểm</h4>"
-        - text: "<h4>So sánh điểm số của tất cả các người chơi để xem ai thắng</h4>"
+        title: Phù hợp với/ khớp với / Chính xác với
       4-5 Algorithms Multi 1:
-        title: Nhiều lựa chọn
-        questions:
-        - text: Đâu không phải là một ví dụ về thuật toán trong đời sống hàng ngày?
         answers:
         - text: Chải răng của bạn
         - text: Nướng bánh qui
         - text: Mua sắm theo danh sách
         - text: Quả chuối
+          correct: true
+        questions:
+        - text: Đâu không phải là một ví dụ về thuật toán trong đời sống hàng ngày?
+        title: Nhiều lựa chọn
       4-5 Computational Thinking Match 1:
-        title: Phù hợp với/ khớp với / Chính xác với
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Mỗi chiếc xe đã bị phân huỷ thành từng miếng nhỏ. Khớp mỗi xe với
           danh sách phân huỷ.
         questions:
@@ -262,80 +266,84 @@ vi-VN:
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
         - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Phù hợp với/ khớp với / Chính xác với
       4-5 Computational Thinking Multi 1:
-        title: Nhiều lựa chọn
-        questions:
-        - text: Seattle là một thành phố lớn.<br/>Eugene là một thành phố khá lớn<br/>Hillview
-            là một thành phố nhỏ.
         answers:
         - text: Bang Seattle _____ a _____ _____.
         - text: _____ là một thành phố_____.
+          correct: true
         - text: _____ là một _____ _____.
         - text: Eugene là một thành phố _____.
-      4-5 Crowdsourcing Multi 1:
+        questions:
+        - text: Seattle là một thành phố lớn.<br/>Eugene là một thành phố khá lớn<br/>Hillview
+            là một thành phố nhỏ.
         title: Nhiều lựa chọn
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - {}
+        - correct: true
         questions:
         - text: Ảnh nào sau đây đặc trưng cho crowdsourcing?
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: Nhiều lựa chọn
-        questions:
-        - text: Hoạt động nào có thể dễ dàng áp dụng crowdsourcing nhất?
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Dọn phòng
+          correct: true
         - text: Thưởng thức bữa tráng miệng
         - text: Chải tóc
         - text: Rửa mặt
-      4-5 Digital Footprint Multi 1:
-        title: Nhiều lựa chọn
         questions:
-        - text: Phần thông tin nào được liệt ra ở dưới là ổn để chia sẻ trên mạng
-            internet?
+        - text: Hoạt động nào có thể dễ dàng áp dụng crowdsourcing nhất?
+        title: Nhiều lựa chọn
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Sinh nhật của bạn
         - text: Món ăn yêu thích của bạn
+          correct: true
         - text: Địa chỉ của bạn
         - text: Số thẻ tín dụng của quý phụ huynh
-      4-5 Internet Multi 1:
+        questions:
+        - text: Phần thông tin nào được liệt ra ở dưới là ổn để chia sẻ trên mạng
+            internet?
         title: Nhiều lựa chọn
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Khi bạn cố gắng đăng nhập vào code.org, địa chỉ IP nào là tên miền
             (DNS) đưa bạn đến ?
+        title: Nhiều lựa chọn
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: Nhiều lựa chọn
         questions:
         - text: Nếu DNS đã gửi cho bạn đến trang địa chỉ IP 100.42.50.110, trang web
             nào bạn đang dùng?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Nhiều lựa chọn
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, Lou, chuyển qua Lou của tôi nào,
         - text: Lou, Lou, chuyển qua Lou của tôi nào, <br/>Lou, Lou, chuyển qua Lou
             của tôi, <br/>Lou, Lou, chuyển qua Lou của tôi, <br/>Chuyển qua Lou của
             tôi, người yêu .
+          correct: true
         - {}
         - {}
+        questions:
+        - {}
+        title: Nhiều lựa chọn
       4-5 Suncatchers Match 1:
-        title: Phù hợp với/ khớp với / Chính xác với
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Khớp mỗi chương trình với từ ngữ tạo ra nó, sử dụng nhóm kỹ năng
           đã được cung cấp.
         questions:
@@ -343,461 +351,425 @@ vi-VN:
         - {}
         - {}
         - {}
+        title: Phù hợp với/ khớp với / Chính xác với
+      4-5 Suncatchers Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-        - {}
-      4-5 Suncatchers Multi 1:
-        title: Nhiều lựa chọn
         questions:
         - text: Chương trình nào dưới đây <em>không</em> thực hiện trình tự chính
             xác như ở Chương trình 1?
+        title: Nhiều lựa chọn
+      4-5 artist loops multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
         questions:
         - text: Khối nào sẽ vẽ đúng ra hình này?
+        title: 'Nghệ sĩ - Vòng lặp: Chọn đáp án đúng - Phần 1'
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: 'Nghệ sĩ: Chọn đáp án đúng'
         questions:
         - text: Khối nào vẽ một hình chữ nhật có chu vi 100 pixels?
+        title: 'Nghệ sĩ: Chọn đáp án đúng'
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: 'Nghệ sĩ: Chọn đáp án đúng'
         questions:
         - text: Hình vẽ nào là đối xứng?
+        title: 'Nghệ sĩ: Chọn đáp án đúng'
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: 'Ong - Cấu trúc rẽ nhánh: Chọn câu trả lời đúng'
         questions:
         - text: Chọn các khối tốt nhất.
+        title: 'Ong - Cấu trúc rẽ nhánh: Chọn câu trả lời đúng'
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: 'Ong - Gỡ Lỗi: Chọn đáp án đúng'
         questions:
         - text: Hàm nào sẽ hoạt động?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Ong - Gỡ Lỗi: Chọn đáp án đúng'
       4-5 bee loops multi 1:
-        title: 'Ong - Vòng lặp: Chọn câu trả lời đúng'
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Khối nào sẽ giải quyết các câu đố?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Ong - Vòng lặp: Chọn câu trả lời đúng'
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Những khối nào giải quyết câu đố này?
         title: 'Mê cung - Cấu trúc rẽ nhánh: Chọn câu trả lời đúng'
-        questions:
-        - text: Những khối nào giải quyết câu đố này?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Nối Mê Cung
-        content1: Nối các câu đố với các khối phù hợp
-        pre_title: Hướng dẫn
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Nối các câu đố với các khối phù hợp
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Nối Mê Cung
       4-5 maze multi 1:
-        title: Mê cung nhiều sự lựa chọn
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Những khối nào giải quyết câu đố này?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Mê cung nhiều sự lựa chọn
       Begin planning your project:
-        title: tiêu đề
         content1: mô tả ở đây
       Begin planning your project_2018:
-        title: Bắt đầu kế hoạch dự án của bạn
         content1: mô tả ở đây
       Begin planning your project_2018_2019:
-        title: Bắt đầu kế hoạch dự án của bạn
+        content1: mô tả ở đây
+      Begin planning your project_2018_2019_2020:
         content1: mô tả ở đây
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 Design Project_2018:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 Design Project_2018_2019:
-        title: tiêu đề
+        content1: mô tả ở đây
+      CSD U2 L1 Overview:
         content1: mô tả ở đây
       CSD U2 L2 Overview:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 L3 Overview:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 L4 Overview:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 L5 Overview:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 L6 Overview:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 Lesson 6 Overview:
         content1: mô tả ở đây
       CSD U2 expand project:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 expand project_2018:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 expand project_2018_2019:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 project guide:
-        title: Trang web cá nhân của bạn
         content1: mô tả ở đây
       CSD U2 project guide_2018:
-        title: Trang web cá nhân của bạn
         content1: mô tả ở đây
       CSD U2 project guide_2018_2019:
-        title: Trang web cá nhân của bạn
         content1: mô tả ở đây
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: tiêu đề
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: tiêu đề
       CSD U3 Boolean MC_2018:
-        title: tiêu đề
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: tiêu đề
       CSD U3 Boolean MC_2018_2019:
-        title: tiêu đề
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: tiêu đề
       CSD U3 Card Examples_2018:
-        title: Tạo một thẻ tương tác
         content1: mô tả ở đây
       CSD U3 Card Examples_2018_2019:
-        title: Tạo một thẻ tương tác
         content1: mô tả ở đây
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U3 combining rep_2018:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U3 combining rep_2018_2019:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
-        title: Tạo trò chơi riêng
         content1: mô tả ở đây
       CSD U3 game intro_2018:
-        title: Tạo trò chơi riêng
         content1: mô tả ở đây
       CSD U3 game intro_2018_2019:
-        title: Tạo trò chơi riêng
         content1: mô tả ở đây
       CSD U3 platform intro:
-        title: Xây dựng một sàn nhảy
         content1: mô tả ở đây
       CSD U3 platform intro_2018:
-        title: Xây dựng một sàn nhảy
         content1: mô tả ở đây
       CSD U3 platform intro_2018_2019:
-        title: Xây dựng một sàn nhảy
         content1: mô tả ở đây
       CSD U5 Encryption 1:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 Encryption 1_2018:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 Encryption 1_2018_2019:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 Encryption 2:
-        title: Chuỗi nhị phân giải mã
         content1: mô tả ở đây
       CSD U5 Encryption 2_2018:
-        title: Chuỗi nhị phân giải mã
         content1: mô tả ở đây
       CSD U5 Encryption 2_2018_2019:
-        title: Chuỗi nhị phân giải mã
         content1: mô tả ở đây
       CSD U5 L13 SFLP Interpreting Data:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 crosstab warmup:
         content1: mô tả ở đây
@@ -806,55 +778,46 @@ vi-VN:
       CSD U5 crosstab warmup_2018_2019:
         content1: mô tả ở đây
       CSD U5 data visualization:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 data visualization_2018:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 data visualization_2018_2019:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 student record:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 student record_2018:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U5 student record_2018_2019:
-        title: tiêu đề
         content1: mô tả ở đây
       CSD U6 LED create intro:
-        title: Làm một ứng dụng bằng cách sử dụng LED
         content1: mô tả ở đây
       CSD U6 LED create intro_2018:
-        title: Làm một ứng dụng bằng cách sử dụng LED
         content1: mô tả ở đây
       CSD U6 LED create intro_2018_2019:
-        title: Làm một ứng dụng bằng cách sử dụng LED
         content1: mô tả ở đây
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: mô tả ở đây
@@ -863,927 +826,1470 @@ vi-VN:
       CSD U6 final intro_2018_2019:
         content1: mô tả ở đây
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "\"# Tiếp tục khiêu vũ!\n \nTrong phần 2, bạn sẽ tạo ra dự án của
+          riêng mình. Không còn những câu đố - thay vào đó là nhiều dự án thể hiện
+          bằng nhiều cách khác nhau để cho ra những bữa tiệc khiêu vũ phức tạp hơn.
+          \n\nBạn có thể thực hiện cấp độ này theo bất kỳ thứ tự nào. Khám phá xung
+          quanh để xem công việc được thực hiện ra sao ở cấp độ trước đó, hoặc kết
+          hợp ý tưởng của các dự án. Hãy thử tất cả, chọn ra mục bạn yêu thích và
+          dành thời gian bổ sung thêm vào dự án để biến nó thành của riêng bạn.\n\n<a
+          class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">Tiếp
+          tục</a> \n\n<div class=\"\"clearfix\"\"></div> \n\n<div style=\"\"float:
+          left; margin: 10px\"\">\n <a href=\"\"2\"\">\n <h2> \nLặp đi lặp lại \n</h2>
+          \n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"3\"\">\n
+          <h2>\n Thêm nút \n</h2>\n\n <img src=\"\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"\"></a>
+          \n\n</div>\n\n <div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"4\"\">\n
+          <h2> \nVào đội hình \n</h2> \n\n<img src=\"\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"\"></a>\n\n
+          </div>\n\n <div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"5\"\">
+          \n<h2> \nHọ sẽ đi đâu? \n</h2> \n\n<img src=\"\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"6\"\">\n
+          <h2>\n Nhóm nhảy \n</h2> \n\n<img src=\"\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"7\"\">\n
+          <h2> \nNốt đen\n </h2> \n\n<img src=\"\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"8\"\">\n
+          <h2>\n Âm trầm, Âm trung, Âm cao \n</h2> \n\n<img src=\"\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"\"></a>
+          \n\n</div>\n\n <div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"9\"\">
+          \n<h2>\n Nhanh lên, Chậm lại \n</h2>\n\n <img src=\"\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"\"></a>\n\n
+          </div>\"\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Tiếp tục nhảy múa!
+
+          Đối với phần 2, bạn sẽ tạo dự án của riêng mình. Không có câu đố nào ở đây - thay vào đó là một loạt các dự án thể hiện những cách khác nhau để thực hiện những bữa tiệc khiêu vũ phức tạp hơn.
+
+          Bạn có thể thực hiện các cấp độ này trong bất kỳ đơn hàng nào_. Nhảy xung quanh để xem làm thế nào một cái gì đó đã được thực hiện ở cấp độ trước, hoặc kết hợp các khái niệm giữa các dự án. Hãy thử tất cả, chọn mục yêu thích của bạn và dành thời gian của bạn để thêm vào dự án đó để biến nó thành của riêng bạn.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Tiếp tục</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Quay lại và Forth
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Thêm nút
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Bắt đầu hình thành
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Họ đi đâu?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Vũ đoàn
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ghi chú khu phố
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bass, Mid, Treble
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Tăng tốc, giảm tốc độ
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup:
-        title: Thiết lập trình mô phỏng internet
         content1: mô tả ở đây
       Internet Simulator Setup 2:
-        title: tiêu đề
         content1: mô tả ở đây
       Internet Simulator Setup 3:
         content1: mô tả ở đây
       K-1 Artist 1 Multi 1:
-        title: Nhiều lựa chọn
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Những khối nào giải quyết câu đố này?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Nhiều lựa chọn
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Những khối nào vẽ ra hình vuông?
+        title: Nhiều lựa chọn
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Phù hợp với/ khớp với / Chính xác với
         content2: Nối các hình cùng loại.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Nhiều lựa chọn
-        questions:
-        - text: Có bao nhiêu mật hoa?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Nhiều lựa chọn
-        questions:
-        - text: Có bao nhiêu mật hoa?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Có bao nhiêu mật hoa?
+        title: Nhiều lựa chọn
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Có bao nhiêu mật hoa?
+        title: Nhiều lựa chọn
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Nối các khối
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Big Event Match 1:
         title: Phù hợp với/ khớp với / Chính xác với
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - {}
         content2: Ghép tổ hợp phím với các bước nhảy phù hợp.
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - {}
+        title: Phù hợp với/ khớp với / Chính xác với
       K-1 Digital Footprint Multi 1:
-        title: Nhiều lựa chọn
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Con vật nào để lại dấu chân kỹ thuật số làm nó <strong>không an toàn
             nhất</strong> so với các con vật còn lại?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: Nhiều lựa chọn
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Bạn sẽ đơn giản hóa trình tự này với vòng như thế nào?
+        title: Nhiều lựa chọn
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Nhiều lựa chọn
         questions:
         - text: Mũi tên nào đưa Flurb tới kho báu?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: Nhiều lựa chọn
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Thông tin nào bạn <strong>không nên</strong> chia sẻ trực tuyến?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: Nhiều lựa chọn
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Khối nào nên chọn cuối cùng?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Nhiều lựa chọn
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Khối lặp lại nào là giống nhau?
+        title: Nhiều lựa chọn
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: Nhiều lựa chọn
+        - correct: true
         questions:
         - text: Chọn chính xác khối lặp lại.
+        title: Nhiều lựa chọn
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Phù hợp với/ khớp với / Chính xác với
+        - {}
         content2: Nối câu đố với khối lệnh phù hợp
-        pre_title: Hướng dẫn
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Phù hợp với/ khớp với / Chính xác với
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Mê cung
         questions:
         - text: Câu trả lời nào giải quyết cho mức độ này?
+        title: Mê cung
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: Nhiều lựa chọn
         questions:
         - text: Thuật toàn nào đưa Flurb tới những bông hoa?
+        title: Nhiều lựa chọn
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Nhiều lựa chọn
+        - correct: true
         questions:
         - text: Bước nào nên thực hiện đầu tiên trong thuật toán này?
+        title: Nhiều lựa chọn
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: Nhiều lựa chọn
         questions:
         - text: Bước mà nên điền vào chỗ trống cho thuật toán này?
+        title: Nhiều lựa chọn
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: Nhiều lựa chọn
         questions:
         - text: Khối nào có nghĩa "DI CHUYỂN"?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
         title: Nhiều lựa chọn
-        questions:
-        - text: Từ nào được đánh vần?
+      K-1 Word Search Multi 3:
         answers:
         - text: THIẾT LẬP
         - text: QUẢNG TRƯỜNG
+          correct: true
         - text: PHÍA NAM
+        questions:
+        - text: Từ nào được đánh vần?
+        title: Nhiều lựa chọn
       Multi-Screen Apps:
-        title: tiêu đề
         content1: mô tả ở đây
       New Challenge Introduction:
-        title: tiêu đề
+        content1: mô tả ở đây
+      OPD-K5 Reviewing Reflections:
         content1: mô tả ở đây
       OPD-K5 Stage3aGo:
-        title: tiêu đề
+        content1: mô tả ở đây
+      OPD-K5 Stage3aGo_copy:
+        content1: mô tả ở đây
+      OPD-K5 conditionals introduced:
+        content1: mô tả ở đây
+      OPD-K5 debugging:
+        content1: mô tả ở đây
+      OPD-K5 diving deeper intro:
+        content1: mô tả ở đây
+      OPD-K5 events introduced:
+        content1: mô tả ở đây
+      OPD-K5 for loops:
+        content1: mô tả ở đây
+      OPD-K5 for loops intro:
+        content1: mô tả ở đây
+      OPD-K5 for loops introduction:
+        content1: mô tả ở đây
+      OPD-K5 functions introduced:
+        content1: mô tả ở đây
+      OPD-K5 journaling:
+        content1: mô tả ở đây
+      OPD-K5 lesson implementation planning:
+        content1: mô tả ở đây
+      OPD-K5 lesson plans:
+        content1: mô tả ở đây
+      OPD-K5 loops introduced:
+        content1: mô tả ở đây
+      OPD-K5 project:
+        content1: mô tả ở đây
+      OPD-K5 projects introduction:
+        content1: mô tả ở đây
+      OPD-K5 role_of_teacher:
+        content1: mô tả ở đây
+      OPD-K5 sequencing introduced:
+        content1: mô tả ở đây
+      OPD-K5 sprite lab:
+        content1: mô tả ở đây
+      OPD-K5 sprite lab introduction:
+        content1: mô tả ở đây
+      OPD-K5 sprite lab unplugged:
+        content1: mô tả ở đây
+      OPD-K5 sprite lab video:
+        content1: mô tả ở đây
+      OPD-K5 types of lessons:
+        content1: mô tả ở đây
+      OPD-K5 using lesson plans:
+        content1: mô tả ở đây
+      OPD-K5 variables:
+        content1: mô tả ở đây
+      OPD-K5 variables introduction:
+        content1: mô tả ở đây
+      OPD-K5 variables unplugged:
+        content1: mô tả ở đây
+      OPD-K5 where to next:
+        content1: mô tả ở đây
+      OPD-K5-projects-1:
         content1: mô tả ở đây
       Prepare for your presentation:
-        title: tiêu đề
         content1: mô tả ở đây
       'Technique: Frequency Analysis':
         content1: mô tả ở đây
       Terminology Recap:
-        title: Dễ thôi, tiếp theo là gì?
         content1: mô tả ở đây
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Không đúng
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Không đúng
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Không đúng
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Không đúng
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Tôi không biết
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Tôi không biết
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Tôi không biết
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
+        - correct: true
+        - text: Tôi không biết
+        questions:
         - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
-      courseD_external_binary1:
-        title: Bản vẽ nhị phân
-      courseD_external_binary1_2018:
-        title: Bản vẽ nhị phân
-      courseD_external_binary1_2018_2019:
-        title: Bản vẽ nhị phân
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_EOC_2020:
+        description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
+          muốn nhé.
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: mô tả ở đây
+      csf_digital_trails:
+        markdown: |-
+          # Theo dấu chân số
+
+          ## Thông tin nào là OK để có trong dấu chân số của bạn?
+      csf_password_power-up:
+        content1: mô tả ở đây
+      csf_putting_a_stop_to_online_meanness:
+        content1: mô tả ở đây
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Khu phố trực tuyến của tôi
+
+          ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
-      gradek1_activity_beNice:
-        title: Máy tính là bạn của bạn
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_story:
+        content1: mô tả ở đây
+        markdown: |-
+          # Dịch bệnh bùng phát: Tự lập trình mô phỏng
+
+          ## Chào mừng bạn đến với Thị Trấn Quái Vật!
+          Thị Trấn Quái Vật vốn là một thị trấn hạnh phúc và khỏe mạnh. Các quái vật trong Thị Trấn Quái Vật rất thích lang thang khắp nơi để ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Một ngày nọ, một chú quái vật bắt đầu có cảm giác bị ốm. Chú quái vật này đã bị dính **vi rút** rồi! Vi rút là một loại vi khuẩn nhỏ xíu khiến bạn bị ốm. Các quái vật khác thì vẫn vô tư. Họ tiếp tục ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Không lâu sau, thêm hai quái vật nữa bị ốm. Vẫn là loại vi rút đó! Dường như họ bị nhiễm vi rút từ bạn bè của mình.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Vi rút dần lây lan sang các quái vật khác ở xung quanh. Các quái vật khỏe mạnh bắt đầu lo lắng rằng họ cũng bị ốm. Các quái vật bị ốm bắt đầu lo lắng rằng họ sẽ lây vi rút cho những quái vật khác.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Ngăn chặn lây lan
+          May mắn thay, sau khi nghiên cứu loại vi rút này, vùng đất láng giềng của Thị Trấn Quái Vật đã phát hiện ra một thông tin quan trọng. Họ nhận ra rằng vi rút sẽ khó lây lan hơn nếu họ đeo khẩu trang che miệng. Nếu đeo khẩu trang, quái vật bị ốm sẽ khó truyền vi rút cho các quái vật khỏe mạnh.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Rồi chuyện gì sẽ xảy ra?
+
+          Hôm nay, bạn sẽ lập trình để tạo ra và tự mình chạy **mô phỏng** dịch bệnh bùng phát do vi rút tại Thị Trấn Quái Vật. Bản mô phỏng là một mô hình máy tính cho một quy trình hoặc một hệ thống. Hãy học cách lập trình và dự đoán điều gì sẽ xảy ra với các vùng đất láng giềng của Thị Trấn Quái Vật.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Vi rút lây lan nhanh tới mức nào?*
+
+          * *Rồi rất cả mọi người sẽ bị ốm sao?*
+
+          * *Khẩu trang có tác dụng gì?*
+
+
+          Sau khi hoàn thành, hãy chia sẻ bản mô phỏng với mọi người. Hãy chia sẻ thông điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người khi vi rút lan tới thị trấn.
+      outbreak_story2:
+        content1: mô tả ở đây
+        markdown: |
+          # Dịch bệnh bùng phát: Tư duy như nhà khoa học
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Mô phỏng là phương pháp lý tưởng để tìm hiểu những sự việc khó quan sát trong thế giới thực. Phương pháp này giúp các nhà khoa học giải quyết các vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là phương thức minh họa cách vi rút lây lan trong Thị Trấn Quái Vật.
+
+          ## Đặt lại và chạy lại!
+          Ngay cả khi bạn chính là người lập trình thì cũng không thể biết chính xác điều gì sẽ xảy ra khi nhấn nút "Chạy". Các quái vật lang thang ngẫu nhiên nên bạn không biết vi rút sẽ lây lan nhanh hay chậm. Mỗi khi bạn thay đổi mã lập trình, hãy đảm bảo chạy mô phỏng nhiều hơn một lần. Sự việc có thể không lặp lại tới lần thứ hai đâu!
+
+          ## Thu thập dữ liệu
+          Hãy thử ghi lại những gì bạn quan sát được trong quá trình chạy mô phỏng. Bạn có thể đếm số quái vật bị ốm hoặc sử dụng đồng hồ bấm giờ xem sự việc diễn ra nhanh tới mức nào. Ví dụ: Thông thường sẽ mất bao nhiêu thời gian để toàn bộ quái vật bị ốm nếu không có ai đeo khẩu trang?
+
+          ## Đưa ra dự đoán
+          Nếu bạn hiểu mô hình của mình, bạn có thể sử dụng mô hình đó để đưa ra dự đoán. Bạn thậm chí còn có thể thay đổi cách chạy mô phỏng và đoán xem sẽ có những thay đổi gì xảy ra. Ví dụ:
+          * Điều gì sẽ xảy ra nếu có số lượng quái vật gấp đôi?
+          * Điều gì sẽ xảy ra nếu tốc độ di chuyển của quái vật giảm còn một nửa?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Thị Trấn Quái Vật có giống thế giới thực không?
+          Mỗi mô hình đều có giới hạn về tính chân thực.
+          * Mô phỏng dịch bệnh bùng phát có điểm chung gì so với dịch bệnh bùng phát do vi rút trong thế giới thực?
+          * Điểm khác biệt là gì?
+          Sau khi hoàn thành hoạt động này, hãy thảo luận các câu hỏi này với thầy cô giáo và gia đình nhé!
+
+          ## Chúng ta có thể tạo mô hình nào khác?
+          Bạn đã tạo mô hình vận hành dịch bệnh bùng phát tại Thị Trấn Quái vật rồi. Những điểm nào bản mô phỏng của bạn chưa làm được hoặc cho thấy bạn mong muốn làm được điều đó? Hãy nhấn tiếp tục để tìm hiểu thêm và học thêm về cách tạo mô hình:
+          * Tăng số lượng quái vật trong bản mô phỏng
+          * Giúp quái vật hồi phục sau khi nhiễm vi rút
+          * Xác suất, miễn dịch, vắc xin và nhiều điều khác!
+
+          Bạn còn có thể chia sẻ mô hình mô phỏng của mình với người khác hoặc chia sẻ thông điệp về những gì bạn nghĩ bạn có thể làm được để giúp mọi người khỏe mạnh khi vi rút lan tới thị trấn.
+      outbreak_freeplay_choice:
+        display_name: chơi miễn phí
+        description: Bạn đã hoàn thành phần hướng dẫn! Hãy tiếp tục thay đổi hoặc
+          cải thiện dự án của mình. Bạn có thể chọn tiếp tục làm việc với các khối
+          giống như vậy hoặc thử hộp công cụ mở rộng.
+      courseD_project_exemplars_2020_2021:
+        markdown: |+
+          # Ví dụ về Dự án
+
+          Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu, hãy dành thời gian xem các dự án mẫu nhé.
+
+
+          | Tốc độ ngẫu nhiên khi nảy (Bóng rổ) | Nhân bản Stormtrooper (Chiến tranh giữa các vì sao) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Quả bóng thay đổi tốc độ khi nảy lên! | Hãy tránh stormtrooper nếu không chúng sẽ nhân bản đấy! |
+
+
+          | Panic! at the Disco (Bữa tiệc khiêu vũ) | Cảnh biển (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Các vũ công phụ họa của bạn liên tục thay đổi điệu nhảy! | Hãy thử thêm nhiều màu sắc và phông nền cho cảnh này nhé! |
+

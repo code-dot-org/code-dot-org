@@ -1,0 +1,10 @@
+name 'CSD games collisions practice choice'
+editor_experiment ''
+display_name 'Collisions Practice'
+description 'Practice using the new collisions blocks.'
+
+sublevels
+level 'CSD U3 collisions types_2020'
+level 'CSD U3 collisions types2_2020'
+level 'CSD U3 collisions types3_2020'
+level 'CSD U3 collisions types4_2020'

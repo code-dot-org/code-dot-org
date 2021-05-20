@@ -1,0 +1,8 @@
+name 'CSD U2 Image challenge_pilot_2021'
+display_name 'Adding Images'
+description 'Find an extra challenge or a new type of code here.'
+
+sublevels
+level 'CSD U2 Image Tag Height Width Attributes_2021'
+level 'CSD U2 Image Tag Illustrated Story_2021'
+level 'CSD U2 Image Tag How-To_2021'

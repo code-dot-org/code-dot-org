@@ -1,7 +1,5 @@
 ---
 title: Dossier de presse
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -59,11 +57,11 @@ La technologie transforme tous les secteurs de la planète. En 2015, 7 millions 
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Les ordinateurs sont partout, changeant tous les secteurs de la planète, mais moins de la moitié de toutes les écoles enseignent les sciences informatiques. Filles et minorités sont gravement sous-représentées dans les classes d'informatique et dans l’industrie de pointe. La bonne nouvelle, c'est que nous sommes en train de changer cela.
+Les ordinateurs sont partout, changeant tous les secteurs de la planète, mais moins de la moitié de toutes les écoles enseignent les sciences informatiques. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est que nous sommes en train de changer cela.
 
 Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo!, et Disney. Plus de 100 partenaires se sont réunis pour soutenir ce mouvement. Chaque Apple Store dans le monde a accueilli une heure de Code. Même le président Obama a écrit sa première ligne de code dans le cadre de la campagne.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+C’est pourquoi tout le monde sur [X number] élèves à [SCHOOL NAME] participe au plus grand événement d’apprentissage de l’histoire : L'Heure du Code, durant la Semaine de l'éducation en informatique (3-9 décembre).
 
 Je vous écris pour vous inviter à assister au coup d'envoi de notre campagne et à voir les enfants commencer leur Heure de Code le [DATE].
 
@@ -75,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"Le projet "Une heure de Code" vise à démystifier la programmation et montrer que l'informatique n'a rien de sorcier - tout le monde peut en apprendre les bases", a dit Hadi Partovi, fondateur et CEO de code.org "Environ 100 million d'élèves à travers le monde ont essayé "Une heure de code". The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"Le projet "Une heure de Code" vise à démystifier la programmation et montrer que l'informatique n'a rien de sorcier - tout le monde peut en apprendre les bases", a dit Hadi Partovi, fondateur et CEO de code.org "Environ 100 million d'élèves à travers le monde ont essayé "Une heure de code". Au XXIe siècle, la demande d'enseignement en informatique pertinent ne connaît ni frontières, ni limites." <br /> <br />
 
 #### À propos de Code.org
 
-Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Its vision is that every student in every school has the opportunity to learn computer programming. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org est une organisation à but non lucratif dont le but est d'accroître l'intérêt pour l'informatique ainsi que la participation des femmes et des groupes sociaux sous-représentés. Sa mission est de permettre à chaque élève, dans chaque école d'avoir l'opportunité d'apprendre la programmation informatique. Après son lancement en 2013, Code.org a organisé une campagne intitulée "l'heure du code" qui a permis a plus de 100 millions d'élèves de mieux comprendre l'informatique à ce jour. Aux Etats-Unis, plus de 70 partenariats avec des écoles publiques ont été mis en place afin détendre les programmes en informatique. Code.org est soutenu par des dons de sociétés philanthropiques, de fondations et de généreux particuliers, y compris Microsoft, la fondation Infosys, USA, la famille Ballmer, Omidyar Network et beaucoup d'autres. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

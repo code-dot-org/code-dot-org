@@ -1,0 +1,41 @@
+%p= "Hello #{@form[:first_name] || @form[:name]},"
+%p Thank you for your interest in supporting computer science education in your region!
+
+-if @regional_partner
+  %p= "Code.org's Regional Partner, #{@regional_partner.name}, will get back to you."
+-else
+  %p
+    Unfortunately we do not have a local Regional Partner in your region at this time.
+  %p
+    If you are a teacher, please visit our
+    = link_to 'Professional Learning page', CDO.code_org_url('/educate/professional-learning', CDO.default_scheme)
+    to learn about the opportunities that exist in your region.
+  %p
+    If you are a school or district administrator, we don't currently have a local contact for you.
+    However, we are continuing to expand into more regions every year and will forward your message
+    to a Regional Partner in your community if and when they become available.
+  %p
+    In the meantime, take a look
+    = link_to 'here for the K-12 Code.org curriculum options', CDO.studio_url('/courses', CDO.default_scheme)
+    available for no cost to all schools, or check out our list of
+    = link_to 'third-party computer science resources.', CDO.code_org_url('/educate/curriculum/3rd-party', CDO.default_scheme)
+
+- recipient_alias = @regional_partner ? 'your Regional Partner' : 'Code.org'
+%p= "Below is a confirmation of the information you sent to #{recipient_alias}:"
+= render partial: 'form_body'
+
+%p Thanks again and we appreciate you reaching out!
+
+%p
+  Best,
+  %br
+  %br
+  Sarah Fairweather
+  %br
+  Education Program Manager, Code.org
+  %br
+  %br
+  Dave Frye
+  %br
+  Director of Program Development and Operations, Code.org
+

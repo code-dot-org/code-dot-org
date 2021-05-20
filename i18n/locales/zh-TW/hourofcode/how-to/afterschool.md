@@ -1,14 +1,18 @@
 ---
-title: 活動指引
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # 如何在課後及才藝班中教授一小時玩程式
 
-### 參與活動，依下面步驟向學生們介紹第一個小時的計算機科學。 一小時玩程式活動的教程對初學者來說很容易上手！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -18,11 +22,11 @@ nav: how_to_nav
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-對組織者來說，**所有的一小時玩程式活動**都不需要做過多的準備，因為它可以讓孩子們依自己的進度和程度自我學習。
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**需要一小時玩程式的課後計劃？**參考我們的[範例](/files/AfterschoolEducatorLessonPlanOutline.docx)
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. 推廣你的一小時玩程式活動
 
@@ -30,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. 規劃你的硬體需求 — 不一定需要電腦
 
-一小時玩程式課程在有網路連線的電腦上會有最佳的體驗。 但你的學生**不見得**都需要一台電腦，你甚至可以舉辦一個完全沒有電腦的一小時玩程式活動。
+一小時玩程式課程在有網路連線的電腦上會有最佳的體驗。 But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-在學生的電腦或其他設備上測試教程，確定音效、影片在瀏覽器能正常運作。 **網路頻寬小？**可以用投影機播放影片，如此就學生就不需自己下載觀看。 或者嘗試不插電活動 / 離線教程。
+在學生的電腦或其他設備上測試教程，確定音效、影片在瀏覽器能正常運作。 **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 如果教程需要音效，請提供耳機或要求學員自備。
 
-**設備數量不足？**試試看[小組編程](https://www.youtube.com/watch?v=vgkahOzFH2Q)吧！ 當學生們合作時，他們會互相幫忙，並減少對老師的依賴。 他們也將瞭解到計算機科學是需要社交與合作的。
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 當學生們合作時，他們會互相幫忙，並減少對老師的依賴。 他們也將瞭解到計算機科學是需要社交與合作的。
 
 ## 5. 用一段勵志影片做為一小時玩程式的開場
 
@@ -49,19 +53,19 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [總統奧巴馬號召所有學生學習計算機科學](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
 - 在[這裡](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)找到更多有啟發性的影片
 
-**如果你是初入計算機科學的新手也沒關係，這裡有些點子幫助你介紹你的一小時玩程式活動：**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - 用男孩和女還們會關心的例子來解釋技術是如何影響我們的生活的（比如一些用於拯救生命，幫助人類，讓人類連接起來等的一些軟件和技術）。
 - 列出在日常生活中用到程式碼的事情。
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**需要更多的指引嗎？**下載這個[課程計畫範本](/files/AfterschoolEducatorLessonPlanOutline.docx)
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. 開始寫程式！
 
-**直接參與活動** - 在白板上直寫寫下教程的連結。 Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**當有人遇到困難時，你可以說：** - 「我不是很清楚， 我們一起找出答案。」 - 「科技不一定能完全依我們所想的運作。」 - 「學習編程就像學習新的語言，你不太可能一開始就說得很流利。」
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. 我們一起找出答案。」 - 「科技不一定能完全依我們所想的運作。」 - 「學習編程就像學習新的語言，你不太可能一開始就說得很流利。」
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -81,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 一小時玩程式之後呢，有什麼？
 
-一小時玩程式只是入門，是瞭解科技如何運作、軟體如何創造的一小步。 幫助學生們繼續他們的旅程，並鼓勵他們[在線上持續學習](%= codeorg_url('/learn/beyond') %)！
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

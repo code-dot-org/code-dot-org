@@ -1,0 +1,23 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "isCostumeEqual",
+    "blockText": "{SPRITE} costume is {COSTUME}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "returnType": "Boolean",
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

@@ -1,7 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: Näytevastaus, joka tukee Tietojenkäsittelytietokoulusviikkoa ja Hour of Codea
 ---
 
 {{ signup_button }}

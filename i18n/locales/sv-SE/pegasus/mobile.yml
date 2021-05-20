@@ -12,12 +12,12 @@
   csedweek_dates: "8-14 december 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> Kodtimmen</a> kommer. Kalla till dig alla lärare och arrangörer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> planera din kodtimme</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Är du en CS lärare? Se andra CSEdWeek resurser</a>'
+  csedweek_banner_teachers_text: "Är du en CS lärare? Se andra CSEdWeek resurser"
   n_have_learned_an_hoc: "<h1>Prova en</h1><h2>Hour of Code</h2><h3># har redan provat</h3>"
   anybody_can_learn: "Alla kan lära sig."
   learn_now: "Lär dig nu"
   petition_message: "Alla elever i alla skolor borde ha möjligheten att lära sig datavetenskap"
   petition_sign_message: 'Om du håller med så skriv ditt namn. Delta # andra.'
-  petition_sign_message_support: 'Om du stöder oss, skriv ditt namn.  Kom tillsammans med  # andra.'
   petition_join_others: 'Gå med # andra'
   name: "Namn"
   email: "E-post"
@@ -26,6 +26,7 @@
   twentyhours_heading: "Prova vår Introduktionskurs i Datavetenskap"
   twentyhours_text: "Avslutat din första Hour of Code? Lär dig mer om grunderna i datavetenskap och programmering i den här uppföljningskursen."
   og_title: 'Code.org: Alla kan lära sig'
+  og_title_soon: "Hour of Code är på gång"
   og_description: "Alla elever i skolan förtjänar att kunna studera datavetenskap."
   csedweek_og_title: "Timmen av kod är här"
   hoc2014_heading: "Gå med i <a href=\"http://hourofcode.com\"> kodtimmen</a> <br/> 8-14 December 2014 <br/>"
@@ -157,7 +158,7 @@
   studiobar_elementary_title: "Grundkurser"
   studiobar_elementary_body: "Våra tre nya kurser för grundskolan"
   studiobar_dance_title: "Dansparty"
-  studiobar_dance_body: "Skapa och dela ditt egna dansparty"
+  studiobar_dance_body: "Skapa och dela ditt eget Dance Party"
   studiobar_hoc_title: "Timme med Kod"
   studiobar_hoc_body: "Lär dig programmera med Angry Birds"
   studiobar_flappy_title: "Flappy kod"
@@ -205,6 +206,7 @@
   homepage_hero_text_stat_loc: "#loc rader kod skriven av studenter"
   homepage_hero_text_stat_students: "#student_count student konton i Kod Studio"
   homepage_hero_text_stat_served: 'Timmen av kod: #served serverad'
+  homepage_hero_hoc_is_coming: "Hour of Code är på gång"
   homepage_slot_text_hoc: "Timme med Kod"
   homepage_slot_text_frozen: "Frozen med Anna och Elsa"
   homepage_slot_text_teacher: "Lärare Dashboard"
@@ -225,6 +227,7 @@
   homepage_action_text_learn: "Börja lära "
   homepage_action_text_signpetition: "Skriv på uppropet"
   homepage_signpetition_dropdown: "Underteckna vår namninsamling &#x25BE;"
+  homepage_signpetition_dropdown_text: "Jag håller med"
   homepage_diversity_pledge: "Ta mångfalds-märket"
   homepage_banner_text_prizes: 'Hour of Code kommer igen, 5-11 december. '
   homepage_banner_link_prizes: 'Gå med i det största lärande eventet i historien. '
@@ -760,6 +763,7 @@
   coursee-2017_gradelevel: Åldrarna 8-12
   coursee-2018_gradelevel: Åldrarna 8-12
   coursee-2019_gradelevel: Åldrarna 8-12
+  coursee-2020_gradelevel: Åldrarna 8-12
   accelerated_gradelevel: "Åldrar 10 + (efter kurs 3)"
   codeorg_platformtext: "Moderna webbläsare, smartphones, surfplattor"
   codeintl_platformtext: "Moderna webbläsare, smartphones, surfplattor"
@@ -1075,6 +1079,7 @@
   flappy_shortcode: "flaxa"
   header_home: "Hem"
   header_courses: "kurser"
+  header_course_catalog: "Kurskatalog"
   header_project_gallery: "Projekt"
   header_sections: "Avsnitt"
   header_professional_learning: "Kollaborativt lärande"
@@ -1103,6 +1108,9 @@
   header_stats: "Statistik"
   header_help_us: "Hjälp oss"
   header_about: "Om"
+  header_report_bug: "Rapportera ett problem"
+  header_legal_privacy: "Sekretesspolicy"
+  header_legal_tos: "Villkor"
   header_documentation: "Dokumentation"
   user_header_label: "Hej %{username}"
   user_header_team: "Team"
@@ -1118,10 +1126,13 @@
   aquatic_name: 'Minecraft: Resande vattenlevande'
   account_sign_up_email_opt_in: "Får vi skicka e-post till dig med nyheter om våra kurser, lokala erbjudanden eller andra nyheter i ämnet datavetenskap?"
   hoc_overview_dance_title: "Dansparty"
+  hoc_overview_dance_subtitle: "Koda ett Dance Party och dela med dina vänner. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, och 25 till!"
+  hoc_overview_dance_2019_subtitle: "Koda ett Dance Party att dela med vänner. Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, och 34 andra!"
   hoc_overview_partner_activities_title: "Fler aktiviteter från våra partner"
   hoc_overview_partner_activities_body: "Webbplatsen för Hour of Code har över 100 datarelaterade aktiviteter för alla åldrar och erfarenhetsnivåer och är utvecklad av Code.org och partner."
   hoc_overview_partner_activities_link: "Visa aktiviteter"
   hoc_overview_start_tutorial: "Start"
+  hoc_overview_more_resources: "För mera resurser om hur du får kontakt i ditt distanslärningsklassrum, läs vår guide för hur man är värd för  [virtuell Hour of Code](https://hourofcode.com/us/how-to/virtual). För studenter med begränsad insikt i teknik eller  konnektivitet, dela detta paket av [frånkopplade Hour of Code aktivititeter](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)"
   hoc_overview_view_teacher_guide: "Visa lärarhandledning"
   hoc2018_creativity_create: "Skapa"
   hoc2018_creativity_what_will_you_create: "Vad kommer du att skapa?"
@@ -1156,5 +1167,13 @@
   hoc2018_dance_teacher_resources_tile2_description: "Inga datorer behövs!  Lär om kodningskoncept för att koreografera ett dansparty tillsammans."
   hoc2018_dance_teacher_resources_tile2_button: "Ouppkopplad aktivitet"
   hoc2018_dance_amazon_about_future_engineer_button: "Lär dig mer"
-  hoc2018_dance_measure: "Åtgärd"
-  hoc2018_dance_measure_colon: 'Åtgärd:'
+  hoc2018_dance_measure: "Takt"
+  hoc2018_dance_measure_colon: 'Takt:'
+  hoc2018_mc_thank_microsoft: "  Vi tackar Microsoft som stöttar vår vision och målsättnng att säkerställa att alla barn har möjlighet att lära sig datavetenskap och får de färdigheter som behövs för att lyckas på 2000-talet.  "
+  footer_powered_by_aws: "Drivs av Amazon Web Services"
+  footer_privacy_policy: "Sekretesspolicy"
+  footer_about: "Om"
+  footer_partners: "Samarbetspartners"
+  footer_donate: "Donera"
+  footer_support: "Hjälp och Community"
+  footer_terms: "Villkor"

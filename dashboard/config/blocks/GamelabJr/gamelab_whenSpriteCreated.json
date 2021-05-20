@@ -1,0 +1,25 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenSpriteCreated",
+    "blockText": "when {SPRITE} created",
+    "miniToolboxBlocks": [
+      "gamelab_newSpritePointer"
+    ],
+    "callbackParams": [
+      "extraArgs"
+    ],
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "eventBlock": true
+  }
+}

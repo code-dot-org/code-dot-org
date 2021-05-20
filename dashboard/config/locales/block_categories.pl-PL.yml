@@ -3,58 +3,30 @@ pl:
   data:
     block_categories:
       Actions: Działania
-      Loops: Pętle
-      Functions: Funkcje
-      Color: Kolor
-      Brushes: Pędzle
-      Math: Matematyka
-      Logic: Logika
-      Variables: Zmienne
-      Number: Liczba
-      String: Łańcuch
-      Image: Obraz
-      Boolean: Wartość logiczna
-      Conditionals: Zdania z warunkami
-      Events: Zdarzenia
-      Games/Score: Gry/Punkty
-      Comments: Komentarze
-      Category: Kategoria
-      Prebuilt: Wcześniej zbudowany
-      Text: Tekst
-      Picker: Selektor
-      Comment: Komentarz
-      World: Świat
-      Behaviors: Zachowanie
-      'Variables ': 'Zmienne '
-      Default: Domyślne
-      Locations: Położenie
-      everythingelse: pozostałe
-      Location: Miejsce
-      numbers: liczby
-      Numbers: Liczby
-      Input: Wejście
-      Dancers: Tancerze
-      Groups: Grupy
       Advanced: Zaawansowane
-      Start: Rozpocznij
-      Music: Muzyka
-      Dancing: Taniec
-      Sprite: Duszek
-      Brush: Pędzel
-      Make Sprite: Utwórz duszka
-      Movement: Ruch
-      Booleans: Wartości logiczne
-      Functional: Funkcjonalny
-      While Events: Podczas zdarzeń
-      Sprite Properties: Właściwości duszka
-      Predefined: Wstępnie zdefiniowane
-      test: test
-      test2: test2
-      Use These Blocks: Użyj tych bloków
-      Do Not Use: Nie używaj
-      Foo: Foo
-      Name: Imię/Nazwisko
-      NEW BLOCKS: NOWE BLOKI
+      Behaviors: Zachowanie
+      Brushes: Pędzle
+      Color: Kolor
+      Comment: Komentarz
+      Comments: Komentarze
+      Conditionals: Zdania z warunkami
+      Dancers: Tancerze
+      Default: Domyślne
+      Events: Zdarzenia
+      Functions: Funkcje
       'Functions ': 'Funkcje '
       Game/Score: Gra/Punkty
-      Function: Funkcja
+      Games/Score: Gry/Punkty
+      Groups: Grupy
+      Input: Wejście
+      Locations: Położenie
+      Logic: Logika
+      Loops: Pętle
+      Math: Matematyka
+      Numbers: Liczby
+      Properties: Właściwości
+      Sprites: Duszki
+      Text: Tekst
+      Variables: Zmienne
+      'Variables ': 'Zmienne '
+      World: Świat

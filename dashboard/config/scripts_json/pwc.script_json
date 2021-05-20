@@ -1,0 +1,879 @@
+{
+  "script": {
+    "name": "pwc",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/pwc/ayp"
+        ]
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:11 UTC",
+    "seeding_key": {
+      "script.name": "pwc"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Personal Innovations",
+      "name": "Personal Innovations",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "What is a Computer?",
+      "name": "What is a Computer?",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "Problem Solving with Big Data",
+      "name": "Problem Solving with Big Data",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "Programming - Hour of Code",
+      "name": "Programming - Hour of Code",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming - Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "Creating Webpages",
+      "name": "Creating Webpages",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Webpages",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "User Interfaces",
+      "name": "User Interfaces",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "Intro to App Lab (13+)",
+      "name": "Intro to App Lab (13+)",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab (13+)",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "Simple Encryption",
+      "name": "Simple Encryption",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "key": "Smart Clothing Design",
+      "name": "Smart Clothing Design",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Smart Clothing Design",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_problemsolving"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_problemsolving"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_problemsolving"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Computer Science is Changing Everything"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer Science is Changing Everything"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "Computer Science is Changing Everything"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_technologyfoundations"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_technologyfoundations"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_technologyfoundations"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "CSD What Makes a Computer a Computer Video"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_data"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_data"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_data"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video"
+        ],
+        "progression": "Problem Solving"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Waze Data Video"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "CSD U5 Waze Data Video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video"
+        ],
+        "progression": "Problem Solving"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U5 Amazon Data Video"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "CSD U5 Amazon Data Video"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_programming"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_programming"
+        ],
+        "lesson.key": "Programming - Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_programming"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_webdevelopment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_webdevelopment"
+        ],
+        "lesson.key": "Creating Webpages",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_webdevelopment"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_appdevunplugged"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_appdevunplugged"
+        ],
+        "lesson.key": "User Interfaces",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_appdevunplugged"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_appdev"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_appdev"
+        ],
+        "lesson.key": "Intro to App Lab (13+)",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_appdev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_cybersecurity"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_cybersecurity"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_cybersecurity"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "Crack a Caesar Cipher"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Terminology Recap"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Terminology Recap"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "Terminology Recap"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Challenge Introduction"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Challenge Introduction"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "New Challenge Introduction"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crack Random Substitution"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack Random Substitution"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "Crack Random Substitution"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Technique: Frequency Analysis"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "Technique: Frequency Analysis"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video - Encryption and Public Keys"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "Video - Encryption and Public Keys"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pwc_internetofthings"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pwc_internetofthings"
+        ],
+        "lesson.key": "Smart Clothing Design",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      },
+      "level_keys": [
+        "pwc_internetofthings"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pwc_problemsolving",
+        "script_level.level_keys": [
+          "pwc_problemsolving"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer Science is Changing Everything",
+        "script_level.level_keys": [
+          "Computer Science is Changing Everything"
+        ],
+        "lesson.key": "Personal Innovations",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_technologyfoundations",
+        "script_level.level_keys": [
+          "pwc_technologyfoundations"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD What Makes a Computer a Computer Video",
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_data",
+        "script_level.level_keys": [
+          "pwc_data"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Waze Data Video",
+        "script_level.level_keys": [
+          "CSD U5 Waze Data Video"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U5 Amazon Data Video",
+        "script_level.level_keys": [
+          "CSD U5 Amazon Data Video"
+        ],
+        "lesson.key": "Problem Solving with Big Data",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_programming",
+        "script_level.level_keys": [
+          "pwc_programming"
+        ],
+        "lesson.key": "Programming - Hour of Code",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_webdevelopment",
+        "script_level.level_keys": [
+          "pwc_webdevelopment"
+        ],
+        "lesson.key": "Creating Webpages",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_appdevunplugged",
+        "script_level.level_keys": [
+          "pwc_appdevunplugged"
+        ],
+        "lesson.key": "User Interfaces",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_appdev",
+        "script_level.level_keys": [
+          "pwc_appdev"
+        ],
+        "lesson.key": "Intro to App Lab (13+)",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_cybersecurity",
+        "script_level.level_keys": [
+          "pwc_cybersecurity"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack a Caesar Cipher",
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Terminology Recap",
+        "script_level.level_keys": [
+          "Terminology Recap"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Challenge Introduction",
+        "script_level.level_keys": [
+          "New Challenge Introduction"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack Random Substitution",
+        "script_level.level_keys": [
+          "Crack Random Substitution"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Technique: Frequency Analysis",
+        "script_level.level_keys": [
+          "Technique: Frequency Analysis"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video - Encryption and Public Keys",
+        "script_level.level_keys": [
+          "Video - Encryption and Public Keys"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pwc_internetofthings",
+        "script_level.level_keys": [
+          "pwc_internetofthings"
+        ],
+        "lesson.key": "Smart Clothing Design",
+        "lesson_group.key": "",
+        "script.name": "pwc"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

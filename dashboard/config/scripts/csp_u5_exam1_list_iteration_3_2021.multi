@@ -1,0 +1,28 @@
+name 'csp-u5-exam1-list-iteration-3_2021'
+editor_experiment ''
+
+
+wrong '`0`'
+
+wrong '`1000000`'
+
+wrong '`numList.length`'
+
+right '`numList[0]`'
+
+markdown <<MARKDOWN
+A program is designed to determine the minimum value in a list of positive numbers called `numList`. The following program was written
+
+```
+var minimum = <MISSING CODE>
+for(var i = 0; i < numList.length; i++){
+  if (numList[i] < minimum){
+    minimum = numList[i]; 
+  }
+}
+console.log(“The minimum is” + minimum);
+```
+
+Which of the following can be used to replace `<MISSING CODE>` so that the program works as intended for every possible list of positive numbers?
+
+MARKDOWN

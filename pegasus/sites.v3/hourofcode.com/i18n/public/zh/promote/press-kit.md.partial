@@ -12,7 +12,7 @@ nav: promote_nav
 
 *所有的記者和媒體查詢，請聯繫 <press@code.org>*
 
----
+* * *
 
 ## Key Tips
 
@@ -59,11 +59,11 @@ Look online to find reporter contact information. If you can't find it, call the
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-計算機無處不在，正在改變著地球上每一個行業，但我們只有不到一半的學校有在講授計算機科學。 計算機課堂上的女性和少數族裔學生嚴重不足，在整個科技產業亦是如此。 好消息是我們正在改變此狀況。
+計算機無處不在，正在改變著地球上每一個行業，但我們只有不到一半的學校有在講授計算機科學。 Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
 
 因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過 100 個合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都有舉辦過《編程一小時》。 甚至連奧巴馬總統也曾在競選活動中寫下了自己的第一行編程。
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+這就是 [學校名稱] 有 [X 人數] 名學生都參加史上最大規模的學習活動的原因：電腦科學教育周（12 月 3 日至 9 日）中的程式設計一小時。
 
 我誠邀您參加我們的開幕式，來看看孩子們如何在[日期] 開始他們的編程之旅。
 
@@ -79,7 +79,7 @@ I look forward to being in touch. <br />
 
 #### 關於 Code.org
 
-Code.org®是501c3公立非營利項目，致力於擴展計算機科學，增加女性和有色弱勢學生群體的參與。 Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 自 2013 年成立以來，Code.org 發起了一小時玩程式（Hour of Code）運動 – 這個運動是要把計算機科學介紹給上百萬的學生 – 並與國內超過 70 所公立學校聯盟，以推展計算機科學與編程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

@@ -1,7 +1,5 @@
 ---
 title: Une Heure de Code Guide d'utilisation pour les mairies, régions et départements
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Amenez chaque école à participer, permettez à n'importe quel étudiant d'apprendre !
 
-### 1. Recruit local schools
+### 1. Recruter des écoles locales 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

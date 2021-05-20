@@ -14,6 +14,8 @@ Computer science opens more doors than any other discipline. Learning the basics
 
 9 out of 10 parents want schools to teach computer science ([Gallup poll](https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf)), and students rank it among their [favorite subjects](https://www.linkedin.com/pulse/what-classes-do-students-like-most-hadi-partovi), behind only art and music. Just as they learn how to write an essay or how electricity works, it’s important for every 21st century student to have a chance to learn how the internet works or design an app.
 
+[Studies show](https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) that computer science students outperform in reading, writing, math, science, and are more likely to enroll in college. Every student should have this opportunity.
+
 **Will you help bring computer science to our school?**
 Tens of thousands of schools have made commitments to add computer science to the school day. We can do it too. We don’t need to hire new teachers. We just need to make this a priority, and take advantage of the resources offered by Code.org:
 

@@ -3,8 +3,8 @@
 # Table name: pd_workshop_daily_surveys
 #
 #  id             :integer          not null, primary key
-#  form_id        :integer          not null
-#  submission_id  :integer          not null
+#  form_id        :bigint           not null
+#  submission_id  :bigint           not null
 #  user_id        :integer          not null
 #  pd_session_id  :integer
 #  pd_workshop_id :integer          not null
@@ -23,8 +23,12 @@
 #  index_pd_workshop_daily_surveys_on_user_workshop_day_form  (user_id,pd_workshop_id,day,form_id) UNIQUE
 #
 
+# NOTE: This is a legacy model and no new surveys should be added here. All new surveys should use Foorm.
+# This class is no longer actively synced via our JotForm cron jobs (fill_jotform_placeholders,
+# sync_jotforms, process_jotform_data).
+
 module Pd
-  class WorkshopDailySurvey < ActiveRecord::Base
+  class WorkshopDailySurvey < ApplicationRecord
     include JotFormBackedForm
     include SharedWorkshopConstants
     include Pd::WorkshopSurveyConstants
@@ -32,6 +36,15 @@ module Pd
     belongs_to :user
     belongs_to :pd_session, class_name: 'Pd::Session'
     belongs_to :pd_workshop, class_name: 'Pd::Workshop'
+
+    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
+                            message: 'already has a submission for this workshop, day, and form'
+    validates_presence_of(
+      :user_id,
+      :pd_workshop_id,
+      :day
+    )
+    validate :day_for_subject
 
     # @override
     def self.attribute_mapping
@@ -54,37 +67,6 @@ module Pd
     def set_day_from_form_id
       self.day = self.class.get_day_for_subject_and_form_id(pd_workshop.subject, form_id)
     end
-
-    validates_uniqueness_of :user_id, scope: [:pd_workshop_id, :day, :form_id],
-      message: 'already has a submission for this workshop, day, and form'
-
-    validates_presence_of(
-      :user_id,
-      :pd_workshop_id,
-      :day
-    )
-
-    # Different categories have different valid days
-    VALID_DAYS = {
-      LOCAL_CATEGORY => (0..5).to_a.freeze,
-      ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
-      ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
-      ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
-      VIRTUAL_1_CATEGORY => [1].freeze,
-      VIRTUAL_2_CATEGORY => [1].freeze,
-      VIRTUAL_3_CATEGORY => [1].freeze,
-      VIRTUAL_4_CATEGORY => [1].freeze,
-      VIRTUAL_5_CATEGORY => [1].freeze,
-      VIRTUAL_6_CATEGORY => [1].freeze,
-      VIRTUAL_7_CATEGORY => [1].freeze,
-      VIRTUAL_8_CATEGORY => [1].freeze,
-      CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
-    }
-
-    validate :day_for_subject
 
     def self.get_form_id_for_subjects_and_day(subjects, day)
       subjects.map do |subject|

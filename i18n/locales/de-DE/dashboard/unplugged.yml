@@ -133,16 +133,28 @@ de:
         desc: Bei vielen Spielen ist es erforderlich, zu bestimmen, wann sich Objekte auf dem Bildschirm berühren. In dieser Lektion finden wir heraus, wie der Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden, ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
       courseA_unplugged_loops:
         title: 'Offline: Schleifen'
+        desc: In dieser Lektion lernst du Schleifen kennen!
       courseB_unplugged_MRF:
         title: Aktivität ohne Computer
+        desc: In dieser Lektion wirst du deine Freunde "programmieren"!
       courseB_unplugged_loopyMRF:
         title: Aktivität ohne Computer
+        desc: Genau wie in "My Robotic Friends" wirst du deine Freunde "programmieren", aber diesmal mit Schleifen!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu dir ist.
       courseD_unplugged_digitalCitizenship:
         title: Aktivität ohne Computer
+        desc: Heute wirst du erfahren, was es bedeutet, ein digitaler Bürger zu sein.
+      courseE_unplugged_privateInformation:
+        title: 'Bildung für gesunden Menschenverstand: Private und persönliche Daten '
+        desc: Heute wirst du den Unterschied zwischen privaten und persönlichen Daten lernen!
       courseF_unplugged_powerOfWords:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu dir ist.
+      deeper learning description:
+        title: ' '
+        desc: "translation missing: en-US.data.unplugged.desc\n"
       courseAB_unplugged_plantASeed:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
@@ -183,6 +195,7 @@ de:
         title: Binärbilder
         desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.
       courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithmen: Würfelrennen'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Dazu identifizieren und schreiben die Schüler den Algorithmus für ein Würfelrennen.
       courseE_unplugged_songwritingParameters:
         title: Songschreiben mit Parametern
@@ -208,8 +221,53 @@ de:
       courseF_unplugged_songwritingParameters:
         title: Komponieren mit Parametern
         desc: 'Eines der nützlichsten Elemente der Informatik ist die Funktion.  Funktionen (manchmal als Prozeduren bezeichnet) sind Miniprogramme, die in größeren Programmen wieder und wieder verwendet werden können. In dieser Lektion lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen zu Funktionen so nützlich ist.  '
+      swipeRightPassThrough:
+        title: Sitzung der Szenarien für die Personalbeschaffung
+        desc: "\"# Sitzung zu Rekrutierungs-Szenarien\\r\n\\r\n## Rechtswischen für Informatik\\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu Informatik-Prinzipien einzuschreiben. \\r\n\\r\n### So funktioniert das Werkzeug\\r\nWenn Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung nach nicht überzeugend sind, nach links. Während der Sitzung werden wir als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung entschieden haben. \\r\n\\r\n\\r\nWenn Sie unten auf Weiter klicken, leiten wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter, mit der Sie eingeloggt sind.\"\n"
+      swipeRightPassThrough-test123:
+        title: Sitzung der Szenarien für die Personalbeschaffung
+        desc: "\"# Sitzung zu Rekrutierungs-Szenarien\\r\n\\r\n## Rechtswischen für Informatik\\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu Informatik-Prinzipien einzuschreiben. \\r\n\\r\n### So funktioniert das Werkzeug\\r\nWenn Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung nach nicht überzeugend sind, nach links. Während der Sitzung werden wir als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung entschieden haben. \\r\n\\r\n\\r\nWenn Sie unten auf Weiter klicken, leiten wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter, mit der Sie eingeloggt sind.\"\n"
+      brad-repro-bug-000:
+        title: "Brad Repro Bug 000\n"
       courseB_unplugged_MRF_2018:
         title: Meine Roboterfreunde
+        desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
+      BuildingAFoundation_2018:
+        title: ' '
+        desc: ' '
+      courseB_unplugged_loopyMRF_2018:
+        title: ' '
+        desc: ' '
+      DiceRace_2018:
+        title: ' '
+        desc: ' '
+      courseE_unplugged_privateInformation_2018:
+        title: ' '
+        desc: ' '
+      SongwritingParameters_2018:
+        title: ' '
+        desc: ' '
+      Internet_2018:
+        title: ' '
+        desc: ' '
+      Crowdsourcing_2018:
+        title: ' '
+        desc: ' '
+      TangramAlgorithms_2018:
+        title: ' '
+        desc: ' '
+      courseF_unplugged_powerOfWords_2018:
+        title: ' '
+        desc: ' '
+      EnvelopeVariables_2018:
+        title: ' '
+        desc: ' '
+      ForLoopFun_2018:
+        title: ' '
+        desc: ' '
+      SongwritingWithParameters_2018:
+        title: ' '
+        desc: ' '
       PlantASeed_2018:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
@@ -221,6 +279,7 @@ de:
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.
       courseA_unplugged_loops_2018:
         title: 'Offline: Schleifen'
+        desc: In dieser Lektion lernst du Schleifen kennen!
       BigEvent_2018:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren auf die verschiedenen Tasten.
@@ -229,8 +288,10 @@ de:
         desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden anweisen, ein Bild zu reproduzieren.
       courseD_unplugged_digitalCitizenship_2018:
         title: Aktivität ohne Computer
+        desc: Heute wirst du erfahren, was es bedeutet, ein digitaler Bürger zu sein.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu dir ist.
       Conditionals_2018:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
@@ -251,28 +312,70 @@ de:
         desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise repräsentiert und gespeichert werden können.
       MoveItMoveIt_2018:
         title: Bewegung, Bewegung
+        desc: ' '
+      courseB_unplugged_CnC_2018:
+        title: Es ist großartig etwas zu erschaffen und fair zu spielen
+        desc: Diese Lektion, die vom Team von Copyright and Creativity an die Grundlagen der Informatik verliehen wurde, soll den Schülern helfen, den kreativen Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen Arbeit fair umzugehen.
+      courseE_unplugged_CnC_2018:
+        title: Digitale Teilhabe
+        desc: "Diese Lektion wurde dem Computer Science Fundamentals Team vom Copyright and Creativity Team leihweise zur Verfügung gestellt und soll den SchülerInnen helfen, den kreativen Prozess von Teilen und Inspiration zu verstehen. Damit einher geht die Förderung des kreativen Ausdrucks und die Notwendigkeit, angemessen mit der kreativen Arbeit umzugehen.\n"
       RelayProgramming_2018:
         title: Relais-Programmierung
+        desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.
       courseB_unplugged_MRF_2019:
         title: Meine Roboterfreunde
+        desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
+      BuildingAFoundation_2019:
+        title: "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.title\n"
+        desc: "translation missing: en-US.data.unplugged.BuildingAFoundation_2018.desc\n"
+      courseB_unplugged_loopyMRF_2019:
+        title: Meine schleifenden Roboterfreunde
+        desc: ' '
       Conditionals_2019:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
+      courseF_unplugged_powerOfWords_2019:
+        title: "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title\n"
+        desc: "translation missing: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc\n"
+      EnvelopeVariables_2019:
+        title: "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.title\n"
+        desc: "translation missing: en-US.data.unplugged.EnvelopeVariables_2018.desc\n"
+      ForLoopFun_2019:
+        title: "translation missing: en-US.data.unplugged.ForLoopFun_2018.title\n"
+        desc: "translation missing: en-US.data.unplugged.ForLoopFun_2018.desc\n"
       GraphPaperProgramming_2019:
         title: Programmieren auf Millimeterpapier
         desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden anweisen, ein Bild zu reproduzieren.
       RelayProgramming_2018_2019:
         title: Relais-Programmierung
+        desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.
       courseD_unplugged_digitalCitizenship_2019:
         title: Aktivität ohne Computer
+        desc: Heute wirst du erfahren, was es bedeutet, ein digitaler Bürger zu sein.
       BinaryImages_2019:
         title: Binärbilder
         desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.
+      courseE_unplugged_privateInformation_2019:
+        title: Private und persönliche Informationen
+        desc: "Diese von Common Sense Education entwickelte Lektion befasst sich mit dem Unterschied zwischen Daten, die man im Internet sicher weitergegeben werden kann, und Daten, bei denen die Weitergabe nicht sicher ist.\n"
+      SongwritingParameters_2019:
+        title: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Digitale Teilhabe
+        desc: "Diese Lektion wurde dem Computer Science Fundamentals Team vom Copyright and Creativity Team leihweise zur Verfügung gestellt und soll den SchülerInnen helfen, den kreativen Prozess von Teilen und Inspiration zu verstehen. Damit einher geht die Förderung des kreativen Ausdrucks und die Notwendigkeit, angemessen mit der kreativen Arbeit umzugehen.\n"
+      Internet_2019:
+        title: 'translation missing: en-US.data.unplugged.Internet_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'translation missing: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Schöne Schleifen
         desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine einfache Choreografie und werden angewiesen, diese zu wiederholen.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Aktivität ohne Computer
+        desc: Heute wirst du lernen, was zu tun ist, wenn jemand online gemein zu dir ist.
       BigEvent_2019:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren auf die verschiedenen Tasten.
@@ -282,6 +385,9 @@ de:
       PaperPlanes_2019:
         title: 'Alltagsalgorithmen: Papierflieger'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      test-uid-passthrough:
+        title: ' '
+        desc: "\"# Sitzung zu Rekrutierungs-Szenarien\\r\n\\r\n## Rechtswischen für Informatik\\r\nIn dieser Sitzung verwenden wir ein Werkzeug namens \"\"Swipe Right for CS\"\"/Rechtswischen für Informatik , das von unseren Partnern am MIT entwickelt wurde. In \"\"Swipe Right for CS\"\" lesen Sie einige Profile von SchülerInnen und überlegen sich spezifische Aussagen, die Sie verwenden könnten, um ihn/sie davon zu überzeugen, sich in Ihrem Kurs zu Informatik-Prinzipien einzuschreiben. \\r\n\\r\n### So funktioniert das Werkzeug\\r\nWenn Sie das Spiel \"\"Swipe Right for CS\"\" spielen, sehen Sie eine Reihe von Zitaten, die Sie bei jedem/r SchülerIn erwähnen können. Sie wischen bei Zitaten, die Ihrer Meinung nach SchülerInnen überzeugen würden, sich für den Kurs einzuschreiben, nach rechts und bei Aussagen, die Ihrer Meinung nach nicht überzeugend sind, nach links. Während der Sitzung werden wir als Gruppe Ihre Gedanken über die Arten von Aussagen diskutieren, die am effektivsten sind, um SchülerInnen dazu zu motivieren, sich für Informatik einzuschreiben, und Sie werden die Gelegenheit haben zu sehen, wie sich andere Personen in Ihrem Workshop bei jedem der Argumente durch ihre Wischbewegung entschieden haben. \\r\n\\r\n\\r\nWenn Sie unten auf Weiter klicken, leiten wir Sie zum Spiel weiter und geben die E-Mail-Adresse von Code.org weiter, mit der Sie eingeloggt sind.\"\n"
       PlantASeed_2019:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
@@ -293,13 +399,34 @@ de:
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.
       courseA_unplugged_loops_2019:
         title: 'Offline: Schleifen'
+        desc: In dieser Lektion lernst du Schleifen kennen!
       MoveItMoveIt_2019:
         title: Bewegung, Bewegung
+        desc: ' '
       DigitalFootprint_2019:
         title: Dein digitaler Fußabdruck
         desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins Internet stellt, und erläutern mögliche Konsequenzen.
+      courseB_unplugged_CnC_2019:
+        title: Es ist großartig etwas zu erschaffen und fair zu spielen
+        desc: Diese Lektion, die vom Team von Copyright and Creativity an die Grundlagen der Informatik verliehen wurde, soll den Schülern helfen, den kreativen Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen Arbeit fair umzugehen.
+      GraphingData_2019:
+        title: "Dartsellung von Daten\n"
+        desc: In dieser Lektion sammeln die Schüler Daten aus einem Play Lab-Projekt oder einem realen Szenario. Diese werden verwenden um Vorhersagen zu treffen.
+      courseE_unplugged_accessAbility_2019:
+        title: "Barrierefreiheit\n"
+        desc: Erfahren Sie mehr über die Zugänglichkeit und den Wert von Empathie durch Brainstorming und die Entwicklung zugänglicher Lösungen für mögliche Apps.
+      courseE_simon_says_2019:
+        title: Simon sagt
+        desc: "Spielen Sie ein Spiel und überlegen Sie, welche Befehle benötigt werden, um das richtige Ergebnis zu erzielen.\\r\n\\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Starke Passwörter
+        desc: Erfahre, warum Menschen Passwörter verwenden, lernen die Vorteile der Verwendung von Passwörtern kennen und entdecke Strategien zur Erstellung und Aufbewahrung starker und sicherer Passwörter.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
+        desc: '_Joshs Anmerkung: Im Gegensatz zur ersten Lektion habe ich diese wie eine typische unplugged Lektion formatiert._'
       timeforcs_demo_conditionals:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
+      TheRightApp_2019:
+        title: Die richtige App
+        desc: "* Jeder benutzt heutzutage Computer, insbesondere Smartphones. \\r\n* Smartphone-Anwendungen oder \"Apps\" helfen Menschen mit Freunden zu reden, Musik zu hören, einzukaufen oder einfach das Internet zu erkunden.\\r\n* Es ist wichtig für Programmierer, die Bedürfnisse anderer zu verstehen und Anwendungen mit Blick auf sie zu entwickeln!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

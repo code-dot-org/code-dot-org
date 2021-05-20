@@ -1,0 +1,41 @@
+name 'csp-u5-exam1-list-iteration-1_2020'
+editor_experiment ''
+
+
+wrong ‘![](https://images.code.org/46998daff5a57b90e0c854efa68b1c01-image-1579905096624.png)‘
+
+wrong ‘![](https://images.code.org/09bae88038f15dd5e03d68c213d233f7-image-1579905096625.png)‘
+
+wrong ‘![](https://images.code.org/55ff8b2d5191e98e2af68e8e8db5bb89-image-1579905096627.png)‘
+
+right ‘![](https://images.code.org/1feccfb76c4c7d66de6bc212b9bc7b94-image-1579905096628.png)‘
+
+
+markdown <<MARKDOWN
+`ageList` and `gradeList` contain information about students in a classroom. A programmer has already written the following code with that information.
+
+```
+var ages = [16,17,18, 17]
+var names = [“Beni”, “Analise”, “Ricardo”, “Tanya”]
+
+var filteredNames = [];
+```
+
+Which of the following programs will result in filteredNames only containing the names of students who are 17 or older? 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Options A and B have a conditional statement that will filter for students who are younger than 17. Option C adds the student ages to the `filteredNames` list instead of the student names.
+
+[Lesson 9 - Traversals Explore](https://curriculum.code.org/csp-20/unit5/9/) showed students all the elements of a traversal. 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.O: For algorithms involving elements of a list:
+a. Write iteration statements to traverse a list.
+b. Determine the result of an algorithm that includes list traversals.
+:::
+
+
+MARKDOWN

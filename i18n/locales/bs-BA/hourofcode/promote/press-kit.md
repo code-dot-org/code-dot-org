@@ -1,7 +1,5 @@
 ---
 title: Materijal za novinare
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -59,7 +57,7 @@ Tehnologija transformiše svaku industriju na planeti. In 2015, 7 million openin
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Kompjuteri su svugdje, mijenjajući svaku industriju na planeti, ali manje od pola škola uči informatiku. Djevojke i manjine se veoma nedovoljno zastupljene na časovima računarskih nauka, i u tehnološkoj industriji. Good news is, we’re on our way to change this.
+Kompjuteri su svugdje, mijenjajući svaku industriju na planeti, ali manje od pola škola uči informatiku. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
 
 Sa Časom Kodiranja. računarstvo je bilo na početnim stranicama Google-a, MSN-a, Yahoo-a! i Diznija. Over 100 partners have joined together to support this movement. Svaki Apple Store u svijetu je bio domaćin Časa Kodiranja. Čak i presjednik Obama je napisao svoju prvu liniju koda kao dio kampanje.
 
@@ -79,7 +77,7 @@ I look forward to being in touch. <br />
 
 #### O Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

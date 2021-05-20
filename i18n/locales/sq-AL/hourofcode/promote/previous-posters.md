@@ -1,14 +1,12 @@
 ---
-title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
+title: Ora e kaluar e Code Posters
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# Ora e kaluar e Code Posters
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Gjeni posterat tanë nga vitet e mëparshme për të shtypur dhe varur në klasën tuaj! Po kërkoni posterët më të rinj? [ Klikoni këtu ]({{ promot/promote_posters_url }}).
 
 * * *
 

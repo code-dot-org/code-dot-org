@@ -1,7 +1,7 @@
 name 'U1 CSP 2019 Assessment Bandwidth Choose 2'
 title 'Choose 2'
 type 'multi2'
-wrong 'Latency:  a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
+wrong 'Latency: a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
 right 'Bandwidth: a measure of bit rate - the amount of data (measured in bits) that can be sent in a fixed amount of time.'
 right 'Latency: the time elapsed between the transmission and the receipt of a request.'
 wrong 'Bandwidth: the time elapsed between the transmission and the receipt of a request.'

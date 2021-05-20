@@ -1,0 +1,16 @@
+name 'csp-u2-exam1-http_2021'
+height 'auto'
+
+question 'Which of the following Internet protocols is used to request and send pages and files on the World Wide Web?'
+wrong 'Transmission Control Protocol (TCP)'
+wrong 'Internet Protocol (IP)'
+wrong 'User Datagram Protocol (UDP)'
+right 'HyperText Transfer Protocol (HTTP)'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

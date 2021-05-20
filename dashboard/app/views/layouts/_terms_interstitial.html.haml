@@ -10,7 +10,7 @@
           = t('terms_interstitial.print')
       .clear
       .scroll-box
-        = t('terms_interstitial.intro_desc').html_safe
+        = t('terms_interstitial.intro_desc_markdown', markdown: true).html_safe
         %br
         %br
         = t('terms_interstitial.intro_instructions')
@@ -27,12 +27,13 @@
       .left
         = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
-            = f.label :terms_of_service_version do
+            = f.label :terms_of_service_version, {class: 'terms'} do
               = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, current_user.latest_terms_version
-              = t('terms_interstitial.accept_label', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy')).html_safe
+              %span
+                = t('terms_interstitial.accept_label_markdown', tos_url: CDO.code_org_url('/tos'), privacy_url: CDO.code_org_url('/privacy'), markdown: :inline).html_safe
           .form-group
             = f.submit t('terms_interstitial.accept'), id: 'accept-terms-submit', class: 'btn primary-button disabled-button', disabled: true
           = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
       .clear
 
-%script{src: minifiable_asset_path('js/layouts/_terms_interstitial.js')}
+%script{src: webpack_asset_path('js/layouts/_terms_interstitial.js')}

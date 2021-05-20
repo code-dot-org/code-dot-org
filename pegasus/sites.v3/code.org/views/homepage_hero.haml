@@ -1,29 +1,111 @@
 :ruby
-  show_single_hero = Homepage.show_single_hero
+  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+  show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
-  actions = Homepage.get_actions
+  actions = Homepage.get_actions(request)
 
 - main_actions = capture_haml do
-  - if show_single_hero == "create"
+  - if show_single_hero == "changeworld"
+    .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
+      = hoc_s(:hoc2019_header_line1_mobile)
+    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
+      = hoc_s(:hoc2019_header_line2_mobile)
+  - if show_single_hero == "dance2019"
+    -# Two lines of text
+    .hero-message-line1{style: "font-size: 28px; line-height: 28px; padding-bottom: 10px; color: white"}
+      - if hoc_mode == "actual-hoc"
+        = hoc_s(:social_hoc2018_hoc_here)
+      - else
+        = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+    .hero-message-line2{style: "font-size: 28px; line-height: 28px; color: white; font-family: 'Gotham 5r', sans-serif; margin-bottom: 20px"}
+      -# Don't tint the word "create"
+      .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+      .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+  - elsif show_single_hero == "oceans2019"
+    = view :homepage_hero_oceans2019
+  - elsif show_single_hero == "hoc2019"
     .hero-message
-      = I18n.t(:hoc2018_creativity_what_will_you_create)
+      = hoc_s(:hoc2019_header_line1_mobile)
+    .hero-message-second
+      = hoc_s(:hoc2019_header_line2_mobile)
+    .hero-sub-message
+      = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "hoc2020"
+    .hero-message
+      = hoc_s(:hoc2020_header_with_line_break_markdown, markdown: true)
+    .hero-sub-message
+      = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  - elsif show_single_hero == "hoc2020_ai"
+    .hero-messages-ai
+      .col-10.desktop-feature
+        &nbsp;
+      .left.col-40
+        .hero-super-message
+          - if hoc_mode == "actual-hoc"
+            = hoc_s(:social_hoc2018_hoc_here)
+          - else
+            = hoc_s(:hoc2020_ai_subheader)
+        .hero-message
+          = hoc_s(:hoc2020_ai_header)
+        .hero-description
+          = hoc_s(:hoc2020_ai_description)
+        - actions.each do |entry|
+          - if entry[:type] == "hoc2020_ai_join_us"
+            .action.join_us_ai
+              %a.linktag#hero-hoc{href: entry[:url]}
+                %button.herohocbutton.herohocbutton-solid-white= I18n.t(entry[:text])
+      .right.col-50{style: "text-align: center;"}
+        .hero-bot
+          - if hoc_mode == "actual-hoc"
+            %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+          - else
+            %a{href: "/ai"}
+              %img{src: "/images/homepage/hoc2020_ai_bot.png"}
+  - elsif show_single_hero == "codebytes2020"
+    .hero-message-codebytes
+      Join us during this year's
+      %a{href: resolve_url('hourofcode/overview')} Hour of Code
+      for our live CodeBytes interactive mini-lessons! If your classroom has gone virtual, CodeBytes is a
+      fun and easy way to learn!
   .action_buttons
     - actions.each do |entry|
-      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
+      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow"].include? entry[:type]
         .action
           %a.linktag#hero-hoc{href: entry[:url]}
             - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
             - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
+            - extra_class = "herohocbutton-solid-yellow" if entry[:type] == "cta_button_solid-yellow"
             %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif entry[:type] == "video"
         .action
           %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
             %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
             %span#playtext= I18n.t(entry[:text])
+      - elsif entry[:type] == "code_break_learn_more"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/learn_more_drawn_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_check"
+        %div
+          %a{href: "/break"}
+            %img{src: "images/homepage/codebreak_check_button.png", style: "width: 250px; "}
+      - elsif entry[:type] == "code_break_home"
+        %div
+          %a{href: "/athome"}
+            %img{src: "images/homepage/codebreak_home_button.png", style: "width: 250px; margin-top: 10px"}
+      - elsif entry[:type] == "code_break_video"
+        %div
+          %a{onclick: "return showVideo_mainvideo();", style: "cursor: pointer"}
+            %img{src: "images/homepage/watch_video_drawn_button.png", style: "width: 250px; margin-top: 10px"}
+      - elsif entry[:type] == "cta_link_white"
+        %a.herohocbutton.herolink-white{href: entry[:href]}
+          %i.fa{class: entry[:icon_class]}
+          %span= entry[:plain_text]
 
   .clear{style: "clear: both"}
 
-#hero{style: "position:relative"}
+- extra_style = show_single_hero == "codebreak2020" ? "margin-bottom: 1px" : ""
+#hero{style: "position: relative", style: extra_style}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -32,9 +114,12 @@
         Two headers with inverse media queries conditionally load the correctly-sized image.
       - response.add_header 'Link', "<#{entry[:image]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
       - response.add_header 'Link', "<#{entry[:image].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
-      .widehero#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});"}
+      -# Temp: for ai2020, heroes will show/hide resposively, so use widehero_do_not_hide
+      .widehero_do_not_hide#fullwidth0{style: "background-position: #{entry[:centering]}; background-image: url(#{entry[:image]});", class: entry[:classname]}
     - else
-      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}"}
+      -# Temp: for ai2020, heroes will show/hide resposively, so use widehero_do_not_hide
+      .widehero_do_not_hide.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image]}", style: "background-position: #{entry[:centering]}", class: entry[:classname]}
+
 
   #fullwidth
     - if request.site == 'code.org'
@@ -45,7 +130,97 @@
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
 
-  - if show_single_hero
+  - if show_single_hero == "dance2019"
+    #actions.mobile-center.col-40
+      = main_actions
+
+    -# Stars image and text below it
+    %a{href: "/dance", style: "text-decoration: none"}
+      .col-60{style: "text-align: center; font-size: 40px; line-height: 40px; font-family: 'Gotham 5r', sans-serif"}
+        %img.desktop-feature{src: "/images/fit-1200/homepage/hoc2019_dance_stars.png", style: "width: 80%"}
+        %img.mobile-feature{src: "/images/fit-1200/homepage/hoc2019_dance_stars_mobile.png", style: "width: 100%; padding-left: 10%; padding-right: 10%"}
+
+        :css
+          .highlight-word {
+            color: rgb(89, 202, 211);
+          }
+
+        .hoc2018-dance-heading{style: "color: white; margin-bottom: 50px; padding-left: 10px; padding-right: 10px"}= hoc_s(:codeorg_homepage_hoc2019_dance_heading)
+
+    .clear{style: "clear: both"}
+
+    -# List of artists
+    %div{style: "color: white; text-align: center; margin-left: 10%; margin-right: 10%; margin-bottom: 15px; font-family: 'Gotham 4r', sans-serif; line-height: 19px;"}
+      %div{style: "margin-bottom: 5px"}= hoc_s(:codeorg_homepage_hoc2018_musician_before)
+      %div
+        - Homepage.get_dance_stars.each do |star|
+          %span{style: "white-space: nowrap"}= star
+          &nbsp; &nbsp;
+        %span{style: "white-space: nowrap"}= hoc_s(:codeorg_homepage_hoc2018_musician_after)
+
+  - elsif show_single_hero == "oceans2019"
+    #actions{style: "text-align: left; cursor: pointer", onclick: "location.href='/oceans'"}
+      = main_actions
+
+      - if hoc_mode == "actual-hoc"
+        -# Extra space because we're down to one button.
+        .blank{style: "height: 105px"}
+          &nbsp;
+      - else
+        .blank{style: "height: 54px"}
+          &nbsp;
+
+  - elsif show_single_hero == "codebreak2020"
+    :css
+      @media screen and (max-width: 400px) {
+        #special-guest-stars {
+          padding-top: 60px !important;
+        }
+      }
+
+    .top_center
+      %div{style: "text-align: center;"}
+
+    .lefter.col-10.desktop-feature
+      &nbsp;
+
+    .right.col-50.mobile-center{style: "margin-top: 14px; padding-left: 5px; padding-right: 5px; text-align: center"}
+      %div
+        %img{src: "images/homepage/codebreak_logo_hand.png", style: "width: 400px; max-width: 100%"}
+      %h3{style: "font-weight: 800; color:#191919; font-size: 16px;"}Take a Code Break! Your weekly dose of inspiration, community, and computer science. And check out our other home learning resources!
+
+      %h3{style: "font-weight: 800;color:#191919; width: 100%; font-family: 'Gotham 5r', sans-serif"} Every Wednesday at 10am PST / 1pm EST
+      .desktop-feature
+        #actions{style: "padding-left: 0px"}
+          = main_actions
+      .mobile-feature
+        #actions
+          = main_actions
+      .clear{style: "clear: both"}
+
+    .left.col-40{style: "padding-left: 5px; padding-right: 5px"}
+      %div{style: "text-align: center;"}
+        %div{style: "display: inline-block; border-radius: 10px; padding: 20px; margin-bottom: 40px; background-image: url(/images/fit-500/homepage/codebreak_blank_note.png); background-size: cover; background-position: 50% 0%; transform: rotate(5deg)"}
+          %div
+            %img#special-guest-stars{src: "images/homepage/codebreak_specialguests.png", style: "width: 300px; padding-bottom: 10px; padding-top: 30px; max-width: 100%"}
+          .headshots{style: "text-align: center"}
+            .guest-1{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/codebreak_aloe_blacc.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Aloe Blacc
+            &nbsp;
+            &nbsp;
+            .guest-2{style: "display: inline-block"}
+              %img{src: "/images/fill-200/homepage/codebreak_bret_taylor.jpg", style: "border-radius: 50%; width: 150px; height: 150px;"}
+              %h3{style: "font-weight: 900; color:#191919; margin-top: 10px; margin-bottom: 6px;"} Bret Taylor
+
+        %div{style: "clear:both;"}
+  - elsif show_single_hero == "codebytes2020"
+    %div
+      %img.codebytes-img{src: "/images/homepage/codebytes2020_foreground.png"}
+    #actions
+      = main_actions
+
+  - elsif show_single_hero
     #actions
       = main_actions
 
@@ -108,6 +283,13 @@
     $(".caption").css({display: "block", opacity: 0});
 
     showQuote(null, 0);
+
+    // The hero might have an onclick handler; the buttons should prevent it from firing.
+    $("#hero button").each(function() {
+      $(this).click(function (e) {
+        e.stopPropagation();
+      });
+    });
   });
 
   function showQuote(lastImage, nextImage)
@@ -161,6 +343,8 @@
     var numWideHeroes = $(".widehero").length;
 
     if (numWideHeroes > 1) {
-      timerId = setInterval(cycleImage, #{hero_display_time});
+      // Temporary for ai2020: don't cycle, even though we have multiple
+      // hero backgrounds, because we're using them responsively.
+      //timerId = setInterval(cycleImage, #{hero_display_time});
     }
   });

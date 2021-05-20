@@ -1,7 +1,5 @@
 ---
 title: პრესისთვის
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -59,7 +57,7 @@ Look online to find reporter contact information. If you can't find it, call the
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-კომპიუტერები ყველგანაა და პლანეტაზე ყველა ინდუსტრიას ცვლის, მაგრამ ნახევარზე ნაკლებ სკოლაში ისწავლება კომპიუტერული მეცნიერება. კომპიუტერული მეცნიერების კლასებსა და ტექნოლოგიის ინდუსტრიაში გოგონები და უმცირესობები უკიდურესად მცირედ არიან წარმოდგენილნი. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე.
+კომპიუტერები ყველგანაა და პლანეტაზე ყველა ინდუსტრიას ცვლის, მაგრამ ნახევარზე ნაკლებ სკოლაში ისწავლება კომპიუტერული მეცნიერება. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. კარგი სიახლე ისაა, რომ ჩვენ ვმუშაობთ ამის შეცვლაზე.
 
 კოდის ერთი საათის მეშვეობით, კომპიუტერულმა მეცნიერებამ Google-ის, MSN-ის, Yahoo!-სა და Disney-ის მთავარი გვერდები დაიკავა. ჩვენი მოძრაობის მხარდასაჭერად 100-ზე მეტი პირი და ორგანიზაცია გაერთიანდა. მსოფლიოში Apple-ის ყველა მაღაზიამ უმასპინძლა კოდის ერთ საათს. პრეზიდენტ ობამამაც კი კოდის პირველი ხაზი კამპანიის ფარგლებში დაწერა.
 
@@ -79,7 +77,7 @@ I look forward to being in touch. <br />
 
 #### Code.org-ის შესახებ
 
-Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო ოლქთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო ოლქთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

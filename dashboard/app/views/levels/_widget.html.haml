@@ -1,5 +1,5 @@
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levels/_widget.js')}
+  %script{src: webpack_asset_path('js/levels/_widget.js')}
   = stylesheet_link_tag asset_path('blockly/css/common.css'), media: 'all'
   = stylesheet_link_tag 'css/leveltype_widget', media: 'all'
 
@@ -9,5 +9,7 @@
   dashboard.widget.setupWidgetLevel();
 
 #external
-  = render file: '/public/' + @level.properties['href']
+  - template = @level.properties['href']
+  - template_type = File.extname(template)[1..-1].to_sym
+  = render inline: File.read(Rails.root.join('public', template)), type: template_type
 .clear

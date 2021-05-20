@@ -10,15 +10,6 @@ import orderBy from 'lodash/orderBy';
 import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-const styles = {
-  table: {
-    width: '100%'
-  },
-  rightAlignText: {
-    textAlign: 'right'
-  }
-};
-
 class StatsTable extends Component {
   static propTypes = {
     section: PropTypes.shape({
@@ -52,6 +43,7 @@ class StatsTable extends Component {
           style={tableLayoutStyles.link}
           href={studentUrl}
           target="_blank"
+          rel="noopener noreferrer"
         >
           {name}
         </a>
@@ -177,6 +169,15 @@ class StatsTable extends Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    width: '100%'
+  },
+  rightAlignText: {
+    textAlign: 'right'
+  }
+};
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({

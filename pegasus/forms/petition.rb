@@ -66,14 +66,8 @@ class Petition < Form
     result = {zip_code_s: zip_code_or_country}
     location = Geocoder.search(zip_code_or_country).first
     if location
-      location.data['address_components'].each do |component|
-        if component['types'].include? 'administrative_area_level_1'
-          result['state_code_s'] = component['short_name'].downcase
-        end
-        if component['types'].include? 'country'
-          result['country_s'] = component['long_name'].downcase
-        end
-      end
+      result['state_code_s'] = location.state_code.downcase if location.state_code
+      result['country_s'] = location.country.downcase if location.country
       return result if result['country_s'] == 'united states'
     end
 

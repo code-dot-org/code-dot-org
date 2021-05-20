@@ -1,9 +1,27 @@
+---
 gl:
   data:
     course:
       name:
+        csp-2017:
+          title: Principios da informática ('17-'18)
+          version_title: "'17-'18"
+        csd-2017:
+          assignment_family_title: Descubrimentos da informática
+          title: Descubrimentos da informática ('17-'18)
+          version_title: "'17-'18"
+          description_short: Un curso introdutorio da ciencias da información que permite os estudantes crear artefactos auténticos.
         allthethingscourse:
           title: allthethingscourse
           description_short: Este é un curso para allthethings
           description_student: Este é un curso para allthethings e ten unha descrición máis longa para o alumnado
           description_teacher: Este é un curso para allthethings e ten unha descrición máis longa para o profesorado
+        csd-2018:
+          assignment_family_title: Descubrimentos da informática
+          title: Descubrimentos da informática ('18-'19)
+          version_title: "'18-'19"
+          description_short: Un curso introdutorio da ciencias da información que permite os estudantes crear artefactos auténticos.
+        csp-2018:
+          version_title: "'18-'19"
+        csd-2019:
+          description_short: Un curso introdutorio da ciencias da información que permite os estudantes crear artefactos auténticos.

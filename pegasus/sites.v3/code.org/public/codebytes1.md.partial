@@ -1,0 +1,167 @@
+---
+title: CodeBytes CS mini-lessons
+video_player: true
+theme: responsive
+social:
+  "og:title": "CodeBytes with Code.org"
+  "og:description": "Join us for 20 minute CS mini-lessons, led by the team at Code.org during  Hour of Code 2020!"
+  "og:image": "https://code.org/images/social-media/codebytes-og-image-1200x630.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:image:src": "https://code.org/images/social-media/codebytes-og-image-1200x630.png"
+---
+<center><div style="background-color: #FFFFFF; padding: 10px; margin-top:50px;"><img src="/images/marketing/CodeBytes_CandyAsset.png" style="max-width: 80%"/></div></center>
+<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Daily mini-lessons brought to you live!</h1></div>
+<div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
+
+<p>Planning for the Hour of Code with your classroom that’s gone virtual? Try a <b>CodeByte</b>! Designed to fit smoothly into a distance learning plan, CodeBytes are <font color="00adbc"><b>easy-to-digest, 20 minute interactive lessons</b></font> that will stream during Computer Science Education Week, <b>December 7-11</b>.</p>
+<p>We saw how many people loved taking a Code Break earlier this year. So, we’re packaging up that CS goodness into 5 different fun-sized CodeBytes during the week!</p>
+<p>Every episode features a new lesson that blends computer science with real-world topics. One day, students will use Dance Party to get creative and express themselves. Another day, they’ll explore environmental sustainability with Artificial Intelligence.</p> 
+<center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Tune-in</button></a><br><em>(Watch on Zoom or <a href="#activities">stream on YouTube</a>)</em></center><br>
+Plus, you have two chances to catch each lesson live! Episodes take place twice daily at 8:00am PST / 11:00am EST and 1:30pm PST / 4:30pm EST. <a href="#activities"><b>Check out our episode schedule</b></a> to find a time that works for you. 
+
+<h2>CodeBytes are great for:</h2>
+<li>Young students who may not be ready for fully self-led Hour of Code activities</li>
+<li>Older students who want to engage in a group lesson</li>
+<li>Parents and caretakers looking to supplement their child’s learning at home</li>
+<li>Educators looking for a simple, pre-planned way to bring the Hour of Code to their virtual classrooms</li>
+
+</div>
+
+<div class="col-33" style=" border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;">
+<img src="/images/marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="max-width:100%">
+<a id="signup"></a>
+<div style="padding:8px 18px 0 8px;">
+<p style="margin: 10px 0 0 0;">Stay in the know! Join our mailing list to receive Code.org updates and be the first to learn of new resources for at home learning.</p>
+<iframe src="http://go.pardot.com/l/153401/2020-10-30/nx8bgj" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
+
+</div></div>
+
+<div class="col-50" style="padding-top:30px;">
+<div style="max-width:100%; position:relative;">{{ codebytes_promoreel }}</div>
+<p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
+</div>
+
+<div class="col-50" style="padding-top: 30px; padding-left:28px; padding-bottom: 10px;">
+<p>Lessons are created and led by our very own Code.org staff, many of whom were teachers themselves previously! This means you don’t need any additional resources or lesson plans in order to organize a fun and educational Hour of Code event to your class even when they are participating from home. All you and your students have to do is <a href="https://codebytes.live/now">tune-in</a>!</p>
+</div>
+
+<div style="clear: both;"></div>
+<a id="activities"></a>
+
+<div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Tune-in daily</h1></div>
+<h3>Each episode takes place live at <b>8:00am PST and 1:30pm PST every day</b>. If you can't make a live episode, recordings can be found below.</h3>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 1</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/marketing/codebytes-1.png" style="max-width:100%">
+<br><center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;">Tune-in live</button></a></a></center></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc;">Monday, December 7th</h3>
+<b>Recommended for grades 6-12</b>
+<p>American Sign Language (ASL) is a way to communicate without speaking. We’ll be training a computer to read sign language with our own images of ASL letters.</p>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">8:00am PST / 11:00am EST</span><br><a href="https://www.addevent.com/event/lp5471077">Add to calendar</a></p>
+<a href="https://youtu.be/SR71w4qcNN4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">1:30pm PST / 4:30pm EST</span><br><a href="https://www.addevent.com/event/gm5471078">Add to calendar</a></p>
+<a href="https://youtu.be/cSdfvjcHUuw"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+
+</div>
+
+<a id="episode2"></a>
+<div style="clear: both;"></div>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 2</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/marketing/codebytes-2.png" style="max-width:100%">
+<br><center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;">Tune-in live</button></a></a></center></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc;">Tuesday, December 8th</h3>
+<b>Recommended for grades K-5</b>
+<p>Everyone’s invited to a digital dance off as we code characters to do your favorite dance moves in <a href="http://code.org/dance">Dance Party</a>!</p>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">8:00am PST / 11:00am EST</span><br><a href="https://www.addevent.com/event/Dx5471079">Add to calendar</a></p>
+<a href="https://youtu.be/qQof5yqzqfc"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">1:30pm PST / 4:30pm EST</span><br><a href="https://www.addevent.com/event/qh5471080">Add to calendar</a></p>
+<a href="https://youtu.be/cxidDtOTe98"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+
+</div>
+
+<a id="episode3"></a>
+<div style="clear: both;"></div>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 3</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/marketing/codebytes-3-new.png" style="max-width:100%">
+<br><center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;">Tune-in live</button></a></a></center></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc;">Wednesday, December 9th</h3>
+<b>Recommended for grades 4-12</b>
+<p>A virus has infected Monster Town! We’ll code an outbreak simulator and make predictions about what will happen to the neighbors of Monster Town.</p>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">8:00am PST / 11:00am EST</span><br><a href="https://www.addevent.com/event/OV5471084">Add to calendar</a></p>
+<a href="https://youtu.be/M7o2eYDZjr4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">1:30pm PST / 4:30pm EST</span><br><a href="https://www.addevent.com/event/uM5471081">Add to calendar</a></p>
+<a href="https://youtu.be/KHte4JXFwOw"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+
+</div>
+
+<a id="episode4"></a>
+<div style="clear: both;"></div>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 4</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/marketing/codebytes-4.png" style="max-width:100%">
+<br><center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;">Tune-in live</button></a></a></center></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc;">Thursday, December 10th</h3>
+<b>Recommended for grades 6-12</b>
+<p>Want to help your community? Learn the basics of designing a simple app in AppLab that you can immediately share with others.</p>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">8:00am PST / 11:00am EST</span><br><a href="https://www.addevent.com/event/Pv5471085">Add to calendar</a></p>
+<a href="https://youtu.be/8JBAjuSM5M4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">1:30pm PST / 4:30pm EST</span><br><a href="https://www.addevent.com/event/AB5471082">Add to calendar</a></p>
+<a href="https://youtu.be/UTMvZSe7ViU"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+
+</div>
+
+<div style="clear: both;"></div>
+<a id="episode5"></a>
+<div style="clear: both;"></div>
+<h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Episode 5</h3>
+<div class="col-33" style="padding-right:20px; padding-top:10px;">
+<img src="/images/marketing/codebytes-5.png" style="max-width:100%">
+<br><center><a href="https://codebytes.live/now"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;">Tune-in live</button></a></a></center></div>
+
+<div class="col-66" style="padding-right:20px;">
+<h3 style="background:#ffffff;color:#00adbc;">Friday, December 11th</h3>
+<b>Recommended for grades 3-7</b>
+<p>Let’s dig into the world of <a href="https://code.org/minecraft">Minecraft</a> to help the Agent activate switches, place blocks, and clear obstacles to pick up items for the journey!</p>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">8:00am PST / 11:00am EST</span><br><a href="https://www.addevent.com/event/gV5471086">Add to calendar</a></p>
+<a href="https://youtu.be/uTZchXcAd-Y"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+<div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
+<p><span style="font-weight:bold">1:30pm PST / 4:30pm EST</span><br><a href="https://www.addevent.com/event/Co5471083">Add to calendar</a></p>
+<a href="https://youtu.be/yY2o8McMd2w"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Stream on YouTube</button></a>
+</div>
+
+</div>
+
+<div style="clear: both"></div>
+<hr>
+<div style="text-align:center">
+<img src="/images/athome/unescovid19.png" style="width:35%">
+</div>

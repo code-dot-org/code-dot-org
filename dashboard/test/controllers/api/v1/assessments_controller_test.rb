@@ -54,6 +54,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     # Sign in and create a new script.
     sign_in @teacher
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Set up an assessment for that script.
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -74,16 +76,29 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       questions: [{text: "one"}, {text: "two"}]
     }
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] = 'Long assessment 1'
-    level1.properties['pages'] = [
-      {levels: ['level_free_response', 'level_multi_unsubmitted']},
-      {levels: ['level_multi_correct', 'level_multi_incorrect']},
-      {levels: ['level_match_unsubmitted', 'level_match_correct', 'level_match_incorrect']},
-      {levels: ['level_multi_unattempted']}
-    ]
-    level1.save!
-    create :script_level, script: script, levels: [level1], assessment: true
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+
+      page
+      level 'level_match_unsubmitted'
+      level 'level_match_correct'
+      level 'level_match_incorrect'
+
+      page
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # Call the controller method.
     get :index, params: {
@@ -104,26 +119,26 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     expected_match_options = [{"text" => "one"}, {"text" => "two"}]
 
     expected_questions = [
-      {"level_id" => sub_level1.id, "type" => "TextMatch", "name" => sub_level1.name,
+      {"level_id" => sub_level1.id.to_s, "type" => "TextMatch", "name" => sub_level1.name,
         "display_name" => nil, "title" => "title", "question_text" => nil, "question_index" => 0},
-      {"level_id" => sub_level2.id, "type" => "Multi", "name" => sub_level2.name,
+      {"level_id" => sub_level2.id.to_s, "type" => "Multi", "name" => sub_level2.name,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level2.get_question_text, "question_index" => 1},
-      {"level_id" => sub_level3.id, "type" => "Multi", "name" => sub_level3.name,
+      {"level_id" => sub_level3.id.to_s, "type" => "Multi", "name" => sub_level3.name,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text, "question_index" => 2},
-      {"level_id" => sub_level4.id, "type" => "Multi", "name" => sub_level4.name,
+      {"level_id" => sub_level4.id.to_s, "type" => "Multi", "name" => sub_level4.name,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text, "question_index" => 3},
-      {"level_id" => sub_level6.id, "type" => "Match", "name" => sub_level6.name,
+      {"level_id" => sub_level6.id.to_s, "type" => "Match", "name" => sub_level6.name,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level6.get_question_text, "question" => sub_level6.question, "question_index" => 4},
-      {"level_id" => sub_level7.id, "type" => "Match", "name" => sub_level7.name,
+      {"level_id" => sub_level7.id.to_s, "type" => "Match", "name" => sub_level7.name,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level7.get_question_text, "question" => sub_level7.question, "question_index" => 5},
-      {"level_id" => sub_level8.id, "type" => "Match", "name" => sub_level8.name,
+      {"level_id" => sub_level8.id.to_s, "type" => "Match", "name" => sub_level8.name,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level8.get_question_text, "question" => sub_level8.question, "question_index" => 6},
-      {"level_id" => sub_level5.id, "type" => "Multi", "name" => sub_level5.name,
+      {"level_id" => sub_level5.id.to_s, "type" => "Multi", "name" => sub_level5.name,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text, "question_index" => 7},
     ]
     level_response = JSON.parse(@response.body)[level1.id.to_s]
-    assert_equal "translation missing: en-US.data.script.name.#{script.name}.title", level_response["name"]
-    assert_equal level1.id, level_response["id"]
+    assert_equal script.name, level_response["name"]
+    assert_equal level1.id.to_s, level_response["id"]
     assert_equal expected_questions, level_response["questions"]
   end
 
@@ -161,6 +176,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     # Sign in and create a new script.
     sign_in @teacher
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Set up an assessment for that script.
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -181,14 +198,29 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       questions: [{text: "one"}, {text: "two"}]
     }
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']},
-                                  {levels: ['level_multi_correct', 'level_multi_incorrect']},
-                                  {levels: ['level_match_unsubmitted', 'level_match_correct', 'level_match_incorrect']},
-                                  {levels: ['level_multi_unattempted']}]
-    level1.save!
-    create :script_level, script: script, levels: [level1], assessment: true
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+
+      page
+      level 'level_match_unsubmitted'
+      level 'level_match_correct'
+      level 'level_match_incorrect'
+
+      page
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # Student has completed an assessment.
     level_source = create(
@@ -211,16 +243,15 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    # Stage translation missing because we don't actually generate i18n files in tests.
     expected_response = {
       @student_1.id.to_s => {
         "student_name" => @student_1.name,
         "responses_by_assessment" => {
           level1.id.to_s => {
-            "stage" => "translation missing: en-US.data.script.name.#{script.name}.title",
+            "stage" => script.name,
             "puzzle" => 1,
             "question" => "Long assessment 1",
-            "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+            "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
             "multi_correct" => 1,
             "multi_count" => 4,
             "match_correct" => 1,
@@ -244,10 +275,90 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_equal expected_response, JSON.parse(@response.body)
   end
 
+  test "multi choose 2 questions are only correct if both answers are correct" do
+    # Sign in and create a new script.
+    sign_in @teacher
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    # Set up an assessment for that script.
+    sub_level1 = create :multi, name: 'level_multi2_correct', type: 'Multi',
+                        properties: {"answers": [{"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Correct Answer", "correct" => true},
+                                                 {"text" => "Correct Answer", "correct" => true}]}
+    sub_level2 = create :multi, name: 'level_multi2_incorrect_only_one_choice', type: 'Multi',
+                        properties: {"answers": [{"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Correct Answer", "correct" => true},
+                                                 {"text" => "Correct Answer", "correct" => true}]}
+
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+
+      page
+      level 'level_multi2_correct'
+      level 'level_multi2_incorrect_only_one_choice'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
+
+    # Student has completed an assessment.
+    level_source = create(
+      :level_source,
+      level: level1,
+      data: %Q({"#{sub_level1.id}":{"result":"2,3"},"#{sub_level2.id}":{"result":"3"}})
+    )
+    create :activity, user: @student_1, level: level1,
+           level_source: level_source
+
+    updated_at = Time.now
+
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+
+    # Call the controller method.
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    expected_response = {
+      @student_1.id.to_s => {
+        "student_name" => @student_1.name,
+          "responses_by_assessment" => {
+            level1.id.to_s => {
+              "stage" => script.name,
+              "puzzle" => 1,
+              "question" => "Long assessment 1",
+              "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+              "multi_correct" => 1,
+              "multi_count" => 2,
+              "match_correct" => 0,
+              "match_count" => 0,
+              "submitted" => true,
+              "timestamp" => user_level[:updated_at],
+              "level_results" => [
+                {"type" => "Multi", "student_result" => [2, 3], "status" => "correct",},
+                {"type" => "Multi", "student_result" => [3], "status" => "incorrect",}
+              ]
+            }
+          }
+      }
+    }
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
   test "gets no anonymous survey data via assessment responses call" do
     # Sign in as teacher and create a new script.
     sign_in @teacher
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     # Set up an anonymous assessment in that script.
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -256,16 +367,25 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [
-      {levels: ['level_free_response', 'level_multi_unsubmitted']},
-      {levels: ['level_multi_correct', 'level_multi_incorrect']},
-      {levels: ['level_multi_unattempted']}
-    ]
-    level1.save!
-    create :script_level, script: script, levels: [level1], assessment: true
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+      anonymous 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+
+      page
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # student_1 through student_5 did the survey, just submitting a free response.
     @students.each_with_index do |student, student_index|
@@ -341,22 +461,33 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     # Create a script with an anonymous assessment.
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
     sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [
-      {levels: ['level_free_response', 'level_multi_unsubmitted']},
-      {levels: ['level_multi_correct', 'level_multi_incorrect']},
-      {levels: ['level_multi_unattempted']}
-    ]
-    level1.save!
-    create :script_level, script: script, levels: [level1], assessment: true
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+      anonymous 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+
+      page
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     updated_at = Time.now
 
@@ -406,10 +537,9 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    # All these are translation missing because we don't actually generate i18n files in tests
     expected_response = {
       level1.id.to_s => {
-        "stage_name" => "translation missing: en-US.data.script.name.#{script.name}.title",
+        "stage_name" => script.name,
         "levelgroup_results" => [
           {
             "type" => "text_match",
@@ -490,6 +620,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "no anonymous survey data when less than five students" do
     sign_in @teacher
     script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
 
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
     sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
@@ -497,12 +629,25 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
     create :multi, name: 'level_multi_unattempted', type: 'Multi'
 
-    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
-    level1.properties['title'] =  'Long assessment 1'
-    level1.properties['anonymous'] = 'true'
-    level1.properties['pages'] = [{levels: ['level_free_response', 'level_multi_unsubmitted']}, {levels: ['level_multi_correct', 'level_multi_incorrect']}, {levels: ['level_multi_unattempted']}]
-    level1.save!
-    create :script_level, script: script, levels: [level1], assessment: true
+    level_group_dsl = <<~DSL
+      name 'LevelGroupLevel1'
+      title 'Long assessment 1'
+      anonymous 'true'
+
+      page
+      level 'level_free_response'
+      level 'level_multi_unsubmitted'
+
+      page
+      level 'level_multi_correct'
+      level 'level_multi_incorrect'
+
+      page
+      level 'level_multi_unattempted'
+    DSL
+    level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
+
+    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # student_1 through student_4 did the survey, just submitting a free response.
     [@student_1, @student_2, @student_3, @student_4].each_with_index do |student, student_index|
@@ -532,7 +677,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     expected_response = {
       level1.id.to_s => {
-        "stage_name" => "translation missing: en-US.data.script.name.#{script.name}.title",
+        "stage_name" => script.name,
         "levelgroup_results" => []
       }
     }

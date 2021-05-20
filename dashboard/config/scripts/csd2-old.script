@@ -1,20 +1,20 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 
-stage 'Quality Websites'
+lesson 'Quality Websites', display_name: 'Quality Websites', has_lesson_plan: false
 level 'Unit 2 Lesson 1 Overview', named: true
 level 'Rating Websites', named: true
 
-stage 'Website Design'
+lesson 'Website Design', display_name: 'Website Design', has_lesson_plan: false
 level 'Unit 2 Lesson 2 Overview', named: true
 level 'Personal Website Examples', named: true
 
-stage 'Describing Web pages'
+lesson 'Describing Web pages', display_name: 'Describing Web pages', has_lesson_plan: false
 level 'Unit 2 Lesson 3 Overview', named: true
 level 'CSD Design Instructions Site', named: true
 
-stage 'Text on the Web'
+lesson 'Text on the Web', display_name: 'Text on the Web', has_lesson_plan: false
 level 'Unit 2 Lesson 4 Overview', named: true
 level 'Intro to Web Lab - Part 1', named: true
 level 'CSDU2 - Type Anything'
@@ -36,7 +36,7 @@ level 'CSDU2 - ordered Lists'
 level 'CSDU2 - Finish Recipe', named: true
 level 'Intro to Web Lab - Part 3', named: true
 
-stage 'Images in HTML'
+lesson 'Images in HTML', display_name: 'Images in HTML', has_lesson_plan: false
 level 'Unit 2 Lesson 5 Overview', named: true
 level 'CSDU2 - Recipe Valid Update'
 level 'CSDU2 - head and body tag intro'
@@ -45,7 +45,7 @@ level 'CSDU2 - Local Images'
 level 'Stop: Images', named: true
 level 'CSDU2 - About Me Page start'
 
-stage 'Clean Code and Debugging'
+lesson 'Clean Code and Debugging', display_name: 'Clean Code and Debugging', has_lesson_plan: false
 level 'Unit 2 Lesson 6 Overview', named: true
 level 'CSDU2 - Debugging 1'
 level 'CSDU2 - Debugging 2'
@@ -53,7 +53,7 @@ level 'CSDU2 - Debugging 3'
 level 'CSDU2 - Debugging 4'
 level 'CSD Creating Debugging Strat'
 
-stage 'Styling Text with CSS'
+lesson 'Styling Text with CSS', display_name: 'Styling Text with CSS', has_lesson_plan: false
 level 'Unit 2 Lesson 7 Overview', named: true
 level 'Video: Intro to CSS', named: true
 level 'CSD U2 text style h1'
@@ -68,7 +68,7 @@ level 'Video: Intro to CSS Part 2', named: true
 level 'CSD U2 add file - OLD'
 level 'CSD U2 text style freeplay - OLD'
 
-stage 'Styling Elements with CSS'
+lesson 'Styling Elements with CSS', display_name: 'Styling Elements with CSS', has_lesson_plan: false
 level 'Unit 2 Lesson 8 Overview', named: true
 level 'CSD U2 layout style sample'
 level 'CSD U2 layout style bgcolor'
@@ -82,7 +82,7 @@ level 'CSD U2 layout style margin'
 level 'CSD U2 layout style review', named: true
 level 'CSD U2 layout style freeplay - OLD'
 
-stage 'Multi-Page Websites'
+lesson 'Multi-Page Websites', display_name: 'Multi-Page Websites', has_lesson_plan: false
 level 'Unit 2 Lesson 9 Overview', named: true
 level 'CSDU2 - Starting Personal Home Page', named: true
 level 'Stop: Personal Home Page Warm Up', named: true
@@ -98,7 +98,7 @@ level 'CSDU2 - Nav on Personal Website'
 level 'CSDU2 - Nav add to Personal Site'
 level 'CSDU2 - Style to Personal Site'
 
-stage 'Classes'
+lesson 'Classes', display_name: 'Classes', has_lesson_plan: false
 level 'Unit 2 Lesson 10 Overview', named: true
 level 'CSD U2 RGB intro'
 level 'CSD U2 RGB Colors', named: true
@@ -114,15 +114,15 @@ level 'Stop: Classes', named: true
 level 'CSDU2 - Matching Class Style Checker'
 level 'CSDU2 - PW - Class Style Personal Site - OLD'
 
-stage 'Peer Review'
+lesson 'Peer Review', display_name: 'Peer Review', has_lesson_plan: false
 level 'Unit 2 Lesson 11 Overview', named: true
 level 'Peer Review: Personal Website', named: true
 
-stage 'Digital Footprint'
+lesson 'Digital Footprint', display_name: 'Digital Footprint', has_lesson_plan: false
 level 'Unit 2 Lesson 12 Overview', named: true
 level 'Social Sleuth', named: true
 
-stage 'Publishing a Website'
+lesson 'Publishing a Website', display_name: 'Publishing a Website', has_lesson_plan: false
 level 'Unit 2 Lesson 13 Overview', named: true
 level 'CSDU2 - PW - Pre Publishing Check'
 level 'CSDU2 - PW - Pre Publishing 2'
@@ -131,7 +131,7 @@ level 'CSDU2 - PW - Pre Publishing 4'
 level 'CSDU2 - PW - Pre Publishing 5'
 level 'CSDU2 - PW - Pre Publishing 6'
 
-stage 'Sources and Search Engines'
+lesson 'Sources and Search Engines', display_name: 'Sources and Search Engines', has_lesson_plan: false
 level 'Unit 2 Lesson 14 Overview', named: true
 level 'Search Engine Optimizer', named: true
 level 'How Search Works', named: true
@@ -141,7 +141,7 @@ level 'CSDU2 - SEO 3'
 level 'CSDU2 - SEO 5'
 level 'CSDU2 - SEO Final'
 
-stage 'Intellectual Property'
+lesson 'Intellectual Property', display_name: 'Intellectual Property', has_lesson_plan: false
 level 'Unit 2 Lesson 15 Overview', named: true
 level 'CSDU2 IP Portfolio'
 level 'CSDU2 IP Fair Use'
@@ -150,6 +150,7 @@ level 'CSDu2 IP CC Search'
 level 'CSDU2 IP Add Images'
 level 'CSDU2 IP Final Touches'
 
-stage 'Project: Personal Portfolio Website'
+lesson 'Project: Personal Portfolio Website', display_name: 'Project: Personal Portfolio Website', has_lesson_plan: false
 level 'Unit 2 Lesson 16 Overview', named: true
 level 'Final Personal Website - OLD', named: true
+

@@ -3,13 +3,6 @@ import React from 'react';
 import Select from 'react-select';
 import {SelectStyleProps} from '../constants';
 
-const styles = {
-  select: {
-    width: 400,
-    display: 'inline-block'
-  }
-};
-
 export default class WorkshopAssignmentSelect extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(
@@ -35,3 +28,10 @@ export default class WorkshopAssignmentSelect extends React.Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    width: 400,
+    display: 'inline-block'
+  }
+};

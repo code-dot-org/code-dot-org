@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 21 Puzzle 9](/s/csd3-2017/stage/21/puzzle/9) and `playerFall` in [Lesson 21 Puzzle 14](/s/csd3-2017/stage/21/puzzle/14).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
+    "long_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 21 Puzzle 9](/s/csd3-2017/lessons/21/levels/9) and `playerFall` in [Lesson 21 Puzzle 14](/s/csd3-2017/lessons/21/levels/14).\r\n\r\nFor each movement:\r\n* Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

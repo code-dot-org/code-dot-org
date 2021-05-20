@@ -20,13 +20,13 @@ bs-BA:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Da li ste učitelj informatike? Pogledajte i ostale CSEdWeek
     resurse</a>'
+  csedweek_banner_teachers_text: Da li ste učitelj informatike? Pogledajte i ostale
+    CSEdWeek resurse
   n_have_learned_an_hoc: "<h1> Isprobaj </h1><h2>Sat Kodiranja</h2><h3># poslužen</h3>"
   anybody_can_learn: Svi mogu naučiti.
   learn_now: Nauči sad
   petition_message: Svaki učenik u svakoj školi ima šansu da uči računarske nauke
   petition_sign_message: Ako se slažeš, napiši svoje ime. Pridruži se ostalima.
-  petition_sign_message_support: 'Ako nas podržavaš, potpiši svoje ime. Pridruži se
-    # drugih.'
   petition_join_others: 'Pridruži se # drugih'
   name: Ime
   email: Email
@@ -171,6 +171,9 @@ bs-BA:
     Sada, nastavi sa našim <a href='http://studio.code.org'>drugim kursevima</a>,
     ili istraži još mogućnosti na<a href='/learn/beyond'>Nauči više nego u jednom
     Satu Kodiranja</a>.
+  get_a_certificate_message_after_markdown: Klikni na certifikat da bi ga snimio ili
+    isprintao. Sada, nastavi sa našim [drugim kursevima](http://studio.code.org),
+    ili istraži još mogućnosti na [Nauči više nego u jednom Satu Kodiranja](/learn/beyond).
   thanks_for_submitting: Hvala na prijavi!
   if_you_enjoyed: Ako ti je učenje bilo super zabavno, pozovi prijatelje da i oni
     probaju! Želimo da cijeli svijet nauči.
@@ -314,6 +317,7 @@ bs-BA:
   homepage_action_text_learn: Započni sa učenjem
   homepage_action_text_signpetition: Potpiši peticiju
   homepage_signpetition_dropdown: Slažem se &#x25BE;
+  homepage_signpetition_dropdown_text: Slažem se
   homepage_diversity_pledge: Prisegni se na raznolikost
   homepage_banner_text_prizes: 'Sat Kodiranja dolazi opet, Decembar 7-13. '
   homepage_banner_link_prizes: 'Pridruži se najvećem događaju učenja u historiji. '
@@ -943,6 +947,8 @@ bs-BA:
   coursee-2018_gradelevel: Dob 8-12
   coursed-2019_gradelevel: Razred 8+
   coursee-2019_gradelevel: Dob 8-12
+  coursed-2020_gradelevel: Razred 8+
+  coursee-2020_gradelevel: Dob 8-12
   accelerated_gradelevel: Dob 10+ (nakon Kursa 3)
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
@@ -1043,6 +1049,10 @@ bs-BA:
   infinity_shortdescription: Upotrijebi Laboratorij Igranja da bi napravio/la priču
     ili igru u kojoj igraju karakteri Disney Beskonačnost.
   artist_shortdescription: Crtanje cool slike i dizajn s Umjetnikom!
+  coursea-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
+    Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+  courseb-2020_shortdescription_congrats: Naučite osnove računarstva i internet sigurnosti.
+    Na kraju kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
   codeorg_longdescription: Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti"
     programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije
     koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči
@@ -1501,6 +1511,8 @@ bs-BA:
   header_teach: Podučavaj
   header_help_us: Pomogni nam
   header_help_support: 'Pomoć i podrška '
+  header_legal_privacy: Pravila Privatnosti
+  header_legal_tos: Uvjeti
   header_documentation: Dokumentacija
   user_header_label: Zdravo, %{username}
   user_header_team: Tim
@@ -1567,3 +1579,8 @@ bs-BA:
   hoc2018_dance_video3: Plesna zabava - Osobenosti
   hoc2018_dance_video4: Plesna zabava - Zahvale
   hoc2018_mc_with_microsoft: U partnerstvu sa
+  footer_powered_by_aws: Potpomognuto sa Amazon Web Services
+  footer_privacy_policy: Pravila Privatnosti
+  footer_donate: Doniraj
+  footer_support: Pomoć i Zajednica
+  footer_terms: Uvjeti

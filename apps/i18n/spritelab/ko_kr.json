@@ -1,3 +1,20 @@
 {
-  "shareGame": "게임 공유하기:"
+  "clicked": "클릭",
+  "clickedSprite": "클릭된 스프라이트",
+  "new": "새로운",
+  "newSprite": "새로운 스프라이트",
+  "subject": "주제",
+  "subjectSprite": "주제 스프라이트",
+  "object": "개체",
+  "objectSprite": "개체 스프라이트",
+  "reinfFeedbackMsg": "완료했네요! 다음 단계로 넘어갈려면 \"계속\"을 클릭하세요.",
+  "shareGame": "게임 공유하기:",
+  "noSprites": "스프라이트를 만드세요.",
+  "noBehavior": "스프라이트가 행동해야 합니다.",
+  "noNewBehavior": "스프라이트가 행동을 시작하지 않았습니다.",
+  "genericSuccess": "레벨을 완료했습니다! 계속을 눌러 진행하세요.",
+  "didntMoveUp": "스프라이트가 위쪽으로 올라가지 않았습니다.",
+  "didntMoveDown": "스프라이트가 아래쪽으로 내려가지 않았습니다.",
+  "didntMoveLeft": "스프라이트가 왼쪽으로 이동하지 않았습니다.",
+  "didntMoveRight": "스프라이트가 오른쪽으로 이동하지 않았습니다."
 }

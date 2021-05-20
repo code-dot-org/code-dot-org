@@ -76,7 +76,6 @@ def main
     ALWAYS_PUBLISHABLE_PROJECT_TYPES
     ALL_PUBLISHABLE_PROJECT_TYPES
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
-    ALLOWED_WEB_REQUEST_HEADERS
     ABUSE_CONSTANTS
     ERROR_SEVERITY_LEVELS
   )
@@ -90,8 +89,12 @@ def main
     generate_multiple_constants(
       %w(
         COURSES
+        COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
+        VIRTUAL_ONLY_SUBJECTS
+        MUST_SUPPRESS_EMAIL_SUBJECTS
+        ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
         STATES
         WORKSHOP_APPLICATION_STATES
@@ -119,25 +122,25 @@ def main
       source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
-      source_module: Pd::Teacher1920ApplicationConstants,
+      source_module: Pd::Teacher2122ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval1920ApplicationConstants,
+      source_module: Pd::PrincipalApproval2122ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
   )
 
   generate_shared_js_file(
@@ -151,7 +154,7 @@ def main
 
   generate_shared_js_file(
     generate_constants(
-      'SCHOLARSHIP_DROPDOWN_OPTIONS',
+      'COURSE_SPECIFIC_SCHOLARSHIP_DROPDOWN_OPTIONS',
       source_module: Pd::ScholarshipInfoConstants,
       transform_keys: true
     ),

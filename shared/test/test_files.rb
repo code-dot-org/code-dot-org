@@ -15,11 +15,7 @@ class FilesTest < FilesApiTestBase
   def teardown
     # Require that tests delete the assets they upload
     get "v3/files/#{@channel_id}"
-    expected_empty_files = {
-      'files' => [],
-      'filesVersionId' => ''
-    }
-    assert_equal(expected_empty_files, JSON.parse(last_response.body))
+    assert not_found?
     delete_channel(@channel_id)
     @channel_id = nil
   end
@@ -110,6 +106,8 @@ class FilesTest < FilesApiTestBase
     dog_image_body = 'stub-dog-contents'
     cat_image_filename = @api.randomize_filename('cat.png')
     cat_image_body = 'stub-cat-contents'
+    hamster_image_filename = @api.randomize_filename('hamster.jfif')
+    hamster_image_body = 'stub-hamster-contents'
 
     # Make sure we have a clean starting point
     delete_all_file_versions(dog_image_filename, cat_image_filename)
@@ -135,6 +133,16 @@ class FilesTest < FilesApiTestBase
     }
     assert_fileinfo_equal(expected_cat_image_info, actual_cat_image_info)
 
+    # Upload hamster.jfif and check the response
+    response = post_file_data(@api, hamster_image_filename, hamster_image_body, 'image/jpg')
+    actual_hamster_image_info = JSON.parse(response)
+    expected_hamster_image_info = {
+      'filename' => hamster_image_filename.sub('.jfif', '.jpg'),
+      'category' => 'image',
+      'size' => hamster_image_body.length
+    }
+    assert_fileinfo_equal(expected_hamster_image_info, actual_hamster_image_info)
+
     file_infos = @api.list_objects
     assert_fileinfo_equal(actual_dog_image_info, file_infos['files'][0])
     assert_fileinfo_equal(actual_cat_image_info, file_infos['files'][1])
@@ -149,6 +157,7 @@ class FilesTest < FilesApiTestBase
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
     @api.delete_object(dog_image_filename)
@@ -157,6 +166,59 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(cat_image_filename)
     assert successful?
 
+    delete_all_manifest_versions
+  end
+
+  def test_upload_html_file
+    # Mocha requires that all calls to DCDO.get be stubbed in order to stub the return value
+    # for DCDO.get('disallowed_html_tags', []), which is the only call we care about in this test.
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+    DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
+
+    filename = 'index.html'
+    # The below HTML is valid/invalid in WebLab projects only. Other project types do not
+    # follow the same validity rules.
+    valid_html = '<div></div>'
+    invalid_html_1 = '<script src="index.js"></script>'
+    invalid_html_2 = '<meta http-equiv="refresh">'
+
+    # WebLab
+    StorageApps.any_instance.stubs(:get).returns({projectType: 'weblab'})
+    @api.put_object(filename, valid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_1)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_2)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    # Not WebLab
+    StorageApps.any_instance.stubs(:get).returns({projectType: 'applab'})
+    @api.put_object(filename, valid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_1)
+    assert successful?
+    @api.delete_object(filename)
+
+    # This means the channel_id does not belong to a valid project.
+    # These requests should always return a 400.
+    StorageApps.any_instance.stubs(:get).returns(nil)
+    @api.put_object(filename, valid_html)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_1)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    StorageApps.any_instance.unstub(:get)
     delete_all_manifest_versions
   end
 
@@ -201,6 +263,18 @@ class FilesTest < FilesApiTestBase
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
+
+    delete_all_manifest_versions
+  end
+
+  def test_codeprojects_get_deleted_project
+    post_file_data(@api, 'index.html', '<div></div>', 'text/html')
+    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+
+    @api.delete_object('index.html')
+    @api.get_root_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert not_found?
 
     delete_all_manifest_versions
   end
@@ -393,9 +467,8 @@ class FilesTest < FilesApiTestBase
   def test_bad_channel_id
     bad_channel_id = 'undefined'
     api = FilesApiTestHelper.new(current_session, 'files', bad_channel_id)
-    file_infos = api.list_objects
-    assert_equal '', file_infos['filesVersionId']
-    assert_equal [], file_infos['files']
+    api.list_objects
+    assert not_found?
     assert_newrelic_metrics []
   end
 

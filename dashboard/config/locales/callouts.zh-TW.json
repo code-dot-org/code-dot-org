@@ -1,0 +1,1575 @@
+{
+  "zh-TW": {
+    "data": {
+      "callouts": {
+        "2-3 Artist Debugging 1": {
+          "2-3_Artist_Debugging_1_a": "小藝術家上沒有「步進」按鈕，但你可以使用左側的滑杆來放慢程式運行的速度以便檢查。"
+        },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！"
+        },
+        "4-5 Artist Patterns Free Play": {
+          "4-5_Artist_Patterns_Free_Play_1": "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "畫面變成綠色了嗎？ 如果是這樣，請點擊“完成”。 如果沒有，請點擊“重置”，更改你的程式，然後再次點擊“執行”。"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "你現在處於設計模式中。"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "在此修改數值"
+        },
+        "CSD U3 Variables Predict Where XY": {
+          "grid": "點擊此處以顯示格線。"
+        },
+        "CSD U3 Variables Predict Where XY_2018": {
+          "grid": "點擊此處以顯示格線。"
+        },
+        "CSD U3 Variables Predict Where XY_2019": {
+          "grid": "點擊此處以顯示格線。"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "在此修改數值"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "在此修改數值"
+        },
+        "CSD U3 abstraction accelerateX": {
+          "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateX_2018": {
+          "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateX_2019": {
+          "CSD_U3_L11_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateY": {
+          "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateY_2018": {
+          "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction accelerateY_2019": {
+          "CSD_U3_L11_S7_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 abstraction jumping": {
+          "CSD_U3_L13_S8_C1": "在此設定速度"
+        },
+        "CSD U3 abstraction jumping_2018": {
+          "CSD_U3_L13_S8_C1": "在此設定速度"
+        },
+        "CSD U3 abstraction jumping_2019": {
+          "CSD_U3_L13_S8_C1": "在此設定速度"
+        },
+        "CSD U3 abstraction velocityX": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityX_2018": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityX_2019": {
+          "CSD_U3_L11_S4_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityY": {
+          "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityY_2018": {
+          "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 abstraction velocityY_2019": {
+          "CSD_U3_L11_S5_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions isTouching intro": {
+          "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions isTouching intro_2018": {
+          "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions isTouching intro_2019": {
+          "CSD_U3_L12_S2_C1": "添加你的積木到這兒。"
+        },
+        "CSD U3 collisions types": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types_2018": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 collisions types_2019": {
+          "CSD_U3_L13_S6_C1": "添加你的程式到這兒。"
+        },
+        "CSD U3 debug": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 debug_2018": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 ellipse": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 ellipse_2018": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 ellipse_2019": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 fill": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 fill_2018": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 fill_2019": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 platform background1": {
+          "CSD_U3_L16_S3_C3": "修改這個函式。"
+        },
+        "CSD U3 platform background1_2018": {
+          "CSD_U3_L16_S3_C3": "修改這個函式。"
+        },
+        "CSD U3 platform background1_2019": {
+          "CSD_U3_L16_S3_C3": "修改這個函式。"
+        },
+        "CSD U3 platform platform1": {
+          "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
+        },
+        "CSD U3 platform platform1_2018": {
+          "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
+        },
+        "CSD U3 platform platform1_2019": {
+          "CSD_U3_S17_L8_C1": "這個積木創建了一個新的角色。"
+        },
+        "CSD U3 platform scoreboard": {
+          "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
+        },
+        "CSD U3 platform scoreboard_2018": {
+          "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
+        },
+        "CSD U3 platform scoreboard_2019": {
+          "CSD_U3_L17_S7_C1": "得分會輸出到這兒。"
+        },
+        "CSD U3 platform variable1": {
+          "callout": "這個積木創建了一個變數。"
+        },
+        "CSD U3 platform variable1_2018": {
+          "callout": "這個積木創建了一個變數。"
+        },
+        "CSD U3 platform variable1_2019": {
+          "callout": "這個積木創建了一個變數。"
+        },
+        "CSD U3 rect": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "這個是「運行」按鈕。"
+        },
+        "CSD U3 rect_2018": {
+          "CSD_U3_rect_c1": "這兒是代碼"
+        },
+        "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "這兒是代碼"
+        },
+        "CSD U3 sequence": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 sequence_2018": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U3 sequence_2019": {
+          "CSD_U3_rect_c1": "這兒是代碼",
+          "CSD_U3_rect_c2": "拖曳這個積木到工作區裡。"
+        },
+        "CSD U6 getProperty input": {
+          "CSD_U6L06P03": "添加你的積木到這兒。"
+        },
+        "CSD U6 getProperty input_2018": {
+          "CSD_U6L06P03": "添加你的積木到這兒。"
+        },
+        "CSD U6 getProperty input_2019": {
+          "CSD_U6L06P03": "添加你的積木到這兒。"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "殭屍需要移動多少次才能完成一個圓？輸入移動的次數。"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "使用「重複」積木，並包住工作區上的所有積木。"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "拖曳計數器變數到這個積木"
+        },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "請注意我們已經排序的所有積木，並把它們依功能分類，讓他們看起來更整潔。 點擊此處可找到所有你需要的積木。"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "使用「重複」積木，並包住工作區上的所有積木。"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "使用這個積木將 length（長度）設置成正確數值。"
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "使用這個積木將 length（長度）設置成正確數值。"
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "用 360 除以邊數就可以得到每個角的角度。"
+        },
+        "Course 4 Artist Vars 8": {
+          "Course_4_Artist_Vars_8_a": "需要更多的空間？拉動這個條桿讓程式區域更寬一些。"
+        },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "使用「如果」積木來決定蜜蜂應該要採集花蜜還是釀造蜂蜜。"
+        },
+        "Course 4 Bee 3": {
+          "if_else_bee": "使用「如果…否則」積木，那樣一來就可以讓蜜蜂從花朵採集花蜜，如果不是花朵就釀造蜂蜜。"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "使用這個按鈕來編輯函式，然後改變蜜蜂的轉向，讓牠採集到花蜜。"
+        },
+        "Course 4 Maze 4": {
+          "repeat": "將程式積木放在迴圈中來重複執行指令"
+        },
+        "Course 4 Play Lab Params 2": {
+          "Course_4 _Play_Lab_Params_2_1": "點擊「編輯」以更新這個函式，讓它可以使用 height（高度）參數。"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "點擊此處以編輯你的函式。"
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "點一下編輯，在你的函式中添加參數"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "使用這些方向鍵來移動角色"
+        },
+        "Course 4 Play Lab Vars 9": {
+          "Course_4_Play_Lab_Vars_9_1": "你的所有積木現在被依功能分成數個類別放置！點擊指令類別文字來看看裡頭有什麼積木。"
+        },
+        "Course 4 Playlab For Loops 4b": {
+          "Course_4_Playlab_For_Loops_4b_1": "注意 `counter`（計數器）變數在每個角色上是不是用了不同的名稱？這樣子每個計數迴圈才可以控制自己的計數器。",
+          "Course_4_Playlab_For_Loops_4b_2": "這個關卡你只能修改`計數迴圈`中的「增量」。"
+        },
+        "Course 4 SCV 6": {
+          "Course_4_SCV_6": "這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "在這裡選擇舞者的類型。"
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "將此程式積木添加到您的程式中。",
+          "arrow_buttons": "按箭頭按鈕控制舞者。"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "把這個積木拖曳到工作區！"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "將新事件添加到程式中。"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "新的程式積木！"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "新的程式積木！"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "新的程式積木！",
+          "new_block_4": "新的程式積木！"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "把這個積木拖曳到工作區！"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "把這個積木拖曳到工作區！"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "把這個積木拖曳到工作區！"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "在此新增您的新舞者"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "新的程式積木！",
+          "dance_callout_11_b": "新的程式積木！"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "在這裡查找「所有鴨子」程式積木"
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "在這裡選擇舞者的類型。"
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "將此程式積木添加到您的程式中。",
+          "arrow_buttons": "按箭頭按鈕控制舞者。"
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "把這個積木拖曳到工作區！"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "將新事件添加到程式中。"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "新的程式積木！"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "新的程式積木！"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "新的程式積木！",
+          "new_block_4": "新的程式積木！"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "把這個積木拖曳到工作區！"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "把這個積木拖曳到工作區！"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "把這個積木拖曳到工作區！"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "在此新增您的新舞者"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "新的程式積木！",
+          "dance_callout_11_b": "新的程式積木！"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "在這裡查找「所有鴨子」程式積木"
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
+        },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "當事件發生時播放一個音效。"
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "當按向上鍵時，哪個積木可以讓杯麵向上移動？",
+          "Infinity_move_directions_callout_arrow": "使用這些方向鍵來進行引導"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "添加移動積木到這兒"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "放置移動積木到這裡面"
+        },
+        "InspirationalArtwork": {
+          "InspirationalArtwork_1": "嘗試使用這個標籤下的新「comment」（注釋）積木將註釋留在程式中！"
+        },
+        "InspirationalArtwork_2018": {
+          "InspirationalArtwork_1": "嘗試使用該標籤下的`註釋`積木在程式中留下註釋！\n"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "當你準備好時，點擊「運行」試試你的程式。"
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "點擊「運行」開始移動。"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "這些方塊無法丟棄，但可以編輯！"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "這些方塊無法丟棄，但可以編輯！"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "這些方塊無法丟棄，但可以編輯！"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "NEW_Course_4_Artist_Functions_3_1": "點擊此處以編輯新的函式，好讓它能建立一個正方形。"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "點擊此處以編輯你的函式。"
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "點擊此處以編輯你的函式。"
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "點擊此處開啟函式視窗，接著點擊「建立一個函式」按鈕。"
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "點一下編輯，在你的函式中添加參數",
+          "add_and_drag_parameter": "在這裡寫下參數名稱，點擊添加，然後將它拖曳到您的函式定義中"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "拖曳 length（長度）參數到這裡以取代問號"
+        },
+        "NEW Course 4 Bee For Loops 4": {
+          "bee_for_loop": "輸入你想要讓蜜蜂收集的花蜜最大數量。"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "工具箱有新的樣貌了！這兒現在有個「動作類別」的積木了。"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "使用下拉清單來創建不同的雪花！"
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
+        },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
+        },
+        "OPD-K5-variables-5": {
+          "courseF_artist_variables3_a": "使用這個來設置變數 `length`（長度）的值。"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "我們預先在這裡放了一些積木，方便您開始"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "我們預先在這裡放了一些積木，方便您開始"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "我們預先在這裡放了一些積木，方便您開始"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "點擊「運行」按鈕，看看程式的結果",
+          "craft_drag_block_callout": "拖曳一個「移動-向前」積木並將色貼合到其它積木下方"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "點擊「運行」按鈕，看看程式的結果",
+          "craft_drag_block_callout": "拖曳一個「移動-向前」積木並將色貼合到其它積木下方"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "點擊「運行」按鈕，看看程式的結果",
+          "craft_drag_block_callout": "拖曳一個「移動-向前」積木並將色貼合到其它積木下方"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
+        },
+        "Robot Doodle": {
+          "4-5_Artist_Patterns_Free_Play_2": "嘗試使用這個標籤下的新「comment」（注釋）積木將註釋留在程式中！"
+        },
+        "Robot Doodle_2018": {
+          "4-5_Artist_Patterns_Free_Play_2": "嘗試使用這個標籤下的新「comment」（注釋）積木將註釋留在程式中！"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "開採這塊鐵礦！"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "開採這塊鐵礦！"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "開採這塊鐵礦！"
+        },
+        "Virtual Pet 2_2019": {
+          "": "請按一下這裡！\n"
+        },
+        "Virtual Pet 2_2020": {
+          "": "請按一下這裡！\n"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
+        "behaviors 3a": {
+          "behavior_callout": "為什麼這個行為對中間的星星不起作用？\n",
+          "star2_callout": "刪除這個服裝積木，用「這個精靈」積木代替。\n",
+          "this_sprite_callout": "將下面的服裝積木替換成這個。\n"
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "為什麼這個行為對中間的星星不起作用？\n",
+          "star2_callout": "刪除這個服裝積木，用「這個精靈」積木代替。\n",
+          "this_sprite_callout": "將下面的服裝積木替換成這個。\n"
+        },
+        "behaviors 4": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
+        "behaviors 5": {
+          "behaviors_edit": "給這個行為添加程式。"
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "給這個行為添加程式。"
+        },
+        "behaviors free play": {
+          "behaviors_edit": "給這個行為添加程式。"
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "給這個行為添加程式。"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "course3_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "使用這個指令讓蜜蜂向後移動。"
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "您應該在該函式中輸入什麼程式碼？",
+          "courseF_bee_functions_challenge1_2": "如果進行編輯以多次釀造蜂蜜，則可以在此處使用「check nectar or honey」函式。"
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "course4_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "這個函式可以很好地完成玉米任務，但對其他蔬菜呢？"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "點擊此處觀看程式運行！"
+        },
+        "courseA_collector_preLoops2": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseA_collector_preLoops3": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "使用步進按鈕可以一步一步地執行程式中的指令，這可以讓你更容易找到出錯的地方！"
+        },
+        "courseA_maze_seq4": {
+          "made_of_stone": "這些積木就像石頭一樣，你可以移動它們，但你無法刪除它們！"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "這是一個標注"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "這是一個標注"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "這是一個標注"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "這是一個標注"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
+        },
+        "courseB_artist_loops5": {
+          "courseB_artist_loops5_1": "這個數字指的是工具箱中已經沒有這個積木。"
+        },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "使用步進按鈕可以一步一步地執行程式中的指令，這可以讓你更容易找到出錯的地方！"
+        },
+        "courseB_maze_seq3": {
+          "courseB_maze_seq3_1": "灰色的積木就像石頭一樣，無法被破壞和丟棄。"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "這個積木對這個專案非常重要。請務必使用它！\n"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "這個積木對這個專案非常重要。請務必使用它！\n"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "把這個新增到你的程式中間。\n"
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "把這個新增到你的程式中間。\n"
+        },
+        "courseC_artist_loopsPrePre1a": {
+          "courseC_artist_loopsPrePre1a_1": "首先使用此積木將小藝術家帶到畫面中央。"
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_1": "首先使用此積木將小藝術家帶到畫面中央。"
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_1": "首先使用此積木將小藝術家帶到畫面中央。"
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_1": "首先使用此積木將小藝術家帶到畫面中央。"
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "灰化的程式積木無法被刪除！"
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_1": "這些灰色積木被鎖定了，無法刪除！\n"
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "這些積木被鎖定了，無法刪除！\n"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "這些積木被鎖定了，無法刪除！\n"
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseC_maze_programming5": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
+          "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
+          "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
+          "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
+          "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "你可以修改這個數字。",
+          "courseD_artist_ramp11_2": "點擊此處輸入程式要重複的次數。"
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。",
+          "4_5_Bee_Conditionals_2_2": "需要幫忙嗎？點擊此處來獲取影片提示！"
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。",
+          "4_5_Bee_Conditionals_2_2": "需要幫忙嗎？點擊此處來獲取影片提示！"
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "使用這個指令讓蜜蜂向後移動。"
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_callout1": "使用這個指令讓蜜蜂向後移動。"
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "使用這個積木來收集寶藏。"
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "stone_block_2": "灰色積木是用石頭做的，不能扔掉。"
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "stone_block_2": "灰色積木是用石頭做的，不能扔掉。"
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "stone_block_2": "灰色的積木是不能扔掉的。\n"
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "stone_block_2": "灰色的積木是不能扔掉的。\n"
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_maze_ramp5": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5a": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp6": {
+          "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        },
+        "courseD_playLab_condFP": {
+          "courseD_playLab_condFP_1": "我們已經把程式積木分類好了，為你提供更多程式積木使用！點擊此處看看吧。"
+        },
+        "courseD_playLab_condFP_2018": {
+          "courseD_playLab_condFP_1": "我們已經把程式積木分類好了，為你提供更多程式積木使用！點擊此處看看吧。"
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。"
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
+        "courseD_scrat_ramp5": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_scrat_ramp6": {
+          "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。"
+        },
+        "courseE_aboutme_2": {
+          "": "請按一下這裡！\n"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "請按一下這裡！\n"
+        },
+        "courseE_artist_functions1": {
+          "courseD_artist_functions1_1": "讓我們先使用這個積木來畫出第一個正方形。"
+        },
+        "courseE_artist_functions1_copy": {
+          "courseD_artist_functions1_1": "讓我們先使用這個積木來畫出第一個正方形。"
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "你可以修改這個數字。",
+          "courseE_artist_ramp8_2": "點擊此處輸入程式要重複的次數。"
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "你可以修改這個數字。",
+          "courseE_artist_ramp8_2": "點擊此處輸入程式要重複的次數。"
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        },
+        "courseF_artist_fwp1": {
+          "courseF_artist_fwp1_1": "點選「edit」鍵以更改函式內部的程式碼。"
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數） 度。"
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "您將在此處找到多邊形函式。"
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_a": "使用這個來設置變數 `length`（長度）的值。"
+        },
+        "courseF_artist_variables3_2018": {
+          "courseF_artist_variables3_a": "使用這個來設置變數 `length`（長度）的值。"
+        },
+        "courseF_artist_variables3_2019": {
+          "courseF_artist_variables3_a": "使用這個來設置變數 `length`（長度）的值。"
+        },
+        "courseF_artist_variables3_2020": {
+          "courseF_artist_variables3_a": "使用這個來設置變數 `length`（長度）的值。"
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "當您必須更改許多相同數字的副本時，變數會很有用。"
+        },
+        "courseF_bee_conditionals2": {
+          "courseF_bee_conditionals2_2": "這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！"
+        },
+        "courseF_bee_conditionals5": {
+          "courseF_bee_conditionals5_1": "當路徑的長度改變時（像長方形的邊），使用這個積木。"
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
+        },
+        "courseF_bee_functions2": {
+          "courseF_bee_functions2_1": "這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！"
+        },
+        "courseF_bee_functions6": {
+          "courseF_bee_functions6_1": "別忘了看看這兒，裡頭有更多積木，也許可以幫助你！"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "您應該在該函式中輸入什麼程式碼？",
+          "courseF_bee_functions_challenge1_2": "如果進行編輯以多次釀造蜂蜜，則可以在此處使用「check nectar or honey」函式。"
+        },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "您可以在這裡找到「if」語句。"
+        },
+        "courseF_bee_fwp2": {
+          "courseF_bee_fwp2_a": "調用函式的積木在這裏。"
+        },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "檢查空白空間和雲時可以使用相同函式。"
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "按下「edit」鍵，向該函式添加參數。"
+        },
+        "courseF_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "這個函式可以很好地完成玉米任務，但對其他蔬菜呢？"
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "工具箱已分類，可以更輕鬆地找到所需的積木。"
+        },
+        "courseF_playlab_variables5c": {
+          "courseF_playlab_variables5c_1": "您將在這裡找到變數積木。"
+        },
+        "courseF_playlab_variables6c": {
+          "courseF_playlab_variables5c_1": "您將在這裡找到變數積木。"
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_1": "在這裡找到「ask」積木！"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "使用「建立一個圓形」積木並修改它的尺寸。"
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) 使用這個積木，把它放到在工作區上的灰色積木周圍。",
+          "repeat_blocks_2": "(2) 將「重複」積木移到這裡，並將灰色積木放到它裡面。"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "使用下拉清單，把「???」換成一個數字。"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "使用重複積木來創建這個圖形。"
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "使用重複積木來創建這個圖形。"
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "使用下拉清單來創建不同的雪花！"
+        },
+        "frozen line": {
+          "run": "點擊「運行」以試試你的程式！",
+          "move_elsa_forward": "拖曳一個「移動-向前」積木，將它貼在「當點擊運行時」積木下方，讓艾莎向前移動。"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "使用「轉向」積木讓艾莎轉彎。下接清單中的數字可以決定艾莎轉向的角度。"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "使用「建立雪花分支」積木"
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "添加更多積木到這兒以建立一個正方形"
+        },
+        "frozen square loop": {
+          "replace_questions": "使用下拉清單，把「???」換成一個數字。"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "使用下拉清單，把「???」換成一個數字。"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "使用下拉清單，把「???」換成一個數字。"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "請注意，現在積木有輸入數字的新方法。這些「數學」積木可以拉出並移動！"
+        },
+        "CSD U6 light show": {
+          "CSDUDL03P09": "這條線是做什麼的？"
+        },
+        "CSD U6 light show_2018": {
+          "CSDUDL03P09": "這條線是做什麼的？"
+        },
+        "CSD U6 light show_2019": {
+          "CSDUDL03P09": "這條線是做什麼的？"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Play Lab Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "你可以修改這個數字。",
+          "courseE_artist_ramp8_2": "點擊此處輸入程式要重複的次數。"
+        },
+        "outbreak2": {
+          "minitoolbox": "點擊這裡擴展塊。",
+          "pointerlocation": "在這裡拖動一個主題塊。"
+        },
+        "outbreak7": {
+          "costumes_callout": "點擊以製作新服裝"
+        }
+      }
+    }
+  }
+}

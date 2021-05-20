@@ -1,0 +1,55 @@
+{
+  "lv-LV": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Darbības",
+          "Loops": "Cikli",
+          "Math": "Matemātika",
+          "Logic": "Loģika",
+          "Functions": "Funkcijas",
+          "Variables": "Mainīgie"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Pasākumi",
+          "Logic": "Loģika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Darbības",
+          "Events": "Pasākumi",
+          "Loops": "Cikli",
+          "Math": "Matemātika",
+          "Logic": "Loģika"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Darbības",
+          "Events": "Pasākumi"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Darbības",
+          "Events": "Pasākumi",
+          "Variables": "Mainīgie",
+          "Math": "Matemātika",
+          "Logic": "Loģika",
+          "Functions": "Funkcijas",
+          "Text": "Teksts"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Darbības",
+          "Events": "Pasākumi",
+          "Logic": "Loģika",
+          "Loops": "Cikli",
+          "Math": "Matemātika",
+          "Variables": "Mainīgie",
+          "Functions": "Funkcijas"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Darbības",
+          "Events": "Pasākumi",
+          "Logic": "Loģika",
+          "Math": "Matemātika"
+        }
+      }
+    }
+  }
+}

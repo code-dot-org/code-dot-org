@@ -4,20 +4,35 @@ km:
     messages:
       not_saved: សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់
       too_young: មានបម្រាមសម្រាប់អាយុរបស់អ្នកប្រើប្រាស់នៅទីនេះ ហើយមិនអនុញ្ញាតិអោយប្រើប្រាស់សម្រាប់សិស្សដែលមានអាយុតិចពេក។
+      teacher_must_accept_terms: មាតិកានេះមានការរឹតត្បិតតាមអាយុ ហើយមិនមានសម្រាប់សិស្សក្មេងៗទេ។
+        សុំឱ្យគ្រូរបស់អ្នកទទួលយកលក្ខខណ្ឌនៃសេវាកម្មដែលបានធ្វើឱ្យទាន់សម័យនេះ ដើម្បីឱ្យអ្នកចូលប្រើមាតិកានេះ។
+        គ្រូរបស់អ្នកអាចធ្វើវាបានដោយចូលទៅក្នុងស្ទូឌីយោកូដហើយចុចប៊ូតុង "ពិនិត្យឡើងវិញនូវលក្ខខណ្ឌដែលបានធ្វើបច្ចុប្បន្នភាព"
+        នៅខាងលើគេហទំព័រដើមកូដស្ទូឌីយ៉ូ។
+      pair_programmer: អ្នកកំពុងតែសរសេរកម្មវិធីជាគូរជាមួយនឹងសិស្សម្នាក់ដែលមិនអាចចូលមកប្រើប្រាស់មាតិកានេះបាននោះទេ។
+        ដើម្បីចូលប្រើប្រាស់មាតិកានេះ ចូរបញ្ឈប់ការសរសេរកម្មវិធីជាគូរ រួចព្យាយាមម្តងទៀត។
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: គឺមិនត្រឹមត្រូវទេ។ ចូរចំណាំថាតំណភ្ជាប់នីមួយៗអាចប្រើប្រាស់បានតែម្តងប៉ុណ្ណោះ
+                ដើម្បីធ្វើការផ្លាស់ប្តូរលេខសម្ងាត់ ហើយមានតែតំណភ្ជាប់ថ្មីៗបង្អស់ដែលផ្ញើអោយអ្នកទើបអាចដំណើរការបាន។
       messages:
         blank: ត្រូវការ
         blank_plural: តម្រូវអោយមាន
+        invalid: មិនត្រឹមត្រូវ
         invalid_plural: មិនត្រឹមត្រូវ
     attributes:
       user:
         name: បង្ហាញ​ឈ្មោះ
-        name_example: ឈ្មោះដែលត្រូវបង្ហាយ <br/>(ឧទាហរណ៏៖ Cool Coder រឺក៏​ Jane S.)
-        email: អ៊ីមែល
+        name_example: ឈ្មោះដែលត្រូវបង្ហាយ (ឧទាហរណ៏៖ Cool Coder រឺក៏​ Jane S.)
+        email: អ៊ីម៉ែល
         parent_email: អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ
         personal_email: អាស័យដ្ឋានសារអេឡិចត្រូនិចផ្ទាល់ខ្លួនរបស់អ្នក<a href="%{url}">(សូមចុចនៅទីនេះ
           បើសិនជាអត់ទាន់មានអាស័យដ្ឋានសារអេឡិចត្រូនិច)</a>
+        personal_email_markdown: អាស័យដ្ឋានសារអេឡិចត្រូនិចផ្ទាល់ខ្លួនរបស់អ្នក[(សូមចុចនៅទីនេះ
+          បើសិនជាអត់ទាន់មានអាស័យដ្ឋានសារអេឡិចត្រូនិច)](%{url})
         username: ឈ្មោះ​អ្នកប្រើ
         password: ពាក្យ​សម្ងាត់
         password_confirmation: ការ​បញ្ជាក់​ពាក្យ​សម្ងាត់
@@ -26,13 +41,23 @@ km:
         age: អាយុ
         gender: ភេទ
         edit_header: កែសម្រួល​ព័ត៌មាន​គណនី
+        finish_sign_up_header: បញ្ចប់ការបង្កើតគណនីរបស់អ្នក
+        finish_sign_up_subheader: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
+          Code.org សម្រាប់ <strong>%{email}</strong>។
+        finish_sign_up_subheader_markdown: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
+          Code.org សម្រាប់ **%{email}**។
+        finish_sign_up_subheader_provider: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
+          Code.org ជាមួយនឹង <strong>%{provider}</strong> សម្រាប់ <strong>%{email}</strong>។
+        finish_sign_up_subheader_provider_markdown: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
+          Code.org ជាមួយនឹង **%{provider}** សម្រាប់ **%{email}**។
+        reset_password_token: តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
   hello: សួស្ដី​ពិភពលោក
   welcome_back: ស្វាគមន៍​ការ​មក​វិញ, %{name}
   your_professional_learning_plan: គំរោងនៃការសិក្សាមុខជំនាញរបស់អ្នក
   see_your_learning_plan: ចូលមើលគំរោងនៃការសិក្សារបស់អ្នក
-  submit: ដាក់ស្នើរ
+  submit: ដាក់ស្នើ
   unsubmit: មិនបានដាក់ចូល
   previous_page: ទំព័រមុន
   next_page: ទំព័របន្ទាប់
@@ -41,21 +66,21 @@ km:
   okay: អូខេ
   or: ឬ
   heading_x_of_y: "%{heading}​ (ទំព័រទី %{x} នៃ %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: បន្ថែម​គ្រូ​ម្នាក់៖
+      title: ចូលរួមផ្នែកមួយនៅលើ Code.org
       placeholder: ផ្នែកនៃការសរសេរកូដ (ABCDEF)
-      instructions: សូមវាយបញ្ចូលនូវកូដដែលគ្រូរបស់អ្នកបានចែកអោយ។ ហើយវាគឺជាកូដដែលមាន៦តួរអក្សរ
-        ដូចជា "ABCDEF" ។
+      instructions: សូមបញ្ចូលលេខកូដជាអក្សរចំនួន៦តួអក្សរ ដែលគ្រូរបស់អ្នកបានចែករំលែកជាមួយអ្នក
+        (ឧទាហរណ៍៖ "ABCDEF") ដើម្បីចូលរួមផ្នែករបស់ពួកគេ។
       instructions_short: សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។
-    submit: បន្ថែម​គ្រូ
+      submit: ចូលរួម
   add_hint_form:
     placeholder: សូមវាយបញ្ចូលនូវតម្រុយនៃកូដរបស់អ្នក។
     submit: ដាក់តម្រុយសម្រាបសម្កាល់
   appname: Code.org
   stage: ដំណាក់​កាល
   stage_number: ដំណាក់កាល %{number}
-  puzzle: ល្បែង​ប្រាជ្ញា
+  puzzle: បញ្ហា
   trophies: ពាន​រង្វាន់
   courses: វគ្គ​សិក្សា
   courses_page:
@@ -73,11 +98,12 @@ km:
   prize: រង្វាន់
   more_info: ព័ត៌មាន​បន្ថែម
   auth:
+    continue_with: បន្តជាមួយ %{provider}
     sign_in_with: ចូល​គណនី​ជាមួយ %{provider}
     signed_in: បាន​ចូល​គណនី!
-    signed_out: អ្នក​បាន​ចាកចេញ​ពី  <a href="%{url}">Code.org</a>។
-    sign_out_of: អ្នក​បាន​ប្រើ %{provider} ដើម្បី​ចូល។ <a href="%{url}">ចុច​ទីនេះ</a>
-      ដើម្បី​ចេញ​ពី %{provider}។
+    signed_out_markdown: "### អ្នកបានចាកចេញពី [Code.org](%{url})។"
+    sign_out_of_markdown: អ្នក​បាន​ប្រើ %{provider} ដើម្បី​ចូល។ ចុច​ទីនេះ %{url} ដើម្បី​ចេញ​ពី
+      %{provider}។
     already_signedup: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
     notyet_signedup: មិន​បាន​ចូលរួម​ទេ?
     google_oauth2: គណនី Google
@@ -87,17 +113,27 @@ km:
     microsoft_v2_auth: គណនី Microsoft
     clever: គណនេយ្យមានលក្ខណៈពេញលេញ
     forgot_password: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
+    migration_success: ជោគជ័យ! អ្នកបានធ្វើបច្ចុប្បន្នភាពបទពិសោធន៍គណនីថ្មីរបស់យើង។
+    demigration_success: បទពិសោធន៍គណនីថ្មី គឺត្រូវបានបិទនៅលើគណនីរបស់អ្នក។
     need_confirmation: មិន​បាន​ទទួល​ការ​ណែនាំ​អំពី​វិធី​បញ្ជាក់​ទេ?
     need_unlock: មិន​បាន​ទទួល​ការណែនាំ​អំពី​វិធី​ដោះសោ​ទេ?
     not_linked: សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
       សូមធ្វើការដំណើរការគណនេយ្យរបស់អ្នកដោយវាយបញ្ចូលលេខសំងាត់នៅខាងក្រោម។
     use_clever: សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
       សូមចូលទៅដំណើរការគណនេយ្យ Clever Portal របស់អ្នកជំនួសវិញ។
+    invalid_provider: សុំទោស គណនី %{provider} មិនអាចតភ្ជាប់ទៅកាន់គណនី Code.org ទេ។
+    migration_required: សុំទោស យើងមិនអាចតភ្ជាប់ ឬ ផ្តាច់គណនីដែលកំពុងប្រើប្រាស់ជាមួយនឹងបទពិសោធន៍គណនីចាស់នោះទេ។
+      សូមធ្វើការបន្ទាន់សម័យទៅកាន់បទពិសោធន៍ថ្មីនៃគណនី។
+    unable_to_connect_provider: មិនអាចភ្ជាប់គណនី Code.org របស់អ្នកជាមួយនឹងគណនី %{provider}
+      ។ សូមព្យាយាមម្តងទៀត។
   signup_form:
     student_count: "%{count} កូនសិស្សបានធ្វើការបង្កើតគណនេយ្យរួចហើយ។"
     teacher_count: "%{count}​ លោកគ្រូអ្នកគ្រូបានធ្វើការបង្កើតគណនេយ្យរួចហើយ។"
     overview: បង្កើតគណនីមួយសម្រាប់ធ្វើការតាមដាននូវដំណើរការបង្រៀននិងគ្រប់គ្រងថ្នាក់រៀនរបស់អ្នក។
       <a href="/"> អ្នកអាចធ្វើការស្វែងរកដំណាក់កាលនិងភាពស្មុគស្មាញជាច្រើនទៀត</a>ដោយមិនចាំបាច់គណនី
+      ប៉ុន្តែអ្នកត្រូវតែចាំបាច់បង្កើតគណនីមួយដើម្បីរក្សាទុកនូវដំណើរការ និងគំរោងរបស់អ្នក។
+    overview_markdown: បង្កើតគណនីមួយសម្រាប់ធ្វើការតាមដាននូវដំណើរការបង្រៀននិងគ្រប់គ្រងថ្នាក់រៀនរបស់អ្នក។
+      [អ្នកអាចធ្វើការស្វែងរកដំណាក់កាលនិងភាពស្មុគស្មាញជាច្រើនទៀត](/)ដោយមិនចាំបាច់គណនី
       ប៉ុន្តែអ្នកត្រូវតែចាំបាច់បង្កើតគណនីមួយដើម្បីរក្សាទុកនូវដំណើរការ និងគំរោងរបស់អ្នក។
     hoc_already_signed_up_heading: ចាប់ផ្តើមដោយមិនចាំបាច់មានគណនេយ្យ។
     teacher_educator_guide: មើល​ការណែនាំ​សម្រាប់​អ្នក​បង្រៀន
@@ -119,11 +155,12 @@ km:
     mismatch_password: ពាក្យ​សម្ងាត់​ទាំង​ពីរ​ដែល​អ្នក​បាន​បញ្ចូល គឺ​មិន​ត្រូវ​គ្នា​ទេ
     additional_information: ពួក​យើង​ត្រូវការ​ព័ត៌មាន​បន្ថែម ដើម្បី​បន្ត​ការ​ចុះឈ្មោះ​របស់​អ្នក។
     user_type_label: ប្រភេទនៃគណនេយ្យ
+    user_type_teacher: គ្រូបង្រៀន
     user_type_student: សិស្ស
     field_is_required: ត្រូវការ
     accept_terms: អ្នកត្រូវតែយល់ព្រមជាមុនដើម្បីបង្កើតគណនេយ្យមួយ
     error: មានកំហុសមួយ
-    email_preference_privacy: "(សូមមើលគោលនយោបាយឯកភាពរបស់យើងខ្ញុំ)"
+    email_preference_privacy: "(សូមពិនិត្យមើលគោលការណ៍ឯកជនភាពរបស់ពួកយើង)"
     email_preference_yes: យល់ព្រម
     email_preference_no: ទេ
   school_info:
@@ -149,7 +186,7 @@ km:
     school_organization_zip: កូដតំបន់របស់សាលា​រឺអង្គការ
   signin_form:
     title: មាន​គណនី​រួច​ហើយ​មែនទេ? ចូលគណនី
-    login: អ៊ីមែល
+    login: អ៊ីម៉ែល
     login_username: Email or Username
     password: ពាក្យ​សម្ងាត់
     remember: ចងចាំ​ខ្ញុំ
@@ -166,15 +203,13 @@ km:
     login: ចូល​គណនី
     invalid_login: ការចូលទៅកាន់គណនីយរបស់អ្នកមិនត្រឹមត្រូវ សូមព្យាយាមម្តងទៀត
     pair_programming: នៅក្នុងកុំព្យូទ័ររបស់ខ្ញុំមានដៃគូរប្រកួតប្រជែង
-    student_privacy: ស្វែងយល់បន្ថែមហេតុអ្វីបានជាពុំមានឈ្មោះពេញរបស់អ្នកតាមការណែនាំ<a
-      href='%{student_privacy_blog}' target='_blank'>ត្រង់នេះ</a>។
   password:
     reset_form:
       title: បាន​ភ្លេច​ពាក្យ​សម្ងាត់​របស់​អ្នក?
       instructions: សូមវាយបញ្ចូល​ email address ដែលបានបង្កើតជាមួយគណនីយរបស់អ្នកខាងក្រោម
         ហើយពួកយើងនឹងផ្ញើរការណែនាំនៃការ​បង្កើតpasswordសាជាថ្មី។
-      email: អាសយដ្ឋាន​អ៊ីមែល
-      submit: ដាក់ស្នើរ
+      email: អាសយដ្ឋានអ៊ីម៉ែល
+      submit: ដាក់ស្នើ
     reset_errors:
       invalid_email: មើលទៅអ្នកប្រហែលជាបានចូលទៅកាន់គណនីជាមួយនឹងអស័យដ្ឋានអ៊ីម៉េលដែលមិនត្រឹមត្រូវ។​
         សូមមេត្តាផ្ញើរអ៊ីម៉ែលទៅកាន់ support@code.org​ ដើម្បីទទួលនូវតំណរភ្ជាប់យកលេខសំងាត់មកវិញ។
@@ -195,6 +230,7 @@ km:
       %{name}
   parent_mailer:
     student_associated_subject: ព័ត៌មាននៃការចូលទៅកាន់គណនីសម្រាប់ Code.org
+    parent_email_added_subject: សូមស្វាគមន៏មកកាន់Code.org!
   teacher_mailer:
     new_teacher_subject: សូមស្វាគមន៏មកកាន់Code.org!
   section:
@@ -208,7 +244,7 @@ km:
     type:
       picture: លេខកូដដែលមានទម្រង់ជារូបភាព
       word: ពាក្យដែលរក្សារជាការសម្ងាត់
-      email: អ៊ីមែល
+      email: អ៊ីម៉ែល
       google_classroom: ថ្នាក់រៀន Google
       clever: Clever
   follower:
@@ -238,7 +274,7 @@ km:
     edit: កែតម្រូវ
     edit_model: កែតម្រូវ%{model}
     update: កែលម្អរ
-    submit: ដាក់ស្នើរ
+    submit: ដាក់ស្នើ
     destroy: កំទេច
     back: ត្រលប់ក្រោយ
     confirm: តើអ្នកប្រកត់ឬអត់?
@@ -259,38 +295,50 @@ km:
       finished_hoc: ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។
       sign_in_to_save: ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ
       my_dashboard: ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ
-      course_catalog: មុខវិទ្យាដោយផ្នែក
+      course_catalog: មុខវិជ្ជាដោយផ្នែក
       project_gallery: គម្រោង
       sections: វគ្គ
       report_bug: រាយការណ៌អំពីកំហុសរបស់កម្មវិធី
-      teacher_community: សមាគមន៏នៃគ្រូបង្រៀន
+      report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
+      teacher_community: សមាគមគ្រូបង្រៀន
       professional_learning: ការរៀនដោយមានវិជ្ជាជីវ
-      educate_elementary: សាលាបឋម
+      app_lab_documentation: ឯកសារ App Lab
+      app_lab_tutorials: មេរៀនណែនាំ App Lab
+      game_lab_documentation: ឯកសារ Game Lab
+      game_lab_tutorials: មេរៀនណែនាំ Game Lab
+      sprite_lab_documentation: ឯកសារ Sprite Lab
+      sprite_lab_tutorials: មេរៀនណែនាំ Sprite Lab
+      educate_elementary: កម្រិតបឋមសិក្សា
       educate_middle: អនុវិទ្យាល័យ
       educate_high: វិទ្យាល័យ
-      educate_hoc: ពេលវេលា​នៃ​កូដ
-      educate_partner: ដៃគូររបស់យើង
+      educate_hoc: កម្មវិធី Hour of Code
+      educate_partner: ធ្វើជាដៃគូរបស់យើង
       educate_inspire: ជំរុញទឹកចិត្តសិស្ស
       about_us: អំពីយើង
       about_leadership: ភាពជាអ្នកដឹកនាំ
       about_donors: អ្នកផ្តល់ជំនួយ
-      about_partners: ដៃគូរ
+      about_partners: ដៃគូ
       about_team: ក្រុមទាំងមូល
-      about_news: វគ្គថ្មី
+      about_news: តារាងព័ត៌មាន
       about_evaluation: ការវាយតម្លៃ
       about_jobs: កិច្ចការ
-      about_contact: ទំនាក់ទំនងមកពួកយើង
-      about_faqs: សម្រាប់សំនួរបន្ថែមទៀត
-      learn: ស្វែងយល់បន្ថែំម
+      about_contact: ទាក់ទងមកពួកយើង
+      about_faqs: សំណួរដែលគេច្រើនសួរ
+      learn: ស្វែងយល់
+      stats: ស្ថិតិ
       help_us: ជួយពួកយើង
       teach: បង្រៀន
       about: អំពី
+      legal: ភាពឯកជននិងច្បាប់
+      legal_privacy: គោលការណ៍ឯកជនភាព
+      legal_tos: លក្ខខណ្ឌ
     user:
-      classroom: ទំព័រដើមគ្រូបង្រៀន
+      classroom: ទំព័រដើមរបស់់គ្រូបង្រៀន
       label: សួស្តី%{username}
       stats: ដំណើការ​របស់​ខ្ញុំ
-      settings: គណនី​របស់​ខ្ញុំ
-      logout: ចាកចេញ
+      my_projects: គម្រោងរបស់ខ្ញុំ
+      settings: ការកែប្រែក្នុងគណនី​
+      logout: ចាកចេញពីគណនី
       signin: ចូល​គណនី
       signup: បង្កើតគណនីថ្មី
       already_registered: បាន​ចុះ​ឈ្មោះ​រួច​ហើយ?
@@ -300,13 +348,18 @@ km:
       artist_k1: សិល្បករ (អ្នកដែលទើបតែរៀនអាន)
       basketball: កីឡាបាល់បោះ
       bounce: បាល់​លោត
+      dance: Dance Party
       gamelab_jr: បន្ទប់ហ្គេម (beta)
       gumball: The Amazing World of Gumball
       iceage: Ice Age
       infinity: អនន្ត
       minecraft_adventurer: Minecraft Adventurer
       playlab_k1: បន្ទប់លេង (សម្រាប់អ្នកដែលទើបរៀនអាន)
+      spritelab: Sprite Lab
+      starwarsblocks: Star Wars (ប្លុក)
+      starwarsblocks_hour: Star Wars (ប្លុក)
       weblab: បន្ទប់វេប
+      view_all: មើលគម្រោងទាំងអស់
     popup:
       progress_for_user: ដំណើរការរបស់%{name}
       progress: ដំណើរការ​របស់​អ្នក
@@ -334,6 +387,7 @@ km:
       student: សិស្ស
       viewing_solution: មើលចម្លើយ
       try_it_yourself: សាកល្បងដោយខ្លួនឯង
+      section: " ថ្មី\n"
       example: ចម្លើយគំរូ
       example_with_number: ចម្លើយគំរូទី%{solution_number}
       submitted_on: ដាក់ចូលនៅៈ
@@ -365,6 +419,10 @@ km:
       អ្នកអាចបង្កើតការចូលទៅកាន់គណនីសម្រាប់ខ្លួនឯងផ្ទាល់ នៅខាងក្រោមនេះ។
     enter_new_login_info: សូមធ្វើការវាយចូលនូវព័ត៌មាននៃការប្រើប្រាស់គណនីរបស់អ្នក
     confirm_secret_words: ធ្វើការយល់ព្រមថា អ្នកគឺជាអ្នកប្រើប្រាស់ដោយវាយចូលនូវពាក្យដែលរក្សាជាសម្ងាត់
+    update_email: កែលម្អរ
+    parent_guardian_email_label: អាស័យដ្ឋានសារអេឡិចត្រូនិចរបស់ឪពុកម្តាយ រឺ អ្នកណែរនាំ
+    none: គ្មាន
+    encrypted: បានអុីនគ្រីប
   user_level:
     completed: បាន​បញ្ចប់
     tried: បាន​ព្យាយាម
@@ -382,7 +440,10 @@ km:
     online: ប្រព័ន្ធអ៊ីនធើណែត
     see_details: មើលសេចក្តីលម្អិត
     view_course: មើលបន្ថែមអំពីមុខវិជ្ជា
-    trynow: រៀនបន្ថែមទៀត
+    trynow: សាកល្បងឥឡូវនេះ
+    try_beta_courses: ថ្មី! សាកល្បងវគ្គសិក្សាសាកល្បងរបស់យើងសម្រាប់សិស្សថ្នាក់មត្តេយ្យដល់ទី៥
+      ។
+  certificate_sponsor_message: "%{sponsor_name} បានជូនកាដូដល់អ្នក ដើម្បីឧបត្ថម្ភការសិក្សារបស់អ្នក ។"
   share:
     title: រៀននៅលើកន្លែងសម្រាប់សរសេរកូដបន្ថែម
     description: រាល់គ្នាអាចរៀនបាននូវមុខវិជ្ជាវិទ្យាសាស្រ្តកំុព្យូទ័រ។​ អាចបង្កើតហ្គេម
@@ -394,15 +455,18 @@ km:
     none: សម្រេច​ចិត្ត​មិន​ឆ្លើយ
   user_type:
     student: សិស្ស
+    teacher: គ្រូបង្រៀន
   footer:
+    built_on_github: បង្កើតឡើងលើ GitHub ដោយ Microsoft
     copyright: រក្សាសិទ្ធដោយ
     more: ផ្សេង​ទៀត
     feedback: ផ្ដល់​មតិ​កែ​លម្អ
     translate: ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក
     support: ការ​គាំទ្រ
-    tos_short: លក្ខណ
+    tos_short: លក្ខខណ្ឌ
     tos: លក្ខខណ្ឌ
-    privacy: សិទ្ធបុគ្គល
+    privacy: គោលការណ៍ឯកជនភាព
+    privacy_updated: គោលការណ៍ភាពឯកជន (បានធ្វើបច្ចុប្បន្នភាព)
     secure: កំណែ​សុវត្ថិភាព
     report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
     try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
@@ -415,9 +479,10 @@ km:
     notes: គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។
     autoplay_option: ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ
     download: ទាញយក​វីដេអូ
+    label: វីដេអូ
   compatibility:
     upgrade:
-      link: សិក្សាបន្ថែម
+      link: ស្វែងយល់បន្ថែម
   try_reloading: សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ
   next_stage: បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់
   download_pdf: បើក​ប្លង់​មេរៀន
@@ -433,21 +498,23 @@ km:
       current: កម្រិត​បច្ចុប្បន្ន
       unused: កម្រិត​ដែល​មិន​បាន​ប្រើ
   upsell:
+    dance:
+      title: Dance Party
+    dance-2019:
+      title: Dance Party
     hoc:
       body: សាក​ល្បង​ផ្នែក​មូលដ្ឋាន​នៃ​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ។ មនុស្ស​ជា​ច្រើន​លាន​នាក់​បាន​សាកល្បង​រួច​ហើយ។
     flappy:
       title: Flappy កូដ
       body: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
         សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
+    hoc-encryption:
+      title: ការអ៉ីនគ្រីបធម្មតា
     hero:
       body: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌!
         ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
     unplugged_conditionals:
       title: លក្ខខណ្ឌ
-  gallery:
-    want_to_make_your_own: តើ​ចង់​បង្កើត​របស់​អ្នក​មែនទេ?
-    more: ច្រើន​ទៀត &rarr;
-    report_abuse: រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ
   multi:
     wrong_title: សំណួរ​មិន​ត្រឹមត្រូវ
     wrong_body: សំណួរ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
@@ -479,14 +546,15 @@ km:
     startover_cancel: បោះបង់
   terms_interstitial:
     tos: លក្ខខណ្ឌ
-    privacy: សិទ្ធបុគ្គល
+    privacy: គោលការណ៍ឯកជនភាព
     print: បោះពុម្ព
   school_info_interstitial:
     save: រក្សា​ទុក
   race_interstitial:
     races:
       other: ផ្សេងៗ
-    submit: ដាក់ស្នើរ
+    submit: ដាក់ស្នើ
+    decline: បិទ
   project:
     projects: គម្រោង
     project_gallery: គម្រោង
@@ -496,23 +564,17 @@ km:
       report_abuse_form:
         abuse_type:
           other: ផ្សេងៗ
-  flex_category:
-    csf_loops: រង្វិល​ជុំ
-    csf_events: ព្រឹត្តិការណ៍
-    csf_conditionals: លក្ខខណ្ឌ
-    csf_functions: អនុ​គមន៍
-    csf_variables: អ​ថេរ
-    csp_variables: អ​ថេរ
-    csp_conditionals: លក្ខខណ្ឌ
-    csp_functions: អនុ​គមន៍
-    csp_lists: បញ្ជី
-    csp_loops: រង្វិល​ជុំ
+  hoc_download:
+    minecraft_name: Minecraft Hour of Code
+  view_teacher_guide: បង្ហាញការណែនាំសម្រាប់គ្រូ
   pd:
     form_labels:
-      email: អ៊ីមែល
+      email: អ៊ីម៉ែល
       school_name: ឈ្មោះរបស់សាលា
       school_city: ទីក្រុងរបស់សាលា
       school_country: សាលាក្នុងប្រទេស
+      colombian_school_city: ទីក្រុងរបស់សាលា
+      colombian_school_name: ឈ្មោះរបស់សាលា
     form_entries:
       gender:
         male: ប្រុស
@@ -523,10 +585,18 @@ km:
         math: គណិត​វិទ្យា
         science: វិទ្យាសាស្រ្ត
         la: អក្សរសាស្រ្ត
+      resources:
+        kodable: Kodable
+      robotics:
+        kodable: Kodable
       email_opt_in:
         opt_in_yes: យល់ព្រម
         opt_in_no: ទេ
   cookie_banner:
     accept: ខ្ញុំ​យល់​ព្រម
-  gdpr_dialog:
-    true: យល់ព្រម
+  page_not_found_title: រកទំព័រពុំឃើញ
+  page_not_found_header: ៤០៤៖ រកទំព័រពុំឃើញ
+  page_not_found_description: ទំព័រដែលអ្នកកំពុងរកមិនមាននៅក្នុងអាសយដ្ឋាននេះទេ។ សូមពិនិត្យអាសយដ្ឋានគេហទំព័រ
+    ហើយដាក់ស្នើម្ដងទៀត ឬត្រឡប់ទៅទំព័រដើមរបស់យើងវិញ។
+  page_not_found_button: ត្រឡប់ទៅទំព័រដើម
+  copy: ចម្លង

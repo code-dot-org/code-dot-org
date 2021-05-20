@@ -3,55 +3,30 @@ hu:
   data:
     block_categories:
       Actions: Műveletek
-      Loops: hurkok
-      Functions: funkciók
-      Color: Szín
-      Brushes: Ecsetek
-      Math: Matematika
-      Logic: Logika
-      Variables: változók
-      Number: Szám
-      String: Karakterlánc
-      Image: Kép
-      Boolean: Logikai
-      Conditionals: Feltételek
-      Events: Események
-      Games/Score: Játék/pontszám
-      Comments: Megjegyzések
-      Category: Kategória
-      Prebuilt: Előre elkészített
-      Text: szöveg
-      Picker: Választó
-      Comment: Megjegyzés
-      World: Világ
-      Sprites: Sprite-ok
-      Behaviors: Viselkedések
-      'Variables ': 'Változók '
-      Default: Alapértelmezett
-      Locations: Helyek
-      everythingelse: minden más
-      Location: Helyszín
-      numbers: számok
-      Numbers: Számok
-      Dancers: Táncosok
-      Groups: Csoportok
       Advanced: Haladó
-      Start: Kezdés
-      Dancing: Tánc
-      Sprite: Sprite
-      Brush: Ecset
-      Make Sprite: Sprite készítése
-      Movement: Mozgás
-      Booleans: Logikai adattípus
-      While Events: Amíg események
-      Sprite Properties: Sprite tulajdonságok
-      Predefined: Előre meghatározott
-      test: 'kifejezés:'
-      test2: teszt2
-      Use These Blocks: Használd ezeket a blokkokat
-      Do Not Use: Nem használható
-      Name: Név
-      NEW BLOCKS: ÚJ BLOKKOK
+      Behaviors: Viselkedések
+      Brushes: Ecsetek
+      Color: Szín
+      Comment: Megjegyzés
+      Comments: Megjegyzések
+      Conditionals: Feltételek
+      Dancers: Táncosok
+      Default: Alapértelmezett
+      Events: Események
+      Functions: funkciók
       'Functions ': 'Függvények '
       Game/Score: Játék/pontszám
-      Function: Függvény
+      Games/Score: Játékok/pontszám
+      Groups: Csoportok
+      Input: Bemenet
+      Locations: Helyek
+      Logic: Logika
+      Loops: hurkok
+      Math: Matematika
+      Numbers: Számok
+      Properties: Tulajdonságok
+      Sprites: manók
+      Text: szöveg
+      Variables: változók
+      'Variables ': 'Változók '
+      World: Világ

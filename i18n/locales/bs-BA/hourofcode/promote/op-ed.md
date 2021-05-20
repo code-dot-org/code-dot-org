@@ -1,7 +1,5 @@
 ---
 title: Uzorak "op-ed" podrške Sedmici Edukacije Računarstva i Sata Kodiranja
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

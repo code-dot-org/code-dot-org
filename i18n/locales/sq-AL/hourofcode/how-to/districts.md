@@ -1,7 +1,5 @@
 ---
 title: Ora e Kodimit Metoda për Shpërndarje
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Bëj çdo shkollë te marrë pjesë, çdo student të mësojë!
 
-### 1. Recruit local schools
+### 1. Merekrut sekolah tempatan 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

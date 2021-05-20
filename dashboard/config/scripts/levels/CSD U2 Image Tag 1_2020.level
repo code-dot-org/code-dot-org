@@ -1,0 +1,37 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-02-17T23:24:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n::: details [**How do I add images?**]\r\n\r\nThe `<img>` tag allows you to show images on your web page. <br><br>\r\n\r\nExample:\r\n```\r\n<img src=\"dog.png\" alt=\"dog jumping\">\r\n```\r\n<br><br>\r\n\r\nIn order to tell the browser which file to use, extra information, called an **attribute**, is added to the &lt;img&gt; tag inside the brackets. The attribute `src` stands for **s**ou**rc**e and tell the name of the image. Image files names include extensions which tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, .png. <br><br>\r\n\r\nIn addition to have the src attribute, image elements also have the `alt` attribute which describe the image. This is important in case the image doesn’t load or for people who have trouble with their eyesight. <br><br>\r\n\r\nAn `<img>` tag is an example of a  **self-closing tag** because it starts and closes in one tag.\r\n\r\n:::\r\n\r\n::: details [**Why does an image tag not have a closing tag?**]\r\nAn image tag doesn't need a closing tag because there is no text content which must be wrapped in tags. The content that shows on the screen is specified through the tags attributes.\r\n:::\r\n\r\n::: details [**What is an attribute?**]\r\n\r\nAttributes are extra information included in a tag.  Attributes have names and values. The name tells what type of information is being provided and then the value gives the specific information for that tag.\r\n\r\nFor example &lt;img&gt; tags have two attributes, src and alt. src specifies the name of the image file and alt tells the browser in readable text what the image is.\r\n\r\n\r\n:::\r\n</div>\r\n\r\n# Images\r\n\r\nA Dog vs Cat web page has been started for you. The dog image has already been added to the below web page. \r\n\r\n# Do this\r\n\r\n* Look at the code that made the dog image appear\r\n* Use an image tag to add the `cat.jpeg` image to the page below the cat heading",
+    "project_template_level_name": "CSDU2 - Images Template_2020",
+    "instructions_important": "false",
+    "encrypted_examples": "IBDgdmb6hHYqPcC/jfcXi/37obs+Q80XBEhTvNAY/n28P6XCcEIXAqhEWge7\ncWilzrx60jBeLbuLITkxw68htQ==\n",
+    "hide_share_and_remix": "true",
+    "submittable": "false",
+    "parent_level_id": 18296,
+    "name_suffix": "_2020",
+    "reference_links": [
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/html/images-in-html/",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "true",
+    "teacher_markdown": "Students may come across some image tags that include a slash at the end, like this: \r\n`<img src=\"imgURL.jpg\" alt=\"my image\" />`\r\n\r\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:32:09 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-24 16:51:56 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:27:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-09 17:47:21 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-19 21:03:21 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2019-03-27 20:18:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 01:28:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-04 01:30:03 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-05 00:21:01 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-04-05 00:24:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-23 05:00:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-07-14 15:58:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-07-14 15:59:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-26 22:56:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2019-10-15 22:44:25 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:36:35 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

@@ -1,6 +1,6 @@
-hidden 'false'
+hidden false
 
-stage 'Infinity'
+lesson 'Infinity', display_name: 'Infinity', has_lesson_plan: false
 level 'Infinity_move_right'
 level 'Infinity_say'
 level 'Infinity_move_directions'
@@ -11,3 +11,4 @@ level 'Infinity_shoot_directions'
 level 'Infinity_repeat'
 level 'Infinity_catch'
 level 'Infinity_finale'
+

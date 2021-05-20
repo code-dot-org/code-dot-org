@@ -1,0 +1,31 @@
+name 'cspu5_assess1_fivemore_2018_2019_virtual'
+wrong '-2'
+wrong '3'
+wrong '5'
+wrong '8'
+right 'Error. Unknown Identifier: x'
+
+
+markdown <<MARKDOWN
+What is the output to the console after the following code segment is executed?
+
+
+```
+1  fiveMore();
+2
+3  function fiveMore(){
+4     var x = 5;
+5  }
+6  var y = 3 + x;
+7  console.log(y);
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 5** - application of local scope and debugging
+
+* The function "fiveMore()" is called.
+* Inside this function, a new variable "x" is set to 5
+* The computer exits this function and moves on to line 5 where a variable y is created
+* The value of y is set to "3 + x" **However**, the variable x was initiated locally inside "fiveMore()" and is not accessible outside of the function. Therefore, there is an error because the variable x does not exist outside the method.
+MARKDOWN

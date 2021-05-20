@@ -1,0 +1,1272 @@
+{
+  "script": {
+    "name": "coursee-ramp",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:58 UTC",
+    "seeding_key": {
+      "script.name": "coursee-ramp"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Real Life Algorithms: Dice Race",
+      "name": "Real Life Algorithms: Dice Race",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Real Life Algorithms: Dice Race",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Conditionals",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DiceRace"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DiceRace"
+        ],
+        "lesson.key": "Real Life Algorithms: Dice Race",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "DiceRace"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_ramp1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_video_ramp1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp3"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp4"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp4"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp5"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_predict1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_video_Loops"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_video_Loops"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseD_maze_video_Loops"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp6"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp6"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp7"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp7"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_ramp8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_ramp8"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_artist_ramp8"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_video_angles"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_video_angles"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseC_video_angles"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_ramp9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_ramp9"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_artist_ramp9"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_artist_predict1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoopsArtist"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_artist_ramp10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_artist_ramp10"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_artist_ramp10"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_maze_ramp13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_maze_ramp13"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_maze_ramp13"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_external_ramp14"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_external_ramp14"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_external_ramp14"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_whileIntro"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseD_video_whileIntro"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp11a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp11a"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_predict1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_predict1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_ifElse"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_ifElse"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_video_ifElse"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp12a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12a"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp12a"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp13"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp13"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_ramp14"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_ramp14"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_bee_ramp14"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_predict2"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_predict2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseD_video_repeatUntil"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp15"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp15"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp15"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_farmer_ramp16"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_farmer_ramp16"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_farmer_ramp16"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_bee_ramp17"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_bee_ramp17"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      },
+      "level_keys": [
+        "courseE_bee_ramp17"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "DiceRace",
+        "script_level.level_keys": [
+          "DiceRace"
+        ],
+        "lesson.key": "Real Life Algorithms: Dice Race",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_ramp1",
+        "script_level.level_keys": [
+          "courseE_video_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp1",
+        "script_level.level_keys": [
+          "courseE_maze_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp2",
+        "script_level.level_keys": [
+          "courseE_maze_ramp2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp3",
+        "script_level.level_keys": [
+          "courseE_maze_ramp3"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp4",
+        "script_level.level_keys": [
+          "courseE_maze_ramp4"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp5",
+        "script_level.level_keys": [
+          "courseE_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_predict1",
+        "script_level.level_keys": [
+          "courseE_maze_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_video_Loops",
+        "script_level.level_keys": [
+          "courseD_maze_video_Loops"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp6",
+        "script_level.level_keys": [
+          "courseE_maze_ramp6"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp7",
+        "script_level.level_keys": [
+          "courseE_maze_ramp7"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp8",
+        "script_level.level_keys": [
+          "courseE_artist_ramp8"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_angles",
+        "script_level.level_keys": [
+          "courseC_video_angles"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp9",
+        "script_level.level_keys": [
+          "courseE_artist_ramp9"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_predict1",
+        "script_level.level_keys": [
+          "courseE_artist_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoopsArtist",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp10",
+        "script_level.level_keys": [
+          "courseE_artist_ramp10"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp13",
+        "script_level.level_keys": [
+          "courseE_maze_ramp13"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_external_ramp14",
+        "script_level.level_keys": [
+          "courseE_external_ramp14"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp11a",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp11a"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_predict1",
+        "script_level.level_keys": [
+          "courseE_farmer_predict1"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_ifElse",
+        "script_level.level_keys": [
+          "courseE_video_ifElse"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp12a",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp12a"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp13",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp13"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_ramp14",
+        "script_level.level_keys": [
+          "courseE_bee_ramp14"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_predict2",
+        "script_level.level_keys": [
+          "courseE_farmer_predict2"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_repeatUntil",
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp15",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp15"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_ramp16",
+        "script_level.level_keys": [
+          "courseE_farmer_ramp16"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_bee_ramp17",
+        "script_level.level_keys": [
+          "courseE_bee_ramp17"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "coursee-ramp"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

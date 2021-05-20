@@ -1,6 +1,5 @@
 ---
 title: Kogu kooli osalemine
-layout: wide
 ---
 
 {{ signup_button }}

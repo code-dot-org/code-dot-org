@@ -1,0 +1,52 @@
+---
+de:
+  data:
+    variable_names:
+      "???": "???"
+      Blue: Blau
+      Green: Grün
+      Red: Rot
+      actor: Figur
+      age: Alter
+      answer: Antwort
+      armlength: Armlänge
+      bit: Bit
+      blue1: blau1
+      blue2: blau2
+      bodylength: Körperlänge
+      cats: alle Katzen
+      choice: Auswahl
+      circ: Kreis
+      color: Farbe
+      counter: Zähler
+      dogs: alle Hunde
+      dragons: Drachen
+      energy: Energie
+      green1: grün1
+      green2: grüm2
+      guess: rate
+      height: Höhe
+      honey: Honig
+      i: i
+      left: links
+      length: Länge
+      level: Level
+      myName: meinName
+      name: Name
+      nectar: Nektar
+      points: Punkte
+      random: zufällig
+      red1: rot1
+      red2: rot2
+      repeat: wiederhole
+      right: rechts
+      score: Punktestand
+      sides: Kanten
+      size: Größe
+      speed: Geschwindigkeit
+      startX: startX
+      startY: startY
+      variable: Variable
+      width: Breite
+      wizard: Zauberer
+      x: x

@@ -26,6 +26,9 @@
               - unless @level.uses_droplet?
                 %button{type: 'button', onclick: 'window.levelbuilder.copyWorkspaceToClipboard()', class: 'btn btn-default btn-sm'}
                   Copy workspace to clipboard
+            - elsif @level.is_a? Javalab
+              %ul
+                %li= link_to "[s]tart", edit_blocks_level_path(@level, :start_sources), { accesskey: 's' }
         - else
           %li (Cannot edit)
         - if can? :delete, @level
@@ -40,16 +43,15 @@
                 = hidden_field_tag :authenticity_token, form_authenticity_token
                 = submit_tag 'Clone'
             - content_for(:head) do
-              %script{src: minifiable_asset_path('js/levelbuilder.js')}
+              %script{src: webpack_asset_path('js/levelbuilder.js')}
             :javascript
               window.levelbuilder.ajaxSubmit('.clone_level');
         -if @level.is_a? LevelGroup
           %li
             sublevels
             %ol
-              - @level.properties['pages'].each do |page|
-                - page['levels'].each do |level_name|
-                  %li= link_to level_name, level_path(Level.find_by_name(level_name))
+              - @level.levels.each do |level|
+                %li= link_to level.name, level_path(level)
         - if contained_level_names = @level.properties['contained_level_names']
           %li
             contained levels
@@ -180,11 +182,16 @@
         %li.reported-abuse{ style: 'display: none;' }
           Manually reported abusive
 
-      .admin-abuse{ :style => "display: none" }
+      .admin-abuse
         Abuse score:
         %span.admin-abuse-score
       %br
-        = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
-
+        %button{id: "admin-abuse-reset", class: "btn btn-default btn-sm"}
+          Reset abuse score to 0
+      %br
+        %button{id: "admin-abuse-buffer", class: "btn btn-default btn-sm"}
+          Set abuse score to -50
+      %br
+      %br
       .admin-report-abuse
         = link_to 'Report Abuse', '/report_abuse'

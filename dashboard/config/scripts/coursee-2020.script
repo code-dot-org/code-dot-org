@@ -1,0 +1,221 @@
+hidden false
+hideable_lessons true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-20/coursee/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-20/coursee/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-20/coursee/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
+lesson_extras_available true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-20/coursee/{LESSON}'
+project_widget_visible true
+project_widget_types ["playlab", "artist"]
+family_name 'coursee'
+version_year '2020'
+is_stable true
+curriculum_umbrella 'CSF'
+tts true
+is_course true
+
+lesson_group 'ramp_up', display_name: 'Ramp-Up'
+lesson 'Sequencing in the Maze', display_name: 'Sequencing in the Maze', has_lesson_plan: true
+level 'courseD_video_ramp1_2020', progression: 'Maze Intro: Programming with Blocks'
+level 'courseD_maze_ramp1_2020', progression: 'Practice'
+level 'courseD_maze_ramp2_2020', progression: 'Practice'
+level 'courseC_maze_debugging9_copy_2020', progression: 'Practice'
+level 'courseD_maze_ramp3_2020', progression: 'Practice'
+level 'courseC_video_debugging_2020', progression: 'Debugging with the Step Button'
+level 'courseC_maze_debugging2_2020', progression: 'Practice'
+level 'courseD_maze_ramp4_2020', progression: 'Practice'
+level 'courseC_maze_debugging4_2020', progression: 'Practice'
+level 'courseC_maze_debugging6_2020', progression: 'Practice'
+level 'courseC_maze_debugging7_2020', progression: 'Challenge', challenge: true
+level 'courseD_maze_ramp5a_2020', progression: 'Practice'
+level 'courseD_maze_ramp5c_2020', progression: 'Practice'
+
+lesson 'Programming and Loops with the Artist', display_name: 'Drawing with Loops', has_lesson_plan: true
+level 'courseC_video_artist_2020', progression: 'Artist Intro with JR Hildebrande'
+level 'courseC_artist_prog1_2020', progression: 'Practice'
+level 'courseC_artist_prog2_2020', progression: 'Practice'
+level 'ramp_video_loopsArtist_2020', progression: 'Loops with the Artist'
+level 'courseC_artist_prog3_2020', progression: 'Practice'
+level 'courseC_artist_prog4_2020', progression: 'Practice'
+level 'courseC_artist_prog7_2020', progression: 'Challenge', challenge: true
+level 'ramp_artist_loops4_2020', progression: 'Practice'
+level 'ramp_artist_loops5_2020', progression: 'Practice'
+level 'ramp_artist_loops6_2020', progression: 'Practice'
+level 'ramp_artist_loops8_2020', progression: 'Challenge', challenge: true
+bonus 'courseC_artist_prog_challenge1_2020'
+bonus 'courseC_artist_prog_challenge2a_2020'
+
+lesson 'Conditionals in Minecraft: Voyage Aquatic', display_name: 'Conditionals in Minecraft: Voyage Aquatic', has_lesson_plan: true
+level 'CourseE_HOC 2018 Level_1_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_2_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_3_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_4_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_5_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_6_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_7a_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_8_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_9b_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_10_2020', progression: 'Practice'
+level 'CourseE_HOC 2018 Level_11_2020', progression: 'Practice'
+
+lesson 'Conditionals', display_name: 'Conditionals with the Farmer', has_lesson_plan: true
+level 'courseD_video_whileIntro_2020', progression: 'While Loops with the Farmer'
+level 'courseD_farmer_while4_predict1_2020', progression: 'Prediction'
+level 'courseE_farmer_ramp11a_2020', progression: 'Practice'
+level 'courseE_farmer_ramp11b_2020', progression: 'Practice'
+level 'courseE_farmer_ramp12b_2020', progression: 'Practice'
+level 'courseE_farmer_ramp12_forswap_2020', progression: 'Practice'
+level 'courseD_video_repeatUntil_2020', progression: 'Repeat Unit Statements'
+level 'courseE_farmer_ramp12c_2020', progression: 'Practice'
+level 'courseE_farmer_ramp12d_2020', progression: 'Practice'
+level 'courseE_farmer_ramp12e_2020', progression: 'Practice'
+level 'courseE_video_BeeifElse_2020', progression: '"If/Else" with the Bee'
+level 'courseE_farmer_ramp12f_2020', progression: 'Challenge', challenge: true
+level 'courseE_farmer_ramp12g_2020', progression: 'Practice'
+
+lesson_group 'csf_sprites', display_name: 'Sprites'
+lesson 'Simon Says', display_name: 'Simon Says', has_lesson_plan: true, unplugged: true
+level 'SimonSays-Unplugged_2020'
+
+lesson 'Learning Sprites with Sprite Lab', display_name: 'Swimming Fish with Sprite Lab', has_lesson_plan: true
+level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Introducing Sprite Lab'
+level 'Fish Tank 1-validated_2020', progression: 'Prediction'
+level 'Fish Tank 2-validated_2020', progression: 'Mini-Project: Swimming Fish'
+level 'Fish Tank 3-validated_2020', progression: 'Mini-Project: Swimming Fish'
+level 'Fish Tank 4-validated_2020', progression: 'Mini-Project: Swimming Fish'
+level 'CourseEF_video_MakeSprite_2020', progression: 'How to Make a Sprite'
+level 'Fish Tank 5-validated_2020', progression: 'Mini-Project: Swimming Fish (continued)'
+level 'Fish Tank 6-validated_2020', progression: 'Mini-Project: Swimming Fish (continued)'
+level 'Fish Tank 7-validated_2020', progression: 'Free Play'
+bonus 'spritelab_extras_repeat'
+
+lesson 'Alien Dance Party with Sprite Lab', display_name: 'Alien Dance Party with Sprite Lab', has_lesson_plan: true
+level 'Dance Party 1-validated_2020', progression: 'Prediction'
+level 'CDEF_video_SpritesInAction_2020', progression: 'Video'
+level 'Dance Party 2_2020', progression: 'Mini-Project: Alien Dance Moves'
+level 'Dance Party 3_2020', progression: 'Mini-Project: Alien Dance Moves'
+level 'Dance Party 4_2020', progression: 'Mini-Project: Alien Dance Moves'
+level 'Dance Party 5_2020', progression: 'Mini-Project: Alien Dance Moves'
+level 'Dance Party 6_2020', progression: 'Mini-Project: Alien Dance Party'
+level 'Dance Party 7_2020', progression: 'Mini-Project: Alien Dance Party'
+level 'Dance Party Freeplay_2020', progression: 'Mini-Project: Alien Dance Party'
+
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true, unplugged: true
+level 'PrivatePersonalInformation-Unplugged_2020'
+
+lesson 'About Me', display_name: 'About Me with Sprite Lab', has_lesson_plan: true
+level 'courseE_aboutme_1_2020', progression: 'Free Play'
+level 'courseE_aboutme_2_2020', progression: 'Mini-project: Interactive Poster'
+level 'courseE_aboutme_3_2020', progression: 'Mini-project: Interactive Poster'
+level 'courseE_aboutme_4_2020', progression: 'Mini-project: Interactive Poster'
+level 'courseE_aboutme_5_2020', progression: 'Mini-project: Interactive Poster'
+level 'courseE_aboutme_6_2020', progression: 'Mini-project: Interactive Poster'
+
+lesson 'Digital Sharing', display_name: 'Digital Sharing', has_lesson_plan: true, unplugged: true
+level 'DigitalSharing-Unplugged_2020'
+
+lesson_group 'csf_nested_loops', display_name: 'Nested Loops'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze', has_lesson_plan: true
+level 'courseD_bee_nestedLoops1a_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops1_2020', progression: 'Practice'
+level 'courseD_video_nestedLoops_2020', progression: 'Nested Loops with the Bee'
+level 'courseD_bee_nestedLoops2_predict1_2020', progression: 'Prediction'
+level 'courseD_bee_nestedLoops2_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops3_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops4_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops5_2020', progression: 'Practice'
+level 'courseD_maze_nestedLoops6_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops7_2020', progression: 'Challenge', challenge: true
+level 'courseD_bee_nestedLoops8_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops9_2020', progression: 'Practice'
+level 'courseD_bee_nestedLoops9_predict2_2020', progression: 'Prediction'
+bonus 'courseD_harvester_nested_loops_challenge1_2020'
+bonus 'courseD_collector_nested_loops_challenge2_2020'
+
+lesson 'Nested Loops in Artist', display_name: 'Fancy Shapes using Nested Loops', has_lesson_plan: true
+level 'courseD_artist_nestedLoops1_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops1a_2020', progression: 'Practice'
+level 'courseD_video_nestedLoopsArtist_2020', progression: 'Video'
+level 'courseD_artist_nestedLoops2_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops3_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops4_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops5_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops7_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops8_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops9_2020', progression: 'Challenge', challenge: true
+level 'courseD_artist_nestedLoops10_2020', progression: 'Practice'
+level 'courseD_artist_nestedLoops9_predict1_2020', progression: 'Prediction'
+level 'courseD_artist_nestedLoopsFP_2020', progression: 'Free Play'
+bonus 'courseD_artist_nestedLoops_challenge1_2020'
+bonus 'courseD_artist_nestedLoops_challenge2_2020'
+
+lesson 'Nested Loops in Frozen', display_name: 'Nested Loops with Frozen', has_lesson_plan: true
+level 'courseD_artist_project1_2020', progression: 'Mini-Project: Snowflake #1'
+level 'courseD_artist_project2_2020', progression: 'Mini-Project: Snowflake #1'
+level 'courseD_artist_project3_2020', progression: 'Mini-Project: Snowflake #1'
+level 'courseD_artist_project4_2020', progression: 'Mini-Project: Snowflake #1'
+level 'courseD_artist_project5_2020', progression: 'Mini-Project: Snowflake #1'
+level 'courseD_artist_project1a_2020', progression: 'Mini-Project: Snowflake #2'
+level 'courseD_artist_project2a_2020', progression: 'Mini-Project: Snowflake #2'
+level 'courseD_artist_project3a_2020', progression: 'Mini-Project: Snowflake #2'
+level 'courseD_artist_project4a_2020', progression: 'Mini-Project: Snowflake #2'
+
+lesson_group 'csf_functions', display_name: 'Functions'
+lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true, unplugged: true
+level 'Songwriting-Unplugged_2020'
+
+lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: true
+level 'MC_HOC_2017_01_RETRY_2020', progression: 'Practice'
+level 'MC_HOC_2017_02_Cole_2020', progression: 'Practice'
+level 'MC_HOC_2017_03_Cole_2020', progression: 'Practice'
+level 'MC_HOC_2017_04_Cole_2020', progression: 'Practice'
+level 'MC_HOC_2017_04POINT5_RYAN_2020', progression: 'Practice'
+level 'MC_HOC_2017_05_Cole_2020', progression: 'Practice'
+level 'MC_HOC_2017_06_Cole_2020', progression: 'Practice'
+level 'Function intro Ryan_2020', progression: 'Practice'
+level 'MC_HOC_2017_07_Cole_2020', progression: 'Practice'
+level 'MC_HOC_2017_10_RETRY_2020', progression: 'Practice'
+level 'MC_HOC_2017_Ali_2020', progression: 'Practice'
+level 'MC_HOC_2017_FP20x20_2020', progression: 'Free Play'
+
+lesson 'Functions in Harvester', display_name: 'Functions with Harvester', has_lesson_plan: true
+level 'harvester_skinOverview_video_2020', progression: 'The Harvester'
+level 'courseE_farmer_functions1_2020', progression: 'Practice'
+level 'courseE_farmer_functions1a_2020', progression: 'Practice'
+level 'courseE_farmer_functions2b_2020', progression: 'Practice'
+level 'courseE_farmer_functions2ba_2020', progression: 'Practice'
+level 'courseE_farmer_functions3c_2020', progression: 'Practice'
+level 'courseE_farmer_functions3c1_2020', progression: 'Practice'
+level 'courseE_video_createFunctions2_2020', progression: 'How to Create a Simple Function'
+level 'courseE_farmer_functions7a1_2020', progression: 'Practice'
+level 'courseE_farmer_functions8a1_2020', progression: 'Practice'
+level 'courseE_farmer_functions9a1_2020', progression: 'Practice'
+level 'courseE_farmer_functions10a1_2020', progression: 'Challenge', challenge: true
+level 'courseE_farmer_functions13_2020', progression: 'Practice'
+level 'courseE_farmer_functions11_predict_2020', progression: 'Prediction'
+
+lesson 'Functions in Artist', display_name: 'Functions with Artist', has_lesson_plan: true
+level 'courseE_artist_functions_predict1_2020', progression: 'Prediction'
+level 'courseE_artist_functions2_2020', progression: 'Practice'
+level 'courseE_artist_functions3_2020', progression: 'Practice'
+level 'courseE_artist_functions5_2020', progression: 'Practice'
+level 'courseE_artist_functions7_2020', progression: 'Practice'
+level 'courseE_artist_functions8a_2020', progression: 'Practice'
+level 'courseE_artist_functions8b_2020', progression: 'Practice'
+level 'courseE_artist_functions8c_2020', progression: 'Practice'
+level 'courseE_artist_functions8_2020', progression: 'Practice'
+level 'courseE_artist_functions9_2020', progression: 'Challenge', challenge: true
+level 'courseE_artist_functions10_2020', progression: 'Practice'
+level 'courseE_artist_functions_predict2_2020', progression: 'Prediction'
+level 'courseE_artist_functionsProj_2020', progression: 'Practice'
+bonus 'courseE_artist_functions_challenge1_2020'
+bonus 'courseE_artist_functions_challenge2_2020'
+
+lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
+lesson 'Designing for Accessibility', display_name: 'Designing for Accessibility', has_lesson_plan: true, unplugged: true
+level 'DesigningForAccessibilityMarkdownLevel_2019_2020'
+
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: true
+level 'courseE_project_exemplars_2019_2020', progression: 'Example Projects'
+level 'courseE_EOC_2020', progression: 'Create your project'
+

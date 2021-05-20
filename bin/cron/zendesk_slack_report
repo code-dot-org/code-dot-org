@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 #
 # Zendesk -> Slack ticket count integration
@@ -29,22 +31,39 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
+  'csf' => ['CSF'],
+  'cspalooza' => ['CSP'],
   'developers' => ['Developers'],
+  'disco-party' => ['CSD'],
+  'foundations' => ['Accounts'],
+  'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
+  'marketing' => ['Media'],
+  'pdot' => ['PDOT Amy', 'PDOT Laura', 'PDOT MeganH', 'PDOT Rosie', 'PDOT Tawny'],
   'plc-engineering' => ['PLC Tools'],
   'product' => ['Product'],
-  'star-labs-cabal' => ['*Labs'],
-  # 'privacy' => ['Privacy'],
-  # 'user-accounts' => ['Accounts'],
+  'regional_managers' => ['Outreach'],
+  'star-labs-cabal' => ['*Labs']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
 GROUP_FILTERS = {
+  'Account' => '360086130792',
+  'CSD' => '83142177',
+  'CSF' => '278602768',
+  'CSP' => '45749787',
   'Developers' => '47222126',
+  'International' => '360086130812',
   'Learning Platform' => '360082967212',
+  'Media' => '47756566',
   'PLC Tools' => '114103940251',
   'Product' => '360007773991',
   '*Labs' => '301129028',
+}
+
+# Slack room -> username of a code.org email
+MONITORING_USERS = {
+  'pl-team-only' => ['zendesk-pl'],
 }
 
 class Zendesk
@@ -62,8 +81,19 @@ class Zendesk
       to_h
   end
 
-  def search(groups:, statuses:)
-    query = Zendesk.build_query(groups: groups, statuses: statuses)
+  def users
+    @users ||= self.class.
+      get(
+        "/api/v2/users.json?role[]=admin",
+        {basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token}}
+      ).
+      parsed_response["users"].
+      map {|u| [u["id"], u["email"]]}.
+      to_h
+  end
+
+  def group_search(groups:, statuses:)
+    group_query = Zendesk.build_groups_query(groups: groups, statuses: statuses)
     page = 1
     results = []
     loop do
@@ -71,7 +101,7 @@ class Zendesk
         "/api/v2/search.json",
         {
           basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token},
-          query: {page: page, query: query}
+          query: {page: page, query: group_query}
         }
       ).parsed_response
       results += response["results"]
@@ -84,10 +114,39 @@ class Zendesk
     results
   end
 
-  def self.build_query(groups: [], statuses: [])
+  def user_search(users:, statuses:)
+    user_query = Zendesk.build_users_query(users: users, statuses: statuses)
+    page = 1
+    results = []
+    loop do
+      response = self.class.get(
+        "/api/v2/search.json",
+        {
+          basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token},
+          query: {page: page, query: user_query}
+        }
+      ).parsed_response
+      results += response["results"]
+      if response["next_page"]
+        page += 1
+      else
+        break
+      end
+    end
+    results
+  end
+
+  def self.build_groups_query(groups: [], statuses: [])
     [
       statuses.map {|s| "status:#{s}"},
       groups.map {|g| "group:\"#{g}\""}
+    ].flatten.join(' ')
+  end
+
+  def self.build_users_query(users: [], statuses: [])
+    [
+      statuses.map {|s| "status:#{s}"},
+      users.map {|u| "assignee:\"#{u}\""}
     ].flatten.join(' ')
   end
 
@@ -97,10 +156,92 @@ class Zendesk
       return "#{base_uri}/agent/filters/#{filter_id}"
     end
 
-    query = build_query(groups: [group], statuses: statuses)
+    query = build_groups_query(groups: [group], statuses: statuses)
     # Zendesk not friendly to '+' for spaces?
     querystring = URI.encode_www_form(q: query).gsub('+', '%20')
     "#{base_uri}/agent/search/1?#{querystring}"
+  end
+
+  def self.user_url(user:, statuses:)
+    query = build_users_query(users: [user], statuses: statuses)
+    # Zendesk not friendly to '+' for spaces?
+    querystring = URI.encode_www_form(q: query).gsub('+', '%20')
+    "#{base_uri}/agent/search/1?#{querystring}"
+  end
+end
+
+# Get tickets by group from the Zendesk API
+def get_tickets_by_group
+  zendesk = Zendesk.new
+  group_results = zendesk.group_search(
+    statuses: STATUSES_TO_REPORT,
+    groups: MONITORING_GROUPS.values.flatten,
+  )
+
+  # Ticket count by group name
+  group_counts = group_results.
+    group_by {|x| x["group_id"]}.
+    map {|group_id, tickets| [zendesk.groups[group_id], tickets.count]}.
+    to_h
+
+  # Report out for each Slack room
+  MONITORING_GROUPS.each do |slack_room, groups|
+    group_messages = groups.map do |group_name|
+      count = group_counts[group_name] || 0
+      next nil if count == 0
+
+      url = Zendesk.group_url(group: group_name, statuses: STATUSES_TO_REPORT)
+      statuses = STATUSES_TO_REPORT.join('/')
+      "<#{url}|#{group_name} has #{count} #{statuses} Zendesk tickets.>"
+    end.compact
+
+    # Don't post if there's nothing to report
+    next if group_messages.empty?
+
+    message = [
+      "*The Daily Zendesk* <https://github.com/code-dot-org/code-dot-org/blob/production/bin/cron/zendesk_slack_report|(source)>",
+      group_messages
+    ].flatten.join("\n")
+
+    ChatClient.message(slack_room, message)
+  end
+end
+
+def get_tickets_by_user
+  zendesk = Zendesk.new
+  user_results = zendesk.user_search(
+    users: MONITORING_USERS.values.flatten.map {|u| "#{u}@code.org"},
+    statuses: STATUSES_TO_REPORT
+  )
+
+  # Ticket count by user email
+  user_counts = user_results.
+    reject {|x| x["assignee_id"].nil?}.
+    group_by {|x| x["assignee_id"]}.
+    map {|assignee_id, tickets| [zendesk.users[assignee_id], tickets.count]}.
+    to_h
+
+  # Report out for each Slack room
+  MONITORING_USERS.each do |slack_room, users|
+    user_messages = users.map do |user|
+      user_email = "#{user}@code.org"
+      count = user_counts[user_email] || 0
+      next nil if count == 0
+
+      url = Zendesk.user_url(user: user_email, statuses: STATUSES_TO_REPORT)
+      statuses = STATUSES_TO_REPORT.join('/')
+      "<#{url}|#{user_email} has #{count} #{statuses} Zendesk tickets.>"
+    end.compact
+
+    # Don't post if there's nothing to report
+    next if user_messages.empty?
+
+    message = [
+      "*The Daily Zendesk* <https://github.com/code-dot-org/code-dot-org/blob/production/bin/cron/zendesk_slack_report|(source)>",
+      user_messages
+    ].flatten.join("\n")
+
+    ChatClient.message(slack_room, message)
   end
 end
 
@@ -108,38 +249,5 @@ end
 # MAIN
 #
 #
-
-# Get tickets from Zendesk API
-zendesk = Zendesk.new
-results = zendesk.search(
-  statuses: STATUSES_TO_REPORT,
-  groups: MONITORING_GROUPS.values.flatten
-)
-
-# Ticket count by group name
-counts = results.
-  group_by {|x| x["group_id"]}.
-  map {|group_id, tickets| [zendesk.groups[group_id], tickets.count]}.
-  to_h
-
-# Report out for each Slack room
-MONITORING_GROUPS.each do |slack_room, groups|
-  group_messages = groups.map do |group_name|
-    count = counts[group_name] || 0
-    next nil if count == 0
-
-    url = Zendesk.group_url(group: group_name, statuses: STATUSES_TO_REPORT)
-    statuses = STATUSES_TO_REPORT.join('/')
-    "<#{url}|#{group_name} has #{count} #{statuses} Zendesk tickets.>"
-  end.compact
-
-  # Don't post if there's nothing to report
-  next if group_messages.empty?
-
-  message = [
-    "*The Daily Zendesk* <https://github.com/code-dot-org/code-dot-org/blob/production/bin/cron/zendesk_slack_report|(source)>",
-    group_messages
-  ].flatten.join("\n")
-
-  ChatClient.message(slack_room, message)
-end
+get_tickets_by_group
+get_tickets_by_user

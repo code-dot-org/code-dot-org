@@ -1,0 +1,8 @@
+name 'U1L10 Multiple Choice analog vs digital_2021'
+title 'Multiple Choice: Analog vs. Digital'
+description ''
+question 'Which statement about analog and digital images is true?'
+wrong 'With advances in technology, digital images look exactly like the analog images they represent.'
+right 'Sampling an analog image more frequently produces a digital image with a better representation.'
+wrong 'Analog images come from data that is measured at regular intervals.'
+wrong 'Digital images come from data that is measures continuously.'

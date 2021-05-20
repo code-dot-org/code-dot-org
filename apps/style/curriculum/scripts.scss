@@ -1,0 +1,26 @@
+@import "markdown";
+@import "pdf_printing";
+
+@media print {
+  /* we have many components that we never want to include in a print view */
+  #script-breadcrumb,
+  #teacher-panel-container,
+  .__react_component_tooltip,
+  .script-overview-top-row,
+  .progress-legend,
+  .google-classroom-attribution {
+    display: none;
+  }
+
+  .teacher-info-box{
+    display: none !important;
+  }
+
+  .lesson-group {
+    border: black solid 1px;
+  }
+
+  .unit-calendar-for-printing {
+    padding: 10px 0px 20px 0px;
+  }
+}

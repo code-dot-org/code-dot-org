@@ -1,0 +1,15 @@
+ru:
+  data:
+    shared_functions:
+      growing: увеличение
+      jittering: дрожание
+      moving east: движение на восток
+      moving north: движение на север
+      moving south: движущийся на юг
+      moving west: движение на запад
+      moving with arrow keys: передвижение клавишами со стрелками
+      patrolling: патрулирование
+      shrinking: уменьшение
+      spinning left: левостороннее вращение
+      spinning right: правостороннее вращение
+      wandering: блуждание

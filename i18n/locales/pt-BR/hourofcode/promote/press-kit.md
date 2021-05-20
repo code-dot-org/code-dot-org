@@ -1,7 +1,5 @@
 ---
 title: Kit para a imprensa
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -59,7 +57,7 @@ A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhõe
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Os computadores estão em toda parte, mudando todos os setores do planeta, mas menos da metade das escolas ensina ciência da computação. As minorias sociais e as mulheres têm baixíssima representação nas aulas de ciência da computação, bem como no setor da tecnologia. A boa notícia é que estamos a caminho de mudar essa realidade.
+Os computadores estão em toda parte, mudando todos os setores do planeta, mas menos da metade das escolas ensina ciência da computação. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. A boa notícia é que estamos a caminho de mudar essa realidade.
 
 Com a Hora do Código, a ciência da computação tem aparecido nas páginas iniciais do Google, MSN, Yahoo! e da Disney. Mais de 100 parceiros se uniram para apoiar este movimento. Todas as lojas da Apple do mundo já sediaram uma Hora do Código. Presidente Obama escreveu sua primeira linha de código como parte da campanha.
 
@@ -79,7 +77,7 @@ I look forward to being in touch. <br />
 
 #### Sobre a Code.org
 
-A Code.org® é uma instituição pública sem fins lucrativos dedicada a promover o estudo da ciência da computação e garantir que ela chegue também às minorias sociais, empoderando, por exemplo, mulheres e negros para a participação nesta área. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

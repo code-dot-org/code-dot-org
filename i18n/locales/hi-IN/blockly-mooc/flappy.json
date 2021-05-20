@@ -1,10 +1,10 @@
 {
   "continue": "जारी रखें",
-  "doCode": "do",
-  "elseCode": "remaining",
+  "doCode": "करें",
+  "elseCode": "एल्स",
   "endGame": "गेम खत्म करें",
   "endGameTooltip": "गेम को खत्म करें",
-  "finalLevel": "बधाइयाँ! आपने अंतिम पहेली हल कर दी है।",
+  "finalLevel": "बधाई हो! आपने अंतिम पहेली हल कर ली है।",
   "flap": "फ़ड़फ़ड़ाय",
   "flapRandom": "इतना फ़ड़फ़ड़ाय",
   "flapVerySmall": "बिलकुल ज़रा सा फ़ड़फ़ड़ाय",
@@ -16,9 +16,9 @@
   "flappySpecificFail": "तुम्हारा कोड एक दम सही दिखता है - यह हर एक क्लिक के साथ अब उप्पर उड़ेगा. मगर आपको बहुत बार क्लिक करना पड़ेगा इसे लक्षय तक पहुंचने के लिये.",
   "incrementPlayerScore": "अंक बनाओ",
   "incrementPlayerScoreTooltip": "वर्तमान खिलाडी के स्कोर में एक  जोड़ें।",
-  "nextLevel": "",
+  "nextLevel": "बधाई हो! आपने यह पहेली पूरी कर ली है।",
   "no": "नहीं",
-  "numBlocksNeeded": "",
+  "numBlocksNeeded": "इस पहेली को %1 ब्लॉक्स के साथ हल किया जा सकता है। ",
   "playSoundRandom": "कोई सी भी ध्वनि चले.",
   "playSoundBounce": "उछलने की ध्वनि चले",
   "playSoundCrunch": "चरमराने का ध्वनि बजाए",
@@ -101,7 +101,7 @@
   "shareFlappyTwitterDonor": "फ्लैपी गेम देखें। ({donor} @codeorg को सहयोग करने के लिए धन्यवाद)",
   "shareGame": "अपनी गेम साझा करें:",
   "soundRandom": "यादृच्छिक",
-  "soundBounce": "",
+  "soundBounce": "उछाल",
   "soundCrunch": "चरमराना",
   "soundDie": "उदास",
   "soundHit": "टकराना",
@@ -129,5 +129,5 @@
   "whenEnterObstacleTooltip": "जब फ्लैपी बाधा में प्रवेश करे तो निम्न क्रियाएं करें।",
   "whenRunButtonClick": "जब गेम शुरू होती है",
   "whenRunButtonClickTooltip": "जब गेम शुरू होती है तो  निम्न क्रियाएं करें।",
-  "yes": "हाँ"
+  "yes": "हां"
 }

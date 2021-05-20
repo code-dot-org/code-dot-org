@@ -1,15 +1,13 @@
 ---
-title: About
+title: معلومات حول التطبيق
 theme: responsive
 video_player: true
 ---
 
-من نحن
+# من نحن
 
-<div class="col-60", style="padding-right:20px;">
-
-Code.org® هو غير ربحي موجه لنشر إمكانية الولوج إلى علوم الكمبيوتر في المدارس وزيادة مشاركة النساء والتمثيليات الأقلية. رؤيتنا أن كل طالب في كل مدرسة له فرصة تعلم علوم الكمبيوتر، كالبيولوجيا والكيمياء والجبر. نقدم المنهاج الأكثر انتشارا لتدريس علوم الكمبوتر في المدارس الابتدائية والثانوية وننظم أيضا حملة <a href="hourofcode.com">ساعة برمجة </a> سنوية، والتي يشارك فيها 10% من طلاب العالم. Code.org ممول من قبل عدة جهات منها أمازون وفايسبوك وغوغل وآنفوسيس ومايكروسوفت و<a href="/about/donors"> آخرون</a>.
-
+<div class="col-60">
+  Code.org® هو غير ربحي موجه لنشر إمكانية الولوج إلى علوم الكمبيوتر في المدارس وزيادة مشاركة النساء والتمثيليات الأقلية. رؤيتنا أن كل طالب في كل مدرسة له فرصة تعلم علوم الكمبيوتر، كالبيولوجيا والكيمياء والجبر. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org ممول من قبل عدة جهات منها أمازون وفايسبوك وغوغل وآنفوسيس ومايكروسوفت و<a href="/about/donors"> آخرون</a>.
 </div>
 
 [col-40]
@@ -22,36 +20,35 @@ Code.org® هو غير ربحي موجه لنشر إمكانية الولوج إ
 
 [/col-40]
 
-<div style="clear:both">
+<div style="clear:both"></div>
 
-## History 
+## السجل
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). هذا الفيديو أصبح #1 على اليوتوب خلال يوم ، و15000 من المؤسسات التي وصلها تطلب المساعدة. منذ ذلك الوقت، قمنا بتوسيع نطاق فريق العمل من المتطوعين لإنشاء منظمة يدعمها الجميع عبر العالم. نؤمن أن تعليم علوم الكمبوتر الجيد يجب أن يتاح لكل طفل، وليس مجرد حظ للبعض منهم.
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+في 2013، تم إطلاق Code.org من قبل التوأمين هادي و علي باتروفي [ بفيديو تعزيز علوم الكومبوتر](https://www.youtube.com/watch?v=nKIu9yen5nc). هذا الفيديو أصبح #1 على اليوتوب خلال يوم ، و15000 من المؤسسات التي وصلها تطلب المساعدة. منذ ذلك الوقت، قمنا بتوسيع نطاق فريق العمل من المتطوعين لإنشاء منظمة يدعمها الجميع عبر العالم. نؤمن أن تعليم علوم الكمبوتر الجيد يجب أن يتاح لكل طفل، وليس مجرد حظ للبعض منهم.
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## ماذا نعمل
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. عملنا بني لمدة عقود من المجودات، وبعدد كبير من المنظمات والأفراد الذين ساهموا في إنشاء وتمويل ونشر تعليم علوم الكمبيوتر. نحن ممتنون لمجتمع تعليم علوم الكمبيوتر على العمل الشاق في نشر تجربتنا على أوسع نطاق، ونشكر كل الشركاء والأفراد الذين ساهموا في نشر رؤيتنا على مر السنين.
+نعمل في كل مجالات التعليم: تصميم[دوراتنا](https://studio.code.org/courses) أو الشراكة مع آخرين، تدريب المدرسين، الشراكات مع المؤسسات، المساعدة في تعديل السياسات الحكومية، والتوسع دوليا عبر شراكات وتسويق النماذج. عملنا بني لمدة عقود من المجودات، وبعدد كبير من المنظمات والأفراد الذين ساهموا في إنشاء وتمويل ونشر تعليم علوم الكمبيوتر. نحن ممتنون لمجتمع تعليم علوم الكمبيوتر على العمل الشاق في نشر تجربتنا على أوسع نطاق، ونشكر كل الشركاء والأفراد الذين ساهموا في نشر رؤيتنا على مر السنين.
 
-## Code.org's International Reach 
+## الإشعاع الدولي لـ Code.org
 
-أكثر من 40% من زوار موقعنا هم من خارج الولايات المتحدة وهذا العدد في ارتفاع. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. نجعل علوم الكمبوتر جزءا من خطابات التربية الدولية بالشراكة مع وزارات التربية عبر العالم ونعمل مع المنظمات الدولية كمنظمة التنمية والتعاون الاقتصادي، ومنظمة الأمم المتحدة للتربية والعلوم والثقافة.
+أكثر من 40% من زوار موقعنا هم من خارج الولايات المتحدة وهذا العدد في ارتفاع. من أجل توسيع النطاق لولوج علوم الكمبيوتر، فريقنا يعمل معية [أكثر من 100 شريك دولي](/about/partners)، يساعدونهم على تسويق فكرة ساعة البرمجة، والدعوة إلى تغيير السياسات التربوية وتدريب المدرسين. نجعل علوم الكمبوتر جزءا من خطابات التربية الدولية بالشراكة مع وزارات التربية عبر العالم ونعمل مع المنظمات الدولية كمنظمة التنمية والتعاون الاقتصادي، ومنظمة الأمم المتحدة للتربية والعلوم والثقافة.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%">
+<img alt="شركاء Code.org الدوليين" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation 
+## ترجمة
 
-تريد أن يكون لك أثر مباشر على الطلاب في بلدك؟ ساعدنا على إتاحة محتوى Code.org بلغتهم الرسمية! إذا كنت مستعدا للتطوع في ترجمة الدروس والدروات، ستنضم إلى مجموعة مترجمين من أكثر من 7000 مترجم يساعدون على تحقيق فكرة تعليم علوم الكمبوتر عبر العالم. Take a look at our [translation guide](/translate) for more information. 
+تريد أن يكون لك أثر مباشر على الطلاب في بلدك؟ ساعدنا على إتاحة محتوى Code.org بلغتهم الرسمية! إذا كنت مستعدا للتطوع في ترجمة الدروس والدروات، ستنضم إلى مجموعة مترجمين من أكثر من 7000 مترجم يساعدون على تحقيق فكرة تعليم علوم الكمبوتر عبر العالم. الق نظرة على [دليل الترجمة](/translate) للمزيد من المعلومات.
 
 ## Our commitment to free curriculum and open source technology
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). تمت ترجمة دوراتنا من قبل ناطقين بلغات مختلفة للاستخدام في جميع أنحاء العالم. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+جميع موارد المنهاج والدروس التي نعدها ستكون دائما مجانية للاستخدام ومفتوحة المصدر تحت ترخيص [Creative Commons ](http://creativecommons.org/licenses/by-nc-sa/4.0/)، تمكن الآخرين من استعمالها لأغراض غير تجارية. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). تمت ترجمة دوراتنا من قبل ناطقين بلغات مختلفة للاستخدام في جميع أنحاء العالم. تم تطوير تكنولولجيتنا [كمشروع مفتوح المصدر](https://github.com/code-dot-org/code-dot-org).
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%">
+<img alt="الطلبة بحاسوب محمول" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## تابعنا
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[قم بتسجيل الدخول التوصل بحالة التحديثات](/about/hear-from-us) حول التقدم في K-12 من علوم الكمبيوتر وعمل Code.org. او تابع Code.org على مواقع التواصل الاجتماعي:
 
 {{ social_media_codeorg }}

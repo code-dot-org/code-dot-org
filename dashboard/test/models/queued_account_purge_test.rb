@@ -46,4 +46,31 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
     end
     refute_nil QueuedAccountPurge.find_by_id(qap.id)
   end
+
+  test "needing_manual_review normally includes everything" do
+    q1 = create :queued_account_purge
+    q2 = create :queued_account_purge
+    assert_includes QueuedAccountPurge.needing_manual_review, q1
+    assert_includes QueuedAccountPurge.needing_manual_review, q2
+  end
+
+  test "needing_manual_review omits Net::ReadTimeout" do
+    q1 = create :queued_account_purge
+    q2 = create :queued_account_purge, reason_for_review: 'Net::ReadTimeout'
+    assert_includes QueuedAccountPurge.needing_manual_review, q1
+    refute_includes QueuedAccountPurge.needing_manual_review, q2
+  end
+
+  test "clean_up_resolved_purges drops records for purged users" do
+    # This one should get cleaned up
+    q1 = create(:queued_account_purge, user: create(:student, deleted_at: Time.now, purged_at: Time.now))
+    # This one should not
+    q2 = create(:queued_account_purge)
+
+    ids = [q1, q2].map(&:id)
+    assert_equal [q1.id, q2.id], QueuedAccountPurge.where(id: ids).pluck(:id)
+
+    QueuedAccountPurge.clean_up_resolved_records!
+    assert_equal [q2.id], QueuedAccountPurge.where(id: ids).pluck(:id)
+  end
 end

@@ -1,0 +1,31 @@
+fil:
+  data:
+    block_categories:
+      Actions: Mga aksyon
+      Advanced: Advanced
+      Behaviors: Pag-uugali
+      Brushes: Brushes
+      Color: Kulay
+      Comment: Komento
+      Comments: Komento
+      Conditionals: Mga conditional
+      Dancers: Mananayaw
+      Default: Default
+      Events: Mga event
+      Functions: Mga function
+      'Functions ': 'Function '
+      Game/Score: Laro/score
+      Games/Score: Laro/score
+      Groups: Grupo
+      Input: Input
+      Locations: Lugar
+      Logic: Lohika
+      Loops: Mga loop
+      Math: Math
+      Numbers: Mga numero
+      Properties: Mga katangian
+      Sprites: Mga Sprites
+      Text: Text
+      Variables: Mga variable
+      'Variables ': 'Pagkakaiba '
+      World: Mundo

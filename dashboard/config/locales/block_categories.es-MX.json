@@ -1,0 +1,76 @@
+{
+  "es-MX": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Acciones",
+          "Brushes": "Pinceles",
+          "Loops": "Bucles",
+          "Math": "Matemáticas",
+          "Logic": "Lógica",
+          "Functions": "Funciones",
+          "Variables": "Variables"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Mundo",
+          "Dancers": "Bailarines",
+          "Properties": "Propiedades",
+          "Events": "Eventos",
+          "Numbers": "Números",
+          "Logic": "Lógica"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Acciones",
+          "Events": "Eventos",
+          "Loops": "Bucles",
+          "Math": "Matemáticas",
+          "Logic": "Lógica",
+          "Games/Score": "Juegos/Puntaje"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Sprites": "Sprites",
+          "Actions": "Acciones",
+          "Events": "Eventos",
+          "Behaviors": "Comportamientos"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Sprites": "Sprites",
+          "Locations": "Ubicaciones",
+          "Actions": "Acciones",
+          "Events": "Eventos",
+          "Behaviors": "Comportamientos",
+          "Variables": "Variables",
+          "Math": "Matemáticas",
+          "Logic": "Lógica",
+          "Functions": "Funciones",
+          "Text": "Texto",
+          "Comments": "Comentarios"
+        },
+        "outbreak_freeplay": {
+          "World": "Mundo",
+          "Sprites": "Sprites",
+          "Actions": "Acciones",
+          "Behaviors": "Comportamientos",
+          "Events": "Eventos",
+          "Locations": "Ubicaciones",
+          "Logic": "Lógica",
+          "Loops": "Bucles",
+          "Math": "Matemáticas",
+          "Variables": "Variables",
+          "Functions": "Funciones",
+          "Comments": "Comentarios"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Mundo",
+          "Sprites": "Sprites",
+          "Actions": "Acciones",
+          "Events": "Eventos",
+          "Logic": "Lógica",
+          "Math": "Matemáticas"
+        }
+      }
+    }
+  }
+}

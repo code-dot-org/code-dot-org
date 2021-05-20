@@ -1,0 +1,47 @@
+{
+  "fil-PH": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "nagpapagaling"
+        },
+        "outbreak2": {
+          "recovering": "nagpapagaling"
+        },
+        "outbreak3": {
+          "recovering": "nagpapagaling"
+        },
+        "outbreak4": {
+          "recovering": "nagpapagaling",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "outbreak5": {
+          "recovering": "nagpapagaling"
+        },
+        "outbreak6": {
+          "recovering": "nagpapagaling"
+        },
+        "outbreak7": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "outbreak8": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "outbreak_freeplay": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "nagpapagaling",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        }
+      }
+    }
+  }
+}

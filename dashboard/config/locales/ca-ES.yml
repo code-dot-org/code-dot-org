@@ -24,11 +24,13 @@ ca:
     attributes:
       user:
         name: Nom a mostrar
-        name_example: 'Mostra el nom<br/>(ex: Programador fantàstic o Joana S.)'
+        name_example: 'Mostra el nom (ex: Programador fantàstic o Joana S.)'
         email: Correu electrònic
         parent_email: E-mail del pare/tutor
         personal_email: Adreça d'e-mail personal <a href="%{url}">(feu clic aquí si
           teniu una adreça electrònica)</a>
+        personal_email_markdown: Adreça d'e-mail personal [(feu clic aquí si teniu
+          una adreça electrònica)](%{url})
         username: nom d'usuari
         password: Contrasenya
         password_confirmation: Confirma la contrasenya
@@ -40,8 +42,12 @@ ca:
         finish_sign_up_header: Acabar de crear el seu compte
         finish_sign_up_subheader: Empleneu la informació següent per acabar creant
           un compte Code.org per a <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Empleneu la informació següent per acabar
+          creant un compte Code.org per a **%{email}**.
         finish_sign_up_subheader_provider: Empleneu la informació següent per acabar
           creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Empleneu la informació següent
+          per acabar creant un compte Code.org amb **%{provider}** per a **%{email}**.
         error:
           future: no pot ser en el futur
   beta: beta
@@ -57,14 +63,10 @@ ca:
   okay: D'acord
   or: o
   heading_x_of_y: "%{heading} (pàgina %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Afegeix un mestre:'
       placeholder: Secció Codi (ABCDEF)
-      instructions: Si us plau, introdueixi el codi compartit pel seu professor. És
-        un codi de 6 lletres com "ABCDEF".
       instructions_short: Introdueixi el seu codi de secció de 6 lletres
-    submit: Afegeix un professor
   add_hint_form:
     placeholder: Introduïu la vostra pista aquí
     submit: Afegeix pista
@@ -94,9 +96,6 @@ ca:
     continue_with: Continua amb %{provider}
     sign_in_with: Registra't amb %{provider}
     signed_in: Registrat!
-    signed_out: Heu tancat sessió a <a href="%{url}">Code.org</a>.
-    sign_out_of: Heu entrat amb %{provider}. <a href="%{url}">Feu clic aquí</a> per
-      tancar la sessió a %{provider}.
     already_signedup: Ja t'has registrat?
     notyet_signedup: No t'has unit encara?
     google_oauth2: Compte de Google
@@ -127,6 +126,10 @@ ca:
       el seu grup-classe. <a href="/"> podeu navegar per les diferents etapes i trencaclosques</a>
       sense un compte, però cal tenir compte per guardar les dades del seu progrés
       i projectes.
+    overview_markdown: Inscrigui's en un compte per tal de seguir el seu progrés o
+      gestionar el seu grup-classe. [podeu navegar per les diferents etapes i trencaclosques](/)
+      sense un compte, però cal tenir compte per guardar les dades del seu progrés
+      i projectes.
     hoc_already_signed_up_heading: Comença sense connectar-te
     hoc_already_signed_up_content: Estas inscrit per ensenyar una hora de codi! Vostè
       i els seus estudiants no cal que inicieu la sessió al Code Studio per participar
@@ -141,6 +144,12 @@ ca:
       cursos a estudiants i vure el seu progrés. <a href="%{studio_url}">També pots
       seguir navegant entre els diferents nivells i trencaclosques</a> sense crear
       un compte.
+    hoc_already_signed_up_content_post_hoc_markdown: Gracies por allotjar una Hora
+      de Codi. Per entrar a "Code Studio", has de crear una contrasenya per el teu
+      compte. Això et deixarà grabar el teu progrés i organitzar la teva aula. Podras
+      asignar cursos a estudiants i vure el seu progrés. [També pots seguir navegant
+      entre els diferents nivells i trencaclosques](%{studio_url}) sense crear un
+      compte.
     teacher_educator_guide: Mira la guia de l'educador
     title: Inscrigui's a Code.org
     school_name: Nom de l'escola (opcional)
@@ -159,23 +168,8 @@ ca:
     valid_password: Contrasenya vàlida!
     invalid_password: La contrasenya ha de tenir almenys 6 caràcters
     mismatch_password: Les dues contrasenyes que has introduït no coincideixen
-    agree_tos_privacy: Accepto els <a href='http://code.org/tos'>Términis de Servei</a>
-      i la <a href='http://code.org/privacy'>Política de Privacitat</a>.
-    under_13_consent: Si soc menor de 13 anys, confirmo que tinc l'autorització dels
-      meus pares o tutors legals per utilitzar els serveis de Code.org.
     student_consent: Confirmo que tinc l'autorització dels meus pares o tutors legals
       per utilitzar los serveis de Code.org.
-    agree_us_website: Estic d'acord a utilitzar un lloc web basat als Estats Units.
-    my_data_to_us: Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades
-      o processades als Estats Units.
-    student_terms: Les adreces de correu electrònic no s'emmagatzemen en una forma
-      que ens permeti contactar amb els estudiants. Els estudiants mai rebran correus
-      electrònics de Code.org excepte per la recuperació de la contrasenya. Per a
-      més informació, veure la nostra <a href='http://code.org/privacy'>política de
-      privacitat</a>.
-    teacher_terms: Estic d'acord a estar obligat pels termes Code.org de servei. Per
-      a més informació sobre la privacitat, veure la nostra política de privacitat
-      de <a href='http://code.org/privacy'></a>.
     additional_information: Necessitem alguna informació addicional per continuar
       amb la vostra inscripció.
     user_type_button: Actualitzeu el tipus de compte
@@ -295,6 +289,8 @@ ca:
       help_us: Ajuda'ns
       teach: Ensenya
       about: Quant a
+      legal_privacy: Política de privadesa
+      legal_tos: Condicions d'ús
     user:
       classroom: Pàgina d'inici de mestre
       district_dashboard: Quadre de comandament de districte
@@ -371,15 +367,14 @@ ca:
     delete_text_teacher_note: 'Tingueu en compte: Si suprimiu el vostre compte no
       s''esborrarant els comptes dels seus alumnes.'
     delete_confirm: Esteu segur que voleu suprimir el vostre compte?
+    update_email: Actualitza
+    parent_guardian_email_label: E-mail del pare/tutor
+    none: Cap
   user_level:
     completed: Completat
     tried: Provat
   home:
     title: Code Studio
-    description: Code Studio és on hi ha els cursos en xarxa de Code.org
-    lines_of_code: "%{lines_count} LÍNIES DE CODI ESCRITES PELS ALUMNES"
-    lines_of_code_linebreak: "%{lines_count} LÍNIES DE CODI<br/>ESCRITES PER %{students_count}
-      MILIONS D'ESTUDIANTS"
     all_courses: Informació general dels cursos 1, 2 i 3
     lesson_plans: Unitats didàctiques
     signin_message: Ja estàs registrat? %{link}
@@ -418,11 +413,6 @@ ca:
     test_videos_help: Prova el nostre nou reproductor de vídeo a la teva escola
     try_beta_courses: Nou! Prova els nostres cursos beta per alumnes de infantil
     use_as_teacher: Utilitza aquest lloc com a mestre
-    heading_hoc2014: "<h2>L'Hora de Codi per a</h2><h1>Totes les edats</h1>"
-    heading_elementary: "<h2>Cursos de 20 hores per a</h2><h1>Principiants (totes
-      les edats)</h1>"
-    heading_apps: "<h2>Diversió per a</h2><h1>Tothom</h1>"
-    heading_legacy: "<h2>El nostre curs general per a</h2><h1>Totes les edats</h1>"
     your_gallery: Galeria
     no_primary_course: Intenta un curs a Code Studio
     choose_next_course: Intenta un curs Code Studio triant-ne un a continuació
@@ -528,6 +518,8 @@ ca:
         per fer-la funcionar i compartiu-la en pocs segons.
     dance:
       title: Festa de ball
+    dance-2019:
+      title: Festa de ball
     hoc:
       title: Laberint clàssic
       body: Prova els conceptes bàsics de la informàtica. Ja ho han fet milions d'usuaris.
@@ -586,33 +578,13 @@ ca:
       title: Condicionals
     widgets:
       title: Ginys
-  gallery:
-    students_drew_these_with_code: Els estudiants van dibuixar això amb codi!
-    students_made_these_with_code: Els estudiants van fer això amb codi!
-    picture_count: En els darrers <b>%{days}</b> dies, els alumnes han elaborat <b>%{count}</b>
-      imatges escrivint els seus propis programes informàtics. Fes clic a les fotos
-      per veure el programa en acció.
-    activity_count: En els darrers <b>%{days}</b> dies, els estudiants han fet <b>%{count}</b>
-      aplicacions i imatges escrivint els seus propis programes informàtics. Fes clic
-      a les fotos i captures de pantalla per veure el programa en acció.
-    want_to_make_your_own: Vols fer el teu propi?
-    more: Més &rarr;
-    caption_by_name_age: per %{name}, %{age} anys
-    caption_time_ago: fa %{time_ago}
-    header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artista
-    report_abuse: Denuncieu un abús
   landing:
-    prerelease: Aquest curs és en <span class='betatext'> beta</span>.  Això significa
-      que no és la versió final del curs i està subjecte a revisió a mida que es reben
-      comentaris i es fan millores.
-    prerelease_hoc2014: Aquest tutorial està en <span class='betatext'> beta</span>.  És
-      subjecte a revisió a mida que es reben comentaris i es fan millores.
     report_bug: Informeu d'errors
     support: Obtenir ajuda
     support_url: support.code.org
     help_support: Ajuda i suport
+  free_response:
+    placeholder: Introdueix la teva resposta aquí
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: La resposta que he introduït no és correcta.  Si us plau, intenta-ho
@@ -664,11 +636,6 @@ ca:
   age_interstitial:
     age: La teva edat
     header: Actualització d'informació del compte
-    message: Estem en procés d'actualització de la nostra experiència per oferir-vos
-      proteccions de privacitat encara millors. Per això, necessitem que els usuaris
-      existents entrin la seva edat aquí. <br/>Com sempre, code.org mai vendrà o compartirà
-      aquesta informació amb tercers.
-    sign_out: Si no vols donar la teva edat tens que <a href="%{url}"> tancar la sessió</a>.
   terms_interstitial:
     tos: Condicions d'ús
     privacy: Política de privadesa
@@ -682,6 +649,10 @@ ca:
     decline: Tanca
   zendesk_too_young_message: Lamentablement, els usuaris més joves no poden registrar-se
     en el nostre lloc de suport. Podeu navegar<a href="http://support.code.org">upport.code.org</a>
+    sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
+    en representació vostra.
+  zendesk_too_young_message_markdown: Lamentablement, els usuaris més joves no poden
+    registrar-se en el nostre lloc de suport. Podeu navegar[upport.code.org](http://support.code.org)
     sense registrar-vos o demanar als vostres pares o mestres que contactin amb nosaltres
     en representació vostra.
   progress:
@@ -725,25 +696,8 @@ ca:
           offensive: Contingut ofensiu
           infringement: Infracció de copyright
           other: Altres
-  flex_category:
-    required: Vista general
-    csf_digcit: Ciutadania digital
-    csf_jigsaw: Puzzle
-    csf_loops: Bucles
-    csf_events: Esdeveniments
-    csf_binary: Binari
-    csf_conditionals: Condicionals
-    csf_spritelab: Laboratori de personatges
-    csf_nested_loops: Bucles imbricats
-    csf_functions: Funcions
-    csf_variables: Variables
-    csf_for_loops: Per bucles
-    csf_internet: Internet
-    csp_variables: Variables
-    csp_conditionals: Condicionals
-    csp_functions: Funcions
-    csp_lists: Llistes
-    csp_loops: Bucles
+  hoc_download:
+    minecraft_name: Hora del Codi de Minecraft
   view_teacher_guide: Veure la guia docent
   pd:
     form_labels:
@@ -768,5 +722,4 @@ ca:
         opt_in_no: 'No'
   cookie_banner:
     accept: D'acord
-  gdpr_dialog:
-    true: Sí
+  copy: Copiar

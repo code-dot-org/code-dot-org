@@ -1,0 +1,413 @@
+{
+  "script": {
+    "name": "csp-create-2018",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-18/csp-create/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csp/ap-prep"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-18/csp-create/standards/"
+        ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2018",
+      "is_stable": true,
+      "exclude_csf_column_in_legend": true,
+      "script_announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "project_sharing": true,
+      "curriculum_umbrella": "CSP",
+      "family_name": "csp-create",
+      "hideable_lessons": true,
+      "announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ]
+    },
+    "new_name": null,
+    "family_name": "csp-create",
+    "serialized_at": "2021-05-03 23:55:22 UTC",
+    "seeding_key": {
+      "script.name": "csp-create-2018"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_ap_3",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 3: AP Create Performance Task"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-create-2018"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Create PT Prep - Reviewing the Task",
+      "name": "Create PT Prep - Reviewing the Task",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "Create PT Prep - Making a Plan",
+      "name": "Create PT Prep - Making a Plan",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT Prep - Making a Plan",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "Create PT - Complete the Task",
+      "name": "Create PT - Complete the Task",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-create-2018"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP CreateL01 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP CreateL01 SFLP"
+        ],
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      },
+      "level_keys": [
+        "CSP CreateL01 SFLP"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2018"
+        ],
+        "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools_2018"
+        ],
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      },
+      "level_keys": [
+        "csp-pt-tech-setup-and-tools_2018"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP CreateL02 SFLP_2018"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP CreateL02 SFLP_2018"
+        ],
+        "lesson.key": "Create PT Prep - Making a Plan",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      },
+      "level_keys": [
+        "CSP CreateL02 SFLP_2018"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP CreateL03 SFLP"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP CreateL03 SFLP"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      },
+      "level_keys": [
+        "CSP CreateL03 SFLP"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Practice Create Performance Task_2018"
+        ],
+        "progression": "Create PT - Complete the Task"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Practice Create Performance Task_2018"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      },
+      "level_keys": [
+        "Practice Create Performance Task_2018"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-create-2018"
+      },
+      "level_keys": [
+        "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP CreateL01 SFLP",
+        "script_level.level_keys": [
+          "CSP CreateL01 SFLP"
+        ],
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-pt-tech-setup-and-tools_2018",
+        "script_level.level_keys": [
+          "csp-pt-tech-setup-and-tools_2018"
+        ],
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP CreateL02 SFLP_2018",
+        "script_level.level_keys": [
+          "CSP CreateL02 SFLP_2018"
+        ],
+        "lesson.key": "Create PT Prep - Making a Plan",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP CreateL03 SFLP",
+        "script_level.level_keys": [
+          "CSP CreateL03 SFLP"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Practice Create Performance Task_2018",
+        "script_level.level_keys": [
+          "Practice Create Performance Task_2018"
+        ],
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2018-markdown-with-link-to-survey_v2",
+        "script_level.level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-create-2018"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

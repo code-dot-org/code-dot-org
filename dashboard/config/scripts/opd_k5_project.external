@@ -1,0 +1,16 @@
+name 'OPD-K5 project'
+title 'End-of-course projects'
+description 'description here'
+markdown <<MARKDOWN
+# Overview: End of course projects
+
+<img src="https://images.code.org/0a5fca1b8c79ab8463d53ef7bde1a7a1-image-1573236230401.jpg" class="level-image">
+
+## New teaching practice: End of course projects
+
+- Each course offers the opportunity for students to take what they’ve learned and put it together into a unique project that represents their own creativity. 
+- Students are encouraged to plan, build, revise, and present projects of their own. 
+- Following a project from inception to delivery offers an inside look at the software development cycle. These guided projects offer scaffolded rubrics for the benefit of both student and teacher.
+
+
+MARKDOWN

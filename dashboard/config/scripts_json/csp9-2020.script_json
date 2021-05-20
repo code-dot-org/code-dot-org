@@ -1,0 +1,1407 @@
+{
+  "script": {
+    "name": "csp9-2020",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSP",
+      "student_detail_progress_view": true,
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit9/{LESSON}",
+      "project_sharing": true,
+      "hideable_lessons": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit9/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit9/standards/"
+        ]
+      ],
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "",
+          "details": "Are your students planning to take the AP Exam? This unit covers content that will be assessed on the exam. Check out the standards covered in this unit.",
+          "link": "https://curriculum.code.org/csp-20/unit9/standards/",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2020",
+          "type": "feedback",
+          "visibility": "Student-only"
+        }
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:47 UTC",
+    "seeding_key": {
+      "script.name": "csp9-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_unit9_2020",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Unit 9: Data"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "cspSurvey2020",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp9-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Learning From Data",
+      "name": "Learning From Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Exploring One Column",
+      "name": "Exploring One Column",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Filtering and Cleaning Data",
+      "name": "Filtering and Cleaning Data",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Exploring Two Columns",
+      "name": "Exploring Two Columns",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Big Data, Crowdsourcing, and Machine Learning",
+      "name": "Big Data, Crowdsourcing, and Machine Learning",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Machine Learning and Bias",
+      "name": "Machine Learning and Bias",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Project - Tell a Data Story - Part 1",
+      "name": "Project - Tell a Data Story - Part 1",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Project - Tell a Data Story - Part 2",
+      "name": "Project - Tell a Data Story - Part 2",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "Lesson 9: Assessment Day",
+      "name": "Assessment Day",
+      "absolute_position": 9,
+      "lockable": true,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp9-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L1 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L1 SFLP 20-21"
+        ],
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L1 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L1 Metadata"
+        ],
+        "progression": "Exploring Metadata"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L1 Metadata"
+        ],
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L1 Metadata"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L1 google trends CFU"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L1 google trends CFU"
+        ],
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "U9L1 google trends CFU"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L2 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L2 SFLP 20-21"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L2 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L2 Making Bar Charts and Histograms"
+        ],
+        "progression": "Making Bar Charts and Histograms"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L2 Making Bar Charts and Histograms"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L2 Making Bar Charts and Histograms"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L2 CFU Histogram vs Bar Chart"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L2 CFU Histogram vs Bar Chart"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "U9L2 CFU Histogram vs Bar Chart"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L3 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L3 SFLP 20-21"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L3 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Cleaning"
+        ],
+        "progression": "Cleaning Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L3 Data Cleaning"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L3 Data Cleaning"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Filtering"
+        ],
+        "progression": "Filtering Data"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L3 Data Filtering"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L3 Data Filtering"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L3 CFU manually cleaning data"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L3 CFU manually cleaning data"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "U9L3 CFU manually cleaning data"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L4 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L4 SFLP 20-21"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L4 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L4 Making Crosstabs and Scatter Plots"
+        ],
+        "progression": "Crosstab and Scatter Charts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L4 Making Crosstabs and Scatter Plots"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L4 Making Crosstabs and Scatter Plots"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Which Type of Chart"
+        ],
+        "progression": "What Type of Chart?"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Which Type of Chart"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Which Type of Chart"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L4 CFU Two Column vs One"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L4 CFU Two Column vs One"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "U9L4 CFU Two Column vs One"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L6 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L6 SFLP 20-21"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L6 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L7 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L7 SFLP 20-21"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L7 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_Video_Machine_Learning"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrashDemo"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrash"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_Video_Training_Data"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_Short"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ],
+        "progression": "AI for Oceans - Machine Learning"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "Oceans_Long"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U9L6 CFU ML Bias"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U9L6 CFU ML Bias"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "U9L6 CFU ML Bias"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L8 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L8 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L8 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 1"
+        ],
+        "progression": "Data Story Workspace"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9 Data Story Day 1"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9 Data Story Day 1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L9 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L9 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L9 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 2"
+        ],
+        "progression": "Data Story Workspace"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9 Data Story Day 2"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9 Data Story Day 2"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U9L10 SFLP 20-21"
+        ],
+        "progression": "Lesson Overview"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U9L10 SFLP 20-21"
+        ],
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP U9L10 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 9 AP-Style Assessment _2020"
+        ],
+        "progression": "Unit 9 Exam"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 9 AP-Style Assessment _2020"
+        ],
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "CSP Unit 9 AP-Style Assessment _2020"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp9-2020"
+      },
+      "level_keys": [
+        "csp-post-survey-2020-markdown-with-link-to-survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L1 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L1 SFLP 20-21"
+        ],
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L1 Metadata",
+        "script_level.level_keys": [
+          "CSP U9L1 Metadata"
+        ],
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L1 google trends CFU",
+        "script_level.level_keys": [
+          "U9L1 google trends CFU"
+        ],
+        "lesson.key": "Learning From Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L2 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L2 SFLP 20-21"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L2 Making Bar Charts and Histograms",
+        "script_level.level_keys": [
+          "CSP U9L2 Making Bar Charts and Histograms"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L2 CFU Histogram vs Bar Chart",
+        "script_level.level_keys": [
+          "U9L2 CFU Histogram vs Bar Chart"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L3 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L3 SFLP 20-21"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L3 Data Cleaning",
+        "script_level.level_keys": [
+          "CSP U9L3 Data Cleaning"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L3 Data Filtering",
+        "script_level.level_keys": [
+          "CSP U9L3 Data Filtering"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L3 CFU manually cleaning data",
+        "script_level.level_keys": [
+          "U9L3 CFU manually cleaning data"
+        ],
+        "lesson.key": "Filtering and Cleaning Data",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L4 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L4 SFLP 20-21"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L4 Making Crosstabs and Scatter Plots",
+        "script_level.level_keys": [
+          "CSP U9L4 Making Crosstabs and Scatter Plots"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Which Type of Chart",
+        "script_level.level_keys": [
+          "Which Type of Chart"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L4 CFU Two Column vs One",
+        "script_level.level_keys": [
+          "U9L4 CFU Two Column vs One"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L6 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L6 SFLP 20-21"
+        ],
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L7 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L7 SFLP 20-21"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Machine_Learning",
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrashDemo",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrash",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Training_Data",
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short",
+        "script_level.level_keys": [
+          "Oceans_Short"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long",
+        "script_level.level_keys": [
+          "Oceans_Long"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U9L6 CFU ML Bias",
+        "script_level.level_keys": [
+          "U9L6 CFU ML Bias"
+        ],
+        "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L8 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L8 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9 Data Story Day 1",
+        "script_level.level_keys": [
+          "CSP U9 Data Story Day 1"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L9 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L9 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9 Data Story Day 2",
+        "script_level.level_keys": [
+          "CSP U9 Data Story Day 2"
+        ],
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U9L10 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U9L10 SFLP 20-21"
+        ],
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 9 AP-Style Assessment _2020",
+        "script_level.level_keys": [
+          "CSP Unit 9 AP-Style Assessment _2020"
+        ],
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2020-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp9-2020"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

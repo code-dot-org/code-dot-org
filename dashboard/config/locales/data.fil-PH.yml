@@ -785,10 +785,19 @@ fil:
         CSF_bb8_loops_C-F: Mga Loops kasama si BB-8
         CSF_harvester_loops_K1: Mga Loops sa Harvester
         CSF_loops_AB: Mga loop
+        hoc_dance_warmup: Dance Party - Warm Up
+        hoc_dance_congrats: Dance Party - Party On!
         csd_pair_programming: Pair programming
         csd_applab_parameters: Mga function na meron mga parameter
         csd_problem_solving_process: Ang Proseso ng Pagtuklas ng Problema
         csd_debugging: Pagdedebug
+        hoc_dance_congrats_2019: Dance Party 2019 - Party On!
+        hoc_dance_warmup_2019: Dance Party 2019 - Warm up
+        hoc_dance_events_2019: Dance Party 2019 - Mga Event
+        hoc_dance_measures_2019: Dance Party 2019 - Mga Measure
+        hoc_dance_properties_2019: Dance Party 2019 - Mga Property
+        csf_private_and_personal_information: Pribado at Personal na Impormasyon
+        csd_what_computers_are: Ano ang isang Kompyuter?
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang

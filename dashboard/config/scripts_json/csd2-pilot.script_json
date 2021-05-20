@@ -1,0 +1,3373 @@
+{
+  "script": {
+    "name": "csd2-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "exclude_csf_column_in_legend": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csd-20/unit2/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csd"
+        ]
+      ],
+      "has_verified_resources": true,
+      "curriculum_path": "https://curriculum.code.org/csd-20/unit2/{LESSON}",
+      "project_sharing": true,
+      "pilot_experiment": "csd-piloters",
+      "tts": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csd2-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd2_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Web Content and HTML"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "csd2_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Styling and CSS"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd2-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Exploring Web Pages",
+      "name": "Exploring Web Pages",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Intro to HTML",
+      "name": "Intro to HTML",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Headings",
+      "name": "Headings",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Digital Footprint",
+      "name": "Digital Footprint",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Styling Text with CSS",
+      "name": "Styling Text with CSS",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Intellectual Property",
+      "name": "Intellectual Property",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Images",
+      "name": "Images",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Websites for Expression ",
+      "name": "Websites for Expression ",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Styling Elements with CSS",
+      "name": "Styling Elements with CSS",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Project - Planning Layout and Style",
+      "name": "Project - Planning Layout and Style",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Planning Layout and Style",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Project - Building a Webpage",
+      "name": "Project - Building a Webpage",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Purpose of a  Websites",
+      "name": "Purpose of a  Websites",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Purpose of a  Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Team Problem Solving",
+      "name": "Team Problem Solving",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Sources and Research",
+      "name": "Sources and Research",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "CSS Classes",
+      "name": "CSS Classes",
+      "absolute_position": 15,
+      "lockable": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Planning a Multi-page Website",
+      "name": "Planning a Multi-page Website",
+      "absolute_position": 16,
+      "lockable": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Linking and Navigation",
+      "name": "Linking and Navigation",
+      "absolute_position": 17,
+      "lockable": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Project - Website for a Purpose",
+      "name": "Project - Website for a Purpose",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Peer Review and Final Touches",
+      "name": "Peer Review and Final Touches",
+      "absolute_position": 19,
+      "lockable": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "Post-Project Test",
+      "name": "Post-Project Test",
+      "absolute_position": 20,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "key": "CS Discoveries Post Course survey",
+      "name": "CS Discoveries Post Course survey",
+      "absolute_position": 21,
+      "lockable": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd2-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L01 TFMD_pilot"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L01 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Sample Pages"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web Sample Pages"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L02 TFMD_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L02 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Experiment with Web Lab"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU2 - Type Anything_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSDU2 - Type Anything_pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 1_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "Intro to Web Lab - Part 1_pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Inspector Warm Up_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Inspector Warm Up_pilot"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 2_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "Intro to Web Lab - Part 2_pilot"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Using HTML Tags"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 HTML Adding Paragraphs_pilot"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Using HTML Tags"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 HTML Adding Paragraphs pt 2_pilot"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Using HTML Tags"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Debug Paragraphs_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 HTML Debug Paragraphs_pilot"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L03 TFMD_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L03 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Pair Programming Video_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Pair Programming Video_pilot"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Headings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading debug"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Heading debug"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Headings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Demo_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Heading Demo_pilot"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Headings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Sizes_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Heading Sizes_pilot"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Debugging"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Debugging"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web Debugging"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Headings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Headings practice"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web Headings practice"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "assessment": true,
+      "properties": {
+        "progression": "Headings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Header Size MC_2018_2019_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Header Size MC_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "assessment": true,
+      "properties": {
+        "progression": "Headings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Test_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Heading Test_pilot"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Headings challenge"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web Headings challenge"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L04 TFMD_pilot"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L04 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Social Sleuth_2018_2019_pilot"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "Social Sleuth_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L05 TFMD_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L05 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS explore CSS_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 CSS explore CSS_pilot"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video: Intro to CSS_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "Video: Intro to CSS_pilot"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling Text"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style h1_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 text style h1_pilot"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling Text"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style h3_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 text style h3_pilot"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling Text"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style size_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 text style size_pilot"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video: Intro to CSS Part 2_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "Video: Intro to CSS Part 2_pilot"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling your Website"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add file_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 add file_pilot"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling Text"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS practice_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 CSS practice_pilot"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 10,
+      "assessment": true,
+      "properties": {
+        "progression": "Styling Text"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web CSS Assessment"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web CSS Assessment"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling Text"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS challenge_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 CSS challenge_pilot"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L06 TFMD_pilot"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L06 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L07 TFMD_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L07 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 1_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag 1_pilot"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Credit_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image Credit_pilot"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Debug_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag Debug_pilot"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image choose name"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image choose name"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 2_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag 2_pilot"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image practice_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image practice_pilot"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 8,
+      "assessment": true,
+      "properties": {
+        "progression": "Adding Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image assessment"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image assessment"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Images Challenges"
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image challenge_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Image challenge_pilot"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L08 TFMD_pilot"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L08 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Expression Exemplars_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L09 TFMD_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L09 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploring more CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style sample_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style sample_pilot"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploring more CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style bgcolor_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style bgcolor_pilot"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Layout with CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style body_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style body_pilot"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Layout with CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style float_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style float_pilot"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Layout with CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style width_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style width_pilot"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Layout with CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style practice_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style practice_pilot"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 8,
+      "assessment": true,
+      "properties": {
+        "progression": "Layout with CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add style_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 add style_pilot"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Layout with CSS"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style challenge_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 layout style challenge_pilot"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L10 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Planning Layout and Style",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L10 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L11 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L11 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project guide_2018_2019_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 project guide_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Website Project"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 upload images_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 upload images_pilot"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Website Project"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add content_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 add content_pilot"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Website Project"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 CSS_pilot"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Website Project"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project review_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 project review_pilot"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 publish video_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 publish video_pilot"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Publishing Your Website"
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project share_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 project share_pilot"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 9,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 TFMD_pilot"
+        ],
+        "lesson.key": "Purpose of a  Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L12 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot"
+        ],
+        "lesson.key": "Purpose of a  Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 Top Websites_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L13 TFMD_pilot"
+        ],
+        "lesson.key": "Team Problem Solving",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L13 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L14 TFMD_pilot"
+        ],
+        "lesson.key": "Sources and Research",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L14 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L15 TFMD_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L15 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling with Classes"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes sample_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 classes sample_pilot"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling with Classes"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes modify_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 classes modify_pilot"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Styling with Classes"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes spring_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 classes spring_pilot"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Styling with Classes"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes summer_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 classes summer_pilot"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 RGB intro_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 RGB intro_pilot"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L16 TFMD_pilot"
+        ],
+        "lesson.key": "Planning a Multi-page Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L16 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L17 TFMD_pilot"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L17 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploring Links"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 link demo_pilot"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 link demo_pilot"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Links and Navigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 making links"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 making links"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Links and Navigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 naming links"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 naming links"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Links and Navigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 nav bar"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 nav bar"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 6,
+      "assessment": true,
+      "properties": {
+        "progression": "Adding Pages"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 adding pages"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 adding pages"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Adding Pages"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 naming pages"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 naming pages"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Challenge: External Links"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 external links"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 external links"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L18 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L18 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Upload Your Images"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web upload images multi_pilot"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD web upload images multi_pilot"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Create Your Pages"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 create page_pilot"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2 create page_pilot"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Add Content"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web add html"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD web add html"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Add Style"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web add CSS"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD web add CSS"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Check Your Work"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web check"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD web check"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L19 TFMD_pilot"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD U2L19 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web incorporate feedback"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web incorporate feedback"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Development Post-Project Test_pilot"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "CSD Web Development Post-Project Test_pilot"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_pilot"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "csd-post-survey-intro-2019_pilot"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-2017-levelgroup_2018_2019_pilot"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd2-pilot"
+      },
+      "level_keys": [
+        "csd-post-survey-2017-levelgroup_2018_2019_pilot"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L01 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L01 TFMD_pilot"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Sample Pages",
+        "script_level.level_keys": [
+          "CSD Web Sample Pages"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L02 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L02 TFMD_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU2 - Type Anything_pilot",
+        "script_level.level_keys": [
+          "CSDU2 - Type Anything_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Web Lab - Part 1_pilot",
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 1_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Inspector Warm Up_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Inspector Warm Up_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Web Lab - Part 2_pilot",
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 2_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Adding Paragraphs_pilot",
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Adding Paragraphs pt 2_pilot",
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Debug Paragraphs_pilot",
+        "script_level.level_keys": [
+          "CSD U2 HTML Debug Paragraphs_pilot"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L03 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L03 TFMD_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Pair Programming Video_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Pair Programming Video_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading debug",
+        "script_level.level_keys": [
+          "CSD U2 Heading debug"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Demo_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Heading Demo_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Sizes_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Heading Sizes_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Debugging",
+        "script_level.level_keys": [
+          "CSD Web Debugging"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Headings practice",
+        "script_level.level_keys": [
+          "CSD Web Headings practice"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Header Size MC_2018_2019_pilot",
+        "script_level.level_keys": [
+          "CSD Header Size MC_2018_2019_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Test_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Heading Test_pilot"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Headings challenge",
+        "script_level.level_keys": [
+          "CSD Web Headings challenge"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L04 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L04 TFMD_pilot"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Social Sleuth_2018_2019_pilot",
+        "script_level.level_keys": [
+          "Social Sleuth_2018_2019_pilot"
+        ],
+        "lesson.key": "Digital Footprint",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L05 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L05 TFMD_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS explore CSS_pilot",
+        "script_level.level_keys": [
+          "CSD U2 CSS explore CSS_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video: Intro to CSS_pilot",
+        "script_level.level_keys": [
+          "Video: Intro to CSS_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style h1_pilot",
+        "script_level.level_keys": [
+          "CSD U2 text style h1_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style h3_pilot",
+        "script_level.level_keys": [
+          "CSD U2 text style h3_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style size_pilot",
+        "script_level.level_keys": [
+          "CSD U2 text style size_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video: Intro to CSS Part 2_pilot",
+        "script_level.level_keys": [
+          "Video: Intro to CSS Part 2_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add file_pilot",
+        "script_level.level_keys": [
+          "CSD U2 add file_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS practice_pilot",
+        "script_level.level_keys": [
+          "CSD U2 CSS practice_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web CSS Assessment",
+        "script_level.level_keys": [
+          "CSD Web CSS Assessment"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS challenge_pilot",
+        "script_level.level_keys": [
+          "CSD U2 CSS challenge_pilot"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L06 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L06 TFMD_pilot"
+        ],
+        "lesson.key": "Intellectual Property",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L07 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L07 TFMD_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag 1_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 1_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Credit_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Image Credit_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag Debug_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Debug_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image choose name",
+        "script_level.level_keys": [
+          "CSD U2 Image choose name"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag 2_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 2_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image practice_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Image practice_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image assessment",
+        "script_level.level_keys": [
+          "CSD U2 Image assessment"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image challenge_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Image challenge_pilot"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L08 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L08 TFMD_pilot"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Expression Exemplars_2018_2019_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L09 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L09 TFMD_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style sample_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style sample_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style bgcolor_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style bgcolor_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style body_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style body_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style float_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style float_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style width_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style width_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style practice_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style practice_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add style_pilot",
+        "script_level.level_keys": [
+          "CSD U2 add style_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style challenge_pilot",
+        "script_level.level_keys": [
+          "CSD U2 layout style challenge_pilot"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L10 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L10 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Planning Layout and Style",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L11 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L11 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project guide_2018_2019_pilot",
+        "script_level.level_keys": [
+          "CSD U2 project guide_2018_2019_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 upload images_pilot",
+        "script_level.level_keys": [
+          "CSD U2 upload images_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add content_pilot",
+        "script_level.level_keys": [
+          "CSD U2 add content_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS_pilot",
+        "script_level.level_keys": [
+          "CSD U2 CSS_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project review_pilot",
+        "script_level.level_keys": [
+          "CSD U2 project review_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 publish video_pilot",
+        "script_level.level_keys": [
+          "CSD U2 publish video_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project share_pilot",
+        "script_level.level_keys": [
+          "CSD U2 project share_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L12 TFMD_pilot"
+        ],
+        "lesson.key": "Purpose of a  Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Top Websites_2018_2019_pilot",
+        "script_level.level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot"
+        ],
+        "lesson.key": "Purpose of a  Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L13 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L13 TFMD_pilot"
+        ],
+        "lesson.key": "Team Problem Solving",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L14 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L14 TFMD_pilot"
+        ],
+        "lesson.key": "Sources and Research",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L15 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L15 TFMD_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes sample_pilot",
+        "script_level.level_keys": [
+          "CSD U2 classes sample_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes modify_pilot",
+        "script_level.level_keys": [
+          "CSD U2 classes modify_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes spring_pilot",
+        "script_level.level_keys": [
+          "CSD U2 classes spring_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes summer_pilot",
+        "script_level.level_keys": [
+          "CSD U2 classes summer_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 RGB intro_pilot",
+        "script_level.level_keys": [
+          "CSD U2 RGB intro_pilot"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L16 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L16 TFMD_pilot"
+        ],
+        "lesson.key": "Planning a Multi-page Website",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L17 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L17 TFMD_pilot"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 link demo_pilot",
+        "script_level.level_keys": [
+          "CSD U2 link demo_pilot"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 making links",
+        "script_level.level_keys": [
+          "CSD U2 making links"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 naming links",
+        "script_level.level_keys": [
+          "CSD U2 naming links"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 nav bar",
+        "script_level.level_keys": [
+          "CSD U2 nav bar"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 adding pages",
+        "script_level.level_keys": [
+          "CSD U2 adding pages"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 naming pages",
+        "script_level.level_keys": [
+          "CSD U2 naming pages"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 external links",
+        "script_level.level_keys": [
+          "CSD U2 external links"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L18 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L18 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web upload images multi_pilot",
+        "script_level.level_keys": [
+          "CSD web upload images multi_pilot"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 create page_pilot",
+        "script_level.level_keys": [
+          "CSD U2 create page_pilot"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web add html",
+        "script_level.level_keys": [
+          "CSD web add html"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web add CSS",
+        "script_level.level_keys": [
+          "CSD web add CSS"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web check",
+        "script_level.level_keys": [
+          "CSD web check"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L19 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U2L19 TFMD_pilot"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web incorporate feedback",
+        "script_level.level_keys": [
+          "CSD Web incorporate feedback"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Development Post-Project Test_pilot",
+        "script_level.level_keys": [
+          "CSD Web Development Post-Project Test_pilot"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-intro-2019_pilot",
+        "script_level.level_keys": [
+          "csd-post-survey-intro-2019_pilot"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd2-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-2017-levelgroup_2018_2019_pilot",
+        "script_level.level_keys": [
+          "csd-post-survey-2017-levelgroup_2018_2019_pilot"
+        ],
+        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd2-pilot"
+      }
+    }
+  ]
+}

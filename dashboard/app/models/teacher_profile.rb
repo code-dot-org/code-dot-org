@@ -19,7 +19,7 @@
 #  index_teacher_profiles_on_studio_person_id  (studio_person_id)
 #
 
-class TeacherProfile < ActiveRecord::Base
+class TeacherProfile < ApplicationRecord
   include SerializedProperties
   # teals: True if the teacher was a TEALS teacher.
   serialized_attrs %w(teals)

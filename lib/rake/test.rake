@@ -90,19 +90,11 @@ namespace :test do
     end
   end
 
-  task :ui_test_flakiness do
-    Dir.chdir(deploy_dir) do
-      flakiness_output = `./bin/test_flakiness -n 5`
-      ChatClient.log "Flakiest tests: <br/><pre>#{flakiness_output}</pre>"
-    end
-  end
-
   task :wait_for_test_server do
     RakeUtils.wait_for_url CDO.studio_url('', CDO.default_scheme)
   end
 
   task ui_live: [
-    :ui_test_flakiness,
     :wait_for_test_server,
     :ui_all
   ]
@@ -152,6 +144,7 @@ namespace :test do
         database = writer.path[1..-1]
         writer.path = ''
         opts = MysqlConsoleHelper.options(writer)
+        mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
 
         if seed_data
           File.write(seed_file, seed_data)
@@ -161,7 +154,7 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          `mysqldump #{opts} #{database}1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
+          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
           gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
           s3_client.put_object(
@@ -173,7 +166,7 @@ namespace :test do
           CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
-        cloned_data = `mysqldump #{opts} #{database}2 --skip-comments | sed '#{auto_inc}'`
+        cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
         if seed_data.equal?(cloned_data)
           CDO.log.info 'Test data not modified'
         else
@@ -218,7 +211,28 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
-  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
+  task :lib_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_lib_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task :bin_i18n_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_bin_i18n_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task ci: [
+    :shared_ci,
+    :pegasus_ci,
+    :dashboard_ci,
+    :lib_ci,
+    :bin_i18n_ci,
+    :ui_live
+  ]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
@@ -238,6 +252,11 @@ namespace :test do
   desc 'Runs lib tests.'
   task :lib do
     TestRunUtils.run_lib_tests
+  end
+
+  desc 'Runs bin/i18n tests.'
+  task :bin_i18n do
+    TestRunUtils.run_bin_i18n_tests
   end
 
   namespace :changed do
@@ -312,13 +331,21 @@ namespace :test do
       end
     end
 
+    desc 'Runs lib tests if lib might have changed from staging.'
+    task :bin_i18n do
+      run_tests_if_changed('bin_i18n', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'bin/i18n/**/*']) do
+        TestRunUtils.run_bin_i18n_tests
+      end
+    end
+
     all_tasks = [:apps,
                  # currently disabled because these tests take too long to run on circle
                  # :interpreter,
                  :dashboard,
                  :pegasus,
                  :shared,
-                 :lib]
+                 :lib,
+                 :bin_i18n]
 
     task all_but_apps: all_tasks.reject {|t| t == :apps}
 
@@ -327,7 +354,7 @@ namespace :test do
 
   task changed: ['changed:all']
 
-  task all: [:apps, :dashboard, :pegasus, :shared, :lib]
+  task all: [:apps, :dashboard, :pegasus, :shared, :lib, :bin_i18n]
 end
 task test: ['test:changed']
 

@@ -13,6 +13,7 @@ km:
         Bounce: បាល់​លោត
         Flappy: Flappy Bird
         ArtistEC: វិចិត្រករ
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: សំរឹទ្ធ
@@ -23,8 +24,31 @@ km:
         function: អនុ​គមន៍
     level:
       instructions:
+        maze_2_13: "Use the `if` block to help me decide\nwhen to turn. \\\r\n"
         maze_2_14: នេះ​ដូច​ទៅ​នឹង​ល្បែង​ប្រាជ្ញា​មុន​ដែរ ប៉ុន្តែ​អ្នក​ត្រូវ​ចងចាំ​អំពី​របៀប​ដែល​អ្នក​ប្រើ​ប្លុក
           "បើ" និង​ប្លុក "ធ្វើ​ឡើង​វិញ" ជាមួយ​គ្នា។
+        maze_2_17: "The `if/else` block checks a condition,\nand then does one thing
+          OR another. \\\r\n\\\r\nUse this new block to get me to\nthe sunflower."
+        maze_2_18: "One more practice puzzle with the `if/else`\nblock!\\\r\n\\\r\nTrace
+          it with your finger to see if you can figure it out on\nyour first try."
+        studio_c2_8: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play a \"hit\"
+          sound if he runs into Chomp? \\\r\n\\\r\nWhen you're\ndone, play the game
+          to make that happen."
+        studio_c2_9: "Can you add a block to score a point\nwhen Waddles runs into
+          Octavia (actor 3)? \\\r\nPlay the game and move Waddles\nwith the arrows
+          until you score!"
+        studio_c2_10: "Add blocks to the `when run` event\nto change the background
+          and the speed of Waddles.\\\r\n\\\r\nPlay the game and\nmove Waddles with
+          the arrows until you score."
+        studio_c3_game_4: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play
+          a \"hit\" sound if he runs into Chomp? \\\r\n\\\r\nWhen you're\ndone, play
+          the game to make that happen."
+        studio_c3_game_5: "Can you add a block to score a point\nwhen Waddles runs
+          into Octavia (actor 3)? \\\r\nPlay the game and move Waddles\nwith the arrows
+          until you score!"
+        studio_c3_game_6: "Add blocks to the `when run` event\nto change the background
+          and the speed of Waddles.\\\r\n\\\r\nPlay the game and\nmove Waddles with
+          the arrows until you score."
     video:
       name:
         function: អនុគមន៍
@@ -36,6 +60,7 @@ km:
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_loops_zombie: រង្វិល​ជុំ
         C4_conditionals: លក្ខខណ្ឌ
+        CSF_my_robotic_friends: មិត្តរ៉ូបូតរបស់ខ្ញុំ
         csp_applab_loops: រង្វិល​ជុំ
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
@@ -47,3 +72,7 @@ km:
         mc_2017_puzzle_8: Minecraft Hour of Code - មុខងារ
         mc_2017_puzzle_12: Minecraft Hour of Code - លេងដោយសេរី
         CSF_loops_AB: រង្វិល​ជុំ
+        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party

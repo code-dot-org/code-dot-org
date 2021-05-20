@@ -19,6 +19,8 @@ eu-ES:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Informatika irakaslea zara? Ikusi Informatikaren Ikaskuntzaren
     Asteko (CSEdWeek) beste baliabide batzuk</a>'
+  csedweek_banner_teachers_text: Informatika irakaslea zara? Ikusi Informatikaren
+    Ikaskuntzaren Asteko (CSEdWeek) beste baliabide batzuk
   n_have_learned_an_hoc: "<h1>Saiatu egiten</h1><h2>Kode Ordua.</h2><h3>#-k egin dute
     jada</h3>"
   anybody_can_learn: Edozeinek ikasi dezake.
@@ -26,8 +28,6 @@ eu-ES:
   petition_message: Edozein eskoletako edozein ikaslek konputazio zientziak ikasteko
     aukera izan beharko luke
   petition_sign_message: 'Ados bazaude, idatzi zure izena. Batu beste # hauek.'
-  petition_sign_message_support: 'Babesten bagaituzu, izena eman. Elkartu beste #
-    gehiagorekin.'
   petition_join_others: 'Elkartu # gehiagorekin'
   name: Izena
   email: E-posta
@@ -130,6 +130,9 @@ eu-ES:
     egin bertan. Orain gure <a href='http://studio.code.org'>-rekin jarraitu, bestelako
     ikastaroak</a> edo ikusi aukera gehiago <a href='/learn/beyond'>Ordubete baino
     gehiago ikasi</a>.
+  get_a_certificate_message_after_markdown: Ziurtagiria deskargatzeko edo inprimatzeko
+    klik egin bertan. Orain gure [rekin jarraitu, bestelako ikastaroak](http://studio.code.org)
+    edo ikusi aukera gehiago [Ordubete baino gehiago ikasi](/learn/beyond).
   thanks_for_submitting: Eskerrik asko bidaltzeagatik!
   if_you_enjoyed: Ondo pasa baduzu ikasten, gonbidatu zure lagunak saiatzeko! Mundu
     guztiak ikastea nahi dugu.
@@ -272,6 +275,7 @@ eu-ES:
   homepage_action_text_learn: Ikasten hasi
   homepage_action_text_signpetition: Sinatu eskaera
   homepage_signpetition_dropdown: Ados nago &#x25BE;
+  homepage_signpetition_dropdown_text: Ados
   homepage_diversity_pledge: Aniztasunarekin konpromisoa
   homepage_banner_text_prizes: Berriro dator Kode Ordua, abenduaren 7-13an.
   homepage_banner_link_prizes: 'Ikasketa ekimen handienaren parte izan. '
@@ -882,6 +886,7 @@ eu-ES:
   coursee-2017_gradelevel: 8 eta 12 urte bitartean
   coursee-2018_gradelevel: 8 eta 12 urte bitartean
   coursee-2019_gradelevel: 8 eta 12 urte bitartean
+  coursee-2020_gradelevel: 8 eta 12 urte bitartean
   accelerated_gradelevel: 10-18 bitarteko adina
   codeorg_platformtext: Nabigatzaile modernoak, smatphoneak, tabletak
   codeintl_platformtext: Nabigatzaile modernoak, eskuko telefonoak, tabletak
@@ -1475,12 +1480,17 @@ eu-ES:
     matematika eta zientzia gaitasunak elkarbanatzen dituzten bitartean.
   flappy_shortcode: hegoei eragin
   header_courses: Mailak
+  header_course_catalog: Ikastaroak
   header_project_gallery: Proiektuak
   header_educate_hoc: Kode Ordua
+  header_about: Code.org-i buruz
+  header_legal_privacy: Pribatutasun politika
+  header_legal_tos: Erabilera baldintzak
   user_header_label: Kaixo %{username}
   user_header_settings: Nire kontua
   user_header_logout: Amaitu saioa
   user_header_signin: Hasi saioa
+  user_header_create: Sortu
   user_header_playlab: Jolas Laborategia
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
@@ -1496,3 +1506,9 @@ eu-ES:
   hoc2018_dance_teacher_resources_tile1_button: Ikasgaiaren plana
   hoc2018_dance_teacher_resources_tile2_button: Lineaz kanpoko ekintza
   hoc2018_dance_amazon_about_future_engineer_button: Ikasi gehiago
+  footer_powered_by_aws: Amazon Web Servicesek sostengatua
+  footer_privacy_policy: Pribatutasun politika
+  footer_about: Code.org-i buruz
+  footer_donate: Diruz lagundu
+  footer_support: Laguntza
+  footer_terms: Baldintzak

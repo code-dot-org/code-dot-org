@@ -1,0 +1,74 @@
+{
+  "ka-GE": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "მოქმედებები",
+          "Brushes": "ფუნჯები",
+          "Loops": "ციკლები",
+          "Math": "მათემატიკა",
+          "Logic": "ლოგიკა",
+          "Functions": "ფუნქციები",
+          "Variables": "ცვლადები"
+        },
+        "CourseD_EOC_dance": {
+          "World": "სამყარო",
+          "Events": "მოვლენები",
+          "Numbers": "რიცხვები",
+          "Logic": "ლოგიკა"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "მოქმედებები",
+          "Events": "მოვლენები",
+          "Loops": "ციკლები",
+          "Math": "მათემატიკა",
+          "Logic": "ლოგიკა",
+          "Games/Score": "თამაშები/ქულა"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "სამყარო",
+          "Sprites": "სპრაიტები",
+          "Actions": "მოქმედებები",
+          "Events": "მოვლენები",
+          "Behaviors": "ქცევა"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "სამყარო",
+          "Sprites": "სპრაიტები",
+          "Locations": "მდებარეობები",
+          "Actions": "მოქმედებები",
+          "Events": "მოვლენები",
+          "Behaviors": "ქცევა",
+          "Variables": "ცვლადები",
+          "Math": "მათემატიკა",
+          "Logic": "ლოგიკა",
+          "Functions": "ფუნქციები",
+          "Text": "ტექსტი",
+          "Comments": "კომენტარები"
+        },
+        "outbreak_freeplay": {
+          "World": "სამყარო",
+          "Sprites": "სპრაიტები",
+          "Actions": "მოქმედებები",
+          "Behaviors": "ქცევა",
+          "Events": "მოვლენები",
+          "Locations": "მდებარეობები",
+          "Logic": "ლოგიკა",
+          "Loops": "ციკლები",
+          "Math": "მათემატიკა",
+          "Variables": "ცვლადები",
+          "Functions": "ფუნქციები",
+          "Comments": "კომენტარები"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "სამყარო",
+          "Sprites": "სპრაიტები",
+          "Actions": "მოქმედებები",
+          "Events": "მოვლენები",
+          "Logic": "ლოგიკა",
+          "Math": "მათემატიკა"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "script": {
+    "name": "flappy",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:35 UTC",
+    "seeding_key": {
+      "script.name": "flappy"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Flappy Code",
+      "name": "Flappy Code",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_1"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_2"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_3"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_4"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_5"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_6"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_7"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_8"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_8"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_9"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_9"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "flappy_11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "flappy_11"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      },
+      "level_keys": [
+        "flappy_11"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "flappy_1",
+        "script_level.level_keys": [
+          "flappy_1"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_2",
+        "script_level.level_keys": [
+          "flappy_2"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_3",
+        "script_level.level_keys": [
+          "flappy_3"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_4",
+        "script_level.level_keys": [
+          "flappy_4"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_5",
+        "script_level.level_keys": [
+          "flappy_5"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_6",
+        "script_level.level_keys": [
+          "flappy_6"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_7",
+        "script_level.level_keys": [
+          "flappy_7"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_8",
+        "script_level.level_keys": [
+          "flappy_8"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_9",
+        "script_level.level_keys": [
+          "flappy_9"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "flappy_11",
+        "script_level.level_keys": [
+          "flappy_11"
+        ],
+        "lesson.key": "Flappy Code",
+        "lesson_group.key": "",
+        "script.name": "flappy"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

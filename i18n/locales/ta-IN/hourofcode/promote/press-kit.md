@@ -1,7 +1,5 @@
 ---
-title: பிரஸ் கிட்
-layout: wide
-nav: promote_nav
+title: ப்ரஸ் கிட்
 ---
 
 {{signup_button}}
@@ -59,7 +57,7 @@ Look online to find reporter contact information. If you can't find it, call the
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-கணினிகணினி எல்லா இடங்களிலும், ஒவ்வொரு தொழிற்துறையிலும் கிரகத்தின் மீது மாறும், ஆனால் அனைத்து பள்ளிகளில் பாதிக்கும் குறைவான கணினி அறிவியல் கற்பிக்கின்றன. கம்ப்யூட்டர் மற்றும் சிறுபான்மையினர் கணினி அறிவியல் வகுப்புகளிலும், டெக்னாலஜி துறையில் கடுமையாக குறைத்துள்ளனர். நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
+கணினிகணினி எல்லா இடங்களிலும், ஒவ்வொரு தொழிற்துறையிலும் கிரகத்தின் மீது மாறும், ஆனால் அனைத்து பள்ளிகளில் பாதிக்கும் குறைவான கணினி அறிவியல் கற்பிக்கின்றன. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. நல்ல செய்தி, இதை மாற்றுவதற்கு நாங்கள் எங்கள் வழியில் இருக்கிறோம்
 
 கோட் ஹவர் உடன், கணினி அறிவியல் Google, MSN, Yahoo !, டிஸ்னி ஆகியவற்றின் முகப்புகளில் உள்ளது. இந்த இயக்கத்தை ஆதரிக்க 100 க்கும் மேற்பட்ட பங்காளிகள் ஒன்று சேர்ந்துள்ளனர். உலகில் ஒவ்வொரு ஆப்பிள் ஸ்டோர் கோடரியின் ஒரு மணி நேரமும் வழங்கப்படுகிறது. பிரச்சாரத்தின் ஒரு பகுதியாக, ஒபாமா கூட தனது முதல் கோட் குறியீட்டை எழுதினார்.
 
@@ -79,7 +77,7 @@ I look forward to being in touch. <br />
 
 #### Code.org பற்றி
 
-Code.org என்பது ஒரு 501c3 பொது லாபமல்லாதது, கணினி அறிவியல் துறையில் விரிவுபடுத்துதல் மற்றும் பெண்களின் அதிகரித்துவரும் பங்கேற்பு மற்றும் வண்ணத்தின் குறைபாடுடைய மாணவர்கள் பங்கேற்பு ஆகியவற்றிற்கு அர்ப்பணிக்கப்பட்டதாகும். Its vision is that every student in every school has the opportunity to learn computer programming. 2013 இல் தொடங்கப்பட்ட பின்னர், Code.org பிரச்சாரத்தின் மணிநேரத்தை ஒழுங்குபடுத்தியது - இன்று வரை கணினி அறிவியல் அறிமுகப்படுத்திய 100 மில்லியன் மாணவர்களை அறிமுகப்படுத்தியது - கணினி அறிவியல் விஞ்ஞான திட்டங்களை விரிவுபடுத்துவதற்காக 70 பொதுப்பள்ளி மாவட்டங்களுடன் கூட்டுசேர்ந்துள்ளது. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 இல் தொடங்கப்பட்ட பின்னர், Code.org பிரச்சாரத்தின் மணிநேரத்தை ஒழுங்குபடுத்தியது - இன்று வரை கணினி அறிவியல் அறிமுகப்படுத்திய 100 மில்லியன் மாணவர்களை அறிமுகப்படுத்தியது - கணினி அறிவியல் விஞ்ஞான திட்டங்களை விரிவுபடுத்துவதற்காக 70 பொதுப்பள்ளி மாவட்டங்களுடன் கூட்டுசேர்ந்துள்ளது. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

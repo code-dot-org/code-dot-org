@@ -1,7 +1,7 @@
 name 'AP_practice_Qs_rqb_75_CSP_5_4_1'
 right 'Line 1'
 wrong 'Line 2'
-wrong 'Line  5'
+wrong 'Line 5'
 wrong 'Line 7'
 markdown <<MARKDOWN
 A programmer wrote the following code that should simulate rolling a die 10 times and determining the number of times an even number appears.  The code below has an error.  Which line needs to be modified to correct the error?

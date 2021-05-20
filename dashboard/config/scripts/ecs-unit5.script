@@ -1,20 +1,20 @@
 professional_learning_course 'ECS Support'
 login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'ECSPD3- unit 5- welcome'
 level 'ECSPD3-u5 about'
 level 'PDECS tour'
 level 'ECSPD3-u5 plan'
 level 'ECSPD course goals'
 
-stage 'Unit 5 Overview'
+lesson 'Unit 5 Overview', display_name: 'Unit 5 Overview', has_lesson_plan: false
 level 'ECSPD3-u5 intro to u5'
 level 'CSPPD3-u5 what is data'
 level 'ECSPD3-u5 tools'
 level 'ECSPD3-u5 connections'
 
-stage 'Unit 5 lessons'
+lesson 'Unit 5 lessons', display_name: 'Unit 5 lessons', has_lesson_plan: false
 level 'ECSPD3-u5 day 1-3'
 level 'ECSPD3-u5 day 4-5'
 level 'ECSPD3-u5 day 6-7'
@@ -31,7 +31,7 @@ level 'ECSPD3-u5 day 26-27'
 level 'ECSPD3-u5 day 28-29'
 level 'ECSPD3-u5 day 30'
 
-stage 'Unit 5 Challenge'
+lesson 'Unit 5 Challenge', display_name: 'Unit 5 Challenge', has_lesson_plan: false
 level 'ECSPD3-u5 what is a challenge'
 level 'ECSPD3-u5 list of challenges'
 level 'ECS Unit 5 Challenge Selection', named: true
@@ -41,5 +41,6 @@ level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
 level 'ECS Unit 5 Challenge Submission', named: true
 
-stage 'Close & Next Steps'
+lesson 'Close & Next Steps', display_name: 'Close & Next Steps', has_lesson_plan: false
 level 'ECSPD Challenge Reflection'
+

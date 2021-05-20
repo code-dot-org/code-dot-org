@@ -14,33 +14,17 @@ const menuItemWidth = _(columnWidths)
   .reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
-const styles = {
-  version: {
-    display: 'inline-block',
-    marginTop: 4
-  },
-  dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  popUpMenuStyle: {
-    // must appear in front of .modal from application.scss
-    zIndex: 1051,
-    maxWidth: null,
-    width: menuWidth
-  }
-};
-
 /**
  * Given an array of versions, return that array with the same versions, plus
- * isRecommended and isSelected properties set on the recommented and selected version(s).
+ * isRecommended and isSelected properties set on the recommended and selected version(s).
  * Note: This method will change the content of the versions array that is passed to it.
  * @param {Array<AssignmentVersionShape>} versions
- * @param {String} locale. User's current locale.
+ * @param {String} localeEnglishName. English name of user's current locale.
  * @param {String} selectedVersionYear. Currently selected version year. Optional.
  */
 export const setRecommendedAndSelectedVersions = (
   versions,
-  locale = null,
+  localeEnglishName = null,
   selectedVersionYear = null
 ) => {
   // Sort versions by year descending.
@@ -54,11 +38,11 @@ export const setRecommendedAndSelectedVersions = (
    * Versions are sorted from most to least recent, so the first stable version will be the latest.
    */
   let recommendedVersion;
-  if (locale) {
+  if (localeEnglishName) {
     recommendedVersion = versions.find(v => {
       const localeSupported =
-        (v.locales || []).includes(locale) ||
-        locale.toLowerCase().startsWith('en');
+        (v.locales || []).includes(localeEnglishName) ||
+        localeEnglishName.toLowerCase().startsWith('en');
 
       return v.isStable && localeSupported;
     });
@@ -189,3 +173,19 @@ export default class AssignmentVersionSelector extends Component {
     );
   }
 }
+
+const styles = {
+  version: {
+    display: 'inline-block',
+    marginTop: 4
+  },
+  dropdownLabel: {
+    fontFamily: '"Gotham 5r", sans-serif'
+  },
+  popUpMenuStyle: {
+    // must appear in front of .modal from application.scss
+    zIndex: 1051,
+    maxWidth: null,
+    width: menuWidth
+  }
+};

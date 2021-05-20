@@ -1,7 +1,20 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 kk:
   errors:
     messages:
       not_saved: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
+      too_young: 'Бұл контентке жас шектеулері бар және жас оқушылар үшін қолжетімді емес'
   activerecord:
     errors:
       messages:
@@ -31,12 +44,9 @@ kk:
   cancel: "Болдырмау"
   okay: "Жақсы"
   or: "немесе"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Мұғалімді қосу:'
       placeholder: "Бөлім Коды (ABCDEF)"
-      instructions: "Мұғалімің бөліскен кодты жаз. Ол \"ABCDEF\" сияқты 6 әріптен тұратын код."
-    submit: 'Мұғалімді қосу'
   add_hint_form:
     placeholder: 'Өтінеміз, мұнда көмек сөзін қосыңыз'
     submit: 'Көмек сөзін қосу'
@@ -63,8 +73,6 @@ kk:
   auth:
     sign_in_with: '%{provider} әлеуметтік желісі арқылы кіру'
     signed_in: 'Кірдіңіз!'
-    signed_out: 'Сіз <a href="%{url}">Code.org</a> сайтынан шықтыңыз.'
-    sign_out_of: 'Сіз кіру үшін %{provider} әлеуметтік желісін пайдаландыңыз. %{provider} әлеуметтік желісінен шығу үшін <a href="%{url}">мұнда шертіңіз</a>.'
     already_signedup: 'Тіркеліп қойдыңыз ба?'
     notyet_signedup: "Сіз әлі бізге қосылмадыңыз ба?"
     google_oauth2: 'Google Аккаунт'
@@ -184,6 +192,8 @@ kk:
       sign_in_to_save: 'Прогрессті сақтау үшін тіркеліңіз'
       project_gallery: "Жобалар"
       educate_hoc: "Код жазу Сағаты"
+      legal_privacy: "Құпиялылық саясаты"
+      legal_tos: "Қызмет көрсету шарттары"
     user:
       classroom: 'Оқытушының жеке парақшасы'
       district_dashboard: 'Ақпарат панелі'
@@ -256,14 +266,12 @@ kk:
     delete_text: "Төмендегі батырманы басу, аккаунтты өшіреді."
     delete_text_teacher_note: "Есте сақтаңыз: өзіңіздің аккаунтыңызды өшіргеніңізбен, оқушыларыңыздың аккаунттары өшпейді."
     delete_confirm: 'Сіз аккаунтыңызды өшіргіңіз келеді ме?'
+    update_email: "Өзгерту"
   user_level:
     completed: 'Аяқталған'
     tried: 'Байқап көру саны'
   home:
     title: "Код Студиясы"
-    description: 'Код Студиясы Code.org бағдарламаушыларымен жасалған онлайн курстар жинағы болып табылады'
-    lines_of_code: "ОҚУШЫЛАРМЕН %{lines_count} ЖОЛ КОД ЖАЗЫЛДЫ"
-    lines_of_code_linebreak: "%{students_count} МИЛЛИОН ОҚУШЫ<br/>%{lines_count} КОД ЖОЛЫН ЖАЗДЫ"
     all_courses: "1, 2, және 3 курстарға шолу жасау"
     lesson_plans: "Оқу Жоспары"
     signin_message: "Тіркеліп қойдыңыз ба? %{link}"
@@ -293,11 +301,6 @@ kk:
     test_videos_help: 'Біздің жаңа видео ойнатқышты сыныбыңызда тексеріп көріңіз'
     try_beta_courses: 'Жаңа! Біздің K-5 оқушыларына арналған бета курсымызды байқап көріңіз'
     use_as_teacher: 'Бұл сайтты оқытушы ретінде қолдану'
-    heading_hoc2014: "<h2>Код Жазу Сағаты</h2><h1>Барлық жастағылар үшін</h1>"
-    heading_elementary: "<h2>20 сағаттық курс</h2><h1>Информатика пәні негіздерінен (барлық жастағылар үшін)</h1>"
-    heading_apps: "<h1>Барлығына</h1><h2>қызықты</h2>"
-    heading_tools: "<h2>Келесі қадамға дайынсын ба?</h2><h1>Жоғары сынып үшін құралдар</h1>"
-    heading_legacy: "<h2>Біздің жеделдетілген курстарымыз</h2><h1>Барлық жастағыларға арналған</h1>"
     your_gallery: Галерея
     no_primary_course: "Код Студиясы курсын байқап көру"
     choose_next_course: "Төмендегі Код Студиясы курсының біреуін байқап көріңіз"
@@ -439,25 +442,12 @@ kk:
       title: "Шарттар"
     widgets:
       cta: "Қалай жасауды үйрең"
-  gallery:
-    students_drew_these_with_code: "Оқушылар кодпен бірге суретін салады!"
-    students_made_these_with_code: "Оқушылар кодын жазады!"
-    picture_count: "Өткен <b>%{days}</b> күнде, оқушылар компьютерлік бағдарламаларына <b>%{count}</b> сурет салды. Әрбір бағдарламаны көру үшін суретке және скриншотқа шертіңіз."
-    activity_count: "Өткен <b>%{days}</b> күнде, оқушылар <b>%{count}</b> қосымша мен компьютерлік ойындарына сурет салды. Әрбір бағдарламаны көру үшін суретке және скриншотқа шертіңіз."
-    want_to_make_your_own: "Өзіңіз жасап көргіңіз келеді ме?"
-    more: "Көбірек &rarr;"
-    caption_by_name_age: "%{name}, жасы %{age}"
-    caption_time_ago: "%{time_ago} бұрын"
-    header: "Галерея"
-    header_playlab: "Хикаялар мен ойындар"
-    header_artist: "Өнерді кодтау"
-    report_abuse: "Құқық бұзушылық туралы хабарлау"
   landing:
-    prerelease: "Бұл курс <span class='betatext'>бета нұсқада</span>. Бұл деген курстың әлі толық жасалып бітпегенін көрсетеді және кері байланыс кезінде өзгертулер еңгізіледі."
-    prerelease_hoc2014: "Бұл сабақ <span class='betatext'>бета нұсқада</span>. Бұл сабаққа кері байланыс кезінде өзгертулер еңгізіледі.."
     report_bug: "Қате туралы хабарлау"
     support: "Көмек Сұрау"
     help_resources: "Көмек және ресурстар"
+  free_response:
+    placeholder: "Жауабыңызды мұнда еңгізіңіз"
   multi:
     wrong_title: "Дұрыс емес жауап"
     wrong_body: "Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!"
@@ -510,8 +500,6 @@ kk:
   age_interstitial:
     age: Сіздің жасыңыз
     header: Жеке парақша Ақпаратын жаңарту
-    message: "Біз өзіміздің құпиялылығымызды қорғау мақсатында тәжірибемізді көтерудеміз. Сондықтан қолданушылардан жасын көрсетуін талап етеміз.<br/>Әдеттегідей, code.org ешқашан сіз туралы ақпаратпен үшінші жақпен бөліспейді."
-    sign_out: 'Егер сіз жасыңызды көрсеткіңіз келмесе, онда <a href="%{url}">шығып кетуіңізге</a> болады.'
   terms_interstitial:
     tos: "Қызмет көрсету шарттары"
     privacy: "Құпиялылық саясаты"
@@ -528,6 +516,7 @@ kk:
     submit: "Жіберу"
     decline: "Жабу"
   zendesk_too_young_message: 'Кешіріңіз, кішкентай қолданушылар біздің көмек көрсету сайтымызға тіркеле алмайды. Сіз біздің <a href="http://support.code.org">support.code.org</a> парақшамызды тіркелместен көруіңізге болады немесе өзіңіздің ата-анаңыздан, оқутышыңыздан бізбен хабарласуын сұрасаңыз болады.'
+  zendesk_too_young_message_markdown: 'Кешіріңіз, кішкентай қолданушылар біздің көмек көрсету сайтымызға тіркеле алмайды. Сіз біздің [support.code.org](http://support.code.org) парақшамызды тіркелместен көруіңізге болады немесе өзіңіздің ата-анаңыздан, оқутышыңыздан бізбен хабарласуын сұрасаңыз болады.'
   progress:
     not_started: басталмады
     in_progress: оқу барысында
@@ -585,29 +574,10 @@ kk:
       name: 'Қабылданды'
     rejected:
       name: 'Қабылданбады'
-  flex_category:
-    required: 'Қысқаша шолу'
-    content: 'Контент'
-    practice: 'Сабақ беру Практикалары'
-    csf_digcit: 'Сандық Азаматтық'
-    csf_jigsaw: 'Бас қатырғыш'
-    csf_loops: 'Ілмек'
-    csf_events: 'Шаралар'
-    csf_binary: 'Бинарлы'
-    csf_conditionals: 'Шарттар'
-    csf_nested_loops: 'Кіріккен Циклдер'
-    csf_functions: 'Функциялар'
-    csf_variables: 'Айнымалылар'
-    csf_for_loops: 'For ілмектері'
-    csf_internet: 'Ғаламтор'
-    csp_variables: 'Айнымалылар'
-    csp_conditionals: 'Шарттар'
-    csp_functions: 'Функциялар'
-    csp_lists: 'Тізімдер'
-    csp_loops: 'Ілмек'
   hoc_download:
     instructions_headline: 'Интернет жоқ па?'
     minecraft_name: 'Minecraft Кодтау Сағаты'
+    download_in_English: 'Ағылшын тілінде жүктеу:'
   pd:
     form_labels:
       email: 'Электронды пошта'
@@ -630,5 +600,4 @@ kk:
         opt_in_no: 'Жоқ'
   cookie_banner:
     accept: 'Мен келісемін'
-  gdpr_dialog:
-    yes: 'Иә'
+  copy: 'Көшіру'

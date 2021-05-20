@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 "no":
   errors:
     messages:
@@ -15,10 +27,11 @@
     attributes:
       user:
         name: 'Visningsnavn'
-        name_example: 'Kallenavn<br/>(f.eks Kule Knut eller Tøffe Trine)'
+        name_example: 'Kallenavn (f.eks Kule Knut eller Tøffe Trine)'
         email: 'E-post'
         parent_email: 'Foreldre/foresatt epost'
         personal_email: "Personlig e-post adresse <a href=\"%{url}\"> (Klikk her hvis du ikke har en e-postadresse)</a>"
+        personal_email_markdown: "Personlig e-post adresse [(Klikk her hvis du ikke har en e-postadresse)](%{url})"
         username: 'brukernavn'
         password: 'Passord'
         password_confirmation: 'Bekreftelse på passord'
@@ -29,7 +42,9 @@
         edit_header: 'Rediger kontodetaljer'
         finish_sign_up_header: 'Fullfør oppretting av kontoen'
         finish_sign_up_subheader: 'Fyll ut for å gjøre ferdig Code.org-konto for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Fyll ut for å gjøre ferdig Code.org-konto for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med <strong>%{provider}</strong> for <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Fyll ut følgende informasjon for å fullføre opprettelsen av en Code.org konto med **%{provider}** for **%{email}**.'
         error:
           future: ikke mulig å være i framtiden
   beta: "beta"
@@ -46,13 +61,11 @@
   okay: "OK"
   or: "eller"
   heading_x_of_y: "%{heading} (side %{x} av %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Legg til en lærer:'
       placeholder: "Seksjonskode (ABCDEF)"
-      instructions: "Skriv inn koden som læreren din har gitt deg. Det er en kode med 6 bokstaver, som \"ABCDEF\"."
       instructions_short: "Angi din seksjons kode (6 tegn)"
-    submit: 'Legg til lærer'
+      submit: 'Bli med'
   add_hint_form:
     placeholder: 'Skriv inn et hint her'
     submit: 'Legg til hint'
@@ -81,8 +94,6 @@
     continue_with: 'Fortsett med %{provider}'
     sign_in_with: 'Logg inn med %{provider}'
     signed_in: 'Logget inn!'
-    signed_out: 'Du har logget ut av <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Du brukte %{provider} for å logge inn. <a href="%{url}">Trykk her</a> for å logge ut fra %{provider}.'
     already_signedup: 'Allerede registrert?'
     notyet_signedup: "Har du ikke blitt medlem ennå?"
     google_oauth2: 'Google-konto'
@@ -101,9 +112,11 @@
     student_count: '%{count} elever har allerede registrert seg.'
     teacher_count: '%{count} lærere har allerede registrert seg.'
     overview: 'Registrer deg for å følge fremdriften din eller administrere klasserommet. <a href="/">Du kan bla gjennom de ulike scenene og oppgavene</a> uten en konto, men du må registrere deg for å lagre fremgang og prosjekter.'
+    overview_markdown: 'Registrer deg for å følge fremdriften din eller administrere klasserommet. [Du kan bla gjennom de ulike scenene og oppgavene](/) uten en konto, men du må registrere deg for å lagre fremgang og prosjekter.'
     hoc_already_signed_up_heading: 'Kom i gang uten å logge inn'
     hoc_already_signed_up_content: 'Du er meldt på til Kodetimen! Dere trenger ikke å logge inn i Code Studio for å delta. For å komme i gang, <a href="https://code.org/learn">velg et oppgavesett</a> til klasserommet ditt, og del lenken med elevene.<br/><br/>Om dere likte Kodetimen og ønsker å kode mer, kan dere opprette kontoer i Code Studio og la elevene jobbe med de <a href="https://code.org/educate">lengre kursene</a>.'
     hoc_already_signed_up_content_post_hoc: 'Takk for at du arrangerer Kodetimen. For å logge inn på Code Studio, trenger du å lage et passord til kontoen din. Dette vil la deg lagre fremgangen din og styre klasserommet. Du vil ha mulighet til å tilordne kurs til elever og se fremgangen. <a href="%{studio_url}">Du kan også fortsette å bla i de forskjellige nivåene og oppgavene</a> uten å lage en konto.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Takk for at du arrangerer Kodetimen. For å logge inn på Code Studio, trenger du å lage et passord til kontoen din. Dette vil la deg lagre fremgangen din og styre klasserommet. Du vil ha mulighet til å tilordne kurs til elever og se fremgangen. [Du kan også fortsette å bla i de forskjellige nivåene og oppgavene](%{studio_url}) uten å lage en konto.'
     teacher_educator_guide: 'Se lærerveiledningen'
     title: "Registrer deg på Code.org"
     school_name: 'Skolens navn (valgfritt)'
@@ -122,12 +135,11 @@
     valid_password: "Gyldig passord!"
     invalid_password: "Passordet må bestå av minimum seks tegn"
     mismatch_password: "De to passordene du skrev inn samsvarer ikke"
-    under_13_consent: "Jeg er under 13 år og bekrefter jeg at har tillatelse fra mine foreldre eller verge til å bruke tjenestene til Code.org."
     student_consent: "Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse til å bruke tjenestene fra Code.org."
-    agree_us_website: "Jeg aksepterer å bruke et nettsted som er basert i USA."
-    my_data_to_us: "Mine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA."
-    student_terms: "Epost-adresser lagres ikke i en form som gjør at vi kan kontakte elever. Elever vil aldr motta epost fra Code.org bortsett fra oppretting av nytt passord. Se våre <a href='http://code.org/privacy'>retningslinjer for personvern</a> for mer informasjon."
-    teacher_terms: "Jeg aksepterer brukerbetingelsene til Code.org. Se våre <a href='http://code.org/privacy'>personvernbetingelser</a> for mer informasjon om personvern."
+    agree_us_data_transfer_student: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
+    agree_us_data_transfer_teacher: '**Jeg godtar at Code.org kan overføre data (inkludert personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet til USA** med formål om å hoste og behandle slike data.'
+    data_collection_us: "Jeg forstår at Code.org er et non profit-nettsted basert i USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for landet mitt."
+    visit_privacy: 'Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å finne ut mer.'
     additional_information: "Vi trenger noen flere opplysninger for å fortsette registreringen din."
     user_type_button: "Oppdater kontotype"
     user_type_label: "Kontotype"
@@ -181,7 +193,6 @@
     login: 'Logg inn'
     invalid_login: 'Feil ved innlogging, vennligst prøv igjen'
     pair_programming: 'Jeg sitter ved datamaskinen sammen med en partner'
-    student_privacy: "Les mer om hvorfor du ikke ser ditt fulle navn <a href='%{student_privacy_blog}' target='_blank'>her</a>."
   password:
     reset_form:
       title: 'Har du glemt passordet ditt?'
@@ -208,6 +219,7 @@
       %{name}
   parent_mailer:
     student_associated_subject: 'Logg inn informasjon for Code.org'
+    parent_email_added_subject: 'Velkommen til Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
     delete_teacher_subject: 'Code.org melding: Din konto er slettet'
@@ -279,6 +291,12 @@
       professional_learning: "Profesjonell opplæring"
       documentation: "Dokumentasjon"
       tutorials: "Guide"
+      app_lab_documentation: "Programmerings lab dokumentasjon"
+      app_lab_tutorials: "Programmerings lab veiledning"
+      game_lab_documentation: "Spill lab dokumentasjon"
+      game_lab_tutorials: "Spill lab veiledning"
+      sprite_lab_documentation: "Animerte figurer lab dokumentasjon"
+      sprite_lab_tutorials: "Animerte figurer lab veiledning"
       educate_overview: "Oversikt for lærere"
       educate_elementary: "Barneskole"
       educate_middle: "Ungdomsskole"
@@ -304,11 +322,14 @@
       help_us: "Hjelp oss"
       teach: "Undervis"
       about: "Om"
+      legal_privacy: "Personvern"
+      legal_tos: "Vilkår"
     user:
       classroom: 'Lærerens startside'
       district_dashboard: 'Distrikt skrivebord'
       label: 'Hei %{username}'
       stats: 'Min fremdrift'
+      my_projects: 'Mine prosjekter'
       settings: 'Min konto'
       logout: 'Logg ut'
       signin: 'Logg inn'
@@ -346,6 +367,7 @@
       starwarsblocks: 'Star Wars (blokker)'
       starwarsblocks_hour: 'Star Wars (blokker)'
       weblab: 'Weblaboratoriet'
+      view_all: 'Vis alle prosjekter...'
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: 'Din fremdrift'
@@ -389,6 +411,7 @@
     email_confirm_needed_required: 'Din e-postadresse %{email} har ikke blitt bekreftet:'
     email_confirm_wrong_email: '(Feil e-postadresse?)'
     email_resend_confirm: 'Send bekreftelse på nytt'
+    new_email_hint: '(Kontroller at du kan motta e-post til denne e-postadressen)'
     new_password_hint: "(la stå tomt hvis du ikke vil endre det)"
     current_password_hint: '(vi trenger ditt gjeldende passord for å bekrefte dine endringer)'
     delete: 'Slett kontoen'
@@ -404,7 +427,9 @@
     create_personal_login_under_13_parent_email: 'Foreldre/foresatt epost'
     create_personal_login_info: 'Hvis du vil fortsette å bruke din Code.org konto, selv etter slutten av skoleåret, kan du opprette din egen personlige pålogging nedenfor.'
     create_personal_login_terms: "Ved å opprette en personlig pålogging, godtar jeg Code.org <a href='%{terms_of_service_url}', target='_blank'> sine vilkår for bruk</a>. Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller verges tillatelse til å bruke Code.org tjenestene selv uten en lærer."
+    create_personal_login_terms_markdown: "Ved å opprette en personlig pålogging, godtar jeg Code.org [sine vilkår for bruk](%{terms_of_service_url}). Hvis jeg er under 13 år, bekrefter jeg at jeg har mine foreldre eller verges tillatelse til å bruke Code.org tjenestene selv uten en lærer."
     create_personal_login_email_note: "Merk: Epostadresser er ikke lagret i et format som tillater oss å kontakte elevene. Elevene vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre <a href='%{privacy_policy_url}', target='_blank'> retningslinjer for personvern</a> for mer informasjon."
+    create_personal_login_email_note_markdown: 'Merk: Epostadresser er ikke lagret i et format som tillater oss å kontakte elevene. Elevene vil aldri få epost fra Code.org, unntatt ved passordgjenoppretting. Se våre [retningslinjer for personvern](%{privacy_policy_url}) for mer informasjon.'
     enter_new_login_info: 'Angi ny påloggingsinformasjon'
     confirm_secret_words: 'Bekreft at det er deg ved å angi gjeldende hemmelige ord'
     parent_email_label: "Foreldre/foresatte e-post (valgfritt)"
@@ -412,14 +437,15 @@
     enter_parent_email: "Angi dine foreldre eller foresattes epostadresse (for passordgjenoppretting)"
     update: "Oppdater konto"
     account_successfully_updated: "Kontoen er oppdatert."
+    update_email: "Oppdater"
+    parent_guardian_email_label: "Foreldre/foresatt epost"
+    none: "Ingen"
+    encrypted: "kryptert"
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
   home:
     title: "Kodestudio"
-    description: 'Code Studio er hjemmet til nettbaserte kurs av Code.org'
-    lines_of_code: "%{lines_count} LINJER MED KODE SKREVET AV ELEVER"
-    lines_of_code_linebreak: "%{lines_count} LINJER KODE<br/>SKREVET AV %{students_count} MILLIONER ELEVER"
     all_courses: "Oversikt over kurs 1, 2 og 3"
     lesson_plans: "Oppgaveplaner"
     signin_message: "Allerede registrert? %{link}"
@@ -449,11 +475,6 @@
     test_videos_help: 'Test vår nye videospiller på skolen din'
     try_beta_courses: 'Nyhet! Prøv våre betakurs for barneskoleelever'
     use_as_teacher: 'Bruk denne nettsiden som lærer'
-    heading_hoc2014: "<h2>Kodetimen for</h2><h1>Alle aldre</h1>"
-    heading_elementary: "<h2>20-timers kurs for</h2><h1>Nybegynnere (alle aldre)</h1>"
-    heading_apps: "<h2>Moro for</h2><h1>Alle</h1>"
-    heading_tools: "<h2>Klar for neste trinn?</h2><h1>JavaScript-verktøy for videregående skole</h1>"
-    heading_legacy: "<h2>Våre introduksjonskurs for</h2><h1>Alle aldre</h1>"
     your_gallery: Galleri
     no_primary_course: "Prøv et kurs på Code Studio"
     choose_next_course: "Prøv et av Code Studio kursene ved å velge nedenfor"
@@ -518,6 +539,7 @@
     download: 'Last ned video'
     show_notes: 'Vis notat'
     show_video: 'Vis video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Nettleseren din støttes ikke. Vennligst oppdater til <a href='%{supported_browsers_url}', target='_blank'>en nettleser vi støtter</a>. Du må gjerne forsøke å se siden, men det kan være at noe ikke vil virke slik det er ment."
@@ -565,6 +587,8 @@
       audience: 'Minstealder 13 år'
       cta: 'Lær hvordan'
     dance:
+      title: 'Dansefest'
+    dance-2019:
       title: 'Dansefest'
     hoc:
       title: 'Klassisk labyrint'
@@ -631,23 +655,7 @@
       body: "Studenter kan utforske konsepter fra informatikk-prinsipper-kurset vårt selv ved å bruke disse digitale verktøyene. Bruk modulene for seg selv, eller lag en enkeltkonseptøkt for klassen din."
       audience: "Alder 14+"
       cta: "Lær hvordan"
-  gallery:
-    students_drew_these_with_code: "Elever tegnet disse ved å kode."
-    students_made_these_with_code: "Elever laget disse ved å kode."
-    picture_count: "I løpet av de siste <b>%{days}</b> dager har elever tegnet <b>%{count}</b> bilder ved å skrive sine egne dataprogram. Klikk på bildene for å se hvert program kjøre."
-    activity_count: "De siste <b>%{days}</b> dagene har elever laget <b>%{count}</b> apps og bilder ved å skrive sine egne programmer. Klikk på bildene og skjermbilder for å se hvert program i aksjon."
-    want_to_make_your_own: "Vil du lage din egen?"
-    how_to_save: "På siste nivå i disse opplæringene, klikker du \"Avslutt\" og \"Lagre\" for å lagre ditt arbeid i galleriet."
-    more: "Flere &rarr;"
-    caption_by_name_age: "av %{name}, %{age} år"
-    caption_time_ago: "%{time_ago} siden"
-    header: "Galleri"
-    header_playlab: "Spill-lab"
-    header_artist: "Kunstner"
-    report_abuse: "Rapporter misbruk"
   landing:
-    prerelease: "Dette kurset er i <span class='betatext'> beta</span>.  Det betyr at det ikke er den endelige versjonen av kurset, men at det blir endret når vi får tilbakemeldinger og forbedringer er laget."
-    prerelease_hoc2014: "Denne veiledningen er i <span class='betatext'> beta</span>.  Den vil kunne endres ettersom vi mottar tilbakemeldinger og gjør forbedringer."
     report_bug: "Rapporter feil"
     support: "Få hjelp"
     support_url: "//support.code.org"
@@ -655,6 +663,8 @@
     help_support: "Hjelp og støtte"
     documentation: "Dokumentasjon"
     tutorials: "Guide"
+  free_response:
+    placeholder: "Angi svaret her"
   multi:
     wrong_title: "Feil svar"
     wrong_body: "Svaret du har angitt er ikke riktig.  Prøv på nytt!"
@@ -714,19 +724,20 @@
   age_interstitial:
     age: Din alder
     header: Oppdatering av kontoinformasjon
-    message: "Vi er i ferd med å oppdatere våre erfaringer for å gi deg enda sterkere personvern. Derfor må eksisterende brukere skriver inn sin alder her. <br/>Code.org vil aldri leie ut, selge eller dele denne informasjonen med noen andre."
-    sign_out: 'Hvis du ikke ønsker å oppgi din alder, kan du <a href="%{url}"> avslutte</a>.'
   terms_interstitial:
     title: "Oppdaterte tjenestebetingelser og personvernbetingelser"
     intro_desc: "Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil <i>ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio</i>. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost."
+    intro_desc_markdown: "Vi har oppdatert våre tjenestebetingelser og personvernbetingelser, som du kan se nedenunder. Endringene gjelder fra 24 august 2016. Den største endringen: Vi vil _ikke lenger lagre epost-adressene til elevenes kontoer på Code Studio_. Dette er viktig for oss, og vi håper det setter en ny personvernstandard for elever i opplæringsteknologi. Vi har sendt deg en oppsummering av øvrige endringer via epost."
     intro_instructions: "Du vil måtte akseptere disse nye betingelsene for at elever yngre enn 13 år kan ha full tilgang på all den nyeste funksjonaliteten i Code Studio. Når du registrerer en konto for en elev under 13, vil du måtte bekrefte at skolen har foreldrenes tillatelse til å samle inn elevens personlige informasjon til bruk i skolen, herunder til undervisningsprogrammer som Code Studio."
     tos: "Vilkår"
     privacy: "Personvern"
     privacy_notice: "Personvernerklæring"
     accept_label: 'Jeg aksepterer de oppdaterte <a href="%{tos_url}" target="_blank">tjenestevilkårene</a> og<a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>.'
+    accept_label_markdown: Jeg aksepterer de oppdaterte [tjenestevilkårene](%{tos_url}) og[retningslinjer for personvern](%{privacy_url}).
     accept: "Godta"
     print: "Skriv ut"
     reminder_desc: 'Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestevilkår</a> og <a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>. Vær s. nill å les disse nøye før du aksepterer dem. Merk at våre verktøy for å undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte betingelsene aksepteres.'
+    reminder_desc_markdown: Vi har oppdatert våre [tjenestevilkår](%{tos_url}) og [retningslinjer for personvern](%{privacy_url}). Vær s. nill å les disse nøye før du aksepterer dem. Merk at våre verktøy for å undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte betingelsene aksepteres.
     review_terms: "Les våre oppdaterte betingelser"
   school_info_interstitial:
     title: "Vi ønsker å fremme kunnskap om informatikk til alle studenter - hjelp oss med å måle fremdriften!"
@@ -748,6 +759,7 @@
     submit: "Send"
     decline: "Lukk"
   zendesk_too_young_message: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom <a href="http://support.code.org"> support.code.org</a> uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
+  zendesk_too_young_message_markdown: 'Beklager, yngre brukere kan ikke logge på nettstedet for kundestøtte. Du kan bla gjennom [support.code.org](http://support.code.org) uten å logge på eller be en forelder eller lærer å kontakte oss for deg.'
   progress:
     not_started: ikke påbegynt
     in_progress: pågår
@@ -811,70 +823,15 @@
   peer_review:
     accepted:
       name: 'Godkjent'
-      description: '<strong>Ja</strong>, dette bidraget <strong>oppfyller</strong> kravene'
     rejected:
       name: 'Avvist'
-      description: '<strong>Nei</strong>, dette bidraget <strong>oppfyller ikke</strong> kravene'
     escalated:
       name: 'Eskalert'
       description: 'Jeg vil gjerne at en instruktør skal vurdere dette bidraget'
     instructor_feedback: 'Tilbakemelding fra instruktør'
     peer_feedback: 'Gi tilbakemelding'
     outdated: 'Denne tilbakemeldingen ble gitt på en tidligere versjon av bidraget'
-  flex_category:
-    required: 'Oversikt'
-    content: 'Innhold'
-    practice: 'Undervisningspraksis'
     peer_review: 'Tilbakemelding'
-    main_course: 'Hovedkurs'
-    extra_course_content: 'Ekstra kursinnhold'
-    csf_e_1: 'Oppgrader til Kurs E (Valgfritt)'
-    csf_e_2: 'Kurs E: innhold'
-    csf_f_1: 'Oppgrader til Kurs F (Valgfritt)'
-    csf_f_2: 'Kurs F: innhold'
-    csf_digcit: 'Digitalt statsborgerskap'
-    csf_jigsaw: 'Puslespill'
-    csf_loops: 'Løkker'
-    csf_events: 'Hendelser'
-    csf_binary: 'Binær'
-    csf_conditionals: 'Betingelser'
-    csf_nested_loops: 'Løkker i løkker'
-    csf_functions: 'Funksjoner'
-    csf_variables: 'Variabler'
-    csf_for_loops: 'For-løkker'
-    csf_internet: 'Internett'
-    csd1_1: 'Kapittel 1: Problemløsingsprosessen'
-    csd1_2: 'Kapittel 2: Datamaskiner og problemløsning'
-    csd2_1: 'Kapittel 1: Nettinnhold og HTML'
-    csd2_2: 'Kapittel 2: Styling og CSS'
-    csd3_1: 'Kapittel 1: Bilder og animasjoner'
-    csd3_2: 'Kapittel 2: Bygge spill'
-    csd4_1: 'Kapittel 1: Bruke sentrert design'
-    csd4_2: 'Kapittel 2: Prototyping av app'
-    csd5_1: 'Kapittel 1: Representerer informasjon'
-    csd5_2: 'Kapittel 2: Problemløsing med data'
-    csd6_1: 'Kapittel 1: Programmere hardware'
-    csd6_2: 'Kapittel 2: Bygge fysiske prototyper'
-    csp1_1: 'Kapittel 1: Representerer og formidle informasjon'
-    csp1_2: 'Kapittel 2: Finne opp Internett'
-    csp2_1: 'Kapittel 1: Kode og komprimere kompleks informasjon'
-    csp2_2: 'Kapittel 2: Manipulere og visualisere data'
-    csp3_1: 'Kapittel 1: Programmeringsspråk og algoritmer'
-    csp4_1: 'Kapittel 1: Verden av Big Data og kryptering'
-    csp5_1: 'Kapittel 1: Hendelsesdrevet programmering'
-    csp5_2: 'Kapittel 2: Programmering med datastrukturer'
-    cspSurvey: 'Undersøkelse'
-    cspAssessment: 'Vurdering av kapittel'
-    csp_ap_1: 'Kapittel 1: AP Tech-oppsett'
-    csp_ap_2: 'Kapittel 2: AP utforske ytelsesoppgave'
-    csp_ap_3: 'Kapittel 3: AP opprette ytelsesoppgave'
-    csp2_1_2018: 'Enhet 2: Digital informasjon'
-    csp_variables: 'Variabler'
-    csp_conditionals: 'Betingelser'
-    csp_functions: 'Funksjoner'
-    csp_lists: 'Lister'
-    csp_loops: 'Løkker'
-    dlp: 'Spørsmål til refleksjon'
   external_links:
     disclaimer: Ansvarsfraskrivelse
     leaving_domain: Du går nå utenfor vårt domene, til et nettsted som ikke drives av code.org.
@@ -951,6 +908,8 @@
       school_name: 'Skolens navn'
       school_city: 'Skolens poststed'
       school_country: 'Landet til skolen'
+      colombian_school_city: 'Skolens poststed'
+      colombian_school_name: 'Skolens navn'
     form_entries:
       gender:
         male: 'Mann'
@@ -984,10 +943,12 @@
         art: 'Kunst'
         other: "Annet:"
       resources:
+        khan: 'Khan akademiet'
         kodable: 'Kodbart'
         scratch: 'Scratch'
         other: "Annet:"
       robotics:
+        grok: 'Grok-læring'
         kodable: 'Kodbart'
         microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
@@ -1000,7 +961,8 @@
   courses_category: 'Alle kurs'
   cookie_banner:
     accept: 'Jeg samtykker'
-  gdpr_dialog:
-    message: 'Dine data fra bruken av dette nettstedet kan sendes til, lagres eller behandles i USA.'
-    logout: 'Logg ut'
-    yes: 'Ja'
+  page_not_found_title: "Side Ikke Funnet"
+  page_not_found_header: '404: Side Ikke Funnet'
+  page_not_found_description: "Siden du leter etter finnes ikke på denne adressen. Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden."
+  page_not_found_button: "Returner hjem"
+  copy: 'Kopier'

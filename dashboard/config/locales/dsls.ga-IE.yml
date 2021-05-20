@@ -3,337 +3,344 @@ ga-IE:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Ilroghnach
+        answers:
+        - text: "Tosaigh le cearnóg \nCuir triantán os cionn na cearnóige \nCuir triantán
+            faoin chearnóg"
+        - correct: true
+        - text: "Tosaigh le cearnóg \nCuir comhthreomharán os cionn na cearnóige \nCuir
+            triantán ar an taobh deas den chomhthreomharán"
+        - text: "Tosaigh le cearnóg \nCuir triantán faoin chearnóg \nCuir comhthreomharán
+            ar an taobh deas den triantán"
         questions:
         - text: Roghnaigh an t-algartam a dhéanfadh an pictiúr.
-        answers:
-        - text: Tosaigh le cearnóg<br/>Cuir triantán os cionn na cearnóige<br/>Cuir
-            triantán faoin chearnóg
-        - {}
-        - text: Tosaigh le cearnóg<br/>Cuir comhthreomharán os cionn na cearnóige<br/>Cuir
-            triantán ar an taobh deas den chomhthreomharán
-        - text: Tosaigh le cearnóg<br/>Cuir triantán faoin chearnóg<br/>Cuir comhthreomharán
-            ar an taobh deas den triantán
-      2-3 Algorithms Multi 2:
         title: Ilroghnach
-        content1: Tosaigh le triantán<br/>Cuir cearnóg faoin triantán<br/>Cuir triantán
-          eile faoin chearnóg
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        content1: "Tosaigh le triantán \nCuir cearnóg faoin triantán \nCuir triantán
+          eile faoin chearnóg"
         questions:
-        - text: Cén pictiúr <em>nach</em> leanann an t-algartam seo?
+        - text: Cén pictiúr _nach_ leanann an t-algartam seo?
+        title: Ilroghnach
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Big Event Match 1:
-        title: Meaitseáil
         content2: Meaitseáil na cnaipí leis na gothaí damhsa.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Meaitseáil
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Meaitseáil
         content2: Úsáid an eochair chun gach cód a mheaitseáil leis an litir cheart
         questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "**N**"
+        - text: "**O**"
+        - text: "**P**"
+        - text: "**Q**"
+        title: Meaitseáil
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Ilroghnach
         questions:
         - text: De réir rialacha an chluiche, cad é an grúpa cártaí leis an scór ceart?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: Ilroghnach
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cén chaoi a mbainfeá úsáid as lúba chun an seicheamh seo a shimpliú?
+        title: Ilroghnach
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Meaitseáil
         content1: Meaitseáil an patrún leis an gclár.
         questions:
         - {}
         - {}
         - {}
+        title: Meaitseáil
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Ilroghnach
         questions:
         - text: Cén clár a dhéanfadh an pictiúr seo?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Ilroghnach
       2-3 Maze Match 2:
-        title: 'Cathair Ghríobháin: Meaitseáil'
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Meaitseáil na dúshláin leis na blocanna
-        pre_title: Treoracha
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 'Cathair Ghríobháin: Meaitseáil'
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Cé hiad na blocanna a chabhrófar liom an mhuc a bhaint amach?
         title: 'Cathair Ghríobháin: Ilroghnach'
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Ilroghnach
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: Ilroghnach
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Cad é an pictiúr+cód *nach bhfuil* botún ann?
+        title: Ilroghnach
+      2-3 artist debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 artist debug multi 1:
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 artist functions multi 1:
-        title: 'Ealaíontóir: Feidhmeanna: Ilroghnach a haon'
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Roghnaigh na blocanna cearta chun an pictiúr seo a tharraingt, ag
             baint úsáid as na feidhmeanna seo
+        title: 'Ealaíontóir: Feidhmeanna: Ilroghnach a haon'
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: Meaitseáil an lúb leis an gcruth
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: 'Ealaíontóir: Lúba: Ilroghnach'
         questions:
         - text: Cén cruth a dhéanfadh an lúb seo?
+        title: 'Ealaíontóir: Lúba: Ilroghnach'
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: 'Ealaíontóir: Lúba: Ilroghnach'
+        - correct: true
         questions:
         - text: Cén cruth a dhéanfadh an clár seo?
+        title: 'Ealaíontóir: Lúba: Ilroghnach'
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: 'Ealaíontóir: Meaitseáil'
         content1: Meaitseáil an cruth leis na blocanna a chríochnódh é.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 'Ealaíontóir: Meaitseáil'
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Cén chomparáid atá fíor?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Roghnaigh na blocanna is fearr.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: 'Beach: Lúba: Ilroghnach a haon'
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cad iad na blocanna a bhaileodh an neachtar go léir?
+        title: 'Beach: Lúba: Ilroghnach a haon'
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: 'Cathair Ghríobháin: Meaitseáil a haon'
         content1: Meaitseáil na dúshláin leis na blocanna
         questions:
         - {}
         - {}
         - {}
+        title: 'Cathair Ghríobháin: Meaitseáil a haon'
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: 'Cathair Ghríobháin: Ilroghnach a haon'
         questions:
         - text: Cad é an clár ceart?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Cathair Ghríobháin: Ilroghnach a haon'
       4-5 Algorithms Match 1:
-        title: Meaitseáil
+        answers:
+        - text: "**Socraigh scór Imreoir 1 go 0**"
+        - text: "**Rollann Imreoir 1 dísle**"
+        - text: "**Cuir rolladh Imreoir 1 leis an scór iomlán**"
+        - text: "**Cuir scóir na n-imreoirí i gcomparáid lena chéile chun buaiteoir
+            a fháil**"
         content1: Cuir na céimeanna sa gcluiche Díslí san ord ba chóir go ndéanfaí
           san algartam iad.
         questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Socraigh scór Imreoir 1 go 0</h4>"
-        - text: "<h4>Rollann Imreoir 1 dísle</h4>"
-        - text: "<h4>Cuir rolladh Imreoir 1 leis an scór iomlán</h4>"
-        - text: "<h4>Cuir scóir na n-imreoirí i gcomparáid lena chéile chun buaiteoir
-            a fháil</h4>"
+        - text: "**1)**"
+        - text: "**2)**"
+        - text: "**3)**"
+        - text: "**4)**"
+        title: Meaitseáil
       4-5 Algorithms Multi 1:
-        title: Ilroghnach
-        questions:
-        - text: Cad é an tasc is deacra le cur síos a dhéanamh air mar algartam?
         answers:
         - text: Do chuid fiacla a scuabadh
         - text: Brioscaí a bhácáil
         - text: Siopadóireacht ó liosta
         - text: Banana
+          correct: true
+        questions:
+        - text: Cad é an tasc is deacra le cur síos a dhéanamh air mar algartam?
+        title: Ilroghnach
       4-5 Computational Thinking Match 1:
-        title: Meaitseáil
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Rinneadh píosaí beaga de gach ceann de na feithiclí seo. Meaitseáil
           gach feithicil lena liosta píosaí.
         questions:
-        - text: "<h3>Rothaí/taobh: 2<br/>Fuinneoga/taobh: 0</h3>"
-        - text: "<h3>Rothaí/taobh: 2<br/>Fuinneoga/taobh: 1</h3>"
-        - text: "<h3>Rothaí/taobh: 2<br/>Fuinneoga/taobh: 6</h3>"
-        - text: "<h3>Rothaí/taobh: 3<br/>Fuinneoga/taobh: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "**Rothaí/taobh: 2** \n**Fuinneoga/taobh: 0**"
+        - text: "**Rothaí/taobh: 2** \n**Fuinneoga/taobh: 1**"
+        - text: "**Rothaí/taobh: 2** \n**Fuinneoga/taobh: 6**"
+        - text: "**Rothaí/taobh: 3** \n**Fuinneoga/taobh: 2**"
+        title: Meaitseáil
       4-5 Computational Thinking Multi 1:
-        title: Ilroghnach
-        questions:
-        - text: Is baile mór é Cathair na Gaillimhe.<br/>Is baile meánmhéide é Cathair
-            na Mart.<br/>Is baile beag é Gleann Cholm Cille.
         answers:
         - text: _____ _____ _____ é Cathair na Gaillimhe.
         - text: Is baile _____ é _____.
+          correct: true
         - text: Is _____ é _____ _____.
         - text: Is baile _____ é Cathair na Mart.
-      4-5 Crowdsourcing Multi 1:
-        title: Ilroghnach
         questions:
-        - text: Cén pictiúr a thaispeánann sluafhoinsiú?
+        - text: "Is baile mór é Cathair na Gaillimhe.  \nIs baile meánmhéide é Cathair
+            na Mart  \nIs baile beag é Gleann Cholm Cille."
+        title: Ilroghnach
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
-        title: Ilroghnach
+        - correct: true
         questions:
-        - text: Cad é an tasc is oiriúnaí don sluafhoinsiú?
+        - text: Cén pictiúr a thugann an léiriú is fearr ar shluafhoinsiú?
+        title: Ilroghnach
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Do sheomra leapa a ghlanadh
+          correct: true
         - text: Do mhilseog a ithe
         - text: Do ghruaig a scuabadh
         - text: D'aghaidh a ní
-      4-5 Digital Footprint Multi 1:
-        title: Ilroghnach
         questions:
-        - text: Cén t-eolas is féidir leat comhroinnt go poiblí ar an Idirlíon?
+        - text: Cad é an tasc is oiriúnaí don sluafhoinsiú?
+        title: Ilroghnach
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Do bhreithlá
         - text: An bia is ansa leat
+          correct: true
         - text: Do sheoladh baile
         - text: Cárta creidmheasa do thuismitheoirí
-      4-5 Internet Multi 1:
+        questions:
+        - text: Cén t-eolas is féidir leat comhroinnt go poiblí ar an Idirlíon?
         title: Ilroghnach
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Dá ndéanfá iarracht logáil isteach i code.org, cad é an seoladh IP
             is dóichí a dtreoródh DNS chuige thú?
+        title: Ilroghnach
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: Ilroghnach
         questions:
         - text: Má threoraíonn DNS chuig leathanach ag seoladh IP 100.42.50.110 thú,
             cén suíomh Gréasáin é sin?
+        title: Ilroghnach
+      4-5 Songwriting Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Songwriting Multi 1:
-        title: Ilroghnach
         questions:
         - {}
+        title: Ilroghnach
+      4-5 Suncatchers Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Suncatchers Match 1:
-        title: Meaitseáil
         content1: Meaitseáil gach clár leis an bhfocal a dhéanann sé, ag baint úsáid
           as na scileanna ag an mbarr.
         questions:
@@ -341,1328 +348,1729 @@ ga-IE:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Meaitseáil
       4-5 Suncatchers Multi 1:
-        title: Ilroghnach
-        questions:
-        - text: Cad é an clár <em>nach ndéanann</em> an seicheamh céanna a dhéanann
-            Clár 1?
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
+        questions:
+        - text: Cad é an clár _nach ndéanann_ an seicheamh céanna a dhéanann Clár
+            1?
+        title: Ilroghnach
       4-5 artist loops multi 1:
-        title: 'Ealaíontóir: Lúba: Ilroghnach'
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Cad iad na blocanna a dhéanfadh an patrún seo?
+        title: 'Ealaíontóir: Lúba: Ilroghnach'
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: 'Ealaíontóir: Ilroghnach'
         questions:
         - text: Cad iad na blocanna a dhéanfadh dronuilleog le peiriméadar 100?
+        title: 'Ealaíontóir: Ilroghnach'
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: 'Ealaíontóir: Ilroghnach'
         questions:
         - text: Cé acu an pictiúr siméadrach?
+        title: 'Ealaíontóir: Ilroghnach'
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: 'Beach: Coinníollacha: Ilroghnach'
         questions:
         - text: Roghnaigh na blocanna is fearr.
+        title: 'Beach: Coinníollacha: Ilroghnach'
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: 'Beach: Dífhabhtú: Ilroghnach'
         questions:
         - text: Cad é an fheidhm cheart?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Beach: Dífhabhtú: Ilroghnach'
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Cé acu blocanna a réiteodh an dúshlán?
         title: 'Beach: Lúba: Ilroghnach'
-        questions:
-        - text: Cé acu blocanna a réiteodh an dúshlán?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Cé acu blocanna a réiteodh an dúshlán?
         title: 'Cathair Ghríobháin: Coinníollacha: Ilroghnach'
-        questions:
-        - text: Cé acu blocanna a réiteodh an dúshlán?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: 'Cathair Ghríobháin: Meaitseáil'
-        content1: Meaitseáil na dúshláin leis na blocanna
-        pre_title: Treoracha
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Meaitseáil na dúshláin leis na blocanna
+        questions:
+        - {}
+        - {}
+        - {}
+        title: 'Cathair Ghríobháin: Meaitseáil'
       4-5 maze multi 1:
-        title: 'Cathair Ghríobháin: Ilroghnach'
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cé acu blocanna a réiteodh an dúshlán?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      Begin planning your project:
-        title: teideal
+        title: 'Cathair Ghríobháin: Ilroghnach'
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      CSD U2 Design Project:
-        title: teideal
-      CSD U2 Design Project_2018:
-        title: teideal
-      CSD U2 Design Project_2018_2019:
-        title: teideal
-      CSD U2 L2 Overview:
-        title: teideal
-      CSD U2 L3 Overview:
-        title: teideal
-      CSD U2 L4 Overview:
-        title: teideal
-      CSD U2 L5 Overview:
-        title: teideal
-      CSD U2 L6 Overview:
-        title: teideal
-      CSD U2 expand project:
-        title: teideal
-      CSD U2 expand project_2018:
-        title: teideal
-      CSD U2 expand project_2018_2019:
-        title: teideal
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: teideal
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: teideal
       CSD U3 Boolean MC_2018:
-        title: teideal
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: teideal
       CSD U3 Boolean MC_2018_2019:
-        title: teideal
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: teideal
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 combining rep:
-        title: teideal
-      CSD U3 combining rep_2018:
-        title: teideal
-      CSD U3 combining rep_2018_2019:
-        title: teideal
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: teideal
-      CSD U5 Encryption 1_2018:
-        title: teideal
-      CSD U5 Encryption 1_2018_2019:
-        title: teideal
-      CSD U5 L13 SFLP Interpreting Data:
-        title: teideal
-      CSD U5 data visualization:
-        title: teideal
-      CSD U5 data visualization_2018:
-        title: teideal
-      CSD U5 data visualization_2018_2019:
-        title: teideal
-      CSD U5 student record:
-        title: teideal
-      CSD U5 student record_2018:
-        title: teideal
-      CSD U5 student record_2018_2019:
-        title: teideal
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: Réamh-mheas
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      Internet Simulator Setup 2:
-        title: teideal
+        title: Réamh-mheas
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Réamh-mheas
+      Dance_Party_extras_intro:
+        markdown: |
+          # Lean ort ag damhsa!
+
+          Anois, cruthóidh tú tionscadal de do chuid féin. Níl aon dúshláin anseo, ina áit sin, gheobhaidh tú tionscadail éagsúla a thaispeánann duit conas is féidir leat cóisirí damhsa níos casta a chruthú.
+
+          Is féidir leat na leibhéil seo a dhéanamh _in ord ar bith_. Léim thart le fáil amach cén chaoi a ndearnadh rud éigin i leibhéal eile, nó cuir coincheapa ó leibhéil éagsúla le chéile. Bain triail as gach ceann acu, roghnaigh an ceann is ansa leat, agus caith d'am ag obair chun an ceann sin a chur in oiriúint duit féin.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Ar Aghaidh</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Tagaimis le Chéile
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Cá ndeachaigh siad?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Foirne Damhsa
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Ceathrúna Nóta
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Dord, Meán-Raon, Tribil
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Níos Sciobtha, Níos Moille
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Lean ort ag damhsa!
+
+          Anois, cruthóidh tú tionscadal de do chuid féin. Níl aon dúshláin anseo, ina áit sin, gheobhaidh tú tionscadail éagsúla a thaispeánann duit conas is féidir leat cóisirí damhsa níos casta a chruthú.
+
+          Is féidir leat na leibhéil seo a dhéanamh _in ord ar bith_. Léim thart le fáil amach cén chaoi a ndearnadh rud éigin i leibhéal eile, nó cuir coincheapa ó leibhéil éagsúla le chéile. Bain triail as gach ceann acu, roghnaigh an ceann is ansa leat, agus caith d'am ag obair chun an ceann sin a chur in oiriúint duit féin.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Ar Aghaidh</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Anonn is Anall
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Tuilleadh Cnaipí
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Tagaimis le Chéile
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Cá ndeachaigh siad?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Foirne Damhsa
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ceathrúna Nóta
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Dord, Meán-Raon, Tribil
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Níos Sciobtha, Níos Moille
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       K-1 Artist 1 Multi 1:
-        title: Ilroghnach
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Cé acu blocanna a réiteodh an dúshlán seo?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Ilroghnach
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cé acu blocanna a tharraingeodh an chearnóg?
+        title: Ilroghnach
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Meaitseáil
         content2: Meaitseáil na cruthanna bunaithe ar a gcineál.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Ilroghnach
-        questions:
-        - text: Cé mhéad neachtar?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Ilroghnach
-        questions:
-        - text: Cé mhéad neachtar?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Meaitseáil
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Cé mhéad neachtar é seo?
+        title: Ilroghnach
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Cé mhéad neachtar é seo?
+        title: Ilroghnach
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Meaitseáil na blocanna
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Meaitseáil
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Meaitseáil
         content2: Meaitseáil na cnaipí leis na gothaí damhsa.
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Meaitseáil
       K-1 Digital Footprint Multi 1:
-        title: Ilroghnach
-        questions:
-        - text: Cad é an t-ainmhí a bhfuil an lorg digiteach <strong>is contúirtí</strong>
-            aige?
         answers:
         - {}
         - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
+        - correct: true
+        questions:
+        - text: Cad é an t-ainmhí a bhfuil an lorg digiteach **is contúirtí** aige?
         title: Ilroghnach
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Cén chaoi a mbainfeá úsáid as lúba chun an seicheamh seo a shimpliú?
+        title: Ilroghnach
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Ilroghnach
         questions:
         - text: Cén tsaighead a threoródh Flurb chuig an gciste?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Ilroghnach
       K-1 Keep it Private Multi 1:
-        title: Ilroghnach
-        questions:
-        - text: Cén t-eolas <strong>nár chóir duit</strong> comhroinnt ar líne?
         answers:
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
+        questions:
+        - text: Cén t-eolas **nár chóir duit** comhroinnt ar líne?
         title: Ilroghnach
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cad é an bloc deireanach?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Ilroghnach
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Cén bloc "athdhéan" a dhéanfadh an patrún seo?
+        title: Ilroghnach
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: Ilroghnach
+        - correct: true
         questions:
         - text: Roghnaigh an bloc "athdhéan" ceart.
+        title: Ilroghnach
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Meaitseáil
+        - {}
         content2: Meaitseáil na dúshláin leis na blocanna
-        pre_title: Treoracha
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Meaitseáil
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Cathair Ghríobháin
         questions:
         - text: Cad é an freagra a réiteodh an leibhéal seo?
+        title: Cathair Ghríobháin
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: Ilroghnach
         questions:
         - text: Cén t-algartam a threoródh Flurb chuig na bláthanna?
+        title: Ilroghnach
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Ilroghnach
+        - correct: true
         questions:
         - text: Cén chéim a chuirfeá ag tús an algartaim?
+        title: Ilroghnach
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: Ilroghnach
         questions:
         - text: Cén chéim a chuirfeá in áit an chomhartha ceiste?
+        title: Ilroghnach
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: Ilroghnach
         questions:
         - text: Cad iad na blocanna a litreodh "MOVE"?
+        title: Ilroghnach
+      K-1 Word Search Multi 3:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 3:
-        title: Ilroghnach
         questions:
         - text: Cén focal a litreodh na blocanna seo?
-        answers:
-        - {}
-        - {}
-        - {}
-      Multi-Screen Apps:
-        title: teideal
+        title: Ilroghnach
       New Challenge Introduction:
-        title: teideal
-      OPD-K5 Stage3aGo:
-        title: teideal
-      Prepare for your presentation:
-        title: teideal
+        content1: cur síos anseo
+        markdown: "### Dúshlán Nua: Sifear Ionadaithe Randamaigh a Bhriseadh... le
+          cúnamh ó ghiuirléid nua\n\nCéard a tharlódh dá ndéanfaimis mapáil ó gach
+          litir den aibítir go dtí litir randamach, in áit aistriú simplí? Tugtar
+          **sifear ionadaithe randamaigh** air seo.\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nAnois,
+          caithfidh tú dul i ngleic le sifear a cuireadh i bhfeidhm le **hionadú randamach**
+          sa chaoi seo.  \n\n\n\nTá sé i bhfad níos deacra sifear den sórt seo a bhriseadh,
+          agus tá uirlis níos cumhachtaí ag teastáil. Dá bharr sin...\n\nNuair a chliceálfaidh
+          tú Ar Aghaidh, feicfidh tú **leagan nua níos cumhachtaí den uirlis chriptithe**
+          a bhfuil mórán gnéithe nua inti.\n\nAch is beagán den dúrún é cad a dhéanann
+          sé go díreach!  \n\n### An Dúshlán Romhatsa:\n\n * Oibriú amach cad a dhéanann
+          an leagan nua seo den uirlis\n * Cén t-eolas a thaispeánann sé duit?\n *
+          Cad is féidir leat a dhéanamh leis an uirlis?\n * Mar is gnáth, ní féidir
+          leat an uirlis a bhriseadh. Mar sin, breathnaigh thart agus cliceáil ar
+          rudaí.\n * Má éiríonn leat an uirlis a thuiscint, b'fhéidir go bhféadfá
+          teachtaireacht a criptíodh le hionadú randamach a léamh.\n \n### Leid\n\n*
+          An raibh a fhios agat gurb é **E** an litir is coitianta i mBéarla?\n\n###
+          Athchruinniú agus Díospóireacht\n Tar éis duit tréimhse a chaitheamh ag
+          imirt leis an uirlis, ba chóir duit suí síos le duine nó daoine eile - páirtnéir,
+          grúpa beag, rang iomlán - agus cúrsaí a phlé. Bí cinnte go dtuigeann tú
+          an uirlis agus na bealaí éagsúla í a úsáid.\n\n\n"
+      'Technique: Frequency Analysis':
+        content1: cur síos anseo
+      Terminology Recap:
+        content1: cur síos anseo
+        markdown: "# Sos agus Athbhreithniú\n\nTá sé an-éasca an **sifear Chaesair**
+          a bhriseadh, go háirithe le cúnamh ríomhaireachta. Anois ó tá taithí agat
+          ar shifir aistrithe a bhriseadh (an-éasca, huth?), bainimis triail as rud
+          éigin níos dúshlánaí.\n\n**Athbhreithniú ar théarmaí:**\n\n* **Criptiú**
+          - próiseas a athscríobhann teachtaireachtaí i gcód rúnda sa chaoi nach mbeadh
+          ach daoine \"údaraithe\" in ann iad a léamh\n* **Díchriptiú** - próiseas
+          a scaoileann an cód chun an buntéacs a fháil ó theachtaireacht chriptithe\n*
+          **Sifear** - téarma ginearálta do theicníc (nó algartam) a dhéanann criptiú\n*
+          **Sifear Chaesair** - algartam criptithe a aistríonn an aibítir trí líon
+          áirithe litreacha\n* **Criptiú a bhriseadh** - nuair a dhéantar iarracht
+          teachtaireacht rúnda a léamh *gan* eolas ar mhionsonraí an tsifir \n\n\nCliceáil
+          Ar Aghaidh chun **an chéad dúshlán eile** a fheiceáil...\n\n \n"
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Mícheart
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Mícheart
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Mícheart
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Mícheart
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Níl a fhios agam
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Níl a fhios agam
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Níl a fhios agam
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
+        - correct: true
+        - text: Níl a fhios agam
+        questions:
         - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test:
+        title: 'Scrúdú Iarthionscadail: Ríomhairí agus Réiteach Fadhbanna'
+      outbreak_freeplay_choice:
+        display_name: Saorimirt

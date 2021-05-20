@@ -1,7 +1,5 @@
 ---
 title: این مفهوم را گسترش دهید
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -10,13 +8,13 @@ nav: promote_nav
 
 ## ۱. این مفهوم را گسترش دهید
 
-Tell your friends about the **#HourOfCode**!
+به دوستان خود درباره **#ساعت‌کدنویسی** بگویید!
 
 {{ promote/share_buttons }}
 
 ## 2. از مدرسه خود بخواهید که ساعت کدنویسی را پیشنهاد دهد
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+این ایمیل را به مدیر مدرسه بفرسیتد و تمام کلاس های مدرسه را به این چالش دغوت کنید که ثبت نام کنند.
 
 ## 3. از کارفرمای خود بخواهید که مشارکت کند
 
@@ -24,7 +22,7 @@ Tell your friends about the **#HourOfCode**!
 
 ## ساعت کدنویسی را در جامعه خود تبلیغ کنید
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. از این پوسترها، بنرها، استیکر ها و ویدیو ها غیره در رویداد خودتان استفاده کنید.
 
 ## از یک مقام منتخب محلی بخواهید از ساعت کدنویسی حمایت کند
 

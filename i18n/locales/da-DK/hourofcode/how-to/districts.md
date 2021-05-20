@@ -1,10 +1,8 @@
 ---
 title: Hour of Code vejledning for kommuner (skoledistrikter)
-layout: wide
-nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How to involve your entire school district
 
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Få alle skoler til at deltage, alle elever til at lære!
 
-### 1. Recruit local schools
+### 1. Rekrutter lokale skoler
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 
@@ -41,4 +39,4 @@ The Hour of Code is just the first step on a journey to learn more about how tec
 - Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
 - [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
 
-{{ signup_button }}
+{{ tilmeld_knap }}

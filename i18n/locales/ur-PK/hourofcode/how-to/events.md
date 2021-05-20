@@ -1,7 +1,5 @@
 ---
 title: آور-آف-کوڈ ایونٹ ھاؤ-ٹو
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **دیگر ایونٹ کے خیالات:**: 
+- **ایونٹس بنانے کے لئے مزید افکار**: 
     - کمپیوٹر سائنس سے متعلق اس کے کام پر گفتگو کرنے کے لئے مقامی صنعت کے رہنما کو مدعو کریں.
     - ایک مقامی سیاستدان کو مدعو کریں اور طلباء کو اس کے بارے میں سکھاو سکیں.
     - کیا طالب علموں کا ایک گروپ غیر فعال شدہ سرگرمی کا مظاہرہ کرتا ہے.

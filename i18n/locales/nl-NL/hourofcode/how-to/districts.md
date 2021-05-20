@@ -1,7 +1,5 @@
 ---
 title: '''Hour of Code''-Handleiding voor Gemeenten'
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Zorg er voor dat iedere school deelneemt en elke leerling leert!
 
-### 1. Recruit local schools
+### 1. Lokale scholen werven 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

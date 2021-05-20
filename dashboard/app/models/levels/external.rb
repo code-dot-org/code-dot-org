@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -27,6 +27,10 @@ class External < DSLDefined
   # This string gets replaced with the user's id in markdown.
   USER_ID_REPLACE_STRING = '<user_id/>'.freeze
 
+  serialized_attrs %w(
+    associated_blocks
+  )
+
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?
     properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
@@ -37,10 +41,10 @@ class External < DSLDefined
   end
 
   def dsl_default
-    <<-TEXT.strip_heredoc.chomp
-    name '#{name || 'unique level name here'}'
-    title 'title'
-    description 'description here'
+    <<~TEXT
+      name '#{name || 'unique level name here'}'
+      title 'title'
+      description 'description here'
     TEXT
   end
 
@@ -58,5 +62,21 @@ class External < DSLDefined
     user_id = user.try(:id).to_s
     localized_markdown = localized_property('markdown')
     return localized_markdown.gsub(USER_ID_REPLACE_STRING, user_id)
+  end
+
+  def associated_blocks
+    properties['associated_blocks']
+  end
+
+  def self.possible_associated_blocks
+    %w(bounce flappy jigsaw maze studio turtle)
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        markdown: localized_property('markdown')
+      }
+    )
   end
 end

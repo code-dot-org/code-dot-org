@@ -1,0 +1,29 @@
+name 'U5L7 CFU Loops Psuedocode'
+editor_experiment ''
+title 'AP Pseudocode: Loops'
+description ''
+wrong '"1 and 2 and 3"'
+right '"and 1 and 2 and 3"'
+wrong '"0 and 1 and 2"'
+wrong '"and 0 and 1 and 2"'
+
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how loops questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+**Note:** The `REPEAT UNITL()` block is similar to a `while()` loop, but there are a few differences. In a `while()` loop, the loop continues as long as the condition is `true`. `REPEAT UNTIL()` continues  as long as the condition is `false`. It ends when the condition is `true`. The condition check comes first - this means for `REPEAT UNTIL()` if the condition is `true`, the loop will never run. 
+
+![](https://images.code.org/546dcc1f00d148623c4d83970db8ea28-image-1571438398722.34.10 PM.png)
+
+![](https://images.code.org/c058dc313e4c0825e6c552785811a51a-image-1571438454943.40.45 PM.png)
+
+![](https://images.code.org/fe94594a924a02d81675417220c2845e-image-1571438747745.45.38 PM.png)
+
+## Practice Question
+
+What will be displayed after this code segment is run?
+
+![](https://images.code.org/084b890596e3822aeffa7e3111e6b853-image-1571438378113.39.26 PM.png)
+MARKDOWN

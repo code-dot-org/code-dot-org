@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -8,40 +7,16 @@ import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import PercentAnsweredCell from './PercentAnsweredCell';
-import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
-import {setQuestionIndex} from './sectionAssessmentsRedux';
+import MultipleChoiceSurveyQuestionDialog from './MultipleChoiceSurveyQuestionDialog';
+import {multipleChoiceDataPropType} from './assessmentDataShapes';
 
 export const COLUMNS = {
   QUESTION: 0
 };
 
-const ANSWER_COLUMN_WIDTH = 70;
-const PADDING = 20;
-
-const styles = {
-  answerColumnHeader: {
-    width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
-  },
-  answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH,
-    padding: 0,
-    height: 40
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  },
-  notAnsweredCell: {
-    padding: 0,
-    height: 40
-  },
-  link: {
-    color: color.teal
-  }
-};
+const ANSWER_COLUMN_WIDTH = 40;
+const MIN_ROW_HEIGHT = 35;
 
 const NOT_ANSWERED = 'notAnswered';
 
@@ -51,12 +26,13 @@ const answerColumnsFormatter = (
 ) => {
   const cell = rowData.answers[columnIndex - 1];
 
-  let percentValue = 0;
+  // Default value for questions that don't include this column
+  let percentValue = -1;
 
   if (property === NOT_ANSWERED) {
     percentValue = rowData.notAnswered;
-  } else {
-    percentValue = cell && cell.percentAnswered;
+  } else if (cell) {
+    percentValue = cell.percentAnswered;
   }
 
   return (
@@ -64,21 +40,11 @@ const answerColumnsFormatter = (
       id={rowData.id}
       percentValue={percentValue}
       isSurvey={true}
+      mainLayoutStyle={styles.answerColumnCellContent}
+      valueLayoutStyle={{}}
     />
   );
 };
-
-const answerDataPropType = PropTypes.shape({
-  multipleChoiceOption: PropTypes.string,
-  percentAnswered: PropTypes.number
-});
-
-export const multipleChoiceSurveyDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  question: PropTypes.string.isRequired,
-  answers: PropTypes.arrayOf(answerDataPropType),
-  notAnswered: PropTypes.number.isRequired
-});
 
 /**
  * A single table that shows students' responses to each multiple choice question for a survey.
@@ -87,18 +53,15 @@ export const multipleChoiceSurveyDataPropType = PropTypes.shape({
  */
 class MultipleChoiceSurveyOverviewTable extends Component {
   static propTypes = {
-    multipleChoiceSurveyData: PropTypes.arrayOf(
-      multipleChoiceSurveyDataPropType
-    ),
-    openDialog: PropTypes.func.isRequired,
-    setQuestionIndex: PropTypes.func.isRequired
+    multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceDataPropType)
   };
 
   state = {
     [COLUMNS.QUESTION]: {
       direction: 'desc',
       position: 0
-    }
+    },
+    selectedQuestionIndex: -1
   };
 
   getSortingColumns = () => {
@@ -120,10 +83,9 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     });
   };
 
-  selectQuestion = index => {
-    this.props.setQuestionIndex(index);
-    this.props.openDialog();
-  };
+  selectQuestion = index => this.setState({selectedQuestionIndex: index});
+
+  closeDialog = () => this.setState({selectedQuestionIndex: -1});
 
   questionFormatter = (
     question,
@@ -144,7 +106,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
   getNotAnsweredColumn = () => ({
     property: NOT_ANSWERED,
     header: {
-      label: i18n.notAnswered(),
+      label: i18n.none(),
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
@@ -157,7 +119,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.notAnsweredCell
+          ...styles.answerColumnCell
         }
       }
     }
@@ -196,10 +158,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.questionCell,
-          maxWidth:
-            styleConstants['content-width'] -
-            numAnswers * (ANSWER_COLUMN_WIDTH + PADDING)
+          ...styles.questionCell
         }
       }
     }
@@ -225,6 +184,12 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     ];
   };
 
+  onBodyRow(row, {rowIndex, rowKey}) {
+    return {
+      style: {height: MIN_ROW_HEIGHT}
+    };
+  }
+
   render() {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -241,22 +206,52 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       sort: orderBy
     })(this.props.multipleChoiceSurveyData);
 
+    const questionIndex = this.state.selectedQuestionIndex;
+    const questionData = this.props.multipleChoiceSurveyData[questionIndex];
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
-      </Table.Provider>
+      <div>
+        {questionIndex >= 0 && (
+          <MultipleChoiceSurveyQuestionDialog
+            isDialogOpen={true}
+            closeDialog={this.closeDialog}
+            questionData={questionData}
+          />
+        )}
+        <Table.Provider columns={columns} style={styles.table}>
+          <Table.Header />
+          <Table.Body rows={sortedRows} rowKey="id" onRow={this.onBodyRow} />
+        </Table.Provider>
+      </div>
     );
   }
 }
 
-export const UnconnectedMultipleChoiceSurveyOverviewTable = MultipleChoiceSurveyOverviewTable;
+const styles = {
+  table: {
+    ...tableLayoutStyles.table,
+    tableLayout: 'fixed'
+  },
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center',
+    height: MIN_ROW_HEIGHT
+  },
+  answerColumnCell: {
+    padding: 0,
+    height: '100%'
+  },
+  answerColumnCellContent: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+  },
+  questionCell: {
+    height: MIN_ROW_HEIGHT
+  },
+  link: {
+    color: color.teal
+  }
+};
 
-export default connect(
-  state => ({}),
-  dispatch => ({
-    setQuestionIndex(questionIndex) {
-      dispatch(setQuestionIndex(questionIndex));
-    }
-  })
-)(MultipleChoiceSurveyOverviewTable);
+export default MultipleChoiceSurveyOverviewTable;

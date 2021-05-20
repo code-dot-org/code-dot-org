@@ -1,0 +1,151 @@
+{
+  "lv-LV": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Events": "Pasākumi",
+              "Loops": "Cikli",
+              "Math": "Matemātika",
+              "Logic": "Loģika"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Pasākumi",
+              "Logic": "Loģika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "zīmet zvaigzni",
+                "parameters": {
+                  "points": "punkti",
+                  "length": "garums"
+                }
+              },
+              "draw a circle": {
+                "name": "zīmēt apli"
+              },
+              "draw a pinwheel": {
+                "name": "uzzīmēt vējdzirnavas",
+                "parameters": {
+                  "length": "garums",
+                  "repeat": "atkārtot"
+                }
+              },
+              "draw a triangle": {
+                "name": "zīmēt trīsstūri",
+                "parameters": {
+                  "length": "garums"
+                }
+              },
+              "draw a shape": {
+                "name": "uzzīmēt formu",
+                "parameters": {
+                  "length": "garums"
+                }
+              },
+              "draw a house": {
+                "name": "zīmēt māju",
+                "parameters": {
+                  "length": "garums"
+                }
+              },
+              "draw a square": {
+                "name": "zīmēt kvadrātu",
+                "parameters": {
+                  "length": "garums"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Events": "Pasākumi"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Pasākumi",
+              "Logic": "Loģika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Loops": "Cikli",
+              "Math": "Matemātika",
+              "Logic": "Loģika",
+              "Functions": "Funkcijas",
+              "Variables": "Mainīgie"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Events": "Pasākumi",
+              "Variables": "Mainīgie",
+              "Math": "Matemātika",
+              "Logic": "Loģika",
+              "Functions": "Funkcijas",
+              "Text": "Teksts"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Events": "Pasākumi",
+              "Variables": "Mainīgie",
+              "Math": "Matemātika",
+              "Logic": "Loģika",
+              "Functions": "Funkcijas",
+              "Text": "Teksts"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Loops": "Cikli",
+              "Math": "Matemātika",
+              "Logic": "Loģika",
+              "Functions": "Funkcijas",
+              "Variables": "Mainīgie"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Events": "Pasākumi",
+              "Logic": "Loģika",
+              "Math": "Matemātika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Darbības",
+              "Events": "Pasākumi",
+              "Logic": "Loģika",
+              "Loops": "Cikli",
+              "Math": "Matemātika",
+              "Variables": "Mainīgie",
+              "Functions": "Funkcijas"
+            }
+          }
+        }
+      }
+    }
+  }
+}

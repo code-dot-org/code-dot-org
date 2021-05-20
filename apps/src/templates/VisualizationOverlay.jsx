@@ -118,6 +118,7 @@ export class VisualizationOverlay extends React.Component {
         baseProfile="full"
         width={this.props.width}
         height={this.props.height}
+        style={{left: 'auto'}}
         viewBox={'0 0 ' + this.props.width + ' ' + this.props.height}
         pointerEvents="none"
       >

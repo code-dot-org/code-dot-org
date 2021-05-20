@@ -10,12 +10,12 @@
   csedweek_dates: "2014 m. gruodžio 8-14"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Programavimo valanda</a> artėja. Kviečiame visus mokytojus ir organizatorius, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">suplanuokite savo „Programavimo valandą“</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ar Jūs informatikos mokytojas(-a)? Peržiūrėkite kitus CSEdWeek išteklius</a>'
+  csedweek_banner_teachers_text: "Ar Jūs informatikos mokytojas(-a)? Peržiūrėkite kitus CSEdWeek išteklius"
   n_have_learned_an_hoc: "<h1>Išmėginkite</h1><h2>„Programavimo valandą“</h2><h3># served</h3>"
   anybody_can_learn: "Išmokti gali kiekvienas."
   learn_now: "Išmokite dabar"
   petition_message: "Kiekvienas mokinys turėtų turėti galimybę mokytis programavimo"
   petition_sign_message: 'Jei sutinkate, parašykite savo vardą. Prijunkite # kitus.'
-  petition_sign_message_support: 'Jei sutinkate ir norite mus paremti, pasirašykite savo vardą. Prisijunkite # prie kitų.'
   petition_join_others: 'Prisijungti # prie kitų'
   name: "Vardas"
   email: "El. pašto adresas"
@@ -194,6 +194,7 @@
   homepage_action_text_learn: "Pradėti mokytis"
   homepage_action_text_signpetition: "Pasirašyti peticiją"
   homepage_signpetition_dropdown: "Aš sutinku &#x25BE;"
+  homepage_signpetition_dropdown_text: "Sutinku"
   homepage_banner_text_main: "Code.org ir College Board susijungė tam, kad pagerintų informatikos kokybę ir įvairovę."
   homepage_banner_text_link: "Sužinok daugiau"
   homepage_banner_privacy_link: "Sužinok daugiau"
@@ -587,6 +588,7 @@
   coursee-2017_gradelevel: Amžius 8-12
   coursee-2018_gradelevel: Amžius 8-12
   coursee-2019_gradelevel: Amžius 8-12
+  coursee-2020_gradelevel: Amžius 8-12
   accelerated_gradelevel: "Amžius 10-18"
   codeorg_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
   codeintl_platformtext: "Šiuolaikinės naršyklės, išmanieji telefonai, planšetės"
@@ -781,6 +783,8 @@
   header_educate_tools: "Įrankiai ir vaizdo įrašai"
   header_teacher_community: "Mokytojų bendruomenė"
   header_report_bug: "Pranešti apie klaidą"
+  header_legal_privacy: "Privatumo politika"
+  header_legal_tos: "Naudojimo taisyklės"
   user_header_label: "Sveiki, %{username}"
   user_header_team: "Komanda"
   user_header_settings: "Mano paskyra"
@@ -803,3 +807,8 @@
   hoc2018_dance_teacher_resources_tile1_button: "Pamokos planas"
   hoc2018_dance_teacher_resources_tile2_button: "Veikla be kompiuterių"
   hoc2018_dance_amazon_about_future_engineer_button: "Sužinok daugiau"
+  footer_powered_by_aws: "Rėmėjas: Amazon Web Services"
+  footer_privacy_policy: "Privatumo politika"
+  footer_donate: "Paremkite"
+  footer_support: "Pagalba"
+  footer_terms: "Sąlygos"

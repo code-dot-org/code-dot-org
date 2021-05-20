@@ -1,11 +1,13 @@
-// Dance Party song titles mapped to the artist's Twitter handle to use in the // ShareDialog share links. Not all songs are available in all environments,
-// and the full list of in-use Dance Party songs can be found at: https://s3.console.aws.amazon.com/s3/buckets/cdo-sound-library/hoc_song_meta/?region=us-east-1&tab=overview
-//Full list of songs including potential (reflected here) can be found at:
-// https://tinyurl.com/y9r5xx5d
+/**
+ * Dance Party song titles mapped to the artist's Twitter handle to use in the
+ * <ShareDialog/> share links. Not all songs are available in all environments.
+ * The full list of in-use Dance Party songs can be found at:
+ * https://s3.console.aws.amazon.com/s3/buckets/cdo-sound-library/hoc_song_meta/?region=us-east-1&tab=overview
+ */
 
 export const SongTitlesToArtistTwitterHandle = {
   backtoyou_selenagomez: 'SelenaGomez',
-  bornthisway_ladygaga: 'LadyGaga',
+  bornthisway_ladygaga: 'ladygaga',
   callmemaybe_carlyraejepsen: 'CarlyRaeJepsen',
   cantfeelmyface_theweeknd: 'TheWeeknd',
   cantholdus_macklemore: 'Macklemore',
@@ -35,13 +37,37 @@ export const SongTitlesToArtistTwitterHandle = {
   wenospeakamericano_yolandabecool: 'YolandaBeCool',
   ymca_villagepeople: 'VillagePeople',
   firework_katyperry: 'KatyPerry',
+  // 2019 Songs
+  calma_pedrocapo: 'PedroCapo',
+  highhopes_panicatthedisco: 'PanicAtTheDisco',
+  ificanthaveyou_shawnmendes: 'ShawnMendes',
+  introtoshamstep_47SOUL: '47soulofficial',
+  kidzbop_ificanthaveyou_shawnmendes: 'KIDZBOP',
+  neverreallyover_katyperry: 'KatyPerry',
+  occidentalview_francescogabbani: 'FrankGabbani',
+  oldtownroadremix_lilnasx: 'LilNasX',
+  oldtownroadremix_lilnasx_long: 'LilNasX',
+  starships_nickiminaj: 'NICKIMINAJ',
+  sucker_jonasbrothers: 'JonasBrothers',
+  // 2020 Songs
+  dancemonkey_tonesandi: 'tonesandimusic',
+  dernieredanse_indila: 'Indila',
+  dontstartnow_dualipa: 'DUALIPA',
+  euphoria_loreen: 'LOREEN_TALHAOUI',
+  ilkadimisenat_kenandogulu: 'kenandogulu',
+  jerusalema_masterkg: 'MasterKGsa',
+  odetocode_brendandominicpaolini: 'CodeWeekEU',
+  rainonme_ladygagaftarianagrande: 'ladygaga',
+  savagelove_jasonderulo: 'jasonderulo',
+  sayso_dojacat: 'DojaCat',
+  // 2021 Songs
+  aire_jessejoy: 'jesseyjoy',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
   // These tracks are currently only potential. If we get licensing, we'll be
   // able to tweet the artist without an additional DTP.
   onedance_drake: 'Drake',
-  starships_nickiminaj: 'NickiMinaj',
   elprestamo_maluma: 'Maluma',
   despacito_luisfonsi: 'LuisFonsi',
   tunaktunaktun_dalermehndi: 'DalerMehndi',

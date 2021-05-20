@@ -2,9 +2,12 @@
 - link += "?nominated=true" if params[:nominated]
 
 - body = capture_haml do
-  %p For most schools, attending Code.org professional learning is free of charge. Apply and see if you and your school qualify.
   %p
-    %b Enter your school’s zip code to learn more.
+    Professional learning programs are hosted by over 60 Regional Partners
+    throughout the U.S. See what scholarships and discounts are available
+    in your region.
+    %p
+    %br
   %form.linktag#pl-zip-form{action: "/educate/professional-learning/program-information", method: "get"}
     %span{style: "font-size:1.2em"} Zip:
     %input{type: "text", name: "zip", style: "padding:10px"}
@@ -12,4 +15,4 @@
       %input{type: "text", name: "nominated", value: params[:nominated], hidden: "true"}
     %input{type: "submit", value: "Submit", style: "color:white; background-color:orange; padding:10px; font-size:1.2em"}
 
-= view :course_wide_block, cta_link: link, img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Attend at no cost!', description: body
+= view :course_wide_block, cta_link: link, img: CDO.code_org_url('/shared/images/banners/small-teal-icons.png'), title: 'Find a Program (Scholarships Limited)', description: body, heading_font_size: '20px'

@@ -1,0 +1,16 @@
+lesson_group 'lesson group', display_name: 'display name'
+lesson 'new lesson', display_name: 'new lesson', has_lesson_plan: false
+level 'CSD U3L12 TFMD_virtual_2020'
+
+lesson_group 'lg_1', display_name: 'DISPLAYNAME'
+lesson 'lesson 2', display_name: 'lesson 2', has_lesson_plan: false
+level 'CSD U3 dancing alien_virtual_2020'
+
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Principles Pre-survey', display_name: 'CS Principles Pre-survey', lockable: true, has_lesson_plan: false
+level 'csp-pre-survey-levelgroup_2019', assessment: true
+
+lesson_group 'cs_lg', display_name: 'LG GOOD'
+lesson 'Buttons and Events', display_name: 'Buttons and Events', has_lesson_plan: false
+level 'CSP U5L01 SFLP_2019', named: true
+

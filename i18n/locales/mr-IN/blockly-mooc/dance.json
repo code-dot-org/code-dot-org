@@ -1,15 +1,13 @@
 {
-  "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "तुम्हाला एक डांसर बनवावा लागेल.",
+  "danceFeedbackNoDancers": "तुमच्याकडे एकही डांसर नाही.",
+  "danceFeedbackNoBackground": "तुम्हाला पार्श्वभूमीचा प्रभाव जोडावा लागेल.",
+  "danceFeedbackTooManyDancers": "जर तुम्ही 'every 2 measures' ब्लॉकच्या आत 'make a new' ब्लॉक ठेवलात, तर अनेक डांसर निर्माण होतील.",
+  "danceFeedbackUseSetSize": "'set backup_dancer2 size' ब्लॉक वापरून त्या डांसरचा आकार लहान करा.",
+  "danceFeedbackUseSetTint": "'set tint' ब्लॉक वापरून डांसरचा रंग बदला.",
+  "danceFeedbackUseStartMapping": "तुमच्या प्रोग्राममध्ये <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> हा ब्लॉक वापरा.",
+  "danceFeedbackStartNewMove": "चौथ्या मापानंतर तुमचा डांसर नवीन मूव्ह करत नव्हता.",
+  "danceFeedbackNeedDifferentDance": "तुम्हाला निराळा नाच वापरला पाहिजे.",
+  "danceFeedbackNeedEveryTwoMeasures": "तुम्ही 'every 2 measures' ब्लॉक वापरत असल्याची खात्री करा",
+  "danceFeedbackNeedMakeANewDancer": "आणखी एक डांसर बनविण्यासाठी 'make a new' ब्लॉक वापरा."
 }

@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Gættu þess að nota `á 2ja takta fresti` kubbinn",
   "danceFeedbackNeedMakeANewDancer": "Notaðu `búa til nýjan` kubbinn til að búa til annan dansara.",
   "danceFeedbackKeyEvent": "Gættu þess að tengja einhvern kóða við `þegar keyrt` kubbinn og ýta á lykilinn á meðan dansinn er í gangi.",
-  "measure": ""
+  "danceFeedbackDidntPress": "Gættu þess að ýta á örvarlyklana á meðan dansinn er í gangi.",
+  "danceFeedbackPressedKey": "Þú ýttir á lykil, en dansarinn sýndi ekki viðbrögð.",
+  "danceFeedbackNeedTwoDancers": "Þú þarft að búa til tvo dansara.",
+  "danceFeedbackOnlyOneDancerMoved": "Aðeins annar dansarinn hreyfðist.",
+  "danceFeedbackNeedLead": "Þú þarft líka að búa til einn aðaldansara með <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> kubbnum.",
+  "danceFeedbackNeedBackup": "Þú þarft að búa til hóp aukadansara með <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> kubbnum.",
+  "danceFeedbackSetSize": "Þú þarft að breyta stærð minnst eins dansara eftir að tónlistin byrjar.",
+  "measure": "Taktur:"
 }

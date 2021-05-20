@@ -8,9 +8,11 @@
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     Thanks to Code.org's generous sponsors and Regional Partner support, elementary professional learning workshops are partially, or fully, funded in many regions.
     If for any reason, you can’t make it, please click this link to
-    = link_to 'cancel your registration', @cancel_url, target: "_blank"
+    = link_to 'cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
     so we can continue to offer this workshop and open up your spot to other interested educators.
   - else
-    I know things come up and you may need to cancel. Please click this link to
-    = link_to 'cancel your registration', @cancel_url, target: "_blank"
-    if you aren't going to be able to make it. Workshop materials and food are ordered based on enrollment numbers.
+    We know things come up and you may no longer be able to attend. Please click this link to
+    = link_to 'cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
+    if you aren't going to be able to make it.
+    - unless @workshop.virtual?
+      Workshop materials and food are ordered based on enrollment numbers.

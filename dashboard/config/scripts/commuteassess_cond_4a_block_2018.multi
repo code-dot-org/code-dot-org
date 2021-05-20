@@ -1,10 +1,11 @@
 name 'CommuteAssess - Cond 4a - block_2018'
 question 'What will be displayed after this code has run?'
-wrong '<pre>The word is too short!</pre>'
-wrong '<pre>The word it too long!</pre>'
-right '<pre>The word is just right!</pre>'
-wrong '<pre>The word is still too short!</pre>'
-wrong '<pre>The word is just right!<br>The word is still too short!</pre>'
+wrong '`The word is too short!`'
+wrong '`The word it too long!`'
+right '`The word is just right!`'
+wrong '`The word is still too short!`'
+wrong '`The word is just right!`  
+`The word is still too short!`'
 wrong 'Nothing will be displayed'
 markdown <<MARKDOWN
 <!-- OLD <img src="https://images.code.org/b99a8b9ea7640427e10a331191e5a0ae-image-1482958340012.png" style="width: 545px"> -->

@@ -1,0 +1,126 @@
+#!/usr/bin/env ruby
+# Removes code studio permissions from former employees or helpers
+# https://codedotorg.atlassian.net/browse/FND-929
+# https://docs.google.com/spreadsheets/d/107zpNoPKvCJdeFrF7E9tdZLiFEogZQeDq-keAr0sxe4/edit#gid=1849362929
+
+require_relative '../../../dashboard/config/environment'
+
+# This script is a dry-run unless we change this line.
+DRY_RUN = true
+
+USERS_TO_REVOKE = %w(
+  26256108
+  35773097
+  5589738
+  5471027
+  5670696
+  852815
+  5560411
+  5711730
+  6350917
+  14826133
+  51293724
+  1307712
+  23776549
+  5562503
+  1362200
+  24971072
+  35115273
+  51766168
+  4664070
+  1059328
+  14963651
+  631542
+  109
+  6151155
+  7960153
+  886605
+  6276799
+  1360576
+  25950322
+  1187668
+  6712196
+  1431643
+  14915941
+  15600021
+  19
+  1287295
+  8500903
+  15425296
+  27693911
+  1323064
+  32704
+  10433550
+  13103842
+  8687343
+  14826133
+  7021250
+  4584163
+  207
+  1307712
+  33070085
+  21898652
+  24078067
+  27062904
+  15604082
+  8500903
+  32704
+  7021250
+  1307712
+  1362200
+  35115273
+  51766168
+  631542
+  15070317
+  7960153
+  34358424
+  10433550
+  7021250
+  1307712
+  33070085
+  24078067
+  5658592
+  47608263
+  1059328
+  27785065
+  39269695
+  7960153
+  886605
+  28697727
+  37473524
+  25950322
+  47639615
+  1187668
+  1431643
+  15236674
+  1362200
+  47650655
+  47714281
+  47607426
+  47616662
+  47617228
+  1287295
+  8500903
+  10433550
+  7021250
+  4584163
+  207
+  26804065
+  1307712
+  21773101
+  6276799
+  15236674
+  32704
+).map(&:to_i).freeze
+
+USERS_TO_REVOKE.each do |user_id|
+  ActiveRecord::Base.transaction do
+    UserPermission.where(user_id: user_id).destroy_all
+
+    raise ActiveRecord::Rollback.new, "Intentional rollback" if DRY_RUN
+
+    puts "User ID successfully revoked - #{user_id}"
+  end
+rescue StandardError => error
+  puts "Error revoking User ID - #{user_id} / #{error.message}"
+end

@@ -1,0 +1,20 @@
+tr:
+  data:
+    shared_functions:
+      driving with arrow keys: ok tuşları ile hareket
+      fluttering: fluttering
+      growing: büyüme
+      jittering: kararsızlık
+      moving east: doğuya ilerleme
+      moving east and looping: doğuya doğru hareket ve döngü
+      moving north: kuzeye ilerleme
+      moving south: güneye ilerleme
+      moving west: batıya ilerleme
+      moving west and looping: batıya doğru hareket ve döngü
+      moving with arrow keys: ok tuşları ile hareket
+      patrolling: kontrol sağlama
+      shrinking: küçülme
+      spinning left: sola dönme
+      spinning right: sağa dönme
+      wandering: gezinme
+      wobbling: sallanma

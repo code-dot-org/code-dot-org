@@ -25,14 +25,13 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     per = params[:per] || params[:limit] || 50
     user_query = params[:user_q]
 
+    # Retrieve all peer reviews
     reviews = PeerReview.all
 
     if user_query.presence
       reviews =
         if user_query.include? '@'
-          reviews.
-            joins(submitter: [:primary_contact_info]).
-            where(authentication_options: {email: user_query})
+          reviews.where submitter: User.find_by_email(user_query)
         else
           # I feel safe-ish using fuzzy search against user display names because we are already
           # constrained by our join to the set of users submitting for peer review, which is below
@@ -51,12 +50,22 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       reviews = reviews.where(script: Plc::Course.find(params[:plc_course_id]).plc_course_units.map(&:script))
     end
 
-    reviews = reviews.distinct {|review| [review.submitter, review.level]}
+    # This query gets the latest submission for each user+level, paginated, and returns a
+    # recordset with pagination metadata and correctly-ordered, partially-populated models.
+    reviews = reviews.
+      page(page).
+      per(per).
+      order('id DESC').
+      group(:submitter_id, :level_id).
+      select('max(peer_reviews.id) id, submitter_id, level_id')
 
-    reviews = reviews.page(page).per(per)
+    # This query gets matching fully-hydrated models in the correct order.
+    real_reviews = PeerReview.find(reviews.map(&:id))
 
-    reviews.each do |review|
-      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script)
+    real_reviews.each do |review|
+      script = Script.find(review.script_id)
+      # Pull out any that are tied to deprecated scripts/units
+      submissions[review.user_level.id] = PeerReview.get_submission_summary_for_user_level(review.user_level, review.script) unless script.deprecated?
     end
 
     render json: {
@@ -96,8 +105,8 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
         submission_times = submission_times_by_user_script_level[[user_level.user_id, user_level.script_id, user_level.level_id]]
         peer_review_submissions[user_level.level.name] = {
           status: result_to_status(user_level.best_result),
-          first_submission_date: submission_times.min&.strftime("%-m/%-d/%Y"),
-          last_submission_date: submission_times.max&.strftime("%-m/%-d/%Y")
+          first_submission_date: submission_times&.min&.strftime("%-m/%-d/%Y"),
+          last_submission_date: submission_times&.max&.strftime("%-m/%-d/%Y")
         }
       end
 

@@ -1,5 +1,5 @@
 ---
-title: Blurbs and useful stats
+title: Ismertetők és hasznos statisztikák
 layout: wide
 nav: promote_nav
 ---
@@ -8,47 +8,47 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Ismertetők és hasznos statisztikák
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### Használd az alábbi ismertetőket, ha a Kódolás óráját szeretnéd népszerűsíteni hírlevelekben és hírközlésekben.
 
----
+* * *
 
-## Use this short blurb in newsletters
+## Használd az alábbi rövid leírást hírlevelekhez
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Hozd a számítástechnikát az iskoládba. Kezd a Kódolás órájával!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But fewer than half of all schools teach computer science! A jó hír az, hogy mi már dolgozunk azon hogy ez megváltozzon. If you heard about the Hour of Code last year, you might know it made history. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+A technológia változásával a bolygó minden iparágában a számítógépes ismeretek az alapvető készségek részévé váltak. Azonban csak az iskolák kevesebb mint fele tanít számítástechnikát! A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon. Aki hallott a tavalyi Kódolás órája eseményről, az tudhatja, hogy az történelmi jelentőséggel bírt. 100 millió diák fedezte fel csupán egy Kódolás órája eseményen való részvétel során, hogy a számítástechnika nem is olyan bonyolult, sőt roppant élvezetes.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+A Kódolás órája egy órás bevezetést nyújt a számítástechnika világába, hogy demisztifikálja a programozás tevékenységét és bemutassa, hogy bárki megtanulhatja az alapokat. További hasznos információkat találsz a [http://HourOfCode.com](http://HourofCode.com) oldalon. Próbáld ki magad, vagy rendezz Kódolás órája eseményt, hogy megmutathasd másoknak is a számítástechnika világát!
 
-## Messaging for frequently asked questions
+## Gyakori kérdések
 
-#### Why is your school doing an Hour of Code?
+#### Miért rendezzen az iskolád Kódolás órája eseményt?
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+Bár mindannyian tudjuk, hogy a diákok számára fontos, hogy megtanulják, hogyan kell navigálni a mai technológiailag telített világban, sok tanárnak nincs tapasztalata a számítástechnikában és nem is tudja, hogyan kezdje. Ez az esemény mindenkinek lehetőséget ad arra, hogy megismerje a számítástechnikát.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt. A kutatások azt is kimutatták, hogy a gyerekek már azelőtt rá tudnak érezni a programozási alapelvekre, mielőtt megtanulnák, hogyan kell írni vagy olvasni. Ugyanis az agyuk fiatalkorban érzékenyebben reagál a számítógépes nyelvezetre, akárcsak az idegen nyelvekre. <br /> <br />
 
-#### Why is this important?
+#### Miért fontos mindez?
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 65 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában, amelyhez előny jelentett volna a programozási ismeret. But 53 percent of schools in the U.S. don't teach computer science. Ideje felzárkózni a 21. századhoz. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat és versenyképességet teremt számukra. <br /> <br />
 
-#### A quote you can use in materials
+#### Egy idézet, amelyet nyugodtan felhasználhatsz
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"A Kódolás órája esemény célja a programozás demisztifikálása, és annak bemutatása, hogy a számítástechnika nem atomfizika - bárki megtanulhatja az alapokat" - mondta Hadi Partovi, a Code.org alapítója és vezérigazgatója. Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját. A 21. századi számítástechnika oktatás iránti kereslet nem ismer határokat." <br /> <br />
 
-#### About Code.org
+#### A Code.org-ról
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+A Code.org egy 501c3 számú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint a nők és az alulreprezentált színesbőrű hallgatók felkarolása. Meglátása szerint, minden iskolában minden diáknak lehetőséget kell teremteni arra, hogy megtanulhassa a számítógépes programozást. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és Amerika szerte 70 középiskolával együttműködve segíti a számítástechnikai programok bővítését. A Code.org-ot különböző társaságok, alapítványok és nagylelkű személyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információért látogass el a [code.org]({{ codeorg_link }}) weboldalra.
 
-## Share these on social media and in emails
+## Oszd meg ezeket a közösségi médiában vagy e-mailezd el barátaidnak
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![kép](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografikák
 
 {{ stats_carousel }}
 

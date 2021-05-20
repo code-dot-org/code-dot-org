@@ -1,0 +1,31 @@
+el:
+  data:
+    block_categories:
+      Actions: Ενέργειες
+      Advanced: Για προχωρημένους
+      Behaviors: Συμπεριφορές
+      Brushes: Πινέλα
+      Color: Χρώμα
+      Comment: Σχόλιο
+      Comments: Σχόλια
+      Conditionals: Συνθήκες
+      Dancers: Χορευτές
+      Default: Προεπιλογή
+      Events: Συμβάντα
+      Functions: Συναρτήσεις
+      'Functions ': 'Συναρτήσεις '
+      Game/Score: Παιχνίδι/Σκορ
+      Games/Score: Παιχνίδια/Σκορ
+      Groups: Ομάδες
+      Input: Είσοδος
+      Locations: Τοποθεσίες
+      Logic: Λογική
+      Loops: Βρόχοι
+      Math: Μαθηματικά
+      Numbers: Αριθμοί
+      Properties: Ιδιότητες
+      Sprites: Χαρακτήρας
+      Text: κείμενο
+      Variables: Μεταβλητές
+      'Variables ': 'Μεταβλητές '
+      World: Κόσμος

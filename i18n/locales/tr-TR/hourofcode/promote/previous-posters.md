@@ -1,14 +1,12 @@
 ---
-title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
+title: Eski Hour of Code Posterleri
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# Eski Hour of Code Posterleri
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Yazdırmak ve sınıfınıza asmak için önceki yıllara ait posterlerimizi bulun! En yeni posterleri mi arıyorsunuz? [Buraya tıklayın]({{ promote/promote_posters_url }}).
 
 * * *
 

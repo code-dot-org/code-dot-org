@@ -25,7 +25,6 @@ ne-NP:
   petition_message: Every student in every school should have the opportunity to learn
     computer science
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: नाम
   email: इमेल
@@ -205,6 +204,7 @@ ne-NP:
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
+  print_certificates: Print certificates
   share_achievement: Share your achievement
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
@@ -363,6 +363,7 @@ ne-NP:
   homepage_action_text_learn: Start learning
   homepage_action_text_signpetition: Sign the petition
   homepage_signpetition_dropdown: I agree &#x25BE;
+  homepage_signpetition_dropdown_text: I agree
   homepage_diversity_pledge: Take the diversity pledge
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
@@ -1144,6 +1145,8 @@ ne-NP:
   coursee-2018_gradelevel: Ages 8-12
   coursed-2019_gradelevel: Grade 8+
   coursee-2019_gradelevel: Ages 8-12
+  coursed-2020_gradelevel: Grade 8+
+  coursee-2020_gradelevel: Ages 8-12
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1742,6 +1745,8 @@ ne-NP:
   header_project_gallery: Projects
   header_educate_hoc: Hour of Code
   header_stats: Stats
+  header_legal_privacy: Privacy Policy
+  header_legal_tos: Terms of Service
   user_header_label: Hi %{username}
   user_header_team: Team
   user_header_settings: My account
@@ -1785,3 +1790,8 @@ ne-NP:
   hoc2018_dance_teacher_resources_tile1_button: Lesson Plan
   hoc2018_dance_teacher_resources_tile2_button: Unplugged Activity
   hoc2018_dance_amazon_about_future_engineer_button: थप जान्नुहोस्
+  footer_powered_by_aws: Powered by Amazon Web Services
+  footer_privacy_policy: Privacy Policy
+  footer_donate: Make a donation
+  footer_support: Support
+  footer_terms: Terms

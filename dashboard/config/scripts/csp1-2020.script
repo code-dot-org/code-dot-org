@@ -1,0 +1,102 @@
+hidden false
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit1/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit1/standards/"]]
+has_verified_resources true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit1/{LESSON}'
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
+is_stable true
+curriculum_umbrella 'CSP'
+
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Principles Pre-survey', display_name: 'CS Principles Pre-survey', lockable: true, has_lesson_plan: false
+level 'csp-pre-survey-levelgroup_2019', assessment: true
+
+lesson_group 'csp_unit1_2020', display_name: 'Unit 1: Digital Information'
+lesson 'Welcome to CSP', display_name: 'Welcome to CSP', has_lesson_plan: true
+level 'CSP U1L1 SFLP 20-21', progression: 'Lesson Overview'
+level 'Computer Science is Changing Everything_2020', progression: 'Computer Science is Changing Everything'
+level 'csp_socialBelonging_control_2018', progression: 'Check For Understanding', assessment: true
+
+lesson 'Representing Information', display_name: 'Representing Information', has_lesson_plan: true
+level 'CSP U1L2 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L3 CFU Sending Complex Messages', progression: 'Check For Understanding', assessment: true
+
+lesson 'Circle Square Patterns', display_name: 'Circle Square Patterns', has_lesson_plan: true
+level 'CSP U1L4 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U1L4 CYU3', progression: 'Check For Understanding', assessment: true
+
+lesson 'Binary Numbers', display_name: 'Binary Numbers', has_lesson_plan: true
+level 'CSP U1L5 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L5 CFU how many bits', progression: 'Check For Understanding', assessment: true
+level 'U1L5 CFU adding bits', progression: 'Check For Understanding', assessment: true
+level 'U1L5 CFU bin dec similarities', progression: 'Check For Understanding', assessment: true
+
+lesson 'Overflow and Rounding', display_name: 'Overflow and Rounding', has_lesson_plan: true
+level 'CSP U1L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'Widget: Binary Odometer_2020', progression: 'Widget: Binary Odometer'
+level 'U1L6 CFU beyond odometer', progression: 'Check For Understanding', assessment: true
+level 'U1L6 CFU representing fractions', progression: 'Check For Understanding', assessment: true
+
+lesson 'Representing Text', display_name: 'Representing Text', has_lesson_plan: true
+level 'CSP U1L7 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L8 Reflection Multiple Representations CSP', progression: 'Check For Understanding', assessment: true
+
+lesson 'Black and White Images', display_name: 'Black and White Images', has_lesson_plan: true
+level 'CSP U1L8 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1 L9 Introduction to Pixelation', progression: 'Video: Intro to Pixelation Encoding B&W'
+level 'U1L9 Pixelation - Make the Letter A_2019', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget Fix bit offset', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge a', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge B', progression: 'Pixelation Widget: B&W'
+level 'U1L9 Pixelation Widget challenge C', progression: 'Pixelation Widget: B&W'
+level 'U1L9 CFU pixel data', progression: 'Check For Understanding', assessment: true
+level 'U1L9 Multiple Choice Digital Analog', progression: 'Check For Understanding', assessment: true
+level 'U1L9 CFU Sampling', progression: 'Check For Understanding', assessment: true
+
+lesson 'Color Images', display_name: 'Color Images', has_lesson_plan: true
+level 'CSP U1L9 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U1L10 RGB', progression: 'RGB Color'
+level 'CSP U1L10 Color Pixelation Widget 1', progression: 'Pixelation Widget: Color'
+level 'CSP U1L10 More Shades of Color', progression: 'More Shades of Color'
+level 'CSP U1L10 Color Pixelation Widget 2', progression: 'Pixelation Widget: Color'
+level 'CSP U1L10 Color Pixelation Widget 3', progression: 'Pixelation Widget: Color'
+level 'CSP U1L10 Color Sampling', progression: 'Color Sampling'
+level 'CSP U1L10 Color Pixelation Widget 4', progression: 'Pixelation Widget: Color'
+level 'U1L10 Multiple Choice analog vs digital', progression: 'Check For Understanding', assessment: true
+level 'U1L10 CFU Sampling', progression: 'Check For Understanding', assessment: true
+
+lesson 'Lossless Compression', display_name: 'Lossless Compression', has_lesson_plan: true
+level 'CSP U1L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L11 Widget: Text Compression', progression: 'Widget: Text Compression'
+level 'U1 L11 Text Compression Widget Aloe Blacc', progression: 'Video: Text Compression Widget with Aloe Blacc'
+level 'U1L11 Multiple Choice lossless compression', progression: 'Check For Understanding', assessment: true
+level 'U1L11 CFU Compression for Email', progression: 'Check For Understanding', assessment: true
+
+lesson 'Lossy Compression', display_name: 'Lossy Compression', has_lesson_plan: true
+level 'CSP U1L11 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1 Lossy Compression Widget v1', progression: 'Lossy Compression Widget'
+level 'U1 Lossy Compression Widget v2', progression: 'Lossy Compression Widget'
+level 'U1L11 CPS CFU Cell Phone', progression: 'Check For Understanding', assessment: true
+
+lesson 'Intellectual Property', display_name: 'Intellectual Property', has_lesson_plan: true
+level 'CSP U1L12 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L12 CFU Creative Commons', progression: 'Check For Understanding', assessment: true
+level 'U1L12 CFU Copyright', progression: 'Check For Understanding', assessment: true
+
+lesson 'Project - Digital Information Dilemmas Part 1', display_name: 'Project - Digital Information Dilemmas Part 1', has_lesson_plan: true
+level 'CSP U1L13 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding', assessment: true
+
+lesson 'Project - Digital Information Dilemmas Part 2', display_name: 'Project - Digital Information Dilemmas Part 2', has_lesson_plan: true
+level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
+level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
+
+lesson 'Lesson 14: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
+level 'CSP Unit 1 AP-Style Assessment _2020', progression: 'Unit 1 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
+

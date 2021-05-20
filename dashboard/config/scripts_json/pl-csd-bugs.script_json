@@ -1,0 +1,261 @@
+{
+  "script": {
+    "name": "pl-csd-bugs",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:37 UTC",
+    "seeding_key": {
+      "script.name": "pl-csd-bugs"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CSD Workshop 1 Bugs",
+      "name": "CSD Workshop 1 Bugs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD-PL AYWS1 Debugging Intro"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-PL AYWS1 Debugging Intro"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      },
+      "level_keys": [
+        "CSD-PL AYWS1 Debugging Intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawing practice 1"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      },
+      "level_keys": [
+        "CSD U3 drawing practice 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawing practice 3"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      },
+      "level_keys": [
+        "CSD U3 drawing practice 3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Variable names debug"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Variable names debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      },
+      "level_keys": [
+        "CSD U3 Variable names debug"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Sprites debug"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprites debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      },
+      "level_keys": [
+        "CSD U3 Sprites debug"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD-PL AYWS1 Debugging Intro",
+        "script_level.level_keys": [
+          "CSD-PL AYWS1 Debugging Intro"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawing practice 1",
+        "script_level.level_keys": [
+          "CSD U3 drawing practice 1"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawing practice 3",
+        "script_level.level_keys": [
+          "CSD U3 drawing practice 3"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Variable names debug",
+        "script_level.level_keys": [
+          "CSD U3 Variable names debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprites debug",
+        "script_level.level_keys": [
+          "CSD U3 Sprites debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

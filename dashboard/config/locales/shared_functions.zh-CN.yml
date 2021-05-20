@@ -1,0 +1,27 @@
+---
+zh-CN:
+  data:
+    shared_functions:
+      growing: 生长
+      jittering: 抖动
+      moving east: 向右推动
+      moving north: '向上移动
+
+'
+      moving south: '向下移动
+
+'
+      moving west: '向左移动
+
+'
+      moving with arrow keys: 使用方向键移动
+      patrolling: 巡逻
+      shrinking: 收缩
+      spinning left: '向左旋转
+
+'
+      spinning right: '向右旋转
+
+'
+      swimming left and right: 左右游动
+      wandering: 徘徊

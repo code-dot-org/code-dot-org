@@ -1,0 +1,159 @@
+{
+  "az-AZ": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Əmrlər",
+              "Events": "Hadisələr",
+              "Loops": "dövrlər",
+              "Math": "Riyaziyyat",
+              "Logic": "Məntiq"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dünya",
+              "Events": "Hadisələr",
+              "Numbers": "Ədədlər",
+              "Logic": "Məntiq"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "bir ulduz çək",
+                "parameters": {
+                  "points": "xallar",
+                  "length": "uzunluq"
+                }
+              },
+              "draw a circle": {
+                "name": "çevrə çək"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "uzunluq",
+                  "repeat": "təkrar et"
+                }
+              },
+              "draw a triangle": {
+                "name": "üçbucaq çək",
+                "parameters": {
+                  "length": "uzunluq"
+                }
+              },
+              "draw a shape": {
+                "name": "bir forma çək",
+                "parameters": {
+                  "length": "uzunluq"
+                }
+              },
+              "draw a house": {
+                "name": "ev çək",
+                "parameters": {
+                  "length": "uzunluq"
+                }
+              },
+              "draw a square": {
+                "name": "kvadrat çək",
+                "parameters": {
+                  "length": "uzunluq"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dünya",
+              "Actions": "Əmrlər",
+              "Events": "Hadisələr"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dünya",
+              "Events": "Hadisələr",
+              "Numbers": "Ədədlər",
+              "Logic": "Məntiq"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Əmrlər",
+              "Loops": "dövrlər",
+              "Math": "Riyaziyyat",
+              "Logic": "Məntiq",
+              "Functions": "Funksiyalar",
+              "Variables": "dəyişənlər"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dünya",
+              "Actions": "Əmrlər",
+              "Events": "Hadisələr",
+              "Variables": "dəyişənlər",
+              "Math": "Riyaziyyat",
+              "Logic": "Məntiq",
+              "Functions": "Funksiyalar",
+              "Text": "mətn"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dünya",
+              "Actions": "Əmrlər",
+              "Events": "Hadisələr",
+              "Variables": "dəyişənlər",
+              "Math": "Riyaziyyat",
+              "Logic": "Məntiq",
+              "Functions": "Funksiyalar",
+              "Text": "mətn"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Əmrlər",
+              "Loops": "dövrlər",
+              "Math": "Riyaziyyat",
+              "Logic": "Məntiq",
+              "Functions": "Funksiyalar",
+              "Variables": "dəyişənlər"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Dünya",
+              "Actions": "Əmrlər",
+              "Events": "Hadisələr",
+              "Logic": "Məntiq",
+              "Math": "Riyaziyyat"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Dünya",
+              "Actions": "Əmrlər",
+              "Events": "Hadisələr",
+              "Logic": "Məntiq",
+              "Loops": "dövrlər",
+              "Math": "Riyaziyyat",
+              "Variables": "dəyişənlər",
+              "Functions": "Funksiyalar"
+            }
+          }
+        }
+      }
+    }
+  }
+}

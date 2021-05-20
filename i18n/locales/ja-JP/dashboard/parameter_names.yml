@@ -1,0 +1,15 @@
+ja:
+  data:
+    parameter_names:
+      actor: キャラ
+      color: 色
+      counter: カウンタ変数
+      height: 高さ
+      honey: ハチミツ
+      left: 左 に
+      length: 長さ
+      min: 最小（さいしょう）
+      points: ポイント
+      size: 大きさ
+      speed: スピード
+      width: 幅

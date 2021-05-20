@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 zh-CN:
   slides:
     maze_intro:
@@ -1966,167 +1971,416 @@ zh-CN:
         text: "你好啊！我叫 Miral Kotb，一名舞者兼软件工程师，同时也是 iLuminate 的作者。"
       3:
         image: 'notes/hoc_dance_warmup_3.png'
+        text: "因此，计算机科学与大量的创新都有关系。基本上，无法估量。也就是说，一旦有能力编写软件了，就能将任何想法编程显示。我用它实现了灯做的衣服。通过这些工具来编写软件，你可以实现无穷的创意。"
       4:
         image: 'notes/hoc_dance_warmup_4.png'
+        text: "接下来的一个小时，会从编写自己的舞蹈派对来开始学习计算机科学！可以将一组流行音乐和一队舞者编到一起。"
       5:
         image: 'notes/hoc_dance_warmup_5.png'
+        text: "这需要使用代码模块来选择不同的舞者，编排舞蹈动作，让他们对音乐做出响应、互动。"
       6:
         image: 'notes/hoc_dance_warmup_6.png'
+        text: "屏幕被分成三个主要的部分。左边是播放区。舞者会在这里跳舞。"
       7:
         image: 'notes/hoc_dance_warmup_7.png'
+        text: "中间是工具箱。课程中新的代码模块都会出现在这里。"
       8:
         image: 'notes/hoc_dance_warmup_8.png'
+        text: "右边是工作区。可将工具箱的模块拖放到这里，来构建自己的程序。"
       9:
         image: 'notes/hoc_dance_warmup_9.png'
+        text: "每个关卡的说明会在屏幕的上方显示。如果需要提示，可以点击小灯泡。"
       10:
         image: 'notes/hoc_dance_warmup_10.png'
+        text: "我们先用这个红色的模块来添加一个新的舞者。首先，将它从工具箱中拖出来，并粘到橙色的\"设置\"模块下方。这个舞者是一只猫，它的名字是\"my_first_dancer\"（我的第一只猫）。可以点这里来改名字。"
       11:
         image: 'notes/hoc_dance_warmup_11.png'
+        text: "用这个选择舞者在播放区出现的位置。"
       12:
         image: 'notes/hoc_dance_warmup_12.png'
+        text: "播放区上面的菜单中可选择音乐。这里有非常多的音乐，选个你喜欢的。播放区下面有个运行按钮。点击运行后，就能看到舞者从程序中出现到播放区，同时会播放音乐。"
       13:
         image: 'notes/hoc_dance_warmup_13.png'
+        text: "自己试试吧！如果遇到了难题，也没关系！在明白之前，继续做就好了，最终都会做出自己的舞蹈派对。所以，想创造点什么？"
     hoc_dance_events:
       1:
         image: 'notes/hoc_dance_events_1.png'
+        text: "编程一小时 | 舞蹈派对：事件"
       2:
         image: 'notes/hoc_dance_events_2.png'
+        text: "我是 Aloe Blacc。我是一名歌手、作词者，也是一名艺人。我觉得学习计算机科学非常重要，因为计算机科学代表着未来。我觉得它对于所有人都很重要，让技术在掌控之中，就是掌控自己的生活。"
       3:
         image: 'notes/hoc_dance_events_3.png'
+        text: "要让不同的舞蹈动作踩到音乐的点子上，需要叫做事件的功能。事件让程序等待某件事情，在这件事情发生时做出反应。"
       4:
         image: 'notes/hoc_dance_events_4.png'
+        text: "一些等待事件的示例包括，鼠标点击时，按下方向键，或者触碰屏幕。在这要用的事件会等待歌曲中的变化。变化发生时，就可以让舞者开始新的动作。"
       5:
         image: 'notes/hoc_dance_events_5.png'
+        text: "专业舞者都会根据音乐的节拍来编排。"
       6:
         image: 'notes/hoc_dance_events_6.png'
+        text: "在音乐中，小节表示一定数量的节拍。大多数流行音乐中，一小节是四拍。"
       7:
         image: 'notes/hoc_dance_events_7.png'
+        text: "要让舞者放松一些，可以添加一个绿色的事件模块。这个事件模块叫做 “在 4 个小节后”。"
       8:
         image: 'notes/hoc_dance_events_8.png'
+        text: "可以拖出一个\"一直做\"模块，为舞者选择某个舞蹈。因为它放到了“在 4 个小节后”事件模块下，舞者会等 4 个小节，然后才开始舞蹈。"
       9:
         image: 'notes/hoc_dance_events_9.png'
+        text: "观察显示区域上方的小节计数器。"
       10:
         image: 'notes/hoc_dance_events_10.png'
+        text: "等待事件发生后，就会触发跳舞的代码。舞者就开始跳舞了。"
     hoc_dance_properties:
       1:
         image: 'notes/hoc_dance_properties_1.png'
+        text: "编程一小时 | 舞蹈派对：属性"
       2:
         image: 'notes/hoc_dance_properties_2.png'
+        text: "我是 Maria，我是华盛顿大学大三的学生，我还是亚马逊未来的工程师。"
       3:
         image: 'notes/hoc_dance_properties_3.png'
+        text: "我非常喜爱计算机科学，因为它需要解决问题和批判性思考。通过几个小时的工作，就能收获非常酷的东西。"
       4:
         image: 'notes/hoc_dance_properties_4.png'
+        text: "现在，你已经可以用不同类型的舞者跳舞了，还有不同的舞蹈动作。但是，这些动作是怎么实现的呢？"
       5:
         image: 'notes/hoc_dance_properties_5.png'
+        text: "每个舞蹈动作都由一组图片组成，每张图片都是一“帧”。每帧都和前一帧稍有不同。当程序运行时，计算机会一帧一帧的显示。当显示得很快的时候，舞者看起来就在动了。这是所有动画背后的秘密。"
       6:
         image: 'notes/hoc_dance_properties_6.png'
+        text: "不仅可以让舞者动起来，还可以改变舞者的属性。属性描述了舞者的一些信息，比如屏幕上的位置，舞者的大小、颜色。"
       7:
         image: 'notes/hoc_dance_properties_7.png'
+        text: "如果要改变舞者的属性，需要一个设置模块。我们来使用设置模块让舞者变小一些。首先，将设置模块拖到程序中。然后，选择要改变的的舞者，输入要在屏幕上显示的大小。"
       8:
         image: 'notes/hoc_dance_properties_8.png'
+        text: "正常尺寸是 100。选择小一些的数字，舞者就会小一些。在改动后，舞者一直都会这么小。这可以用来创建伴舞的舞者。"
       9:
         image: 'notes/hoc_dance_properties_9.png'
+        text: "使用设置模块，还可以改变舞者的大小、旋转角度、位置和颜色。使用这些属性，可以根据歌曲不同的部分，创建出各种各样的变化。"
       10:
         image: 'notes/hoc_dance_properties_10.png'
+        text: "记住，只能为已有的舞者设置属性。确保将属性放到\"创建一个新的舞者\"模块后。开始随便玩吧。"
+    hoc_dance_congrats:
+      1:
+        text: "编程一小时 | 舞蹈派对：派对开始了！"
+      2:
+        text: "祝贺你！你已经学会了计算机科学的基础。现在，可以用这些模块来创造自己的舞蹈派对，并且分享给朋友们了。"
+      3:
+        text: "在工具箱里，可以找到一些没介绍过的新模块。例如， 可以用布局模块在屏幕上排列舞者。"
+      4:
+        text: "看一看，再试一试这些新的模块和功能。你能为自己喜欢的歌曲编排出舞蹈吗？"
+      5:
+        text: "或者和朋友们跳舞？"
+      6:
+        text: "或者一起做些别的事情？"
+      7:
+        text: "在教程结束的时候，可以将作品的链接分享给朋友们。发挥想象力，尽情享受吧！"
     mc_2018_intro:
       1:
         image: 'notes/mc_2018_intro_1.png'
+        text: "你好。刚好来得及。欢迎来到水上航行。我正好出发去寻找水下的宝藏，很高兴你能来帮我。谁知道我们会在神秘的水下世界中遇到什么呢？我们先在码头上看看第一个指南。"
       2:
         image: 'notes/mc_2018_intro_2.png'
+        text: "欢迎你，冒险家！要完成水上航行，需要用代码解决一系列的难题。这是基本介绍。屏幕被分成三个主要部分。"
       3:
         image: 'notes/mc_2018_intro_3.png'
+        text: "左边是《我的世界》的世界。"
       4:
         image: 'notes/mc_2018_intro_4.png'
+        text: "中间部分是工具箱，可以找到代码模块。"
       5:
         image: 'notes/mc_2018_intro_5.png'
+        text: "右边最大的部分是工作区。这是堆放命令来构建程序，控制动作的地方。"
       6:
         image: 'notes/mc_2018_intro_6.png'
+        text: "每一关的说明在页面最上方。点击加号可以切换说明的长短。"
       7:
         image: 'notes/mc_2018_intro_7.png'
+        text: "试着将模块从工具箱拖到工作区中，堆放它们，然后点击运行按钮来执行命令。"
       8:
         image: 'notes/mc_2018_intro_8.png'
+        text: "可以多试几次来熟悉一下，一些难题可能有多种方法来解决，多试试，看看怎么能成功。"
       9:
         image: 'notes/mc_2018_intro_9.png'
+        text: "如果要重试，点击重置按钮来返回最初的状态。"
       10:
+        text: "如果要删除某个命令，将模块从工作区拖回工具箱即可。记住，点击\"运行\"才能执行代码。"
       11:
+        text: "好了，够多的信息了，冒险家伙计。让我们开始写代码来找到水下的宝藏吧。"
     MC_2018_loops:
       1:
         image: 'notes/MC_2018_loops_1.png'
+        text: "太好了！抓到了一条鳕鱼！你知道吗，如果把鳕鱼喂给海豚，海豚就会带你去沉船那儿，那里可能会有宝藏！我们要靠近一点。下一组关卡一定会更麻烦些，所以我们的编程技能要学好一点。"
       2:
         image: 'notes/MC_2018_loops_2.png'
+        text: "欢迎你，冒险家！我是乌贼。我发现你在上一关里，一遍一遍的使用同一组命令。估计这有点无聊。你有没有想过，有没有什么方法能让这种要做一遍一遍的事情不那么累或者无聊，比如洗盘子、刷牙？"
       3:
         image: 'notes/MC_2018_loops_3.png'
+        text: "计算机非常擅长于用代码循环来重复做同一件事情。当需要程序多次执行一段同样的指令时，可以用循环！"
       4:
         image: 'notes/MC_2018_loops_4.png'
+        text: "循环模块中的指令可不断重复执行，直到达到了目标。如果程序使用了\"重复直到达到目标\"循环，会不停的重复其中的指令，直到到达了目标。"
       5:
         image: 'notes/MC_2018_loops_5.png'
+        text: "自己试试？将想要重复的命令放入\"重复直到达到目标\"模块，点击\"运行\"，看看是怎么运行的！"
       6:
         image: 'notes/MC_2018_loops_6.png'
+        text: "好吧，有点奇怪。谁会知道乌贼也能写代码呢？我都没想过它们有没有手指头。现在，我们了解循环了。让我们循环来打包更多的宝藏吧。"
     mc_2018_conditionals:
       1:
         image: 'notes/mc_2018_conditionals_1.png'
+        text: "哇！又解决了三个难题！我们现在抓住了……一条三文鱼！虽然不像捞到一堆黄金那样激动，但总会捞到的。我感觉到鹦鹉螺壳以后总会派上用场的。不知道废墟中藏着什么。也许需要点提示！让我们看看里面。"
       2:
         image: 'notes/mc_2018_conditionals_2.png'
+        text: "我是 Netty，欢迎来到我的废墟。我们一直根据条件来做决定。如果要下雨了，我们就会带上雨伞。如果饿了，就吃点零食。"
       3:
         image: 'notes/mc_2018_conditionals_3.png'
+        text: "如果看见了苦力怕，就朝反方向跑。计算机也能做这类决定。实际上是根据不同的条件来执行不同的代码。"
       4:
         image: 'notes/mc_2018_conditionals_4.png'
+        text: "要编写像这样的响应的代码，选择一个 如果 模块。"
       5:
         image: 'notes/mc_2018_conditionals_5.png'
+        text: "选择下拉列表来创建命令。"
       6:
         image: 'notes/mc_2018_conditionals_6.png'
+        text: "例如，如果在\"如果右边有路\"条件中中放上 向右转，那么斯蒂夫走到右边有路的地方，就总会向右转。如果右边没有路，就不会向右转。这些条件如果语句在不可预料的情况时很有用，比如在水下神秘的废墟中。"
       7:
         image: 'notes/mc_2018_conditionals_7.png'
+        text: "试着使用如果模块来转圈。"
       8:
         image: 'notes/mc_2018_conditionals_8.png'
+        text: "哇！Netty 的废墟真棒。我真的要搬出父母的房子。你觉得怎样？用条件语句能帮我们完成最后的难题吗？来试试吧。"
+    mc_2018_closing:
+      1:
+        text: "Amy Lee33: 祝贺！你成功了！"
+      2:
+        text: "乌贼：祝贺你！"
+      3:
+        text: "Netty: 成功了！祝贺你！"
+      4:
+        text: "Tomohawk: 祝贺你！"
+      5:
+        text: "今天真棒！寻宝过程中，构建了《我的世界》的通道，找到了鹦鹉螺，发现了百宝箱。我非常喜欢多姿多彩的颜色。我们还学会了使用循环和条件。"
+      6:
+        text: "说到编程，这里还有一关任务。冒险家，来试试吗？"
+      7:
+        text: "这一关自由发挥，可以用你的编程技巧来制作一些不可思议的东西。"
+      8:
+        text: "嗯……藏宝的地方，水下纪念碑，珊瑚城堡？啊……好多主意啊。试试使用循环来创建重复的动作，并使用条件来为所有那些不可预测的情况做好准备。"
+      9:
+        text: "你已经证明了自己是一位出色的程序员了，我非常想看看你创造出的东西。希望你的编程冒险不会仅此而已。一路顺风！"
     teaching_csf_how_it_works:
       1:
         image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "本课程分为多个阶段。"
       2:
         image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "前几阶段会介绍什么是计算机科学，以及一些关键词汇。"
       3:
         image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "接下来，会通过和学生一样的方法来学习。课程最后部分会帮助你制定计划来在课堂上教授计算机科学。通过此课程，可以了解在线课程，以及不需要计算机的离线课程的示例。"
       4:
         image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "学习平台可以记录进度，因此任何时候都可以离开。"
     what_is_cs:
       1:
         image: 'notes/what_is_cs.png'
+        text: "编程，是你给计算机的一组指令。计算机科学是人们使用计算机的能力来解决问题的领域。计算机科学包括编程，但还有其它内容，比如互联网原理及对社会的影响，大数据能做什么，如何分解大问题。计算机科学需要解决问题、批判性思考、坚持不懈等能力。"
     writing_first_program:
       1:
         image: 'notes/writing_first_program_1.png'
+        text: "Code.org 用模块化的可视化的，拖拽式编程语言。模块化编程使用彩色的，叫做模块的指令来编写程序、解决问题。"
       2:
         image: 'notes/writing_first_program_2.png'
+        text: "每个难题有分成 4 部分。"
       3:
         image: 'notes/writing_first_program_3.png'
+        text: "运行区域在左边，可以看到程序运行。"
       4:
         image: 'notes/writing_first_program_4.png'
+        text: "中间是工具箱区域，所有需要的模块都在这里。"
       5:
         image: 'notes/writing_first_program_5.png'
+        text: "右边是工作区，是将模块拖拽到这里构建程序的地方。"
       6:
         image: 'notes/writing_first_program_6.png'
+        text: "工作区上面是每个难题的说明。"
       7:
         image: 'notes/writing_first_program_7.png'
+        text: "如果从工具箱中拖拽出了不需要的模块，只需要将多余的模块拖回工具箱即可。点击运行了试试程序，点击重置可以重新开始。"
     repeat_block:
       1:
         image: 'notes/repeat_block.png'
+        text: "重复模块可以按照要求来多次循环里面的代码。"
     what_is_an_event:
       1:
         image: 'notes/what_is_an_event.png'
+        text: "事件告诉程序来等待某件事情的发生。当事情发生时，程序会执行对应的操作。计算机可以等待鼠标点击，按下方向键或触摸屏幕等事件。"
     lesson_planning:
       1:
         image: 'notes/lesson_planning_1.png'
+        text: "计算机科学基础从概述开始，介绍课程会覆盖哪些内容。"
       2:
         image: 'notes/lesson_planning_2.png'
+        text: "课程包括热身、活动以及总结。如果要创建自己的课程计划，也许需要这些技巧。"
       3:
         image: 'notes/lesson_planning_3.png'
+        text: "1. 试试使用螺旋式的教学设计。先介绍一次概念，然后再回头复习它们。"
       4:
         image: 'notes/lesson_planning_4.png'
+        text: "2. 将线上和线下课程组合，创建混合的学习体验。"
       5:
         image: 'notes/lesson_planning_5.png'
+        text: "3. 将教案费城更小的模块。"
       6:
         image: 'notes/lesson_planning_6.png'
+        text: "4. 确保符合当地标准，并对大学和职业发展有所准备。"
     opd_closing:
       1:
         image: 'notes/opd_closing_1.png'
+        text: "祝贺！你已经完成了教师的计算机科学在线课程。现在你是不断成长的教师社区中的一员了，教师们会帮助学生为未来做好准备。"
       2:
         image: 'notes/opd_closing_2.png'
+        text: "如果需要更多支持，可以查看以下资源：1. forum.code.org 2. Twitter @teachcode 3. studio.code.org "
+    hoc_dance_warmup_2019:
+      1:
+        image: 'notes/hoc_dance_warmup_1.png'
+        text: "编程一小时 | 舞蹈派对：热身"
+      2:
+        image: 'notes/hoc_dance_warmup_2.png'
+        text: "你好啊！我叫 Miral Kotb，一名舞者兼软件工程师，同时也是 iLuminate 的作者。"
+      3:
+        image: 'notes/hoc_dance_warmup_3.png'
+        text: "计算机科学与大量的创新都有关系。基本上，无法估量。也就是说，一旦有能力编写软件了，就能将任何想法编程显示。我用它实现了灯做的衣服。通过这些工具来编写软件，你可以实现无穷的创意。"
+      4:
+        image: 'notes/hoc_dance_warmup_4.png'
+        text: "接下来的一个小时，会从编写自己的舞蹈派对来开始学习计算机科学！可以将一组流行音乐和一队舞者编到一起。"
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "这需要使用代码模块来选择不同的舞者，编排舞蹈动作，让他们对音乐做出响应、互动。"
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "屏幕被分成三个主要的部分。左边是播放区。舞者会在这里跳舞。"
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "中间是工具箱。课程中新的代码模块都会出现在这里。"
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "右边是工作区。可将工具箱的模块拖放到这里，来构建自己的程序。"
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "每个关卡的说明会在屏幕的上方显示。如果需要提示，可以点击小灯泡。"
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "先用这个红色模块来创建一个舞者。首先，将它从工具箱里拖出，然后粘到橙色的\"设置\"模块下。这位舞者是一只猫。"
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "用这个选择舞者在播放区出现的位置。"
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "播放区上面的菜单中可选择音乐。这里有非常多的音乐，选个你喜欢的。播放区下面有个运行按钮。点击运行后，就能看到舞者从程序中出现到播放区，同时会播放音乐。"
+      13:
+        image: 'notes/hoc_dance_warmup_13.png'
+        text: "自己试试吧！遇到难题也没关系。在明白之前，继续做就好了！最终都会做出自己的舞蹈派对。所以，想创造点什么？"
+    hoc_dance_events_2019:
+      1:
+        image: 'notes/hoc_dance_events_1.png'
+        text: "编程一小时 | 舞蹈派对：事件"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "我是 Erin，我在 Code.org 做软件工程师，我参与实现了舞蹈派对。"
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "要让不同的舞蹈动作踩到音乐的点子上，需要叫做事件的功能。事件让程序\"等待\"某件事情，在这件事情发生时做出反应。"
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "一般事件会去侦听的动作有鼠标单击，按下方向键，屏幕触碰。"
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "当点击屏幕上的方向键，或者按下键盘上的方向键时，需要编程让舞者执行一个动作。"
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "可以用\"当上方向键按下时\"事件模块，并将\"做一次\"模块连到它下面。当上方向键按下时，附加到\"当上方向键按下时\"模块下的代码就会运行。你会选哪个舞蹈动作？"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "确保创建的舞者类型存在于\"设置\"模块里，否则什么都看不到。"
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "最终，能像这样创造出更多的事件，来让舞者在按下每个键时表演不同的动作。试一试，只需要几行代码就能创造出能交互的舞蹈。"
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "编程一小时 | 舞蹈派对：小节"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "我是 Aloe Blacc。我是一名歌手、作词者，也是一名艺人。我觉得学习计算机科学非常重要，因为计算机科学代表着未来。我觉得它对于所有人都很重要，让技术在掌控之中，就是掌控自己的生活。"
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "现在要使用的事件会等待音乐中的变化。变化发生时，会触发舞者开始新动作。"
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "专业的舞者会在练习编排舞蹈时，数歌曲的节拍。在音乐中，小节中有一定数量的节拍。大多数流行歌曲都是四拍的。"
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "要让舞者放松一些，可以添加一个绿色的事件模块。这个事件模块叫做 “在 4 个小节后”。"
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "可以拖出一个\"一直做\"模块，为舞者选择某个舞蹈。因为它放到了“在 4 个小节后”事件模块下，舞者会等 4 个小节，然后才开始舞蹈。"
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "观察显示区域上方的小节计数器。"
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "等待事件发生后，就会触发跳舞的代码。舞者就开始跳舞了。"
+    hoc_dance_properties_2019:
+      1:
+        image: 'notes/hoc_dance_properties_1.png'
+        text: "编程一小时 | 舞蹈派对：属性"
+      2:
+        image: 'notes/hoc_dance_properties_2.png'
+        text: "我是 Maria，我是华盛顿大学大三的学生，我还是亚马逊未来的工程师。"
+      3:
+        image: 'notes/hoc_dance_properties_3.png'
+        text: "我非常喜爱计算机科学，因为它需要解决问题和批判性思考。通过几个小时的工作，就能收获非常酷的东西。"
+      4:
+        image: 'notes/hoc_dance_properties_4.png'
+        text: "现在，你已经能用不同类型的舞者跳舞了，还有不同的舞蹈动作。但这些动作是怎么实现的呢？"
+      5:
+        image: 'notes/hoc_dance_properties_5.png'
+        text: "每个舞蹈动作都由一组图片组成，每张图片都是一“帧”。每帧都和前一帧稍有不同。当程序运行时，计算机会一帧一帧的显示。当显示得很快的时候，舞者看起来就在动了。这是所有动画背后的秘密。"
+      6:
+        image: 'notes/hoc_dance_properties_6.png'
+        text: "不仅可以让舞者动起来，还可以改变舞者的属性。属性描述了舞者的一些信息，比如屏幕上的位置，舞者的大小、颜色。"
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "要改变舞者的属性，就需要设置模块。用设置模块来让舞者看起来更小。首先，将设置模块拖拽到程序中。"
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "然后，选择要改变的舞者，输入要在屏幕上显示的大小。正常尺寸是 100。选择小一些的数字，舞者就会小一些。在改动后，舞者一直都会这么小。"
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "还可以用设置模块来改变舞者的大小、旋转角度、位置和颜色。可以根据歌曲不同的部分，使用这些属性，创建出各种各样的变化。"
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "记住，只能为已有的舞者设置属性。确保将属性放到\"创建一个新的舞者\"模块后。随便玩吧！"
+    hoc_dance_congrats_2019:
+      1:
+        text: "编程一小时 | 舞蹈派对：派对开始了！"
+      2:
+        text: "祝贺你！你已经学会了计算机科学的基础。现在，可以用这些模块来创造自己的舞蹈派对，并且分享给朋友们了。"
+      3:
+        text: "在工具箱里，可以找到一些没介绍过的新模块。例如， 可以用布局模块在屏幕上排列舞者。"
+      4:
+        text: "看一看，再试一试这些新的模块和功能。你能为自己喜欢的歌曲编排出舞蹈吗？"
+      5:
+        text: "或者和朋友们跳舞？"
+      6:
+        text: "或者一起做些别的事情？"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "在教程结束的时候，可以将作品的链接分享给朋友们。发挥想象力，尽情享受吧！"

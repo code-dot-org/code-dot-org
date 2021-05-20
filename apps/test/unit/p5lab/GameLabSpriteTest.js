@@ -1,6 +1,6 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {
   forEveryBooleanPermutation,
   sandboxDocumentBody

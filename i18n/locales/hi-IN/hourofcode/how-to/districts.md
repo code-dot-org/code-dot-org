@@ -1,7 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
+title: ऑवर ऑफ़ कोड हाउ-टु जिलों के लि
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Get every school participating, every student learning!
 
-### 1. Recruit local schools
+### 1. स्थानीय स्कूलों को शामिल करें 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

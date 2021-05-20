@@ -69,8 +69,8 @@ function customizeStyles() {
     $(".hide_on_v1").hide();
 
     // Default initial width and height (only available to widget v1)
-    const initialWidth = parseInt(options.v1InitialWidth, 10);
-    const initialHeight = parseInt(options.v1InitialHeight, 10);
+    var initialWidth = parseInt(options.v1InitialWidth, 10);
+    var initialHeight = parseInt(options.v1InitialHeight, 10);
     if (!isNaN(initialWidth)) {
       $("#width").val(initialWidth);
     }
@@ -142,21 +142,51 @@ function initProjects() {
       getGeneratedProperties: function() {
         return undefined;
       },
+      setInitialLibrariesList: function(_) {},
+      getLibrariesList: function() {
+        return undefined;
+      },
       setInitialLevelSource: function(levelSource) {
         options.projectData = levelSource;
       },
       getLevelSource: function() {
         return {
-          // this method is expected to return a Promise. Since this file does not go through our
+          // This method is expected to return a Promise. Since this file does not go through our
           // pipeline and can't be ES6, return a "then" method with a Promise-like interface
+          // that returns a "catch" method.
           then: function(callback) {
+            var studentCode = '';
             // Store the source in whichever format the level specifies.
             if (isHexSelected()) {
               var hexCode = pixel_data.value.replace(/[^0-9A-F]/gi, "");
-              callback(isHexLevel() ? hexCode : hexToBinPvt(hexCode));
+              studentCode = isHexLevel() ? hexCode : hexToBinPvt(hexCode);
             } else {
               var binCode = pixel_data.value.replace(/[^01]/gi, "");
-              callback(isHexLevel() ? binToHexPvt(binCode) : binCode);
+              studentCode = isHexLevel() ? binToHexPvt(binCode) : binCode;
+            }
+
+            var charactersToTrim = 0;
+            if (options.version === "2") {
+              // length & width
+              charactersToTrim = 2;
+            } else if (options.version === "3") {
+              // length & width & bitsPerPixel
+              charactersToTrim = 3;
+            }
+
+            charactersToTrim = isHexLevel() ? charactersToTrim * 2 : charactersToTrim * 8;
+            studentCode = studentCode.substring(charactersToTrim, studentCode.length);
+            studentCode = JSON.stringify({
+              width: widthText.value,
+              height: heightText.value,
+              bitsPerPixel: bitsPerPixelText.value,
+              binaryCode: studentCode
+            });
+
+            callback(studentCode);
+
+            return {
+              catch: function() {}
             }
           }
         };
@@ -174,26 +204,73 @@ function initProjects() {
     dashboard.project
       .load()
       .then(function() {
-        // Only enable saving if the initial load succeeds. This means new work
-        // will not be saved, but old work will not be erased and may become
-        // available by refreshing the page.
+        // Only enable saving if the initial load succeeds. This ensures that
+        // any previous work will not be erased if the initial load fails.
         options.saveProject = dashboard.project.save.bind(dashboard.project);
         options.projectChanged = dashboard.project.projectChanged;
         window.dashboard.project.init(sourceHandler);
 
         // Complete project initialization sequence.
         $(document).trigger("appInitialized");
-      })
-      .always(function() {
+
+        // Only enable UI controls if the initial load succeeds. This ensures
+        // the user cannot create any work which we are then unable to save if
+        // the initial load fails.
+        enableUiControls();
+        loadMetadata();
         pixelationDisplay();
+      })
+      .catch(function() {
+        window.alert(
+          "the pixelation level failed to load. Please reload the page to try again."
+        );
       });
   } else {
     pixelationDisplay();
   }
 }
 
+/**
+ * Load the project's width and height and bitsPerPixel into the pixelation
+ * widget and (if this is a version 2 or 3 project) prepend them into the code
+ * too.
+*/
+function loadMetadata() {
+  // First check if this is a legacy (pre 2020) project. Legacy projects do not
+  // have the height & width & bitsPerPixel stored, they only have the binary
+  // code stored as a string. If this is a legacy project, do nothing. It will
+  // be migrated when it is saved.
+  try {
+    var projectData = options.projectData && JSON.parse(options.projectData);
+  } catch (e) {
+    return;
+  }
+
+  if (typeof projectData !== "object") {
+    return;
+  }
+
+  // This is a newer project. Get the width & height & bitsPerPixel.
+  widthText.value = widthRange.value = projectData.width;
+  heightText.value = heightRange.value = projectData.height;
+  if (projectData.bitsPerPixel) {
+    // Only V3 projects have bitsPerPixel.
+    bitsPerPixelText.value = bitsPerPixelRange.value = projectData.bitsPerPixel;
+  }
+
+  var sliderBytes = "";
+  if (options.version !== "1") {
+    sliderBytes = getSliderBytes();
+    if (isHexLevel()) {
+      sliderBytes = binToHexPvt(sliderBytes);
+    }
+  }
+
+  pixel_data.value = sliderBytes + projectData.binaryCode;
+}
+
 function pixelationDisplay() {
-  pixel_data.value = options.projectData || options.data;
+  pixel_data.value = pixel_data.value || options.projectData || options.data;
   drawGraph(null, false, true);
   formatBitDisplay();
 }
@@ -252,7 +329,7 @@ function drawGraph(ctx, exportImage, updateControls) {
   }
 
   var bitsPerPix = 1;
-  if (options.version == "1") {
+  if (options.version === "1") {
     image_w = getPositiveValue(widthText);
     image_h = getPositiveValue(heightText);
   } else {
@@ -592,20 +669,30 @@ function getPositiveValue(element) {
   return value >= 1 ? value : 1;
 }
 
-function updateBinaryDataToMatchSliders() {
+/**
+ * Gets the numbers stored in the slider and returns them as a byte string.
+ */
+function getSliderBytes() {
   var heightByte = pad(getPositiveValue(heightRange).toString(2), 8, "0");
   var widthByte = pad(getPositiveValue(widthRange).toString(2), 8, "0");
-  var bppByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
+  var bitsPerPixelByte = pad(getPositiveValue(bitsPerPixelRange).toString(2), 8, "0");
 
+  var sliderBits = widthByte + heightByte;
+  if (options.version === "3") {
+    sliderBits += bitsPerPixelByte;
+  }
+
+  return sliderBits;
+}
+
+function updateBinaryDataToMatchSliders() {
+  var newBits = getSliderBytes();
   var justBits = pixel_data.value.replace(/[ \n]/g, "");
-
   if (isHexSelected()) {
     justBits = hexToBinPvt(justBits);
   }
 
-  var newBits = widthByte + heightByte;
-  if (options.version == "3") {
-    newBits += bppByte;
+  if (options.version === "3") {
     if (justBits.length > 24) {
       newBits += justBits.substring(24);
     }
@@ -699,6 +786,31 @@ function startOverConfirmed() {
   pixel_data.value = options.data;
   drawGraph(null, false, true);
   formatBitDisplay();
+}
+
+var UI_CONTROL_IDS = [
+  "width",
+  "widthRange",
+  "height",
+  "heightRange",
+  "bitsPerPixel",
+  "bitsPerPixelSlider",
+  "hex_to_bin",
+  "bin_to_hex",
+  "actual_size",
+  "save_image",
+  "pixel_data",
+  "readable_format",
+  "raw_format",
+  "start_over",
+  "finished"
+];
+
+function enableUiControls() {
+  UI_CONTROL_IDS.forEach(function(id) {
+    var el = document.getElementById(id);
+    el.removeAttribute("disabled");
+  });
 }
 
 pixelationInit();

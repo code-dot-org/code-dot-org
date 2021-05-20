@@ -1,7 +1,7 @@
 {
-  "danceFeedbackNeedNewDancer": "אתם צריכים ליצור רקדן.",
+  "danceFeedbackNeedNewDancer": "עליכם ליצור רקדן.",
   "danceFeedbackNoDancers": "אין לכם רקדנים.",
-  "danceFeedbackNoBackground": "אתם צריכים להוסיף אפקט ברקע.",
+  "danceFeedbackNoBackground": "עליכם להוסיף אפקט רקע.",
   "danceFeedbackTooManyDancers": "זהירות! אם תשימו בלוק 'צור חדש' בתוך בלוק 'כל 2 תיבות', אתם תייצרו הרבה מאוד רקדנים.",
   "danceFeedbackUseSetSize": "השתמשו בבלוק 'שנה גודל backup_dancer2' כדי להקטין את הרקדן.",
   "danceFeedbackUseSetTint": "השתמשו בבלוק 'הגדר גוון' כדי לשנות את הגוון של הרקדן.",
@@ -9,7 +9,14 @@
   "danceFeedbackStartNewMove": "הרקדן שלכם לא השתמש בתנועה חדשה אחרי התיבה הרביעית.",
   "danceFeedbackNeedDifferentDance": "אתם צריכים להשתמש בצעד ריקוד אחר.",
   "danceFeedbackNeedEveryTwoMeasures": "ודאו כי אתם משתמשים בבלוק 'כל 2 תיבות'",
-  "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק 'צור חדש' על מנת ליצור רקדן שני.",
-  "danceFeedbackKeyEvent": "",
+  "danceFeedbackNeedMakeANewDancer": "השתמשו בבלוק `צור חדש` על מנת ליצור רקדן שני.",
+  "danceFeedbackKeyEvent": "ודאו שאתם מוסיפים את הקוד לבלוק\n <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"למעלה\"</title></block></xml>\nולוחצים על המקש בזמן שהריקוד שלכם מתבצע.",
+  "danceFeedbackDidntPress": "ודאו שאתם לוחצים על מקשי החצים בזמן שהריקוד שלכם מתבצע.",
+  "danceFeedbackPressedKey": "לחצתם על מקש, אבל הרקדן שלכם לא הגיב.",
+  "danceFeedbackNeedTwoDancers": "עליכם ליצור שני רקדנים.",
+  "danceFeedbackOnlyOneDancerMoved": "רק אחד מהרקדנים שלכם זז.",
+  "danceFeedbackNeedLead": "עליכם גם ליצור רקדן מוביל אחד עם הבלוק\n<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "עליכם ליצור קבוצה של רקדני ליווי עם הבלוק\n<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"חדי קרן\"</title><title name=\"LAYOUT\">\"עיגול\"</title></block></xml>.",
+  "danceFeedbackSetSize": "עליכם לשנות את גודלו של אחד מהרקדנים אחרי שהמוזיקה מתחילה להתנגן.",
   "measure": "תיבה:"
 }

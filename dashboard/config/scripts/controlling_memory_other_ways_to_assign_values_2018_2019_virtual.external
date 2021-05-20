@@ -1,0 +1,25 @@
+name 'Controlling Memory - Other ways to assign values_2018_2019_virtual'
+title 'title'
+description 'description here'
+css 'unplugged'
+markdown <<MARKDOWN
+# Controlling Memory - Other ways to store values
+
+## Tip: Say "gets" instead of "equals"
+
+We know that the `=` sign, in a JavaScript statement like `a = b`, **isn't** a statement of mathematical equality. It's an instruction to move memory around. We'll talk about how to do mathematical equalities in JavaScript soon, but for now we'll just focus on the meaning of `=`.
+
+One tip is to read a statement like `var score = 0` as: **"The variable score *gets* the value 0"** or maybe just **"score *gets* 0"** to be brief.  Another example: `a = b + 7` should be read as **"a gets b plus 7"**
+
+When you read the `=` sign as "gets", and say it out loud that way, you'll prevent confusing yourself, and other programmers will know what you're talking about.
+
+As we're about to see there are other ways to store values in variables besides just hard-coding single numbers.  But in all cases, even when it's more complicated, **using the word "gets"** when you see a single `=` sign will help your mental model of what's happening.
+
+In the next several levels we're going to see how to:
+
+* Assign the result of an arithmetic expression.
+* Assign the value returned by `randomNumber`.
+* Assign a value given by the user through `promptNum`.
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

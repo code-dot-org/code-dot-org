@@ -1,8 +1,8 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
-import JoinSection from '@cdo/apps/templates/studioHomepages/JoinSection';
+import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,
@@ -20,7 +20,7 @@ describe('JoinSection', () => {
     server.restore();
   });
 
-  it('renders with a dashbed border when not enrolled in a section', () => {
+  it('renders with a dashed border when not enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={false} />
     );
@@ -32,6 +32,13 @@ describe('JoinSection', () => {
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={true} />
     );
     expect(wrapper.prop('style')).to.include({borderStyle: 'solid'});
+  });
+
+  it('renders with disabled button when input is empty', () => {
+    const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    expect(wrapper.find('Button').prop('disabled')).to.be.true;
+    wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
+    expect(wrapper.find('Button').prop('disabled')).to.be.false;
   });
 
   it('updates state when typing', () => {
@@ -195,5 +202,13 @@ describe('JoinSection', () => {
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
     wrapper.find('Button').simulate('click');
     server.respond();
+  });
+
+  it('makes get request to server for captcha info in componentDidMount', () => {
+    const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
+    const instance = wrapper.instance();
+    const fetchCaptchaSpy = sinon.spy(instance, 'fetchCaptchaInfo');
+    instance.componentDidMount();
+    expect(fetchCaptchaSpy).to.have.been.calledOnce;
   });
 });

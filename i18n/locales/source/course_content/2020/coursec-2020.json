@@ -1,0 +1,1338 @@
+{
+  "https://studio.code.org/s/coursec-2020/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# STOP Meanness\n\n## What should you do if someone is mean to you online?\n\n* **S**tep away.\n* **T**ell a trusted adult.\n* **O**K sites first.\n* **P**ause and think online.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/2/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "#  Power Up Your Password\n\n## Password Tips to Remember\n\n* Start with a memorable **phrase**.\n* Only your **parents** should know your password.\n* Never use any **private** identity information in your password.\n* Create passwords with at least **eight** characters.\n* Use letters, numbers, and **symbols** in your password.\n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/3/levels/1": {
+    "dsls": {
+      "markdown": "# My Robotic Friends\n\nLearn to program by writing code for your friends!\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/2": {
+    "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
+    "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
+    "authored_hints": {
+      "courseC_maze_programming1_0": "Make sure all of the blocks have been fully snapped together, then click \"Run\" again."
+    },
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/3": {
+    "short_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
+    "long_instructions": "Drag an extra [blockly block][0] block out of the toolbox to finish your code.",
+    "authored_hints": {
+      "courseC_maze_programming2_a": "To use a [blockly block][0] block, drag it out of the toolbox and snap it to the [blockly block][1] block.",
+      "courseC_maze_programming2_b": "Make sure all of the blocks have been fully snapped together, then click \"Run\" again."
+    },
+    "callouts": {
+      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/4": {
+    "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
+    "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by unhooking it from the grey blocks and dragging it back to the toolbox.",
+    "authored_hints": {
+      "courseC_maze_programming3_a": "Try running the code first to see where it goes wrong.",
+      "courseC_maze_programming3_b": "[][0]\n\nTo delete a block from the middle of your code, drag all of the blocks to another part of the workspace.\n\nDrag the block you want to delete back to the toolbox.\n\nFinally, put your other blocks back where they belong."
+    },
+    "callouts": {
+      "courseC_maze_programming3_2": "You can drag extra blocks to the toolbox to throw them away.",
+      "courseC_maze_programming3_3": "These blocks are stone and cannot be thrown away."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/5": {
+    "short_instructions": "Avoid TNT or feathers will fly!",
+    "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
+    "authored_hints": {
+      "courseC_maze_programming4_a": "Remember that when you turn, you are turning from the _bird's_ point of view.  If you turn right, the bird will point down.",
+      "courseC_maze_programming4_b": "To follow the path:\n\n-   move forward\n-   turn one way\n-   move forward\n-   turn back the other way\n-   move forward"
+    },
+    "callouts": {
+      "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/6": {
+    "short_instructions": "Avoid the TNT.",
+    "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
+    "authored_hints": {
+      "courseC_maze_programming5_a": "Try using the \"Step\" button to run your code line by line. Can you figure out what you need to do next?",
+      "courseC_maze_programming5_b": "The bird will need to make one turn to complete this puzzle. Can you figure out which way?",
+      "courseC_maze_programming5_c": "The solution will have two `move forward` blocks, a turn, and two more `move forward` blocks."
+    },
+    "callouts": {
+      "": "These blocks don't have numbers on them. You can use as many as you want!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/7": {
+    "short_instructions": "\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"",
+    "long_instructions": "_\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"_\n\nGet the bird to the pig and avoid the TNT.",
+    "authored_hints": {
+      "courseC_maze_programming6_a": "There are two ways to solve this puzzle!",
+      "courseC_maze_programming6_b": "Follow your finger from the bird to the pig, which steps did you take?",
+      "courseC_maze_programming6_c": "Remember you have to turn first, since the bird starts facing a wall.",
+      "courseC_maze_programming6_d": "Feel stuck?  Look at this path!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/8": {
+    "short_instructions": "**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
+    "long_instructions": "_\"It's time to get angry!\"_\n\n**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
+    "authored_hints": {
+      "courseC_maze_programming7_a": "Don't forget to use the \"Step\" button to go through block by block and look for errors.",
+      "courseC_maze_programming7_b": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper."
+    },
+    "callouts": {
+      "courseC_maze_programming7_1": "This is your first challenge puzzle! These are meant to be hard and may take several tries.",
+      "courseC_maze_programming7_2": "These blocks are made of stone and can't be thrown away."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/9": {
+    "short_instructions": "_\"Keep calm and help me find the bad pig.\"_",
+    "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
+    "authored_hints": {
+      "courseC_maze_programming8_a": "Remember you can use the \"Step\" button to look through your code line-by-line if you get stuck.",
+      "courseC_maze_programming8_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/10": {
+    "short_instructions": "_\"Keep calm and help me find the bad pig.\"_",
+    "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The bird will end up one step short of the pig.",
+              "correct": false,
+              "feedback": "Incorrect. This code gets the bird perfectly to the pig."
+            },
+            {
+              "text": "The bird will make it to the pig.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The bird will run into the TNT.",
+              "correct": false,
+              "feedback": "Incorrect. This code gets the bird perfectly to the pig."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "This code gets the bird perfectly to the pig."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read through the code below very carefully. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/levels/11": {
+    "short_instructions": "_\"Now, help me sneak up on the pig any way you want to!\"_",
+    "long_instructions": "_\"Now, help me sneak up on the pig any way you want to!\"_"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/extras?level_name=courseC_maze_programming_challenge1_2020": {
+    "short_instructions": "The pig is hiding, and the goal is to find it. ",
+    "long_instructions": "The bird needs your help! The pig is hiding, and the goal is to find it. ",
+    "authored_hints": {
+      "courseC_maze_programming_challenge1_a": "There are many ways to get to the pig. Use your finger to find a path and then program it!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/4/extras?level_name=courseC_maze_programming_challenge2_2020": {
+    "short_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
+    "long_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
+    "authored_hints": {
+      "courseC_maze_programming_challenge2_a": "_\"If you send me backwards, be extra careful that I turn the correct way!\"_",
+      "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/2": {
+    "short_instructions": "Fix the code to help get Scrat get to the acorn.",
+    "long_instructions": "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn.",
+    "authored_hints": {
+      "courseC_maze_debugging1_a": "-   Does everything work after the first step?\n-   Does it still work after the second?\n-   Where does it go wrong?",
+      "courseC_maze_debugging1_b": "There is 1 block you need to add to complete this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/3": {
+    "short_instructions": "Use your debugging skills to get Scrat to the acorn.",
+    "authored_hints": {
+      "courseC_maze_debugging2_a": "There is a lot of valuable code in the workspace.  Don't just delete it all and start over!",
+      "courseC_maze_debugging2_b": "-   Does everything work after the first step?\n-   Does it still work after the second?\n-   Where does it go wrong?",
+      "courseC_maze_debugging2_c": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/4": {
+    "short_instructions": "Remove blocks to get Scrat to the acorn!",
+    "long_instructions": "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!",
+    "authored_hints": {
+      "courseC_maze_debugging3_a": "To delete a block from the middle of your code, drag all of the blocks to another part of the workspace.\n\nDrag the block you want to delete back to the toolbox.\n\nFinally, put your other blocks back where they belong.\n\n[][0]",
+      "courseC_maze_debugging3_b": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/5": {
+    "short_instructions": "Someone has their directions mixed up! Can you help?",
+    "authored_hints": {
+      "courseC_maze_debugging4_a": "Use the \"Step\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?",
+      "courseC_maze_debugging4_b": "One of the turns is making Scrat go in the wrong direction. Can you figure out which one?"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/6": {
+    "short_instructions": "Debug this level by rearranging and changing blocks.",
+    "authored_hints": {
+      "courseC_maze_debugging5_a": "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong.",
+      "courseC_maze_debugging5_c": "You can change the direction of the turn block by clicking on the dropdown.",
+      "courseC_maze_debugging5_b": "Try saying what Scrat should do out loud.  Is it the same as the code in the workspace?  What goes wrong?"
+    },
+    "callouts": {
+      "courseC_maze_debugging5_1": "These blocks are locked and cannot be deleted!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/7": {
+    "short_instructions": "Figure out what is wrong and get Scrat to the acorn.",
+    "authored_hints": {
+      "courseC_maze_debugging6_a": "-   What is Scrat supposed to do?\n-   What does Scrat do?\n-   What does that tell you?",
+      "courseC_maze_debugging6_b": "Once you've found and fixed the first bug, go through the debugging process again to find the second one.\n\nRepeat the process until the program works!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/8": {
+    "short_instructions": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
+    "authored_hints": {
+      "courseC_maze_debugging7_a": "-   Does everything work at the first step?\n-   How about the second step?\n-   Where does it go wrong?",
+      "courseC_maze_debugging7_b": "Don't forget to use the \"Step\" button to run the program line by line!",
+      "courseC_maze_debugging7_c": "After you find and fix the first bug, make sure to use the debugging process again to find the next one.\n\nRepeat the debugging process until the program works!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/9": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Scrat will reach the acorn. There are no bugs in the code.",
+              "correct": false,
+              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+            },
+            {
+              "text": "Scrat will not reach the acorn because he turns the wrong way.",
+              "correct": true,
+              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+            },
+            {
+              "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
+              "correct": true,
+              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look for bugs in this code. Will Scrat reach the acorn or is there a problem?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/levels/10": {
+    "long_instructions": "Use the blocks in the toolbox to build your program. Get the Scrat to the acorn.",
+    "callouts": {
+      "courseC_maze_debugging9_2019_1": "Drag blocks from the toolbox into your workspace."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/extras?level_name=courseC_maze_debugging_challenge1_2020": {
+    "short_instructions": "Help Scrat decide which way to turn to get to the acorn.",
+    "authored_hints": {
+      "courseC_maze_debugging_challenge1_a": "Left or right? It's up to you!",
+      "courseC_maze_debugging_challenge1_b": "Scrat's path is the shape of a rectangle! He needs to turn the same way each time.",
+      "courseC_maze_debugging_challenge1_c": "If you are getting stuck, you can always start over and find a new way!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/5/extras?level_name=courseC_maze_debugging_challenge2_2020": {
+    "short_instructions": "Help Scrat reach the acorn with only four `turn` commands.",
+    "long_instructions": "If Scrat turns too often, he might get dizzy! Help him reach the acorn with only four `turn` commands.",
+    "authored_hints": {
+      "courseC_maze_debugging_challenge2_b": "If you are getting stuck, try debugging the code.  Where does it go wrong?",
+      "courseC_maze_debugging_challenge2_c": "There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/2": {
+    "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
+    "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
+    "authored_hints": {
+      "courseC_collector_prog1_a": "When you are standing on a space with treasure, use the [blockly block][0] block to pick it up.",
+      "courseC_collector_prog1_b": "The most simple solution would be to move forward once, then collect treasure."
+    },
+    "callouts": {
+      "courseC_collector_prog1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them in another lesson."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/3": {
+    "short_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
+    "long_instructions": "Move Laurel to the treasure, then use the [blockly block][0] block to pick it up.",
+    "authored_hints": {
+      "courseC_collector_prog2_a": "You can use four [blockly block][0] blocks or use the [blockly block][1] block to make your program shorter.",
+      "courseC_collector_prog2_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/4": {
+    "short_instructions": "Order these blocks to collect the treasure and solve the puzzle.",
+    "long_instructions": "_\"Sequence matters!\"_ \n\nThe blocks you need are already in the workspace, but not connected.\\\nOrder these blocks to collect the treasure and solve the puzzle.",
+    "authored_hints": {
+      "courseC_collector_prog3_a": "The program will only run the blocks that are connected to the [blockly block][0] block.",
+      "courseC_collector_prog3_b": "Try using the \"Step\" button to run your code one line at a time.  Do you see where the code goes wrong?",
+      "courseC_collector_prog3_c": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/5": {
+    "short_instructions": "Put these blocks in order to collect all of the treasure and solve the puzzle.",
+    "long_instructions": "_\"Sequence matters!\"_\n\nThe blocks you need are already in the workspace, but not connected.  \n\nPut these blocks in order to collect all of the treasure and solve the puzzle.",
+    "authored_hints": {
+      "courseC_collector_prog4_a": "If you get stuck, try writing out the steps on a piece of paper.",
+      "courseC_collector_prog4_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.",
+      "courseC_collector_prog4_c": "Try this option for a path."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/6": {
+    "short_instructions": "These blocks are in the wrong order. Can you fix them?",
+    "long_instructions": "_\"Help me collect each bit of treasure!\"_\n\nThese blocks are in the wrong order. Can you fix them?",
+    "authored_hints": {
+      "courseC_collector_prog5_a": "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\"",
+      "courseC_collector_prog5_b": "If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.",
+      "courseC_collector_prog5_c": "If you get stuck, try writing out the steps on a piece of paper.",
+      "courseC_collector_prog5_d": "Follow the path to collect the treasure."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/7": {
+    "short_instructions": "Reorder the blocks to collect all of the treasure.",
+    "long_instructions": "_\"Help me collect all of the treasure!\"_\n\nThese blocks are in the wrong order. Reorder them to collect all of the treasure.",
+    "authored_hints": {
+      "courseC_collector_prog6_a": "Can you figure out what is going wrong?  \n\nTry using the \"Step\" button to find errors by running your code line by line.",
+      "courseC_collector_prog6_b": "Stuck?  Try this path to collect the treasure."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/8": {
+    "short_instructions": "Use blocks from the toolbox to collect all of the treasure.",
+    "long_instructions": "**Challenge:** _\"What is going on here?\"_\n\nEven if we put these in the right order, there will still be some missing.\\\nUse blocks from the toolbox to collect all of the treasure.",
+    "authored_hints": {
+      "courseC_collector_prog7_a": "There is already a lot of great code in the workspace.  You don't need to delete any of it to solve this puzzle.  ",
+      "courseC_collector_prog7_b": "Don't see the block you need to get the adventurer moving in the right direction?  Pull one from the toolbox.",
+      "courseC_collector_prog7_c": "Having trouble seeing a route to collect all of the treasure?  Try this path!"
+    },
+    "callouts": {
+      "courseC_collector_prog7_1": "You can take more blocks from the toolbox if you need them!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/9": {
+    "short_instructions": "_\"Keep up the good work! Help me collect all of the treasure.\"_",
+    "long_instructions": "_\"Keep up the good work! Help me collect all of the treasure.\"_"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/10": {
+    "short_instructions": "_\"Let's get all of the treasure!\"_",
+    "long_instructions": "_\"Let's get all of the treasure!\"_"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/11": {
+    "short_instructions": "Help Laurel collect all of the treasure.",
+    "long_instructions": "Help Laurel collect all of the treasure."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/12": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Laurel will collect 4 pieces of treasure using this code.",
+              "correct": false,
+              "feedback": "Incorrect.  Laurel tries to collect treasure where there is none and it causes an error."
+            },
+            {
+              "text": "Laurel will try to collect treasure where there is not any and it causes an error.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "Laurel will collect all of the treasure.",
+              "correct": false,
+              "feedback": "Incorrect.  Laurel tries to collect treasure where there is none and it causes an error."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "Laurel tries to collect treasure where there is none and it causes an error."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at this code carefully. What do you think will happen when the program runs?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/levels/13": {
+    "short_instructions": "You're almost done! Collect as many pieces of treasure as you can to finish the stage!",
+    "long_instructions": "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/extras?level_name=courseC_collector_prog_challenge1_2020": {
+    "short_instructions": "Look carefully! Can you collect all **10** pieces of treasure?",
+    "authored_hints": {
+      "courseC_collector_prog_challenge1_a": "You can use the `collect` block many times to collect the extra treasure."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/6/extras?level_name=courseC_collector_prog_challenge2_2020": {
+    "short_instructions": "Collect at least **10** pieces of treasure to finish this challenge!",
+    "long_instructions": "There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!",
+    "authored_hints": {
+      "courseC_collector_prog_challenge1_a": "You can use more than one `collect` block at each space.",
+      "courseC_collector_prog_challenge1_b": "Lost your way?  Try this path to solve the puzzle!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/2": {
+    "short_instructions": "Play with the blocks in the toolbox to see what they do!",
+    "long_instructions": "_\"Hi, I'm an artist. You can write code to make me draw almost anything.\"_\n\nPlay with the blocks in the toolbox to see what they do!"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/3": {
+    "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
+    "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
+    "authored_hints": {
+      "courseC_artist_prog2_a": "_\"If you use the [blockly block][0] block, I will draw a line.\"_",
+      "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/4": {
+    "short_instructions": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "long_instructions": "_\"This spaceship needs a window!\"_\n\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
+    "authored_hints": {
+      "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
+      "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
+    },
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/5": {
+    "short_instructions": "Finish Starla's rocket so she can chase her pet.",
+    "long_instructions": "_\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"_\n\nFinish Starla's rocket so she can chase her pet.\\\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
+    "authored_hints": {
+      "courseC_artist_prog4_a": "To finish the rocket, just draw the triangle on top!",
+      "courseC_artist_prog4_b": "You can use the drop down menu on the `turn` blocks to see which angle you need!",
+      "courseC_artist_prog4_c": "To draw a triangle, you will want to:\n\n-   move forward\n-   turn left 120 degrees\n-   move forward\n-   turn left 120 degrees\n-   move forward"
+    },
+    "function_definitions": {
+      "booster": {
+        "name": "booster"
+      }
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/6": {
+    "short_instructions": "Finish this tag by drawing a rectangle around the outside.\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "long_instructions": "_\"Maybe we should make a tag for each of our pets in case they get lost!\"_\n\nFinish this tag by drawing a rectangle around the outside.\\\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "authored_hints": {
+      "courseC_artist_prog5_a": "Slow the slider down all the way until you can run your code line-by-line to see where things go wrong.",
+      "courseC_artist_prog5_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.",
+      "courseC_artist_prog5_c": "You can use the drop down menus in the blocks to change what they do!",
+      "courseC_artist_prog5_d": "Each turn should be 90 degrees to the right."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/7": {
+    "short_instructions": "Draw this diamond with 200 pixel sides.",
+    "long_instructions": "_\"Now a tag for Belle!\"_\n\nDraw this square with 200 pixel sides.",
+    "authored_hints": {
+      "courseC_artist_prog6_a": "The artist is already facing the correct way to draw his first line.",
+      "courseC_artist_prog6_b": "This diamond is really just a square that's standing on its corner.",
+      "courseC_artist_prog6_c": "Since this diamond is also a square, be sure to turn 90 degrees at the corners."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/8": {
+    "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
+    "long_instructions": "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?\\\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
+    "authored_hints": {
+      "courseC_artist_prog7_a": "Every angle is either 45 or 90 degrees.",
+      "courseC_artist_prog7_b": "Does it work at the first step?\\\nHow about the second?\\\nWhere does it go wrong?",
+      "courseC_artist_prog7_c": "You can use the dropdown menu on the turn blocks to see which angle you need!",
+      "courseC_artist_prog7_d": "You will want to:\n\n-   move forward\n-   turn right 45 degrees\n-   move forward\n-   turn right 90 degrees\n-   move forward\n-   turn right 45 degrees\n\nRepeat this pattern 2 times!",
+      "courseC_artist_prog7_e": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/9": {
+    "short_instructions": "One more tag.  This is a triangle for Pi.\n(Each side is 150 pixels)",
+    "long_instructions": "One more tag.  This is a triangle for Pi.\\\n(Each side is 150 pixels)"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/levels/10": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The artist will draw a triangle with three equal sides.",
+              "correct": false,
+              "feedback": "Incorrect.  The artist draws a square."
+            },
+            {
+              "text": "The artist will draw a single line.",
+              "correct": false,
+              "feedback": "Incorrect.  The artist draws a square."
+            },
+            {
+              "text": "The artist will draw a square.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The artist draws a square."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/extras?level_name=courseC_artist_prog_challenge1_2020": {
+    "short_instructions": "Draw rooms for each of the animals. ",
+    "long_instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.",
+    "authored_hints": {
+      "courseC_artist_prog_challenge1_a": "You can draw this as a rectangle with a line in the middle or two different squares!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/7/extras?level_name=courseC_artist_prog_challenge2a_2020": {
+    "short_instructions": "_\"Help me paint the yellow lines on this road!\"_",
+    "long_instructions": "_\"Help me paint the yellow lines on this road!\"_\n\nThe three line segments have lengths of 150, 100, and 200 pixels!",
+    "authored_hints": {
+      "courseC_artist_prog_challenge2_a": "After you draw the first line, turn left before you draw your second line.",
+      "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/8/levels/1": {
+    "dsls": {
+      "markdown": "# Binary Bracelets\n\nCreate a bracelet that represents your name in a system that computers understand!\n\n![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/9/levels/1": {
+    "dsls": {
+      "markdown": "# My Loopy Robotic Friends\n\nMake your programs more shorter using loops!\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/2": {
+    "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
+    "long_instructions": "[][0] _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: [][1]",
+    "authored_hints": {
+      "courseC_starWars_loops1_a": "When BB-8 rolls over scrap metal he picks it up automatically.",
+      "courseC_starWars_loops1_b": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.",
+      "courseC_starWars_loops1_c": "You will want to `move forward` five times to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/3": {
+    "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "BB-8 will not move.",
+              "correct": false,
+              "feedback": "Incorrect. The repeat block will make the BB-8 move forward 5 times."
+            },
+            {
+              "text": "BB-8 will move only one space",
+              "correct": false,
+              "feedback": "Incorrect. The repeat block will make the BB-8 move forward 5 times."
+            },
+            {
+              "text": "BB-8 will move 5 times and get all of the scrap metal",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "I don't know",
+              "correct": false,
+              "feedback": "The repeat block will make the BB-8 move forward 5 times."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What do you think will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/5": {
+    "short_instructions": "To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
+    "long_instructions": "[][0] _\"Go BB-8!\"_\n\nTo get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
+    "authored_hints": {
+      "courseC_starWars_loops2_a": "To repeat code, drag out a `repeat` loop, then put the block you want inside of it."
+    },
+    "callouts": {
+      "courseC_starWars_loops2": "You only have one of these blocks available in this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/6": {
+    "short_instructions": "In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\nIn this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
+    "authored_hints": {
+      "courseC_starWars_loops4_c": "Clicking on the small arrow next to \"left\" on the turn block will let you change it to  \"right\".",
+      "courseC_starWars_loops4_a": "Use two `repeat` blocks.",
+      "courseC_starWars_loops4_b": "Each `repeat` loop will have only one command inside of it: `move forward`."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/7": {
+    "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
+    "long_instructions": "[][0] _\"Go BB-8!\"_",
+    "authored_hints": {
+      "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/8": {
+    "short_instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
+    "long_instructions": "[][0] _\"Can you get it all?\"_\n\nLoops even work with more than one block inside!  Can you loop this sequence?",
+    "authored_hints": {
+      "courseC_starWars_loops6_a": "Try writing all of the moves down on a piece of paper and looking for a pattern.",
+      "courseC_starWars_loops6_b": "If you want to use less code, you can put one `repeat` loop inside of another!\\\nThis is called a **nested loop**."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/9": {
+    "short_instructions": "Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
+    "long_instructions": "[][0] _\"You can do it!\"_\n\nCan you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
+    "authored_hints": {
+      "courseC_starWars_loops7_a": "This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?",
+      "courseC_starWars_loops7_b": "If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.",
+      "courseC_starWars_loops7_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/10": {
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge:** Combine ideas from the last few puzzles to complete this level.",
+    "authored_hints": {
+      "course_starWars_loops8_a": "Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!",
+      "course_starWars_loops8_b": "Think of the first half of this problem as a stair step problem. How did you solve that before?",
+      "course_starWars_loops8_c": "Take a look at this path.\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/11": {
+    "short_instructions": "Use what you have learned to pick up all of the scrap metal!",
+    "long_instructions": "[][0] _\"Keep going!\"_\n\nUse what you have learned to pick up all of the scrap metal!",
+    "authored_hints": {
+      "course_starWars_loops9_b": "You can put more than one block inside a `repeat` loop.",
+      "course_starWars_loops9_c": "You do not need to turn left to solve this puzzle. All of your turns can be to the right.\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/12": {
+    "short_instructions": "You are doing great! Keep it up!",
+    "long_instructions": "[][0]\n _\"Go BB-8!\"_\n\nYou are doing great! Keep it up!",
+    "authored_hints": {
+      "courseC_starWars_loops10_a": "Doesn't this pattern look like a giant set of stair steps? See if you can use what you learned from previous puzzles to get all of the turns.",
+      "courseC_starWars_loops10_b": "If you want to use less code, you can put one `repeat` loop inside of another!\\\nThis is called a **nested loop**.",
+      "courseC_starWars_loops10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/13": {
+    "short_instructions": "You are doing great! Keep it up!",
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "BB-8 will travel too far in the first loop.",
+              "correct": false,
+              "feedback": "Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            },
+            {
+              "text": "BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "BB-8 will collect all of the scrap metal with no problems.",
+              "correct": false,
+              "feedback": "Incorrect. The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/levels/14": {
+    "short_instructions": "You are almost there! This time, choose any path you like!",
+    "long_instructions": "[][0] _\"Keep going, BB-8!\"_\n\nYou are almost there! This time, choose any path you like!"
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/extras?level_name=courseC_maze_loops_challenge1a_2020": {
+    "short_instructions": "Now Scrat wants to try using loops to find his acorn! ",
+    "authored_hints": {
+      "courseC_maze_loops_challenge1_a": "Think about this path as being two different pieces. Each one has a pattern you can repeat.",
+      "courseC_maze_loops_challenge1_b": "Can you remember how to use loops to repeat a staircase pattern?"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/10/extras?level_name=courseC_collector_loops_challenge2_2020": {
+    "short_instructions": "Get at least **5** pieces of treasure!",
+    "long_instructions": "_\"Let's hunt for treasure!\"_\n\nHelp the collector get at least **5** pieces of treasure.",
+    "authored_hints": {
+      "courseC_maze_loops_challenge2_b": "Use loops so you don't run out of `collect` blocks!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/2": {
+    "short_instructions": "Use loops to pick all of the pumpkins.",
+    "long_instructions": "Loops can be used to repeat more than moves.  \n\nUse loops to collect all four of the pumpkins.",
+    "authored_hints": {
+      "courseC_harvester_loops1_a": "Once you have moved to a pumpkin, use [blockly block][0] to collect it.",
+      "courseC_harvester_loops1_b": "You can use a loop with the [blockly block][0] block to pick more than one pumpkin from a square."
+    },
+    "callouts": {
+      "courseC_harvester_loops1_callout1": "The number four on the pumpkin tells you that there are four pumpkins available to pick."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/3": {
+    "short_instructions": "Can you combine two different loops to move toward the pumpkins, then collect them all?",
+    "long_instructions": "Can you combine two different loops to move toward the pumpkins, then collect them all?",
+    "authored_hints": {
+      "courseC_harvester_loops2_a": "If you get stuck, try writing the steps on paper and looking for repeating patterns.",
+      "courseC_harvester_loops2_b": "You will need one `repeat` loop after another.",
+      "courseC_harvester_loops2_c": "One loop will repeat the `move forward` command, and the other will repeat the `pick pumpkin` command."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/4": {
+    "short_instructions": "Collect all of the pumpkins.",
+    "long_instructions": "Collect all of the pumpkins.",
+    "authored_hints": {
+      "courseC_harvester_loops3_a": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
+      "courseC_harvester_loops3_b": "For the first pumpkins, you can use code very similar to the last puzzle. Which way do you need to turn afterwards?",
+      "courseC_harvester_loops3_c": "If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/5": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Now there is corn growing, too!\n\nCollect all of the corn and all of the pumpkins.",
+    "authored_hints": {
+      "courseC_harvester_loops4_a": "Use the new `pick corn` block to collect the corn.",
+      "courseC_harvester_loops4_b": "You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.",
+      "courseC_harvester_loops4_c": "If you want to simplify your code, you can actually put one loop inside of another! This is called a **nested loop**."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/6": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Collect all of the corn and all of the pumpkins.",
+    "authored_hints": {
+      "courseC_harvester_loops6_a": "Remember you can put multiple blocks in one repeat loop.",
+      "courseC_harvester_loops6_b": "Don’t forget to turn at the end of the row of corn."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/7": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Collect all of the corn and all of the pumpkins.",
+    "authored_hints": {
+      "courseC_harvester_loops7_a": "You can solve this puzzle two ways, either get the corn or the pumpkins first.",
+      "courseC_harvester_loops7_b": "You will need multiple `repeat` loops to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/8": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Collect all of the corn and all of the pumpkins.",
+    "authored_hints": {
+      "courseC_harvester_loops5_a": "If you get stuck, try drawing the entire program and then looking for repeating patterns.",
+      "courseC_harvester_loops5_b": "Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/9": {
+    "short_instructions": "**Challenge:** Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "**Challenge:** Collect all of the corn and all of the pumpkins.\n\nYou can complete this challenge any way you want, but it will either take a lot of work or a lot of thinking!",
+    "authored_hints": {
+      "courseC_harvester_loops8_a": "Does this stair step look familiar from the previous puzzle? The movements should be similar, just remember to collect crops along the way.",
+      "courseC_harvester_loops8_b": "If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/10": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Collect all of the corn and all of the pumpkins."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/11": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Collect all of the corn and all of the pumpkins."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/12": {
+    "short_instructions": "Collect all of the corn and all of the pumpkins.",
+    "long_instructions": "Collect all of the corn and all of the pumpkins."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/levels/13": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "4",
+              "correct": false,
+              "feedback": "Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!"
+            },
+            {
+              "text": "12",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "15",
+              "correct": false,
+              "feedback": "Incorrect. The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!"
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How many pumpkins will the farmer collect after you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/extras?level_name=courseC_harvester_loops_challenge1a_2020": {
+    "short_instructions": "Collect all of the corn.",
+    "authored_hints": {
+      "courseC_harvester_loops_challenge1_a": "This is too hard without loops!",
+      "courseC_harvester_loops_challenge1_b": "You can repeat `move forward` and `pick corn` as many times as you need, then `turn right` at each corner.",
+      "courseC_harvester_loops_challenge1_c": "The best way to collect the corn in the middle uses a `repeat` block inside of another `repeat` block.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/11/extras?level_name=courseC_harvester_loops_challenge2_2020": {
+    "short_instructions": "Collect all of the lettuce. Avoid the trees and fields!",
+    "long_instructions": "Collect all of the lettuce. Avoid the trees and fields!",
+    "authored_hints": {
+      "courseC_harvester_loops_challenge2_a": "One way to solve this looks like a zig-zag. Another way looks like a spiral! There are lots of different solutions to a puzzle like this. Be persistent!",
+      "courseC_harvester_loops_challenge2_b": "You can repeat `move forward` and `pick lettuce` as many times as you need to, then turn at each corner.",
+      "courseC_harvester_loops_challenge2_c": "This zig-zag pattern can be repeated twice to finish the puzzle with just 20 blocks!\n\n[][0]",
+      "courseC_harvester_loops_challenge2_d": "This spiral pattern can be coded with just 18 blocks!\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/1": {
+    "short_instructions": "Add a second `move forward` block to reach the sheep.",
+    "long_instructions": "Add a second `move forward` block to reach the sheep.",
+    "authored_hints": {
+      "mc_1_a": "The `move forward` block is at the top of the toolbox.",
+      "mc_1_b": "Make sure both `move forward` blocks are snapped to the `when run` block."
+    },
+    "callouts": {
+      "craft_run_button_callout": "Hit \"Run\" to try your program",
+      "craft_drag_block_callout": "Drag a \"move forward\" block and snap it below the other block"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/2": {
+    "short_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the “destroy block” command to chop it down.",
+    "long_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the `destroy` block command to chop it down.",
+    "authored_hints": {
+      "mc_2_a": "You need to `move forward` twice to stand in front of the tree.",
+      "mc_2_b": "The `destroy block` command cuts down the tree in front of you."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/3": {
+    "short_instructions": "Sheep-shearing time! Use the “shear” command to gather wool from both sheep.",
+    "long_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
+    "authored_hints": {
+      "mc_3_a": "The `shear` block gets the sheep in front of you. Are you facing the sheep?",
+      "mc_3_b": "If you need to change the way you are facing, use a `turn` block.",
+      "mc_3_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/4": {
+    "short_instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
+    "authored_hints": {
+      "mc_4_a": "You can chop down trees in any order. What path takes the smallest number of blocks?",
+      "mc_4_b": "The `destroy block` command cuts down the tree in front of you."
+    },
+    "callouts": {
+      "craft_callout_preplaced": "We've put some blocks here to get you started"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/5": {
+    "short_instructions": "Every house starts with a wall. Build the first part of your house by putting the \"place\" and \"move forward\" commands inside the repeat loop.",
+    "long_instructions": "Every house starts with a wall. Build the first part of your house by putting the `place` and `move forward` commands inside the repeat loop.",
+    "authored_hints": {
+      "mc_5_a": "Use the `place` block first, and then the `move` block.",
+      "mc_5_b": "Make sure both blocks are inside of the `repeat` loop to run the code more than once.",
+      "mc_5_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    },
+    "callouts": {
+      "craft_inside_repeat": "Repeat actions by placing blocks in here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/6": {
+    "short_instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
+    "long_instructions": "Build the rest of your house from any material you'd like. The `repeat` command will come in handy.",
+    "authored_hints": {
+      "mc_6_a": "Click the arrow on the `place` block to choose what you want to place.",
+      "mc_6_b": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet.",
+      "mc_6_c": "You can put more than one block inside of a `repeat` loop."
+    },
+    "callouts": {
+      "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/7": {
+    "short_instructions": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
+    "authored_hints": {
+      "mc_7_a": "Use the `plant crop` block to plant a crop in the space where you are standing.",
+      "mc_7_b": "Both stripes of dark brown land by the water need to be filled with crops.",
+      "mc_7_c": "You can put more than one block inside of a `repeat` loop."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/8": {
+    "short_instructions": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
+    "authored_hints": {
+      "mc_8_a": "There are a few paths you can take. Which is the shortest?",
+      "mc_8_b": "Use `repeat` loops to simplify your code.",
+      "mc_8_c": "Your goal is to get into the doorway of the house at the top of the screen."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/9": {
+    "short_instructions": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
+    "authored_hints": {
+      "mc_9_a": "Are you facing the right way? The `destroy block` mines the block in front of you.",
+      "mc_9_b": "The black specks in the wall are coal! Use `destroy block` on these to mine the coal.",
+      "mc_9_c": "Use `place torch` to put a torch in the space where you are standing."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/10": {
+    "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+    "authored_hints": {
+      "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
+      "mc_10_b": "When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!",
+      "mc_10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    },
+    "callouts": {
+      "craft_what_is_iron": "Mine this iron!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/11": {
+    "short_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
+    "long_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
+    "authored_hints": {
+      "mc_11_a": "All of the code is in place to check for lava and deal with it. All you need to do is add a block to move.",
+      "mc_11_b": "Should your `move forward` command go inside of the `if` statement or after?"
+    },
+    "callouts": {
+      "craft_callout_moveforward": "This code will check for lava, can you add a command to move forward?"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/12": {
+    "short_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
+    "long_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
+    "authored_hints": {
+      "mc_12_a": "The spaces with red speckles are where you will find Redstone.",
+      "mc_12_b": "Can you use a `repeat` loop to make your code shorter?",
+      "mc_12_c": "Use an `if` statement to check spaces for lava, then place cobblestones. "
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/13": {
+    "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
+    "authored_hints": {
+      "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
+      "mc_13_b": "Use `repeat` loops to make your code shorter."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/12/levels/14": {
+    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/1": {
+    "short_instructions": "Get the artist to the center of the play area, then draw a sticker. ",
+    "long_instructions": "**Free Play:** Let's build something bigger, one step at a time!\n\nGet the artist to the center of the play area using the [blockly block][0] block, then use the [blockly block][1] block to make something appear.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][2]\n[expandable][3]\n[expandable][4]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops1a_a": "This is the first block you will need:\n\n[blockly block][0]",
+      "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "jumpto_callout": "This block is very important for this project. Be sure to use it!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/2": {
+    "short_instructions": "Change the direction your sticker is facing by adding a `turn` command to your code. ",
+    "long_instructions": "Change the direction your sticker is facing by adding a `turn` command to your code. \n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops1b_a": "This is the first block you will need:\n\n[blockly block][0]\n\nYou can choose either left or right and any number of degrees."
+    },
+    "callouts": {
+      "sticker2": "Add this to the middle of your program."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/3": {
+    "short_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.",
+    "long_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the `turn` and `repeat` blocks to make different patterns.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops2a_a": "Inside your loop, you will want to jump to the middle, then turn, then draw a sticker.",
+      "courseC_artist_loops2a_b": "Click on the number at the top of the `repeat` loop to change how many times it repeats."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/4": {
+    "short_instructions": "Now add a second sticker!",
+    "long_instructions": "So much fun!  \n\nNow, add a second sticker right on top of the first one to make an image like the ones below.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting.\n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops3a_a": "You will want to add just one block inside of your loop, after the first sticker.",
+      "courseC_artist_loops3a_b": "Your program should look like this!\n\n[blockly block][0]\n\nYou can use any stickers you like!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/5": {
+    "short_instructions": "Edit your code so that you jump forward between drawing the two stickers.",
+    "long_instructions": "Edit your code so that you jump forward between drawing the two stickers. In this puzzle, make sure you have `jump to the middle center position` inside of your loop, so you stay in the center!\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n[blockly block][0]\n\nDon't forget to change how far!",
+      "courseC_artist_loops4a_b": "Your program should look like this!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/6": {
+    "short_instructions": "Try adding lines!",
+    "long_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n[blockly block][0]",
+      "courseC_artist_loops5b_b": "To make a design like the one above, you will want to move backward the same amount that you move forward.",
+      "courseC_artist_loops5b_c": "Your program should look like this!\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/7": {
+    "short_instructions": "Add another sticker!",
+    "long_instructions": "Add a third sticker anywhere in the loop that you want! What does it look like now?\n\n-   Change the pattern on your brush for more variety!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops6a_a": "To make a design like the one above, jump forward less than 75 pixels between each sticker."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/8": {
+    "short_instructions": "Play with the loops and angles.",
+    "long_instructions": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\n\n-   Try changing how many times you spin\n    -   Try a 60 degree turn for 6 times around\n    -   Try a 20 degree turn for 18 times around\n\n* * *\n\nThe first image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "courseC_artist_loops7a_a": "A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?\nCheck the suggested rotations to see that this works!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/13/levels/9": {
+    "short_instructions": "Now try something on your own!",
+    "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/14/levels/1": {
+    "dsls": {
+      "markdown": "# The Big Event\n\nIn computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/2": {
+    "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
+    "long_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n* * *\n\nClick or tap on the play space to move Flappy to the target.",
+    "authored_hints": {
+      "courseC_flappy_events1_a": "[][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/3": {
+    "short_instructions": "Try adding a block that sets the level speed when the \"Run\" button is pressed.  Play the game and flap to the target to continue.",
+    "long_instructions": "The `when run` event allows you to run code as soon as your game starts.  \n\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \n\n* * *\n\nPlay the game and flap to the target to continue.",
+    "authored_hints": {
+      "courseC_flappy_events2_a": "The block you need to add is called `set speed`. ",
+      "courseC_flappy_events2_b": "Connect the `set speed` block to the `when run` block to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/4": {
+    "short_instructions": "Attach the `end game` block to the `when hit the ground` event.   Play the game and crash the bird into the ground to continue.",
+    "long_instructions": "Now we've added the ground. \n\nAttach the `end game` block to the `when hit the ground` event. \n\n* * *\n\nPlay the game and crash the bird into the ground to continue.",
+    "authored_hints": {
+      "courseC_flappy_events3_a": "If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/5": {
+    "short_instructions": "Attach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "long_instructions": "Flappy will fly right through obstacles unless you write code to make him crash. \n\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "authored_hints": {
+      "courseC_flappy_events4_a": "Connect the `end game` block to `when hit an obstacle` to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/6": {
+    "short_instructions": "Add a block to the `when pass an obstacle` event, then press \"Run\" to score a point by flying Flappy through the first set of pipes.",
+    "long_instructions": "We've added a scoreboard to count points when Flappy passes obstacles.  \n\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes.",
+    "authored_hints": {
+      "courseC_flappy_events5_a": "You will need to use the `score a point` block to pass this level."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/7": {
+    "short_instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
+    "long_instructions": "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \n\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
+    "authored_hints": {
+      "courseC_flappy_events6_a": "Try connecting the `flap a ____ amount` block to the `when click` event."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/8": {
+    "short_instructions": "Next, try changing the scene by attaching a block to the `when run` event.",
+    "long_instructions": "Next, try changing the scene by attaching a block to the `when run` event.",
+    "authored_hints": {
+      "courseC_flappy_events7_a": "You can change the background using the `set scene` block. "
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/9": {
+    "short_instructions": "Try setting a **random** scene when other events happen...for example, when passing an obstacle.",
+    "long_instructions": "You can set the background under any event, not just when the game starts. \n\nTry setting a **random** scene when other events happen...for example, when passing an obstacle.",
+    "authored_hints": {
+      "courseC_flappy_events8_a": "Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/10": {
+    "short_instructions": "To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.",
+    "long_instructions": "To mix things up, instead of ending the game when Flappy hits an obstacle, try setting the score back to 0.",
+    "authored_hints": {
+      "courseC_flappy_events9_a": "Connect the `set score 0` block to the `when hit an obstacle` event to pass this level."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/15/levels/11": {
+    "short_instructions": "Create your own Flappy game! ",
+    "long_instructions": "Create your own Flappy game! \n\nYou can change the visuals and the rules...even the gravity! \nWhen you're done, click \"Finish\" to share with friends on their phones."
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/1": {
+    "short_instructions": "Make Jorge the Dog (actor 1) say \"Hi there.\"",
+    "authored_hints": {
+      "courseC_PlayLab_events1_a": "Attach this block to the `when run` block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/2": {
+    "short_instructions": "Can you make Jorge the Dog (actor 1) say something, then have Olive the Cat (actor 2) say something afterward?",
+    "authored_hints": {
+      "courseC_PlayLab_events2_a": "Attach two of these blocks to the `when run` block:\n\n[blockly block][0]",
+      "courseC_PlayLab_events2_b": "Use the dropdown menu on the second `actor __ say` block to change which actor speaks."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/3": {
+    "short_instructions": "Can you write a program to make Jorge (actor 1) move toward Olive the Cat?",
+    "authored_hints": {
+      "courseC_PlayLab_events3_a": "You only need to move Jorge to the right by about 25 pixels to solve this puzzle.",
+      "courseC_PlayLab_events3_b": "Is there a block in the toolbox that looks like it would move an actor?",
+      "courseC_PlayLab_events3_c": "Attach this block to the `when run` block:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/4": {
+    "short_instructions": "Can you write a program that makes Jorge (actor 1) move to Olive the Cat, and have Olive say \"Hi there.\" when Jorge reaches her?",
+    "authored_hints": {
+      "courseC_PlayLab_events4_b": "When the \"Run\" button is clicked, Jorge needs to move right **100** pixels to reach Olive the Cat.",
+      "courseC_PlayLab_events4_a": "You will need to attach an `actor __ say` block to the `when actor touches` event to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/5": {
+    "short_instructions": "Can you write a program to make Octavia the Octopus say \"What's new?\" when she is clicked?",
+    "authored_hints": {
+      "courseC_PlayLab_events5_a": "You will need to click the dropdown menu in the `actor say` block to find the text \"What's new?\"",
+      "courseC_PlayLab_events5_b": "Click on Octavia when you run your program to check that it works!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/6": {
+    "short_instructions": "Let's play a game. Score 5 points by moving the Penguin to the Octopus!",
+    "long_instructions": "Let's play a game. Move the penguin to the octopus to score a point. Score 5 points to win.",
+    "authored_hints": {
+      "courseC_PlayLab_eventsA_a": "Use the arrow keys to move the penguin. You do not need to write any code to finish this level."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/7": {
+    "short_instructions": "Now, write a program to make Waddles the Penguin move around using the up / down / left / right keys to hit all of the targets!",
+    "long_instructions": "Now, write a program to make Waddles the Penguin move around using the up / down / left / right keys to hit all of the targets!",
+    "authored_hints": {
+      "courseC_PlayLab_events6_a": "Each green `when arrow` block should have one action below it.",
+      "courseC_PlayLab_events6_b": "Use the drop down menu on the `move actor 1` block to change which direction Waddles moves.",
+      "courseC_PlayLab_events6_c": "When you're done, you should be able to move Waddles around using the arrow keys on your computer!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/8": {
+    "short_instructions": "The `repeat forever` block allows you to run code over and over forever.  Use this block to move Chomp the Dino (actor 2) up and down by 400 pixels forever.",
+    "long_instructions": "The `repeat forever` block allows you to run code over and over forever.  Use this block to move Chomp the Dino (actor 2) up and down by 400 pixels forever.\n\n[][0]",
+    "authored_hints": {
+      "courseC_PlayLab_events7_a": "Use both the `move actor 2 up 400 pixels` block and the `move actor 2 down 400 pixels` block inside the `repeat forever` loop to solve this puzzle. ",
+      "courseC_PlayLab_events7_b": "The `repeat forever` loop does not need to be connected to any other event blocks; it will run on its own."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/9": {
+    "short_instructions": "Can you have Waddles (actor 1) play a \"hit\" sound and say \"Ouch!\" if he runs into Chomp? \nWhen you're done, play the game to make that happen.",
+    "long_instructions": "Can you have Waddles (actor 1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \n\nWhen you're done, play the game to make that happen.\n\n[][0]",
+    "authored_hints": {
+      "courseC_PlayLab_events8_a": "You will need to connect blocks to the `when actor touches` block to make this happen correctly.",
+      "courseC_PlayLab_events8_b": "The `actor say` and `play sound` blocks in the toolbox should help you out!"
+    },
+    "callouts": {
+      "courseC_PlayLab_events8_callout1": "Use this block for when Waddles and Chomp touch!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/10": {
+    "short_instructions": "Can you add a block to score a point when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)? \nPlay the game and move Waddles with the arrows until you score!",
+    "authored_hints": {
+      "courseC_PlayLab_events9_a": "The `score point` block will help you to solve this puzzle.",
+      "courseC_PlayLab_events9_b": "Make sure that your new `when actor touches` block says actor **1** and actor **3**.",
+      "courseC_PlayLab_events9_c": "You can have more than one `when actor touches` event in your workspace at the same time, so you don't have to delete the first one!"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/11": {
+    "short_instructions": "Add blocks to the `when run` event to change the background scene and the speed of Waddles the Penguin.\n\nPlay the game and move Waddles with the arrows until you score.",
+    "authored_hints": {
+      "courseC_PlayLab_eventsA_a": "Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.",
+      "courseC_PlayLab_eventsA_b": "You will need to specifically drag a `when run` event block into the workspace to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/levels/12": {
+    "short_instructions": "Create your own story. When you're done, click \"Finish\" to share with friends. See story ideas in the hints.",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
+    "authored_hints": {
+      "idea1": "_Need an idea?_\n\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
+      "idea2": "_Need an idea?_\n\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
+      "idea3": "_Need an idea?_\n\n**Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/16/extras?level_name=courseC_PlayLab_events_challenge1_2020": {
+    "short_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. \nPlay the game and move Waddles with the arrows until you score enough points.",
+    "long_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!\n\nPlay the game and move Waddles with the arrows until you score 5 or more points. Waddles must be moved to the `middle left` position of the screen to complete this challenge.",
+    "authored_hints": {
+      "courseC_PlayLab_events_challenge_a": "You can use this block to move actors to different places on the game space.\n\n[blockly block][0]",
+      "courseC_PlayLab_events_challenge_b": "Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!",
+      "courseC_PlayLab_events_challenge_c": "You might also want to try changing the speed of the different actors to make the game easier or more challenging!\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "courseC_PlayLab_events_challenge1_1": "This block lets you move actors to different parts of the game space."
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/17/levels/1": {
+    "dsls": {
+      "markdown": "# Picturing Data\n\nUse a Play Lab project to collect data and make predictions.\n\n![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/17/levels/2": {
+    "short_instructions": "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?",
+    "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
+    "function_definitions": {
+      "do something": {
+        "name": "do something"
+      }
+    },
+    "placeholder_texts": {
+      "d93dfc24c6ce3e53d8ee07416c743e60": "A dog!",
+      "336ad881e37e713ba0325500a8fa1f00": " dogs!",
+      "27944770529dd15319a983bee8951560": "A cat!",
+      "22f6f6821f4d6d0a08653935b466ac2f": " cats!",
+      "1c64ef29c853587fbe94f69f05272b79": "A bird!",
+      "5b402e6ea05e847a076e03ad74420c45": " birds!",
+      "4b23c908b939eaf7918e07142b9e05e0": "A dragon!",
+      "7f945c111ba5ea6d7b1547601db6ba0e": " dragons!",
+      "71fc859f3abd22273bad5d0d8eda2173": "Count all the animals!",
+      "f62038e77820419cd978f7b722da560a": "How many will appear?",
+      "81a2909a24e4ca3b582ab9ee539c080c": "Count the Pets"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n| Hungry Squirrel | Alien Story |\n|---|---|\n| [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG \"Hungry Squirrel (Play Lab\")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG \"Alien Story (Play Lab\")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |\n| Try adding sounds to this game! | Try adding another scene to this story! |\n\n"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/2": {
+    "short_instructions": "Choose a background and map, and pick an actor to be your game's hero.",
+    "long_instructions": "It is amazing how much you have learned! Let's make a game step by step.\n\nUsing new blocks in your toolbox, choose a new background, then pick an actor to be in your game.",
+    "authored_hints": {
+      "courseE_playLab_scaffold1_a": "The `set actor 1 to ??? image` block can be used to add an actor to the stage.",
+      "courseE_playLab_scaffold1_b": "Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.",
+      "courseE_playLab_scaffold1_c": "Use `set ??? background` to choose a background for your scene."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/3": {
+    "short_instructions": "Use events and actions to make your hero move. Get to the targets.",
+    "long_instructions": "Use  blocks like events and actions to make your player move when you press the arrow keys.  \n\nGet the player to the targets to complete this puzzle.",
+    "authored_hints": {
+      "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
+      "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
+      "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/4": {
+    "short_instructions": "Add two or more additional actors to your game and make them move.",
+    "long_instructions": "Let's add some more characters to your game!\n\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
+    "callouts": {
+      "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/5": {
+    "short_instructions": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
+    "long_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\n\nUse event blocks like the `when actor touches` to change the score or win the game. Score 5 points or win the game to complete this puzzle.",
+    "authored_hints": {
+      "courseE_playLab_scaffold4_a": "Use `score point` to add a point, and `remove point` to subtract one."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/6": {
+    "short_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want.",
+    "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. When you are done, click \"Finish\"!",
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    }
+  },
+  "https://studio.code.org/s/coursec-2020/lessons/18/levels/7": {
+    "short_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    }
+  }
+}

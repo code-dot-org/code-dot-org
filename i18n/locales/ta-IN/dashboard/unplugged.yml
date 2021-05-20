@@ -26,9 +26,15 @@ ta:
         title: கணினிபூர்வமான சிந்தனை
       SongwritingParameters:
         title: பாடல் எழுதுதல்
+      SongwritingWithParameters:
+        title: பாடல் எழுதுதல்
       courseD_unplugged_graphPaperProgramming:
         title: வரைதாள் செய்நிரல்
+      courseE_unplugged_songwritingParameters:
+        title: பாடல் எழுதுதல்
       courseE_unplugged_songwriting:
+        title: பாடல் எழுதுதல்
+      courseF_unplugged_songwritingParameters:
         title: பாடல் எழுதுதல்
       GraphPaperProgramming_2018:
         title: வரைதாள் செய்நிரல்

@@ -1,2 +1,22 @@
 {
+  "danceFeedbackNeedNewDancer": "Kailangan mong gumawa ng dancer.",
+  "danceFeedbackNoDancers": "Wala kang mga dancer.",
+  "danceFeedbackNoBackground": "Kailangang magdagdag ka ng isang background effect.",
+  "danceFeedbackTooManyDancers": "Mag-ingat! Kung maglalaghay ka ng `gumawa ng bagong` block sa loob ng bawat 2 measure`, lilikha ka ng maraming dancer.",
+  "danceFeedbackUseSetSize": "Gamitin ang `set backup_dancer2 size` block para gawing mas maliit ang dancer.",
+  "danceFeedbackUseSetTint": "Gamitin ang `i-set ang tint` block para baguhin ang kulay ng dancer.",
+  "danceFeedbackUseStartMapping": "Subukang idagdag ang <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block sa iyong program.",
+  "danceFeedbackStartNewMove": "Hindi gumagawa ng bagong galaw ang iyong dancer makalipas ang ikaapat na measure.",
+  "danceFeedbackNeedDifferentDance": "Kailangan mong gumamit ng naiibang sayaw.",
+  "danceFeedbackNeedEveryTwoMeasures": "Tiyakin na ginagamit m ang bawat 2 measure` na block",
+  "danceFeedbackNeedMakeANewDancer": "Gamitin ang block na `gumawa ng bago` para likhain ang ikalawang dancer.",
+  "danceFeedbackKeyEvent": "Tiyakin na nag-attach ka ng ilang code sa <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> block at pindutin ang key habang tumatakbo ang iyong sayaw.",
+  "danceFeedbackDidntPress": "Tiyakin na pinindot mo ang mga arrow key habang tumatakbo ang iyong sayaw.",
+  "danceFeedbackPressedKey": "Pinindot mo ang key, ngunit hindi tumugon ang iyong dancer.",
+  "danceFeedbackNeedTwoDancers": "Kailangang gumawa ka ng dalawang dancer.",
+  "danceFeedbackOnlyOneDancerMoved": "Tanging isa lamang sa iyong mga dancer ang gumalaw.",
+  "danceFeedbackNeedLead": "Kailangan mo ring lumikha ng isang lead dancer sa <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> block.",
+  "danceFeedbackNeedBackup": "Kailangan mong lumikhs ng isang pangkat ng mga backup dancer gamit ang <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
+  "danceFeedbackSetSize": "Kailangan mong palitan ang laki ng kahit isang dancer matapos mag-umpisa ang musika.",
+  "measure": "Measure:"
 }

@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -26,7 +26,7 @@
 require 'nokogiri'
 class Blockly < Level
   include SolutionBlocks
-  before_save :fix_examples
+  before_save :fix_examples, :update_goal_override
 
   serialized_attrs %w(
     level_url
@@ -74,11 +74,11 @@ class Blockly < Level
     encrypted_examples
     disable_if_else_editing
     show_type_hints
-    thumbnail_url
     include_shared_functions
     preload_asset_list
     skip_autosave
     skip_run_save
+    goal_override
   )
 
   before_save :update_ideal_level_source
@@ -260,7 +260,6 @@ class Blockly < Level
           baseUrl: Blockly.base_url,
           app: game.try(:app),
           droplet: uses_droplet?,
-          pretty: Rails.configuration.pretty_apps ? '' : '.min',
         }
       )
     end
@@ -285,19 +284,16 @@ class Blockly < Level
 
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
+        set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
 
-        if script && !script.localize_long_instructions?
-          level_options.delete('longInstructions')
-        else
-          set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
-        end
+        set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
         # these fields contain Blockly xml.
         unless uses_droplet?
-          set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
+          set_unless_nil(level_options, 'toolbox', localized_toolbox_blocks(level_options['toolbox']))
 
           %w(
             initializationBlocks
@@ -308,7 +304,9 @@ class Blockly < Level
             solutionBlocks
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
-            set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_blocks_with_placeholder_texts(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -361,11 +359,14 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
+        level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
         level_prop['name'] = name
       end
 
       if is_a? Gamelab
         level_prop['startAnimations'] = try(:project_template_level).try(:start_animations) || start_animations
+        level_prop['name'] = name
       end
 
       if is_a?(Maze) && step_mode
@@ -384,7 +385,7 @@ class Blockly < Level
       level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|
@@ -409,6 +410,7 @@ class Blockly < Level
     options.freeze
   end
 
+  # FND-985 Create shared API to get localized level properties.
   def get_localized_property(property_name)
     if should_localize? && try(property_name)
       I18n.t(
@@ -475,35 +477,193 @@ class Blockly < Level
     end
   end
 
-  def self.localize_toolbox_blocks(blocks)
+  def localized_toolbox_blocks(blocks)
     return nil if blocks.nil?
 
-    block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
+    block_xml = Nokogiri::XML(localized_function_blocks(blocks), &:noblanks)
     block_xml.xpath('//../category').each do |category|
       name = category.attr('name')
       localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+
       category.set_attribute('name', localized_name) if localized_name
     end
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def self.localize_function_blocks(blocks)
+  def localized_function_blocks(blocks)
     return nil if blocks.nil?
 
     block_xml = Nokogiri::XML(blocks, &:noblanks)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
-      name = function.at_xpath('./title[@name="NAME"]')
-      next unless name
-      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
-      name.content = localized_name if localized_name
+      function_name = function.at_xpath('./title[@name="NAME"]')
+      next unless function_name
+      localized_name = I18n.t(
+        "name",
+        scope: [:data, :function_definitions, name, function_name.content],
+        default: nil,
+        smart: true
+      )
+      original_function_name = function_name.content
+      function_name.content = localized_name if localized_name
+      # The description and parameter declarations are in a mutation.
+      # If this function doesn't have a mutation, it won't have a
+      # description or parameters, so we can move on.
+      function_mutation = function.at_xpath('./mutation')
+      next unless function_mutation
+      function_description = function_mutation.at_xpath('./description')
+      localized_description = I18n.t(
+        "description",
+        scope: [:data, :function_definitions, name, original_function_name],
+        default: nil,
+        smart: true
+      )
+      # Some levels add a description to the function in the solution
+      # but not in the starter/toolbox blocks. These functions have the same key if they have the same name
+      function_description.content = localized_description if function_description && localized_description
+      # Translate the "declared" parameter names
+      function_mutation.xpath("./arg").each do |parameter|
+        localized_parameter = I18n.t(
+          parameter["name"],
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
+          default: nil,
+          smart: true
+        )
+        parameter["name"] = localized_parameter if localized_parameter
+      end
+      # Replace usages of parameters with their translated name
+      function.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        parameter_name = parameter.content
+        localized_parameter = I18n.t(
+          parameter_name,
+          scope: [:data, :function_definitions, name, original_function_name, "parameters"],
+          default: nil,
+          smart: true
+        )
+        parameter.content = localized_parameter if localized_parameter
+      end
     end
     block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
       mutation = function.at_xpath('./mutation')
       next unless mutation
-      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      mutation_name = mutation.attr('name')
+      localized_name = I18n.t(
+        "name",
+        scope: [:data, :function_definitions, name, mutation.attr('name')],
+        default: nil,
+        smart: true
+      )
+      mutation.xpath('./arg').each do |arg|
+        localized_parameter = I18n.t(
+          arg["name"],
+          scope: [:data, :function_definitions, name, mutation_name, :parameters],
+          default: nil,
+          smart: true
+        )
+        arg["name"] = localized_parameter if localized_parameter
+      end
       mutation.set_attribute('name', localized_name) if localized_name
     end
+    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="VAR"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="NAME"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
+
+    localize_behaviors(block_xml)
     return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing variable names in "variables_get" and "parameters_get" block types
+  def localized_variable_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    variables_get = block_xml.xpath("//block[@type=\"variables_get\"]")
+    variables_set = block_xml.xpath("//block[@type=\"variables_set\"]")
+    variables = variables_get + variables_set
+    variables.each do |variable|
+      variable_name = variable.at_xpath('./title[@name="VAR"]')
+      next unless variable_name
+      localized_name = I18n.t(
+        variable_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      variable_name.content = localized_name if localized_name
+    end
+
+    block_xml.xpath("//block[@type=\"parameters_get\"]").each do |parameter|
+      parameter_name = parameter.at_xpath('./title[@name="VAR"]')
+      next unless parameter_name
+      localized_name = I18n.t(
+        parameter_name.content,
+        scope: [:data, :parameter_names],
+        default: nil,
+        smart: true
+      )
+      parameter_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in all possible block types.
+  # @param blocks [String]
+  # @return [String]
+  # @see unit test for an example of blocks that contain placeholder texts.
+  def localized_blocks_with_placeholder_texts(blocks)
+    return if blocks.nil?
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+
+    localize_placeholder_texts(block_xml, 'text', ['TEXT'])
+    localize_placeholder_texts(block_xml, 'studio_ask', ['TEXT'])
+    localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
+
+    block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in one block type.
+  # @param block_xml [Nokogiri::XML::Document]
+  # @param block_type [String]
+  # @param title_names [Array<String>]
+  # @return [Nokogiri::XML::Document]
+  def localize_placeholder_texts(block_xml, block_type, title_names)
+    block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+      title_names.each do |title_name|
+        title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+        next unless title&.content&.present?
+
+        # Must generate text_key in the same way it is created in
+        # the get_i18n_strings function in sync-in.rb script.
+        text_key = Digest::MD5.hexdigest title.content
+        localized_text = I18n.t(
+          text_key,
+          scope: [:data, :placeholder_texts, name],
+          default: nil,
+          smart: true
+        )
+        title.content = localized_text if localized_text
+      end
+    end
+    block_xml
   end
 
   def self.base_url
@@ -551,9 +711,35 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{I18n.locale}/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
+  end
+
+  def localize_behaviors(block_xml)
+    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
+      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+        parameter.content = I18n.t('behaviors.this_sprite')
+      end
+    end
+    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
+      mutation = behavior.at_xpath('./mutation')
+      mutation.xpath('./arg').each do |arg|
+        next unless arg["name"] == I18n.t('behaviors.this_sprite', locale: :en)
+        arg["name"] = I18n.t('behaviors.this_sprite')
+      end
+      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+        parameter.content = I18n.t('behaviors.this_sprite')
+      end
+    end
+  end
+
+  def localized_shared_functions(shared_functions)
+    block_xml = Nokogiri::XML("<xml>#{shared_functions}</xml>", &:noblanks)
+    localize_behaviors(block_xml)
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   # Display translated custom block text and options
@@ -597,5 +783,21 @@ class Blockly < Level
       level_object[:config]["args"] = arguments
     end
     level_objects_copy
+  end
+
+  def update_goal_override
+    if goal_override&.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions || long_instructions,
+        shortInstructions: localized_short_instructions || short_instructions,
+        skin: skin
+      }
+    )
   end
 end

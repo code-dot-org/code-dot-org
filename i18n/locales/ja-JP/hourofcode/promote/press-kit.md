@@ -1,7 +1,5 @@
 ---
 title: プレスキット
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -59,11 +57,11 @@ Look online to find reporter contact information. If you can't find it, call the
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 良いお知らせは、私たちはこれを変えようとしているということです。
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 良いお知らせは、私たちはこれを変えようとしているということです。
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+[学校名] の[X番号] の生徒全員が、コンピューターサイエンス教育ウィーク（12月3〜9日）で史上最大の学習イベントHour of Code（アワー オブ コード）に参加しているのはそのためです。
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -79,7 +77,7 @@ Code.orgの創始者兼CEOであるHadi Partovi曰く、「Hour of Codeはコー
 
 #### Code.orgについて
 
-Code.orgは501c3非営利の公的団体です。コンピューターサイエンスの普及と、女性や肌の色で過小評価されている生徒たちの参加機会の増大に取り組んでいます。 すべての学校のすべての生徒がコンピュータープログラミングを学ぶ機会を得るというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピューターサイエンスを紹介することができ、全米で70もの公立の学区とコンピューターサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、フェイスブック、インフォシス財団、アマゾンなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. すべての学校のすべての生徒がコンピュータープログラミングを学ぶ機会を得るというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピューターサイエンスを紹介することができ、全米で70もの公立の学区とコンピューターサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、フェイスブック、インフォシス財団、アマゾンなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

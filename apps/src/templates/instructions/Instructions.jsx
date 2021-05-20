@@ -4,15 +4,8 @@ import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
-
-const styles = {
-  inTopPane: {
-    overflow: 'hidden'
-  },
-  notInTopPane: {
-    overflow: 'auto'
-  }
-};
+import ImmersiveReaderButton from './ImmersiveReaderButton';
+import i18n from '@cdo/locale';
 
 /**
  * A component for displaying our level instructions text, and possibly also
@@ -31,7 +24,9 @@ class Instructions extends React.Component {
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func
+    onResize: PropTypes.func,
+    isBlockly: PropTypes.bool,
+    noInstructionsWhenCollapsed: PropTypes.bool
   };
 
   /**
@@ -53,6 +48,8 @@ class Instructions extends React.Component {
           markdown={this.props.longInstructions}
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
+          isBlockly={this.props.isBlockly}
+          noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
         />
       );
     } else {
@@ -73,6 +70,10 @@ class Instructions extends React.Component {
       <div
         style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
       >
+        <ImmersiveReaderButton
+          title={this.props.puzzleTitle || i18n.instructions()}
+          text={this.props.longInstructions || this.props.shortInstructions}
+        />
         {this.renderMainBody()}
 
         {this.props.inputOutputTable && (
@@ -88,5 +89,14 @@ class Instructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  inTopPane: {
+    overflow: 'hidden'
+  },
+  notInTopPane: {
+    overflow: 'auto'
+  }
+};
 
 module.exports = Instructions;

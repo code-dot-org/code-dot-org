@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Event How-To
-layout: wide
-nav: how_to_nav
+title: कोडचा तास कार्यक्रम कसे करावे
 ---
 
 {{ signup_button }}

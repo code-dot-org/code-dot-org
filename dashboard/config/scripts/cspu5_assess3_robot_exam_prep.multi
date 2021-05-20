@@ -1,9 +1,9 @@
 name 'cspu5_assess3_robot_exam_prep'
-right '<img src="https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png" width=150>'
-wrong '<img src="https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png" width=150>'
-wrong '<img src="https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png" width=150>'
-wrong '<img src="https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png" width=150>'
-wrong '<img src="https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png" width=150>'
+right 'https://images.code.org/c44bbc5b68bae229843b08e08bfa27d4-image-1477184386347.png,150'
+wrong 'https://images.code.org/8fbe13c7f6d3869a097edaa24bc5d393-image-1477184386344.png,150'
+wrong 'https://images.code.org/500154541cc64001c7d24c3a941b1b1d-image-1477184386346.png,150'
+wrong 'https://images.code.org/81e757288cb6786b82d3f6c4204ac028-image-1477184386342.png,150'
+wrong 'https://images.code.org/7694fb3368367d6217ab5b93618d9d3e-image-1477184386345.png,150'
 
 markdown <<MARKDOWN
 The following question asks you to reason about pseudocode involving loops, boolean operators, and the “robot instructions” from the AP Exam Reference guide.  We’ve replicated the relevant sections below to use as reference.

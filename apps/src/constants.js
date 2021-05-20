@@ -64,11 +64,13 @@ export const TestResults = {
   GENERIC_LINT_FAIL: -7, // The program contains a lint error
   LOG_CONDITION_FAIL: -8, // The program execution log did not pass a required condition
   BLOCK_LIMIT_FAIL: -9, // Puzzle was solved using more than the toolbox limit of a block
+  FREE_PLAY_UNCHANGED_FAIL: -10, // The code was not changed when the finish button was clicked
 
   // Codes for unvalidated levels.
   UNSUBMITTED_ATTEMPT: -50, // Progress was saved without submitting for review, or was unsubmitted.
 
   SKIPPED: -100, // Skipped, e.g. they used the skip button on a challenge level
+  LEVEL_STARTED: -150, // The user has triggered the reset action at least once (ex: by clicking the reset button)
 
   // Numbers below 20 are generally considered some form of failure.
   // Numbers >= 20 generally indicate some form of success (although again there
@@ -101,8 +103,7 @@ export const TestResults = {
   BETTER_THAN_IDEAL: 102,
 
   SUBMITTED_RESULT: 1000,
-  LOCKED_RESULT: 1001,
-  READONLY_SUBMISSION_RESULT: 1002,
+
   REVIEW_REJECTED_RESULT: 1500,
   REVIEW_ACCEPTED_RESULT: 2000
 };
@@ -181,3 +182,14 @@ export const EXPO_SESSION_SECRET =
   '{"id":"fakefake-67ec-4314-a438-60589b9c0fa2","version":1,"expires_at":2000000000000}';
 
 export const BASE_DIALOG_WIDTH = 700;
+
+export const TOOLBOX_EDIT_MODE = 'toolbox_blocks';
+
+export const PROFANITY_FOUND = 'profanity_found';
+
+export const NOTIFICATION_ALERT_TYPE = 'notification';
+
+export const BlocklyVersion = {
+  CDO: 'CDO',
+  GOOGLE: 'Google'
+};

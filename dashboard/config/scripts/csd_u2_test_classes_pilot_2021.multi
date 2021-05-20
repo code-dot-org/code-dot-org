@@ -1,0 +1,8 @@
+name 'CSD U2 Test Classes_pilot_2021'
+title 'Question 3'
+question 'A group of artists is making a website. When should they use classes?'
+wrong 'They want to make their h3 tags bigger than their h1 tags.'
+wrong 'They want headings to be one color, but paragraphs to be a different color.'
+right 'They want some images to float left, and other images to float right.'
+wrong 'They want all the pages on their site to have the same style.'
+wrong 'They want make a special color using RGB codes.'

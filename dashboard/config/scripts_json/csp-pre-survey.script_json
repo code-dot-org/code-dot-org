@@ -1,0 +1,393 @@
+{
+  "script": {
+    "name": "csp-pre-survey",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "csp-pre-survey"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Anonymous student pre-survey",
+      "name": "Anonymous student pre-survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Anonymous student pre-survey",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "Unit 1 Chapter 1 Assessment",
+      "name": "Unit 1 Chapter 1 Assessment",
+      "absolute_position": 2,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "NEW Unit 1 Chapter 1 Assessment",
+      "name": "NEW Unit 1 Chapter 1 Assessment",
+      "absolute_position": 3,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "Unit 3 Chapter 1 Assessment",
+      "name": "Unit 3 Chapter 1 Assessment",
+      "absolute_position": 4,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "Unit 4 Chapter 1 Assessment",
+      "name": "Unit 4 Chapter 1 Assessment",
+      "absolute_position": 5,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 4 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "Anonymous student survey: Taking the AP exam",
+      "name": "Anonymous student survey: Taking the AP exam",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Anonymous student survey: Taking the AP exam",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP pre-assessment survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP pre-assessment survey"
+        ],
+        "lesson.key": "Anonymous student pre-survey",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      },
+      "level_keys": [
+        "CSP pre-assessment survey"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+        ],
+        "variants": {
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group": {
+            "active": false
+          }
+        }
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+        ],
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      },
+      "level_keys": [
+        "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+        "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC"
+        ],
+        "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      },
+      "level_keys": [
+        "CSP Unit 2 Ch2 Cumulative Assessment MC"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
+        ],
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      },
+      "level_keys": [
+        "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC"
+        ],
+        "lesson.key": "Unit 4 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      },
+      "level_keys": [
+        "CSP Unit 4 Ch1 Cumulative Assessment MC"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp_ap_questions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_ap_questions"
+        ],
+        "lesson.key": "Anonymous student survey: Taking the AP exam",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      },
+      "level_keys": [
+        "csp_ap_questions"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP pre-assessment survey",
+        "script_level.level_keys": [
+          "CSP pre-assessment survey"
+        ],
+        "lesson.key": "Anonymous student pre-survey",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+        ],
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2",
+        "script_level.level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+        ],
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 2 Ch2 Cumulative Assessment MC",
+        "script_level.level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC"
+        ],
+        "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 3 Ch1 Cumulative Assessment MC Group",
+        "script_level.level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
+        ],
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 4 Ch1 Cumulative Assessment MC",
+        "script_level.level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC"
+        ],
+        "lesson.key": "Unit 4 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_ap_questions",
+        "script_level.level_keys": [
+          "csp_ap_questions"
+        ],
+        "lesson.key": "Anonymous student survey: Taking the AP exam",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -44,13 +44,9 @@ sl:
   okay: V redu
   or: ali
   heading_x_of_y: "%{heading} (stran %{x} od %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Dodaj učitelja/ico:'
       placeholder: Koda razdelka (ABCDEF)
-      instructions: Vnesi šifro, ki ti je dal učitelj. To je šest mestna šifra v obliki
-        "ABCDEF".
-    submit: Dodaj učitelja/ico
   add_hint_form:
     placeholder: Prosim vnesite vaš namig tukaj
     submit: Dodaj namig
@@ -61,6 +57,7 @@ sl:
   trophies: Trofeje
   courses: Predavanja
   courses_page:
+    title_student: Spoznaj Računalništvo
     title_teacher: Poučuj s studio Code
   unplugged_activity: Dejavnost brez prijave
   of: od
@@ -77,9 +74,6 @@ sl:
   auth:
     sign_in_with: Vpiši se z %{provider}
     signed_in: Vpisan si!
-    signed_out: Trenutno nisi prijavljen/a v <a href="%{url}"> Code.org</a>.
-    sign_out_of: Vpisani ste z %{provider}, <a href="%{url}"> Kliknite tukaj</a> za
-      izpis iz %{provider}.
     already_signedup: Si se že vpisal?
     notyet_signedup: Se nam še nisi pridružil?
     google_oauth2: Google račun
@@ -115,6 +109,17 @@ sl:
     valid_password: Veljavno geslo!
     invalid_password: Geslo mora imeti vsaj 6 znakov
     mismatch_password: Vneseni gesli nista enaki
+    agree_us_data_transfer_student: "**Strinjam se, da lahko Code.org prenese podatke
+      (vključno z osebnimi podatki) iz moje uporabe tega spletnega mesta v Združene
+      države Amerike** za namen gostovanja in obdelovanja teh podatkov."
+    agree_us_data_transfer_teacher: "**Strinjam se, da lahko Code.org prenese podatke
+      (vključno z osebnimi podatki) iz moje uporabe (in uporabe mojih študentov) tega
+      spletnega mesta v Združene države Amerike** za namen gostovanja in obdelovanja
+      teh podatkov."
+    data_collection_us: Razumem, da je Code.org neprofitno spletno mesto iz ZDA in
+      da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji
+      državi.
+    visit_privacy: Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.
     additional_information: Potrebujemo nekaj dodatnih informacij za uspešno prijavo.
     user_type_teacher: Učitelj/ica
     user_type_student: Učenec
@@ -238,6 +243,8 @@ sl:
       help_us: Pomagaj nam
       teach: Predavaj
       about: O programu
+      legal_privacy: Izjava o zasebnosti
+      legal_tos: Pogoje storitve
     user:
       classroom: Učiteljeva domača stran
       district_dashboard: Nadzorna plošča za okrožje
@@ -312,15 +319,13 @@ sl:
     delete_text_teacher_note: 'Prosimo pomnite: brisanje vašega računa ne bo izbrisalo
       računov vaših študentov.'
     delete_confirm: Ali ste prepričani, da želite izbrisati svoj račun?
+    update_email: Posodobi
+    parent_guardian_email_label: Elektronska pošta staršev/skrbnikov
   user_level:
     completed: Zaključeno
     tried: Poskus
   home:
     title: Studio za kodiranje
-    description: Code Studio je dom spletnih tečajev, ki jih je ustvaril Code.org
-    lines_of_code: ŠTUDENTJE SO NAPISALI %{lines_count} VRSTIC KODE
-    lines_of_code_linebreak: "%{students_count} MILIJONOV ŠTUDENTOV JE NAPISALO<br/>%{lines_count}
-      VRSTIC KODE"
     all_courses: Pregled tečajev 1, 2 in 3
     lesson_plans: Učni načrti
     signin_message: Že registrirani? %{link}
@@ -359,12 +364,6 @@ sl:
     try_beta_courses: Novo! Poskusite naše beta tečaje za učence prvih dveh triad
       na ameriških šolah
     use_as_teacher: Uporabi to stran kot učitelj
-    heading_hoc2014: "<h2>Ura kodiranja za</h2><h1>vse starosti</h1>"
-    heading_elementary: "<h2>20 urni tečaji za</h2><h1>začetnike (vseh starosti)</h1>"
-    heading_apps: "<h2>Zabavno učenje za</h2><h1>vsakogar</h1>"
-    heading_tools: "<h2>Pripravljen na naslednji korak?</h2><h1>JavaScript Orodja
-      za Srednjo Šolo</h1>"
-    heading_legacy: "<h2>Naš tečaj za</h2><h1>vse starosti</h1>"
     your_gallery: Galerija
     no_primary_course: Poskusite Code Studio smer
     choose_next_course: Poskusi Code Studio tečaj z izbiro enga spodaj
@@ -518,30 +517,12 @@ sl:
       audience: Starost 4+
     unplugged_conditionals:
       title: Pogoji
-  gallery:
-    students_drew_these_with_code: Učenci so to narisali s svojimi programi!
-    students_made_these_with_code: Učenci so to ustvarili s svojimi programi!
-    picture_count: V zadnjih <b>%{days}</b> dneh so učenci narisali veliko (<b>%{count}</b>)
-      slik s programe, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja
-      posameznega programa.
-    activity_count: V zadnjih <b>%{days}</b> dneh so učenci izdelali veliko (<b>%{count}</b>)
-      aplikacij s programi, ki so jih sami ustvarili. Kliknite sličice za prikaz delovanja
-      posameznega programa.
-    want_to_make_your_own: Bi poskusil/a še sam/a?
-    more: Več &rarr;
-    caption_by_name_age: po %{name}, %{age} starosti
-    caption_time_ago: pred %{time_ago}
-    header: Galerija
-    header_playlab: Zgodbe in igre
-    report_abuse: Prijavi zlorabo
   landing:
-    prerelease: Ta tečaj je <span class='betatext'>beta</span>.  To pomeni, da ni
-      končna različica in ga bomo z vašo pomočjo še izboljševali.
-    prerelease_hoc2014: Ta priročnik je <span class='betatext'>beta</span>.  To pomeni,
-      da ni končna različica in ga bomo z vašo pomočjo še izboljševali.
     report_bug: Sporoči napako
     support: Pomoč
     support_url: "//support.code.org"
+  free_response:
+    placeholder: Vnesite vaš odgovor tukaj
   multi:
     wrong_title: Nepravilen odgovor
     wrong_body: Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!
@@ -585,10 +566,6 @@ sl:
   age_interstitial:
     age: Tvoja starost
     header: Posodobitev podatkov o računu
-    message: Želimo zagotoviti še boljšo zaščito zasebnosti, zato potrebujemo podatek
-      o starosti učencev. <br/>Kot vedno, code.org podatkov ne bo nikoli posodil,
-      prodal ali delil s tretjimi osebami.
-    sign_out: Če podatka o starosti ne želite vnesti, se lahko <a href="%{url}">izpišete</a>.
   terms_interstitial:
     tos: Pogoje storitve
     privacy: Izjava o zasebnosti
@@ -610,6 +587,9 @@ sl:
     decline: Zapri
   zendesk_too_young_message: Žal se mlajši uporabniki ne morejo prijaviti. Lahko pa
     brez prijave brskate po <a href="http://support.code.org">support.code.org</a>,
+    ali pa zaprosite starše ali učitelje, da nas kontaktirajo.
+  zendesk_too_young_message_markdown: Žal se mlajši uporabniki ne morejo prijaviti.
+    Lahko pa brez prijave brskate po [support.code.org](http://support.code.org),
     ali pa zaprosite starše ali učitelje, da nas kontaktirajo.
   progress:
     not_started: ni začeto
@@ -662,24 +642,6 @@ sl:
           infringement: Kršitev avtorskih pravic
           other: Drugi
         detail: Prosimo, navedite čim več podrobnosti glede vsebine, ki jo prijavljate.
-  flex_category:
-    required: Pregled
-    content: Vsebina
-    csf_digcit: Digitalno državljanstvo
-    csf_jigsaw: Sestavljanka
-    csf_loops: Zanke
-    csf_events: Dogodki
-    csf_binary: Binarno
-    csf_conditionals: Pogoji
-    csf_nested_loops: Gnezdenje zank
-    csf_functions: Funkcije
-    csf_variables: Spremenljivke
-    csf_internet: Internet
-    csp_variables: Spremenljivke
-    csp_conditionals: Pogoji
-    csp_functions: Funkcije
-    csp_lists: Seznami
-    csp_loops: Zanke
   hoc_download:
     minecraft_name: Minecraft Ura za kodo
     download_in_Albanian: 'Prenesi v albanskem jeziku:'
@@ -693,6 +655,7 @@ sl:
     form_labels:
       email: Elektronska pošta
       school_name: Ime šole
+      colombian_school_name: Ime šole
     form_entries:
       gender:
         male: Moški
@@ -712,5 +675,4 @@ sl:
         opt_in_no: Ne
   cookie_banner:
     accept: Strinjam se
-  gdpr_dialog:
-    true: Da
+  copy: Kopiraj

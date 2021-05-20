@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Чому це важливо?
 
-Технології змінюють кожну галузь на планеті. 2015 року 7 мільйонів вакансій у США були у професіях, — включно з мистецтвом та дизайном, — для яких мають значення навички кодування. But 65 percent of schools in the U.S. don't teach computer science. Настав час нам наздоганяти 21-ше сторіччя. Ми знаємо, що незалежно від того, чим вирішать займатися наші учні у дорослому житті, медициною, бізнесом, політикою чи мистецтвом, знання того, як створюються технології, надасть їм впевненості та конкурентоспроможності. <br /> <br />
+Технології змінюють кожну галузь на планеті. 2015 року 7 мільйонів вакансій у США були у професіях, — включно з мистецтвом та дизайном, — для яких мають значення навички кодування. But 53 percent of schools in the U.S. don't teach computer science. Настав час нам наздоганяти 21-ше сторіччя. Ми знаємо, що незалежно від того, чим вирішать займатися наші учні у дорослому житті, медициною, бізнесом, політикою чи мистецтвом, знання того, як створюються технології, надасть їм впевненості та конкурентоспроможності. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -40,11 +38,11 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Про Code.org
 
-Code.org® є неприбутковою громадською організацією, яка займається розширенням залучення до інформатики, та збільшенням участі жінок та національних меншин. Its vision is that every student in every school has the opportunity to learn computer programming. Після утворення 2013 року Code.org започаткувала кампанію Години коду, яка на даний момент познайомила з інформатикою понад 100 мільйонів учнів, та уклала партнерство з 70-ма освітніми округами для розширення програм з інформатики. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Після утворення 2013 року Code.org започаткувала кампанію Години коду, яка на даний момент познайомила з інформатикою понад 100 мільйонів учнів, та уклала партнерство з 70-ма освітніми округами для розширення програм з інформатики. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

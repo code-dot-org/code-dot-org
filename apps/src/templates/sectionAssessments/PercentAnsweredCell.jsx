@@ -3,28 +3,6 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const styles = {
-  main: {
-    border: 'none',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    height: '100%'
-  },
-  overviewMain: {
-    padding: 10
-  },
-  icon: {
-    color: color.level_perfect
-  },
-  value: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
-    marginRight: 10
-  }
-};
-
 function calculateOpacity(answered) {
   return (answered + 10) / 100;
 }
@@ -34,7 +12,9 @@ class PercentAnsweredCell extends Component {
     percentValue: PropTypes.number.isRequired,
     isCorrectAnswer: PropTypes.bool,
     displayAnswer: PropTypes.string,
-    isSurvey: PropTypes.bool
+    isSurvey: PropTypes.bool,
+    mainLayoutStyle: PropTypes.object,
+    valueLayoutStyle: PropTypes.object
   };
 
   getBackgroundColor = percentValue => {
@@ -67,8 +47,8 @@ class PercentAnsweredCell extends Component {
       backgroundColor: this.getBackgroundColor(percentValue)
     };
     return (
-      <div style={{...styles.main, ...backgroundCSS, ...styles.overviewMain}}>
-        <div style={styles.value}>
+      <div style={{...this.props.mainLayoutStyle, ...backgroundCSS}}>
+        <div style={{...styles.value, ...this.props.valueLayoutStyle}}>
           {percentValue >= 0 && <span>{`${percentValue}%`}</span>}
           {percentValue < 0 && <span>{'-'}</span>}
         </div>
@@ -82,8 +62,29 @@ class PercentAnsweredCell extends Component {
   }
 }
 
+const styles = {
+  main: {
+    border: 'none',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: '100%',
+    padding: 10
+  },
+  icon: {
+    color: color.level_perfect
+  },
+  value: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};
+
 PercentAnsweredCell.defaultProps = {
-  percentValue: -1
+  percentValue: -1,
+  mainLayoutStyle: styles.main,
+  valueLayoutStyle: {marginRight: 10}
 };
 
 export default PercentAnsweredCell;

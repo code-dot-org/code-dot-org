@@ -1,0 +1,276 @@
+{
+  "uz-UZ": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Rahmat!",
+          "40d7755b0c04b15ca69f0f8d8c510f91": "Quyonni boqing!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "ko‘k",
+          "f59f10539890569d3b1deb0e4352ab84": "Bugun men kiyaman",
+          "810f7026db2f96c4e654f4664e44be04": " jersi!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "qizil",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Bu nisbatan",
+          "c30c9d9f51c03a6d42d66cea54206abd": "bugun, shundaymi?",
+          "b92274a5b4513e80f4bd6a8136581578": "Bu eng g'alati soya",
+          "f54929e86cc7510907895070d8b05979": " men qachondir ko'rgan!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Rahmat!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "Ballar hisobi: ",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "Tangalarni oling. Yiqilmang!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!",
+          "8437002ea42b64a5fd68abfb2ab8dae0": "O‘yin tugadi",
+          "c865bfd8e0c78020ace8e1376d3cc9ad": "Mag‘lub bo‘ldingiz."
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "Ballar hisobi: "
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Men o'sha! Rikki! Men kod yozishni, Tuy bilan suhbat qurishni va muzqaymoq yeyishni yaxshi ko'raman!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu mening eng yaqin do'stim Tuy! U haqiqatan ham sport ustasi!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Muzqaymoq - mening sevimli taomim! Ammo men uni divanda yeyishim kerak emas ...",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu mening uy quyonim, Lolipop xonim! Nima uchun unga shunday ism qo'yganimni bilmayman!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu mening kompyuterim! Men unda HAR DOIM kod yozaman!",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "Mana sir: Tuy nihoyatda qitiqlashdan qo'rqadi!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Mazza!",
+          "41a18649f969a00ec0b2feba20db997f": "Menimcha, bu rang sizga ko'proq yoqadi, Lolipop xonim!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Ushbu kompyuter mening antiqa kodlash ko'nikmalarimga chiday olmaydi!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Men o'sha! Rikki! Men kod yozishni, Tuy bilan suhbat qurishni va muzqaymoq yeyishni yaxshi ko'raman!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu mening eng yaqin do'stim Tuy! U haqiqatan ham sport ustasi!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Muzqaymoq - mening sevimli taomim! Ammo men uni divanda yeyishim kerak emas ...",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu mening uy quyonim, Lolipop xonim! Nima uchun unga shunday ism qo'yganimni bilmayman!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu mening kompyuterim! Men unda HAR DOIM kod yozaman!",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "Mana sir: Tuy nihoyatda qitiqlashdan qo'rqadi!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Mazza!",
+          "41a18649f969a00ec0b2feba20db997f": "Menimcha, bu rang sizga ko'proq yoqadi, Lolipop xonim!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Ushbu kompyuter mening antiqa kodlash ko'nikmalarimga chiday olmaydi!"
+        },
+        "Choose Your Own Adventure": {
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "Xavotirga o'rin yo'q! Ishonchim komil, uni topa olaman",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "Men hozir izlashni boshlayman! Xayr!",
+          "6d411b45e39818da535ba9f8a2cf58e2": "Bu meni jodugarga aylantirdi!",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "Men haqiqatan ham bu tayoqchaning egasini topishim kerak edi!",
+          "c332bf82ea63d21d1d1b701a07ab9afd": "Yordamingiz uchun tashakkur, lekin men endi ketishim kerak",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "Hey, men tayoqcha topdim!",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "Oh, yo'q! Bu jodugarlar tayoqchasi!",
+          "2cef5d66c57efe3994c85f4e1f312849": "A-ha! Men ikkita tayoqchani topdim! Yordamingiz uchun ikkinchisi sizga! Oling!",
+          "24a124016e7eec7a8fef5bc228541533": "Xavotirga o'rin yo'q! Ishonchim komil, uni topa olaman",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "FoodFight": {
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Ballar hisobi ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Daraja ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "Guess The Number": {
+          "5c95950acb6c51d88cc8869eb31f2bdf": "Uddaladingiz!",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "Pingvinni yutib yuborishimdan oldin mening yoshimni taxmin qiling!",
+          "015c8ae47c8964d793ddc123b7ba6b81": "Bu yoshda hech kim tirik emas.",
+          "56582da5c99c1bb46ab5dcda003f8c27": "O'ta yosh.",
+          "781b7711244d030e4ed6e1bfa883364e": "Men hali 20 yosh ham emasman!",
+          "01bab55de9d3319f27c5213b4661c79f": "Bu yoshda emas!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "Find the Wizard": {
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Uchtagacha sanang va men yo'q bo'lib ketaman! Meni topish uchun 1 dan 400 gacha raqamni taxmin qiling!",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Siz meni topdingiz!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables1a": {
+          "ea904c9d18bd602705f598372988aaa8": "Nima deb baqirishim kerak?",
+          "97a97de7add5e8dcd9f70a407d56968e": "Gol!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "88789b154a4ffbbd84108b0c80f8c464": "Yoshing nechada, Brayn?",
+          "662722f1029078dad7a3683c64d8b922": "Vah! Men ",
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables4b": {
+          "2e1749915d40abd8f43fc2b9dd13649c": "Bajonudil,",
+          "ecb2903fb054395baf72ea1da127be32": "Bo'yingiz juda baland...",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " yosh, ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "d065635d5fffcb3739555ae93006081c": "Siz bilan uchrashganimdan xursandman, ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables8c": {
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Tabriklar,",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", men rang haqida o'yladim",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "Uzr, ",
+          "8622f69e8cf70458a82fc22d8e46372f": ", men rang haqida o'ylamadim",
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        }
+      }
+    }
+  }
+}

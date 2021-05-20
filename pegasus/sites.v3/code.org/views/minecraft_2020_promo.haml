@@ -1,0 +1,27 @@
+%link{href: "/css/tutorial-promo.css", rel: "stylesheet"}
+
+:ruby
+  mee_image = "/images/mc/fit-1940x620/mc_mee_wide_large_2020.jpg"
+  mee_title = I18n.t(:hoc2020_mc_mee_title)
+  mee_description = I18n.t(:hoc2020_mc_mee_description)
+  mee_link = "https://aka.ms/hourofcode2020"
+  mee_link_text = I18n.t(:hoc2018_mc_educators_box1_button)
+
+.tutorial-promo-container
+  .img-container
+    %img.background-img{src: mee_image}
+  .col-50.specific-tutorial.right-tutorial{style: "right: 10px; top: 10px; height: initial"}
+    .tutorial-box
+      %h2.specific-tutorial-heading= mee_title
+      .tutorial-details{style: "height: initial"}
+        %p.tutorial-description
+          = mee_description
+      %a{href: mee_link, target: '_blank'}
+        %button.tutorial-button{style: "color: #4d575f; background-color: white; border-color: white; font-size: 14px"}
+          = mee_link_text
+      - if language_dir_class == 'rtl'
+        %img{style: "position: absolute; top: 10px; left: 10px; width: 60px;", src: '/images/mc/new_tag.png'}
+      - else
+        %img{style: "position: absolute; top: 10px; right: 10px; width: 60px", src: '/images/mc/new_tag.png'}
+
+  .clear

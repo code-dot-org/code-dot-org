@@ -1,0 +1,31 @@
+name 'U10 SSQRP1 part 3'
+editor_experiment ''
+
+
+
+
+description 'Which of the following is considered a potential effect of the _GroceryGrabbr_ app rather than a function of the _GroceryGrabbr_ app?'
+right 'Using the app may result in the user being able to spend less time shopping for groceries and more time with their family and friends.'
+wrong 'Using the app allows users to locate grocery items on a list.'
+wrong 'The app enables users to receive a notification that the app is ready to be used when they enter the grocery store'
+wrong 'The app informs users of the total cost of their groceries.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** While the other three answers describe things that every user would expect to experience from using the app, not every user will necessarily find that it saves them time that they can then spend with their families.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* CRD-2.A.1 - The purpose of computing innovations is to solve problems or to pursue interests through creative expression.
+* IOC-1.A.3 - Not every effect of a computing innovation is anticipated in advance.
+
+
+
+:::
+
+
+MARKDOWN

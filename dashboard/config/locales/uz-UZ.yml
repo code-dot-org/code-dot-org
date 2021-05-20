@@ -3,35 +3,85 @@ uz:
   errors:
     messages:
       not_saved: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
+      too_young: Bu dars uchun yoshga cheklov bo‘lib, yoshi to‘lmaganlar uchun kirish
+        imkoni yo‘q.
+      teacher_must_accept_terms: Ushbu tarkib yoshga nisbatan cheklovlarga ega va
+        yoshi kichik o'quvchilar uchun mos emas. O'qituvchingizdan ushbu tarkibga
+        kirish huquqini olish uchun yangilangan Xizmat shartlarini qabul qilishini
+        so'rang. O'qituvchingiz buni Code Studio-ga kirish va Code Studio bosh sahifasining
+        yuqori qismidagi "Yangilangan shartlarni ko'rib chiqish" tugmasini bosish
+        orqali amalga oshirishi mumkin.
+      pair_programmer: Siz hozirda ushbu tarkibga kirish imkoniga ega bo'lmagan talaba
+        bilan juft dasturlashdasiz. Ushbu tarkibga kirish uchun juft dasturlash rejimini
+        to'xtating va qaytadan kiring.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: yaroqsiz. E'tibor bering, har bir havoladan parolingizni tiklash
+                uchun faqat bir marta foydalanish mumkin va faqat eng so'nggi yuborilgan
+                havola ishlaydi.
       messages:
         blank: talab etiladi
+        blank_plural: talab etiladi
+        invalid: yaroqsiz
+        invalid_plural: yaroqsiz
     attributes:
       user:
-        name: Ismni ko`rsatish
-        email: Elektron pochta
-        username: Foydalanuvchi nomi
-        password: Kalit so`z
-        password_confirmation: Kalitni so`zni tasdiqlash
-        current_password: Joriy kalit so`z
+        name: Ko‘rsatiladigan ism
+        name_example: Ko‘rsatiladigan ism (masalan, Cool Coder yoki Jeyn S.)
+        email: E-mail
+        parent_email: Ota-ona/Vasiy emaili
+        personal_email: Shaxsiy elektron pochta manzili <a href="%{url}"> (elektron
+          pochta manzilingiz bo‘lmasa, shu yerni bosing) </a>
+        personal_email_markdown: 'Shaxsiy elektron pochta manzili [(elektron pochta
+          manzilingiz bo‘lmasa, shu yerni bosing)](%{url}) '
+        username: Foydalanuvchi ismi
+        password: Kalit so‘z
+        password_confirmation: Kalitni so‘zni tasdiqlash
+        current_password: Joriy kalit so‘z
         locale: Til
         age: Yoshi
         gender: Jinsi
-        edit_header: Foydalanuvchi ma'lumotlarini tahrir qilish
+        edit_header: Foydalanuvchi ma'lumotlarini tahrirlash
+        finish_sign_up_header: Hisob qaydnomangizni yaratishni yakunlang
+        finish_sign_up_subheader: "<strong>%{email} </strong> uchun Code.org hisob
+          qaydnomasini yaratishni tugatish uchun quyidagi ma'lumotlarni to'ldiring."
+        finish_sign_up_subheader_markdown: "**%{email}**  uchun Code.org hisob qaydnomasini
+          yaratishni tugatish uchun quyidagi ma'lumotlarni to'ldiring."
+        finish_sign_up_subheader_provider: "<strong>%{provider}</strong> bilan <strong>%{email}
+          </strong> uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi
+          ma'lumotlarni to'ldiring."
+        finish_sign_up_subheader_provider_markdown: "**%{provider}** bilan **%{email}**
+          \ uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma'lumotlarni
+          to'ldiring."
+        reset_password_token: Siz kirib o'tgan parolni qayta tiklash uchun havola
         error:
           future: yaqin orada bo`la olmaydi
   beta: beta
   hello: Salom Dunyo
   welcome_back: Qayta tashrifingiz bilan, %{name}
+  your_professional_learning_plan: Sizning kasbiy ta'lim rejangiz
+  see_your_learning_plan: Kasbiy ta'lim rejangizni ko‘ring
   submit: Taqdim qilmoq
+  unsubmit: Bekor qilish
+  previous_page: Oldingi sahifa
+  next_page: Keyingi sahifa
+  next_resource: Keyingi resurs
   cancel: Bekor qilish
+  okay: Yaxshi
   or: yoki
-  add_teacher_form:
+  heading_x_of_y: "%{heading} ( %{y} dan  %{x} - sahifa)"
+  join_section:
     code:
-      label: 'O`qituvchi qo`shing:'
+      title: Code.org saytidagi bo'limga qo'shiling
       placeholder: Bo`lim kodi
-    submit: O`qituchi qo`shish
+      instructions: 'Iltimos, o''qituvchingiz bo''limiga qo''shilish uchun ular sizga
+        ulashgan 6 ta harfli kodni kiriting (masalan: "ABCDEF").'
+      instructions_short: 6 harfli bo'lim kodini kiriting
+      submit: Qo'shilish
   add_hint_form:
     placeholder: Iltimos, ko`makchi so`zni shu yerga kiriting
     submit: Ko`makchi so`z qo`shing
@@ -41,149 +91,1364 @@ uz:
   puzzle: Jumboq
   trophies: Mukofotlar
   courses: Kurslar
+  courses_page:
+    title_student: Informatikani o‘rganing
+    title_teacher: Informatikani o‘rgating
+  unplugged_activity: Kompyutersiz o‘tiladigan mashg‘ulotlar
   of: ni
   more: Ko`p
   less: Oz
+  try_hoc: Kod soatini sinab ko'ring, bu yerni bosing >>
+  try_k8intro: K-8 Informatikaga kirish kursimizni sinab ko'ring (15-25 soat)
+  k8intro: Informatikaga kirish kursi (15-25 soat)
   already_started: 'Allaqachon boshlaganmisiz? Bu yerda davom eting >> '
   demos: 'Admin: Barcha demonstratsiyalar'
   continue: Davom etish
   prize: sovg'a
   more_info: Batafsil
   auth:
+    continue_with: "%{provider} bilan kirish"
     sign_in_with: "%{provider} orqali kirish"
     signed_in: Kirgansiz!
-    signed_out: Siz <a href="%{url}">saytidan</a> chiqdingiz.
-    sign_out_of: Siz saytga kirish uchun %{provider} dan foydalandingiz. %{provider}
-      dan chiqish uchun <a href="%{url}">bu yerni</a> bosing.
+    signed_out_markdown: "### Siz [Code.org](%{url}) saytidan chiqdingiz."
+    sign_out_of_markdown: "#### Siz saytga kirish uchun %{provider} dan foydalandingiz.
+      %{provider} dan chiqish uchun [bu yerni]%{url} bosing."
+    already_signedup: Siz ro'yxatdan o'tganmisiz?
+    notyet_signedup: Hali qo'shilmaganmisiz?
+    google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft akkaunti
     microsoft_v2_auth: Microsoft akkaunti
+    clever: Aqlli
+    powerschool: Powerschool
     forgot_password: Parolni unutdingizmi?
+    migration_success: Muvaffaqiyat! Siz bizning yangi hisob tajribamizga o'tdingiz.
+    demigration_success: Endi hisobingizda yangi hisob tajribasi o'chirib qo'yilgan.
     need_confirmation: Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?
+    need_unlock: Qulfdan chiqarish bo'yicha ko'rsatmalar olmadingizmi?
+    not_linked: Kechirasiz, sizning Code.org hisob qaydnomangiz %{provider} bilan
+      bog'lanmagan. Parolni quyida yozib tizimga kirishingiz kerak.
+    use_clever: Kechirasiz, sizning Code.org hisob qaydnomangiz %{provider} bilan
+      bog'lanmagan. Iltimos, Clever Portal orqali kiring.
+    invalid_provider: Kechirasiz, %{provider} hisob qaydnomalarini Code.org hisoblari
+      bilan bog'lab bo'lmaydi.
+    migration_required: Kechirasiz, biz hali ham eski hisob tajribasidan foydalangan
+      hisoblarni ulay olmaymiz. Iltimos, yangi hisob tajribasiga o'ting.
+    unable_to_connect_provider: Code.org hisobingizni %{provider} hisobingizga ulab
+      bo'lmadi. Iltimos, yana bir bor urinib ko'ring.
+    disconnect_successful: Muvaffaqiyatli! Biz tashqi hisobingizni Code.org hisob
+      qaydnomangizdan uzdik.
+    already_in_use: "%{provider} hisobingiz allaqachon boshqa Code.org hisobiga ulangan."
+    already_linked: "%{provider} hisobingiz allaqachon Code.org hisobingizga ulangan."
+    existing_account:
+      account_exists: Xush habar! Sizda bu  %{email} bo'yicha Code.org hisob qaydnomasi
+        mavjud
+      sign_in: Mavjud hisobingizga kiring. Shunda siz %{provider} profilingizni Hisob
+        sozlamalari sahifasidan bog'lashingiz mumkin bo'ladi.
+      sign_up: Sizning elektron pochtangiz emasmi? Boshqa elektron pochta orqali yangi
+        hisob yaratmoqchimisiz? Agar siz yangi hisob yaratmoqchi bo'lsangiz, %{provider}
+        profilingizni Hisob sozlamalari sahifasidan bog'lashingiz mumkin.
   signup_form:
+    email_signup: Elektron pochta manzilingiz bilan ro'yxatdan o'ting
+    student_count: "%{count} talaba allaqachon ro'yxatdan o'tgan."
+    teacher_count: "%{count} o'qituvchi allaqachon ro'yxatdan o'tgan."
+    overview: Sizning taraqqiyotingizni kuzatish yoki sinfingizni boshqarish uchun
+      ro'yxatdan o'ting. <a href="/"> Siz turli xil bosqichlarni va boshqotirmalarni
+      </a> hisob qaydnomasiz ko'rib chiqishingiz mumkin, ammo o'zingizning yutuqlaringiz
+      va loyihalaringizni saqlash uchun ro'yxatdan o'tishingiz kerak bo'ladi.
+    overview_markdown: O'z yoki farzandingiz taraqqiyotini kuzatish yoki sinfingizni
+      boshqarish uchun ro'yxatdan o'ting.  Siz turli xil bosqichlarni va boshqotirmalarni  hisob
+      qaydnomasiz ko'rib chiqishingiz mumkin, ammo o'zingizning yutuqlaringiz va loyihalaringizni
+      saqlash uchun ro'yxatdan o'tishingiz kerak bo'ladi.
+    hoc_already_signed_up_heading: Tizimga kirmasdan boshlash
+    hoc_already_signed_up_content: Siz Dastrulash soatini o'qitish uchun ro'yxatdan
+      o'tgansiz! Ushbu tadbirda ishtirok etish uchun siz va o'quvchilaringiz Code
+      Studio-ga kirishingiz shart emas. Boshlash uchun <a href="%{learn_url}"> sinfingiz
+      uchun o'quv qo'llanmasini tanlang </a> va havolani ular bilan ulashing. <br/>
+      <br/> Agar siz "Dastrulash soati"ni yaxshi ko'rsangiz va davom etishni xohlasangiz,
+      siz o'z o'quvchilaringizni <a href="%{educate_url}"> kattaroq kurslarga </a>
+      yozilish uchun quyida parolni o'rnatishingiz va Code Studio-da ro'yxatdan o'tishingiz
+      mumkin.
+    hoc_already_signed_up_content_post_hoc: Dasturlash soatini o'tkazganingiz uchun
+      tashakkur. Code Studio-ga kirish uchun hisob qaydnomangiz uchun parol o'rnatishingiz
+      kerak bo'ladi. Bu sizning taraqqiyotingizni saqlashga va sinfingizni boshqarishga
+      imkon beradi. Siz talabalarga kurslarni tayinlashingiz va ularning rivojlanishini
+      kuzatib borishingiz mumkin. <a href="%{studio_url}"> Shuningdek, siz hisob yaratmasdan
+      turli bosqichlar va boshqotirmalarni </a> yechishda davom etishingiz mumkin.
+    hoc_already_signed_up_content_post_hoc_markdown: Dasturlash soatini o'tkazganingiz
+      uchun tashakkur. Code Studio-ga kirish uchun hisob qaydnomangiz uchun parol
+      o'rnatishingiz kerak bo'ladi. Bu sizning taraqqiyotingizni saqlashga va sinfingizni
+      boshqarishga imkon beradi. Siz talabalarga kurslarni tayinlashingiz va ularning
+      rivojlanishini kuzatib borishingiz mumkin.  Shuningdek, siz hisob yaratmasdan
+      [turli bosqichlar va boshqotirmalarni  yechishda davom etishingiz mumkin](%{studio_url}).
+    teacher_educator_guide: Pedagoglar uchun qo'llanma
+    title: Code.org-ga ro'yxatdan o'ting
+    school_name: Maktab nomi (ixtiyoriy)
+    school_address: Maktab manzili (ixtiyoriy)
+    address_placeholder: manzil, shahar, davlat, pochta indeksi
+    gender: Jins (ixtiyoriy)
+    birthday: Tug'ilgan kun (ixtiyoriy)
     age: Yoshi
+    user_type: Siz oʻqituvchimisiz yoki oʻquvchi?
+    submit: Ro‘yxatdan o‘tish
+    go_to_account: Hisobimga o'tish
+    teacher: O'qituvchimisiz?
+    valid_username: Foydalanish uchun mavjud!
+    invalid_username: Foydalanuvchi nomi kamida 5 ta belgidan iborat bo'lishi kerak
+    taken_username: Foydalanuvchi nomi allaqachon band
+    valid_password: Yaroqli parol!
+    invalid_password: Parol kamida 6 ta belgidan iborat boʻlishi kerak.
+    mismatch_password: Siz kiritgan ikkita parol mos emas
+    student_consent: Code.org xizmatlaridan foydalanish uchun ota-onam yoki qonuniy
+      vakilimning ruxsati borligini tasdiqlayman.
+    agree_us_data_transfer_student: "**Code.org ushbu saytda ishlash jarayonida olinga
+      ma'lumotlarni (shu jumladan shaxsiy ma'lumotlarni) Qo'shma Shtatlarda joylashtirish
+      va qayta ishlashga rozilik bildiraman**."
+    agree_us_data_transfer_teacher: "**Code.org ushbu saytda men (va mening o'quvchilarim)
+      ishlashi jarayonida olinga ma'lumotlarni (shu jumladan shaxsiy ma'lumotlarni)
+      Qo'shma Shtatlarda joylashtirish va qayta ishlashga rozilik bildiraman**."
+    data_collection_us: Code.org AQShda joylashgan va notijorat veb-sayt bo'lib, AQShda
+      ma'lumotlar yig'ishni tartibga soluvchi qonunlar mening mamlakatim qonunlaridan
+      farq qilishi mumkinligini tushunaman.
+    visit_privacy: Qo‘shimcha ma'lumot olish uchun Code.org-ning [Maxfiylik siyosati
+      sahifasi](%{privacy_url})ga o‘ting.
+    student_terms_markdown: Elektron pochta manzillari talabalar bilan bog'lanishimizga
+      imkon beradigan shaklda saqlanmaydi. Parolni tiklashdan tashqari, talabalar
+      hech qachon Code.org saytidan elektron pochta xabarlarini olmaydilar. Qo'shimcha
+      ma'lumot olish uchun bizning [maxfiylik siyosatimiz] (http://code.org/privacy)
+      ga qarang.
+    additional_information: Ro'yxatdan o'tishni davom ettirish uchun bizga qo'shimcha
+      ma'lumot kerak.
+    user_type_button: Hisob turini yangilash
+    user_type_label: Hisob (Akkaunt) Turi
     user_type_teacher: O'qituvchi
     user_type_student: O‘quvchi
     field_is_required: talab etiladi
+    accept_terms: Hisob qaydnomasini yaratishga rozilik bildirishingiz kerak.
+    error: Xatolik yuz berdi.
+    email_preference_question: Sizga elektron pochta orqali bizning kurslarimiz, mahalliy
+      imkoniyatlarimiz yoki boshqa kompyuter fanlari yangiliklari to‘g‘risida xabar
+      yuborishimiz mumkinmi? (taxminan bir oyda bir marta)
+    email_preference_privacy: "(Maxfiylik siyosatimizga qarang)"
+    email_preference_yes: Ha
+    email_preference_no: yo‘q
+    email_preference_required: Siz elektron pochta parametrlarini belgilashingiz kerak.
+    parent_account_checkbox: Men farzandim nomidan ro'yxatdan o'tgan ota-ona/vasiyiman
+    parent_account_email_progress_permission: Biz sizga elektron pochta orqali bolangizning
+      taraqqiyoti va loyihalari to‘g‘risida, ularning kursi va kompyuter fanlari haqidagi
+      yangiliklarni vaqti-vaqti bilan yuborib tursak bo‘ladimi?  [(Maxfiylik siyosatimizga
+      qarang)](%{privacy_policy_url})
+    parent_account_email_label: Ota-ona/Vasiy emaili
   school_info:
+    title: Maktab haqida ma'lumot (ixtiyoriy)
+    school_country: Maktab davlati
+    select_school_type: Maktab turi
+    charter: Nizom
+    private: Xususiy
+    public: Davlat
+    homeschool: Uy maktab
+    after_school: Maktabdan keyin
     other: Boshqa
+    state: Davlat
+    district: Tuman
+    other_district_not_listed: Yuqorida sanab o'tilmagan boshqa tuman
+    district_name: Tuman nomi
+    school: Maktab
+    other_school_not_listed: Yuqorida sanab o'tilmagan boshqa maktab
+    school_name: Maktab nomi
+    school_zip: Maktab pochta indeksi
+    school_address: Maktab manzili
+    school_organization_name: Maktab/tashkilot nomi
+    school_organization_zip: Maktab/tashkilot pochta indeksi
   signin_form:
-    login: Elektron pochta
-    password: Kalit so`z
+    title: Hisobingiz bormi? Tizimga kiring
+    login: E-mail
+    login_username: Email yoki foydalanuvchi nomi
+    password: Kalit so‘z
+    remember: Meni eslab qolish
+    submit: Kirish
+  signin:
+    try_heading: Kirishsiz kodlashni sinab ko'rmoqchimisiz?
+    try_hoc: Avval Dasturlash soatini sinab ko'ring
+    try_20hours: Kompyuter faniga 20 soatlik kirish kursimizni sinab ko'ring
+  signinsection:
+    welcome: "%{section_name} ga xush kelibsiz."
+    name: Ismingizni tanlang
+    picture: Endi sirli rasmingizni toping
+    words: Endi sirli so'zlaringizni kiriting
+    login: Kirish
+    invalid_login: Login noto‘g‘ri, qayta urinib ko‘ring
+    pair_programming: Kompyuterimda sherigim bor
+    student_privacy_markdown: Nega to'liq ismingizni ko'rmayotganingiz haqida ko'proq
+      ma'lumot oling [bu yerda](%{student_privacy_blog}).
   password:
     reset_form:
       title: Parolni unutdingizmi?
+      instructions: Hisobingiz bilan bog'liq elektron pochta manzilingizni quyida
+        kiriting va biz sizga parolni tiklash bo'yicha ko'rsatmalarni yuboramiz.
+      email: Elektron pochta manzili
       submit: Taqdim qilmoq
+    reset_errors:
+      captcha_required: Parolingizni tiklash uchun CAPTCHA-ni to'ldiring.
+      invalid_email: Siz noto'g'ri elektron pochta manzili bilan ro'yxatdan o'tgan
+        bo'lishingiz mumkin. Parolni tiklash havolasini olish uchun, iltimos, support@code.org
+        elektron manziliga so'rov yuboring.
+    change_form:
+      title: Parolni almashtirish
+      new_password: Yangi Parol
+      confirm_password: Yangi parolni tasdiqlash
+      submit: Parolni almashtirish
+  welcome_email:
+    subject: Sinfimga qo'shiling (Code.org-da)
+    body: |
+      Code.org-da kompyuter fanlari bo'yicha o'quv qo'llanmalariga yozilish uchun quyidagi havolani bosing (men bilan "o'qituvchingiz" sifatida):
+
+      %{link}
+
+      O'quv qo'llanmalari qiziqarli, vizual ko'rinishga ega va oddiy, boshqariladigan, o'yinga o'xshash tajribadan foydalangan holda informatika fanining asosiy tushunchalarini o'rgatadi. Bill Geyts, Mark Sukerberg, Angry Birds va Plants va Zombies-dan kod yozishni o'rganing! :-)
+
+      %{name}
+  parent_mailer:
+    student_associated_subject: Code.org uchun login ma'lumotlari
+    parent_email_added_subject: '"Code.org"ga xush kelibsiz!'
+  teacher_mailer:
+    new_teacher_subject: '"Code.org"ga xush kelibsiz!'
+    delete_teacher_subject: 'Code.org xabarnomasi: Sizning hisob qaydnomangiz o''chirildi'
   section:
+    your_section:
+      one: 'Bo‘limingiz:'
+      other: 'Bo‘limingiz:'
+    code_with_teacher: "%{teacher_name} bilan %{section_code}  "
+    confirm:
+      remove: Ushbu bo'limni tark etishga ishonchingiz komilmi?
+    default_name: Nomlanmagan bo'lim
+    remove: "(Bo‘limni o'chirish)"
     type:
+      picture: Rasmli parol
       word: Sirli so'z
-      email: Elektron pochta
+      email: E-mail
+      google_classroom: Google Classroom
+      clever: Aqlli
+  follower:
+    invite_sent: Taklif yuborildi
+    added_teacher: "%{name} o'qituvchingiz sifatida qo'shildi"
+    registered: Siz %{section_name} uchun ro'yxatdan o'tdingiz.
+    error:
+      signed_in: Davom etishdan oldin, iltimos, tizimdan chiqing
+      username_not_found: " %{username} foydalanuvchi topilmadi"
+      username_in_use: "%{username} avval lingan, iltimos, boshqasini tanlang"
+      no_teacher: "'%{teacher_email_or_code}' bilan tizimga kirgan odamni topib bo'lmadi.
+        Iltimos, ulardan bu yerda ro'yxatdan o'tishni so'rang va keyin ularni yana
+        qo'shib ko'ring"
+      section_not_found: "'%{section_code}' kodli bo'lim topilmadi."
+      blank_code: Iltimos, bo'lim kodini kiriting
+      cant_join_own_section: Kechirasiz, siz o'z bo'limingizga qo'shila olmaysiz.
+      provider_managed_section: Ushbu bo'lim boshqa provayder tomonidan boshqariladi
+        va unga qo'shilish mumkin emas. Iltimos, o'qituvchingizdan sizni %{provider}
+        orqali qo'shishini va ularning bo'limini qayta sinxronlashtirishini so'rang.
+    mail:
+      student_disassociated:
+        subject: 'Code.org xabarnomasi: %{student_name} endi sizning talabangiz sifatida
+          bog''lanmagan.'
+  reports:
+    error:
+      access_denied: Sizda bu shaxsning statistik ma'lumotlarini ko'rish huquqi yo'q
   crud:
+    new_model: Yangi %{model}
+    show: Ko‘rsatish
+    edit: tahrirlash
+    edit_model: Tahrirlash %{model}
+    update: Yangilash
     submit: Taqdim qilmoq
+    destroy: Yo‘q qilish
+    back: Orqaga
     confirm: Aminmisiz?
+    created: "%{model} muvaffaqiyatli yaratildi."
+    updated: "%{model} muvaffaqiyatli yangilandi."
+    destroyed: "%{model} muvaffaqiyatli o'chirildi."
+    access_denied: Bu %{model} ga sizda ruxsat yo'q.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: Siz taqdim etgan elektron pochta manzili
+          ushbu hisob elektron pochta manziliga to'g'ri kelmaydi
+        personal_login_created_email: Siz shaxsiy loginni muvaffaqiyatli yaratdingiz.
+          Endi o'zingizning hisobingizga elektron pochta va parolingiz bilan kirishingiz
+          mumkin
+        personal_login_created_username: Siz shaxsiy loginni muvaffaqiyatli yaratdingiz.
+          Endi o'zingizning hisobingizga foydalanuvchi nomi (%{username}) va parolingiz
+          bilan kirishingiz mumkin
   nav:
     header:
+      finished_hoc: Tugatdim!
+      sign_in_to_save: Natijalaringizni saqlash uchun tizimga kiring
+      my_dashboard: Mening boshqaruv panelim
+      course_catalog: Kurslar katalogi
+      project_gallery: Loyihalar
+      sections: Boʻlimlar
+      help_support: Yordam va qo‘llab-quvvatlash
+      report_bug: Muammo haqida xabar berish
+      report_abuse: Report abuse
+      teacher_community: O‘qituvchilar hamjamiyati
+      professional_learning: Kasbiy ta'lim
+      documentation: Hujjatlar
+      tutorials: Qo‘llanmalar
+      app_lab_documentation: App Lab Documentation
+      app_lab_tutorials: App Lab Tutorials
+      game_lab_documentation: Game Lab Documentation
+      game_lab_tutorials: Game Lab Tutorials
+      sprite_lab_documentation: Sprite Lab Documentation
+      sprite_lab_tutorials: Sprite Lab Tutorials
+      web_lab_documentation: Web Lab hujjatlari
+      educate_overview: Pedagog muxtasari
+      educate_elementary: Boshlang'ich maktab
+      educate_middle: O‘rta maktab
+      educate_high: Yuqori sinflar
       educate_hoc: Dasturlash soati
+      educate_partner: Bizning hamkorimiz bo'ling
+      educate_beyond: Code.org-dan tashqarida
+      educate_inspire: Talabani ilhomlantiring
+      educate_community: Onlayn hamjamiyat
+      educate_tools: Vositalar va videolar
+      about_us: Biz haqimizda
+      about_leadership: Yetakchilik
+      about_donors: Donorlar
+      about_partners: Hamkorlar
+      about_team: To'liq jamoa
+      about_news: Yangiliklar sahifasi
+      about_evaluation: Baholash
+      about_jobs: Ish
+      about_contact: Biz bilan bog'laning
+      about_faqs: Ko‘p beriladigan savollar
+      learn: Oʻrganish
+      stats: Statistika
+      help_us: Bizga yordam bering
+      teach: O'qiting
+      about: Biz haqimizda
+      legal: Privacy & Legal
+      legal_privacy: Maxfiylik siyosati
+      legal_tos: Xizmat shartlari
     user:
       classroom: O‘qituvchining bosh sahifasi
+      district_dashboard: Tuman paneli
+      label: Salom %{username}
+      stats: Dasturlash studiyasi
+      my_projects: My projects
+      settings: Akkaunt sozlamalari
+      logout: Chiqish
+      signin: Kirish
+      signup: Ro‘yxatdan o‘ting
+      already_registered: Ro'yxatdan o'rganmisiz?
+      pair_programming: Juftlikda dasturlash
+      team: Jamoa
+      driver: Hisobga kirilgan
+      navigator: Hamkor
       create: Yaratmoq
-      applab: Ilova labaratoriyasi
+      algebra_game: Algebra
+      applab: Ilovalar laboratoriyasi
+      artist: Rassom
+      artist_k1: Rassom (Maktabgacha yosh)
+      basketball: Basketbol
       bounce: Sakrash
+      calc: Calc
+      dance: Dance Party
+      eval: Eval
+      flappy: Flappy
+      frozen: Muzlagan (Frozen)
+      gamelab: O‘yin laboratoriyasi
+      gamelab_jr: O‘yin laboratoriyasi (beta)
+      gumball: The Amazing World of Gumball
       iceage: Muzlik davri
+      infinity: Cheksizlik
+      makerlab: Maker asboblar to‘plami
+      minecraft_adventurer: Minecraft Sarguzashtchi
+      minecraft_aquatic: Minecraft Aquatic
+      minecraft_codebuilder: 'Minecraft: Kod aloqa'
+      minecraft_designer: Minecraft
+      minecraft_hero: Minecraft qahramoni
+      playlab: Play Lab - O‘yin laboratoriyasi
+      playlab_k1: Play Lab (Maktabgacha)
+      scratch: Scratch
+      sports: Sport
+      spritelab: Sprite Lab
+      starwars: Yulduzlar urushi
+      starwarsblocks: Star Wars (Blocks)
+      starwarsblocks_hour: Star Wars (Blocks)
+      weblab: Web Lab
+      view_all: Barcha loyihalarni ko‘rish...
+    popup:
+      progress_for_user: "%{name} progressi"
+      progress: Progressingiz
+      lines: 'Jami kod satrlari: %{lines}'
+      close: YOPISH
+      mastery: Ma'ruza/Konseptsiya
+      puzzle_map: Pog`onalar
+      prizes: Barcha %{total_trophies} trofeylarni to'plang va sovrinlarni yutib oling!
+      prize_earned: Barcha %{total_trophies} trofeylar to'plandi. Sovrin yutildi!
+      prize_us_only: "(Faqat AQSh talabalari)"
+      prizes_link: Batafsil
   teacher:
+    answer: Javob
+    for_teachers_only: Faqat o'qituvchilar uchun
+    title:
+      one: 'Oʻqituvchingiz:'
+      other: 'Oʻqituvchilaringiz:'
+    remove: Oʻqituvchini oʻchirish
+    confirm:
+      remove: Ushbu o'qituvchini o'chirishni haqiqatan xohlaysizmi?
+    students:
+      dashboard: O‘qituvchilar paneliga o'tish
+    user_not_found: O'qituvchini topib bo'lmadi.
+    student_teacher_disassociated: Siz %{teacher_name} bilan %{section_code} qismni
+      tark etdingiz.
     panel:
+      answer_viewer: O‘qituvchilar paneli
       student: O‘quvchi
+      viewing_solution: Yechimni ko'rish
+      try_it_yourself: Oʻzingiz urinib koʻring
+      section: Section
+      example: Misol yechimi
+      example_with_number: Misol yechimi %{solution_number}
+      submitted_on: 'Yoqilgan:'
+      last_updated: 'Oxirgi yangilangan:'
+      unsubmit: Bekor qilish
+      worked_with: Ishlangan birgalikda
+      update_lock_settings: Bu yerda qulflash sozlamalarini yangilang.
+      clear_response: Aniq javob
+    student_code_view_diabled: Ushbu mashg'ulot uchun talaba kodini ko'rib bo'lmaydi.
+  user:
+    email_confirm_needed: 'Elektron pochta manzili tasdiqlanmagan:'
+    email_confirm_needed_required: 'Elektron pochta manzilingiz %{email} tasdiqlanmagan:'
+    email_confirm_wrong_email: "(Elektron pochtangiz boshqami?)"
+    email_resend_confirm: Tasdiqlash yo‘riqnomasi qayta yuborish
+    new_email_hint: "(ushbu elektron pochta manziliga elektron pochta xabarlarini
+      qabul qilishingiz mumkinligiga ishonch hosil qiling)"
+    new_password_hint: "(agar o'zgartirishni xohlamasangiz, bo'sh qoldiring)"
+    current_password_hint: "(o'zgartirishlarni tasdiqlash uchun bizga joriy parolingiz
+      kerak)"
+    delete: Akkauntni oʻchirish
+    delete_text: Hisobingizni o'chirib tashlasangiz, ushbu hisobga ulangan barcha
+      ma'lumotlar va o'tilgan bosqichlar haqida ma'lumotlar o'chiriladi.
+    delete_text_teacher_managed_note: Ushbu hisobni o'chirish uchun sizda ruxsat yo'q,
+      chunki uni o'qituvchingiz boshqaradi. Hisobingizni o'chirishdan oldin o'qituvchi(lar)
+      sizni o'z bo'limlaridan o'chirishlari kerak.
+    delete_text_teacher_note: 'Iltimos, diqqat qiling: hisobingizni o''chirib tashlasangiz,
+      o''quvchilaringizning hisoblari o''chirilmaydi.'
+    delete_confirm: Haqiqatan ham hisobingizni o'chirmoqchimisiz?
+    deleted_user: foydalanuvchini o'chirish
+    no_password_because_oauth: Uchinchi tomon provayderi orqali kirganingiz uchun
+      parol yo'q.
+    no_password_because_sponsored: Parolingizni boshqarish uchun o'qituvchingizga
+      murojaat qiling.
+    create_personal_login: Shaxsiy parol bilan login yaratish
+    create_personal_login_under_13_info: Agar o'quv yili tugaganidan keyin ham Code.org
+      hisob qaydnomangizdan foydalanishni davom ettirishni istasangiz, ota-onangizdan/vasiyingizdan
+      quyida o'zingizning shaxsiy loginingizni yaratishda yordam berishni so'rang.
+    create_personal_login_under_13_username: Foydalanuvchi nomi (haqiqiy ismingizni
+      ishlatmang!)
+    create_personal_login_under_13_parent_email: Ota-ona/vasiyning elektron pochta
+      manzili
+    create_personal_login_info: Agar o'quv yili tugaganidan keyin ham Code.org hisob
+      qaydnomangizdan foydalanishni davom ettirishni istasangiz, quyida o'zingizning
+      shaxsiy loginingizni yaratishingiz mumkin.
+    create_personal_login_link_account: Bundan tashqari, "Bog'langan hisoblarni boshqarish"
+      bo'limida shaxsiy hisobga ulanishni tanlashingiz mumkin.
+    create_personal_login_terms: Shaxsiy login yaratish orqali men Code.org <a href='%{terms_of_service_url}',
+      target='_blank'> xizmat ko'rsatish shartlariga </a> rioya qilishga rozilik bildiraman.
+      Men o'qituvchisiz ham Code.org xizmatlaridan foydalanish uchun ota-onam yoki
+      qonuniy vakilimdan ruxsat olganligimni tasdiqlayman.
+    create_personal_login_terms_markdown: Shaxsiy login yaratish orqali men Code.org
+      [xizmat ko'rsatish shartlariga](%{terms_of_service_url}) rioya qilishga rozilik
+      bildiraman. Men o'qituvchisiz ham Code.org xizmatlaridan foydalanish uchun ota-onam
+      yoki qonuniy vakilimdan ruxsat olganligimni tasdiqlayman.
+    create_personal_login_email_note: 'Eslatma: Elektron pochta manzillari talabalar
+      bilan bog''lanishimizga imkon beradigan shaklda saqlanmaydi. Parolni tiklashdan
+      tashqari, talabalar hech qachon Code.org saytidan elektron pochta xabarlarini
+      olmaydilar. Qo''shimcha ma''lumot olish uchun bizning <a href=''%{privacy_policy_url}'',
+      target=''_blank''>maxfiylik siyosatimiz</a> ga qarang.'
+    create_personal_login_email_note_markdown: 'Eslatma: Elektron pochta manzillari
+      talabalar bilan bog''lanishimizga imkon beradigan shaklda saqlanmaydi. Parolni
+      tiklashdan tashqari, talabalar hech qachon Code.org saytidan elektron pochta
+      xabarlarini olmaydilar. Qo''shimcha ma''lumot olish uchun bizning [maxfiylik
+      siyosatimiz](%{privacy_policy_url}) ga qarang.'
+    enter_new_login_info: Yangi login ma'lumotlarini kiriting
+    confirm_secret_words: Maxfiy so'zlarni kiritib, o'zingiz ekanligingizni tasdiqlang
+    parent_email_label: Ota-ona/vasiyning elektron pochta manzili (Ixtiyoriy)
+    parent_email_hint: "(bu parolni tiklash uchun ishlatilishi mumkin)"
+    enter_parent_email: Ota-onangiz yoki vasiyingizning elektron pochta manzilini
+      kiriting (parolni tiklash uchun)
+    update: Hisob yangilash
+    account_successfully_updated: " Hisob muvaffaqiyatli yangilandi."
+    auth_option_saved: Siz %{provider} hisobingizni %{email} elektron pochta bilan
+      muvaffaqiyatli bog'ladingiz.
+    auth_option_saved_no_email: Siz %{provider} hisobingizni muvaffaqiyatli bog'ladingiz.
+    update_email: Yangilash
+    for_parents_and_guardians: Ota-onalar va vasiylar uchun
+    link_a_parent_email: Farzandingizning taraqqiyoti va loyihalari to'g'risida xabardor
+      bo'lish uchun ota-ona/ vasiyning elektron pochta manzilini ushbu hisobga ulang.
+      Parolni tiklash uchun siz ushbu elektron pochta manzilidan foydalanishingiz
+      mumkin bo'ladi.
+    parent_guardian_email_label: Ota-ona/Vasiy emaili
+    remove_parent_email_label: O‘chirish
+    none: Hech biri
+    only_one_parent_email_supported_warning: 'Eslatma: biz hozirda bitta talaba hisobiga
+      faqat bitta ota-ona/vasiy elektron pochta manzilini bog''lashimiz mumkin.'
+    encrypted: shifrlangan
+  user_level:
+    completed: Tugallangan
+    tried: Urinilgan
   home:
+    title: Dasturlash studiyasi
+    all_courses: 1, 2 va 3 kurslariga umumiy sharh
+    lesson_plans: Dars rejalari
+    signin_message: Ro'yxatdan o'rganmisiz? %{link}
+    student_reg_link: O‘quvchi
+    teacher_reg_link: Oʻqituvchi roʻyxatdan oʻtishi
+    signin_directions: Taraqqiyotni kuzatib borish uchun hisob qaydnomasidan foydalaning.
+      <br/> O'qituvchilar, butun sinfingizni kuzatib boring.
+    teacher_dashboard: Progress panelini ko'ring
+    teacher_student_count_one: Sizda %{count} talaba bor.
+    teacher_student_count: Sizda %{count} talaba bor.
+    teacher_averages: O'quvchilaringiz "Concept Mastery" %{trophy_max} trofeylaridan
+      o'rtacha %{trophy_average} ga ega bo'lishdi.
+    teacher_print_certificates: Ushbu kursni tugatgan talabalar uchun sertifikatlarni
+      chop eting
+    teacher_read_blog: Yangiliklar va bizning materiallarimizdagi yangilanishlar haqida
+      Pedagog blogida o'qing
+    classroom: Sinfxonangiz
+    student_progress: O'qish jarayoningiz
+    student_stats: Siz "Concept Mastery" %{trophy_max} trofeylaridan %{trophy_count}
+      ga ega bo'ldingiz.
+    student_left_off: 'Qoldirgan joyingiz:'
+    student_finished: Siz barcha Code.org o'quv qo'llanmalarini yakunladingiz. Boshqa
+      sinfni tanlang %{online_link} yoki %{local_school_link}.
+    local_school: mahalliy maktab
+    online: Onlayn
+    see_details: Tafsilotlarni ko'ring
+    view_course: Kursni ko‘rish
+    prize_info: 'Ishtirokchilar uchun mukofotlar (faqat AQSh davlat maktablari o''qituvchilari
+      uchun): Sinf uchun $1000 gacha.'
+    tryfirst: 'Yoki avval sinab ko''rishingiz va keyinroq ro''yxatdan o''tishingiz
+      mumkin:'
     trynow: Hoziroq sinang
+    add_hint_help: Iltimos, Code.org o'quv qo'llanmalariga aqlli maslahatlarni qo'shishda
+      bizga yordam bering
+    20hour_overview: Ushbu 20 soatlik dars asosiy kompyuter fanlari va dasturlash
+      tushunchalari bilan tanishtiradi. Kurs 8-sinflar uchun sinfda foydalanish uchun
+      mo'ljallangan, ammo har qanday yoshda o'rganish uchun qiziqarli.
+    test_videos_help: Maktabingizda yangi video pleyerimizni sinab ko'ring
+    try_beta_courses: Yangilik! Boshlang‘ich sinfdagilar uchun beta-mashg‘ulotlarimizni
+      sinab ko‘ring.
+    use_as_teacher: Ushbu saytdan o'qituvchi sifatida foydalaning
+    heading_elementary_markdown: |-
+      ## 20 soatlik kurslar
+
+      # Kompyuter fanlari asoslari (barcha yoshdagilar)
+    your_gallery: Galereya
+    no_primary_course: Dasturlash studiyasi boshqa kursini sinab ko‘ring
+    choose_next_course: Quyidagi birini tanlab Code Studio kursini sinab ko'ring
+    print_certificate: Sertifikatni chop etish
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor
+    your learning."
+  move_students:
+    new_section_dne: Kechirasiz, lekin %{new_section_code} bo'lim mavjud emas. Boshqa
+      bo'lim kodini kiriting.
+    section_code_cant_be_current_section: Joriy bo'lim yangi bo'lim bilan bir xil
+      bo'lishi mumkin emas.
+    current_section_dne: Kechirasiz, lekin %{current_section_code} bo'lim mavjud emas.
+      Boshqa bo'lim kodini kiriting.
+    student_ids_not_entered: Iltimos, "student_ids"ni taqdim eting.
+    student_not_found: Bir yoki bir nechta talaba topilmadi.
+    all_students_must_be_in_current_section: Hozirda barcha talabalar sizning bo'limingizga
+      yozilishlari shart.
+    already_enrolled_in_new_section: Siz ushbu o'quvchilarni ko'chira olmaysiz, chunki
+      ular allaqachon yangi bo'limda.
+    third_party_login: Siz talabalarni uchinchi tomon vositasi bilan sinxronlashtirilgan
+      bo'limga ko'chira olmaysiz.
+  share:
+    title: Code Studioda o'rganish
+    description: Har bir inson kompyuter fanini o'rganishi mumkin. Kod bilan o'yinlar,
+      ilovalar va san'at asari yarating.
+    try_hour_of_code: Dasturlash soatini sinab ko‘ring!
   gender:
+    male: Erkak
+    female: Ayol
+    non_binary: Binar emas
+    not_listed: Afzal bo'lgan muddat ro'yxatda yo'q
     none: Javob bermaslikni ma’qul ko‘raman
   user_type:
     student: O‘quvchi
     teacher: O'qituvchi
   footer:
+    thank_you: <a href="https://code.org/about/donors"> Donorlarimizga </a>, <a href="https://code.org/about/partners">
+      hamkorlarimizga </a>, <a href="https://code.org/about/team"> kengaytirilgan
+      jamoamiz </a>, videoroliklar va Code Studio dasturini qo'llab-quvvatlagi uchun
+      <a href="https://code.org/about/advisors">ta'lim bo'yicha maslahatchilar</a>
+      minnatdorchilik bildiramiz.
     help_from_html: Biz, ayniqsa, ushbu materiallarni yaratishga yordam bergan Google,
       Microsoft, Facebook, Twitter muhandislari va boshqalarga minnatdorchilik bildirmoqchimiz.
-    help_from_html_old: Ushbu materiallarn yaratishgai Google, Microsoft, Facebook
+    help_from_html_old: Ushbu materiallarni yaratishga Google, Microsoft, Facebook
       va Twitter muhandislari yordam berishgan.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br
+      />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br
+      />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice
+      Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br
+      />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark
+      and &copy; %{current_year} Cartoon Network.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights
+      Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All
+      Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.
+      Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.
+      Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All
+      Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
+      Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and
+      &copy; %{current_year} Cartoon Network.
+    code_from_html: Code.org p5.play-dan foydalanadi, u <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      GNU LGPL 2.1 </a> ostida litsenziyalangan.
+    powered_by_aws: Amazon Web Services va "Powered by AWS" logotipi Amazon.com, Inc
+      yoki uning AQSh va/yoki boshqa mamlakatlardagi filiallarining savdo belgilaridir.
+    built_on_github: Microsoft-dan GitHub-da yaratilgan
+    google_copyright: "&copy; Google Inc. ruxsati bilan ishlatilgan. Google Classroom
+      - Google Inc savdo belgisi."
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipi va
+      Hour of Code&reg; Code.org savdo belgilari."
+    copyright: Mualliflik huquqi
     more: Yana
+    feedback: Fikr-mulohaza bildiring
+    translate: Kontentimizni tarjima qilishda qatnashing
+    support: Qo‘llab-quvvatlash
     tos_short: Shartlar
     tos: Xizmat shartlari
+    privacy: Maxfiylik siyosati
+    secure: Xavfsiz versiya
     report_abuse: Nosozlik haqida xabar berish
+    built_on_code_studio: Code Studioda qurilgan
+    make_my_own_app: O'z dasturimni yaratish
+    how_it_works: Bu qanday ishlaydi (Kodni ko'rish)
+    try_hour_of_code: Dasturlash soatini sinab ko‘ring!
   reference_area:
     title: Yordam kerakmi?
+    subtitle: Ushbu video va ko'rsatmalarni ko'ring
+    teacher: Yechimni koʻrish
+    teacher_no_solution: Yechimni ko'rishni to'xtatish
+    auth_error: Yechimni ko'rishga vakolatingiz yo'q.
+    submit: Rassom joylashuvini yangilash
+    direction: Boshlanish yo'nalishi (daraja/graduslarda)
+  video:
+    tab: Video.
+    notes: Video yo‘qmi? Qaydlarini ko'rsatish.
+    notes_coming_soon: Ushbu video uchun qaydlar tez orada qo'shiladi.
+    autoplay_option: Videolar avtoplay rejimida
+    download: Videoni yuklab olish
+    show_notes: Qaydlarni ko‘rsatish
+    show_video: Videoni ko‘rsatish
+    label: Video
   compatibility:
     upgrade:
+      unsupported_message: Brauzeringiz qo'llab-quvvatlanmaydi. Iltimos, brauzeringizni
+        [qo'llab-quvvatlanadigan brauzerlarimizdan biriga](%{supported_browsers_url})
+        yangilang. Siz sahifani ko'rishga urinib ko'rishingiz mumkin, ammo funksionallik
+        buzilishi mumkin.
       link: Ko‘proq bilish
+      applab_unsupported_tablet: App Lab sichqoncha va klaviatura yordamida ish stoli
+        yoki noutbukda yaxshi ishlaydi. Joriy qurilmangizda ushbu vositadan foydalanishda
+        muammolarga duch kelishingiz mumkin.
+      gamelab_unsupported_tablet: Game Lab sichqoncha va klaviatura yordamida ish
+        stoli yoki noutbukda yaxshi ishlaydi. Joriy qurilmangizda ushbu vositadan
+        foydalanishda muammolarga duch kelishingiz mumkin.
+      oceans_unsupported_browser: Ushbu o'quv qo'llanmada ushbu brauzer qo'llab-quvvatlanmaydi.
+        Iltimos, Edge, Chrome, Firefox yoki boshqa zamonaviy brauzer yordamida ushbu
+        sahifaga kirib ko'ring.
+      weblab_unsupported_browser: Afsuski, biz hozirda ushbu brauzerda Web Lab-ni
+        yuklashda muammolarga duch kelmoqdamiz. Bu hal bo'lguncha boshqa brauzerdan
+        foydalanishingiz mumkin. Noqulaylik uchun uzr.
+      weblab_unsupported_locale_storage: Shaxsiy ko'rib chiqish rejimida Web Lab bilan
+        bog'liq muammolarga duch kelishingiz mumkin. Iltimos, loyihangizni normal
+        rejimda qayta yuklang. Noqulaylik uchun uzr.
+  slow_loading: Bu odatdagidan ko'proq vaqt talab qilmoqda ...
+  try_reloading: Sahifani qayta yuklashga harakat qilib ko'ring
   next_stage: Tamom! Keyingi bosqichga o‘tish
   download_pdf: Dars rejasini ochish
   lesson_plan: Dars rejasi
   view_lesson_plan: Dars rejasini ko‘rish
+  pdf_download: PDF-ni yuklab olish
+  download_coming_soon: Yuklab olinadigan mashg'ulot tez orada qo'shiladi.
+  video_coming_soon: Video  tez orada qo'shiladi!
+  share_code:
+    title: Dasturimni amalda ko'rish uchun "Ishga tushirish" tugmachasini bosing
+    bounce_og_title: Mening Bounce Game o'yinimni sinab ko'ring
+    flappy_og_title: Mening Flappy Game o'yinimni sinab ko'ring
+    studio_og_title: Mening Play Lab ilovamni sinab ko'ring
+    check_out_what_i_made: Mening ishlanmalarimni tekshirib ko'ring
+    og_description: Kodlarni o'zim Code.org bilan yozganman
+    phone_number_not_allowed: Uning ichida telefon raqami bor ekan. Matnni o'zgartirishga
+      harakat qiling.
+    address_not_allowed: Uning ichida manzil bor ekan. Matnni o'zgartirishga harakat
+      qiling.
+    email_not_allowed: Uning ichida email bor ekan. Matnni o'zgartirishga harakat
+      qiling.
+    profanity_not_allowed: Uning ichida haqoratli so'zlar bor ekan. Matnni o'zgartirishga
+      harakat qiling.
+  builder:
+    created: Siz yangi skript yaratdingiz.
+    destroyed: Siz skriptni buzdingiz.
+    manage: Darajalarni yaratish
+    view: Ko'rish
+    back: Skriptga qaytish
+    success: Bloklarni muvaffaqiyatli tahrir qildingiz.
+    level:
+      create: Yangi daraja yarating
+      current: Joriy darajalar
+      unused: Foydalanilmagan darajalar
   upsell:
     applab:
-      title: Ilova labaratoriyasi
+      title: Ilovalar laboratoriyasi
+      body: App Lab - bu oddiy dasturlarni yaratishingiz mumkin bo‘lgan dasturiy muhit.
+        Ilovani ishlab chiqing, uni ishlashi uchun bloklar yoki JavaScript bilan kodni
+        yarating, so‘ngra bir necha soniya ichida o‘z ilovangiz bilan o'rtoqlashing.
+      body_short: Ilovani ishlab chiqing, uni bloklar yoki JavaScript kodini ishlab
+        chiqing, keyin uni bir necha soniya ichida ulashing.
+      audience: 13+ yosh
+      cta: Qanday qilishni o‘rganing
+    dance:
+      title: Dance Party
+    dance-2019:
+      title: Dance Party
+    hoc:
+      title: Klassik labirint
+      body: Informatika asoslari bilan tanishib ko‘ring. Millionlar buni uddalashdi.
+    flappy:
+      title: Flappy o‘yinini yarating
+      body: O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code
+        darsimizni sinab ko‘ring!
+    20-hour:
+      title: Tezlashtirilgan kurs
+      body: Ushbu 20 soatlik kurs 2-4 kurslarda o‘tiladigan asosiy kompyuter fanlari
+        va dasturlash tushunchalarini qamrab oladi. Kurs 10-18 yoshlilar uchun mo'ljallangan.
+        To‘liq tajriba uchun 2-4 kurslarni o‘ting!
+      body_short: 2-4-kurslarning tezlashtirilgan versiyasida asosiy kompyuter fanlarini
+        o'rganing.
+    hoc2014:
+      try_new_tutorial: Beta-versiyadagi yangi "Daturlash soati" o'quv qo'llanmamizni
+        sinab ko'ring
+      try_frozen: Muzlagan Anna va Elza bilan Rassom
+    gallery:
+      title: Galereya
+      body: Foydalanuvchilarimiz tomonidan yaratilgan dastur va rasmlar galereyasini
+        ko'ring
+    gamelab:
+      title: O‘yin laboratoriyasi
+      body: O'yin laboratoriyasi - bu bir-biri bilan o‘zaro bog‘liq bo'lgan obyektlar
+        va qahramonlar bilan oddiy animatsiyalar va o‘yinlar qilishingiz mumkin bo‘lgan
+        dasturiy muhit.
+      audience: 13+ yosh
+      cta: Qanday qilishni o‘rganing
+    hoc-encryption:
+      title: Oddiy Shifrlash
+      body: O‘rganuvchilar shifrlangan xabarlarni yaratish va ularni krek qilish usullarini
+        o‘rganadilar.
+    weblab:
+      title: Veb-laboratoriya (beta)
+      body: Web Lab - bu HTML va CSS-dan foydalangan holda oddiy veb-sahifalarni yaratishingiz
+        mumkin bo‘lgan dasturiy muhit. Bir necha soniya ichida veb-sahifalaringizni
+        yarating va saytingiz bilan o‘rtoqlashing.
+      audience: 13+ yosh
+      cta: Qanday qilishni o‘rganing
+    frozen:
+      title: Muzlagan (Frozen)
+    starwars:
+      title: Yulduzlar urushi
+    infinity:
+      title: Cheksiz O‘yin laboratoriyasi
+      body: Disney Infinity qahramonlari ishtirokidagi hikoya yoki o‘yin yaratish
+        uchun Play Lab-dan foydalaning.
+    minecraft:
+      title: Minecraft
+      body: Minecraft dunyosini kod orqali o'rganing.
+    minecraft2016:
+      title: Minecraft
+      body: Minecraft-ning o'z versiyangizda hayvonlarni va boshqa Minecraft jonzotlarini
+        dasturlab yarating.
+    aquatic:
+      title: Minecraft
+    hero:
+      title: Minecraft
+      body: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft
+        bo‘yicha kod bilan sayohat.
+    sports:
+      title: Sport
+      body: Basketbol o‘yini yarating yoki sport turlarini aralashtiring va moslashtiring.
+    text-compression:
+      title: Matnni Zichlash
+      body: Ushbu darsda talabalar Matnni zichlashtirish vidjetidan foydalanib, patternlarni
+        belgilar bilan almashtirish orqali matnni zichlashtiradilar.
+    unplugged:
+      title: Kompyutersiz darslar
+      audience: 4+ yosh
+      body: Biz sizning sinfingizda foydalanishingiz uchun kompyutersiz darslar ro'yxatini
+        tuzdik. Endi siz sinfingizda kompyuteringiz bor yoki yo'qligidan qat'iy nazar,
+        informatika asoslarini o'rgatishingiz mumkin! Ushbu darslarni mustaqil ravishda
+        yoki har qanday informatika kursi uchun qo'shimcha dars sifatida ishlatishga
+        harakat qiling.
+      body_short: Agar sizda kompyuterlar bo‘lmasa, ushbu kompyutersiz o‘tiladigan
+        darslarni sinfingizda sinab ko‘ring.
     unplugged_conditionals:
-      title: Shart buyruqlari
-  gallery:
-    report_abuse: Nosozlik haqida xabar berish
+      title: Shartli bayonotlar
+      body: Ushbu "kompyutersiz" faoliyatda algoritmlar va shartli bayonotlar haqida
+        kartalar to‘plami yordamida o‘rganing.
+    widgets:
+      title: Vidjetlar
+      body: Talabalar ushbu raqamli vositalardan foydalangan holda bizning CS tamoyillari
+        kursidan tushunchalarni o‘rganishi mumkin. Vidjetlardan mustaqil ravishda
+        foydalaning yoki o‘zingizning sinfingiz uchun bitta konsept darsini yarating.
+      audience: 14+ yosh
+      cta: Qanday qilishni o‘rganing
+  landing:
+    prerelease_tutorial: Ushbu o'quv qo'llanma ** beta-versiyada **. U qayta ko'rib
+      chiqilishi kerak, fikr-mulohazalar qabul qilinadi va takomillashtiriladi.
+    report_bug: Xato haqida xabar berish
+    support: Yordam oling
+    help_resources: Yordam va manbalar
+    help_support: Yordam va qo‘llab-quvvatlash
+    documentation: Hujjatlar
+    tutorials: Qo‘llanmalar
+  free_response:
+    placeholder: Javobingizni bu yerga yozing
   multi:
     wrong_title: Noto‘g‘ri javob
     wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!
     correct_title: To‘g‘ri
     correct_body: Bu to‘g‘ri javob.
+  multi-submittable:
+    wrong_title: Rahmat
+    wrong_body: Javob yuborganingiz uchun tashakkur.
+    correct_title: Rahmat
+    correct_body: Javob yuborganingiz uchun tashakkur.
+  level_group:
+    wrong_title: Rahmat
+    wrong_body: Javoblar yuborganingiz uchun tashakkur.
+    correct_title: Rahmat
+    correct_body: Javoblar yuborganingiz uchun tashakkur.
+    hide_survey_last_answer: Ushbu so'rovnoma anonim. Umumiy natijalar uchun o'qituvchilar
+      paneliga tashrif buyuring. E'tibor bering, natijalar kamida beshta talaba so'rovnomani
+      topshirgan taqdirdagina ko'rinadi.
+    survey_submission_thankyou: Ushbu so'rovnomani topshirganingiz uchun tashakkur!
+      Javoblaringiz noma'lum qolishi uchun so'rovnoma tozalandi. E'tibor bering, o'qituvchingiz
+      hali ham butun sinf uchun javoblarni ko'rishi mumkin, ammo ismlarsiz.
+  level_group-submittable:
+    wrong_title: Rahmat
+    wrong_body: Javoblar yuborganingiz uchun tashakkur.
+    correct_title: Rahmat
+    correct_body: Javoblar yuborganingiz uchun tashakkur.
+    unsubmit-title: Baholashni bekor qilish
+    unsubmit-body: Bahoingizni topshirmasangiz, taqdim etilgan vaqt va sana qayta
+      tiklanadi. Ishonchingiz komilmi?
+    submit-incomplete-title: Baholashni yuborish
+    submit-incomplete-body: Siz ba'zi savollarni javobsiz qoldirdingiz. Topshirgandan
+      keyin bahoingizni o'zgartira olmaysiz. Ishonchingiz komilmi?
+    submit-complete-title: Baholashni yuborish
+    submit-complete-body: Siz baholashni yuborganingizdan keyin tahrirlay olmaysiz,
+      haqiqatan ham topshirasizmi?
   match:
+    wrong_title: Noto'g'ri yechim
+    wrong_body: Siz bergan yechim noto‘g‘ri. Qaytadan urinib ko‘ring!
     correct_title: To‘g‘ri
     correct_body: Bu to‘g‘ri javob.
   contract_match:
     wrong_title: Noto‘g‘ri javob
+    badname: Sizning shartnomangiz noto'g'ri nomlangan.
+    badname_case: Funksiya nomlari harflar katta-kichikligiga bog'liq. Shartnomangiz
+      nomini o'zgartirishga harakat qiling.
+    badrange: Sizning shartnomangiz ko'lami noto'g'ri.
+    baddomainsize: Sizning shartnomangizda domendagi kerakli miqdordagi narsalar mavjud
+      emas.
+    baddomainname: Bir yoki bir nechta domen elementlari noto'g'ri nomlangan.
+    baddomaintype: Bir yoki bir nechta domeningiz noto'g'ri turga ega yoki ular noto'g'ri
+      tartibda.
   text_match:
     placeholder: Javobingizni bu yerga yozing
     open_response_title: Rahmat
     open_response_body: Javobingiz uchun tashakkur!
     correct_title: To‘g‘ri
     correct_body: Bu to‘g‘ri javob.
+  lesson_extras:
+    bonus_level: Bonus daraja
   dialog:
     ok: Davom etish
     startover_title: Rostan boshidan boshlamoqchimisiz?
+    startover_body: Bu jumboqni boshdagi holatiga qaytarib, siz qo'shgan yoki o'zgartirgan
+      bloklar barchasi o‘chirib yuboriladi.
     startover_ok: Boshidan boshlamoq
     startover_cancel: Bekor qilish
   time:
     hour: 1 soat
     day: kun
     week: hafta
+  age_interstitial:
+    age: Yoshingiz
+    header: Foydalanuvchi haqida ma'lumotlar yangilanishi
+    warning: Sizga maxfiylikni yanada kuchli himoya qilish uchun o'z tajribamizni
+      yangilayapmiz. Buning uchun mavjud foydalanuvchilar bu yerda o'z yoshlarini
+      kiritishlari kerak.
+    disclaimer: Har doimgidek, code.org bu ma'lumotni hech qachon ijaraga bermaydi,
+      sotmaydi yoki uchinchi tomon bilan baham ko'rmaydi.
+    sign_out_markdown: Agar siz yoshingizni ko'rsatishni xohlamasangiz, siz [tizimdan
+      chiqishingiz](%{url}) mumkin.
   terms_interstitial:
+    title: Yangilangan Xizmat ko'rsatish shartlari va Maxfiylik siyosati
+    intro_desc: 'Biz quyida ko''rsatilganidek, Xizmat ko''rsatish shartlari va Maxfiylik
+      siyosatini yangiladik. O''zgarishlar 2016 yil 24-avgustdan kuchga kiradi. Eng
+      katta o''zgarish: biz <i> endi talabalarning hisob raqamlari uchun elektron
+      pochta manzillarini Code Studio-da saqlamaymiz. </i> Bu biz uchun juda katta
+      ahamiyatga ega va umid qilamizki, ta''lim texnologiyasida talabalarning shaxsiy
+      hayotini muhofaza qilish uchun yangi standart. Sizga boshqa o''zgarishlar haqida
+      qisqacha ma''lumotni elektron pochta orqali jo''natdik.'
+    intro_desc_markdown: 'Biz quyida ko''rsatilganidek, Xizmat ko''rsatish shartlari
+      va Maxfiylik siyosatini yangiladik. O''zgarishlar 2016 yil 24-avgustdan kuchga
+      kiradi. Eng katta o''zgarish: biz  endi talabalarning hisob raqamlari uchun
+      elektron pochta manzillarini Code Studio-da saqlamaymiz.  Bu biz uchun juda
+      katta ahamiyatga ega va umid qilamizki, ta''lim texnologiyasida talabalarning
+      shaxsiy hayotini muhofaza qilish uchun yangi standart. Sizga boshqa o''zgarishlar
+      haqida qisqacha ma''lumotni elektron pochta orqali jo''natdik.'
+    intro_instructions: Siz o'zingizning sinfingizdagi 13 yoshgacha bo'lgan o'quvchilar
+      uchun Code Studio-ning barcha so'nggi xususiyatlaridan to'liq foydalanish uchun
+      ushbu yangi shartlarni qabul qilishingiz kerak. 13 yoshgacha bo'lgan talaba
+      uchun hisob qaydnomasini ro'yxatdan o'tkazishda, sizning maktabingiz o'quvchilarning
+      shaxsiy ma'lumotlarini, shu jumladan Code Studio kabi o'quv dasturlarini ishlatish
+      va foydasi uchun to'plash uchun ota-onalarning roziligini tasdiqlashingizni
+      so'raladi.
     tos: Xizmat shartlari
+    privacy: Maxfiylik siyosati
+    privacy_notice: Maxfiylik to'g'risidagi bildirishnoma
+    accept_label: Men  <a href="%{tos_url}" target="_blank">Foydalanish shartlari</a>
+      va <a href="%{privacy_url}" target="_blank">Maxfiylik siyosati</a>ga amal qilishga
+      roziman.
+    accept_label_markdown: Men  [Foydalanish shartlari](%{tos_url}) va [Maxfiylik
+      siyosati](%{privacy_url}) ga amal qilishga roziman.
+    accept_tos: Code.org-ga ro'yxatdan o'tish orqali Siz [Foydalanish shartlari](%{tos_url})
+      va [Maxfiylik siyosati](%{privacy_url})ga amal qilishga rozilik bildirasiz.
+    accept: Qabul qilish
+    print: Chop etish
+    reminder_desc: Biz <a href="%{tos_url}" target="_blank"> Foydalanish shartlari
+      </a> va <a href="%{privacy_url}" target="_blank"> Maxfiylik Siyosatini </a>
+      yangiladik . Iltimos, ularni qabul qilishdan oldin ularni diqqat bilan o'qing.
+      Yangilangan foydalanish shartlarni qabul qilishsiz JavaScript-ni o'qitadigan
+      vositalardan foydalanish imkoniyati sizning o'quvchilaringiz bo'lmasligi mumkin.
+    reminder_desc_markdown: Biz [Foydalanish shartlari](%{tos_url}) va [Maxfiylik
+      siyosati](%{privacy_url}) yangiladik . Iltimos, ularni qabul qilishdan oldin
+      ularni diqqat bilan o'qing. Yangilangan foydalanish shartlarni qabul qilishsiz
+      JavaScript-ni o'qitadigan vositalardan foydalanish imkoniyati sizning o'quvchilaringiz
+      bo'lmasligi mumkin.
+    review_terms: Yangilangan shartlarni ko'rib chiqish
+  donor_interstitial:
+    title: Sizning bepul CS kurslaringiz bular orqali amalga oshiriladi...
+    subtitle: Biz qo'llab-quvvatlagan Code.org-ning muvaffaqiyatini ta'minlagan saxovatli
+      donorlarga minnatdorchilik bildiramiz. [Donorlar](%{donors_url}) ning doimiy
+      saxovati tufayli biz Code.org-ni dunyo bo'ylab maktablar va talabalar uchun
+      bepul taqdim etib boramiz!
+    local_supporters: Mahalliy qo'llab-quvvatlovchilar
+    global_supporters: Global qo'llab-quvvatlovchilar
+    support_codeorg_1: Code.org-ga berilgan har bir dollar ko'proq talabalarga imkoniyatlar
+      yaratadi.
+    support_codeorg_2: " Code.org-ni qo'llab-quvvatlash uchun [hoziroq xayriya qiling](%{donate_url})."
+    get_started: Code.org saytidan boshlang
   school_info_interstitial:
+    title: Biz har bir o'quvchini kompyuter fanlariga jalb qilmoqchimiz - bizning
+      rivojlanishimizni kuzatishda yordam bering!
+    message: Iltimos, quyida maktab ma'lumotlarini kiriting.
+    message_with_suggestion: Iltimos, quyidagi ma'lumotlarning to'g'riligini tekshiring
+      yoki kerak bo'lganda yangilang.
     save: Saqlash
   race_interstitial:
+    title: 'Majburiy emas: bizga kompyuter fanlari sohasida xilma-xilligini oshirish
+      borasidagi yutuqlarimizni kuzatishda yordam bering'
+    message: Iltimos, bizga irqingiz haqida ma'lumot bering (tegishli bo'lgan barcha
+      narsani belgilang)
     races:
+      white: Oq
+      black: Qoratanli yoki afroamerikalik
+      hispanic: Ispan yoki lotino
+      asian: Osiyolik
+      hawaiian: Havayilik yoki boshqa Tinch okean orollaridan
+      american_indian: Amerikalik hindu/ Alyaska aholisi
       other: Boshqa
+      opt_out: Javob bermaslikni ma’qul ko‘raman
     submit: Taqdim qilmoq
+    decline: Yopish
+  zendesk_too_young_message: Kechirasiz, kichik foydalanuvchilar bizning qo'llab-quvvatlash
+    saytimizga kirmasligi mumkin. Siz tizimga kirmasdan <a href="http://support.code.org">
+    support.code.org </a> sahifasini ko'rib chiqishingiz yoki ota-onangiz yoki o'qituvchingizdan
+    biz uchun biz bilan bog'lanishni so'rashingiz mumkin.
+  zendesk_too_young_message_markdown: Kechirasiz, kichik foydalanuvchilar bizning
+    qo'llab-quvvatlash saytimizga kirmasligi mumkin. Siz tizimga kirmasdan  [support.code.org](http://support.code.org)
+    sahifasini ko'rib chiqishingiz yoki ota-onangiz yoki o'qituvchingizdan biz uchun
+    biz bilan bog'lanishni so'rashingiz mumkin.
+  progress:
+    not_started: boshlanmagan
+    in_progress: Jarayonda
+    completed_too_many_blocks: bajarildi, juda ko'p bloklar
+    completed_perfect: yakunlandi, mukammal
+    furthest_level_attempted: eng yuqori darajaga harakat qilindi
+    assessment: baholash
+    submitted: qabul qilingan
+  studio:
+    courses_working_on: Siz ishlayotgan kurslar
+    completed_courses: Yakunlangan kurslar
+    all_courses: Barcha kurslar
   project:
-    name: Ismi
+    projects: Loyihalar
+    create: Loyiha yaratish
+    create_a_project: Yangi loyiha yaratish
+    new: Yangi yaratish
+    exit: Kursga qaytish
+    project_gallery: Loyihalar
+    publish: Chop etish
+    unpublish: E’lon qilinmagan
+    share_title: Loyihangizni ulashing
+    share_copy_link: 'Havolani nusxalash:'
+    share_embed_description: Loyihani veb-sahifada ko'rsatish uchun siz ichki kodni
+      HTML-sahifaga joylashtirishingiz mumkin.
+    share_u13_warning: Ulashishdan oldin o'qituvchingizdan so'rang. Faqat maktabingizdagilar
+      bilan ulashish.
+    embed: Joylangan
+    advanced_share: Kengaytirilgan variantlarni ko'rsatish
+    no_projects: Sizda hozirda hech qanday loyiha yo'q. Loyihani boshlash uchun yuqoridagi
+      tugmachalardan birini bosing.
+    name: Ismingiz
+    updated: Yangilangan
+    project_type: Loyiha turi
+    help_text: Yangi loyihani boshlash uchun quyida <strong> Ilova yaratish </strong>
+      yoki <strong> Nimadir chizish </strong> ni bosing! <br/> Siz istagan vaqtingizda
+      qaytib kelib, loyihalaringizda ishlashni davom etishingiz mumkin.
+    need_help: Yangi loyihangizni boshlashga yordam beradigan ushbu kurslarni sinab
+      ko'ring
+    thumbnail_help: Loyihangiz uchun to'g'ri yorliqchani ko'rmayapsizmi? Yangi yorliqcha
+      yaratish uchun ilovangizni ishga tushiring. Yorliqni hamma joyda yangilash uchun
+      bir necha soat vaqt ketishi mumkinligiga e'tibor bering.
+    saved: Saqlangan
+    not_saved: Saqlanmagan
+    view_all: Loyihalarimni ko‘rish
+    edit_project: Loyihani tahrirlash
+    sharing_disabled: Kechirasiz, ushbu loyihani baham ko‘rish mumkin emas. Agar bu
+      sizning loyihangiz yoki talabalaringizdan biriniki bo‘lsa, iltimos, loyihani
+      ko‘rish uchun o‘z hisobingizga <a href='https://studio.code.org/users/sign_in'>kiring</a>.
     abuse:
+      tos: Ushbu loyiha Code.org-ning <a href='http://code.org/tos'>Xizmat ko‘rsatish
+        shartlari</a> ni buzgani uchun xabar qilingan va boshqalar bilan baham ko‘rish
+        mumkin emas.
+      policy_violation: Ushbu loyihada boshqalar bilan bo'lishib bo'lmaydigan ma'lumotlar
+        mavjud. Ilova kontentini tuzatish uchun ilova egasiga murojaat qiling.
+      contact_us: Agar buni xato deb hisoblasangiz, iltimos <a href='https://code.org/contact'>
+        biz bilan bog'laning. </a>
+      go_to_code_studio: Code Studio-ga o'tish
       report_abuse_form:
+        intro: Code Studio-da o'rnatilgan dasturlardan foydalanishda sizga tegishli
+          haqoratli tarkib, tahdidlar, kiberhujumlar, ta'qiblar yoki mualliflik huquqining
+          buzilishi holatlariga duch kelgan bo'lsangiz, iltimos, quyidagi shaklni
+          to'ldiring. Biz sizning hisobotingizni juda jiddiy qabul qilamiz, shunga
+          ko'ra tekshiramiz va tegishli choralarni ko'ramiz.
+        validation:
+          email: Iltimos, elektron pochta manzilini ko'rsating
+          age: Iltimos, yoshni kiriting
+          abuse_type: Iltimos, ushbu tarkib Xizmat shartlarini qanday buzayotganiga
+            javob bering
+          abuse_detail: Iltimos, xabar berayotgan tarkib haqida batafsil ma'lumot
+            bering
+        abusive_url: Xabar berilayotgan tarkibning URL manzili
         abuse_type:
+          question: Ushbu tarkib %{link_start}Xizmat ko‘rsatish shartlarini%{link_end}
+            qanday buzadi?
+          harassment: Tahdidlar, kiberhujumlar, ta'qiblar
+          offensive: Haqoratli tarkib
+          infringement: Mualliflik huquqining buzilishi
           other: Boshqa
-  flex_category:
-    csf_jigsaw: Topishmoq
-    csf_loops: Sikllar
-    csf_conditionals: Shart buyruqlari
-    csf_functions: Funksiyalar
-    csf_variables: O‘zgaruvchilar
-    csp_variables: O‘zgaruvchilar
-    csp_conditionals: Shart buyruqlari
-    csp_functions: Funksiyalar
-    csp_lists: Ro‘yxatlar
-    csp_loops: Sikllar
+        detail: Iltimos, xabar berayotgan tarkib haqida mumkin bo'lgan batafsil ma'lumot
+          bering.
+        acknowledge: Ushbu ma'lumotni taqdim etish orqali siz ushbu ma'lumot %{link_start_privacy}Maxfiylik
+          siyosati%{link_end} and the %{link_start_tos}Xizmat ko‘rsatish shartlari
+          %{link_end} muvofiq ravishda ko‘rib chiqilishini tan olasiz.
+  peer_review:
+    accepted:
+      name: Qabul qilingan
+      description_markdown: "** Ha **, ushbu qabul qilish ** talablarga javob beradi
+        **"
+    rejected:
+      name: Rad etilgan
+      description_markdown: "** Yo'q **, ushbu qabul qilish ** talablarga javob bermaydi
+        **"
+    escalated:
+      name: Kuchaygan
+      description: Men o'qituvchini ushbu taqdimotni ko'rib chiqishini xohlayman
+    instructor_feedback: O'qituvchining fikri (fidbek)
+    peer_feedback: O'zaro fikr-mulohazalar
+    outdated: Ushbu mulohaza ilgari yuborilgan versiya uchun qo'shilgan
+    peer_review: 'Talabalarning o''zaro taqrizi '
+  external_links:
+    disclaimer: Javobgarlikni rad etish
+    leaving_domain: Siz endi ushbu domenni tark etib, Code.org tomonidan boshqarilmaydigan
+      saytga ketmoqdasiz.
+    disclaimer_text: Ushbu saytda Code.org-dan farq qiluvchi maxfiylik siyosati bo'lishi
+      mumkin. Biz ushbu uchinchi tomon resurslarini tanladik, chunki ular siz uchun
+      foydali bo'ladi deb o'ylaymiz. Ushbu veb-sayt mazmuni uchun biz to'g'ridan-to'g'ri
+      javobgar bo'lmasak ham, agar tarkibni nomaqbul deb bilsangiz yoki bog'langan
+      sayt endi mavjud bo'lmasa, iltimos <a href='%{support_url}'> qo'llab-quvvatlash
+      xizmatiga murojaat qiling </a>.
+  hoc_download:
+    title: Dasturlash soatini yuklab olishlar
+    capsule_title: Internet sizda bormi?
+    capsule_desc: Onlayn, veb-ga asoslangan  [%{app_name}](%{url}) versiyadan foydalaning.
+    instructions_headline: Internet yo'qmi?
+    instructions: 'O''qituvchilar uchun ko''rsatma: agar sizda Internet xizmati past
+      bo''lsa, ushbu Dasturlash soati qo''llanmalarini yuklab olish va o''rnatish
+      yordamida oflayn rejimda foydalanish mumkin. Tilingizni va platformangizni tanlang,
+      yuklab oling va sinfdagi barcha kompyuterlarga o''rnating. Bir marta yuklab
+      olish va barcha kompyuterlarga o''rnatish uchun USB diskdan foydalanishingiz
+      mumkin. Izoh: talabalar Code Studio-ga kira olmaydi, o''qish jarayonini saqlay
+      olmaydi va sertifikatlarni chop eta olmaydi. O''qituvchilar sertifikatlarni
+      muddatidan oldin [bu yerda](%{url}) yuklab chop etib olishlari mumkin.'
+    minecraft_name: Maynkraft Dasturlash soati
+    starwars_blocks_name: 'Yulduzlar Jangi: Kod bilan Galaktika qurish (Bloklar)'
+    starwars_javascript_name: 'Yulduzlar Jangi: Kod bilan Galaktika qurish (JavaScript)'
+    download_message: Oflayn foydalanish uchun %{app_name}-ni yuklab oling (136MB)
+    download_in_Albanian: 'Alban tilida yuklab olish:'
+    download_in_Arabic: 'Arab tilida yuklab olish:'
+    download_in_Azerbaijani: 'Ozarbayjon tilida yuklab olish:'
+    download_in_Basque: 'Bask tilida yuklab olish:'
+    download_in_Bosnian: 'Bosniya tilida yuklab olish:'
+    download_in_Bulgarian: 'Bulg''or tilida yuklab olish:'
+    download_in_Catalan: 'Katalan tilida yuklab olish:'
+    download_in_Chinese-Taiwan: 'Xitoy (Tayvan) tilida yuklab olish:'
+    download_in_Chinese: 'Xitoy tilida yuklab olish:'
+    download_in_Croatian: 'Xorvat tilida yuklab olish:'
+    download_in_Czech: 'Chex tilida yuklab olish:'
+    download_in_Danish: 'Daniya tilida yuklab olish:'
+    download_in_Dutch: 'Golland tilida yuklab olish:'
+    download_in_English: 'Ingliz tilida yuklab olish:'
+    download_in_Finnish: 'Fin tilida yuklab olish:'
+    download_in_French: 'Fransuz tilida yuklab olish:'
+    download_in_German: 'Nemis tilida yuklab olish:'
+    download_in_Greek: 'Yunon tilida yuklab olish:'
+    download_in_Hebrew: 'Yahudiy tilida yuklab olish:'
+    download_in_Hungarian: 'Venger tilida yuklab olish:'
+    download_in_Icelandic: 'Island tilida yuklab olish:'
+    download_in_Indonesian: 'Indoneziya tilida yuklab olish:'
+    download_in_Irish: 'Irland tilida yuklab olish:'
+    download_in_Italian: 'Italyan tilida yuklab olish:'
+    download_in_Japanese: 'Yapon tilida yuklab olish:'
+    download_in_Korean: 'Koreys tilida yuklab olish:'
+    download_in_Latvian: 'Latviya tilida yuklab olish:'
+    download_in_Lithuanian: 'Litva tilida yuklab olish:'
+    download_in_Norwegian: 'Norveg tilida yuklab olish:'
+    download_in_Norwegian-Nynorsk: 'Norveg (Nynorsk) tilida yuklab olish:'
+    download_in_Polish: 'Polyak tilida yuklab olish:'
+    download_in_Portuguese-Brazil: 'Portugal (Braziliya) tilida yuklab olish:'
+    download_in_Portuguese: 'Portugal tilida yuklab olish:'
+    download_in_Romanian: 'Rumin tilida yuklab olish:'
+    download_in_Russian: 'Rus tilida yuklab olish:'
+    download_in_Serbian: 'Serb tilida yuklab olish:'
+    download_in_Slovenian: 'Sloveniya tilida yuklab olish:'
+    download_in_Spanish: 'Ispan tilida yuklab olish:'
+    download_in_Swedish: 'Shved tilida yuklab olish:'
+    download_in_Turkish: 'Turk tilida yuklab olish:'
+    download_in_Ukrainian: 'Ukrain tilida yuklab olish:'
+    download_in_Vietnamese: 'Vetnam tilida yuklab olish:'
+    windows: Windows (64-bit)
+    mac: Mac OS X
+  locked_stage: Ushbu bosqich kontenti ko'rinmaydi, chunki bu bosqich hozirda bloklangan.
+    O'qituvchingiz ushbu bosqich ustida ishlash yoki javoblaringizni ko'rib chiqish
+    uchun vaqti kelganda ochishi mumkin.
+  hidden_stage: Sizning o'qituvchingiz bu yerda bo'lishingizni kutmagan edi. Iltimos,
+    o'qituvchingizdan qaysi darsda bo'lishingiz kerakligini so'rang.
+  hidden_script: Sizning o'qituvchingiz bu yerda bo'lishingizni kutmagan edi. Iltimos,
+    o'qituvchingizdan qaysi bo'limda bo'lishingiz kerakligini so'rang.
+  no_course_access_student: Siz ushbu kursga kirish huquqiga ega emassiz. Iltimos,
+    o'qituvchingizdan qaysi kursga borishingizni so'rang.
+  no_course_access_teacher: Siz ushbu kursga kirish huquqiga ega emassiz. Agar siz
+    ushbu kursga kirishingiz kerak deb hisoblasangiz, iltimos, vaziyatni to'g'rilashimiz
+    uchun support@code.org elektron manziliga yozing.
+  no_script_access_student: Siz ushbu bo'limga kirish huquqiga ega emassiz. Iltimos,
+    o'qituvchingizdan qaysi bo'limga borishingizni so'rang.
+  no_script_access_teacher: Siz ushbu bo'limga kirish huquqiga ega emassiz. Agar siz
+    ushbu bo'limga kirishingiz kerak deb hisoblasangiz, iltimos, vaziyatni to'g'rilashimiz
+    uchun support@code.org elektron manziliga yozing.
+  return_unit_overview: Bolim haqida umumiy ma'lumotga o'tish
+  return_course_overview: Kurs haqida umumiy ma'lumotga o'tish
+  view_all_units: Barcha bolimlarni ko'rish
+  view_teacher_guide: O‘qituvchilar qo‘llanmasi bilan tanishing
   pd:
     form_labels:
-      email: Elektron pochta
+      first_name: Ism
+      first_name_preferred: Afzal ko'rilgan ism
+      last_name: Familiya
+      email: E-mail
+      email_alternate: Alternativ Email
+      gender: Jinsiy identifikatsiya
+      school_name: Maktab nomi
+      school_city: Maktab shahri
+      school_country: Maktab davlati
+      colombian_school_city: Maktab shahri
+      colombian_school_department: Maktab bo'limi
+      colombian_school_municipality: Maktab munitsipaliteti
+      colombian_school_name: Maktab nomi
+      ages: Bu yil qaysi yosh(lar) ni o'qitasiz?
+      subjects: Bu yil qaysi fan(lar)ni o'qitasiz?
+      resources: Quyidagi CS (informatika) ta'lim manbalaridan qaysi birini ishlatasiz?
+      robotics: Quyidagi robototexnika manbalaridan qaysi birini ishlatasiz?
+      workshop_organizer: Seminar tashkilotchisi
+      workshop_facilitator: Seminar boshlovchisi
+      workshop_course: Seminar kursi
+      email_opt_in: Sizga elektron pochta orqali Code.org xalqaro dasturi, bizning
+        kurslarimiz haqidagi yangiliklar yoki boshqa kompyuter fanlari yangiliklari
+        haqida xabar yuborib tursak bo'ladimi?
+      legal_opt_in: 'Ushbu shaklni topshirish orqali siz Code.org va sizning kasbiy
+        ta''lim manbalaringizdan qanday foydalanishingiz haqida ma''lumotni o''zingizning
+        mamlakatingizda, tumaningizda va o''qituvchilaringizda Code.org xalqaro sheriklari
+        bilan bo''lishishga ruxsat berishga rozilik bildirasiz. Biz sizning aloqa
+        ma''lumotlaringizni, qaysi kurslardan/bo''limlardan foydalanayotganingizni
+        va ushbu sheriklar bilan sizning sinflaringiz haqidagi ma''lumotlarni yig''amiz.
+        Bunga sizning sinflaringizdagi o''quvchilar soni, sinfingizning demografik
+        tuzilishi, maktabingiz va tumaningiz nomi kiradi. Biz sheriklarimiz bilan
+        alohida talabalar haqida hech qanday ma''lumot almashmaymiz: talabalar to''g''risidagi
+        umumiy ma''lumotlar aniqlanadi va yig''iladi. Xalqaro sheriklarimiz va yordamchilarimiz
+        shartnoma bo''yicha ushbu ma''lumotlarga Code.org kabi maxfiylik darajasida
+        munosabatda bo''lishlari shart.'
     form_entries:
       gender:
+        male: Erkak
+        female: Ayol
+        non_binary: Binar emas
+        not_listed: Afzal bo'lgan muddat ro'yxatda yo'q
         none: Javob bermaslikni ma’qul ko‘raman
+      school_country:
+        canada: Kanada
+        chile: Chili
+        colombia: Kolumbiya
+        israel: Isroil
+        malaysia: Malayziya
+        mexico: Meksika
+        thailand: Tailand
+      ages:
+        ages_under_6: "< 6 yosh"
+        ages_7_8: 7-8 yosh
+        ages_9_10: 9-10 yosh
+        ages_11_12: 11-12 yosh
+        ages_13_14: 13-14 yosh
+        ages_15_16: 15-16 yosh
+        ages_17_18: 17-18 yosh
+        ages_19_over: 19+ yosh
       subjects:
         cs: Informatika
+        ict: ICT
         math: Matematik
+        science: Tabiiy fanlar
+        history: Tarix/ijtimoiy fanlar
+        la: Til san'ati
+        efl: Ingliz tili chet tili sifatida
+        music: Musiqa
+        art: San'at
+        other: 'Boshqa:'
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Xon Akademiyasi
+        kodable: Kodable
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Boshqa:'
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Boshqa:'
+      workshop_course:
+        csf_af: CS Fundamentals - Informatika asoslari (A-F kurslar)
+        csf_express: CS Fundamentals  - Informatika asoslari (Pre-Express yoki Express)
+        csd: Kompyuter fanlari kashfiyotlari
+        csp: CS Principles -Informatika tamoyillari
+        not_applicable: Mavjud emas
+      email_opt_in:
+        opt_in_yes: Ha
+        opt_in_no: yo‘q
+    international_opt_in:
+      title: Seminarda qatnashish
+      intro: Code.org o'quv dasturi bo'yicha o'qish uchun vaqt ajratganingiz uchun
+        tashakkur. Dunyo bo'ylab barcha maktablardagi barcha bolalarga informatika
+        bo'yicha ta'lim imkoniyatlarini taqdim etish bo'yicha vazifamiz faqat siz
+        bilan amalga oshishi mumkin.
+      instructions: 'Iltimos, quyidagi shaklni to''ldiring: 1) siz Code.org ning xalqaro
+        hamkorlaridan biri tomonidan o''tkazilgan o''quv seminarida qatnashgansiz
+        va 2) sizning ma''lumotlaringizni bizning mamlakatingizdagi xalqaro hamkorlarimiz
+        bilan ulashishga rozilik bildirasiz, shunda ular sizning informatika o''qituvchisi
+        sifatida sayohatingizni qo''llab-quvvatlash uchun yordam berishi mumkin.'
+      thanks_markdown: Qo'shilganingiz uchun tashakkur! Code.org o'quv dasturi va
+        vositalari bilan tanishishingizda biz sizni qo'llab-quvvatlashga xursandmiz.
+        Iltimos, bizga [support@code.org](%{support_email_url}) yozish orqali yoki
+        [o'qituvchilar forumiga] (%{teacher_forum_url}) xabar yuborish orqali biz
+        bilan savollaringiz va mulohazalaringizni baham ko'rishda davom eting!
+      facilitator_not_listed: Mening yordamchim ro'yxatda yo'q
+      facilitator_not_applicable: Mavjud emas
+      organizer_not_listed: Mening tashkilotchim ro'yxatda yo'q
+    logged_out:
+      heading: Kasbiy ta'lim (Professional Learning) dasturiga qiziqishingiz uchun
+        tashakkur!
+      body: Boshlash uchun avval Code.org hisob qaydnomangizga kirishingiz kerak.
+        Agar yozilishdan oldin dastur haqida ko'proq ma'lumot olishni istasangiz,
+        <a href="%{url}"> Professional Learning Program - Kasbiy o'rganish dasturining
+        umumiy sharhini </a> ko'rib chiqing.
+    not_teacher:
+      body_markdown: Code.org-ning Professional Learning dasturiga qiziqishingiz uchun
+        tashakkur! Siz hozirda talaba hisobiga kirgansiz. Iltimos, o'qituvchi hisobini
+        yarating yoki o'z hisobingizni talabadan o'qituvchiga ko'tarish uchun [foydalanuvchi
+        sozlamalariga o'ting](%{user_settings}).
+      more_markdown: Agar arizangizni boshlashdan oldin dastur haqida ko'proq ma'lumot
+        olishni istasangiz, [Kasbiy o'rganish dasturining umumiy sharhi](%{pl_overview})
+        bilan tanishing.
+    no_teacher_email:
+      body_markdown: Hisobingizda elektron pochta manzili yo'q. Ushbu shaklni to'ldirishdan
+        oldin elektron pochta manzilingizni qo'shish uchun [hisobingiz sozlamalariga
+        o'ting](%{user_registration}).
+  courses_category: To'liq kurslar
   cookie_banner:
+    message: Bizning saytni ko'rib chiqishni davom ettirish yoki "Men roziman" tugmasini
+      bosish orqali siz cookie-fayllarni kompyuteringizda yoki qurilmangizda saqlashga
+      rozilik bildirasiz.
+    more_information: Code.org Maxfiylik siyosati bilan tanishing
     accept: Roziman
+  page_not_found_title: Sahifa topilmadi
+  page_not_found_header: '404: Sahifa topilmadi'
+  page_not_found_description: Siz izlayotgan sahifa ushbu manzilda mavjud emas. Veb-manzilni
+    tekshiring va qayta yuboring. Yoki, bizning bosh sahifamizga qayting.
+  page_not_found_button: Bosh sahifaga qaytish
+  copy: Nusxalash
+  maker:
+    google_oauth:
+      login_with_google: Maker ilovasiga Google bilan kirish
+      enter_code: Iltimos, standart brauzeringizda Google orqali tizimga kirishda
+        ko'rsatilgan kodni kiriting.
+      copy_code: Code.org-ga kirish uchun ushbu koddan nusxa oling va Maker ilovasiga
+        joylashtiring.
+      error_token_expired: Tokenning amal qilish muddati tugagan. Iltimos, yangi token
+        uchun qayta kiring.
+      error_wrong_provider: Noto'g'ri provayder. Google bilan tizimga kirganingizga
+        ishonch hosil qiling.
+      error_invalid_user: Foydalanuvchi identifikatori yaroqsiz. Qaytadan kirishga
+        urinib ko'ring.
+      error_no_code: Iltimos, login kodini shu yerga kiriting.
+  parent_email_banner:
+    text: "** Siz ota-ona yoki homiymisiz? ** Farzandingiz taraqqiyoti va loyihalari
+      to'g'risida xabardor bo'lib turish uchun elektron pochtangizni ushbu hisobga
+      bog'lang!"
+    link_your_email: Elektron pochtangizni bog'lang
+    not_now: Hozir emas
+  behaviors:
+    this_sprite: bu sprayt
+  unit_prefix: Bo'lim %{n}

@@ -1,0 +1,229 @@
+{
+  "ru-RU": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Спасибо!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Победа!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Привет, мир!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Привет, мир!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Привет, мир!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Привет, мир!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Привет, мир!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Привет, мир!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "синий",
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "красный",
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Победа!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Спасибо!"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Собака!",
+          "336ad881e37e713ba0325500a8fa1f00": " собаки!",
+          "27944770529dd15319a983bee8951560": "Кошка!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " кошки!",
+          "1c64ef29c853587fbe94f69f05272b79": "Птица!",
+          "5b402e6ea05e847a076e03ad74420c45": "птицы",
+          "4b23c908b939eaf7918e07142b9e05e0": "Дракон!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "драконы!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Подсчитайте всех животных!"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Собака!",
+          "336ad881e37e713ba0325500a8fa1f00": " собаки!",
+          "27944770529dd15319a983bee8951560": "Кошка!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " кошки!",
+          "1c64ef29c853587fbe94f69f05272b79": "Птица!",
+          "5b402e6ea05e847a076e03ad74420c45": "птицы",
+          "4b23c908b939eaf7918e07142b9e05e0": "Дракон!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "драконы!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Подсчитайте всех животных!"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "Find the Wizard": {
+          "0b895ef4c917e50663bc2a7327cbee3d": "Ты нашел меня!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "введите текст здесь",
+          "30fcc1693fa8402931d13ac3a5f396fd": "введите название здесь"
+        }
+      }
+    }
+  }
+}

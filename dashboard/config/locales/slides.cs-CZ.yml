@@ -118,7 +118,7 @@ cs:
           přáteli. Užij si to!
     loop_times:
       1:
-        text: Ahoj, jsem Mark! Seznámím tě se smyčkami. Pomocí smyček můžeš říct počítači,
+        text: Ahoj, jsem Mark! Seznámím tě s cykly. Pomocí cyklů můžeš říct počítači,
           aby opakoval sadu akcí znovu a znovu, tisíckrát či klidně milionkrát.
       2:
         text: V této hádance chceme, aby se ptáček posunul vpřed o 5 políček a dostal
@@ -138,17 +138,17 @@ cs:
     loop_until:
       1:
         text: Čau, jsem Chris. Než jsem se přidal k Miami Heat, studoval jsem na Georgia
-          Tech informatiku. Pojďme spolu zkusit nový blok "opakovat do".
+          Tech informatiku. Pojďme spolu zkusit nový blok "opakuj dokud nenastane".
       2:
         text: Co kdybychom nevěděli, jak daleko se ptáček musí posunout, aby se dostal
           k prasátku?
       3:
-        text: Pokud vložíme blok "posunout vpřed" do bloku "opakovat dokud", ptáček
-          se bude posouvat vpřed až do chvíle, DOKUD nenarazí na prasátko (nebo do
-          zdi).
+        text: Pokud vložíme blok "posuň se vpřed" do bloku "opakovat dokud nenastane",
+          ptáček se bude posouvat vpřed až do chvíle, DOKUD nenarazí na prasátko (nebo
+          do zdi).
       4:
         text: 'Toto je důležité: stejně jako před tím, můžeme vložit několik bloků
-          dovnitř bloku "opakovat dokud" a všechny tyto bloky se budou opakovat.'
+          dovnitř bloku "opakuj dokud nenastane" a všechny tyto bloky se budou opakovat.'
     if:
       1:
         text: 'Ahoj, já jsem Bil. Pojďme se naučit nový základní pojem: příkazy "Pokud".
@@ -237,10 +237,10 @@ cs:
         text: Ahoj, já jsem Trina a pracuji pro Pixar. Pracovala jsem na spoustě filmů
           včetně Shreka.
       2:
-        text: Toto je naše nová smyčka "čítač". Bude provádět akce znovu a znovu a
+        text: Toto je náš nový cyklus "čítač". Bude provádět akce znovu a znovu a
           pokaždé můžete akci trošku pozměnit.
       3:
-        text: V tomto případě, naše smyčka "čítač" říká, že budeme "počítat s čítačem
+        text: V tomto případě náš cyklus "čítač" říká, že budeme "počítat s čítačem
           od 50 do 90 po 10" a uvnitř něj máme náš blok "nakreslit čtverec". Přetáhni
           blok "čítač" ze sekce "Proměnné" na místo "délka".
       4:
@@ -274,14 +274,13 @@ cs:
           trojúhelníky různých velikostí.
     hoc_wrapup:
       1:
-        text: Blahopřejeme! S poslední hádankou, kterou jsi vyřešil, jsi právě napsal
-          program, který dokáže JAKÉMUKOLIV robotovi říct, jak najít cestu skrz nerozvětvené
-          bludiště nebo skrz tunel libovolné délky, ať už je to zombie, ptáček, vozítko
-          na Marsu nebo dokonce samořídící auto.
+        text: Blahopřejeme! Tvůj nový program dokáže JAKÉMUKOLIV robotovi říct, jak
+          najít cestu skrz nerozvětvené bludiště nebo skrz tunel libovolné délky,
+          ať už je to zombie, ptáček, vozítko na Marsu nebo dokonce samořídící auto.
       2:
         text: Základní pojmy, které jsi použil jsou srdcem každého programu nebo aplikace,
-          kterou kdy spustíš. Naučili jsme se opakovací smyčky, příkazy opakovat dokud,
-          příkazy pokud a příkazy pokud-jinak.
+          kterou kdy spustíš. Naučili jsme se opakovací cykly, příkazy opakuj dokud
+          nenastane, příkazy pokud a příkazy pokud-jinak.
       3:
         text: Jestli se ti tvá první hodina kódu líbila, navštiv stránku code.org
           pro další výuku programování! Jakmile dokončíš náš kurz 20 hodin, budeš
@@ -886,10 +885,9 @@ cs:
           zanecháváš? Jaký druh digitální stopy chceš zanechávat?
     C2_graph_paper:
       1:
-        text: V této lekci se nazývá "Programování s milimetrovým papírem" a je to
-          vše o algoritmech. Dnes se budeme učit jak psát programy, které si navzájem
-          ukážete, jak znovu vytvořit jednoduché černobílé obrázky, pomocí jen ručně
-          kreslených šipek.
+        text: Táto lekce se nazývá "Programování na čtverečkovaném papíru" a je celá
+          o algoritmech. Dnes se naučíme, jak pomocí šipek vytvorit programy na kreslení
+          jednoduchých černobílých obrázků.
       2:
         text: Algoritmus je seznam instrukcí k dokončení úkolu. Provádíme této sady
           instrukcí uděláte misku. Algoritmy jsou opravdu užitečné, když potřebuješ,
@@ -986,12 +984,12 @@ cs:
       1:
         text: Dnes budeme dělat štafetové programování. Je to všechno o programování
           pod tlakem a ladění chyb, které se někdy stanou, když pracujete opravdu
-          rychle nebo v týmech. Použijeme grafický papír k programování pro simulaci
-          kódování a simulace a použijete k simulaci termínu štafetových závodů.
+          rychle nebo v týmech. Použijeme čtverečkovaný papír pro simulaci kódování
+          a štafetový závod k simulaci časového tlaku.
       2:
-        text: Ve štafetovém programování týmy závodí k dokončení programu s milimetrovým
-          papírem. Musíš zkontrolovat práci tvého spoluhráče nebo ladění, opravit,
-          když je chyba, Přidat svou šipku a běžet zpátky a označit svého spoluhráče.
+        text: Ve štafetovém programování týmy závodí v psaní programu na čtverečkový
+          papír. Budeš muset zkontrolovat práci spoluhráčů, opravit případné chyby,
+          přidat svou šipku, běžet zpátky a dát štafetu dalšímu spoluhráči.
       3:
         text: Programátoři používají hodně ladění k nalezení a opravě problémů v jejich
           algoritmy nebo kódu. Je spousta způsobů, jak odladit problémy. Jedním z
@@ -1212,9 +1210,9 @@ cs:
           algoritmus. Ale jako nové dovednosti, je to snazší a jednodušší, s praxí.
     C3_farmer_while:
       1:
-        text: While cykly jsou dost podobné, co můžeš dělat v každodenním životě.
-          Představ si, že myješ tvé auto, budeš drhnout, dokud není čisté. Zatímco
-          to není čisté, pokračuješ v drhnutí. Vyhodnocuješ tyto věci po celou dobu.
+        text: Cykly pokud (while) jsou dost podobné tomu, co můžeš dělat v každodenním
+          životě. Představ si, že myješ své auto. Budeš ho drhnout, dokud není čisté.
+          Pokud není čisté, pokračuješ v drhnutí. Po celou dobu tyto věci vyhodnocuješ.
       2:
         text: Máme nový pohled na to, abys pomohl tvému farmáři. Tomu se říká while
           blok. Je to vlastně docela jednoduché. While příkaz v horní části je pravdivý,
@@ -1310,9 +1308,9 @@ cs:
           použít pět bloků pohyb vpřed, nebo mohli jste povědět počítači posunout
           vpřed a pětkrát opakovat pomocí jednoho bloku opakování.
       2:
-        text: To šetří čas a usnadňuje. Chcete-li použít, stačí dát blok krok vpřed
-          uvnitř bloku opakování. Stisknout run a zombie se přesune pětkrát k báječné
-          slunečnici.
+        text: Šetří to čas a hodně to usnadňuje. Abys to využil, stačí dát blok posuň
+          se vpřed dovnitř bloku opakuj. Pak stiskni Spustit a zombie se pětkrát posune
+          dopředu k vynikající slunečnici.
     C3_playlab_create_game:
       1:
         text: Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé,
@@ -1847,10 +1845,10 @@ cs:
           která se předává ostatním studentům pro znovu vytvoření jejich vlastní příšery.
     unplug3:
       1:
-        text: Programování s milimetrovým papírem nám pomůže vysvětlit, jak kódovací
-          práce pomáhá lidem znovu vytvářet kresby pomocí pouze pomocí šipek a klikyháků.
-          Jedna osoba vzhledem k malému kreslení na milimetrovém papíru a musí projít
-          jen pomocí určitých šipek. Pokus se popsat, jak se znova vytvoří tato kresba.
+        text: Programování na čtverečkovaném papíru nám pomůže vysvětlit, jak programováni
+          funguje. Jedna osoba dostane malou kresbu na čtverečkovaném papíre a její
+          úlohou je jenom pomocí šípek a znaků definovat algoritmus (postup) pro nakreslení
+          stejné kresby.
       2:
         text: 'V této činnosti lze použít jen tyto symboly: přesunout o jedno pole
           vpřed, jedno pole zpět, jedno pole nahoru, jedno pole dolů, změnit další
@@ -1858,10 +1856,10 @@ cs:
           osobě, která umí číst kód a pokusit se znovu vytvořit obrázek.'
     unplug4:
       1:
-        text: Programování s milimetrovým papírem nám pomůže vysvětlit, jak kódovací
-          práce pomáhá lidem znovu vytvářet kresby pomocí pouze pomocí šipek a klikyháků.
-          Jedna osoba vzhledem k malému kreslení na milimetrovém papíru a musí projít
-          jen pomocí určitých šipek. Pokus se popsat, jak se znova vytvoří tato kresba.
+        text: Programování na čtverečkovaném papíru nám pomůže vysvětlit, jak programováni
+          funguje. Jedna osoba dostane malou kresbu na čtverečkovaném papíre a její
+          úlohou je jenom pomocí šípek a znaků definovat algoritmus (postup) pro nakreslení
+          stejné kresby.
       2:
         text: V druhé polovině aktivity požádáme studenty, kolika různými způsoby
           lze složit list papíru k vytvoření šestnácti stejných obdélníků. Pak budeš
@@ -1869,10 +1867,10 @@ cs:
           některá řešení jsou lepší v určitých situacích.
     unplug5:
       1:
-        text: Programování s milimetrovým papírem nám pomůže vysvětlit, jak kódovací
-          práce pomáhá lidem znovu vytvářet kresby pomocí pouze pomocí šipek a klikyháků.
-          Jedna osoba vzhledem k malému kreslení na milimetrovém papíru a musí projít
-          jen pomocí určitých šipek. Pokus se popsat, jak se znova vytvoří tato kresba.
+        text: Programování na čtverečkovaném papíru nám pomůže vysvětlit, jak programováni
+          funguje. Jedna osoba dostane malou kresbu na čtverečkovaném papíre a její
+          úlohou je jenom pomocí šípek a znaků definovat algoritmus (postup) pro nakreslení
+          stejné kresby.
       2:
         text: V druhé polovině aktivity požádáme studenty, kolika různými způsoby
           lze složit list papíru k vytvoření šestnácti stejných obdélníků. Pak budeš
@@ -2100,11 +2098,11 @@ cs:
         text: Ahoj, jmenuji se Alice, řídím projektové a inženýrské týmy zde na Code.org.
           Pracovala jsem na tomto výukovém kurzu, se kterým si právě hraješ.
       2:
-        text: Právě jsi se dopracoval do poslední úrovně. Blahopřejeme! Právě jsi
-          se naučil vše, co potřebuješ vědět, aby sis udělal vlastní hru Hvězdné války.
-          Nyní neexistují žádné další instrukce, žádné hádanky k řešení. Můžeš si
-          vytvořit vlastní hru a zvolit, jak to bude fungovat. Ještě jedna věc, odemkni
-          si nové zvuky a příkazy, abys toho dokázal ještě víc.
+        text: 'Vitej v poslední úloze. Blahopřejeme! Už umíš všecho potřebné pro vytvoření
+          vlastních Hvězdných válek. Tady nejsou žádné další instrukce, žádné úlohy.
+          Můžeš si vytvořit vlastní hru a jen ty určíš, jak bude fungovat. A ještě
+          jedna věc: podařilo se ti odemknout nové zvuky a příkazy, s kterými toho
+          dokážeš ještě víc.'
       3:
         text: "[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
           když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko
@@ -2200,11 +2198,11 @@ cs:
         text: Ahoj, jmenuji se Alice, řídím projektové a inženýrské týmy zde na Code.org.
           Pracovala jsem na tomto výukovém kurzu, se kterým si právě hraješ.
       2:
-        text: Právě jsi se dopracoval do poslední úrovně. Blahopřejeme! Právě jsi
-          se naučil vše, co potřebuješ vědět, aby sis udělal vlastní hru Hvězdné války.
-          Nyní neexistují žádné další instrukce, žádné hádanky k řešení. Můžeš si
-          vytvořit vlastní hru a zvolit, jak to bude fungovat. Ještě jedna věc, odemkni
-          si nové zvuky a příkazy, abys toho dokázal ještě víc.
+        text: 'Vitej v poslední úloze. Blahopřejeme! Už umíš všecho potřebné pro vytvoření
+          vlastních Hvězdných válek. Tady nejsou žádné další instrukce, žádné úlohy.
+          Můžeš si vytvořit vlastní hru a jen ty určíš, jak bude fungovat. A ještě
+          jedna věc: podařilo se ti odemknout nové zvuky a příkazy, s kterými toho
+          dokážeš ještě víc.'
       3:
         text: "[studenti mluví] Tak jsme si udělali hru v podstatě, kde dostaneš body,
           když dostaneš puffer prasátka. Přetočení je pokaždé. dostaneš-li prasátko
@@ -2405,9 +2403,9 @@ cs:
           ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč
           musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
       3:
-        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě.
-          Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš
-          vlastní hru.
+        text: V této hádance je naším cílem pomoci aktérovi dělat práci nepřetržitě.
+          Když se naučíš, jak povely opakování fungují, ušetříš později tuny času,
+          když budeš vytvářet vlastní hru.
     iceage_intro:
       1:
         text: Kdybys sis chtěl vytvořit vlastní hru, je to opravdu snadné. Vše co
@@ -2469,9 +2467,9 @@ cs:
           ve hře. Když chceme, aby aktér udělal něco opakovaně bez toho, aby hráč
           musel něco udělat. Dáme tyhle bloky dovnitř bloku repeat forever.
       3:
-        text: V příští hádance je naším cílem pomoci aktérovi dělaat práci nepřetržitě.
-          Učení, jak povely opakování fungují, ti ušetří později tuny času, když vytváříš
-          vlastní hru.
+        text: V této hádance je naším cílem pomoci aktérovi dělat práci nepřetržitě.
+          Když se naučíš, jak povely opakování fungují, ušetříš později tuny času,
+          když budeš vytvářet vlastní hru.
     mc_2016_intro:
       1:
         text: Ahoj, jmenuji se Jens a jsem hlavní kreativní designer Minecraftu. V
@@ -2561,9 +2559,9 @@ cs:
           zombíků!
     mc_2016_congrats:
       1:
-        text: |-
-          Gratuluji! Naučili jste se jak využít počítačovou vědu k rozhýbání světa Minecraft! Teď už jsi vývojář/ka!
-          Použil/a jsi všechny příkazy a všechna stvoření. To ty jsi rozhodl/a co se bude dít.
+        text: Gratuluji! Pomocí informatiky už umíš rozhýbat svět Minecraftu! Naprogramuj
+          si ho tak, jak se ti líbi. Všechny příkazy a všechna stvoření jsou k ti
+          k dispozoci. Ty rozhodneš, co se s nimi bude dít.
       2:
         text: Až skončíš se svojí hrou, klikni na sdílet a dostaneš odkaz. Můžeš ho
           sdílet se svými přáteli nebo si s ním zahraješ hru na mobilu. Užijte si
@@ -2571,3 +2569,33 @@ cs:
     mc_2017_agent_intro:
       11:
         text: Pokud zapomeneš jak hru hrát, instrukce ke každé úrovni jsou nahoře.
+    hoc_dance_warmup:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Na rozehřátí'
+    hoc_dance_events:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Události'
+    hoc_dance_properties:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Vlastnosti'
+    hoc_dance_congrats:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Party začíná!'
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Na rozehřátí'
+    hoc_dance_events_2019:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Události'
+      2:
+        text: Jmenuji se Erin a jsem softwarová inženýrka tady v Code.org. Pomohla
+          jsem vytvořit Taneční večírek.
+      4:
+        text: Některé příklady událostí naslouchají klepnutí myší, kurzorové směrové
+          tlačítko nebo dotek na obrazovku.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Vlastnosti'
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hodina kódu | Taneční večírek: Party začíná!'

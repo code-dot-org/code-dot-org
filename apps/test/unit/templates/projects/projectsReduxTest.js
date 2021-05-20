@@ -1,6 +1,14 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
+import sinon from 'sinon';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 import projects, {
   setPersonalProjectsList,
+  updatePersonalProjectData,
   publishSuccess,
   unpublishSuccess,
   deleteSuccess,
@@ -8,9 +16,12 @@ import projects, {
   updateProjectName,
   cancelRenamingProject,
   saveSuccess,
-  saveFailure
+  saveFailure,
+  unsetNameFailure,
+  unpublishProjectLibrary
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 describe('projectsRedux', () => {
   const initialState = projects(undefined, {});
@@ -24,6 +35,31 @@ describe('projectsRedux', () => {
         stubFakePersonalProjectData
       );
     });
+  });
+
+  describe('updatePersonalProjectData', () => {
+    const personalProjects = [
+      {channel: 'abc123', name: 'first project'},
+      {channel: 'def456', name: 'second project'}
+    ];
+    const updatedProject = {
+      channel: 'def456',
+      name: 'second project (edited)'
+    };
+
+    const action = setPersonalProjectsList(personalProjects);
+    const nextState = projects(initialState, action);
+    const nextAction = updatePersonalProjectData(
+      updatedProject.channel,
+      updatedProject
+    );
+    const nextNextState = projects(nextState, nextAction);
+
+    const expectedProjects = [personalProjects[0], updatedProject];
+    assert.deepEqual(
+      nextNextState.personalProjectsList.projects,
+      expectedProjects
+    );
   });
 
   describe('publishSuccess', () => {
@@ -199,6 +235,115 @@ describe('projectsRedux', () => {
         nextNextState.personalProjectsList.projects[3].isEditing,
         false
       );
+    });
+
+    it('saveFailure with a projectNameFailure sets the project isEditing to true and sets projectNameFailure', () => {
+      const profanity = 'farts';
+      const updatedName = profanity;
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(
+        nextState.personalProjectsList.projects,
+        stubFakePersonalProjectData
+      );
+      nextState.personalProjectsList.projects[3].updatedName = updatedName;
+      const nextAction = saveFailure('abcd4', profanity);
+      const nextNextState = projects(nextState, nextAction);
+      // Name doesn't change after saveFailure.
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].name,
+        nextState.personalProjectsList.projects[3].name
+      );
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].projectNameFailure,
+        profanity
+      );
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].isSaving,
+        false
+      );
+      // Should still be editing because you need to pick a new name without profanity.
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].isEditing,
+        true
+      );
+    });
+  });
+
+  describe('unsetNameFailure', () => {
+    it('unsetNameFailure sets the project projectNameFailure to undefined', () => {
+      const profanity = 'farts';
+      const action = setPersonalProjectsList(stubFakePersonalProjectData);
+      const nextState = projects(initialState, action);
+      assert.deepEqual(
+        nextState.personalProjectsList.projects,
+        stubFakePersonalProjectData
+      );
+      nextState.personalProjectsList.projects[3].projectNameFailure = profanity;
+      const nextAction = unsetNameFailure('abcd4');
+      const nextNextState = projects(nextState, nextAction);
+      assert.equal(
+        nextNextState.personalProjectsList.projects[3].projectNameFailure,
+        undefined
+      );
+    });
+  });
+
+  describe('unpublishProjectLibrary', () => {
+    let server, store, libraryApiStub;
+    const projectId = 'abc123';
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      stubRedux();
+      registerReducers({projects});
+      store = getStore();
+      libraryApiStub = sinon.createStubInstance(LibraryClientApi, {
+        unpublish: sinon.stub()
+      });
+    });
+
+    afterEach(() => {
+      server.restore();
+      restoreRedux();
+    });
+
+    const setFetchPersonalProjectsResponse = status => {
+      server.respondWith('GET', `/v3/channels/${projectId}`, [
+        status,
+        {'Content-Type': 'application/json'},
+        JSON.stringify([])
+      ]);
+    };
+
+    it('unpublishes library', () => {
+      setFetchPersonalProjectsResponse(200);
+
+      const action = unpublishProjectLibrary(
+        projectId,
+        () => {},
+        libraryApiStub
+      );
+      store.dispatch(action);
+      server.respond();
+
+      assert(libraryApiStub.unpublish.calledOnce);
+    });
+
+    it('does not unpublish library if fetchProjectToUpdate fails', () => {
+      setFetchPersonalProjectsResponse(500);
+      const onCompleteSpy = sinon.spy();
+
+      const action = unpublishProjectLibrary(
+        projectId,
+        onCompleteSpy,
+        libraryApiStub
+      );
+      store.dispatch(action);
+      server.respond();
+
+      assert.equal(0, libraryApiStub.unpublish.callCount);
+      assert(onCompleteSpy.calledOnce);
     });
   });
 });

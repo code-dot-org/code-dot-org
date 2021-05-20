@@ -1,0 +1,81 @@
+hidden false
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit7/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit7/standards/"]]
+has_verified_resources true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit7/{LESSON}'
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 15 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Teacher-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 15 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2020", "type"=>"feedback", "visibility"=>"Student-only"}]
+is_stable true
+project_sharing true
+curriculum_umbrella 'CSP'
+
+lesson_group 'csp_parameters_return_values', display_name: 'Parameters and Return Values'
+lesson 'Parameters and Return Explore', display_name: 'Parameters and Return Explore', has_lesson_plan: true
+level 'CSP U7L1 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7L1 CFU Return', progression: 'Check For Understanding', assessment: true
+
+lesson 'Parameters and Return Investigate', display_name: 'Parameters and Return Investigate', has_lesson_plan: true
+level 'CSP U7L2 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Param Return Investigate Rock', progression: 'App Investigation'
+level 'U7 Param Investigate Poetry App', progression: 'App Investigation'
+level 'U7L2 CSP CFU Param and Return', progression: 'Check For Understanding', assessment: true
+
+lesson 'Parameters and Return Practice', display_name: 'Parameters and Return Practice', has_lesson_plan: true
+level 'CSP U7L3 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Param Return Practice Part 1', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 2', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 4', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 3', progression: 'console.log Practice'
+level 'U7 Param Return Practice Part 5', progression: 'console.log Practice'
+level 'U7 Param Investigate Calculator App', progression: 'App Practice'
+level 'U7 Param Practice App 2', progression: 'App Practice'
+level 'U7 Param Return Practice MOD', progression: 'MOD Practice'
+level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Practice', assessment: true
+
+lesson 'Parameters and Return Make', display_name: 'Parameters and Return Make', has_lesson_plan: true
+level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Param Return Make RPS App_2020', progression: 'Try the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App Project_2020', progression: 'Make the Rock Paper Scissors App', assessment: true
+
+lesson_group 'csp_libraries', display_name: 'Libraries'
+lesson 'Libraries Explore', display_name: 'Libraries Explore', has_lesson_plan: true
+level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: true
+
+lesson 'Libraries Investigate', display_name: 'Libraries Investigate', has_lesson_plan: true
+level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7L6 States App Investigation', progression: 'States App'
+level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
+level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
+
+lesson 'Libraries Practice', display_name: 'Libraries Practice', has_lesson_plan: true
+level 'CSP U7L7 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Practice 3', progression: 'Using Libraries'
+level 'U7 Libraries Practice 5', progression: 'Using Libraries'
+level 'U7 Libraries Practice 2', progression: 'Testing Libraries'
+level 'U7 Libraries Practice 1', progression: 'Testing Libraries'
+level 'U7 Libraries Practice 4', progression: 'Testing Libraries'
+level 'U77 CFU Libraries AP', progression: 'Check For Understanding', assessment: true
+
+lesson 'Project - Make a Library Part 1', display_name: 'Project - Make a Library Part 1', has_lesson_plan: true
+level 'CSP U7L8 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Project Part 1', progression: 'Build Your Library'
+
+lesson 'Project - Make a Library Part 2', display_name: 'Project - Make a Library Part 2', has_lesson_plan: true
+level 'CSP U7L9 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Project Part 2', progression: 'Build Your Library'
+level 'U7 Libraries Project Test a Library', progression: 'Test a Classmate\'s Library'
+
+lesson 'Project - Make a Library Part 3', display_name: 'Project - Make a Library Part 3', has_lesson_plan: true
+level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
+level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessment: true
+
+lesson 'Lesson 11: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
+level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 7 AP-Style Assessment _2020', progression: 'Unit 7 Exam', assessment: true
+
+lesson_group 'cspSurvey2020', display_name: 'Post-Course Survey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: false
+level 'csp-post-survey-2020-markdown-with-link-to-survey', progression: 'Post-Course Survey Instructions', assessment: true
+

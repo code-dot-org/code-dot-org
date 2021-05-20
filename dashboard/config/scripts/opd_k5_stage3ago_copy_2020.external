@@ -1,0 +1,37 @@
+name 'OPD-K5 Stage3aGo_copy_2020'
+title 'title'
+description 'description here'
+markdown <<MARKDOWN
+# Unplugged Lesson: Happy Maps
+
+We like to introduce computer science topics with unplugged lessons. Then, we use bridging activities to transition into the online lessons later. Beginning with these unplugged lessons introduces concepts in a fun and friendly way. Then, students already feel familiar with the concept by the time that they get to the online lessons, and can relate the online lessons back to the unplugged activity.
+
+For these programming stages that you will be going through, we will also start with examples of unplugged lessons. Read through the following lesson plan and watch the accompanying videos, thinking about how you would implement this in your classroom with your students.
+
+***
+CS Fundamentals primarily teaches students how to write computer programs. In order to do so, we will begin with **sequencing**. 
+> **Sequencing** describes the simple process of ordering steps in a linear manner. 
+
+For example:
+- Step 1: Boil the egg 
+- Step 2: Crack the egg
+- Step 3: Eat the egg
+
+Sequences are the foundation of **algorithms**.
+> **Algorithms**  are lists of steps to complete a task. Programs, then, are algorithms transcribed into code for a computer to execute.
+
+***
+## **1. Review the "<a href="https://curriculum.code.org/csf-20/coursea/3/" target="blank" rel="noopener noreferrer">Happy Maps</a>" Lesson Plan from Course A.**
+
+Course A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.
+
+## **2. Watch the student video: Happy Maps (found in lesson plan)**
+This is a video that you would show your students to help introduce the concept of sequencing and kick off the unplugged lesson.
+
+***
+<a href="https://curriculum.code.org/csf-20/coursea/3/" target="blank" rel="noopener noreferrer">![](https://images.code.org/ad64fc36bf12e02ed1815f4cba2cdd64-image-1592841790753.png)</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,0 +1,40 @@
+{
+  "category": "World",
+  "config": {
+    "func": "textJoin",
+    "blockText": "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}",
+    "returnType": "String",
+    "inline": false,
+    "args": [
+      {
+        "name": "LEFT_QUOTE",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/quote0.png",
+          "width": 12,
+          "height": 12
+        }
+      },
+      {
+        "name": "TEXT1",
+        "type": "String",
+        "field": true
+      },
+      {
+        "name": "RIGHT_QUOTE",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/quote1.png",
+          "width": 12,
+          "height": 12
+        }
+      },
+      {
+        "name": "TEXT2",
+        "type": "String"
+      }
+    ]
+  }
+}

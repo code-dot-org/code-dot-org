@@ -1,0 +1,213 @@
+{
+  "hu-HU": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Műveletek",
+              "Events": "Események",
+              "Loops": "hurkok",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Games/Score": "Játékok/pontszám"
+            },
+            "display_name": "Készíts Star Wars játékot",
+            "short_instructions": "Készítsd el saját Star Wars játékodat!",
+            "long_instructions": "Készítsd el saját Star Wars játékodat!"
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Világ",
+              "Dancers": "Táncosok",
+              "Properties": "Tulajdonságok",
+              "Events": "Események",
+              "Numbers": "Számok",
+              "Logic": "Logika"
+            },
+            "display_name": "Késztíts táncot",
+            "short_instructions": "Készítsd el a saját táncodat!",
+            "long_instructions": "Készítsd el a saját táncodat!"
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "rajzolj egy csillagot",
+                "parameters": {
+                  "points": "pontok",
+                  "length": "hossza"
+                }
+              },
+              "draw a circle": {
+                "name": "kör rajzolása"
+              },
+              "draw a pinwheel": {
+                "name": "rajzolj szélkereket",
+                "parameters": {
+                  "length": "hossza",
+                  "repeat": "ismételd"
+                }
+              },
+              "draw a triangle": {
+                "name": "Rajzolj egy háromszöget",
+                "parameters": {
+                  "length": "hossza"
+                }
+              },
+              "draw a shape": {
+                "name": "rajzolj síkidomot",
+                "parameters": {
+                  "length": "hossza"
+                }
+              },
+              "draw a house": {
+                "name": "rajzoljon egy házat",
+                "parameters": {
+                  "length": "hossza"
+                }
+              },
+              "draw a square": {
+                "name": "rajzoljon egy négyzetet",
+                "parameters": {
+                  "length": "hossza"
+                }
+              }
+            },
+            "display_name": "Készíts rajzot",
+            "short_instructions": "Készítsd el saját rajzodat!",
+            "long_instructions": "Készítsd el saját rajzodat!"
+          },
+          "CourseD_EOC_bounce1": {
+            "display_name": "Készíts kosárlabdás játékot",
+            "short_instructions": "Készítsd el saját kosárlabdás játékodat!",
+            "long_instructions": "Készítsd el saját kosárlabdás játékodat!"
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Világ",
+              "Sprites": "manók",
+              "Actions": "Műveletek",
+              "Events": "Események",
+              "Behaviors": "Viselkedések"
+            },
+            "display_name": "Készíts egy Sprite Lab projektet"
+          },
+          "Course E: Artist Project_2020": {
+            "display_name": "Készíts egy Művész projektet"
+          },
+          "Course E: Frozen Project_2020": {
+            "display_name": "Készíts egy Jégvarázs projektet"
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Világ",
+              "Dancers": "Táncosok",
+              "Properties": "Tulajdonságok",
+              "Events": "Események",
+              "Numbers": "Számok",
+              "Logic": "Logika"
+            },
+            "display_name": "Késztíts táncot",
+            "short_instructions": "Készítsd el a saját táncodat!",
+            "long_instructions": "Készítsd el a saját táncodat!"
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Műveletek",
+              "Brushes": "Ecsetek",
+              "Loops": "hurkok",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "funkciók",
+              "Variables": "változók"
+            },
+            "display_name": "Készíts egy Művész projektet"
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Világ",
+              "Sprites": "manók",
+              "Locations": "Helyek",
+              "Actions": "Műveletek",
+              "Events": "Események",
+              "Behaviors": "Viselkedések",
+              "Variables": "változók",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "funkciók",
+              "Text": "szöveg",
+              "Comments": "Megjegyzések"
+            },
+            "display_name": "Készíts egy Sprite Lab projektet"
+          },
+          "Course E: Frozen Project_2020": {
+            "display_name": "Készíts egy Jégvarázs projektet"
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Világ",
+              "Sprites": "manók",
+              "Locations": "Helyek",
+              "Actions": "Műveletek",
+              "Events": "Események",
+              "Behaviors": "Viselkedések",
+              "Variables": "változók",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "funkciók",
+              "Text": "szöveg",
+              "Comments": "Megjegyzések"
+            },
+            "display_name": "Készíts egy Sprite Lab projektet"
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Műveletek",
+              "Brushes": "Ecsetek",
+              "Loops": "hurkok",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "funkciók",
+              "Variables": "változók"
+            },
+            "display_name": "Készíts egy Művész projektet"
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Világ",
+              "Sprites": "manók",
+              "Actions": "Műveletek",
+              "Events": "Események",
+              "Logic": "Logika",
+              "Math": "Matematika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Világ",
+              "Sprites": "manók",
+              "Actions": "Műveletek",
+              "Behaviors": "Viselkedések",
+              "Events": "Események",
+              "Locations": "Helyek",
+              "Logic": "Logika",
+              "Loops": "hurkok",
+              "Math": "Matematika",
+              "Variables": "változók",
+              "Functions": "funkciók",
+              "Comments": "Megjegyzések"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 ---
 ms:
+  errors:
+    messages:
+      not_saved: 'Sila betulkan kesilapan yang berikut:'
   activerecord:
     errors:
       messages:
@@ -24,11 +27,9 @@ ms:
   submit: Hantar
   cancel: Batal
   or: atau
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Tambahkan guru:'
       placeholder: Kod Seksyen (ABCDEF)
-    submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
@@ -53,9 +54,6 @@ ms:
   auth:
     sign_in_with: Daftar Masuk dengan % {pembekal}
     signed_in: Daftar masuk!
-    signed_out: Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.
-    sign_out_of: Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik
-      di sini</a> untuk mendaftar keluar daripada %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum menyertai lagi?
     google_oauth2: Akaun Google
@@ -88,6 +86,11 @@ ms:
     field_is_required: adalah diperlukan
     email_preference_yes: Ya
     email_preference_no: Tidak
+    parent_account_checkbox: Saya ibubapa/penjaga yang daftar bagi pihak anak saya
+    parent_account_email_progress_permission: Bolehkah kami sekali-sekala e-mel anda
+      kemaskini kemajuan dan projek anak anda, serta kemaskini kursus dan sains komputer
+      mereka? [(Lihat polisi privasi kami)](%{privacy_policy_url})
+    parent_account_email_label: E-mel Ibubapa/Penjaga
   school_info:
     other: Lain-lain
   signin_form:
@@ -165,7 +168,14 @@ ms:
     header:
       finished_hoc: Saya telah menyelesaikan Hour of Code saya
       sign_in_to_save: Daftar Masuk untuk menyimpan kemajuan
+      course_catalog: Katalog Kursus
+      project_gallery: Projek
+      help_support: Bantuan dan sokongan
+      report_bug: Laporkan masalah
       educate_hoc: Hour of Code
+      about: Tentang
+      legal_privacy: Dasar Privasi
+      legal_tos: Terma Perkhidmatan
     user:
       classroom: Laman Utama Guru
       label: Hi %{username}
@@ -173,8 +183,10 @@ ms:
       settings: Akaun saya
       logout: Daftar keluar
       signin: Log masuk
+      signup: Buat akaun
       create: Buat
       bounce: Lantunan
+      dance: Majlis Tari-Menari
       flappy: Flappy
       infinity: Infiniti
     popup:
@@ -203,6 +215,14 @@ ms:
     new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
     current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)"
+    update_email: Kemas kini
+    for_parents_and_guardians: Untuk Ibubapa dan Penjaga
+    link_a_parent_email: Sambungkan e-mel ibubapa/penjaga ke akaun ini untuk dikemaskini
+      mengenai kemajuan dan projek anak anda. Anda juga boleh guna e-mel ini untuk
+      pemulihan kata laluan.
+    none: Tiada
+    only_one_parent_email_supported_warning: 'Nota: kami hanya dapat sokong satu e-mel
+      ibubapa/penjaga untuk setiap akaun pelajar pada masa ini.'
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -248,15 +268,18 @@ ms:
     student: pelajar
     teacher: Guru
   footer:
+    copyright: Hak Cipta
     more: Lagi
     feedback: Sediakan maklum balas
-    translate: Bantu kami menterjemahkan ke bahasa anda
+    translate: Sukarela menterjemah kandungan kami
     support: Bantuan dan Komuniti
-    tos: Terma
-    privacy: Dasar privasi
+    tos_short: Terma
+    tos: Terma Perkhidmatan
+    privacy: Dasar Privasi
     secure: Versi Dilindungi
+    report_abuse: Lapor Salah Guna
   reference_area:
-    title: Perlukan bantuan?
+    title: Perlu bantuan?
     subtitle: Lihat video dan petunjuk ini
     teacher: Lihat penyelesaian
     auth_error: Anda tidak disahkan untuk melihat penyelesaian tersebut.
@@ -290,6 +313,10 @@ ms:
       current: Tahap semasa
       unused: Tahap yang tidak digunakan
   upsell:
+    dance:
+      title: Majlis Tari-Menari
+    dance-2019:
+      title: Majlis Tari-Menari
     hoc:
       body: Cuba asas-asas sains komputer. Ramai yang telah mencuba.
     flappy:
@@ -302,13 +329,8 @@ ms:
         adalah menyeronokkan untuk belajar di semua peringkat umur.
     unplugged_conditionals:
       title: Bersyarat
-  gallery:
-    students_drew_these_with_code: Pelajar telah melukis ini dengan kod!
-    picture_count: Sebelum ini <b>%{days}</b> hari, pelajar telah melukis <b>%{count}</b>
-      gambar dengan menulis program komputer mereka sendiri. Klik pada gambar untuk
-      melihat program dimainkan.
-    want_to_make_your_own: Ingin buat anda punya sendiri?
-    more: Lagi &rarr;
+  landing:
+    help_support: Bantuan dan sokongan
   multi:
     wrong_title: Jawapan yang salah
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!
@@ -330,8 +352,10 @@ ms:
     startover_ok: Mula Sekali Lagi
     startover_cancel: Batal
   terms_interstitial:
-    tos: Terma
-    privacy: Dasar privasi
+    tos: Terma Perkhidmatan
+    privacy: Dasar Privasi
+    accept_tos: Dengan mendaftar masuk Code.org, anda bersetuju dengan [Terma Perkhidmatan](%{tos_url})
+      dan [Dasar Privasi](%{privacy_url})kami.
     print: Cetak
   school_info_interstitial:
     save: Simpan
@@ -340,24 +364,14 @@ ms:
       other: Lain-lain
     submit: Hantar
   project:
+    projects: Projek
+    project_gallery: Projek
     name: Nama
     saved: Disimpan di dalam galeri!
     abuse:
       report_abuse_form:
         abuse_type:
           other: Lain-lain
-  flex_category:
-    csf_loops: Gelung
-    csf_events: Acara-acara
-    csf_conditionals: Bersyarat
-    csf_functions: Fungsi
-    csf_variables: Pembolehubah
-    csf_internet: Internet
-    csp_variables: Pembolehubah
-    csp_conditionals: Bersyarat
-    csp_functions: Fungsi
-    csp_lists: Senarai
-    csp_loops: Gelung
   pd:
     form_labels:
       email: E-mel
@@ -373,5 +387,9 @@ ms:
         opt_in_no: Tidak
   cookie_banner:
     accept: saya setuju
-  gdpr_dialog:
-    true: Ya
+  copy: Salin
+  parent_email_banner:
+    text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini
+      untuk kemaskini kemajuan dan projek anak anda!"
+    link_your_email: Sambung e-mel
+    not_now: Nanti

@@ -1,112 +1,159 @@
 ---
-title: How-to Guide
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code with your class
+# Movt plánet iežat Kodendiimmu
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your class.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [Other Hour of Code resources for educators](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Choose a tutorial for your hour
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+* * *
 
-## 3. Promote your Hour of Code
+<a id="explore-activities"></a>
 
-Promote your Hour of Code [with these tools]({{ urls/promote_resources }}) and encourage others to host their own events.
+## 2. Explore activities and tutorials
 
-## 4. Plan your technology needs - computers are optional
+We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. Ohppiide lea miellagiddevaš geahččalit iešstivrejuvvon neavvagiid, vaikko ollu doaimmain leat oahpahusplánat oahpaheddjiide mat nevvot digaštallamiid dahje ahte viiddit doaimmaid.
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+Guorahala doaimmaid ja mearrit ovdagihtii háliidat go válljet seamma neavvaga buot ohppiide, dahje divtte ahte juohke oahppi ieš vállje neavvaga.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+* * *
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+<a id="create-your-plan"></a>
 
-<img src="/images/fit-350/group_ipad.jpg" />
+## 3. Create your plan for the day
 
-## 5. Start your Hour of Code off with an inspiring speaker or video
+### Smiehtas iežat teknologiija dárbbuid birra - ii leat bággu atnit dihtoriid!
 
-**Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+- The best Hour of Code experience includes Internet-connected computers. Muitte ahte ii leat dárbu ahte buot ohppiin lea dihtor, ja Kodendiimmu sáhttá čađahit dihtora haga. [neahtahaga doaimmaide](/learn), galgá dušše Klássalanja Teknologiija oasis merket čájet molssaeavttuid “II oktage dihtor dahje ovttadat”.
+- Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. Lea go njoazes neahttaoktavuohta? Pláne čájehit videoid klássii, vai juohke oahppi ieš ii viečča videoid. Dahje geahččal neavvagiid maid sáhttá neahta haga doaimmahit.
+- Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+- Eai go leat doarvái ovttadagat? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
-**Show an inspirational video:**
+<img src="/images/fit-600/group_ipad.jpg" />
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
+### Vállje beaivvi ja diimmu
+
+Olbmot miehtá máilmmi servet Kodendiimmu ávvudeapmái CS Education Week (Juovlamánu 9.-13. beaiv.) dalle go ođđaseamos neavvagat ja doaimmat leat almmuhuvvon. Muhto don sáhtát čađahit Kodendiimmu vaikko goas jagis!
+
+* * *
+
+<a id="promote-your-hour"></a>
+
+## 4. Promote your Hour of Code
+
+Now that you've planned your event, it's time to start promoting it!
+
+### Muital iežat Skuvlii ja Birrasii
+
+Promote the Hour of Code to other teachers who may want to join in on the fun! Dát lea maid buorre vejolašvuohta oláhit du skuvlla PTSA dahje juogadit váhnenođđasiin, muitalit sidjiide ahte sin mánná soaitá ruovttus háliidit geahččalit eanet doaimmaid ja neavvagiid.
+
+### Dieđit Eaktodáhtolaččaide dalle go Registeret iežat Dáhpáhusa
+
+Dalle go [dieđihat iežat Kodendiimmu dáhpáhusa ](/), de dutnje sáddejuvvo e-poastagulahallan mas leat ođđasat ja fuomášumit oažžut lihkostuvvat du Kodendiimmu lágideami. Dá lea maiddái vuohki movt sáhtát dieđihit báikkálaš eaktodáhtolaččaide ahte du skuvla oassálastá. Eaktodáhtolaččat sáhttet leat buorit resursat ja sii sáhttet boahtit du luohkkái hupmat dihtordiehtaga birra dahje dušše veahkehit du ohppiid Kodendiimmu doaimmaiguin.
+
+### Movttidahte iežat Ohppiid
+
+Ráhkkan dáhpáhussii juogadettiin [movttidahttin videoid](/promote/resources) mas rámpot muhtin olbmuid ja mas čájehat buriid vugiid movt dihtordiehtaga sáhttá geavahit. Dahje diŋgo movttidahtti plakáhtaid du luohkkálatnjii! Oahppit soitet háliidit oassálastit fáttás go oidnet ahte olbmot movttidahttet sin.
+
+{{ promote_new_posters }}
+
+Oahpa eanet plakáhtaid, videoid, darvvihanmearkkaid ja eará vugiid birra [promote du dáhpáhusa](/promote/resources#posters) iežat birrasii.
+
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. How to start your Hour of Code strong
+
+Go du Kodendiimmu ávvudeapmi lea boahtán, sáhtát geahččalit oažžut buorii álggu dáhpáhussii dáiguin reaidduiguin ja fuomašumiiguin.
+
+Bovde [báikkálaš eaktodáhtolačča]({{ urls/volunteer_local }}) movttidit du ohppiid čilgemiin daid oallut vejolašvuođaid mat gávdnojit dihtordiehtagis. Gávdnojit duhahiid mielde eaktodáhtolaččat miehtá máilmmi geat leat gergosat veahkehit du Kodendiimmuin juogo guossástallet klássalanjas dahje hupmat du ohppiiguin video bokte!
+
+Show an inspirational video:
+
+- Originála Code.org almmuhanvideo, mas Bill Gates, Mark Zuckerberg, ja NBA násti Chris Bosh leat mielde. (Gávdnojit [1 minuhttasaš](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuhttasaš](https://www.youtube.com/watch?v=nKIu9yen5nc), ja [9 minuhttasaš](https://www.youtube.com/watch?v=dU1xS07N-FA) veršuvnnat)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
-- Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
-- As a class, list things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Čilge movt teknologiija váikkuha min eallimiidda, ovdamearkkaiguin main sihke bártnit ja nieiddat beroštit (muital movt gádjut heakka, veahkehit olbmuid, oažžut oktavuođa olbmuiguin, jna.).
+- Siđa klássa ráhkadit listtu masa čállet diŋggaid mat geavahit kodema árgabeaivvis.
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
-## 6. Code!
+* * *
 
-**Direct students to the activity**
+<a id="code"></a>
+
+## 6. Get coding!
+
+Čájet ohppiide doaimma
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When your students come across difficulties it's okay to respond:**
+Go du oahppit deaivvidit váttisvuođaiguin lea vuogas vástidit:
 
 - “I don’t know. Let’s figure this out together.”
 - “Technology doesn’t always work out the way we want.”
 - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What if a student finishes early?**
+Movt de jus oahppi geargá ovdal?
 
-- Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
-- Or, ask students who finish early to help classmates who are having trouble with the activity.
+- Oahppit sáhttet geahččat buot neavvagiid ja [geahččalit eará Kodendiimmu doaimma]({{ urls/learn }}).
+- Dahje, jeara oahppis gii lea geargan gillego veahkehit skuvlaoappáid/-vieljaid geat soitet bártideame doaimmain.
 
-[col-33]
+* * *
 
-![](/images/fit-250/highschoolgirls.jpeg)
+<a id="celebrate"></a>
 
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-## 7. Celebrate
+## 7. Celebrate your students' success
 
 [col-33]
 
-![](/images/fit-300/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
 - [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your school.
+- [Čálit "Mun čađahin Kodendiimmu!"]({{ urls/promote_stickers }}) darvvihanmearkkaid du ohppiide.
+- [Diŋgo heivehuvvon t-báiddiid](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) du skuvlii.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
-[col-33]
+* * *
 
-![](/images/fit-260/highlight-certificates.jpg)
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
+<a id="other-resources"></a>
 
 ## Other Hour of Code resources for educators:
 
-- Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
+- Fina [Kodendiimmu Oahpaheaddji Forumas](http://forum.code.org/c/plc/hour-of-code) oažžut rávvagiid, ipmárdusa ja veahki eará oahpaheddjiin.
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## What comes after the Hour of Code?
+### What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:
-
-- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

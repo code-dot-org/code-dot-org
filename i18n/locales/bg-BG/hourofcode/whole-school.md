@@ -1,6 +1,5 @@
 ---
 title: Общоучилищно участие
-layout: wide
 ---
 
 {{ signup_button }}

@@ -32,6 +32,21 @@
   @include buttons();
   @include user-selects(auto);
 
+  // Markdown rendered with SafeMarkdown in LabeledFormComponent is wrapped in
+  // a <div> and uses <p> tags for each paragraph, but the forms system
+  // expects this content to be entirely inline, and so we provide this styling.
+  .inline_markdown {
+    display: inline;
+
+    div {
+      display: inline;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+
   a:not(.btn) {
     color: $purple;
     font-family: "Gotham 7r";
@@ -178,3 +193,8 @@ form .form-required-field {
     padding: 10px 20px 10px 20px;
   }
 }
+
+.submission-download-datepicker .form-control {
+    z-index: -1 !important;
+}
+

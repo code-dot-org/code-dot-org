@@ -1,0 +1,13 @@
+hy:
+  data:
+    block_categories:
+      Actions: գործողություններ
+      Color: Գույնը
+      Conditionals: conditionals
+      Events: Իրադարձություններ
+      Functions: գործառույթները
+      Logic: տրամաբանություն
+      Loops: loops
+      Math: Մաթեմատիկա
+      Text: տեքստ
+      Variables: փոփոխականների

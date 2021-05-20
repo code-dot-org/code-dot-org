@@ -1,3 +1,9 @@
+/* Needed for colors to render correctly on PDFs -
+   see https://github.com/GoogleChrome/puppeteer/blob/v2.0.0/docs/api.md#pagepdfoptions */
+* {
+  -webkit-print-color-adjust: exact;
+}
+
 .state-fact-sheet {
   padding-top: 10px;
   max-width: 970px;

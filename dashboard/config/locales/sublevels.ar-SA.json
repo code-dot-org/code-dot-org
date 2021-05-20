@@ -1,0 +1,192 @@
+{
+  "ar-SA": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "الإجراءات",
+              "Events": "الأحداث",
+              "Loops": "الحلقات",
+              "Math": "العمليات الحسابية",
+              "Logic": "المنطق",
+              "Games/Score": "ألعاب/نقطة\n"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "العالم",
+              "Dancers": "الراقصون",
+              "Properties": "خصائص\n",
+              "Events": "الأحداث",
+              "Numbers": "أرقام",
+              "Logic": "المنطق"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "رسم نجمة",
+                "parameters": {
+                  "points": "نقاط",
+                  "length": "الطول"
+                }
+              },
+              "draw a circle": {
+                "name": "رسم دائرة"
+              },
+              "draw a pinwheel": {
+                "name": "ارسم دولاب الهواء",
+                "parameters": {
+                  "length": "الطول",
+                  "repeat": "كرر"
+                }
+              },
+              "draw a triangle": {
+                "name": "رسم مثلث",
+                "parameters": {
+                  "length": "الطول"
+                }
+              },
+              "draw a shape": {
+                "name": "ارسم شكل",
+                "parameters": {
+                  "length": "الطول"
+                }
+              },
+              "draw a house": {
+                "name": "رسم منزل",
+                "parameters": {
+                  "length": "الطول"
+                }
+              },
+              "draw a square": {
+                "name": "رسم مربع",
+                "parameters": {
+                  "length": "الطول"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "العالم",
+              "Sprites": "النقوش المتحركة",
+              "Actions": "الإجراءات",
+              "Events": "الأحداث",
+              "Behaviors": "السلوك"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "العالم",
+              "Dancers": "الراقصون",
+              "Properties": "خصائص\n",
+              "Events": "الأحداث",
+              "Numbers": "أرقام",
+              "Logic": "المنطق"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "الإجراءات",
+              "Brushes": "فرش",
+              "Loops": "الحلقات",
+              "Math": "العمليات الحسابية",
+              "Logic": "المنطق",
+              "Functions": "دوال",
+              "Variables": "المتغيرات"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "العالم",
+              "Sprites": "النقوش المتحركة",
+              "Locations": "مواقع",
+              "Actions": "الإجراءات",
+              "Events": "الأحداث",
+              "Behaviors": "السلوك",
+              "Variables": "المتغيرات",
+              "Math": "العمليات الحسابية",
+              "Logic": "المنطق",
+              "Functions": "دوال",
+              "Text": "النص",
+              "Comments": "تعليقات\n"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "العالم",
+              "Sprites": "النقوش المتحركة",
+              "Locations": "مواقع",
+              "Actions": "الإجراءات",
+              "Events": "الأحداث",
+              "Behaviors": "السلوك",
+              "Variables": "المتغيرات",
+              "Math": "العمليات الحسابية",
+              "Logic": "المنطق",
+              "Functions": "دوال",
+              "Text": "النص",
+              "Comments": "تعليقات\n"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "الإجراءات",
+              "Brushes": "فرش",
+              "Loops": "الحلقات",
+              "Math": "العمليات الحسابية",
+              "Logic": "المنطق",
+              "Functions": "دوال",
+              "Variables": "المتغيرات"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "العالم",
+              "Sprites": "النقوش المتحركة",
+              "Actions": "الإجراءات",
+              "Events": "الأحداث",
+              "Logic": "المنطق",
+              "Math": "العمليات الحسابية"
+            },
+            "behavior_names": {
+              "recovering": "التعافي",
+              "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+              "moving with arrow keys": "التحرك من خلال الأسهم"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "العالم",
+              "Sprites": "النقوش المتحركة",
+              "Actions": "الإجراءات",
+              "Behaviors": "السلوك",
+              "Events": "الأحداث",
+              "Locations": "مواقع",
+              "Logic": "المنطق",
+              "Loops": "الحلقات",
+              "Math": "العمليات الحسابية",
+              "Variables": "المتغيرات",
+              "Functions": "دوال",
+              "Comments": "تعليقات\n"
+            },
+            "behavior_names": {
+              "recovering": "التعافي",
+              "moving left and right": "تحرك إلى اليسار وإلى اليمين",
+              "moving with arrow keys": "التحرك من خلال الأسهم"
+            }
+          }
+        }
+      }
+    }
+  }
+}

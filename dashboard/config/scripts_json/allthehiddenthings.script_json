@@ -1,0 +1,241 @@
+{
+  "script": {
+    "name": "allthehiddenthings",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "seeding_key": {
+      "script.name": "allthehiddenthings"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Game Lab",
+      "name": "Game Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Game Lab",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    },
+    {
+      "key": "Contained Levels",
+      "name": "Contained Levels",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
+        ],
+        "lesson.key": "Game Lab",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      },
+      "level_keys": [
+        "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Test GameLab Predictive"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test GameLab Predictive"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      },
+      "level_keys": [
+        "Test GameLab Predictive"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Test Contained Multi"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test Contained Multi"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      },
+      "level_keys": [
+        "Test Contained Multi"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PS predictive Applab level test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PS predictive Applab level test"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      },
+      "level_keys": [
+        "PS predictive Applab level test"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "allthethings_U3 - Simple Drawing - Rectangle Width and Height",
+        "script_level.level_keys": [
+          "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
+        ],
+        "lesson.key": "Game Lab",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Test GameLab Predictive",
+        "script_level.level_keys": [
+          "Test GameLab Predictive"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Test Contained Multi",
+        "script_level.level_keys": [
+          "Test Contained Multi"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PS predictive Applab level test",
+        "script_level.level_keys": [
+          "PS predictive Applab level test"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

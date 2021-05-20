@@ -34,13 +34,6 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'}
 ];
 
-const styles = {
-  icon: {
-    color: color.purple,
-    paddingRight: 5
-  }
-};
-
 /*
  * Part of the Assessment Tab of Teacher Dashboard.
  * Shown when select a script that is either CSD or CSP
@@ -80,6 +73,7 @@ class FeedbackDownload extends Component {
           headers={HEADERS}
         >
           <Button
+            __useDeprecatedTag
             text={i18n.downloadFeedbackCSV()}
             onClick={() => {}}
             color={Button.ButtonColor.gray}
@@ -101,6 +95,13 @@ class FeedbackDownload extends Component {
     );
   }
 }
+
+const styles = {
+  icon: {
+    color: color.purple,
+    paddingRight: 5
+  }
+};
 
 export const UnconnectedFeedbackDownload = FeedbackDownload;
 

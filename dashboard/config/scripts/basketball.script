@@ -1,18 +1,13 @@
-hidden 'false'
-stage 'Bounce'
-skin 'basketball'
+hidden false
+tts true
+
+lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false
 level 'bounce_1_basketball'
-skin 'basketball'
 level 'bounce_2_basketball'
-skin 'basketball'
 level 'bounce_5_basketball'
-skin 'basketball'
 level 'bounce_6_basketball'
-skin 'basketball'
 level 'bounce_7_basketball'
-skin 'basketball'
 level 'bounce_10_basketball'
-skin 'basketball'
 level 'bounce_11_basketball'
-skin 'basketball'
 level 'bounce_12_basketball'
+

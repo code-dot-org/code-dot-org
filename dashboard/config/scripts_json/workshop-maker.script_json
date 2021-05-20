@@ -1,0 +1,1486 @@
+{
+  "script": {
+    "name": "workshop-maker",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:58 UTC",
+    "seeding_key": {
+      "script.name": "workshop-maker"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "App Lab Basics",
+      "name": "App Lab Basics",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "key": "The Circuit Playground",
+      "name": "The Circuit Playground",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "key": "Physical Input",
+      "name": "Physical Input",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "key": "Analog Input",
+      "name": "Analog Input",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD Review: Design Mode, IDs, and Events"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Review Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Review Events"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD: Review Events"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD - Getters and Setters"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD - Getters and Setters"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD - Getters and Setters"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - setText"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
+        "progression": "Using Getters and Setters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - UI and Inputs - hide show"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Circuit Playground Map: LEDS"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Circuit Playground Map: LEDS"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "Circuit Playground Map: LEDS"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 Circuit Playground Test"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 LED basics led.on"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 LED basics onEvent"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 LED basics led.off()"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED predict"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED predict"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 LED predict"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 LED alarm silent"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Circuit Playground Map: Buzzer"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Circuit Playground Map: Buzzer"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "Circuit Playground Map: Buzzer"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 buzzer freq"
+        ],
+        "progression": "Using the Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 buzzer freq"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 buzzer freq"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 buzzer stop"
+        ],
+        "progression": "Using the Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 buzzer stop"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 buzzer stop"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
+        "progression": "Using the Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 buzzer alarm"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Challenge: Buzzer and LED"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Challenge: Buzzer and LED"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "Challenge: Buzzer and LED"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Map: onBoardEvent"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Map: onBoardEvent"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD Map: onBoardEvent"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button screen buttonL"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button screen buttonR"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Map: Board Buttons"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Map: Board Buttons"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD Map: Board Buttons"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button toggle"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button toggle"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button toggle"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button on off"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button on off"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button on off"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button up down predict"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button up down predict"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button up down predict"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button up down"
+        ],
+        "progression": "Using the Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button up down"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button up down"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
+        "progression": "Tug o War Game"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button tug o war right button"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
+        "progression": "Tug o War Game"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button tug o war left button"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
+        "progression": "Tug o War game"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - button tug o war challenge"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors experiment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors experiment"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - sensors experiment"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Map: Board Sensors"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Map: Board Sensors"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD Map: Board Sensors"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors sound"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors sound"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - sensors sound"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors light"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors light"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - sensors light"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors temp"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - sensors temp"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors predict"
+        ],
+        "progression": "Using Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors predict"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - sensors predict"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Map: Polling Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Map: Polling Events"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSD Map: Polling Events"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
+        "progression": "Displaying Sensor Values"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 - sensors temp f c"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 light sensor alarm"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 light sensor alarm"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "CSDU6 light sensor alarm"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "maker workshop final"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "maker workshop final"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      },
+      "level_keys": [
+        "maker workshop final"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD Review: Design Mode, IDs, and Events",
+        "script_level.level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Review Events",
+        "script_level.level_keys": [
+          "CSD: Review Events"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD - Getters and Setters",
+        "script_level.level_keys": [
+          "CSD - Getters and Setters"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - setText",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - UI and Inputs - hide show",
+        "script_level.level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
+        "lesson.key": "App Lab Basics",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Circuit Playground Map: LEDS",
+        "script_level.level_keys": [
+          "Circuit Playground Map: LEDS"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Circuit Playground Test",
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED basics led.on",
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED basics onEvent",
+        "script_level.level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED basics led.off()",
+        "script_level.level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED predict",
+        "script_level.level_keys": [
+          "CSDU6 LED predict"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 LED alarm silent",
+        "script_level.level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Circuit Playground Map: Buzzer",
+        "script_level.level_keys": [
+          "Circuit Playground Map: Buzzer"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 buzzer freq",
+        "script_level.level_keys": [
+          "CSDU6 buzzer freq"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 buzzer stop",
+        "script_level.level_keys": [
+          "CSDU6 buzzer stop"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 buzzer alarm",
+        "script_level.level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Challenge: Buzzer and LED",
+        "script_level.level_keys": [
+          "Challenge: Buzzer and LED"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Map: onBoardEvent",
+        "script_level.level_keys": [
+          "CSD Map: onBoardEvent"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button screen buttonL",
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button screen buttonR",
+        "script_level.level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Map: Board Buttons",
+        "script_level.level_keys": [
+          "CSD Map: Board Buttons"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button toggle",
+        "script_level.level_keys": [
+          "CSDU6 - button toggle"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button on off",
+        "script_level.level_keys": [
+          "CSDU6 - button on off"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button up down predict",
+        "script_level.level_keys": [
+          "CSDU6 - button up down predict"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button up down",
+        "script_level.level_keys": [
+          "CSDU6 - button up down"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button tug o war right button",
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button tug o war left button",
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button tug o war challenge",
+        "script_level.level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
+        "lesson.key": "Physical Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors experiment",
+        "script_level.level_keys": [
+          "CSDU6 - sensors experiment"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Map: Board Sensors",
+        "script_level.level_keys": [
+          "CSD Map: Board Sensors"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors sound",
+        "script_level.level_keys": [
+          "CSDU6 - sensors sound"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors light",
+        "script_level.level_keys": [
+          "CSDU6 - sensors light"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors temp",
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors predict",
+        "script_level.level_keys": [
+          "CSDU6 - sensors predict"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Map: Polling Events",
+        "script_level.level_keys": [
+          "CSD Map: Polling Events"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - sensors temp f c",
+        "script_level.level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 light sensor alarm",
+        "script_level.level_keys": [
+          "CSDU6 light sensor alarm"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "maker workshop final",
+        "script_level.level_keys": [
+          "maker workshop final"
+        ],
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "",
+        "script.name": "workshop-maker"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

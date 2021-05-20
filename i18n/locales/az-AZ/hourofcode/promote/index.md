@@ -1,7 +1,5 @@
 ---
 title: Hərkəsə səsimizi yayın
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

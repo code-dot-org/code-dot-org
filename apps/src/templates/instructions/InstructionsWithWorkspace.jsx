@@ -16,7 +16,10 @@ import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
 export class UnwrappedInstructionsWithWorkspace extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    // props provided via connect
+    instructionsStyle: PropTypes.object,
+    workspaceStyle: PropTypes.object,
+
+    // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired
   };
@@ -68,11 +71,11 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const codeWorkspaceHeight = this.codeWorkspaceContainer
       .getWrappedInstance()
       .getRenderedHeight();
-    if (codeWorkspaceHeight === 0) {
-      // We haven't initialized the codeWorkspace yet. No need to change the
-      // max height of instructions
-      return;
-    }
+
+    // Continue here even if the workspace height is measured at zero. Workspace
+    // height at zero is a somewhat common case after rotating the screen on
+    // mobile. Especially when using an Android device in blockly labs where
+    // there is a dismissable message in the instructions.
 
     const totalHeight = instructionsHeight + codeWorkspaceHeight;
     let maxInstructionsHeight = totalHeight - DEBUGGER_RESERVE - EDITOR_RESERVE;
@@ -94,14 +97,21 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
+    const {
+      instructionsStyle,
+      workspaceStyle,
+      instructionsHeight,
+      children
+    } = this.props;
+
     return (
       <span>
-        <TopInstructions />
+        <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          topMargin={this.props.instructionsHeight}
+          style={{...workspaceStyle, top: instructionsHeight}}
         >
-          {this.props.children}
+          {children}
         </CodeWorkspaceContainer>
       </span>
     );
@@ -109,16 +119,12 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 }
 
 export default connect(
-  function propsFromStore(state) {
-    return {
-      instructionsHeight: state.instructions.renderedHeight
-    };
-  },
-  function propsFromDispatch(dispatch) {
-    return {
-      setInstructionsMaxHeightAvailable(maxHeight) {
-        dispatch(setInstructionsMaxHeightAvailable(maxHeight));
-      }
-    };
-  }
+  state => ({
+    instructionsHeight: state.instructions.renderedHeight
+  }),
+  dispatch => ({
+    setInstructionsMaxHeightAvailable(maxHeight) {
+      dispatch(setInstructionsMaxHeightAvailable(maxHeight));
+    }
+  })
 )(UnwrappedInstructionsWithWorkspace);

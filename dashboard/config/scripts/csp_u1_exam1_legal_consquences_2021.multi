@@ -1,0 +1,29 @@
+name 'csp-u1-exam1-legal-consquences_2021'
+height 'auto'
+
+question 'Lucy is completing a project as part of a science class using materials she found online. Which of the following is MOST LIKELY to lead to legal consequences?'
+wrong ‘Modifying a piece of open source software.’
+wrong ‘Using open access research for which she does not acquire a license.’
+wrong ‘Failing to publish her work under a Creative Commons license.’
+right ‘Using images posted online by another student without permission or citation.’
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since the other student’s images are automatically protected under copyright law, Lucy must cite these images or make clear she has permission to use them in order to avoid legal consequences.
+
+[Lesson 11 - Intellectual Property](https://curriculum.code.org/csp-20/unit1/11/) contains a series of videos explaining how copyright works including some examples from the real world.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.F.4: The use of material created by someone else without permission and presented as one’s own is plagiarism and may have legal consequences. 
+
+* IOC-1.F.5: Some examples of legal ways to use materials created by someone else include:
+	* Creative Commons—a public copyright license that enables the free distribution of an otherwise copyrighted work. This is used when the content creator wants to give others the right to share, use, and build upon the work they have created. 
+	* open source—programs that are made freely available and may be redistributed and modified
+	* open access—online research output free of any and all restrictions on access and free of many restrictions on use, such as copyright or license restrictions
+:::
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

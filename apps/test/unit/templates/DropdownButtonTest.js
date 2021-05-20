@@ -1,8 +1,8 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 
 const clickSpy = sinon.spy();

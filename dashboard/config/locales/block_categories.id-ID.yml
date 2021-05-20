@@ -3,19 +3,30 @@ id:
   data:
     block_categories:
       Actions: Aksi
-      Loops: Loop
-      Functions: fungsi
+      Advanced: Tingkat lanjut
+      Behaviors: Perilaku
+      Brushes: Kuas
       Color: Warna
-      Math: Matematika
-      Logic: Logika
-      Variables: variabel
+      Comment: Komentar
+      Comments: Komentar
       Conditionals: Kondisi
+      Dancers: Pedansa
+      Default: Default
       Events: kegiatan
+      Functions: fungsi
+      'Functions ': 'Function '
+      Game/Score: Permainan/Skor
+      Games/Score: Permainan/Skor
+      Groups: Grup
+      Input: Input
+      Locations: Lokasi
+      Logic: Logika
+      Loops: Loop
+      Math: Matematika
+      Numbers: Nomor
+      Properties: Properti
+      Sprites: Sprites
       Text: Teks
-      Location: Lokasi
-      Input: Masukan
-      Start: Mulai
-      Booleans: Boolean
-      test: test
-      Name: Nama
-      Function: Fungsi
+      Variables: variabel
+      'Variables ': 'Variable '
+      World: Dunia

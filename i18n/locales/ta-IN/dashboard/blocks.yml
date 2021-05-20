@@ -2,47 +2,396 @@
 ta:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          MOVE1:
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+          MOVE2:
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+      Dancelab_atTimestamp:
+        text: இதற்குப்பின் {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': அளவீடுகள்
+            '"seconds"': விநாடிகள்
+      Dancelab_changeColorBy:
+        text: மாற்றுக {COLOR} {METHOD} இதனால் {AMOUNT}
+        options:
+          METHOD:
+            '"hue"': ஹ்யூ
+            '"saturation"': சாச்சுரேஷன் (நிற ஆழம்)
+            '"brightness"': பிரைட்னஸ் (வெளிர்தன்மை)
       Dancelab_changeMoveEachLR:
+        text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          MOVE:
+            '"next"': "(அடுத்த)"
+            '"prev"': "(முந்தைய)"
+            '"rand"': "(ரான்டம்)"
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
       Dancelab_changeMoveLR:
+        text: "{SPRITE} செய்க {MOVE} {DIR} எப்போதும்"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"next"': "(அடுத்த)"
+            '"prev"': "(முந்தைய)"
+            '"rand"': "(ரான்டம்)"
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
       Dancelab_changePropBy:
+        text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
+            '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
       Dancelab_doMoveEachLR:
+        text: "{GROUP} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          MOVE:
+            '"rand"': "(ரான்டம்)"
+            MOVES.XBend: வளைக்கவும்
+            MOVES.Roll: பாடி ரோல்
+            MOVES.XClapSide: கைதட்டவும்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.XFever: டிஸ்கோ
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.XHeadHips: தலை+ இடுப்பு
+            MOVES.XHop: குதிக்கவும்
+            MOVES.XHighKick: எத்தவும்
+            MOVES.XKnee: மூட்டு
+            MOVES.XKneel: மண்டியிடவும்
+            MOVES.XOle: ஒலே
+            MOVES.XArmsSide: ரீச்
+            MOVES.XSlide: சறுக்கவும்
+            MOVES.Kick: ஸ்டார்
+            MOVES.XArmsUp: நீட்டவும்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
       Dancelab_doMoveLR:
+        text: "{SPRITE} ஒருமுறை {MOVE} {DIR} செய்யவும்"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"rand"': "(ரான்டம்)"
+            MOVES.XBend: வளைக்கவும்
+            MOVES.Roll: பாடி ரோல்
+            MOVES.XClapSide: கைதட்டவும்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.XFever: டிஸ்கோ
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.XHeadHips: தலை+ இடுப்பு
+            MOVES.XHop: குதிக்கவும்
+            MOVES.XHighKick: எத்தவும்
+            MOVES.XKnee: மூட்டு
+            MOVES.XKneel: மண்டியிடவும்
+            MOVES.XOle: ஒலே
+            MOVES.XArmsSide: ரீச்
+            MOVES.XSlide: சறுக்கவும்
+            MOVES.Kick: ஸ்டார்
+            MOVES.XArmsUp: நீட்டவும்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+      Dancelab_everySeconds:
+        text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
+        options:
+          UNIT:
+            '"measures"': அளவீடுகள்
+            '"seconds"': விநாடிகள்
+      Dancelab_everySecondsRange:
+        text: 'ஒவ்வொரு {N} {UNIT} {START} தொடங்கி {STOP} வரை '
+        options:
+          UNIT:
+            measures: அளவீடுகள்
+            seconds: விநாடிகள்
+      Dancelab_everyVerseChorus:
+        text: 'ஒவ்வொரு {UNIT} '
+        options:
+          UNIT:
+            '"verse"': வெர்ஸ்
+            '"chorus"': கோரஸ்
+      Dancelab_getEnergy:
+        text: எடுக்க {RANGE}
+        options:
+          RANGE:
+            '"low"': பேஸ்
+            '"mid"': மிட்
+            '"high"': ட்ரெபில்
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"tint"': டின்ட்
+      Dancelab_getTime:
+        text: நடப்பு நேர அலகு {UNIT}
+        options:
+          UNIT:
+            '"measures"': அளவீடுகள்
+            '"seconds"': விநாடிகள்
+      Dancelab_ifDanceIs:
+        text: |-
+          ஒருவேளை {SPRITE} {DANCE} செய்தால்
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Clown: கங்கனம்
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Roll: பாடி ரோல்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+      Dancelab_ifTime:
+        text: |-
+          ஒருவேளை {UNIT} {OP} {N} என்றிருந்தால்
+          {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': அளவீடுகள்
+            '"seconds"': விநாடிகள்
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
         options:
           LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
-      Dancelab_layoutSprites:
+      Dancelab_jumpToEach:
         options:
-          FORMAT:
-            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
-      Dancelab_makeNewDanceSprite:
-        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
           LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_layoutSprites:
+        text: "{FORMAT} ஆக {GROUP}-ஐ தளவமைக்கவும்"
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          FORMAT:
+            '"border"': பார்டர்
+            '"inner"': சதுரத்திற்குள்
+            '"circle"': வட்டம்
+            '"grid"': கிரிட்
+            '"row"': வரிசை
+            '"column"': பத்தி
+            '"x"': கிரிஸ்-கிராஸ்
+            '"plus"': ப்ளஸ்
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': வேற்றுகிரகத்துவாசி
+            '"BEAR"': கரடி
+            '"CAT"': பூனை
+            '"DOG"': நாய்
+            '"DUCK"': வாத்து
+            '"FROG"': தவளை
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்
+            '"UNICORN"': யூனிகார்ன்கள்
+          LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          ஒரு புதிய {COSTUME} உருவாக்கவும்
+           {NAME} ஐ {LOCATION} ல் அழைத்தேன்
+        options:
+          COSTUME:
+            '"ALIEN"': வேற்றுகிரகத்துவாசி
+            '"BEAR"': கரடி
+            '"CAT"': பூனை
+            '"DOG"': நாய்
+            '"DUCK"': வாத்து
+            '"FROG"': தவளை
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன்ஆப்பிள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்
+            '"UNICORN"': யூனிகார்ன்கள்
+          LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": தொடர்பின்றி எடுக்கப்பட்ட
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          {N} புதிய {COSTUME} உருவாக்கவும்
+          ஒரு {LAYOUT}-ல்
         options:
           'N':
             '2': '2'
@@ -64,145 +413,805 @@ ta:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
           LAYOUT:
+            '"border"': பார்டர்
+            '"inner"': சதுரத்திற்குள்
+            '"circle"': வட்டம்
+            '"grid"': கிரிட்
+            '"row"': வரிசை
+            '"column"': பத்தி
+            '"x"': கிரிஸ்-கிராஸ்
+            '"plus"': ப்ளஸ்
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      Dancelab_mixColors:
+        text: "{COLOR1} மற்றும் {COLOR2} –ஐ கலக்கவும்"
+      Dancelab_nMeasures:
+        text: "{N} அளவீடுகள்"
+      Dancelab_onPointerDown:
+        text: பாய்ண்டர் டவுனில்
+      Dancelab_onPointerDrag:
+        text: பாய்ண்டர் டிராகில்
+      Dancelab_onPointerUp:
+        text: பாய்ண்டர் அப்பில்
       Dancelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      Dancelab_setBackground:
+        text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
+      Dancelab_setBackgroundEffect:
+        text: |-
+          பின்னணி எஃபெக்டடை அமைக்கவும்
+          {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': எதுவுமில்லை
+            '"circles"': வட்டங்கள்
+            '"color_cycle"': வண்ணங்கள்
+            '"diamonds"': டயமன்ட்ஸ்
+            '"disco_ball"': டிஸ்கோ பால்
+            '"fireworks"': ஃபயர்ஒர்க்ஸ்
+            '"swirl"': ஹிப்னோ
+            '"kaleidoscope"': கெலைடோஸ்கோப்
+            '"lasers"': லேசர் டான்ஸ் தளம்
+            '"splatter"': பெயின்ட் ஸ்பலாட்டர்
+            '"rainbow"': வானவில்
+            '"snowflakes"': பனி
+            '"text"': பாடல் பெயர்கள்
+            '"galaxy"': ஸ்பேஸ்
+            '"sparkles"': ஜொலிப்புகள்
+            '"spiral"': ஸ்பைரல்
+            '"disco"': சதுரங்கள்
+            '"stars"': நட்சத்திரங்கள்
+          PALETTE:
+            '"rave"': கருப்பு வெள்ளை
+            '"cool"': கூல்
+            '"electronic"': எலக்ட்ரானிக்
+            '"iceCream"': ஐஸ்க்ரீம்
+            '"default"': லைட்
+            '"neon"': நியான்
+            '"tropical"': டிராபிகல்
+            '"vintage"': வின்டேஜ்
+            '"warm"': வ
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          பின்னணி எஃபெக்டடை அமைக்கவும்
+           {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': எதுவுமில்லை
+            '"rand"': "(ரான்டம்)"
+            '"circles"': வட்டங்கள்
+            '"quads"': கோணங்கள்
+            '"color_cycle"': வண்ணங்கள்
+            '"diamonds"': டயமன்ட்ஸ்
+            '"disco_ball"': டிஸ்கோ பால்
+            '"fireworks"': ஃபயர்ஒர்க்ஸ்
+            '"flowers"': மலர்கள்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
+            '"swirl"': ஹிப்னோ
+            '"kaleidoscope"': கெலைடோஸ்கோப்
+            '"lasers"': லேசர் டான்ஸ் தளம்
+            '"splatter"': பெயின்ட் ஸ்பலாட்டர்
+            '"rainbow"': வானவில்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"ripples"': சிற்றலைகள்
+            '"snowflakes"': பனி
+            '"text"': பாடல் பெயர்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"galaxy"': ஸ்பேஸ்
+            '"sparkles"': ஜொலிப்புகள்
+            '"spiral"': ஸ்பைரல்
+            '"disco"': சதுரங்கள்
+            '"stars"': நட்சத்திரங்கள்
+            '"music_wave"': அலைகள்
+          PALETTE:
+            '"rave"': கருப்பு வெள்ளை
+            '"cool"': கூல்
+            '"electronic"': எலக்ட்ரானிக்
+            '"iceCream"': ஐஸ்க்ரீம்
+            '"default"': லைட்
+            '"neon"': நியான்
+            '"tropical"': டிராபிகல்
+            '"vintage"': வின்டேஜ்
+            '"warm"': வ
       Dancelab_setDanceSpeed:
+        text: "{SPRITE} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': வேகமாக
+            '4': அதிக வேகம்
+            '0.5': வேகக் குறைவு
+            '0.25': வேகம் மிகக்குறைவு
       Dancelab_setDanceSpeedEach:
+        text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
           SPEED:
             '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '2': வேகமாக
+            '4': அதிக வேகம்
+            '0.5': வேகக் குறைவு
+            '0.25': வேகம் மிகக்குறைவு
+      Dancelab_setForegroundEffect:
+        text: முன்னணி எஃபெக்டை அமைக்கவும் {EFFECT}
+        options:
+          EFFECT:
+            '"none"': எதுவுமில்லை
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts_red"': இதயங்கள்
+            '"music_notes"': இசைக் குறிப்புகள்
+            '"pineapples"': பைன் ஆப்பிள்கள்
+            '"pizzas"': பீட்சாக்கள்
+            '"smiling_poop"': பூப்
+            '"rain"': மழை
+            '"floating_rainbows"': வானவில்கள்
+            '"smile_face"': ஸ்மைல்ஸ்
+            '"spotlight"': ஸ்பாட்லைட்
+            '"color_lights"': மேடை லைட்கள்
+            '"raining_tacos"': டாகோஸ்
+      Dancelab_setForegroundEffectExtended:
+        text: முன்னணி எஃபெக்டை அமைக்கவும் {EFFECT}
+        options:
+          EFFECT:
+            '"none"': எதுவுமில்லை
+            '"rand"': "(ரான்டம்)"
+            '"bubbles"': குமிழிகள்
+            '"confetti"': கான்ஃபெடி
+            '"hearts_red"': இதயங்கள்
+            '"music_notes"': இசைக் குறிப்புகள்
+            '"pineapples"': பைன் ஆப்பிள்கள்
+            '"pizzas"': பீட்சாக்கள்
+            '"smiling_poop"': பூப்
+            '"rain"': மழை
+            '"floating_rainbows"': வானவில்கள்
+            '"smile_face"': ஸ்மைல்ஸ்
+            '"spotlight"': ஸ்பாட்லைட்
+            '"color_lights"': மேடை லைட்கள்
+            '"raining_tacos"': டாகோஸ்
       Dancelab_setProp:
+        text: "{SPRITE} {PROPERTY} ஐ {VAL} ஆக்கவும் "
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
       Dancelab_setPropEach:
+        text: "{GROUP} {PROPERTY} ஐ {VAL} ஆக்கவும்"
         options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"tint"': டின்ட்
       Dancelab_setPropRandom:
+        text: "{SPRITE} {PROPERTY} ஐ ரேன்டம் ஆக்கவும்"
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"tint"': டின்ட்
+      Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} ஐ ரேன்டம் ஆக்கவும்"
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
+            '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"tint"': டின்ட்
+      Dancelab_setTint:
+        text: "{SPRITE} ன் டின்ட்டை {VAL} ஆக்கவும்"
+      Dancelab_setTintEach:
+        text: "{THIS} ன் டின்ட்டை {VAL} ஆக்கவும்"
+        options:
+          THIS:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+      Dancelab_setTintEachInline:
+        text: "{THIS} ன் டின்ட்டை {VAL} ஆக்கவும்"
+        options:
+          THIS:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+      Dancelab_setTintInline:
+        text: "{SPRITE} ன் டின்ட்டை {VAL} ஆக்கவும்"
+      Dancelab_setVisible:
+        text: "{SPRITE} ஐ {VISIBILITY} க்கு தெரியும்படி செய்யவும்"
+        options:
+          VISIBILITY:
+            'true': தெரியும்படி இருப்பது
+            'false': தெரியாமல் இருப்பது
+      Dancelab_setVisibleEach:
+        text: "{THIS} ன் தோற்றத்தை {VISIBILITY} க்கு தெரியும்படி செய்யவும்"
+        options:
+          THIS:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          VISIBILITY:
+            'true': தெரியும்படி இருப்பது
+            'false': தெரியாமல் இருப்பது
       Dancelab_startMapping:
+        text: "{RANGE} ஐ தொடர்ந்து {PROPERTY} ஐ {SPRITE} தொடங்குக"
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"tint"': டின்ட்
+          RANGE:
+            '"bass"': பேஸ்
+            '"mid"': மிட்
+            '"treble"': ட்ரெபில்
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
+            '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"tint"': டின்ட்
+          RANGE:
+            '"bass"': பேஸ்
+            '"mid"': மிட்
+            '"treble"': ட்ரெபில்
       Dancelab_stopMapping:
+        text: "{RANGE} ஐ தொடர்ந்து {PROPERTY} ஐ {SPRITE} நிற்க"
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"direction"': நகர்வு திசை
+            '"tint"': டின்ட்
+          RANGE:
+            '"bass"': பேஸ்
+            '"mid"': மிட்
+            '"treble"': ட்ரெபில்
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': ஏலியன்கள்
+            '"BEAR"': கரடிகள்
+            '"CAT"': பூனைகள்
+            '"DOG"': நாய்கள்
+            '"DUCK"': வாத்துகள்
+            '"FROG"': தவளைகள்
+            '"MOOSE"': மூஸ்
+            '"PINEAPPLE"': பைன் ஆப்பிள்கள்
+            '"ROBOT"': ரோபோக்கள்
+            '"SHARK"': சுறாமீன்கள்
+            '"UNICORN"': யூனிகார்ன்கள்
+          PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
+            '"height"': உயரம்
+            '"rotation"': சுழற்சி
+            '"x"': கிடைமட்ட அமைவிடம்
+            '"y"': செங்குத்து அமைவிடம்
+            '"direction"': நகர்வு திசை
+            '"tint"': டின்ட்
+          RANGE:
+            '"bass"': பேஸ்
+            '"mid"': மிட்
+            '"treble"': ட்ரெபில்
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"music_wave"': அலைகள்
+            '"ripples"': சிற்றலைகள்
+            '"ripples_random"': தொடர்பற்ற சிற்றலைகள்
+            '"quads"': கோணங்கள்
+            '"flowers"': மலர்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
+            '"growing_stars"': வளரும் நட்சத்திரங்கள்
+            '"hearts_colorful"': இதயங்கள்
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
+            '"up"': மேலே
+            '"left"': இடது
+            '"down"': கீழே
+            '"right"': வலது
             '"space"': வெளி
+            '"enter"': என்டர்
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: "{RANGE} ஆகையில் பீக்"
+        options:
+          RANGE:
+            '0': பேஸ்
+            '1': மிட்
+            '2': ட்ரெபில்
+      Dancelab_whenSetup:
+        text: செட்அப்
+      Dancelab_whenSetup2:
+        text: செட்அப்
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
+      gamelab_changePropBy:
+        text: மாற்றவும் {SPRITE} {PROPERTY} இந்த அளவிற்கு {VAL}
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
       gamelab_checkTouching:
         options:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+            '"tint"': டின்ட்
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
+            '"space"': வெளி
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"z"': z
+      gamelab_jumpTo:
+        text: "{SPRITE} குதிக்கவும் {LOCATION}"
       gamelab_keyPressed:
         options:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
           KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
             '"space"': வெளி
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"z"': z
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"right"': வலது
+            '"left"': இடது
       gamelab_randColor:
         text: ஏதாவது ஒரு நிறம்
       gamelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
+      gamelab_setBackground:
+        text: பின்னணி வண்ணத்தை மாற்றவும் {COLOR}
       gamelab_setBackgroundImage:
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': குகை
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': கிரிட்
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': வானவில்
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': நீருக்கடியில்
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': குளிர்காலம்
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
       gamelab_setSizes:
         options:
           PROPERTY:
+            '"scale"': அளவு
+            '"width"': அகலம்
             '"height"': உயரம்
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': எப்போது
             '"while"': எப்பொழுது
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"right"': வலது
+            '"left"': இடது
       gamelab_whenKey:
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
             '"space"': வெளி
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
             '"space"': வெளி
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      Mikelab_ifDanceIs:
+        text: |-
+          ஒருவேளை {SPRITE} {DANCE} செய்தால்
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Clown: கங்கனம்
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Roll: பாடி ரோல்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
       Mikelab_randomColor:
         text: ஏதாவது ஒரு நிறம்
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
+            '"rotation"': சுழற்சி
+            '"direction"': நகர்வு திசை
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': வலது
+            '"left"': இடது
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": மேல்புறம்
+            "{x: 200, y: 300}": கீழ்புறம்
+            "{x: 100, y: 200}": இடது
+            "{x: 300, y: 200}": வலது
+            "{x: 200, y: 200}": மையம்
+            "{x: 100, y: 100}": மேல் இடது
+            "{x: 300, y: 100}": மேல் வலது
+            "{x: 100, y: 300}": கீழ் இடது
+            "{x: 300, y: 300}": கீழ் வலது
       Mikelab_whenKeyPressed:
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
             '"w"': மேற்கு
+            '"a"': அ
             '"s"': தெற்கு
+            '"d"': ஈ
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': மேற்கு
+            '"a"': அ
             '"s"': தெற்கு
+            '"d"': ஈ
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': கிரிட்
+            '"border"': பார்டர்
+            '"row"': வரிசை
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:
         text: இடதுபுறம் திரும்பவும்
       RyanLab_turnRight:
         text: வலதுபுறம் திரும்பவும்
-      aalab_checkTouching:
+      Vector_positionCenter:
+        text: மையம்
+      aalab_layoutSprites:
         options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
-      aalab_clickedOn:
+          FORMAT:
+            '"grid"': கிரிட்
+            '"border"': பார்டர்
+            '"row"': வரிசை
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
+      binary_move:
         options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': எப்போது
-            '"while"': எப்பொழுது
-          KEY:
-            '"space"': வெளி
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': மாநகர்
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': மெய்
-            '"false"': தவறு
+          DIR:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
       binary_whenKey:
+        text: "{KEY} அழுத்தப்படுகையில்"
         options:
           KEY:
+            '"up"': மேலே
+            '"down"': கீழே
+            '"left"': இடது
+            '"right"': வலது
             '"space"': வெளி
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

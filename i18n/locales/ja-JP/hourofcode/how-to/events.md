@@ -1,7 +1,5 @@
 ---
 title: Hour of Codeのイベント開催ガイド
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- ** その他のイベントアイデア **: 
     - コンピューターサイエンスに関わる活動について議論できる地域のリーダーを招待する。
     - 地域の政治家を招待して、生徒が先生役となり、その政治家にコーディングを教えてみる。
     - 生徒のグループに、オフラインアクティビティのデモを行ってもらう。

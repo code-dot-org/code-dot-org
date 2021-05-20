@@ -1,7 +1,5 @@
 ---
 title: Шайланма бийликтер үчүн Код сааты пресс-релизи
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

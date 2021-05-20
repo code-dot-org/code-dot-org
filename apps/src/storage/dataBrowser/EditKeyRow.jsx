@@ -17,7 +17,9 @@ const INITIAL_STATE = {
 class EditKeyRow extends React.Component {
   static propTypes = {
     keyName: PropTypes.string.isRequired,
-    value: PropTypes.any
+    value: PropTypes.any,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -39,13 +41,23 @@ class EditKeyRow extends React.Component {
     });
 
   handleSave = () => {
-    this.setState({isSaving: true});
-    FirebaseStorage.setKeyValue(
-      this.props.keyName,
-      castValue(this.state.newValue),
-      this.resetState,
-      msg => console.warn(msg)
-    );
+    this.props.hideError();
+    try {
+      this.setState({isSaving: true});
+      const newValue = castValue(
+        this.state.newValue,
+        /* allowUnquotedStrings */ false
+      );
+      FirebaseStorage.setKeyValue(
+        this.props.keyName,
+        newValue,
+        this.resetState,
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      this.setState({isSaving: false});
+      this.props.showError();
+    }
   };
 
   resetState = () => {
@@ -72,7 +84,7 @@ class EditKeyRow extends React.Component {
 
   render() {
     return (
-      <tr style={dataStyles.row}>
+      <tr style={dataStyles.row} className="uitest-kv-table-row">
         <td style={dataStyles.cell}>{JSON.stringify(this.props.keyName)}</td>
         <td style={dataStyles.cell}>
           {this.state.isEditing ? (

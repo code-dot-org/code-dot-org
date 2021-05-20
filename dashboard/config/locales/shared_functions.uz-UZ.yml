@@ -1,0 +1,17 @@
+---
+uz:
+  data:
+    shared_functions:
+      growing: o'sish
+      jittering: titrash
+      moving east: sharqqa yurish
+      moving north: shimolga yurish
+      moving south: janubga yurish
+      moving west: g'arbga yurish
+      moving with arrow keys: o'q tugmalari bilan harakatlantiring
+      patrolling: patrullash
+      shrinking: kichrayish
+      spinning left: chap tarafga aylanish
+      spinning right: o'ng tarafga aylanish
+      swimming left and right: chapga va o'ngga suzish
+      wandering: daydish

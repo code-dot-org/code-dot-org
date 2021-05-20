@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import {OAuthSectionTypes} from './shapes';
+import {reload} from '@cdo/apps/utils';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -11,10 +13,12 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'stageExtras',
   'pairingAllowed',
+  'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
   'grade',
-  'hidden'
+  'hidden',
+  'restrictSection'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -42,7 +46,16 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
+const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
+  'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
+const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
+const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
+
+// DCDO Flag - show/hide Lock Section field
+const SET_SHOW_LOCK_SECTION_FIELD =
+  'teacherDashboard/SET_SHOW_LOCK_SECTION_FIELD';
+
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -100,6 +113,14 @@ export const setStageExtrasScriptIds = ids => ({
   type: SET_STAGE_EXTRAS_SCRIPT_IDS,
   ids
 });
+export const setTextToSpeechScriptIds = ids => ({
+  type: SET_TEXT_TO_SPEECH_SCRIPT_IDS,
+  ids
+});
+export const setPreReaderScriptIds = ids => ({
+  type: SET_PREREADER_SCRIPT_IDS,
+  ids
+});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -118,6 +139,25 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   sectionId: sectionId,
   students: studentInfo
 });
+export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
+
+// DCDO Flag - show/hide Lock Section field
+export const setShowLockSectionField = showLockSectionField => {
+  return {
+    type: SET_SHOW_LOCK_SECTION_FIELD,
+    showLockSectionField
+  };
+};
+
+// pageType describes the current route the user is on. Used only for logging.
+// Enum of allowed values:
+export const pageTypes = {
+  level: 'level',
+  scriptOverview: 'script_overview',
+  courseOverview: 'course_overview',
+  stageExtras: 'stage_extras',
+  homepage: 'homepage'
+};
 
 /**
  * Set the list of sections to display.
@@ -137,6 +177,80 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+  return dispatch(finishEditingSection());
+};
+
+/**
+ * Removes null values from stringified object before sending firehose record
+ */
+function removeNullValues(key, val) {
+  if (val === null || typeof val === undefined) {
+    return undefined;
+  }
+  return val;
+}
+
+/**
+ * Assigns a course to a given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ * @param {number} courseId
+ * @param {number} scriptId
+ */
+export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-assigned-to-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          scriptId,
+          courseId,
+          date: new Date()
+        },
+        removeNullValues
+      )
+    },
+    {includeUserId: true}
+  );
+  return (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    dispatch(
+      editSectionProperties({
+        courseId: courseId,
+        scriptId: scriptId
+      })
+    );
+    return dispatch(finishEditingSection(pageType));
+  };
+};
+
+/**
+ * Removes assignments from the given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ */
+export const unassignSection = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  const {initialCourseId, initialScriptId} = getState().teacherSections;
+  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-unassigned-from-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          scriptId: initialScriptId,
+          courseId: initialCourseId,
+          date: new Date()
+        },
+        removeNullValues
+      )
+    },
+    {includeUserId: true}
+  );
   return dispatch(finishEditingSection());
 };
 
@@ -176,11 +290,7 @@ export const editSectionProperties = props => ({
  */
 export const cancelEditingSection = () => ({type: EDIT_SECTION_CANCEL});
 
-/**
- * Submit staged section changes to the server.
- * Closes UI and updates section table on success.
- */
-export const finishEditingSection = () => (dispatch, getState) => {
+export const submitEditingSection = (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
@@ -189,20 +299,50 @@ export const finishEditingSection = () => (dispatch, getState) => {
     ? '/dashboardapi/sections'
     : `/dashboardapi/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
+  return $.ajax({
+    url: dataUrl,
+    method: httpMethod,
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(serverSectionFromSection(section))
+  });
+};
+
+/**
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
+ */
+export const finishEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
   return new Promise((resolve, reject) => {
-    $.ajax({
-      url: dataUrl,
-      method: httpMethod,
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(serverSectionFromSection(section))
-    })
+    submitEditingSection(dispatch, getState)
       .done(result => {
         dispatch({
           type: EDIT_SECTION_SUCCESS,
           sectionId: section.id,
           serverSection: result
         });
-        resolve();
+        resolve(result);
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
+      });
+  });
+};
+
+export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+  return new Promise((resolve, reject) => {
+    submitEditingSection(dispatch, getState)
+      .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
+        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
@@ -315,6 +455,15 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
 export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 /**
+ * Start the process of importing a section from Google Classroom by opening
+ * the RosterDialog and loading the list of classrooms available for import.
+ */
+export const beginGoogleImportRosterFlow = () => dispatch => {
+  dispatch(setRosterProvider(OAuthSectionTypes.google_classroom));
+  dispatch(beginImportRosterFlow());
+};
+
+/**
  * Import the course with the given courseId from a third-party provider
  * (like Google Classroom or Clever), creating a new section. If the course
  * in question has already been imported, update the existing section already
@@ -374,6 +523,9 @@ const initialState = {
   sectionBeingEdited: null,
   showSectionEditDialog: false,
   saveInProgress: false,
+  stageExtrasScriptIds: [],
+  textToSpeechScriptIds: [],
+  preReaderScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -384,7 +536,12 @@ const initialState = {
   // Not populated until the RosterDialog is opened.
   classrooms: null,
   // Error that occurred while loading oauth classrooms
-  loadError: null
+  loadError: null,
+  // The page where the action is occurring
+  pageType: '',
+
+  // DCDO Flag - show/hide Lock Section field
+  showLockSectionField: null
 };
 
 /**
@@ -404,12 +561,15 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: true,
     pairingAllowed: true,
+    ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
     code: '',
     courseId: courseId || null,
     scriptId: scriptId || null,
-    hidden: false
+    hidden: false,
+    isAssigned: undefined,
+    restrictSection: false
   };
 }
 
@@ -453,10 +613,31 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
+    return {
+      ...state,
+      textToSpeechScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_PREREADER_SCRIPT_IDS) {
+    return {
+      ...state,
+      preReaderScriptIds: action.ids
+    };
+  }
+
   if (action.type === SET_VALID_GRADES) {
     return {
       ...state,
       validGrades: action.grades
+    };
+  }
+
+  if (action.type === SET_PAGE_TYPE) {
+    return {
+      ...state,
+      pageType: action.pageType
     };
   }
 
@@ -561,7 +742,7 @@ export default function teacherSections(state = initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage)
+      // in a way that only provides name/id per section, in other places (homepage, script overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
@@ -648,6 +829,9 @@ export default function teacherSections(state = initialState, action) {
         );
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialScriptId: initialSectionData.scriptId,
+      initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
@@ -668,12 +852,17 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const stageExtraSettings = {};
+    const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
+      // TODO: enable autoplay by default if script is a pre-reader script
+      // and teacher is on IE, Edge or Chrome after initial release
+      // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
+      //   state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
         stageExtraSettings.stageExtras =
-          script.stage_extras_available || defaultStageExtras;
+          script.lesson_extras_available || defaultStageExtras;
       }
     }
 
@@ -682,6 +871,7 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
         ...stageExtraSettings,
+        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };
@@ -715,6 +905,49 @@ export default function teacherSections(state = initialState, action) {
       } else {
         newSectionIds = [section.id, ...state.sectionIds];
       }
+    }
+
+    if (section.loginType !== state.initialLoginType) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher-dashboard',
+          study_group: 'edit-section-details',
+          event: 'change-login-type',
+          data_json: JSON.stringify({
+            sectionId: section.id,
+            initialLoginType: state.initialLoginType,
+            updatedLoginType: section.loginType
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+
+    let assignmentData = {
+      section_id: section.id,
+      section_creation_timestamp: section.createdAt,
+      page_name: state.pageType
+    };
+    if (section.scriptId !== state.initialScriptId) {
+      assignmentData.script_id = section.scriptId;
+    }
+    if (section.courseId !== state.initialCourseId) {
+      assignmentData.course_id = section.courseId;
+    }
+    if (
+      // If either of these is not undefined, then assignment changed and should be logged
+      !(typeof assignmentData.script_id === 'undefined') ||
+      !(typeof assignmentData.course_id === 'undefined')
+    ) {
+      firehoseClient.putRecord(
+        {
+          study: 'assignment',
+          study_group: 'v1',
+          event: newSection ? 'create_section' : 'edit_section_details',
+          data_json: JSON.stringify(assignmentData)
+        },
+        {includeUserId: true}
+      );
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -827,6 +1060,14 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  // DCDO Flag - show/hide Lock Section field
+  if (action.type === SET_SHOW_LOCK_SECTION_FIELD) {
+    return {
+      ...state,
+      showLockSectionField: action.showLockSectionField
+    };
+  }
+
   return state;
 }
 
@@ -881,7 +1122,7 @@ export function assignedScriptName(state) {
 
 export function getVisibleSections(state) {
   const allSections = Object.values(getRoot(state).sections);
-  return (allSections || []).filter(s => !s.hidden);
+  return sortSectionsList(allSections || []).filter(section => !section.hidden);
 }
 
 /**
@@ -907,6 +1148,10 @@ export function getSectionRows(state, sectionIds) {
   }));
 }
 
+export function getAssignmentName(state, sectionId) {
+  const {sections, validAssignments} = getRoot(state);
+  return assignmentNames(validAssignments, sections[sectionId])[0];
+}
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
@@ -914,17 +1159,23 @@ export function getSectionRows(state, sectionIds) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
-  stageExtras: serverSection.stage_extras,
+  stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  ttsAutoplayEnabled: serverSection.tts_autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null,
-  hidden: serverSection.hidden
+  scriptId: serverSection.script
+    ? serverSection.script.id
+    : serverSection.script_id || null,
+  hidden: serverSection.hidden,
+  isAssigned: serverSection.isAssigned,
+  restrictSection: serverSection.restrict_section
 });
 
 /**
@@ -949,11 +1200,13 @@ export function serverSectionFromSection(section) {
   return {
     ...section,
     login_type: section.loginType,
-    stage_extras: section.stageExtras,
+    lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
-    script: section.scriptId ? {id: section.scriptId} : undefined
+    script: section.scriptId ? {id: section.scriptId} : undefined,
+    restrict_section: section.restrictSection
   };
 }
 
@@ -1030,14 +1283,48 @@ export function editedSectionId(state) {
 }
 
 /**
+ * @param {object} state - state.teacherSections in redux tree
  * Extract a list of name/id for each section
  */
 export function sectionsNameAndId(state) {
-  return state.sectionIds.map(id => ({
-    id: parseInt(id, 10),
-    name: state.sections[id].name
+  return sortSectionsList(
+    state.sectionIds.map(id => ({
+      id: parseInt(id, 10),
+      name: state.sections[id].name
+    }))
+  );
+}
+
+/**
+ * @param {object} state - state.teacherSections in redux tree
+ */
+export function sectionsForDropdown(
+  state,
+  scriptId,
+  courseId,
+  onCourseOverview
+) {
+  return sortedSectionsList(state.sections).map(section => ({
+    ...section,
+    isAssigned:
+      (scriptId !== null && section.scriptId === scriptId) ||
+      (courseId !== null && section.courseId === courseId && onCourseOverview)
   }));
 }
+
+/**
+ * @param {object} sectionsObject - an object containing sections keyed by id
+ * Converts an unordered dictionary of sections into a sorted array
+ */
+export const sortedSectionsList = sectionsObject =>
+  sortSectionsList(Object.values(sectionsObject));
+
+/**
+ * @param {array} sectionsList - an array of section objects
+ * Sorts an array of sections by descending id
+ */
+export const sortSectionsList = sectionsList =>
+  sectionsList.sort((a, b) => b.id - a.id);
 
 /**
  * @param {object} state - Full state of redux tree

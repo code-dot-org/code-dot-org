@@ -1,7 +1,5 @@
 ---
 title: โปสเตอร์ Hour of Code เก่า
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

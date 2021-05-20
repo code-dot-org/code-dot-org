@@ -1,14 +1,18 @@
 ---
-title: Panduan How-To
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Cara mengajar Hour of Code di kelas dan klub setelah sekolah
 
-### Bergabung dengan gerakan ini untuk memperkenalkan pelajar kepada satu jam pertama ilmu komputer dengan langkah-langkah berikut. Hour of Code mudah dijalankan - bahkan untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -18,11 +22,11 @@ nav: how_to_nav
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**Semua Tutorial Hour of Code**memerlukan waktu minimal persiapan untuk mengorganisir, dan panduan mandiri- memungkinkan anak-anak bekerja pada langkahnya sendiri dan level keahlian.
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Membutuhkan rencana pembelajaran untuk after-school Hour of Code Anda ?**lihat disini[template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promosikan Jam Kode Anda
 
@@ -30,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Rencanakan kebutuhan teknologi komputer Anda - bersifat opsional
 
-Pengalaman Jam Pemrograman terbaik memiliki komputer yang terhubung dengan internet. Anda **tidak** memerlukan komputer untuk setiap anak, dan Anda bahkan dapat melakukan Hour of Code tanpa komputer sama sekali.
+Pengalaman Jam Pemrograman terbaik memiliki komputer yang terhubung dengan internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Pastikan untuk menguji tutorial pada komputer siswa atau perangkat untuk memastikan mereka bekerja dengan baik pada browser dengan suara dan video. **bandwidth rendah?** Tampilkan video di depan kelas, agark setiap siswa tidak perlu mengunduh video mereka sendiri. Atau coba tutorial unplugged / offline.
+Pastikan untuk menguji tutorial pada komputer siswa atau perangkat untuk memastikan mereka bekerja dengan baik pada browser dengan suara dan video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Sediakan headphone untuk kelas Anda atau minta para siswa untuk membawa headphone mereka sendiri, jika tutorial yang Anda pilih, akan lebih baik dijalankan dengan suara.
 
-** Tidak punya cukup perangkat? </ strong> Gunakan [ pemrograman pasangan ](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.</p> 
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Ketika pelajar bekerja sama, mereka dapat saling membantu dan dapat mengurangi beban kerja pada guru. Mereka juga akan melihat ilmu komputer bersifat sosial dan kolaboratif.
 
 ## 5. Mulai Hour of Code Anda dengan video yang inspiratif
 
@@ -81,6 +85,6 @@ Mulai Hour of Code Anda dengan menginspirasi peserta dan diskusi bagaimana ilmu 
 
 ## Apa yang diharapkan selanjutnya setelah Jam Pemrograman?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

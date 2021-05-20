@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 tr:
   slides:
     maze_intro:
@@ -1525,3 +1530,357 @@ tr:
         text: "Yazılım, basit ikili koddan yapılmış bir dizi komuttur ve bu ikili kod sadece milyarlarca minik devrenin üzerinden akan elektrik sinyalleridir."
       17:
         text: "Bilgisayarlar, her türlü şaşırtıcı şeyi yapma potansiyeline sahiptir. Ancak bilgisayarın akıllı ya da faydalı olmasını sağlayan tek şey sizsiniz. Kodlama öğrendiğinizde çözmek istediğiniz sorunu tanımlar ve bu fikirleri gerçeğe dönüştüren yazılımı yazarsınız."
+    hoc_dance_warmup:
+      1:
+        text: "Kod Saati | Dans Partisi: Canlanın"
+      2:
+        text: "Selam! Adım Miral Kotb ve ben bir dansçı, yazılım geliştirici ve iLuminate'in yaratıcısıyım."
+      3:
+        text: "Dolayısıyla bilgisayar bilimi, birçok biçimde yaratıcılıkla ilgilidir. Gerçekten de tahmin edilemeyecek kadar çok biçimde. Yani, yazılım yazma kabiliyetiniz varsa, fikirlerinizi bir şeye yatırabilirsiniz. Ben bunu ışıklı kıyafetlerle yaparım. Yazılım yazmak için araçlarınız varsa yapabileceğiniz çok fazla şey vardır ve imkanlar gerçekten de sonsuzdur."
+      4:
+        text: "Sonraki saatte, kendi dans partinizi programlayarak bilgisayar bilimine başlayacaksınız! Birkaç hit müzik ve sizinle birlikte oynayacak mükemmel bir dansçı takımı belirledik."
+      5:
+        text: "Farklı dansçıları seçmek, dans hareketlerini değiştirmek, dansçıların müziğe tepki göstermesini sağlamak ve dansçıları etkileşime geçirmek için için kod bloklarını kullanacaksınız."
+      6:
+        text: "Ekranınızın üç ana kısma ayrıldığını göreceksiniz. Solda oyun alanı var. Burada dansçılarınızı göreceksiniz."
+      7:
+        text: "Bu orta alan araç kutusudur. Derste ilerledikçe bu alanca yeni kod blokları bulunacaktır."
+      8:
+        text: "Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç kutusundan çalışma alanına sürükleyebilirsiniz."
+      9:
+        text: "Her bir seviye için talimatlar, burada ekranın üstünde olacaktır. Bir ipucuna ihtiyacınız olursa sadece ampule tıklayın."
+      10:
+        text: "Başlangıç olarak, bu kırmızı blokla yeni bir dansçı yapalım. Öncelikle bunu araç kutusundan sürükleyin ve bu turuncu \"kurulum\" bloğun altına yapıştırın. Bu dansçı bir kedidir ve adı \"my_first_dancer\". Buraya tıklayarak adını istediğin gibi değiştirebilirsin."
+      11:
+        text: "Ayrıca, bununla oyun alanınızda dansçının göründüğü yeri değiştirebilirsiniz.\n"
+      12:
+        text: "Oyun alanının üzerinde, müziği seçmeniz için bir menü var. Burada seçebileceğiniz tonlarca müzik var, yani favori müziklerinizi bulmada iyi eğlenceler. Bu oyun alanının altında çalıştır düğmesi var. Bu çalıştırma düğmesine bastığınızda, programınızdaki dansçıları oyun alanında göreceksiniz ve müzik çalacak."
+      13:
+        text: "Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun yok! Sadece ayağa kalk ve hareket etmeye başla, ve siz fakına varmada kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? "
+    hoc_dance_events:
+      1:
+        text: "Kod Saati | Dans Partisi: Olaylar"
+      2:
+        text: "Ben Aloe Blacc. Bir şarkıcı, besteci ve komedyenim. Bence bilgisayar bilimini öğrenmek gerçekten de önemli çünkü bilgisayar bilimi gelecektir ve bence kelimenin tam anlamıyla kendi hayatlarını kontrol eden teknolojinin kontrolünün insanlarda olması önemlidir."
+      3:
+        text: "Farklı dans hareketlerinin müzikle birlikte yalnızca doğru zamanda meydana gelmesini sağlamak için olaylar dediğimiz şeyi kullanabilirsiniz. Bir olay, bir şeyin olması ve hemen tepki vermesi için dinleyeceğiniz programınızı anlatır."
+      4:
+        text: "Bazı olay örnekleri bir fare tıklaması, bir ok düğmesi veya ekrandaki bir sekmeyi dinlemektir. Şimdi kullanacağımız olay, şarkıda bir değişikliği dinleyecektir. Değişiklik, dansçıyı yeni bir dans yapması için harekete geçirecektir."
+      5:
+        text: "Profesyonel dansçılar, şarkının vuruşlarını sayarak koreografi yapar."
+      6:
+        text: "Müzikte bir ölçü, belirli bir sayıda vuruşa atıfta bulunur. En popüler şarkılarda bir ölçü dört vuruşluk uzunluktadır."
+      7:
+        text: "Danşçılarınızın gevşemesini sağlamak için yeşil bir olay bloğuna ihtiyacınız olacak. Bu olay bloğu \"4 ölçü sonra\" der. "
+      8:
+        text: "Mor \"sonsuza kadar yap\" bloğunu sürüklerseniz, dansçınızın yapması için bir dans seçebilirsiniz. \"4 ölçü sonra\" olay bloğunun altında olduğundan dolayı dansçınız, dansa başlamadan önce dört ölçülük şarkıyı bekleyecektir."
+      9:
+        text: "Ekran alanının üstündeki ölçü sayacından gözünüzü ayırmayın."
+      10:
+        text: "Dans kodunuzu harekete geçirecek olaya bakın ve bunu dinleyin. Ve tam o sırada dansçımız gitmeye başlar."
+    hoc_dance_properties:
+      1:
+        text: "Kod Saati | Dans Partisi: Özellikler"
+      2:
+        text: "Adım Maria. Washington Üniversitesinde üçüncü sınıf öğrencisiyim ve Amazon Gelecekteki Mühendisiyim."
+      3:
+        text: "Bilgisayar bilimini seviyorum çünkü problem çözmeyi ve eleştirel düşünmeyi içeriyor ve bir şey üzerine saatlerce çalıştıktan sonra gerçekten mükemmel bir şey elde edebiliyorsun ve bunun sayesinde ödül alabiliyorsun. "
+      4:
+        text: "Şu ana kadar, birkaç farklı türde dansçı ile oynama şansın vardı ve bu dansçıları, farklı türlerde dans hareketleri yapması için programladın. Ama bu hareketler gerçekten nasıl çalışır?"
+      5:
+        text: "Her bir dans hareketi, çerçeve dediğimiz bir dizi resimden oluşur. Her bir çerçeve, bir öncekinden biraz farklıdır. Programınız çalıştığında bilgisayar, birbiri ardı sıra çerçeve gösterir. O kadar hızlı gösterilir ki sanki dansçı hareket ediyor gibi görünür. Bu, tüm animasyonun arkasındaki sırdır."
+      6:
+        text: "Yalnızca dansçınızın hareketlerini değiştirmezsiniz, aynı zamanda bir dansçının özelliklerini de değiştirebilirsiniz. Özellikler, dansçının ekrandaki konumu, dansçının boyutu ve dansçının rengi gibi şeyleri açıklar."
+      7:
+        text: "Bir dansçının özelliklerini değiştirmek için bir ayarla bloğunu kullanacaksınız. Dansçılarımızın daha küçük görünmesi için bir ayarla bloğunu kullanalım. Öncelikle ayarla bloğunu programınıza sürükleyin. Sonra değiştirmek istediğiniz dansçıyı ve ekranda görünecek boyut tipini seçin."
+      8:
+        text: "Tam boyut 100'dür. Daha düşük bir sayı seçerseniz bu dansçıyı küçültecektir. Dansçı küçüldükçe daha da uzakta görünecektir. Bu, arka plan dansçılarını yapmak için mükemmel bir yoldur."
+      9:
+        text: "Ayarla bloğunu kullanarak, aynı zamanda dansçının büyüklükleri, dönmesi, konumu ve rengini seçebilirsiniz. Bu özelliklerle oynayarak, her türde değişikliği yapabilirsiniz ve bunları şarkının farklı kısımları ile bağlayabilirsiniz."
+      10:
+        text: "Unutmayın ki yalnızca halihazırda var olan bir dansçının özelliklerini ayarlayabilirsiniz. Ayarla bloğunuzun \"Yeni bir dansçı oluştur\" bloğundan sonra geldiğinden emin olun. Deney yaparken yaratıcı olun ve eğlenin."
+    hoc_dance_congrats:
+      1:
+        text: "Kod Saati | Dans Partisi: Partile! "
+      2:
+        text: "Tebrikler! Bilgisayar biliminin temellerini öğrendiniz. Artık arkadaşlarınızla paylaşacağınız kendi dans partisi tasarımınızı oluşturmak için bu blokları kullanabilirsiniz."
+      3:
+        text: "Araç kutusuna bakarsanız, daha önce görmediğiniz birkaç yepyeni blok bulacaksınız. Örneğin dansçıları ekranda farklı şekillerde düzenlemek için düzen bloğunu kullanabilirsiniz."
+      4:
+        text: "Etrafa bir bakın ve bu yeni blokları ve özellikleri denemeye çalışın. Favori şarkınız için itinayla koreografisi yapılmış bir dans oluşturacak mısınız?"
+      5:
+        text: "Ya da arkadaşlarınızla dans edin?"
+      6:
+        text: "Ya da hep birlikte başka bir şey yapın?"
+      7:
+        text: "Eğitimin sonunca, oluşturduğunuz şeyleri arkadaşlarınızla bir bağlantı vasıtasıyla paylaşabilirsiniz. Hayal gücünü büyütün ve sadece eğlenin!"
+    mc_2018_intro:
+      1:
+        text: "Merhaba! Tam zamanında geldin. Su Yolculuğuna Hoşgeldin. Sualtında saklı hazineyi bulmak için bir arayış içine girmek üzereyim ve yardım edersen sevinirim. Tüm bu gizemli su yollarında neler ile karşılaşacağımızı kim bilir? Bu iskelede bir yerde ilk rehberimizle buluşmamız gerekiyor."
+      2:
+        text: "Hoşgeldiniz, maceracılar! Su Yolculuğunu tamamlamak için, kod kullanarak bir dizi bulmaca çözmeniz gerekecek. Şöyle olacak. Ekranınız üç ana kısma bölünür. "
+      3:
+        text: "Solda Minecraft dünyasını göreceksiniz."
+      4:
+        text: "Orta alanda, kodlama komutlarını bulabileceğiniz araç kutunuz var."
+      5:
+        text: "Ve büyük alanda sağda çalışma alanınız var. Bu, programınızı oluşturmaya ve hareketlerinizi kontrol etmeye yönelik komutları biriktireceğiniz yer."
+      6:
+        text: "Her bir seviyenin talimatları sayfanın üstündedir. Uzun ve kısa talimatlar arasında değişiklik yapmak için artı işaretine tıklayın."
+      7:
+        text: "Blokları araç kutusundan çalışma alanına sürüklemeye, bunları biriktirmeye çalışın ve sonra komutlarını uygulamak için çalıştır düğmesine tıklayın."
+      8:
+        text: "Doğru yapmak için birkaç defa denemeniz gerekebilir ve bazı bulmacalar, deneyin işe yaradığını görebilmek amacıyla birden fazla çözüm gerektirebilir."
+      9:
+        text: "Yeniden denemek isterseniz, başladığınız yere geri dönmek için sıfırla düğmesine tıklayın."
+      10:
+        text: "Bir komutu silmeniz gerekirse, sadece bloğu çalışma alanınızdan geri araç kutusuna sürükleyin. Unutmayın ki kodunuzun faal iken nasıl göründüğünü görmek için \"Çalıştır\" düğmesine tıklayın."
+      11:
+        text: "Tamam, bu kadar oyalandığımız yeter,  maceracı arkadaşım. Biraz da sualtında hazine bulmak için kodlamaya başlayalım."
+    MC_2018_loops:
+      1:
+        text: "Mükemmel! Bir morina balığı yakaladık! Eğer bir balinayı bir morina balığı ile beslerseniz balinanın, sizi hazinenin bulunabileceği bir gemi enkazına yönlendireceğini biliyor muydunuz? Daha da yakınlaşmalıyız. Sonraki bulmaca dizisi muhakkak ki hileci olacaktır, dolayısıyla daha fazla kodlama becerisini daha iyi öğreniriz. Bu nedir? Bir mağara mı?"
+      2:
+        text: "Hoşgeldiniz, aceracılar! Adım Squid. Son bulmacaların bazılarında aynı komut dizisini kullandığınızı fark ettim. Biraz yorucu olmuştur. Hani bilirsiniz ya bulaşıkları yıkamak veya dişlerinizi fırçalamak gibi şeyleri yorulmadan veya sıkılmadan tekrar tekrar yapmanın bir yolunu bulmayı hiç istediniz mi?  Bu çok güzel olurdu."
+      3:
+        text: "Bilgisayarlar, kodlama döngüleri kullanarak aynı şeyi tekrar tekrar yapmada gerçekten de iyiler. Programınızın aynı talimatları birçok kere yapmasını isterseniz bir döngü kullanabilirsiniz!"
+      4:
+        text: "Döngü bloğu, hedefe ulaşılana kadar tekrarlanan talimatları içerir. Programınız \"Hedefe kadar tekrarla\" döngüsünü başlattığında hedefe ulaşana kadar talimatları tekrarlamaya devam edecektir."
+      5:
+        text: "Bunu kendi kendinize deneyin! Tekrarlanmasını istediğiniz komutları \"Hedefe kadar tekrarla\" bloğuna yerleştirin, \"Çalıştır\"a tıklayın ve izleyip görün!"
+      6:
+        text: "Peki bu biraz garip oldu. Mürekkep balıklarının kodlayabileceğini kim bilebilirdi? Ben bile parmakları olduğunu düşünememiştim. Yani artık döngüleri biliyoruz. Çantamıza biraz daha fazla hazine toplamak için bunları kullanalım."
+    mc_2018_conditionals:
+      1:
+        text: "Vay canına! Üç tane daha bulmaca çözüldü! Ve bizler... bir somon balığı yakaladık. Altın yığınları kadar heyecan verici olmasa da alabileceğimizi alacağız. Ve notilus kabuğunun biraz sonra işimize yarayacağına dair bir his var. Bu kalıntılarda neyin gizlendiğini merak ediyorum. Belki de başka bir ipucu! Hadi içine bakalım."
+      2:
+        text: "Adım Netty ve kalıntılarıma hoşgeldiniz. Koşullara bağlı olarak her daim kararlar veririz. Eğer yağmur yağacak gibiyse, bir şemsiye alırız. Eğer açsak, o zaman bir atıştırmalık yeriz."
+      3:
+        text: "Eğer bir sürüngen görürsek, karşıt yönde koşarız. Bilgisayarlar da bu tarz kararlar verir. Aslında kod kullanarak koşullara tepki de verebilir."
+      4:
+        text: "Kod komutlarınızı kullanarak bunun gibi bir tepkiyi programlamak için bir eğer yolu bloğu seçin."
+      5:
+        text: "Komutu oluşturmak için açılır listeyi seçin."
+      6:
+        text: "Örneğin, \"eğer sağa doğru yol varsa\" komutunu yazarsanız ve koşula sağa dönüşü eklerseniz, Steve sağa doğru açık bir yola vardığında, her daim sağa dönecektir. Sağa doğru bir açık alan yoksa sağa dönmeyecektir. Bu koşullu eğer komutları, su altı mağaralarında gizemli kalıntılar gibi tahmin edilemez durumlarda kodu çalıştırdığınızda faydalı olur."
+      7:
+        text: "Eğer bloklarını kullanmayı deneyin ve bir dönüş için kodunuzu alın."
+      8:
+        text: "Vay canına! Netty'nin kalıntıları muhteşemdi. Gerçekten ailemin evinden taşınmalıyım. E ne düşünüyorsun? Son bulmacaları tamamlamamız için doğru koşullar var mı? Hadi deneyelim."
+    mc_2018_closing:
+      1:
+        text: "Amy Lee33: Tebrikler! Başardın!"
+      2:
+        text: "Squid: Tebrikler!"
+      3:
+        text: "Netty: Başardın! Tebrikler!"
+      4:
+        text: "Tomohawk: Tebrikler!"
+      5:
+        text: "Ne muhteşem bir gün! Tüm hazine avı bir Minecraft su yolu inşa etmemizi, Notilus kabuklarını bulmamızı ve hazine sandığını keşfetmemizi sağladı. Ayrıca döngüler ve koşullar ile nasıl kod yapacağımızı öğrendik."
+      6:
+        text: "Kodlamadan bahsetmişken, bu arayışta bir seviye daha var. Maceracılar, buna hazır mısınız?"
+      7:
+        text: "Bu ücretsiz bir oyun seviyesidir ve inanılmaz bir şeyi kullanmak ve inşa etmek için kodlama becerilerinizi ortaya koyabilirsiniz."
+      8:
+        text: "Hmmm... hazinenizi saklayacak bir yer, sualtında bir dağ, bir mercan kale? Ahhh... o kadar çok fikir var ki! Bir tekrar eylemini oluşturmak için döngüleri ve bu tahmin edilemez senaryoların hepsine karşı hazırlıklı olmak için koşulları kullanmayı deneyin."
+      9:
+        text: "Şimdiye kadar cesur bir kodcu olduğunu kanıtladın ve ne oluşturacağını görmek için sabırsızlanıyorum. Ve umarım kodla yaşadığın maceralar burada sonlanmaz. İyi Yolculuklar!"
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "Bu ders, aşamalar halinde bölünür."
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "İlk birkaç aşama, bilgisayar biliminin ne olduğunu ve ayrıca birkaç önemli kelimeyi tanıtacaktır."
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "Sonra, öğrencileriniz ile aynı biçimde nasıl kodlayacağınızı öğreneceksiniz. Dersin son aşamaları, sınıfınızda bilgisayar bilimini öğretmek için bir plan yapmanıza yardımcı olacaktır. Ders boyunca, hem bağlantılı - veya çevrimiçi - dersleri hem de bir bilgisayar olmadan yapılan bağlantısız dersleri göreceksiniz."
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "Öğrenme platformu, ilerlemenizi izleyecektir, böylelikle herhangi bir zaman kaldığınız yerden devam edebilirsiniz."
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+        text: "Kodlama, bir bilgisayar verdiğini talimat dizisidir. Bilgisayar bilimi, insanların büyük sorunları çözmek için bilgisayarların gücünü kullandığı bir alandır. Bilgisayar bilimi kodlamayı içerir ancak aynı zamanda internetin nasıl çalıştığı ve toplumu nasıl etkilediği, büyük veri ile ne yapılacağını ve büyük sorunları nasıl böleceğini gibi başka şeyleri de içerir. Bilgisayar bilimi, problem çözme, eleştirel düşünme ve süreklilik ile ilgilidir."
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+        text: "Code.org, Blockly olarak bildiğimiz görsel bir sürükle ve bırak programlama dilini kullanır. Blockly, programları oluşturmak ve bulmacaları çözmek için bloklar olarak adlandırılan talimatları kullanır."
+      2:
+        image: 'notes/writing_first_program_2.png'
+        text: "Her bir bulmacanın dört kısmı vardır."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "Programınızın çalıştığı oyun alanı soldadır."
+      4:
+        image: 'notes/writing_first_program_4.png'
+        text: "Merkez, ihtiyacınız olan tüm blokların olduğu araç kutusu alanına sahiptir."
+      5:
+        image: 'notes/writing_first_program_5.png'
+        text: "Programınızı oluşturmak için blokları sürüklediğini çalışma alanı sağdadır."
+      6:
+        image: 'notes/writing_first_program_6.png'
+        text: "Her bir bulmaca için talimatlar çalışma alanının yukarısındadır."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "Araç kutusundan birçok blok sürükleyip çıkarırsanız, sadece ekstra bloğu geri araç kutusuna sürükleyin. Programınızı denemek için Çalıştırın ve yeniden denemek için Sıfırlayın."
+    repeat_block:
+      1:
+        image: 'notes/repeat_block.png'
+        text: "Bir tekrar bloğu, içindeki kodu istediğiniz kadar döngüye sokmanıza izin verir."
+    what_is_an_event:
+      1:
+        image: 'notes/what_is_an_event.png'
+        text: "Bir olay, programınıza bir şeyin meydana gelmesini dinlemesini anlatır. Bu şey meydana geldiğinde program bir eylem gerçekleştirir. Bir bilgisayar, bir fare tıklamasını dinleyebilir, ekrandaki bir ok düğmesine veya bir sekmeye basabilir."
+    lesson_planning:
+      1:
+        image: 'notes/lesson_planning_1.png'
+        text: "Bilgisayar Bilimi Temelleri dersleri, dersin neyi kapsayacağını öğrenmeniz için genel bakışlar ile başlar."
+      2:
+        image: 'notes/lesson_planning_2.png'
+        text: "Derslerde alışma etkinlikleri, aktiviteler ve sonuç etkinlikleri vardır. Kendi ders planlarınızı oluşturmak isterseniz, bu ipuçlarını akılda tutmayı isteyebilirsiniz."
+      3:
+        image: 'notes/lesson_planning_3.png'
+        text: "1. Sarmal bir müfredat tasarımını kullanmayı deneyin. Kavramları bir kere tanıtın ve sonra bunlara yeniden bakın."
+      4:
+        image: 'notes/lesson_planning_4.png'
+        text: "2. Çevrimiçi dersler ile bağlantısız dersleri birleştirerek karma bir öğrenim deneyimi oluşturun."
+      5:
+        image: 'notes/lesson_planning_5.png'
+        text: "3. Müfredatınızı küçük parçalara ayırın."
+      6:
+        image: 'notes/lesson_planning_6.png'
+        text: "4. Yerel standartlara ve üniversiteye ve kariyere hazırlık becerilerine uyum sağladığınızdan emin olun."
+    opd_closing:
+      1:
+        image: 'notes/opd_closing_1.png'
+        text: "Tebrikler! Bilgisayar Bilimi Temelleri Öğretimi çevrimiçi dersi tamamladınız. Artık öğrencileri geleceğe hazırlayan büyüyen bir öğretmen topluluğunun bir parçasısınız. "
+      2:
+        image: 'notes/opd_closing_2.png'
+        text: "Daha fazla desteğe ihtiyacınız olursa şu kaynaklara bakın: 1. forum.code.org 2. @teachcode on Twitter 3. studio.code.org "
+    hoc_dance_warmup_2019:
+      1:
+        text: "Kod Saati | Dans Partisi: Canlanın"
+      2:
+        text: "Selam! Adım Miral Kotb ve ben bir dansçı, yazılım geliştirici ve iLuminate'in yaratıcısıyım."
+      3:
+        text: "Bilgisayar bilimi, birçok biçimde yaratıcılıkla ilgilidir. Gerçekten de tahmin edilemeyecek kadar çok biçimde. Yani, yazılım yazma kabiliyetiniz varsa, fikirlerinizi bir şeye yatırabilirsiniz. Ben bunu ışıklı kıyafetlerle yaparım. Yazılım yazmak için araçlarınız varsa yapabileceğiniz çok fazla şey vardır ve imkanlar gerçekten de sonsuzdur."
+      4:
+        text: "Sonraki saatte, kendi dans partinizi programlayarak bilgisayar bilimine başlayacaksınız! Birkaç hit müzik ve sizinle birlikte oynayacak mükemmel bir dansçı takımı belirledik."
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "Farklı dansçıları seçmek, dans hareketlerini değiştirmek, dansçıların müziğe tepki göstermesini sağlamak ve dansçıları etkileşime geçirmek için için kod bloklarını kullanacaksınız."
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "Ekranınızın üç ana kısma ayrıldığını göreceksiniz. Solda oyun alanı var. Burada dansçılarınızı göreceksiniz."
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "Bu orta alan araç kutusudur. Derste ilerledikçe bu alanca yeni kod blokları bulunacaktır."
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "Sağdaki alan çalışma alanıdır. Programınızı yapmak için blokları araç kutusundan çalışma alanına sürükleyebilirsiniz."
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "Her bir seviye için talimatlar, burada ekranın üstünde olacaktır. Bir ipucuna ihtiyacınız olursa sadece ampule tıklayın."
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "Başlangıç olarak, bu kırmızı blokla yeni bir dansçı yapalım. Öncelikle bunu araç kutusundan sürükleyin ve bu turuncu \"kurulum\" bloğun altına yapıştırın. Bu dansçı bir kedidir."
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "Ayrıca, bununla oyun alanınızda dansçının göründüğü yeri değiştirebilirsiniz.\n"
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "Oyun alanının üzerinde, müziği seçmeniz için bir menü var. Burada seçebileceğiniz tonlarca müzik var, yani favori müziklerinizi bulmada iyi eğlenceler. Bu oyun alanının altında çalıştır düğmesi var. Bu çalıştırma düğmesine bastığınızda, programınızdaki dansçıları oyun alanında göreceksiniz ve müzik çalacak."
+      13:
+        text: "Kendi kendinize deneyin! Ve eğer sıkıştığınızı düşünüyorsanız, sorun yok, sadece ayağa kalk ve hareket etmeye başla. Ve siz fakına varmada kendi dans partinizi yapmış olacaksınız. E, ne oluşturacaksınız? "
+    hoc_dance_events_2019:
+      1:
+        text: "Kod Saati | Dans Partisi: Olaylar"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "Adım Erin ve Code.org'da bir yazılım mühendisiyim ve Dans Partisini oluşturmada yardım ettim."
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "Farklı dans hareketlerinin müzikle birlikte yalnızca doğru zamanda meydana gelmesini sağlamak için olaylar dediğimiz şeyi kullanabilirsiniz. Bir olay, bir şeyin olması ve hemen tepki vermesi için \"dinleyeceğiniz\" programınızı anlatır."
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "Olay;  fare tıklama, yön tuşuna basma yada ekrana tıklama gibi aktivitelerdir."
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "Burada ekrandaki ok düğmelerine veya klavyedeki tuşlara bastığınızda bir dansçının bir hareketi gerçekleştirmesini programlayacağız."
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "\"Yukarı oka basıldığında\" olay bloğunu kullanabilirsiniz veya buna \"bir kere yap\" bloğunu bağlayabilirsiniz. Bir kişi yukarı ok tuşuna bastığında, \"yukarı oka basıldığında\" bloğu ile ilişkili kod çalıştırılır. Hangi dans hareketini seçeceksiniz?"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "Seçtiğiniz dansçı türünün, \"kurulum\" bloğunda oluşturduğunuz dansçılardan biri ile eşleştiğinden emin olun, yoksa hiçbir şeyi göremezsiniz."
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "Son olarak, her bir tuş ile dansçılarınızın farklı hareketler yapmasını sağlamak için bunun gibi daha fazla olay oluşturabilirsiniz. Bir deneyin ve birkaç kod hattı ile kendi etkileşimli dansınızı yapabilirsiniz."
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "Kod Saati | Dans Partisi: Ölçüler\n"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "Ben Aloe Blacc. Bir şarkıcı, besteci ve komedyenim. Bence bilgisayar bilimini öğrenmek gerçekten de önemli çünkü bilgisayar bilimi gelecektir ve bence kelimenin tam anlamıyla kendi hayatlarını kontrol eden teknolojinin kontrolünün insanlarda olması önemlidir."
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "Şimdi kullanacağımız olay, şarkıda bir değişikliği dinleyecektir. Değişiklik, dansçıyı yeni bir dans yapması için harekete geçirecektir."
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "Profesyonel dansçılar, şarkı vuruşlarını sayarak koreografilerini uygular. Müzikte bir ölçü, belirli bir sayıda vuruşa atıfta bulunur. En popüler şarkılarda bir ölçü dört vuruşluk uzunluktadır."
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "Danşçılarınızın gevşemesini sağlamak için yeşil bir olay bloğuna ihtiyacınız olacak. Bu olay bloğu \"4 ölçü sonra\" der. "
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "Mor \"sonsuza kadar yap\" bloğunu sürüklerseniz, dansçınızın yapması için bir dans seçebilirsiniz. \"4 ölçü sonra\" olay bloğunun altında olduğundan dolayı dansçınız, dansa başlamadan önce dört ölçülük şarkıyı bekleyecektir."
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "Ekran alanının üstündeki ölçü sayacından gözünüzü ayırmayın."
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "Dans kodunuzu harekete geçirecek olaya bakın ve bunu dinleyin. Ve tam o sırada dansçımız gitmeye başlar."
+    hoc_dance_properties_2019:
+      1:
+        text: "Kod Saati | Dans Partisi: Özellikler"
+      2:
+        text: "Adım Maria. Washington Üniversitesinde üçüncü sınıf öğrencisiyim ve Amazon Gelecekteki Mühendisiyim."
+      3:
+        text: "Bilgisayar bilimini seviyorum çünkü problem çözmeyi ve eleştirel düşünmeyi içeriyor ve bir şey üzerine saatlerce çalıştıktan sonra gerçekten mükemmel bir şey elde edebiliyorsun ve bunun sayesinde ödül alabiliyorsun. "
+      4:
+        text: "Şu ana kadar, birkaç farklı türde dansçı ile oynama şansın vardı ve bu dansçıları, farklı türlerde dans hareketleri yapması için programladın. Ama bu hareketler gerçekten nasıl çalışır?"
+      5:
+        text: "Her bir dans hareketi, çerçeve dediğimiz bir dizi resimden oluşur. Her bir çerçeve, bir öncekinden biraz farklıdır. Programınız çalıştığında bilgisayar, birbiri ardı sıra çerçeve gösterir. O kadar hızlı gösterilir ki sanki dansçı hareket ediyor gibi görünür. Bu, tüm animasyonun arkasındaki sırdır."
+      6:
+        text: "Yalnızca dansçınızın hareketlerini değiştirmezsiniz, aynı zamanda bir dansçının özelliklerini de değiştirebilirsiniz. Özellikler, dansçının ekrandaki konumu, dansçının boyutu ve dansçının rengi gibi şeyleri açıklar."
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "Bir dansçının özelliklerini değiştirmek için bir ayarla bloğunu kullanacaksınız. Dansçılarımızın daha küçük görünmesi için bir ayarla bloğunu kullanalım. Öncelikle ayarla bloğunu programınıza sürükleyin."
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "Sonra değiştirmek istediğiniz dansçıyı ve ekranda görünecek boyut tipini seçin. Tam boyut 100'dür. Eğer daha düşük bir sayı seçerseniz, bu, dansçıyı küçültecektir. Dansçı küçüldükçe, daha da uzakta görünecektir."
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "Ayarla bloğunu kullanarak, aynı zamanda dansçının büyüklükleri, dönmesi, konumu ve rengini seçebilirsiniz. Bu özelliklerle oynayarak, her türde değişikliği yapabilirsiniz ve bunları şarkının farklı kısımları ile bağlayabilirsiniz."
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "Unutmayın ki yalnızca halihazırda var olan bir dansçının özelliklerini ayarlayabilirsiniz. Ayarla bloğunuzun \"Yeni bir dansçı oluştur\" bloğundan sonra geldiğinden emin olun. Deney yaparken yaratıcı olun ve eğlenin!"
+    hoc_dance_congrats_2019:
+      1:
+        text: "Kod Saati | Dans Partisi: Partile! "
+      2:
+        text: "Tebrikler! Bilgisayar biliminin temellerini öğrendiniz. Artık arkadaşlarınızla paylaşacağınız kendi dans partisi tasarımınızı oluşturmak için bu blokları kullanabilirsiniz."
+      3:
+        text: "Araç kutusuna bakarsanız, daha önce görmediğiniz birkaç yepyeni blok bulacaksınız. Örneğin dansçıları ekranda farklı şekillerde düzenlemek için düzen bloğunu kullanabilirsiniz."
+      4:
+        text: "Etrafa bir bakın ve bu yeni blokları ve özellikleri denemeye çalışın. Favori şarkınız için itinayla koreografisi yapılmış bir dans oluşturacak mısınız?"
+      5:
+        text: "Ya da arkadaşlarınızla dans edin?"
+      6:
+        text: "Ya da hep birlikte başka bir şey yapın?"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "Eğitimin sonunda, oluşturduğunuz şeyleri arkadaşlarınızla bir bağlantı vasıtasıyla paylaşabilirsiniz. Hayal gücünüzü büyütün ve sadece eğlenin!"

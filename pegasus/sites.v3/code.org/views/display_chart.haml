@@ -6,7 +6,7 @@
 
   // Callback function to fetch data from a spreadsheet.
   window["getChartData_#{id}"] = function() {
-    var query = new google.visualization.Query("#{query_url}");
+    var query = new google.visualization.Query("#{query_url.html_safe}");
     query.send(window["handleQueryResponse_#{id}"]);
   };
 

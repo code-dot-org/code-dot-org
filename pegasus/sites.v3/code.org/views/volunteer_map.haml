@@ -16,10 +16,10 @@
 
 %form#volunteer-search-form{role: "form", onsubmit: "event.preventDefault();"}
   #volunteer-search-facets.form-section.row
-    %h3.col-xs-12.top-margin Narrow your search
+    %h3.col-xs-12.top-margin Search your location
     .form-section.row.no-margin
       .form-group.col-xs-4
-        %input#location.form-control{name: "location", placeholder: "Search my location", type: "text", value: search_location}
+        #mapbox-geocoder
       .form-group.col-xs-2.submit-btn
         %button#btn-submit{type: "submit", style: "margin-top: 0px"} Search
 
@@ -42,22 +42,53 @@
         %label.control-label.small{for: "distance"} Within
         %div
           %select#distance.form-control{name: "distance", type: "select"}
-            %option{selected: distance.nil_or_empty?, value: ""}= "15 miles"
+            %option{selected: distance.nil_or_empty?, value: ""}= "#{VolunteerEngineerSubmission2015::DEFAULT_DISTANCE_MILES} miles"
             -VolunteerEngineerSubmission2015.distances.each do |key, value|
               %option{value: key, selected: (distance||[]).include?(key.to_s)}= value
       .form-group.col-xs-2
         %label.control-label.small{for: "num_volunteers"} Show no more than
         %div
           %select#num_volunteers.form-control{name: "num_volunteers", type: "select"}
-            %option{selected: num_volunteers.nil_or_empty?, value: ""}= "10 volunteers"
+            %option{selected: num_volunteers.nil_or_empty?, value: ""}= "#{VolunteerEngineerSubmission2015::DEFAULT_NUM_VOLUNTEERS} volunteers"
             -VolunteerEngineerSubmission2015.num_volunteers.each do |key, value|
-              %option{value: key, selected: (num_volunteers||[]).include?(key.to_s)}= value
+              %option{value: key, selected: (num_volunteers || []).include?(key.to_s)}= value
 
-
-#volunteer-search-results.row.top-margin
-  #volunteer-search-controls.col-xs-5
-    #controls
-  #volunteer-search-map.col-xs-7
-    #gmap
 .row
   #volunteer-search-error.col-xs-12.display-none.top-margin
+
+
+%link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
+%script{type: "text/javascript", src: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js"}
+
+%script{src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"}
+%link{rel: "stylesheet", href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css", type: "text/css"}
+
+:css
+  .mapboxgl-ctrl {
+    width: 100%;
+    z-index: 2;
+  }
+
+  .mapboxgl-ctrl ul li {
+    padding-left: 0;
+    text-indent: 0;
+  }
+
+  .mapboxgl-ctrl ul li:before {
+    content: none;
+    color: #00a1e6;
+  }
+
+  .mapboxgl-popup-content {
+    max-height: 180px;
+    overflow-y: scroll;
+  }
+
+:javascript
+  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
+
+#mapbox-container.row{style: "display: none"}
+  .col-xs-5
+    #mapbox-listings{style: "height: 400px; overflow: scroll"}
+  .col-xs-7
+    #mapbox{style: "width: 553px; height: 400px"}

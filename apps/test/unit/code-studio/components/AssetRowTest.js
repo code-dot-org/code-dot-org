@@ -4,17 +4,20 @@ import {mount} from 'enzyme';
 import AssetRow from '@cdo/apps/code-studio/components/AssetRow';
 
 const DEFAULT_PROPS = {
-  name: "foo's.bar",
+  name: `fo\'o's.bar`,
   type: 'image',
+  api: {
+    basePath: name => `/path/to/${name}`
+  },
   onDelete: () => {}
 };
 
 describe('AssetRow', () => {
-  it('recognizes assets with an apostrophe in the src string', () => {
+  it('recognizes assets with apostrophes and escaped apostrophes in the src string', () => {
     var visualization = document.createElement('div');
     visualization.id = 'visualization';
     var child = document.createElement('div');
-    child.setAttribute('src', "foo's.bar");
+    child.setAttribute('src', `fo\'o's.bar`);
     visualization.appendChild(child);
     document.body.appendChild(visualization);
     const wrapper = mount(

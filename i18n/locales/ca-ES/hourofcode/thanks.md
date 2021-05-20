@@ -1,10 +1,5 @@
 ---
 title: Gràcies per registrar-se per acollir una Hora de Codi!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Gràcies per registrar-se per acollir una Hora de Codi!

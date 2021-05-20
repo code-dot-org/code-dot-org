@@ -1,0 +1,22 @@
+name 'Episode 5 Challenge Instructions Younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Instructions
+
+### Sprite Lab
+
+* The beginner Sprite Lab levels includes a copy of the working virus simulation code. Modify it by changing the sprite costumes or adding more sprites to the screen. 
+
+* For the intermediate Sprite Lab level, challenge yourself to add new features to the simulation. What if you added walls to simulate social distancing? Could you add a counter to count how many sprites are infected? 
+
+![](https://images.code.org/54973efa1836c39317c1a765aff74c51-image-1587323315532.gif) ![](https://images.code.org/d27a65ce0a8a13f0c950ee829e372586-image-1587323330029.gif)
+
+---
+
+*Over 13 year old? Find your challenge level [here](https://studio.code.org/s/code-break/lessons/5/levels/5).*
+MARKDOWN

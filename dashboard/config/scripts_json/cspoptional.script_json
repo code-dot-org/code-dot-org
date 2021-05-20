@@ -1,0 +1,1332 @@
+{
+  "script": {
+    "name": "cspoptional",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "has_lesson_plan": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "seeding_key": {
+      "script.name": "cspoptional"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 1 - Sending Bits in the Real World",
+      "name": "Unit 1 - Sending Bits in the Real World",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "Unit 1 - Encoding Numbers in the Real World",
+      "name": "Unit 1 - Encoding Numbers in the Real World",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+      "name": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "Unit 1 - Algorithms Detour - Shortest Path",
+      "name": "Unit 1 - Algorithms Detour - Shortest Path",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "Unit 1 - How Routers Learn",
+      "name": "Unit 1 - How Routers Learn",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+      "name": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+      "name": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Sending Bits Real World Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Sending Bits Real World Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "Sending Bits Real World Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U1L5 How the Internet Works - Video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L5 Matching Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 Matching Assessment"
+        ],
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U1L5 Matching Assessment"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Encoding Numbers Real World Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Encoding Numbers Real World Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "Encoding Numbers Real World Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L9 Free Response Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Free Response Assessment"
+        ],
+        "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U1L9 Free Response Assessment"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Algo MST Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Algo MST Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "Algo MST Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L06 - Matching: Label the Diagram"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L06 - Matching: Label the Diagram"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L06 - Matching: Label the Diagram"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L06- MC: what is an MST?"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L06- MC: what is an MST?"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L06- MC: what is an MST?"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L06 - MC: Which is an MST?"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L06 - MC: Which is an MST?"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L06 - MC: Which is an MST?"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Algo Shortest Path Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Algo Shortest Path Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "Algo Shortest Path Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U1L07 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L07 Assessment 1"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U1L07 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L07 Assessment2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L07 Assessment2"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L07 Assessment2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L07 Assessment3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L07 Assessment3"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L07 Assessment3"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L07 Assessment4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L07 Assessment4"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L07 Assessment4"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L07 Assessment5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L07 Assessment5"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L07 Assessment5"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Algo How Routers Learn Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Algo How Routers Learn Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "Algo How Routers Learn Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L08 Free Response 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L08 Free Response 3"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L08 Free Response 3"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L08 Free Response 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L08 Free Response 1"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L08 Free Response 1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L08 Free Response 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L08 Free Response 2"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L08 Free Response 2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L08 Assessment 0"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L08 Assessment 0"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L08 Assessment 0"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L08 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L08 Assessment 1"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L08 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L17 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L17 Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 Assessment 1"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 Assessment 1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L17 Assessment 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 Assessment 2"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 Assessment 2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L16 Free Response Assessment 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L16 Free Response Assessment 3"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L16 Free Response Assessment 3"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L17 Free Response Wrap Up"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 Free Response Wrap Up"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 Free Response Wrap Up"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L18 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L18 Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L18 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L17 Free Response Getting Started"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 Free Response Getting Started"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 Free Response Getting Started"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L17 Free Responses Assessment 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 Free Responses Assessment 1"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 Free Responses Assessment 1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L17 - Vocabulary matching"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L17 - Vocabulary matching"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L17 - Vocabulary matching"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L18 Free Response Getting Started"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L18 Free Response Getting Started"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L18 Free Response Getting Started"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L18 Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L18 Assessment"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L18 Assessment"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U2L18 Free Response Wrap Up"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L18 Free Response Wrap Up"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      },
+      "level_keys": [
+        "U2L18 Free Response Wrap Up"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Sending Bits Real World Student Lesson Introduction",
+        "script_level.level_keys": [
+          "Sending Bits Real World Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 How the Internet Works - Video",
+        "script_level.level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 Matching Assessment",
+        "script_level.level_keys": [
+          "U1L5 Matching Assessment"
+        ],
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Encoding Numbers Real World Student Lesson Introduction",
+        "script_level.level_keys": [
+          "Encoding Numbers Real World Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Free Response Assessment",
+        "script_level.level_keys": [
+          "U1L9 Free Response Assessment"
+        ],
+        "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Algo MST Student Lesson Introduction",
+        "script_level.level_keys": [
+          "Algo MST Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L06 - Matching: Label the Diagram",
+        "script_level.level_keys": [
+          "U2L06 - Matching: Label the Diagram"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L06- MC: what is an MST?",
+        "script_level.level_keys": [
+          "U2L06- MC: what is an MST?"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L06 - MC: Which is an MST?",
+        "script_level.level_keys": [
+          "U2L06 - MC: Which is an MST?"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Algo Shortest Path Student Lesson Introduction",
+        "script_level.level_keys": [
+          "Algo Shortest Path Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L07 Assessment 1",
+        "script_level.level_keys": [
+          "U1L07 Assessment 1"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L07 Assessment2",
+        "script_level.level_keys": [
+          "U2L07 Assessment2"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L07 Assessment3",
+        "script_level.level_keys": [
+          "U2L07 Assessment3"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L07 Assessment4",
+        "script_level.level_keys": [
+          "U2L07 Assessment4"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L07 Assessment5",
+        "script_level.level_keys": [
+          "U2L07 Assessment5"
+        ],
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Algo How Routers Learn Student Lesson Introduction",
+        "script_level.level_keys": [
+          "Algo How Routers Learn Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L08 Free Response 3",
+        "script_level.level_keys": [
+          "U2L08 Free Response 3"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L08 Free Response 1",
+        "script_level.level_keys": [
+          "U2L08 Free Response 1"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L08 Free Response 2",
+        "script_level.level_keys": [
+          "U2L08 Free Response 2"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L08 Assessment 0",
+        "script_level.level_keys": [
+          "U2L08 Assessment 0"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L08 Assessment 1",
+        "script_level.level_keys": [
+          "U2L08 Assessment 1"
+        ],
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U2L17 Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 Assessment 1",
+        "script_level.level_keys": [
+          "U2L17 Assessment 1"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 Assessment 2",
+        "script_level.level_keys": [
+          "U2L17 Assessment 2"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L16 Free Response Assessment 3",
+        "script_level.level_keys": [
+          "U2L16 Free Response Assessment 3"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 Free Response Wrap Up",
+        "script_level.level_keys": [
+          "U2L17 Free Response Wrap Up"
+        ],
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L18 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U2L18 Student Lesson Introduction"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 Free Response Getting Started",
+        "script_level.level_keys": [
+          "U2L17 Free Response Getting Started"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 Free Responses Assessment 1",
+        "script_level.level_keys": [
+          "U2L17 Free Responses Assessment 1"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L17 - Vocabulary matching",
+        "script_level.level_keys": [
+          "U2L17 - Vocabulary matching"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L18 Free Response Getting Started",
+        "script_level.level_keys": [
+          "U2L18 Free Response Getting Started"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L18 Assessment",
+        "script_level.level_keys": [
+          "U2L18 Assessment"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L18 Free Response Wrap Up",
+        "script_level.level_keys": [
+          "U2L18 Free Response Wrap Up"
+        ],
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

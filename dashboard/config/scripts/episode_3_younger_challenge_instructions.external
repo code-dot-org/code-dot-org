@@ -1,0 +1,23 @@
+name 'Episode 3 Younger Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenge
+
+## Instructions
+
+Encrypt messages with your Ceasear Cipher wheel or using Random Substitution. We can't wait to see what you make!
+
+### Encryption Challenge
+
+* [Challenge Guide](https://docs.google.com/document/d/1yWlQbCuSls02BQBHi_eztF1MUWd3naiLpAnqh9HjZOg/edit?usp=sharing)
+
+![](https://images.code.org/8fd5d9ad1d773ea2f5fde2c0a5d0f49c-image-1586313341107.gif)
+
+
+---
+
+*Over 13 year old? Find your challenge level [here](https://studio.code.org/s/code-break/lessons/3/levels/5).*
+MARKDOWN

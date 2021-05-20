@@ -147,7 +147,17 @@ export default class CensusMapReplacement extends Component {
   }
 
   componentDidMount = () => {
-    this.initializeMap();
+    try {
+      this.initializeMap();
+    } catch (e) {
+      // logging this in a separate thread so errors don't get logged in the
+      // console but still make it to our error reporting system. We should
+      // change this code once React error boundariess are available (React
+      // 16).  https://reactjs.org/docs/error-boundaries.html
+      setTimeout(1, function() {
+        console.err(e);
+      });
+    }
 
     $(window).resize(() => {
       // Throttle calling of resizeMap
@@ -201,6 +211,11 @@ export default class CensusMapReplacement extends Component {
       minZoom: 1,
       center: [-98, 39]
     });
+
+    this.map.dragRotate.disable();
+    this.map.scrollZoom.disable();
+    this.map.dragPan.disable();
+
     var _this = this;
 
     this.map.on('load', function() {
@@ -255,10 +270,29 @@ export default class CensusMapReplacement extends Component {
         ]
       });
 
+      _this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
       _this.map.addControl(
         new mapboxgl.NavigationControl({showCompass: false}),
         'bottom-right'
       );
+
+      function enableMouseControls() {
+        _this.map.scrollZoom.enable();
+        _this.map.dragPan.enable();
+      }
+
+      // Enable mouse controls when the map is clicked
+      _this.map.on('click', function(e) {
+        enableMouseControls();
+      });
+      // Enable mouse controls when the zoom (+/-) buttons are pressed
+      _this.map.on('zoom', function(e) {
+        enableMouseControls();
+      });
+      // Enable mouse controls when we go full screen
+      _this.map.on('resize', function(e) {
+        enableMouseControls();
+      });
 
       _this.map.on('click', 'census-schools', function(e) {
         _this.onPointClick(_this, e);
@@ -364,29 +398,29 @@ export default class CensusMapReplacement extends Component {
 
   render() {
     return (
-      <div>
+      <div id="census-map">
         <div id="mapbox" className="full-width">
           <div id="inmaplegend" className="legend">
             <div className="legend-title">Legend</div>
-            <div className="color green" />
+            <div className="color legend-offers-cs" />
             <div className="caption">Offers computer science</div>
-            <div className="color blue" />
+            <div className="color legend-limited-cs" />
             <div className="caption">Limited or no CS opportunities</div>
-            <div className="color yellow" />
+            <div className="color legend-inconclusive-cs" />
             <div className="caption">Inconclusive data</div>
-            <div className="color white" />
+            <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
         </div>
         <div id="belowmaplegend" className="legend">
           <div className="legend-title">Legend</div>
-          <div className="color green" />
+          <div className="color legend-offers-cs" />
           <div className="caption">Offers computer science</div>
-          <div className="color blue" />
+          <div className="color legend-limited-cs" />
           <div className="caption">Limited or no CS opportunities</div>
-          <div className="color yellow" />
+          <div className="color legend-inconclusive-cs" />
           <div className="caption">Inconclusive data</div>
-          <div className="color white" />
+          <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>
         <div id="map-footer">

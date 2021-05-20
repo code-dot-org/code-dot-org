@@ -1,0 +1,1007 @@
+{
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/1": {
+    "dsls": {
+      "markdown": "# Welcome to 'Teaching Computer Science Fundamentals'\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\" class=\"level-image\">\n\n## What is this online course for? \nThis online course is intended as an introduction to Code.org's Computer Science Fundamentals curriculum and resources for teachers. Through reading, viewing videos, completing interactive puzzles and reflecting on your learning, you'll develop your own understanding of how to teach Computer Science Fundamentals in your classroom.\n\n## Who is this online course for?\nThis online course is designed for **elementary school educators who are interested in teaching Computer Science Fundamentals to their students**. This can range from classroom teachers, to STEM teachers, to librarians, and everyone in between.\n\nIf you are a <a href=\"https://code.org/educate/csd\" target=\"blank\">middle school</a> or <a href=\"https://code.org/educate/csp\" target=\"blank\">high school</a> teacher interested in teaching our middle school or high school courses, we recommend you pursue more <a href=\"https://code.org/educate/professional-learning/middle-high\" target=\"blank\">in-depth, ongoing professional development opportunities</a>.\n\n## Will I learn computer science through this online course?\nWhile there are opportunities to learn and practice basic coding concepts and see how they are presented to students in the curriculum, it is not meant to be a comprehensive introduction to computer science for adults. At the end of the course, we will provide other resources that can help you go deeper into computer science concepts.\n\n## Do I need to have any experience in order to take this online course?\nNo previous experience with coding or computer science education is assumed. \n\n## How long does this online course take? \nCompleting this online course should take between 4-6 hours.\n\n## Can I change the font size of the text in this course?\nWe know that the text on this platform can appear small! \n\nTo make the font size bigger:\n- On Mac, click \"Command\" and \"+\"\n- On Windows, click \"Control\" and \"+\"\n\nTo make the size smaller: \n- On Mac, click \"Command\" and \"-\"\n- On Windows, click \"Control\" and \"-\"\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/2": {
+    "display_name": "What is computer science?",
+    "long_instructions": "<span style=\"font-size: 1.1em\">\nHave you ever wondered what computer science is, or what kinds of different program languages there are? This video provides an introduction to the field of computer science.\n</span>"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/3": {
+    "dsls": {
+      "markdown": "# Why teach computer science?\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\" class=\"level-image\">\n\n### **Develop important skills**\nResearch shows that computer science promotes critical thinking, creativity, problem-solving, and engagement in real-world skills. \n\n### **Improve performance in other subjects**\nYou don't need to be a STEM teacher to see the benefit of CS in your classroom. A <a href=\"https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e\" target=\"blank\">recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching CS Fundamentals lessons. \n\n### **Build confidence and interest early on**\nIf we wait until high school or college to introduce students to computer science, some students will already have decided that computer science is not for them or they will feel that they are already too far behind compared to students who study it outside of school.\n\nExposing students to computer science in grades K-5, when they don't have to opt-in to a class like they might in high school, allows all students to see how accessible the subject is, and decide if they enjoy it.\n\n### **It's fun!**\nComputer science gives students an opportunity to collaborate, be creative, and express themselves! \n\n### **Need more convincing?**\nCode.org has a lot of resources to help you -- as well as students, your administration, parents, and your community -- understand why CS is important in the classroom. Check out our inspirational video series, as well as some of the of the statistics and evidence around CS education, below.\n\n> <a href=\"http://code.org/educate/inspire\" target=\"blank\"><button class=\"default\">Explore inspirational videos >></button></a>\n\n> <a href=\"http://code.org/promote\" target=\"blank\"><button class=\"default\">Explore research >></button></a>\n\n<img src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/4": {
+    "dsls": {
+      "markdown": "# Course outline\n\nThe course is divided into four concept chunks, which each have lessons in them. Lessons consists of different \"levels\", which are colloquially referred to as bubbles, stages, or puzzles by students and teachers. Here's an overview of what you'll learn if you complete the entire course:\n\n## Getting Started\n\n### Lesson 1: Welcome to 'Teaching Computer Science Fundamentals' (15 minutes)\n- Review the course details\n- Understand what computer science is and differentiate between \"coding\" and computer science\"\n- Identify the benefits of teaching and learning computer science\n- Plan your participation in this course\n\n### Lesson 2: Getting to know the Computer Science Fundamentals Courses (15-20 minutes)\n- Become familiar with the content and organization of the Computer Science Fundamentals courses\n- Identify which course is most appropriate for your students\n- Understand the importance of the teacher in the Computer Science Fundamentals curriculum\n- Understand different types of Computer Science Fundamentals lessons\n\n## Basic Coding Concepts and Teaching Practices\n\n### Lesson 3: Sequencing (15-45 minutes)\n- Define \"program\" and \"algorithm\"\n- Identify where sequencing is introduced in the Computer Science Fundamentals courses\n- Use the Code.org visual programming engine to write simple programs\n- Explore an unplugged lesson on sequencing and reflect on classroom application\n- Think about how to use lesson plans\n\n### Lesson 4: Loops (15-45 minutes)\n- Define \"loops\" and explain their importance\n- Identify where loops are introduced in the Computer Science Fundamentals courses\n- Explore an unplugged lesson on loops and reflect on classroom application\n- Practice coding simple loops\n- Understand the benefits of pair programming\n\n### Lesson 5: Events (15-45 minutes)\n- Define \"events\" and explain their importance\n- Identify where events are introduced in the Computer Science Fundamentals courses\n- Explore an unplugged lesson on events and reflect on classroom application\n- Practice coding simple events\n- Understand the debugging process\n\n### Lesson 6: Conditionals (15-45 minutes)\n- Define \"conditionals\" and explain their importance\n- Identify where conditionals are introduced in the Computer Science Fundamentals courses\n- Explore an unplugged lesson on conditionals and reflect on classroom application\n- Practice coding simple conditionals\n- Understand the teaching practice of journaling\n\n### Lesson 7: End of Course Projects (15-45 minutes)\n- Understand the benefit of end of course projects\n- Identify where end of course projects are introduced in the Computer Science Fundamentals courses\n- Practice coding a project\n\n## [Optional] Diving Deeper: Courses E and F \nYou will want to complete this section if you are teaching Courses E or F. This section dives into some of the harder concepts covered in these courses for older students.\n\n### Lesson 8: Functions (30-45 minutes)\n- Identify if you will be teaching Courses E or F to students\n- Define \"functions\" and explain their importance\n- Identify where functions are introduced in the Computer Science Fundamentals courses\n- Explore the unplugged lesson on functions and reflect on classroom application\n- Practice coding simple functions\n\n### Lesson 9: Variables (30-45 minutes)\n- Define \"variable\" and explain its importance\n- Identify where variables are introduced in the Computer Science Fundamentals courses\n- Explore the unplugged lesson on variables and reflect on classroom application\n- Practice coding with variables\n\n### Lesson 10: For Loops (30-45 minutes)\n- Define \"for loops\" and explain its importance\n- Identify where for loops are introduced in the Computer Science Fundamentals courses\n- Explore the unplugged lesson on for loops and reflect on classroom application\n- Practice coding with for loops\n\n### Lesson 11: Sprite Lab (15-45 minutes)\n- Define \"sprite\" and \"behavior\"\n- Identify where sprites and behaviors are introduced in the Computer Science Fundamentals courses\n- Explore the coding environment Sprite Lab\n\n## Next Steps\n\n### Lesson 12: Reviewing your Reflections (15 minutes)\n- Review the reflections you have made throughout the course so far\n\n### Lesson 13: Next Steps (15 minutes)\n- Explore teacher resources\n- Plan for next steps you can take to continue your learning\n- Connect with a global community of fellow educators interested in computer science education\n- Share your takeaways and feedback on this course\n\n> **Note**: Suggested times are provided above to help you plan your learning. Please note that you may want to spend more or less time on a given stage, depending on your prior knowledge, interest and capacity. Keep in mind that this course is entirely self-paced; you can always leave the course and come back or revisit any stage or level at any time. \n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/5": {
+    "dsls": {
+      "markdown": "# Navigating this online course\n\nAs you complete this course, you'll familiarize yourself with everything CS Fundamentals has to offer.\n\nIf you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course. Feel free to come back to this level any time!\n\n---\n\n## Concept Chunks\nThe main page of this online course is pictured below. This page is broken up into four **concept chunks**. This mirrors how the Computer Science Fundamentals courses are laid out.\n\n![](https://images.code.org/5227343bf74975b4678e42b50fdcd085-image-1573235429162.50.02 AM.png)\n## Lessons\nEach section is comprised of **lessons**, which represent different topics and ideas.\n\n## Levels (bubbles)\nEach stage is made up of levels, which look like bubbles. **Diamonds** represent levels like this, which hold individual videos, readings, or questions. Some **circles** are online puzzles that you will complete to practice coding concepts. Other **circles** are free response questions, which you will submit an answer for and revisit later on. The colors of the bubble will change based on your progress. In this online professional development course you'll see the following types of bubbles:\n<br/>\n\n<img src =\"https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png\" />\n\n<br/>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/6": {
+    "dsls": {
+      "markdown": "# Planning your participation\n\nBefore you begin, take a moment to consider your learning needs, goals and the unique experience of learning in an online, self-paced environment -- especially if this is your first online course!\n\n## Take the pre-survey\nWe want you to get as much as possible out of this professional development. For that reason, we ask you to fill out <a href=\"https://form.jotform.com/93175711692159?user_id=<user_id/>\" target=\"blank\">this short pre-survey</a>. The survey will ask you to reflect on your goals for this course and will tell us a little bit about who you are and how we can support you.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://form.jotform.com/93175711692159?user_id=<user_id/>\" target=\"blank\">Take the pre-survey</a>\n\n\n## Go at your own pace\n\nThis self-paced online course is designed to put you in the driver's seat, and give you control over your own learning. **Please take your time and work through this course at your own pace. Suggested times are given for each stage.** If you find yourself spending more or less time on a given stage, don't worry! Our main goal is for you to have fun, learn the basics, and apply what you learn in your classroom practice in whatever way works best for you.\n\n## Find help when you need it\n\nIf you get stuck at any time during the course, head over to <a href=\"http://support.code.org\" target=\"blank\">support.code.org</a> and check out <a href=\"https://forum.code.org/\" target=\"blank\">our community forums</a>. You'll likely find the answer to your question there. If you don't or are still stuck, you can email <a href=\"mailto:support@code.org\" target=\"blank\">support@code.org</a> and a Code.org staff member will get back to you as soon as they can.\n\nAnother way to get support, which we highly recommend, is to work through this online course with a partner or group of colleagues!\n\n## Find the learning experience that works for you\n\nFinally, online learning is not for everyone. This course has no instructor or built-in mechanism for communicating in real-time with your peers. If you find yourself needing more one-on-one attention or know you learn better in a real-world classroom where there is more opportunity for collaboration and engagement, we recommend you pursue one of our <a href=\"http://code.org/professional-development-workshops\" target=\"blank\">in-person professional development opportunities</a>.\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/1/levels/7": {
+    "short_instructions": "Take a moment now to consider how and when you will complete this online course to ensure you get the most benefit from the experience. When you've got a good plan sketched out, continue on to dive more deeply into Computer Science Fundamentals.",
+    "long_instructions": "# What's your plan?\n\nThroughout the course, you will be asked to write reflections on what you have learned. Once you submit your response, it will save, and you can always come back to it. We will revisit it at the end of this online course.\n\nTake a moment now to reflect. How and when will you complete this online course to make ensure you get the most benefit from the experience? "
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/1": {
+    "long_instructions": "## Get to know CS Fundamentals\n\nLet's start by learning a bit about what Computer Science (CS) Fundamentals is, and how it has worked for teachers and students around the globe. "
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/2": {
+    "dsls": {
+      "markdown": "# Computer Science Fundamentals Courses\n\nThe goal of Code.org's professional development is to prepare teachers like you to integrate computer science into their classrooms and support their growth as teachers. After completing this online course, you'll be ready to teach one or more of the following Code.org Computer Science Fundamentals courses in your classroom.\n\n**Take a moment to look at the table below and think about which course or courses will be best suited for your students**.\n\n<table style=\"width:100%; border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b><a href=\"https://curriculum.code.org/csf-19/coursea/\" target=\"blank\" style=\"color: white\">Course A</a></b><br/>\n      <i>Kindergarten</i>\n    </th>\n    <th style=\"background-color:#f1c232; text-align:center; border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/courseb/\" target=\"blank\" style=\"color: white\">Course B</a><br/>\n        <i>1st Grade</i>\n    </th>\n    <th style=\"background-color:#b8bf0d; text-align:center; border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\" style=\"color: white\">Course C</a><br/>\n        <i>2nd Grade</i>\n    </th>\n    <th style=\"background-color:#53bac2; text-align:center; border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\" style=\"color: white\">Course D</a><br/>\n        <i>3rd Grade</i>\n    </th>\n    <th style=\"background-color:#0094ca; text-align:center; border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\" style=\"color: white\">Course E</a><br/>\n        <i>4th Grade</i>\n    </th>\n    <th style=\"background-color:#7664a0; text-align:center; border-style:none;\"\"\">\n        <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\" style=\"color: white\">Course F</a><br/>\n        <i>5th Grade</i>\n    </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;\"\">12 lessons, ~12 hours to complete</td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;\"\">12 lessons, ~12 hours to complete</td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~18 hours to complete</td>\n    <td style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~18 hours to complete</td>\n    <td style=\"background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~18-20 hours to complete</td>\n    <td style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;\"\">20 lessons, ~20-22 hours to complete</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;\">Concepts</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Sequencing</li>\n        <li>Loops</li>\n        <li>Events</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Sequencing</li>\n        <li>Loops</li>\n        <li>Impacts of Computing</li>\n        <li>Events</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Sequencing</li>\n        <li>Binary</li>\n        <li>Loops</li>\n        <li>Events</li>\n        <li>Data</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Sequencing</li>\n        <li>Events</li>\n        <li>Loops</li>\n        <li>Conditionals</li>\n        <li>Binary</li>\n        <li>Digital Citizenship</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Sprites</li>\n        <li>Digital Citizenship</li>\n        <li>Nested Loops</li>\n        <li>Functions</li>\n          <li>Impacts of Computing</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Variables</li>\n        <li>Data</li>\n        <li>For Loops</li>\n        <li>Internet</li>\n        <li>Sprites</li>\n        </ul>\n    </td>\n</table>\n<br/>\n\n**Later on, if you want to see even more details about what is in each course, you can check out our very thorough <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\" target=\"blank\">Computer Science Fundamentals Curriculum Guide</a>.**\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Role of the teacher\n\n<img src=\"https://images.code.org/cd6529b3552a2911cb907aceb59932b1-image-1571688504066.JPG\" class=\"level-image\">\n\nWe believe students learn best with the help of an empowered teacher. Computer Science Fundamentals courses A-F  are designed to work best in a classroom setting, led by an engaged teacher.\n\nWe know that many teachers are new to computer science, and for that reason, we design curriculum with the idea that the instructor will act as the lead learner. As the lead learner, the role of the teacher shifts from being the source of knowledge to being a leader in seeking knowledge.\n\nThe lead learner's mantra is: **\"I may not know the answer, but I know that together we can figure it out.\"**\n\nYou can read more about being a lead learner, as well as other pedagogical approaches to our values, in the <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#\" target=\"blank\">curriculum guide</a>.\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/4": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Organization of CS Fundamentals courses\n\n## Concept chunks\n\nEach CS Fundamentals course is organized into concept chunks, the big ideas that provide structure to a course. Concept chunks make it easy for teachers to see at a glance what is covered in a course. **Code.org provides <a href=\"http://curriculum.code.org/csf-19\" target=\"blank\">lesson plans</a> for every lesson in the curriculum, both on and off the computer**. The different kinds of lessons in each concept chunk are explained in detail below.\n\nTo illustrate, here are the five lessons contained in the \"Loops\" concept chunk in Course C, as they appear in the course.\n\n\n<img src=\"https://images.code.org/953ebc5b17a97ee7fc9ee9261b4ee132-image-1571689334077.png\">\n\n## Unplugged lessons\n**These lessons are done away from the computer and are often used to introduce a new concept in a hands-on, tangible way.** Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. Often an unplugged lesson sets the stage for a subsequent skill-building lesson investigating the same concept on the computer.\n\n## Plugged lessons -- Skill building\n**These lessons are done on the computer and give students structured practice with a new tool or programming concept.** These puzzle progressions generally start with a sequence of practice puzzles that gradually increase until reaching a challenge puzzle. There are often additional puzzles after the challenge that intentionally get easier to help build efficacy and confidence at the end of the lesson.\n\n\n## Plugged lessons -- Application\n**These lessons are done on the computer and give students space to apply learned concepts in creative ways.** These lessons typically walk students through the creation of a mini-project that will be unique for them based on their own creative decisions. There are no right or wrong answers here!\n\n## End of course projects\nEach course offers the opportunity for students to take what they've learned at the end of a lesson and put it together into a unique project that represents their own creativity. We'll learn more about them later on in this course.\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Lesson Plans\n\n## Where do I find lesson plans?\nYou can see all the lesson plans for all of the CS Fundamentals courses <a href=\"https://curriculum.code.org/csf-19/\" target=\"blank\">here</a>. \n\n## Are there lesson plans for unplugged ***and*** plugged lessons?\nYes! \n\n## How are lesson plans structured?\n\nEvery lesson plan has a common structure designed to make it easy to find what you need. As you plan for a lesson, we recommend starting with the overview, then reviewing the core activity to get a deeper sense of what will happen in the lesson and how long it might take.\n\n<img src=\"https://images.code.org/f5ada4cd79f47502741adc86ed6f4430-image-1571693286262.27.12 PM.png\">\n\n## Where can I learn more about lesson plans?\nThere is a ton more information about lesson plans in the <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\" target=\"blank\">curriculum guide</a>!\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/6": {
+    "long_instructions": "It might seem counterproductive to teach computer science away from the computer! However, we've found that some of the most impactful  lessons are actually \"unplugged,\" or conducted with little to no technology at all. \n\nAll of our CS Fundamentals courses use unplugged activities to introduce computer science concepts with physical manipulatives before students write computer programs using those concepts. We also use unplugged activities to teach important concepts that are not coding, like digital citizenship. Watch the video below to understand the benefits of using unplugged activities to teach computer science."
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/7": {
+    "dsls": {
+      "markdown": "# Looking Ahead\n\n## Teaching practices\nIn the next concept chunk, you will learn about the following teaching practices:\n\n- Finding and utilizing lesson plans\n- Pair programming\n- Debugging\n- Journaling\n\n## Basic coding concepts\nIn the next concept chunk, you will practice the following basic core concepts of computer science:\n\n- Sequencing\n- Loops\n- Events\n- Conditionals\n\nIn these lessons, you will: \n- Define and explain what is meant by the core concept, and why it's important in computer science\n- Write simple programs applying the concept (by using visual programming to solve puzzles)\n- Reflect on how you might integrate the concept into your practice\n\n## How do I know if I should move to the next lesson?\n\nAs you complete each lesson, ask yourself:\n\n- Could I define and explain the importance of this particular core concept to someone without knowledge of computer science?\n- Was I able to successfully complete the simple puzzles in this lesson?\n- Do I have a few ideas on how I might use this in my classroom?\n\nIf you answer yes to each question, proceed to the next lesson. If you answer no to any of the questions, consider revisiting the lesson or exploring more about the topic in one of the Computer Science Fundamentals courses before moving on.\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/2/levels/8": {
+    "dsls": {
+      "markdown": "# Reflection\n\n<img src=\"https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg\" class=\"level-image\">\n\n## Pause and reflect\nWe hope that, up until now, this course has given you a sense of what computer science is, why it is important, and how Computer Science Fundamentals is structured to teach elementary school students basic concepts of computer science. Take a moment to pause and reflect on what you feel like you have learned from this course so far, and go back to any parts you may have had questions on.\n\nRemember that you can always reference the <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\" target=\"blank\">Computer Science Fundamentals curriculum guide</a> for more information.\n\n## Things to remember\nAs you go forward in this course, keep in mind: \n- As with any discipline, the path towards mastery in computer science is infinite. From novices to veterans, **everyone has something to learn.** \n- Programming becomes more comfortable every time you come back to it. **You're not going to be an expert your first time.**\n- There's no way around it, the act of programming and **learning to program takes time, but anyone can do it!**\n\n<br/>\n\n> **Key Takeway:** The goal of the next several lessons is not to turn you into a computer scientist, but to instead help you feel comfortable enough with the core concepts that you are excited to share your knowledge with your students.\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/1": {
+    "dsls": {
+      "markdown": "# Overview: Sequencing\n\n<img src=\"https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG\" width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px 40px;\">\n\nIn the levels that follow, you will learn about a coding concept through unplugged lessons as well as online puzzles. In order to complete a puzzle, you'll need to write code using Blockly code blocks. You will also learn about a key teaching practice.\n\n## Coding concept: Sequencing\n- You will be able to define \"algorithm\" and \"program\"\n\n## Teaching practice: Using lesson plans\n- You will understand the importance of utilizing unplugged and plugged lesson plans\n- You will get the chance to see and practice with Lesson Implementation Planning Guides\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Sequencing: Where is it introduced?\n\nThis gives you a sense of when sequencing is introduced in Courses A-F. You don't need to go look at all of these lessons -- we will dive into some in this part of the online course -- but feel free to reference this as needed.\n\n## <a href=\"https://curriculum.code.org/csf-19/coursea/\" target=\"blank\">Course A</a>\n- Lesson 2: Learn to Drag and Drop\n- Lesson 3 (Unplugged): Happy Maps\n- Lesson 4: Sequencing with Scrat\n- Lesson 5 (Programming with Scrat)\n- Lesson 6: Programming with Rey and BB-8\n\n## <a href=\"https://curriculum.code.org/csf-19/courseb/\" target=\"blank\">Course B</a>\n- Lesson 2 (Unplugged): Move It, Move It\n- Lesson 3: Sequencing with Angry Birds\n- Lesson 4: Programming with Angry Birds\n- Lesson 5: Programming with Harvester\n\n## <a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\">Course C</a>\n- Lesson 3: (Unplugged): My Robotic Friends, Jr.\n- Lesson 4: Programming with Angry Birds\n- Lesson 5: Debugging in Maze\n- Lesson 6: Collecting Treasure with Laurel\n- Lesson 7: Creating Art with Code\n\n## <a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\">Course D</a>\n- Lesson 1 (Unplugged): Graph Paper Programming\n- Lesson 2: Introduction to Online Puzzles\n- Lesson 3: Relay Programming\n- Lesson 4: Debugging with Laurel\n\n## <a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\">Course E</a>\n- Lesson 1: Sequencing in the Maze\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Unplugged Lesson: Happy Maps\n\nWe like to introduce computer science topics with unplugged lessons. Then, we use bridging activities to transition into the online lessons later. Beginning with these unplugged lessons introduces concepts in a fun and friendly way. Then, students already feel familiar with the concept by the time that they get to the online lessons, and can relate the online lessons back to the unplugged activity.\n\nFor these programming stages that you will be going through, we will also start with examples of unplugged lessons. Read through the following lesson plan and watch the accompanying videos, thinking about how you would implement this in your classroom with your students.\n\n***\nCS Fundamentals primarily teaches students how to write computer programs. In order to do so, we will begin with **sequencing**. \n> **Sequencing** describes the simple process of ordering steps in a linear manner. \n\nFor example:\n- Step 1: Boil the egg \n- Step 2: Crack the egg\n- Step 3: Eat the egg\n\nSequences are the foundation of **algorithms**.\n> **Algorithms**  are lists of steps to complete a task. Programs, then, are algorithms transcribed into code for a computer to execute.\n\n***\n## **1. Review the \"<a href=\"https://curriculum.code.org/csf-20/coursea/3/\" target=\"blank\">Happy Maps</a>\" Lesson Plan from Course A.**\n\nCourse A is meant for Kindergarten students. Sequencing comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.\n\n## **2. Watch the student video: Happy Maps (found in lesson plan)**\nThis is a video that you would show your students to help introduce the concept of sequencing and kick off the unplugged lesson.\n\n***\n<a href=\"https://curriculum.code.org/csf-20/coursea/3/\" target=\"blank\">![](https://images.code.org/8871ce7afb8fa81eb805d4640e1b9a95-image-1573079151706.25.15 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/4": {
+    "long_instructions": "Watch the video below, which explains a program that young students will write in <a href=\"https://studio.code.org/s/coursea-2019\" target=\"blank\">Course A</a>. On the next page, you'll get to write a similar program of your own!"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/5": {
+    "short_instructions": "Try this one yourself from the beginning.",
+    "long_instructions": "Try this one yourself from the beginning.\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_maze_seq5_a": "Try writing down the steps on paper to find a solution!",
+      "courseA_maze_seq5_b": "You will need 2 blocks, pointing in 2 directions."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/6": {
+    "short_instructions": "Move one way, then another to get the bird to the pig!",
+    "long_instructions": "Move one way, then another to get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_maze_seq6_a": "Your final code should have 3 movement blocks.",
+      "courseA_maze_seq6_b": "If you get stuck, try solving the puzzle in 2 parts, one part before the corner and one part after the corner."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/7": {
+    "short_instructions": "Figure out what is missing and then add blocks to get the bird to the pig!",
+    "long_instructions": "Figure out what is missing and then add blocks to get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_maze_seq7_a": "There is 1 block that you need to add to move the bird to the pig.",
+      "courseA_maze_seq7_b": "If you can't figure out what to do, try drawing the puzzle on paper and use your finger to figure out which way to move."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/8": {
+    "short_instructions": "Solve this level and get the bird to the pig!",
+    "long_instructions": "Solve this level and get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_maze_seq8_a": "If you're stuck, try drawing the image on paper to see how the bird should move."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/9": {
+    "short_instructions": "Challenge: Go around the TNT to get the bird to the pig! ",
+    "long_instructions": "**Challenge:** Go around the TNT to get the bird to the pig!\n\n[expandable][0]",
+    "authored_hints": {
+      "courseA_maze_seq10_a": "If you're having trouble, try writing down the steps on a piece of paper first.",
+      "courseA_maze_seq10_b": "You will need to go 3 directions to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/10": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Teaching practice: Using lesson plans\n\n<img src=\"https://images.code.org/bf355a9cc76e248efa509ee0cea0b10c-image-1573174157169.48.54 PM.png\" class=\"level-image\">\n\n## What is the benefit of following a lesson plan (even for plugged lessons)?\n\nPlugged lesson plans typically have many of the same features as their unplugged counterparts. Lessons will begin and end with discussions or activities that help motivate and synthesize learning. Key moments for you to check in with your students are noted in lesson plans. Students will use a computer, but the ways students interact with each other and your role as the teacher are still important considerations.\n\nLesson plans provide opportunities to introduce concepts, have students reflect on what they've learned, and collaborate.\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/11": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Lesson Implementation Planning Guides\n\nThe goal of these questions is to help you think about and make a detailed plan for how you might teach lessons in a way that leverages best teaching practices and supports students. Think about these questions as you continue to learn basic coding concepts and teaching practices throughout this online professional development course.\n\n## Unplugged Lessons\nYou can find a printable version of this resource on page 43 of the <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#heading=h.jhv35ofi4hkz\" target=\"blank\">curriculum guide</a>. \n\n| What's happening | Where can this happen in the lesson? | \n| ------------ | ----------------- |\n| **Instructional approaches to use in this lesson** <br/>What instructional techniques do you want to be sure to use in this lesson? Where do you want to use them?  |    |\n| **Role as the teacher** <br/>When/where in the lesson do you want the whole class to discuss a topic? What role do you plan to take and when? |  |\n| **Classroom environment and student interaction** <br/>When do you want students to interact during this lesson? What should that look like?|  |\n| **Assessing student learning in the lesson** <br/>How can you assess if students have learned what they need to learn during this lesson? |  |\n| **Connecting to computer science** <br/>Where do you think students might need a push to see the connection between this unplugged activity and computer science? How do  you plan to support that? |  |\n| **Making connections** <br/>Where is there space in this lesson to make connections to the real world/other things students are learning in school? |  |\n\n## Plugged Lessons\nYou can find a printable version of this resource on page 45 of the <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview#heading=h.jhv35ofi4hkz\" target=\"blank\">curriculum guide</a>. \n\n| What's happening | Where can this happen in the lesson? | \n| ------------ | ----------------- |\n| **Connecting to Unplugged lesson** <br/>How will you scaffold and support students in seeing the connection between the previous unplugged lesson and this plugged lesson?  |    |\n| **Instructional approaches to use in this lesson** <br/>What instructional techniques do you want to be sure to use in this lesson? Where do you want to use them?  |    |\n| **Role as the teacher** <br/>When/where in the lesson do you want the whole class to discuss a topic? What role do you plan to take and when? |  |\n| **Classroom environment and student interaction** <br/>When do you want students to interact during this lesson? What should that look like?|  |\n| **Assessing student learning in the lesson** <br/>How can you assess if students have learned what they need to learn during this lesson? |  |\n| **Supporting debugging** <br/>Where do you think students might need to engage in debugging during this lesson (which levels/activities)? How can you support them with that debugging? |  |\n| **Making connections** <br/>Where is there space in this lesson to make connections to the real world/other things students are learning in school? |  |\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/3/levels/12": {
+    "long_instructions": "# Reflect on Sequencing\n\nCongratulations! You just wrote some code. You are officially a programmer!\n\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\n\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? "
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/1": {
+    "dsls": {
+      "markdown": "# Overview: Loops\n\n<img src=\"https://images.code.org/ec2f0877ef2c14cf64d611f47a11daa7-image-1573236152060.jpg\" class=\"level-image\">\n\n## Coding concept\n- Practice coding simple loops\n\n## Teaching practice: Pair programming\n- Understand the benefit of pair programming and how it is used in the real world\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Loops: Where are they introduced?\n\nThis gives you a sense of when loops are introduced in Courses A-F. You don't need to go look at all of these lessons -- we will dive into some in this part of the online course -- but feel free to reference this as needed.\n\n## <a href=\"https://curriculum.code.org/csf-19/coursea/\" target=\"blank\">Course A</a>\n- Lesson 7 (Unplugged): Happy Loops\n- Lesson 8: Loops with Scrat\n- Lesson 9: Loops with Laurel\n- Lesson 10: Ocean Scenes with Loops\n\n## <a href=\"https://curriculum.code.org/csf-19/courseb/\" target=\"blank\">Course B</a>\n- Lesson 6 (Unplugged): Getting Loopy\n- Lesson 7: Loops with Harvester\n- Lesson 8: Loops with Laurel\n- Lesson 9: Drawing Gardens with Loops\n\n## <a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\">Course C</a>\n- Lesson 9: (Unplugged): My Loopy Robotic Friends, Jr.\n- Lesson 10: Loops with Rey and BB-8\n- Lesson 11: Harvesting Crops with Loops\n- Lesson 12: Looking Ahead with Minecraft\n- Lesson 13: Sticker Art with Loops\n\n## <a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\">Course D</a>\n- Lesson 7: Loops in Ice Age\n- Lesson 8: Drawing Shapes with Loops\n- Lesson 9: Nested Loops in Maze\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/3": {
+    "dsls": {
+      "markdown": "# Unplugged Lesson: Getting Loopy\n\n> A **loop** is the action of doing something over and over again.\n****\n\n## **1. Review \"<a href=\"https://curriculum.code.org/csf-19/courseb/6/\" target=\"blank\">Getting Loopy</a>\" Lesson Plan from Course B:**\nCourse B is meant for Grade 1 students. Loops comes up in other courses, as well, and you can find examples of those lessons at the bottom of this page.\n\n## **2. Watch the student video: Getting Loopy (found in the lesson plan)**\nThis is a video that you would show your students to help introduce the concept of loops and kick off the unplugged lesson.\n\n***\n<a href=\"https://curriculum.code.org/csf-19/courseb/6/\" target=\"blank\">![](https://images.code.org/74f963b452dbba7eb260d6b9e1fa2b4c-image-1573079606451.33.05 PM.png)</a>\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/4": {
+    "long_instructions": "Watch the video below, which explains how loops work and introduces the 'Repeat' block in CS Fundamentals."
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/5": {
+    "short_instructions": "To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
+    "long_instructions": "[][0] _\"Go BB-8!\"_\n\nTo get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
+    "authored_hints": {
+      "courseC_starWars_loops2_a": "To repeat code, drag out a `repeat` loop, then put the block you want inside of it."
+    },
+    "callouts": {
+      "courseC_starWars_loops2": "You only have one of these blocks available in this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/6": {
+    "short_instructions": "In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\nIn this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
+    "authored_hints": {
+      "courseC_starWars_loops4_c": "Clicking on the small arrow next to \"left\" on the turn block will let you change it to  \"right\".",
+      "courseC_starWars_loops4_a": "Use two `repeat` blocks.",
+      "courseC_starWars_loops4_b": "Each `repeat` loop will have only one command inside of it: `move forward`."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/7": {
+    "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
+    "long_instructions": "[][0] _\"Go BB-8!\"_",
+    "authored_hints": {
+      "courseC_starWars_loops5_b": "To move down, you have to turn and then move forward.",
+      "courseC_starWars_loops5_a": "The best solution uses a turn, then a single `move forward`, another turn, then a loop."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/8": {
+    "short_instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
+    "long_instructions": "[][0] _\"Can you get it all?\"_\n\nLoops even work with more than one block inside!  Can you loop this sequence?",
+    "authored_hints": {
+      "courseC_starWars_loops6_a": "Try writing all of the moves down on a piece of paper and looking for a pattern.",
+      "courseC_starWars_loops6_b": "If you want to use less code, you can put one `repeat` loop inside of another!\\\nThis is called a **nested loop**."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/9": {
+    "short_instructions": "Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
+    "long_instructions": "[][0] _\"You can do it!\"_\n\nCan you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
+    "authored_hints": {
+      "courseC_starWars_loops7_a": "This pattern looks harder than it is! Start with a simple stair step. Does that cover all of the scrap metal?",
+      "courseC_starWars_loops7_b": "If you are having trouble with this puzzle, try writing all of the moves on a piece of paper and looking for a pattern.",
+      "courseC_starWars_loops7_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/10": {
+    "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge:** Combine ideas from the last few puzzles to complete this level.",
+    "authored_hints": {
+      "course_starWars_loops8_a": "Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!",
+      "course_starWars_loops8_b": "Think of the first half of this problem as a stair step problem. How did you solve that before?",
+      "course_starWars_loops8_c": "Take a look at this path.\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/11": {
+    "dsls": {
+      "markdown": "# Teaching practice: Pair programming\n\nOne important classroom management strategy many educators use is strategic grouping. At Code.org, we suggest trying the strategic grouping strategy used in the real-world offices of the top tech firms: pair programming.\n\n> **Pair programming** is when two students use one computer to write a program together. \n\nResearch shows that pair programming:\n\n- Leads to higher-quality student programs relative to non-paired students' programs\n- Reduces the so-called \"confidence gap\" between female and male students, while increasing the programming confidence of all students\n\nThe National Center for Women & Information Technology (NCWIT) has a <a href=\"http://www.ncwit.org/sites/default/files/resources/pairprogramming_retainingwomencollaborativelearning_practice.pdf\" target=\"blank\">great resource about the benefits of pair programming</a>. \n\nWatch this video to understand how pair programming works, and hear directly from students how it enhances their learning.\n\n<a href=\"https://www.youtube.com/watch?v=vgkahOzFH2Q\" target=\"blank\">![](https://images.code.org/2c721ff31fbd06f527d99965d3460fa8-image-1571172758005.52.13 PM.png)</a>\n\n[Can't see the video? Click here](http://videos.code.org/2014/C1-pair-programming.mp4)\n<br/><br/>\nNot only is pair programming beneficial for students, it is also something that is practiced by some professional computer programmers. Watch this video to learn how to introduce pair programming to your students.\n\n<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"blank\">![](https://images.code.org/01da36dbe56da7986c3652991d4828e8-image-1571172869229.54.16 PM.png)</a>\n\n[Can't see the video? Click here](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)\n<br/>\n\n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/4/levels/12": {
+    "long_instructions": "# Reflect on Loops\n\nIn this lesson, we explored how loops can be used to make code more efficient. In the next lesson, we'll look at how events can add interactivity into a program.\n\nNow take a moment to reflect. How can you connect the concept of loops to your students’ prior experience outside of the CS classroom? What are the benefits of pair programming, and how could you use the it when teaching this lesson?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/1": {
+    "dsls": {
+      "markdown": "# Overview: Events\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\" width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px 40px;\">\n\n## Coding concepts: Events\n- Make a program interactive\n\n## Teaching practice: Debugging\n- Find and fix problems in an algorithm or program\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Events: Where are they introduced?\n\nThis gives you a sense of where events is introduced in Courses A-F. You don't need to go look at all of these lessons -- we will dive into some in this part of the online course -- but feel free to reference this as needed.\n\n## <a href=\"https://curriculum.code.org/csf-19/coursea/\" target=\"blank\">Course A</a>\n- Lesson 11 (Unplugged):  The Big Event Jr.\n- Lesson 12: On the Move with Events\n\n## <a href=\"https://curriculum.code.org/csf-19/courseb/\" target=\"blank\">Course B</a>\n- Lesson 11 (Unplugged): The Big Event Jr.\n- Lesson 12: A Royal Battle with Events\n\n## <a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\">Course C</a>\n- Lesson 14: (Unplugged): The Big Event\n- Lesson 15: Build a Flappy Game\n- Lesson 16: Chase Game with Events\n\n## <a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\">Course D</a>\n- Lesson 5: Events in Bounce\n- Lesson 6: Build a Star Wars Game\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/3": {
+    "dsls": {
+      "markdown": "# Unplugged Lesson: The Big Event\n\n> An **event** is a line of code that tells your computer to \"listen\" for something to happen, then take an action. For example, on web pages, you often can display a drop down menu when you roll over the navigation bar with your mouse. The \"mouse rollover\" is an event that triggers an action.\n\n***\n## **1. Review \"<a href=\"https://curriculum.code.org/csf-19/coursec/14/\" target=\"blank\">The Big Event</a>\" Lesson Plan from Course C.**\n<br/>\nCourse C is meant for students in Grade 2. Events come up in every CS Fundamentals Course, from A-F.\n<br/><br/>\n\n## **2. Watch the student video: The Big Event (found in lesson plan)**\nThis is a video that you would show your students to help introduce the concept of events and kick off the unplugged lesson.\n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursec/14/\" target=\"blank\">![](https://images.code.org/37ab92bffc396c3b60f83123b44a0552-image-1573080011247.39.43 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/5": {
+    "short_instructions": "Attach the `flap normal amount` block to the `when click` event, then press \"Run\".    Click or tap on the play space to move Flappy to the target.",
+    "long_instructions": "Attach the `flap a normal amount` block to the `when click` event, then press \"Run\".   \n\n* * *\n\nClick or tap on the play space to move Flappy to the target.",
+    "authored_hints": {
+      "courseC_flappy_events1_a": "[][0]"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/6": {
+    "short_instructions": "Try adding a block that sets the level speed when the \"Run\" button is pressed.  Play the game and flap to the target to continue.",
+    "long_instructions": "The `when run` event allows you to run code as soon as your game starts.  \n\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \n\n* * *\n\nPlay the game and flap to the target to continue.",
+    "authored_hints": {
+      "courseC_flappy_events2_a": "The block you need to add is called `set speed`. ",
+      "courseC_flappy_events2_b": "Connect the `set speed` block to the `when run` block to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/7": {
+    "short_instructions": "Attach the `end game` block to the `when hit the ground` event.   Play the game and crash the bird into the ground to continue.",
+    "long_instructions": "Now we've added the ground. \n\nAttach the `end game` block to the `when hit the ground` event. \n\n* * *\n\nPlay the game and crash the bird into the ground to continue.",
+    "authored_hints": {
+      "courseC_flappy_events3_a": "If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/8": {
+    "short_instructions": "Attach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "long_instructions": "Flappy will fly right through obstacles unless you write code to make him crash. \n\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "authored_hints": {
+      "courseC_flappy_events4_a": "Connect the `end game` block to `when hit an obstacle` to solve this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/9": {
+    "short_instructions": "Add a block to the `when pass an obstacle` event, then press \"Run\" to score a point by flying Flappy through the first set of pipes.",
+    "long_instructions": "We've added a scoreboard to count points when Flappy passes obstacles.  \n\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes.",
+    "authored_hints": {
+      "courseC_flappy_events5_a": "You will need to use the `score a point` block to pass this level."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/10": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Teaching practice: Debugging\n\nEveryone gets bugs! Therefore, debugging is an essential skill all students should develop that builds on the student practices discussed above. Without strong debugging skills, students can become frustrated. Help keep students moving by implementing both active and reflective debugging strategies in your classroom.\n\n> **Debugging** is finding and fixing problems in an algorithm or program\n\n## Active Debugging\nNew programmers are prone to writing long chunks of code without pausing to read or test their work along the way, which can snowball into a program that is very hard to debug. To prevent this, we suggest implementing active debugging as part of a general coding philosophy.\n\nActive debugging describes the practice of debugging while coding. This generally means students taking time during coding exercises to read, process, and test small pieces of code that they have just written.\n\nUse this debugging guide to help with active debugging: \n\n<img src=\"https://images.code.org/b17956e111a6ca4ec17ace55f7fdf69b-image-1571695775936.09.14 PM.png\">\n\n\n## Reflective Debugging\nReflective debugging is a practice in which students participate in debugging as an entire class. 'Bug talks' and keeping a 'bug tracker' are two examples of  strategies that can be used to implement reflective debugging in your classroom and are described below. Read more about these on <a href=\"https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview\" target=\"blank\">page 23 of the curriculum guide</a>. \n\nCheck out this video on debugging to learn more about the debugging process:\n\n<a href=\"https://www.youtube.com/watch?v=auv10y-dN4s\" target=\"blank\">![](https://images.code.org/281fbcbd84d0df2491e0c4050e612b97-image-1571696135948.13.58 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/5/levels/11": {
+    "long_instructions": "# Reflect on Events\n\nIn this lesson, you stretched your coding muscles by using events to trigger certain actions in your program.\n\nNow take a moment to reflect. How would you explain the concept of events to your students? What are the steps you could take to debug a program?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/1": {
+    "dsls": {
+      "markdown": "# Overview: Conditionals\n\n<img src=\"https://images.code.org/d2c2e06ce0bef52ae173a1de35b92af7-image-1470945682161.png\" width=\"450px\"  style=\"border-radius:10px; float:right; margin: 0 0 40px 40px;\"/>\n\nSo far, you've written a few programs, added loops to increase efficiency, and added events to make your programs interactive. In this stage, we'll explore **conditionals** (if-statements), which begin to add logic to your program.\n\n## Coding concept\n- Practice coding simple conditionals (if-statements)\n\n## Teaching practice: Journaling\n- Using journal prompts to help students process and reflect on what they have learned, as well as work through problems\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Conditionals: Where are they introduced?\n\nThis gives you a sense of where conditionals is introduced in Courses A-F. You don't need to go look at all of these lessons -- we will dive into some in this part of the online course -- but feel free to reference this as needed.\n\n## <a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\">Course C</a>\n- Lesson 12: Looking Ahead with Minecraft\n\n## <a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\">Course D</a>\n- Lesson 10: (Unplugged): Conditionals with Cards\n- Lesson 11: If/Else with Bee\n- Lesson 12: While Loops in Farmer\n- Lesson 13: Until Loops in Maze\n- Lesson 14: Harvesting with Conditionals\n\n## <a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\">Course E</a>\n- Lesson 3: Conditionals in Minecraft: Voyage Aquatic\n- Lesson 4: Conditionals with the Farmer\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/3": {
+    "dsls": {
+      "markdown": "# Unplugged Lesson: Conditionals with Cards\n\n> **Conditionals** are if-statements.\n\n***\n\n## **1. Review \"<a href=\"https://curriculum.code.org/csf-19/coursed/10/\" target=\"blank\">Conditionals with Cards</a>\" lesson plan from Course D:** \nCourse D is meant for Grade 3 students. Conditionals are not covered in Courses A, B, or C.\n<br/>\n\n## **2. Watch the student video: Conditionals with Cards (found in the lesson plan)**<br/>\nThis is a video that you would show your students to help introduce the concept of conditionals and kick off the unplugged lesson.\n\n## **3. Watch a teacher model this lesson: \"Conditionals with Cards\" (found in the lesson plan)**<br/>\nThis video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\" target=\"blank\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/5": {
+    "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "authored_hints": {
+      "courseD_bee_conditionals1_a": "You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar."
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            },
+            {
+              "text": "The bee will move to the cloud and only try to get nectar if there is a flower underneath.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The bee will move to the cloud and then do nothing, no matter what. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ],
+          "questions": [
+            {
+              "text": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/6": {
+    "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
+    "long_instructions": "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
+    "authored_hints": {
+      "courseD_bee_conditionals2_hintVid1": "Need help getting started?  Watch the video!",
+      "courseD_bee_conditionals2_a": "Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.",
+      "courseD_bee_conditionals2_b": "You can use a `repeat` loop or a `while path ahead` to move through this maze.",
+      "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.",
+      "courseD_bee_conditionals2_hintVid2": "Watch this video for help solving this puzzle."
+    },
+    "callouts": {
+      "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all.",
+      "4_5_Bee_Conditionals_2_2": "Need help?  Click here for a VIDEO hint!"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/7": {
+    "short_instructions": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "long_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar _once_.",
+    "authored_hints": {
+      "courseD_bee_conditionals3_hintVid1": "Need help getting started?  Watch the video!",
+      "courseD_bee_conditionals3_a": "Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.",
+      "courseD_bee_conditionals3_b": "You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!",
+      "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet.",
+      "courseD_bee_conditionals3_hintVid2": "Watch this video for help solving this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/8": {
+    "short_instructions": "Get all of the nectar using as few blocks as possible.",
+    "long_instructions": "In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
+    "authored_hints": {
+      "courseD_bee_conditionals4_hintVid1": "Need help getting started?  Watch the video!",
+      "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
+      "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. ",
+      "courseD_bee_conditionals4_c": "Using [blockly block][0] block, you should move forward and check for a flower. If there is a flower, what should the bee do?",
+      "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/9": {
+    "short_instructions": "Collect all of the nectar using as few blocks as possible",
+    "authored_hints": {
+      "courseD_bee_conditionals5_hintVid1": "Need help getting started?  Watch the video!",
+      "courseD_bee_conditionals5_a": "Think of every side of the rectangular path as a path by itself. Set up a nested loop with a `repeat` block on the outside and a `while there is a path ahead` loop on the inside. How many paths does the bee need to buzz down if the bee needs to buzz down every side with a flower?",
+      "courseD_bee_conditionals5_c": "There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.",
+      "courseD_bee_conditionals5_b": "Inside the `while there is a path ahead` block you will need to move forward and check for a flower. How do you check if there is a flower? What do you do if there is a flower?",
+      "courseD_bee_conditionals5_hintVid2": "Watch this video for help solving this puzzle."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/10": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Teaching practice: Journaling\n\n<img src=\"https://images.code.org/49264bf902a5804672133e723bee6e8b-image-1573170371197.42.28 PM.png\" class=\"level-image\">\n\n## Why use it? \nLike a chemist would catalog strategies and solutions, so do we ask our budding computer scientists to take notes on their trials and achievements. Journals are useful as scratch paper for building, debugging, and strategizing, and they offer a fantastic resource for referencing previous answers when struggling with more complex problems.\n\n## How do I use it?\n- Encourage students to keep their journals beside them at all times when coding\n- Remind students that they can write solutions out longhand, then circle patterns to find prime opportunities for loops and functions\n- Have students copy down answers to puzzles that they might need in future levels\n- Ask students to draw emoticons at the top of the pages to help them identify how they're feeling about concepts\n- End each lesson with a thought or question that students can answer in writing as a way of reflecting on their growth for the day\n\nLesson plans also have journaling prompts in them! \n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/6/levels/11": {
+    "long_instructions": "# Reflect on Conditionals\n\nIn this lesson, we explored how conditionals help programmers add logic to their code.\n\nNow take a moment to reflect. How would you explain the concept of conditionals to your students? What is the benefit of journaling as a teaching practice for comptuer science?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Overview: End of course projects\n\n<img src=\"https://images.code.org/0a5fca1b8c79ab8463d53ef7bde1a7a1-image-1573236230401.jpg\" class=\"level-image\">\n\n## New teaching practice: End of course projects\n\n- Each course offers the opportunity for students to take what they've learned and put it together into a unique project that represents their own creativity. \n- Students are encouraged to plan, build, revise, and present projects of their own. \n- Following a project from inception to delivery offers an inside look at the software development cycle. These guided projects offer scaffolded rubrics for the benefit of both student and teacher.\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# End of course projects: Where are they introduced?\n\n## <a href=\"https://curriculum.code.org/csf-19/coursea/\" target=\"blank\">Course A</a>\n- Lesson 12: On the Move with Events\n\n## <a href=\"https://curriculum.code.org/csf-19/courseb/\" target=\"blank\">Course B</a>\n- Lesson 12: A Royal Battle with Events\n\n## <a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\">Course C</a>\n- Lesson 18: End of Course Project\n\n## <a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\">Course D</a>\n- Lesson 18: End of Course Project\n\n## <a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\">Course E</a>\n- Lesson 18: End of Course Project\n\n## <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\">Course F</a>\n- Lesson 20: End of Course Project\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n| Hungry Squirrel | Alien Story |\n|---|---|\n|<a href=\"https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view\" target=\"blank\">![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG \"Hungry Squirrel (Play Lab\")</a>| <a href=\"https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view\" target=\"blank\">![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG \"Alien Story (Play Lab\")</a>|\n| Try adding sounds to this game! | Try adding another scene to this story! |\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/4": {
+    "short_instructions": "Choose a background and map, and pick an actor to be your game's hero.",
+    "long_instructions": "It is amazing how much you have learned! Let's make a game step by step.\n\nUsing new blocks in your toolbox, choose a new background, then pick an actor to be in your game.",
+    "authored_hints": {
+      "courseE_playLab_scaffold1_a": "The `set actor 1 to ??? image` block can be used to add an actor to the stage.",
+      "courseE_playLab_scaffold1_b": "Put the `set actor` block under `when run` to make your actor appear at the beginning of the program.",
+      "courseE_playLab_scaffold1_c": "Use `set ??? background` to choose a background for your scene."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/5": {
+    "short_instructions": "Use events and actions to make your hero move. Get to the targets.",
+    "long_instructions": "Use  blocks like events and actions to make your player move when you press the arrow keys.  \n\nGet the player to the targets to complete this puzzle.",
+    "authored_hints": {
+      "courseE_playLab_scaffold1_a": "Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.",
+      "courseE_playLab_scaffold1_b": "You should have four `when arrow` event blocks, with a direction to move underneath each.",
+      "courseE_playLab_scaffold1_c": "When you are done, you should be able to move your hero with the arrow keys!"
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/6": {
+    "short_instructions": "Add two or more additional actors to your game and make them move.",
+    "long_instructions": "Let's add some more characters to your game!\n\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
+    "callouts": {
+      "courseE_playLab_scaffold3_1": "Get the actor to this flag to move on to the next level."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/7": {
+    "short_instructions": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
+    "long_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\n\nUse event blocks like the `when actor touches` to change the score or win the game. Score 5 points or win the game to complete this puzzle.",
+    "authored_hints": {
+      "courseE_playLab_scaffold4_a": "Use `score point` to add a point, and `remove point` to subtract one."
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/8": {
+    "short_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want.",
+    "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. When you are done, click \"Finish\"!",
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/9": {
+    "short_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/10": {
+    "long_instructions": "# Reflect on end-of-course projects\n\nTake a moment to reflect. How would you use end-of-course projects in your classroom? What is the benefit of having students complete a project?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/7/levels/11": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Where to next?\n\nCongratulations! You've completed the basic coding concepts portion of this online professional development course! So, where to next?\n\n## If you are planning to teach Courses E and F\nIf you are planning to teach Courses E and F (or you just want to become familiar with some more advanced coding concepts), we recommend you continue onto the <a href=\"https://studio.code.org/s/k5-onlinepd-2019/stage/8/puzzle/1\" target=\"blank\">next concept chunk</a>, which specifically covers the concepts that are introduced in these courses.\n\n## If you are not planning to teach Courses E and F\nIf you are not planning to teach Courses E and F, you can skip to the <a href=\"https://studio.code.org/s/k5-onlinepd-2019/stage/12/puzzle/1\" target=\"blank\">\"Next Steps\" concept chunk.</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Diving Deeper: Courses E and F\n\n## Are you teaching Courses E and F? \n\nCourses E and F are designed for 4th and 5th grade. In these courses, we dive deeper into some concepts and introduce new coding environments. \n\nIf you are planning to teach these courses, we recommend completing the following lessons. If you are not planning to teach these courses, you can skip this concept chunk and move onto \"Next Steps\".\n\n## What will you find in this concept chunk?\nIn this concept chunk, we will cover:\n- More advanced coding concepts: functions, variables and advanced forms of loops (nested loops and for loops)\n- \"Sprites\" and a new coding environment called Sprite Lab\n- End-of-course projects\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/2": {
+    "dsls": {
+      "markdown": "# Overview: Functions\n\n<img src=\"https://images.code.org/6ac5cc9f26b87a62b0558947d4cfd457-image-1501267730981.jpg\" width=\"450px\" style=\"border-radius:10px; float:right; margin: 0 0 40px 40px;\">\n\n## Coding Concepts: Functions\n- Practice coding simple functions\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Functions: Where are they introduced?\n\nThis gives you a sense of when functions are introduced in Courses E-F. You don't need to go look at all of these lessons -- we will dive into some in this part of the online course -- but feel free to reference this as needed.\n\n## <a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\">Course E</a>\n- Lesson 14 (Unplugged): Songwriting\n- Lesson 15: Functions in Minecraft\n- Lesson 16: Functions with Harvester\n- Lesson 17: Functions with Artist\n\n## <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\">Course F</a>\n- Lesson 1: Functions in Minecraft\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/4": {
+    "dsls": {
+      "markdown": "# Unplugged Lesson: Songwriting\n\n> A **function** is a piece of code that you can easily call over and over again.\n\nProgrammers are always looking for ways to make their code more efficient. One way that they do that is through **functions**, which allow them to reuse segments of code.\n\n*** \n\n## **1. Review \"<a href=\"https://curriculum.code.org/csf-19/coursee/14/\" target=\"blank\">Functions: Songwriting</a>\" Lesson Plan from Course E.**\n<br/>\nCourse E is meant for students in Grade 4. Functions are not covered in Courses A-D. \n\n## **2. Watch the student video: \"Functions: Songwriting\" (found in the lesson plan)**\nThis is a video that you would show your students to help introduce the concept of functions and kick off the unplugged lesson.  \n\n## **3. Watch a teacher model this lesson: \"Functions: Songwriting\" (found in the lesson plan)**\nThis video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson.\n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursee/14/\" target=\"blank\">![](https://images.code.org/c961585a0e79fc2934530d251dd84f53-image-1573080971047.55.58 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/5": {
+    "short_instructions": "Help the zombie draw glasses using squares with sides of 100 pixels.\\\nThe bridge between the glasses is 75 pixels long.",
+    "long_instructions": "_\"Me zombie artist. Me love drawing!\"_\n\nHelp the zombie draw glasses using squares with sides of 100 pixels.\\\nThe bridge between the glasses is 75 pixels long.",
+    "authored_hints": {
+      "courseE_artist_functions1_a": "The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.",
+      "courseE_artist_functions1_b": "It is okay to draw overlapping lines to make your glasses.",
+      "courseE_artist_functions1_c": "For shorter code, try using a `repeat` loop to draw the square frames of the glasses."
+    },
+    "callouts": {
+      "courseD_artist_functions1_1": "Let's start by using this block to help create the first square."
+    },
+    "function_definitions": {
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/6": {
+    "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nothing. The function is not called in the program.",
+              "correct": false,
+              "feedback": "Incorrect. The function is actually called two times in the program."
+            },
+            {
+              "text": "The artist will draw a single square.",
+              "correct": false,
+              "feedback": "Incorrect. The function is actually called two times in the program."
+            },
+            {
+              "text": "The artist will draw two squares that overlap.",
+              "correct": false,
+              "feedback": "Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions."
+            },
+            {
+              "text": "The artist will draw two squares with a small gap in between.",
+              "correct": true,
+              "feedback": "Correct! The function is called two times in the program, with a jump in between."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/8": {
+    "short_instructions": "This time, use the `draw a square` function to create the glasses. ",
+    "long_instructions": "Functions let you define new blocks! \n\nWe've moved the blocks needed for drawing a square into a function called `draw a square`. This time, use the `draw a square` function to create the glasses. \n\n* * *\n\nThe squares are 75 pixels apart.",
+    "authored_hints": {
+      "courseD_artist_functions2_b": "The function you write should not contain your whole program, just the part that draws a square with 100 pixel sides.",
+      "courseD_artist_functions2_c": "Use the green `draw a square` block to \"call\" your function under the `when run` block. Otherwise, the code in your function will not run.\n\n[blockly block][0]",
+      "courseD_artist_functions2_a": "Your program should:\n\n-   Use function\n-   Move forward 100 + 75 pixels\n-   Use function"
+    },
+    "callouts": {
+      "courseD_artist_functions2_1": "When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?"
+    },
+    "function_definitions": {
+      "draw a square": {
+        "name": "draw a square"
+      },
+      "draw ear stems": {
+        "name": "draw ear stems"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/9": {
+    "short_instructions": "You can make this drawing by adding a repeat block.",
+    "long_instructions": "We will come back to functions shortly. Let's take a break to practice making this star. \n\nYou can make this drawing by adding a repeat block.",
+    "authored_hints": {
+      "courseD_artist_functions3_a": "To solve this puzzle, you just need to add a  loop that repeats the starter code 8 times.\n\nIf you can't remember what the starter code was, click \"start over\" in the upper right corner of the workspace.",
+      "courseD_artist_functions3_b": "Your loop should have all 3 starter code blocks inside of it."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/10": {
+    "short_instructions": "Now that you can draw a star, try drawing four stars!",
+    "long_instructions": "Now that you can draw a star, try drawing four stars!\n\n-   Each branch of the star is 25 pixels long\n-   Turn 45 degrees between branches\n-   Jump 100 pixels between each star",
+    "authored_hints": {
+      "courseD_artist_functions4_a": "Try using a function!",
+      "courseD_artist_functions4_b": "Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.",
+      "courseD_artist_functions4_c": "Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!"
+    },
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/11": {
+    "short_instructions": "Draw only those three stars to finish this puzzle.",
+    "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\n\nDraw only those three stars to finish this puzzle.",
+    "authored_hints": {
+      "courseD_artist_functions5_a": "Don't give up!  Remember what you have been learning.",
+      "courseD_artist_functions5_b": "Functions make it easy to call saved code at any time, not just from inside a loop!",
+      "courseD_artist_functions5_c": "Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!"
+    },
+    "function_definitions": {
+      "draw a star": {
+        "name": "draw a star"
+      }
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/8/levels/12": {
+    "long_instructions": "# Reflect on Functions\n\nIn this lesson, we explored how functions can make you a faster and better programmer by allowing you to reuse segments of your code. In the next lesson, we'll look at the concept of variables.\n\nNow take a moment to reflect. How would you explain the concept of functions to your students? What is one teaching practice that you could use to teach this concept?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Overview: Variables\n\n<img src=\"https://images.code.org/833108f29baf6f8633b1282aeb7d06e5-image-1571780548872.jpg\" class=\"level-image\">\n\n## Advanced coding concepts: Variables\n\n- Understand that a variable placeholder for a piece of information that can change\n- Practice using variables\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Variables: Where are they introduced?\n\n## <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\">Course F</a>\n- Lesson 6:(Unplugged): Envelope Variables\n- Lesson 7: Variables with Artist\n- Lesson 8: Changing Variables with Bee\n- Lesson 9: Changing Variables with Artist\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Unplugged Lesson: Envelope Variables\n\n> A **variable** is a placeholder for a piece of information that can change.\n\n***\n\n## **1. Review \"<a href=\"https://curriculum.code.org/csf-20/coursef/7/\" target=\"blank\">Envelope Variables</a>\" Lesson Plan from Course F.**\n<br/>\nCourse F is meant for students in Grade 5. This is the only place where variables come up in Courses A-F.\n<br/><br/>\n\n## **2. Watch the student video: Envelope Variables (in the lesson plan)**\n<br/>\nThis is a video that you would show your students to help introduce the concept of variables and kick off the unplugged lesson.\n\n***\n<a href=\"https://curriculum.code.org/csf-20/coursef/7/\" target=\"blank\">![](https://images.code.org/ff686377c1ba9bcd153a01cbfb24af35-image-1573086630947.29.50 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/4": {
+    "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
+    "authored_hints": {
+      "grade5_artist_variables_triangles1_a": "To make an internal angle of 60 degrees in this triangle, remember to turn the artist 120 degrees.",
+      "grade5_artist_variables_triangles1_b": "Use the `repeat` loop to make your code shorter.",
+      "grade5_artist_variables_triangles1_c": "Inside your loop, you will want to move forward 50 pixels, then turn left 120 degrees."
+    },
+    "callouts": {
+      "grade5_artist_variables_triangles1_1": "Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/5": {
+    "short_instructions": "Now draw three of those triangles right next to each other.   ",
+    "long_instructions": "Now use another loop to draw three of those triangles right next to each other.   \n\nYou can nest the code from your last puzzle inside.",
+    "authored_hints": {
+      "courseF_artist_variables2_a": "Remember to move forward after drawing each triangle.",
+      "courseF_artist_variables2_b": "Your new loop will contain the loop for your triangle, then a `move forward` command."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/7": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The artist will draw a triangle with 50 pixel sides.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The artist will draw a 50-sided polygon with 3 pixel sides.",
+              "correct": false,
+              "feedback": "Incorrect. The variable `length` would need to be in the `repeat` loop for that to happen."
+            },
+            {
+              "text": "The artist will draw three open sides with 50 degree turns.",
+              "correct": false,
+              "feedback": "Incorrect.  The `length` variable would need to be used in the `turn` block for that to happen."
+            },
+            {
+              "text": "I don't know.",
+              "correct": false,
+              "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/8": {
+    "short_instructions": "Move the length of 50 into a variable so we can use it in the next few puzzles.",
+    "long_instructions": "Before things get tricky, can you move the length of 50 into a variable so we can use it in the next few puzzles?  \n\n[expandable][0]",
+    "authored_hints": {
+      "courseF_artist_variables3_a": "The variable `length` will be used in two places in your code: In the side length of your triangle, and in the amount you move forward between triangles.",
+      "courseF_artist_variables3_b": "A number block with value 50 should only be in one place: after the `set length` block."
+    },
+    "callouts": {
+      "courseF_artist_variables3_a": "Use this to set the value of the variable `length`"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/9": {
+    "short_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
+    "long_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
+    "authored_hints": {
+      "courseF_artist_variables4_a": "Your code won't be much different than it was in the last puzzle, except that you will need to turn the artist to jump down, then turn him back to get ready to draw the next triangle.",
+      "courseF_artist_variables4_c": "This is the pattern your artist will be following:\n\n[][0]",
+      "courseF_artist_variables4_b": "[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/10": {
+    "short_instructions": "Add another set of loops at the end of your code to add three more triangles. This time, move forward and up!",
+    "authored_hints": {
+      "courseF_artist_variables5_a": "The second half of your code should look almost the same as the first half, except you will be turning _left_, jumping, then turning _right_.",
+      "courseF_artist_variables5_b": "The first half of your code will draw three triangles, and the second half will draw the other three.",
+      "courseF_artist_variables5_c": "Start by duplicating the code in the first half of your program, then alter it to make the design shown.",
+      "courseF_artist_variables5_d": "This is the pattern your artist will follow:\n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/9/levels/11": {
+    "long_instructions": "# Reflect on Variables\n\nTake a moment to reflect. How would you explain the concept of variables to your students? What is one teaching practice that you could use to teach this concept?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Overview: For Loops\n\n<img src=\"https://images.code.org/9d05ff62f3098c6143eff78553e05f06-image-1571780679511.jpg\" class=\"level-image\">\n\n## Advanced coding concepts: For loops\n- Understand that for loops are a loop with a predetermined beginning, end, and increment (step interval)\n- Practice using for loops\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# For Loops: Where are they introduced?\n\n## <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\">Course F</a>\n- Lesson 11 (Unplugged): For Loop Fun\n- Lesson 12: For Loops with Bee\n- Lesson 13: For Loops with Artist\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Unplugged Lesson: For Loop Fun\n\n> A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).\n*** \n## **1. Review \"<a href=\"https://curriculum.code.org/csf-19/coursef/11/\" target=\"blank\">For Loop Fun</a>\" Lesson Plan from Course F.**\n<br/>\nCourse F is meant for students in Grade 5. This is the only place where for loops come up in Courses A-F.\n<br/><br/>\n\n## **2. Watch the student video: For Loop Fun (found in lesson plan)**\n<br/>\nThis is a video that you would show your students to help introduce the concept of for loops and kick off the unplugged lesson.\n\n***\n\n<a href=\"https://curriculum.code.org/csf-19/coursef/11/\" target=\"blank\">![](https://images.code.org/73c0b6e95f2136d6ebcc03cbddee1be7-image-1573148733514.45.16 AM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/4": {
+    "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
+    "authored_hints": {
+      "courseF_bee_for1_a": "Drag a purple number block into the blank space on the `repeat` loop to tell it how many times to repeat.",
+      "courseF_bee_for1_b": "You will need two blocks in your ‘repeat’ loop to collect all of the nectar."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/5": {
+    "short_instructions": "Write the code to help the bee collect all of the nectar.",
+    "long_instructions": "Write the code to help the bee collect all of the nectar.\n\nYou will need lots of blocks for this challenge, but we'll learn an easier way in the next puzzle.",
+    "authored_hints": {
+      "courseF_bee_for2_a": "If you’re confused, work one flower at a time, and test often.",
+      "courseF_bee_for2_b": "Remember to move forward between each loop, so you reach each flower."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/7": {
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The bee will move forward and collect all of the nectar from every flower. ",
+              "correct": false,
+              "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            },
+            {
+              "text": "The bee will move forward and collect all of the nectar from every flower, except for one.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The bee will move forward and collect one nectar from each flower. ",
+              "correct": false,
+              "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            },
+            {
+              "text": "I don't know. ",
+              "correct": false,
+              "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            }
+          ],
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/8": {
+    "short_instructions": "Help the bee collect all of the nectar.",
+    "authored_hints": {
+      "courseF_bee_for4_a": "Use a `for` loop that goes from 1 to 7 with an increment of 1 to solve this puzzle.",
+      "courseF_bee_for4_b": "Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.",
+      "courseF_bee_for4_c": "Make sure to use the `counter` variable inside your nested `repeat` loop to get enough nectar!"
+    },
+    "callouts": {
+      "courseF_bee_for4_1": "You will find the `for` loop in here!"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/9": {
+    "short_instructions": "Try gathering this nectar by counting down from 5 to 1 by 1.",
+    "long_instructions": "You can also use a `for` loop to count down. \n\nTry gathering this nectar by counting down from **5** to **1** by **1**.",
+    "authored_hints": {
+      "courseF_bee_for6_a": "Don't forget to use a `counter` variable inside your `repeat` loop.",
+      "courseF_bee_for6_b": "Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.",
+      "courseF_bee_for6_c": "Your loop should count **from 5 to 1**."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/10": {
+    "short_instructions": "Try collecting these flowers using an increment of 2.",
+    "long_instructions": "The last number in your `for` loop is called the **\"increment\"**.  Each time the loop is run, the counter variable changes by the value of the **increment**.\n\nTry collecting these flowers using an **increment** of 2.",
+    "authored_hints": {
+      "courseF_bee_for7_a": "Your `for` loop will need to count from 1 to 7 by 2.",
+      "courseF_bee_for7_b": "Within your `for` loop, you will want to have a `move forward` command, and a loop to collect nectar.",
+      "courseF_bee_for7_c": "Remember to use the `counter` variable in your `repeat` loop."
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/10/levels/11": {
+    "long_instructions": "# Reflect on For Loops\n\nTake a moment to reflect. How would you explain the concept of for loops to your students? What is one teaching practice that you could use to teach this concept?"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Overview: Sprite Lab\n\n<img src=\"https://images.code.org/e9d343b93e7a23bdb0c8bdd800f0dae1-image-1571780815860.46.37 PM.png\" class=\"level-image\">\n\n## Advanced coding concept: Sprites and behaviors in Sprite Lab\n- Become familiar with a new coding environment: Sprite Lab\n- Practice creating Sprites\n- Practice coding behaviors for different Sprites\n\n![]()\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/2": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Sprite Lab: Where is it introduced?\n\n## <a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\">Course E</a>\n- Lesson 5 (Unplugged): Simon Says\n- Lesson 6: Swimming Fish with Sprite Lab\n- Lesson 7: Alien Dance Party with Sprite Lab\n\n## <a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\">Course F</a>\n- Lesson 2: Swimming Fish with Sprite Lab\n- Lesson 3: Alien Dance Party with Sprite Lab\n- Lesson 15: Behaviors in Sprite Lab\n- Lesson 16: Virtual Pet with Sprite Lab\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/3": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Unplugged Lesson: Simon Says\n\n> A **sprite** is a graphic character on the screen with properties that describe its location, movement, and look. A **behavior** is an action that a sprite performs continuously until it's told to stop.\n\n***\n\n## **1. Review \"<a href=\"https://curriculum.code.org/csf-19/coursee/5/\" target=\"blank\">Simon Says</a>\" Lesson Plan from Course E.**\n<br/>\nCourse E is meant for students in Grade 4. Behaviors and Sprites appear in Courses E and F.\n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursee/5/\" target=\"blank\">![](https://images.code.org/991a82dba5edbd6c4909c540a1777041-image-1573149641437.00.20 AM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/4": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Introducing Sprite Lab\n\nWatch this video for an introduction to Sprite Lab!  \n\n<a href=\"https://www.youtube.com/watch?v=l0B0gDuHHC8\" target=\"blank\">![](https://images.code.org/929bd692b7029063aa9bf5835f6e6397-image-1571775211459.12.36 PM.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/5": {
+    "contained levels": [
+      {
+        "long_instructions": "**Make a prediction**: What do you think will happen when you run this code?"
+      }
+    ]
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/6": {
+    "short_instructions": "Change the tumbleweed into any kind of fish!",
+    "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1].",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must have at least one fish sprite with an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/7": {
+    "short_instructions": "Change the fish's behavior so that it swims left and right.",
+    "long_instructions": "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims left and right.",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one fish sprite with an active behavior.\n-   The fish sprite needs to move left and right. This can be done by changing its behavior to `swimming left and right`.",
+    "callouts": {
+      "spritelab_comment": "Use this block to leave yourself or your teacher notes about how your code works."
+    },
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/8": {
+    "short_instructions": "Use the `set background color` block to make the background any color.",
+    "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _PROGRESSION NAME_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the background to something other than white.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/9": {
+    "display_name": "How to Make a Sprite"
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/10": {
+    "short_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
+    "long_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create exactly two unique sprites, and one must be a fish.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/11": {
+    "short_instructions": "Add a behavior to the fish's new friend.",
+    "long_instructions": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Each sprite must have an active behavior.",
+    "behavior_names": {
+      "swimming left and right": "swimming left and right",
+      "shrinking": "shrinking",
+      "patrolling": "patrolling",
+      "wandering": "wandering",
+      "growing": "growing",
+      "jittering": "jittering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "spinning right": "spinning right"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/11/levels/12": {
+    "long_instructions": "# Reflect on Sprite Lab\n\nTake a moment to reflect. How would you use Sprite Lab in your classroom? "
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/12/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Overview: Reviewing Reflections\n\nCongratulations! You've become familiar with basic coding concepts and gotten a chance to practice them. \n\nIn this lesson, before you move onto next steps, you will have the chance to review some of the reflections you wrote throughout the online course. Feel free to change or update them if you want! \n\nIf you did not complete the optional section on Courses E to F, you can skip those levels. \n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/1": {
+    "dsls": {
+      "markdown": "# Overview: Next Steps\n\n<img src=\"https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG\" class=\"level-image\">\n\n## What you've done so far\n\n - Become familiar with the structure and content of the Computer Science Fundamentals curriculum\n - Practiced the basics of coding\n - Thought about teaching practices and how you might use them in your classroom\n\n \n## What's in this concept chunk\n \nBy completing this final concept chunk, you will:\n\n - Explore teacher resources\n - Learn how to set up a class section on Code.org\n - Develop a plan to bring Computer Science Fundamentals to your classroom\n - Plan for next steps you can take to continue your learning\n - Connect with a global community of fellow educators interested in computer science education\n - Offer feedback via a post-survey\n - Print a certificate of completion\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/2": {
+    "dsls": {
+      "markdown": "# Exploring Teacher Resources\n\nIt's time to start planning your instruction. In this stage, we'll be touring other areas of the Code.org platform and the **<a href=\"http://studio.code.org/\" target=\"blank\">Teacher Dashboard</a>**. \n\nA screenshot of the Teacher Dashboard is below. You will need to log into your Code.org teacher account in order to see it. Once you are logged in, it should be the default screen that you see on the Code.org website. If you do not have a teacher account, you can **<a href=\"https://studio.code.org/users/sign_up\" target=\"blank\">sign up for one here</a>**.\n\n<a href=\"http://studio.code.org/\" target=\"blank\">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/3": {
+    "dsls": {
+      "markdown": "# Getting started on Code.org\n\n\n## Step 1: Choose a course\nAll of our courses -- from pre-readers to high schoolers -- are listed in our **<a href=\"https://studio.code.org/courses\" target=\"blank\">course catalog</a>**. All our courses are available at no cost. Chat with colleagues at your school to determine how the course curriculum can be integrated with a variety of subjects.\n\n<table style=\"width:100%; border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900; text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>Course A</b><br/>\n      <i>Kindergarten</i>\n    </th>\n    <th style=\"background-color:#f1c232; text-align:center; border-style:none;\"\"\">\n        Course B<br/>\n        <i>1st Grade</i>\n    </th>\n    <th style=\"background-color:#b8bf0d; text-align:center; border-style:none;\"\"\">\n        Course C<br/>\n        <i>2nd Grade</i>\n    </th>\n    <th style=\"background-color:#53bac2; text-align:center; border-style:none;\"\"\">\n        Course D<br/>\n        <i>3rd Grade</i>\n    </th>\n    <th style=\"background-color:#0094ca; text-align:center; border-style:none;\"\"\">\n        Course E<br/>\n        <i>4th Grade</i>\n    </th>\n    <th style=\"background-color:#7664a0; text-align:center; border-style:none;\"\"\">\n        Course F<br/>\n        <i>5th Grade</i>\n    </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;\"\">12 lessons, ~12 hours to complete</td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;\"\">12 lessons, ~12 hours to complete</td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~18 hours to complete</td>\n    <td style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~18 hours to complete</td>\n    <td style=\"background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~18-20 hours to complete</td>\n    <td style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;\"\">18 lessons, ~20-22 hours to complete</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;\">Concepts</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Sequencing</li>\n        <li>Loops</li>\n        <li>Events</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#ffe599; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Sequencing</li>\n        <li>Loops</li>\n        <li>Impacts of Computing</li>\n        <li>Events</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Digital Citizenship</li>\n        <li>Sequencing</li>\n        <li>Binary</li>\n        <li>Loops</li>\n        <li>Events</li>\n        <li>Data</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Sequencing</li>\n        <li>Events</li>\n        <li>Loops</li>\n        <li>Conditionals</li>\n        <li>Binary</li>\n        <li>Digital Citizenship</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Sprites</li>\n        <li>Digital Citizenship</li>\n        <li>Impacts of Computing</li>\n        <li>Nested Loops</li>\n        <li>Functions</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Variables</li>\n        <li>Data</li>\n        <li>For Loops</li>\n        <li>Internet</li>\n        <li>Sprites</li>\n        <li>Digital Citizenship</li>\n        </ul>\n    </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n     <a href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n        <button>View course</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\" target=\"_blank\" style='text-decoration:none'>\n          <button>Lesson plans</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n    <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n        <button>View course</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\" target=\"_blank\" style='text-decoration:none'>\n        <button>Lesson plans</button>\n      </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n    <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n        <button>View course</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\" target=\"_blank\" style='text-decoration:none'>\n        <button>Lesson plans</button>\n      </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n    <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n        <button>View course</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\" target=\"_blank\" style='text-decoration:none'>\n        <button>Lesson plans</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n    <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n        <button>View course</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\" target=\"_blank\" style='text-decoration:none'>\n        <button>Lesson plans</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n    <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n        <button>View course</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\" target=\"_blank\" style='text-decoration:none'>\n        <button>Lesson plans</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n## Step 2: Set up your classroom section\nSet up a classroom section to view your student's progress, print login cards for your students, manage their accounts, and print certificates they can bring home when they finish the course. Click this link to **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\" target=\"blank\">watch a brief video</a>** that demonstrates how to set up your first computer science class on Code.org. You can also find the steps in **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\" target=\"blank\">this support article</a>**.\n\n***\n## Step 3: Assign the course to your section\nClick into the course that you are teaching. You can then click \"Assign Course\" and assign that course to one of your sections. \n***\n## Step 4: Start teaching! \nAll it takes is one lesson to bring computer science concepts into your classroom. Once you see your students enthusiasm for CS, go further with daily lesson plans to guide your students, unplugged activities you can do without a computer, and forums to connect to other teachers.\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/4": {
+    "dsls": {
+      "markdown": "# Other resources\n\nWhen you're logged into Code.org as a teacher, you have access to many features that your students do not. You've already seen how to find a course, create a section, and assign your class to that section. However, you can also: \n\n\n## Continue your learning\n- **Continue professional development**: Access <a href=\"https://code.org/professional-development-workshops\" target=\"blank\">in-person training</a> for teachers.\n- **Go through CS Fundamentals as a learner**: View your own personal progress on Code.org lessons, as a learner. Your students will also be able to see their progress in their accounts. However, as a teacher, you are also able to view lesson plans and see the solutions for every puzzle.\n- **Learn more computer science:** Check out <a href=\"https://hourofcode.com/us/beyond\" target=\"blank\">these resources</a>, including online tutorials and classes, to deepen your understanding of computer science concepts.\n\n\n## Find help and community\n- **Find computer science guest speakers**: <a href=\"https://code.org/volunteer/local\" target=\"blank\">Find smart, passionate and engaging tech industry professionals</a> who would love to talk to your class about their jobs. \n- **Get support**: Access <a href=\"https://support.code.org/\" target=\"blank\">support.code.org</a>, where you can post questions, respond to other teacher's posts, and read FAQs by Code.org staff. On this page, you'll also be able to directly contact Code.org with any questions you may have.\n- **Check out the teacher forum**: Ask questions, check out great teacher-created resources, and connect with other teachers on the <a href=\"http://forum.code.org/c/csf\" target=\"blank\">forum</a>.\n\n\n\nYou can always access support.code.org and our teacher forum via the dropdown menu on the top right of the Code.org homepage.\n\n![](https://images.code.org/35d6218f47f5b0b00975369dd9f5bea5-image-1573169909110.38.03 PM.png)\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/5": {
+    "dsls": {
+      "markdown": "# Your Plan\n\nWe hope this stage has helped introduce you to the resources available on Code Studio. As you think about how how you might in the future teach computer science using any of the code.org or Code Studio resources, take a moment to <a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\" target=\"blank\">share your plan with the Professional Learning Community (PLC)</a>.\n\nShare with us:\n\n- What are your goals for your classroom? How will CS or code.org resources help you meet those goals?\n- What are you most excited about when it comes to implementing some of these resources?\n- What challenges do you foresee in trying to meet your goals?\n- What questions do you have that this community might help you answer?\n\nAfter posting your initial plan, feel free to revisit <a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\" target=\"blank\">this thread</a> in the future to update us on how things are going! We encourage you to also look at posts from others so that you can get further inspired!\n\n> <a href=\"http://forum.code.org/t/teaching-computer-science-your-plans/412\" target=\"blank\"><button class=\"plc\">Post your plan >></button></a>\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/6": {
+    "dsls": {
+      "markdown": "# Next Steps \n\n\n## Take the post-survey\n\nWhether or not you did the whole course in order, we want to hear your feedback. Please submit this short survey to help us improve the course going forward! \n\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://form.jotform.com/93176494681166?user_id=<user_id/>\" target=\"blank\"> Take the post-survey</a>\n\n\n## Print a certificate\n\nCongratulations on completing this professional development online course. Provided you have completed all levels in this training, you can download and print a certificate of accomplishment now by completing the following steps:\n\n- Visit <a href=\"https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals\" target=\"blank\">this link</a>.\n- Enter your name into the input field/box.\n- Click Print Certificates.\n- Right click on the image of the certificate and choose \"Save Image As...\" so you can download to your computer.\n- And don't forget... you can return to this online course anytime to review your learning, access links or resources, or just refresh your memory!\n\n\n## Come to an in-person professional development workshop\n- Check out <a href=\"http://code.org/professional-development-workshops\" target=\"blank\">our professional learning map</a> to see the CS Fundamentals workshops that are being offered in your area! \n\n## Get connected\n- **Continue participating in the code.org teacher Professional Learning Community:** The forum that you've been using throughout this course will be a great resource for you moving forward. You can use it not only to refer back to your learning from this course, but to find support as you continue your journey, or even to offer support to others who need your expertise. Be sure to bookmark it now and visit often: <a href=\"http://forum.code.org/c/csf\" target=\"blank\">http://forum.code.org/c/csf</a>.  \n- **Connect with <a href=\"http://twitter.com/teachcode\" target=\"blank\">@teachcode</a> on Twitter.**  \n- **Join the computer science Teachers Association (CSTA):** <a href=\"http://csta.acm.org/index.html\" target=\"blank\">The CSTA</a> is an engaged community of educators across the nation that is committed to bringing computer science education to their students while raising awareness of the subject to the general public. They host an annual conference and also have chapters that hold local meetings.\n\n\n> Thank you for your participation! We can't wait to hear how you implement computer science and Code Studio in your classroom!\n\n"
+    }
+  },
+  "https://studio.code.org/s/k5-onlinepd-2019/lessons/13/levels/7": {
+    "long_instructions": "> **If you enjoyed this course, sign up for an in-person workshop:**\n>\n> <a href=\"http://code.org/professional-development-workshops\" target=\"blank\">Sign up now</a> to continue learning computer science and its pedagogy. The free in-person workshops are a valuable place to collaborate and engage with other passionate educators in your area."
+  }
+}

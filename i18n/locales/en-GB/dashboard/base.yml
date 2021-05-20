@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 en-GB:
   errors:
     messages:
@@ -13,6 +25,7 @@ en-GB:
         current_password: 'Current password'
         age: 'Age'
         gender: 'Gender'
+  beta: "beta"
   hello: "Hello World"
   submit: Submit
   next_page: Next page
@@ -33,6 +46,7 @@ en-GB:
     type:
       email: 'Email'
   crud:
+    edit: 'editar'
     submit: 'Submit'
   nav:
     user:
@@ -55,12 +69,6 @@ en-GB:
   project:
     name: "Name"
     saved: "Saved"
-  flex_category:
-    csf_loops: 'Loops'
-    csf_variables: 'Variables'
-    csp_variables: 'Variables'
-    csp_lists: 'Lists'
-    csp_loops: 'Loops'
   pd:
     form_labels:
       email: 'Email'
@@ -71,5 +79,4 @@ en-GB:
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
-  gdpr_dialog:
-    yes: 'Yes'
+  copy: 'Copy'

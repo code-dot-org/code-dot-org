@@ -14,6 +14,16 @@ class AdminReportsControllerTest < ActionController::TestCase
   test 'pd_progress should return 404 for unfound script' do
     get :pd_progress, params: {script: 'bogus-nonexistent-script-name'}
     assert_response :not_found
+    assert_includes @response.body, "Script bogus-nonexistent-script-name not found"
+  end
+
+  test 'pd_progress should return 404 for unfound progress data' do
+    script = create :script, name: "test-unfound-progress-data"
+    Properties.stubs(:get).returns(nil)
+
+    get :pd_progress, params: {script: script.name}
+    assert_response :not_found
+    assert_includes @response.body, "PD progress data not found for test-unfound-progress-data"
   end
 
   test 'pd_progress should sanitize script.name' do

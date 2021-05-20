@@ -1,0 +1,7502 @@
+{
+  "script": {
+    "name": "csd6-2017",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "exclude_csf_column_in_legend": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csd/unit6/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csd6"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csd/unit6/vocab/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csd/unit6/standards/"
+        ],
+        [
+          "codeIntroduced",
+          "https://curriculum.code.org/csd/unit6/code/"
+        ]
+      ],
+      "has_verified_resources": true,
+      "project_widget_types": [
+        "applab"
+      ],
+      "has_lesson_plan": true,
+      "version_year": "2017",
+      "is_stable": true,
+      "project_sharing": true,
+      "curriculum_umbrella": "CSD",
+      "family_name": "csd6",
+      "tts": true,
+      "hideable_lessons": true
+    },
+    "new_name": "csd6-2017",
+    "family_name": "csd6",
+    "serialized_at": "2021-05-03 23:54:58 UTC",
+    "seeding_key": {
+      "script.name": "csd6-2017"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd6_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Programming with Hardware"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "csd6_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Building Physical Prototypes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "csd_survey",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd6-2017"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Innovations in Computing_",
+      "name": "Innovations in Computing",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Designing Screens with Code_",
+      "name": "Designing Screens with Code",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "The Circuit Playground_",
+      "name": "The Circuit Playground",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Input Unplugged_",
+      "name": "Input Unplugged",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Board Events_",
+      "name": "Board Events",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Getting Properties_",
+      "name": "Getting Properties",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Analog Input_",
+      "name": "Analog Input",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "The Program Design Process_",
+      "name": "The Program Design Process",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Project: Make a Game__",
+      "name": "Project: Make a Game",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Arrays and Color LEDs__",
+      "name": "Arrays and Color LEDs",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Making Music_",
+      "name": "Making Music",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Arrays and For Loops_",
+      "name": "Arrays and For Loops",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Accelerometer_",
+      "name": "Accelerometer",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Functions with Parameters_",
+      "name": "Functions with Parameters",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Circuits and Physical Prototypes_",
+      "name": "Circuits and Physical Prototypes",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "Project: Prototype an Innovation_",
+      "name": "Project: Prototype an Innovation",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "key": "CSD Post-Course Survey",
+      "name": "CSD Post-Course Survey",
+      "absolute_position": 17,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD Post-Course Survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd6-2017"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L01 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L01 TFMD"
+        ],
+        "lesson.key": "Innovations in Computing_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L01 TFMD"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 Innovation"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Innovation"
+        ],
+        "lesson.key": "Innovations in Computing_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 Innovation"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L02 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L02 TFMD"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L02 TFMD"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty Map"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty Map"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty predict app"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty predict app"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty predict app"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty Text"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty Text"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty Text"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty xy"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty xy"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty xy click"
+        ],
+        "progression": "Events and Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy click"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty xy click"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty xy random"
+        ],
+        "progression": "Events and Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy random"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty xy random"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty hidden"
+        ],
+        "progression": "Events and Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty hidden"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 setProperty hidden 2"
+        ],
+        "progression": "Events and Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden 2"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 setProperty hidden 2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine example"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine example"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine example"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 1"
+        ],
+        "progression": "Building an App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 1"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 2"
+        ],
+        "progression": "Building an App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 2"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 3"
+        ],
+        "progression": "Building an App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 3"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 3"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 4"
+        ],
+        "progression": "Building an App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 4"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 4"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L03 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L03 TFMD"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L03 TFMD"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 hardware software video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 hardware software video"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 hardware software video"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD LEDs Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD LEDs Map"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD LEDs Map"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 Circuit Playground Test"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 test LED"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 test LED"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 test LED"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 predict LED button"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 predict LED button"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 predict LED button"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 add LED button"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 add LED button"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 add LED button"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 LED toggle"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 LED toggle"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 LED toggle"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 LED all"
+        ],
+        "progression": "Using the LED"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 LED all"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 LED all"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 LED create intro"
+        ],
+        "progression": "LED Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 LED create intro"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 LED create intro"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 light show"
+        ],
+        "progression": "LED Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 light show"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 light show"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Catch the Mouse"
+        ],
+        "progression": "LED Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Catch the Mouse"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 Catch the Mouse"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 create LED app"
+        ],
+        "progression": "LED Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 create LED app"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 create LED app"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 create LED app 2"
+        ],
+        "progression": "LED Apps"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 create LED app 2"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 create LED app 2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L04 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L04 TFMD"
+        ],
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L04 TFMD"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 GameLab Input 1"
+        ],
+        "progression": "Input Examples"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 GameLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 GameLab Input 1"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 AppLab Input 1"
+        ],
+        "progression": "Input Examples"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 AppLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 AppLab Input 1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L05 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L05 TFMD"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L05 TFMD"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD onBoardEvent Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD onBoardEvent Map"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD onBoardEvent Map"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - button LED prediction"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button LED prediction"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - button LED prediction"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - LED buttonL"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - LED buttonL"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - LED buttonL"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - LED toggle buttonL up"
+        ],
+        "progression": "Board Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - LED toggle buttonL up"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - LED toggle buttonL up"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Board Buttons Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Board Buttons Map"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD Board Buttons Map"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - lightswitch toggleswitch"
+        ],
+        "progression": "Using the Switch"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lightswitch toggleswitch"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - lightswitch toggleswitch"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - toggle state LED prediction"
+        ],
+        "progression": "Using the Switch"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - toggle state LED prediction"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - toggle state LED prediction"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - toggleswitch state setProp"
+        ],
+        "progression": "Using the Switch"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - toggleswitch state setProp"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - toggleswitch state setProp"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Buzzer Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Buzzer Map"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD Buzzer Map"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - buzzer intro"
+        ],
+        "progression": "The Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - buzzer intro"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - buzzer intro"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - buzzer duration"
+        ],
+        "progression": "The Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - buzzer duration"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - buzzer duration buttons"
+        ],
+        "progression": "The Buzzer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration buttons"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - buzzer duration buttons"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L06 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L06 TFMD"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L06 TFMD"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getProperty Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty Map"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getProperty Map"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getProperty Demo"
+        ],
+        "progression": "Getting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty Demo"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getProperty Demo"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getProperty input"
+        ],
+        "progression": "Getting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty input"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getProperty input"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getProperty dropdown"
+        ],
+        "progression": "Getting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty dropdown"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getProperty dropdown"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getProperty board predict"
+        ],
+        "progression": "Getting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty board predict"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getProperty board predict"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getProperty buzzer"
+        ],
+        "progression": "Getting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty buzzer"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getProperty buzzer"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 slider intro"
+        ],
+        "progression": "Sliders"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 slider intro"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 slider intro"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 frequency"
+        ],
+        "progression": "Sliders"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 frequency"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 frequency"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 interval"
+        ],
+        "progression": "Sliders"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 interval"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 interval"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Event Types"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Event Types"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 Event Types"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 change"
+        ],
+        "progression": "Change"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 change"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 change"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 get toggle"
+        ],
+        "progression": "Change"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 get toggle"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 get toggle"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 getters debug"
+        ],
+        "progression": "Change"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getters debug"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 getters debug"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 move motorcycle"
+        ],
+        "progression": "Motorcycle"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 move motorcycle"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 move motorcycle"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 design motorcycle"
+        ],
+        "progression": "Motorcycle"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 design motorcycle"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 design motorcycle"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L07 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L07 TFMD"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L07 TFMD"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 sensor experiment embedded"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 sensor experiment embedded"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 sensor experiment embedded"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Board Sensors Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Board Sensors Map"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD Board Sensors Map"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog sound"
+        ],
+        "progression": "Reading Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog sound"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog sound"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog light"
+        ],
+        "progression": "Reading Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog light"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog light"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog temp"
+        ],
+        "progression": "Reading Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog temp"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog temp"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog predict"
+        ],
+        "progression": "Reading Sensors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog predict"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog predict"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Polling Events Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Polling Events Map"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD Polling Events Map"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog data"
+        ],
+        "progression": "Sensor Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog data"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog data"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog change"
+        ],
+        "progression": "Sensor Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog change"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog change"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog threshold"
+        ],
+        "progression": "Sensor Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog threshold"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog threshold"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Set Scale Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Set Scale Map"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD Set Scale Map"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog rbg 1"
+        ],
+        "progression": "Sensors to Colors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog rbg 1"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog rbg 1"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog rbg 2"
+        ],
+        "progression": "Sensors to Colors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog rbg 2"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog rbg 2"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog rgb 3"
+        ],
+        "progression": "Sensors to Colors"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog rgb 3"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog rgb 3"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 analog challenge"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 analog challenge"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 analog challenge"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L08 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L08 TFMD"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L08 TFMD"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 emoji race demo"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emoji race demo"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 emoji race demo"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar stop"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar stop"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar stop"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar design 1"
+        ],
+        "progression": "Screen Design"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar design 1"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar design 1"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar design 1.5"
+        ],
+        "progression": "Screen Design"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar design 1.5"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar design 1.5"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar design 2"
+        ],
+        "progression": "Screen Design"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar design 2"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar design 2"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar variables 1"
+        ],
+        "progression": "Finishing Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar variables 1"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar variables 1"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar variables 2"
+        ],
+        "progression": "Finishing Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar variables 2"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar variables 2"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar variables 3"
+        ],
+        "progression": "Finishing Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar variables 3"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar variables 3"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar conditional"
+        ],
+        "progression": "Checking for a Winner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar conditional"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar conditional"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar setScreen"
+        ],
+        "progression": "Checking for a Winner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar setScreen"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar setScreen"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar setProperty"
+        ],
+        "progression": "Checking for a Winner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar setProperty"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar setProperty"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar buzzer"
+        ],
+        "progression": "Checking for a Winner"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar buzzer"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar buzzer"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar final"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar final"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar final"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L09 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L09 TFMD"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L09 TFMD"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 tugowar demo"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 tugowar demo"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 tugowar demo"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project stop"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project stop"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project stop"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project screens"
+        ],
+        "progression": "Screen Design"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project screens"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project screens"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project screen links"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project screen links"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project screen links"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project board events"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project board events"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project board events"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project functions define"
+        ],
+        "progression": "Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project functions define"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project functions define"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project functions call"
+        ],
+        "progression": "Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project functions call"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project functions call"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 game project finish"
+        ],
+        "progression": "Finishing Touches"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 game project finish"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 game project finish"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U6Ch1"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L10 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L10 TFMD"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L10 TFMD"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 arrays intro"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 arrays intro"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 arrays intro"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 arrays select predict"
+        ],
+        "progression": "Introduction to Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 arrays select predict"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 arrays select predict"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 arrays select rainbow"
+        ],
+        "progression": "Introduction to Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 arrays select rainbow"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 arrays select rainbow"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 array select days"
+        ],
+        "progression": "Introduction to Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 array select days"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 array select days"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 arrays select random"
+        ],
+        "progression": "Introduction to Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 arrays select random"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 arrays select random"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 arrays select variable"
+        ],
+        "progression": "Introduction to Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 arrays select variable"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 arrays select variable"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 array multi"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 array multi"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 array multi"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD colorLed Map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD colorLed Map"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD colorLed Map"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds predict"
+        ],
+        "progression": "Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds predict"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds predict"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 colorLED on"
+        ],
+        "progression": "Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLED on"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 colorLED on"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 LEDs color"
+        ],
+        "progression": "Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 LEDs color"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 LEDs color"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds debug"
+        ],
+        "progression": "Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds debug"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds debug"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds intensity"
+        ],
+        "progression": "Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds intensity"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds intensity"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds light pattern"
+        ],
+        "progression": "Light Show"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds light pattern"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds light pattern"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 light pattern off"
+        ],
+        "progression": "Light Show"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 light pattern off"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 light pattern off"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L11 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L11 TFMD"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L11 TFMD"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 circuit playground piano"
+        ],
+        "progression": "Making Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 circuit playground piano"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 circuit playground piano"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 frequency modification"
+        ],
+        "progression": "Making Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 frequency modification"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 frequency modification"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 frequency creation"
+        ],
+        "progression": "Making Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 frequency creation"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 frequency creation"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Making Music"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Making Music"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "Making Music"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 piano with notes"
+        ],
+        "progression": "Playing with Notes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 piano with notes"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 piano with notes"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD-Arrays"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-Arrays"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD-Arrays"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 array piano"
+        ],
+        "progression": "Musical Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 array piano"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 array piano"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 random array notes"
+        ],
+        "progression": "Musical Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 random array notes"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 random array notes"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 making new arrays"
+        ],
+        "progression": "Musical Arrays"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 making new arrays"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 making new arrays"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 play predict code"
+        ],
+        "progression": "Making Songs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 play predict code"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 play predict code"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 play songs"
+        ],
+        "progression": "Making Songs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 play songs"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 play songs"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 play null notes"
+        ],
+        "progression": "Making Songs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 play null notes"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 play null notes"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CDU U6 Playground Sound Board"
+        ],
+        "progression": "Making Songs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CDU U6 Playground Sound Board"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CDU U6 Playground Sound Board"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L12 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L12 TFMD"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L12 TFMD"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop click predict"
+        ],
+        "progression": "Programs that Repeat"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop click predict"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop click predict"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop click exit"
+        ],
+        "progression": "Programs that Repeat"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop click exit"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop click exit"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop map"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop map"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop map"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: For Loop"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: For Loop"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD: For Loop"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - predict print"
+        ],
+        "progression": "For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - for loop - predict print"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - for loop - predict print"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop button array"
+        ],
+        "progression": "For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop button array"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop button array"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop list.length"
+        ],
+        "progression": "For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop list.length"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop list.length"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop images"
+        ],
+        "progression": "For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop images"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop images"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop led on"
+        ],
+        "progression": "For Loops and Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop led on"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop led on"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop led off"
+        ],
+        "progression": "For Loops and Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop led off"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop led off"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 functions paramters video"
+        ],
+        "progression": "For Loops and Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 functions paramters video"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 functions paramters video"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop led function"
+        ],
+        "progression": "For Loops and Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop led function"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop led function"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop led function call"
+        ],
+        "progression": "For Loops and Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop led function call"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop led function call"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 for loop led function finish"
+        ],
+        "progression": "For Loops and Color LEDs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 for loop led function finish"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 for loop led function finish"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L13 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L13 TFMD"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L13 TFMD"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Accelerometer"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Accelerometer"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "The Accelerometer"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Airplane predict"
+        ],
+        "progression": "Orientation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Airplane predict"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 Airplane predict"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 investigate orientation"
+        ],
+        "progression": "Orientation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 investigate orientation"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 investigate orientation"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 directional leds pitch"
+        ],
+        "progression": "Orientation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 directional leds pitch"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 directional leds pitch"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 directional LEDs roll"
+        ],
+        "progression": "Orientation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 directional LEDs roll"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 directional LEDs roll"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Using Accelerometer Events"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Using Accelerometer Events"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "Using Accelerometer Events"
+      ]
+    },
+    {
+      "chapter": 155,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 stillness game predict code"
+        ],
+        "progression": "Accelerometer Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 stillness game predict code"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 stillness game predict code"
+      ]
+    },
+    {
+      "chapter": 156,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Pedometer"
+        ],
+        "progression": "Accelerometer Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Pedometer"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 Pedometer"
+      ]
+    },
+    {
+      "chapter": 157,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Revisiting the Counter Pattern"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Revisiting the Counter Pattern"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "Revisiting the Counter Pattern"
+      ]
+    },
+    {
+      "chapter": 158,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 goalie"
+        ],
+        "progression": "Accelerometer Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 goalie"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 goalie"
+      ]
+    },
+    {
+      "chapter": 159,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Driver pt1"
+        ],
+        "progression": "Accelerometer Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Driver pt1"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 Driver pt1"
+      ]
+    },
+    {
+      "chapter": 160,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 Driver pt 2"
+        ],
+        "progression": "Accelerometer Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 Driver pt 2"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 Driver pt 2"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L14 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L14 TFMD"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L14 TFMD"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params predict"
+        ],
+        "progression": "Functions with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params predict"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params predict"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params modify clouds"
+        ],
+        "progression": "Functions with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params modify clouds"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params modify clouds"
+      ]
+    },
+    {
+      "chapter": 164,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params modify planes"
+        ],
+        "progression": "Functions with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params modify planes"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params modify planes"
+      ]
+    },
+    {
+      "chapter": 165,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params create colors"
+        ],
+        "progression": "Functions with Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params create colors"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params create colors"
+      ]
+    },
+    {
+      "chapter": 166,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 iter predict bubbles"
+        ],
+        "progression": "Iteration and Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 iter predict bubbles"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 iter predict bubbles"
+      ]
+    },
+    {
+      "chapter": 167,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 iter modify bugs"
+        ],
+        "progression": "Iteration and Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 iter modify bugs"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 iter modify bugs"
+      ]
+    },
+    {
+      "chapter": 168,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 iter create notes"
+        ],
+        "progression": "Iteration and Parameters"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 iter create notes"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 iter create notes"
+      ]
+    },
+    {
+      "chapter": 169,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser intro"
+        ],
+        "progression": "Star Chaser"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params starchaser intro"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params starchaser intro"
+      ]
+    },
+    {
+      "chapter": 170,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 1"
+        ],
+        "progression": "Star Chaser"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 1"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params starchaser 1"
+      ]
+    },
+    {
+      "chapter": 171,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 2"
+        ],
+        "progression": "Star Chaser"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 2"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params starchaser 2"
+      ]
+    },
+    {
+      "chapter": 172,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 3"
+        ],
+        "progression": "Star Chaser"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 3"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params starchaser 3"
+      ]
+    },
+    {
+      "chapter": 173,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 4"
+        ],
+        "progression": "Star Chaser"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 4"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params starchaser 4"
+      ]
+    },
+    {
+      "chapter": 174,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 5"
+        ],
+        "progression": "Star Chaser"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 5"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 params starchaser 5"
+      ]
+    },
+    {
+      "chapter": 175,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L15 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L15 TFMD"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L15 TFMD"
+      ]
+    },
+    {
+      "chapter": 176,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit logic video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit logic video"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit logic video"
+      ]
+    },
+    {
+      "chapter": 177,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit predict"
+        ],
+        "progression": "Simple Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit predict"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit predict"
+      ]
+    },
+    {
+      "chapter": 178,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit LED map"
+        ],
+        "progression": "Simple Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit LED map"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit LED map"
+      ]
+    },
+    {
+      "chapter": 179,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit pinMode"
+        ],
+        "progression": "Simple Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit pinMode"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit pinMode"
+      ]
+    },
+    {
+      "chapter": 180,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit createLed"
+        ],
+        "progression": "Simple Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit createLed"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit createLed"
+      ]
+    },
+    {
+      "chapter": 181,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit multi led"
+        ],
+        "progression": "Simple Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit multi led"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit multi led"
+      ]
+    },
+    {
+      "chapter": 182,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike blinkers"
+        ],
+        "progression": "Smart Bike - Blinkers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike blinkers"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit smart bike blinkers"
+      ]
+    },
+    {
+      "chapter": 183,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike blinker buttons"
+        ],
+        "progression": "Smart Bike - Blinkers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike blinker buttons"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit smart bike blinker buttons"
+      ]
+    },
+    {
+      "chapter": 184,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike blinker build"
+        ],
+        "progression": "Smart Bike - Blinkers"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike blinker build"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit smart bike blinker build"
+      ]
+    },
+    {
+      "chapter": 185,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit button map"
+        ],
+        "progression": "Button Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit button map"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit button map"
+      ]
+    },
+    {
+      "chapter": 186,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit createButton"
+        ],
+        "progression": "Button Circuits"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit createButton"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit createButton"
+      ]
+    },
+    {
+      "chapter": 187,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike buzzer"
+        ],
+        "progression": "Finish the Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike buzzer"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit smart bike buzzer"
+      ]
+    },
+    {
+      "chapter": 188,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike light"
+        ],
+        "progression": "Finish the Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike light"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit smart bike light"
+      ]
+    },
+    {
+      "chapter": 189,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike final"
+        ],
+        "progression": "Finish the Prototype"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike final"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 circuit smart bike final"
+      ]
+    },
+    {
+      "chapter": 190,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6L16 TFMD"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6L16 TFMD"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6L16 TFMD"
+      ]
+    },
+    {
+      "chapter": 191,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 final intro"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 final intro"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSD U6 final intro"
+      ]
+    },
+    {
+      "chapter": 192,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 1"
+        ],
+        "progression": "User Interface"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 1"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - final project 1"
+      ]
+    },
+    {
+      "chapter": 193,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 2"
+        ],
+        "progression": "User Interface"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - final project 2"
+      ]
+    },
+    {
+      "chapter": 194,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 3"
+        ],
+        "progression": "Board Input and Output"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 3"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - final project 3"
+      ]
+    },
+    {
+      "chapter": 195,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 5"
+        ],
+        "progression": "Board Input and Output"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 5"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - final project 5"
+      ]
+    },
+    {
+      "chapter": 196,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 4"
+        ],
+        "progression": "Finishing Touches"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 4"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - final project 4"
+      ]
+    },
+    {
+      "chapter": 197,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU6 - final project 6"
+        ],
+        "progression": "Finishing Touches"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - final project 6"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "CSDU6 - final project 6"
+      ]
+    },
+    {
+      "chapter": 198,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U6Ch2"
+      ]
+    },
+    {
+      "chapter": 199,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CSD Post-Course Survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd6-2017"
+      },
+      "level_keys": [
+        "csd-post-survey-2018-markdown-with-link-to-survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L01 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L01 TFMD"
+        ],
+        "lesson.key": "Innovations in Computing_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Innovation",
+        "script_level.level_keys": [
+          "CSDU6 Innovation"
+        ],
+        "lesson.key": "Innovations in Computing_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L02 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L02 TFMD"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty Map",
+        "script_level.level_keys": [
+          "CSD U6 setProperty Map"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty predict app",
+        "script_level.level_keys": [
+          "CSD U6 setProperty predict app"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty Text",
+        "script_level.level_keys": [
+          "CSD U6 setProperty Text"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty xy",
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty xy click",
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy click"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty xy random",
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy random"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty hidden",
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty hidden 2",
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden 2"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine example",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine example"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 1",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 1"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 2",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 2"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 3",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 3"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 4",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 4"
+        ],
+        "lesson.key": "Designing Screens with Code_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L03 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L03 TFMD"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 hardware software video",
+        "script_level.level_keys": [
+          "CSD U6 hardware software video"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD LEDs Map",
+        "script_level.level_keys": [
+          "CSD LEDs Map"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Circuit Playground Test",
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 test LED",
+        "script_level.level_keys": [
+          "CSD U6 test LED"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 predict LED button",
+        "script_level.level_keys": [
+          "CSD U6 predict LED button"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 add LED button",
+        "script_level.level_keys": [
+          "CSD U6 add LED button"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 LED toggle",
+        "script_level.level_keys": [
+          "CSD U6 LED toggle"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 LED all",
+        "script_level.level_keys": [
+          "CSD U6 LED all"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 LED create intro",
+        "script_level.level_keys": [
+          "CSD U6 LED create intro"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 light show",
+        "script_level.level_keys": [
+          "CSD U6 light show"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Catch the Mouse",
+        "script_level.level_keys": [
+          "CSD U6 Catch the Mouse"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 create LED app",
+        "script_level.level_keys": [
+          "CSD U6 create LED app"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 create LED app 2",
+        "script_level.level_keys": [
+          "CSD U6 create LED app 2"
+        ],
+        "lesson.key": "The Circuit Playground_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L04 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L04 TFMD"
+        ],
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 GameLab Input 1",
+        "script_level.level_keys": [
+          "CSDU6 GameLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 AppLab Input 1",
+        "script_level.level_keys": [
+          "CSDU6 AppLab Input 1"
+        ],
+        "lesson.key": "Input Unplugged_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L05 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L05 TFMD"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD onBoardEvent Map",
+        "script_level.level_keys": [
+          "CSD onBoardEvent Map"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button LED prediction",
+        "script_level.level_keys": [
+          "CSDU6 - button LED prediction"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - LED buttonL",
+        "script_level.level_keys": [
+          "CSDU6 - LED buttonL"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - LED toggle buttonL up",
+        "script_level.level_keys": [
+          "CSDU6 - LED toggle buttonL up"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Board Buttons Map",
+        "script_level.level_keys": [
+          "CSD Board Buttons Map"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lightswitch toggleswitch",
+        "script_level.level_keys": [
+          "CSDU6 - lightswitch toggleswitch"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - toggle state LED prediction",
+        "script_level.level_keys": [
+          "CSDU6 - toggle state LED prediction"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - toggleswitch state setProp",
+        "script_level.level_keys": [
+          "CSDU6 - toggleswitch state setProp"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Buzzer Map",
+        "script_level.level_keys": [
+          "CSD Buzzer Map"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - buzzer intro",
+        "script_level.level_keys": [
+          "CSDU6 - buzzer intro"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - buzzer duration",
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - buzzer duration buttons",
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration buttons"
+        ],
+        "lesson.key": "Board Events_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L06 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L06 TFMD"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty Map",
+        "script_level.level_keys": [
+          "CSD U6 getProperty Map"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty Demo",
+        "script_level.level_keys": [
+          "CSD U6 getProperty Demo"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty input",
+        "script_level.level_keys": [
+          "CSD U6 getProperty input"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty dropdown",
+        "script_level.level_keys": [
+          "CSD U6 getProperty dropdown"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty board predict",
+        "script_level.level_keys": [
+          "CSD U6 getProperty board predict"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty buzzer",
+        "script_level.level_keys": [
+          "CSD U6 getProperty buzzer"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 slider intro",
+        "script_level.level_keys": [
+          "CSD U6 slider intro"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 frequency",
+        "script_level.level_keys": [
+          "CSD U6 frequency"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 interval",
+        "script_level.level_keys": [
+          "CSD U6 interval"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Event Types",
+        "script_level.level_keys": [
+          "CSD U6 Event Types"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 change",
+        "script_level.level_keys": [
+          "CSD U6 change"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 get toggle",
+        "script_level.level_keys": [
+          "CSD U6 get toggle"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getters debug",
+        "script_level.level_keys": [
+          "CSD U6 getters debug"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 move motorcycle",
+        "script_level.level_keys": [
+          "CSD U6 move motorcycle"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 design motorcycle",
+        "script_level.level_keys": [
+          "CSD U6 design motorcycle"
+        ],
+        "lesson.key": "Getting Properties_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L07 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L07 TFMD"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 sensor experiment embedded",
+        "script_level.level_keys": [
+          "CSD U6 sensor experiment embedded"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Board Sensors Map",
+        "script_level.level_keys": [
+          "CSD Board Sensors Map"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog sound",
+        "script_level.level_keys": [
+          "CSD U6 analog sound"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog light",
+        "script_level.level_keys": [
+          "CSD U6 analog light"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog temp",
+        "script_level.level_keys": [
+          "CSD U6 analog temp"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog predict",
+        "script_level.level_keys": [
+          "CSD U6 analog predict"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Polling Events Map",
+        "script_level.level_keys": [
+          "CSD Polling Events Map"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog data",
+        "script_level.level_keys": [
+          "CSD U6 analog data"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog change",
+        "script_level.level_keys": [
+          "CSD U6 analog change"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog threshold",
+        "script_level.level_keys": [
+          "CSD U6 analog threshold"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Set Scale Map",
+        "script_level.level_keys": [
+          "CSD Set Scale Map"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog rbg 1",
+        "script_level.level_keys": [
+          "CSD U6 analog rbg 1"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog rbg 2",
+        "script_level.level_keys": [
+          "CSD U6 analog rbg 2"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog rgb 3",
+        "script_level.level_keys": [
+          "CSD U6 analog rgb 3"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 analog challenge",
+        "script_level.level_keys": [
+          "CSD U6 analog challenge"
+        ],
+        "lesson.key": "Analog Input_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L08 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L08 TFMD"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emoji race demo",
+        "script_level.level_keys": [
+          "CSD U6 emoji race demo"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar stop",
+        "script_level.level_keys": [
+          "CSD U6 tugowar stop"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar design 1",
+        "script_level.level_keys": [
+          "CSD U6 tugowar design 1"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar design 1.5",
+        "script_level.level_keys": [
+          "CSD U6 tugowar design 1.5"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar design 2",
+        "script_level.level_keys": [
+          "CSD U6 tugowar design 2"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar variables 1",
+        "script_level.level_keys": [
+          "CSD U6 tugowar variables 1"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar variables 2",
+        "script_level.level_keys": [
+          "CSD U6 tugowar variables 2"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar variables 3",
+        "script_level.level_keys": [
+          "CSD U6 tugowar variables 3"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar conditional",
+        "script_level.level_keys": [
+          "CSD U6 tugowar conditional"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar setScreen",
+        "script_level.level_keys": [
+          "CSD U6 tugowar setScreen"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar setProperty",
+        "script_level.level_keys": [
+          "CSD U6 tugowar setProperty"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar buzzer",
+        "script_level.level_keys": [
+          "CSD U6 tugowar buzzer"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar final",
+        "script_level.level_keys": [
+          "CSD U6 tugowar final"
+        ],
+        "lesson.key": "The Program Design Process_",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L09 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L09 TFMD"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 tugowar demo",
+        "script_level.level_keys": [
+          "CSD U6 tugowar demo"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project stop",
+        "script_level.level_keys": [
+          "CSD U6 game project stop"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project screens",
+        "script_level.level_keys": [
+          "CSD U6 game project screens"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project screen links",
+        "script_level.level_keys": [
+          "CSD U6 game project screen links"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project board events",
+        "script_level.level_keys": [
+          "CSD U6 game project board events"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project functions define",
+        "script_level.level_keys": [
+          "CSD U6 game project functions define"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project functions call",
+        "script_level.level_keys": [
+          "CSD U6 game project functions call"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 game project finish",
+        "script_level.level_keys": [
+          "CSD U6 game project finish"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U6Ch1",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1"
+        ],
+        "lesson.key": "Project: Make a Game__",
+        "lesson_group.key": "csd6_1",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L10 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L10 TFMD"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 arrays intro",
+        "script_level.level_keys": [
+          "CSD U6 arrays intro"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 arrays select predict",
+        "script_level.level_keys": [
+          "CSD U6 arrays select predict"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 arrays select rainbow",
+        "script_level.level_keys": [
+          "CSDU6 arrays select rainbow"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 array select days",
+        "script_level.level_keys": [
+          "CSDU6 array select days"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 arrays select random",
+        "script_level.level_keys": [
+          "CSDU6 arrays select random"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 arrays select variable",
+        "script_level.level_keys": [
+          "CSDU6 arrays select variable"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 array multi",
+        "script_level.level_keys": [
+          "CSD U6 array multi"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD colorLed Map",
+        "script_level.level_keys": [
+          "CSD colorLed Map"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds predict",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds predict"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLED on",
+        "script_level.level_keys": [
+          "CSD U6 colorLED on"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 LEDs color",
+        "script_level.level_keys": [
+          "CSD U6 LEDs color"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds debug",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds debug"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds intensity",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds intensity"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds light pattern",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds light pattern"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 light pattern off",
+        "script_level.level_keys": [
+          "CSD U6 light pattern off"
+        ],
+        "lesson.key": "Arrays and Color LEDs__",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L11 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L11 TFMD"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 circuit playground piano",
+        "script_level.level_keys": [
+          "CSDU6 circuit playground piano"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 frequency modification",
+        "script_level.level_keys": [
+          "CSDU6 frequency modification"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 frequency creation",
+        "script_level.level_keys": [
+          "CSDU6 frequency creation"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Making Music",
+        "script_level.level_keys": [
+          "Making Music"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 piano with notes",
+        "script_level.level_keys": [
+          "CSDU6 piano with notes"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-Arrays",
+        "script_level.level_keys": [
+          "CSD-Arrays"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 array piano",
+        "script_level.level_keys": [
+          "CSD U6 array piano"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 random array notes",
+        "script_level.level_keys": [
+          "CSD U6 random array notes"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 making new arrays",
+        "script_level.level_keys": [
+          "CSDU6 making new arrays"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 play predict code",
+        "script_level.level_keys": [
+          "CSDU6 play predict code"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 play songs",
+        "script_level.level_keys": [
+          "CSDU6 play songs"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 play null notes",
+        "script_level.level_keys": [
+          "CSDU6 play null notes"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CDU U6 Playground Sound Board",
+        "script_level.level_keys": [
+          "CDU U6 Playground Sound Board"
+        ],
+        "lesson.key": "Making Music_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L12 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L12 TFMD"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop click predict",
+        "script_level.level_keys": [
+          "CSD U6 for loop click predict"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop click exit",
+        "script_level.level_keys": [
+          "CSD U6 for loop click exit"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop map",
+        "script_level.level_keys": [
+          "CSD U6 for loop map"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: For Loop",
+        "script_level.level_keys": [
+          "CSD: For Loop"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - for loop - predict print",
+        "script_level.level_keys": [
+          "CSDU6 - for loop - predict print"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop button array",
+        "script_level.level_keys": [
+          "CSD U6 for loop button array"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop list.length",
+        "script_level.level_keys": [
+          "CSD U6 for loop list.length"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop images",
+        "script_level.level_keys": [
+          "CSD U6 for loop images"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop led on",
+        "script_level.level_keys": [
+          "CSD U6 for loop led on"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop led off",
+        "script_level.level_keys": [
+          "CSD U6 for loop led off"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 functions paramters video",
+        "script_level.level_keys": [
+          "CSD U6 functions paramters video"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop led function",
+        "script_level.level_keys": [
+          "CSD U6 for loop led function"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop led function call",
+        "script_level.level_keys": [
+          "CSD U6 for loop led function call"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 for loop led function finish",
+        "script_level.level_keys": [
+          "CSD U6 for loop led function finish"
+        ],
+        "lesson.key": "Arrays and For Loops_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L13 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L13 TFMD"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Accelerometer",
+        "script_level.level_keys": [
+          "The Accelerometer"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Airplane predict",
+        "script_level.level_keys": [
+          "CSD U6 Airplane predict"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 investigate orientation",
+        "script_level.level_keys": [
+          "CSD U6 investigate orientation"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 directional leds pitch",
+        "script_level.level_keys": [
+          "CSD U6 directional leds pitch"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 directional LEDs roll",
+        "script_level.level_keys": [
+          "CSD U6 directional LEDs roll"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Using Accelerometer Events",
+        "script_level.level_keys": [
+          "Using Accelerometer Events"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 stillness game predict code",
+        "script_level.level_keys": [
+          "CSD U6 stillness game predict code"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Pedometer",
+        "script_level.level_keys": [
+          "CSD U6 Pedometer"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Revisiting the Counter Pattern",
+        "script_level.level_keys": [
+          "Revisiting the Counter Pattern"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 goalie",
+        "script_level.level_keys": [
+          "CSD U6 goalie"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Driver pt1",
+        "script_level.level_keys": [
+          "CSD U6 Driver pt1"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 Driver pt 2",
+        "script_level.level_keys": [
+          "CSD U6 Driver pt 2"
+        ],
+        "lesson.key": "Accelerometer_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L14 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L14 TFMD"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params predict",
+        "script_level.level_keys": [
+          "CSD U6 params predict"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params modify clouds",
+        "script_level.level_keys": [
+          "CSD U6 params modify clouds"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params modify planes",
+        "script_level.level_keys": [
+          "CSD U6 params modify planes"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params create colors",
+        "script_level.level_keys": [
+          "CSD U6 params create colors"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 iter predict bubbles",
+        "script_level.level_keys": [
+          "CSD U6 iter predict bubbles"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 iter modify bugs",
+        "script_level.level_keys": [
+          "CSD U6 iter modify bugs"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 iter create notes",
+        "script_level.level_keys": [
+          "CSD U6 iter create notes"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params starchaser intro",
+        "script_level.level_keys": [
+          "CSD U6 params starchaser intro"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params starchaser 1",
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 1"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params starchaser 2",
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 2"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params starchaser 3",
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 3"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params starchaser 4",
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 4"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 params starchaser 5",
+        "script_level.level_keys": [
+          "CSD U6 params starchaser 5"
+        ],
+        "lesson.key": "Functions with Parameters_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L15 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L15 TFMD"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit logic video",
+        "script_level.level_keys": [
+          "CSD U6 circuit logic video"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit predict",
+        "script_level.level_keys": [
+          "CSD U6 circuit predict"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit LED map",
+        "script_level.level_keys": [
+          "CSD U6 circuit LED map"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit pinMode",
+        "script_level.level_keys": [
+          "CSD U6 circuit pinMode"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit createLed",
+        "script_level.level_keys": [
+          "CSD U6 circuit createLed"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit multi led",
+        "script_level.level_keys": [
+          "CSD U6 circuit multi led"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit smart bike blinkers",
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike blinkers"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit smart bike blinker buttons",
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike blinker buttons"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit smart bike blinker build",
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike blinker build"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit button map",
+        "script_level.level_keys": [
+          "CSD U6 circuit button map"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit createButton",
+        "script_level.level_keys": [
+          "CSD U6 circuit createButton"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit smart bike buzzer",
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike buzzer"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit smart bike light",
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike light"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 circuit smart bike final",
+        "script_level.level_keys": [
+          "CSD U6 circuit smart bike final"
+        ],
+        "lesson.key": "Circuits and Physical Prototypes_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6L16 TFMD",
+        "script_level.level_keys": [
+          "CSD U6L16 TFMD"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 final intro",
+        "script_level.level_keys": [
+          "CSD U6 final intro"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 1",
+        "script_level.level_keys": [
+          "CSDU6 - final project 1"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 2",
+        "script_level.level_keys": [
+          "CSDU6 - final project 2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 3",
+        "script_level.level_keys": [
+          "CSDU6 - final project 3"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 5",
+        "script_level.level_keys": [
+          "CSDU6 - final project 5"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 4",
+        "script_level.level_keys": [
+          "CSDU6 - final project 4"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - final project 6",
+        "script_level.level_keys": [
+          "CSDU6 - final project 6"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U6Ch2",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2"
+        ],
+        "lesson.key": "Project: Prototype an Innovation_",
+        "lesson_group.key": "csd6_2",
+        "script.name": "csd6-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-2018-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csd-post-survey-2018-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "CSD Post-Course Survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd6-2017"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

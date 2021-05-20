@@ -3,8 +3,11 @@
 
 %div#bubble-choice
 
+.bubble-choice
+  = render partial: 'levels/teacher_markdown', locals: {data: @level.properties}
+
 - data = {}
 - user_id = request.params["user_id"] || current_user&.id
-- data[:level] = @level.summarize(script_level: @script_level, user_id: user_id)
+- data[:level] = @level.summarize(script_level: @script_level, user: @view_as_user, should_localize: true)
 
-%script{src: minifiable_asset_path('js/levels/_bubble_choice.js'), data: {bubblechoice: data.to_json}}
+%script{src: webpack_asset_path('js/levels/_bubble_choice.js'), data: {bubblechoice: data.to_json}}

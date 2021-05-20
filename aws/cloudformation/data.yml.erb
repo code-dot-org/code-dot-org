@@ -2,6 +2,9 @@
 require 'cdo/aws/dms'
 require 'active_support/core_ext/numeric/bytes'
 require 'active_support/core_ext/numeric/time'
+require 'active_support/inflector'
+require 'cdo/redshift'
+self.tags.push key: 'environment', value: rack_env
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -20,6 +23,9 @@ Parameters:
     Type: String
     NoEcho: true
   RDSHost:
+    Type: String
+  # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
+  RDSClusterEndpointRootDomain:
     Type: String
   ReportingCluster:
     Type: String
@@ -43,7 +49,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
-      AutomatedSnapshotRetentionPeriod: 1
+      AutomatedSnapshotRetentionPeriod: 5
       ClusterParameterGroupName: default.redshift-1.0
       ClusterSubnetGroupName: !ImportValue VPC-RedshiftSubnetGroup
       ClusterType: single-node
@@ -54,6 +60,9 @@ Resources:
       MasterUsername: {Ref: RedshiftUsername}
       MasterUserPassword: {Ref: RedshiftPassword}
       NodeType: dc1.large
+      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
+      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
+      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
   TableauSync:
@@ -68,6 +77,23 @@ Resources:
       ReplicationInstanceIdentifier: !Ref AWS::StackName
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
+  # Note that this is an incomplete set of Policies attached to the
+  # redshift-s3 Role. The Role itself and other Policies were generated manually
+  # in the AWS Console, and we should continue to move these Resources here over time.
+  RedshiftS3Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: RedshiftS3Policy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: RedshiftS3ImportExportBucket
+            Effect: Allow
+            Action:
+              - 's3:*'
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal/*'
+              - 'arn:aws:s3:::cdo-data-sharing-internal'
   RDSEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
@@ -75,6 +101,19 @@ Resources:
       EndpointType: source
       EngineName: mysql
       ServerName: !Ref RDSHost
+      Port: 3306
+      Username: !Ref RDSUsername
+      Password: !Ref RDSPassword
+      ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
+  AuroraCloneEndpoint:
+    Type: AWS::DMS::Endpoint
+    Properties:
+      EndpointIdentifier: !Sub "AuroraCloneEndpoint-${AWS::StackName}"
+      EndpointType: source
+      EngineName: aurora
+      # At the time this template is rendered the Redshift Import Clone may not exist, so we can't use the RDS describe
+      # endpoints API to get this server name.
+      ServerName: !Sub "<%= RedshiftImport::CLONE_CLUSTER_ID %>.${RDSClusterEndpointRootDomain}"
       Port: 3306
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
@@ -108,19 +147,23 @@ Resources:
          # Default value: 1000 KB (1 MB)
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
   DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
-      MigrationType: full-load-and-cdc
+      MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>
-      SourceEndpointArn: !Ref RDSEndpoint
+      ReplicationTaskIdentifier: <%= task_name %>-task
+      SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
         <%= YAML.load(erb_file(aws_dir('dms/replication-task-settings.yml.erb'))).to_json %>
       TableMappings: !Sub |
-        <%= table_mappings.to_json %>
+          <%= table_mappings.to_json %>
+      Tags:
+        -
+          Key: schedule
+          Value: <%=schedule%>
 <% end -%>
   DMSS3Role:
     Type: AWS::IAM::Role
@@ -173,42 +216,16 @@ Resources:
                   - 's3:ListBucket'
                 Resource: 'arn:aws:s3:::cdo-activities-archive'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
-  PrimaryDBParameters:
-    Type: AWS::RDS::DBParameterGroup
+<%
+  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+-%>
+  <%=key%>DBParameters:
+    Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
     Properties:
-      Description: !Sub "Primary Database Parameters for ${AWS::StackName}."
-      Family: mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['Primary'].compact.to_json %>
-  ReportingDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Reporting Read Replica DB Parameters for ${AWS::StackName}."
-      Family: mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['Replica'].compact.to_json %>
-  AuroraClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora DB Cluster Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraCluster'].compact.to_json %>
-  AuroraReportingClusterDBParameters:
-    Type: AWS::RDS::DBClusterParameterGroup
-    Properties:
-      Description: !Sub "Aurora Reporting DB Cluster Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingCluster'].compact.to_json %>
-  AuroraWriterDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Writer Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraWriter'].compact.to_json %>
-  AuroraReportingReplicaDBParameters:
-    Type: AWS::RDS::DBParameterGroup
-    Properties:
-      Description: !Sub "Aurora Reporting Replica Parameters for ${AWS::StackName}."
-      Family: aurora-mysql5.7
-      Parameters: <%= YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb')))['AuroraReportingReplica'].compact.to_json %>
+      Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
+      Family: <%=key.include?('Aurora') ? 'aurora-' : ''%>mysql5.7
+      Parameters: <%=values.compact.to_json%>
+<%end -%>
 <%
   # Add CloudWatch Logs Metric Filters for RDS Enhanced Monitoring metrics.
   # Ref: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#w2ab1c20c23c17b7b5
@@ -289,25 +306,6 @@ Resources:
     Properties:
       AliasName: !Sub "alias/snapshot-${AWS::StackName}"
       TargetKeyId: !Ref DBSnapshotKey
-  # The production reporting Aurora cluster replicates via MySQL binlog from the production Aurora cluster.
-  ReportingBinLogReplicaLagAlarm:
-    Type: AWS::CloudWatch::Alarm
-    Properties:
-      AlarmName: !Sub "${AWS::StackName}-ReportingBinLogReplicaLag"
-      AlarmDescription: Alarms when the Aurora Reporting Cluster binlog replica lag exceeds 900 seconds for 12 datapoints.
-      AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-LowPriority"
-      Dimensions:
-        - Name: DBClusterIdentifier
-          Value: !Ref ReportingCluster
-      MetricName: AuroraBinlogReplicaLag
-      Namespace: AWS/RDS
-      Statistic: Average
-      ComparisonOperator: GreaterThanThreshold
-      Threshold: 600
-      Period: 3600 # 1 hour
-      EvaluationPeriods: 12
-      TreatMissingData: breaching
 # ELB Access Logs tables defined in Glue Data Catalog.
   ELBLogsDatabase:
     Type: AWS::Glue::Database
@@ -367,7 +365,7 @@ Resources:
     Type: AWS::Glue::Crawler
     Properties:
       Name: elb_logs
-      Role: !ImportValue IAM-GlueRoleARN
+      Role: !GetAtt GlueRole.Arn
       Description: Update daily partitions generated by ELB Access Logs.
       SchemaChangePolicy:
         UpdateBehavior: LOG
@@ -378,16 +376,90 @@ Resources:
       Targets:
         S3Targets:
         - Path: !Sub 's3://${LogsBucket}/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/'
-  CrawlerConfiguration:
-    Type: Custom::CrawlerConfiguration
+      Configuration: '<%={Version: 1.0, CrawlerOutput: {Partitions: {AddOrUpdateBehavior: 'InheritFromTable'}}}.to_json%>'
+  GlueRole:
+    Type: AWS::IAM::Role
     Properties:
-      ServiceToken: !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:GlueConfiguration'
-      CrawlerName: !Ref ELBLogsCrawler
-      Configuration:
-        Version: '1.0'
-        CrawlerOutput:
-          Partitions:
-            AddOrUpdateBehavior: InheritFromTable
+      <%=service_role 'glue'%>
+      Policies:
+        - PolicyName: ReadLogs
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 's3:GetObject'
+                Resource:
+                  - !Sub 'arn:aws:s3:::${LogsBucket}/*'
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  CloudTrailLogsTable:
+    Type: AWS::Glue::Table
+    Properties:
+      DatabaseName: !Ref ELBLogsDatabase
+      CatalogId: !Ref AWS::AccountId
+      TableInput:
+        Name: cloudtrail
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: cloudtrail
+        PartitionKeys:
+          # Data is partitioned by year/month/day
+          - {Name: year, Type: bigint}
+          - {Name: month, Type: bigint}
+          - {Name: day, Type: bigint}
+        StorageDescriptor:
+          Location: !Sub 's3://${LogsBucket}/AWSLogs/${AWS::AccountId}/CloudTrail/'
+          Columns: <%=
+            # Ref: https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html#create-cloudtrail-table
+            str = <<~HIVE
+            eventversion STRING,
+            useridentity STRUCT<type:STRING,principalid:STRING,arn:STRING,accountid:STRING,invokedby:STRING,accesskeyid:STRING,userName:STRING,sessioncontext:STRUCT<attributes:STRUCT<mfaauthenticated:STRING,creationdate:STRING>,sessionissuer:STRUCT<type:STRING,principalId:STRING,arn:STRING,accountId:STRING,userName:STRING>>>,
+            eventtime STRING,
+            eventsource STRING,
+            eventname STRING,
+            awsregion STRING,
+            sourceipaddress STRING,
+            useragent STRING,
+            errorcode STRING,
+            errormessage STRING,
+            requestparameters STRING,
+            responseelements STRING,
+            additionaleventdata STRING,
+            requestid STRING,
+            eventid STRING,
+            resources ARRAY<STRUCT<ARN:STRING,accountId:STRING,type:STRING>>,
+            eventtype STRING,
+            apiversion STRING,
+            readonly STRING,
+            recipientaccountid STRING,
+            serviceeventdetails STRING,
+            sharedeventid STRING,
+            vpcendpointid STRING
+            HIVE
+            str.lines.map {|x| name, type = x.chomp.chomp(',').split(' '); {Name: name, Type: type.downcase}}.to_json
+          %>
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          InputFormat: com.amazon.emr.cloudtrail.CloudTrailInputFormat
+          SerdeInfo:
+            SerializationLibrary: com.amazon.emr.hive.serde.CloudTrailSerde
+            Parameters:
+              serialization.format: '1'
+  CloudTrailLogsCrawler:
+    Type: AWS::Glue::Crawler
+    Properties:
+      Name: cloudtrail_logs
+      Role: !GetAtt GlueRole.Arn
+      Description: Update daily partitions generated by CloudTrail Logs.
+      SchemaChangePolicy:
+        UpdateBehavior: LOG
+        DeleteBehavior: LOG
+      Schedule: {ScheduleExpression: 'cron(0 7 * * ? *)'}
+      DatabaseName: !Ref ELBLogsDatabase
+      TablePrefix: cloudtrail_logs_
+      Targets:
+        S3Targets:
+          - Path: !Sub 's3://${LogsBucket}/AWSLogs/${AWS::AccountId}/CloudTrail/'
+      Configuration: '<%={Version: 1.0, CrawlerOutput: {Partitions: {AddOrUpdateBehavior: 'InheritFromTable'}}}.to_json%>'
   CloudFrontLogsTable:
     Type: AWS::Glue::Table
     Properties:
@@ -503,3 +575,46 @@ Resources:
                 Value: <%=environment%>-dashboard-cdn/
               - Name: suffix
                 Value: .gz
+  AuditLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: /admin/auditlogs
+      # TODO Manually configured for now, uncomment when official resource support has been deployed.
+      # Ref: https://github.com/aws-cloudformation/aws-cloudformation-coverage-roadmap/issues/128
+      # KMSKeyId: !Ref AuditLogsKey
+  AuditLogsKey:
+    Type: AWS::KMS::Key
+    Properties:
+      Description: 'Used for encrypting audit logs.'
+      EnableKeyRotation: true
+      # See: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html#cmk-permissions
+      KeyPolicy:
+        Version: 2012-10-17
+        Id: key-policy-1
+        Statement:
+          - Sid: Enable IAM policies in source account for managing key access.
+            Effect: Allow
+            Principal: {AWS: [!Sub "arn:aws:iam::${AWS::AccountId}:root"]}
+            Action: 'kms:*'
+            Resource: '*'
+          - Sid: Restrict use of key to specific log groups.
+            Effect: Allow
+            Principal:
+              Service:
+                - !Sub "logs.${AWS::Region}.amazonaws.com"
+                - ssm.amazonaws.com
+            Action:
+              - 'kms:Encrypt'
+              - 'kms:Decrypt'
+              - 'kms:ReEncrypt*'
+              - 'kms:GenerateDataKey*'
+              - 'kms:DescribeKey'
+            Resource: '*'
+            Condition:
+              ArnEquals:
+                kms:EncryptionContext:aws:logs:arn: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${AuditLogs}"
+  AuditLogsKeyAlias:
+    Type: AWS::KMS::Alias
+    Properties:
+      AliasName: alias/auditlogs
+      TargetKeyId: !Ref AuditLogsKey

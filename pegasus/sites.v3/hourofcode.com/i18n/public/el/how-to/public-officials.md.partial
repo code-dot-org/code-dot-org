@@ -6,61 +6,61 @@ nav: how_to_nav
 
 {{ signup_button }}
 
-# How to involve your entire community
+# Πως να εμπλέξετε όλη την κοινότητά σας
 
-### Show your state, district, or city your commitment to computer science
+### Δείξτε στην περιφέρεια, την περιοχή σας ή την πόλη σας τη δέσμευσή σας για την επιστήμη των υπολογιστών
 
----
+* * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## Φιλοξενείτε έναν εκλεγμένο αξιωματούχο στη δική σας Ώρα του Κώδικα;
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+[Δείτε την εργαλειοθήκη μας](/files/elected-official.pdf) με όλες τις πληροφορίες που χρειάζεστε για να κάνετε την επίσκεψή του και την εκδήλωσή σας καταπληκτική!
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+Από αριστερά προς τα δεξιά: *Κυβερνήτες από το Άρκανσο, τη Βόρεια Καρολίνα και την Αριζόνα που συμμετείχαν σε μία Ώρα του Κώδικα.*
 
 ## Καλέστε όλα τα σχολεία να λάβουν μέρους, όλους τους μαθητές να μάθουν!
 
-### 1. Read our one-pager
+### 1. Διαβάστε το φυλλάδιό μας
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
-### 2. Recruit local schools and districts
+### 2. Καλέστε τοπικά σχολεία και περιφέρειες
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+Χρησιμοποιήστε [αυτό το email]({{ promote/sample_emails }}) ή [αυτήν την περίληψη]({{ promote/stats_url }}) ως σημείο εκκίνησης, και ρίξτε μια ματιά σ' αυτόν τον [οδηγό]({{ urls/how_to_guide }}) για σχολεία και περιφέρειες.
 
-### 3. Host an Hour of Code event
+### 3. Φιλοξενήστε μια εκδήλωση Ώρας του Κώδικα
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+Δείτε τον [οδηγό μας για εκδηλώσεις]({{ urls/how_to_events }}) για ένα παράδειγμα πραγματοποίησης μιας εκδήλωσης, [το κιτ για τα μέσα ενημέρωσης]({{ promote/press_kit_url }}), και άλλους πόρους για τον σχεδιασμό εκδηλώσεων. Η διοργάνωση μιας εκδήλωσης είναι ένας πολύ καλός τρόπος για να προωθήσετε την Ώρα του Κώδικα και να αυξήσετε τη συμμετοχή.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. Παρευρεθείτε σε μια εκδήλωση κατά τη διάρκεια της Εβδομάδας Εκπαίδευσης στην Επιστήμη των Υπολογιστών ({{ campaign_date/short }})
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+[Βρείτε τάξεις και σχολεία]({{ urls/events }}) που συμμετέχουν στην περιοχή σας, την πόλη σας ή την περιφέρειά σας.
 
-### 5. Issue a proclamation or resolution
+### 5. Εκδώστε μια διακήρυξη ή ένα ψήφισμα
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+Δείτε αυτό το [παράδειγμα ψηφίσματος]({{ urls/proclamation }}) που υποστηρίζει την Εβδομάδα Εκπαίδευσης της Επιστήμης των Υπολογιστών και τους στόχους της, που μπορεί να χρησιμοποιηθεί από τους τοπικούς νομοθέτες.
 
-### 6. Draft an op-ed
+### 6. Γράψτε την άποψή σας
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+Εξετάστε το ενδεχόμενο να δημοσιεύσετε ένα άρθρο γνώμης στην τοπική σας εφημερίδα. Δείτε αυτό το [παράδειγμα άρθρου]({{ promot/op_ed }}) που υποστηρίζει την Εβδομάδα Εκπαίδευσης την Επιστήμης των Υπολογιστών και τους στόχους της.
 
-### 7. Spread the word
+### 1. Διαδώστε το
 
-[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+[Μοιραστείτε το βίντεο της Ώρας του Κώδικα στο Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) και [μιλήστε για την στήριξή σας σ' αυτήν στο Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Μοιραστείτε φωτογραφίες των εκδηλώσεων ή ένα βίντεο δικό σας ή και άλλων ενηλίκων, όπου υλοποιείτε την Ώρα του Κώδικα. Χρησιμοποιήστε το hashtag **#HourOfCode**, ώστε να μπορέσει το Code.org (@code.org) να το δει και να προωθήσει την υποστήριξη. Ή, χρησιμοποίησε κάποιο από τα παρακάτω παραδείγματα tweets:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Κάθε μαθητής, αγόρι ή κορίτσι, πρέπει να έχει τη δυνατότητα να μάθει την επιστήμη των υπολογιστών. Ελάτε μαζί μας να ξεκινήσουμε μία #HourOfCode <http://hourofcode.com>*
+- *Σήμερα, είμαστε περήφανοι που συμμετέχουμε στην κίνηση της Ώρας του Κώδικα. Είσαι μέσα; #HourOfCode <http://hourofcode.com>.*
 
-### 8. Issue a press release
+### 8. Βγάλτε ένα δελτίο τύπου
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[Χρησιμοποιήστε αυτό το παράδειγμα]({{ promote/official_press_release }}) ως οδηγό.
 
-### 9. Connect locally
+### 9. Συνδεθείτε τοπικά
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[Μάθετε περισσότερα σχετικά με την εκπαίδευση στην επιστήμη των υπολογιστών στην περιφέρειά σας]({{ urls/advocacy }}). Υπογράψτε το αίτημα εκεί και θα έχετε ενημέρωση σχετικά με τις προσπάθειες υποστήριξης του Code.org σε τοπικό, περιφερειακό και κρατικό επίπεδο.
 
 {{ signup_button }}

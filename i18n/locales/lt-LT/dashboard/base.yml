@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 lt:
   errors:
     messages:
@@ -12,7 +24,7 @@ lt:
     attributes:
       user:
         name: 'Tavo vardas'
-        name_example: 'Tavo vardas<br/>(jį matys tavo mokytoja(-s))'
+        name_example: 'Tavo vardas (jį matys tavo mokytoja(-s))'
         email: 'El. paštas'
         username: 'Naudotojo vardas'
         password: 'Slaptažodis'
@@ -38,12 +50,9 @@ lt:
   okay: "Gerai"
   or: "arba"
   heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pridėti mokytoją:'
       placeholder: "Grupės kodas (ABCDEF)"
-      instructions: "Įrašyk kodą, kurį tau davė mokytojas. Tai yra 6 raidžių kodas, pavyzdžiui \"ABCDEF\"."
-    submit: 'Pridėk mokytoją'
   add_hint_form:
     placeholder: 'Įvesk savo suflerį čia'
     submit: 'Pridėk suflerį'
@@ -70,8 +79,6 @@ lt:
   auth:
     sign_in_with: 'Prisijungti naudojant %{provider}'
     signed_in: 'Prisijungta!'
-    signed_out: 'Jūs atsijungėte iš <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Prisijungimui jūs panaudojote %{provider}. <a href="%{url}">Spauskite čia</a>, kad atsijungtumėte nuo %{provider}.'
     already_signedup: 'Jau užsiregistravote?'
     notyet_signedup: "Dar nesate užsiregistravę?"
     google_oauth2: 'Google paskyra'
@@ -86,6 +93,7 @@ lt:
     student_count: 'Jau užsiregistravo %{count} mokinių(-iai).'
     teacher_count: 'Jau užsiregistravo %{count} mokytojų(-ai).'
     overview: 'Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti savo klasę. <a href="/">Galite naršyti įvairius etapus ir galvosūkius</a> be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą ir projektus.'
+    overview_markdown: 'Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti savo klasę. [Galite naršyti įvairius etapus ir galvosūkius](/) be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą ir projektus.'
     hoc_already_signed_up_heading: 'Naudotis neprisijungus'
     teacher_educator_guide: 'Peržiūrėti pedagogo vadovą'
     title: "Užsiregistruokite Code.org"
@@ -104,6 +112,10 @@ lt:
     valid_password: "Galiojantis slaptažodis!"
     invalid_password: "Slaptažodį turi sudaryti mažiausiai 6 simboliai"
     mismatch_password: "Slaptažodžiai nesutampa"
+    agree_us_data_transfer_student: '**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant asmeninius duomenis), naudojantis šiuo tinklapiu Jungtinėse Valstijose** tokių duomenų prieglobai ir apdorojimui.'
+    agree_us_data_transfer_teacher: '**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant asmeninius duomenis), man (ir kaip studentui) naudojantis šiuo tinklapiu Jungtinėse Valstijose** tokių duomenų prieglobai ir apdorojimui.'
+    data_collection_us: "Suprantu, kad „Code.org“ yra JAV esantis ne pelno siekiantis tinklapis ir įstatymai, kuriais tvarkomas duomenų rinkimas JAV, gali skirtis nuo jūsų šalies įstatymų."
+    visit_privacy: 'Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}), kad sužinotumėte išsamiau.'
     additional_information: "Mums reikia papildomos informacijos, kad galėtum prisiregistruoti."
     user_type_label: "Paskyros tipas"
     user_type_teacher: "Mokytojas"
@@ -151,7 +163,6 @@ lt:
     login: 'Prisijungti'
     invalid_login: 'Netinkamas prisijungimas, mėginkite dar kartą'
     pair_programming: 'Kompiuteriu dalinuosi su klasioku'
-    student_privacy: "Sužinok <a href='%{student_privacy_blog}' target='_blank'>čia</a>, kodėl nematai savo pilno vardo."
   password:
     reset_form:
       title: 'Užmiršai savo slaptažodį?'
@@ -229,6 +240,8 @@ lt:
       educate_inspire: "Įkvėpkite mokinius"
       educate_community: "Virtuali bendruomenė"
       educate_tools: "Įrankiai ir vaizdo įrašai"
+      legal_privacy: "Privatumo politika"
+      legal_tos: "Naudojimo taisyklės"
     user:
       classroom: 'Mokytojo namų puslapis'
       district_dashboard: 'Prietaisų skydelis'
@@ -303,14 +316,13 @@ lt:
     delete_text: "Nuspaudus mygtuką panaikinsite savo paskyrą."
     delete_text_teacher_note: "Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus panaikintos."
     delete_confirm: 'Ar tikrai norite panaikinti savo paskyrą?'
+    update_email: "Atnaujinti"
+    none: "Nė vienas"
   user_level:
     completed: 'Baigta'
     tried: 'Išbandyta'
   home:
     title: "Code Studio"
-    description: '„Code Studio“ yra internetinių kursų puslapis, sukurtas Code.org'
-    lines_of_code: "MOKINIAI PARAŠĖ %{lines_count} KODO EILUČIŲ"
-    lines_of_code_linebreak: "%{students_count} MILIJONŲ MOKINIŲ <br/>JAU PARAŠĖ %{lines_count} KODO EILUČIŲ"
     all_courses: "1, 2 ir 3 kursų apžvalga"
     lesson_plans: "Pamokų planai"
     signin_message: "Jau užsiregistravote? %{link}"
@@ -340,11 +352,6 @@ lt:
     test_videos_help: 'Išbandykite mūsų naują vaizdo grotuvą savo mokykloje'
     try_beta_courses: 'Naujiena! Išmėginkite testuojamus kursus pradinukams'
     use_as_teacher: 'Naudokite šią svetainę kaip mokytojas'
-    heading_hoc2014: "<h2>Programavimo valanda</h2><h1>Visoms amžiaus grupėms</h1>"
-    heading_elementary: "<h2>20 valandų kursas</h2><h1>Kompiuterių mokslo pradmenys (visoms amžiaus grupėms)</h1>"
-    heading_apps: "<h2>Smagumynai</h2><h1>visiems</h1>"
-    heading_tools: "<h2>Pasiruošęs kitam žingsniui?</h2><h1>JavaScript įrankiai gimnazijoms</h1>"
-    heading_legacy: "<h2>Pagreitinti kursai</h2><h1>visoms amžių grupėms</h1>"
     your_gallery: Galerija
     no_primary_course: "Išmėgink „Code Studio“ kursą"
     choose_next_course: "Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau"
@@ -486,26 +493,13 @@ lt:
       title: "Sąlyginiai sakiniai"
     widgets:
       cta: "Sužinok, kaip"
-  gallery:
-    students_drew_these_with_code: "Mokiniai nupiešė juos parašę kodą!"
-    students_made_these_with_code: "Mokinių sukurti pavyzdžiai."
-    picture_count: "Šiomis <b>%{days}</b> dienomis, mokiniai nupiešė <b>%{count}</b> piešinių parašydami savo kompiuterines programas. Nuspausk ant šių piešinių, kad pamatytum parašytas programas."
-    activity_count: "Per pastarąsias <b>%{days}</b> dienas, mokiniai programuodami sukūrė <b>%{count}</b> programėlių ir piešinių."
-    want_to_make_your_own: "Norėtum sukurti savo?"
-    more: "Daugiau &rarr;"
-    caption_by_name_age: "sukūrė %{name}  (%{age} m.)"
-    caption_time_ago: "prieš %{time_ago} "
-    header: "Galerija"
-    header_playlab: "Istorijos ir žaidimai"
-    header_artist: "Menininkas"
-    report_abuse: "Praneškite apie piktnaudžiavimą"
   landing:
-    prerelease: "Šis kursas yra <span class='betatext'>beta</span>. Tai reiškia, kad tai nėra galutinis šio kurso variantas ir jis dar yra tobulinamas."
-    prerelease_hoc2014: "Šios pamokėlės yra <span class='betatext'>beta versijoje</span>. Į pasiūlymus ir klaidų pranešimus bus atsižvelgta."
     report_bug: "Pranešti apie problemą"
     support: "Pagalba"
     support_url: "//support.code.org"
     help_resources: "Pagalba ir ištekliai"
+  free_response:
+    placeholder: "Įveskite savo atsakymą čia"
   multi:
     wrong_title: "Neteisingas atsakymas"
     wrong_body: "Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!"
@@ -558,8 +552,6 @@ lt:
   age_interstitial:
     age: Tavo amžius
     header: Paskyros informacijos atnaujinimas
-    message: "Šiuo metu mes atnaujiname privatumo apsaugą, kad Jūsų duomenys būtų dar saugesni. Norėdami tai padaryti, mums reikia, kad visi naudotojai įvestų savo amžių.<br/>Kaip ir visuomet, code.org niekada neparduos ir neišduos Jūsų asmeninių duomenų tretiesiems asmenims."
-    sign_out: 'Jeigu nenori skelbti savo amžiaus, gali <a href="%{url}">atsijungti</a>.'
   terms_interstitial:
     tos: "Naudojimo taisyklės"
     privacy: "Privatumo politika"
@@ -581,6 +573,7 @@ lt:
     submit: "Pateikti"
     decline: "Užverti"
   zendesk_too_young_message: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org"> support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'
+  zendesk_too_young_message_markdown: 'Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti [support.code.org](http://support.code.org) nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis už jus.'
   progress:
     not_started: nepradėta
     in_progress: pradėta
@@ -635,34 +628,12 @@ lt:
   peer_review:
     accepted:
       name: 'Priimta'
-      description: '<strong>Taip</strong>, ši pateiktis <strong>atitinka</strong> reikalavimus'
     rejected:
       name: 'Atmesta'
-      description: '<strong>Ne</strong>, ši pateiktis <strong>neatitinka</strong> reikalavimų'
     escalated:
       description: 'Norėčiau, kad instruktorius peržiūrėtų šią pateiktį'
     instructor_feedback: 'Instruktoriaus atsiliepimai'
-  flex_category:
-    required: 'Peržiūra'
-    content: 'Turinys'
-    practice: 'Mokymo praktikos'
     peer_review: 'Tarpusavio peržiūra'
-    csf_digcit: 'Virtuali pilietybė'
-    csf_jigsaw: 'Dėlionės'
-    csf_loops: 'Kartojimas'
-    csf_events: 'Įvykiai'
-    csf_binary: 'Dvejetainis'
-    csf_conditionals: 'Sąlyginiai sakiniai'
-    csf_nested_loops: 'Kartojimas kartojime'
-    csf_functions: 'Komandų kūrimas'
-    csf_variables: 'Kintamieji'
-    csf_for_loops: 'Kartojimas'
-    csf_internet: 'Internetas'
-    csp_variables: 'Kintamieji'
-    csp_conditionals: 'Sąlyginiai sakiniai'
-    csp_functions: 'Komandų kūrimas'
-    csp_lists: 'Sąrašai'
-    csp_loops: 'Kartojimas'
   hoc_download:
     title: '„Programavimo valandos” parsisiuntimai'
     capsule_title: 'Ar turite internetą?'
@@ -671,13 +642,17 @@ lt:
     starwars_blocks_name: 'Žvaigždžių karai: Programuojame galaktiką (Blokais)'
     starwars_javascript_name: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)'
     download_message: 'Parsisiųsti %{app_name} naudojimui neprisijungus (136MB)'
+    download_in_English: 'Parsisiųsti anglų kalba:'
+    download_in_Spanish: 'Parsisiųsti ispanų kalba:'
     windows: 'Windows (64-bitų)'
     mac: 'Mac OS X'
+  return_unit_overview: 'Eiti į skyriaus apžvalgą'
   return_course_overview: 'Eiti į skyriaus apžvalgą'
   pd:
     form_labels:
       email: 'El. paštas'
       school_name: 'Mokyklos pavadinimas'
+      colombian_school_name: 'Mokyklos pavadinimas'
     form_entries:
       gender:
         male: 'Vyras'
@@ -688,10 +663,11 @@ lt:
         math: 'Matematika'
         science: 'Gamtos mokslai'
         la: 'Literatūra'
+      resources:
+        khan: 'Khan Akademija'
       email_opt_in:
         opt_in_yes: 'Taip'
         opt_in_no: 'Ne'
   cookie_banner:
     accept: 'Sutinku'
-  gdpr_dialog:
-    yes: 'Taip'
+  copy: 'Kopijuoti'

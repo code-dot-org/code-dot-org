@@ -1,0 +1,21 @@
+name 'Episode 5 Instructions - Younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Sprite Lab Simulations
+Follow along with Sofia as she creates a simulation in Sprite Lab. Watch the first half of the Code Break episode and use this level to code along. 
+
+![](https://images.code.org/396dc7d23692f4dca36091501f62ae1f-image-1587320897997.gif)
+
+
+---
+Looking for more practice? Check out the [Express Course](https://studio.code.org/s/express-2019/lessons/24/levels/1]).
+
+*Over 13 year old? Find your practice level [here](https://studio.code.org/s/code-break/lessons/5/levels/2).*
+MARKDOWN

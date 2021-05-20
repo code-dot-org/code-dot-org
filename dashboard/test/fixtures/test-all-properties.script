@@ -1,0 +1,23 @@
+family_name 'csd-one'
+
+hideable_lessons true
+project_widget_visible true
+student_detail_progress_view true
+lesson_extras_available true
+has_verified_resources true
+is_stable true
+tts true
+project_sharing true
+is_course true
+
+peer_reviews_to_complete 1
+curriculum_path 'fake_curriculum_path'
+version_year '2020'
+pilot_experiment 'fake-pilot-experiment'
+editor_experiment 'fake-editor-experiment'
+curriculum_umbrella 'CSF'
+professional_learning_course 'Exploring Computer Science PD Course'
+supported_locales ["de-DE"]
+project_widget_types ["gamelab", "weblab"]
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-18/coursea/"], ["teacherForum", "http://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-18/coursea/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-18/coursea/standards/"]]
+announcements [{"notice"=>"This Online PD Resource is no longer available", "details"=>"Click \"Learn More\" to find out about the new Online PD Resources.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"failure", "visibility"=>"Teacher and student"}]

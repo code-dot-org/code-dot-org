@@ -1,0 +1,47 @@
+{
+  "sv-SE": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "återhämtning"
+        },
+        "outbreak2": {
+          "recovering": "återhämtning"
+        },
+        "outbreak3": {
+          "recovering": "återhämtning"
+        },
+        "outbreak4": {
+          "recovering": "återhämtning",
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "outbreak5": {
+          "recovering": "återhämtning"
+        },
+        "outbreak6": {
+          "recovering": "återhämtning"
+        },
+        "outbreak7": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "outbreak8": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "outbreak_freeplay": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "återhämtning",
+          "moving left and right": "flytta vänster och höger",
+          "moving with arrow keys": "flytta med piltangenter"
+        }
+      }
+    }
+  }
+}

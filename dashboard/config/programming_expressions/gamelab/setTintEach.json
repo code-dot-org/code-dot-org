@@ -1,0 +1,21 @@
+{
+  "func": "setTintEach",
+  "category": "Groups",
+  "paletteParams": [
+    "color"
+  ],
+  "params": [
+    "\"blue\""
+  ],
+  "dropdown": {
+    "0": [
+      "\"red\"",
+      "\"green\"",
+      "\"blue\"",
+      "\"yellow\"",
+      "rgb(255, 0, 0)",
+      "rgb(255, 0, 0, 0.5)"
+    ]
+  },
+  "modeOptionName": "*.setTintEach"
+}

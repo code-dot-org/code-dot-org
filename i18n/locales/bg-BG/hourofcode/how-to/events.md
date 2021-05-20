@@ -1,7 +1,5 @@
 ---
 title: Hour of Code практически съвети
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

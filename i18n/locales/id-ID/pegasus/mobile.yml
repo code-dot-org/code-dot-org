@@ -6,19 +6,32 @@
   select_language: "Silahkan pilih bahasa Anda"
   upgrade_ie_message: "Code.org akan menghapus dukungan terhadap Internet Explorer 8, 9, dan 10. Silakan perbaruhi browser anda."
   upgrade_ie_message_csedweek: "CSEdWeek.org akan menghapus dukungan terhadap Internet Explorer 8, 9, dan 10. Silakan perbaruhi browser anda."
-  upgrade_ie_link: "Pelajari lebih banyak"
+  upgrade_ie_link: "Pelajari lebih lanjut"
   en: "Ilmu komputer"
   computer_science_edweek: "Minggu pendidikan ilmu komputer"
   csedweek_dates: "8-14 Desember 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> The Hour of Code</a> telah tiba. Mintalah semua guru dan penyelenggara, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> rencanakan Hour of Code Anda</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400"> Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek yang lain</a>'
+  csedweek_banner_teachers_text: "Apakah Anda seorang guru komputer? Lihat sumber CSEdWeek yang lain"
   n_have_learned_an_hoc: "<h1>Cobalah</h1><h2>Hour of Code</h2><h3># served</h3>"
+  try_hoc_num_served: "<h1>Coba</h1><h2>Hour of Code</h2><h3>%{num} disajikan</h3>"
+  try_hoc_num_served_markdown: |-
+    # Coba
+
+    ## Hour of Code
+
+    ### %{num} disajikan #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Siapa pun bisa belajar."
   learn_now: "Pelajari sekarang"
   petition_message: "Setiap siswa di setiap sekolah seharusnya memiliki kesempatan untuk mempelajari ilmu komputer"
-  petition_sign_message: 'Jika Anda setuju, bubuhkan nama Anda.  Bergabung dengan # orang lain.'
-  petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabunglah dengan # orang lainnya.'
+  petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda dan bergabunglah dengan milis kami dengan # orang lainnya.'
+  petition_sign_message_num: "Jika Anda setuju, daftarkan nama Anda dan bergabunglah dengan milis kami bersama %{num} orang lainnya."
   petition_join_others: 'Bergabunglah dengan # orang-orang lainnya'
+  petition_join_others_num: "Gabung bersama %{num} orang lainnya"
   name: "Nama"
   email: "Email"
   zipcode: "poskode atau negara"
@@ -28,7 +41,7 @@
   og_title: 'Setiap anak berhak atas kesempatan'
   og_title_soon: "Jam kode akan segera hadir"
   og_title_here: "Jam kode di sini!"
-  og_description: "Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk belajar ilmu komputer. Ini mengubah segalanya."
+  og_description: "Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk belajar ilmu komputer."
   og_description_celeb: "Mencoba tutorial yang baru, memenangkan video selebriti untuk dirimu sendiri atau chat kelasmu!"
   csedweek_og_title: "Minggu pendidikan ilmu komputer"
   csedweek_og_description: "4-10 Desember 2017. Ilmu komputer adalah dasar bagi setiap siswa untuk belajar."
@@ -42,9 +55,10 @@
   hoc2014_everyone: "Semua orang"
   hoc2014_support: "Dukunglah &#x25BE;"
   hoc2014_whatishoc: "Apa itu Hour of Code?"
-  csedweek_map_header: "# CSEdWeek / acara Hour of Code di seluruh dunia"
-  csedweek_map_signup: "Daftarkan acaramu"
-  csedweek_map_search_placeholder: "Telusuri acara Hour of Code"
+  csedweek_map_header: "# CSEdWeek / event Hour of Code di seluruh dunia"
+  csedweek_map_header_num: "%{num} CSEdWeek / event Hour of Code di seluruh dunia"
+  csedweek_map_signup: "Daftarkan eventmu"
+  csedweek_map_search_placeholder: "Telusuri event Hour of Code"
   csedweek_map_search_search: "Telusuri"
   csedweek_map_search_reset: "Kembali ke awal"
   csedweek_map_legend_title: "Legenda"
@@ -106,7 +120,7 @@
   third_party_scratch_btn_curriculum: "Unduk Kurikulum Scratch"
   third_party_scratch_btn_forum: "Forum Pengajar Scratch"
   third_party_scratch_btn_site: "Kunjungan Scratch"
-  third_party_lightbot_desc: "Dalam Lightbot, siswa harus memprogram robot dengan perintah untuk memecahkan teka-teki. Siswa bisa memainkan permainan dalam Browser (memerlukan Flash Player), atau pada perangkat Android atau iOS. Siswa bermain pada tingkat \"Dasar\" dalam Lightbot. Mereka akan belajar bagaimana memberitahu komputer apa yang harus dikerjakan dengan serangkaian perintah-perintah dasar dan mengerti proses umum tentang bagaimana program komputer ditulis."
+  third_party_lightbot_desc: "Dalam Lightbot, siswa harus memprogram robot dengan perintah untuk memecahkan puzzle. Siswa bisa memainkan permainan dalam Browser (memerlukan Flash Player), atau pada perangkat Android atau iOS. Siswa bermain pada tingkat \"Dasar\" dalam Lightbot. Mereka akan belajar bagaimana memberitahu komputer apa yang harus dikerjakan dengan serangkaian perintah-perintah dasar dan mengerti proses umum tentang bagaimana program komputer ditulis."
   third_party_lightbot_btn_curriculum: "Unduh Kurikulum Lightbot"
   third_party_lightbot_btn_site: "Kunjungi Lightbot"
   third_party_khan_desc: "Belajar bagaimana memprogram gambar, animasi dan game menggunakan JavaScript & ProcessingJS, atau belajar cara membuat halaman web dengan HTML & CSS. Anda dapat berbagi apa pun yang Anda buat, mengeksplorasi apa yang telah dibuat orang lain dan saling belajar satu sama lain!"
@@ -145,11 +159,21 @@
   enter_valid_email: "Masukkan alamat email yang valid"
   get_a_certificate_message: "Kami akan kirimkan sertifikat dan informasi tentang cara untuk <a href='/learn/beyond'> belajar lebih dari satu jam</a>"
   get_a_certificate_message_after: "Klik sertifikat untuk mengunduh atau mencetak. Sekarang, terus berjalan dengan <a href='http://studio.code.org'> kursus lain</a> kami, atau lihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui satu jam</a>."
+  get_a_certificate_message_after_markdown: "Klik sertifikat untuk mengunduh atau mencetaknya. Sekarang, terus ikuti [other courses](http://studio.code.org) kami, atau lihat opsi selengkapnya untuk [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Terima kasih untuk kiriman!"
   if_you_enjoyed: "Jika Anda suka mengikuti pelajaran ini, ajaklah teman-temanmu untuk mencoba juga!  Kami ingin seluruh dunia untuk ikut belajar."
   personalize_certificate: "Personalisasi sertifikat Anda"
+  print_batch_certificates: "Cetak sekumpulan sertifikat"
+  print_certificates: "Cetak Sertifikat"
+  certificate_sponsor_message: "%{sponsor_name} banyak memberikan sumbangan untuk mensponsori pembelajaran Anda."
+  print_ice_art_from_frozen: "Cetak seni salju dari Frozen tutorials"
+  want_a_blank_certificate_template: "Ingin templat sertifikat kosong untuk menuliskan nama-nama siswa Anda?"
+  landscape_recommended_certificates: "Anda dianjurkan memilih **Lanskap** ketika mencetak sertifikat."
+  print_one_here_certificates: "Cetak satu di sini."
+  enter_certificate_names: "Masukkan maksimal 30 nama, **satu per baris**. Sebuah halaman yang bisa dicetak dengan sertifikat %{script_name} dipersonalisasi akan muncul."
   share_achievement: "Tunjukkanlah prestasi Anda"
   beyond_hour_message: "Teruskan dengan <a href='http://studio.code.org'>kursus lain</a> kami, atau lihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui satu jam</a>."
+  beyond_hour_message_markdown: "Terus ikuti [other courses](http://studio.code.org) kami, atau lihat opsi selengkapnya untuk [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Leaderboards untuk jam kode."
   support_url: "http://support.code.org/"
   country: "Negara"
@@ -224,11 +248,15 @@
   stats_nina: '"Setiap hari menghasilkan hasil yang sama &mdash; 100% menggugah."-Nina Nichols Peery, guru'
   stats_student: '"Aku tahu ini adalah kesempatan <b>sekali dalam seumur hidup</b>."-Mariana Alzate, anak kelas 5'
   stats_michael: 'Saya <b>tidak pernah</b> melihat murid-murid saya begitu gembira belajar. "-Michael Clark, guru'
+  stats_nina_markdown: '"Setiap hari membuahkan hasil yang — partisipasi 100%."-Nina Nichols Peery, Guru'
+  stats_student_markdown: '"Saya tahu ini adalah kesempatan **sekali-seumur-hidup**." -Mariana Alzate, anak kelas 5'
+  stats_michael_markdown: 'Saya **belum pernah sekalipun** melihat murid-murid saya begitu gembira belajar." - Frank Martinez, Guru'
   studiobar_title: "Kunjungi <a href='http://studio.code.org'>Code Studio</a>"
   studiobar_title_nolink: "Kunjungi Code Studio"
   studiobar_elementary_title: "Latihan-latihan dasar"
   studiobar_elementary_body: "Tiga latihan terbaru kami untuk for K&#8209;5"
-  studiobar_dance_body: "Buat dan bagikan pesta dansa anda"
+  studiobar_dance_title: "Pesta Tari"
+  studiobar_dance_body: "Buat dan bagikan pesta tari anda"
   studiobar_hoc_title: "Jam kode"
   studiobar_hoc_body: "Belajar menulis kode bersama Angry Birds"
   studiobar_flappy_title: "Kode Flappy"
@@ -298,29 +326,30 @@
   homepage_slot_text_flappy: "Kode Flappy"
   homepage_action_text_hoc: "Hour of Code untuk setiap pelajar."
   homepage_action_text_num_served: "# disajikan"
-  homepage_action_text_join_us: "Bergabung dengan kami"
+  homepage_action_text_join_us: "Bergabunglah dengan kami"
   homepage_action_text_sign_up: "Daftar"
   homepage_action_text_try_it: "Cobalah"
   homepage_action_text_volunteers: "Teknis relawan yang diinginkan"
-  homepage_action_text_codevideo: "Tonton videonya"
+  homepage_action_text_codevideo: "Tonton video"
   homepage_action_text_teachervideo: "Tonton videonya"
-  homepage_action_text_watchvideo: "Tonton videonya"
+  homepage_action_text_watchvideo: "Tonton video"
   homepage_action_text_girlvideo: "Inspirasi seorang gadis"
   homepage_action_text_learn: "Mulailah belajar"
   homepage_action_text_signpetition: "Tandatangani petisi"
   homepage_action_text_wincelebritychat: "Menangkan sebuah obrolan selebriti"
   homepage_signpetition_dropdown: "Tandatangani petisi kami &#x25BE;"
+  homepage_signpetition_dropdown_text: "Saya setuju"
   homepage_diversity_pledge: "Ambil jaminan diversitas"
   homepage_banner_text_prizes: 'The Hour of Code akan datang lagi, Desember 7-13. '
-  homepage_banner_link_prizes: 'Bergabung dengan acara belajar terbesar dalam sejarah. '
+  homepage_banner_link_prizes: 'Bergabung dengan event belajar terbesar dalam sejarah. '
   homepage_banner_text_main: "Code.org dan College Board membentuk aliansi untuk meningkatkan keberagaman dalam ilmu komputer."
-  homepage_banner_text_link: "Pelajari lebih banyak"
+  homepage_banner_text_link: "Pelajari lebih lanjut"
   homepage_banner_privacy_link: "Pelajari lebih banyak"
   homepage_banner_20k_teachers: "20.000 guru telah dilatih, dan sekarang mereka mengajar ilmu komputer di kelas-kelas."
-  homepage_banner_20k_teachers_link: "Pelajari lebih banyak"
+  homepage_banner_20k_teachers_link: "Pelajari lebih lanjut"
   homepage_banner_emailprivacy: "Kami membuat perubahan penting tentang bagaimana kami mendukung privasi siswa."
   homepage_banner_emailprivacy_link: "Baca selengkapnya"
-  homepage_banner_40k_teachers_link: "Pelajari lebih banyak"
+  homepage_banner_40k_teachers_link: "Pelajari lebih lanjut"
   homepage_slot_text_title_hoc: "Jam kode"
   homepage_slot_text_blurb_hoc: "Siapapun bisa belajar. Mulailah hari ini"
   homepage_slot_text_link_hoc: "Cobalah \"Hour of Code\""
@@ -349,12 +378,12 @@
   homepage_slot_text_link_donate: "Membuat sumbangan"
   homepage_slot_text_link_shop: "Kaos, topi, & banyak lagi"
   homepage_slot_text_link_administrators: "Bawa CS ke sekolah mu"
-  homepage_gallery_header: "Lebih%{project_count}juta Code.org proyek telah dibuat"
+  homepage_gallery_header: "Lebih dari %{project_count} juta proyek Code.org telah dibuat"
   homepage_header_donors: "Code.org mengucapkan terima kasih kepada para pendukungnya"
   homepage_donors_seall: "Lihat semua"
   homepage_donors_donate: "Donasi"
   homepage_below_hero_announcement_text: "Kami peduli pada privasi anda dan membuat beberapa pembaruan pada kebijakan privasi, efektif 25 mei."
-  homepage_below_hero_announcement_link_text: "Pelajari lebih banyak"
+  homepage_below_hero_announcement_link_text: "Pelajari lebih lanjut"
   contact_form_topic_student: "Saya seorang siswa"
   contact_form_topic_parent: "Saya orang tua"
   contact_form_topic_teacher: "Saya seorang guru"
@@ -393,7 +422,9 @@
   class_submission_level_vocational: "Sekolah Kejuruan"
   class_submission_languages_other: "Bahasa yang lain"
   videos_more: "Selengkapnya <a href='%{inspiring_videos_playlist}'>video inspiratif </a> menampilkan role model dan selebriti"
+  videos_more_markdown: "[inspirational videos](%{inspiring_videos_playlist}) selengkapnya yang menampilkan model peran dan selebritis"
   careers_page_more: "Selengkapnya <a href='%{careers_url}' target='_blank'> video inspiratif</a> menampilkan beberapa ahli di bidang teknologi"
+  careers_page_more_markdown: "[inspirational videos](%{careers_url}) selengkapnya yang menampilkan para profesional di bidang teknologi"
   playlab_choose_theme: "Pilih laboratorium bermain-mu"
   playlab_classic_title: "Klasik"
   playlab_gumball_title: "Dunia Gumball yang menakjubkan"
@@ -419,8 +450,9 @@
   minecraft_tutorials: "Tutorial Minecraft Jam Kode"
   minecraft_specs: "Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+"
   minecraft_start_tutorial: "Mulai tutorial"
+  minecraft_agent_description: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   minecraft_agent_button: "Mulai"
-  minecraft_designer_description: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
+  minecraft_designer_description: "Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri."
   minecraft_designer_button: "Mulai"
   minecraft_adventurer_description: "Gunakan kode untuk menggunakan Alex atau Steve pada petualangan."
   minecraft_adventurer_button: "Mulai"
@@ -429,9 +461,9 @@
   minecraft_subtitle: "Minecraft Hour of Code"
   minecraft_store_camps: "Perkemahan Minecraft Hour of Code Gratis di Microsoft Store"
   minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Mendaftar</a> untuk Workshop Minecraft Hour Of Code Gratis di Microsoft Stores Australia, Kanada, Puerto Rico atau Amerika Serikat. Pelajari bagaimana coding untuk semua orang dan mengkombinasikan kreativitas, pemecahan masalah dan banyak hal menarik."
-  minecraft_host_event: "Tuan rumah acara Minecraft Hour of Code"
+  minecraft_host_event: "Tuan rumah event Minecraft Hour of Code"
   minecraft_teach_resources: "Sumber daya guru dan rencana pembelajaran."
-  minecraft_leader_guide: "Unduh sumber untuk membantu anda merencanakan dan memimpin sebuah acara."
+  minecraft_leader_guide: "Unduh sumber untuk membantu anda merencanakan dan memimpin sebuah event."
   minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Unduh</a>fasilitator panduan mulai cepat presentasi PowerPoint untuk siswa yang lebih muda atau lebih tua sekarang."
   minecraft_join_online_training: "Siap untuk memfasilitasi Hour of Code anda dengan minekraft, belum yakin dimana memulai? cek <a href='%{minecraft_webinar_url}', target='_blank'>on-demand webinar</a>, anda akan mempelajari praktik terbaik, siap akses ke materi fasilitator, dapatkan melalui tutorial hero's journey dari tim minekraft. Mulailah dalam memikirkan apa yang akan anda bawa dalam Hour of Code ke anak anak muda selama Computer Science Education Week (Desember 4-10) dan selebihnya."
   minecraft_continue_learning: 'Sains komputer untuk setiap orang: melebihi simpanan Hour of Code di Microsoft'
@@ -444,10 +476,11 @@
   sports_og_title: "Dorong dirimu. Setiap orang bisa belajar."
   sports_og_description: "Juara dan peraih medali memberanikan dirimu untuk mencoba Hour of Code. Kode permainan olahragamu."
   sports_title: "Kode permainan olahraga Anda"
-  sports_watch_video: "Tonton videonya"
+  sports_watch_video: "Tonton video"
   sports_video_title: "Dorong dirimu. Setiap orang bisa belajar."
   sports_select_theme: "Pilih tema tutorial Anda"
   sports_basketball_title: "Buat sebuah permainan basket"
+  sports_all_sports_title: "Padu dan padankan lintas olahraga"
   sports_featured_athletes: "Atlet unggulan"
   sports_athletes_title: "Atlet unggulan"
   sports_athlete_Draymond: "Draymoon Green, peraih medali emas olimpiade dan juara NBA, Golden State Warriord"
@@ -468,6 +501,7 @@
   sports_athlete_Chris: "Chris Bosh, peraih medali emas olimpiade dan juara NBA, Miami Heat"
   sports_athlete_Harrison: "Harrison Barnes, peraih medali emas dan juara NBA, Dallas Mavericks"
   watch_inspirational_videos: "Sebelum Anda memulai, lihat salah satu video inspiratif ini"
+  video_title_cs_is_everything: "Ilmu Komputer Mengubah Segalanya"
   video_title_inspire_girl: "Inspirasi seorang gadis"
   video_title_cs_intro: "Perkenalan Ilmu Komputer"
   video_title_schools_dont_teach: "Apa yang tidak diajarkan di kebanyakan sekolah"
@@ -483,22 +517,26 @@
   video_title_my_name_is_aracely: "Nama saya Aracely"
   video_1min: "1 menit"
   video_2min: "2 menit"
-  video_3min: "3 min"
-  video_5min: "5 min"
-  speak_another_language: "Berbicara bahasa lain?"
+  video_3min: "3 menit"
+  video_5min: "5 menit"
+  speak_another_language: "Berbicara dengan bahasa lain?"
   help_translate: "Bantuk kami menerjemahkan."
   no_internet: "Tidak ada koneksi Internet?"
   download_offline: "Versi unduh secara offline."
   are_you_teacher: "Apakah anda seorang guru?"
-  review_lesson_plan: "Meninjau rencana pelajaran dan sumber daya guru lainnya."
+  review_lesson_plan: "Meninjau rencana pelajaran dan materi pembelajaran guru lainnya."
   volunteer_engineer_submission_title: "Inspirasi siswa dan relawan untuk Hour of Code."
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh bantuan Anda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} guru-guru memerlukan bantuan sukarela.<br>%{num_volunteers} bantuan sukarela telah terdaftar. Bergabung."
   volunteer_engineer_submission_intro_background: "The Hour of Code merupakan gerakan bagi siswa di seluruh dunia untuk mencoba 1 jam pengenalan terhadap ilmu komputer. Gerakan ini meliputi puluhan juta siswa di lebih dari 180 negara. Silakan bergabung dalam Pekan Pendidikan Ilmu Komputer, 7--13 Desember."
   volunteer_engineer_submission_intro_recruit: 'Guru akan senang untuk memiliki seseorang <span style="font-family: ''Gotham 7r'', sans-serif;"> bergairah tentang pendidikan ilmu komputer</span> yang dapat membantu di dalam kelas (melalui video), atau untuk seseorang yang dapat <span style="font-family: ''Gotham 7r'', sans-serif;"> menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan dengan ilmu komputer.'
+  volunteer_engineer_submission_intro_recruit_markdown: "Guru tentu senang memiliki siswa yang **sangat menyukai pendidikan ilmu komputer** yang dapat membantu di ruang kelas, atau bagi seorang guru yang dapat **menginspirasi** siswanya dengan mengupas luasnya kemungkinan ilmu komputer (yang dapat dilakukan lewat obrolan video)."
   volunteer_engineer_submission_intro_guide: "kami belajar lebih tentang <a href=\"%{volunteer_guide}\"> secara sukarela program disini </a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Pelajari selengkapnya [volunteer program here](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Masukkan informasi berikut jika Anda seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai dengan <span class=\"form-required-field\"> *</span> diperlukan."
+  volunteer_engineer_submission_intro_signup_markdown: "Masukkan informasi berikut jika Anda seorang siswa ilmu komputer atau profesional perangkat lunak. Anda harus berusia minimal 18 tahun untuk mendaftar sebagai relawan. Catat bahwa semua kolom yang Anda isi di bagian ini akan dapat dilihat secara publik oleh siapa pun yang mencermati [volunteer map](/volunteer/local). Kolom dengan tanda _*_ wajib diisi."
   volunteer_engineer_submission_intro_links: "Apakah Anda membutuhkan voluntir? Temukan seorang voluntir dari lingkungan anda pada <a href=\"%{volunteer_local}\">volunteer map</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Apakah Anda seorang guru yang sedang mencari relawan? Temukan relawan lokal di [volunteer map](%{volunteer_local}) kami."
   volunteer_engineer_submission_update_information: "Perbarui informasi Anda"
   volunteer_engineer_submission_header_shared: "Informasi yang dibagi dengan guru-guru pada peta relawan"
   volunteer_engineer_submission_field_name: "Nama"
@@ -524,7 +562,7 @@
   volunteer_engineer_submission_field_email_desc: "Alamat email Anda tidak akan pernah dibagikan, tetapi kami akan mengirimkan anda permintaan dari guru."
   volunteer_engineer_submission_field_email_placeholder: "Alamat email"
   volunteer_engineer_submission_field_email_preference: "Dapatkah kami mengirim email kepada anda tentang pembaruan kursus kami, kesempatan relawan, atau berita ilmu komputer yang lain?"
-  volunteer_engineer_submission_field_email_preference_privacy: "(Lihat kebijakan privasi)"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Lihak kebijakan privasi kami)"
   volunteer_engineer_submission_field_email_preference_yes: 'Ya'
   volunteer_engineer_submission_field_email_preference_no: 'Tidak'
   volunteer_engineer_submission_final_paragraph: "Anda akan didaftarkan dalam sebuah peta agar guru-guru lokal dapat menghubungi Anda untuk Jamnya Berkode atau kesempatan-kesempatan bersukarela lainnya. Surel dan alamat Anda TIDAK AKAN PERNAH dibagikan oleh kami. Tetapi informasi lainnya (termasuk lokasi) akan dapat dilihat secara umum oleh para guru lokal."
@@ -532,6 +570,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "Saya menyatakan bahwa saya minimal berusia 18 tahun."
   volunteer_engineer_submission_submit: "Kirim"
   volunteer_engineer_submission_thankyou: "Terima kasih sudah mendaftar untuk bersukarela. Para guru akan menggunakan <a href=\"%{url}\">peta ini</a> untuk mencari dan menghubungi sukarela-sukarela seperti Anda."
+  volunteer_engineer_submission_thankyou_markdown: "Terima kasih! Informasi relawan Anda berhasil terkirim. Guru akan menggunakan [this map](%{url}) untuk mencari dan menghubungi relawan seperti Anda. Silakan tunggu 48 jam agar informasi Anda muncul secara tepat di peta."
   volunteer_engineer_submission_commitment_uncertain: "Belum Pasti"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 jam per minggu"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 jam per minggu"
@@ -540,7 +579,7 @@
   volunteer_engineer_submission_commitment_annually: "2 - 3 kali per tahun"
   volunteer_engineer_submission_commitment_monthly: "Beberapa jam per bulan"
   volunteer_engineer_submission_commitment_weekly: "Beberapa jam per minggu"
-  volunteer_engineer_submission_commitment_more: "Lebih"
+  volunteer_engineer_submission_commitment_more: "Selengkapnya"
   volunteer_engineer_submission_location_flexibility_onsite: "Fasilitas di sekolah"
   volunteer_engineer_submission_location_flexibility_remote: "membimbing dari jarak jauh (guru atau siswa)"
   volunteer_engineer_submission_location_flexibility_curriculum: "Bersedia untuk membantu memberikan kontribusi untuk proyek-proyek kurikulum open source"
@@ -561,7 +600,7 @@
   volunteer_engineer_submission_type_task_mentor: "Saya mencari mentor untuk membantu mempersiapkan diri saya untuk koding dengan murid-murid saya"
   petition_age: "Umur"
   dashboard_announce_hoc_scaling_progress: "Kami mengalami Jam kode lalu lintas tinggi. Kami tidak bisa untuk menyimpan apa saja kemajuan minggu ini, tapi kemajuan ini dari minggu sebelumnya masih aman."
-  dashboard_announce_learn_more_button: "Pelajari lebih banyak"
+  dashboard_announce_learn_more_button: "Pelajari lebih lanjut"
   dashboard_landing_title: "Beranda guru"
   dashboard_landing_welcome: "Selamat datang di dasbot guru yang baru dan termutakhir."
   dashboard_landing_video: "Tonton video ini"
@@ -628,9 +667,9 @@
   dashboard_navigation_home_page: "Beranda guru"
   dashboard_navigation_section_student_progress: "Akun dan perkembangan siswa"
   dashboard_navigation_section_teacher_progress: "Kemajuan studi Anda"
-  dashboard_navigation_section_lesson_plans: "Rencana pelajaran dan sumber daya"
+  dashboard_navigation_section_lesson_plans: "Rencana pelajaran dan materi pembelajaran"
   dashboard_navigation_section_community: "Bantuan dan komunitas"
-  dashboard_navigation_section_pd: "Pengembangan profesional"
+  dashboard_navigation_section_pd: "Pengembangan Profesional"
   dashboard_navigation_section_speakers: "Ilmu Komputer <br/> Pembicara Tamu"
   dashboard_navigation_all_sections: "Akun dan perkembangan siswa"
   dashboard_navigation_view_progress: "Perkembangan"
@@ -639,7 +678,7 @@
   dashboard_navigation_view_assessments_surveys: "Penilaian/survei"
   dashboard_navigation_add_students: "Tambahkan murid"
   dashboard_navigation_manage_students: "Kelola murid"
-  dashboard_navigation_lesson_plans_resources: "Rencana pelajaran dan sumber daya"
+  dashboard_navigation_lesson_plans_resources: "Rencana pelajaran dan materi pembelajaran"
   dashboard_navigation_view_stats: "Statistik"
   dashboard_navigation_section: 'Bagian: %{section_name}'
   dashboard_navigation_student: 'Murid: %{student_name}'
@@ -655,7 +694,7 @@
   dashboard_progress_pair_programming: "pemrograman berpasangan"
   dashboard_responses_view: 'Lihat respon teks di:'
   dashboard_responses_none: "Sebagian besar kelas kami dirancang untuk bekerja pada usia muda dan tidak mengharuskan siswa mengetik respon teks terhadap pertanyaan, jadi anda tidak akan melihat respon teks apapun disini. Kursus untuk siswa di kelas menengah dan kelas atas, Anda bisa melihat kiriman mereka untuk membuka respon teks berakhir dengan pertanyaan memilih kursus yang di tugaskan dari penurunan diatas."
-  dashboard_sections_new_section: "Kelompok baru"
+  dashboard_sections_new_section: "Bagian baru"
   dashboard_sections_new_google_section: "Bagian impor dari ruang kelas Google"
   dashboard_sections_jumbotron_instruction: "Buatlah kelompok baru dan tambahkan murid di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil agar Anda bisa memantau perkembangan dan mengelola akun mereka."
   dashboard_sections_table_section: "Sesi"
@@ -683,7 +722,7 @@
   dashboard_sections_both_sections: "Apakah anda suka siswa anda berada dalam kedua bagian?"
   dashboard_sections_yes_both: "Ya, Saya ingin siswa menyalin untuk menjadi bagian saat ini dan seperti bagian baru"
   dashboard_sections_no_move: "Tidak, Saya tidak ingin memindahkan siswa hanya untuk berada di bagian baru."
-  dashboard_sections_move_students: "Siswa pindahan"
+  dashboard_sections_move_students: "Pindahkan siswa"
   dashboard_sections_assign_hoc_script_desc: "Berpartisipasi dalam Jam kode?"
   dashboard_sections_assign_hoc_script_msg: "Silahkan dicatat bahwa kami tidak akan dapat untuk menyimpan kemajuan dalam kursus 3- 11 Desember karena banyaknya lalu lintas situs kami akan diterima untuk Jam kode. Segala sesuatu yang lainnya dalam tutorial akan terus bekerja seperti yang diharapakan. Anda mungkin masih menetapkan kursus dan memberi semua murid sertifikat untuk partisipasi. (Sebagian guru <a href='%{certificate_url}'> mencetak ini di muka</a>.) Kami akan menyimpan dan melaporkan kemajuan siswa dari setiap minggu untuk pertahun."
   dashboard_sections_assign_activity: "Menetapkan kursus"
@@ -731,6 +770,7 @@
   dashboard_pre-express: 'Kursus Express Pre-Reader: '
   dashboard_express: 'Kursus Express: '
   dashboard_unplugged: "Jika Anda tidak memiliki komputer, <a href='%{unplugged_url}'>cobalah pelajaran tanpa penggunaan komputer </a> di kelas Anda."
+  dashboard_unplugged_markdown: "Jika Anda tidak memiliki komputer,  [try these unplugged lessons](%{unplugged_url}) di ruang kelas Anda."
   dashboard_tools: 'Peralatan: '
   dashboard_curriculum: "Kurikulum"
   dashboard_curriculum_overview: "Tinjauan Kurikulum K-5"
@@ -742,7 +782,7 @@
   dashboard_glossary: "Daftar istilah"
   dashboard_classroom_strategies: "Strategi ruang kelas untuk para guru"
   dashboard_debugging: 'Debug:'
-  dashboard_puzzle_solving: 'Memecahkan teka-teki:'
+  dashboard_puzzle_solving: 'Memecahkan puzzle:'
   dashboard_student_worksheet: "lembar kerja siswa"
   dashboard_teacher_worksheet: "lembar kerja guru"
   dashboard_curriculum_csina: 'Ilmu Komputer dalam Aljabar:'
@@ -757,7 +797,7 @@
   dashboard_login_picture: "Gambar"
   dashboard_login_none: "email"
   dashboard_stage: "Tahap"
-  dashboard_puzzle: "Teka-teki"
+  dashboard_puzzle: "Puzzle"
   dashboard_question: "Pertanyaan"
   dashboard_response: "Respon"
   dashboard_correctness: "Kebenaran"
@@ -765,7 +805,7 @@
   dashboard_correctness_unsubmitted: "Tidak terkirim"
   dashboard_correctness_correct: "Benar"
   dashboard_correctness_incorrect: "Salah"
-  dashboard_submission_submitted: "Dikirim"
+  dashboard_submission_submitted: "Terkirim"
   dashboard_submission_in_progress: "Sedang berlangsung"
   dashboard_status: "Status"
   dashboard_multi_correct: "# pilihan ganda yang benar"
@@ -774,7 +814,7 @@
   dashboard_submission_timestamp: "Pengiriman stempel waktu"
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: "Statistik Hour of Code tahun 2013"
-  dashboard_teacher: "Pelajar"
+  dashboard_teacher: "Guru"
   dashboard_student: "Siswa"
   dashboard_sections_email_question: "Apakah semua murid memiliki alamat email yang berlaku?"
   dashboard_sections_account_creation_question: "Siapa yang membuat akun murid-murid?"
@@ -792,7 +832,7 @@
   code_sign_up: "Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer"
   host_an_hour: "Sekitar satu jam"
   learn_banner_title: "Bergabung bersama kami untuk Jam kode"
-  learn_banner_desc: "Hour of Code adalah gerakan global yang mencapai 100 juta lebih siswa di lebih dari 180+ negara. Siapapun, dimanapun bisa menyelenggarakan acara Hour of Code. Bantu kami memberi kesempatan kepada setiap siswa untuk belajar ilmu komputer! Penyelenggara bisa mengikuti kami <a href='%{how_to_url}' target='_blank'>how-to guide</a> untuk mengajarkan Hour of Code dan menginspirasi siswa dengan <a href='%{videos_url}' target='_blank'>video ini</a>."
+  learn_banner_desc: "Hour of Code adalah gerakan global yang mencapai 100 juta lebih siswa di lebih dari 180+ negara. Siapapun, dimanapun bisa menyelenggarakan event Hour of Code. Bantu kami memberi kesempatan kepada setiap siswa untuk belajar ilmu komputer! Penyelenggara bisa mengikuti kami <a href='%{how_to_url}' target='_blank'>how-to guide</a> untuk mengajarkan Hour of Code dan menginspirasi siswa dengan <a href='%{videos_url}' target='_blank'>video ini</a>."
   learn_more: "Pelajari lebih banyak"
   learn_sign_up_description: "Mendaftar untuk berpartisipasi dalam Hour of Code selama Minggu Pendidikan Ilmu komputer"
   learn_sign_up_button: "Daftar"
@@ -841,7 +881,7 @@
   teach_led_lesson_plans: "Guru Dipimpin oleh rencana pembelajaran Hour of Code"
   learn_footer_all_tutorials: "Lihatlah <a href=\"https://code.org/educate/allhourofcode\"> daftar tutorial-tutorial komprehensif Jam Berkode</a>. Untuk melihat kriteria kami dan panduan pengajuan tutorial-tutorial Jam Berkode <a href=\"https://hourofcode.com/tutorial-guidelines\">klik di sini.</a>"
   how_to_teach_hoc: "Cara Mengajarkan Hour of Code"
-  more_resources_educators: "Lebih banyak sumber daya bagi guru dan pendidik"
+  more_resources_educators: "Lebih banyak materi pembelajaran bagi guru dan pendidik"
   beyond_submission: "Hendak mengajukan tutorial yang lebih dari satu Jam? Lihat kriteria dan penyerahan formulir."
   third_party_submission: "Ingin mengajukan sebuah tutorial dalam daftar ini?<a href=\"%{submission_url}\">lihat kriteria dangormat pengajuan</a>"
   participants: "peserta"
@@ -854,8 +894,8 @@
   mobile_devices: "Pedoman untuk ponsel"
   frozen_name: "Koding dengan Anna dan Elsa"
   starwars_name: 'Star Wars: Dirikan sebuah galaksi dengan Code'
-  codeorg_name: "Labirin klasik"
-  codeintl_name: "Labirin klasik"
+  codeorg_name: "Labirin Klasik"
+  codeintl_name: "Labirin Klasik"
   thinkersmithspanish_name: "Mis Amigos Roboticos"
   khan_name: "Pengenalan JavaScript"
   khanes_name: "Pengenalan JavaScript"
@@ -891,7 +931,7 @@
   thinkersmith2_name: "Baubles biner"
   kodableunplugged_name: "fuzzFamily Frenzy"
   projguts_name: "Batu, kertas, gunting"
-  hourofcode_name: "Labirin klasik"
+  hourofcode_name: "Labirin Klasik"
   playlab_name: "Play Lab/Lab Permainan"
   infinity_name: "Play Lab tak tebatas"
   artist_name: "Artis"
@@ -923,23 +963,48 @@
   coursed-2017_name: Kursus D (2017)
   coursee-2017_name: Kursus E (2017)
   coursef-2017_name: Kursus F (2017)
+  coursea-2018_name: Kursus A(2018)
+  courseb-2018_name: Kursus B (2018)
+  coursec-2018_name: Kursus C (2018)
+  coursed-2018_name: Kursus D (2018)
+  coursee-2018_name: Kursus E (2018)
+  coursef-2018_name: Kursus F (2018)
+  coursea-2019_name: Kursus A(2019)
+  courseb-2019_name: Kursus B (2019)
+  coursec-2019_name: Kursus C (2019)
+  coursed-2019_name: Kursus D (2019)
+  coursee-2019_name: Kursus E (2019)
+  coursef-2019_name: Kursus F (2019)
+  coursea-2020_name: Kursus A(2020)
+  courseb-2020_name: Kursus B (2020)
+  coursec-2020_name: Kursus C (2020)
+  coursed-2020_name: Kursus D (2020)
+  coursee-2020_name: Kursus E (2020)
+  coursef-2020_name: Kursus F (2020)
+  express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
+  express-2019_name: Kursus Kilat (2019)
   pre-express-2019_name: Kursus Express Pre-Reader(2019)
-  accelerated_name: "Kursus akselerasi"
+  express-2020_name: Kursus Kilat (2020)
+  pre-express-2020_name: Kursus Kilat Pre-reader(2020)
+  csd2_name: 'Unit 2: Pengembangan Web'
+  csd3_name: 'Unit 3: Animasi dan Game'
+  accelerated_name: "Kursus Akselerasi"
+  express_name: "Kursus Kilat"
   pre-express_name: Kursus ekspres Pre-reader
-  20-hour_name: Kursus akselerasi
+  20-hour_name: Kursus Akselerasi
   algebra_name: "CS di Kursus penuh Aljabar"
   AlgebraA_name: "Cs di kursus A Aljabar"
   AlgebraB_name: "CS di kursus B Aljabar"
   gumball_name: "Gumball"
-  classicmaze_name: "Labirin klasik"
+  classicmaze_name: "Labirin Klasik"
   iceage_name: "Zaman Es"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star wars(blok)"
   hoc-encryption_name: Enkripsi sederhana
   text-compression_name: kompresi Teks
   applab_name: "Laboratorium Aplikasi"
-  gamelab_name: "Laboratorium Game"
+  gamelab_name: "Game Lab"
   basketball_name: "Buat sebuah permainan basket"
   sports_name: "Kode permainan olahraga Anda"
   applab_gradelevel: "Usia 13+"
@@ -1022,6 +1087,12 @@
   coursed-2019_gradelevel: Kelas 8+
   coursee-2019_gradelevel: Usia 8-12
   coursef-2019_gradelevel: Usia 9-13
+  coursea-2020_gradelevel: Usia 4-7
+  courseb-2020_gradelevel: Usia 5-8
+  coursec-2020_gradelevel: Usia 6-10
+  coursed-2020_gradelevel: Kelas 8+
+  coursee-2020_gradelevel: Usia 8-12
+  coursef-2020_gradelevel: Usia 9-13
   accelerated_gradelevel: "Usia 10 + (setelah Kursus 3)"
   codeorg_platformtext: "Browser modern, smartphone, tablet"
   codeintl_platformtext: "Browser modern, smartphone, tablet"
@@ -1080,9 +1151,9 @@
   khanhe_shortdescription: "Belajar menggambar menggunakan JavaScript"
   khanfr_shortdescription: "Belajar menggambar menggunakan JavaScript"
   khanpl_shortdescription: "Belajar menggambar menggunakan JavaScript"
-  tynker_shortdescription: "Belajar kode dengan memecahkan teka-teki menyenangkan dan membangun permainan mobile Anda sendiri."
+  tynker_shortdescription: "Belajar kode dengan memecahkan puzzle menyenangkan dan membangun permainan mobile Anda sendiri."
   scratch_shortdescription: "Buatlah permainan interaktif, cerita dan animasi."
-  lightbot_shortdescription: "program Lightbot untuk memecahkan teka-teki menggunakan prosedur dan loop!"
+  lightbot_shortdescription: "program Lightbot untuk memecahkan puzzle menggunakan prosedur dan loop!"
   thinkersmith_shortdescription: "tutorial Unplugged untuk grup tanpa menggunakan perangkat"
   condcards_shortdescription: "Belajar algoritma menggunakan kartu-kartu"
   lightbotintl_shortdescription: "Sebuah permainan untuk mengajar konsep mengkode"
@@ -1097,12 +1168,12 @@
   quorum_shortdescription: "Bergabunglah dengan Mary dalam tur saat dia belajar bahasa pemrograman Quorum."
   codespark_shortdescription: "Foos adalah permainan yang menyenangkan untuk anak-anak belajar tentang pemrograman."
   kodable_shortdescription: "Sebuah permainan iPad yang menyenangkan untuk mengajarkan konsep-konsep pemrograman komputer"
-  tynkerapp_shortdescription: 'Belajar program dengan memecahkan pengkodean teka-teki menyenangkan. '
+  tynkerapp_shortdescription: 'Belajar program dengan memecahkan pengkodean puzzle menyenangkan. '
   robomindnl_shortdescription: "Menulis kode untuk virtual robot"
   flappy_shortdescription: "Buat permainan Anda sendiri - Flappy Bird, hiu atau kapal selam"
   bitsbox_shortdescription: "Kodekan serangkaian aplikasi untuk dimainkan dan dibagikan, menggunakan JavaScript nyata."
   makeschool_shortdescription: "Buat permainan iPhone! Belajarlah dengan menulis kode untuk mengajarkan gerakan baru untuk monster Anda!"
-  touchdevelop_shortdescription: 'Pecahkan teka-teki, menciptakan permainan dan belajar pengkodean semua di telepon Anda. '
+  touchdevelop_shortdescription: 'Pecahkan puzzle, menciptakan permainan dan belajar pengkodean semua di telepon Anda. '
   appinventor_shortdescription: "Membuat aplikasi Anda sendiri! (hanya untuk Android)"
   blockly_shortdescription: "Unduh file ZIP untuk belajar secara luring"
   thinkersmith2_shortdescription: "Pelajari cara komputer menggunakan angka-angka 1 dan 0 untuk mewakili informasi"
@@ -1126,24 +1197,34 @@
   course4_shortdescription_congrats: "Siap untuk level berikutnya? siswa akan menggali lebih dalam pengenalan topik programing dalam kursus sebelumnya untuk mendapatkan solusi fleksibel atas masalah yang lebih kompleks. Pada akhir kursus ini, siswa membuat cerita interaktif dan permainan yang mereka bisa bagi ke setiap orang. Disarankan untuk level 4-5."
   coursea_shortdescription_congrats: "Pengenalan ilmu komputer untuk pra-pembaca."
   courseb_shortdescription_congrats: "Pengenalan ilmu komputer untuk pra-pembaca.(Sama dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)"
+  coursec_shortdescription_congrats: "Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri."
   coursed_shortdescription_congrats: "Segera beralih konsep dari kursus C, kemudian algoritma, nested loops, kondisional, dan banyak lagi."
   coursee_shortdescription_congrats: "Segera berpindah konsep di kursus C&D kemudian lanjutkan dengan fungsi."
   coursef_shortdescription_congrats: "Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri."
   coursea-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2017_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2017_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
   coursed-2017_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2017_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian lanjutkan dengan fungsi.
   coursef-2017_shortdescription_congrats: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
   coursea-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2018_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2018_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
   coursed-2018_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2018_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian lanjutkan dengan fungsi.
   coursef-2018_shortdescription_congrats: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
   coursea-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.
   courseb-2019_shortdescription_congrats: Pengenalan ilmu komputer untuk pra-pembaca.(Sama dengan kursus A, tetapi dengan banyak variasi untuk siswa yang lebih tua)
+  coursec-2019_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
   coursed-2019_shortdescription_congrats: Segera beralih konsep dari kursus C, kemudian algoritma, nested loops, kondisional, dan banyak lagi.
   coursee-2019_shortdescription_congrats: Segera berpindah konsep di kursus C&D kemudian lanjutkan dengan fungsi.
   coursef-2019_shortdescription_congrats: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+  coursea-2020_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+  courseb-2020_shortdescription_congrats: Pelajari dasar-dasar ilmu komputer dan keamanan internet. Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+  coursec-2020_shortdescription_congrats: Buat program dengan pengurutan, loop, dan event. Terjemahkan inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah, dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
+  coursed-2020_shortdescription_congrats: Murid mengembangkan pemahaman tentang loop, conditional, dan event. Selain coding, murid belajar tentang kewarganegaraan digital.
+  coursee-2020_shortdescription_congrats: Mulai coding dengan algorithm, loop, conditional, event, dan barulah Anda beralih ke function. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang dapat dibagikan kepada teman dan keluarga.
+  coursef-2020_shortdescription_congrats: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
   codeorg_longdescription: "Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa."
   codeintl_longdescription: "Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari putaran berulang, persyaratan, dan dasar algoritma. Tersedia dalam 34 bahasa."
   thinkersmithspanish_longdescription: "Dengan menggunakan  \"Kosakata Robot/ Vocabulary Robot\" siswa akan mencari&aacute; cara untuk memandu satu sama lain untuk menyelesaikan tugas-tugas tertentu&iacute;  tanpa mendiskusikannya terlebih dahulu. Pelajaran ini&ntilde;  mengajarkan anak-anak hubungan&oacute;  antara simbol dan tindakan, &iacute; serta keterampilan yang sangat berharga dari debugging&oacute;."
@@ -1153,7 +1234,7 @@
   khanhe_longdescription: "Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!"
   khanfr_longdescription: "Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!"
   khanpl_longdescription: "Pelajari dasar-dasar pemrograman JavaScript sekaligus menciptakan menyenangkan gambar dengan kode Anda. Lakukannya sendiri atau dengan kelas Anda!"
-  tynker_longdescription: "Ciptakan permainan Anda sendiri dan bagikan dengan teman-teman! Memecahkan teka-teki  coding yang menyenangkan dan belajar konsep pemrograman di setiap tingkat. Personalisasi game dengan karakter animasi, berbagai tingkatan dan alat peraga yang kaya. Membuat game yang realistis menggunakan fisik. Lihat kode sebagai blok visual atau JavaScript. Ambil permainan ponsel Anda pada iPads dan tablet Android. Lebih dari belasan kegiatan yang menyenangkan yang dapat dipilih!"
+  tynker_longdescription: "Ciptakan permainan Anda sendiri dan bagikan dengan teman-teman! Memecahkan puzzle  coding yang menyenangkan dan belajar konsep pemrograman di setiap tingkat. Personalisasi game dengan karakter animasi, berbagai tingkatan dan alat peraga yang kaya. Membuat game yang realistis menggunakan fisik. Lihat kode sebagai blok visual atau JavaScript. Ambil permainan ponsel Anda pada iPads dan tablet Android. Lebih dari belasan kegiatan yang menyenangkan yang dapat dipilih!"
   scratch_longdescription: "Dengan Scratch, Anda dapat membuat permainan, cerita, animasi interaktif Anda sendiri &mdash; dan membagikannya dengan teman Anda. Mulailah dengan menganimasikan nama Anda membuat kartu liburan, atau membuat permainan pong."
   lightbot_longdescription: "bimbing Lightbot untuk menyalakan semua keramik biru! Lightbot adalah permainan puzzle yang menggunakan pemrograman mekanik permainan untuk memberitahu pemain dalam memperoleh pemahaman praktis dalam coding dasar. Belajarlah untuk mengurutkan instruksi, menulis prosedur, dan memanfaatkan loop untuk memecahkan tingkatan. Cocok untuk segala usia."
   thinkersmith_longdescription: "Menggunakan  \"Kosakata Robot\" telah ditetapkan agar siswa akan mencari cara untuk memandu dan saling menyelesaikan tugas-tugas tertentu tanpa mendiskusikannya terlebih dahulu. Pelajaran ini mengajarkan anak-anak hubungan antara simbol dan tindakan, serta keterampilan yang sangat berharga dari debugging. \"Teman Robotic Saya\" karya terbaik sebagai kegiatan kelompok dan termasuk buku kerja guru untuk dipergunakan di dalam kelas."
@@ -1168,21 +1249,21 @@
   robomind_longdescription: 'Siswa belajar dasar-dasar pemrograman dengan mengendalikan robot virtual mereka sendiri. Kursus online ini sepenuhnya serba lengkap dengan presentasi singkat, film, kuis dan bimbingan otomatis / petunjuk untuk membantu anda dalam latihan pemrograman.'
   groklearning_longdescription: "Gunakan bahasa pemrograman Python untuk membangun ChatBot yang disebut \"Eliza\" untuk bertindak sebagai psikoterapis robot. Anda akan mengajari Eliza bagaimana cara berbicara dan hal yang benar untuk mengatakan. Bisakah dia menipu teman-teman Anda hingga berpikir bahwa dia adalah seorang manusia bukan komputer?"
   quorum_longdescription: "Tutorial ini dapat diakses untuk-tunanetra, dan bekerja dengan screenreaders. Gabungkan Mary ke dalam Tour saat dia bergabung dengan laboratorium biologi sebagai programmer dan belajar bahasa pemrograman Kuorum. didalam Tutorial ini siswa-dipandu dengan contoh kegiatan online."
-  codespark_longdescription: "The Foos adalah cara yang menyenangkan dan ramah-anak untuk belajar tentang pemrograman komputer. Program karakter lucu untuk memecahkan teka-teki dan membawa dunia maya kedalam kehidupan. Permainan ini \"Word Free / kata gratis\" sehingga semua bisa bermain!"
+  codespark_longdescription: "The Foos adalah cara yang menyenangkan dan ramah-anak untuk belajar tentang pemrograman komputer. Program karakter lucu untuk memecahkan puzzle dan membawa dunia maya kedalam kehidupan. Permainan ini \"Word Free / kata gratis\" sehingga semua bisa bermain!"
   kodable_longdescription: "Kodable adalah permainan  self-guided iPad atau permainan yang membimbing diri sendiri melalui iPad yang memperkenalkan anak-anak usia 5 tahun ke atas ke dasar pemrograman. Milikilah seorang guru atau orang-tua dikat siswa agar lebih optimal, tetapi tidak terlalu diperlukan."
-  tynkerapp_longdescription: "Belajar program dengan memecahkan pengkodean teka-teki yang menyenangkan . Dengan mudah membangun permainan dan cerita dengan tema grafis, 10 + game-kit dan karakter dapat disesuaikan. Tidak ada konektivitas internet diperlukan. Anda juga dapat mengakses kreasi Anda di web."
+  tynkerapp_longdescription: "Belajar program dengan memecahkan pengkodean puzzle yang menyenangkan . Dengan mudah membangun permainan dan cerita dengan tema grafis, 10 + game-kit dan karakter dapat disesuaikan. Tidak ada konektivitas internet diperlukan. Anda juga dapat mengakses kreasi Anda di web."
   robomindnl_longdescription: 'Siswa belajar dasar-dasar pemrograman dengan mengendalikan robot virtual mereka sendiri. Kursus online ini sepenuhnya serba lengkap dengan presentasi singkat, film, kuis dan bimbingan otomatis / petunjuk untuk membantu anda dalam latihan pemrograman.'
   flappy_longdescription: "dengan menggunakan pemrograman drag-and-drop untuk membuat permainan Flappy Bird Anda sendiri , dan menyesuaikannya untuk terlihat berbeda (Flappy Shark, Flappy Santa, apa pun). Tambahkan permainan ke telepon Anda dalam satu klik."
   bitsbox_longdescription: "Sesuaikan tablet virtual Anda sendiri, kemudian kode sejumlah aplikasi untuk bermain dan berbagi. Penelusuran sederhana memungkinkan bahkan untuk anak-anak muda untuk program JavaScript yang nyata , dan jika anda lebih maju , maka semakin jauh Anda akan pergi."
   makeschool_longdescription: "Belajarlah untuk mengkode dengan membuat sebuah game iPhone menggunakan merek baru dan bahasa pemrograman yang ramah bagi pemula yang disebut Swift! Buat Pok&eacute;mon-permainan aksi yang menginspirasi dan tulislah kode untuk mengajar gerak baru pada rakasa Anda . Anda akan belajar bagaimana menggunakan variabel, metode, dan obyek untuk membantu rakasa Anda menang!"
-  touchdevelop_longdescription: 'Sentuhan editor ramah akan menunjukan Anda dalam membuat piksel seni, memecahkan bear puzzle / teka-teki beruang atau membuat permainan burung melompat sendiri.'
+  touchdevelop_longdescription: 'Sentuhan editor ramah akan menunjukan Anda dalam membuat piksel seni, memecahkan bear puzzle / puzzle beruang atau membuat permainan burung melompat sendiri.'
   appinventor_longdescription: "Menghibur, video tutorial cepat memandu Anda dalam membangun tiga aplikasi sederhana untuk ponsel Android Anda atau tablet. Dirancang untuk pemula dan juga ahli, hour of code ini  akan membuat Anda siap untuk mulai membangun aplikasi Anda sendiri sebelum Anda mengetahuinya. Bayangkan berbagi aplikasi kreasi Anda sendiri dengan teman-teman Anda! Kegiatan ini cocok untuk individu dan untuk guru kelas terkemuka."
   blockly_longdescription: "Punya PC dengan akses internet lambat (atau tidak ada akses internet)? Download tutorial Blockly yang merupakan pendahulu dari tutorial Code.org - ukuran 3MB ZIP file tunggal dapat dimuat ke komputer atau digunakan dari memory stick"
   thinkersmith2_longdescription: "\nSiswa belajar tentang merepresentasikan dan menyimpan surat-surat dalam bentuk biner, sebagai fungsi on dan off( nyala dan padam). Pada akhir materi ini, diharapkan kelas dapat mengkodekan (menyandikan) inisial mereka sendiri untuk mereka bawa pulang ke rumah."
   kodableunplugged_longdescription: 'Dirancang untuk digunakan dengan kertas biasa, fuzzFamily Frenzy adalah sebuah pengantar pemrograman logika untuk anak-anak usia 5 dan diatasnya. Guru harus menjelaskan permainan, maka siswa memprogram mitra untuk menyelesaikan rintangan yang sederhana.'
   projguts_longdescription: "Kegiatan  \"unplugged\" Ini membantu siswa belajar bagaimana pemodelan dan simulasi kerja dengan memiliki sekelompok siswa yang memainkan versi yang berbeda dari game Rock / Paper / Scissors, dan lihat hasilnya sebagai percobaan pemodelan yang berbeda."
   hourofcode_longdescription: "Pengganti untuk code.org/hoc yang baru"
-  frozen_longdescription: "Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Kamu akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!"
+  frozen_longdescription: "Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Anda akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!"
   starwars_longdescription: "Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh."
   playlab_longdescription: "Membuat cerita atau membuat game dengan Play Lab! Membuat binatang, bajak laut, zombie, ninja, dan banyak lagi karakter bergerak, membuat suara, mencetak poin, dan bahkan melemparkan bola api!"
   monstercoding_longdescription: "Pencarian Mengkode Pulau Misteri oleh raksasa pengkode menawarkan sebuah petualangan membimbing yang menyenangkan yang mengajari beberapa konsep kunci pemrograman kepada anak-anak. Setiap blok berdasarkan pada aktifitas yang dibangun sebelumnya, mengenalkan anak-anak pada Fungsi-Fungsi, Nilai-Nilai Boolean, Loops, Pernyataan If/Else, dan Arrays, dengan menggunakan grafik animasi yang berwarna-warni, instruksi bersuara."
@@ -1359,12 +1440,12 @@
   codehs_beyond_longdescription: 'Pelajari dasar-dasar pemrograman dengan Karel and Dog, pengenalan yang menyenangkan, dapat diakses dan pengenalan yang visual untuk coding, dimana anda dapat memberikan perintah kepada komputer adalah seperti memberikan perintah kepada seekor anjing. Tutorial ini bagus jika dipimpin oleh seorang guru, tetapi juga dapat dilakukan secara independen. [Catatan:  diperlukan pembayaran]'
   udemy_beyond_longdescription: 'Apakah Anda pernah melihat baris kode atau kode Anda untuk hidup, Udemy memiliki kursus untuk Anda, diajarkan oleh instruktur profesional. [Catatan: diperlukan pembayaran]'
   lynda_beyond_longdescription: 'Pelajari bagaimana cara melakukan kode, menciptakan dan membangun aplikasi web, dari dasar-dasar pemrograman berorientasi obyek C dan c + +, bagaimana menulis kode Java. Tutorial pengembang kami dapat membantu Anda belajar untuk mengembangkan dan membuat aplikasi seluler, bekerja dengan PHP dan MySQL database, memulai dengan bahasa pengolahan Statistik R, dan banyak lagi. [Catatan: diperlukan pembayaran]'
-  edx_beyond_longdescription: "CS50x adalah pengenalan Harvard College perusahaan intelektual ilmu komputer dan seni pemrograman untuk jurusan dan  juga non-jurusan, dengan atau tanpa pengalaman pemrograman. Topik meliputi abstraksi, algoritma, struktur data, enkapsulasi, manajemen sumber daya, keamanan, rekayasa perangkat lunak, dan pengembangan web. Bahasa Pemograman termasuk C, PHP, dan JavaScript ditambah SQL, CSS dan HTML. Versi CS50x  adalah kursus terbesar kedua di kampus Harvard."
+  edx_beyond_longdescription: "CS50x adalah pengenalan Harvard College perusahaan intelektual ilmu komputer dan seni pemrograman untuk jurusan dan  juga non-jurusan, dengan atau tanpa pengalaman pemrograman. Topik meliputi abstraksi, algoritma, struktur data, enkapsulasi, manajemen materi pembelajaran, keamanan, rekayasa perangkat lunak, dan pengembangan web. Bahasa Pemograman termasuk C, PHP, dan JavaScript ditambah SQL, CSS dan HTML. Versi CS50x  adalah kursus terbesar kedua di kampus Harvard."
   coursera_beyond_longdescription: 'Kelas CS101 Stanford diajarkan oleh Nick Parlante (gratis!). CS101 mengajarkan ide-ide penting ilmu komputer untuk khalayak nol-sebelum-pengalaman. Bermain dan bereksperimen dengan bit singkat pada kode untuk membawa hidup kepada kekuatan dan keterbatasan dari komputer. CS101 juga menyediakan latar belakang umum pada komputer hari ini: apa itu komputer, Apakah itu perangkat keras, apa itu perangkat lunak, apa itu internet. Tidak ada pengalaman sebelumnya diperlukan selain kemampuan untuk menggunakan web browser.'
   udacity_beyond_longdescription: "Dalam kursus ini anda akan mempelajari konsep-konsep penting dalam ilmu komputer dan belajar bagaimana menulis program komputer sendiri dalam konteks membangun web crawler. Tidak ada pengetahuan pemrograman sebelumnya diperlukan untuk kursus ini. Pemula dipersilahkan! Pada akhir kursus ini, Anda akan belajar konsep-konsep penting dalam ilmu komputer dan pemrograman yang cukup untuk dapat menulis program Python untuk memecahkan masalah Anda sendiri. Kursus ini akan mempersiapkan Anda untuk beralih ke program komputasi tingkat menengah."
   teachingtree_beyond_longdescription: "TeachingTree adalah sebuah platform terbuka yang memungkinkan siapa pun mengatur konten pendidikan. Tujuan kami adalah agar siswa dengan mudah dan cepat mengakses clips dengan tepat yang mereka butuhkan untuk mempelajari konsep-konsep individu. Setiap orang didorong untuk membantu dengan menambahkan video atau penandaan konsep."
   kodu_beyond_longdescription: "Kodu memungkinkan anak-anak membuat game di PC dan Xbox melalui bahasa pemrograman visual yang sederhana. Kodu dapat digunakan untuk mengajarkan kreativitas, pemecahan masalah, bercerita, serta pemrograman. Siapapun dapat menggunakan Kodu untuk membuat game, anak-anak maupun orang dewasa tanpa desain atau pemrograman keterampilan. Kodu tersedia untuk PC dan dapat didownload secara gratis. Kodu tersedia juga untuk Xbox di Amerika Serikat pada Xbox Marketplace, di saluran Indie Games dengan harga sekitar $ 5."
-  cargobot_beyond_longdescription: "Cargo-Bot adalah permainan puzzle yang di mana Anda seperti mengajarkan cara memindahkan peti pada sebuah robot . Terdengar sederhana, kan? terdapat  36 fitur teka-teki fiendishly pintar, membayangi musik dan memukau retina gambar. Anda bahkan dapat merekam solusi dan membagikannya di YouTube untuk menunjukkan ke teman-teman Anda."
+  cargobot_beyond_longdescription: "Cargo-Bot adalah permainan puzzle yang di mana Anda seperti mengajarkan cara memindahkan peti pada sebuah robot . Terdengar sederhana, kan? terdapat  36 fitur puzzle fiendishly pintar, membayangi musik dan memukau retina gambar. Anda bahkan dapat merekam solusi dan membagikannya di YouTube untuk menunjukkan ke teman-teman Anda."
   kidsruby_beyond_longdescription: 'Bersenang-senang dan membuat game, atau meretas (hack) pekerjaan rumah Anda menggunakan Ruby! semua itu hanya memberitahu orang tua Anda atau guru Anda bahwa anda sedang belajar pemrograman Ruby ...;). ini gratis dan bekerja di komputer manapun. [Catatan: Perlu diinstallkan di desktop anda]'
   w3schools_beyond_longdescription: "Belajar untuk membuat situs web pada komputer Anda sendiri. Pelajari dasar-dasar server dalam waktu kurang dari sehari. Belajar untuk menambahkan database ke situs web Anda"
   codeavengers_beyond_longdescription: "Pelajari bagaimana memprogram permainan, aplikasi dan situs web. Dirancang oleh pakar-pakar dengan sempurna dengan tingkat kesulitan untuk pemula, mudah untuk memahami petunjuk dan sangat membantu ketika Anda membutuhkannya. Kursus  HTML, CSS dan JavaScript kami mencakup kode tantangan dan revisi permainan yang membuat belajar menyenangkan dan efektif untuk segala usia."
@@ -1379,14 +1460,14 @@
   sphero_beyond_longdescription: "Apakah Anda seorang pendidik atau orangtua, pelajaran SPRK memberikan anak-anak kursus singkat yang menyenangkan dalam memprogram robot ketika mengasah keterampilan mereka dalam matematika dan sains."
   compatibility_hide_this_warning: "Sembunyikan peringatan"
   compatibility_unsupported_browser: "Peramban kamu tidak didukung. Harap tingkatkan Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi beberapa fungsi tidak dapat bekerja."
-  compatibility_unsupported_browser_markdown: "Peramban kamu tidak didukung. Harap tingkatkan Peramban kamu ke <a href='%{supported_browsers_url}', target='_blank'> salah satu peramban yang didukung</a> kami. kamu bisa mencoba melihat halaman, akan tetapi beberapa fungsi tidak dapat bekerja."
+  compatibility_unsupported_browser_markdown: "Browser Anda tidak didukung. Harap mutakhirkan browser Anda ke [salah satu browser kami yang didukung]('%{supported_browsers_url}). Anda bisa mencoba melihat halaman, akan tetapi functionality mungkin tidak bekerja."
   flappy_shortcode: "kepakkan"
   header_home: "Beranda"
   header_my_dashboard: "Dasbor saya"
   header_courses: "Kursus"
-  header_course_catalog: "Katalog kursus"
+  header_course_catalog: "Katalog Kursus"
   header_project_gallery: "Proyek"
-  header_sections: "Sesi"
+  header_sections: "Bagian"
   header_professional_learning: "Belajar profesional"
   header_educate_overview: "Ikhtisar Pendidik"
   header_educate_elementary: "Sekolah Dasar"
@@ -1415,24 +1496,32 @@
   header_about: "Tentang"
   header_teacher_community: "Komunitas guru"
   header_help_support: 'Bantuan dan dukungan '
-  header_report_bug: "Laporkan bug"
+  header_report_bug: "Laporkan masalah"
+  header_report_abuse: "Laporkan penyalahgunaan"
+  header_legal: "Privasi & Hukum"
+  header_legal_privacy: "Kebijakan privasi"
+  header_legal_tos: "Ketentuan Layanan"
   header_tutorials: "Tutorial"
   app_lab_documentation: "Dokumentasi aplikasi Lab"
   app_lab_tutorials: "Tutorial aplikasi Lab"
   game_lab_documentation: "Dokumentasi lab permainan"
   game_lab_tutorials: "Tutorial lab permainan"
+  sprite_lab_documentation: "Dokumentasi Lab Sprite"
+  sprite_lab_tutorials: "Tutorial Lab Sprite"
   header_documentation: "Dokumentasi"
   user_header_label: "Halo %{username}"
   user_header_team: "Tim"
   user_header_my_projects: "Proyek saya"
-  user_header_settings: "Akun saya"
+  user_header_settings: "Pengaturan akun"
   user_header_logout: "Keluar"
   user_header_signin: "Masuk"
-  user_header_create: 'Buatlah '
+  user_header_create: 'Buat '
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
-  user_header_gamelab: "Laboratorium Game"
+  user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab/Lab Permainan"
+  user_header_dance: "Pesta Tari"
+  user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Lihat semua proyek..."
@@ -1465,24 +1554,31 @@
   syncing_students: "Singkronkan siswa anda"
   syncing_students_instructions: 'Jika bagian Code.org anda sudah kadaluarsa dengan daftar siswa di kelas Google,klik tombol "sync students from Google Clasroom pada tab:"manage students":'
   google_sign_in_instruct: 'Dari sana, mereka harus memilih opsi:"sign with Google Account":'
+  hero_name: 'Minecraft: Perjalanan Pahlawan'
   applab-intro_name: Pembukaan aplikasi lab
   applab_tile_title: "Pembukaan untuk aplikasi Lab(usia13+)"
   applab_tile_subtitle: "Buat aplikasimu sendiri di javascriptmenggunakan blok dasar programing. Atau asah keterampilan anda ke tingkat selanjutnya teks-dasar programing.( hanya dalam bahasa inggris)"
   applab_tile_start_tutorial: "Mulai"
   applab_tile_teacher_guide: "Lihat petunjuk guru"
-  account_sign_up_email_opt_in: "Dapat kami email Anda tentang pembaruan kursus kami, peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)"
-  account_sign_up_child_accept_terms: "Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org."
-  hoc_overview_dance_subtitle: "Kode pesta dansa untuk dibagi dengan teman. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 lainnya!"
+  aquatic_name: 'Minecraft: Perjalanan Air'
+  account_sign_up_email_opt_in: "Dapatkah kami mengirimi Anda email berisi pembaruan kursus, peluang lokal, atau berita ilmu komputer lainnya? (kira-kira sekali sebulan)"
+  account_sign_up_child_accept_terms: "Saya mengonfirmasi bahwa saya telah menerima izin dari orang tua atau wali saya untuk menggunakan layanan Code.org."
+  hoc_overview_dance_title: "Pesta Tari"
+  hoc_overview_dance_subtitle: "Kodekan Pesta Tari untuk dibagikan ke teman-teman Anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 orang lainnya!"
+  hoc_overview_dance_2019_subtitle: "Kode Pesta Dansa untuk berbagi dengan teman-teman Anda. Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, dan 34 artis lainnya!"
   hoc_overview_title: "Aktifitas Hour of Code dari Code.org"
-  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code </a> adalah gerakan global mencapai puluhan juta siswa di 180+ negara.Siapapun,dimanapun bisa menyelenggarakan acara Hour of Code atau mencoba apa saja dari 200+lebih satu -jam tutorial,tersedia lebih dari 45 bahasa."
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code </a> adalah gerakan global mencapai puluhan juta siswa di 180+ negara.Siapapun,dimanapun bisa menyelenggarakan event Hour of Code atau mencoba apa saja dari 200+lebih satu -jam tutorial,tersedia lebih dari 45 bahasa."
+  hoc_overview_subtitle_markdown: "[Hour of Code](https://hourofcode.com) adalah sebuah gerakan global yang menjangkau puluhan juta siswa di 180+ negara. Siapa pun, di mana pun dapat mengadakan event Hour of Code atau mencoba salah satu dari 500+ tutorial satu-jam, tersedia di lebih dari 45 bahasa."
   hoc_overview_partner_activities_title: "Banyak aktifitas dari teman"
   hoc_overview_partner_activities_body: "Situs Hour of Code memiliki lebih dari 100 aktifitas ilmu komputer untuk semua usia dan tingkat pengalaman,dikembangkan pleh Code.org dan partners."
   hoc_overview_partner_activities_link: "Lihat aktifitas"
   hoc_overview_start_tutorial: "Mulai"
+  hoc_overview_more_resources: "Untuk info selengkapnya tentang cara bergabung dalam kelas jarak jauh Anda, lihat panduan kami tentang cara menyelenggarakan [Hour of Code virtual](https://hourofcode.com/us/how-to/virtual). Untuk siswa dengan teknologi atau konektivitas terbatas atau tanpa teknologi atau konektivitas, bagikan paket [kegiatan Hour of Code tanpa komputer](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf) ini."
   hoc_overview_view_teacher_guide: "Lihat petunjuk guru"
   hoc2018_creativity: "kreatifitas"
   hoc2018_creativity_create: "Buat"
   hoc2018_creativity_hoc_coming: "Hour of Code datang…"
+  hoc2018_creativity_what_will_you_create: "Apa yang akan kamu buat?"
   hoc2018_creativity_homepage: "Terbangkan imajinasi dan lahirkan inovasi. Mulai dengan Hour of Code dan brand kreatifitas anda sendiri, apapun itu. Tonton video kami."
   hoc2018_creativity_hoc_about: 'Tahun ini, Hour of Code semua tentang kreatifitas. '
   hoc2018_creativity_social_media: 'Ini tahun HourOfCode tentang kreatifitas. saya ikut! kamu?'
@@ -1494,9 +1590,12 @@
   hoc2018_mc_details: "Berbagai bahasa | Browser terbaru dan tablet | Tingkat 2+"
   hoc2018_mc_aquatic_announcement: "Daftarkan kelasmu untuk mencoba satu dari 150 aktifitas BARU untuk Hour of Code (Des 3-9). Pastikan untuk mengecek brand aktifitas minekraft baru untuk 2018, perjalanan air! Daftarkan kelasmu sekarang."
   hoc2018_mc_aquatic_title: "Perjalanan air Minekraft"
+  hoc2018_mc_aquatic_description: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
+  hoc2019_mc_aquatic_description: "Jelajahi dan bangun dunia bawah laut dengan kode."
   hoc2018_mc_hero_title: "Minecraft: Perjalanan Pahlawan"
+  hoc2018_mc_hero_description: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   hoc2018_mc_designer_title: "Perancang Minecraft"
-  hoc2018_mc_designer_description: "Program animal dan objek - objek Minecraft lainnya dalam versi Minecraft Anda sendiri."
+  hoc2018_mc_designer_description: "Program binatang dan makhluk Minecraft lainnya dalam Minecraft versi Anda sendiri."
   hoc2018_mc_adventurer_title: "Petualang Minecraft"
   hoc2018_mc_adventurer_description: "Gunakan kode untuk menggunakan Alex atau Steve pada petualangan."
   hoc2018_mc_start: "Mulai"
@@ -1520,10 +1619,11 @@
   hoc2018_mc_careers_more: "Selengkapnya <a href='%{careers_url}' target='_blank'> video inspiratif</a> menampilkan beberapa ahli di bidang teknologi"
   hoc2018_mc_video_1min: "1 menit"
   hoc2018_mc_video_2min: "2 menit"
-  hoc2018_mc_video_3min: "3 min"
-  hoc2018_mc_video_5min: "5 min"
+  hoc2018_mc_video_3min: "3 menit"
+  hoc2018_mc_video_5min: "5 menit"
   hoc2018_mc_video_title_steph_curry: "Hour of Code bersama Steph Curry"
   hoc2018_mc_video_title_sports: "Dorong dirimu. Setiap orang bisa belajar."
+  hoc2018_mc_video_title_cs_is_everything: "Ilmu Komputer Mengubah Segalanya"
   hoc2018_mc_video_title_inspire_girl: "Inspirasi seorang gadis"
   hoc2018_mc_video_title_cs_intro: "Perkenalan Ilmu Komputer"
   hoc2018_mc_video_title_schools_dont_teach: "Apa yang tidak diajarkan di kebanyakan sekolah"
@@ -1532,10 +1632,13 @@
   hoc2018_mc_video_title_anybody_can_learn: "Siapa pun bisa belajar"
   hoc2018_mc_video_title_my_name_is_aracely: "Nama saya Aracely"
   hoc2018_mc_homepage_hoc_coming: "Hour of Code datang..."
+  hoc2018_mc_homepage_what_create: "Apa yang akan kamu buat?"
   hoc2018_mc_homepage_give_flight: "Terbangkan imajinasi dan lahirkan inovasi. Mulai dengan Hour of Code dan brand kreatifitas anda sendiri, apapun itu."
   hoc2018_mc_homepage_watch_video: "Tonton video kami"
-  hoc2018_mc_homepage_join_us: "Bergabung dengan kami"
+  hoc2018_mc_homepage_join_us: "Bergabunglah dengan kami"
   hoc2018_mc_homepage_try_it: "Cobalah"
+  hoc2018_mc_back: "Minecraft hadir kembali dengan aktivitas Hour of Code yang serba baru!"
+  hoc2018_mc_back_journey: "Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code."
   hoc2018_mc_teacher_guide: "Lihat petunjuk guru"
   hoc2018_mc_minecraft_education: "Pendidikan Minecraft"
   hoc2018_mc_continue_learning: "Lanjutkan pembelajaran dengan Minecraft."
@@ -1543,9 +1646,11 @@
   hoc2018_mc_short_description: "Gunakan kreatifitasmu dan keterampilan memecahkan masalah untuk menemukan harta terpendam dan eksplor dunia bawah air dengan kekuatan kode."
   hoc2018_mc_short_description_shorter: "Gunakan kreatifitasmu dan keterampilan memecahkan masalah untuk mengeksplor dan membangun dunia bawah air dengan kode."
   hoc2018_mc_journey: "Perjalanan melewati Minekraft dengan kode."
+  hoc2018_dance_party_main_heading: "Pesta Tari"
   hoc2018_dance_party_landing_title: "Menari"
   hoc2018_dance_party_subheading: "Bantu menerjemahkan pesta dansa"
   hoc2018_dance_create_your_own_dance_title: "Buat pesta dansamu sendiri"
+  hoc2018_dance_party_box_title: "Pesta Tari"
   hoc2018_dance_party_box_description: "Kode sebuah pesta dansa dibagi dengan temanmu!"
   hoc2018_dance_party_specs: "Bahasa| Format | Usia 6-106"
   hoc2018_dance_party_button: "Mulai"
@@ -1558,17 +1663,18 @@
   hoc2018_dance_teacher_resources_tile1_button: "Rencana Pelajaran"
   hoc2018_dance_teacher_resources_tile2_title: "Pesta tari dicabut"
   hoc2018_dance_teacher_resources_tile2_description: "Tidak perlu komputer! Belajar konsep koding untuk koreografi pesta dansa bersama."
-  hoc2018_dance_teacher_resources_tile2_button: "Kegiatan tanpa komputer"
+  hoc2018_dance_teacher_resources_tile2_button: "Aktivitas Offline"
   hoc2018_dance_featured_student_creations_title: "Kreasi siswa ditampilkan"
   hoc2018_dance_videos_section_heading: "Terinspirasi"
   hoc2018_dance_video_title_what_is_creativity: "Apa kreatifitas itu?"
   hoc2018_dance_view_creativity_video_playlist: "Apa kreatifitas itu? lihat seri lengkap(5min)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "Bermitra dengan"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer * adalah program masa kanak-kanak yang komprehensif untuk menginspirasi, mendidik, dan melatih anak-anak dan kaum muda yang berpenghasilan rendah dan yang kurang beruntung untuk mengejar karir di bidang ilmu komputer. <a href='%{amazon_future_engineer_link}' target='_blank'>Pelajari lebih lanjut</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer * adalah program anak-anak-hingga-karier yang lengkap untuk menginspirasi, mendidik, dan melatih anak-anak dan kaum muda dengan penghasilan rendah dan kurang beruntung untuk mengejar karir di bidang ilmu komputer. [Learn more](%{amazon_future_engineer_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Pelajari lebih lanjut tentang Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "Tentang ahli teknik masa depan Amazon"
   hoc2018_dance_amazon_about_future_engineer_description: "Belajar tentang sekolah kanak kanak Amazon program karir untuk meningkatkan akses pendidikan ilmu komputer. Temukan informasi bagaimana terlibat dalam kamp musim panas, kelas CS SMU beasiswa, dan magang."
-  hoc2018_dance_amazon_about_future_engineer_button: "Pelajari lebih banyak"
+  hoc2018_dance_amazon_about_future_engineer_button: "Pelajari lebih lanjut"
   hoc2018_dance_amazon_try_coding_this_summer_title: "Mencoba koding musim panas ini"
   hoc2018_dance_amazon_try_coding_this_summer_description: "Ikutlah dalam Amazon Future Engineer's, bebas biaya, menyenangkan, dan kamp ilmu komputer inklusif! Kamp musim panas tersedia untuk siswa mulai kanak kanak hingga kelas 8 di beberapa lokasi di AS untuk musim panas 2019."
   hoc2018_dance_amazon_try_coding_this_summer_button: "Ikut kamp"
@@ -1581,14 +1687,14 @@
   hoc2018_dance_amazon_k8_programs_title: "Program k-8"
   hoc2018_dance_amazon_funding_title: "Dapatkan pendanaan untuk gelar CS anda"
   hoc2018_dance_amazon_future_engineer_footer: "Artis yang musiknya digunakan dalam tutorial ini bukanlah sponsor atau endorse Amazon sebagai bagian lisensi menggunakan musik mereka untuk code.org.\n\n"
-  hoc2018_dance_measure: "Mengukur"
-  hoc2018_dance_measure_colon: 'Ukuran:'
+  hoc2018_dance_measure: "Birama"
+  hoc2018_dance_measure_colon: 'Birama:'
   hoc2018_aquatic_video1: "Perjalanan air Minekraft-pendahuluan"
   hoc2018_aquatic_video2: "Perjalanan air Minekraft - Loops"
   hoc2018_aquatic_video3: "Perjalanan air Minekraft -kondisional"
   hoc2018_aquatic_video4: "Perjalanan air Minekraft -selamat"
   hoc2018_dance_video1: "Pesta dansa-pembukaan"
-  hoc2018_dance_video2: "Pesta dansa-acara"
+  hoc2018_dance_video2: "Pesta dansa-event"
   hoc2018_dance_video3: "Pesta dans-properti"
   hoc2018_dance_video4: "Pesta dansa-selamat"
   page_not_found_title: "Halaman tidak ditemukan"
@@ -1597,3 +1703,24 @@
   page_not_found_button: "Pulang ke rumah"
   hoc2018_mc_with_microsoft: "Bermitra dengan"
   hoc2018_mc_thank_microsoft: "Kami berterima kasih kepada Mikrosoft atas dukungan visi dan misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar ilmu komputer dan keterampilan untuk sukses di abad ke 21."
+  hoc2019_mc_mee_title: "AI Minecraft untuk Kebaikan"
+  hoc2019_mc_mee_description1: 'Tutorial Hour of Code Minecraft kini tersedia di Minecraft: Edisi Pendidikan untuk Windows, Mac, dan iPad. Pelajari dasar-dasar koding dan jelajahi AI bersama siswa Anda!'
+  hoc2019_mc_mee_description2: "Akses materi pembelajaran gratis termasuk rencana pelajaran, video, kurikulum ilmu komputer, dan pelatihan guru."
+  hoc2019_mc_more_coding_resources: "Sumber daya coding lainnya"
+  hoc2019_dance_previous_versions: "Mencari Dance Party versi yang lama?\nKlik di sini untuk memulai [Bagian 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) edisi tahun lalu."
+  homepage_slot_text_title_at_home: "Belajar di Rumah\n"
+  homepage_slot_text_blurb_at_home: "Materi pembelajaran ini memudahkan"
+  homepage_slot_text_link_code_break: "Ambil Code Break"
+  homepage_slot_text_link_do_hoc: "Adakan Hour of Code"
+  homepage_slot_text_link_express_course: "Coba Kursus Kilat"
+  page_not_available_title: "Halaman Tidak Tersedia"
+  page_not_available_description: "Mohon maaf, halaman yang Anda minta tidak lagi tersedia di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link})."
+  page_not_available_button: "Pulang ke rumah"
+  footer_powered_by_aws: "Didukung oleh Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Bahasa Inggris saja"
+  footer_privacy_policy: "Kebijakan privasi"
+  footer_about: "Tentang"
+  footer_partners: "Mitra-Mitra"
+  footer_donate: "Donasi"
+  footer_support: "Bantuan dan komunitas"
+  footer_terms: "Ketentuan"

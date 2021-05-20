@@ -9,7 +9,5 @@
   "danceFeedbackStartNewMove": "Tavs dejotājs neveiks jaunu kustību pēc ceturtās ritma kustības.",
   "danceFeedbackNeedDifferentDance": "Izmanto citu deju.",
   "danceFeedbackNeedEveryTwoMeasures": "Pārliecinies, vai izmanto bloku 'katras 2 ritma kustības' (every 2 measures)",
-  "danceFeedbackNeedMakeANewDancer": "Izmanto 'izveidot jaunu' bloku lai izveidotu otru dejotāju.",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNeedMakeANewDancer": "Izmanto 'izveidot jaunu' bloku lai izveidotu otru dejotāju."
 }

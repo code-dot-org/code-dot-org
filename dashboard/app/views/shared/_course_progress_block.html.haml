@@ -5,12 +5,12 @@
       .clear
       .smalltext= data_t_suffix('script.name', script.name, 'description_short')
       .clear
-    - if current_user.completed?(script)
+    - if Policies::ScriptActivity.completed?(current_user, script)
       =link_to script_url(script.id) do
         .audiencebar.bottombartext.printcertificatelight= t('home.view_course')
       %a{href: script_certificate_image_url(current_user, script)}
         .bottombar.bottombartext.printcertificate{style: 'bottom: 0; position: absolute'}= t('home.print_certificate')
-    - elsif current_user.not_started?(script)
+    - elsif Policies::ScriptActivity.not_started?(current_user, script)
       =link_to script_url(script.id) do
         .audiencebar.bottombartext.trynowlight= t('home.view_course')
       %a{href: script_url(script.id)}

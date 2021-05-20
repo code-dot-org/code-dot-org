@@ -19,15 +19,25 @@ uk-UA:
     text-decoration:underline; font-weight:bold">спланувати свою Годину коду</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Ви вчитель інформатики? Перегляньте інші ресурси з предмету</a>'
+  csedweek_banner_teachers_text: Ви вчитель інформатики? Перегляньте інші ресурси
+    з предмету
   n_have_learned_an_hoc: "<h1>Спробуйте</h1><h2>Годину коду з</h2><h3># інших</h3>"
+  try_hoc_num_served: "<h1>Приєднуйтесь до</h1><h2>Години коду</h2><h3>%{num} вже
+    спробували</h3>"
+  try_hoc_num_served_markdown: |-
+    # Приєднуйтесь до
+
+    ## Години коду
+    ###  %{num}  вже спробували #Try an
   anybody_can_learn: Кожен може вчитися.
   learn_now: Почати навчання
   petition_message: Кожен учень у кожній школі повинен мати можливість вивчати інформатику
   petition_sign_message: 'Якщо ви згодні, то напишіть своє ім''я.  Приєднайтеся до
     # інших.'
-  petition_sign_message_support: 'Якщо Ви підтримуєте наші ідеї, запишіть своє ім''я.
-    Приєднайтесь до # інших.'
+  petition_sign_message_num: 'Якщо ви згодні, напишіть своє ім''я та приєднайтеся
+    до нашого списку розсилки разом із %{num} іншими. '
   petition_join_others: 'Приєднатися до # інших'
+  petition_join_others_num: Приєднуйтесь до %{num} інших
   name: Ім’я
   email: Електронна пошта
   zipcode: Поштовий індекс або країна
@@ -211,10 +221,23 @@ uk-UA:
     його. А далі, продовжуйте навчатись на <a href='http://studio.code.org'>інших
     курсах</a>, або розгляньте інші варіанти <a href='/learn/beyond'>навчання поза
     Годиною коду</a>.
+  get_a_certificate_message_after_markdown: Клацніть на сертифікат, щоб завантажити
+    або роздрукувати його. А тепер, продовжуйте [other courses](http://studio.code.org),
+    або розгляньте інші варіанти навчання поза Годиною коду).
   thanks_for_submitting: Дякуємо за участь!
   if_you_enjoyed: Якщо вам сподобалось так навчатись, запросіть друга! Ми хочемо навчати
     увесь світ.
   personalize_certificate: Персоналізувати ваш сертифікат
+  print_batch_certificates: Роздрукуйте комплект сертифікатів
+  print_certificates: Друкувати сертифікати
+  certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати
+    ваше навчання. "
+  want_a_blank_certificate_template: Вам потрібен пустий шаблон сертифіката, щоб виписувати
+    його на ім'я студента?
+  landscape_recommended_certificates: Під час друку сертифікатів рекомендується вибрати
+    **Альбомну** орієнтацію.
+  enter_certificate_names: 'Введіть до 30 імен, **по одному на рядок**. Буде сгенерована
+    сторінка для друку з персоналізованими %{script_name} сертифікатами. '
   share_achievement: Поділитись досягненнями
   beyond_hour_message: Продовжуйте навчання на <a href='http://studio.code.org'>інших
     курсах</a>, або перегляньте інші варіанти <a href='/learn/beyond'>навчання поза
@@ -304,11 +327,18 @@ uk-UA:
     5 клас'
   stats_michael: '"Я <b>ніколи раніше</b> не бачив своїх учнів так схвильованими навчанням."
     - Френк Мартінез, педагог'
+  stats_nina_markdown: '"Кожен день давав той самий результат — 100% зацікавленості."
+    - Ніна Ніколс Пірі, педагог'
+  stats_student_markdown: '"Я знала, що це був **унікальний** шанс." - Маріана Альзате,
+    5 клас'
+  stats_michael_markdown: '"Я **ніколи, ніколи** не бачив, щоб мої учні так захоплювалися
+    навчанням". - Френк Мартінес, вчитель '
   studiobar_title: Познайомтесь зі <a href='http://studio.code.org'> Студією коду</a>
   studiobar_title_nolink: Познайомтесь зі Студією коду
   studiobar_elementary_title: Базові курси
   studiobar_elementary_body: Три нові курси для K&#8209;5
   studiobar_dance_title: Танцювальна вечірка
+  studiobar_dance_body: Створіть та продемонструйте власну танцювальну вечірку
   studiobar_hoc_title: Година Коду
   studiobar_hoc_body: Вчимося програмувати зі Злими Птахами
   studiobar_flappy_title: Код Пурха
@@ -402,6 +432,7 @@ uk-UA:
   homepage_action_text_signpetition: Підписати петицію
   homepage_action_text_wincelebritychat: Виграй чат зі знаменітостю
   homepage_signpetition_dropdown: Підписати нашу петицію &#x25BE;
+  homepage_signpetition_dropdown_text: Погоджуюся
   homepage_diversity_pledge: Приєднатись до петиції про різноманіття
   homepage_banner_text_prizes: 'Година коду наближається знову, 7-13 грудня. '
   homepage_banner_link_prizes: 'Приєднуйтесь до найбільшої освітньої події в історії. '
@@ -447,9 +478,13 @@ uk-UA:
   homepage_slot_text_link_donate: Зробити пожертвування
   homepage_slot_text_link_shop: Футболки, капелюхи та інше
   homepage_slot_text_link_administrators: Привнесить Інформатику до вашої школи
+  homepage_gallery_header: Більше %{project_count} мільйонів проектів створено на
+    Code.org
   homepage_header_donors: Code.org дякує своїм помічникам
   homepage_donors_seall: Подивитися усіх
   homepage_donors_donate: Підтримати
+  homepage_below_hero_announcement_text: Ми дбаємо про вашу конфіденційність і вносимо
+    деякі зміни в нашу політику конфіденційності, починаючи з 25 травня.
   homepage_below_hero_announcement_link_text: Дізнайтеся більше
   contact_form_topic_student: Я учень
   contact_form_topic_parent: Я батько/мати
@@ -520,6 +555,8 @@ uk-UA:
   minecraft_adventurer: Майнкрафт - Пригоди
   minecraft_tutorials: Підручники Години коду від Майнкрафт
   minecraft_specs: Багато мов | Сучасні браузери та планшети | Класи 2+
+  minecraft_agent_description: Майнкрафт повернувся до Години коду з новеньким підручником!
+    Подорожуйте Майнкрафтом з кодом.
   minecraft_agent_button: Початок
   minecraft_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
     версії цієї гри.
@@ -537,6 +574,8 @@ uk-UA:
     в собі творчість, вирішення проблем та багато веселощів."
   minecraft_host_event: Проведіть Годину коду від Minecraft
   minecraft_teach_resources: Ресурси вчителя та план уроку.
+  minecraft_leader_guide: 'Завантажте ресурси, які допоможуть вам спланувати та провести
+    подію. '
   minecraft_future: Допожить всій молоді стати готовими до майбутнього
   minecraft_future_description: Дізнайтесь, як інші школи та некомерційні організації
     привносять цифрові навичкі, від цифровій грамотності до навчання інформатиці,
@@ -599,6 +638,7 @@ uk-UA:
   video_title_my_name_is_aracely: Мене звати Араклі
   video_1min: 1 хв
   video_2min: 2 хв
+  video_3min: 3 хв
   video_5min: 5 хв
   speak_another_language: Інша мова?
   help_translate: Допоможіть нам з перекладом.
@@ -623,12 +663,22 @@ uk-UA:
     власного заходу Години коду.'
   volunteer_engineer_submission_intro_guide: Дізнайтеся більше про нашу <a href="%{volunteer_guide}">волонтерську
     програму тут</a>.
+  volunteer_engineer_submission_intro_guide_markdown: 'Дізнайтеся більше про нашу
+    [програму волонтерів тут] (%{volunteer_guide}). '
   volunteer_engineer_submission_intro_signup: Вкажіть наступну інформацію, якщо ви
     студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span
     class="form-required-field">*</span> є обов'язковими для заповнення.
+  volunteer_engineer_submission_intro_signup_markdown: 'Будь ласка, вкажіть наступну
+    інформацію, якщо ви студент галузі комп''ютерних наук чи професійний програміст.  Вам
+    має бути щонайменше 18 років, щоб зареєструватися добровольцем. Зверніть увагу,
+    що всі поля, заповнені в цьому розділі, будуть загальнодоступними для всіх, хто
+    переглядає [карту волонтерів](/добровольців/місцевих). Поля, позначені символом
+    _ * _, є обов’язковими для заповнення. '
   volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
     більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
     на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
+  volunteer_engineer_submission_intro_links_markdown: 'Ви - вчитель і шукаєте волонтерів?
+    Знайдіть місцевого волонтера на нашій [карті волонтерів](%{volunteer_local}). '
   volunteer_engineer_submission_update_information: Оновіть свої дані
   volunteer_engineer_submission_header_shared: Інформація доступна вчителям та волонтерам
     на карті
@@ -663,6 +713,11 @@ uk-UA:
   volunteer_engineer_submission_field_email_desc: Ваша адреса електронної пошти ніколи
     не передаватиметься, але ми надішлемо вам запити від учителів.
   volunteer_engineer_submission_field_email_placeholder: Адреса електронної пошти
+  volunteer_engineer_submission_field_email_preference: 'Чи можемо ми надсилати вам
+    електронні листі про оновлення наших курсів, можливості для волонтерів та інші
+    новини з інформатики? '
+  volunteer_engineer_submission_field_email_preference_privacy: "(Дивіться нашу політику
+    конфіденційності)"
   volunteer_engineer_submission_field_email_preference_yes: Так
   volunteer_engineer_submission_field_email_preference_no: Ні
   volunteer_engineer_submission_final_paragraph: Ви з'явитесь на карті, щоб місцеві
@@ -679,6 +734,9 @@ uk-UA:
   volunteer_engineer_submission_thankyou: Дякуємо за подання вашої інформації. Щоб
     підготуватись до Години коду і залучити інших волонтерів, <a href="%{url}">звертайтесь
     сюди.</a>
+  volunteer_engineer_submission_thankyou_markdown: 'Дякуємо за подання вашої інформації.
+    Вчителі використовуватимуть [цю карту](%{url}) для пошуку та зв’язку з такими
+    добровольцями, як ви. Протягом 48 годин інформація про вас з''явиться на карті. '
   volunteer_engineer_submission_commitment_uncertain: Невизначено
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 година на тиждень
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 години на тиждень
@@ -714,6 +772,8 @@ uk-UA:
   volunteer_engineer_submission_type_task_mentor: Я шукаю наставника, який допоможе
     мені підготуватись до програмування з учнями
   petition_age: Вік
+  dashboard_announce_hoc_scaling_progress: 'Йой! На сайті Година Коду забагато відвідувачів.
+    Неможливо зберегти прогрес на цьому тижні, але попередній прогрес не постраждав. '
   dashboard_announce_learn_more_button: Дізнайтеся більше
   dashboard_landing_title: Домашня сторінка вчителя
   dashboard_landing_welcome: Вітаємо в оновленій та покращеній вчительській панелі
@@ -849,6 +909,7 @@ uk-UA:
     їхні відповіді на питання з відкритими формулюваннями, обираючи призначений курс
     з випадного меню вгорі.
   dashboard_sections_new_section: Нова група
+  dashboard_sections_new_google_section: Імпорт розділу з Google Classroom
   dashboard_sections_jumbotron_instruction: Створюйте нові групи і додавайте до них
     учнів. Це допоможе організувати учнів у менші групи для зручнішого відстеження
     прогресу та керування обліковими записами.
@@ -905,7 +966,7 @@ uk-UA:
   dashboard_students_add_multiple: 'Надрукуйте або вставте імена Ваших учнів, по одному
     на рядок:'
   dashboard_students_new_google_classroom_section: Щоб додати учнів, використуйте
-    <a href='http://classroom.google.com' target='_blank'>Google Клас</a> та після
+    <a href='http://classroom.google.com' target='_blank'>Google Клас</a>, а тоді
     клацніть кнопку <b>Синхронізувати учнів з Google Класу</b> угорі.
   dashboard_students_new_section: Ви створили нову групу! Тепер додавайте учнів, використовуючи
     кнопки <b>Додати учня</b> та <b>Додати учнів</b>.
@@ -958,6 +1019,8 @@ uk-UA:
   dashboard_express: 'Швидкий Курс: '
   dashboard_unplugged: Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте
     ці безмашинні вправи</a> у своєму класі.
+  dashboard_unplugged_markdown: Якщо ви не маєте комп'ютера, [спробуйте ці офлайн
+    уроки]](%{unplugged_url}) у вашому класі.
   dashboard_tools: 'Інструменти: '
   dashboard_curriculum: Навчальний план
   dashboard_curriculum_overview: Огляд навчальної програми
@@ -976,6 +1039,7 @@ uk-UA:
   dashboard_curriculum_csins: 'Інформатика в науці:'
   dashboard_curriculum_csp: 'AP® принципи інформатики:'
   dashboard_curriculum_ecs: 'Вивчення інформатики:'
+  dashboard_curriculum_csd: 'Відкриття інформатики: '
   dashboard_grade_k: Kлас
   dashboard_grade_other: Інше
   dashboard_login_word: Слово
@@ -1071,9 +1135,14 @@ uk-UA:
   carousel_heading_beyond_languages: Підручники інших мов програмування
   carousel_heading_apps_games: Створіть власні програми чи ігри
   carousel_heading_university: Курси університетів онлайн
+  carousel_heading_online_university: 'Університетські курси, доступні в інтернеті '
   carousel_heading_webpages: Навчіться створювати веб-сторінки
   carousel_heading_robots: Навчіться програмувати роботів
   carousel_heading_ide: Платформи, популярні серед вчителів
+  carousel_heading_desktop: 'Навчіться кодити на комп’ютері '
+  carousel_heading_mobtabelem: Для телефонів і планшетів
+  carousel_heading_nointernet: Ненадійний чи відсутній Інтернет? Встановіть ці програми
+    на свій комп’ютер
   educator_notes: Інформація для вчителя
   teach_led_lesson_plans: Плани уроків для вчителів
   learn_footer_all_tutorials: Перегляньте<a href="https://code.org/educate/allhourofcode">вичерпний
@@ -1084,6 +1153,8 @@ uk-UA:
   more_resources_educators: Більше ресурсів для вчителів та освітян
   beyond_submission: Бажаєте надіслати підручник для занять поза Годиною коду? Перегляньте
     критерії та форму подання.
+  third_party_submission: Хочете запропонувати навчальний посібник для переліку тут?
+    <a href="%{submission_url}"> Перегляньте критерії та форму подання. </a>
   participants: учасники
   teachers_notes: Інформація для вчителя
   teachers_notes_hoc: 'Вчителі: ознайомтесь із вказівками для вчителів'
@@ -1159,6 +1230,33 @@ uk-UA:
   coursee_name: Курс Ґ
   coursef-draft_name: Курс Д
   coursef_name: Курс Д
+  coursea-2017_name: Курс А (2017)
+  courseb-2017_name: Курс B (2017)
+  coursec-2017_name: Курс C (2017)
+  coursed-2017_name: Курс D (2017)
+  coursee-2017_name: Курс E (2017)
+  coursef-2017_name: Курс F (2017)
+  coursea-2018_name: Курс А (2018)
+  courseb-2018_name: Курс В (2018)
+  coursec-2018_name: Курс С (2018)
+  coursed-2018_name: Курс D (2018)
+  coursee-2018_name: Курс Е (2018)
+  coursef-2018_name: Курс F (2018)
+  coursea-2019_name: Курс А (2019)
+  courseb-2019_name: Курс В (2019)
+  coursec-2019_name: Курс С (2019)
+  coursed-2019_name: Курс D (2019)
+  coursee-2019_name: Курс Е (2019)
+  coursef-2019_name: Курс F (2019)
+  coursea-2020_name: Курс А (2020)
+  courseb-2020_name: Курс В (2020)
+  coursec-2020_name: Курс С (2020)
+  coursed-2020_name: Курс D (2020)
+  coursee-2020_name: Курс Е (2020)
+  coursef-2020_name: Курс F (2020)
+  express-2018_name: Експрес курс (2018)
+  csd2_name: 'Блок 2: Веб-розробка'
+  csd3_name: 'Блок 3: Анімація та ігри'
   accelerated_name: Прискорений курс
   20-hour_name: Прискорений курс
   algebra_name: Інформатика в алгебрі
@@ -1170,6 +1268,7 @@ uk-UA:
   minecraft_name: Майнкрафт
   starwarsblocks_name: Зоряні війни (блоки)
   hoc-encryption_name: Просте шифрування
+  text-compression_name: Стиснення тексту
   applab_name: App Lab
   gamelab_name: Ігрова лабораторія
   basketball_name: Зроби гру в баскетбол
@@ -1256,6 +1355,12 @@ uk-UA:
   coursed-2019_gradelevel: 8+ класи
   coursee-2019_gradelevel: Вік 8-12
   coursef-2019_gradelevel: Вік 9-13
+  coursea-2020_gradelevel: Вік 4-7
+  courseb-2020_gradelevel: Вік 5-8
+  coursec-2020_gradelevel: Вік 6-10
+  coursed-2020_gradelevel: 8+ класи
+  coursee-2020_gradelevel: Вік 8-12
+  coursef-2020_gradelevel: Вік 9-13
   accelerated_gradelevel: Вік 10-18
   codeorg_platformtext: Сучасні браузери, смартфони, планшети
   codeintl_platformtext: Сучасні браузери, смартфони, планшети
@@ -1865,6 +1970,7 @@ uk-UA:
     працюватимуть.
   flappy_shortcode: махати
   header_home: Головна
+  header_my_dashboard: Моя майстерня
   header_courses: курси
   header_course_catalog: Каталог курсів
   header_project_gallery: Проекти
@@ -1895,28 +2001,78 @@ uk-UA:
   header_help_us: Допомога нам
   header_about: Про
   header_teacher_community: Спільнота вчителів
-  header_report_bug: Повідомити про помилку
+  header_help_support: 'Допомога та підтримка '
+  header_report_bug: Сповістити про проблему
+  header_report_abuse: Повідомити про порушення
+  header_legal: Конфіденційність та юридична інформація
+  header_legal_privacy: Політика конфіденційності
+  header_legal_tos: Умови надання послуг
   header_tutorials: Навчальні матеріали
+  header_screen_reader_hamburger: Меню
+  header_screen_reader_help: Допомога
   header_documentation: Документація
   user_header_label: Привіт %{username}
   user_header_team: Команда
+  user_header_my_projects: Мої проекти
   user_header_settings: Мій профіль
   user_header_logout: Вийти
-  user_header_signin: Вхід
+  user_header_signin: Увійти
   user_header_create: 'Творіть '
+  user_header_artist: Художник
   user_header_gamelab: Ігрова лабораторія
   user_header_playlab: Ігрова студія
   user_header_dance: Танцювальна вечірка
   user_header_minecraft: Майнкрафт
   user_header_flappy: Пурх
+  user_header_view_all: Переглянути всі проекти...
+  user_header_view_project_gallery: Переглянути галерею проекту
+  view_section: Переглянути секцію
+  privacy_doc_explanation: 'Клацніть тут, щоб отримати наші документи про конфіденційність,
+    якими можна поділитися або роздрукувати для студентів. '
+  signing_in: Увійти
+  sign_in_overview: 'Ваші студенти можуть увійти в свої Code.org акаунти, виконавши
+    наступні дії: '
+  sign_in_instruct_website: Перейти до%{code_org_url}.
+  sign_in_instruct_secret: Виберіть їх секрет %{secret}.
+  sign_in_instruct_button: Натисніть кнопку «Увійти».
+  reset_student_password: Скинути паролів учнів
+  syncing_students: Синхронізація ваших учнів
+  applab_tile_title: Вступ до App Lab (Вік13+)
+  applab_tile_subtitle: Створіть власну аплікацію на JavaScript використовуючи блокове
+    програмування. Або вдоскональте свої навики з текстовим програмуванням. (Лише
+    англійською)
   applab_tile_start_tutorial: Початок
+  applab_tile_teacher_guide: Переглянути рекомендації для вчителя
   aquatic_name: 'Minecraft: Водна подорож'
   account_sign_up_email_opt_in: Чи можемо ми сповіщати вас про оновлення курсів, локальних
     можливості та інші новини з області інформатики за допомогою електронної пошти?
   account_sign_up_child_accept_terms: Я підтверджую що у мене є згода моїх батьків
     і законних опікунів на дозвіл використання Code.org.
   hoc_overview_dance_title: Танцювальна вечірка
+  hoc_overview_dance_subtitle: Закодуйте танцювальну вечірку та покажіть її друзям.
+    Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25
+    виконавців!
+  hoc_overview_dance_2019_subtitle: Закодуйте танцювальну вечірку та покажіть її друзям.
+    Під пісні Кеті Перрі, Шона Мендеса, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Нікі Мінаж та 34 інших виконавців та груп!
+  hoc_overview_title: Підручники Години коду від Code.org
+  hoc_overview_subtitle: <a href="https://hourofcode.com">Година коду</a> це глобальний
+    захід, який залучає десятки мільйонів учнів, у більш, ніж 180 країнах світу. Кожен
+    може організувати заходи в рамках Години коду і спробувати будь-який із більше
+    500 одно-годинних підручників, доступних більш, як 45 мовами.
+  hoc_overview_subtitle_markdown: "[Година коду](https://hourofcode.com) - це глобальний
+    захід, який залучає десятки мільйонів учнів, у більш, ніж 180 країнах світу. Кожен
+    може організувати заходи в рамках Години коду і спробувати будь-який із більше
+    500 одно-годинних підручників, доступних більш, як 45 мовами."
+  hoc_overview_partner_activities_title: Більше діяльностей від партнерів
+  hoc_overview_partner_activities_body: Сайт Години коду має більше 500 інформатичних
+    діяльностей для будь-якого віку та рівня досвіду, розроблених Code.org та партнерами.
   hoc_overview_start_tutorial: Початок
+  hoc_overview_more_resources: Щоб отримати додаткові ресурси для навчання з класом
+    дистанційно, див. наш посібник з розміщення [віртуального Hour of Code](https://hourofcode.com/us/how-to/virtual).
+    Що стосується учнів, які мають технологічні обмеження або проблеми з підключенням,
+    ви можете надіслати їм цей пакет для [роботи з Hour of Code без підключення](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_view_teacher_guide: Переглянути рекомендації для вчителя
   hoc2018_creativity: творчість
   hoc2018_creativity_create: Створити
   hoc2018_creativity_hoc_coming: Наближається Година коду…
@@ -1934,7 +2090,14 @@ uk-UA:
     Code.org</a>
   hoc2018_mc_page_title: Підручники Години коду від Майнкрафт
   hoc2018_mc_details: Багато мов | Сучасні браузери та планшети | Класи 2+
+  hoc2018_mc_aquatic_title: 'Minecraft: Підводна подорож'
+  hoc2018_mc_aquatic_description: Майнкрафт повернувся до Години коду з новеньким
+    підручником! Подорожуйте Майнкрафтом з кодом.
+  hoc2019_mc_aquatic_description: Досліджуйте та творіть підводні світи за допомогою
+    коду.
   hoc2018_mc_hero_title: 'Minecraft: Подорож героя'
+  hoc2018_mc_hero_description: Майнкрафт повернувся до Години коду з новеньким підручником!
+    Подорожуйте Майнкрафтом з кодом.
   hoc2018_mc_designer_title: Майнкрафт - Розробник
   hoc2018_mc_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
     версії цієї гри.
@@ -1944,7 +2107,11 @@ uk-UA:
   hoc2018_mc_start: Початок
   hoc2018_mc_no_internet: Немає Інтернету?
   hoc2018_mc_download_adventurer: Завантажуйте оффлайнову версію Майнкрафт - Пригод.
+  hoc2018_mc_educators_box1_button: Розпочинайте
+  hoc2018_mc_educators_box2_desc: 'Цей набір інструментів допоможе вам провести Годину
+    Коду та залучити студентів до інформатики. '
   hoc2018_mc_educators_box2_button: Завантажити
+  hoc2018_mc_educators_box4_title: Отримайте більше ресурсів з інформатики
   hoc2018_mc_watch_videos: Перед початком роботи перегляньте ці відео для натхнення
   hoc2018_mc_videos_more: Більше <a href='%{inspiring_videos_playlist}'>надихаючих
     відео</a> з рольовими моделями та знаменитостями
@@ -1952,6 +2119,7 @@ uk-UA:
     відео</a> з фахівцями зі сфери технологій
   hoc2018_mc_video_1min: 1 хв
   hoc2018_mc_video_2min: 2 хв
+  hoc2018_mc_video_3min: 3 хв
   hoc2018_mc_video_5min: 5 хв
   hoc2018_mc_video_title_steph_curry: Година коду зі Стефом Каррі
   hoc2018_mc_video_title_sports: Постарайся! Навчитись може кожен.
@@ -1964,11 +2132,22 @@ uk-UA:
   hoc2018_mc_video_title_anybody_can_learn: Навчитись може кожен
   hoc2018_mc_video_title_my_name_is_aracely: Мене звати Араклі
   hoc2018_mc_homepage_what_create: А що створите Ви?
+  hoc2018_mc_homepage_watch_video: Перегляньте наше відео
   hoc2018_mc_homepage_join_us: Приєднуйтесь
   hoc2018_mc_homepage_try_it: Спробувати
+  hoc2018_mc_back_journey: Майнкрафт повернувся до Години коду з новеньким підручником!
+    Подорожуйте Майнкрафтом з кодом.
+  hoc2018_mc_teacher_guide: Переглянути рекомендації для вчителя
+  hoc2018_mc_short_description_shorter: Скористайтесь своєю креативністю та вміннями
+    розв'язання проблем для того, щоб дослідити та збудувати підводні світи за допомогою
+    коду.
+  hoc2018_mc_journey: Подорож Майнкрафтом з кодом.
   hoc2018_dance_party_main_heading: Танцювальна вечірка
+  hoc2018_dance_party_subheading: Допоможіть перекласти Dance Party
+  hoc2018_dance_create_your_own_dance_title: Створіть власну Dance Party
   hoc2018_dance_party_box_title: Танцювальна вечірка
   hoc2018_dance_party_box_description: Закодуй танцювальну вечірку і поділися з друзями!
+  hoc2018_dance_party_specs: Мова| Формат| Вік 6-106
   hoc2018_dance_party_button: Початок
   hoc2018_dance_keep_on_dancing_box_title: Продовжуємо танцювати
   hoc2018_dance_keep_on_dancing_description: Рухайся далі однієї години з розширеними
@@ -1988,6 +2167,58 @@ uk-UA:
   hoc2018_dance_video_title_what_is_creativity: Що таке креативність?
   hoc2018_dance_view_creativity_video_playlist: Що таке креативність? Перегляньте
     всі серії (5 хв)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: У партнерстві з
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: 'Amazon Future
+    Engineer * - це комплексна програма від дитинства до кар’єри, яка надихає, тренує
+    та навчає молодь, дітей з обмеженими можливостямі або з сімей з низьким рівнем
+    доходу для кар’єри в галузі інформатики. <a href=''%{amazon_future_engineer_link}''
+    target=''_blank''> Дізнатися більше </a> '
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer * - це комплексна програма від дитинства до кар’єри, яка надихає,
+    тренує та навчає молодь, дітей з обмеженими можливостямі або з сімей з низьким
+    рівнем доходу для кар’єри в галузі інформатики.  [Дізнатися більше](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: 'Якщо ви студент або
+    викладач у Франції, відвідайте [Amazon Future Engineer - Франція](%{amazon_future_engineer_france_link}) '
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Дізнайтеся більше
+    про Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Про Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_button: Дізнайтеся більше
+  hoc2018_dance_amazon_try_coding_this_summer_title: Спробуйте кодити цього літа
+  hoc2018_dance_amazon_try_coding_this_summer_button: Приєднатися до табору
+  hoc2018_dance_amazon_scholarship_programs_button: Подати заявку
+  hoc2018_dance_amazon_internships_button: Знайдіть стажування
   hoc2018_dance_measure: Крок
   hoc2018_dance_measure_colon: 'Крок:'
+  hoc2018_aquatic_video1: 'Minecraft: Підводна подорож - Вступ'
+  hoc2018_aquatic_video2: 'Minecraft: Підводна подорож - Цикли'
+  hoc2018_aquatic_video3: 'Minecraft: Підводна подорож - Умови'
+  hoc2018_aquatic_video4: 'Minecraft: Підводна подорож - Вітання'
+  hoc2018_dance_video1: Танцювальна вечірка - Вступ
+  hoc2018_dance_video2: Танцювальна вечірка - Події
+  hoc2018_dance_video3: Танцювальна вечірка - Властивості
+  hoc2018_dance_video4: Танцювальна вечірка - Вітання
+  page_not_found_title: Сторінка не знайдена
+  page_not_found_header: '404: Сторінка не знайдена'
+  hoc2018_mc_with_microsoft: У партнерстві з
+  hoc2018_mc_thank_microsoft: Ми дякуємо Microsoft за підтримку нашого бачення та
+    місії щодо забезпечення кожної дитини можливістю вивчати інформатику та навички,
+    необхідні для досягнення успіху в 21 столітті.
+  hoc2019_mc_mee_description2: Доступ до безкоштовних ресурсів, включаючи план уроків,
+    відео, навчальну програму з інформатики та тренінги для вчителів.
+  hoc2019_mc_more_coding_resources: Більше Coding ресурсів
+  hoc2019_dance_previous_versions: |-
+    Шукаєте попередню версію Dance Party?
+    Натисніть тут, щоб почати [Частина 1](%{dance_2018_link}) та [Частина 2](%{dance_extras_2018_link}) з останнього року.
+  homepage_slot_text_title_at_home: Навчайтеся вдома
+  homepage_slot_text_blurb_at_home: З нашими ресурсами це легко
+  homepage_slot_text_link_code_break: Зробіть перерву на код
+  page_not_available_title: Сторінка недоступна
+  footer_powered_by_aws: На потужностях Amazon Web Services
+  codebytes_skinny_banner_english_only: Лише англійська
+  codebytes_skinny_banner_learn: 'Дізнатися більше на [code.org/codebytes](%{code_bytes_url}). '
+  footer_privacy_policy: Політика конфіденційності
+  footer_about: Про
+  footer_partners: Партнери
+  footer_donate: Підтримати
+  footer_support: Довідка та спільнота
+  footer_terms: Умови

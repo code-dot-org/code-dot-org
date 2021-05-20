@@ -1,0 +1,203 @@
+{
+  "mi-NZ": {
+    "data": {
+      "placeholder_texts": {
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kua wini koe!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Kia Ora e te Ao!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Kia Ora e te Ao!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Kia Ora e te Ao!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Kia Ora e te Ao!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Kia Ora e te Ao!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Kia Ora e te Ao!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "kahurangi",
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "whero",
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kua wini koe!"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "Find the Wizard": {
+          "0b895ef4c917e50663bc2a7327cbee3d": "Kua kimi koe i a au!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "patohia te kuputuhi ki konei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "patohia te taitara ki konei"
+        }
+      }
+    }
+  }
+}

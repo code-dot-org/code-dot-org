@@ -1,4 +1,4 @@
-require 'cdo/google_drive'
+require 'cdo/google/drive'
 
 # Given a line of yml in the form of key: value, wraps unquoted strings in
 # double quotes, escaping existing quotes. Does not touch already quoted or

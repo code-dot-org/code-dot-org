@@ -1,0 +1,398 @@
+{
+  "script": {
+    "name": "sciencePD3_pre1",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS in Science Legacy"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:44 UTC",
+    "seeding_key": {
+      "script.name": "sciencePD3_pre1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome Back!",
+      "name": "Welcome Back!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "key": "The TLO",
+      "name": "The TLO",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The TLO",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "key": "Prep With Your Modules",
+      "name": "Prep With Your Modules",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD3pre1 intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD3pre1 intro"
+        ],
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "sciPD3pre1 intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD2 timeline"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD2 timeline"
+        ],
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "sciPD2 timeline"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "ECSPD PD details"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TLO intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TLO intro"
+        ],
+        "lesson.key": "The TLO",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "TLO intro"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TLO practical"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TLO practical"
+        ],
+        "lesson.key": "The TLO",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "TLO practical"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD3pre1 prep"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD3pre1 prep"
+        ],
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "sciPD3pre1 prep"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD3pre1 remember"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD3pre1 remember"
+        ],
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "sciPD3pre1 remember"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sciPD3pre1 thanks"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sciPD3pre1 thanks"
+        ],
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      },
+      "level_keys": [
+        "sciPD3pre1 thanks"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "sciPD3pre1 intro",
+        "script_level.level_keys": [
+          "sciPD3pre1 intro"
+        ],
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD2 timeline",
+        "script_level.level_keys": [
+          "sciPD2 timeline"
+        ],
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD PD details",
+        "script_level.level_keys": [
+          "ECSPD PD details"
+        ],
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TLO intro",
+        "script_level.level_keys": [
+          "TLO intro"
+        ],
+        "lesson.key": "The TLO",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TLO practical",
+        "script_level.level_keys": [
+          "TLO practical"
+        ],
+        "lesson.key": "The TLO",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD3pre1 prep",
+        "script_level.level_keys": [
+          "sciPD3pre1 prep"
+        ],
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD3pre1 remember",
+        "script_level.level_keys": [
+          "sciPD3pre1 remember"
+        ],
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sciPD3pre1 thanks",
+        "script_level.level_keys": [
+          "sciPD3pre1 thanks"
+        ],
+        "lesson.key": "Prep With Your Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3_pre1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

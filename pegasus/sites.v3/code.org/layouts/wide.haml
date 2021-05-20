@@ -2,14 +2,14 @@
 
 .wrapper
   = view :unsupported_browser
-  -unless header['theme'] == 'responsive_wide'
+  -unless @header['theme'] == 'responsive_wide'
     = view :header
 
   -containerClass = "container_fullwidth"
 
   .containerClass
 
-    -if header['theme'] == 'responsive_wide'
+    -if @header['theme'] == 'responsive_wide'
       =body
 
       #clearboth{:style=>"clear:both"}
@@ -17,13 +17,10 @@
 
   .push
 
--if header['theme'] == 'responsive_wide'
-  -if page_translated? && !partner_site?
+-if @header['theme'] == 'responsive_wide'
+  .desktop-feature
+    = view :footer
+  .mobile-headers.mobile-feature
     = view :mobile_footer_responsive
-  -else
-    .desktop-feature
-      = view :footer
-    .mobile-headers.mobile-feature
-      = view :mobile_footer_responsive
 -else
   = view :footer

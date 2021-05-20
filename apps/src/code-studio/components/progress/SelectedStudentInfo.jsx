@@ -47,14 +47,18 @@ export class SelectedStudentInfo extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     selectedStudent: PropTypes.object,
-    level: PropTypes.object,
+    // While this userLevel object does have the properties of a levelType,
+    // it is conceptually more similar to a userLevel object. For example,
+    // the id property of this object is the user_level id. To get the level
+    // id, use the level_id property.
+    userLevel: PropTypes.object,
     onSelectUser: PropTypes.func.isRequired,
     getSelectedUserId: PropTypes.func.isRequired
   };
 
   onUnsubmit = () => {
     $.ajax({
-      url: `/user_levels/${this.props.level.id}`,
+      url: `/user_levels/${this.props.userLevel.id}`,
       method: 'PUT',
       data: {
         user_level: {
@@ -72,7 +76,7 @@ export class SelectedStudentInfo extends React.Component {
 
   onClearResponse = () => {
     $.ajax({
-      url: `/user_levels/${this.props.level.id}`,
+      url: `/user_levels/${this.props.userLevel.id}`,
       method: 'DELETE'
     })
       .done(data => {
@@ -111,7 +115,7 @@ export class SelectedStudentInfo extends React.Component {
   };
 
   render() {
-    const {selectedStudent, level} = this.props;
+    const {selectedStudent, userLevel} = this.props;
 
     return (
       <div style={styles.main}>
@@ -122,58 +126,51 @@ export class SelectedStudentInfo extends React.Component {
         />
         <div style={styles.studentInfo}>
           <div style={styles.name}>{selectedStudent.name}</div>
-          {level.paired && (
+          {userLevel.paired && (
             <div>
               <div>{i18n.workedWith()}</div>
-              {level.navigator && (
-                <div key={level.navigator}>
-                  {i18n.partner({partner: level.navigator})}
+              {userLevel.navigator && (
+                <div key={userLevel.navigator}>
+                  {i18n.partner({partner: userLevel.navigator})}
                 </div>
               )}
-              {level.driver && (
-                <div key={level.driver}>
-                  {i18n.loggedIn({partner: level.driver})}
+              {userLevel.driver && (
+                <div key={userLevel.driver}>
+                  {i18n.loggedIn({partner: userLevel.driver})}
                 </div>
               )}
             </div>
           )}
           <div style={styles.bubble}>
-            <TeacherPanelProgressBubble level={level} />
+            <TeacherPanelProgressBubble userLevel={userLevel} />
           </div>
-          {!level.submitLevel && (
+          {!userLevel.submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.lastUpdatedNoTime()}</div>
               <div>
-                {level.status !== LevelStatus.not_tried
-                  ? new Date(level.updated_at).toLocaleString()
+                {userLevel.status !== LevelStatus.not_tried
+                  ? new Date(userLevel.updated_at).toLocaleString()
                   : i18n.notApplicable()}
               </div>
             </div>
           )}
-          {level.submitLevel && (
+          {userLevel.submitLevel && (
             <div>
               <div style={styles.timeHeader}>{i18n.submittedOn()}</div>
               <div>
-                {level.status === LevelStatus.submitted
-                  ? new Date(level.updated_at).toLocaleString()
+                {userLevel.status === LevelStatus.submitted
+                  ? new Date(userLevel.updated_at).toLocaleString()
                   : i18n.notApplicable()}
               </div>
               <Button
+                __useDeprecatedTag
                 text={i18n.unsubmit()}
                 color="blue"
                 onClick={this.onUnsubmit}
                 id="unsubmit-button-uitest"
-                disabled={level.status !== LevelStatus.submitted}
+                disabled={userLevel.status !== LevelStatus.submitted}
               />
             </div>
-          )}
-          {level.contained && (
-            <Button
-              text={i18n.clearResponse()}
-              color="blue"
-              onClick={this.onClearResponse}
-              disabled={level.status === LevelStatus.not_tried}
-            />
           )}
         </div>
         <RadiumFontAwesome

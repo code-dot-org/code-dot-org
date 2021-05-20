@@ -1,7 +1,5 @@
 ---
 title: آور-آف-کوڈ ھاؤ-ٹو برائے ڈسٹرکٹس (اضلاع)
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## ! ہر اسکول کی شمولیت، ہر اسٹوڈینٹ کا سیکھنا ممکن بنائیں!
 
-### 1 ۔ مقامی اسکولوں کو بھرتی
+### 1 ۔ مقامی سکولوں کو شامل کروائیں
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

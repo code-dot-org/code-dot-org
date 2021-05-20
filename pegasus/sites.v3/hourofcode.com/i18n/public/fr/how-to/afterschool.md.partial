@@ -1,5 +1,5 @@
 ---
-title: Guide
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,9 +8,15 @@ nav: how_to_nav
 
 # Comment enseigner une Heure de Code en activités para-scolaires ou en clubs
 
-### Rejoignez le mouvement et initiez un groupe d'élèves à leur première heure d'informatique grâce à ces étapes. L'Heure de Code est facile à mettre en œuvre - même pour les débutants! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Rejoignez le mouvement et initiez vos étudiants à l'informatique en suivant ces étapes.
 
----
+La pensée computationnelle contribue à développer les compétences de résolution de problèmes, la logique et la créativité. Et la technologie transforme toutes les industries de la planète. Les étudiants d'aujourd'hui doivent apprendre à créer la technologie, et pas seulement à l'utiliser. En commençant tôt, ils auront les bases pour réussir dans tout cheminement de carrière du 21ème siècle.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### Une Heure de Code peut également être animée à distance ! Pour commencer, consultez nos [conseils pour organiser un événement Heure de Code virtuel](https://hourofcode.com/us/how-to/virtual).
+
+* * *
 
 ## 1. Regarder cette vidéo de formation <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4) Déterminez quels sont vos besoins en matériel - vous n'avez pas forcément besoin d'ordinateur
 
-Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. Mais vous **n'avez pas besoin** de disposer d'un ordinateur pour chaque étudiant, et vous pouvez même suivre l'Heure de Code sans aucun ordinateur.
+Pour tirer le meilleur parti de l'Heure de Code, il est préférable de disposer d'ordinateurs reliés à internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Testez les tutoriels sur les ordinateurs ou appareils mis à votre disposition. Assurez-vous qu'ils fonctionnent correctement sur les navigateurs, notamment le son et la vidéo. **Vous avez une connexion internet lente ?** Prévoyez de montrer les vidéos devant toute la classe pour que les élèves n'aient pas à les télécharger. Vous pouvez aussi essayer les tutoriels qui ne requièrent pas de connexion.
+Testez les tutoriels sur les ordinateurs ou appareils mis à votre disposition. Assurez-vous qu'ils fonctionnent correctement sur les navigateurs, notamment le son et la vidéo. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Distribuez des écouteurs dans votre classe, ou demandez aux élèves d'apporter les leurs, si le tutoriel que vous choisissez fonctionne mieux avec le son.
 
-**Vous n'avez pas suffisamment de matériel informatique ?** Mettez en place [des binômes pour la programmation](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quand les élèves sont en équipe, ils s'entraident et sollicitent moins leur enseignant. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
 
 ## 5. Commencez votre Heure de Code avec une vidéo encourageante
 
@@ -59,9 +65,9 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## 6) Programmez !
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Trouvez le lien, listé dans les [informations pour le tutoriel choisi]({{ urls/learn }}), sous le nombre des participants. 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. "« Réfléchissons-y ensemble. » - « La technologie ne fonctionne pas toujours de la manière qu’on le souhaiterait. » - « Apprendre à programmer, c’est comme apprendre une nouvelle langue ; vous devez parler couramment tout de suite. »" 
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -81,6 +87,6 @@ Donnez le coup d'envoi de votre Heure de Code en dynamisant les participants et 
 
 ## Et après l'Heure de Code ?
 
-L'Heure de Code n'est que la première étape dans ce parcours pour apprendre d'avantage sur les technologies et la conception de logiciels. Aidez les élèves dans leur aventure et encouragez-les à [apprendre d'avantage grâce au web](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

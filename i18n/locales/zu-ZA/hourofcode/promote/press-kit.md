@@ -1,7 +1,5 @@
 ---
 title: Ikhithi yabokusasaza
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -59,7 +57,7 @@ Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
+Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Izindaba ezimnandi ukuthi, sisendleleni ukuzoshintsha lokhu.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -79,7 +77,7 @@ I look forward to being in touch. <br />
 
 #### Nge Code.org
 
-Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Its vision is that every student in every school has the opportunity to learn computer programming. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

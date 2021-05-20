@@ -3,17 +3,20 @@ peer_reviews_to_complete 6
 login_required true
 student_detail_progress_view true
 
-stage 'Deeper Learning Overview', flex_category: 'required'
+lesson_group 'required', display_name: 'Overview'
+lesson 'Deeper Learning Overview', display_name: 'Deeper Learning Overview', has_lesson_plan: false
 level 'dlp19_overview1', progression: 'Background'
 level 'dlp19_overview2', progression: 'Process'
 level 'dlp19_overview3', progression: 'Preparation'
 level 'dlp19_overview4', progression: 'Evaluation'
 level 'dlp19_overview5', progression: 'Due Dates'
 
-stage 'Step 1: Develop Understanding'
+lesson_group 'content', display_name: 'Content'
+lesson 'Step 1: Develop Understanding', display_name: 'Step 1: Develop Understanding', has_lesson_plan: false
 level 'dlp19-csp-prework-mod1'
 
-stage 'Step 2: Demonstrate Understanding'
+lesson 'Step 2: Demonstrate Understanding', display_name: 'Step 2: Demonstrate Understanding', has_lesson_plan: false
 level 'dlp19-csp-mod1-q1'
 level 'dlp19-csp-mod1-q2'
 level 'dlp19-csp-mod1-q3'
+

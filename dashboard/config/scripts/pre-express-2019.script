@@ -1,42 +1,57 @@
 hidden false
-hideable_stages true
-stage_extras_available true
-has_lesson_plan true
+hideable_lessons true
+lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/pre-express/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 family_name 'pre-express'
 version_year '2019'
 is_stable true
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fil-PH", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
+tts true
+is_course true
 
-stage 'Learn to Drag and Drop', flex_category: 'csf_sequencing'
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Learn to Drag and Drop', display_name: 'Learn to Drag and Drop', has_lesson_plan: true
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:1'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 
-stage 'Sequencing with Scrat', flex_category: 'csf_sequencing'
+lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: true
 level 'courseAB_video_NewIntro_2019'
 level 'courseB_Scrat_ramp1_2019'
 level 'courseB_Scrat_ramp2_2019'
@@ -45,7 +60,7 @@ level 'courseB_Scrat_ramp3b_2019'
 level 'courseB_Scrat_ramp4a_2019'
 level 'courseB_Scrat_ramp5a_2019'
 
-stage 'Programming in Maze', flex_category: 'csf_sequencing'
+lesson 'Programming in Maze', display_name: 'Programming with Angry Birds', has_lesson_plan: true
 level 'elementary_video_pairProgramming_2019'
 level 'courseA_maze_seq1_2019'
 level 'courseA_maze_seq5_2019'
@@ -59,7 +74,7 @@ level 'courseA_maze_seq13_2019'
 bonus 'courseA_maze_seq_challenge1_2019'
 bonus 'courseA_maze_seq_challenge2_2019'
 
-stage 'Programming with Rey and BB-8', flex_category: 'csf_sequencing'
+lesson 'Programming with Rey and BB-8', display_name: 'Programming with Rey and BB-8', has_lesson_plan: true
 level 'bb8_skinOverview_K-1_video_2019'
 level 'courseB_starWars_prog1_2019'
 level 'courseB_starWars_prog2_2019'
@@ -73,7 +88,7 @@ level 'courseB_starWars_prog9_2019'
 level 'courseB_starWars_prog10_2019'
 level 'courseB_starWars_prog11_2019'
 
-stage 'Programming in Harvester', flex_category: 'csf_sequencing'
+lesson 'Programming in Harvester', display_name: 'Programming with Harvester', has_lesson_plan: true
 level 'courseA_harvester_intro_2019'
 level 'courseA_harvester_seq1_2019'
 level 'courseA_harvester_seq2_2019'
@@ -90,7 +105,7 @@ level 'courseA_harvester_seq12_2019'
 level 'courseA_harvester_seq11_2019'
 level 'courseA_harvester_seq13_2019'
 
-stage 'Spelling Bee', flex_category: 'csf_sequencing'
+lesson 'Spelling Bee', display_name: 'Spelling Bee', has_lesson_plan: true
 skin 'letters'
 video_key_for_next_level 'C1_spelling_bee_intro'
 level_concept_difficulty '{"sequencing":2}'
@@ -120,7 +135,8 @@ skin 'letters'
 level_concept_difficulty '{"sequencing":3}'
 level 'blockly:CustomMaze:wordsearch_k_16'
 
-stage 'Loops in Ice Age', flex_category: 'csf_loops'
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Loops in Ice Age', display_name: 'Loops with Scrat', has_lesson_plan: true
 level 'courseB_iceage_loops1_2019'
 level 'courseB_iceage_loops2_2019'
 level 'courseB_iceage_loops_video_2019'
@@ -134,7 +150,7 @@ level 'courseB_iceage_loops10_2019', challenge: true
 level 'courseB_iceage_loops11_2019'
 level 'courseB_iceage_loops12_2019'
 
-stage 'Loops in Collector', flex_category: 'csf_loops'
+lesson 'Loops in Collector', display_name: 'Loops with Laurel', has_lesson_plan: true
 level 'courseAB_video_collector_2019'
 level 'courseB_collector_loops1_2019'
 level 'courseB_collector_loops2_2019'
@@ -151,7 +167,7 @@ level 'courseB_collector_loops11_2019'
 bonus 'courseB_collector_loops_challenge1_2019'
 bonus 'courseB_collector_loops_challenge2a_2019'
 
-stage 'Ocean Scene with Loops', flex_category: 'csf_loops'
+lesson 'Ocean Scene with Loops', display_name: 'Ocean Scene with Loops', has_lesson_plan: true
 level 'courseB_video_ArtistIntro_2019'
 level 'courseA_artist_loops1_2019'
 level 'courseA_artist_loops2_2019'
@@ -169,7 +185,7 @@ level 'courseA_artist_loops12_2019'
 bonus 'courseA_artist_loops_challenge2a_2019'
 bonus 'courseA_artist_loops_challenge1_2019'
 
-stage 'Loops in Artist', flex_category: 'csf_loops'
+lesson 'Loops in Artist', display_name: 'Drawing Gardens with Loops', has_lesson_plan: true
 level 'courseB_video_ArtistIntro_2019'
 level 'courseB_artist_loops1_2019'
 level 'courseB_video_artistLoops_2019'
@@ -185,7 +201,8 @@ level 'courseB_artist_loops10_2019'
 bonus 'courseB_artist_loops_challenge1_2019'
 bonus 'courseB_artist_loops_challenge2_2019'
 
-stage 'Tell a Story in Play Lab', flex_category: 'csf_events'
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Tell a Story in Play Lab', display_name: 'On the Move with Events', has_lesson_plan: true
 level 'courseA_video_events_2019'
 level 'courseA_playLab_events1_2019'
 level 'courseA_playLab_events2_2019'
@@ -197,7 +214,7 @@ level 'courseA_playLab_events7_2019'
 bonus 'courseA_playlab_events_challenge2_2019'
 bonus 'courseA_playlab_events_challenge1_2019'
 
-stage 'Make a Game in Play Lab', flex_category: 'csf_events'
+lesson 'Make a Game in Play Lab', display_name: 'A Royal Battle with Events', has_lesson_plan: true
 level 'courseB_playLab_events1_2019'
 level 'courseB_playlab_events2_2019'
 level 'courseB_playlab_events3_2019'
@@ -208,3 +225,4 @@ level 'courseB_playlab_events7_2019'
 level 'courseB_playlab_eventsFP_2019'
 bonus 'courseB_playlab_events_challenge1_2019'
 bonus 'courseB_playlab_events_challenge2_2019'
+

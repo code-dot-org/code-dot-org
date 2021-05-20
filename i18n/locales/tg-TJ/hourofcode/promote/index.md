@@ -1,7 +1,5 @@
 ---
 title: Маълумотро паҳн кунед
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

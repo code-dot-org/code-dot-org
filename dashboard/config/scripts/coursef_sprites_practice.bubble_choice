@@ -1,0 +1,24 @@
+name 'courseF_sprites_practice'
+editor_experiment ''
+display_name 'Sprites Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with sprites and behaviors!'
+
+sublevels
+level 'courseF_sprites_desert'
+level 'courseF_place_fruit'
+level 'courseF_sprites_ship'
+level 'courseF_sprites_clouds'
+
+teacher_markdown <<MARKDOWN
+# Choice Level Overview
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but may work through as many as they (or you) like.
+
+You can use the descriptions below to help students self-select choices, or to set expectations around how many sub-levels they should complete.
+
+|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Desert Scene|Resize the fruit.|Animate a Sailing Ship|A Breezy Day|
+|-|-|-|-|-|
+| ***Type*** |**Review**|**Review**|**Review**|**Review**|
+| ***Concept***|*sprites, locations*|*sprites, properties*|*sprites, locations, behaviors*|*behaviors*|
+
+
+MARKDOWN

@@ -1,0 +1,8 @@
+name 'CSD U5 test crosstab multi_2021'
+question 'If someone told you their favorite season was autumn, what animal are they most likely to prefer, according to this chart?'
+wrong 'dog'
+wrong 'penguin'
+right 'frog'
+wrong 'giraffe'
+wrong 'It\’s impossible to tell from this information.'
+

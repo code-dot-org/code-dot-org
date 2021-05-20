@@ -1,0 +1,76 @@
+{
+  "uk-UA": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Дії",
+          "Brushes": "Кисті",
+          "Loops": "Цикли",
+          "Math": "Математика",
+          "Logic": "Логіка",
+          "Functions": "Функції",
+          "Variables": "Змінні"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Світ",
+          "Dancers": "Виконавці",
+          "Properties": "Властивості",
+          "Events": "Події",
+          "Numbers": "Числа",
+          "Logic": "Логіка"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Дії",
+          "Events": "Події",
+          "Loops": "Цикли",
+          "Math": "Математика",
+          "Logic": "Логіка",
+          "Games/Score": "Ігри / рахунок"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Світ",
+          "Sprites": "Спрайти",
+          "Actions": "Дії",
+          "Events": "Події",
+          "Behaviors": "Поведінка"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Світ",
+          "Sprites": "Спрайти",
+          "Locations": "Розташування",
+          "Actions": "Дії",
+          "Events": "Події",
+          "Behaviors": "Поведінка",
+          "Variables": "Змінні",
+          "Math": "Математика",
+          "Logic": "Логіка",
+          "Functions": "Функції",
+          "Text": "Текст",
+          "Comments": "Коментарі"
+        },
+        "outbreak_freeplay": {
+          "World": "Світ",
+          "Sprites": "Спрайти",
+          "Actions": "Дії",
+          "Behaviors": "Поведінка",
+          "Events": "Події",
+          "Locations": "Розташування",
+          "Logic": "Логіка",
+          "Loops": "Цикли",
+          "Math": "Математика",
+          "Variables": "Змінні",
+          "Functions": "Функції",
+          "Comments": "Коментарі"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Світ",
+          "Sprites": "Спрайти",
+          "Actions": "Дії",
+          "Events": "Події",
+          "Logic": "Логіка",
+          "Math": "Математика"
+        }
+      }
+    }
+  }
+}

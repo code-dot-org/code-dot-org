@@ -1,0 +1,13 @@
+name 'CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021'
+editor_experiment ''
+display_name 'Plan Your Project'
+css 'unplugged'
+markdown <<MARKDOWN
+# Plan Your Project
+
+Take a look at the project guide, which has already been filled out for you.
+
+* Does the project guide describe the same sprites that you thought of?
+* Does it use the same variables to store information?
+* Are the functions that it describes the same as the functions you described?
+MARKDOWN

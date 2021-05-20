@@ -3,20 +3,30 @@ da:
   data:
     block_categories:
       Actions: Handlinger
-      Loops: Løkker
-      Functions: Funktioner
+      Advanced: Avanceret
+      Behaviors: Opførsel
+      Brushes: Pensler
       Color: Farve
-      Math: Matematik
-      Logic: Logik
-      Variables: Variabler
+      Comment: Kommentar
+      Comments: Kommentarer
       Conditionals: Betingelser
-      Events: Hændelser
-      Text: Tekst
-      Location: Placering
       Dancers: Dansere
+      Default: Standard
+      Events: Hændelser
+      Functions: Funktioner
+      'Functions ': 'Funktioner '
+      Game/Score: Spil/score
+      Games/Score: Spil/score
       Groups: Grupper
-      Start: Start
-      Booleans: Booleans
-      test: test
-      Name: Navn
-      Function: Funktion
+      Input: input
+      Locations: Placering
+      Logic: Logik
+      Loops: Løkker
+      Math: Matematik
+      Numbers: Tal
+      Properties: Egenskaber
+      Sprites: figure
+      Text: Tekst
+      Variables: Variabler
+      'Variables ': 'Variabler '
+      World: Verden

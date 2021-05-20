@@ -1,0 +1,7 @@
+{
+  "category": "Text",
+  "config": {
+    "docFunc": "codestudio_string",
+    "func": "text"
+  }
+}

@@ -6,6 +6,16 @@ style_min: true
 
 # How to Help
 
+## Make a generous donation
+We're working to give every student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. For every dollar you donate, one child will be introduced to computer science.
+
+[<button>Donate now</button>](https://donate.code.org/give/172233/#!/donation/checkout)     [<button>Start a fundraiser</button>](https://donate.code.org/campaign/computer-science-education/c142257)
+
+## Have Amazon make a donation for you
+If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
+
+[<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
+
 ## Ask your school to teach computer science
 Encourage your local school to start teaching computer science. To make it easier, Code.org offers [courses for every grade level](https://studio.code.org/courses?view=teacher) from kindergarten through high school at no cost. And, teachers can enroll in our [hands-on professional learning workshops](/educate/professional-learning) offered locally across the United States.
 
@@ -18,13 +28,10 @@ Petition your state to allow computer science to count towards math or science h
 
 [<button>Add your support</button>](/promote)
 
-## Learn about our advocacy efforts in your state
-Learn more about [Code.org's advocacy work](https://advocacy.code.org) across the U.S. and the nine policies we recommend states adopt to make computer science foundational for all students. And, find out how you can drive change in your state.
+## Teach an online course to your child, or in any classroom
+Code.org's online platform [Code Studio](https://studio.code.org/courses?view=teacher) enables students to learn the basic concepts of computer science as early as kindergarten. You don't need any prior experience to get started - you can learn along with your children. If you do know some programming, try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
 
-## Host an Hour of Code - at work, in your community, or local school
-Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
-
-[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)
+[<button>Find a course</button>](https://studio.code.org/courses?view=teacher)
 
 ## Buy a CODE hat or t-shirt
 Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too.
@@ -36,22 +43,18 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 
 [<button>Shop</button>](/shop)
 
+## Learn about our advocacy efforts in your state
+Learn more about [Code.org's advocacy work](https://advocacy.code.org) across the U.S. and the nine policies we recommend states adopt to make computer science foundational for all students. And, find out how you can drive change in your state.
 
-## Make a generous donation or have Amazon do it for you
-We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate. If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
+## Host an Hour of Code - at work, in your community, or local school
+Millions of people of all ages have learned an [Hour of Code](https://hourofcode.com), a one-hour introductory course designed to demystify computer science and show that anybody can learn the basics. Anybody, anywhere, anytime can learn an Hour of Code.
 
-[<button>Please consider a donation</button>](/donate) &nbsp;&nbsp; [<button>Donate with AmazonSmile</button>](/donate/amazonsmile)
+[<button>Host an Hour of Code</button>](https://hourofcode.com/how-to)
 
 ## Translate our tutorials
-Volunteers have translated our tutorials in over 40 languages. Help us continue to expand our tutorials for students around the world!
+Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!
 
 [<button>Translate tutorials</button>](/translate)
-
-## Teach an online course to your child, or in any classroom
-Code.org's online platform [Code Studio](https://studio.code.org/courses?view=teacher) enables students to learn the basic concepts of computer science as early as kindergarten. You don't need any prior experience to get started - you can learn along with your children. If you do know some programming, try [App Lab](/educate/applab), a JavaScript programming environment for high school students to create apps.
-
-[<button>Find a course</button>](https://studio.code.org/courses?view=teacher)
-
 
 ## Are you a software engineer? Volunteer in a classroom
 ### Even an hour makes a difference
@@ -81,6 +84,3 @@ Code.org works with nonprofit organizations, as partners, to help spread compute
 
 [<button>United States</button>](/educate/regional-partner)
 [<button>International</button>](/international)
-
-
-

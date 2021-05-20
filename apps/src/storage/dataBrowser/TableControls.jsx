@@ -4,11 +4,63 @@
  */
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
+import VisualizerModal from './dataVisualizer/VisualizerModal';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
+
+class TableControls extends React.Component {
+  static propTypes = {
+    clearTable: PropTypes.func.isRequired,
+    exportCsv: PropTypes.func.isRequired,
+    importCsv: PropTypes.func.isRequired,
+    tableName: PropTypes.string.isRequired,
+    readOnly: PropTypes.bool.isRequired
+  };
+
+  render() {
+    return (
+      <div style={styles.container}>
+        <div style={styles.tableNameWrapper}>
+          <span style={styles.tableName}>{this.props.tableName}</span>
+        </div>{' '}
+        <div style={styles.buttonWrapper}>
+          <VisualizerModal key={this.props.tableName} />
+
+          {!this.props.readOnly && (
+            <ConfirmDeleteButton
+              body={msg.confirmClearTable()}
+              buttonText="Clear table"
+              containerStyle={{width: 103, marginLeft: 10}}
+              buttonId="clearTableButton"
+              onConfirmDelete={this.props.clearTable}
+              title="Clear table"
+            />
+          )}
+
+          {!this.props.readOnly && (
+            <ConfirmImportButton
+              importCsv={this.props.importCsv}
+              containerStyle={{marginLeft: 10}}
+            />
+          )}
+
+          <button
+            type="button"
+            onClick={this.props.exportCsv}
+            style={styles.exportButton}
+          >
+            Export to csv
+          </button>
+        </div>
+        {/* help make the "text-align: justify;" trick work */}
+        <div style={dataStyles.clearfix} />
+      </div>
+    );
+  }
+}
 
 const styles = {
   buttonWrapper: {
@@ -47,48 +99,4 @@ const styles = {
     verticalAlign: 'middle'
   }
 };
-
-class TableControls extends React.Component {
-  static propTypes = {
-    clearTable: PropTypes.func.isRequired,
-    exportCsv: PropTypes.func.isRequired,
-    importCsv: PropTypes.func.isRequired,
-    tableName: PropTypes.string.isRequired
-  };
-
-  render() {
-    return (
-      <div style={styles.container}>
-        <div style={styles.tableNameWrapper}>
-          <span style={styles.tableName}>{this.props.tableName}</span>
-        </div>{' '}
-        <div style={styles.buttonWrapper}>
-          <ConfirmDeleteButton
-            body={applabMsg.confirmClearTable()}
-            buttonText="Clear table"
-            containerStyle={{width: 103}}
-            buttonId="clearTableButton"
-            onConfirmDelete={this.props.clearTable}
-            title="Clear table"
-          />
-
-          <ConfirmImportButton
-            importCsv={this.props.importCsv}
-            containerStyle={{marginLeft: 10}}
-          />
-
-          <button
-            type="button"
-            onClick={this.props.exportCsv}
-            style={styles.exportButton}
-          >
-            Export to csv
-          </button>
-        </div>
-        {/* help make the "text-align: justify;" trick work */}
-        <div style={dataStyles.clearfix} />
-      </div>
-    );
-  }
-}
 export default Radium(TableControls);

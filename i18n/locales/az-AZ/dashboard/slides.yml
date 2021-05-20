@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 az:
   slides:
     maze_intro:
@@ -151,12 +156,16 @@ az:
     if_else:
       1:
         image: 'notes/hoc5_1.jpg'
+        text: "Salam, mənim adım Salonidir. İnformatikadan səhiyyə və tibbdəki məsələləri həll etmək üçün istifadə edirəm. Gəlin, \"əgər, əks halda\" blokunu öyrənək. Bu, \"əgər\" blokuna oxşayır, amma axırında \"əks halda\" deyə əlavə bir hissəsi var."
       2:
         image: 'notes/hoc5_2.jpg'
+        text: "Əgər mən \"irəli get\" blokunu \"et\" deyilən yerə və \"sola dön\" blokunu \"əks halda\" deyən yerə qoysam, bu o deməkdir ki, zombi 2 seçimdən birini edəcək. Əgər zombinin qarşısında yol varsa, o zaman zombi irəliləyəcək, ƏKS HALDA isə (qarşısında irəliləməyə yol yoxdur), zombi sola dönəcək."
       3:
         image: 'notes/hoc5_3.jpg'
+        text: "\"Əgər\" bloku kimi, biz \"təkrar et\" bloklarının daxilinə \"əgər əks halda\" bloklarını elə qoya bilərik ki, zombi irəliləməkdə davam etsin və \"əgər əks halda\" bloku hərəkət etdikcə hər hansı bir yerə döngə olub olmadığını yoxlasın."
       4:
         image: 'notes/hoc5_4.jpg'
+        text: "İndi bu zombiləri olmalı olduqları yerə aparın!"
     if_else_scrat:
       1:
         text: "Bir \"əgər-əks halda\" ifadəsi iki şeyin arasında qərar qəbul etməkdir. Gəlin, görək biz dostumuz Cıramqla \"əgər-əks halda\" ifadəsini necə istifadə edə bilərik."
@@ -281,3 +290,97 @@ az:
       3:
       4:
       5:
+    hoc_dance_warmup:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Qızışma"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
+    hoc_dance_events:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Hadisələr"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+    hoc_dance_properties:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Xüsusiyətlər"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+    hoc_dance_congrats:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Şənlik davam edir!"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+    hoc_dance_warmup_2019:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Qızışma"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+      12:
+      13:
+    hoc_dance_events_2019:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Hadisələr"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+    hoc_dance_properties_2019:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Xüsusiyətlər"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+      10:
+    hoc_dance_congrats_2019:
+      1:
+        text: "Kod Saatı | Rəqs şənliyi: Şənlik davam edir!"
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:

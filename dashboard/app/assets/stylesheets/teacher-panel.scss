@@ -57,26 +57,6 @@
     margin: 0;
   }
 
-  h4 {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    text-align: center;
-    margin: 5px 0;
-  }
-
-  .students {
-    padding: 0 5px;
-    a {
-      width: 100%;
-      text-align: center;
-      font-size: 17.5px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-height: 2em;
-      display: block;
-    }
-  }
-
   &.hidden {
     right: -195px;
     .hide-handle {
@@ -87,102 +67,6 @@
       right: 200px;
       display: block;
     }
-  }
-
-  .user_level {
-    padding: 0 5px;
-
-    .level_link {
-      margin: 0 auto;
-      border-radius: 40px;
-      width: 44px;
-      min-width: 44px;
-      line-height: 44px;
-      font-size: 32px;
-      border-width: 4px;
-      display: block;
-      img {
-        width: 32px;
-        height: 32px;
-      }
-    }
-  }
-
-  .level {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .section {
-    padding: 0 5px;
-
-    h4 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  .section-students {
-    &,
-    tr {
-      border: 1px solid $lighter_cyan;
-      border-collapse: collapse;
-    }
-
-    td {
-      padding: 2.5px;
-    }
-
-    .section-student {
-      background-color: $lightest_gray;
-      opacity: 1;
-
-      .level_link {
-        padding: 5px;
-      }
-      .name a {
-        display: block;
-        width: 146px;
-        line-height: 34px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-decoration: none;
-        .pair-programming-icon {
-          float: right;
-          line-height: 34px;
-        }
-      }
-
-      .navigator a {
-        color: $light_gray;
-      }
-
-      &:hover {
-        background-color: $lighter_cyan;
-        font-family: $gotham-extra-bold;
-        font-weight: normal;
-        a {
-          color: $white;
-        }
-      }
-      &.active {
-        background-color: $light_cyan;
-        font-family: $gotham-extra-bold;
-        font-weight: normal;
-        a {
-          color: $white;
-        }
-        .navigator a {
-          color: $lightest_gray;
-        }
-      }
-    }
-  }
-  .scrollable-wrapper {
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 0 5px;
   }
 
   select {

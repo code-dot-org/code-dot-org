@@ -1,7 +1,7 @@
 professional_learning_course 'ECS Support Legacy'
-login_required 'true'
+login_required true
 
-stage 'Introduction to PD'
+lesson 'Introduction to PD', display_name: 'Introduction to PD', has_lesson_plan: false
 level 'ECSPD presurvey'
 level 'PDECS Welcome Video'
 level 'PDECS tour'
@@ -10,7 +10,7 @@ level 'PDECS commitment match'
 level 'PDECS attendance commitment'
 level 'ECSPD pause'
 
-stage 'What is ECS?'
+lesson 'What is ECS?', display_name: 'What is ECS?', has_lesson_plan: false
 level 'ECSPD program overview'
 level 'ECSPD curriculum overview'
 level 'ECSPD unit matching'
@@ -21,27 +21,28 @@ level 'ECSPD phase matching'
 level 'ECSPD PD goals'
 level 'ECSPD program overlap'
 
-stage 'Impact of Computer Science'
+lesson 'Impact of Computer Science', display_name: 'Impact of Computer Science', has_lesson_plan: false
 level 'ECSPD impact of CS'
 level 'ECSPD impact vid1'
 level 'ECSPD impact vid2'
 level 'ECSPD impact vid2 question'
 level 'ECSPD impact in program'
 
-stage 'Growth Mindset'
+lesson 'Growth Mindset', display_name: 'Growth Mindset', has_lesson_plan: false
 level 'ECSPD what is growth mindset'
 level 'ECSPD growth mindset in the classroom'
 level 'ECSPD growth mindset question'
 level 'ECSPD growth mindset strategies'
 level 'ECSPD strategies'
 
-stage 'Teaching Strategies'
+lesson 'Teaching Strategies', display_name: 'Teaching Strategies', has_lesson_plan: false
 level 'ECSPD teaching strategies video'
 level 'ECSPD strategies'
 
-stage 'Preparing for in-person PD'
+lesson 'Preparing for in-person PD', display_name: 'Preparing for in-person PD', has_lesson_plan: false
 level 'facilitator test'
 level 'ECSPD forum introduction'
 level 'ECSPD PD details'
 level 'ECSPD postsurvey'
 level 'ECSPD end of p1'
+

@@ -118,13 +118,24 @@ Resources:
             Condition:
               StringNotEquals:
                 cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-            # Read-only access to current secrets.
+          # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
             Resource: '*'
-            Condition:
-              StringEquals:
-                secretsmanager:VersionStage: AWSCURRENT
+  # Permissions which grant the CurriculumBuilder project read-only acces to
+  # the DCDO database, so select configuration variables can be shared between
+  # the two projects.
+  CurriculumBuilderDCDO:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CurriculumBuilderDCDO
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - dynamodb:GetItem
+            Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
   Developer:
     Type: AWS::IAM::Role
     Properties:
@@ -179,7 +190,51 @@ Resources:
             - secretsmanager:GetSecretValue
             - secretsmanager:DeleteSecret
             NotResource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/*"
+      # Deny all access to /admin logs.
+      - PolicyName: DenyAdminLogs
+        PolicyDocument:
+          Statement:
+          - Effect: Deny
+            Action: logs:*
+            Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
       ManagedPolicyArns: [!Ref DevPermissions]
+  DataAnalystRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: DataAnalyst
+      Path: /dataanalyst/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+      ManagedPolicyArns: [!Ref DataAnalystPolicy]
+  DataAnalystPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DataAnalystPolicy
+      Path: /dataanalyst/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DataAnalystTools
+            Effect: Allow
+            Action:
+              - 's3:ListAllMyBuckets'
+              - 'redshift:*'
+              - 'dms:*'
+            Resource: '*'
+          - Sid: DataAnalystS3ImportExportBucket
+            Effect: Allow
+            Action:
+              - 's3:*'
+            Resource:
+              - 'arn:aws:s3:::cdo-data-sharing-internal/*'
+              - 'arn:aws:s3:::cdo-data-sharing-internal'
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
   FirehoseLambdaRole:
@@ -258,6 +313,34 @@ Resources:
       Path: /
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
+  SessionPermissions:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      Description: Allows opening Session Manager sessions and writing to the audit log.
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DescribeLogs
+            Effect: Allow
+            Action: logs:DescribeLogGroups
+            Resource: '*'
+          - Sid: PublishAuditEvents
+            Effect: Allow
+            Action:
+              - logs:PutLogEvents
+              - logs:DescribeLogStreams
+              - logs:CreateLogStream
+            Resource:
+              !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/auditlogs:log-stream:*"
+          - Sid: AllowSession
+            Effect: Allow
+            Action:
+              - ssmmessages:CreateControlChannel
+              - ssmmessages:CreateDataChannel
+              - ssmmessages:OpenControlChannel
+              - ssmmessages:OpenDataChannel
+              - ssm:UpdateInstanceInformation
+            Resource: '*'
 Outputs:
   DevPermissions:
     Description: Developer Permissions
@@ -267,3 +350,7 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
+  SessionPermissions:
+    Description: Session Permissions
+    Value: !Ref SessionPermissions
+    Export: {Name: !Sub "${AWS::StackName}-SessionPermissions"}

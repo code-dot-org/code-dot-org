@@ -4,18 +4,20 @@
   'yes': 'Sim'
   'no': 'Não'
   select_language: "Por favor, escolhe o teu idioma"
+  upgrade_ie_message: "Em breve, a Code.org removerá o suporte para o Internet Explorer 8, 9 e 10. Atualiza para um navegador moderno por favor."
+  upgrade_ie_message_csedweek: "Em breve, a CSEdWeek.org removerá o suporte para o Internet Explorer 8, 9 e 10. Atualize para um navegador moderno por favor."
   upgrade_ie_link: "Saber mais"
   en: "Ciência da computação"
   computer_science_edweek: "Semana da Educação da Ciência da Computação"
   csedweek_dates: "De 8 a 14 de dezembro de 2014"
   csedweek_banner_hoc: 'A <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hora de Código</a> está a chegar. Relembramos todos os professores e organizadores de que devem <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planear a sua Hora de Código</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação</a>'
+  csedweek_banner_teachers_text: "Você é professor de ciência da computação? Veja outros recursos da Semana de Educação em Ciência da Computação"
   n_have_learned_an_hoc: "<h1>Experimenta uma</h1><h2>Hora de Código</h2><h3># já experimentaram</h3>"
   anybody_can_learn: "Todos podem aprender."
   learn_now: "Aprende agora"
   petition_message: "Todos os alunos de todas as escolas deviam ter a oportunidade de ter uma disciplina de informática"
   petition_sign_message: 'Se concordar, assine seu nome. Junte-se aos # outros.'
-  petition_sign_message_support: 'Se você nos apoia, assine seu nome. Junte-se aos # outros.'
   petition_join_others: 'Junta-te a # pessoas'
   name: "Nome"
   email: "E-mail"
@@ -24,7 +26,14 @@
   twentyhours_heading: "Experimenta o nosso curso de introdução à Ciência da Computação"
   twentyhours_text: "Terminou sua primeira Hora do Código? Aprenda mais sobre a ciência da computação e seus conceitos nesse curso."
   og_title: 'Todos os alunos merecem uma oportunidade'
+  og_title_soon: "A Hora do Código está a chegar"
+  og_title_here: "A Hora do Código chegou!"
+  og_description: "Cada aluno em cada escola merece a oportunidade de estudar ciências da computação."
+  og_description_celeb: "Experimenta os novos tutoriais e terás uma oportunidade de conversares por vídeo com uma celebridade ou até mesmo com a tua turma!"
   csedweek_og_title: "Semana da Educação da Ciência da Computação"
+  csedweek_og_description: "A ciência da computação é fundamental para todos os alunos aprenderem."
+  csedweek_og_description_soon: "A Hora do Código está a chegar entre 3 a 9 de dezembro de 2018. A ciência da computação é fundamental para todos os alunos aprenderem."
+  csedweek_og_description_here: "A Hora do Código chegou. A ciência da computação é fundamental para todos os alunos aprenderem."
   hoc2014_heading: "Participa na <a href=\"http://hourofcode.com\">Hora de Código</a><br/>de 8 a 14 de dezembro de 2014<br/>"
   hoc2014_students: "Alunos"
   hoc2014_try: "Experimentar"
@@ -61,6 +70,7 @@
   congratulations: "Parabéns!"
   congratulations_on_completing_hoc: "Parabéns por teres concluído uma Hora de Código"
   congratulations_volunteer: 'Parabéns: agora que já tentaste a Hora do Código, <a href="https://code.org/volunteer"> regista-te para seres voluntário numa sala de aula</a> e ajuda estudantes a aprender numa Hora de Código!'
+  congratulations_on_completing_course: "Parabéns por teres completado %{course}"
   congrats_next_tutorials_title: "A seguir, experimenta estes tutoriais"
   congrats_next_tutorials_desc: "Experimenta este tutoriais mais curtos de 1 hora ou experimenta um <a href=\"%{current_path}/next\">Tutorial de um parceiro</a>."
   get_a_certificate_of_achievement: "Obtem um certificado de realização"
@@ -138,6 +148,9 @@
   thanks_for_submitting: "Obrigado por personalizares o teu certificado!"
   if_you_enjoyed: "Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos que o mundo todo aprenda."
   personalize_certificate: "Personaliza o teu certificado"
+  print_batch_certificates: "Imprimir uma remessa de certificados"
+  print_certificates: "Imprimir certificados"
+  print_one_here_certificates: "Imprima um aqui."
   share_achievement: "Partilha a tua conquista"
   beyond_hour_message: "Faça nossos <a href='http://studio.code.org'>outros cursos</a>, ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>."
   leaderboards_for_hoc: "Classificações da Hora de Código"
@@ -174,17 +187,28 @@
   petition_thankyou: "Obrigado por assinares a petição"
   continue_learning_header: "Vê o que podes fazer além da Hora de Código"
   continue_learning_body: "Existem muitas opções. Podes aprender online, numa escola local ou num acampamento de verão."
+  learn_code_studio: "Experimenta os cursos do Code.org"
   learn_next_level: "Experimentar outro curso do Code Studio"
   learn_online: "Experimentar outros cursos online"
   learn_classes: "Encontrar aulas perto de ti"
   learn_back_to_minecraft: "Continua a aprender com o Minecraft"
+  hoc_is_here: 'A #HourOfCode estará de volta nos dias 5 a 11 de dezembro. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Terminar uma Hora de Código no @codeorg! #HourOfCode'
   just_did_course1: "Vejam! Acabei de concluir o curso 1! @codeorg"
   just_did_course2: "Vejam! Acabei de concluir o curso 2! @codeorg"
   just_did_course3: "Vejam! Acabei de concluir o curso 3! @codeorg"
   just_did_course4: "Vejam! Acabei de concluir o curso 4! @codeorg"
+  just_did_coursea: "Acabei de terminar o Percurso A - ora vê! @codeorg"
+  just_did_courseb: "Acabei de terminar o Percurso B - ora vê! @codeorg"
+  just_did_coursec: "Acabei de terminar o Percurso C - ora vê! @codeorg"
+  just_did_coursed: "Acabei de terminar o Percurso D - ora vê! @codeorg"
+  just_did_coursee: "Acabei de terminar o Percurso E - ora vê! @codeorg"
+  just_did_coursef: "Acabei de terminar o Percurso F - ora vê! @codeorg"
   just_did_accelerated: "Vejam! Acabei de concluir o curso acelerado! @codeorg"
+  just_did_hoc_donor: 'Acabei de terminar a #HourOfCode - ora vê! (Obrigado %{donor_twitter} por apoiares a @codeorg)'
+  just_did_course_donor: "Acabei de terminar o %{course} - ora vê! Obrigado %{donor_twitter} por apoiares a @codeorg"
   twitter_teach_cs: "9 de 10 pessoas concordam, as escolas devem ensinar ciência da computação. http://youtu.be/nKIu9yen5nc. Visite https://code.org/."
+  twitter_cs_foundational: "A ciência da computação é fundamental para todos os alunos aprenderem. https://youtu.be/QvyTEx1wyOY"
   learn_hoc: "Aprende a programar numa hora com a Hora de Código"
   beyond_hoc: "Além da Hora de Código"
   what_gender: "Qual é o teu género?"
@@ -195,6 +219,7 @@
   lines_of_code: "MAIS DE <b># LINHAS DE CÓDIGO</b> ESCRITAS ATÉ AGORA."
   lines_of_code_alt: "<b>#</b> LINHAS DE CÓDIGO ESCRITAS POR ALUNOS"
   who_has_done_hoc: 'Quem participou na #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Quem é que terminou a #HourOfCode? (Obrigado %{donor_twitter} por apoiares a @codeorg)'
   hoc_leaderboards: "Classificações da Hora do Código"
   students_and_lines: "%{students} os estudantes fizeram a Hora de Código e escreveram %{lines} linhas de código."
   start_hoc: "Começa agora a Hora de Código"
@@ -206,6 +231,8 @@
   studiobar_title_nolink: "Explore o Code Studio"
   studiobar_elementary_title: "Cursos elementares"
   studiobar_elementary_body: "Os nossos três cursos para alunos do 1.º Ciclo"
+  studiobar_dance_title: "Festa da Dança"
+  studiobar_dance_body: "Cria e partilha a tua própria Festa de Dança"
   studiobar_hoc_title: "A Hora de Código"
   studiobar_hoc_body: "Aprende a programar com o Angry Birds"
   studiobar_flappy_title: "Flappy Bird"
@@ -218,6 +245,12 @@
   studiobar_donate_body: "Por cada dólar que doares, mais um aluno poderá aprender a programar"
   studiobar_shop_title: "Loja"
   studiobar_shop_body: "Quebre estereótipos. Use nosso logotipo com orgulho."
+  homepage_stats_students: "dos estudantes dos EUA possuem contas na Code.org"
+  homepage_stats_female: "dos nossos estudantes são raparigas"
+  homepage_stats_teachers: "professores usam a Code.org"
+  homepage_stats_hourofcodde: "dos estudantes ao redor do mundo experimentaram a Hora do Código"
+  homepage_stats_policy: "estados mudaram a política para apoiarem a ciência da computação"
+  homepage_stats_title: "Estamos a fazer uma diferença"
   homepage_hero_text_malala: "&ldquo;Eu desafio todas as raparigas do mundo\na experimentarem uma Hora de Código.&rdquo;\nMalala, Prémio Nobel da Paz"
   homepage_hero_text_susan: |-
     &ldquo;Se é possível mudar a tecnologia,
@@ -235,6 +268,10 @@
     &ldquo;A informática permite-te descobrir as
     melhores oportunidades no mundo.&rdquo;
     Satya, CEO da Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;A ciência da computação fortalece os
+    alunos para criarem o mundo do amanhã.&rdquo;
+    Satya, Diretor Executivo da Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Se souberes programar, sabes
     que podes definir toda a tua vida.&rdquo;
@@ -261,6 +298,8 @@
   homepage_hero_text_stat_loc: "2,5 milhões de raparigas estão a aprender no Code Studio"
   homepage_hero_text_stat_students: "#student_count de contas de alunos no Code Studio"
   homepage_hero_text_stat_served: 'Hora de Código: #served de alunos já experimentaram'
+  homepage_hero_hoc_is_coming: "A Hora do Código está a chegar"
+  homepage_hero_hoc_is_here: "A Hora do Código está aqui"
   homepage_slot_text_hoc: "A Hora de Código"
   homepage_slot_text_frozen: "Frozen com Anna e Elsa"
   homepage_slot_text_teacher: "Painel do Professor"
@@ -280,7 +319,9 @@
   homepage_action_text_girlvideo: "Inspirar uma rapariga"
   homepage_action_text_learn: "Começa a aprender"
   homepage_action_text_signpetition: "Assina a petição"
+  homepage_action_text_wincelebritychat: "Ganha uma oportunidade para conversares por vídeo com uma celebridade"
   homepage_signpetition_dropdown: "Assina a nossa petição &#x25BE;"
+  homepage_signpetition_dropdown_text: "Concordar"
   homepage_diversity_pledge: "Aceite a promessa de diversidade"
   homepage_banner_text_prizes: 'A Hora de Código está de volta, de 7 a 13 de dezembro. '
   homepage_banner_link_prizes: 'Junte-se ao maior evento de aprendizagem da história. '
@@ -297,6 +338,7 @@
   homepage_slot_text_title_hoc: "Hora de Código"
   homepage_slot_text_blurb_hoc: "Todos podem aprender.\nComeça hoje com uma Hora de Código."
   homepage_slot_text_link_hoc: "Exprimenta a Hora de Código"
+  homepage_slot_text_link_about_hoc: "Sobre a Hora do Código"
   homepage_slot_text_link_host: "Organize um evento da Hora do Código"
   homepage_slot_text_link_hocserved: "# já experimentaram"
   homepage_solot_text_link_volunteer: "Seja voluntário na Hora do Código"
@@ -320,9 +362,12 @@
   homepage_slot_text_link_buy: "Colaborar"
   homepage_slot_text_link_donate: "Fazer uma doação"
   homepage_slot_text_link_shop: "T-shirts, chapéus e muito mais"
+  homepage_slot_text_link_administrators: "Traz a ciência da computação para a tua escola"
+  homepage_gallery_header: "Mais de %{project_count} milhões de projetos Code.org criados"
   homepage_header_donors: "Agradecemos a quem nos apoia"
   homepage_donors_seall: "Ver todos"
   homepage_donors_donate: "Doar"
+  homepage_below_hero_announcement_text: "Preocupamo-nos com a tua privacidade e estamos a fazer algumas atualizações à nossa política de privacidade, em vigor no dia 25 de maio."
   homepage_below_hero_announcement_link_text: "Saber mais"
   contact_form_topic_student: "Sou um aluno"
   contact_form_topic_parent: "Sou um encarregado de educação"
@@ -361,7 +406,10 @@
   class_submission_level_college: "Ensino Superior"
   class_submission_level_vocational: "Curso Profissional"
   class_submission_languages_other: "Outro(s) idioma(s)"
+  videos_more: "Mais <a href='%{inspiring_videos_playlist}'>vídeos inspiradores</a> a apresentarem modelos e celebridades"
+  careers_page_more: "Mais <a href='%{careers_url}' target='_blank'>vídeos inspiradores</a> a apresentarem profissionais em campos tecnológicos"
   playlab_classic_title: "Clássico"
+  playlab_gumball_title: "O Incrível Mundo de Gumball"
   playlab_iceage_title: "Idade do gelo - brevemente"
   playlab_iceage_title_live: "Idade do gelo"
   starwars_subtitle: "Construindo uma galáxia com código"
@@ -370,28 +418,88 @@
   starwars_javascript_specs: "Apenas Inglês | Navegadores modernos | Idades 11 +"
   starwars_blocks_title: "Blocos"
   starwars_blocks_description: "Utiliza blocos de arrastar-soltar."
+  starwars_blocks_specs: "Várias línguas | Navegadores modernos, smartphones e tablets | Idades entre os 6-106"
   starwars_platform_text: "Navegadores modernos, smartphones e tablets"
   mc_name: "Hora do Código de Minecraft"
   mc_longdescription: "Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft."
   mc_shortdescription: "Use blocos de código para levar o Steve ou a Alex numa aventura por este mundo Minecraft."
   mc_gradelevel: "Idades 6 +"
   mc_platformtext: "Navegadores modernos, smartphones e tablets"
+  mc_specs: "Várias línguas | Navegadores modernos e tablets | Idades entre os 6-106"
   minecraft_designer: "Designer de Minecraft"
+  minecraft_adventurer: "Aventureiro de Minecraft"
+  minecraft_tutorials: "Minecraft Hora do Código Tutoriais"
+  minecraft_specs: "Várias línguas | Navegadores modernos e tablets | A partir do 2º ano"
+  minecraft_start_tutorial: "Começar o tutorial"
   minecraft_agent_button: "Começar"
   minecraft_designer_description: "Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais."
   minecraft_designer_button: "Começar"
+  minecraft_adventurer_description: "Usa código para levar o Alex ou o Steve numa aventura."
   minecraft_adventurer_button: "Começar"
+  minecraft_no_internet: "Não tens Internet?"
+  minecraft_download_adventurer: "Descarregue a versão offline do Minecraft Adventurer. "
   minecraft_subtitle: "Hora do Código de Minecraft"
+  minecraft_teach_resources: "Recursos para docentes e planos de aula"
+  minecraft_future: "Ajude toda a juventude a tornar-se pronta para o futuro"
+  sports_og_title: "Esforce-se. Qualquer um pode aprender."
   sports_watch_video: "Vê o vídeo"
+  sports_video_title: "Esforce-se. Qualquer um pode aprender."
+  sports_select_theme: "Escolhe o teu tema de tutorial"
+  sports_basketball_title: "Faça um jogo de basquetebol."
+  sports_featured_athletes: "Ver atletas em destaque"
+  sports_athletes_title: "Atletas destacados"
+  sports_athlete_Draymond: "Draymond Green, Medalha Olímpica de Ouro e Campeão NBA, Golden State Warriors"
+  sports_athlete_Serena: "Serena Williams, Medalha Olímpica de Ouro e Campeã de Ténis"
+  sports_athlete_Russell: "Russell Okung, Campeão da Super Bowl e jogador da NFL, Denver Broncos\n"
+  sports_athlete_Sergio: "Sergio Ramos, Campeonato da Copa do Mundo e Jogador de Futebol, Real Madrid."
+  sports_athlete_Sue: "Sue Bird, Medalha de Ouro e Campeã da WNBA, Seattle Storm"
+  sports_athlete_Alana: "Alana Beard, Medalha de ouro e WNBA All-Star, Los Angeles Sparks"
+  sports_athlete_Angelo: "Angelo Matthews, Capitão da Equipa Sri Lankan Cricket"
+  sports_athlete_Nneka: "Nneka Ogwumike, Medalha de Ouro, Campeã da WNBA e Melhor Jogadora 2016, Los Angeles Sparks"
+  sports_athlete_Carmelo: "Carmelo Anthony, Medalha Olímpica de Ouro e NBA All-Star, New York Knicks"
+  sports_athlete_Marco: "Marco Belinelli, Campeão NBA, Charlotte Hornets"
+  sports_athlete_Neymar: "Neymar Jr., Medalhista de Ouro Olímpico e Jogador de Futebol do FC Barcelona e da Equipa Nacional do Brasil"
+  sports_athlete_Sarah: "Sarah Quita Offringa, Campeã de Windsurf"
+  sports_athlete_Marcelo: "Marcelo, Campeão de Futebol, Real Madrid e Equipa Nacional do Brasil"
+  sports_athlete_Erika: "Erika Olivera, Campeã de Maratona"
+  sports_athlete_John: "John Wall, NBA All-Star, Washington Wizards"
+  sports_athlete_Chris: "Chris Bosh, Medalha Olímpica de Ouro e Campeão da NBA, Miami Heat"
+  sports_athlete_Harrison: "Harrison Barnes, Medalha de Ouro e Campeão NBA, Dallas Mavericks"
+  watch_inspirational_videos: "Antes de começares, vê um destes vídeos inspiradores"
+  video_title_cs_is_everything: "A Ciência da Computação está a Mudar Tudo."
   video_title_inspire_girl: "Inspirar uma rapariga"
+  video_title_cs_intro: "Introdução à Ciência da Computação"
+  video_title_schools_dont_teach: "O que a Maioria das Escolas Não Ensina"
+  video_title_obama: "Presidente Obama sobre as ciências da computação"
+  video_title_hoc_is_here: "A Hora do Código chegou - Todos Podem Aprender"
+  video_title_anybody_can_learn: "Qualquer pessoa pode aprender"
+  video_title_steph_curry: "Hora do Código com Steph Curry"
+  video_title_draymond_green: "Hora do Código com Draymond Green"
+  video_title_russell_okung: "Hora do Código com Russell Okung"
+  video_title_real_madrid: "Hora do Código com Real Madrid"
+  video_title_marco_belinelli: "Hora do Código com Marco Belinelli"
+  video_title_chris_bosh: "Chris Bosh sobre Ciências da Computação "
+  video_title_my_name_is_aracely: "Chamo-me Aracely"
+  video_1min: "1 minuto"
+  video_2min: "2 minutos"
+  video_3min: "3 minutos"
+  video_5min: "5 minutos"
+  speak_another_language: "Falas outra língua?"
+  help_translate: "Ajuda-nos a traduzir."
+  no_internet: "Não tens Internet?"
+  download_offline: "Descarrega a versão offline."
   are_you_teacher: "É um professor?"
+  review_lesson_plan: "Revê o plano da lição e outros recursos de professores."
   volunteer_engineer_submission_title: "Inspire alunos e seja um voluntário na Hora do Código."
   volunteer_engineer_submission_subtitle_generic: '100.000 professores vão ser anfitriões de uma Hora do Código na sua sala de aula este ano, de 7 a 13 de dezembro de 2015. Eles querem a sua ajuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} professores querem voluntários apaixonados pelo ensino da Informática e das Ciências da Computação para ajudar na sua Hora do Código em dezembro deste ano. <br>%{num_volunteers} voluntários já se inscreveram. Junta-te a eles."
   volunteer_engineer_submission_intro_background: "A Hora do Código é um movimento global para experimentar uma introdução de uma hora à Ciência da Computação e Informática, atingindo dezenas de milhões de estudantes em + de 180 países. Por favor, envolva-se durante a Semana da Educação em Ciência da Computação, de 7 a 13 de dezembro."
   volunteer_engineer_submission_intro_recruit: 'Estes professores adorariam ter alguém <span style="font-family: ''Gotham 7r'', sans-serif;"> apaixonado sobre o ensino de Ciências da Computação</span> que possa ajudar na sala de aula, ou alguém que possa <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar</span> os seus alunos falando sobre o mundo de possibilidades que se abre à Ciência da Computação (que pode ser feito através de um chat vídeo).'
+  volunteer_engineer_submission_intro_guide: "Aprende mais sobre o nosso <a href=\"%{volunteer_guide}\">programa de voluntariado aqui</a>."
   volunteer_engineer_submission_intro_signup: "Por favor, insira as seguintes informações, se você é um estudante de Informática ou um profissional da área. Os campos marcados com um <span class=\"form-required-field\"> *</span> são obrigatórios."
   volunteer_engineer_submission_intro_links: "Não quer ser voluntário? <a href=\"%{learn_more}\"> Saiba mais</a> sobre como organizar o seu próprio evento da Hora do Código e encontrar um voluntário local no nosso <a href=\"%{volunteer_local}\"> mapa de voluntários</a>."
+  volunteer_engineer_submission_intro_links_markdown: "É um(a)  professor(a) à procura de voluntários? Encontre um voluntário local no nosso [mapa de voluntários](%{volunteer_local})."
+  volunteer_engineer_submission_update_information: "Atualiza a tua informação"
   volunteer_engineer_submission_header_shared: "Informações partilhadas com os professores no mapa de voluntários"
   volunteer_engineer_submission_field_name: "Nome"
   volunteer_engineer_submission_field_name_placeholder: "Nome completo"
@@ -415,11 +523,13 @@
   volunteer_engineer_submission_field_email: "Endereço de e-mail"
   volunteer_engineer_submission_field_email_desc: "O seu endereço de e-mail nunca será partilhado, mas vamos enviar-lhe as solicitações dos professores."
   volunteer_engineer_submission_field_email_placeholder: "Endereço de e-mail"
+  volunteer_engineer_submission_field_email_preference: "Podemos enviar-te um email sobre as atualizações dos nossos cursos, oportunidades de voluntariado ou outras notícias acerca da ciência de computação?"
   volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nossa política de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sim'
   volunteer_engineer_submission_field_email_preference_no: 'Não'
   volunteer_engineer_submission_final_paragraph: "Você será listado no mapa para professores locais para que o contactem para a Hora do Código ou para outras oportunidades de voluntariado. O seu e-mail e endereço exato nunca serão partilhados por nós. Mas as outras informações (incluindo a localização aproximada) será visível publicamente por professores na sua zona."
   volunteer_engineer_submission_checkbox_contact: 'Eu concordo que os professores podem contactar-me para oportunidades de voluntariado (Nota: o seu e-mail não será partilhado)'
+  volunteer_engineer_submission_checkbox_age_18_plus: "Confirmo que tenho pelo menos 18 anos."
   volunteer_engineer_submission_submit: "OK"
   volunteer_engineer_submission_thankyou: "Obrigado por se voluntariar para a Hora do Código. Prepare-se para a Hora do Código e para recrutar outros voluntários, <a href=\"%{url}\"> saiba mais aqui.</a>"
   volunteer_engineer_submission_commitment_uncertain: "Incerto"
@@ -496,8 +606,12 @@
   dashboard_action_delete_no: 'Não'
   dashboard_action_confirm: "Apagar?"
   dashboard_action_done: "Terminado"
+  dashboard_action_print_certificates: "Imprimir certificados"
   dashboard_assessments_summaries: "Resumos"
   dashboard_assessments_answers: "Todas as respostas"
+  dashboard_surveys_answers: "Inquéritos"
+  dashboard_percent: "Percentagem"
+  dashboard_filter_by_stage: 'Filtrar por nível:'
   dashboard_filter_all: "Todos"
   dashboard_download_csv: "Transferir CSV"
   dashboard_navigation_home_page: "Página inicial do professor"
@@ -525,6 +639,7 @@
   dashboard_progress_furthest_level_attempted: "tentativa para o nível mais avançado"
   dashboard_progress_submitted: "submetido"
   dashboard_progress_view: 'Ver progresso em:'
+  dashboard_progress_pair_programming: "programação por pares"
   dashboard_responses_view: 'Ver respostas de texto em:'
   dashboard_sections_new_section: "Nova turma"
   dashboard_sections_jumbotron_instruction: "Crie novas turmas e adicione alunos a elas. As turmas ajudam na organização dos alunos em grupos menores para que você possa acompanhar seu progresso e gerenciar suas contas."
@@ -543,6 +658,11 @@
   dashboard_sections_print_secrets: "Você pode imprimir uma folha com cartões contendo as informações da conta para distribuir individualmente para seus alunos."
   dashboard_sections_switch_section: 'Trocar de turma:'
   dashboard_sections_close: "Fechar"
+  dashboard_sections_move_to_section: 'Ir para a secção:'
+  dashboard_sections_enter_code: 'Introduz o código da secção:'
+  dashboard_sections_code_placeholder: "Código de 6 caracteres (ABCDEF)"
+  dashboard_sections_other_section: "Outro Professor"
+  dashboard_sections_yes_both: "Sim, Eu quero copiar o aluno(s) para estar nesta secção atual E a nova secção."
   dashboard_sections_move_students: "Mover alunos"
   dashboard_students_add_multiple: 'Digite ou cole os nomes dos seus alunos, um por linha:'
   dashboard_students_new_section: "Você criou uma nova turma! Agora, adicione seus alunos usando os botões <b>Adicionar aluno</b> e <b>Adicionar vários alunos</b> acima."
@@ -563,6 +683,7 @@
   dashboard_students_join_link: "Peça a seus alunos para que criem suas próprias contas e junte-se a turma em"
   dashboard_students_no_email: "Se seus alunos não têm endereço de e-mail, ou se você quer criar as contas para eles, altere o tipo de segredo da turma para <b>palavra</b> ou <b>imagem</b>."
   dashboard_students_print_page: "Imprimir esta página"
+  dashboard_students_signin_card: "Visite %{join_url} e entre %{section_code}"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">Clique aqui</a> para partilhar ou imprimir o nosso documento de privacidade."
   dashboard_curriculum_k5_title: "Recursos para professores do 1.º Ciclo"
@@ -574,6 +695,15 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
+  dashboard_coursea: 'Curso A: '
+  dashboard_courseb: 'Curso B: '
+  dashboard_coursec: 'Curso C: '
+  dashboard_coursed: 'Curso D: '
+  dashboard_coursee: 'Curso E: '
+  dashboard_coursef: 'Curso F: '
+  dashboard_pre-express: 'Pré-leitor Curso Expresso: '
+  dashboard_express: 'Curso Expresso: '
+  dashboard_tools: 'Ferramentas:'
   dashboard_curriculum: "Currículo"
   dashboard_curriculum_overview: "Visão geral do currículo do pré ao 5º ano"
   dashboard_overview: "Visão geral"
@@ -591,6 +721,7 @@
   dashboard_curriculum_csins: 'Ciência da computação na ciência:'
   dashboard_curriculum_csp: 'AP® Princípios da ciência da computação:'
   dashboard_curriculum_ecs: 'Explorando a Ciência da Computação:'
+  dashboard_curriculum_csd: 'Descobertas da Ciência da Computação: '
   dashboard_grade_k: "Nível"
   dashboard_grade_other: "Outro"
   dashboard_login_word: "Palavra"
@@ -630,11 +761,21 @@
   dashboard_faq_k5: "Perguntas frequentes do Ensino Fundamental"
   code_hoc_coming: "A Hora de Código chegou: de 8 a 14 de dezembro!"
   code_sign_up: "Inscreva-se para participar durante a Semana da Educação em Ciência da Computação"
+  learn_banner_title: "Junta-te a nós para a Hora do Código"
   learn_more: "Experimentar agora"
+  learn_sign_up_description: "Inscreva-se para participar na Hora do Código durante a Semana da Educação em Ciências da Computação"
   learn_sign_up_button: "Criar conta"
+  learn_videos_watch: "Veja este vídeo inspirador com a sua turma"
+  learn_videos_show: "Mostre este vídeo inspirador à sua turma"
+  learn_videos_before_hoc: "Veja um vídeo inspirador antes da sua Hora do Código"
+  learn_educator_resources_description: "Aprenda como ensinar uma Hora de Código"
   learn_educator_resources_button: "Recursos para professores"
   learn_are_you_educator: "É professor? Veja <a href=\"http://hourofcode.com/resources/how-to\">como ensinar uma Hora de Código</a>"
+  learn_find_volunteer: "<a href=\"https://code.org/volunteer/local\">Encontrar um voluntário local</a> para ajudar durante a Hora do Código"
+  learn_teacher_led_lesson_plans: "Inspire-se com <a href=\"https://code.org/teacher-led\">planos de lição do professor para Hora de Código</a>\n"
+  learn_how_to_hoc: "Siga <a href=\"https://hourofcode.com/how-to\">o nosso guia</a> para ensinar uma Hora de Código"
   learn_hoc_prizes: "<a href=\"https://hourofcode.com/prizes\"> Saber mais</a> sobre os prêmios para cada educador, antes que acabem"
+  learn_inspirational_videos: "Inspire os alunos mostrando-lhes  <a href=\"https://code.org/educate/inspire\">estes vídeos</a>"
   hoc2014_try_new_tutorials: "Experimente nossos novos tutoriais da Hora do Código"
   hoc2014_try_new_tutorial: "Experimente nosso novo tutorial da Hora do Código na versão beta"
   hoc2014_try_scrat: "Angry Birds, PvZ e Scrat"
@@ -642,6 +783,7 @@
   carousel_heading_codeorg: "Tutorial por Code.org"
   carousel_heading_codeorg_any_device: "Tutorial por Code.org (para todos os dispositivos)"
   carousel_heading_3rd_party: "Tutoriais de terceiros"
+  carousel_heading_third_party: "Tutoriais de terceiros"
   carousel_heading_international: "Tutoriais em português"
   carousel_heading_domestic: "Tutoriais disponíveis em inglês"
   carousel_heading_beginners: "Tutoriais para iniciantes"
@@ -655,10 +797,15 @@
   carousel_heading_beyond_languages: "Tutoriais sobre outras linguagens de programação"
   carousel_heading_apps_games: "Crie seus próprios aplicativos e jogos"
   carousel_heading_university: "Cursos universitários on-line"
+  carousel_heading_online_university: "Cursos Universitários Disponíveis Online"
   carousel_heading_webpages: "Aprenda a fazer páginas da Web"
   carousel_heading_robots: "Aprenda a programar com robôs"
   carousel_heading_ide: "Plataformas populares entre professores"
+  carousel_heading_desktop: "Aprenda a codificar num computador"
+  carousel_heading_mobtabelem: "Para telefones e tablets"
+  carousel_heading_prereader: "Para pré-leitores"
   educator_notes: "Observações do professor"
+  teach_led_lesson_plans: "Planos de lição do professor"
   learn_footer_all_tutorials: "Vê a <a href=\"https://code.org/educate/allhourofcode\">lista completa de tutorias da Hora de Código</a>. Para veres as regras de submissão de tutoriais da Hora de Código, <a href=\"https://hourofcode.com/tutorial-guidelines\">clica aqui.</a>"
   how_to_teach_hoc: "Como dar uma aula da \"Hora de Código\""
   more_resources_educators: "Mais recursos para professores"
@@ -711,11 +858,36 @@
   csfirst_name: "CS First"
   boxisland_name: "Box Island"
   texasinstruments_name: "10 minutos de código"
+  teacherled_name: "Planos de lição do professor"
   course1_name: "Curso 1"
   course2_name: "Curso 2"
   course3_name: "Curso 3"
   course4_name: "Curso 4"
+  coursea-draft_name: Curso A
+  coursea_name: "Curso A"
+  courseb-draft_name: Curso B
+  courseb_name: "Curso B"
+  coursec-draft_name: Curso C
+  coursec_name: "Curso C"
+  coursed-draft_name: Curso D
+  coursed_name: "Curso D"
+  coursee-draft_name: Curso E
+  coursee_name: "Curso E"
+  coursef-draft_name: Curso F
+  coursef_name: "Curso F"
+  coursea-2017_name: Curso A (2017)
+  courseb-2017_name: Curso B (2017)
+  coursec-2017_name: Curso C (2017)
+  coursed-2017_name: Curso D (2017)
+  coursee-2017_name: Curso E (2017)
+  coursef-2017_name: Curso F (2017)
+  express-2018_name: Curso Expresso (2018)
+  pre-express-2018_name: Pré-leitor Curso Expresso (2018)
+  pre-express-2019_name: Pré-leitor Curso Expresso (2019)
+  csd2_name: 'Unidade 2: Desenvolvimento da Web'
+  csd3_name: 'Unidade 3: Animação e Jogos'
   accelerated_name: "Curso acelerado"
+  pre-express_name: Pré-leitor Curso Expresso
   20-hour_name: Curso acelerado
   algebra_name: "CS em Álgebra"
   AlgebraA_name: "CS no Curso de Álgebra A"
@@ -725,8 +897,12 @@
   iceage_name: "Idade do gelo"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Guerra das Estrelas (Blocos)"
+  hoc-encryption_name: Encriptação Simples
+  text-compression_name: Compressão de Texto
   applab_name: "Laboratório de aplicações"
+  basketball_name: "Faça um jogo de basquetebol."
   applab_gradelevel: "Maiores de 13 anos"
+  applab_shortdescription_congrats: "O laboratório de app é um ambiente de programação, onde você pode fazer apps simples. Design de um app, o código com blocos ou JavaScript para fazer o trabalho, em seguida, compartilhar seu app em segundos."
   codeorg_gradelevel: "Dos 4 aos 104 anos"
   codeintl_gradelevel: "Dos 4 aos 104 anos"
   khan_gradelevel: "Maiores de 15 anos"
@@ -780,14 +956,36 @@
   course2_gradelevel: "Dos 6 aos 18 anos"
   course3_gradelevel: "Dos 8 aos 18 anos"
   course4_gradelevel: "Dos 10 aos 18 anos"
+  coursea_gradelevel: "Idades 4-7"
+  courseb_gradelevel: "Idades 5-8"
+  coursec_gradelevel: "Idades 6-10"
   coursed_gradelevel: "Notas 8+"
   coursee_gradelevel: "Dos 8 aos 12 anos"
+  coursef_gradelevel: "Idades 9-13"
+  coursea-2017_gradelevel: Idades 4-7
+  courseb-2017_gradelevel: Idades 5-8
+  coursec-2017_gradelevel: Idades 6-10
   coursed-2017_gradelevel: Notas 8+
   coursee-2017_gradelevel: Dos 8 aos 12 anos
+  coursef-2017_gradelevel: Idades 9-13
+  coursea-2018_gradelevel: Idades 4-7
+  courseb-2018_gradelevel: Idades 5-8
+  coursec-2018_gradelevel: Idades 6-10
   coursed-2018_gradelevel: Notas 8+
   coursee-2018_gradelevel: Dos 8 aos 12 anos
+  coursef-2018_gradelevel: Idades 9-13
+  coursea-2019_gradelevel: Idades 4-7
+  courseb-2019_gradelevel: Idades 5-8
+  coursec-2019_gradelevel: Idades 6-10
   coursed-2019_gradelevel: Notas 8+
   coursee-2019_gradelevel: Dos 8 aos 12 anos
+  coursef-2019_gradelevel: Idades 9-13
+  coursea-2020_gradelevel: Idades 4-7
+  courseb-2020_gradelevel: Idades 5-8
+  coursec-2020_gradelevel: Idades 6-10
+  coursed-2020_gradelevel: Notas 8+
+  coursee-2020_gradelevel: Dos 8 aos 12 anos
+  coursef-2020_gradelevel: Idades 9-13
   accelerated_gradelevel: "Dos 10 aos 18 anos"
   codeorg_platformtext: "Navegadores modernos, smartphones e tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones e tablets"
@@ -1082,14 +1280,26 @@
   processing_beyond_longdescription: "Processing é uma linguagem de programação, um ambiente de desenvolvimento e uma comunidade on-line. Desde 2001, Processing promove a alfabetização em softwares na área de artes visuais dentro do ambiente tecnológico. Inicialmente criada para servir como um software usado para ensinar os fundamentos de programação dentro de um contexto visual, Processing evoluiu para uma ferramenta de desenvolvimento para profissionais. Hoje, há dezenas de milhares de alunos, artistas, designers, pesquisadores e amadores que usam Processing para o aprendizado, para a prototipagem e para a produção."
   alice_beyond_longdescription: "Usando um inovador ambiente de programação com suporte para a criação de animações em 3D, o projeto Alice fornece ferramentas e materiais para ensinar e aprender pensamento computacional, resolução de problemas e programação para várias idades e níveis escolares."
   sphero_beyond_longdescription: "Quer seja professor ou pai, as aulas do SPRK proporcionam às crianças um curso divertido acerca da programação de robôs, e, ao mesmo tempo, aperfeiçoam as competências dos alunos em Matemática e Ciências."
+  compatibility_hide_this_warning: "Ocultar este aviso"
   compatibility_unsupported_browser: "O seu navegador não é suportado. Por favor atualize o seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidade podem não estar disponíveis."
   compatibility_unsupported_browser_markdown: "O seu navegador não é suportado. Por favor atualize o seu navegador para <a href='%{supported_browsers_url}', target='_blank'> um dos nossos navegadores suportados</a>. Você pode tentar visualizar a página, mas algumas funcionalidade podem não estar disponíveis."
   flappy_shortcode: "bater as assas"
   header_home: "Início"
+  header_my_dashboard: "O Meu Painel de Controlo"
   header_courses: "Cursos"
+  header_course_catalog: "Catálogo de Cursos"
   header_project_gallery: "Projetos"
   header_sections: "Turmas"
+  header_educate_overview: "Visão geral do professor"
+  header_educate_elementary: "Primária"
+  header_educate_middle: "2º e 3º ciclos do ensino básico"
+  header_educate_high: "Secundário"
   header_educate_hoc: "Hora de Código"
+  header_educate_partner: "Associa-te connosco"
+  header_educate_beyond: "Para além da Code.org"
+  header_educate_inspire: "Inspira um estudante"
+  header_educate_community: "Comunidade online"
+  header_educate_tools: "Ferramentas e Vídeos"
   header_about_us: "Quem somos"
   header_about_leadership: "Administração"
   header_about_donors: "Doadores"
@@ -1100,35 +1310,81 @@
   header_about_jobs: "Empregos"
   header_about_contact: "Contacte-nos"
   header_about_faqs: "Perguntas frequentes"
+  header_learn: "Aprender"
+  header_teach: "Ensina"
   header_stats: "Estatística"
+  header_help_us: "Ajuda-nos"
+  header_about: "Sobre"
   header_teacher_community: "Comunidade de professores"
   header_help_support: 'Ajuda e suporte'
   header_report_bug: "Comunicar um problema"
+  header_legal_privacy: "Política de privacidade"
+  header_legal_tos: "Termos de utilização"
   header_tutorials: "Tutoriais"
   header_documentation: "Documentação"
   user_header_label: "Olá, %{username}"
   user_header_team: "Equipa"
-  user_header_settings: "Minha conta"
+  user_header_settings: "Definições da conta"
   user_header_logout: "Terminar sessão"
   user_header_signin: "Iniciar sessão"
   user_header_playlab: "Laboratório"
+  user_header_dance: "Festa da Dança"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy Bird"
   user_header_view_my_projects: "Ver os meus projetos"
   view_all_sections: "Ver todas as turmas"
   applab_tile_start_tutorial: "Começar"
+  account_sign_up_email_opt_in: "Podemos enviar-te um email sobre atualizações dos nossos cursos, oportunidades locais ou outras notícias sobre a ciência de computação? (aproximadamente 1 vez por mês)"
+  account_sign_up_child_accept_terms: "Eu confirmo que tenho autorização dos meus pais ou do encarregado de educação para usar os serviços da Code.org."
+  hoc_overview_dance_title: "Festa da Dança"
   hoc_overview_start_tutorial: "Começar"
   hoc2018_creativity_create: "Criar"
   hoc2018_creativity_what_will_you_create: "O que vais criar?"
+  hoc2018_mc_page_title: "Minecraft Hora do Código Tutoriais"
+  hoc2018_mc_details: "Várias línguas | Navegadores modernos e tablets | A partir do 2º ano"
   hoc2018_mc_designer_title: "Designer de Minecraft"
   hoc2018_mc_designer_description: "Constrói um jogo Minecraft. Cria as tuas próprias versões de galinhas, ovelhas, Creepers, mortos-vivos e muito mais."
+  hoc2018_mc_adventurer_title: "Aventureiro de Minecraft"
+  hoc2018_mc_adventurer_description: "Usa código para levar o Alex ou o Steve numa aventura."
   hoc2018_mc_start: "Começar"
+  hoc2018_mc_no_internet: "Não tens Internet?"
+  hoc2018_mc_download_adventurer: "Descarregue a versão offline do Minecraft Adventurer. "
   hoc2018_mc_educators_box2_button: "Transferir"
+  hoc2018_mc_watch_videos: "Antes de começares, vê um destes vídeos inspiradores"
+  hoc2018_mc_videos_more: "Mais <a href='%{inspiring_videos_playlist}'>vídeos inspiradores</a> a apresentarem modelos e celebridades"
+  hoc2018_mc_careers_more: "Mais <a href='%{careers_url}' target='_blank'>vídeos inspiradores</a> a apresentarem profissionais em campos tecnológicos"
+  hoc2018_mc_video_1min: "1 minuto"
+  hoc2018_mc_video_2min: "2 minutos"
+  hoc2018_mc_video_3min: "3 minutos"
+  hoc2018_mc_video_5min: "5 minutos"
+  hoc2018_mc_video_title_steph_curry: "Hora do Código com Steph Curry"
+  hoc2018_mc_video_title_sports: "Esforce-se. Qualquer um pode aprender."
+  hoc2018_mc_video_title_cs_is_everything: "A Ciência da Computação está a Mudar Tudo."
   hoc2018_mc_video_title_inspire_girl: "Inspirar uma rapariga"
+  hoc2018_mc_video_title_cs_intro: "Introdução à Ciência da Computação"
+  hoc2018_mc_video_title_schools_dont_teach: "O que a Maioria das Escolas Não Ensina"
+  hoc2018_mc_video_title_obama: "Presidente Obama sobre as ciências da computação"
+  hoc2018_mc_video_title_hoc_is_here: "A Hora do Código chegou - Todos Podem Aprender"
+  hoc2018_mc_video_title_anybody_can_learn: "Qualquer pessoa pode aprender"
+  hoc2018_mc_video_title_my_name_is_aracely: "Chamo-me Aracely"
+  hoc2018_mc_homepage_hoc_coming: "A Hora do Código está a chegar..."
   hoc2018_mc_homepage_what_create: "O que vais criar?"
+  hoc2018_mc_homepage_give_flight: "Dá asas à imaginação e nascimento à inovação. Começa com uma Hora do Código e a tua própria marca de criatividade, qualquer que seja."
+  hoc2018_mc_homepage_watch_video: "Vê o nosso vídeo"
   hoc2018_mc_homepage_join_us: "Junta-te a nós"
   hoc2018_mc_homepage_try_it: "Experimentar"
+  hoc2018_dance_party_main_heading: "Festa da Dança"
+  hoc2018_dance_party_box_title: "Festa da Dança"
   hoc2018_dance_party_button: "Começar"
   hoc2018_dance_teacher_resources_tile1_button: "Plano da aula"
   hoc2018_dance_teacher_resources_tile2_button: "Atividade offline"
   hoc2018_dance_amazon_about_future_engineer_button: "Saber mais"
+  page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
+  footer_powered_by_aws: "Powered by Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Apenas em inglês"
+  footer_privacy_policy: "Política de privacidade"
+  footer_about: "Sobre"
+  footer_partners: "Parceiros"
+  footer_donate: "Doar"
+  footer_support: "Suporte"
+  footer_terms: "Termos"

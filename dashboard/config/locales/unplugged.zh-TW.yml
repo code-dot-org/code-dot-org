@@ -94,7 +94,7 @@ zh-TW:
         title: 大事件
         desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
       GoingPlacesSafely:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       GraphPaperProgramming:
         title: 方格紙編程
@@ -139,7 +139,7 @@ zh-TW:
         title: Mad Glibs
         desc: 抽象概念（Abstraction）是一個資訊電腦科學家最需要了解的重要技巧之一。這個活動會讓你的學生分析故事間的差異性，進而讓他們把故事抽象化。這些被抽象化的故事就會變成有趣又瘋狂的新故事的範本。
       ForLoopFun:
-        title: 有趣的計數迴圈
+        title: 有趣的計次迴圈
         desc: 我們知道迴圈可以讓我們不斷重複的做同一件事情，而現在我們要學習如何使用本身有多一些額外的結構的迴圈。
       SongwritingWithParameters:
         title: 用參數寫歌
@@ -167,16 +167,27 @@ zh-TW:
         desc: 偵測畫面上的物件有沒有碰到一起，是大多數遊戲中很重要的設計環節。在這堂課中，我們將看看畢氏定理和距離公式是怎麼用來測量平面上兩點間的距離，以及判斷這兩點（或遊戲角色）有沒有碰在一起。
       courseA_unplugged_loops:
         title: 迴圈的不插電活動
+        desc: 在本課堂中，你會學習迴圈（loop）！
       courseB_unplugged_MRF:
         title: 不插電活動
+        desc: 在本課堂中，你會為好友「設計程式」（program）！
       courseB_unplugged_loopyMRF:
         title: 不插電活動
+        desc: 就像「我的機器人朋友」那樣，你會為朋友「設計程式」，不過這次會使用迴圈（loop）！
       courseC_Unplugged_ScreenOutTheMean:
         title: 不插電活動
+        desc: 今天你會學習一下，若有人在線上惡意傷人，你應該要怎麼做。
       courseD_unplugged_digitalCitizenship:
         title: 不插電活動
+        desc: 今天，你會學習數位公民的意義所在。
+      courseE_unplugged_privateInformation:
+        title: 常識教育：隱私與個人資訊
+        desc: 今天，你將了解私人資訊與個人資訊之間的區別！
       courseF_unplugged_powerOfWords:
         title: 不插電活動
+        desc: 今天你會學習一下，若有人在線上惡意傷人，你應該要怎麼做。
+      deeper learning description:
+        desc: '翻譯不見了: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 生活中的演算法 - 植物種植
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
@@ -184,7 +195,7 @@ zh-TW:
         title: 快樂地圖
         desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       courseA_unplugged_goingPlacesSafely:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       courseABC_unplugged_bigEvent:
         title: 大事件
@@ -217,6 +228,7 @@ zh-TW:
         title: 二進制圖像
         desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。
       courseE_unplugged_diceRace:
+        title: 生活中的演算法 - 擲骰子比賽
         desc: 這課展示我們在日常生活中使用的演算法。其中有個部分，學生會發現並寫出擲骰子比大小遊戲的演算法。
       courseE_unplugged_songwritingParameters:
         title: 用參數寫歌
@@ -237,11 +249,30 @@ zh-TW:
         title: 信封變數
         desc: 在計算機科學中，變數提供了很大的自由度。這節課有助於解釋什麼是變數，以及我們如何用不同的方法來使用它們。在這節課實施前，需要先（或同時）清楚抽象概念。
       courseF_unplugged_forLoopFun:
-        title: 有趣的計數迴圈
+        title: 有趣的計次迴圈
         desc: 我們知道迴圈可以讓我們不斷重複的做同一件事情，而現在我們要學習如何使用本身有多一些額外的結構的迴圈。
       courseF_unplugged_songwritingParameters:
         title: 用參數寫歌
         desc: '在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。  '
+      swipeRightPassThrough:
+        title: 招募情境工作階段
+        desc: "# 招募情景工作階段\r\r## 向右掃，學電腦\r在這個工作階段中，我們會使用稱為「向右掃，學電腦」（Swipe Right for
+          CS）的工具，這款工具由麻省理工大學的合作夥伴製作。在「向右掃，學電腦」中，你會閱讀一些學生檔案，並思考一些特定的句子，是否可用於說服他/她登記你的電腦科學原理課程。\r\r###
+          使用方法\r玩「向右掃，學電腦」遊戲時，你會看見一系列的引述句子，並可能會用來對每位學生說出來。若你認為引述句子可有效說服學生報名參加課程，就把句子向右側輕掃；若你認為句子效用不大，則向左側輕掃。在工作階段中，我們會以小組形式討論你的想法，瞭解你認為哪類句子最有效讓學生報名參加
+          CS 課程，而你也有機會看看工作坊裡的其他人對每個引述句子的選擇。\r\r\r點擊下方的「Continue」（繼續）後，我們會把你帶到遊戲中，然後傳達你用來登入的
+          Code.org 電郵地址。"
+      swipeRightPassThrough-test123:
+        title: 招募情境工作階段
+        desc: "# 招募情景工作階段\r\r## 向右掃，學電腦\r在這個工作階段中，我們會使用稱為「向右掃，學電腦」（Swipe Right for
+          CS）的工具，這款工具由麻省理工大學的合作夥伴製作。在「向右掃，學電腦」中，你會閱讀一些學生檔案，並思考一些特定的句子，是否可用於說服他/她登記你的電腦科學原理課程。\r\r###
+          使用方法\r玩「向右掃，學電腦」遊戲時，你會看見一系列的引述句子，並可能會用來對每位學生說出來。若你認為引述句子可有效說服學生報名參加課程，就把句子向右側輕掃；若你認為句子效用不大，則向左側輕掃。在工作階段中，我們會以小組形式討論你的想法，瞭解你認為哪類句子最有效讓學生報名參加
+          CS 課程，而你也有機會看看工作坊裡的其他人對每個引述句子的選擇。\r\r\r點擊下方的「Continue」（繼續）後，我們會把你帶到遊戲中，然後傳達你用來登入的
+          Code.org 電郵地址。"
+      brad-repro-bug-000:
+        title: Brad 重現錯誤 000
+      courseB_unplugged_MRF_2018:
+        title: 我的機器人朋友
+        desc: 通過為自己的朋友編寫程式碼來學習程式設計！
       PlantASeed_2018:
         title: 生活中的演算法 - 植物種植
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
@@ -249,10 +280,11 @@ zh-TW:
         title: 快樂地圖
         desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       GoingPlacesSafely_2018:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       courseA_unplugged_loops_2018:
         title: 迴圈的不插電活動
+        desc: 在本課堂中，你會學習迴圈（loop）！
       BigEvent_2018:
         title: 大事件
         desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
@@ -261,8 +293,10 @@ zh-TW:
         desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
       courseD_unplugged_digitalCitizenship_2018:
         title: 不插電活動
+        desc: 今天，你會學習數位公民的意義所在。
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: 不插電活動
+        desc: 今天你會學習一下，若有人在線上惡意傷人，你應該要怎麼做。
       Conditionals_2018:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
@@ -283,26 +317,68 @@ zh-TW:
         desc: 學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用一種以上的方法來呈現和儲存。
       MoveItMoveIt_2018:
         title: 移動它，移動它
+      courseB_unplugged_CnC_2018:
+        title: 以公平的方式製作與玩遊戲
+        desc: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解分享與靈感的創意過程。此外還會宣揚創意表達，以及需要公平對待創意作品。
+      courseE_unplugged_CnC_2018:
+        title: 數位分享
+        desc: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解尊重所有權與著作權的挑戰和優點，尤其是在數位環境中。教師應鼓勵學生，我們是遵守道德的數位公民，重點之一是尊重藝術家的權利。
       RelayProgramming_2018:
         title: 接力編程
+        desc: 這項活動首先會以簡短的課堂開始，內容關於除錯與堅持，然後會快速轉至倒數計時活動，學生會分為多個團隊，一起編寫程式，每次編寫一項指令。
+      courseB_unplugged_MRF_2019:
+        title: 我的機器人朋友
+        desc: 通過為自己的朋友編寫程式碼來學習程式設計！
+      BuildingAFoundation_2019:
+        title: '翻譯不見了: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: 我的愛迴圈機器人朋友
       Conditionals_2019:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
+      courseF_unplugged_powerOfWords_2019:
+        title: '翻譯不見了: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: '翻譯不見了: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: '翻譯不見了: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: 方格紙編程
         desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
       RelayProgramming_2018_2019:
         title: 接力編程
+        desc: 這項活動首先會以簡短的課堂開始，內容關於除錯與堅持，然後會快速轉至倒數計時活動，學生會分為多個團隊，一起編寫程式，每次編寫一項指令。
       courseD_unplugged_digitalCitizenship_2019:
         title: 不插電活動
+        desc: 今天，你會學習數位公民的意義所在。
       BinaryImages_2019:
         title: 二進制圖像
         desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。
+      courseE_unplugged_privateInformation_2019:
+        title: 隱私與個人資訊
+        desc: 本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。
+      SongwritingParameters_2019:
+        title: '翻譯不見了: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: 數位分享
+        desc: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解尊重所有權與著作權的挑戰和優點，尤其是在數位環境中。教師應鼓勵學生，我們是遵守道德的數位公民，重點之一是尊重藝術家的權利。
+      Internet_2019:
+        title: '翻譯不見了: en-US.data.unplugged.Internet_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: '翻譯不見了: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: '翻譯不見了: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: 學習迴圈
         desc: 這一課經由舞蹈活動來介紹迴圈（重複一些指令）這個編程概念。學生會學習到簡單的動作，然後依照指示重複這些動作。
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: 不插電活動
+        desc: 今天你會學習一下，若有人在線上惡意傷人，你應該要怎麼做。
       BigEvent_2019:
         title: 大事件
         desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
@@ -312,6 +388,13 @@ zh-TW:
       PaperPlanes_2019:
         title: 生活中的演算法 - 紙飛機
         desc: 這課以製作紙飛機為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
+      test-uid-passthrough:
+        desc: "# 招募情景工作階段\r\r## 向右掃，學電腦\r在這個工作階段中，我們會使用稱為「向右掃，學電腦」（Swipe Right for
+          CS）的工具，這款工具由麻省理工大學的合作夥伴製作。在「向右掃，學電腦」中，你會閱讀一些學生檔案，並思考一些特定的句子，是否可用於說服他/她登記你的電腦科學原理課程。\r\r##
+          使用方法\r玩「向右掃，學電腦」遊戲時，你會看見一系列的引述句子，並可能會用來對每位學生說出來。若你認為引述句子可有效說服特定學生報名參加課程，就把句子向右側輕掃；若你認為句子效用不大，則向左側輕掃。在工作階段中，我們會以小組形式討論你的想法，瞭解你認為哪類句子最有效讓學生報名參加
+          CS 課程，而你也有機會看看工作坊裡的其他人對每個引述句子的選擇。\r<br><br><br><br>\r\r<span style=\"display:none\">submitButton
+          next-stage</span>\r\r<a class=\"btn btn-large btn-primary submitButton\"
+          href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">點擊這裡，開始「向右掃，學電腦」遊戲！</a>\r\r"
       PlantASeed_2019:
         title: 生活中的演算法 - 植物種植
         desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
@@ -319,19 +402,38 @@ zh-TW:
         title: 快樂地圖
         desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       GoingPlacesSafely_2019:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       courseA_unplugged_loops_2019:
         title: 迴圈的不插電活動
+        desc: 在本課堂中，你會學習迴圈（loop）！
       MoveItMoveIt_2019:
         title: 移動它，移動它
       DigitalFootprint_2019:
         title: 你的數位足跡
         desc: 教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。
+      courseB_unplugged_CnC_2019:
+        title: 以公平的方式製作與玩遊戲
+        desc: 本課堂由「著作權與創意」團隊借予電腦科學基礎。提供本課堂之目的，是協助學生瞭解分享與靈感的創意過程。此外還會宣揚創意表達，以及需要公平對待創意作品。
+      GraphingData_2019:
+        title: 描繪資料
+        desc: 在本課堂中，學生會收集 Play Lab 專案或現實世界情景的資料，並以這些資料來做出預測。
       courseE_unplugged_accessAbility_2019:
         title: 輔助功能
+        desc: 瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
+      courseE_simon_says_2019:
+        title: 老師說
+        desc: "玩一個遊戲，同時思考需要使用哪些指令才能獲得正確的結果。\r\n\r\n![測試圖像](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: 強大的密碼
+        desc: 瞭解我們為甚麼要使用密碼、瞭解使用密碼的優點，並發掘各種策略，從而建立並儲存強效、安全的密碼。
       timeforcs_demo_crowdsourcing:
         title: 群眾外包（Crowdsourcing）
+        desc: _Josh 注意：與課堂 1 不同，我們已把這個課堂格式化，就像一般不插電課堂一樣。_
       timeforcs_demo_conditionals:
         title: 條件判斷（Conditionals）
         desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
+      TheRightApp_2019:
+        title: 合適的應用程式
+        desc: "* 在現代社會，所有人都會使用電腦，尤其是智慧型手機。\r* 智慧型手機應用程式（APP）可幫助大眾完成各種事情，例如與朋友對話、聆聽音樂、購物等，或是僅瀏覽網頁。\r*
+          程式設計師必須瞭解他人的需要，並依據這些需要為他們設計 APP！\r\r![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

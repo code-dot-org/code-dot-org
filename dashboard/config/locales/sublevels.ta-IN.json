@@ -1,0 +1,169 @@
+{
+  "ta-IN": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "செயல்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Loops": "சுழற்சிகள்",
+              "Math": "கணிதம்",
+              "Logic": "தர்க்கம்"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Dancers": "நடனக்கலைஞர்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Numbers": "எண்கள்",
+              "Logic": "தர்க்கம்"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "நட்சத்திரம் வரைக",
+                "parameters": {
+                  "length": "நீளம்"
+                }
+              },
+              "draw a circle": {
+                "name": "ஒரு வட்டத்தை வரையவும்"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "நீளம்",
+                  "repeat": "மறுபடி"
+                }
+              },
+              "draw a triangle": {
+                "name": "ஒரு முக்கோணத்தை வரையவும்",
+                "parameters": {
+                  "length": "நீளம்"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "நீளம்"
+                }
+              },
+              "draw a house": {
+                "name": "ஒரு வீட்டை வரையவும்",
+                "parameters": {
+                  "length": "நீளம்"
+                }
+              },
+              "draw a square": {
+                "name": "ஒரு சதுரத்தை வரையவும்",
+                "parameters": {
+                  "length": "நீளம்"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Actions": "செயல்கள்",
+              "Events": "நிகழ்வுகள்"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Dancers": "நடனக்கலைஞர்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Numbers": "எண்கள்",
+              "Logic": "தர்க்கம்"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "செயல்கள்",
+              "Loops": "சுழற்சிகள்",
+              "Math": "கணிதம்",
+              "Logic": "தர்க்கம்",
+              "Functions": "செயல்பாடுகள்",
+              "Variables": "மாறிலிகள்"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Actions": "செயல்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Variables": "மாறிலிகள்",
+              "Math": "கணிதம்",
+              "Logic": "தர்க்கம்",
+              "Functions": "செயல்பாடுகள்",
+              "Text": "உரை"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Actions": "செயல்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Variables": "மாறிலிகள்",
+              "Math": "கணிதம்",
+              "Logic": "தர்க்கம்",
+              "Functions": "செயல்பாடுகள்",
+              "Text": "உரை"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "செயல்கள்",
+              "Loops": "சுழற்சிகள்",
+              "Math": "கணிதம்",
+              "Logic": "தர்க்கம்",
+              "Functions": "செயல்பாடுகள்",
+              "Variables": "மாறிலிகள்"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Actions": "செயல்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Logic": "தர்க்கம்",
+              "Math": "கணிதம்"
+            },
+            "behavior_names": {
+              "recovering": "மீட்கிறது",
+              "moving left and right": "இடது மற்றும் வலது நகரும்",
+              "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "உலகம்",
+              "Actions": "செயல்கள்",
+              "Events": "நிகழ்வுகள்",
+              "Logic": "தர்க்கம்",
+              "Loops": "சுழற்சிகள்",
+              "Math": "கணிதம்",
+              "Variables": "மாறிலிகள்",
+              "Functions": "செயல்பாடுகள்"
+            },
+            "behavior_names": {
+              "recovering": "மீட்கிறது",
+              "moving left and right": "இடது மற்றும் வலது நகரும்",
+              "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+            }
+          }
+        }
+      }
+    }
+  }
+}

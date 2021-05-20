@@ -1,0 +1,506 @@
+{
+  "script": {
+    "name": "minecraft",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:56 UTC",
+    "seeding_key": {
+      "script.name": "minecraft"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Minecraft Hour of Code Designer",
+      "name": "Minecraft Hour of Code Designer",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 2-2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 2-2"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 2-2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 3"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 4"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 4"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Walk"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 New Walk"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 New Walk"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Drop"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 New Drop"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 New Drop"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 5"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 8"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 8"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Village Test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Village Test"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Village Test"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Spawn"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 New Spawn"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 New Spawn"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 6"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 6"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 SCORE LEVEL"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 SCORE LEVEL"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 SCORE LEVEL"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 10"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      },
+      "level_keys": [
+        "MC HOC 2016 Level 10"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 2-2",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 2-2"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 3",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 3"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 4",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 4"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 New Walk",
+        "script_level.level_keys": [
+          "MC HOC 2016 New Walk"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 New Drop",
+        "script_level.level_keys": [
+          "MC HOC 2016 New Drop"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 5",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 5"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 8",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 8"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Village Test",
+        "script_level.level_keys": [
+          "MC HOC 2016 Village Test"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 New Spawn",
+        "script_level.level_keys": [
+          "MC HOC 2016 New Spawn"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 6",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 6"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 SCORE LEVEL",
+        "script_level.level_keys": [
+          "MC HOC 2016 SCORE LEVEL"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MC HOC 2016 Level 10",
+        "script_level.level_keys": [
+          "MC HOC 2016 Level 10"
+        ],
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "lesson_group.key": "",
+        "script.name": "minecraft"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

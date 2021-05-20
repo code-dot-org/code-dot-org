@@ -1,7 +1,5 @@
 ---
 title: 給地區的一小時玩程式活動指引
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## 讓每個學校都能參與，每個學生都能學習！
 
-### 1. Recruit local schools
+### 1.招募當地學校 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

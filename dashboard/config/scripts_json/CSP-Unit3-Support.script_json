@@ -1,0 +1,633 @@
+{
+  "script": {
+    "name": "CSP-Unit3-Support",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS Principles Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "CSP-Unit3-Support"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Unit 3 Overview",
+      "name": "Unit 3 Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "key": "Chunk 1 Overview",
+      "name": "Chunk 1 Overview",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chunk 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "key": "Chunk 2 Overview",
+      "name": "Chunk 2 Overview",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chunk 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "key": "Chunk 3 Overview",
+      "name": "Chunk 3 Overview",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chunk 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "key": "Chunk 4 Overview",
+      "name": "Chunk 4 Overview",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chunk 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "key": "Chunk 5 Overview",
+      "name": "Chunk 5 Overview",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chunk 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "key": "Practice Performance Task",
+      "name": "Practice Performance Task",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice Performance Task",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 breakdown of u3 chunks"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 breakdown of u3 chunks"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 breakdown of u3 chunks"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 tips for prep"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 tips for prep"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 tips for prep"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 1 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 1 concepts"
+        ],
+        "lesson.key": "Chunk 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 1 concepts"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 1 resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 1 resources"
+        ],
+        "lesson.key": "Chunk 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 1 resources"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 2 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 2 concepts"
+        ],
+        "lesson.key": "Chunk 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 2 concepts"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 2 resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 2 resources"
+        ],
+        "lesson.key": "Chunk 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 2 resources"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 3 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 3 concepts"
+        ],
+        "lesson.key": "Chunk 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 3 concepts"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 3 resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 3 resources"
+        ],
+        "lesson.key": "Chunk 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 3 resources"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 4 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 4 concepts"
+        ],
+        "lesson.key": "Chunk 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 4 concepts"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 4 resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 4 resources"
+        ],
+        "lesson.key": "Chunk 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 4 resources"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 5 concepts"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 5 concepts"
+        ],
+        "lesson.key": "Chunk 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 5 concepts"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 5 resources"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 5 resources"
+        ],
+        "lesson.key": "Chunk 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 chunk 5 resources"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u3 practice PT"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u3 practice PT"
+        ],
+        "lesson.key": "Practice Performance Task",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      },
+      "level_keys": [
+        "CSPPD3-u3 practice PT"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 breakdown of u3 chunks",
+        "script_level.level_keys": [
+          "CSPPD3-u3 breakdown of u3 chunks"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 tips for prep",
+        "script_level.level_keys": [
+          "CSPPD3-u3 tips for prep"
+        ],
+        "lesson.key": "Unit 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 1 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 1 concepts"
+        ],
+        "lesson.key": "Chunk 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 1 resources",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 1 resources"
+        ],
+        "lesson.key": "Chunk 1 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 2 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 2 concepts"
+        ],
+        "lesson.key": "Chunk 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 2 resources",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 2 resources"
+        ],
+        "lesson.key": "Chunk 2 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 3 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 3 concepts"
+        ],
+        "lesson.key": "Chunk 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 3 resources",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 3 resources"
+        ],
+        "lesson.key": "Chunk 3 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 4 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 4 concepts"
+        ],
+        "lesson.key": "Chunk 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 4 resources",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 4 resources"
+        ],
+        "lesson.key": "Chunk 4 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 5 concepts",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 5 concepts"
+        ],
+        "lesson.key": "Chunk 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 chunk 5 resources",
+        "script_level.level_keys": [
+          "CSPPD3-u3 chunk 5 resources"
+        ],
+        "lesson.key": "Chunk 5 Overview",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u3 practice PT",
+        "script_level.level_keys": [
+          "CSPPD3-u3 practice PT"
+        ],
+        "lesson.key": "Practice Performance Task",
+        "lesson_group.key": "",
+        "script.name": "CSP-Unit3-Support"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

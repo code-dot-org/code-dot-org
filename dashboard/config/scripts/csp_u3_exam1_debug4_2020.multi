@@ -1,17 +1,38 @@
 name 'csp-u3-exam1-debug4_2020'
 height 'auto'
 
-question ‘The following program is run. Then the user clicks the “topButton” ONCE and then clicks the “bottomButton” ONCE. What will be displayed in the console?’
+question ‘The following program is run. Then the user clicks the “bottomButton” ONCE and then clicks the “topButton” ONCE. What will be displayed in the console?’
 
-wrong ‘<pre>aaa<br>bbb<br>ccc</pre>’
-wrong ‘<pre>aaa<br>ccc<br>bbb</pre>’
-wrong ‘<pre>bbb<br>aaa<br>ccc</pre>’
-right ‘<pre>ccc<br>bbb<br>aaa</pre>’
+wrong ‘`aaa`  
+`bbb`  
+`ccc`’
+wrong ‘`aaa`  
+`ccc`  
+`bbb`’
+wrong ‘`bbb`  
+`aaa`  
+`ccc`’
+right ‘`ccc`  
+`bbb`  
+`aaa`’
 
 
 
 
 teacher_markdown <<MARKDOWN
+
+**Explanation:** Walking through the code run based on the description in the question:
+* Line 7 will run as soon as the program is run, displaying `ccc` to the console.
+* The user clicks the “bottomButton” ONCE which causes line 5 to run, displaying `bbb` to the console.
+* The user clicks the “topButton” ONCE which causes line 2 to run, displaying `aaa` to the console.
+
+[Lesson 6 - Intro to Programming](https://curriculum.code.org/csp-20/unit3/6/) showed students examples of programs like this one.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.C.5: In event-driven programming, program statements are executed when triggered rather than through the sequential flow of control.
+
+:::
 
 MARKDOWN
 

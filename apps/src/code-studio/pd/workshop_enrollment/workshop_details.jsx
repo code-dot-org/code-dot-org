@@ -5,15 +5,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {WorkshopPropType} from './enrollmentConstants';
 
-const styles = {
-  label: {
-    textAlign: 'right'
-  },
-  notes: {
-    whiteSpace: 'pre-wrap'
-  }
-};
-
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
@@ -59,9 +50,16 @@ export default class WorkshopDetails extends React.Component {
           <strong>Location:</strong>
         </div>
         <div className="span2">
-          {this.props.workshop.location_name}
-          <br />
-          {this.props.workshop.location_address}
+          {this.props.workshop.virtual
+            ? 'Virtual'
+            : this.props.workshop.location_name}
+          {!this.props.workshop.virtual &&
+            this.props.workshop.location_address && (
+              <div>
+                <br />
+                {this.props.workshop.location_address}
+              </div>
+            )}
         </div>
       </div>
     );
@@ -80,6 +78,21 @@ export default class WorkshopDetails extends React.Component {
         </div>
       </div>
     );
+  }
+
+  fee() {
+    if (this.props.workshop.course === 'CS Fundamentals') {
+      return (
+        <div className="row">
+          <div className="span2" style={styles.label}>
+            <strong>Fee:</strong>
+          </div>
+          <div className="span2">{this.props.workshop.fee || 'No cost!'}</div>
+        </div>
+      );
+    }
+
+    return null;
   }
 
   regionalPartner() {
@@ -130,9 +143,19 @@ export default class WorkshopDetails extends React.Component {
         {this.sessionDates()}
         {this.location()}
         {this.courseAndSubject()}
+        {this.fee()}
         {this.regionalPartner()}
         {this.organizerAndNotes()}
       </div>
     );
   }
 }
+
+const styles = {
+  label: {
+    textAlign: 'right'
+  },
+  notes: {
+    whiteSpace: 'pre-wrap'
+  }
+};

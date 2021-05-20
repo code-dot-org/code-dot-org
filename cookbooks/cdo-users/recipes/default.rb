@@ -6,7 +6,7 @@
 require 'chef/user'
 require 'chef/client'
 
-chef_gem "aws-sdk-ec2"
+chef_gem("aws-sdk-ec2") {compile_time true}
 require 'aws-sdk-ec2'
 
 apt_package 'awscli' # AWS command-line tools

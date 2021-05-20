@@ -1,0 +1,6224 @@
+{
+  "script": {
+    "name": "new-d",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:07 UTC",
+    "seeding_key": {
+      "script.name": "new-d"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Algorithms: Graph Paper Programming",
+      "name": "Algorithms: Graph Paper Programming",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Introduction",
+      "name": "Introduction",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Building a Foundation",
+      "name": "Building a Foundation",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Debugging in Collector",
+      "name": "Debugging in Collector",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Events in Bounce",
+      "name": "Events in Bounce",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Loops in Ice Age",
+      "name": "Loops in Ice Age",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Loops in Artist",
+      "name": "Loops in Artist",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Nested Loops in Bee",
+      "name": "Nested Loops in Bee",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Nested Loops in Artist",
+      "name": "Nested Loops in Artist",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "While Loops in Farmer",
+      "name": "While Loops in Farmer",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Conditionals with Cards",
+      "name": "Conditionals with Cards",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Conditionals in Bee",
+      "name": "Conditionals in Bee",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Conditionals & Loops in Maze",
+      "name": "Conditionals & Loops in Maze",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Conditionals & Loops in Farmer",
+      "name": "Conditionals & Loops in Farmer",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Digital Citizenship",
+      "name": "Digital Citizenship",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Build a Play Lab Game",
+      "name": "Build a Play Lab Game",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Unplugged: Binary",
+      "name": "Unplugged: Binary",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "key": "Artist Binary",
+      "name": "Artist Binary",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GraphPaperProgramming"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GraphPaperProgramming"
+        ],
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "GraphPaperProgramming"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_ramp1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_ramp1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp3"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp4"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5a"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5a"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_maze_ramp5b"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5b"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5b"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5c"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5c"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5c"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5d"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5d"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5d"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BuildingAFoundation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BuildingAFoundation"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "BuildingAFoundation"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_debugging"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_debugging"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_debugging"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging1a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging1a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging1a"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging2a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging2a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging2a"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging3a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging3a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging3a"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging4a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging4a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging4a"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging5a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging5a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging5a"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_collector_debugging6a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging6a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging6a"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging8a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging8a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging8a"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging9a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging9a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_debugging9a"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_1",
+          "courseD_bounce_events1s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_1",
+          "courseD_bounce_events1s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_1",
+        "courseD_bounce_events1s"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_2",
+          "courseD_bounce_events2s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_2",
+          "courseD_bounce_events2s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_2",
+        "courseD_bounce_events2s"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_5",
+          "courseD_bounce_events5s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_5",
+          "courseD_bounce_events5s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_5",
+        "courseD_bounce_events5s"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_6",
+          "courseD_bounce_events6s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_6",
+          "courseD_bounce_events6s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_6",
+        "courseD_bounce_events6s"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_7",
+          "courseD_bounce_events7s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_7",
+          "courseD_bounce_events7s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_7",
+        "courseD_bounce_events7s"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_10",
+          "courseD_bounce_events10s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_10",
+          "courseD_bounce_events10s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_10",
+        "courseD_bounce_events10s"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_11",
+          "courseD_bounce_events11s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_11",
+          "courseD_bounce_events11s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_11",
+        "courseD_bounce_events11s"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bounce_12",
+          "courseD_bounce_events12s"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bounce_12",
+          "courseD_bounce_events12s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "bounce_12",
+        "courseD_bounce_events12s"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops1"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops2"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops2"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops_video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops_video"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops_video"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops3"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops3"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops4"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops4"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops6"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops6"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops7"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops7"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops8"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops8"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops9"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops9"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_iceage_loops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops10"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops10"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops11"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops11"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops12"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_iceage_loops12"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_artistIntro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_video_artistIntro"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops1"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops2"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_video_loopsArtist"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops3"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops3"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops4"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops4"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops5"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops5"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops6"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops6"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops7"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops7"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops8"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops8"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops9"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "ramp_artist_loops9"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1a"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoops"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoops"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_predict1"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops3"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops4"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops5"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops6"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_nestedLoops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops7"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops8"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_predict2"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_harvester_nested_loops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_harvester_nested_loops_challenge1"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_harvester_nested_loops_challenge1"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_nested_loops_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_nested_loops_challenge2"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_collector_nested_loops_challenge2"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops1"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1a"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops1a"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoopsArtist"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops2"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops2"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops3"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops3"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops4"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops4"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops5"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops5"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops7"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops7"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops8"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops8"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_artist_nestedLoops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops9"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops10"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops10"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops9_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9_predict1"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops9_predict1"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoopsFP"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoopsFP"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoopsFP"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge1"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops_challenge1"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge2"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_nestedLoops_challenge2"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while1"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while1"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while2"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while2"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while3"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while3"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_whileIntro"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_whileIntro"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while4_predict1"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while4"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while4"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while5"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while5"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while6"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while6"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while7"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while7"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_farmer_while8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while8"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while8"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while9"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while9"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while10"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while10"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while10_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while10_predict2"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while10_predict2"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while_challenge1"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while_challenge1"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while_challenge2"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_while_challenge2"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Conditionals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Conditionals"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "Conditionals"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVid1"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals1_predict1"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals2"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals3"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals4"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals5"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals5"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals6"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals6"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVidIfElse"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals7"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7_predict2"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals7_predict2"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals8"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals8"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals9"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals9"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals10"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals10"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge1"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals_challenge1"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge2"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals_challenge2"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until1"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until1"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_repeatUntil"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until2_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until2_predict1"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until2_predict1"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until3"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until3"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until4"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until4"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until5"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until5"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until6"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until6"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until7"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until7"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_ifElse"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_ifElse"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_video_ifElse"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until8"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until8"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_maze_until9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until9"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until9"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until10"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until10"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until10_predict2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until10_predict2"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until10_predict2"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until_challenge1"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_maze_until_challenge1"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_until_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_until_challenge2"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_until_challenge2"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops1"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops1"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops2"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops2"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops3"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops3"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops4"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops4"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops5"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops5"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops6"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops6"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_farmer_condLoops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops7"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops7"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops8"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops8"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops9"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9_predict1"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops9_predict1"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge1"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops_challenge1"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge2"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops_challenge2"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_unplugged_digitalCitizenship"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_unplugged_digitalCitizenship"
+        ],
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_unplugged_digitalCitizenship"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond1"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond1"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond2"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond2"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond3"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond3"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond3a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond3a"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond3a"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond4"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond4"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond5"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond5"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond6"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond6"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_cond6a"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_cond6a"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_cond6a"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_playLab_condFP"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_playLab_condFP"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_playLab_condFP"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BinaryImages"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryImages"
+        ],
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "BinaryImages"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_external_binary1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_external_binary1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_external_binary1"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary1"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary2"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary2"
+      ]
+    },
+    {
+      "chapter": 155,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary3"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary3"
+      ]
+    },
+    {
+      "chapter": 156,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary4"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary4"
+      ]
+    },
+    {
+      "chapter": 157,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary5"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary5"
+      ]
+    },
+    {
+      "chapter": 158,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary6"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary6"
+      ]
+    },
+    {
+      "chapter": 159,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary7"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary7"
+      ]
+    },
+    {
+      "chapter": 160,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary8"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary8"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary8_predict1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary8_predict1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary8_predict1"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binaryFP"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binaryFP"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binaryFP"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary_challenge1"
+      ]
+    },
+    {
+      "chapter": 164,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge2"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      },
+      "level_keys": [
+        "courseD_artist_binary_challenge2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "GraphPaperProgramming",
+        "script_level.level_keys": [
+          "GraphPaperProgramming"
+        ],
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ramp1",
+        "script_level.level_keys": [
+          "courseD_video_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp1",
+        "script_level.level_keys": [
+          "courseD_maze_ramp1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp2",
+        "script_level.level_keys": [
+          "courseD_maze_ramp2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp3",
+        "script_level.level_keys": [
+          "courseD_maze_ramp3"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp4",
+        "script_level.level_keys": [
+          "courseD_maze_ramp4"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5a",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5a"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5b",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5b"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5c",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5c"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5d",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5d"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BuildingAFoundation",
+        "script_level.level_keys": [
+          "BuildingAFoundation"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_debugging",
+        "script_level.level_keys": [
+          "courseD_video_debugging"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging1a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging1a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging2a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging2a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging3a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging3a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging4a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging4a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging5a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging5a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging6a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging6a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging8a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging8a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging9a",
+        "script_level.level_keys": [
+          "courseD_collector_debugging9a"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_1",
+        "script_level.level_keys": [
+          "bounce_1",
+          "courseD_bounce_events1s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events1s",
+        "script_level.level_keys": [
+          "bounce_1",
+          "courseD_bounce_events1s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_2",
+        "script_level.level_keys": [
+          "bounce_2",
+          "courseD_bounce_events2s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events2s",
+        "script_level.level_keys": [
+          "bounce_2",
+          "courseD_bounce_events2s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_5",
+        "script_level.level_keys": [
+          "bounce_5",
+          "courseD_bounce_events5s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events5s",
+        "script_level.level_keys": [
+          "bounce_5",
+          "courseD_bounce_events5s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events6s",
+        "script_level.level_keys": [
+          "bounce_6",
+          "courseD_bounce_events6s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_6",
+        "script_level.level_keys": [
+          "bounce_6",
+          "courseD_bounce_events6s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_7",
+        "script_level.level_keys": [
+          "bounce_7",
+          "courseD_bounce_events7s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events7s",
+        "script_level.level_keys": [
+          "bounce_7",
+          "courseD_bounce_events7s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_10",
+        "script_level.level_keys": [
+          "bounce_10",
+          "courseD_bounce_events10s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events10s",
+        "script_level.level_keys": [
+          "bounce_10",
+          "courseD_bounce_events10s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_11",
+        "script_level.level_keys": [
+          "bounce_11",
+          "courseD_bounce_events11s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events11s",
+        "script_level.level_keys": [
+          "bounce_11",
+          "courseD_bounce_events11s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bounce_12",
+        "script_level.level_keys": [
+          "bounce_12",
+          "courseD_bounce_events12s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events12s",
+        "script_level.level_keys": [
+          "bounce_12",
+          "courseD_bounce_events12s"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops1",
+        "script_level.level_keys": [
+          "courseD_iceage_loops1"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops2",
+        "script_level.level_keys": [
+          "courseD_iceage_loops2"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops_video",
+        "script_level.level_keys": [
+          "courseD_iceage_loops_video"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops3",
+        "script_level.level_keys": [
+          "courseD_iceage_loops3"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops4",
+        "script_level.level_keys": [
+          "courseD_iceage_loops4"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops6",
+        "script_level.level_keys": [
+          "courseD_iceage_loops6"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops7",
+        "script_level.level_keys": [
+          "courseD_iceage_loops7"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops8",
+        "script_level.level_keys": [
+          "courseD_iceage_loops8"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops9",
+        "script_level.level_keys": [
+          "courseD_iceage_loops9"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops10",
+        "script_level.level_keys": [
+          "courseD_iceage_loops10"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops11",
+        "script_level.level_keys": [
+          "courseD_iceage_loops11"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops12",
+        "script_level.level_keys": [
+          "courseD_iceage_loops12"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_artistIntro",
+        "script_level.level_keys": [
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops1",
+        "script_level.level_keys": [
+          "ramp_artist_loops1"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops2",
+        "script_level.level_keys": [
+          "ramp_artist_loops2"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist",
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops3",
+        "script_level.level_keys": [
+          "ramp_artist_loops3"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops4",
+        "script_level.level_keys": [
+          "ramp_artist_loops4"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops5",
+        "script_level.level_keys": [
+          "ramp_artist_loops5"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops6",
+        "script_level.level_keys": [
+          "ramp_artist_loops6"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops7",
+        "script_level.level_keys": [
+          "ramp_artist_loops7"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops8",
+        "script_level.level_keys": [
+          "ramp_artist_loops8"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops9",
+        "script_level.level_keys": [
+          "ramp_artist_loops9"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1a",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoops",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_predict1",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops3",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops4",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops5",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops6",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops7",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops8",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_predict2",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_harvester_nested_loops_challenge1",
+        "script_level.level_keys": [
+          "courseD_harvester_nested_loops_challenge1"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_nested_loops_challenge2",
+        "script_level.level_keys": [
+          "courseD_collector_nested_loops_challenge2"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops1",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops1a",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops1a"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoopsArtist",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops2",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops2"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops3",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops3"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops4",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops4"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops5",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops5"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops7",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops7"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops8",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops8"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops9",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops10",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops10"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops9_predict1",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops9_predict1"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoopsFP",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoopsFP"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops_challenge1",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge1"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_nestedLoops_challenge2",
+        "script_level.level_keys": [
+          "courseD_artist_nestedLoops_challenge2"
+        ],
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while1",
+        "script_level.level_keys": [
+          "courseD_farmer_while1"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while2",
+        "script_level.level_keys": [
+          "courseD_farmer_while2"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while3",
+        "script_level.level_keys": [
+          "courseD_farmer_while3"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4_predict1",
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4",
+        "script_level.level_keys": [
+          "courseD_farmer_while4"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while5",
+        "script_level.level_keys": [
+          "courseD_farmer_while5"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while6",
+        "script_level.level_keys": [
+          "courseD_farmer_while6"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while7",
+        "script_level.level_keys": [
+          "courseD_farmer_while7"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while8",
+        "script_level.level_keys": [
+          "courseD_farmer_while8"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while9",
+        "script_level.level_keys": [
+          "courseD_farmer_while9"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while10",
+        "script_level.level_keys": [
+          "courseD_farmer_while10"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while10_predict2",
+        "script_level.level_keys": [
+          "courseD_farmer_while10_predict2"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while_challenge1",
+        "script_level.level_keys": [
+          "courseD_farmer_while_challenge1"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while_challenge2",
+        "script_level.level_keys": [
+          "courseD_farmer_while_challenge2"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Conditionals",
+        "script_level.level_keys": [
+          "Conditionals"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVid1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals1_predict1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals2",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals3",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals4",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals5",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals5"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals6",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals6"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVidIfElse",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals7",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals7_predict2",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7_predict2"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals8",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals8"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals9",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals9"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals10",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals10"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals_challenge1",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge1"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals_challenge2",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge2"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until1",
+        "script_level.level_keys": [
+          "courseD_maze_until1"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_repeatUntil",
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until2_predict1",
+        "script_level.level_keys": [
+          "courseD_maze_until2_predict1"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until3",
+        "script_level.level_keys": [
+          "courseD_maze_until3"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until4",
+        "script_level.level_keys": [
+          "courseD_maze_until4"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until5",
+        "script_level.level_keys": [
+          "courseD_maze_until5"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until6",
+        "script_level.level_keys": [
+          "courseD_maze_until6"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until7",
+        "script_level.level_keys": [
+          "courseD_maze_until7"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ifElse",
+        "script_level.level_keys": [
+          "courseD_video_ifElse"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until8",
+        "script_level.level_keys": [
+          "courseD_maze_until8"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until9",
+        "script_level.level_keys": [
+          "courseD_maze_until9"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until10",
+        "script_level.level_keys": [
+          "courseD_maze_until10"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until10_predict2",
+        "script_level.level_keys": [
+          "courseD_maze_until10_predict2"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until_challenge1",
+        "script_level.level_keys": [
+          "courseD_maze_until_challenge1"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_until_challenge2",
+        "script_level.level_keys": [
+          "courseD_farmer_until_challenge2"
+        ],
+        "lesson.key": "Conditionals & Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops1",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops1"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops2",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops2"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops3",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops3"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops4",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops4"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops5",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops5"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops6",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops6"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops7",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops7"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops8",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops8"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops9",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops9_predict1",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9_predict1"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops_challenge1",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge1"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops_challenge2",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge2"
+        ],
+        "lesson.key": "Conditionals & Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_unplugged_digitalCitizenship",
+        "script_level.level_keys": [
+          "courseD_unplugged_digitalCitizenship"
+        ],
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond1",
+        "script_level.level_keys": [
+          "courseD_playLab_cond1"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond2",
+        "script_level.level_keys": [
+          "courseD_playLab_cond2"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond3",
+        "script_level.level_keys": [
+          "courseD_playLab_cond3"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond3a",
+        "script_level.level_keys": [
+          "courseD_playLab_cond3a"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond4",
+        "script_level.level_keys": [
+          "courseD_playLab_cond4"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond5",
+        "script_level.level_keys": [
+          "courseD_playLab_cond5"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond6",
+        "script_level.level_keys": [
+          "courseD_playLab_cond6"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_cond6a",
+        "script_level.level_keys": [
+          "courseD_playLab_cond6a"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_playLab_condFP",
+        "script_level.level_keys": [
+          "courseD_playLab_condFP"
+        ],
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BinaryImages",
+        "script_level.level_keys": [
+          "BinaryImages"
+        ],
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_external_binary1",
+        "script_level.level_keys": [
+          "courseD_external_binary1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary1",
+        "script_level.level_keys": [
+          "courseD_artist_binary1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary2",
+        "script_level.level_keys": [
+          "courseD_artist_binary2"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary3",
+        "script_level.level_keys": [
+          "courseD_artist_binary3"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary4",
+        "script_level.level_keys": [
+          "courseD_artist_binary4"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary5",
+        "script_level.level_keys": [
+          "courseD_artist_binary5"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary6",
+        "script_level.level_keys": [
+          "courseD_artist_binary6"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary7",
+        "script_level.level_keys": [
+          "courseD_artist_binary7"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary8",
+        "script_level.level_keys": [
+          "courseD_artist_binary8"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary8_predict1",
+        "script_level.level_keys": [
+          "courseD_artist_binary8_predict1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binaryFP",
+        "script_level.level_keys": [
+          "courseD_artist_binaryFP"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary_challenge1",
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge1"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary_challenge2",
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge2"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "new-d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

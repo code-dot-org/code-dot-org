@@ -1,5 +1,5 @@
 name 'courseD_multi_farmer_condLoops9_predict1_2018'
-question 'Take a close look at the code below.  What will happen after you click "Run"?'
+question 'Take a close look at the code below. What will happen after you click "Run"?'
 wrong 'The harvester will collect all of the crops.', feedback: 'Incorrect. There is no code here for picking the pumpkin.'
 wrong 'The harvester will not pick any of the crops with the path she is taking.', feedback: 'Incorrect. The code will have the harvester repeatedly make a stairstep pattern and pick as much corn or lettuce as she comes across. She will not pick the pumpkin.'
 right 'The harvester will pick all of the crops, except the pumpkin.', feedback: 'Correct!'

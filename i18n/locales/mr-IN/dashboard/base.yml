@@ -1,14 +1,102 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 mr:
   or: "किंवा"
+  courses_page:
+    title_student: "संगणक विज्ञान शिकुया"
+  continue: 'सुरू ठेवा'
   signup_form:
     user_type_student: "विध्यार्थी"
+    email_preference_yes: "होय"
+    email_preference_no: "नाही"
+    parent_account_checkbox: "मी माझ्या बालकाच्या वतीने साईनिंग अप करणारा  आई-वडील/पालक आहे"
+    parent_account_email_progress_permission: "तुमच्या मुलाची प्रगती आणि प्रकल्प, आणि त्यांचा अभ्यासक्रम आणि संगणक शास्त्र याबद्दलचे अपडेट्स आम्ही आपल्याला अधूनमधून ईमेलद्वारे पाठवू शकतो का? [(आमचे गोपनीयता धोरण पहा)](%{privacy_policy_url})"
+    parent_account_email_label: "आई-वडील/पालक ईमेल"
+  signin_form:
+    submit: 'साइन इन करा'
+  signinsection:
+    login: 'साइन इन करा'
+  crud:
+    edit: 'संपादन करा'
   nav:
+    header:
+      finished_hoc: "माझं झालंय!"
+      course_catalog: "अभ्यासक्रमाचा कॅटलॉग"
+      project_gallery: "प्रकल्प"
+      help_support: "सहाय्य आणि मदत"
+      report_bug: "समस्या रिपोर्ट करा"
+      about: "या बद्दल"
+      legal_privacy: "गोपनीयता धोरण"
+      legal_tos: "सेवेच्या अटी"
     user:
+      signin: 'साइन इन करा'
+      signup: 'अकाउंट तयार करा'
       create: 'बनवा'
+      dance: 'डांस पार्टी'
+      minecraft_adventurer: 'माईनक्राफ्ट साहस'
   teacher:
     panel:
       student: 'विध्यार्थी'
+  user:
+    for_parents_and_guardians: "आईवडील आणि पालकांसाठी"
+    link_a_parent_email: "आई-वडील/पालकाचा ईमेल पत्ता या खात्याशी जोडा म्हणजे तुम्हाला मुलाची प्रगती आणि प्रकल्प याबद्दलचे अपडेट्स मिळत राहतील. पासवर्ड परत मिळवण्यासाठीसुद्धा तुम्ही हा ईमेल पत्ता वापरू शकता."
+    none: "कुठलेच नाही"
+    only_one_parent_email_supported_warning: "सूचना: सध्या आम्ही प्रत्येक विद्यार्थ्याच्या खात्यासाठी आई-वडील/पालकांचा एकच ईमेल पत्ता समर्थित करू शकत आहोत."
+  home:
+    student_reg_link: 'विध्यार्थी'
   user_type:
     student: 'विध्यार्थी'
+  footer:
+    copyright: 'कॉपीराइट'
+    translate: 'आमच्या सामग्रीचा अनुवाद करण्यासाठी पुढे या'
+    tos: 'सेवेच्या अटी'
+    privacy: 'गोपनीयता धोरण'
+    report_abuse: 'गैरवर्तनाची रिपोर्ट करा'
+  reference_area:
+    title: 'मदत पाहिजे?'
+    subtitle: 'हे व्हिडिओ आणि इशारे पाहा'
+  video:
+    tab: 'व्हिडिओ.'
+    notes: 'व्हिडिओ नाही? नोट्स दाखवा.'
+  upsell:
+    dance:
+      title: 'डांस पार्टी'
+    dance-2019:
+      title: 'डांस पार्टी'
+    minecraft2016:
+      body: "माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा."
+  landing:
+    help_support: "सहाय्य आणि मदत"
+  dialog:
+    ok: "ठीक आहे"
+    startover_ok: "पुन्हा सुरू करा"
+  terms_interstitial:
+    tos: "सेवेच्या अटी"
+    privacy: "गोपनीयता धोरण"
+    accept_tos: "Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता\nधोरण](%{privacy_url}) साठी संमती देता."
+    print: "प्रिंट"
+  race_interstitial:
+    decline: "Band"
   project:
+    projects: "प्रकल्प"
+    project_gallery: "प्रकल्प"
     name: "नाव"
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_yes: 'होय'
+        opt_in_no: 'नाही'
+  parent_email_banner:
+    text: "**तुम्ही आई-वडील किंवा पालक आहात का?** तुमचे ईमेल या खात्याशी जोडा म्हणजे तुम्हाला मुलाची प्रगती आणि प्रकल्प याबद्दलचे अपडेट्स मिळत राहतील!"
+    link_your_email: "तुमचे ईमेल जोडा"
+    not_now: "आत्ता नाही"

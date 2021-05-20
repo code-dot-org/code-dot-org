@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 import i18n from '@cdo/tutorialExplorer/locale';
@@ -23,7 +23,14 @@ describe('FilterGroupOrgNames', () => {
     const wrapper = shallow(<FilterGroupOrgNames {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <FilterGroupContainer text={i18n.filterOrgNames()}>
-        <select value={TEST_ORG_NAME} className="noFocusButton">
+        <label htmlFor="filter-org-names-dropdown" className="hidden-label">
+          {i18n.filterOrgNames()}
+        </label>
+        <select
+          id="filter-org-names-dropdown"
+          value={TEST_ORG_NAME}
+          className="noFocusButton"
+        >
           <option key="all" value="all">
             {i18n.filterOrgNamesAll()}
           </option>

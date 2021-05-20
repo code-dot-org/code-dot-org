@@ -1,10 +1,5 @@
 azure_content_moderation_key: !Secret
 discourse_sso_secret: !Secret
-hoc_map_account: !Secret
-hoc_map_api_key: !Secret
-hoc_map_api_secret: !Secret
-hoc_map_service_account_email: !Secret
-hoc_map_table_id: !Secret
 level_sources_redis_url: !Secret
 pardot_password: !Secret
 pardot_user_key: !Secret
@@ -13,6 +8,7 @@ pd_teacher_application_list_secret_key: !Secret
 pledge_map_table_id: !Secret
 redshift_host: !Secret
 redshift_password: !Secret
+redshift_username: !Secret
 sinatra_session_secret: !Secret
 slog_token: !Secret
 reporting_db_admin: !Secret
@@ -28,84 +24,13 @@ firebase_name: cdo-v3-prod
 db_cluster_id: production-aurora-cluster
 solr_server:                            solr.code.org
 use_pusher:                             true
-jotform_forms:
-  academic_year_1:
-    day_1:         92125650301142
-    facilitator:   91372090131144
-    post_workshop: 92125916725157
-  academic_year_2:
-    day_1:         92125614667157
-    facilitator:   91372090131144
-    post_workshop: 92125916725157
-  academic_year_3:
-    day_1:         92125413150141
-    facilitator:   91372090131144
-    post_workshop: 92125916725157
-  academic_year_4:
-    day_1:         92125122319145
-    facilitator:   91372090131144
-    post_workshop: 92125916725157
-  academic_year_1_2:
-    day_1:         92125650301142
-    day_2:         92125614667157
-    facilitator:   91372090131144
-    post_workshop: 92125916725157
-  academic_year_3_4:
-    day_1:         92125413150141
-    day_2:         92125122319145
-    facilitator:   91372090131144
-    post_workshop: 92125916725157
-  virtual_1:
-    day_1:         92175136628158
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_2:
-    day_1:         92175665906164
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_3:
-    day_1:         92175784085164
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_4:
-    day_1:         92175722303149
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_5:
-    day_1:         92175483700154
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_6:
-    day_1:         92175857756170
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_7:
-    day_1:         92175683174161
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  virtual_8:
-    day_1:         92175542003146
-    facilitator:   92175282703154
-    post_workshop: 92174983603160
-  local:
-    day_0:       81307473693159
-    day_1:       81236323593153
-    day_2:       81368536787170
-    day_3:       81368909887175
-    day_4:       81368069687170
-    day_5:       81495142793161
-    facilitator: 81276605393158
-  local_summer:
-    day_0:       90986490369171
-    day_1:       90986506471163
-    day_2:       90986458251165
-    day_3:       90986477669179
-    day_4:       90986953273169
-    day_5:       90986517815167
-    facilitator: 91372090131144
-  post_course:
-    2018-2019: 90486182774164
-  csf:
-    pre201:      90066184161150
-    post201:     90065524560150
-    facilitator: 91405279991164
+
+# Used for the exporting teacher enrollment data to a gsheet
+enrollments_summer_2020_gsheet_key: !Secret
+
+# Amazon Future Engineer integration
+afe_pardot_form_handler_url: !Secret
+
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_client_id:     '06d74083-9d25-43e4-acf6-0377f381a1e5'
+imm_reader_subdomain:     'cdo-immersive-reader-prod'

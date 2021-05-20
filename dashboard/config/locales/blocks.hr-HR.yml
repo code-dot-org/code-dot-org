@@ -6,31 +6,16 @@ hr:
         options:
           UNIT:
             '"seconds"': sekunde
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -54,58 +39,50 @@ hr:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": slučajno odabran
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': vanzemaljac
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
+            '"ROBOT"': robot
+            '"UNICORN"': jednorog
+          LOCATION:
+            "{x: 100, y: 200}": lijevo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': vanzemaljac
+            '"CAT"': mačka
+            '"DOG"': pas
+            '"DUCK"': patka
+            '"ROBOT"': robot
+            '"UNICORN"': jednorog
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slučajno odabran
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_randomColor:
         text: nasumično odabrana boja
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +98,17 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': veličina
@@ -131,6 +118,16 @@ hr:
           PROPERTY:
             '"scale"': veličina
             '"height"': visina
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': veličina
+            '"height"': visina
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': dijamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,12 +137,17 @@ hr:
             '"right"': desno
             '"space"': svemir
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': brzina
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -157,6 +159,20 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': brzina
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekunde
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gore
+            '"down"': dolje
+            '"left"': lijevo
+            '"right"': desno
+            '"space"': svemir
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -178,6 +194,8 @@ hr:
         text: nasumično odabrana boja
       gamelab_randomColor:
         text: nasumično odabrana boja
+      gamelab_repeatForever:
+        text: ponavljaj zauvijek
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -194,6 +212,11 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': brzina
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': veličina
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -267,6 +290,8 @@ hr:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: nasumično odabrana boja
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj zauvijek
       Mikelab_setBG:
         options:
           BG:
@@ -316,63 +341,20 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': slučajno odabran
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': dok
-          KEY:
-            '"up"': gore
-            '"down"': dolje
-            '"left"': lijevo
-            '"right"': desno
-            '"space"': svemir
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': grad
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': točno
-            '"false"': netočno
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': veličina
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': zauvijek
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': prikaži
-            '"hide"': sakrij
+          FORMAT:
+            '"random"': slučajno odabran
       binary_move:
         options:
           DIR:

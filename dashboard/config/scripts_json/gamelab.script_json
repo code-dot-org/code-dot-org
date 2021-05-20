@@ -1,0 +1,451 @@
+{
+  "script": {
+    "name": "gamelab",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:29 UTC",
+    "seeding_key": {
+      "script.name": "gamelab"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Start and End Screens",
+      "name": "Start and End Screens",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "key": "Start and End Screens2",
+      "name": "Start and End Screens2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Start and End Screens2",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Intro"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen base code"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen base code"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen base code"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen State"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen State"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen State"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Check State"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Check State"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Check State"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Check States"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Check States"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Check States"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Change State"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Change State"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Change State"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen End Game"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen End Game"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen End Game"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Restart Game"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Restart Game"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Restart Game"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Hide Sprites"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Hide Sprites"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Hide Sprites"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Gamelab StartScreen Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Gamelab StartScreen Intro"
+        ],
+        "lesson.key": "Start and End Screens2",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      },
+      "level_keys": [
+        "Gamelab StartScreen Intro"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Intro",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Intro"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen base code",
+        "script_level.level_keys": [
+          "Gamelab StartScreen base code"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen State",
+        "script_level.level_keys": [
+          "Gamelab StartScreen State"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Check State",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Check State"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Check States",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Check States"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Change State",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Change State"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen End Game",
+        "script_level.level_keys": [
+          "Gamelab StartScreen End Game"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Restart Game",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Restart Game"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Hide Sprites",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Hide Sprites"
+        ],
+        "lesson.key": "Start and End Screens",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Gamelab StartScreen Intro",
+        "script_level.level_keys": [
+          "Gamelab StartScreen Intro"
+        ],
+        "lesson.key": "Start and End Screens2",
+        "lesson_group.key": "",
+        "script.name": "gamelab"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

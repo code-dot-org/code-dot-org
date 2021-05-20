@@ -1,0 +1,402 @@
+{
+  "script": {
+    "name": "dance-extras-2019",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:38 UTC",
+    "seeding_key": {
+      "script.name": "dance-extras-2019"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Dance Party - Go Further",
+      "name": "Dance Party - Go Further",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_intro_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_intro_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_intro_2019"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_alternate_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_alternate_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_alternate_2019"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_mixed_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_mixed_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_mixed_2019"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_layout_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_layout_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_layout_2019"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_visible_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_visible_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_visible_2019"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_battle_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_battle_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_battle_2019"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_every_beat_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_every_beat_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_every_beat_2019"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_on_beat_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_on_beat_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_on_beat_2019"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_speed_2019"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_speed_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      },
+      "level_keys": [
+        "Dance_Party_extras_speed_2019"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_intro_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_intro_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_alternate_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_alternate_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_mixed_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_mixed_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_layout_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_layout_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_visible_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_visible_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_battle_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_battle_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_every_beat_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_every_beat_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_on_beat_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_on_beat_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_speed_2019",
+        "script_level.level_keys": [
+          "Dance_Party_extras_speed_2019"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-2019"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

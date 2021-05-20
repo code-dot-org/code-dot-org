@@ -1,26 +1,3 @@
 {
-  "errorLoadingAnimation": "",
-  "reinfFeedbackMsg": "",
-  "shareGame": "Share your game:",
-  "spritelabFeedbackCreateFishWithBehavior": "",
-  "spritelabFeedbackMoveFishLeftRight": "",
-  "spritelabFeedbackChangeBackgroundColor": "",
-  "spritelabFeedbackCreateTwoSprites": "",
-  "spritelabFeedbackTwoSpritesWithCostumes": "",
-  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "",
-  "spritelabFeedbackClickSprite": "",
-  "spritelabFeedbackUseSpinningBehavior": "",
-  "spritelabFeedbackPinkAlienBehavior": "",
-  "spritelabFeedbackCreateThreeAliens": "",
-  "spritelabFeedbackAliensNotInLine": "",
-  "spritelabFeedbackYellowAlienBehavior": "",
-  "spritelabFeedbackNoAlienColor": "",
-  "spritelabFeedbackNeedAlienStopBehavior": "",
-  "spritelabFeedbackBlueAlienBehavior": "",
-  "spritelabFeedbackUseCostume": "",
-  "spritelabFeedbackThreeSpritesWithCostumes": "",
-  "spritelabFeedbackMoveUpNotDown": "",
-  "spritelabFeedbackRobotFasterThanRover": "",
-  "spritelabFeedbackDifferentStarRotation": "",
-  "spritelabFeedbackAstronautMoveToCorner": ""
+  "shareGame": "Share your game:"
 }

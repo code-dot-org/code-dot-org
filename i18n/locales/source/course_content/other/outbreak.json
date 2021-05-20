@@ -1,0 +1,212 @@
+{
+  "https://studio.code.org/s/outbreak/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Outbreak: Code Your Own Simulation\n\n## Welcome to Monster Town!\nMonster Town was usually a happy and healthy place. The monsters of Monster town loved to wander around to visit their friends. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\">\n\nOne day, one of the monsters started feeling sick. The monster had caught a **virus**! A virus is a tiny germ that can make you sick. The other monsters were not too worried. They kept visiting their friends.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\">\n\nSoon after, two more monsters got sick. It was the same virus! It seems they got the virus from their friend.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\">\n\nThe virus slowly spread to other monsters who were nearby. The healthy monsters began to worry that they were all going to get sick. The sick monsters began to worry that they were going to give the virus to everyone else.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\" style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\" style=\"float:right; width:30%\">\n\n## Stopping the spread\nFortunately, after studying the virus, the neighbors of Monster Town made an important discovery. They realized that they were less likely to spread the virus if they wore masks over their mouths. With face masks on, sick monsters were less likely to give the virus to healthy monsters.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\" style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\" style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n## What will happen next?\n\nToday, you're going to write code to create and run your own **simulation** of the virus outbreak at Monster Town.  A simulation is a computer model of a process or system. Learn to code and make predictions about what will happen to the neighbors of Monster Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\" style=\"float:right; width:15%\">\n\n* *How quickly will the virus spread?*\n\n* *Will everyone get sick?*\n\n* *How will face masks help?*\n\n\nWhen you're finished, share your simulation with others. Share your message about what you think we can do to help keep others healthy when a virus comes to town. \n\n<img src=\"https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png\" style=\"float:left;width:30%\">\n"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/2": {
+    "display_name": "Virus Simulation",
+    "short_instructions": "Create 10 healthy sprites and 1 sick sprite. Change their size and make them wander.",
+    "long_instructions": "# Creating a Simulation\n\n<img src=\"https://images.code.org/fa359041f9e1a3ed92d72f6b0b24a8a9-image-1602095737300.gif\" style=\"float:right; padding-left:10px\">\n\n<div style=\"display:inline\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\n\n_Today, you're going to write code so you can run your own simulation of the virus outbreak at Monster Town._\n\n_First, we will bring Monster Town to life by creating sprites to represent the monsters. Write your code in the_ **workspace,** _then press_ **Run** _to see your simulation. If you need any help, click the_ **lightbulb** _for a hint._\n\n</div>\n\n## Do This\n\n1.  Make sprites to represent 10 healthy monsters [][0] and 1 sick monster [][1]. **Sprites** are the characters on the screen that can move, change, or interact with each other.\n\n2.  Set the size of the sprites to `50`, and make them all begin `wandering`.\n\n3.  Press `RUN`.\n\nYou should see sprites moving around like the animation to the right.",
+    "authored_hints": {
+      "step1": "Use these blocks to create your sprites:\n\n[blockly block][0]\n\n[blockly block][1]\n\nThis block is found in the **Sprites** category of the toolbox.",
+      "step2": "Change the size of the sprites with this block: [blockly block][0].\n\nIt is found in the **Actions** category of the toolbox.",
+      "step3": "Make all sprite begin wandering with this: [blockly block][0].\n\nThis block is found in the **Actions** category of the toolbox."
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/3": {
+    "display_name": "Virus Simulation",
+    "short_instructions": "Change healthy monsters into sick monsters when they touch.",
+    "long_instructions": "# Programming with Events\n\n<div style=\"display:inline-block\">\n\n_<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\nUh oh! One of the monsters caught a virus! When a healthy monster touches a sick monster, it becomes sick too._ \n\n</div>\n\nTo make something happen when two sprites touch, we will use this \"event\" block:\n\n[blockly block][0]\n\nNotice that you can open this block with the blue `+` on the left side. \n\n## Do This\n\nUse the `subject` block inside to change **healthy monsters**  [][1] into **sick monsters** [][2] when they touch.",
+    "authored_hints": {
+      "hint1": "Click the `+` button on the event block. Fill the empty spot in the `change costume` block with the `subject` block found inside.\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "minitoolbox": "Click here to expand the block.",
+      "pointerlocation": "Drag a subject block here."
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/4": {
+    "display_name": "Virus Simulation",
+    "short_instructions": "Change monsters into monsters with face masks when you click them.",
+    "long_instructions": "<img src=\"https://images.code.org/a157874032e8f71cf921ba32f082e5b4-image-1602518140122.2020-10-12 11_55_12.gif\" style=\"float:right; padding:10px\">\n\n# Stopping the Outbreak with Masks\n\n_<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">One way to slow down an outbreak is to wear a mask. Monsters with face masks will be unable to get the virus or give it to others. To make something happen when a type of monster is clicked, you can use a new type of_ \"event\" _block._\n\n## Do This\n\n1.  Use a `when clicked` block with the `change costume` block to give healthy monsters a mask when they are clicked. Repeat this for sick monsters.\n\n2.  Press `Run` and begin rapidly clicking the monsters. Try to slow or stop the outbreak by putting a mask on all the monsters.",
+    "authored_hints": {
+      "hint1": "To give the monsters masks, use the `change costume` block with a `when clicked` event:\n\n[blockly block][0]\n\nBe sure to drag in the small red `clicked` block as well!",
+      "hint2": "The new code for this level should look like this:\n\n[blockly block][0]"
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Outbreak: Thinking Like a Scientist\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\" style=\"float:right; width:30%\">\n\nSimulations are a great way to learn things that can be hard to observe in the real world. They help scientists solve problems and test new ideas safely and efficiently. Your simulation is a way to show how a virus outbreak in Monster Town might look.\n\n## Reset and Replay!\nEven when you write the code yourself, it's impossible to know exactly what will happen when you press run. The monsters wander randomly, so you don't know if the virus will spread fast or slow. Whenever you change your code, make sure to run your simulation more than once. Things won't happen the same way twice!\n\n## Collecting Data\nTry writing down your observations as you run your simulation. You can count the number of monsters that get sick or use a timer to see how fast things happen. For example, how long does it usually take for all monsters to get sick if none have masks? \n\n## Making Predictions\nIf you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:\n* What would happen if there were twice as many monsters?\n* What would happen if the monsters moved at half the speed?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\" style=\"float:right\">\n\n## Is Monster Town like the real world?\nThere is a limit to how realistic any model can get. \n* What does your outbreak simulation have in common with real world virus outbreaks?\n* What are the differences?\nWhen you finish this activity, discuss these questions with teachers or your family!\n\n## What else can we model?\nYou have already created a working model of the outbreak at Monster Town. What are the things your simulation can't do or show that you wish it could? Press continue to keep going and learn to model even more:\n* Increasing the number of monsters in the simulation\n* Helping monsters recover from the virus\n* Probability, immunity, vaccines, and more!\n\nYou can also share your simulation model with others, or share a message about what you think we can do to help keep others healthy when a virus comes to town. \n"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/6": {
+    "display_name": "Modify Your Simulation",
+    "bubble_choice_description": "Change how the simulation works and make a prediction about what will happen.",
+    "short_instructions": "Change the number and size of monster sprites for your simulation.",
+    "long_instructions": "<img src=\"https://images.code.org/d228e4b5feb602025d5f7b5145dbece9-image-1603143852671.gif\" width=\"250\" style=\"float:right; padding-left:10px\">\n\n# More monsters\n\n_<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">New monsters are moving into Monster Town! What will this mean for the outbreak? Let's use the simulation to make predictions._ \n\n## Do This\n\n1.  Change the number of monster sprites you make by editing this block: \n    [blockly block][0]\n\n2.  Change the size of the sprites by editing this block: \n    [blockly block][1]\n\n3.  Run the new simulation 3-5 times.\n\n_Did anything happen differently?_",
+    "authored_hints": {
+      "challenge": "## Looking for an extra challenge?\n\nYou can also make the monsters move faster or slower.\n\n1.  Click `Edit` in this block [blockly block][0] \n2.  Increase or decrease the number in this block: \n\n[blockly block][1]\n\nTo make the monsters move slower, choose a decimal number like `0.5` or `0.25`. To make them move faster, choose any number greater than 1."
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/7": {
+    "display_name": "Recovery",
+    "bubble_choice_description": "Help your sprites get better automatically over time!",
+    "short_instructions": "Make all the sick monsters begin recovering when a healthy monster touches a sick monster.",
+    "long_instructions": "# Recovery\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\n\n_Good news: Monsters can start to feel better on their own! Sick monsters that begin recovering will automatically change back to a healthy monster after some time passes. Let's add code to the simulation to make all sick monsters gradually recover from the virus._\n\n</div>\n\nWe now have a special [blockly block][0] behavior. You can add this to your code at any point a monster gets the virus.\n\n## Do This\n\n1.  Under your `when touches` events, add more code to make the subject sprite begin the `recovering` behavior.\n    [blockly block][1]",
+    "authored_hints": {
+      "solution2": "Your new code should look like this:\n\n[blockly block][0]"
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/8": {
+    "display_name": "Random Chance",
+    "bubble_choice_description": "A virus isn't always transmitted, and masks don't stop transmission perfectly either. Improve your simulation by making infections happen with a random chance.",
+    "short_instructions": "Add a percent chance for monsters to get sick whenever healthy monsters touch sick monsters. Do this for all combinations of monsters with and without masks.",
+    "long_instructions": "# Chance\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\n\n_Right now, it's impossible for monsters to give or get the virus if either of them is wearing a mask. This sounds great, but it's not really that simple. We should add a \"chance\" (or probability) for the virus to spread each time any two monsters touch. We can model the chance of getting the virus off of these notes._\n\n</div>\n\n<details open><summary><em><strong>Notes:</strong>How face masks affect the Monster Town outbreak</em></summary>\n\n<div class=\"container\" style=\"background-color:indianred; text-align:center; border-style: solid; width: 250px\">\n<img src=\"https://images.code.org/01291b1e958448f65abb46b0d135b916-image-1603206161098.png\" style=\"width:55%\">\n\n<div class=\"container\" style=\"background-color:white; text-align:center; border-style: solid; width: 220px\">\n<br>\n\n_Benefits of Face Masks_\n\n| Healthy |  Sick |     Chance    |  %  |\n| :-----: | :---: | :-----------: | :-: |\n|  [][6]  | [][7] | **Very High** | 90% |\n|  [][4]  | [][5] |    **High**   | 75% |\n|  [][2]  | [][3] |    **Low**    | 25% |\n|  [][0]  | [][1] |  **Very Low** | 10% |\n\n<br>\n</div>\n<br>\n</div>\n\n</details>\n\n## Do This\n\n1.  Add this **logic** block under the `when touches` event and set it to a very high chance:\n\n[blockly block][8]\n\n2.  Add more events that include monsters wearing masks and give each a different percent chance (probability). Click the lightbulb for a hint if you are not sure which events are needed.\n\n3.  Press **Finish** when you are ready to move on.",
+    "authored_hints": {
+      "hint2": "Be sure to move the other \"action\" blocks to the inside of the `if chance` block:\n\n[blockly block][0]",
+      "hint1": "You will need to add 3 more `when touches` events to check for all possible combinations of `touches` between healthy and infected sprites.\n\n[blockly block][0]"
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/9": {
+    "display_name": "Immunity and Vaccines",
+    "bubble_choice_description": "Prevent your sprites from ever getting sick by giving them immunity.",
+    "short_instructions": "Create a new costume for monsters with immunity to the virus and use it in your simulation.",
+    "long_instructions": "# Vaccines\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\n\n_Vaccines can protect monsters from getting a virus. These monsters will not get sick at all!_\n\n</div>\n\nNext, you will create a new sprite costume to represent monsters who got a vaccine.\n\n<details><summary><strong>Learn how to modify a sprite costume.</strong></summary>\n\n|                                       | To modify a costume:                                                                                                                                                                                                                    |\n| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [expandable][0] <br/> (Click to view) | 1. Change to the Costumes tab in the top left corner. <br/> 2. Duplicate one of the existing costumes. <br/> 3. Choose a primary color for drawing.  <br/> 4. Click the Paint bucket tool, then click the monster's body to recolor it. |\n\n</details>\n\nOnce the new costume is ready, find a way to work it into your program. For example, you can change masked monsters into vaccinated monsters when they are clicked.",
+    "authored_hints": {
+      "whenclicked": "## Vaccines\n\nYou can simulate giving monsters a vaccine when you click on them. To do this, use the `change costume` block with this event:\n\n[blockly block][0]",
+      "verionhistory": "Feeling stuck? You can always reset your code by clicking `Version History` below then choosing to \"Start Over\"."
+    },
+    "callouts": {
+      "costumes_callout": "Click to make a new costume"
+    },
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "moving left and right": "moving left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/10": {
+    "display_name": "Share a Message",
+    "bubble_choice_description": "Use your project to share a message. What do you want others to learn from this?",
+    "short_instructions": "Share a message with your simulation.",
+    "long_instructions": "# Share your message!\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\n\n_You can share your creation - and your message - with the world! What have you learned from this activity? What do you hope others will learn?_\n\n</div>\n\nThe [blockly block][0] block displays text on the screen while your simulation runs. Use it to tell the user how your simulation works or to share a message.\n\nHere are some examples:\n\n[blockly block][1]\n\n[blockly block][2]",
+    "behavior_names": {
+      "recovering": "recovering",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "moving left and right": "moving left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys"
+    }
+  },
+  "https://studio.code.org/s/outbreak/lessons/1/levels/11": {
+    "dsls": {
+      "description": "You finished the tutorial! Keep making changes or improvements to your project. You can choose to keep working with the same blocks or try an expanded toolbox.",
+      "display_name": "Free Play"
+    },
+    "sublevels": {
+      "outbreak_freeplay_basic": {
+        "display_name": "Standard Toolbox",
+        "bubble_choice_description": "Keep going with the same blocks you've already seen!",
+        "short_instructions": "Make any changes or improvements to your project that you would like. ",
+        "long_instructions": "# Free Play\r\n\r\n<div style=\"display:inline-block\">\r\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\r\n\r\n*Great job! You've been a huge help to all of the residents of Monster Town. We hope you will share what you've learned with others.*\r\n\r\n</div>\r\n\r\nYou finished the tutorial! Make any changes or improvements to your project that you would like. Press the \"Share\" button at the top of the page to send your project to your friends and family.\r\n",
+        "behavior_names": {
+          "recovering": "recovering",
+          "wandering": "wandering",
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "moving left and right": "moving left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling",
+          "moving with arrow keys": "moving with arrow keys"
+        }
+      },
+      "outbreak_freeplay": {
+        "display_name": "Expanded Toolbox",
+        "bubble_choice_description": "Expand your project with functions, variables and more!",
+        "short_instructions": "Make any changes or improvements to your project that you would like. ",
+        "long_instructions": "# Free Play\r\n\r\n<div style=\"display:inline-block\">\r\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" class=\"instructor-image\">\r\n\r\n*Great job! You've been a huge help to all of the residents of Monster Town. We hope you will share what you've learned with others.*\r\n\r\n</div>\r\n\r\nYou finished the tutorial! Make any changes or improvements to your project that you would like. Press the \"Share\" button at the top of the page to send your project to your friends and family. The toolbox has been expanded greatly.\r\n\r\n",
+        "behavior_names": {
+          "recovering": "recovering",
+          "wandering": "wandering",
+          "moving east": "moving east",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "growing": "growing",
+          "moving south": "moving south",
+          "moving left and right": "moving left and right",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "moving west": "moving west",
+          "patrolling": "patrolling",
+          "moving with arrow keys": "moving with arrow keys"
+        }
+      }
+    }
+  }
+}

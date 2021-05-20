@@ -5,12 +5,15 @@
 //   apps/src/color.js during the apps build process.
 
 $black: #000;
+$darkest_gray: #272822;
+$dark_slate_gray: #282c34;
 $dark_charcoal: #4d575f;
 $charcoal: #5b6770;
 $light_gray: #949ca2;
 $lighter_gray: #c6cacd;
 $lightest_gray: #e7e8ea;
 $background_gray: #f2f2f2;
+$dimgray: #696969;
 $white: #fff;
 $default_blue: #3670b3;
 
@@ -88,6 +91,7 @@ $level_current: $orange;
 $level_review_rejected: $red;
 $level_review_accepted: rgb(11, 142, 11); // TODO: $level_passed;
 $assessment: $cyan;
+$workspace_running_background: #e5e5e5;
 
 // Links (used in apps).
 $link_color: #0596CE;
@@ -104,6 +108,10 @@ $bootstrap_error_border: #ebccd1;
 $bootstrap_warning_background: #fcf8e3;
 $bootstrap_warning_text: #c09853;
 $bootstrap_warning_border: #faebcc;
+$bootstrap_border_color: #cccccc;
+$bootstrap_success_background: #dff0d8;
+$bootstrap_success_text: #468847;
+$bootstrap_success_border: #d6e9c6;
 
 // Colors taken from droplet, not part of our core theme.
 $droplet_light_green: #d3e965;
@@ -117,3 +125,6 @@ $droplet_pink: #f57ac6;
 $droplet_purple: #bb77c7;
 $droplet_green: #68d995;
 $droplet_white: $white;
+
+// Oceans: deep blue background.
+$oceans_deep_blue: rgb(2, 0, 28);

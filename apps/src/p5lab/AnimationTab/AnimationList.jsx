@@ -4,24 +4,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
-import {show, Goal} from '../AnimationPicker/animationPickerModule';
+import {show, Goal} from '../redux/animationPicker';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
 import i18n from '@cdo/locale';
-
-const styles = {
-  root: {
-    flex: '1 0 0',
-    borderTop: 'solid thin ' + color.light_gray,
-    borderBottom: 'solid thin ' + color.light_gray,
-    borderLeft: 'solid thin ' + color.light_gray,
-    borderRight: 'none',
-    backgroundColor: color.lightest_gray,
-    paddingRight: 10,
-    paddingLeft: 10
-  }
-};
 
 /**
  * Vertical scrolling list of animations associated with the project.
@@ -31,7 +18,8 @@ class AnimationList extends React.Component {
     animationList: shapes.AnimationList.isRequired,
     selectedAnimation: shapes.AnimationKey,
     onNewItemClick: PropTypes.func.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    hideBackgrounds: PropTypes.bool.isRequired
   };
 
   render() {
@@ -39,13 +27,21 @@ class AnimationList extends React.Component {
       <NewListItem
         key="new_animation"
         label={this.props.spriteLab ? i18n.newCostume() : i18n.newAnimation()}
-        onClick={this.props.onNewItemClick}
+        onClick={() => this.props.onNewItemClick(this.props.spriteLab)}
       />
     );
+    let animationListKeys = this.props.animationList.orderedKeys;
+    if (this.props.hideBackgrounds) {
+      animationListKeys = animationListKeys.filter(key => {
+        return !(
+          this.props.animationList.propsByKey[key].categories || []
+        ).includes('backgrounds');
+      });
+    }
     return (
       <ScrollableList style={styles.root} className="animationList">
         {this.props.spriteLab && addAnimation}
-        {this.props.animationList.orderedKeys.map(key => (
+        {animationListKeys.map(key => (
           <AnimationListItem
             key={key}
             animationKey={key}
@@ -59,6 +55,19 @@ class AnimationList extends React.Component {
     );
   }
 }
+
+const styles = {
+  root: {
+    flex: '1 0 0',
+    borderTop: 'solid thin ' + color.light_gray,
+    borderBottom: 'solid thin ' + color.light_gray,
+    borderLeft: 'solid thin ' + color.light_gray,
+    borderRight: 'none',
+    backgroundColor: color.lightest_gray,
+    paddingRight: 10,
+    paddingLeft: 10
+  }
+};
 export default connect(
   state => ({
     animationList: state.animationList,
@@ -66,8 +75,8 @@ export default connect(
     spriteLab: state.pageConstants.isBlockly
   }),
   dispatch => ({
-    onNewItemClick() {
-      dispatch(show(Goal.NEW_ANIMATION));
+    onNewItemClick(isSpriteLab) {
+      dispatch(show(Goal.NEW_ANIMATION, isSpriteLab));
     }
   })
 )(AnimationList);

@@ -1,0 +1,22 @@
+name 'csp-7-exam1-mod-2020_2021'
+editor_experiment ''
+right ' `num % 2 == 0;`'
+wrong ' `num % 0 == 2;`'
+wrong ' `num % 1 == 0;`'
+wrong ' `num % 1 == 2;`'
+
+markdown <<MARKDOWN
+Which code segment results in "true" being returned if a number is even?
+Replace "MISSING CONDITION" with the correct code segment. 
+
+```
+function isEven(num){
+	if(MISSING CONDITION){
+    	return true;
+    } else {
+    	return false;
+    }
+}
+
+```
+MARKDOWN

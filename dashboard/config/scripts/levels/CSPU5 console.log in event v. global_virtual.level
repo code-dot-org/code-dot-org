@@ -1,0 +1,86 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:24:58.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "skin": "applab",
+    "embed": "false",
+    "long_instructions": "# Predict what will happen\r\n\r\nWe've added some `console.log` statements *both* in event handlers as well as just out in the open, between event handler definitions. \r\n\r\n**Do this:**\r\n* **Study the code first.**\r\n* **Make a prediction.** What do you think will happen when you click Run?  What will display? Will it:\r\n  * Print all 5 messages?\r\n  * Print only a few? Which ones?\r\n  * Halt with an error message?\r\n* **Run your program.** Try using the buttons.\r\n* **Reflect.** Were you right? Anything unexpected?\r\n  * Reset and Run the program again a few times until you understand what's happening.\r\n \r\n<details>\r\n\r\n<summary>What's happening? [click to expand]</summary>\r\n\r\n<li> As soon as you hit Run messages \"1\", \"3\" and \"5\" will display immediately. Those statements are out in the \"open\" rather than part of an event handling function - the computer can run them right away.</li>\r\n<li>Messages \"1\", \"3\" and \"5\" will only print once each time you run the program not matter what else you do</li>\r\n<li>Messages \"2\" and \"4\" will be displayed when the the buttons are clicked.</li>\r\n<li>In case you're wondering: <strong>This is bad code</strong>.  It's hard to read because of where the statements fall.  Typically if some code needs to run when the program starts up, you'd group it all together at the top of the program.  Scattering it about in and between event handlers and other functions is a recipe for a lot of buggy code that will be hard for you to work out.</li>\r\n\r\n</details>",
+    "instructions_important": "false",
+    "start_blocks": "console.log(\"Message 1\");\r\n\r\nonEvent(\"button1\",\"click\",function(){\r\n  console.log(\"Message 2\");\r\n});\r\n\r\nconsole.log(\"Message 3\");\r\n\r\nonEvent(\"button2\",\"click\",function(){\r\n  console.log(\"Message 4\");\r\n});\r\n\r\nconsole.log(\"Message 5\");",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "true",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "code_functions": {
+      "setProperty": null,
+      "onEvent": {
+        "params": [
+          "\"id\"",
+          "\"click\"",
+          "function(){\n\n}"
+        ]
+      },
+      "playSound": {
+        "params": [
+          "\"sound://default.mp3\""
+        ],
+        "paletteParams": [
+          "url"
+        ]
+      },
+      "setScreen": null,
+      "setPosition": null,
+      "randomNumber_min_max": null,
+      "console.log": null
+    },
+    "palette_category_at_start": "variables",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; transform: scale(0.625);\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"button1\" style=\"padding: 0px; margin: 0px; height: 65px; width: 115px; font-size: 20px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 25px; top: 110px;\">Button 1</button><button id=\"button2\" style=\"padding: 0px; margin: 0px; height: 65px; width: 120px; font-size: 20px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 175px; top: 110px;\">Button 2</button></div></div>",
+    "teacher_markdown": "### Teaching Tips\r\n\r\n**Prediction is important**\r\n\r\nYou might want to have all students do this level at the same time and explain the prediction process to them.\r\n\r\n* Do what you can to really get students to examine the code and predict what will happen before hitting run.  Perhaps have them do it with a partner.\r\n\r\n* Later on in the course there are levels that force you to make a prediction first.  We're not that heavy handed yet.\r\n\r\nThe **purpose of prediction** is that you are more likely to remember the result of some action if you try to predict what will happen first.\r\n\r\n* In fact, you might remember better if your prediction is *wrong*.  \r\n* So there is no pressure to be right, only that you *force yourself to make a prediction*.\r\n* Professional programmers do this implicitly out of habit - it's a great way to quickly gain insight into your code and what it is (or isn't) doing.",
+    "parent_level_id": 17108,
+    "name_suffix": "_virtual",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-15 03:45:28 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-04-03 20:25:57 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-03 20:26:20 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-04-23 16:34:40 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

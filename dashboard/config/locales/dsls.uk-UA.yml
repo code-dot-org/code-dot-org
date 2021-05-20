@@ -3,32 +3,38 @@ uk-UA:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        questions:
-        - text: Вибери алгоритм для поданого зображення.
         answers:
         - text: Почни з квадрата<br/>Постав на нього трикутник<br/>Розмісти трикутник
             під квадратом
-        - correct: true
+        - text: Почніть з квадрата<br/>Розмістіть трикутник праворуч від квадрата<br/>Поставте
+            паралелограм під квадратом<br/>Розмістіть трикутник праворуч від паралелограма
+          correct: true
         - text: Почни з квадрата<br/>Постав паралелограм над квадратом<br/>Розмісти
             трикутник праворуч від паралелограма
         - text: Почни з квадрата<br/>Розмісти трикутник під квадратом<br/>Постав паралелограм
             праворуч від трикутника
-      2-3 Algorithms Multi 2:
-        title: Множинний вибір
-        content1: Почни з трикутника <br/> Розмісти квадрат під трикутником <br/>
-          Розмісти ще один трикутник під квадратом
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
-        - text: Яке зображення <em>не</em> відповідає цьому алгоритму?
+        - text: Вибери алгоритм для поданого зображення.
+        title: Множинний вибір
+      2-3 Algorithms Multi 2:
         answers:
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        content1: Почни з трикутника <br/> Розмісти квадрат під трикутником <br/>
+          Розмісти ще один трикутник під квадратом
+        questions:
+        - text: Яке зображення <em>не</em> відповідає цьому алгоритму?
+        title: Множинний вибір
       2-3 Big Event Match 1:
-        title: Відповідність
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Відповідність комбінації клавіш танцювальних ходів.
         questions:
@@ -36,13 +42,13 @@ uk-UA:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
-      2-3 Binary Match 1:
         title: Відповідність
+      2-3 Binary Match 1:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Використовуйте клавішу, щоб відповідати кожному коду на його букву
         questions:
@@ -50,225 +56,224 @@ uk-UA:
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
-        answers:
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        title: Відповідність
       2-3 Conditionals Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
-        questions:
-        - text: Відповідно до правил гри, для якого набору карт правильно розраховано
-            очки?
         answers:
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
-      2-3 Getting Loopy Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
-        - text: Як можна спростити цю послідовність, використавши цикли?
+        - text: Відповідно до правил гри, для якого набору карт правильно розраховано
+            очки?
+        title: Множинний вибір
+      2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
+        questions:
+        - text: Як можна спростити цю послідовність, використавши цикли?
+        title: Множинний вибір
       2-3 Graph Paper Match 1:
-        title: Відповідність
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Зіставте сітку до програми.
         questions:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        answers:
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        title: Відповідність
       2-3 Graph Paper Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        questions:
-        - text: Яка програма зробить це зображення?
         answers:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-      2-3 Maze Match 2:
-        title: Матч Лабіринт
-        content1: Складіть пазл з блоків
-        pre_title: Інструкції
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        - text: Яка програма зробить це зображення?
+        title: Множинний вибір
+      2-3 Maze Match 2:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
-      2-3 Maze Multi 2:
-        title: Лабіринт - вибір
-        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
+        content1: Складіть пазл з блоків
         questions:
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        title: Матч Лабіринт
+      2-3 Maze Multi 2:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
-      2-3 Relay Programming Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
+        - text: Який набір блоків проведене мене до свині?
+        title: Лабіринт - вибір
+      2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
           correct: true
-      2-3 Relay Programming Multi 2:
-        title: Множинний вибір
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - text: Яка комбінація зображення та програми не містить помилок?
+        - text: Яка програма **не** створить це зображення?
+        title: Множинний вибір
+      2-3 Relay Programming Multi 2:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
           correct: true
-      2-3 artist debug multi 1:
-        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
-          700"
         questions:
-        - {}
+        - text: Яка комбінація зображення та програми не містить помилок?
+        title: Множинний вибір
+      2-3 artist debug multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-      2-3 artist functions multi 1:
-        title: Художник - функції- вибір 1
-        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
-          500"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
-        - text: Оберіть правильні блоки, щоб намалювати це зображення, використовуючи
-            подані функції
+        - {}
+      2-3 artist functions multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
+        questions:
+        - text: Оберіть правильні блоки, щоб намалювати це зображення, використовуючи
+            подані функції
+        title: Художник - функції- вибір 1
       2-3 artist loops match 1:
-        title: Художник Відповідність циклів 1
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Відповідність циклів до форми
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
+        title: Художник Відповідність циклів 1
       2-3 artist loops multi 1:
-        title: Художник - цикли - вибір
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500"
         questions:
         - text: Яка фігура утвориться цим циклом?
+        title: Художник - цикли - вибір
+      2-3 artist loops multi 2:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-      2-3 artist loops multi 2:
-        title: Художник - цикли - вибір
+          correct: true
         content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
           500"
         questions:
         - text: Яку фігуру утворює ця програма?
-        answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
-          correct: true
+        title: Художник - цикли - вибір
       2-3 artist match 1:
-        title: Збіг художника
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Збігати форму з блоками, які його заповнюють.
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
+        title: Збіг художника
       2-3 bee conditionals multi 1:
-        questions:
-        - text: Яке порівняння, з поданих нижче, правильне?
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
-      2-3 bee conditionals multi 3:
-        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
-          500"
         questions:
-        - text: Вибери найкращі блоки.
+        - text: Яке порівняння, з поданих нижче, правильне?
+      2-3 bee conditionals multi 3:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
-      2-3 bee loops multi 1:
-        title: Бджілка - цикли - вибір 1
-        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
-        - text: Які блоки допоможуть зібрати увесь нектар?
+        - text: Вибери найкращі блоки.
+      2-3 bee loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
+        questions:
+        - text: Які блоки допоможуть зібрати увесь нектар?
+        title: Бджілка - цикли - вибір 1
       2-3 maze match 1:
-        title: Лабіринт матч Один
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Складіть пазл з блоків
         questions:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        answers:
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        title: Лабіринт матч Один
       2-3 maze multi 1:
-        title: Лабіринт - вибір 1
-        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
-        questions:
-        - text: Набір блоків є правильну відповідь?
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
+        questions:
+        - text: Набір блоків є правильну відповідь?
+        title: Лабіринт - вибір 1
       4-5 Algorithms Match 1:
-        title: Відповідність
+        answers:
+        - text: "<h4> Встановити значення гравця 1 до 0 </h4>"
+        - text: "<h4> Гравець 1 ролі помре </h4>"
+        - text: "<h4> Додайте гравця 1 до загального балу </h4>"
+        - text: "<h4> Порівняйте результати гравців, щоб побачити, хто виграє </h4>"
         content1: Зіграйте кроки у грі Dice Race в порядку, щоб вони з&#39;являлися
           в алгоритмі.
         questions:
@@ -276,23 +281,23 @@ uk-UA:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4> Встановити значення гравця 1 до 0 </h4>"
-        - text: "<h4> Гравець 1 ролі помре </h4>"
-        - text: "<h4> Додайте гравця 1 до загального балу </h4>"
-        - text: "<h4> Порівняйте результати гравців, щоб побачити, хто виграє </h4>"
+        title: Відповідність
       4-5 Algorithms Multi 1:
-        title: Множинний вибір
-        questions:
-        - text: Для якого з цих процесів найскладніше описати алгоритм?
         answers:
         - text: Чищення зубів
         - text: Випікання печива
         - text: Купити у відповідності до списку
         - text: Банан
           correct: true
+        questions:
+        - text: Для якого з цих процесів найскладніше описати алгоритм?
+        title: Множинний вибір
       4-5 Computational Thinking Match 1:
-        title: Відповідність
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Кожна з цих машин була розкладена на менші частини. Підібрати кожен
           транспортний засіб зі своїм розбитим списком.
         questions:
@@ -300,76 +305,69 @@ uk-UA:
         - text: "<h3>Колеса/сторони: 2<br/>Вікна/сторони: 1</h3>"
         - text: "<h3>Колеса/сторони: 2<br/>Вікна/сторони: 6</h3>"
         - text: "<h3>Колеса/сторони: 3<br/>Вікна/сторони: 2</h3>"
-        answers:
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+        title: Відповідність
       4-5 Computational Thinking Multi 1:
-        title: Множинний вибір
-        questions:
-        - text: Сіетл - величезне місто. <br/> Eugene є середні міста <br/> Hillview
-            — місто.
         answers:
         - text: Сіетл _____ це _____ _____.
         - text: _____ це _____ місто.
           correct: true
         - text: _____ є _____ за _____.
         - text: Eugene — _____ місто.
-      4-5 Crowdsourcing Multi 1:
-        title: Множинний вибір
+        content1: Ось три речення. Який зі зразків нижче підходить до кожного з речень
         questions:
-        - text: Яке із цих зображень найкраще ілюструє краудсорсинг?
+        - text: Сіетл - величезне місто. <br/> Eugene — середнє місто <br/> Hillview
+            — мале місто.
+        title: Множинний вибір
+      4-5 Crowdsourcing Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
           correct: true
-      4-5 Crowdsourcing Multi 2:
-        title: Множинний вибір
         questions:
-        - text: Який із цих заходів найкраще використати для краудсорсингу?
+        - text: Яке із цих зображень найкраще ілюструє краудсорсинг?
+        title: Множинний вибір
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Прибрати у кімнаті
           correct: true
         - text: З'їсти десерт
         - text: Розчесати волосся
         - text: Вмитись
-      4-5 Digital Footprint Multi 1:
-        title: Множинний вибір
         questions:
-        - text: Яку інформацію, з поданої нижче, можна поширювати в Інтернеті?
+        - text: Який із цих заходів найкраще використати для краудсорсингу?
+        title: Множинний вибір
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Ваш День народження
         - text: Ваші улюблені харчі
           correct: true
         - text: Ваша адреса
         - text: Номер кредитної картки ваших батьків
-      4-5 Internet Multi 1:
+        questions:
+        - text: Яку інформацію, з поданої нижче, можна поширювати в Інтернеті?
         title: Множинний вибір
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Коли ви заходите на code.org, до якої ІР-адреси Вас найімовірніше
             скерують?
+        title: Множинний вибір
+      4-5 Internet Multi 2:
         answers:
         - {}
-        - {}
-        - {}
         - correct: true
-      4-5 Internet Multi 2:
-        title: Множинний вибір
+        - {}
+        - {}
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: DNS скерував до ІР-адреси 100.42.50.110, який це сайт?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Множинний вибір
-        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
@@ -377,8 +375,16 @@ uk-UA:
           correct: true
         - {}
         - {}
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        questions:
+        - {}
+        title: Множинний вибір
       4-5 Suncatchers Match 1:
-        title: Відповідність
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Збігайте кожну програму з тим, що вона робить, використовуючи надану
           групу навичок.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -387,131 +393,125 @@ uk-UA:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Відповідність
       4-5 Suncatchers Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        questions:
-        - text: Які програми нижче <em>не</em> виконують таку ж послідовності, як
-            Програма 1?
         answers:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-      4-5 artist loops multi 1:
-        title: Художник - цикли - вибір
-        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
-          500"
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
-        - text: Які блоки створять такий дизайн?
+        - text: Які програми нижче <em>не</em> виконують таку ж послідовності, як
+            Програма 1?
+        title: Множинний вибір
+      4-5 artist loops multi 1:
         answers:
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
-      4-5 artist multi 1:
-        title: Художник - вибір
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
-        - text: Які блоки намалюють прямокутник з периметром 100?
+        - text: Які блоки створять такий дизайн?
+        title: Художник - цикли - вибір
+      4-5 artist multi 1:
         answers:
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
-      4-5 artist multi 2:
-        title: Художник - вибір
         questions:
-        - text: Який малюнок є симетричним?
+        - text: Які блоки намалюють прямокутник з периметром 100?
+        title: Художник - вибір
+      4-5 artist multi 2:
         answers:
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
           correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
-      4-5 bee conditionals multi 1:
-        title: Бджілка - умови - вибір
-        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         questions:
-        - text: Вибери найкращі блоки.
+        - text: Який малюнок є симетричним?
+        title: Художник - вибір
+      4-5 bee conditionals multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
-      4-5 bee debug multi 1:
-        title: Бджілка - відлагодження - вибір
-        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
-        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         questions:
-        - text: Яка версія функції буде працювати?
+        - text: Вибери найкращі блоки.
+        title: Бджілка - умови - вибір
+      4-5 bee debug multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
-      4-5 bee loops multi 1:
-        title: Бджілка - цикли -вибір
-        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
-        - text: Які блоки розв'яжуть задачу?
+        - text: Яка версія функції буде працювати?
+        title: Бджілка - відлагодження - вибір
+      4-5 bee loops multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
-      4-5 maze conditionals multi 1:
-        title: Лабіринт - умови - вибір
-        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
-          500"
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: Які блоки розв'яжуть задачу?
+        title: Бджілка - цикли -вибір
+      4-5 maze conditionals multi 1:
         answers:
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
           correct: true
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
-      4-5 maze match 1:
-        title: Матч Лабіринт
-        content1: Складіть пазл з блоків
-        pre_title: Інструкції
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
         questions:
-        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
-        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
-        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        - text: Які блоки розв'яжуть задачу?
+        title: Лабіринт - умови - вибір
+      4-5 maze match 1:
         answers:
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-      4-5 maze multi 1:
-        title: Лабіринт - вибір
-        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
+        content1: Складіть пазл з блоків
         questions:
-        - text: Які блоки розв'яжуть задачу?
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        title: Матч Лабіринт
+      4-5 maze multi 1:
         answers:
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
           correct: true
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
+        questions:
+        - text: Які блоки розв'яжуть задачу?
+        title: Лабіринт - вибір
       Begin planning your project:
-        title: назва
         content1: опис тут
       Begin planning your project_2018:
-        title: Почніть планувати свій проект
         content1: опис тут
       Begin planning your project_2018_2019:
-        title: Почніть планувати свій проект
+        content1: опис тут
+      Begin planning your project_2018_2019_2020:
         content1: опис тут
       CSD Header Size MC:
         answers:
@@ -547,47 +547,32 @@ uk-UA:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
       CSD U2 Design Project:
-        title: назва
         content1: опис тут
       CSD U2 Design Project_2018:
-        title: назва
         content1: опис тут
       CSD U2 Design Project_2018_2019:
-        title: назва
+        content1: опис тут
+      CSD U2 L1 Overview:
         content1: опис тут
       CSD U2 L2 Overview:
-        title: назва
         content1: опис тут
       CSD U2 L3 Overview:
-        title: назва
         content1: опис тут
       CSD U2 L4 Overview:
-        title: назва
         content1: опис тут
       CSD U2 L5 Overview:
-        title: назва
         content1: опис тут
       CSD U2 L6 Overview:
-        title: назва
         content1: опис тут
       CSD U2 Lesson 6 Overview:
         content1: опис тут
       CSD U2 expand project:
-        title: назва
         content1: опис тут
       CSD U2 expand project_2018:
-        title: назва
         content1: опис тут
       CSD U2 expand project_2018_2019:
-        title: назва
         content1: опис тут
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
             PM.png">
@@ -599,18 +584,13 @@ uk-UA:
             PM.png">
         - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
             PM.png">
-      CSD U2 lists match:
         questions:
-        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
-            PM.png
-        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
-            PM.png
-        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
-            PM.png
-        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
-            PM.png
-        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
-            AM.png
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
             PM.png
@@ -621,19 +601,19 @@ uk-UA:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
         - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
       CSD U2 lists match_2018:
-        questions:
-        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
-            PM.png
-        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
-            PM.png
-        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
-            PM.png
-        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
-            PM.png
-        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
-            AM.png
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
             PM.png
@@ -644,19 +624,19 @@ uk-UA:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
         - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
       CSD U2 lists match_2018_2019:
-        questions:
-        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
-            PM.png
-        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
-            PM.png
-        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
-            PM.png
-        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
-            PM.png
-        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
-            AM.png
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
             PM.png
@@ -667,6 +647,17 @@ uk-UA:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
         - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
       CSD U2 project guide:
         content1: опис тут
@@ -675,71 +666,71 @@ uk-UA:
       CSD U2 project guide_2018_2019:
         content1: опис тут
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: назва
-        questions:
-        - {}
         answers:
         - correct: true
         - text: "  0<br>200<br>100"
         - {}
         - {}
+        questions:
+        - {}
+        title: назва
       CSD U3 Boolean MC_2018:
-        title: назва
-        questions:
-        - {}
         answers:
         - correct: true
         - text: "  0<br>200<br>100"
         - {}
         - {}
+        questions:
+        - {}
+        title: назва
       CSD U3 Boolean MC_2018_2019:
-        title: назва
-        questions:
-        - {}
         answers:
         - correct: true
         - text: "  0<br>200<br>100"
         - {}
         - {}
+        questions:
+        - {}
+        title: назва
       CSD U3 Card Examples_2018:
         content1: опис тут
       CSD U3 Card Examples_2018_2019:
@@ -763,114 +754,97 @@ uk-UA:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        questions:
+        - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
-          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
+        questions:
+        - {}
       CSD U3 Sprites intro predict multi_2018:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
-            style="width: 150px; border: 1px solid">'
-          correct: true
-        - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
-            style="width: 150px; border: 1px solid">'
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
-          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
+        questions:
+        - {}
       CSD U3 combining rep:
-        title: назва
         content1: опис тут
       CSD U3 combining rep_2018:
-        title: назва
         content1: опис тут
       CSD U3 combining rep_2018_2019:
-        title: назва
         content1: опис тут
       CSD U3 drawSprites placement match:
-        questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
             AM.png">
@@ -879,17 +853,17 @@ uk-UA:
         - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
             AM.png">
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
             AM.png">
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
             AM.png">
@@ -898,6 +872,15 @@ uk-UA:
         - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
             AM.png">
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
             AM.png">
       CSD U3 game intro:
         content1: опис тут
@@ -912,13 +895,10 @@ uk-UA:
       CSD U3 platform intro_2018_2019:
         content1: опис тут
       CSD U5 Encryption 1:
-        title: назва
         content1: опис тут
       CSD U5 Encryption 1_2018:
-        title: назва
         content1: опис тут
       CSD U5 Encryption 1_2018_2019:
-        title: назва
         content1: опис тут
       CSD U5 Encryption 2:
         content1: опис тут
@@ -927,7 +907,6 @@ uk-UA:
       CSD U5 Encryption 2_2018_2019:
         content1: опис тут
       CSD U5 L13 SFLP Interpreting Data:
-        title: назва
         content1: опис тут
       CSD U5 crosstab warmup:
         content1: опис тут
@@ -936,22 +915,16 @@ uk-UA:
       CSD U5 crosstab warmup_2018_2019:
         content1: опис тут
       CSD U5 data visualization:
-        title: назва
         content1: опис тут
       CSD U5 data visualization_2018:
-        title: назва
         content1: опис тут
       CSD U5 data visualization_2018_2019:
-        title: назва
         content1: опис тут
       CSD U5 student record:
-        title: назва
         content1: опис тут
       CSD U5 student record_2018:
-        title: назва
         content1: опис тут
       CSD U5 student record_2018_2019:
-        title: назва
         content1: опис тут
       CSD U6 LED create intro:
         content1: опис тут
@@ -960,8 +933,6 @@ uk-UA:
       CSD U6 LED create intro_2018_2019:
         content1: опис тут
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
@@ -972,9 +943,9 @@ uk-UA:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
@@ -985,9 +956,9 @@ uk-UA:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
@@ -998,6 +969,8 @@ uk-UA:
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
+        questions:
+        - {}
       CSD U6 final intro:
         content1: опис тут
       CSD U6 final intro_2018:
@@ -1005,8 +978,6 @@ uk-UA:
       CSD U6 final intro_2018_2019:
         content1: опис тут
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
@@ -1014,12 +985,12 @@ uk-UA:
             style="max-width: 100px;">'
         - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
             style="max-width: 100px;">'
-          correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
+          correct: true
+        questions:
+        - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
@@ -1027,1018 +998,1650 @@ uk-UA:
             style="max-width: 100px;">'
         - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
             style="max-width: 100px;">'
-          correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
+          correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
+          correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Продовжуємо танцювати! \n\nУ частині 2 ви створите власний проект.
+          Тут немає головоломок — натомість є ряд проектів, які демонструють різні
+          способи створення ускладнених танцювальних вечірок. Ці рівні можна проходити
+          _у будь-якому порядку_. \n\nВи можете дивитися, як щось було зроблено на
+          попередньому рівні, або поєднувати концепції з різних проектів. Перегляньте
+          усі проекти, оберіть улюблений та вдоскональте його на власний розсуд. \n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Продовжити</a>
+          \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:
+          10px\"> \n<a href=\"2\">\n <h2> \nНазад і вперед \n</h2>\n\n <img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"3\">\n
+          <h2> \nБільше кнопок \n</h2>\n\n <img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"4\">
+          \n<h2> \nШикуймося \n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n\n<a href=\"5\">\n
+          <h2>\n Куди вони поділися? \n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"6\">\n
+          <h2> \nТанцювальні команди \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"7\">\n
+          <h2> \nЧетвертні ноти \n</h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"8\"> \n<h2>
+          \nБаси, середні та високі частоти\n </h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\"> \n<h2>
+          \nПришвидшення та сповільнення \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Продовжуємо танцювати!
+
+          У частині 2 ви створите власний проект. Тут немає головоломок — натомість є ряд проектів, які демонструють різні способи створення ускладнених танцювальних вечірок.
+
+          Ці рівні можна проходити _у будь-якому порядку_. Ви можете дивитися, як щось було зроблено на попередньому рівні, або поєднувати концепції з різних проектів. Перегляньте усі проекти, оберіть улюблений та вдоскональте його на власний розсуд.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Продовжити</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Назад і вперед
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Більше кнопок
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Шикуймося
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Куди вони поділися?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Танцювальні команди
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Четвертні ноти
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Баси, середні та високі частоти
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Пришвидшення та сповільнення
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup:
         content1: опис тут
       Internet Simulator Setup 2:
-        title: назва
         content1: опис тут
       Internet Simulator Setup 3:
         content1: опис тут
       K-1 Artist 1 Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
-        questions:
-        - text: Які блоки розв'яжуть задачу?
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
         - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
           correct: true
         - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
         - text: "/script_assets/k_1_images/artist_images/E-S.png"
-      K-1 Artist 1 Multi 2:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
-        - text: Які блоки намалюють квадрат?
+        - text: Які блоки розв'яжуть задачу?
+        title: Множинний вибір
+      K-1 Artist 1 Multi 2:
         answers:
         - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
           correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
         - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
         - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
+        questions:
+        - text: Які блоки намалюють квадрат?
+        title: Множинний вибір
       K-1 Artist 2 Match 2:
-        title: Відповідність
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Встанови відповідність фігур за типом.
         questions:
         - text: "/script_assets/k_1_images/artist_images/small_circle.png"
         - text: "/script_assets/k_1_images/artist_images/large_square.png"
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
-        answers:
-        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
-        - text: "/script_assets/k_1_images/artist_images/small_square.png"
-        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
+        title: Відповідність
       K-1 Bee 1 Multi 1:
-        title: Множинний вибір
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Скільки тут нектару?
+        title: Множинний вибір
+      K-1 Bee 1 Multi 2:
         answers:
         - text: "/script_assets/k_1_images/bee_images/nectar.png"
         - text: "/script_assets/k_1_images/bee_images/2nectar.png"
-          correct: true
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
-      K-1 Bee 1 Multi 2:
-        title: Множинний вибір
+          correct: true
         content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Скільки тут нектару?
-        answers:
-        - text: "/script_assets/k_1_images/bee_images/nectar.png"
-        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
-        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
-        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
-          correct: true
+        title: Множинний вибір
       K-1 Bee Loops Match 1:
-        title: Відповідність
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Встанови відповідність для блоків
         questions:
         - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
         - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
-        answers:
-        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
-        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
-      K-1 Big Event Match 1:
         title: Відповідність
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Відповідність комбінації клавіш танцювальних ходів.
         questions:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        title: Відповідність
       K-1 Digital Footprint Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        questions:
-        - text: Яка тварина залишила цифровий слід, який піддає <strong>найбільшій
-            небезпеці</strong>?
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
           correct: true
-      K-1 Getting Loopy Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
-        - text: Як можна спростити цю послідовність, використавши цикли?
+        - text: Яка тварина залишила цифровий слід, який піддає <strong>найбільшій
+            небезпеці</strong>?
+        title: Множинний вибір
+      K-1 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
-      K-1 Happy Maps Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
-        - text: Яка стрілка скерує Флурба до скарбу?
+        - text: Як можна спростити цю послідовність, використавши цикли?
+        title: Множинний вибір
+      K-1 Happy Maps Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/up.png"
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
         - text: "/script_assets/k_1_images/unplugged_images/right.png"
-      K-1 Keep it Private Multi 1:
-        title: Множинний вибір
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
-        - text: Яку інформацію <strong>не</strong> можна поширювати в Інтернеті?
+        - text: Яка стрілка скерує Флурба до скарбу?
+        title: Множинний вибір
+      K-1 Keep it Private Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-      K-1 Maze Debugging Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
-        - text: Яким повинен бути останній блок?
+        - text: Яку інформацію <strong>не</strong> можна поширювати в Інтернеті?
+        title: Множинний вибір
+      K-1 Maze Debugging Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/N.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/S.png"
         - text: "/script_assets/k_1_images/move_blocks/E.png"
         - text: "/script_assets/k_1_images/move_blocks/W.png"
-      K-1 Maze Loops Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
-        - text: Які блоки "повторити" є однаковими?
+        - text: Яким повинен бути останній блок?
+        title: Множинний вибір
+      K-1 Maze Loops Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
         - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
-      K-1 Maze Loops Multi 2:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
-        - text: Обери правильний блок циклу.
+        - text: Які блоки "повторити" є однаковими?
+        title: Множинний вибір
+      K-1 Maze Loops Multi 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
           correct: true
-      K-1 Maze Match 1:
-        title: Відповідність
-        content2: Встанови відповідність між завданнями і блоками
-        pre_title: Інструкції
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
-        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
-        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
-        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
-        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        - text: Обери правильний блок циклу.
+        title: Множинний вибір
+      K-1 Maze Match 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/ENE.png"
         - text: "/script_assets/k_1_images/move_blocks/WW.png"
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
-      K-1 Maze Multiple Choice 2:
-        title: Лабіринт
-        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
+        content2: Встанови відповідність між завданнями і блоками
         questions:
-        - text: Яке питання розв'яже цей рівень?
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: Відповідність
+      K-1 Maze Multiple Choice 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/ES.png"
         - text: "/script_assets/k_1_images/move_blocks/WS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/WN.png"
-      K-1 Move It Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
-        - text: Який алгоритм доставить Флурба до квітів?
+        - text: Яке питання розв'яже цей рівень?
+        title: Лабіринт
+      K-1 Move It Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
         - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
         - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
-      K-1 Plant a Seed Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
-        - text: Який крок повинен бути на початку цього алгоритму?
+        - text: Який алгоритм доставить Флурба до квітів?
+        title: Множинний вибір
+      K-1 Plant a Seed Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
           correct: true
-      K-1 Plant a Seed Multi 2:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
-        - text: Яким кроком потрібно заповнити пропуск у цьому алгоритмі?
+        - text: Який крок повинен бути на початку цього алгоритму?
+        title: Множинний вибір
+      K-1 Plant a Seed Multi 2:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
-      K-1 Word Search Multi 1:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/search_images/move.png, 450"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
-        - text: Які блоки напишуть "MOVE" (РУХАТИСЬ)?
+        - text: Яким кроком потрібно заповнити пропуск у цьому алгоритмі?
+        title: Множинний вибір
+      K-1 Word Search Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EEES.png"
         - text: "/script_assets/k_1_images/move_blocks/EESS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
-      K-1 Word Search Multi 3:
-        title: Множинний вибір
-        content1: "/script_assets/k_1_images/search_images/square.png, 700"
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
-        - text: Яке написано слово?
+        - text: Які блоки напишуть "MOVE" (РУХАТИСЬ)?
+        title: Множинний вибір
+      K-1 Word Search Multi 3:
         answers:
         - text: SET (ВСТАНОВИТИ)
         - text: SQUARE (КВАДРАТ)
           correct: true
         - text: SOUTH (ПІВДЕНЬ)
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
+        questions:
+        - text: Яке написано слово?
+        title: Множинний вибір
       Multi-Screen Apps:
-        title: назва
         content1: опис тут
       New Challenge Introduction:
-        title: назва
+        content1: опис тут
+      OPD-K5 Reviewing Reflections:
         content1: опис тут
       OPD-K5 Stage3aGo:
-        title: назва
+        content1: опис тут
+      OPD-K5 Stage3aGo_copy:
+        content1: опис тут
+      OPD-K5 conditionals introduced:
+        content1: опис тут
+      OPD-K5 debugging:
+        content1: опис тут
+      OPD-K5 diving deeper intro:
+        content1: опис тут
+      OPD-K5 events introduced:
+        content1: опис тут
+      OPD-K5 for loops:
+        content1: опис тут
+      OPD-K5 for loops intro:
+        content1: опис тут
+      OPD-K5 for loops introduction:
+        content1: опис тут
+      OPD-K5 functions introduced:
+        content1: опис тут
+      OPD-K5 journaling:
+        content1: опис тут
+      OPD-K5 lesson implementation planning:
+        content1: опис тут
+      OPD-K5 lesson plans:
+        content1: опис тут
+      OPD-K5 loops introduced:
+        content1: опис тут
+      OPD-K5 project:
+        content1: опис тут
+      OPD-K5 projects introduction:
+        content1: опис тут
+      OPD-K5 role_of_teacher:
+        content1: опис тут
+      OPD-K5 sequencing introduced:
+        content1: опис тут
+      OPD-K5 sprite lab:
+        content1: опис тут
+      OPD-K5 sprite lab introduction:
+        content1: опис тут
+      OPD-K5 sprite lab unplugged:
+        content1: опис тут
+      OPD-K5 sprite lab video:
+        content1: опис тут
+      OPD-K5 types of lessons:
+        content1: опис тут
+      OPD-K5 using lesson plans:
+        content1: опис тут
+      OPD-K5 variables:
+        content1: опис тут
+      OPD-K5 variables introduction:
+        content1: опис тут
+      OPD-K5 variables unplugged:
+        content1: опис тут
+      OPD-K5 where to next:
+        content1: опис тут
+      OPD-K5-projects-1:
         content1: опис тут
       Prepare for your presentation:
-        title: назва
         content1: опис тут
-      Prepare for your presentation_2018:
-        title: Підготуйтеся до презентації в юрті
       'Technique: Frequency Analysis':
         content1: опис тут
       Terminology Recap:
         content1: опис тут
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Неправильно
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Неправильно
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Неправильно
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Неправильно
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
         - text: Не знаю.
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
-      courseC_multi_starWars_predict1:
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseC_multi_starWars_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
-      courseD_external_binary1:
-        title: Двійкове Малювання
-      courseD_external_binary1_2018:
-        title: Двійкове Малювання
-      courseD_external_binary1_2018_2019:
-        title: Двійкове Малювання
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: А
         - text: Б
         - text: В
         - text: Г
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: А
         - text: Б
         - text: В
         - text: Г
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: А
         - text: Б
         - text: В
         - text: Г
           correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: А
+        - text: Б
+        - text: В
+        - text: Г
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
         - text: А
           correct: true
         - text: Б
         - text: В
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: А
           correct: true
         - text: Б
         - text: В
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: А
           correct: true
         - text: Б
         - text: В
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: А
+          correct: true
+        - text: Б
+        - text: В
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseD_project_exemplars_2020_2021:
+        content1: Тест зменшення Сторінки Підручника
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       courseE_project_exemplars_2019:
-        title: Тест зменшення Сторінки Підручника
+        content1: Тест зменшення Сторінки Підручника
+      courseE_project_exemplars_2019_2020:
+        content1: Тест зменшення Сторінки Підручника
+      courseExpress_project_exemplars_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseF_markdown_algorithms_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_algorithms_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_conditionals_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_conditionals_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_debugging_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_debugging_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_end_2019:
-        title: Тест зменшення Сторінки Підручника
+        content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_forloops_end_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_forloops_intro_2019:
-        title: Тест зменшення Сторінки Підручника
+        content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_forloops_intro_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_loops_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_loops_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_nestedloops_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_nestedloops_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_end:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_end_2019:
-        title: Тест зменшення Сторінки Підручника
+        content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_variables_end_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_intro:
-        title: Тест зменшення Сторінки Підручника
         content1: Тест зменшення Сторінки Підручника
       courseF_markdown_variables_intro_2019:
-        title: Тест зменшення Сторінки Підручника
+        content1: Тест зменшення Сторінки Підручника
+      courseF_markdown_variables_intro_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Не знаю.
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
-      courseF_multi_bee_for3_predict1:
         questions:
         - {}
+      courseF_multi_bee_for3_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: 'Не знаю. '
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: 'Не знаю. '
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: 'Не знаю. '
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       courseF_project_exemplars_2019:
-        title: Тест зменшення Сторінки Підручника
+        content1: Тест зменшення Сторінки Підручника
+      courseF_project_exemplars_2019_2020:
         content1: Тест зменшення Сторінки Підручника
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: опис тут
+        markdown: "# Супер цифровий громадянин\n\n## Як ми можемо допомогти, коли
+          бачимо кібер-знущання? "
+      csf_password_power-up:
+        content1: опис тут
+        markdown: "# Підсилити свій пароль\n\n## Поради щодо запам'ятовування пароля\n\n*
+          Почни із пам’ятної **фрази**.\n* Тільки **батьки** можуть знати твій пароль.\n*
+          Ніколи не використовуй будь-яку **приватну** інформацію про себе у паролі.\n*
+          Створюй паролі щонайменше з **вісьмома** символами.\n* Використовуй у своєму
+          паролі літери, цифри та **символи**. \n\n![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
+      csf_putting_a_stop_to_online_meanness:
+        content1: опис тут
+        markdown: |-
+          # STOP недоброзичливісті
+
+          ## Що ви повинні робити, якщо хтось недоброзичливий з вами онлайн?
+
+          * **В**ідстороньтеся.
+          * ** Р**озкажіть дорослому, якому довіряєте
+          * **O**K сайти спочатку.
+          * **З**робіть паузу та подумайте.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
+        questions:
+        - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - text: Не знаю.
-      gradek1_activity_beNice:
-        title: Комп'ютер - твій друг
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - text: Не знаю.
+        questions:
+        - {}
+      csf_digital_trails:
+        markdown: |-
+          # Йдіть Цифровим шляхом
+
+          ## Яку інформацію можна мати у своєму цифровому сліді?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # Моє Інтернет сусідство
+
+          ## Як безпечно відвідувати місця в Інтернеті?
+      outbreak_story:
+        content1: опис тут
+        markdown: "# Спалах: закодуйте власну модель\n\n## Ласкаво просимо до Монстро-міста!\nМонстро-місто
+          було щасливим та здоровим місцем. Місцеві монстри полюбляли прогулюватись
+          та ходити в гості до своїх друзів. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nОдного дня один з монстрів заховорів. Монстр підхопив
+          **вірус**! Вірус - це маленька мікроба, яка робить нас хворим. Інші монстри
+          не сильно занепокоїлись. Вони продовжували ходити в гості.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nНезабаром захворіли ще два монстри. Це був той же
+          вірус! Здається, вони заразились від свого товариша.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nВірус повільно поширювався до ближніх монстрів. Здорові
+          почали переживати, що всі вони захворіють. Хворі переживали, що вони заразять
+          всіх інших.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Зупинити поширення\nНа щастя, після
+          вивчення вірусу, сусіди Монстро-міста зробили важливе відкриття. Вони зрозуміти,
+          що вони менш імовірно поширюватимуть вірус, якщо носитимуть маски. З масками
+          хворі монстри менш ймовірно передавали вірус здоровим.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Що трапиться далі?\n\nСьогодні ви напишете код, який створить і запустить
+          вашу власну  **симуляцію** поширення вірусу в Монстро-місті. Симуляція -
+          це комп'ютерна модель процесу чи системи. Навчіться програмувати і робити
+          прогнози щодо того, що трапиться з мешканцями Монстро-міста.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Як швидко буде поширюватись вірус?*\n\n*
+          *Захворіють всі?*\n\n* *Наскільки допомагатимуть маски?*\n\n\nКоли завершите,
+          поділіться симуляцією з іншими. Поширте своє повідомлення про те, що можна
+          зробити для того, щоб вберегти здоров'я інших, коли у місто приходить вірус.
+          \n"
+      outbreak_story2:
+        content1: опис тут
+        markdown: "# Спалах: Мислимо, як науковці\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nСимуляції - це чудовий спосід вивчити
+          речі, які може бути складно спостерігати у реальному світі. Вони допомагають
+          науковцям вирішувати проблеми та тестувати нові ідеї безпечно та ефективно.
+          Ваша симуляція - це спосіб показати, як може виглядати спалах вірусу в Монстро-місті.\n\n##
+          Перезапустити та переграти!\nНавіть коли ви самі пишете код, неможливо точно
+          знати, що трапиться, коли натиснути Запуск. Монстри блукають випадковими
+          траєкторіями, тож ви не знаєте, з якою швидкістю буде поширюватись вірус.
+          Щоразу, як ви міняєте код, не забувайте запустити свою симуляцію кілька
+          разів. Одне і те ж не трапиться двічі!\n\n## Збирати дані\nПробуйте записувати
+          свої спостереження, коли запускаєте симуляції. Можете рахувати кількість
+          монстрів, які захворюють, або використовуйте таймер, щоб побачити, як швидко
+          відбуваються події. Наприклад, скільки часу зазвичай проходить до захворювання
+          всіх монстрів, коли ніхто не носить масок? \n\n## Робити прогнози\nЯкщо
+          ви розумієте свою модель, ви можете її використовувати для прогнозування.
+          Можете навіть змінити хід своєї симуляції і припустити, що це змінить. Наприклад:\n*
+          Що станеться, якщо буде удвічі більше монстрів?\n* Що станеться, якщо монстри
+          рухатимуться удвічі повільніше?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Монстро-місто схоже на справжнє?\nЄ межа того,
+          наскільки реалістичною може бути модель. \n* Що ваша симуляція спалаху вірусу
+          має спільного зі справжніми спалахами?\n* У чому відмінності?\nКоли завершите
+          цю вправу, обговоріть ці питання з вчителями чи родиною!\n\n## Що ще можна
+          моделювати?\nВи вже створили робочу модель спалаху в Монстро-місті. Що є
+          такого, що ваша симуляція не робить, або що би ви хотіли, щоб вона робила?
+          Натисніть Продовжити, щоб дізнатись, як моделювати наступне:\n* Збільшення
+          кількості монстрів у симуляції\n* Допомогти монстрам вилікуватись від вірусу\n*
+          Ймовірності, імунітет, вакцини і більше!\n\nМожете поділитись своєю симуляційною
+          моделлю з іншими, або поширити повідомлення про те, що, на вашу думку, можна
+          зробити, щоб зберегти здоров'я, коли в місті з'являється вірус. \n"
+      outbreak_freeplay_choice:
+        description: Ви завершили підручник! Можете продовжувати змінювати та вдосконалювати
+          свій проект. Можете працювати з цими ж блоками, або спробувати розширений
+          набір інструментів.
+        display_name: Вільна гра
+      CSD U1 Test:
+        title: 'Тест: Комп’ютери та вирішення проблем'
+      PowerfulPasswords-Unplugged:
+        markdown: "# Сильні паролі \n\nДослідіть, чому люди використовують паролі,
+          дізнайтеся про переваги використання паролів та відкрийте стратегії створення
+          та збереження надійних, безпечних паролів.\n\n![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)\n"
+      courseD_EOC_2020:
+        description: 'Ви дійшли до останнього уроку курсу D! Виберіть проект для створення. '
+      csd-post-survey-2017-levelgroup:
+        title: Опитування учнів по закінченню курсу Відкриття інформатики
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Опитування учнів по закінченню курсу Відкриття інформатики
+      csd-post-survey-2017-levelgroup_2018:
+        title: Опитування учнів по закінченню курсу Відкриття інформатики
+      csd-post-survey-levelgroup-2018:
+        title: Опитування учнів по закінченню курсу Відкриття інформатики
+      csd-post-survey-levelgroup_2019:
+        title: Опитування учнів по закінченню курсу Відкриття інформатики
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: Швидке опитування курсу Відкриття інформатики!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: Швидке опитування курсу Відкриття інформатики!

@@ -1,24 +1,19 @@
 - if Homepage.show_professional_learning_banner(request)
   = inline_css 'homepage_below_hero_plane_banner.css'
+  - text = Homepage.professional_learning_banner_text()
 
   .homepage-professional-learning-banner
     %a.linktag#pl-2019{href: "/educate/professional-learning/middle-high"}
       .nonphone.col-80.tablet-feature
         .left.col-80.animateSlideInFromLeft
           .banner
-            %img{src: "/images/homepage/professional-learning-2018-banner-purple.png"}
-            .text
-              Professional Learning deadlines fast approaching!
-              %br/
-              Sign up now to reserve your seat.
+            %img{src: "/images/homepage/professional-learning-2018-banner.png"}
+            .text= text
         .right.col-20
           %button
             Join us
       .phone.phone-feature
-        .text
-          Professional Learning deadlines fast approaching!
-          %br/
-          Sign up now to reserve your seat.
+        .text= text
         %button
           Join us
 

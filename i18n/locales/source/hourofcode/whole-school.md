@@ -1,6 +1,5 @@
 ---
 title: Whole School Participation
-layout: wide
 ---
 
 {{ signup_button }}

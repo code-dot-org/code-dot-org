@@ -1,0 +1,591 @@
+{
+  "script": {
+    "name": "csd-bugs",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:36 UTC",
+    "seeding_key": {
+      "script.name": "csd-bugs"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Game Lab Bugs",
+      "name": "Game Lab Bugs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "key": "Immovable Crab",
+      "name": "Immovable Crab",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug text behind sprites"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug text behind sprites"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug text behind sprites"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug infinity mouse 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug infinity mouse 1"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug infinity mouse 1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug infinity mouse 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug infinity mouse 2"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug infinity mouse 2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug not a function"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug not a function"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug not a function"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 1"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 2"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 3"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 3"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 4"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 4"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 5"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 5"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 6"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 6"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 7"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 7"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 8"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      },
+      "level_keys": [
+        "gamelab bug declare sprite in loop 8"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug text behind sprites",
+        "script_level.level_keys": [
+          "gamelab bug text behind sprites"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug infinity mouse 1",
+        "script_level.level_keys": [
+          "gamelab bug infinity mouse 1"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug infinity mouse 2",
+        "script_level.level_keys": [
+          "gamelab bug infinity mouse 2"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug not a function",
+        "script_level.level_keys": [
+          "gamelab bug not a function"
+        ],
+        "lesson.key": "Game Lab Bugs",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 1",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 1"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 2",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 2"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 3",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 3"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 4",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 4"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 5",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 5"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 6",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 6"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 7",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 7"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gamelab bug declare sprite in loop 8",
+        "script_level.level_keys": [
+          "gamelab bug declare sprite in loop 8"
+        ],
+        "lesson.key": "Immovable Crab",
+        "lesson_group.key": "",
+        "script.name": "csd-bugs"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

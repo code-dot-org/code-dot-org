@@ -1,0 +1,1681 @@
+{
+  "script": {
+    "name": "jr-test",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:19 UTC",
+    "seeding_key": {
+      "script.name": "jr-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Using Behaviors",
+      "name": "Using Behaviors",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "key": "Using Forever Loops",
+      "name": "Using Forever Loops",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "key": "Virtual Pet - Behaviors",
+      "name": "Virtual Pet - Behaviors",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "key": "Virtual Pet - Forever",
+      "name": "Virtual Pet - Forever",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "key": "Fish Tank",
+      "name": "Fish Tank",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "key": "Alien Dance Party - Input",
+      "name": "Alien Dance Party - Input",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "key": "Virtual Pet - Interactions",
+      "name": "Virtual Pet - Interactions",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_1"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_2"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_5"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_5"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_6"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_6"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_7"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_7"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_8"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_8"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Behavior_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Behavior_9"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Behavior_9"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_1"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_2"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_5"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_5"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_6"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_6"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_7"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_7"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_8"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_8"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GLJr_Forever_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GLJr_Forever_9"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "GLJr_Forever_9"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "behaviors pet test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "behaviors pet test"
+        ],
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "behaviors pet test"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "behaviors pet test 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "behaviors pet test 2"
+        ],
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "behaviors pet test 2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "behaviors pet test 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "behaviors pet test 3"
+        ],
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "behaviors pet test 3"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "loop pet test"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "loop pet test"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "loop pet test"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "loop pet test 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "loop pet test 2"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "loop pet test 2"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "loop pet test 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "loop pet test 3"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "loop pet test 3"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "loop pet test 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "loop pet test 4"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "loop pet test 4"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 1"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 2"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 2"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 3"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 3"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 4"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 4"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 5"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 5"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 6"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 6"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 7"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Fish Tank 7"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 1"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 2"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 3"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 3"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 4"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 4"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 5"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 5"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 6"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 6"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party 7"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party 7"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance Party Freeplay"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Party Freeplay"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Dance Party Freeplay"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet 1"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet 1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet 2"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet 2"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet 3"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet 3"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet 4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet 4"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet 4"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet 5"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet 5"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet 6"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet 6"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Virtual Pet Freeplay"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Virtual Pet Freeplay"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      },
+      "level_keys": [
+        "Virtual Pet Freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_1",
+        "script_level.level_keys": [
+          "GLJr_Behavior_1"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_2",
+        "script_level.level_keys": [
+          "GLJr_Behavior_2"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_5",
+        "script_level.level_keys": [
+          "GLJr_Behavior_5"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_6",
+        "script_level.level_keys": [
+          "GLJr_Behavior_6"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_7",
+        "script_level.level_keys": [
+          "GLJr_Behavior_7"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_8",
+        "script_level.level_keys": [
+          "GLJr_Behavior_8"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Behavior_9",
+        "script_level.level_keys": [
+          "GLJr_Behavior_9"
+        ],
+        "lesson.key": "Using Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_1",
+        "script_level.level_keys": [
+          "GLJr_Forever_1"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_2",
+        "script_level.level_keys": [
+          "GLJr_Forever_2"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_5",
+        "script_level.level_keys": [
+          "GLJr_Forever_5"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_6",
+        "script_level.level_keys": [
+          "GLJr_Forever_6"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_7",
+        "script_level.level_keys": [
+          "GLJr_Forever_7"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_8",
+        "script_level.level_keys": [
+          "GLJr_Forever_8"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GLJr_Forever_9",
+        "script_level.level_keys": [
+          "GLJr_Forever_9"
+        ],
+        "lesson.key": "Using Forever Loops",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "behaviors pet test",
+        "script_level.level_keys": [
+          "behaviors pet test"
+        ],
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "behaviors pet test 2",
+        "script_level.level_keys": [
+          "behaviors pet test 2"
+        ],
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "behaviors pet test 3",
+        "script_level.level_keys": [
+          "behaviors pet test 3"
+        ],
+        "lesson.key": "Virtual Pet - Behaviors",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "loop pet test",
+        "script_level.level_keys": [
+          "loop pet test"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "loop pet test 2",
+        "script_level.level_keys": [
+          "loop pet test 2"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "loop pet test 3",
+        "script_level.level_keys": [
+          "loop pet test 3"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "loop pet test 4",
+        "script_level.level_keys": [
+          "loop pet test 4"
+        ],
+        "lesson.key": "Virtual Pet - Forever",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 1",
+        "script_level.level_keys": [
+          "Fish Tank 1"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 2",
+        "script_level.level_keys": [
+          "Fish Tank 2"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 3",
+        "script_level.level_keys": [
+          "Fish Tank 3"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 4",
+        "script_level.level_keys": [
+          "Fish Tank 4"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 5",
+        "script_level.level_keys": [
+          "Fish Tank 5"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 6",
+        "script_level.level_keys": [
+          "Fish Tank 6"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 7",
+        "script_level.level_keys": [
+          "Fish Tank 7"
+        ],
+        "lesson.key": "Fish Tank",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 1",
+        "script_level.level_keys": [
+          "Dance Party 1"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 2",
+        "script_level.level_keys": [
+          "Dance Party 2"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 3",
+        "script_level.level_keys": [
+          "Dance Party 3"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 4",
+        "script_level.level_keys": [
+          "Dance Party 4"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 5",
+        "script_level.level_keys": [
+          "Dance Party 5"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 6",
+        "script_level.level_keys": [
+          "Dance Party 6"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party 7",
+        "script_level.level_keys": [
+          "Dance Party 7"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Party Freeplay",
+        "script_level.level_keys": [
+          "Dance Party Freeplay"
+        ],
+        "lesson.key": "Alien Dance Party - Input",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet 1",
+        "script_level.level_keys": [
+          "Virtual Pet 1"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet 2",
+        "script_level.level_keys": [
+          "Virtual Pet 2"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet 3",
+        "script_level.level_keys": [
+          "Virtual Pet 3"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet 4",
+        "script_level.level_keys": [
+          "Virtual Pet 4"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet 5",
+        "script_level.level_keys": [
+          "Virtual Pet 5"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet 6",
+        "script_level.level_keys": [
+          "Virtual Pet 6"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Virtual Pet Freeplay",
+        "script_level.level_keys": [
+          "Virtual Pet Freeplay"
+        ],
+        "lesson.key": "Virtual Pet - Interactions",
+        "lesson_group.key": "",
+        "script.name": "jr-test"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

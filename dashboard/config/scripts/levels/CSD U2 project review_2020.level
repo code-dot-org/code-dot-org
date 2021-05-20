@@ -1,0 +1,40 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-02-17T23:24:09.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD U2 Project Template_2020",
+    "hide_share_and_remix": "true",
+    "long_instructions": "# Review Your Project\r\n\r\nYou're almost ready to publish your project, but you should check one more time that you have fulfilled all the requirements for this project.\r\n\r\n# Do This\r\n* Check that you are comfortable sharing all the information that's on your site.\r\n* Check that all of your images are correctly attributed, and that you have the right to put them on your site.\r\n* Check that your project includes everything included in the project rubric.\r\n* Use comments and whitespace to make your website readable.\r\n* Ask a classmate to help you find any potential problems with your site.\r\n",
+    "submittable": "false",
+    "parent_level_id": 18322,
+    "name_suffix": "_2020",
+    "reference_links": [
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "false",
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 23:44:19 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 21:13:53 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-08 18:37:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-05-29 18:19:10 +0000\",\"changed\":[\"reference_links\",\"map_reference\"],\"changed_by_id\":781,\"changed_by_email\":\"erin.bond@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Weblab>

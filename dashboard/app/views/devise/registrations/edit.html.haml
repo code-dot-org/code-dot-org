@@ -14,7 +14,7 @@
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   - email_mismatch = current_user.errors.delete(:email_mismatch)
   - current_user.reload if email_mismatch.present?
-  = devise_error_messages!
+  = render "devise/shared/error_messages", resource: resource
   %div
   .field
     = f.label :name, class: "label-bold"
@@ -36,10 +36,10 @@
         - if current_user.migrated? && !current_user.student?
           %em= t('user.new_email_hint')
           %br/
-        %span#displayed-user-email= f.object.email.present? ? f.object.email : '***encrypted***'
+        %span#displayed-user-email= f.object.email.present? ? f.object.email : "***#{t('user.encrypted')}***"
         - if current_user.should_see_edit_email_link?
           (
-          %a#edit-email-link{href: '#'}= "Update"
+          %a#edit-email-link{href: '#'}= t('user.update_email')
           )
   - if resource.username.present?
     .field
@@ -99,6 +99,24 @@
     = f.hidden_field :password
     = f.hidden_field :password_confirmation
 
+- if current_user.student?
+  %div#add-parent-email
+    %hr
+    %h2= t('user.for_parents_and_guardians')
+    %p= t('user.link_a_parent_email')
+    %p
+      %b= "#{t('user.parent_guardian_email_label')}:"
+      %span#displayed-parent-email= (current_user.parent_email == nil || current_user.parent_email.empty?) ? t('user.none') : current_user.parent_email
+      (
+      %a#add-parent-email-link{href: '#', role: 'button'}
+        = t('user.update_email')
+      - if current_user.parent_email&.present?
+        = t('or')
+        %a#remove-parent-email-link{href: '', role: 'button'}
+          = t('user.remove_parent_email_label')
+      )
+    %p= t('user.only_one_parent_email_supported_warning')
+
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
@@ -120,7 +138,8 @@
     - else
       .field
         = form.label :personal_email, class: "label-bold" do
-          = t('activerecord.attributes.user.personal_email', url: CDO.studio_url('users/edit/?noEmail=true')).html_safe
+          %span
+            = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
         = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
     .field
       = form.label :password, maxlength: 255, class: "label-bold"
@@ -138,9 +157,9 @@
       .field
         = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
         = form.text_field :parent_email, maxlength: 255
-    %p= t('user.create_personal_login_terms', terms_of_service_url: CDO.code_org_url('/tos')).html_safe
+    = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
     - unless no_email
-      %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
+      = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
     %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
 
 -# Separately-submittable form section allowing the user to edit their own
@@ -189,6 +208,24 @@
     = f.hidden_field :email_preference_opt_in
     = f.hidden_field :current_password
 
+- if resource.student?
+  = form_for(resource,
+      as: resource_name,
+      url: '/users/parent_email',
+      remote: true,
+      html: { id: 'add-parent-email-modal-form' },
+      namespace: 'add-parent-email-modal',
+    ) do |f|
+    = f.hidden_field :parent_email
+    = f.hidden_field :parent_email_preference_opt_in
+    = f.hidden_field :parent_email_preference_source, value: EmailPreference::PARENT_EMAIL_CHANGE
+  = form_for(resource,
+      as: resource_name,
+      :url => registration_path(resource_name),
+      html: { id: 'remove-parent-email-form', :method => :put },
+    ) do |f|
+    = f.hidden_field :parent_email, value: nil
+
 :ruby
   script_data = {
     edit: {
@@ -200,7 +237,7 @@
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
       dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count,
+      studentCount: current_user.students.count
     }.to_json
   }
-%script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
+%script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

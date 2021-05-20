@@ -1,0 +1,24 @@
+name 'VPL - CSD U4 Chapter 1 Project'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 4 Chapter 1 Project - Paper Prototype
+
+Unit 4 Chapter 1 ends with students developing a paper prototype.  This is an opportunity for students to show how they considered the needs of others in solving a problem. This project also shows how students engaged in the Problem Solving Process.
+
+## Sample Paper Prototypes
+
+<img src="https://images.code.org/86afcc2d0803ae6ed6975bf5079cb85e-image-1596742729009.png" style="float:center; height:75%; width:75%">
+
+<img src="https://images.code.org/a9279651fa315ee1165d06ec7ddf3a7b-image-1596742606125.png" style="float:center; height:75%; width:75%">
+
+## Project Resources 
+
+**Optional:** Explore the project lesson plan and accompanying resources. 
+
+><a href="https://curriculum.code.org/csd-20/unit4/7/" target="blank" rel="noopener noreferrer">Unit 4 Lesson 7: Project - Paper Prototype - Lesson Plan</a>
+
+
+MARKDOWN

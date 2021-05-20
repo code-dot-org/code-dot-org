@@ -1,7 +1,5 @@
 ---
 title: Priopćenje za tisak Sata kodiranja za izabrane dužnosnike
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

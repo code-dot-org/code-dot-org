@@ -1,14 +1,12 @@
 ---
-title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
+title: 과거의 아워오브코드 포스터
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# 과거의 아워오브코드 포스터
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### 이전 연도의 포스터를 찾아 인쇄하여 교실에 걸어 놓으세요! 최신의 포스터를 찾고 계세요? [여기 클릭]({{ promote/promote_posters_url }}).
 
 * * *
 

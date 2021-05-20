@@ -1,5 +1,6 @@
 {
   "continue": "ဆက်လုပ်ပါ",
+  "elseCode": "သို့မဟုတ်",
   "flap": "လှုပ်ခတ်ပါ",
   "flapRandom": "ကြုံရာပမာဏလှုပ်ခတ်ပါ",
   "flapVerySmall": "အလွန်အနည်းငယ်သာလှုပ်ခတ်ပါ",
@@ -10,12 +11,12 @@
   "flapTooltip": "တဖျပ်ဖျပ်လှုပ်ခတ် ပျံတက်ပါ",
   "flappySpecificFail": "သင့်codeဟာ ကောင်းသလိုဘဲ - နှိပ်လိုက်တိုင်း လှုပ်ခတ်သွားလိမ့်မယ်. သို့သော်သင်ဟာ လိုရာနေရာကိုရောက်ဖို့ အကြိမ်ရေများစွာ နှိပ်ရန်လိုအပ်သည်",
   "incrementPlayerScore": "အမှတ်ရယူပါ",
-  "incrementPlayerScoreTooltip": "လက်ရှိကစားသူအမှတ် ၁ တိုးပါ။",
+  "incrementPlayerScoreTooltip": "လက်ရှိ ကစားသူ တစ်မှတ် ရသည်။",
   "playSoundRandom": "ကြုံရာ အသံ ဖွင့်ပါ",
   "playSoundBounce": "ပြန်ခုန်တက်သံဖွင့်ပါ",
-  "playSoundCrunch": "အကြပ်အတည်း အသံဖွင့်ပါ",
+  "playSoundCrunch": "ကျွတ်ကျွတ်မြည်သံ ဖွင့်ပါ",
   "playSoundDie": "၀မ်းနည်းသံဖွင့်ပါ",
   "playSoundHit": "ရိုက်ခွဲသံဖွင့်ပါ",
   "playSoundPoint": "pointသံကို ဖွင့်ပါ",
-  "playSoundTooltip": "​ရွေးချယ်ထား​​သော အသံဖွင့်ပါ။"
+  "playSoundTooltip": "​ရွေးထား​​တဲ့အသံ ဖွင့်ပါ။"
 }

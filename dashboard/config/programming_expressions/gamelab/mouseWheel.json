@@ -1,0 +1,7 @@
+{
+  "func": "mouseWheel",
+  "block": "function mouseWheel() {}",
+  "expansion": "function mouseWheel() {\n  __;\n}",
+  "category": "World",
+  "noAutocomplete": true
+}

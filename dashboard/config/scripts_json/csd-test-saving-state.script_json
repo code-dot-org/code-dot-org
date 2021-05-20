@@ -1,0 +1,381 @@
+{
+  "script": {
+    "name": "csd-test-saving-state",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:36 UTC",
+    "seeding_key": {
+      "script.name": "csd-test-saving-state"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "What is a Computer?",
+      "name": "What is a Computer?",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "key": "Problem Solving Process",
+      "name": "Problem Solving Process",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "csd digital unplugged WIAC"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC L1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC L1"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "csd digital unplugged WIAC L1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC L2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC L2"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "csd digital unplugged WIAC L2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD digital Unplugged WIAC video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD digital Unplugged WIAC video"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "CSD digital Unplugged WIAC video"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged WIAC L3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC L3"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "csd digital unplugged WIAC L3"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD digital unplugged WIAC Qs"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD digital unplugged WIAC Qs"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "CSD digital unplugged WIAC Qs"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP word search"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged PSP word search"
+        ],
+        "lesson.key": "Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "csd digital unplugged PSP word search"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP seating"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged PSP seating"
+        ],
+        "lesson.key": "Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      },
+      "level_keys": [
+        "csd digital unplugged PSP seating"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged WIAC",
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged WIAC L1",
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC L1"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged WIAC L2",
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC L2"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD digital Unplugged WIAC video",
+        "script_level.level_keys": [
+          "CSD digital Unplugged WIAC video"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged WIAC L3",
+        "script_level.level_keys": [
+          "csd digital unplugged WIAC L3"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD digital unplugged WIAC Qs",
+        "script_level.level_keys": [
+          "CSD digital unplugged WIAC Qs"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged PSP word search",
+        "script_level.level_keys": [
+          "csd digital unplugged PSP word search"
+        ],
+        "lesson.key": "Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged PSP seating",
+        "script_level.level_keys": [
+          "csd digital unplugged PSP seating"
+        ],
+        "lesson.key": "Problem Solving Process",
+        "lesson_group.key": "",
+        "script.name": "csd-test-saving-state"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,356 @@
+framework,category,standard,description
+csp2021,AAP-1.A,AAP-1.A.1,"A variable is an abstraction inside a program that can hold a value. Each variable has associated data storage that represents one value at a time, but that value can be a list or other collection that in turn contains multiple values. "
+csp2021,AAP-1.A,AAP-1.A.2,Using meaningful variable names helps with the readability of program code and understanding of what values are represented by the variables.
+csp2021,AAP-1.A,AAP-1.A.3,"Some programming languages provide types to represent data, which are referenced using variables. These types include numbers, Booleans, lists, and strings. "
+csp2021,AAP-1.A,AAP-1.A.4,Some values are better suited to representation using one type of data rather than another. 
+csp2021,AAP-1.B,AAP-1.B.1,The assignment operator allows a program to change the value represented by a variable. 
+csp2021,AAP-1.B,AAP-1.B.2,"The exam reference sheet provides the “←” operator to use for assignment. For example,a ← expression evaluates expression and then assigns the result to the variable a."
+csp2021,AAP-1.B,AAP-1.B.3,The value stored in a variable will be the most recent value assigned. For example: a ← 1b ← a a ← 2 display(b) still displays 1.
+csp2021,AAP-1.C,AAP-1.C.1,"A list is an ordered sequence of elements. For example, [value1, value2, value3, …] describes a list where value1 is the first element, value 2 is the second element, value 3 is the third element, and so on."
+csp2021,AAP-1.C,AAP-1.C.2,An element is an individual value in a list that is assigned a unique index.
+csp2021,AAP-1.C,AAP-1.C.3,An index is a common method for referencing the elements in a list or string using natural numbers.
+csp2021,AAP-1.C,AAP-1.C.4,A string is an ordered sequence of characters.
+csp2021,AAP-1.D,AAP-1.D.1,Data abstraction provides a separation between the abstract properties of a data type and the concrete details of its representation.
+csp2021,AAP-1.D,AAP-1.D.2,Data abstractions manage complexity in programs by giving a collection of data a name without referencing the specific details of the representation.
+csp2021,AAP-1.D,AAP-1.D.3,Data abstractions can be created using lists. 
+csp2021,AAP-1.D,AAP-1.D.4,Developing a data abstraction to implement in a program can result in a program that is easier to develop and maintain.
+csp2021,AAP-1.D,AAP-1.D.5,Data abstractions often contain different types of elements. 
+csp2021,AAP-1.D,AAP-1.D.6,"The use of lists allows multiple related items to be treated as a single value. Lists are referred to by different names, such as array, depending on the programming language. EXCLUSION STATEMENT(EK APP-1.D.6): The use of linked lists is outside the scope"
+csp2021,AAP-1.D,AAP-1.D.7,"The exam reference sheet provides the notation [value1, value2, value3…] to create a list with those values as the first, second, third, and so on items. For example, ●       aList ← [value1, value2, value3,...] creates a new list that contains the value"
+csp2021,AAP-1.D,AAP-1.D.8,"The exam reference sheet describes a list structure whose index values are 1 through the number of elements in the list, inclusive. For all list operations, if a list index is less than 1 or greater than the length of the list, an error message is produce"
+csp2021,AAP-2.A,AAP-2.A.1,An algorithm is a finite set of instructions that accomplish a specific task. 
+csp2021,AAP-2.A,AAP-2.A.2,"Beyond visual and textual programming languages, algorithms can be expressed in a variety of ways, such as natural language, diagrams, and pseudocode."
+csp2021,AAP-2.A,AAP-2.A.3,Algorithms executed by programs are implemented using programming languages. 
+csp2021,AAP-2.A,AAP-2.A.4,"Every algorithm can be constructed using combinations of sequencing, selection, and iteration."
+csp2021,AAP-2.B,AAP-2.B.1,Sequencing is the application of each step of an algorithm in the order in which the code statements are given.
+csp2021,AAP-2.B,AAP-2.B.2,A code statement is a part of program code that expresses an action to be carried out. 
+csp2021,AAP-2.B,AAP-2.B.3,"An expression can consist of a value, a variable, an operator, or a procedure call that returns a value."
+csp2021,AAP-2.B,AAP-2.B.4,Expressions are evaluated to produce a single value.
+csp2021,AAP-2.B,AAP-2.B.5,The evaluation of expressions follows a set order of operations defined by the programming language.
+csp2021,AAP-2.B,AAP-2.B.6,Sequential statements execute in the order they appear in the code segment.
+csp2021,AAP-2.B,AAP-2.B.7,Clarity and readability are important considerations when expressing an algorithm in a programming language.
+csp2021,AAP-2.C,AAP-2.C.1,"Arithmetic operators are part of most programming languages and include addition, subtraction, multiplication, division, and modulus operators."
+csp2021,AAP-2.C,AAP-2.C.2,"The exam reference sheet provides a MOD b, which evaluates to the remainder when a is divided by b. Assume that a is an integer greater than or equal to 0 and b is an integer greater than 0. For example, 17 MOD 5 evaluates to 2."
+csp2021,AAP-2.C,AAP-2.C.3,"The exam reference sheet provides the arithmetic operators +, -, *, /, and MOD. ●       a + b●       a – b●       a * b●       a / b●       a MOD bThese are used to perform arithmetic on a and b. For example, 17 / 5 evaluates to 3.4."
+csp2021,AAP-2.C,AAP-2.C.4,The order of operations used in mathematics applies when evaluating expressions. The MOD operator has the same precedence as the * and / operators. 
+csp2021,AAP-2.D,AAP-2.D.1,String concatenation joins together two or more strings end-to-end to make a new string.
+csp2021,AAP-2.D,AAP-2.D.2,A substring is part of an existing string.
+csp2021,AAP-2.E,AAP-2.E.1,A Boolean value is either true or false. 
+csp2021,AAP-2.E,AAP-2.E.2,"The exam reference sheet provides the following relational operators: =, ≠, >, <, ≥, and ≤. ●       a = b●       a ≠ b●       a > b●       a < b●       a ≥ b●       a ≤ b These are used to test the relationship between two variables, expressions, o"
+csp2021,AAP-2.F,AAP-2.F.1,"The exam reference sheet provides the logical operators NOT, AND, and OR, which evaluate to a Boolean value."
+csp2021,AAP-2.F,AAP-2.F.2,"The exam reference sheet provides the NOT condition, which evaluates to true if condition is false; otherwise it evaluates to false."
+csp2021,AAP-2.F,AAP-2.F.3,"The exam reference sheet provides condition1 AND condition2, which evaluates to true if both condition1 and condition2 are true; otherwise it evaluates to false. "
+csp2021,AAP-2.F,AAP-2.F.4,"The exam reference sheet provides condition1 OR condition2, which evaluates to true if condition1 is true or if condition2 is true or if both condition1 and condition2 are true; otherwise it evaluates to false."
+csp2021,AAP-2.F,AAP-2.F.5,The operand for a logical operator is either a Boolean expression or a single Boolean value.
+csp2021,AAP-2.G,AAP-2.G.1,Selection determines which parts of an algorithm are executed based on a condition being true or false.
+csp2021,AAP-2.H,AAP-2.H.1,Conditional statements or “if-statements” affect the sequential flow of control by executing different statements based on the value of a Boolean expression.
+csp2021,AAP-2.H,AAP-2.H.2,The exam reference sheet providesIF(condition){<block of statements>}in which the code in block of statements is executed if the Boolean expression condition evaluates to true; no action is taken if condition evaluates to false. 
+csp2021,AAP-2.H,AAP-2.H.3,"The exam reference sheet providesIF(condition){ <first block of statements>}ELSE{ <second block of statements>}in which the code in first block of statements is executed if the Boolean expression condition evaluates to true; otherwise, the code i"
+csp2021,AAP-2.I,AAP-2.I.1,"Nested conditional statements, or “else if” statements, consist of conditional statements within conditional statements."
+csp2021,AAP-2.I,AAP-2.I.2,"If the Boolean condition of the initial conditional statement evaluates to false, then the Boolean condition of the nested conditional statement is evaluated."
+csp2021,AAP-2.I,AAP-2.J,press an algorithm that uses iteration without using a programming language.
+csp2021,AAP-2.I,AAP-2.J.1,Iteration is a repeating portion of an algorithm. Iteration repeats a specified number of times or until a given condition is met.
+csp2021,AAP-2.K,AAP-2.K.1,"Iteration statements change the sequential flow of control by repeating a set of statements zero or more times, until a stopping condition is met. "
+csp2021,AAP-2.K,AAP-2.K.2,The exam reference sheet providesREPEAT n TIMES{ <block of statements>}in which the block of statements is executed n times. 
+csp2021,AAP-2.K,AAP-2.K.3,The exam reference sheet providesREPEAT UNTIL(condition){ <block of statements>}in which the code in block of statements is repeated until the Boolean expression condition evaluates to true. 
+csp2021,AAP-2.K,AAP-2.K.4,"In REPEAT UNTIL(condition) iteration, an infinite loop occurs when the ending condition will never evaluate to true."
+csp2021,AAP-2.K,AAP-2.K.5,"In REPEAT UNTIL(condition) iteration, if the conditional evaluates to true initially, the loop body is not executed at all, due to the condition being checked before the loop."
+csp2021,AAP-2.L,AAP-2.L.1,Algorithms can be written in different ways and still accomplish the same tasks. 
+csp2021,AAP-2.L,AAP-2.L.2,Algorithms that appear similar can yield different side effects or results.
+csp2021,AAP-2.L,AAP-2.L.3,Some conditional statements can be written as equivalent Boolean expressions. 
+csp2021,AAP-2.L,AAP-2.L.4,Some Boolean expressions can be written as equivalent conditional statements.
+csp2021,AAP-2.L,AAP-2.L.5,Different algorithms can be developed or used to solve the same problem.
+csp2021,AAP-2.M,AAP-2.M.1,"Algorithms can be created from an idea, by combining existing algorithms, or by modifying existing algorithms. "
+csp2021,AAP-2.M,AAP-2.M.2,Knowledge of existing algorithms can help in constructing new ones. Some existing algorithms include:●       determining the maximum or minimum value of 2 or more numbers ●       computing the sum or average of 2 or more numbers●       identifying if a
+csp2021,AAP-2.M,AAP-2.M.3,"Using existing correct algorithms as building blocks for constructing another algorithm has benefits such as reducing development time, reducing testing, and simplifying the identification of errors."
+csp2021,AAP-2.N,AAP-2.N.1,"The exam reference sheet provides basic operations on lists, including: ●       accessing an element by index         o   aList[i] accesses the element of aList at index i. The first element of aList is at index 1 and accessed using the notation aList[1"
+csp2021,AAP-2.N,AAP-2.N.2,List procedures are implemented in accordance with the syntax rules of the programming language.
+csp2021,AAP-2.O,AAP-2.O.1,"Traversing a list can be a complete traversal, where all elements in the list are accessed, or a partial traversal, where only a portion of elements are accessed. EXCLUSION STATEMENT (EK AAP-2.O.1): Traversing multiple lists at the same time using the sam"
+csp2021,AAP-2.O,AAP-2.O.2,Iteration statements can be used to traverse a list.
+csp2021,AAP-2.O,AAP-2.O.3,"The exam reference sheet providesFOR EACH item IN aList{ <block of statements>}The variable item is assigned the value of each element of aList sequentially, in order, from the first element to the last element. The code in block of statements is exe"
+csp2021,AAP-2.O,AAP-2.O.4,Knowledge of existing algorithms that use iteration can help in constructing new algorithms. Some examples of existing algorithms that are often used with lists include:●       determining a minimum or maximum value in a list●       computing a sum or a
+csp2021,AAP-2.O,AAP-2.O.5,"Linear search or sequential search algorithms check each element of a list, in order, until the desired value is found or all elements in the list have been checked."
+csp2021,AAP-2.P,AAP-2.P.1,The binary search algorithm starts at the middle of a sorted data set of numbers and eliminates half of the data; this process repeats until the desired value is found or all elements have been eliminated. EXCLUSION STATEMENT (EK: AAP-2.P.1): Specific imp
+csp2021,AAP-2.P,AAP-2.P.2,Data must be in sorted order to use the binary search algorithm. 
+csp2021,AAP-2.P,AAP-2.P.3,Binary search is often more efficient than sequential/linear search when applied to sorted data.
+csp2021,AAP-3.A,AAP-3.A.1,A procedure is a named group of programming instructions that may have parameters and return values.
+csp2021,AAP-3.A,AAP-3.A.2,"Procedures are referred to by different names, such as method or function, depending on the programming language."
+csp2021,AAP-3.A,AAP-3.A.3,Parameters are input variables of a procedure. Arguments specify the values of the parameters when a procedure is called.
+csp2021,AAP-3.A,AAP-3.A.4,"A procedure call interrupts the sequential execution of statements, causing the program to execute the statements within the procedure before continuing. Once the last statement in the procedure (or a return statement) has executed, flow of control is ret"
+csp2021,AAP-3.A,AAP-3.A.5,"The exam reference sheet provides procName (arg1, arg2, …) as a way to call PROCEDURE procName(parameter1, parameter 2, …) which takes zero or more arguments; arg1 is assigned to parameter1, arg2 is assigned to parameter2, and so on."
+csp2021,AAP-3.A,AAP-3.A.6,"The exam reference sheet provides the procedure DISPLAY(expression) to display the value of expression, followed by a space."
+csp2021,AAP-3.A,AAP-3.A.7,"The exam reference sheet provides the RETURN(expression) statement, which is used to return the flow of control to the point where the procedure was called and to return the value of expression."
+csp2021,AAP-3.A,AAP-3.A.8,"The exam reference sheet provides result ß procName(arg1, arg2, …) to assign to result the “value of the procedure” being returned by calling PROCEDURE procName(parameter1, parameter2, …)"
+csp2021,AAP-3.A,AAP-3.A.9,"The exam reference sheet provides procedure INPUT(), which accepts a value from the user and returns the input value."
+csp2021,AAP-3.B,AAP-3.B.1,"One common type of abstraction is procedural abstraction, which provides a name for a process and allows a procedure to be used only knowing what it does, not how it does it. "
+csp2021,AAP-3.B,AAP-3.B.2,Procedural abstraction allows a solution to a large problem to be based on the solution of smaller subproblems. This is accomplished by creating procedures to solve each of the subproblems. 
+csp2021,AAP-3.B,AAP-3.B.3,The subdivision of a computer program into separate subprograms is called modularity.
+csp2021,AAP-3.B,AAP-3.B.4,"A procedural abstraction may extract shared features to generalize functionality instead of duplicating code. This allows for program code reuse, which helps manage complexity."
+csp2021,AAP-3.B,AAP-3.B.5,"Using parameters allows procedures to be generalized, enabling the procedures to be reused with a range of input values or arguments. "
+csp2021,AAP-3.B,AAP-3.B.6,Using procedural abstraction helps improve code readability.
+csp2021,AAP-3.B,AAP-3.B.7,"Using procedural abstraction in a program allows programmers to change the internals of the procedure (to make it faster, more efficient, use less storage, etc.) without needing to notify users of the change as long as what the procedure does is preserved"
+csp2021,AAP-3.C,AAP-3.C.1,"The exam reference sheet provides PROCEDURE procName(parameter1, parameter2, …){<block of statements>}which is used to define a procedure that takes zero or more arguments. The procedure contains block of statements. "
+csp2021,AAP-3.C,AAP-3.C.2,"The exam reference sheet providesPROCEDURE procName(parameter1, parameter2, …){ <block of statements> RETURN(expression)}which is used to define a procedure that takes zero or more arguments. The procedure contains block of statements and returns th"
+csp2021,AAP-3.D,AAP-3.D.1,A software library contains procedures that may be used in creating new programs.
+csp2021,AAP-3.D,AAP-3.D.2,"Existing code segments can come from internal or external sources, such as libraries or previously written code. "
+csp2021,AAP-3.D,AAP-3.D.3,The use of libraries simplifies the task of creating complex programs.
+csp2021,AAP-3.D,AAP-3.D.4,Application program interfaces (APIs) are specifications for how the procedures in a library behave and can be used.
+csp2021,AAP-3.D,AAP-3.D.5,Documentation for an API/library is necessary in understanding the behavior(s) provided by the API/library and how to use them.
+csp2021,AAP-3.E,AAP-3.E.1,"The exam reference sheet provides RANDOM(a, b) which generates and returns a random integer from a to b, inclusive. Each result is equally likely to occur. For example, RANDOM(1, 3) could return 1, 2, or 3."
+csp2021,AAP-3.E,AAP-3.E.2,Using random number generation in a program means each execution may produce a different result.
+csp2021,AAP-3.F,AAP-3.F.1,Simulations are abstractions of more complex objects or phenomena for a specific purpose.
+csp2021,AAP-3.F,AAP-3.F.2,A simulation is a representation that uses varying sets of values to reflect the changing state of a phenomenon. 
+csp2021,AAP-3.F,AAP-3.F.3,"Simulations often mimic real-world events with the purpose of drawing inferences, allowing investigation of a phenomenon without the constraints of the real world."
+csp2021,AAP-3.F,AAP-3.F.4,The process of developing an abstract simulation involves removing specific details or simplifying functionality. 
+csp2021,AAP-3.F,AAP-3.F.5,Simulations can contain bias derived from the choices of real-world elements that were included or excluded.
+csp2021,AAP-3.F,AAP-3.F.6,"Simulations are most useful when real-world events are impractical for experiments (e.g., too big, too small, too fast, too slow, too expensive, or too dangerous)."
+csp2021,AAP-3.F,AAP-3.F.7,Simulations facilitate the formulation and refinement of hypotheses related to the objects or phenomena under consideration.
+csp2021,AAP-3.F,AAP-3.F.8,Random number generators can be used to simulate the variability that exists in the real world.
+csp2021,AAP-4.A,AAP-4.A.1,"A problem is a general description of a task that can (or cannot) be solved algorithmically. An instance of a problem also includes specific input. For example, sorting is a problem; sorting the list (2,3,1,7) is an instance of the problem."
+csp2021,AAP-4.A,AAP-4.A.2,"A decision problem is a problem with a yes/no answer  (e.g., is there a path from A to B?). An optimization problem is a problem with the goal of finding the ""best"" solution among many (e.g., what is the shortest path from A to B?)."
+csp2021,AAP-4.A,AAP-4.A.3,Efficiency is an estimation of the amount of computational resources used by an algorithm. Efficiency is typically expressed as a function of the size of the input. EXCLUSION STATEMENT (EK AAP-4.A.3): Formal analysis of algorithms (Big-O) and formal reaso
+csp2021,AAP-4.A,AAP-4.A.4,An algorithm’s efficiency is determined through formal or mathematical reasoning.
+csp2021,AAP-4.A,AAP-4.A.5,An algorithm's efficiency can be informally measured by determining the number of times a statement or group of statements executes.
+csp2021,AAP-4.A,AAP-4.A.6,Different correct algorithms for the same problem can have different efficiencies. 
+csp2021,AAP-4.A,AAP-4.A.7,"Algorithms with a polynomial efficiency or lower (constant, linear, square, cube, etc.) are said to run in a reasonable amount of time. Algorithms with exponential or factorial efficiencies are examples of algorithms that run in an unreasonable amount of "
+csp2021,AAP-4.A,AAP-4.A.8,"Some problems cannot be solved in a reasonable amount of time because there is no efficient algorithm for solving them. In these cases, approximate solutions are sought. "
+csp2021,AAP-4.A,AAP-4.A.9,A heuristic is an approach to a problem that produces a solution that is not guaranteed to be optimal but may be used when techniques that are guaranteed to always find an optimal solution are impractical. EXCLUSION STATEMENT (AAP-4.A.9): Specific heurist
+csp2021,AAP-4.B,AAP-4.B.1,"A decidable problem is a decision problem for which an algorithm can be written to produce a correct output for all inputs (e.g., “Is the number even?”)."
+csp2021,AAP-4.B,AAP-4.B.2,An undecidable problem is one for which no algorithm can be constructed that is always capable of providing a correct yes-or-no answer. EXCLUSION STATEMENT (EK AAP-4.B.2):  Determining whether a given problem is undecidable is outside the scope of this co
+csp2021,AAP-4.B,AAP-4.B.3,"An undecidable problem may have some instances that have an algorithmic solution, but there is no algorithmic solution that could solve all instances of the problem."
+csp2021,CRD-1.A,CRD-1.A.1,A computing innovation includes a program as an integral part of its function. 
+csp2021,CRD-1.A,CRD-1.A.2,"A computing innovation can be physical (e.g., self-driving car), non-physical computing software (e.g., picture editing software), or non-physical computing concepts (e.g., e-commerce)."
+csp2021,CRD-1.A,CRD-1.A.3,Effective collaboration produces a computing innovation that reflects the diversity of talents and perspectives of those who designed it.
+csp2021,CRD-1.A,CRD-1.A.4,Collaboration that includes diverse perspectives helps avoid bias in the development of computing innovations.
+csp2021,CRD-1.A,CRD-1.A.5,Consultation and communication with users are important aspects of the development of computing innovations.
+csp2021,CRD-1.A,CRD-1.A.6,Information gathered from potential users can be used to understand the purpose of a program from diverse perspectives and to develop a program that fully incorporates these perspectives.
+csp2021,CRD-1.B,CRD-1.B.1,Online tools support collaboration by allowing programmers to share and provide feedback on ideas and documents.
+csp2021,CRD-1.B,CRD-1.B.2,Common models such as pair programming exist to facilitate collaboration.
+csp2021,CRD-1.C,CRD-1.C.1,"Effective collaborative teams practice interpersonal skills, including but not limited to:
+●       communication
+●       consensus building
+●       conflict resolution
+●       negotiation"
+csp2021,CRD-2.A,CRD-2.A.1,The purpose of computing innovations is to solve problems or to pursue interests through creative expression. 
+csp2021,CRD-2.A,CRD-2.A.2,An understanding of the purpose of a computing innovation provides developers with an improved ability to develop that computing innovation.
+csp2021,CRD-2.B,CRD-2.B.1,A program is a collection of program statements that performs a specific task when run by a computer. A program is often referred to as software.
+csp2021,CRD-2.B,CRD-2.B.2,A code segment refers to a collection of program statements that are part of a program. 
+csp2021,CRD-2.B,CRD-2.B.3,A program needs to work for a variety of inputs and situations. 
+csp2021,CRD-2.B,CRD-2.B.4,The behavior of a program is how a program functions during execution and is often described by how a user interacts with it.
+csp2021,CRD-2.B,CRD-2.B.5,"A program can be described broadly by what it does, or in more detail by both what the program does and how the program statements accomplish this function."
+csp2021,CRD-2.C,CRD-2.C.1,"Program input is data sent to a computer for processing by a program. Input can come in a variety of forms, such as tactile, audio, visual, or text. "
+csp2021,CRD-2.C,CRD-2.C.2,An event is associated with an action and supplies input data to a program. 
+csp2021,CRD-2.C,CRD-2.C.3,"Events can be generated when a key is pressed, a mouse is clicked, a program is started, or by any other defined action that affects the flow of execution."
+csp2021,CRD-2.C,CRD-2.C.4,Inputs usually affect the output produced by a program. 
+csp2021,CRD-2.C,CRD-2.C.5,"In event-driven programming, program statements are executed when triggered rather than through the sequential flow of control."
+csp2021,CRD-2.C,CRD-2.C.6,Input can come from a user or other programs.
+csp2021,CRD-2.D,CRD-2.D.1,"Program output is any data sent from a program to a device. Program output can come in a variety of forms, such as tactile, audio, visual, or text."
+csp2021,CRD-2.D,CRD-2.D.2,"Program output is usually based on a program’s input or prior state (e.g., internal values)."
+csp2021,CRD-2.E,CRD-2.E.1,"A development process can be ordered and intentional, or exploratory in nature. "
+csp2021,CRD-2.E,CRD-2.E.2,"There are multiple development processes. The following phases are commonly used when developing a program:
+●       investigating and reflecting
+●       designing
+●       prototyping
+●       testing"
+csp2021,CRD-2.E,CRD-2.E.3,"A development process that is iterative requires refinement and revision based on feedback, testing, or reflection throughout the process. This may require revisiting earlier phases of the process."
+csp2021,CRD-2.E,CRD-2.E.4,A development process that is incremental is one that breaks the problem into smaller pieces and makes sure each piece works before adding it to the whole.
+csp2021,CRD-2.F,CRD-2.F.1,The design of a program incorporates investigation to determine its requirements.
+csp2021,CRD-2.F,CRD-2.F.2,"Investigation in a development process is useful for understanding and identifying the program constraints, as well as the concerns and interests of the people who will use the program."
+csp2021,CRD-2.F,CRD-2.F.3,"Some ways investigation can be performed are as follows: 
+●        collecting data through surveys
+●        user testing 
+●        interviews 
+●        direct observations"
+csp2021,CRD-2.F,CRD-2.F.4,Program requirements describe how a program functions and may include a description of user interactions that a program must provide.
+csp2021,CRD-2.F,CRD-2.F.5,A program’s specification defines the requirements for the program. 
+csp2021,CRD-2.F,CRD-2.F.6,"In a development process, the design phase outlines how to accomplish a given program specification. "
+csp2021,CRD-2.F,CRD-2.F.7,"The design phase of a program may include: 
+●        brainstorming
+●        planning and storyboarding
+●        organizing the program into modules and functional components
+●        creation of diagrams that represent the layouts of the user interface
+● "
+csp2021,CRD-2.G,CRD-2.G.1,"Program documentation is a written description of the function of a code segment, event, procedure, or program and how it was developed."
+csp2021,CRD-2.G,CRD-2.G.2,Comments are a form of program documentation written into the program to be read by people and do not affect how a program runs. 
+csp2021,CRD-2.G,CRD-2.G.3,Programmers should document a program throughout its development.
+csp2021,CRD-2.G,CRD-2.G.4,Program documentation helps in developing and maintaining correct programs when working individually or in collaborative programming environments. 
+csp2021,CRD-2.G,CRD-2.G.5,"Not all programming environments support comments, so other methods of documentation may be required."
+csp2021,CRD-2.H,CRD-2.H.1,It is important to acknowledge any code segments that were developed collaboratively or by another source.
+csp2021,CRD-2.H,CRD-2.H.2,Acknowledgement of code segment(s) written by someone else and used in a program can be in the program documentation. The acknowledgement should include the origin or original author’s name.
+csp2021,CRD-2.I,CRD-2.I.1,A logic error is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly.
+csp2021,CRD-2.I,CRD-2.I.2,A syntax error is a mistake in the program where the rules of the programming language are not followed.
+csp2021,CRD-2.I,CRD-2.I.3,A run-time error is a mistake in the program that occurs during the execution of a program. Programming languages define their own run-time errors.
+csp2021,CRD-2.I,CRD-2.I.4,An overflow error is an error that occurs when a computer attempts to handle a number that is outside of the defined range of values.
+csp2021,CRD-2.I,CRD-2.I.5,"The following are effective ways to find and correct errors: 
+●        test cases
+●        hand tracing
+●        visualizations
+●        debuggers
+●        adding extra output statement(s)"
+csp2021,CRD-2.J,CRD-2.J.1,"In the development process, testing uses defined inputs to ensure that an algorithm or program is producing the expected outcomes. Programmers use the results from testing to revise their algorithms or programs."
+csp2021,CRD-2.J,CRD-2.J.2,Defined inputs used to test a program should demonstrate the different expected outcomes that are at or just beyond the extremes (minimum and maximum) of input data. 
+csp2021,CRD-2.J,CRD-2.J.3,Program requirements are needed to identify appropriate defined inputs for testing.
+csp2021,CSN-1.A,CSN-1.A.1,"A computing device is a physical artifact that can run a program. Some examples include computers, tablets, servers, routers, and smart sensors. "
+csp2021,CSN-1.A,CSN-1.A.2,A computing system is a group of computing devices and programs working together for a common purpose. 
+csp2021,CSN-1.A,CSN-1.A.3,A computer network is a group of interconnected computing devices capable of sending or receiving data. 
+csp2021,CSN-1.A,CSN-1.A.4,A computer network is a type of a computing system.
+csp2021,CSN-1.A,CSN-1.A.5,A path between two computing devices on a computer network (a sender and a receiver) is a sequence of directly connected computing devices that begins at the sender and ends at the receiver.
+csp2021,CSN-1.A,CSN-1.A.6,Routing is the process of finding a path from sender to receiver.
+csp2021,CSN-1.A,CSN-1.A.7,The bandwidth of a computer network is the maximum amount of data that can be sent in a fixed amount of time. 
+csp2021,CSN-1.A,CSN-1.A.8,Bandwidth is usually measured in bits per second. 
+csp2021,CSN-1.B,CSN-1.B.1,"The Internet is a computer network consisting of interconnected networks that use standardized, open (nonproprietary) communication protocols. "
+csp2021,CSN-1.B,CSN-1.B.2,Access to the Internet depends on the ability to connect a computing device to an Internet-connected device.
+csp2021,CSN-1.B,CSN-1.B.3,A protocol is an agreed-upon set of rules that specify the behavior of a system.
+csp2021,CSN-1.B,CSN-1.B.4,"The protocols used in the Internet are open, which allows users to easily connect additional computing devices to the Internet."
+csp2021,CSN-1.B,CSN-1.B.5,Routing on the Internet is usually dynamic; it is not specified in advance.
+csp2021,CSN-1.B,CSN-1.B.6,The scalability of a system is the capacity for the system to change in size and scale to meet new demands. 
+csp2021,CSN-1.B,CSN-1.B.7,The Internet was designed to be scalable.
+csp2021,CSN-1.C,CSN-1.C.1,"Information is passed through the Internet as a data stream. Data streams contain chunks of data, which are encapsulated in packets."
+csp2021,CSN-1.C,CSN-1.C.2,"Packets contain a chunk of data and metadata used for routing the packet between the origin and the destination on the Internet, as well as for data reassembly."
+csp2021,CSN-1.C,CSN-1.C.3,"Packets may arrive at the destination in order, out of order, or not at all."
+csp2021,CSN-1.C,CSN-1.C.4,"IP, TCP, and UDP are common protocols used on the Internet."
+csp2021,CSN-1.D,CSN-1.D.1,"The World Wide Web is a system of linked pages, programs, and files."
+csp2021,CSN-1.D,CSN-1.D.2,HTTP is a protocol used by the World Wide Web.
+csp2021,CSN-1.D,CSN-1.D.3,The World Wide Web uses the Internet.
+csp2021,CSN-1.E,CSN-1.E.1,"The Internet has been engineered to be fault-tolerant, with abstractions for routing and transmitting data. "
+csp2021,CSN-1.E,CSN-1.E.2,Redundancy is the inclusion of extra components that can be used to mitigate failure of a system if other components fail.
+csp2021,CSN-1.E,CSN-1.E.3,One way to accomplish network redundancy is by having more than one path between any two connected devices.
+csp2021,CSN-1.E,CSN-1.E.4,"If a particular device or connection on the Internet fails, subsequent data will be sent via a different route, if possible."
+csp2021,CSN-1.E,CSN-1.E.5,"When a system can support failures and still continue to function, it is called fault-tolerant. This is important because elements of complex systems fail at unexpected times, often in groups, and fault tolerance allows users to continue to use the networ"
+csp2021,CSN-1.E,CSN-1.E.6,Redundancy within a system often requires additional resources but can provide the benefit of fault tolerance.
+csp2021,CSN-1.E,CSN-1.E.7,The redundancy of routing options between two points increases the reliability of the Internet and helps it scale to more devices and more people.
+csp2021,CSN-2.A,CSN-2.A.1,Sequential computing is a computational model in which operations are performed in order one at a time.
+csp2021,CSN-2.A,CSN-2.A.2,"Parallel computing is a computational model where the program is broken into multiple smaller sequential computing operations, some of which are performed simultaneously."
+csp2021,CSN-2.A,CSN-2.A.3,Distributed computing is a computational model in which multiple devices are used to run a program.
+csp2021,CSN-2.A,CSN-2.A.4,Comparing efficiency of solutions can be done by comparing the time it takes them to perform the same task.
+csp2021,CSN-2.A,CSN-2.A.5,A sequential solution takes as long as the sum of all of its steps. 
+csp2021,CSN-2.A,CSN-2.A.6,A parallel computing solution takes as long as its sequential tasks plus the longest of its parallel tasks. 
+csp2021,CSN-2.A,CSN-2.A.7,The “speedup” of a parallel solution is measured in the time it took to complete the task sequentially divided by the time it took to complete the task when done in parallel.
+csp2021,CSN-2.B,CSN-2.B.1,Parallel computing consists of a parallel portion and a sequential portion. 
+csp2021,CSN-2.B,CSN-2.B.2,Solutions that use parallel computing can scale more effectively than solutions that use sequential computing.
+csp2021,CSN-2.B,CSN-2.B.3,Distributed computing allows problems to be solved that could not be solved on a single computer because of either the processing time or storage needs involved.
+csp2021,CSN-2.B,CSN-2.B.4,Distributed computing allows much larger problems to be solved quicker than they could be solved using a single computer.
+csp2021,CSN-2.B,CSN-2.B.5,"When increasing the use of parallel computing in a solution, the efficiency of the solution is still limited by the sequential portion. This means that at some point, adding parallel portions will no longer meaningfully increase efficiency."
+csp2021,DAT-1.A,DAT-1.A.1,"Data values can be stored in variables, lists of items, or standalone constants and can be passed as input to (or output from) procedures."
+csp2021,DAT-1.A,DAT-1.A.10," Analog data can be closely approximated digitally using a sampling technique, which means measuring values of the analog signal at regular intervals called samples. The samples are measured to figure out the exact bits required to store each sample."
+csp2021,DAT-1.A,DAT-1.A.2,"Computing devices represent data digitally, meaning that the lowest-level components of any value are bits."
+csp2021,DAT-1.A,DAT-1.A.3,Bit is shorthand for binary digit and is either 0 or 1. 
+csp2021,DAT-1.A,DAT-1.A.4,A byte is 8 bits. 
+csp2021,DAT-1.A,DAT-1.A.5,"Abstraction is the process of reducing complexity by focusing on the main idea. By hiding details irrelevant to the question at hand and bringing together related and useful details, abstraction reduces complexity and allows one to focus on the idea. "
+csp2021,DAT-1.A,DAT-1.A.6,"Bits are grouped to represent abstractions. These abstractions include, but are not limited to, numbers, characters, and color. "
+csp2021,DAT-1.A,DAT-1.A.7,The same sequence of bits may represent different types of data in different contexts.
+csp2021,DAT-1.A,DAT-1.A.8,"Analog data have values that change smoothly, rather than in discrete intervals, over time. Some examples of analog data include pitch and volume of music, colors of a painting, or position of a sprinter during a race.  "
+csp2021,DAT-1.A,DAT-1.A.9,The use of digital data to approximate real-world analog data is an example of abstraction.
+csp2021,DAT-1.B,DAT-1.B.1,"In many programming languages, integers are represented by a fixed number of bits, which limits the range of integer values and mathematical operations on those values. This limitation can result in overflow or other errors."
+csp2021,DAT-1.B,DAT-1.B.2,Other programming languages provide an abstraction through which the size of representable integers is limited only by the size of the computer's memory; this is the case for the language defined in the exam reference sheet.
+csp2021,DAT-1.B,DAT-1.B.3,"In programming languages, the fixed number of bits used to represent real numbers limits the range and mathematical operations on these values; this limitation can result in round-off and other errors. Some real numbers are represented as approximations i"
+csp2021,DAT-1.C,DAT-1.C.1,"Number bases, including binary and decimal, are used to represent data."
+csp2021,DAT-1.C,DAT-1.C.2,Binary (base 2) uses only combinations of the digits zero and one.
+csp2021,DAT-1.C,DAT-1.C.3,Decimal (base 10) uses only combinations of the digits 0 – 9.
+csp2021,DAT-1.C,DAT-1.C.4,"As with decimal, a digit’s position in the binary sequence determines its numeric value. The numeric value is equal to the bit’s value (0 or 1) multiplied by the place value of its position."
+csp2021,DAT-1.C,DAT-1.C.5,The place value of each position is determined by the base raised to the power of the position. Positions are numbered starting at the rightmost position with 0 and increasing by 1 for each subsequent position to the left.
+csp2021,DAT-1.D,DAT-1.D.1,Data compression can reduce the size (number of bits) of  transmitted or stored data.
+csp2021,DAT-1.D,DAT-1.D.2,Fewer bits does not necessarily mean less information.
+csp2021,DAT-1.D,DAT-1.D.3,The amount of size reduction from compression depends on both the amount of redundancy in the original data representation and the compression algorithm applied.
+csp2021,DAT-1.D,DAT-1.D.4,Lossless data compression algorithms can usually reduce the number of bits stored or transmitted while guaranteeing complete reconstruction of the original data.
+csp2021,DAT-1.D,DAT-1.D.5,Lossy data compression algorithms can significantly reduce the number of bits stored or transmitted but only allow reconstruction of an approximation of the original data.
+csp2021,DAT-1.D,DAT-1.D.6,Lossy data compression algorithms can usually reduce the number of bits stored or transmitted more than lossless compression algorithms.
+csp2021,DAT-1.D,DAT-1.D.7,"In situations where quality or ability to reconstruct the original is maximally important, lossless compression algorithms are typically chosen."
+csp2021,DAT-1.D,DAT-1.D.8,"In situations where minimizing data size or transmission time is maximally important, lossy compression algorithms are typically chosen."
+csp2021,DAT-2.A,DAT-2.A.1,Information is the collection of facts and patterns extracted from data. 
+csp2021,DAT-2.A,DAT-2.A.2,"Data provide opportunities for identifying trends, making connections, and addressing problems."
+csp2021,DAT-2.A,DAT-2.A.3,Digitally processed data may show correlation between variables. A correlation found in data does not necessarily indicate that a causal relationship exists. Additional research is needed to understand the exact nature of the relationship.
+csp2021,DAT-2.A,DAT-2.A.4,"Often, a single source does not contain the data needed to draw a conclusion. It may be necessary to combine data from a variety of sources to formulate a conclusion."
+csp2021,DAT-2.B,DAT-2.B.1,"Metadata are data about data. For example, the piece of data may be an image, while the metadata may include the date of creation or the file size of the image. "
+csp2021,DAT-2.B,DAT-2.B.2,Changes and deletions made to metadata do not change the primary data.
+csp2021,DAT-2.B,DAT-2.B.3,"Metadata are used for finding, organizing, and managing information. "
+csp2021,DAT-2.B,DAT-2.B.4,Metadata can increase the effective use of data or data sets by providing additional information. 
+csp2021,DAT-2.B,DAT-2.B.5,Metadata allow data to be structured and organized.
+csp2021,DAT-2.C,DAT-2.C.1,The ability to process data depends on the capabilities of the users and their tools. 
+csp2021,DAT-2.C,DAT-2.C.2,"Data sets pose challenges regardless of size, such as:●       the need to clean data●       incomplete data●       invalid data●       the need to combine data sources"
+csp2021,DAT-2.C,DAT-2.C.3,"Depending on how data were collected, they may not be uniform. For example, if users entered data into an open field, the way they choose to abbreviate, spell, or capitalize something may vary from user to user. "
+csp2021,DAT-2.C,DAT-2.C.4,"Cleaning data is a process that makes the data uniform without changing its meaning (e.g., replacing all equivalent abbreviations, spellings, and capitalizations with the same word). "
+csp2021,DAT-2.C,DAT-2.C.5,Problems of bias are often created by the type or source of data being collected. Bias is not eliminated by simply collecting more data.
+csp2021,DAT-2.C,DAT-2.C.6,The size of a data set affects the amount of information that can be extracted from it.
+csp2021,DAT-2.C,DAT-2.C.7,Large data sets are difficult to process using a single computer and may require parallel systems.
+csp2021,DAT-2.C,DAT-2.C.8,"Scalability of systems is an important consideration when working with data sets, as the computational capacity of a system affects how data sets can be processed and stored."
+csp2021,DAT-2.D,DAT-2.D.1,Programs can be used to process data to acquire information.
+csp2021,DAT-2.D,DAT-2.D.2,"Tables, diagrams, text, and other visual tools can be used to communicate insight and knowledge gained from data."
+csp2021,DAT-2.D,DAT-2.D.3,Search tools are useful for efficiently finding information.
+csp2021,DAT-2.D,DAT-2.D.4,Data filtering systems are important tools for finding information and recognizing patterns in data.
+csp2021,DAT-2.D,DAT-2.D.5,Programs such as spreadsheets help efficiently organize and find trends in information.
+csp2021,DAT-2.D,DAT-2.D.6,"Some processes that can be used to extract or modify information from data include the following:●       transforming every element of a data set, such as doubling every element in a list, or extracting the parent’s email from every student record●     "
+csp2021,DAT-2.E,DAT-2.E.1,Programs are used in an iterative and interactive way when processing information to allow users to gain insight and knowledge about data.
+csp2021,DAT-2.E,DAT-2.E.2,"Programmers can use programs to filter and clean digital data, thereby gaining insight and knowledge."
+csp2021,DAT-2.E,DAT-2.E.3,"Combining data sources, clustering data, and classifying data are parts of the process of using programs to gain insight and knowledge from data."
+csp2021,DAT-2.E,DAT-2.E.4,Insight and knowledge can be obtained from translating and transforming digitally represented information.
+csp2021,DAT-2.E,DAT-2.E.5,Patterns can emerge when data are transformed using programs.
+csp2021,IOC-1.A,IOC-1.A.1,People create computing innovations.
+csp2021,IOC-1.A,IOC-1.A.2,The way people complete tasks often changes to incorporate new computing innovations.
+csp2021,IOC-1.A,IOC-1.A.3,Not every effect of a computing innovation is anticipated in advance.
+csp2021,IOC-1.A,IOC-1.A.4,"A single effect can be viewed as both beneficial and harmful by different people, or even by the same person. "
+csp2021,IOC-1.A,IOC-1.A.5,"Advances in computing have generated and increased creativity in other fields, such as medicine, engineering, communications, and the arts."
+csp2021,IOC-1.B,IOC-1.B.1,Computing innovations can be used in ways that their creators had not originally intended:●       The World Wide Web was originally intended only for rapid and easy exchange of information within the scientific community. ●       Targeted advertising is
+csp2021,IOC-1.B,IOC-1.B.2,"Some of the ways computing innovations can be used may have a harmful impact on society, economy, or culture."
+csp2021,IOC-1.B,IOC-1.B.3,Responsible programmers try to consider the unintended ways their computing innovations can be used and the potential beneficial and harmful effects of these new uses.
+csp2021,IOC-1.B,IOC-1.B.4,It is not possible for a programmer to consider all the ways a computing innovation can be used.
+csp2021,IOC-1.B,IOC-1.B.5,Computing innovations have often had unintended beneficial effects by leading to advances in other fields.
+csp2021,IOC-1.B,IOC-1.B.6,Rapid sharing of a program or running a program with a large number of users can result in significant impacts beyond the intended purpose or control of the programmer.
+csp2021,IOC-1.C,IOC-1.C.1,"Internet access varies between socioeconomic, geographic, and demographic characteristics, as well as between countries. "
+csp2021,IOC-1.C,IOC-1.C.2,"The “digital divide” refers to differing access to computing devices and the Internet, based on socioeconomic, geographic, or demographic characteristics. "
+csp2021,IOC-1.C,IOC-1.C.3,The digital divide can affect both groups and individuals.
+csp2021,IOC-1.C,IOC-1.C.4,"The digital divide raises issues of equity, access, and influence, both globally and locally."
+csp2021,IOC-1.C,IOC-1.C.5,"The digital divide is affected by the actions of individuals, organizations, and governments."
+csp2021,IOC-1.D,IOC-1.D.1,Computing innovations can reflect existing human biases because of biases written into the algorithms or biases in the data used by the innovation.
+csp2021,IOC-1.D,IOC-1.D.2,Programmers should take action to reduce bias in algorithms used for computing innovations as a way of combating existing human biases.
+csp2021,IOC-1.D,IOC-1.D.3,Biases can be embedded at all levels of software development.
+csp2021,IOC-1.E,IOC-1.E.1,"Widespread access to information and public data facilitates the identification of problems, development of solutions, and dissemination of results."
+csp2021,IOC-1.E,IOC-1.E.2,Science has been affected by using distributed and “citizen science” to solve scientific problems. 
+csp2021,IOC-1.E,IOC-1.E.3,"Citizen science is scientific research conducted in whole or part by distributed individuals, many of whom may not be scientists, who contribute relevant data to research using their own computing devices."
+csp2021,IOC-1.E,IOC-1.E.4,Crowdsourcing is the practice of obtaining input or information from a large number of people via the Internet.
+csp2021,IOC-1.E,IOC-1.E.5,Human capabilities can be enhanced by collaboration via computing.
+csp2021,IOC-1.E,IOC-1.E.6,"Crowdsourcing offers new models for collaboration, such as connecting businesses or social causes with funding."
+csp2021,IOC-1.F,IOC-1.F.1,Material created on a computer is the intellectual property of the creator or an organization. 
+csp2021,IOC-1.F,IOC-1.F.10, The digital divide raises ethical concerns around computing. 
+csp2021,IOC-1.F,IOC-1.F.11, Computing innovations can raise legal and ethical concerns. Some examples of these include:●       the development of software that allows access to digital media downloads and streaming●       the development of algorithms that include bias●       th
+csp2021,IOC-1.F,IOC-1.F.2,"Ease of access and distribution of digitized information raises intellectual property concerns regarding ownership, value, and use."
+csp2021,IOC-1.F,IOC-1.F.3,Measures should be taken to safeguard intellectual property.
+csp2021,IOC-1.F,IOC-1.F.4,The use of material created by someone else without permission and presented as one’s own is plagiarism and may have legal consequences. 
+csp2021,IOC-1.F,IOC-1.F.5,Some examples of legal ways to use materials created by someone else include:●       Creative Commons—a public copyright license that enables the free distribution of an otherwise copyrighted work. This is used when the content creator wants to give othe
+csp2021,IOC-1.F,IOC-1.F.6,The use of material created by someone other than you should always be cited. 
+csp2021,IOC-1.F,IOC-1.F.7,"Creative commons, open source, and open access have enabled broad access to digital information."
+csp2021,IOC-1.F,IOC-1.F.8,"As with any technology or medium, using computing to harm individuals or groups of people raises legal and ethical concerns. "
+csp2021,IOC-1.F,IOC-1.F.9,"Computing can play a role in social and political issues, which in turn often raise legal and ethical concerns."
+csp2021,IOC-2.A,IOC-2.A.1,"Personally identifiable information (PII) is information about an individual that identifies, links, relates, or describes them. Examples of PII include:●       social security number●       age●       race●       phone number(s)●       medical infor"
+csp2021,IOC-2.A,IOC-2.A.10, Commercial and governmental curation of information may be exploited if privacy and other protections are ignored.
+csp2021,IOC-2.A,IOC-2.A.11," Information placed online can be used in ways that were not intended and that may have a harmful impact. For example, an email message may be forwarded, tweets can be retweeted, and social media posts can be viewed by potential employers."
+csp2021,IOC-2.A,IOC-2.A.12, PII can be used to stalk or steal the identity of a person or to aid in the planning of other criminal acts. 
+csp2021,IOC-2.A,IOC-2.A.13," Once information is placed online, it is difficult to delete."
+csp2021,IOC-2.A,IOC-2.A.14," Programs can collect your location and record where you have been, how you got there, and how long you were at a given location."
+csp2021,IOC-2.A,IOC-2.A.15, Information posted to social media services can be used by others. Combining information posted on social media and other sources can be used to deduce private information about you.
+csp2021,IOC-2.A,IOC-2.A.2,Search engines can record and maintain a history of searches made by users. 
+csp2021,IOC-2.A,IOC-2.A.3,Websites can record and maintain a history of individuals who have viewed their pages. 
+csp2021,IOC-2.A,IOC-2.A.4,"Devices, websites, and networks can collect information about a user’s location."
+csp2021,IOC-2.A,IOC-2.A.5,"Technology enables the collection, use, and exploitation of information about, by, and for individuals, groups, and institutions."
+csp2021,IOC-2.A,IOC-2.A.6,Search engines can use search history to suggest websites or for targeted marketing. 
+csp2021,IOC-2.A,IOC-2.A.7,"Disparate personal data, such as geolocation, cookies, and browsing history, can be aggregated to create knowledge about an individual."
+csp2021,IOC-2.A,IOC-2.A.8,PII and other information placed online can be used to enhance a user’s online experiences. 
+csp2021,IOC-2.A,IOC-2.A.9,PII stored online can be used to simplify making online purchases. 
+csp2021,IOC-2.B,IOC-2.B.1,Authentication measures protect devices and information from unauthorized access. Examples of authentication measures include strong passwords and multifactor authentication.
+csp2021,IOC-2.B,IOC-2.B.10, All real-world systems have errors or design flaws that can be exploited to compromise them. Regular software updates help fix errors that could compromise a computing system.
+csp2021,IOC-2.B,IOC-2.B.11, Users can control the permissions programs have for collecting user information. Users should review the permission settings of programs to protect their privacy.
+csp2021,IOC-2.B,IOC-2.B.2,A strong password is something that is easy for a user to remember but would be difficult for someone else to guess based on knowledge of that user. 
+csp2021,IOC-2.B,IOC-2.B.3,"Multifactor authentication is a method of computer access control in which a user is only granted access after successfully presenting several separate pieces of evidence to an authentication mechanism, typically in at least two of the following categorie"
+csp2021,IOC-2.B,IOC-2.B.4,Multifactor authentication requires at least two steps to unlock protected information; each step adds a new layer of security that must be broken to gain unauthorized access. 
+csp2021,IOC-2.B,IOC-2.B.5,Encryption is the process of encoding data to prevent unauthorized access. Decryption is the process of decoding the data. Two common encryption approaches are: ●       Symmetric key encryption involves one key for both encryption and decryption.●      
+csp2021,IOC-2.B,IOC-2.B.6,Certificate authorities issue digital certificates that validate the ownership of encryption keys used in secure communications and are based on a trust model .
+csp2021,IOC-2.B,IOC-2.B.7,Computer virus and malware scanning software can help protect a computing system against infection.
+csp2021,IOC-2.B,IOC-2.B.8,A computer virus is a malicious program that can copy itself and gain access to a computer in an unauthorized way. Computer viruses often attach themselves to legitimate programs and start running independently on a computer.
+csp2021,IOC-2.B,IOC-2.B.9,Malware is software intended to damage a computing system or to take partial control over its operation.
+csp2021,IOC-2.C,IOC-2.C.1,"Phishing is a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails."
+csp2021,IOC-2.C,IOC-2.C.2,Keylogging is the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information.
+csp2021,IOC-2.C,IOC-2.C.3,"Data sent over public networks can be intercepted, analyzed, and modified. One way that this can happen is through a rogue access point. "
+csp2021,IOC-2.C,IOC-2.C.4,A rogue access point is a wireless access point that gives unauthorized access to secure networks.
+csp2021,IOC-2.C,IOC-2.C.5,A malicious link can be disguised on a web page or in an email message. 
+csp2021,IOC-2.C,IOC-2.C.6,"Unsolicited emails, attachments, links, and forms in emails can be used to compromise the security of a computing system. These can come from unknown senders or from known senders whose security has been compromised. "
+csp2021,IOC-2.C,IOC-2.C.7,Untrustworthy (often free) downloads from freeware or shareware sites can contain malware.

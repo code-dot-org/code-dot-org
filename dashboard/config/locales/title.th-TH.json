@@ -1,0 +1,42 @@
+{
+  "th-TH": {
+    "data": {
+      "title": {
+        "BigEvent": "อีเวนท์ใหญ่",
+        "BigEvent_2018": "อีเวนท์ใหญ่",
+        "BuildingAFoundation": "สร้างพื้นฐาน",
+        "ComputationalThinking": "คิดคำนวณ",
+        "Conditionals": "เงื่อนไข ",
+        "Conditionals_2018": "เงื่อนไข ",
+        "DiceRace": "อัลกอริทึมในชีวิตจริง: การแข่งลูกเต๋า",
+        "DigitalCitizenship": "พลเมืองดิจิทัล",
+        "ForLoopFun": "สนุกกับ For ลูป",
+        "GettingLoopy": "มาวนลูปกัน",
+        "GettingLoopy_2018": "มาวนลูปกัน",
+        "GoingPlacesSafely": "ไปที่ไหนให้ปลอดภัย",
+        "GoingPlacesSafely_2018": "ไปที่ไหนให้ปลอดภัย",
+        "GraphPaperProgramming": "การเขียนกระดาษกราฟ",
+        "GraphPaperProgramming_2018": "การเขียนกระดาษกราฟ",
+        "Internet": "อินเทอร์เน็ต",
+        "MoveIt": "ขยับหน่อยสิ ขยับหน่อย",
+        "MoveItMoveIt_2018": "ขยับหน่อยสิ ขยับหน่อย",
+        "PaperPlanes": "อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ",
+        "PaperPlanes_2018": "อัลกอริทึมในชีวิตจริง: เครื่องบินกระดาษ",
+        "PlantASeed": "อัลกอริธีมในชีวิตจริง: หว่านเมล็ด",
+        "PlantASeed_2018": "อัลกอริธีมในชีวิตจริง: หว่านเมล็ด",
+        "RelayProgramming": "โปรแกรมการถ่ายทอดข้อมูล",
+        "RelayProgramming_2018": "โปรแกรมการถ่ายทอดข้อมูล",
+        "UnplugHappyMaps": "แผนที่แห่งความสุข",
+        "UnplugHappyMaps_2018": "แผนที่แห่งความสุข",
+        "courseB_unplugged_MRF": "กิจกรรมถอดปลั๊ก",
+        "courseB_unplugged_MRF_2018": "เพื่อนหุ่นยนต์",
+        "courseB_unplugged_loopyMRF": "กิจกรรมถอดปลั๊ก",
+        "courseC_Unplugged_ScreenOutTheMean": "กิจกรรมถอดปลั๊ก",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "กิจกรรมถอดปลั๊ก",
+        "courseD_unplugged_digitalCitizenship": "กิจกรรมถอดปลั๊ก",
+        "courseD_unplugged_digitalCitizenship_2018": "กิจกรรมถอดปลั๊ก",
+        "courseF_unplugged_powerOfWords": "กิจกรรมถอดปลั๊ก"
+      }
+    }
+  }
+}

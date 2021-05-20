@@ -3,21 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import msg from '@cdo/locale';
 import Lightbulb from './Lightbulb';
-
-const styles = {
-  confirmButton: {
-    float: 'right'
-  },
-  nextButton: {
-    float: 'right'
-  },
-  lightbulb: {
-    margin: '-9px 0px -9px -5px'
-  },
-  hintButton: {
-    marginRight: 10
-  }
-};
+import {getStore} from '@cdo/apps/redux';
 
 export default class DialogButtons extends Component {
   static propTypes = {
@@ -41,6 +27,8 @@ export default class DialogButtons extends Component {
       hintButton,
       againButton,
       nextButton;
+
+    const isRtl = getStore().getState().isRtl;
 
     if (this.props.ok) {
       okButton = (
@@ -83,7 +71,7 @@ export default class DialogButtons extends Component {
           <LegacyButton
             type="cancel"
             size="large"
-            arrow="left"
+            arrow={isRtl ? 'right' : 'left'}
             id="again-button"
             className="launch"
           >
@@ -117,10 +105,10 @@ export default class DialogButtons extends Component {
           <LegacyButton
             type="primary"
             size="large"
-            arrow="right"
+            arrow={isRtl ? 'left' : 'right'}
             id="continue-button"
             className="launch"
-            style={styles.nextButton}
+            style={isRtl ? styles.nextButtonRtl : styles.nextButton}
           >
             {this.props.continueText}
           </LegacyButton>
@@ -129,7 +117,7 @@ export default class DialogButtons extends Component {
             type="primary"
             id="continue-button"
             className="launch"
-            style={styles.nextButton}
+            style={isRtl ? styles.nextButtonRtl : styles.nextButton}
           >
             {this.props.continueText}
           </LegacyButton>
@@ -148,3 +136,21 @@ export default class DialogButtons extends Component {
     );
   }
 }
+
+const styles = {
+  confirmButton: {
+    float: 'right'
+  },
+  nextButton: {
+    float: 'right'
+  },
+  nextButtonRtl: {
+    float: 'left'
+  },
+  lightbulb: {
+    margin: '-9px 0px -9px -5px'
+  },
+  hintButton: {
+    marginRight: 10
+  }
+};

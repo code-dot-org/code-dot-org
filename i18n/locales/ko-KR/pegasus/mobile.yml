@@ -12,13 +12,26 @@
   csedweek_dates: "2018년 12월 3일-9일"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> 가 곧 시작됩니다. 모든 선생님들과 운영자들에게 알립니다.  <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> 여러분의 Hour of Code 행사를 준비하세요.'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">컴퓨터과학(정보(과학)) 선생님이시라면? CSEdWeek resources 를 살펴보세요.</a>'
+  csedweek_banner_teachers_text: "CS 선생님이십니까? 기타 CSEdWeek 리소스를 살펴보세요."
   n_have_learned_an_hoc: "<h1>Hour of Code를</h1> <h2>체험하세요</h2> <h3># served</h3>"
+  try_hoc_num_served: "<h1>제공되는</h1><h2> 아워오브코드</h2><h3>%{num}를 체험해 보세요</h3>"
+  try_hoc_num_served_markdown: |-
+    # 제공되는
+
+    ## 아워오브코드를
+
+    ### %{num} 를 체험해 보세요 #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "누구나 배울 수 있습니다."
   learn_now: "지금 배워보세요."
   petition_message: "모든 학교의 모든 학생은 컴퓨터과학(정보과학)을 배울 기회가 있어야 합니다."
   petition_sign_message: '동의하시면 이름을 등록하고, 다른 # 명의 사람들처럼 메일링리스트에도 가입해주세요.'
-  petition_sign_message_support: '함께 도와주시고 싶으신 경우 이름을 등록하고, 다른 # 명의 사람들처럼 메일링리스트에도 가입해주세요.'
+  petition_sign_message_num: "동의하시면, 이름을 적고 %{num} 명의 다른 이들과 함께 저희 주소목록에 등록하세요."
   petition_join_others: '가입 # others'
+  petition_join_others_num: "%{num} 명이 등록"
   name: "이름"
   email: "Email"
   zipcode: "우편번호 또는 국가"
@@ -26,6 +39,7 @@
   twentyhours_heading: "컴퓨터과학(정보과학) 과정을 시도해 보세요."
   twentyhours_text: "Hour of Code 를 모두 마쳤나요? 다음과 같은 과정들을 통해 컴퓨터과학(정보과학)의 원리나 프로그래밍 기초개념들을 학습해 보세요."
   og_title: 'Code.org: 누구나 배울 수 있습니다.'
+  og_title_soon: "아워오브코드가 다가오고 있습니다."
   og_title_here: "Hour of Code 가 여기에 있습니다!"
   og_description: "모든 학교의 모든 학생들은 컴퓨터과학(정보과학) 을 배울 기회가 있어야 합니다."
   og_description_celeb: "새로운 따라해보기 튜토리얼들을 해보고, 유명인들과의 동영상 채팅 기회를 잡아보세요!"
@@ -42,6 +56,7 @@
   hoc2014_support: "후원하기 &#x25BE;"
   hoc2014_whatishoc: "Hour of Code 란?"
   csedweek_map_header: "# CSEdWeek / Hour of Code 전세계의 이벤트"
+  csedweek_map_header_num: "%{num} CSEdWeek / 전 세계 아워오브코드 이벤트"
   csedweek_map_signup: "이벤트 등록하기"
   csedweek_map_search_placeholder: "Hour of Code 이벤트 검색하기"
   csedweek_map_search_search: "검색"
@@ -144,11 +159,21 @@
   enter_valid_email: "이메일을 정확히 입력해 주세요"
   get_a_certificate_message: "인증서와 <a href='/learn'>Learn beyond One Hour</a> 에 대한 정보를 보내드립니다"
   get_a_certificate_message_after: "다운로드 하거나 인쇄 하려면 증명서를 누르세요. 이제, 우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택을 둘러보세요."
+  get_a_certificate_message_after_markdown: "인증서를 다운로드 하거나 인쇄하려면 클릭하세요. 이제, 우리의 [다른 과정](http://studio.code.org)을 계속 듣거나 또는 [더 배우기] (/배우기/너머)를 위한 더 많은 옵션을 보세요."
   thanks_for_submitting: "청원해 주셔서 감사합니다!"
   if_you_enjoyed: "재미있으면, 친구들과 함께 해보세요! 전세계 모든 사람들이 함께 하면 좋겠습니다."
   personalize_certificate: "개인별 인증서 만들기"
+  print_batch_certificates: "한 묶음의 인증서 인쇄"
+  print_certificates: "인증서 인쇄하기"
+  certificate_sponsor_message: "%{sponsor_name}가 학습을 후원하기 위해 선물을 했습니다."
+  print_ice_art_from_frozen: "겨울 왕국 튜토리얼에서 아이스 아트 인쇄"
+  want_a_blank_certificate_template: "학생의 이름을 적어 넣기 위한 빈 인증서 탬플릿을 원하세요?"
+  landscape_recommended_certificates: "인증서 인쇄 시 **Landscape** 를 선택할 것을 권장합니다."
+  print_one_here_certificates: "여기서 인쇄하세요."
+  enter_certificate_names: "**한 줄에 한 이름**씩 최대 30개의 이름을 입력하세요. 개인 %{script_name} 인증서의 인쇄 가능한 페이지가 생성될 것입니다."
   share_achievement: "다른 사람들에게 자랑하기"
   beyond_hour_message: "우리의 <a href='http://studio.code.org'>다른 강좌들</a>을 계속 듣거나, <a href='/learn/beyond'>Hour of Code를 넘어서</a>에서 다른 선택들을 둘러보세요."
+  beyond_hour_message_markdown: "우리의 [다른 과정](http://studio.code.org)을 계속 듣거나 또는 [더 배우기](/배우기/너머)를 위한 더 많은 옵션을 보세요."
   leaderboards_for_hoc: "Hour of Code 순위"
   support_url: "http://support.code.org/"
   country: "국가"
@@ -164,7 +189,7 @@
   share_on_facebook: "Facebook 에 공유하기"
   share_on_twitter: "Twitter 에 공유하기"
   beyond_an_hour: "Hour of Code를 넘어서"
-  get_started: "시작:"
+  get_started: "시작"
   i_agree: "동의합니다"
   participant_select: "- 선택 -"
   participant_student: "student"
@@ -223,6 +248,9 @@
   stats_nina: '"매일 100% 참여라는 놀라운 경험을 하였습니다.&mdash;" - 니나 니콜스 피어리, 교사'
   stats_student: '"이건 <b>평생 처음</b> 경험하는 기회였습니다." - Mariana Alzate 초등5학년'
   stats_michael: '"저는 학생들이 이렇게 배우는 것에 열광하는 것을 <b>결코</b> 본적이 없습니다." - 프랭크 마르티네즈(Frank Martinez), 선생님'
+  stats_nina_markdown: '"매일 똑같이 100% 열중이라는 동일한 결과가 나왔어요" - Nina Nichols Peery, 교사'
+  stats_student_markdown: '"저는 이것이 **평생에 한 번 있는** 기회란 걸 알았어요." -  Mariana Alzate, 5학년'
+  stats_michael_markdown: '"저는 제 학생들이 이렇게 배우는 것에 열광하는 것을 **결코** 본 적이 없습니다." - Frank Martinez, 교사'
   studiobar_title: "<a href='http://studio.code.org'>Code.org 학습코스</a> 를 살펴보세요."
   studiobar_title_nolink: "Code.org 학습코스 살펴보기"
   studiobar_elementary_title: "초등학생 코스"
@@ -256,6 +284,8 @@
     &ldquo;우리 아이들은 &mdash; 여자 아이를 포함한 &mdash; 컴퓨터 과학을 배울 기회가 필요합니다.&rdquo; 셰릴, Facebook COO
   homepage_hero_text_satya: |-
     &ldquo;컴퓨터 과학은 세상의 가장 큰 기회를 열 수 있다.&rdquo; 사티아, 마이크로소프트 CEO
+  homepage_hero_text_satya_new: |-
+    &ldquo;컴퓨터 과학은 학생들에게 내일의 세상을 만들 힘을 줍니다.&rdquo; Satya, 마이크로소프트 CEO
   homepage_hero_text_bosh: |-
     &ldquo;코딩을 하면, 당신은 삶의 방향을 꼼꼼하게 선택할 수 있게된다.&rdquo; 크리스 보쉬
   homepage_hero_text_student1: |-
@@ -269,12 +299,14 @@
   homepage_hero_text_teacher1: "&ldquo;코딩은 창의성, 영감 그리고 혁신에 불꽃을 일으킨다 &mdash; 이 모든 것은 어떠한 경력에도 필수적이다&rdquo; 플로레사, 교사"
   homepage_hero_text_teacher2: |-
     &ldquo;이 프로그램은 내 학생들이 100% 사로잡혀, 몰두하고, 참가하도록 만들었다.&rdquo; 아담, 교사
-  homepage_hero_text_stat_loc: "#loc 학생들에 의해서 작성된 코드의 줄"
-  homepage_hero_text_stat_students: "#student_count Code Studio에 등록된 학생 계정"
+  homepage_hero_text_stat_loc: "8백5십만 명의 여학생들이 Code.org에 등록하여 학습하고 있습니다."
+  homepage_hero_text_stat_students: "#student_count Code.org에 등록된 학생 계정"
   homepage_hero_text_stat_served: 'Hour of Code: #served 제공'
+  homepage_hero_hoc_is_coming: "아워오브코드가 다가오고 있습니다."
+  homepage_hero_hoc_is_here: "아워오브코드가 여기에 있습니다"
   homepage_slot_text_hoc: "The Hour of Code"
   homepage_slot_text_frozen: "안나와 엘사가 함께 하는 겨울왕국"
-  homepage_slot_text_teacher: "선생님용 대시보드"
+  homepage_slot_text_teacher: "교사 대시보드"
   homepage_slot_text_studio: "모든 튜토리얼"
   homepage_slot_text_course4: "과정4"
   homepage_slot_text_shop: "상점"
@@ -291,7 +323,9 @@
   homepage_action_text_girlvideo: "여학생들에게 영감 주기"
   homepage_action_text_learn: "학습 시작"
   homepage_action_text_signpetition: "청원서에 서명하세요"
+  homepage_action_text_wincelebritychat: "유명인사와의 채팅에 당첨되세요."
   homepage_signpetition_dropdown: "청원서에 서명하세요"
+  homepage_signpetition_dropdown_text: "동의합니다"
   homepage_diversity_pledge: "다양성 존중 서약하기"
   homepage_banner_text_prizes: '12월 7일 - 13일, Hour of Code가 다시 찾아옵니다. '
   homepage_banner_link_prizes: '역사상 가장 큰 학습 이벤트 참가하세요. '
@@ -302,12 +336,13 @@
   homepage_banner_20k_teachers_link: "더 알아보기"
   homepage_banner_congress: "미국 지도자들은 유치원 부터 고등학교 졸업반을 위한 컴퓨터 과학(정보 과학) 기금을 의회에 요청하고 있습니다."
   homepage_banner_congress_link: "지원하기"
-  homepage_banner_emailprivacy: "우리는 학생 개인 정보 보호 지원 방법에 대한 중요한 변화를 만들고 있습니다."
+  homepage_banner_emailprivacy: "우리는 학생의 개인 정보를 보호하기 위한 지원 방법에서 중요한 변화를 만들어 가고 있습니다."
   homepage_banner_emailprivacy_link: "자세히 보기"
   homepage_banner_40k_teachers_link: "더 알아보기"
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "누구든지 배울 수 있습니다. 오늘 시작하세요."
   homepage_slot_text_link_hoc: "Hour of Code 해보기"
+  homepage_slot_text_link_about_hoc: "아워오브코드 소개"
   homepage_slot_text_link_host: "Hour of Code의 주인"
   homepage_slot_text_link_hocserved: "# 명에게 제공하였습니다"
   homepage_solot_text_link_volunteer: "Hour of Code 자원봉사자"
@@ -331,6 +366,8 @@
   homepage_slot_text_link_buy: "함께 참여하세요"
   homepage_slot_text_link_donate: "기부하기"
   homepage_slot_text_link_shop: "T-셔츠, 모자 등"
+  homepage_slot_text_link_administrators: "학교에 CS 과목 도입"
+  homepage_gallery_header: "Code.org에서 제작된 프로젝트 %{project_count}개 이상"
   homepage_header_donors: "Code.org는 후원자 여러분에게 감사의 인사를 드립니다."
   homepage_donors_seall: "모두 보기"
   homepage_donors_donate: "기부하기"
@@ -373,8 +410,10 @@
   class_submission_level_college: "대학교"
   class_submission_level_vocational: "직업관련"
   class_submission_languages_other: "다른 프로그래밍언어"
-  videos_more: "더 많은 <a href='%{inspiring_videos_playlist}'> 영감을 주는 비디오 </a> 에 등장하는 롤모델 과 유명인사"
-  careers_page_more: "더많은 <a href='%{careers_url}' target='_blank'>영감을 주는 비디오</a>에 등장하는 교육전문가"
+  videos_more: "롤모델과 유명인사가 나오는 더 많은 <a href='%{inspiring_videos_playlist}'> 영감을 주는 비디오 </a>"
+  videos_more_markdown: "롤모델과 유명인사가 나오는 더 많은 [영감을 주는 비디오](%{inspiring_videos_playlist}) "
+  careers_page_more: "교육 전문가가 나오는 더 많은 <a href='%{careers_url}' target='_blank'>영감을 주는 비디오</a>"
+  careers_page_more_markdown: "기술 분야 전문가가 나오는 더 많은 [영감을 주는 비디오](%{careers_url})"
   playlab_choose_theme: "Play Lab 테마 선택"
   playlab_classic_title: "클래식"
   playlab_gumball_title: "검볼의 어메이징 월드"
@@ -394,77 +433,99 @@
   mc_gradelevel: "6세 이상"
   mc_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   mc_specs: "여러 언어 | 최신 웹브라우저, 태블릿 | 6-106 세"
-  minecraft_designer: "Minecraft 디자이너"
-  minecraft_adventurer: "Minecraft 모험가"
-  minecraft_tutorials: "Minecraft Hour of Code 튜토리얼"
+  minecraft_agent: "마인크래프트 히어로의 여정"
+  minecraft_designer: "마인크래프트 디자이너"
+  minecraft_adventurer: "마인크래프트 모험가"
+  minecraft_tutorials: "마인크래프트 아워오브코드 튜토리얼"
   minecraft_specs: "여러 언어 | 최신 웹브라우저, 태블릿 | 초등학교 2학년 이상"
+  minecraft_start_tutorial: "튜토리얼 시작"
   minecraft_agent_description: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
-  minecraft_agent_button: "시작:"
+  minecraft_agent_button: "시작"
   minecraft_designer_description: "Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요."
-  minecraft_designer_button: "시작:"
-  minecraft_adventurer_description: "코드를 사용하여 Alex나 Steve와 함께 모험에 도전해보세요."
-  minecraft_adventurer_button: "시작:"
+  minecraft_designer_button: "시작"
+  minecraft_adventurer_description: "코드를 사용하여 알렉스 또는 스티브를 모험의 세계로 데려 가세요."
+  minecraft_adventurer_button: "시작"
   minecraft_no_internet: "인터넷을 사용할 수 없습니까?"
-  minecraft_download_adventurer: "Minecraft 모험가의 오프라인 버전을 다운로드."
+  minecraft_download_adventurer: "마인크래프트 모험가의 오프라인 버전 다운로드."
   minecraft_subtitle: "마인크래프트 Hour of Code"
-  sports_page_title: "Hour of Code 스포츠"
-  sports_og_title: "Hour of Code 스포츠 튜토리얼"
-  sports_og_description: "챔피언과 금메달리스트들은 당신을 Hour of Code 에 도전하도록 격려합니다. 자신만의 스포츠게임을 코딩해보세요."
-  sports_title: "당신만의 스포츠게임을 코딩하세요"
+  minecraft_store_camps: "마이크로소프트 스토어에서 열리는 무료 마인크래프트 아워오브코드 캠프"
+  minecraft_signup_store_camps: "호주와 캐나다, 푸에토리코, 미국의 마이크로소프트 스토어에서 열리는 무료 마인크래프트 아워오브코드 워크숍에 <a href='%{signup_store_camp}', target='_blank'>신청</a> 하세요. 코딩이 어떻게 모든 이를 위한 것이며 창의력과 문제해결, 재미를 결합하는지 알아 보세요."
+  minecraft_host_event: "마인크래프트 아워오브코드 이벤트 주최"
+  minecraft_teach_resources: "교사 자료 및 레슨 플랜."
+  minecraft_leader_guide: "계획 수립 및 이벤트 진행에 도움을 줄 리소스를 다운로드하세요."
+  minecraft_facilitating_event: "지금, 진행자용 빠른 시작 가이드와 저학년과 고학년 학생을 위한 파워포인트 프레젠테이션을<a href='%{minecraft_facilitator_download}', target='_blank'>다운로드</a> 하세요."
+  minecraft_join_online_training: "마인크래프트로 자신의 아워오브코드를 진행할 준비가 되었지만 어디서부터 시작해야 할지 잘 모르시겠어요? 우리의 <a href='%{minecraft_webinar_url}', target='_blank'>온 디맨드 웨비나</a>를 확인해 보세요. 모범 사례를 배우고, 준비된 진행자 자료에도 액세스할 수  있으며 마인크래프트의 새 히어로의 여정 튜토리얼도 볼 수 있을 것입니다. 컴퓨터 과학 교육주간(12월 4-10일) 동안 또는 그 이후에 어린 학생들에게 아워오브코드를 소개하기 위해 무엇이 필요할지 미리 생각해 보세요."
+  minecraft_continue_learning: '모두를 위한 컴퓨터 과학: 마이크로소프트 스토어에서 아워오브코드를 너머 '
+  minecraft_continue_learning_description: "컴퓨터 과학 경험이 없어도 괜찮습니다! 모든 청소년이 컴퓨터 과학 교육을 통해 가치 있는 기술을 배울 수 있도록 도와 주세요. 마이크로소프트 스토어에서 열리는 세 개의 무료 시리즈, 1시간 워크숍에 참가하여 코딩을 재미 있고 스트레스가 없는 환경에서 경험해 보고 주요 컴퓨터 과학 개념을 익히고 여러분의 교실 또는 커뮤니티에서 아워오브코드를 이끌 준비를 하세요. 아셨죠! <a href='%{minecraft_continue_learning_url}', target='_blank'>오늘 신청하세요</a>."
+  minecraft_future: "모든 젊은이가 미래를 준비하도록 도와주세요. "
+  minecraft_future_description: "다른 학교와 비영리 단체가 디지털 리터러시부터 컴퓨터 과학 교육까지, 디지털 기술을 그들의 커뮤니티에 어떻게 가져오는지 알아 냅니다. 여러 모델을 고려하고 팀과 힌트를 얻으며 가장 가치있다고 생각되는  <a href='%{minecraft_future_url}', target='_blank'>리소스에 액세스</a> 하세요."
+  minecraft_og_designer: "마인크래프트가 아워오브코드를 위한 새로운 활동을 가지고 다시 돌아 왔습니다. 자신만의 마인크래프트 버전으로 동물들과 기타 마인크래프트 생명체를 프로그래밍해보세요."
+  minecraft_og_agent: "마인크래프트가 아워오브코드를 위해 돌아 왔으며, 여러분은 영웅입니다! 마인크래프트  바이옴을 통과하는 여정을 위해 코드를 작성하세요. "
+  sports_page_title: " 아워오브코드 스포츠"
+  sports_og_title: "스스로를 다그치세요. 누구나 배울 수 있습니다."
+  sports_og_description: "챔피언과 금메달리스트가 여러분에게 아워오브코드를 해보라고 격려합니다. 자신만의 스포츠 게임을 코딩해보세요."
+  sports_title: "스포츠 게임 코딩"
   sports_watch_video: "동영상 보기"
-  sports_video_title: "Hour of Code 스포츠 튜토리얼"
-  sports_select_theme: "여러분의 튜토리얼 테마를 선택하세요"
+  sports_video_title: "스스로를 다그치세요. 누구나 배울 수 있습니다."
+  sports_select_theme: "튜토리얼 테마 선택"
   sports_basketball_title: "농구 게임 만들기"
-  sports_all_sports_title: "스포츠 전반 조합하기"
-  sports_featured_athletes: "주전 선수 보기"
-  sports_athletes_title: "주전 선수"
-  sports_athlete_Draymond: "데이먼드 그린, NBA 우승과 올림픽에서 금메달을 획득한 골든 스테이트 워리어스의 선수"
-  sports_athlete_Serena: "세레나 윌리엄스, 테니스 챔피언이자 올림픽 금메달리스트"
-  sports_athlete_Russell: "러셀 오쿵, NFL 덴버 브롱크스의 선수이자 슈퍼볼 챔피언"
-  sports_athlete_Sergio: "서지오 라모스, 레알마드리드의 선수이며 월드컵에서 우승"
-  sports_athlete_Sue: "수 버드, WNBA 시애틀 스톰 소속의 여자농구선수 이자 올림픽 금메달리스트"
-  sports_athlete_Alana: "알라나 브리드, WNBA L. A. Sparks의 선수이며 올림픽 금메달리스트"
+  sports_all_sports_title: "스포츠 혼합 및 매칭"
+  sports_featured_athletes: "출연하는 선수 보기"
+  sports_athletes_title: "출연한 선수"
+  sports_athlete_Draymond: "데이먼드 그린, 올림픽 금메달리스트 및 NBA 챔피온, 골든 스테이트 워리어스"
+  sports_athlete_Serena: "세레나 윌리엄스, 올림픽 금메달리스트 및 테니스 챔피언 "
+  sports_athlete_Russell: "러셀 오쿵, 슈퍼볼 챔피언 및 NFL 선수, 덴버 브롱크스"
+  sports_athlete_Sergio: "서지오 라모스, 월드컵 챔피온 및 축구 선수, 레알 마드리드"
+  sports_athlete_Sue: "수 버드, 올림픽 금메달리스트 및 WNBA 챔피온, 시애틀 스톰"
+  sports_athlete_Alana: "알라나 브리드, 올림픽 금메달리스트 및 WNBA 올 스타, 로스엔젤레스 스파크스"
   sports_athlete_Angelo: "안젤로 매튜스, 스리랑카 크리켓팀의 주장"
-  sports_athlete_Nneka: "Nneka Ogwumike, WNBA L.A. Sparks 의 선수이며 리그 우승 및 올림픽 금메달 획득"
-  sports_athlete_Carmelo: "카멜로 앤떠니, NBA 뉴욕닉스의 선수로 올림픽 금메달 획득"
-  sports_athlete_Marco: "마르코 벨리넬리, NBA 샬럿 호네츠의 선수로써 NBA 챔피언"
-  sports_athlete_Neymar: "네이마르 Jr, FC 바르셀로나의 선수이며 자국 브라질을 올림픽에서 우승시킴"
-  sports_athlete_Sarah: "사라 쿠이타 오프링가, 위드서핑 챔피언"
-  sports_athlete_Marcelo: "마르셀로, 레알 마드리드 선수이며 월드컵 챔피언"
+  sports_athlete_Nneka: "은카니 오그미케, 올림픽 금메달리스트 및 WNBA 챔피온, 2016 MVP, 로스엔젤레스 스파크스"
+  sports_athlete_Carmelo: "카멜로 안소니, 올림픽 금메달리스트 및 NBA 올 스타, 뉴욕 닉스"
+  sports_athlete_Marco: "마르코 벨리넬리, NBA 챔피언, 샬럿 호네츠"
+  sports_athlete_Neymar: "네이마르 Jr, 올림픽 금메달리스트 및 축구 선수, FC 바르셀로나 및 브라질 국가 대표팀"
+  sports_athlete_Sarah: "사라 쿠이타 오프링가, 윈드서핑 챔피언"
+  sports_athlete_Marcelo: "마르셀로, 축구 챔피언, 레알 마드리드 및 브라질 국가 대표팀"
   sports_athlete_Erika: "에리카 올리베라, 마라톤 챔피언"
   sports_athlete_John: "존 월, NBA 올스타, 워싱턴 위저드"
-  sports_athlete_Chris: "크리스 보쉬, NBA 마이애미 히트 선수, 올림픽 금메달리스트, NBA 챔피언"
-  sports_athlete_Harrison: "해리슨 반스, 델러스 메버릭스 선수, NBA 챔피언, 올림픽 금메달리스트"
-  watch_inspirational_videos: "시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요."
+  sports_athlete_Chris: "크리스 보쉬, 올림픽 금메달리스트 및 NBA 챔피언, 마이애미 히트  "
+  sports_athlete_Harrison: "해리슨 반스, 올림픽 금메달리스트 및 NBA 챔피언, 델러스 메버릭스"
+  watch_inspirational_videos: "시작하기 전에 영감을 불러일으키는 동영상 중 한 편을 시청하세요."
+  video_title_cs_is_everything: "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  "
   video_title_inspire_girl: "여학생들에게 영감 주기"
-  video_title_cs_intro: "컴퓨터 공학 소개"
+  video_title_cs_intro: "컴퓨터 과학 소개"
   video_title_schools_dont_teach: "대부분의 학교가 가르쳐주지 않는 것"
   video_title_obama: "컴퓨터공학(정보과학)을 지지하는 오바마"
-  video_title_hoc_is_here: "Hour of Code 가 여기 있습니다 - 누구나 배울 수 있습니다"
+  video_title_hoc_is_here: "아워오브코드가 여기 있습니다 - 누구나 배울 수 있습니다"
   video_title_anybody_can_learn: "누구나 배울 수 있습니다"
-  video_title_draymond_green: "Draymond Green과 함께하는 Hour of Code"
-  video_title_russell_okung: "Russell Okung과 함께하는 Hour of Code"
-  video_title_real_madrid: "Real Madrid와 함께하는 Hour of Code"
-  video_title_marco_belinelli: "Marco Belinelli와 함께하는 Hour of Code"
-  video_title_chris_bosh: "컴퓨터공학을 지지하는 크리스 보쉬"
+  video_title_steph_curry: "스테프 커리와 함께 하는 아워오브코드"
+  video_title_draymond_green: "드레이먼드 그린과 함께 하는 아워오브코드"
+  video_title_russell_okung: "러셀 오쿵과 함께 하는 아워오브코드"
+  video_title_real_madrid: "레알 마드리드와 함께 하는 아워오브코드"
+  video_title_marco_belinelli: "마크로 벨리넬리와 함께 하는 아워오브코드"
+  video_title_chris_bosh: "컴퓨터 과학을 지지하는 크리스 보쉬"
+  video_title_my_name_is_aracely: "제 이름은 아라셀리예요."
   video_1min: "1분"
   video_2min: "2분"
   video_3min: "3분"
   video_5min: "5분"
-  speak_another_language: "다른 언어를 할 줄 아나요?"
+  speak_another_language: "다른 언어를 사용하세요?"
   help_translate: "번역하는 것을 도와주세요."
   no_internet: "인터넷을 사용할 수 없습니까?"
-  download_offline: "오프라인 버전 다운로드"
+  download_offline: "오프라인 버전을 다운로드하세요."
   are_you_teacher: "선생님이신가요?"
-  review_lesson_plan: "수업 계획과 다른 자료들을 리뷰해주세요."
+  review_lesson_plan: "레슨 플랜과 다른 교사 리소스를 검토해주세요."
   volunteer_engineer_submission_title: "학생들과 자원봉사자들에게 꿈과 희망을 불어넣어 주세요."
   volunteer_engineer_submission_subtitle_generic: '올 해 12월7일-13일까지 100,000 명의 선생님들이 수업 중에 Hour of Code 행사를 운영할 예정입니다. 선생님들은 여러분들의 도움이 필요합니다! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 명의 선생님들이 자원봉사자를 필요로 하고 있습니다.<br>%{num_volunteers} 명의 자원봉사자들이 등록되어 있습니다. 함께 해주세요."
   volunteer_engineer_submission_intro_background: "Hour of Code 는 전세계 180개 이상의 나라에서 수 억명의 학생들에게 컴퓨터과학(정보과학) 을 소개하는 한 시간 짜리 활동을 해보도록 하는 전세계적인 운동입니다. 12월7일-13일 컴퓨터과학교육주간 동안 저희와 함께 해주세요."
   volunteer_engineer_submission_intro_recruit: '이 선생님들은 다른 분들로부터 도움 받고 싶어합니다.<span style="font-family: ''Gotham 7r'', sans-serif;">컴퓨터과학(정보과학) 교육에 열정적인 전문가</span> 로써 수업을 도와주시거나, 학생들에게<span style="font-family: ''Gotham 7r'', sans-serif;">꿈과 희망을 심어 주실 수 있는 분으로서,</span> 컴퓨터과학(정보과학) 으로 가능한 다양한 것들에 대해서 이야기해 주시길 원하고 있습니다.(화상 회의로도 가능합니다.)'
+  volunteer_engineer_submission_intro_recruit_markdown: "교사들은 교실에서 도와 줄 수 있는 **컴퓨터 과학 교육에 열정적**이거나 또는 컴퓨터 과학의 폭 넓은 가능성에 대해 말하며 학생들에게 **영감**을 줄 수 있는 (이 일은 비디오 채팅을 통해서도 가능) 이가 자원봉사해주길 바라고 있습니다."
   volunteer_engineer_submission_intro_guide: "<a href=\"%{volunteer_guide}\">자원 봉사 프로그램</a>에 대해서는 여기에서 자세히 알아보세요."
-  volunteer_engineer_submission_intro_signup: "컴퓨터과학/공학/교육과 대학생이거나 소프트웨어 개발자이시면 <span class=\"form-required-field\">*</span> 표 있는 곳을 채워주세요."
+  volunteer_engineer_submission_intro_guide_markdown: "[자원 봉사 프로그램에 대해서는 여기]에서 자세히 알아보세요(%{volunteer_guide})."
+  volunteer_engineer_submission_intro_signup: "컴퓨터 과학을 공부하는 학생이거나 소프트웨어 전문가이면 다음의 정보를 입력해 주세요. 자원봉사자로 등록하려면 최소 18세이어야 합니다. 이 섹션에서 작성된 입력란 모두는 <a href=\"/volunteer/local\">자원봉사자 맵</a>을 보는 모든 이에게 공개된다는 점에 유의하세요. <span class=\"form-required-field\">*</span>가 표시된 란은 필수입력란 입니다."
+  volunteer_engineer_submission_intro_signup_markdown: "컴퓨터 과학을 공부하는 학생이거나 소프트웨어 전문가이면 다음의 정보를 입력해 주세요. 자원봉사자로 등록하려면 최소 18세이어야 합니다. 이 섹션에서 작성된 입력란 모두는 [자원봉사자 맵](/자원봉사자/지역)을 보는 모든 이에게 공개된다는 점에 유의하세요.  _*_ 가 표시된 란은 필수입력란입니다."
   volunteer_engineer_submission_intro_links: "자원봉사를 찾고 계신 선생님이신가요? <a href=\"%{volunteer_local}\">자원봉사자 지도</a>에서 살펴보세요."
+  volunteer_engineer_submission_intro_links_markdown: "자원봉사자를 찾고 있는 선생님이신가요? [자원봉사자 맵](%{volunteer_local})에서 지역 자원봉사자를 찾아 보세요."
   volunteer_engineer_submission_update_information: "정보 업데이트"
   volunteer_engineer_submission_header_shared: "자원봉사자 지도에 선생님에게 공유되는 정보"
   volunteer_engineer_submission_field_name: "이름"
@@ -473,8 +534,8 @@
   volunteer_engineer_submission_field_company_placeholder: "회사 (또는 대학)"
   volunteer_engineer_submission_field_experience_level: "경험 수준"
   volunteer_engineer_submission_field_location: "위치"
-  volunteer_engineer_submission_field_location_desc: "여러분의 위치는 선생님들이 학교 인근의 자원봉사자분들을 검색하는데 활용될 것이며, 지도 위에 핀으로 표시될 것입니다. 만약에 여러분이 개인정보에 대해 걱정하신다면 직장/학교 주소 또는 여러분이 살고 있는 도시만 사용해주세요."
-  volunteer_engineer_submission_field_location_placeholder: "우편번호, 시도/국가 또는 도로명 주소"
+  volunteer_engineer_submission_field_location_desc: "여러분의 위치는 선생님들이 학교 인근의 자원봉사자를 검색하는데 활용될 것이며, 지도 위에 핀으로 표시됩니다. 개인정보 보호 차원에서 거주 도시 또는 우편번호만 입력해주세요."
+  volunteer_engineer_submission_field_location_placeholder: "우편번호, 시도/국가"
   volunteer_engineer_submission_field_location_flexibility: "저는 다음과 같이 자원봉사가 가능합니다...(가능한 것 모두 선택)"
   volunteer_engineer_submission_checkbox_after_hoc: "저는 연중 봉사활동에도 관심이 있습니다."
   volunteer_engineer_submission_field_time_commitment: "봉사 가능 시간"
@@ -495,9 +556,10 @@
   volunteer_engineer_submission_field_email_preference_no: '아니요'
   volunteer_engineer_submission_final_paragraph: "여러분은 지역 선생님들의 Hour of Code 활동 등이 가능한 자원봉사자 명단에 들어갈 것입니다. 여러분의 이메일과 주소는 절대로 공개되지 않습니다만 아래의 정보들(정확한 위치를 포함한 정보들) 은 지역 선생님들에게 안내가 될 것입니다."
   volunteer_engineer_submission_checkbox_contact: '선생님들이 자원봉사자를 구하실 때 저에게 연락주시는 것에 동의합니다. (참고: 여러분의 이메일 주소가 공유 되지는 않을 것입니다.)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "18세 이상임을 증명합니다."
+  volunteer_engineer_submission_checkbox_age_18_plus: "18세 이상임을 확인합니다."
   volunteer_engineer_submission_submit: "제출하기"
-  volunteer_engineer_submission_thankyou: "자원봉사를 지원해주셔서 감사드립니다. 선생님들은 <a href=\"%{url}\">이 지도</a>를 사용해 여러분과 같은 자원봉사자들을 찾게될 것입니다."
+  volunteer_engineer_submission_thankyou: "감사드립니다! 자원봉사자 정보가 성공적으로 제출되었습니다. 선생님들이 <a href=\"%{url}\">이 맵</a> 을 사용해 여러분과 같은 자원봉사자를 찾아 연락드릴 것입니다. 48시간 정도 지난 후 여러분의 정보가 맵에 표시될 것입니다."
+  volunteer_engineer_submission_thankyou_markdown: "감사드립니다! 자원봉사자 정보가 성공적으로 제출되었습니다. 선생님들이 [이 지도](%{url})를 사용해 여러분과 같은 자원봉사자를 찾아 연락드릴 것입니다. 귀하의 정보가 지도 위에 바르게 올라오기까지 48시간을 기다려 주십시요. "
   volunteer_engineer_submission_commitment_uncertain: "소속없음"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1주일에 1시간"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "1주일에 3시간"
@@ -526,6 +588,7 @@
   volunteer_engineer_submission_type_task_remote: "스카이프로 우리반 아이들에게 멋진 말씀들을 해주세요."
   volunteer_engineer_submission_type_task_mentor: "우리 학생들에게 코딩을 가르치기 위해서 저와 함께 준비하는데 도움을 주실 수 있는 멘토 분들을 찾고 있습니다."
   petition_age: "나이"
+  dashboard_announce_hoc_scaling_progress: "엇! 아워오브코드의 트래픽이 초과되고 있습니다. 이번 주 진도는 저장할 수 없지만 이번 주 이전의 진도는 여전히 안전하게 저장되어 있습니다."
   dashboard_announce_learn_more_button: "더 알아보기"
   dashboard_landing_title: "선생님 홈페이지"
   dashboard_landing_welcome: "새롭게 개선된 교사용 상황판"
@@ -554,7 +617,7 @@
   dashboard_landing_inspire: "포스터, 비디오 등의 자료로 학생들에게 영감을 주세요."
   dashboard_landing_video_library: "컴퓨터 과학의 개념에 대한 비디오 라이브러리를 이용하세요."
   dashboard_landing_report_bug: "기능 요청 또는 오류 신고"
-  dashboard_landing_teacher_forum: "전문적 학습 커뮤니티에 가입하세요."
+  dashboard_landing_teacher_forum: "전문가 학습 커뮤니티에 가입하세요."
   dashboard_hoc_courses: "모든 연령대를 위한 Hour of Code"
   dashboard_hoc_courses_desc: "당신의 학생과 1시간 이내로 끝낼 수 있는 튜토리얼을 해보세요."
   dashboard_hoc_courses_desc_and_cta: "이 한 시간 짜리 짧은 튜토리얼들을 여러분의 학생들과 함께 해보세요. 컴퓨터과학교육주간동안 <a href=\"https://hourofcode.com\">Hour of Code 운동</a>에 함께 참여해 주세요."
@@ -580,11 +643,11 @@
   dashboard_action_done: "완료"
   dashboard_action_print_certificates: "인증서 인쇄하기"
   dashboard_assessments_view: '평가 결과 보기:'
-  dashboard_assessments_none: "평가 결과 없음"
-  dashboard_assessments_none_part2: "여러분이 중학교 혹은 고등학교 과정을 가르치고 있다면 학생들의 AP 시험 준비를 도울 수 있도록 코드 스튜디오의 한 부분으로서 평가 문항을 사용할 수 있습니다. 이러한 평가를 사용하려면 먼저 여러분의 수업에 과정을 등록하고 드롭다운 메뉴에서 과정을 고르면 됩니다. 그러면 여러분 학생들의 답변을 여기서 볼 수 있습니다."
-  dashboard_assessments_summaries: "요약"
-  dashboard_assessments_answers: "모든 답변"
-  dashboard_surveys_answers: "설문"
+  dashboard_assessments_none: "대부분의 교사는 '진도 보기' 탭을 이용하여 학생들의 진도를 측정할 수 있습니다. 학생들의 추가 평가를 제공하고 싶으면, 레슨 플랜에서 추천 질문과 분야를 찾을 수 있습니다. 그것들은 Code.org 외부에서 제작되었습니다."
+  dashboard_assessments_none_part2: "여러분이 중학교 혹은 고등학교 과정을 가르치고 있다면 학생들의 AP 시험 준비를 도울 수 있도록  Code.org의 한 부분으로서 평가 문항을 사용할 수 있습니다. 이러한 평가를 사용하기 위해, 먼저 과정을 학급에 배정하고 위의 드롭다운에서 과정을 선택하면 학생들의 답변을 여기서 볼 수 있습니다."
+  dashboard_assessments_summaries: "평가 요약"
+  dashboard_assessments_answers: "모든 평가 답변"
+  dashboard_surveys_answers: "설문 조사"
   dashboard_percent: "퍼센트"
   dashboard_filter_by_stage: '단계에 따라 필터링하기:'
   dashboard_filter_all: "모두"
@@ -592,18 +655,18 @@
   dashboard_navigation_home_page: "교사 홈페이지"
   dashboard_navigation_section_student_progress: "학생 계정 및 진도"
   dashboard_navigation_section_teacher_progress: "나의 학습 진도"
-  dashboard_navigation_section_lesson_plans: "수업 계획 및 자료"
+  dashboard_navigation_section_lesson_plans: "레슨 플랜 및 리소스"
   dashboard_navigation_section_community: "도움말 및 커뮤니티"
   dashboard_navigation_section_pd: "고급 교육 및 개발"
   dashboard_navigation_section_speakers: "컴퓨터과학(정보과학) <br/> 특별 초청 연사들"
   dashboard_navigation_all_sections: "학생 계정 및 진도"
   dashboard_navigation_view_progress: "진행도"
   dashboard_navigation_view_text_responses: "텍스트 응답"
-  dashboard_navigation_view_assessments: "평가 점수"
-  dashboard_navigation_view_assessments_surveys: "평가/조사"
+  dashboard_navigation_view_assessments: "평가"
+  dashboard_navigation_view_assessments_surveys: "평가/설문 조사"
   dashboard_navigation_add_students: "학생 추가"
   dashboard_navigation_manage_students: "학생 관리"
-  dashboard_navigation_lesson_plans_resources: "표준 및 프레임워크"
+  dashboard_navigation_lesson_plans_resources: "커리큘럼 표준"
   dashboard_navigation_view_stats: "통계"
   dashboard_navigation_section: '섹션: %{section_name}'
   dashboard_navigation_student: '학생: %{student_name}'
@@ -618,8 +681,9 @@
   dashboard_progress_student_in_script: "%{script_name} 에서 %{student_name} 에 대한 진도 정보"
   dashboard_progress_pair_programming: "페어 프로그래밍"
   dashboard_responses_view: '텍스트 응답 보기:'
-  dashboard_responses_none: "텍스트 응답 없음"
+  dashboard_responses_none: "대부분의 수업은 어린 연령의 학생들을 위해 설계되었으며 학생들에게 텍스트로 답을 입력하도록 요구하지 않기 때문에 여기서는 텍스트 응답을 볼 수 없습니다. 중고등학교 과정의 고학년 학생의 경우는 질문에 텍스트로 답을 해야 하기 때문에, 교사는 위의 드롭다운에서 배정된 과정을 선택하면 학생들의 제출 답안을 볼 수 있습니다.                                                           "
   dashboard_sections_new_section: "새 섹션"
+  dashboard_sections_new_google_section: "구글 클래스룸에서 섹션 불러 오기"
   dashboard_sections_jumbotron_instruction: "새로운 섹션을 만들고 학생을 추가합니다. 섹션은 학생들을 모다 작은 모둠으로 구성할 수 있게 하여 학생들의 계정에 따라 진도를 추적할 수 있습니다."
   dashboard_sections_table_section: "섹션"
   dashboard_sections_table_secret: "로그인 유형"
@@ -629,7 +693,7 @@
   dashboard_sections_table_stage_extras: "추가 단계"
   dashboard_sections_table_students: "학생들"
   dashboard_sections_table_code: "섹션 코드"
-  dashboard_sections_name: '섹션 이름'
+  dashboard_sections_name: '섹션 이름:'
   dashboard_sections_choose_secret: "학생들에게 계정을 만들어주고 싶은 경우에는, 비밀단어/그림을 섹션에 설정해 주세요."
   dashboard_sections_secret_word: "비밀단어를 각 학생들에게 따로 부여할 수 있습니다."
   dashboard_sections_secret_picture: "비밀그림을 각 학생들에게 따로 부여할 수 있습니다."
@@ -638,30 +702,31 @@
   dashboard_sections_switch_section: '섹션 바꾸기:'
   dashboard_sections_close: "닫기"
   dashboard_sections_move_students_desc: "새 섹션으로 이동시킬 학생을 선택하세요. 학생을 이동시켜도 그들의 진도는 지워지지 않습니다."
-  dashboard_sections_one_per_teacher: "학생들은 선생님 각각에 대해서 하나의 섹션에만 있을 수 있습니다. 여러분의 학생들은 이전 섹션에서 빠져나가서 여기 새로운 섹션에 추가될 것입니다."
+  dashboard_sections_one_per_teacher: "학생은 교사 당 한 섹션에만 등록될 수 있습니다. 학생을 새 섹션에 추가하려면 이전 섹션에서 제거해야 합니다."
   dashboard_sections_move_to_section: '섹션으로 이동:'
   dashboard_sections_enter_code: '섹션 코드 입력:'
   dashboard_sections_code_placeholder: "6-문자 코드 (ABCDEF)"
-  dashboard_sections_other_section: "다른 섹션"
-  dashboard_sections_both_sections: "학생(들) 을 양쪽 섹션에 두고 싶으세요?"
-  dashboard_sections_yes_both: "예, 현재의 섹션에 있는 학생(들) 을 새로운 섹션으로 복사하고 싶습니다."
-  dashboard_sections_no_move: "아니오, 단지 학생(들) 을 새로운 섹션으로 이동시키고 싶습니다."
-  dashboard_sections_move_students: "학생들을 이동시키기"
-  dashboard_sections_assign_hoc_script_desc: "Hour of Code에 참가하시겠습니까?"
-  dashboard_sections_assign_hoc_script_msg: "Hour of Code로 인한 트래픽 증가로 12월 3일부터 11일까지 본 과정의 진행상태를 저장할 수 없습니다.\n하지만 모든 튜토리얼은 계속해서 사용할 수 있습니다.\n그리고 코스를 배정하고 참가하는 모든 학생들의 certificate를 제공할 수 있습니다.  \n(대다수의 선생님들은 <a href='%{certificate_url}'>certificate</a>를 먼저 출력합니다.)  \n연간 격주로 학생들의 진행상태를 저장하고 보고합니다."
-  dashboard_sections_assign_activity: "코스 배정"
-  dashboard_error_none_selected: "당신은 이동시킬 학생을 선택하지 않았습니다. 최소 한 명 이상의 학생을 선택하세요."
-  dashboard_error_other_section: "만약 여러분의 섹션으로 학생들을 이동시킬 것이라면, 드롭다운 목록에서 섹션을 선택하세요. 학생들을 다른 선생님의 섹션으로 이동시키려면 '다른 섹션'을 선택합니다."
+  dashboard_sections_other_section: "다른 교사"
+  dashboard_sections_both_sections: "학생을 두 섹션 모두에 두고 싶으세요?"
+  dashboard_sections_yes_both: "예, 현재의 섹션과 새 섹션 두 개 섹션 모두에 있도록 학생을 복사하고 싶습니다."
+  dashboard_sections_no_move: "아니오, 학생을 새 섹션으로 이동시키고 싶습니다."
+  dashboard_sections_move_students: "학생 이동"
+  dashboard_sections_assign_hoc_script_desc: "아워오브코드에 참가하시겠습니까?"
+  dashboard_sections_assign_hoc_script_msg: "아워오브코드로 인한 트래픽 증가로 12월 3일부터 11일까지 본 과정의 진도를 저장할 수 없음을 양지해 주십시오. 이 튜토리얼 내 그 밖의 모든 것은 계속해서 사용할 수 있습니다. 교사는 여전히 과정을 배정하고 참가하는 모든 학생에게 인증서를 제공할 수 있습니다.  (대부분의 교사는 <a href='%{certificate_url}'>미리 인증서를 인쇄합니다</a>.) 올해 학생들의 진도는 격주로 저장하고 보고할 것입니다."
+  dashboard_sections_assign_activity: "과정 배정"
+  dashboard_error_none_selected: "학생을 이동하지 않기로 선택했습니다. 최소 한 명 이상을 선택하세요."
+  dashboard_error_other_section: "만약 학생을 여러분의 섹션으로 이동하려면, 드롭다운에서 섹션을 선택하세요. 학생을 다른 선생님의 섹션으로 이동할 때만 '다른 섹션'을 선택하세요."
   dashboard_students_add_multiple: '학생들의 이름을 한 줄에 하나씩 입력하거나 붙여넣기 하세요.'
+  dashboard_students_new_google_classroom_section: "학생을 추가하려면, <a href='http://classroom.google.com' target='_blank'>구글 클래스룸</a> 을 사용하고 위의 <b>구글 클래스룸 학생과 동기화</b> 버튼을 클릭하세요."
   dashboard_students_new_section: "새로운 섹션을 만들었습니다! <b>학생 추가</b> <b>여러 학생 추가</b> 버튼을 눌러 학생들을 추가하세요."
-  dashboard_students_name: '이름'
+  dashboard_students_name: '이름: '
   dashboard_students_progress: "진행도"
   dashboard_students_male: "남"
   dashboard_students_female: "여"
   dashboard_students_completed_levels: "단계 완료"
   dashboard_students_total_lines: "총 코드 라인"
-  dashboard_students_share_section: "이 섹션의 로그인 페이지를 학생들에게 공유하기:"
-  dashboard_students_share_section_secondary: '또는, 학생들에게 이 섹션의 로그인 페이지를 공유하세요:'
+  dashboard_students_share_section: "학생에게  <a href=%{join_url}>%{join_url}</a> 으로 가 섹션 코드(%{section_code})를 입력하라고 말하세요."
+  dashboard_students_share_section_secondary: '또는, 이 섹션의 로그인 페이지를 학생들과 공유하세요:'
   dashboard_students_print_info: "학생 로그인 정보와 함께 카드 출력하기."
   dashboard_students_secret_picture_title: "비밀 그림"
   dashboard_students_secret_picture: "이 섹션의 비밀 형식으로 <b>그림</b>을 사용합니다.  그것은 각 학생의 비밀 그림에 로그인 하는 암호 대신 사용 되는 의미 합니다.  학생 웹 주소에 로그인 위에 주어진 부호를 사용 해야 합니다."
@@ -673,18 +738,28 @@
   dashboard_students_no_email: "학생들이 이메일이 없는 경우, 학생들을 위한 계정을 만들어 주려는 경우, 이 섹션의 비밀보호를 <b>비밀단어</b>나 <b>비밀그림</b>으로 설정해 주세요."
   dashboard_students_print_page: "이 페이지 인쇄"
   dashboard_students_signin_card: "%{join_url} 를 방문 하셔서 %{section_code} 를 입력하세요"
-  dashboard_students_url: "URL"
+  dashboard_students_url: "직접 URL"
   dashboard_privacy_document_link: "<a href=\"/privacy/student-privacy\", target=\"_blank\">학생들을 위한 개인정보보호 정책 문서</a>"
   dashboard_curriculum_k5_title: "K-5(초등학교 5학년) 교육자 리소스"
   dashboard_curriculum_middle_title: "중학교 교육자 리소스"
   dashboard_curriculum_high_title: "고등학교 교육자 리소스"
   dashboard_lesson_plans: "수업 계획"
-  dashboard_view_all_lesson_plans: "모든 레슨 계획 살펴보기"
+  dashboard_view_all_lesson_plans: "과정 1-4를 위한 모든 커리큘럼 다운로드"
   dashboard_course1: '코스1:'
   dashboard_course2: '코스2:'
   dashboard_course3: '코스3:'
-  dashboard_course4: '코스 4(베타):'
-  dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
+  dashboard_course4: '과정 4: '
+  dashboard_coursea: '과정 A: '
+  dashboard_courseb: '과정 B: '
+  dashboard_coursec: '과정 C: '
+  dashboard_coursed: '과정 D: '
+  dashboard_coursee: '과정 E: '
+  dashboard_coursef: '과정 F: '
+  dashboard_pre-express: '프리 리더 익스프레스 과정:'
+  dashboard_express: '속성 과정: '
+  dashboard_unplugged: "컴퓨터가 없으면, 교실에서 <a href='%{unplugged_url}'>이 언플러그드 레슨</a> 을 해보세요."
+  dashboard_unplugged_markdown: "컴퓨터가 없으면, 교실에서 [이 언플러그드 레슨](%{unplugged_url})을 해보세요."
+  dashboard_tools: '툴: '
   dashboard_curriculum: "교과 과정"
   dashboard_curriculum_overview: "K-5(초등 5학년) 교육과정 살펴보기"
   dashboard_overview: "개요"
@@ -700,8 +775,10 @@
   dashboard_teacher_worksheet: "교사 활동지"
   dashboard_curriculum_csina: '대수학 영역의 컴퓨터 과학:'
   dashboard_curriculum_csins: '과학 영역의 컴퓨터 과학:'
-  dashboard_curriculum_csp: 'AP ® 컴퓨터 과학 원리:'
+  dashboard_curriculum_csp: '컴퓨터 과학 원리:'
   dashboard_curriculum_ecs: '컴퓨터과학 살펴보기'
+  dashboard_curriculum_csd: '컴퓨터 과학 발견: '
+  dashboard_curriculum_apcsa: 'AP 컴퓨터 과학, 자바: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "기타"
   dashboard_login_word: "단어"
@@ -731,7 +808,7 @@
   dashboard_sections_account_creation_question: "학생들의 계정은 누가 만들었나요?"
   dashboard_sections_password_question: "\"비밀번호\"로서 학생들이 사용해야하는 것은?"
   dashboard_sections_picture_account_creation: "Code.org 에 의해 부여된 그림"
-  dashboard_sections_word_account_creation: "Code.org 에 의해 부여된 단어"
+  dashboard_sections_word_account_creation: "Code.org 에 의해 부여된 간단한 단어쌍"
   dashboard_sections_sign_in_question: "학생들이 어디서 가입을 하나요?"
   dashboard_sections_sign_in_unique: "\"학생 관리하기\" 탭의 웹페이지 리스트를 유일하게 해주세요."
   dashboard_sections_sign_in_main: "http://code.org 로 접속해서 \"가입하기\"를 누르세요."
@@ -742,8 +819,8 @@
   code_hoc_coming: "Hour of Code 가 여기있습니다. - 12월8일-14일!"
   code_sign_up: "CS Education Week 기간 동안의 활동을 신청하세요."
   host_an_hour: "1 시간 주최"
-  learn_banner_title: "Hour of Code에 가입하세요"
-  learn_banner_desc: "Hour of Code 는 180개 이상의 국가에서 100만명 이상의 학생이 참여하는 글로벌 운동입니다. 장소에 구애받지 않고 누구나 Hour of Code 이벤트를 진행할 수 있습니다. 모든 학생들에게 컴퓨터를 공부할 수 있는 기회를 제공해 주세요. 주최자는 <a href='%{how_to_url}' target='_blank'>how-to guide</a> 와 <a href='%{videos_url}' target='_blank'>이 영상들</a>을 참고해서 학생들을 가르칠 수 있습니다."
+  learn_banner_title: "아워오브코드에 가입하세요"
+  learn_banner_desc: "아워오브코드는 전세계 180개 이상의 국가에서 1억 명 이상의 학생이 참여하는 글로벌 운동입니다. 장소에 구애받지 않고 누구나 아워오브코드 행사를 주최할 수 있습니다. 모든 학생들이 컴퓨터 과학을 공부할 수 있는 기회를 제공받도록 도와 주세요. 주최자는 아워오브코드를 가르치기 위한 <a href='%{how_to_url}' target='_blank'>가이드</a>를 따르고 <a href='%{videos_url}' target='_blank'>다음의 동영상</a>으로 학생들에게 영감을 줄 수 있습니다."
   learn_more: "지금 해보기"
   learn_sign_up_description: "컴퓨터과학교육주간 동안 Hour of Code 에 함께 참여해 주세요."
   learn_sign_up_button: "가입 신청"
@@ -769,25 +846,32 @@
   carousel_heading_international: "한국어로 제공되는 협찬 튜토리얼"
   carousel_heading_domestic: "영어로 제공되는 협찬 튜토리얼들"
   carousel_heading_beginners: "K-8(유치원-초1) 학생들을 위한 협찬 튜토리얼"
-  carousel_heading_beyond_beginners: '처음하는 사람들을 위한 튜토리얼'
+  carousel_heading_beyond_beginners: '초보자용: 블록 기반 코딩으로 시작하기'
   carousel_heading_javascript: "Javascript 를 교육할 수 있는 협찬 튜토리얼들"
-  carousel_heading_beyond_javascript: "Javascript 를 교육할 수 있는 튜토리얼들"
+  carousel_heading_beyond_javascript: "자바스크립트 학습"
   carousel_heading_unplugged: "적당한 장비나 인터넷 연결이 없나요? 컴퓨터과학 언플러그드 활동을 해보세요."
   carousel_heading_devices: "스마트폰과 태블릿들을 위한 협찬 튜토리얼 앱들"
-  carousel_heading_beyond_devices: "스마트폰과 태블릿을 위한 튜토리얼 앱"
+  carousel_heading_beyond_devices: "스마트폰과 태블릿을 위한 앱"
   carousel_heading_languages: "다른 프로그래밍언어로 되어있는 협찬 튜토리얼들"
-  carousel_heading_beyond_languages: "다른 프로그래밍 언어에 대한 튜토리얼들"
+  carousel_heading_beyond_languages: "기타 프로그래밍 언어 학습"
   carousel_heading_apps_games: "앱이나 게임을 직접 만들어보세요."
-  carousel_heading_university: "대학 온라인 과정"
+  carousel_heading_university: "온라인 과정 및 학교"
+  carousel_heading_online_university: "대학 온라인 과정"
   carousel_heading_webpages: "웹 페이지 만들기"
-  carousel_heading_robots: "로봇 프로그래밍"
+  carousel_heading_robots: "로봇과 기기로 프로그램을 배우세요"
   carousel_heading_ide: "선생님들이 자주 사용하는 양식들"
+  carousel_heading_desktop: "컴퓨터로 코딩하는 법을 배우세요"
+  carousel_heading_mobtabelem: "스마트폰과 태블릿용"
+  carousel_heading_prereader: "글을 읽지 못하는 어린 유아용"
+  carousel_heading_beyondblocks: "블록을 너머 가기 - 프로그래밍 언어 배우기"
+  carousel_heading_nointernet: "연결이 불안정하거나 또는 인터넷이 없어요? 컴퓨터에 다음 앱을 설치하세요."
   educator_notes: "교육자 참고사항들"
   teach_led_lesson_plans: "교사 주도 Hour of Code 수업 계획"
-  learn_footer_all_tutorials: "<a href=\"https://code.org/educate/allhourofcode\">Hour of Code 튜토리얼 전체 목록</a>을 참조하세요. Hour of Code 튜토리얼의 기준 및 제출 지침을 살펴보기 위해 <a href=\"https://hourofcode.com/tutorial-guidelines\">여기를 클릭하세요.</a>"
+  learn_footer_all_tutorials: "<a href=\"https://code.org/learn\">아워오브코드 튜토리얼 전체 목록</a>을 참조하세요. 아워오브코드 튜토리얼의 기준 및 제출 지침을 보려면<a href=\"https://hourofcode.com/activity-guidelines\">여기를 클릭하세요.</a>"
   how_to_teach_hoc: "'Hour of Code' 가르치는 방법"
   more_resources_educators: "선생님들과 교육자를 위한 더 많은 자료들"
   beyond_submission: "Beyond an Hour 튜토리얼에 제출하고 싶으세요? 기준 및 제출 양식을 보세요."
+  third_party_submission: "튜토리얼을 제출하여 여기 목록에 넣고 싶으세요? <a href=\"%{submission_url}\">기준 및 제출 양식을 보세요."
   participants: "참여자"
   teachers_notes: "선생님 참고사항들"
   teachers_notes_hoc: '선생님들: 교육자들을 위한 중요한 안내사항들을 살펴보세요.'
@@ -856,21 +940,56 @@
   coursee_name: "과정 E"
   coursef-draft_name: 과정 F
   coursef_name: "과정 F"
+  coursea-2017_name: 과정 A (2017)
+  courseb-2017_name: 과정 B (2017)
+  coursec-2017_name: 과정 C (2017)
+  coursed-2017_name: 과정 D (2017)
+  coursee-2017_name: 과정 E (2017)
+  coursef-2017_name: 과정 F (2017)
+  coursea-2018_name: 과정 A (2018)
+  courseb-2018_name: 과정 B (2018)
+  coursec-2018_name: 과정 C (2018)
+  coursed-2018_name: 과정 D (2018)
+  coursee-2018_name: 과정 E (2018)
+  coursef-2018_name: 과정 F (2018)
+  coursea-2019_name: 과정 A (2019)
+  courseb-2019_name: 과정 B (2019)
+  coursec-2019_name: 과정 C (2019)
+  coursed-2019_name: 과정 D (2019)
+  coursee-2019_name: 과정 E (2019)
+  coursef-2019_name: 과정 F (2019)
+  coursea-2020_name: 과정 A (2020)
+  courseb-2020_name: 과정 B (2020)
+  coursec-2020_name: 과정 C (2020)
+  coursed-2020_name: 과정 D (2020)
+  coursee-2020_name: 과정 E (2020)
+  coursef-2020_name: 과정 F (2020)
+  express-2018_name: 익스프레스 과정 (2018)
+  pre-express-2018_name: 프리 리더 익스프레스 과정 (2018)
+  express-2019_name: 익스프레스 과정(2019)
+  pre-express-2019_name: 프리 리더 익스프레스 과정 (2019)
+  express-2020_name: 익스프레스 과정(2020)
+  pre-express-2020_name: 프리 리더 익스프레스 과정 (2020)
+  csd2_name: '단원 2: 웹 개발'
+  csd3_name: '단원 3: 애니메이션과 게임'
   accelerated_name: "빠른 과정"
+  express_name: "익스프레스 과정"
+  pre-express_name: 프리 리더 익스프레스 과정
   20-hour_name: 빠른 과정
-  algebra_name: "대수학에서의 CS"
-  AlgebraA_name: "대수학에서의 CS 코스 A"
-  AlgebraB_name: "대수학에서의 CS 코스 B"
+  algebra_name: "대수학 내  CS 전체 과정"
+  AlgebraA_name: "대수학 내 CS 과정 A"
+  AlgebraB_name: "대수학 내 CS 과정 B"
   gumball_name: "검볼"
   classicmaze_name: "고전 미로게임"
   iceage_name: "아이스 에이지"
   minecraft_name: "마인크래프트"
   starwarsblocks_name: "스타워즈 (블록)"
   hoc-encryption_name: 간단한 암호화
+  text-compression_name: 텍스트 압축
   applab_name: "앱 연구실"
-  gamelab_name: "Game Lab"
+  gamelab_name: "게임 랩"
   basketball_name: "농구 게임 만들기"
-  sports_name: "당신만의 스포츠게임을 코딩하세요"
+  sports_name: "스포츠 게임 코딩"
   applab_gradelevel: "13세 이상"
   applab_shortdescription_congrats: "App Lab 은 간단한 앱들을 만들 수 있는 프로그래밍 환경입니다. 아주 짧은 시간에 앱을 디자인하고, 블록이나 자바스크립트로 만들고, 공유할 수 있습니다."
   codeorg_gradelevel: "나이 4세-104세"
@@ -926,14 +1045,36 @@
   course2_gradelevel: "6-18 세"
   course3_gradelevel: "8-18 세"
   course4_gradelevel: "나이 10세-13세"
+  coursea_gradelevel: "4-7 세"
+  courseb_gradelevel: "5-8 세"
+  coursec_gradelevel: "6-10 세"
   coursed_gradelevel: "8 학년 이상"
   coursee_gradelevel: "나이 8세-12세"
+  coursef_gradelevel: "9-13 세"
+  coursea-2017_gradelevel: 4-7 세
+  courseb-2017_gradelevel: 5-8 세
+  coursec-2017_gradelevel: 6-10 세
   coursed-2017_gradelevel: 8 학년 이상
   coursee-2017_gradelevel: 나이 8세-12세
+  coursef-2017_gradelevel: 9-13 세
+  coursea-2018_gradelevel: 4-7 세
+  courseb-2018_gradelevel: 5-8 세
+  coursec-2018_gradelevel: 6-10 세
   coursed-2018_gradelevel: 8 학년 이상
   coursee-2018_gradelevel: 나이 8세-12세
+  coursef-2018_gradelevel: 9-13 세
+  coursea-2019_gradelevel: 4-7 세
+  courseb-2019_gradelevel: 5-8 세
+  coursec-2019_gradelevel: 6-10 세
   coursed-2019_gradelevel: 8 학년 이상
   coursee-2019_gradelevel: 나이 8세-12세
+  coursef-2019_gradelevel: 9-13 세
+  coursea-2020_gradelevel: 4-7 세
+  courseb-2020_gradelevel: 5-8 세
+  coursec-2020_gradelevel: 6-10 세
+  coursed-2020_gradelevel: 8 학년 이상
+  coursee-2020_gradelevel: 나이 8세-12세
+  coursef-2020_gradelevel: 9-13 세
   accelerated_gradelevel: "나이 10세-13세"
   codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   codeintl_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
@@ -1034,6 +1175,36 @@
   course2_shortdescription_congrats: "글을 읽고 이해하는 능력이 있는 학생들을 위해 과정1이 설계되어있습니다. 학생들은 문제 해결 프로그램을 만들거나, 인터랙티브 게임/스토리들을 만들어 다른 친구들과 공유할 수 있습니다. 2-5학년 학생들에게 권장됩니다."
   course3_shortdescription_congrats: "다음 레벨로 넘어갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을 찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을 만들고 다른 사람들과 공유할 수 있습니다. 4-5학년 학생들에게 권장합니다."
   course4_shortdescription_congrats: "더 나아갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을 찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을 만들고 다른 사람들과 공유할 수 있습니다. 초등학교 4학년 - 중학교 2학년 학생들에게 권장합니다."
+  coursea_shortdescription_congrats: "글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개."
+  courseb_shortdescription_congrats: "글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개 (과정 A와 유사하지만 더 연령이 높은 학생에게는 더 다양한 내용이 추가됩니다.)"
+  coursec_shortdescription_congrats: "컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요."
+  coursed_shortdescription_congrats: "과정 C에서 나온 개념을 빠르게 다룬 후 알고리즘과 중첩 루프, 조건 등으로 더 깊게 들어 가세요."
+  coursee_shortdescription_congrats: "과정 C와 D의 개념을 빠르게 다루고 그 다음, 함수로 더 깊게 들어 가세요."
+  coursef_shortdescription_congrats: "컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요."
+  coursea-2017_shortdescription_congrats: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+  courseb-2017_shortdescription_congrats: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개 (과정 A와 유사하지만 더 연령이 높은 학생에게는 더 다양한 내용이 추가됩니다.)
+  coursec-2017_shortdescription_congrats: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+  coursed-2017_shortdescription_congrats: 과정 C에서 나온 개념을 빠르게 다룬 후 알고리즘과 중첩 루프, 조건 등으로 더 깊게 들어 가세요.
+  coursee-2017_shortdescription_congrats: 과정 C와 D의 개념을 빠르게 다루고 그 다음, 함수로 더 깊게 들어 가세요.
+  coursef-2017_shortdescription_congrats: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+  coursea-2018_shortdescription_congrats: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+  courseb-2018_shortdescription_congrats: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개 (과정 A와 유사하지만 더 연령이 높은 학생에게는 더 다양한 내용이 추가됩니다.)
+  coursec-2018_shortdescription_congrats: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+  coursed-2018_shortdescription_congrats: 과정 C에서 나온 개념을 빠르게 다룬 후 알고리즘과 중첩 루프, 조건 등으로 더 깊게 들어 가세요.
+  coursee-2018_shortdescription_congrats: 과정 C와 D의 개념을 빠르게 다루고 그 다음, 함수로 더 깊게 들어 가세요.
+  coursef-2018_shortdescription_congrats: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+  coursea-2019_shortdescription_congrats: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개.
+  courseb-2019_shortdescription_congrats: 글을 읽지 못하는 어린 유아를 위한 컴퓨터 과학 소개 (과정 A와 유사하지만 더 연령이 높은 학생에게는 더 다양한 내용이 추가됩니다.)
+  coursec-2019_shortdescription_congrats: 컴퓨터 과학의 기초를 배우고 자신의 미술작품과 스토리, 게임을 만드세요.
+  coursed-2019_shortdescription_congrats: 과정 C에서 나온 개념을 빠르게 다룬 후 알고리즘과 중첩 루프, 조건 등으로 더 깊게 들어 가세요.
+  coursee-2019_shortdescription_congrats: 과정 C와 D의 개념을 빠르게 다루고 그 다음, 함수로 더 깊게 들어 가세요.
+  coursef-2019_shortdescription_congrats: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
+  coursea-2020_shortdescription_congrats: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+  courseb-2020_shortdescription_congrats: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
+  coursec-2020_shortdescription_congrats: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
+  coursed-2020_shortdescription_congrats: 학생들은 루프와 조건, 이벤트에 관한 그들의 이해를 더 심화합니다. 코딩을 너머 학생들은 디지털 시민의식에 대해 배웁니다.
+  coursee-2020_shortdescription_congrats: 알고리즘과 루프, 조건, 이벤트로 코딩을 시작하고 그 다음, 함수로 넘어갈 수 있습니다. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
+  coursef-2020_shortdescription_congrats: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을 조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이 되는 프로젝트를 설계하고 만드세요.
   codeorg_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   codeintl_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도, 빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택 실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1250,115 +1421,277 @@
   sphero_beyond_longdescription: "SPRK 교육과정을 통해 아이들이 로봇이 충돌을 피하도록 하는 재미있는 프로그래밍 과정을 통해 수학 과학 능력을 향상시킬 수 있습니다."
   compatibility_hide_this_warning: "경고창 숨기기"
   compatibility_unsupported_browser: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
-  compatibility_unsupported_browser_markdown: "브라우저가 지원되지 않습니다. <a href='%{supported_browsers_url}', target='_blank'> 지원 되는 브라우저로</a>로 업그레이드 하시기 바랍니다. 여러분은 이 페이지를 볼 수는 있지만 올바르게 동작하지 않을 수 있습니다."
+  compatibility_unsupported_browser_markdown: "브라우저가 지원되지 않습니다. [지원 되는 브라우저 중 하나](%{supported_browsers_url})로 업그레이드하시기 바랍니다. 페이지 보기를 시도할 수는 있지만 제대로 기능하지 않을 수도 있습니다."
   starwars_shortcode: "별"
   flappy_shortcode: "펄럭이기"
   header_home: "홈"
-  header_my_dashboard: "대시보드"
+  header_my_dashboard: "내 대시보드"
   header_courses: "courses"
-  header_course_catalog: "강의 목록"
+  header_course_catalog: "과정 카탈로그"
   header_project_gallery: "프로젝트"
   header_sections: "섹션"
-  header_professional_learning: "전문 학습"
+  header_professional_learning: "전문가 학습"
   header_educate_overview: "교사 개요"
   header_educate_elementary: "초등학교"
   header_educate_middle: "중학교"
   header_educate_high: "고등학교"
   header_educate_hoc: "Hour of Code"
   header_educate_partner: "우리와 함께하는 파트너"
-  header_educate_beyond: "Code.org 를 넘어서"
+  header_educate_beyond: "Code.org 너머"
   header_educate_inspire: "학생들에게 영감을 주기"
   header_educate_community: "온라인 커뮤니티"
-  header_educate_tools: "도구와 영상"
+  header_educate_tools: "툴과 동영상"
   header_about_us: "우리 소개"
-  header_about_leadership: "리더쉽"
+  header_about_leadership: "리더십"
   header_about_donors: "기여자"
   header_about_partners: "파트너"
-  header_about_team: "모든 팀"
+  header_about_team: "전체 팀"
   header_about_news: "뉴스룸"
   header_about_evaluation: "평가"
   header_about_jobs: "작업"
-  header_about_contact: "문의하기"
+  header_about_contact: "문의"
   header_about_faqs: "자주 묻는 질문(FAQ)"
-  header_learn: "배우기"
-  header_teach: "가르치기"
+  header_learn: "학습"
+  header_teach: "교육"
   header_stats: "통계"
-  header_help_us: "도움주기"
-  header_about: "안내"
+  header_help_us: "도움말"
+  header_about: "소개"
   header_teacher_community: "교사 커뮤니티"
-  header_report_bug: "버그 보고"
+  header_help_support: '도움말 및 지원'
+  header_report_bug: "문제 신고"
+  header_report_abuse: "학대 사례 신고"
+  header_legal: "개인정보 보호 및 법률"
+  header_legal_privacy: "개인정보보호 정책"
+  header_legal_tos: "이용 약관"
   header_tutorials: "튜토리얼"
+  app_lab_documentation: "웹 랩 문서화"
+  app_lab_tutorials: "앱 랩 튜토리얼"
+  game_lab_documentation: "게임 랩 문서화"
+  game_lab_tutorials: "게임 랩 튜토리얼"
+  sprite_lab_documentation: "스프라이트 랩 문서화"
+  sprite_lab_tutorials: "스프라이트 랩 튜토리얼"
   header_documentation: "문서"
   user_header_label: "안녕하세요? %{username} 님"
   user_header_team: "팀"
-  user_header_settings: "내 계정"
+  user_header_my_projects: "내 프로젝트"
+  user_header_settings: "계정 설정"
   user_header_logout: "로그아웃"
   user_header_signin: "로그인"
-  user_header_gamelab: "Game Lab"
+  user_header_create: '만들기'
+  user_header_applab: '앱 랩 '
+  user_header_artist: '아티스트 '
+  user_header_gamelab: "게임 랩"
   user_header_playlab: "Play Lab"
   user_header_dance: "댄스 파티"
+  user_header_spritelab: "스프라이트 연구소"
   user_header_minecraft: "마인크래프트"
   user_header_flappy: "플래피"
-  user_header_view_my_projects: "나의 프로젝트 보기"
-  applab_tile_start_tutorial: "시작:"
-  applab_tile_teacher_guide: "선생님 가이드 보기"
-  account_sign_up_email_opt_in: "당사의 코스, 현지 기회, 또는 다른 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 귀하께 보내드려도 되겠습니까?"
+  user_header_view_all: "모든 프로젝트 보기..."
+  user_header_view_project_gallery: "프로젝트 갤러리 보기"
+  user_header_view_my_projects: "내 프로젝트 보기"
+  view_all_sections: "모든 섹션 보기"
+  view_section: "섹션 보기"
+  view_named_section: "%{section_name} 보기"
+  privacy_doc_explanation: "학생들을 위한 공유 및 인쇄 가능한 우리의 개인정보 보호정책 문서는 여기를 클릭하세요."
+  signing_in: "로그인하는 중"
+  sign_in_overview: '학생들은 다음과 같은 단계를 따름으로써 그들의 Code.org 계정으로 로그인할 수 있습니다:'
+  sign_in_instruct_website: "%{code_org_url}로 가기."
+  sign_in_instruct_code: '섹션 코드 입력: %{section_code}.'
+  sign_in_instruct_name: "디스플레이 이름 선택."
+  sign_in_instruct_secret: "비밀 %{secret} 선택."
+  sign_in_instruct_button: "\"로그인\" 버튼 클릭."
+  sign_in_overview_cards: "학생은 아래 로그인 카드에서 자신의 비밀 %{secret}을(를) 포함하여 이 모든 정보를 볼 수 있습니다."
+  reset_student_password: "학생 비밀번호 재설정"
+  reset_student_password_instructions: "해당 섹션의 \"학생 관리\" 탭에 가서 \"비밀번호\" 열 아래 \"비밀 보여주기\" 버튼을 클릭하고 \"재설정\" 버튼을 클릭하여 학생의 비밀<word/picture>을(를) 재설정할 수 있습니다."
+  login_cards: "로그인 카드"
+  print_login_cards: "로그인 카드 인쇄"
+  joining_section: "섹션에 참가(1회 한정)"
+  joining_section_overview: "학생이 섹션에 아직 포함되어 있지 않으면, 다음 단계를 수행하도록 요청하십시오. 이 단계는 한 번만 하면 됩니다. 학생이 섹션에 들어 있으면 학생은 자신에게 배정된 과정을 볼 수 있고 귀하는 학생들이 로그인한 동안 완료한 작업의 진도를 추적할 수 있습니다."
+  joining_section_instruct_website: '아직 Code.org 계정을 만들지 않았다면 계정을 만드십시오. 계정은  https://studio.code.org/users/sign_up에서 만들 수 있습니다. 이메일 주소 및 비밀번호로 가입하거나 다음 버튼 중 하나를 클릭하여 Google, Facebook 또는 Microsoft를 통하여 가입할 수 있습니다:'
+  joining_section_instruct_account: "Code.org 계정에 로그인"
+  joining_section_instruct_code: '%{code_org_url}을(를) 탐색한 후 섹션 코드를 입력하십시오: %{section_code}.'
+  joining_section_instruct_button: "일단 \"가기\" 버튼을 누르면, 귀하의 섹션에 추가됩니다."
+  signing_in_single_instruct: "학생들은 https://code.org로 간 다음, 상단 오른쪽 구석에 있는 \"로그인\" 버튼을 클릭하여 Code.org 계정으로 로그인할 수 있습니다."
+  reset_student_password_email: "학생들이 이메일 주소와 비밀번호(Google, Facebook, Microsoft 또는 Clever를 통한 로그인 대신)를 사용하여 Code.org 계정을 만들 경우, 섹션의 \"학생 관리\" 탭으로 가서 \"비밀번호\" 열의 \"비밀번호 재설정\" 버튼을 클릭하여 비밀번호를 재설정할 수 있습니다."
+  syncing_students: "학생 동기화"
+  syncing_students_instructions: '귀하의 Code.org 섹션이 구글 클래스룸 내 학생 목록보다 오래된 경우, "학생 관리" 탭에서 "구글 클래스룸로부터 학생 동기화" 버튼을 클릭하십시오:'
+  google_sign_in_instruct: '여기에서, "구글로 로그인" 옵션을 선택해야 합니다:'
+  hero_name: '마인크래프트: 히어로의 여정'
+  applab-intro_name: 앱 랩 소개
+  applab_tile_title: "앱 랩 소개(13세 이상)"
+  applab_tile_subtitle: "블록 기반 프로그래밍을 사용하여 자바스크립트로 앱을 만드세요. 또는 다음 레벨에서 텍스트 기반 프로그래밍 스킬을 발휘하세요 (영어 만)"
+  applab_tile_start_tutorial: "시작"
+  applab_tile_teacher_guide: "교사 가이드 보기"
+  aquatic_name: '마인크래프트: 보야지 아쿠아틱'
+  account_sign_up_email_opt_in: "과정  또는 지역 기회, 기타 컴퓨터 과학 뉴스 업데이트에 관한 이메일을 발송해도 되겠습니까? (대략 월 1회)"
+  account_sign_up_child_accept_terms: "본인은 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
   hoc_overview_dance_title: "댄스 파티"
+  hoc_overview_dance_subtitle: "댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara 등 25팀과 함께합니다!"
+  hoc_overview_dance_2019_subtitle: "댄스 파티를 코딩해서 친구들과 공유하세요. Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj 등 34팀이 함께합니다!"
+  hoc_overview_title: "Code.org의 아워오브코드 활동"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">아워오브코드</a>는 180개 이상의 국가에서 수천만 명에 이르는 학생과 함께 하는 전 세계적인 운동입니다.  누구든지 어디에서나 아워오브코드 이벤트를 개최하거나 또는 45개 이상 언어로 제공되는 한 시간 분량의 500개 이상의 튜토리얼을 사용해 볼 수 있습니다."
+  hoc_overview_subtitle_markdown: "[아워오브코드](https://hourofcode.com)는 180개 이상의 국가에서 수천만 명에 이르는 학생에게 다가가는 전 세계적인 운동입니다.  누구든지 어디에서나 아워오브코드 이벤트를 개최하거나 또는 45개 이상 언어로 제공되는 한 시간 분량의 500개 이상의 튜토리얼을 사용해 볼 수 있습니다."
   hoc_overview_partner_activities_title: "파트너들의 더 많은 활동"
   hoc_overview_partner_activities_body: "코딩의 시간 웹사이트에는 모든 연령 및 모든 경험 수준에 맞도록 Code.org와 파트너들이 함께 개발한 100가지 이상의 컴퓨터 과학 활동이 준비되어 있습니다."
   hoc_overview_partner_activities_link: "활동 보기"
-  hoc_overview_start_tutorial: "시작:"
-  hoc_overview_view_teacher_guide: "선생님 가이드 보기"
+  hoc_overview_start_tutorial: "시작"
+  hoc_overview_more_resources: "원격 교실에 참여하는 방법에 관한 더 많은 자료는 [가상 아워오브코드]개최를 위한 가이드(https://hourofcode.com/us/how-to/virtual)를 참조하세요. 테크놀로지 및 인터넷 연결이 제한적이거나 또는 없는 학생을 위해 이  [언플러그드 아워오브코드 활동] 패킷(https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)을 공유하세요."
+  hoc_overview_view_teacher_guide: "교사 가이드 보기"
+  hoc2018_creativity: "창의력"
   hoc2018_creativity_create: "만들기"
+  hoc2018_creativity_hoc_coming: "아워오브코드가 곧 시작됩니다..."
   hoc2018_creativity_what_will_you_create: "무엇을 만들어 보시겠어요?"
-  hoc2018_mc_page_title: "Minecraft Hour of Code 튜토리얼"
+  hoc2018_creativity_homepage: "상상의 나래를 펴 혁신을 이루세요. 아워오브코드와 무엇이든, 자신의 창의성으로 시작해보세요. 비디오를 시청하세요."
+  hoc2018_creativity_hoc_about: '올해 아워오브코드는 모두 창의력에 관한 것입니다. '
+  hoc2018_creativity_social_media: '올해 #HourOfCode는 창의력에 관한 것입니다. 저는 참가합니다! 어떻게 하실거예요?'
+  hoc2018_creativity_social_media_2: '올해 #HourOfCode는 창의력에 관한 것입니다. 무엇을 만들거예요?'
+  hoc2018_creativity_courses: "Code.org 과정으로 더 깊이 들어가기"
+  hoc2018_creativity_courses_link: " <a href=\"https://studio.code.org/courses\">Code.org 과정</a>으로 더 깊이 들어가기"
+  hoc2018_homepage: "여러분의 학급이 아워오브코드의 150개 이상의 새로운 활동 중 하나를 해볼 수 있도록 신청하세요 (12월 3-9일)!"
+  hoc2018_mc_page_title: "마인크래프트 아워오브코드 튜토리얼"
   hoc2018_mc_details: "여러 언어 | 최신 웹브라우저, 태블릿 | 초등학교 2학년 이상"
+  hoc2018_mc_aquatic_announcement: "여러분의 학급이 아워오브코드의 150개 이상의 새로운 활동 중 하나를 해볼 수 있도록 신청하세요 (12월 3-9일)! 2018년 새로운 마인크래프트 활동인 보야지 아쿠아틱을 확인해 보세요! 오늘 신청하세요. "
+  hoc2018_mc_aquatic_title: "마인크래프트 보야지 아쿠아틱"
   hoc2018_mc_aquatic_description: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
+  hoc2019_mc_aquatic_description: "해저 세계를 코드로 탐구하고 건설합니다."
+  hoc2018_mc_hero_title: "마인크래프트 히어로의 여정"
   hoc2018_mc_hero_description: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
-  hoc2018_mc_designer_title: "Minecraft 디자이너"
+  hoc2018_mc_designer_title: "마인크래프트 디자이너"
   hoc2018_mc_designer_description: "Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요."
-  hoc2018_mc_adventurer_title: "Minecraft 모험가"
-  hoc2018_mc_adventurer_description: "코드를 사용하여 Alex나 Steve와 함께 모험에 도전해보세요."
-  hoc2018_mc_start: "시작:"
+  hoc2018_mc_adventurer_title: "마인크래프트 모험가"
+  hoc2018_mc_adventurer_description: "코드를 사용하여 알렉스 또는 스티브를 모험의 세계로 데려 가세요."
+  hoc2018_mc_start: "시작"
   hoc2018_mc_no_internet: "인터넷을 사용할 수 없습니까?"
-  hoc2018_mc_download_adventurer: "Minecraft 모험가의 오프라인 버전을 다운로드."
+  hoc2018_mc_download_adventurer: "마인크래프트 모험가의 오프라인 버전 다운로드."
+  hoc2018_mc_educators: "교육자용"
+  hoc2018_mc_educators_box1_title: "마인크래프트로 코딩"
+  hoc2018_mc_educators_box1_desc: '마인크래프트: 교육용 에디션은 교과 과정에 맞춘 커리큘럼과 마인크래프트 교육 및 코딩을 제공합니다.'
+  hoc2018_mc_educators_box1_button: "시작하기"
+  hoc2018_mc_educators_box2_title: "진행자 가이드 다운로드"
+  hoc2018_mc_educators_box2_desc: "이 툴킷은 여러분이 아워오브코드를 개최하여 학생들에게 컴퓨터 과학에 흥미를 갖게 하는데 도움을 줄 것입니다."
   hoc2018_mc_educators_box2_button: "다운로드"
-  hoc2018_mc_watch_videos: "시작하기 전에 영감을 불러일으키는 동영상들 중 하나를 시청하세요."
-  hoc2018_mc_videos_more: "더 많은 <a href='%{inspiring_videos_playlist}'> 영감을 주는 비디오 </a> 에 등장하는 롤모델 과 유명인사"
-  hoc2018_mc_careers_more: "더많은 <a href='%{careers_url}' target='_blank'>영감을 주는 비디오</a>에 등장하는 교육전문가"
+  hoc2018_mc_educators_box3_title: "무료 학생 워크숍에 참석"
+  hoc2018_mc_educators_box3_desc: "지역 내 마이크로소프트 스토어를 방문하여 무료 아워오브코드 워크숍에 참여하세요. 모든 스킬 레벨과 6세 이상 참여 가능. "
+  hoc2018_mc_educators_box3_button: "워크숍 찾기"
+  hoc2018_mc_educators_box4_title: "더 많은 컴퓨터 과학 리소스에 액세스"
+  hoc2018_mc_educators_box4_desc: "디지털 능력과 Microsoft의 컴퓨터 과학 교육 리소스로 커뮤니티에 변화를 일으키세요."
+  hoc2018_mc_educators_box4_button: "리소스 탐구"
+  hoc2018_mc_watch_videos: "시작하기 전에 영감을 불러일으키는 동영상 중 한 편을 시청하세요."
+  hoc2018_mc_videos_more: "롤모델과 유명인사가 나오는 더 많은 <a href='%{inspiring_videos_playlist}'> 영감을 주는 비디오 </a>"
+  hoc2018_mc_careers_more: "교육 전문가가 나오는 더 많은 <a href='%{careers_url}' target='_blank'>영감을 주는 비디오</a>"
   hoc2018_mc_video_1min: "1분"
   hoc2018_mc_video_2min: "2분"
   hoc2018_mc_video_3min: "3분"
   hoc2018_mc_video_5min: "5분"
-  hoc2018_mc_video_title_sports: "Hour of Code 스포츠 튜토리얼"
+  hoc2018_mc_video_title_steph_curry: "스테프 커리와 함께 하는 아워오브코드"
+  hoc2018_mc_video_title_sports: "스스로를 다그치세요. 누구나 배울 수 있습니다."
+  hoc2018_mc_video_title_cs_is_everything: "컴퓨터 과학은 모든 것을 바꾸고 있습니다.  "
   hoc2018_mc_video_title_inspire_girl: "여학생들에게 영감 주기"
-  hoc2018_mc_video_title_cs_intro: "컴퓨터 공학 소개"
+  hoc2018_mc_video_title_cs_intro: "컴퓨터 과학 소개"
   hoc2018_mc_video_title_schools_dont_teach: "대부분의 학교가 가르쳐주지 않는 것"
   hoc2018_mc_video_title_obama: "컴퓨터공학(정보과학)을 지지하는 오바마"
-  hoc2018_mc_video_title_hoc_is_here: "Hour of Code 가 여기 있습니다 - 누구나 배울 수 있습니다"
+  hoc2018_mc_video_title_hoc_is_here: "아워오브코드가 여기 있습니다 - 누구나 배울 수 있습니다"
   hoc2018_mc_video_title_anybody_can_learn: "누구나 배울 수 있습니다"
+  hoc2018_mc_video_title_my_name_is_aracely: "제 이름은 아라셀리예요."
   hoc2018_mc_homepage_hoc_coming: "코딩의 시간이 곧 시작됩니다."
   hoc2018_mc_homepage_what_create: "무엇을 만들어 보시겠어요?"
+  hoc2018_mc_homepage_give_flight: "상상의 나래를 펴 혁신을 이루세요. 아워오브코드와 무엇이든, 자신의 창의력으로 시작해보세요. "
+  hoc2018_mc_homepage_watch_video: "비디오 시청"
   hoc2018_mc_homepage_join_us: "함께 참여하기"
   hoc2018_mc_homepage_try_it: "해보기"
+  hoc2018_mc_back: "마인크래프트가 아워오브코드를 위해 새로운 활동을 갖고 다시 돌아 왔습니다!"
   hoc2018_mc_back_journey: "마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요."
-  hoc2018_mc_teacher_guide: "선생님 가이드 보기"
+  hoc2018_mc_teacher_guide: "교사 가이드 보기"
+  hoc2018_mc_minecraft_education: "마인크래프트 에듀케이션"
+  hoc2018_mc_continue_learning: "마인크래프트로 계속 학습"
+  hoc2018_mc_go_to_mc_education: "마인크래프트 에듀케이션으로 가기"
+  hoc2018_mc_short_description: "창의력과 문제해결 능력을 사용하여 코드의 힘으로 보석을 찾고 해저 세계를 탐구합니다."
   hoc2018_mc_short_description_shorter: "창의성, 문제해결 능력, 코드를 사용해 언더워터 월드를 탐험하고 만들어 보세요."
+  hoc2018_mc_journey: "코드로 하는 마인크래프트 여정"
   hoc2018_dance_party_main_heading: "댄스 파티"
+  hoc2018_dance_party_landing_title: "댄스"
+  hoc2018_dance_party_subheading: "댄스 파티의 번역을 도와 주세요"
   hoc2018_dance_create_your_own_dance_title: "나만의 댄스 파티 만들기"
   hoc2018_dance_party_box_title: "댄스 파티"
   hoc2018_dance_party_box_description: "댄스 파티의 코드를 만들고 친구와 공유하세요!"
-  hoc2018_dance_party_button: "시작:"
+  hoc2018_dance_party_specs: "언어 | 형식 | 6-106 세"
+  hoc2018_dance_party_button: "시작"
   hoc2018_dance_keep_on_dancing_box_title: "계속 춤추기"
   hoc2018_dance_keep_on_dancing_description: "확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요."
-  hoc2018_dance_keep_on_dancing_button: "파트 2 시작"
-  hoc2018_dance_teacher_resources_title: "선생님 자료"
-  hoc2018_dance_teacher_resources_tile1_description: "수업 계획, 인증서 및 음악 필터링입니다."
-  hoc2018_dance_teacher_resources_tile1_button: "수업 계획"
+  hoc2018_dance_keep_on_dancing_specs: "언어 | 형식 | 13세 이상"
+  hoc2018_dance_keep_on_dancing_button: "2부 시작"
+  hoc2018_dance_teacher_resources_title: "교사 리소스"
+  hoc2018_dance_teacher_resources_tile1_description: "레슨 플랜, 인증서, 음악 필터링."
+  hoc2018_dance_teacher_resources_tile1_button: "레슨 플랜"
   hoc2018_dance_teacher_resources_tile2_title: "댄스 파티 언플러그드"
   hoc2018_dance_teacher_resources_tile2_description: "컴퓨터가 필요하지 않아요!  코딩 개념을 배우고 함께 댄스 파티를 연출하세요."
   hoc2018_dance_teacher_resources_tile2_button: "언플러그드 활동"
+  hoc2018_dance_featured_student_creations_title: "학생 작품으로 구성"
+  hoc2018_dance_videos_section_heading: "영감을 얻으세요"
+  hoc2018_dance_video_title_what_is_creativity: "창의력이란?"
+  hoc2018_dance_view_creativity_video_playlist: "창의력이란? 전체 시리즈 보기 (5분)"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "파트너십을 통해"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "아마존 미래 엔지니어링*은 저소득층 및 기타 불우한 어린이와 청소년들에게 컴퓨터 과학 관련 진로를 추구하도록 영감을 주고 교육하며 훈련하는 종합적인 아동 진로 교육 프로그램입니다. <a href='%{amazon_future_engineer_link}' target='_blank'>자세히 알아보기</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "아마존 미래 엔지니어링 *은 저소득층 및 기타 불우한 어린이와 청소년들에게 컴퓨터 과학 관련 진로를 추구하도록 영감을 주고 교육하며 훈련하는 종합적인 아동 진로 교육 프로그램입니다. [자세히 알아보기](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "프랑스에 있는 학생 또는 교사는 [아마존 미래 엔지니어 - 프랑스](%{amazon_future_engineer_france_link})를 방문하세요."
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "아마존 미래 엔지니어에 대해 자세히 알아보기"
+  hoc2018_dance_amazon_about_future_engineer_title: "아마존 미래 엔지니어 소개"
+  hoc2018_dance_amazon_about_future_engineer_description: "컴퓨터 과학 교육에 대한 접근성을 높이기 위한 아마존의 유치원 진료 교육 프로그램에 대해 알아 보세요. 여름 캠프와 고등학교 CS 수업, 장학금 및 인턴십에 참여하는 방법에 대한 정보를 찾으세요."
   hoc2018_dance_amazon_about_future_engineer_button: "더 알아보기"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "이번 여름에는 코딩을 시도해 보세요."
+  hoc2018_dance_amazon_try_coding_this_summer_description: "아마존 미래 엔지니어링의 재미 있고 포용적인 무료 컴퓨터 과학 캠프에 참가하세요! 여름 캠프는 유치원생부터 8 학년까지 학생들을 위해 2019년 여름 미국의 여러 지역에서 제공됩니다."
+  hoc2018_dance_amazon_try_coding_this_summer_button: "캠프에 참여하십시오."
+  hoc2018_dance_amazon_scholarship_programs_title: "장학금 프로그램"
+  hoc2018_dance_amazon_scholarship_programs_description: "아마존은 AP CS 과정을 성공적으로 이수했거나 현재 등록되어 있고  미국의 4 년제 대학에서 CS 학위를 공부하고자하는 소외된 학생들에게 매년 1 만 달러의 장학금을 제공하고 있습니다."
   hoc2018_dance_amazon_scholarship_programs_button: "지금 신청하기"
+  hoc2018_dance_amazon_internships_title: "아마존에서 인턴으로 일하기"
+  hoc2018_dance_amazon_internships_description: "이제 2019 여름 아마존 미래 엔지니어 인턴쉽 신청이 개시되었습니다. 인턴은 관리자, 기술 멘토 및 다른 인턴과 파트너가 되어 아마존 고객을 위해 새로운 기능과 서비스를 개발하고 혁신할 것입니다. 인턴쉽은 미국과 캐나다에서 가능합니다."
+  hoc2018_dance_amazon_internships_button: "인턴쉽 찾기"
+  hoc2018_dance_amazon_k8_programs_title: "K-8 프로그램"
+  hoc2018_dance_amazon_funding_title: "CS 학위를 위한 학자금 얻기"
+  hoc2018_dance_amazon_future_engineer_footer: "*이 튜토리얼에서 사용하는 음악의 아티스트는 Code.org에게 음악 사용을 허가하는 일환으로 Amazon을 후원하거나또는 지지하지 않습니다.\n\n"
   hoc2018_dance_measure: "마디"
   hoc2018_dance_measure_colon: '마디:'
+  hoc2018_aquatic_video1: "마인크래프트 보야지 아쿠아틱 - 소개"
+  hoc2018_aquatic_video2: "마인크래프트 보야지 아쿠아틱 - 루프"
+  hoc2018_aquatic_video3: "마인크래프트 보야지 아쿠아틱 - 조건"
+  hoc2018_aquatic_video4: "마인크래프트 보야지 아쿠아틱 - 축하"
+  hoc2018_dance_video1: "댄스 파티 - 소개"
+  hoc2018_dance_video2: "댄스 파티 - 이벤트"
+  hoc2018_dance_video3: "댄스 파티 - 속성"
+  hoc2018_dance_video4: "댄스 파티 - 축하"
+  page_not_found_title: "페이지를 찾을 수 없습니다."
+  page_not_found_header: '404: 페이지를 찾을 수 없습니다'
+  page_not_found_description: "찾고 계신 페이지는 이 주소에 존재하지 않습니다. 웹 주소를 확인하여 다시 제출하세요. 또는 홈페이지로 되돌아 가세요."
+  page_not_found_button: "홈으로 되돌아 가기"
+  hoc2018_mc_with_microsoft: "파트너십을 통해"
+  hoc2018_mc_thank_microsoft: "모든 어린이들이 컴퓨터 과학을 배우고 21세기에 성공할 기술을 얻을 수 있는 기회를 갖도록 저희의 비전과 미션에 지원하고 있는 마이크로소프트에 감사드립니다."
+  hoc2019_mc_mee_title: "선의를 위한 마인크래프트 AI"
+  hoc2019_mc_mee_description1: '새 마인크래프트 아워오브코드 튜토리얼은 이제 Windows, Mac, iPad용 마인크래프트: 교육용 에디션으로 제공 가능합니다. 학생들과 함께 코딩의 기초를 배우고 AI를 탐구하세요!'
+  hoc2019_mc_mee_description2: "레슨 플랜과 비디오, 컴퓨터 과학 커리큘럼, 교사 트레이닝을 포함한 무료 리소스에 액세스"
+  hoc2019_mc_more_coding_resources: "더 많은 코딩 리소스"
+  hoc2019_dance_previous_versions: "댄스 파티의 이전 버전을 찾으시나요?  \n여기를 클릭하여 2018년 [1부](%{dance_2018_link})와 [2부](%{dance_extras_2018_link}) 를 시작하세요."
+  homepage_slot_text_title_at_home: "가정 학습"
+  homepage_slot_text_blurb_at_home: "이러한 리소스는 그것을 쉽게 만듭니다."
+  homepage_slot_text_link_code_break: "코드 브레이크 선택"
+  homepage_slot_text_link_do_hoc: "아워오브코드 하기"
+  homepage_slot_text_link_express_course: "익스프레스 과정 해보기"
+  page_not_available_title: "페이지 없음"
+  page_not_available_description: "죄송합니다. 요청하신 페이지가 더 이상 이 주소에 없습니다. 여전히 그 페이지에 접속해야 하면, [support@code.org](%{support_email_link})으로 이메일하십시오."
+  page_not_available_button: "홈으로 되돌아 가기"
+  hoc2020_mc_available_code_org: "Code.org 상에서 사용 가능"
+  hoc2020_mc_available_mee: '마인크래프트: 교육용 에디션에서 사용 가능'
+  hoc2020_mc_mee_title: "마인크래프트 두 마을 이야기"
+  hoc2020_mc_mee_description: '새 마인크래프트 아워오브코드 튜토리얼은 이제 Windows, Mac, iPad용 마인크래프트: 교육용 에디션으로 제공 가능합니다. 학생들과 함께 코딩의 기초를 배우고 다양성과 포용성을 탐구하세요! 레슨 플랜과 비디오, 컴퓨터 과학 커리큘럼, 공평 레슨, 교사 트레이닝을 포함한 무료 리소스에 액세스하세요.'
+  footer_powered_by_aws: "Amazon Web Services 및 “Powered by AWS” 로고는 Amazon.com, Inc. 또는 미국 및/또는 다른 국가 내 그 계열회사의 상표입니다."
+  footer_built_on_github: "마이크로소프트의 GitHub 위에 구축"
+  codebytes_skinny_banner_title: "12월 7-11일 CodeBytes 라이브 미니 레슨을 위해 저희에게 신청하세요!"
+  codebytes_skinny_banner_description: '20분 분량의 인터랙티브 컴퓨터 과학 레슨인 CodeBytes를 위한 CS 교육 주간에 위해 저희에게 신청하세요. 매일 두 차례 라이브로 스트리밍되는 CodeBytes은 학생들이 가상 #HourOfCode에 참가할 수 있는 좋은 기회입니다!'
+  codebytes_skinny_banner_english_only: "영어로만 제공"
+  codebytes_skinny_banner_learn: "[code.org/codebytes](%{code_bytes_url})에서 더 자세히 알아보세요."
+  footer_privacy_policy: "개인정보보호 정책"
+  footer_about: "소개"
+  footer_partners: "파트너"
+  footer_donate: "기부하기"
+  footer_support: "지원"
+  footer_terms: "약관"

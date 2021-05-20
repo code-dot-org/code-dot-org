@@ -1,7 +1,5 @@
 ---
 title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

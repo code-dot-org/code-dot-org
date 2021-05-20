@@ -1,79 +1,99 @@
 ---
-title: Leitfaden für Eltern
-layout: wide
-nav: how_to_nav
+title: Hour of Code - Leitfaden für Eltern
 ---
 
-{{ signup_button }}
+# So veranstalten Sie eine Hour of Code mit Ihrem Kind 
 
-# How to do an Hour of Code with your child
+Ein Stunde Hour of Code auszuprobieren ist eine einfache und unterhaltsame Möglichkeit, Ihr Kind an die Informatik heranzuführen, vielleicht sogar zum ersten Mal. Die Informatik ist nicht nur grundlegend für alle Studienrichtungen, sondern [neue Studien zeigen](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) auch: Kinder, die Informatikunterricht haben, schneiden in anderen Fächern besser ab, sind beim Lösen von Aufgaben überdurchschnittlich erfolgreich und <font color="00adbc"><b> die Wahrscheinlichkeit, dass sie an einer Hochschule studieren werden, ist um 17 % höher</b></font>. 
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+Sie können zusammen mit vielen Millionen SchülerInnen weltweit an dieser globalen Veranstaltung teilnehmen. Gemeinsam können wir Kinder und Jugendliche zum Lernen inspirieren, Klischees aufbrechen und ihnen helfen, sich für etwas ganz Neues zu interessieren. Und das Beste ist, dass Sie bereits alles haben, um die Hour of Code nach Hause zu holen!
+
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
+
+<h3>Was brauchen wir, um mitzumachen?</h3>
+
+Die Hour of Code ist extrem unkompliziert - auch für Anfänger. Sie brauchen keine Erfahrung mit Informatik oder pädagogische Qualifikationen, um Ihren Kindern eine unterhaltsame Aktivität zu bieten, mit der sie sowohl lernen als auch etwas zum Lachen haben.
+
+Sie können die Hour of Code auf einem Computer, einem Tablet, einem Smartphone oder ganz ohne Internet durchführen! Hier erfahren Sie, wie Sie mitmachen können. 
+
+[<button>PDF-Leitfaden anzeigen </button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
-## 1) Schauen Sie sich dieses Videotutorial an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Aktivitäten und Tutorials erkunden.
 
-## 2) Choose a tutorial
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Es gibt unzählige <a href="https://hourofcode.com/us/learn>Hour of Code Aktivitäten</a>, die Ihnen zur Verfügung stehen, wenn Sie an einem Computer mit Internetzugang arbeiten. Es ist hilfreich, wenn Sie sich einige der Optionen vorher ansehen, damit Sie Ihr Kind zu denjenigen Übungen führen können, die ihm besonders viel Spaß machen werden.
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Alle unsere Aktivitäten verbinden das Lösen von Aufgaben und kritisches Denken mit Spaß und Kreativität, aber hier sehen Sie einige, die bei den SchülerInnen besonders beliebt sind:
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+- Für Kinder, die gerne spielen: [Minecraft](https://code.org/minecraft) oder die[Tanzparty](https://code.org/dance) 
+- Für Kinder, die Disney lieben: [Star Wars](https://code.org/starwars), [Die Eiskönigin](https://studio.code.org/s/frozen/stage/1/puzzle/1) oder [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C) 
+- Für Kinder, die gerne lernen: [KI für Ozeane](https://code.org/oceans) oder [Musizieren mit Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg) 
 
-## 3) Planen Sie Ihren Bedarf an technischer Ausstattung
+<h3>Low-Tech oder No-Tech?</h3>
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+Wenn Sie nur wenig oder keine Technologie verwenden, können Sie die <a href="https://hourofcode.com/us/learn>Hour of Code-Aktivitäten</a> filtern, indem Sie im Abschnitt *Technologie in der Klasse* "Keine Computer oder Geräte" auswählen. 
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-## 4) Start your Hour of Code with an inspiring video
+Schauen Sie sich auch diese <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu>kurzen Videos</a> an, die weitere Ideen dazu enthalten, wie man Aktivitäten auch ohne Technologie zu Hause durchführen kann! 
 
-Beginnen Sie Ihre Hour of Code, indem Sie Ihr Kind begeistern und mit ihm diskutieren, wie Informatik jeden Teil unseres Lebens beeinflusst.
+## 2) Bereiten Sie sich vor
 
-**Zeigen Sie ein inspirierendes Video:**
+Sie haben sich nun einige Tutorials ausgesucht. Dabei kann es sinnvoll sein, diese Aktivitäten auf Ihrem Gerät zu testen, bevor Sie sie Ihrem Kind vorstellen.
 
-- Das original "Hour of Code"-Einführungsvideo mit Bill Gates, Mark Zuckerberg und NBA-Star Chris Bosch ([1-minütige](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 -minütige](https://www.youtube.com/watch?v=nKIu9yen5nc) und [9-minütige](https://www.youtube.com/watch?v=dU1xS07N-FA) Version).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [US-Präsident Obama fordert alle Schüler auf, Informatik zu lernen](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+[![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-Es ist in Ordnung, wenn Sie und Ihr Kind absolute Neulinge in Informatik sind. Hier finden Sie einige Ideen, wie Sie Ihr Hour of Code-Training vorstellen können:
+<h3>Mehrere Kinder im Haus?</h3>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Zählen Sie auf, wo überall im täglichen Leben Code verwendet wird.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+Vielleicht ist es sinnvoll, jedem Kind einen Kopfhörer zu geben, wenn sie an separaten Geräten arbeiten wollen. So können sie die Aktivitäten mit Ton spielen, ohne die anderen zu stören. 
 
-Brauchen Sie weitere Ideen? Schauen Sie sich unsere [Vorlage Unterrichtsplan](/files/AfterschoolEducatorLessonPlanOutline.docx) mit gelungenen Beispielen erfahrener Pädagoginnen und Pädagogen an.
+Wenn Sie nur ein Gerät verwenden oder Ihre "Hour of Code" einfach interaktiver gestalten wollen, versuchen Sie es mit der href="https://www.youtube.com/watch?v=vgkahOzFH2Q">Programmierung zu zweit</a>. Die Programmierung zu zweit ermutigt die Kinder zur Zusammenarbeit. Wenn sie gemeinsam arbeiten, helfen sie sich bei der Lösung von Aufgaben gegenseitig. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
 
-## 5) Programmieren Sie!
+<h3>Begeistern Sie Ihre Kinder! </h3>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+Dies ist eine großartige Gelegenheit, den Tagesablauf Ihres Kindes mit einer ganz neuen Aktivität zu bereichern. Mit diesen Vorschlägen können Sie den Spaß über ein Tutorial hinaus fortführen: 
 
-Wenn Sie das Tutorial, das Sie durchführen möchten, ausgewählt haben, können Sie das Tutorial Mit einem Lesezeichen versehen.
+- Zeigen Sie ihnen ein <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ>motivierendes Video</a>, in dem eines ihrer Lieblingsvorbilder vorkommt 
+- Begeistern Sie sie mit einem Video über eines der [vielen Berufsbilder](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP), für die Informatikkenntnisse wichtig sind 
+- <a href="https://store.code.org/>Bestellen Sie ein paar witzige Artikel</a>! Sie haben die Wahl zwischen T-Shirts, Stickern oder sogar abwaschbaren Tattoos. Geben Sie sie ihnen sofort, um sie zu motivieren, oder heben Sie sie für das Ende der Hour of Code als besondere Belohnung auf. 
 
-**Wenn Ihr Kind auf Schwierigkeiten stösst**
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-Es ist in Ordnung, darauf so zu antworten:
+## 3) Tipps zur Einführung Ihres Kindes in die Informatik
 
-- "Ich weiß es nicht. Lass uns das Problem gemeinsam lösen."
-- "Die Technik funktioniert nicht immer so, wie wir es wollen."
-- "Programmieren lernen ist wie das Lernen einer Fremdsprache; wir sprechen sie nicht gleich fließend."
+Es ist kein Problem, wenn Sie und Ihr Kind bisher überhaupt nichts mit Informatik zu tun hatten. Hier einige Ideen für den Einstig in Ihre Hour of Code Aktivität und Denkanstöße zur Informatik für Sie beide: 
 
-## 6) Feiern Sie!
+- Erklären Sie mit konkreten Beispielen, die Ihr Kind interessieren könnten, wie Technologie unser Leben beeinflusst. Sie könnten zum Beispiel über Medizin sprechen oder wie Menschen virtuell miteinander Kontakt haben. Sehen Sie sich auch <a href="https://code.org/csforgood>Code.org/CSforGood</a> an - hier finden Sie Vorschläge für Gesprächsthemen. 
+- Erstellen Sie gemeinsam eine Liste alltäglicher Dinge, die Code verwenden, um richtig zu funktionieren.
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-Teilen Sie Fotos und Videos Ihrer Hour of Code-Veranstaltung in den sozialen Medien. Verwenden Sie #HourOfCode und @codeorg, damit wir Ihren Erfolg auch hervorheben können!
+<h3>Gibt es in Ihrem Haushalt junge Frauen?
+</h3>
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+<a href="https://code.org/girls">Hier finden Sie unsere Empfehlungen</a>, wie sie ihr Interesse an der Informatik wecken können. **Profi-Tipp**: Sagen Sie ihnen einfach, dass sie großartig darin wären! 
 
-## Was kommt nach der Hour of Code?
+<h3>Gemeinsam Aufgaben lösen</h3>
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+"Wenn Ihr Kind Schwierigkeiten bei einer Aufgabe hat, ist es in Ordnung, so darauf zu reagieren: - ""Ich weiß es tatsächlich auch nicht." Versuchen wir zusammen eine Lösung zu finden." - "Technik funktioniert nicht immer so, wie wir uns es wünschen." - "Programmieren lernen ist wie das Erlernen einer neuen Sprache; Es braucht Zeit, bis man flüssig sprechen kann."
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+In der Informatik geht es darum zu lernen, wie man Fehler in Situationen beseitigt, die sich nicht erwartungsgemäß entwickeln. Sie und Ihr Kind können sich gemeinsam kreative Methoden zur Lösung der Aufgabe ausdenken! 
 
-{{ signup_button }}
+## 4) Vergessen Sie das Feiern nicht!
+
+Die Hour of Code ist Ereignis, das auf der ganzen Welt stattfindet, und Ihre Familie sollte mitfeiern. Hier sind einige Möglichkeiten, wie Sie Ihre Hour of Code ganz besonders denkwürdig gestalten können: 
+
+- Drucken Sie [Hour of Code Zertifikate](https://staging.code.org/certificates) aus, die Sie Ihrem Kind übergeben, wenn es seine Aktivität abgeschlossen hat 
+- [Drucken Sie Sticker ](https://staging.hourofcode.com/us/promote/resources#stickers) zu Hause aus oder [ bestellen Sie sie online ](https://store.code.org/) als zusätzliche Überraschung. 
+- Posten Sie Fotos und Videos von Ihrer Hour of Code zu Hause in den Sozialen Medien. Erwähnen Sie dabei #HourofCode und @codeorg, damit wir Ihren gemeinsamen Erfolg mitfeiern können! 
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>Was kommt nach der Hour of Code?</h2>
+
+Informatik muss nicht mit der Hour of Code enden! Obwohl 90 % der Eltern es gerne hätten, dass ihr Kind Informatik lernt, wird dieses Fach an vielen Schulen immer noch nicht unterrichtet. Unser Lehrplan ist zu Ihrer Unterstützung webbasiert und kostenlos - für immer. <a href="https://code.org/yourschool>Erfahren Sie heute, wie</a> Sie das Fach Informatik an die Schule Ihres Kindes bringen können. 
+
+[<button>PDF-Leitfaden anzeigen </button>]({{ localized_files/hourofcode_parent_how_to }})

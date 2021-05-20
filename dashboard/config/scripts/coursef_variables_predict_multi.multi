@@ -1,0 +1,6 @@
+name 'courseF_variables_predict_multi'
+question 'This program lets you answer a question by typing with your keyboard. The `print` block shows text on the screen. Make a prediction: What will happen after answering the question?'
+wrong 'The program will print "Hello name!"', feedback: 'Incorrect. The name block will be replaced with whatever you type in.'
+right 'The program will greet you with the name you type in.', feedback: 'Correct! What you type is used in place of the name block.'
+wrong 'The sprite will change sizes.', feedback: 'Incorrect. Text is printed to the screen.'
+wrong 'The computer will ask another question.', feedback: 'Incorrect. Only one question is asked, right when the program begins.'

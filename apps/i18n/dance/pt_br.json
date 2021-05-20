@@ -1,7 +1,7 @@
 {
   "danceFeedbackNeedNewDancer": "Você precisa criar um(a) dançarino(a).",
   "danceFeedbackNoDancers": "Você não tem dançarinos.",
-  "danceFeedbackNoBackground": "Você precisa adicionar um efeito de fundo.",
+  "danceFeedbackNoBackground": "Você precisa adicionar um efeito de plano de fundo.",
   "danceFeedbackTooManyDancers": "Tenha cuidado! Se você inserir o bloco `criar novo` em `cada dois compassos`, você vai criar muitos dançarinos.",
   "danceFeedbackUseSetSize": "Use o bloco `set backup_dancer2 size` para diminuir o tamanho daquele(a) dançarino(a).",
   "danceFeedbackUseSetTint": "Use o bloco de `definir tonalidade` para alterar a tonalidade de um(a) dançarino(a).",
@@ -10,6 +10,13 @@
   "danceFeedbackNeedDifferentDance": "Você precisa usar uma dança diferente.",
   "danceFeedbackNeedEveryTwoMeasures": "Certifique-se de que você está utilizando o bloco `a cada dois compassos`",
   "danceFeedbackNeedMakeANewDancer": "Use o bloco de `criar novo` para criar um(a) segundo(a) dançarino(a).",
-  "danceFeedbackKeyEvent": "Certifique-se de anexar algum código ao bloco `quando tecla` e pressione a tecla enquanto sua dança estiver rodando.",
+  "danceFeedbackKeyEvent": "Certifique-se de anexar algum código ao bloco <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"cima\"</title></block></xml> e pressione a tecla enquanto sua dança estiver rodando.",
+  "danceFeedbackDidntPress": "Certifique-se de pressionar as teclas de seta enquanto sua dança está em execução.",
+  "danceFeedbackPressedKey": "Você pressionou uma tecla, mas seu dançarino não respondeu.",
+  "danceFeedbackNeedTwoDancers": "Você precisa criar dois dançarinos.",
+  "danceFeedbackOnlyOneDancerMoved": "Apenas um de seus dançarinos se moveu.",
+  "danceFeedbackNeedLead": "Você também precisa criar um dançarino principal com o  bloco <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "Você precisa criar um grupo de dançarinos de backup com o bloco  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICÓRNIO\"</title><title name=\"LAYOUT\">\"círculo\"</title></block></xml>.",
+  "danceFeedbackSetSize": "Você precisa alterar o tamanho de pelo menos um dançarino após o início da música.",
   "measure": "Compasso:"
 }

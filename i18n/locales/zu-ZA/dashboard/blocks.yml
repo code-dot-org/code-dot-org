@@ -1,73 +1,18 @@
----
 zu:
   data:
     blocks:
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"height"': ubude
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"height"': ubude
       Dancelab_getProp:
         options:
           PROPERTY:
             '"height"': ubude
-      Dancelab_makeNewDanceSpriteGroup:
-        options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -80,11 +25,23 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"height"': ubude
@@ -106,18 +63,6 @@ zu:
             '"when"': nini
       RyanLab_moveForward:
         text: qubekela phambili
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': nini
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': nini
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nini
       craft_ifPath:
         options:
           DIR:

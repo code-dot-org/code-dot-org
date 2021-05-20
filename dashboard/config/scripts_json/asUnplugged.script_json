@@ -1,0 +1,530 @@
+{
+  "script": {
+    "name": "asUnplugged",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:44 UTC",
+    "seeding_key": {
+      "script.name": "asUnplugged"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Happy Maps",
+      "name": "Happy Maps",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Happy Maps",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Move it, Move it",
+      "name": "Move it, Move it",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Move it, Move it",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Real-life Algorithms: Plant a Seed",
+      "name": "Real-life Algorithms: Plant a Seed",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Graph Paper Programming",
+      "name": "Graph Paper Programming",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Building a Foundation",
+      "name": "Building a Foundation",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Getting Loopy",
+      "name": "Getting Loopy",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "The Big Event",
+      "name": "The Big Event",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "The Big Event",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Binary Bracelets",
+      "name": "Binary Bracelets",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "Songwriting",
+      "name": "Songwriting",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "UnplugHappyMaps"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "UnplugHappyMaps"
+        ],
+        "lesson.key": "Happy Maps",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "UnplugHappyMaps"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MoveIt"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MoveIt"
+        ],
+        "lesson.key": "Move it, Move it",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "MoveIt"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PlantASeed"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PlantASeed"
+        ],
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "PlantASeed"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GraphPaperProgramming"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GraphPaperProgramming"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "GraphPaperProgramming"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BuildingAFoundation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BuildingAFoundation"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "BuildingAFoundation"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GettingLoopy"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "GettingLoopy"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "The Big Event",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "BigEvent"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BinaryBracelets"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryBracelets"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "BinaryBracelets"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SongwritingParameters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SongwritingParameters"
+        ],
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      },
+      "level_keys": [
+        "SongwritingParameters"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "UnplugHappyMaps",
+        "script_level.level_keys": [
+          "UnplugHappyMaps"
+        ],
+        "lesson.key": "Happy Maps",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MoveIt",
+        "script_level.level_keys": [
+          "MoveIt"
+        ],
+        "lesson.key": "Move it, Move it",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PlantASeed",
+        "script_level.level_keys": [
+          "PlantASeed"
+        ],
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GraphPaperProgramming",
+        "script_level.level_keys": [
+          "GraphPaperProgramming"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BuildingAFoundation",
+        "script_level.level_keys": [
+          "BuildingAFoundation"
+        ],
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GettingLoopy",
+        "script_level.level_keys": [
+          "GettingLoopy"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BigEvent",
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "The Big Event",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BinaryBracelets",
+        "script_level.level_keys": [
+          "BinaryBracelets"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SongwritingParameters",
+        "script_level.level_keys": [
+          "SongwritingParameters"
+        ],
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

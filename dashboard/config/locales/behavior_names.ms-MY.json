@@ -1,0 +1,47 @@
+{
+  "ms-MY": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "pulih"
+        },
+        "outbreak2": {
+          "recovering": "pulih"
+        },
+        "outbreak3": {
+          "recovering": "pulih"
+        },
+        "outbreak4": {
+          "recovering": "pulih",
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "outbreak5": {
+          "recovering": "pulih"
+        },
+        "outbreak6": {
+          "recovering": "pulih"
+        },
+        "outbreak7": {
+          "recovering": "pulih",
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving left and right": "bergerak kiri dan kanan"
+        },
+        "outbreak8": {
+          "recovering": "pulih",
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving left and right": "bergerak kiri dan kanan"
+        },
+        "outbreak_freeplay": {
+          "recovering": "pulih",
+          "moving left and right": "bergerak kiri dan kanan",
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "pulih",
+          "moving left and right": "bergerak kiri dan kanan",
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+is:
+  data:
+    parameter_names:
+      actor: leikmaður
+      color: litur
+      counter: teljari
+      dir: stefna
+      direction: stefna
+      height: hæð
+      honey: hunang
+      left: vinstri
+      length: lengd
+      min: min
+      nectar units: einingar blómasafa
+      nectars: blómasafar
+      numOctagons: numOctagons
+      points: stig
+      radius: radius
+      sides: hliðar
+      size: stærð
+      speed: hraða
+      width: breidd

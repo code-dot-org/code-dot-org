@@ -1,67 +1,65 @@
 ---
 title: Hour of Code 이벤트 행상 방법
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# 아워오브코드 어셈블리 또는 이벤트 조직 방법
 
-### Get your entire school or community involved in an Hour of Code!
+### 전교 또는 전체 지역사회가 아워오브코드에 참여하게 하세요!
 
 * * *
 
-## 1. Prepare for your event
+## 1. 이벤트 준비
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- 장소, 날짜, 시간을 정하세요.
+- [편지](https://hourofcode.com/promote/resources#sample-emails)를 지역 시장, 시의원, 주지사, 영향력 있는 지역 사업가들에게 보내 행사에 초대하여 학생들에게 강연하게 합니다. 선출직 공무원을 초대할 때는 더 자세한 내용은 [하우 투 툴키트]({{ localized_files/elected_official }}) 를 참조하세요.
+- 지역 뉴스보도국, 신문, 교육/공학 블로거 등과 같은 미디어/언론을 초대합니다. 도움은 [언론 키트]({{ promote/press_kit_url }})를 참조하세요.
 
-## 2. During your event
+## 2. 이벤트 동안
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- [고무적인 동영상]({{ promote/videos }}) 중 하나로 이벤트를 시작하세요.
+- 다음의 [통계 및 인포그래픽]({{ promote/stats_url }})을 사용하여 컴퓨터 과학의 중요성을 개략적으로 소개합니다.   
       
     
-- **Other event ideas**: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
-    - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+- **다른 이벤트 아이디어**: 
+    - 지역 산업 리더를 초청하여 컴퓨터 과학 분야와 연관된 일에 관해 논의하게 하세요.
+    - 지역 정치인을 초대하고 학생들에게 그들에게 코딩하는 법을 가르치게 합니다.
+    - 학생들에게 언플러그드 활동을 시연하게 하세요.
+    - 학생 그룹에게 교장 선생님 또는 선생님들에게 코딩하는 방법을 가르쳐 보게 하세요.
+    - 학교에서 이미 컴퓨터 과학을 가르치고 있으면, 학생에게 프로젝트를 시연하게 하세요.
 
-## 3. Share how it went
+## 3. 진행 결과 공유
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+이벤트 사진을 페이스북과 트위터에서 공유하고 해시 태그 **#HourOfCode**를 사용하세요.
 
 * * *
 
-## Example plan for a school assembly or event
+## 아워오브코드와 함께 패밀리 코드 나이트를 주최하고 학부모를 참여하도록 초대합니다.
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+K-5 저녁 이벤트 개최를 고려하고 학부모를 초대하여 학생과 함께 아워오브코드에 참여할 수 있게 합니다. 더 큰 커뮤니티의 참여를 이끌고 학부모에게 학교의 컴퓨터 과학을 지지하도록 독려하는 좋은 방법입니다. 패밀리 코드 나이트에서 우리의 파트너는 기획 체크리스트와 강연자의 대본, 초대 이메일, 포스터, 파워포인트, 기타 이벤트를 운영에 필요한 항목 등이 담긴 올인원 이벤트 키트를 만들고 있습니다. [여기를 클릭하여 이벤트 키트를 다운로드하세요](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## 아워오브코드 어셈블리 또는 이벤트 계획의 예
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**이벤트:** 학교 전체 컴퓨터 과학 교육주간 시작 모임
+
+**날짜:** {{ campaign_date/start_short }} (컴퓨터 과학 교육주간으로 시작)
+
+**시간:** 수업일 중. 아침-점심 사이, 대략 1시간.
+
+**장소:** 학교 강당 (예: 극장, 체육관, 식당)
 
 ## 이벤트 일정
 
-| 시간               | 내용                                                                                                                                    |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 오전 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 오전 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 오전 10:15 - 10:30 | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.                                                     |
-| 오전 10:30 - 10:40 | Students do an Hour of Code demo for the school. Fun twist: have them teach the principal, politician, or other students!             |
-| 오전 10:40 - 11:00 | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.                                                    |
-| 오전 11:00 - 11:05 | 학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.                                                                                                       |
+| 시간               | 내용                                                                                     |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| 오전 10:00 - 10:05 | [고무적인 동영상]({{ promote/videos }}) 중 하나로 여십시오.                                           |
+| 오전 10:05 - 10:15 | 교장선생님은 컴퓨터 과학의 중요성을 간략하게 설명하는 인사말을 합니다. 이[통계 및 인포그래픽]({{ promote/stats_url }})을 활용하세요. |
+| 오전 10:15 - 10:30 | 특별 초청 게스트가 자기소개를 하고, 그 사람의 일상생활에서 컴퓨터과학기술과 컴퓨터과학이 얼마나 중요한 역할을 하고 있는지에 대해서 이야기 한다.      |
+| 오전 10:30 - 10:40 | 학생들은 학교를 위해 아워오브코드 데모를 시연합니다. 재미있는 트위스트: 학생들에게 교장 선생님 또는 정치인, 다른 학생들을 가르치게 하세요!        |
+| 오전 10:40 - 11:00 | 학생들이 컴퓨터과학 언플러그드 활동을 시연하면서, 컴퓨터가 전혀 없이도 컴퓨터과학(정보과학)에 대해서 어떻게 배울 수 있게 되는지 보여주도록 한다.     |
+| 오전 11:00 - 11:05 | 학교 전체 활동을 계획하고 주도한 선생님이 맺음말 한다.                                                        |
 
 {{ signup_button }}

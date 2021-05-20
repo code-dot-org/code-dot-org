@@ -1,0 +1,22 @@
+name 'Episode 9 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+### Dance Party
+
+**Do This:** Ready to make something amazing? Show us what you've got!
+
+If you're looking for ideas on how to do some advanced moves check out [Keep On Dancing](https://studio.code.org/s/dance-extras-2019/lessons/1/levels/1).
+
+![](https://images.code.org/26642ca24b5ca4133376760625c9d389-image-1589808704742.gif)  ![](https://images.code.org/d8732099f0430846debe52bda3e70c27-image-1589808710285.gif)
+
+### App Lab
+
+**Do This:** Make your own Escape Room. Will there be one room or two? How will you try to stump the user, while also following good design principles? 
+
+![](https://images.code.org/cafd8b70ba24718204e2ad823bce36ee-image-1589808871044.gif) ![](https://images.code.org/e979bde678df0bdb3af00342ab6b16f1-image-1589808932730.gif)
+MARKDOWN

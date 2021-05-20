@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2019-10-21T17:56:46.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "video_key": "lesson_planning",
+    "instructions_important": "false",
+    "long_instructions": "So far, you've been introduced to some of our unplugged lesson plans. However, there are lesson plans for every single CS Fundamentals lesson -- both plugged and online. You can find the full list of lesson plans for each course below:\r\n<br/>\r\n<br/> \r\n<a href=\"https://curriculum.code.org/csf-19/coursea/\" target=\"blank\">Course A lesson plans</a><br/>\r\n<a href=\"https://curriculum.code.org/csf-19/courseb/\" target=\"blank\">Course B lesson plans</a><br/>\r\n<a href=\"https://curriculum.code.org/csf-19/coursec/\" target=\"blank\">Course C lesson plans</a><br/>\r\n<a href=\"https://curriculum.code.org/csf-19/coursed/\" target=\"blank\">Course D lesson plans</a><br/>\r\n<a href=\"https://curriculum.code.org/csf-19/coursee/\" target=\"blank\">Course E lesson plans</a><br/>\r\n<a href=\"https://curriculum.code.org/csf-19/coursef/\" target=\"blank\">Course F lesson plans</a>\r\n\r\n\r\nHowever, you may want to adapt these lessons, or build your own! The video below explains the structure of the CS Fundamentals lessons, but also provides tips in case if you want to develop your own lessons.",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16684,
+    "name_suffix": "_copy",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-22 17:18:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-02-22 17:21:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-02-22 17:56:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-07 18:21:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"},{\"changed_at\":\"2019-11-14 21:52:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":884,\"changed_by_email\":\"emma@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

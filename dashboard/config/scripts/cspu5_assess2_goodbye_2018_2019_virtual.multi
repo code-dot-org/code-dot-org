@@ -1,0 +1,23 @@
+name 'cspu5_assess2_goodbye_2018_2019_virtual'
+wrong 'Wow, big word.'
+wrong 'Did you say something? That was so short.'
+right 'Use that word on the SAT.'
+wrong 'I have never heard that before.'
+wrong 'Nothing will be printed'
+
+markdown <<MARKDOWN
+If the above code segment is run, and “goodbye” is entered into the prompt, what will be displayed in the console?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 6, 8, 9** -- requires incorporating new knowledge about strings, plus nested if reasoning.
+
+
+
+Going through the code line by line:
+
+* The variable word is set to "goodbye", which has a length of 7
+* Since the length of the word is not greater than 10, we go into the else statement
+* Inside the else statement, since the length of hello is not less than 3, we go into the else statement
+* Since the word length is greater than 6, the code displays “ Use that word on the SAT.” in the console
+MARKDOWN

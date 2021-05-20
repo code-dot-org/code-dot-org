@@ -3,1561 +3,2067 @@ ur-PK:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Big Event Match 1:
-        title: مشابہ
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
         title: مشابہ
+      2-3 Binary Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: "<strong>ن</strong>"
         - text: "<strong>و</strong>"
         - text: "<strong>پ</strong>"
         - text: "<strong>ق</strong>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Graph Paper Match 1:
         title: مشابہ
+      2-3 Conditionals Multi 1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+        title: کثیر انتخاب
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: کثیر انتخاب
+      2-3 Graph Paper Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
         content1: اس پروگرام کے لیے گرڈ مشابہ کریں.
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: مشابہ
       2-3 Graph Paper Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
         title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       2-3 Maze Match 2:
-        pre_title: ہدایات
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       2-3 Maze Multi 2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 Relay Programming Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: کثیر انتخاب
       2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
         title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 artist loops match 1:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       2-3 artist loops multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       2-3 artist loops multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       2-3 artist match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
         title: فن کارانہ مشابہت
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee conditionals multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       2-3 bee conditionals multi 3:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 bee loops multi 1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       2-3 maze match 1:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       2-3 maze multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - {}
+      4-5 Algorithms Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Algorithms Match 1:
-        title: مشابہ
         questions:
         - text: "<h4>1)</h4>"
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: مشابہ
       4-5 Algorithms Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - text: اپنے دانتوں کو برش کرنا
         - {}
         - {}
         - text: کیلا
-      4-5 Computational Thinking Match 1:
-        title: مشابہ
+          correct: true
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+        title: کثیر انتخاب
+      4-5 Computational Thinking Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Computational Thinking Multi 1:
-        title: کثیر انتخاب
         questions:
         - {}
+        - {}
+        - {}
+        - {}
+        title: مشابہ
+      4-5 Computational Thinking Multi 1:
         answers:
         - {}
         - text: _____ ایک _____ شہر ہے ۔
+          correct: true
         - text: _____ _____ ایک _____ ہے.
         - {}
-      4-5 Crowdsourcing Multi 1:
-        title: کثیر انتخاب
         questions:
         - {}
+        title: کثیر انتخاب
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
-        title: کثیر انتخاب
+        - correct: true
         questions:
         - {}
+        title: کثیر انتخاب
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: اپنے کمرے کی صفائی کرنا
+          correct: true
         - text: اپنا میٹھا کھائیے
         - text: اپنے بالوں کو برش کرنا
         - text: اپنا چہرہ دھوئیے
-      4-5 Digital Footprint Multi 1:
-        title: کثیر انتخاب
         questions:
         - {}
+        title: کثیر انتخاب
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: آپ کی سالگرہ
         - text: آپ کا پسندیدہ کھانا
+          correct: true
         - text: آپ کا پتہ
         - text: اپنے والدین کے کریڈٹ کارڈ نمبر
+        questions:
+        - {}
+        title: کثیر انتخاب
       4-5 Internet Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: کثیر انتخاب
       4-5 Internet Multi 2:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       4-5 Songwriting Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       4-5 Suncatchers Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
         title: مشابہ
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 Suncatchers Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
         title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       4-5 artist loops multi 1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       4-5 artist multi 1:
-        title: فن کار کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: فن کار کثیر انتخاب
       4-5 artist multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
         title: فن کار کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 bee conditionals multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       4-5 bee debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       4-5 bee loops multi 1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       4-5 maze conditionals multi 1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       4-5 maze match 1:
-        pre_title: ہدایات
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       4-5 maze multi 1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Boolean MC_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Boolean MC_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# ڈانس کرتے رہیں!\n\n حصہ 2 کے لئے، آپ اپنا خود کا پروجیکٹ تیار
+          کرنے لگے ہیں۔ یہاں کوئی پزلز نہیں ہیں - اس کے بجائے یہاں پروجیکٹس کا گروپ
+          ہے جو مزید پیچیدہ ڈانس پارٹیاں بنانے کے مختلف طریقے دکھاتا ہے۔ آپ یہ لیولز
+          _کسی بھی ترتیب میں_ کر سکتے ہیں۔ یہ دیکھنے کے لئے اردگرد چھلانگ لگائیں کہ
+          گزشتہ لیول میں کچھ کیسے ہوا تھا، یا پراجیکٹس کے درمیان تصورات کو یکجا کریں۔
+          ان تمام کو آزمائیں، اپنی پسند منتخب کریں، اور اسے اپنا بنانے کے لئے اس پروجیکٹ
+          میں شامل کرنے کا کام کرنے اپنا وقت صرف کریں۔\n\n<a class=\"btn btn-large
+          btn-primary next-stage submitButton pull-right\">جاری رکھیں</a>\n<div class=\"clearfix\">\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\n تشکیل میں آئیں\n</h2>\n\n<img
+          src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\n وہ کہاں گئے
+          تھے؟\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\n ڈانس گروپ \n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\">\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nچوتھائی سُر\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\">\n\n</div>\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\n باس، مڈ، ٹریبل\n</h2>\n\n<img
+          src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nاسے تیز کریں،
+          اسے آہستہ کریں\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\">\n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |-
+          # ناچتے رہو!
+
+          حصہ 2 کے ل you're ، آپ خود اپنا پروجیکٹ تیار کرنے جارہے ہیں۔ یہاں کوئی پہیلیاں نہیں ہیں - بجائے اس کے کہ ایسے پروجیکٹس کا ایک گروپ ہے جو رقص کی زیادہ پیچیدہ جماعتیں بنانے کے مختلف طریقے دکھاتا ہے۔
+
+          آپ یہ درجات کسی بھی آرڈر _ میں کرسکتے ہیں۔ پچھلے درجے میں کچھ کیا ہوا تھا ، یا پروجیکٹس کے مابین تصورات کو یکجا کرنے کے لئے یہ دیکھنے کے لئے ادھر ادھر جائیں۔ ان سب کو آزمائیں ، اپنی پسند کا انتخاب کریں ، اور اپنا منصوبہ بنانے کے ل own اس منصوبے میں شامل کرنے میں اپنا وقت گزاریں۔
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">جاری رکھیں</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          واپس اور اگلا
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          مزید بٹن
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          تشکیل میں حاصل کریں
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          وہ کہاں گئے تھے؟
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          ڈانس عملہ
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          کوارٹر نوٹس
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          باس ، وسط ، ٹریبل
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          اسے تیز کریں ، اسے
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+          تیز کریں۔
       K-1 Artist 1 Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Artist 1 Multi 2:
-        title: کثیر انتخاب
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+        title: کثیر انتخاب
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: مشابہ
         content2: قسم کی بناء پر اشکال سے مشابہ کریں.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: مشابہ
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+        title: کثیر انتخاب
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: کثیر انتخاب
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: بلاک مشابہ کریں
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: مشابہ
       K-1 Big Event Match 1:
-        title: مشابہ
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        title: مشابہ
       K-1 Digital Footprint Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Getting Loopy Multi 1:
-        title: کثیر انتخاب
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: کثیر انتخاب
       K-1 Happy Maps Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Keep it Private Multi 1:
-        title: کثیر انتخاب
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: کثیر انتخاب
       K-1 Maze Debugging Multi 1:
-        title: کثیر انتخاب
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: کثیر انتخاب
       K-1 Maze Loops Multi 1:
-        title: کثیر انتخاب
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: کثیر انتخاب
       K-1 Maze Loops Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
         title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       K-1 Maze Match 1:
-        title: مشابہ
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: پہیلیاں اور بلاکس کو مشابہ کریں
-        pre_title: ہدایات
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: مشابہ
       K-1 Maze Multiple Choice 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       K-1 Move It Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Plant a Seed Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Plant a Seed Multi 2:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Word Search Multi 1:
-        title: کثیر انتخاب
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
+        title: کثیر انتخاب
       K-1 Word Search Multi 3:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
         title: کثیر انتخاب
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: مے نی جانتا
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: مے نی جانتا
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: مے نی جانتا
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
+        - correct: true
+        - text: مے نی جانتا
+        questions:
         - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: ایے
         - text: بی
         - text: سی
         - text: ڈی
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: ایے
         - text: بی
         - text: سی
         - text: ڈی
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: ایے
         - text: بی
         - text: سی
         - text: ڈی
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: ایے
         - text: بی
         - text: سی
+        - text: ڈی
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: ایے
+          correct: true
+        - text: بی
+        - text: سی
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: ایے
+          correct: true
         - text: بی
         - text: سی
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: ایے
+          correct: true
         - text: بی
         - text: سی
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: ایے
+          correct: true
+        - text: بی
+        - text: سی
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_story:
+        markdown: "# وباء: اپنا سیمولیشن کوڈ کر لیں\n\n## بھوت شہر مانسٹر ٹاؤن میں
+          خوش آمدید!\nمانسٹر ٹاؤن عمومی طور پر ایک خوشحال اور صحتمند جگہ تھی. اس بھوت
+          شہر میں رہنے والے بھوتوں کو دوستوں کے ساتھ گھومنا پھرنا بہت پسند تھا \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nایک دن ایک بھوت بیمار محسوس کرنے لگا. اس بھوت کو
+          **وائرس** لگ گیا تھا! وائرس ایک بہت چھوٹا جرثومہ ہوتا ہے. دیگر بھوت اس بارے
+          \ میں کچھ خاص پریشان نہیں تھے. وہ اپنے دوستوں کے پاس آتے جاتے رہے.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nاس کے بعد جلد ہی دو مزید بھوت بیمار پڑ گئے۔ ان کو
+          بھی وہی وائرس لگ گیا تھا! ایسے لگ رہا تھا ان کو یہ وائرس اپنے بیمار دوست
+          سے لگ گیا تھا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nوہ وائرس بتدریج نزدیک میں دوسرے بھوتوں کی جانب پھیلنے
+          لگا. صحتمند بھوت سارے پریشان ہونے لگے کہ وہ خود بھی بیمار ہو جائیں گے. مریض
+          بھوتوں کو یہ پریشانی لاحق ہو گئی کہ ان سے یہ وائرس باقی سب کی جانب پھیل
+          جائے گا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## وائرس کے پھیلاؤ کی روک تھام\nخوش
+          بختانہ، جب وائرس کا مطالعہ کیا گیا تو مانسٹر ٹاؤن کو ایک اہم بات پتہ چلی.
+          انہوں نے دریافت کیا کہ اگر وہ اپنے منہ کے اوپر ماسک پہنیں تو وائرس کے پھیلنے
+          کا امکان کم ہو جاتا ہے. ماسک پہنے رکھنے سے مریض بھوتوں سے صحتمند بھوتوں
+          تک وائرس کے پھیلنے کا امکان کم ہو جاتا تھا.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          آگے کیا ہو گا؟\n\nآج کوڈ لکھ کر اپنا **simulation** چلائیں گے کہ مانسٹر
+          ٹاؤن میں پھیلتی وبا کی روک تھام کر سکیں. ایک سیمولیشن کسی پراسس یا سسسٹم
+          کا کمپیوٹر ماڈل ہوتا ہے. کوڈ لکھنا سیکھ لیں اور پیشنگوئی کریں کہ مانسٹر
+          ٹاؤن میں مریضوں        \n       کے پڑوسیوں کے ساتھ کیا ہو گا.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *وائرس کتنی تیزی سے پھیلے گا؟*\n\n*
+          *کیا ہر کوئی بیمار ہو جائے گا؟*\n\n* *چہرے کے ماسک کیسے مددگار ثابت ہوں
+          گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
+          کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
+          تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
+      outbreak_story2:
+        markdown: |-
+          # وباء: ایک سائنسدان کی طرح سوچنا
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          سیمولیشن ایسی چیزوں کے بارے سیکھنے کا بہترین ذریعہ ہیں جن کا حقیقی دنیا میں مشاہدہ کرنا مشکل ہوتا ہے. یہ سائنسدانوں کے ساتھ مسائل حل کرنے اور نئے خیالات کا محفوظ اور اچھے طریقے سے آزمانے میں مدد کرتے ہیں۔ آپ کا سیمولیشن ایک ذریعہ ہے کہ جس سے مانسٹر ٹاؤن میں وائرس کی وباء کے فرضی پھیلاؤ کا مشاہدہ کیا جا سکتا ہے۔
+
+          ## ری سٹ اور ری پلے!
+          جب آپ نے کوڈ خود بھی لکھا ہو لیکن یہ جاننا ناممکن ہے کہ Run کا بٹن دبانے کے بعد کیا ہوگا. یہ مانسٹر بے ترتیب انداز میں ادھر ادھر گھومتے ہیں، یوں آپ کو پتہ نہیں چلتا کہ وائرس تیز یا سست سرایت کرے گا. آپ جب اپنا کوڈ تبدیل کر لیتے ہیں، اپنا سیمولیشن کئی بار ضرور چلائیں. ہر بار چیزیں ایک ہی جیسی نہیں ہوں گی!
+
+          ## ڈاٹا جمع کرنا
+          سیمولیشن چلاتے ہوئے اپنے مشاہدات کو لکھ کر نوٹ کر لیا کریں. آپ بیمار ہونے والے بھوتوں کا شمار کر سکتے ہیں یا ایک ٹائمر کے ذریعے وقت گن سکتے ہیں کہ حال کس تیزی سے تبدیل ہو رہا ہے. مثلا، اگر کسی بھی مانسٹر نے ماسک نہ پہنا ہو تو سب کے بیمار ہونے میں عموما کتنا عرصہ لگتا ہے؟
+
+          ## پیشنگوئیاں کرنا
+          اگر آپ کو اپنے ماڈل کی سمجھ ہے تو آپ اسے پیشنگوئیاں کرنے کے لئے استعمال کر سکتے ہیں. آپ اپنے سیمولیشن کے run ہونے کا طریقہ کار بھی تبدیل کر سکتے ہیں اور اندازہ لگا سکتے ہیں کہ نتیجہ کیسے مختلف ہو گا. مثلا:
+          * اگر بھوتوں کی تعداد موجودہ شمار سے دوگنی ہوتی تو کیا ہوتا؟
+          * اگر یہ سب بھوت یعنی مانسٹر اپنی موجودہ سے ادھی کم رفتار سے چلتے تو کیا ہوتا؟
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## کیا مانسٹر ٹاؤن حقیقی دنیا جیسا ہے؟
+          یہ کہ آپ کا ماڈل صرف محدود حد تک حقیقت کے نزدیک ہو سکتا ہے.
+          * وباء کے لئے آپ کا کمپیوٹر سیمولیشن حقیقی دنیا میں وائرس کے وباء سے کتنا مشابہ ہے؟
+          * ان دونوں میں فرق کے نقاط کیا ہیں؟
+          جب آپ اس سرگرمی کو مکمل کر لیں، اپنے استاد یا اپنے فیملی سے ان سوالات کے بارے میں بات چیت کر لیں!
+
+          ## اپنے ماڈل میں آپ اور کیا شامل کر سکتے ہیں؟
+          آپ نے پہلے ہی مانسٹر ٹاؤن میں وباء کے پھیلاؤ کا ماڈل تیار کر لیا ہے. وہ کونسی چیزیں ہیں جو آپ کا ماڈل نہیں کر سکتا یا دکھا سکتا لیکن آپ کی خواہش ہے کہ وہ ویسا کرے یا دکھائے؟ آگے پڑھنے کے لئےcontinue کا بٹن دبائیں اور ماڈل بنانے کے حوالے سے مزید سیکھتے چلے جائیں:
+          * اپنے سیمولیشن میں بھوتوں کی تعداد بڑھا کر
+          * بھوتوں سے وائرس سے ٹھیک ہونے میں مدد کرنے سے
+          * وائرس سے دوچار ہونے کے امکانات، اس سے حفاطت، ویکسین، اور دیگر!
+
+          آپ دیگر لوگوں کے ساتھ اپنا سیمولیشن ماڈل شریک کر سکتے ہیں، یا یہ اپنا یہ پیغام شریک کر سکتے ہیں کہ اگر ہمارے شہر میں وائرس آ جائے تو ہم دوسروں کو صحتمند رکھنے واسطے کیا کر سکتے ہیں۔
+      outbreak_freeplay_choice:
+        description: آپ نے یہ ٹیوٹوریل مکمل کر لیا ہے! اپنے پراجیکٹ میں تبدیلیاں یا
+          بہتریاں لاتے جائیں۔ آپ کی مرضی ہے کہ انہیں بلاکس کو استعمال کرتے جائیں یا
+          ٹول باکس سے مزید چیزیں اٹھا کر استعمال کر لیں۔
+      Unit 1 Lesson 1 Overview:
+        markdown: کلاس گروپوں میں ایلومینیم ورق کشتیاں ڈیزائن کرنے کے لئے کام کرتی
+          ہے جو زیادہ سے زیادہ  پیسہ برقرار رکھیں۔ سبق کے اختتام پر گروپس سرگرمی سے
+          متعلق اپنے تجربات پر غور کرتے ہیں اور اس مسئلے کو حل کرنے کی اقسام سے ربط
+          رکھتے ہیں جو وہ باقی کورس میں کریں گے.
+        teacher_markdown: |-
+          [ایلومینیم کشتیاں - مثال]
+          (https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) -سرگرمی ہدایت نامہ  ([PDF]
+          (https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+      Unit 1 Lesson 2 Overview:
+        markdown: |-
+          #جائزہ
+
+          اس سبق میں آپ مسئلے کو حل کرنے کا ایک باضابطہ عمل سیکھیں گے جو آپ کو مختلف قسم کی پریشانیوں کے حل کے لئے  اپنے نقطہ نظر کی تشکیل میں مدد فراہم کرے گا۔
+
+          # حوالہ جات
+
+          * [مسئلہ حل کرنے کا مسئلہ - سرگرمی کی رہنمائی]
+          (https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: |-
+          * [مسئلہ حل کرنے کا عمل]
+
+          (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/) - سرگرمی گائیڈ ([PDF]]
+          (https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))

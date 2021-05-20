@@ -2331,7 +2331,7 @@ en:
         image: 'notes/hoc_dance_congrats_2.png'
         text: "Congratulations! You've just learned the basics of computer science. Now you can use these blocks to create a dance party of your own design to share with your friends."
       3:
-        image: 'notes/hoc_dance_congrats_3.png'
+        image: 'notes/hoc_dance_congrats_2019_3.png'
         text: "If you look in the tool box, you'll find some brand new blocks that you haven't seen before. For instance, you can use the layout block to arrange the dancers in different ways on the screen."
       4:
         image: 'notes/hoc_dance_congrats_4.png'
@@ -2343,7 +2343,7 @@ en:
         image: 'notes/hoc_dance_congrats_6.png'
         text: "Or something else altogether?"
       7:
-        image: 'notes/hoc_dance_congrats_7.png'
+        image: 'notes/hoc_dance_congrats_2019_7.png'
         text: "At the end of the tutorial you can share a link to your creation with your friends. Stretch your imagination and just have fun!"
     mc_2018_intro:
       1:
@@ -2524,3 +2524,146 @@ en:
       2:
         image: 'notes/opd_closing_2.png'
         text: "Check out these resources if you need more support: 1. forum.code.org 2. @teachcode on Twitter 3. studio.code.org "
+    hoc_dance_warmup_2019:
+      1:
+        image: 'notes/hoc_dance_warmup_1.png'
+        text: "Hour of Code | Dance Party: Warm Up"
+      2:
+        image: 'notes/hoc_dance_warmup_2.png'
+        text: "Hi! My name is Miral Kotb and I'm a dancer, software developer, and creator of iLuminate."
+      3:
+        image: 'notes/hoc_dance_warmup_3.png'
+        text: "Computer science relates to creativity in numerous ways. Immeasurable, really. I mean, once you have the ability to write software you can put ideas into anything. I do it with light suits. There's so much you can do once you have the tools to write software, and the possibilities are really endless."
+      4:
+        image: 'notes/hoc_dance_warmup_4.png'
+        text: "Over the next hour, you're going to get started with computer science by programming your own dance party! We've assembled some hit music and a team of great dancers for you to play with."
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "You'll be using blocks of code to choose different dancers, change their dance moves, make them respond to the music, and make them interactive."
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "You'll see that your screen is split into three main parts. On the left is the play space. This is where your dancers will show up."
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "The middle area is the toolbox. New blocks of code will be available in this space as you go through the lessons."
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "The space to the right is the workspace. You can drag blocks out of the toolbox and into the workspace to build your program."
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "The instructions for each level will be up here at the top of the screen. If you need a hint, just click the light bulb."
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "To start off, let's make a new dancer with this red block. First, drag it out of the toolbox and snap it under this orange \"setup\" block. This dancer is a cat."
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "You can also change where the dancer appears in your play space with this."
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "Above the play space is a menu for picking out music. There are a ton of songs to choose from so have fun finding your favorites. Under the play space is the run button. When you press run, you'll see the dancers from your program appear in the play space and the music will play."
+      13:
+        image: 'notes/hoc_dance_warmup_13.png'
+        text: "Try it yourself! And if you're feeling stuck, it's okay, just get up and get moving! And before you know it, you'll have made your own dance party. So, what will you create?"
+    hoc_dance_events_2019:
+      1:
+        image: 'notes/hoc_dance_events_1.png'
+        text: "Hour of Code | Dance Party: Events"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "My name is Erin, and I am a software engineer here at Code.org, and I helped build Dance Party."
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "To make different dance moves happen at just the right time with the music, you can use something called events. An event tells your program to \"listen\" for something to happen and then react right away."
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "Some examples of events are listening for a mouse click, an arrow button, or a tap on the screen."
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "Here we’re going to program a dancer to perform a move when you press the arrow buttons on the screen, or the keys on your keyboard."
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "We can use the \"when up arrow\" event block and connect a \"do once\" block to it. When someone press the up arrow key, the code attached to the \"when up arrow\" block is run. Which dance move will you choose?"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "Make sure the type of dancer you choose matches one of the dancers you created inside the \"setup\" block, or you might not see anything happen."
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "Eventually, you can create more events like this to make your dancers perform different moves with each key. Give it a try, and with a few lines of code you can make your own interactive dance."
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "Hour of Code | Dance Party: Measures"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "I'm Aloe Blacc. I'm a singer, songwriter, and entertainer. I think computer science is really important to learn because computer science is the future, and I think it's important for people to be in control of the technology that is literally controlling their lives."
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "The event we’re going to use now will listen for a change in the song. That change will trigger you dancer to do a new dance."
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "Professional dancers practice their choreography by counting the beats of the song. In music, a measure refers to a certain number of beats. In most popular songs, a measure is four beats long."
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "To get your dancers to let loose, you'll need a green event block. This event block says, \"after 4 measures\"."
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "If you drag out a purple \"do forever\" block, you can pick a dance for your dancer to do. Because it's under the \"after 4 measures\" event block, your dancer will wait for four measures of the song before starting their dance."
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "Keep an eye on the measure counter at the top of the display area."
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "Look and listen for the event that will trigger the dance code. And right on cue, our dancer starts going."
+    hoc_dance_properties_2019:
+      1:
+        image: 'notes/hoc_dance_properties_1.png'
+        text: "Hour of Code | Dance Party: Properties"
+      2:
+        image: 'notes/hoc_dance_properties_2.png'
+        text: "My name is Maria I'm a junior at the University of Washington and I'm an Amazon Future Engineer."
+      3:
+        image: 'notes/hoc_dance_properties_3.png'
+        text: "I love computer science because it incorporates problem-solving and critical thinking and after putting hours of work into something you can get something really cool and rewarding out of it."
+      4:
+        image: 'notes/hoc_dance_properties_4.png'
+        text: "So far you’ve had a chance to play some different types of dancers and you've programmed them to do different types of dance moves. But how do these moves really work?"
+      5:
+        image: 'notes/hoc_dance_properties_5.png'
+        text: "Every dance move is made up of a series of images called frames. Each frame is slightly different from the one before it. When your program runs, the computer shows one frame after another. They're shown so fast that it looks like the dancer is moving. This is the secret behind all animation."
+      6:
+        image: 'notes/hoc_dance_properties_6.png'
+        text: "Not only can you change your dancer's moves, you can also change a dancer's properties. Properties describe things like the dancer's position on the screen, the dancer's size, and the dancer's color."
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "To change the properties of a dancer you'll use a set block.  Let's use a set block to make our dancers look smaller. First, drag the set block into your program."
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "Then, select a dancer you’d like to change, and type in the size they will appear on screen. Full size is 100. If you choose a lower number, that will make the dancer smaller. The smaller the dancer is, the further away it looks."
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "Using the set block, you can also change a dancer's dimensions, rotation, position and color. By playing around with these properties you can make all kinds of changes and link them to different parts of the song."
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "Remember, you can only set the properties of a dancer that already exists. Make sure that your set block comes after the \"Make a new dancer\" block. Feel free to experiment be creative, and have fun!"
+    hoc_dance_congrats_2019:
+      1:
+        image: 'notes/hoc_dance_congrats_1.png'
+        text: "Hour of Code | Dance Party: Party On!"
+      2:
+        image: 'notes/hoc_dance_congrats_2.png'
+        text: "Congratulations! You've just learned the basics of computer science. Now you can use these blocks to create a dance party of your own design to share with your friends."
+      3:
+        image: 'notes/hoc_dance_congrats_2019_3.png'
+        text: "If you look in the tool box, you'll find some brand new blocks that you haven't seen before. For instance, you can use the layout block to arrange the dancers in different ways on the screen."
+      4:
+        image: 'notes/hoc_dance_congrats_4.png'
+        text: "Have a look around and try experimenting with these new blocks and features. Will you create a carefully choreographed dance to your favorite song?"
+      5:
+        image: 'notes/hoc_dance_congrats_5.png'
+        text: "Or a dance-off with your friends?"
+      6:
+        image: 'notes/hoc_dance_congrats_6.png'
+        text: "Or something else altogether?"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "At the end of the tutorial you can share a link to your creation with your friends. Stretch your imagination and just have fun!"

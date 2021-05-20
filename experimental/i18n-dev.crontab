@@ -1,0 +1,50 @@
+# What is this file?
+# This is a backup of the crontab configuration running on the i18n-dev server.
+#
+# How was this file created?
+# ```
+# ssh -t aws ssh -t i18n-dev
+# crontab -l > i18n-dev.crontab
+# ```
+#
+# How can I load this file into the i18n-dev server?
+# ```
+# ssh -t aws ssh -t i18n-dev
+# crontab i18n-dev.crontab
+# ```
+#
+# Where can I ask a question about this config?
+# Reach out to the #i18n slack channel.
+
+PATH=/home/ubuntu/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOME=/home/ubuntu
+
+# Run a CI Build to update the server from staging. We do this primarily to
+# make sure the server gets seeded with latest level content for the sync in.
+# Note that the CI_ONLY_BUILD environment variable is necessary; the server is
+# not set up to actually serve a version of the website, and it will fail to
+# build correctly if not thus restricted.
+0 */4 * * * cd /home/ubuntu/code-dot-org && CI_ONLY_BUILD=true bundle exec ./bin/cronjob ./aws/ci_build >>/tmp/cronlog 2>&1
+
+# Run the I18n Sync!
+# Sync is scheduled for 12:30 AM PST every Monday; run around midnight so the
+# sync is hopefully finished by start of day on Monday, offset by 30 minutes so
+# we don't conflict with the ci_build which runs on the hour.
+30 8 * * MON (cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/sync-all.rb -yip | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error) >>/tmp/cronlog 2>&1
+
+# Run the sync down periodically throughout the week. Specifically:
+# - Run it every other hour. This is a somewhat arbitrarily-chosen frequency
+#   for a test period. We expect to refine this over time.
+# - Run it on the half-hour. Like for the full sync, this is done to reduce the
+#   chance of colliding with the CI Build.
+# - Run it every day except Monday. This is done so we don't conflict with the
+#   full sync, and also because we expect to spend Monday verifiying the
+#   results of the full sync.
+30 */2 * * SUN,TUE-SAT cd /home/ubuntu/code-dot-org && ((bundle exec ./bin/i18n/sync-all -c down && bundle exec ./bin/i18n/sync-all -c out) | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+
+# Periodically check to see if the I18n Sync PRs have been merged and attempt
+# to return to staging.
+0 */1 * * * cd /home/ubuntu/code-dot-org && git fetch && (bundle exec ./bin/i18n/sync-all.rb -y -c return-to-staging | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
+
+# Update string translation status to Redshift
+0 0 * * * cd /home/ubuntu/code-dot-org && bundle exec .bin/i18n/translation_status/update_translation_status.rb

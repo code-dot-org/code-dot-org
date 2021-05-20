@@ -3,9 +3,6 @@ gl-ES:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Múltiple Escolla
-        questions:
-        - text: Escolle un algoritmo para a imaxe fornecida.
         answers:
         - text: Comeza cun cadrado<br/>Coloca un triángulo por enriba do cadrado<br/>Coloca
             un triángulo abaixo do cadrado
@@ -14,19 +11,26 @@ gl-ES:
             un triángulo á dereita do paralelogramo
         - text: Comeza cun cadrado<br/>Coloca un triángulo abaixo do cadrado<br/>Coloca
             un paralelogramo á dereita do triángulo
-      2-3 Algorithms Multi 2:
-        title: Múltiple Escolla
-        content1: Comeza cun triángulo<br/>Coloca un cadrado abaixo do triángulo<br/>Coloca
-          outro triángulo abaixo do cadrado
         questions:
-        - text: Que imaxe <em>non</em> segue este algoritmo?
+        - text: Escolle un algoritmo para a imaxe fornecida.
+        title: Múltiple Escolla
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
+        content1: Comeza cun triángulo<br/>Coloca un cadrado abaixo do triángulo<br/>Coloca
+          outro triángulo abaixo do cadrado
+        questions:
+        - text: Que imaxe <em>non</em> segue este algoritmo?
+        title: Múltiple Escolla
       2-3 Big Event Match 1:
-        title: Asociación
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Fai a correspondencia da combinación de botóns para os movementos
           de danza.
         questions:
@@ -34,206 +38,205 @@ gl-ES:
         - {}
         - {}
         - {}
+        title: Asociación
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Asociación
         content2: Usa a chave para relacionar cada código a súa letra
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Asociación
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Conditionals Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: De acordo coas regras do xogo, que conxunto de cartas foi marcado
             correctamente?
+        title: Múltiple Escolla
+      2-3 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Como simplificarías esta secuencia con bucles?
+        title: Múltiple Escolla
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Asociación
         content1: Asocia a reixa ao programa.
         questions:
         - {}
         - {}
         - {}
+        title: Asociación
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 Graph Paper Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Cal programa crea esta imaxe?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Múltiple Escolla
       2-3 Maze Match 2:
-        title: Xogo de labirinto
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Asocia os desafíos aos bloques
-        pre_title: Instrucións
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Xogo de labirinto
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
         title: Labirinto - Múltiple escolla
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Múltiple Escolla
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
-      2-3 Relay Programming Multi 2:
+        questions:
+        - {}
         title: Múltiple Escolla
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
         questions:
         - text: Que combinación entre imaxe e programa non contén erros?
+        title: Múltiple Escolla
+      2-3 artist debug multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist debug multi 1:
+        - {}
         questions:
         - {}
+      2-3 artist functions multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist functions multi 1:
-        title: Funcións do Artista - Múltiple escolla 1
         questions:
         - text: Escolle os bloques correctos para debuxar a imaxe usando as funcións
             dadas
+        title: Funcións do Artista - Múltiple escolla 1
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: Asocia o bucle á figura
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 1:
-        title: bucles do Artista - Múltiple escolla
         questions:
         - text: Cal figura é creada por este bucle?
+        title: bucles do Artista - Múltiple escolla
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 2:
-        title: bucles do Artista - Múltiple escolla
         questions:
         - text: Que figura é creada por este programa?
+        title: bucles do Artista - Múltiple escolla
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: O Artista - Asociación
         content1: Asocia a figura cos bloques que a completan.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: O Artista - Asociación
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Que comparación de abaixo é certa?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Escolle os mellores bloques.
+      2-3 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: Os bucles da Abella - Múltiple escolla 1
         questions:
         - text: Que bloques recollen todo o néctar?
+        title: Os bucles da Abella - Múltiple escolla 1
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: Labirinto Un
         content1: Asocia os desafíos aos bloques
         questions:
         - {}
         - {}
         - {}
+        title: Labirinto Un
+      2-3 maze multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 maze multi 1:
-        title: Labirinto de Múltiple Escolla Un
+        - {}
         questions:
         - text: Que conxunto de bloques é a resposta correcta?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirinto de Múltiple Escolla Un
       4-5 Algorithms Match 1:
-        title: Asociación
+        answers:
+        - text: "<h4>Define a puntuación do xogador 1 como 0</h4>"
+        - text: "<h4>O xogador 1 bota o dado</h4>"
+        - text: "<h4>Agrega o resultado do xogador 1 á puntuación total</h4>"
+        - text: "<h4>Compara a puntuación dos xogadores para ver quen vence</h4>"
         content1: Asoca os pasos do Xogo de Dados á orde en que deben aparecer no
           algoritmo.
         questions:
@@ -241,22 +244,22 @@ gl-ES:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Define a puntuación do xogador 1 como 0</h4>"
-        - text: "<h4>O xogador 1 bota o dado</h4>"
-        - text: "<h4>Agrega o resultado do xogador 1 á puntuación total</h4>"
-        - text: "<h4>Compara a puntuación dos xogadores para ver quen vence</h4>"
+        title: Asociación
       4-5 Algorithms Multi 1:
-        title: Múltiple Escolla
-        questions:
-        - text: Cal destes elementos é o máis difícil para ser descrito cun algoritmo?
         answers:
         - text: Lavando os dentes
         - text: Facendo boliños
         - text: Facer compras a partir de unha lista
         - text: Banana
+        questions:
+        - text: Cal destes elementos é o máis difícil para ser descrito cun algoritmo?
+        title: Múltiple Escolla
       4-5 Computational Thinking Match 1:
-        title: Asociación
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Cada un deses vehículos foi decomposto en partes menores. Asocia
           cada vehículo coa súa lista de partes correcta.
         questions:
@@ -264,77 +267,77 @@ gl-ES:
         - text: "<h3>Rodas/lado: 2 <br/>xanelas/lado: 1</h3>"
         - text: "<h3>Rodas/lado: 2 <br/>xanelas/lado: 6</h3>"
         - text: "<h3>Rodas/lado: 3 <br/>xanelas/lado: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Asociación
       4-5 Computational Thinking Multi 1:
-        title: Múltiple Escolla
-        questions:
-        - text: Vigo é unha cidade grande.<br/>Santiago de Compostela é unha cidade
-            media<br/>Monforte é unha cidade pequena.
         answers:
         - text: Vigo _____ unha _____ _____.
         - text: _____ é unha cidade _____.
         - text: _____ é unha _____ _____.
         - text: Compostela é unha cidade _____.
-      4-5 Crowdsourcing Multi 1:
-        title: Múltiple Escolla
         questions:
-        - text: Cal desas figuras representa mellor o crowdsourcing?
+        - text: Vigo é unha cidade grande.<br/>Santiago de Compostela é unha cidade
+            media<br/>Monforte é unha cidade pequena.
+        title: Múltiple Escolla
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - {}
-      4-5 Crowdsourcing Multi 2:
-        title: Múltiple Escolla
         questions:
-        - text: Cal destas actividades sería mellor para practicar crowdsourcing?
+        - text: Cal desas figuras representa mellor o crowdsourcing?
+        title: Múltiple Escolla
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Limpando o teu cuarto
         - text: Comendo a sobremesa
         - text: Peiteando o cabelo
         - text: Lavando o rostro
-      4-5 Digital Footprint Multi 1:
-        title: Múltiple Escolla
         questions:
-        - text: Que parte da información listada abaixo pode ser compartida na internet?
+        - text: Cal destas actividades sería mellor para practicar crowdsourcing?
+        title: Múltiple Escolla
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: O teu aniversario
         - text: A túa comida favorita
         - text: O teu enderezo
         - text: O número do cartón de crédito dos teus pais
-      4-5 Internet Multi 1:
+        questions:
+        - text: Que parte da información listada abaixo pode ser compartida na internet?
         title: Múltiple Escolla
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cando tentas te conectar á code.org, a que enderezo IP o DNS probabelmente
             che vai direcionar?
+        title: Múltiple Escolla
+      4-5 Internet Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Internet Multi 2:
-        title: Múltiple Escolla
         questions:
         - text: Se o DNS mandouno para a páxina con enderezo IP 100.42.50.110, en
             que sitio web estás?
+        title: Múltiple Escolla
+      4-5 Songwriting Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Songwriting Multi 1:
-        title: Múltiple Escolla
         questions:
         - {}
+        title: Múltiple Escolla
+      4-5 Suncatchers Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Suncatchers Match 1:
-        title: Asociación
         content1: Asocia cada programa á palabra que produce, usando o grupo de habilidades
           fornecidas.
         questions:
@@ -342,264 +345,424 @@ gl-ES:
         - {}
         - {}
         - {}
+        title: Asociación
+      4-5 Suncatchers Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      4-5 Suncatchers Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Cal dos programas de abaixo <em>non</em> realiza a mesma sequencia
             exacta do Programa 1?
+        title: Múltiple Escolla
+      4-5 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: bucles do Artista - Múltiple escolla
+        - {}
         questions:
         - text: Que bloques creará o deseño?
+        title: bucles do Artista - Múltiple escolla
+      4-5 artist multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 1:
-        title: O Artista - Múltiple escolla
         questions:
         - text: Que bloques debuxan un retángulo cun perímetro de 100?
+        title: O Artista - Múltiple escolla
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 2:
-        title: O Artista - Múltiple escolla
         questions:
         - text: Que debuxo é simétrico?
+        title: O Artista - Múltiple escolla
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee conditionals multi 1:
-        title: Condicionais da abella - Múltiple escolla
         questions:
         - text: Escolle os mellores bloques.
+        title: Condicionais da abella - Múltiple escolla
+      4-5 bee debug multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee debug multi 1:
-        title: Depuración da abella - Múltiple escolla
         questions:
         - text: Que versión da función vai funcionar?
+        title: Depuración da abella - Múltiple escolla
+      4-5 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee loops multi 1:
-        title: Os bucles da Abella - Múltiple escolla
         questions:
         - text: Que bloques van resolver o desafío?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Os bucles da Abella - Múltiple escolla
       4-5 maze conditionals multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Cales bloques resolven o desafío?
         title: Condicionais do labirinto - Múltiple escolla
-        questions:
-        - text: Cales bloques resolven o desafío?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Xogo de labirinto
-        content1: Asocia os desafíos aos bloques
-        pre_title: Instrucións
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Asocia os desafíos aos bloques
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Xogo de labirinto
       4-5 maze multi 1:
-        title: Labirinto - Múltiple escolla
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Cales bloques resolven o desafío?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      Begin planning your project:
-        title: Título
+        title: Labirinto - Múltiple escolla
       CSD Header Size MC:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Mira o código de abaixo e predí como se mostrarán as cabeceiras.
+          Elixe unha das opcións da dereita.
+        title: Comprobación rápida das cabeceiras
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Mira o código de abaixo e predí como se mostrarán as cabeceiras.
+          Elixe unha das opcións da dereita.
+        title: Comprobación rápida das cabeceiras
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Design Project:
-        title: Título
-      CSD U2 Design Project_2018:
-        title: Título
-      CSD U2 Design Project_2018_2019:
-        title: Título
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Mira o código de abaixo e predí como se mostrarán as cabeceiras.
+          Elixe unha das opcións da dereita.
+        title: Comprobación rápida das cabeceiras
+      CSD U2 L1 Overview:
+        markdown: |-
+          # Resumo
+
+          Esta lección presenta os propósitos que un sitio web pode ofrecer, tanto para os usuarios como para os creadores. Esta aula explora un puñado dos sitios web máis empregados nos Estados Unidos e analiza como cada un deses sitios é útil para os usuarios e como podería servir tamén aos seus creadores.
+          ## Vocabulario
+
+          * * Sitio web** - Un lugar conectado a Internet que mantén unha ou máis páxinas na World Wide Web.
+
+
+          ## Recursos
+
+          * [A finalidade dos sitios web - Guía de actividades] (en inglés)
+          (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [A finalidade dos sitios web - Guía de ￼actividades￼]
+          (en inglés)(https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L2 Overview:
-        title: Título
+        markdown: "# Resumo\n\nEsta lección presenta os sitios web como un medio de
+          expresión persoal. A clase primeiro discute os diferentes xeitos en que
+          a xente expresa e comparte os seus intereses e ideas, e logo mira algúns
+          exemplos de sitios web feitos polos estudantes dun curso anterior. Finalmente,
+          todos comparten unha lista de temas e intereses a incluír, creando un recurso
+          para desenvolver un sitio web persoal no resto da unidade. \n## Vocabulario\n\n*
+          * Contido da páxina web** - O texto sen procesar, imaxes e outros elementos
+          incluídos nunha páxina web\n\n\n## Recursos\n\n* [Bosquexo da páxina web
+          persoal - Guía de actividades] (en inglés)(https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)"
+        teacher_markdown: "* [Bosquexo da páxina web persoal - Guía de ￼actividades￼]
+          (en inglés)(https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
-        title: Título
+        markdown: |
+          # Resumo
+
+          Esta lección presenta o HTML como unha solución ao problema de como comunicar tanto o contido como a estrutura dun sitio web a un ordenador. A lección comeza cunha breve actividade sen conexión que demostra os desafíos de comunicar efectivamente a estrutura dunha páxina web. A clase examina unha páxina HTML no Laboratorio Web e discute como as etiquetas HTML axudan a resolver este problema e, finalmente, emprega o HTML para escribir as primeiras páxinas web da unidade.
+          ## Vocabulario
+
+          * * HTML** - Linguaxe de Etiquetaxe de HiperTexto, unha linguaxe usada para crear páxinas web
+          * * HTML Element** - Un elemento dun sitio web, marcado por unha etiqueta de inicio e ás veces pechado cunha etiqueta de final
+          * * HTML Tag** - O conxunto especial de caracteres que indica o comezo e o final dun elemento HTML e o tipo dese elemento
+          * * Contido do sitio web** - O texto sen formato, imaxes e outros elementos incluídos nunha páxina web
+          * * Estrutura do sitio web** - A finalidade das diferentes pezas de contido nunha páxina web, utilizadas para axudar á computadora para determinar como debe ser mostrado ese contido
+
+          ##  Código Introducido
+
+          * **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/)** - `<!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
+          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`
+          * **[Head](//studio.code.org/docs/weblab/head/)** - `<head></head>`
       CSD U2 L4 Overview:
-        title: Título
+        markdown: |-
+          # Resumo
+
+          Esta lección continúa a introdución ás etiquetas HTML, esta vez con encabezados. Na clase practicarás o uso de etiquetas de encabezado para crear títulos de páxina e de sección e aprenderás como se mostran por defecto os diferentes elementos de encabezado. Logo, a clase propón como organizar o contido das páxinas web persoais que se construirán ao longo da unidade e comeza a primeira páxina do proxecto.
+          ## Vocabulario
+
+          * **Cabeceira** - Un título ou resumo dun documento ou sección dun documento.
+
+          ## Código introducido
+
+          * **[Heading](//studio.code.org/docs/weblab/h/)** - `<h1></h1>`
       CSD U2 L5 Overview:
-        title: Título
+        markdown: |+
+          # Resumo
+
+          Esta lección dá un paso atrás na creación do sitio web persoal para falar da información persoal que a xente elixe compartir dixitalmente. A clase comeza discutindo que tipos de información é bo compartir con outras persoas, logo bota un ollo a varias páxinas de mostra de medios sociais para ver que tipos de información persoal poderían ser compartidos intencionalmente ou non. Por último, a clase propón unha serie de pautas que deben seguirse ao poñer información en liña.
+          ## Vocabulario
+
+          * **Pegada dixital** - A información recompilada sobre un individuo a través de múltiples sitios web en internet.
+
+          ## Recursos
+
+          * [Cando é importante a túa privacidade? - Guía de actividades en inglés]
+          (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Detective Social - Guía de actividades en inglés]
+          (https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+
+        teacher_markdown: "* [Cando é importante a túa privacidade? - en inglés] (https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit)
+          – Exemplar da guía de actividades ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Social Sleuth](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/)
+          – Guía de actividades ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))"
       CSD U2 L6 Overview:
-        title: Título
-      CSD U2 expand project:
-        title: Título
-      CSD U2 expand project_2018:
-        title: Título
-      CSD U2 expand project_2018_2019:
-        title: Título
+        markdown: |-
+          # Resumo
+
+          Esta lección presenta as listas ordenadas e non ordenadas e as etiquetas HTML asociadas &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt;. A clase mostra o uso das etiquetas, logo regresa ao proxecto da páxina web persoal para agregar unha nova páxina HTML que inclúa as novas etiquetas.
+
+          ## Código presentado
+
+          * **[Lista desordenada – en inglés](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
+          * **[Elemento da lista – en inglés](//studio.code.org/docs/weblab/li/)** - `<li></li>`
+          * **[Lista ordenada – en inglés](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+      CSD U2 L7 Overview:
+        markdown: |-
+          # Resumo
+
+          Esta lección abarca como utilizar o contido creado por outros nun sitio web respectando os dereitos do creador orixinal dese contido. Despois de estudar primeiro as licenzas Creative Commons, a clase aprende como agregar imaxes ás páxinas web e dar a atribución adecuada ao facelo.
+
+          ## Vocabulario
+
+          * **Cita** - Unha cita ou referencia a un libro, artigo ou autor, especialmente nun traballo académico.
+          * **Copyright** - o dereito legal exclusivo, dado a un creador ou a un representante legal para imprimir, publicar, interpretar, filmar ou gravar material literario, artístico ou musical, e para autorizar a outros a facer o mesmo.
+          * ** Creative Commons** - Licencias de dereitos de autor públicas que permiten a libre distribución dun traballo que doutro xeito estaría protexido por dereitos de autor. Unha licencia CC utilízase cando un autor quere dar ás persoas o dereito de compartir, usar e construír sobre un traballo que ￼crearon￼.
+          * ** ￼Propiedade￼Intelectual** - Unha obra ou invento que é o resultado da creatividade, como un manuscrito ou un deseño, sobre o que se teñen dereitos e para o que se pode solicitar unha patente, un copyright, unha marca rexistrada, etc.
+
+          ￼##￼￼ Código presentado￼
+
+          *  **[Image](//studio.code.org/docs/weblab/img/)** - `<img />`
+
+          ##￼ ￼Recursos
+
+          * [Resumo dos Creative Commons](￼￼￼￼￼￼https://www.youtube.com/watch?v=HKfqoPYJdVc￼￼) – Vídeo
+          * [Licencia do teu traballo - Guía de ￼actividades￼ en inglés](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licencia do teu traballo - Guía de ￼actividades￼ en
+          inglés](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
+      CSD U2 Top Websites:
+        markdown: |-
+          # Os mellores sitios web dos EE. UU.
+
+          Os seguintes sitios web son os máis visitados nos Estados Unidos. Cada un deles inclúe unha breve descrición da súa función principal.
+
+
+          1. Google.com - Motor de busca de sitios web, fotos, vídeos e outros medios de comunicación
+          2. Youtube.com - Sitio de vídeo enviado polo usuario con cualificacións e comentarios
+          3. Facebook.com - Rede social que permite aos usuarios compartir información cos seus amigos
+          4.  Amazon.com - Sitios de compras en liña para todo tipo de bens
+          4. Yahoo.com - Un motor debusca, provedor de correo electrónico e fonte de noticias
+          5. Wikipedia.org - Unha enciclopedia libre con contido xerado polos usuarios
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Compara a ￼lista￼ co código que a ￼fai￼.
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Comprobación rápida das listas
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Compara a ￼lista￼ co código que a ￼fai￼.
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Comprobación rápida das listas
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Compara a ￼lista￼ co código que a ￼fai￼.
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Comprobación rápida das listas
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: Título
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: Título
       CSD U3 Boolean MC_2018:
-        title: Título
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: Título
       CSD U3 Boolean MC_2018_2019:
-        title: Título
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: Título
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -619,1051 +782,1256 @@ gl-ES:
         - {}
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U3 combining rep:
-        title: Título
-      CSD U3 combining rep_2018:
-        title: Título
-      CSD U3 combining rep_2018_2019:
-        title: Título
+        questions:
+        - {}
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: Título
-      CSD U5 Encryption 1_2018:
-        title: Título
-      CSD U5 Encryption 1_2018_2019:
-        title: Título
-      CSD U5 L13 SFLP Interpreting Data:
-        title: Título
-      CSD U5 data visualization:
-        title: Título
-      CSD U5 data visualization_2018:
-        title: Título
-      CSD U5 data visualization_2018_2019:
-        title: Título
-      CSD U5 student record:
-        title: Título
-      CSD U5 student record_2018:
-        title: Título
-      CSD U5 student record_2018_2019:
-        title: Título
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      Internet Simulator Setup 2:
-        title: Título
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       K-1 Artist 1 Multi 1:
-        title: Múltiple Escolla
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Que bloques resolven o desafío?
+        title: Múltiple Escolla
+      K-1 Artist 1 Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 1 Multi 2:
-        title: Múltiple Escolla
         questions:
         - text: Cales bloques forman o cadrado?
+        title: Múltiple Escolla
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Asociación
         content2: Asocia as figuras baseadas no tipo.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Múltiple Escolla
-        questions:
-        - text: Canto néctar representa isto?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Múltiple Escolla
-        questions:
-        - text: Canto néctar representa isto?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Asociación
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Canto néctar representa isto?
+        title: Múltiple Escolla
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Canto néctar representa isto?
+        title: Múltiple Escolla
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Asocia os bloques
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Asociación
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Asociación
         content2: Fai a correspondencia da combinación de botóns para os movementos
           de danza.
         questions:
         - {}
         - {}
         - {}
+        title: Asociación
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Digital Footprint Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Que animal ten a pegada que o coloca <strong>máis en risco</strong>?
+        title: Múltiple Escolla
+      K-1 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Getting Loopy Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Como simplificarías esta secuencia con bucles?
+        title: Múltiple Escolla
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Múltiple Escolla
+        - {}
         questions:
         - text: Cal frecha leva o Flurb ao tesouro?
+        title: Múltiple Escolla
+      K-1 Keep it Private Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Keep it Private Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Que informacións <strong>non</strong> debes compartir online?
+        title: Múltiple Escolla
+      K-1 Maze Debugging Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Debugging Multi 1:
-        title: Múltiple Escolla
+        - {}
         questions:
         - text: Que opción debe ser o bloque final?
+        title: Múltiple Escolla
+      K-1 Maze Loops Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Que bloque de repetición é o mesmo?
+        title: Múltiple Escolla
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Loops Multi 2:
-        title: Múltiple Escolla
         questions:
         - text: Escolle o bloque de repetición correcto.
+        title: Múltiple Escolla
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Asociación
+        - {}
         content2: Asocia os desafíos aos bloques
-        pre_title: Instrucións
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Asociación
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Maze Multiple Choice 2:
-        title: Labirinto
         questions:
         - text: Que resposta é a solución para este nivel?
+        title: Labirinto
+      K-1 Move It Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Move It Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Cal algoritmo leva o Flurb até as flores?
+        title: Múltiple Escolla
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Que paso debe ficar no comezo deste algoritmo?
+        title: Múltiple Escolla
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Plant a Seed Multi 2:
-        title: Múltiple Escolla
         questions:
         - text: Que paso debe cubrir o espazo en branco para este algoritmo?
+        title: Múltiple Escolla
+      K-1 Word Search Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Word Search Multi 1:
-        title: Múltiple Escolla
         questions:
         - text: Que bloques forman a palabra "MOVE"?
+        title: Múltiple Escolla
+      K-1 Word Search Multi 3:
         answers:
         - {}
         - {}
         - {}
-      K-1 Word Search Multi 3:
-        title: Múltiple Escolla
         questions:
         - text: Cal é palabra formada?
+        title: Múltiple Escolla
+      behaviors 1 predict:
         answers:
         - {}
         - {}
         - {}
-      Multi-Screen Apps:
-        title: Título
-      New Challenge Introduction:
-        title: Título
-      OPD-K5 Stage3aGo:
-        title: Título
-      Prepare for your presentation:
-        title: Título
-      behaviors 1 predict:
+        - {}
         questions:
         - {}
+      behaviors 1 predict_2020:
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_freeplay_choice:
+        display_name: Xogo libre

@@ -1,0 +1,29 @@
+th:
+  data:
+    block_categories:
+      Actions: การดำเนินการ
+      Advanced: ก้าวหน้า
+      Behaviors: พฤติกรรม
+      Brushes: พู่กัน
+      Color: สี
+      Comment: หมายเหตุ (Comment)
+      Comments: หมายเหตุ (Comment)
+      Conditionals: เงื่อนไข 
+      Dancers: นักเต้น
+      Default: ค่าปริยาย
+      Events: เหตุการณ์
+      Functions: ฟังก์ชัน
+      'Functions ': 'ฟังก์ชั่น '
+      Game/Score: เกม/คะแนน
+      Games/Score: เกม/คะแนน
+      Groups: กลุ่ม
+      Locations: สถานที่ตั้ง
+      Logic: ตรรกะ
+      Loops: ลูป
+      Math: คำนวณ
+      Numbers: ตัวเลข
+      Properties: คุณสมบัติ
+      Text: ข้อความ
+      Variables: ตัวแปร
+      'Variables ': 'ตัวแปร '
+      World: โลก

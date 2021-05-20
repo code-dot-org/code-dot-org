@@ -1,58 +1,66 @@
 =inline_css 'mobile-footer.css'
 %script{:defer => "defer", src: '/js/mobile-footer.js'}
 
--if request.language == "en"
-  %footer#pagefooter
-    #footer-links
-      %ul
-        %li#privacy
-          %a{:href=>'/privacy'} Privacy Policy
-        %li
-          %a{:href=>'/about'} About
-        %li
-          %a{:href =>'/partners'} Partners
-        %li
-          %a{:href=>'https://medium.com/@codeorg', :target=>'_blank'} Blog
-        %li
-          %a{:href=>'/donate'} Donate
-        %li
-          %a{:href=>'/shop'} Store
-        %li
-          %a#support{:href=>'https://support.code.org/', target: '_blank'} Support
-        %li
-          %a{:href=>'/tos'} Terms
+%footer#pagefooter
+  #footer-links
+    %ul
+      %li#privacy
+        %a{:href=>'/privacy', :style=>'color: #ffa400;'}
+          - @privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
+          - if @privacy_updated
+            !=I18n.t(:footer_privacy_policy_updated)
+          - else
+            !=I18n.t(:footer_privacy_policy)
+      %li
+        %a{:href=>'/about'}
+          !=I18n.t(:footer_about)
+      %li
+        %a{:href =>'/partners'}
+          !=I18n.t(:footer_partners)
+      %li
+        %a{:href=>'https://medium.com/@codeorg', :target=>'_blank'}
+          !=I18n.t(:footer_blog)
+      %li
+        %a{:href=>'/donate'}
+          !=I18n.t(:footer_donate)
+      %li
+        %a{:href=>'/shop'}
+          !=I18n.t(:footer_store)
+      %li
+        %a#support{:href=>'https://support.code.org/', target: '_blank'}
+          !=I18n.t(:footer_support)
+      %li
+        %a{:href=>'/tos'}
+          !=I18n.t(:footer_terms)
 
-      #footer-toggle
-        Code.org
-        %i#up{:class=>'fa fa-chevron-up'}
-        %i#down{:class=>'fa fa-chevron-down'}
+    #footer-toggle
+      Code.org
+      %i#up{:class=>'fa fa-chevron-up'}
+      %i#down{:class=>'fa fa-chevron-down'}
 
-    .social-language-box
-      .language-dropdown
-        =view :language
-
-      .social-media
-        %a.social-icon{:href=>'https://www.facebook.com/Code.org', :target=>'_blank'}
-          %i.fa.fa-facebook.fa-lg
-          &nbsp; &nbsp;
-        %a.social-icon{:href=>'https://twitter.com/codeorg', :target=>'_blank'}
-          %i.fa.fa-twitter.fa-lg
-          &nbsp; &nbsp;
-        %a.social-icon{:href=>'https://www.instagram.com/codeorg', :target=>'_blank'}
-          %i.fa.fa-instagram.fa-lg
-          &nbsp; &nbsp;
-        %a.social-icon{:href=>'https://medium.com/@codeorg', :target=>'_blank'}
-          %img{src: '/images/icons/medium-monogram-white.png', style: 'width: 20px'}
-
-    #copyright
-      !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
-      %br
-      Powered by Amazon Web Services
-
--else
-  %footer#pagefooter#non-en
+  .social-language-box
     .language-dropdown
       =view :language
-    #copyright-non-en
-      !="&copy; Code.org, #{Time.now.year}."
-      %br
+
+    .social-media
+      %a.social-icon{:href=>'https://www.facebook.com/Code.org', :target=>'_blank'}
+        %i.fa.fa-facebook.fa-lg
+        &nbsp; &nbsp;
+      %a.social-icon{:href=>'https://twitter.com/codeorg', :target=>'_blank'}
+        %i.fa.fa-twitter.fa-lg
+        &nbsp; &nbsp;
+      %a.social-icon{:href=>'https://www.instagram.com/codeorg', :target=>'_blank'}
+        %i.fa.fa-instagram.fa-lg
+        &nbsp; &nbsp;
+      %a.social-icon{:href=>'https://medium.com/@codeorg', :target=>'_blank'}
+        %img{src: '/images/icons/medium-monogram-white.png', style: 'width: 20px'}
+
+  #copyright
+    !="&copy; Code.org, #{Time.now.year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org."
+    !=I18n.t(:footer_powered_by_aws)
+    %br
+    !=I18n.t(:footer_built_on_github)
+
+  %div.powered-by-aws
+    %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+      %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}

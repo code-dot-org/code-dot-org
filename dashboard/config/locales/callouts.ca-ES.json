@@ -1,0 +1,231 @@
+{
+  "ca-ES": {
+    "data": {
+      "callouts": {
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "Introdueix el nombre de vegades que el zombie ha de moure's fer un cercle complet"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "Utilitza el bloc \"Repeteix\" i fica-hi a dins els blocs en l'àrea de treball"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "Arrossegueu la variable comptador dins d'aquest bloc"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "Utilitza el bloc \"Repeteix\" i fica-hi a dins els blocs en l'àrea de treball"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "Utilitza aquest bloc per establir el valor correcte de \"longitud\"."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "Utilitza aquest bloc per establir el valor correcte de \"longitud\"."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "Divideix 360 pel número de costats per obtenir la mida de cada angle en graus."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "Fes servir aquest botó per editar la funció i canviar la direcció en que l'abella ha de girar per obtenir el nèctar."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "Posa els blocs dins del bucle per repetir les ordres"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "Fes clic aquí per editar la teva funció."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "Fes clic a Edita per afegir un paràmetre a la funció"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "Utilitza les fletxes per moure l'actor"
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "Nou bloc!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "Nou bloc!",
+          "new_block_4": "Nou bloc!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "Afegir aquest bloc al teu programa!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Afegir el teu nou dansaire aquí"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "Nou bloc!",
+          "dance_callout_11_b": "Nou bloc!"
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "Nou bloc!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "Nou bloc!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "Nou bloc!",
+          "new_block_4": "Nou bloc!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "Afegir aquest bloc al teu programa!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "Afegir aquest bloc al teu programa!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "Afegir aquest bloc al teu programa!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Afegir el teu nou dansaire aquí"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "Nou bloc!",
+          "dance_callout_11_b": "Nou bloc!"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "Reprodueix un so quan tingui lloc aquest fet."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "Quin bloc farà que Baymax pugi quan es premi la fletxa amunt?",
+          "Infinity_move_directions_callout_arrow": "Usa les fletxes per dirigir"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "Afegeix un bloc de moviment aquí"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "Col·loca els blocs de moviment aquí dins"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "Fes clic aquí per editar la teva funció."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "Fes clic aquí per editar la teva funció."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "Fes clic aquí per obrir el desplegable \"Funcions\", després fes clic al botó \"Crea una funció\"."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "Fes clic a Edita per afegir un paràmetre a la funció",
+          "add_and_drag_parameter": "Escriu el nom del teu paràmetre aquí, fes clic a Afegeix i llavors arrossega-ho a la teva definició de funció"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "Arrossega la variable de longitud aquí per substituir els interrogants"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "La caixa d'eines té un nou look! Els blocs de \"Accions\" són aquí ara."
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Utilitza aquesta llista desplegable per crear diferents flocs de neu!"
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "Hem posat alguns blocs aquí per a que puguis començar"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "Aquest codi començarà a construir la teva casa. Pots acabar-lo?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Fes clic a \"Executa\" per provar el teu programa"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "Fes clic a \"Executa\" per provar el teu programa"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "Fes clic a \"Executa\" per provar el teu programa"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "Repeteix accions posant blocs d'aquí"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "Aquest codi buscarà lava, pots afegir una ordre per a seguir endavant?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "Aquest ferro és meu!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "Aquest ferro és meu!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "Aquest ferro és meu!"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Utilitza el bloc \"crear un cercle\" i canvia la mida."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Utilitza aquest bloc i posa-ho al voltant dels blocs grisos en l'àrea de treball",
+          "repeat_blocks_2": "(2) Mou el bloc \"Repetir\" aquí i posa els blocs grisos dins"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Utilitza la llista desplegable per substituir \"???\" per un valor"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Utilitza el bloc de repetició per crear aquesta forma."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Utilitza el bloc de repetició per crear aquesta forma."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Utilitza aquesta llista desplegable per crear diferents flocs de neu!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "Arrossega un bloc \"Avança\" i col·loca'l sota el bloc \"Quan s'executi\" per fer avançar l'Elsa"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Utilitza el bloc \"Gira\" per fer girar l'Elsa. El valor que triem en el desplegable determina quants graus girarà l'Elsa"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Utilitza el bloc \"crear una branca de floquet de neu\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Uniu més blocs aquí per crear un quadrat"
+        },
+        "frozen square loop": {
+          "replace_questions": "Utilitza la llista desplegable per substituir \"???\" per un valor"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Utilitza la llista desplegable per substituir \"???\" per un valor"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Utilitza la llista desplegable per substituir \"???\" per un valor"
+        }
+      }
+    }
+  }
+}

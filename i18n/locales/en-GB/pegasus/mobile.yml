@@ -13,7 +13,6 @@
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
   petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_sign_message_support: 'If you support us, sign your name.  Join # others.'
   petition_join_others: 'Join # others'
   name: "Name"
   email: "Email"
@@ -169,3 +168,4 @@
   flappy_shortcode: "flap"
   hoc2018_creativity_create: "Create"
   hoc2018_mc_homepage_try_it: "Try it"
+  footer_donate: "Donate"

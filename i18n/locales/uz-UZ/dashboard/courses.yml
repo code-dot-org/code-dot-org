@@ -1,1 +1,50 @@
+---
 uz:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: Informatika tamoyillari
+          title: Informatika tamoyillari ('17-'18)
+          version_title: "'17-'18"
+          description_student: 2016 yil kuzida Kollej kengashi o‘zining eng yangi AP® kursi - AP Informatika tamoyillarini boshladi. Kurs talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradi va ularni hisoblash va texnologiyalar dunyoga qanday ta'sir qilishi mumkinligini o‘rganishga chorlaydi. AP dasturi informatika sohalarida yetakchilarni yetishtirish va an'anaviy hisoblash vositalari va ko‘p tarmoqli imkoniyatlar bilan kam ta'minlanganlarni sohaga jalb qilish va ilhomlashtirish maqsadida AP kInformatika tamoyillarini ishlab chiqdi.
+          description_teacher: 2016 yil kuzida Kollej kengashi o‘zining eng yangi AP® kursi - AP Informatika tamoyillarini boshladi. Kurs talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradi va ularni hisoblash va texnologiyalar dunyoga qanday ta'sir qilishi mumkinligini o‘rganishga chorlaydi. AP dasturi informatika sohalarida yetakchilarni yetishtirish va an'anaviy hisoblash vositalari va ko‘p tarmoqli imkoniyatlar bilan kam ta'minlanganlarni sohaga jalb qilish va ilhomlashtirish maqsadida AP kInformatika tamoyillarini ishlab chiqdi.
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+        csd-2017:
+          assignment_family_title: Informatika kashfiyotlari
+          title: Informatika fani kashfiyotlari ('17-'18)
+          version_title: "'17-'18"
+          description_student: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+          description_teacher: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+          description_short: O'quvchilarga haqiqiy artefaktlar yaratish imkoniyatini beradigan kirish fanlari kursi.
+        allthethingscourse:
+          title: Barcha narsalar kursi
+          description_short: Bu kurs barcha narsalar uchun
+          description_student: Bu kurs barcha narsalar haqida va talabalar uchun uzunroq tavsifga ega.
+          description_teacher: Bu kurs barcha narsalar haqida va o‘qituvchilar uchun uzunroq tavsifga ega.
+        csd-2018:
+          assignment_family_title: Informatika kashfiyotlari
+          title: Informatika kashfiyotlari ('18-'19)
+          version_title: "'18-'19"
+          description_short: O'quvchilarga haqiqiy artefaktlar yaratish imkoniyatini beradigan kirish fanlari kursi.
+          description_student: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+          description_teacher: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+        csp-2018:
+          assignment_family_title: Informatika tamoyillari
+          title: Informatika tamoyillari ('18-'19)
+          version_title: "'18-'19"
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+          description_student: 2016 yil kuzida Kollej kengashi o‘zining eng yangi AP® kursi - AP Informatika tamoyillarini boshladi. Kurs talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradi va ularni hisoblash va texnologiyalar dunyoga qanday ta'sir qilishi mumkinligini o‘rganishga chorlaydi. AP dasturi informatika sohalarida yetakchilarni yetishtirish va an'anaviy hisoblash vositalari va ko‘p tarmoqli imkoniyatlar bilan kam ta'minlanganlarni sohaga jalb qilish va ilhomlashtirish maqsadida AP kInformatika tamoyillarini ishlab chiqdi.
+          description_teacher: 2016 yil kuzida Kollej kengashi o‘zining eng yangi AP® kursi - AP Informatika tamoyillarini boshladi. Kurs talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradi va ularni hisoblash va texnologiyalar dunyoga qanday ta'sir qilishi mumkinligini o‘rganishga chorlaydi. AP dasturi informatika sohalarida yetakchilarni yetishtirish va an'anaviy hisoblash vositalari va ko‘p tarmoqli imkoniyatlar bilan kam ta'minlanganlarni sohaga jalb qilish va ilhomlashtirish maqsadida AP kInformatika tamoyillarini ishlab chiqdi.
+        csp-2019:
+          title: Informatika tamoyillari ('19-'20)
+          version_title: "'19-'20"
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+          description_student: 2016 yil kuzida Kollej kengashi o‘zining eng yangi AP® kursi - AP Informatika tamoyillarini boshladi. Kurs talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradi va ularni hisoblash va texnologiyalar dunyoga qanday ta'sir qilishi mumkinligini o‘rganishga chorlaydi. AP dasturi informatika sohalarida yetakchilarni yetishtirish va an'anaviy hisoblash vositalari va ko‘p tarmoqli imkoniyatlar bilan kam ta'minlanganlarni sohaga jalb qilish va ilhomlashtirish maqsadida AP kInformatika tamoyillarini ishlab chiqdi.
+          description_teacher: 2016 yil kuzida Kollej kengashi o‘zining eng yangi AP® kursi - AP Informatika tamoyillarini boshladi. Kurs talabalarni informatika fanining asosiy tushunchalari bilan tanishtiradi va ularni hisoblash va texnologiyalar dunyoga qanday ta'sir qilishi mumkinligini o‘rganishga chorlaydi. AP dasturi informatika sohalarida yetakchilarni yetishtirish va an'anaviy hisoblash vositalari va ko‘p tarmoqli imkoniyatlar bilan kam ta'minlanganlarni sohaga jalb qilish va ilhomlashtirish maqsadida AP kInformatika tamoyillarini ishlab chiqdi.
+        csd-2019:
+          title: Informatika kashfiyotlari ('19-'20)
+          version_title: "'19-'20"
+          description_short: O'quvchilarga haqiqiy artefaktlar yaratish imkoniyatini beradigan kirish fanlari kursi.
+          description_student: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+          description_teacher: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.

@@ -1,0 +1,20 @@
+name 'OPD-K5 Younger Grades_copy'
+skip_dialog true
+
+markdown <<MARKDOWN
+# Why teach computer science in the early grades?
+
+<img src="https://images.code.org/0149da542dae03da5f40b7b8aacf73c0-image-1434818868152.jpg" class="level-image">
+
+In addition to the computational thinking practices students learn through coding experience, teaching computer science in the early grades has an additional benefit for students and for society &mdash; we can work to create more equity in the tech industry.
+
+If we wait until high school or college to introduce students to computer science, some students will already have decided that computer science is not for them or they will feel that they are already too far behind compared to students who study it outside of school.
+
+Exposing students to computer science in grades K-5, when they don't have to opt-in to a class like they might in high school, allows all students to see how accessible the subject is, and decide if they enjoy it.
+
+> ## Why do you believe teaching computer science is worthwhile?
+[Tweet your thoughts](https://twitter.com/teachcode) and be sure to tag @teachcode in your tweet so we can respond.
+
+> <a href="http://ctt.ec/Bfjw3" target="blank" rel="noopener noreferrer"><button class="default">Share on Twitter >></button></a><br><br>
+Don't have a Twitter account? You can also find us on [Facebook](https://www.facebook.com/Code.org/) or [Instagram](https://www.instagram.com/codeorg/).
+MARKDOWN

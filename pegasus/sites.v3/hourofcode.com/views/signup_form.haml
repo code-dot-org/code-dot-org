@@ -1,4 +1,7 @@
 - require 'country_codes'
+%script{type: "text/javascript", src: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"}
+%link{rel: "stylesheet", type: "text/css", href: "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"}
+
 - signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
 - signup_submit_census_error_message = hoc_s(:signup_submit_census_error_message).gsub(/"/,"\\\\\"")
 - hoc_year = DCDO.get("hoc_year", 2017)
@@ -47,7 +50,7 @@
         %div
           %select#hoc-event-type.form-control{name: "event_type_s", type: "select"}
             %option{value: nil, selected: true}
-            -['in_school', 'out_of_school'].each do |event_type|
+            -%w(in_school out_of_school at_home).each do |event_type|
               %option{value: event_type}= hoc_s('signup_event_type_' + event_type)
         #event-type-error.error-message{style: "display:none;"}
           = hoc_s(:signup_event_type_error)
@@ -77,8 +80,7 @@
         %label.control-label{for: "hoc-event-location"}
           = hoc_s(:signup_event_location_label)
           %span.required*
-        %div
-          %textarea#hoc-event-location.form-control{name: "event_location_s", placeholder: "Event location address", style: "height: 4em;"}
+        %div#hoc-event-location-selector
         #event-location-error.error-message{style: "display:none;"}
           = hoc_s(:signup_event_location_error)
 
@@ -157,3 +159,4 @@
   var signupErrorMessage = "#{signup_submit_error_message}";
   var censusErrorMessage = "#{signup_submit_census_error_message}";
   var hocYear = "#{hoc_year}"
+  if (typeof mapboxgl === 'object') {mapboxgl.accessToken = "#{CDO.mapbox_access_token}";}

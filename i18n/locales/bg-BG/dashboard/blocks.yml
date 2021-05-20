@@ -2,6 +2,43 @@
 bg:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          MOVE1:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
+          MOVE2:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
       Dancelab_atTimestamp:
         text: след {TIMESTAMP} {UNIT}
         options:
@@ -78,6 +115,27 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
       Dancelab_doMoveEachLR:
         text: "{GROUP} направи {MOVE} {DIR} веднъж"
         options:
@@ -93,7 +151,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           MOVE:
             '"rand"': Случаен
             MOVES.ClapHigh: Пляскай високо
@@ -191,6 +249,27 @@ bg:
             "{x: 100, y: 200}": наляво
             "{x: 300, y: 200}": надясно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случаен
       Dancelab_layoutSprites:
         options:
           GROUP:
@@ -205,21 +284,43 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           FORMAT:
             '"border"': рамка
+            '"diamond"': диамант
             '"circle"': кръг
             '"grid"': мрежа
             '"row"': ред
             '"column"': колона
             '"plus"': плюс
             '"random"': случаен
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': извънземно
+            '"BEAR"': Мечка
+            '"CAT"': котка
+            '"DOG"': куче
+            '"DUCK"': патица
+            '"FROG"': Жаба
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': Ананас
+            '"ROBOT"': робот
+            '"SHARK"': Акула
+            '"UNICORN"': еднорог
+          LOCATION:
+            "{x: 200, y: 100}": горе
+            "{x: 200, y: 300}": долу
+            "{x: 100, y: 200}": наляво
+            "{x: 300, y: 200}": надясно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_makeNewDanceSprite:
         options:
           COSTUME:
             '"ALIEN"': Извънземно
             '"BEAR"': Мечка
             '"CAT"': Котка
+            '"DOG"': куче
             '"DUCK"': Патица
             '"FROG"': Жаба
             '"MOOSE"': Лос
@@ -235,26 +336,6 @@ bg:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случаен
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           COSTUME:
             '"ALIEN"': Извънземни
             '"BEAR"': Мечки
@@ -269,6 +350,7 @@ bg:
             '"UNICORN"': Еднорози
           LAYOUT:
             '"border"': рамка
+            '"diamond"': диамант
             '"circle"': кръг
             '"grid"': мрежа
             '"row"': ред
@@ -318,7 +400,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           SPEED:
             '1': нормално
             '2': бързо
@@ -353,7 +435,6 @@ bg:
             '"rotation"': въртене
             '"x"': хоризонтално положение
             '"y"': вертикално положение
-            '"tint"': оттенък
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -368,7 +449,7 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           PROPERTY:
             '"scale"': размер
             '"height"': височина
@@ -378,6 +459,28 @@ bg:
             '"tint"': оттенък
       Dancelab_setPropRandom:
         options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"tint"': оттенък
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
           PROPERTY:
             '"scale"': размер
             '"height"': височина
@@ -399,6 +502,22 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
       Dancelab_setVisible:
         options:
           VISIBILITY:
@@ -418,12 +537,37 @@ bg:
             '"PINEAPPLE"': всички ананаси
             '"ROBOT"': всички роботи
             '"SHARK"': всички акули
-            '"UNICORN"': всички еднорози
+            '"UNICORN"': Еднорози
           VISIBILITY:
             'true': видим
             'false': невидим
       Dancelab_startMapping:
         options:
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"tint"': оттенък
+          RANGE:
+            '"bass"': бас
+            '"treble"': сопрано
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
           PROPERTY:
             '"scale"': размер
             '"height"': височина
@@ -447,6 +591,40 @@ bg:
           RANGE:
             '"bass"': бас
             '"treble"': сопрано
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: всички
+            '"ALIEN"': всички извънземни
+            '"BEAR"': всички мечки
+            '"CAT"': всички котки
+            '"DOG"': всички кучета
+            '"DUCK"': всички патици
+            '"FROG"': всички жаби
+            '"MOOSE"': всички лосове
+            '"PINEAPPLE"': всички ананаси
+            '"ROBOT"': всички роботи
+            '"SHARK"': всички акули
+            '"UNICORN"': Еднорози
+          PROPERTY:
+            '"scale"': размер
+            '"height"': височина
+            '"rotation"': въртене
+            '"x"': хоризонтално положение
+            '"y"': вертикално положение
+            '"direction"': посока на движение
+            '"tint"': оттенък
+          RANGE:
+            '"bass"': бас
+            '"treble"': сопрано
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': диамант
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         text: когато {KEY} е натиснат
         options:
@@ -468,6 +646,10 @@ bg:
             '0': бас
             '1': mid
             '2': сопрано
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_changePropBy:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -477,6 +659,7 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
+            '"speed"': скорост
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -493,8 +676,27 @@ bg:
             '"y"': y позиция
             '"direction"': посока на движение
             '"tint"': оттенък
+            '"speed"': скорост
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_hideTitleScreen:
         text: скрива заглавния екран
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': нагоре
+            '"down"': надолу
+            '"left"': наляво
+            '"right"': надясно
+            '"space"': космос
+            '"a"': а
+            '"d"': d
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -525,6 +727,8 @@ bg:
         text: случаен цвят
       gamelab_randomColor:
         text: случаен цвят
+      gamelab_repeatForever:
+        text: повтаряй завинаги
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -535,6 +739,13 @@ bg:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': дъга
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под вода
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средно
+            '100': large
       gamelab_setProp:
         text: промяна на {SPRITE} {PROPERTY} с {VAL}
         options:
@@ -544,6 +755,16 @@ bg:
             '"x"': x позиция
             '"y"': y позиция
             '"direction"': посока на движение
+            '"speed"': скорост
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': размер
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': средно
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -686,6 +907,8 @@ bg:
         text: "{LOCATION}"
       Mikelab_randomColor:
         text: случаен цвят
+      Mikelab_repeatUntilComplete:
+        text: повтаряй завинаги
       Mikelab_setBG:
         options:
           BG:
@@ -742,6 +965,13 @@ bg:
             '"down"': стрелка надолу
             '"left"': лява стрелка
             '"right"': стрелка надясно
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': мрежа
+            '"border"': рамка
+            '"row"': ред
+            '"random"': случаен
       RyanLab_moveForward:
         text: върви напред
       RyanLab_turnLeft:
@@ -750,65 +980,27 @@ bg:
         text: завий надясно
       Vector_vectorNorth:
         text: север
-      aalab_changePropByFlexible:
-        text: промяна на {SPRITE} {PROPERTY} с {VAL}
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-      aalab_checkTouching:
+          FORMAT:
+            '"grid"': мрежа
+            '"border"': рамка
+            '"row"': ред
+            '"random"': случаен
+      aalab_someGraduallyStartIntervention:
         options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      aalab_clickedOn:
+          PORTION:
+            '1': всички
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': когато
-            '"while"': докато
-          KEY:
-            '"up"': нагоре
-            '"down"': надолу
-            '"left"': наляво
-            '"right"': надясно
-            '"space"': космос
-      aalab_location_picker:
-        text: "{LOCATION}"
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': град
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': вярно
-            '"false"': грешно
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': размер
-            '"rotation"': въртене
-            '"x"': x позиция
-            '"y"': y позиция
-            '"direction"': посока на движение
-            '"tint"': оттенък
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': завинаги
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': показва
-            '"hide"': скрива
+          PORTION:
+            '1': всички
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:
@@ -870,7 +1062,6 @@ bg:
             '"stoneBricks"': каменни тухли
             '"mossyStoneBricks"': мъхести каменни тухли
             '"crackedStoneBricks"': начупени каменни тухли
-            '"decorativeStoneBricks"': декоративни каменни тухли
             '"blueCoralBlock"': блок от син корал
             '"pinkCoralBlock"': блок от розов корал
             '"magentaCoralBlock"': блок от пурпурен корал

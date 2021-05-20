@@ -1,0 +1,20 @@
+zh-CN:
+  data:
+    shared_functions:
+      driving with arrow keys: 使用方向键驱动
+      fluttering: 飘动
+      growing: 生长
+      jittering: 抖动
+      moving east: 向右推动
+      moving east and looping: 循环向西边移动
+      moving north: "向上移动\n"
+      moving south: "向下移动\n"
+      moving west: "向左移动\n"
+      moving west and looping: 循环向东边移动
+      moving with arrow keys: 使用方向键移动
+      patrolling: 巡逻
+      shrinking: 收缩
+      spinning left: "向左旋转\n"
+      spinning right: "向右旋转\n"
+      wandering: 徘徊
+      wobbling: 摇摆

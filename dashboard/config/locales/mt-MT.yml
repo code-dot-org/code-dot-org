@@ -3,6 +3,8 @@ mt:
   errors:
     messages:
       not_saved: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
+      too_young: Dan il-kontenut għandu restrizzjonijiet ta' bl-età fil-post u m'huwiex
+        disponibbli għall-istudenti żgħar
   activerecord:
     errors:
       messages:
@@ -26,11 +28,9 @@ mt:
   welcome_back: Merħba lura, %{name}
   unsubmit: Unsubmit
   or: jew
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Żid Għalliem:'
       placeholder: Sezzjoni kodiċi (ABCDEF)
-    submit: Żid għalliem
   add_hint_form:
     placeholder: Daħħal suġġeriment tiegħek hawn
     submit: Żid suġġeriment
@@ -58,9 +58,6 @@ mt:
   auth:
     sign_in_with: Idħol bl-%{provider}
     signed_in: Dhalt!
-    signed_out: Inti hrigt mis-sit <a href="%{url}">Code.org</a>.
-    sign_out_of: Inti użajt %{provider} biex tidhol fis sit. <a href="%{url}"> Ikklikkja
-      hawnhekk</a> biex toħroġ minn %{provider}.
     already_signedup: Diga miktub bhala user?
     notyet_signedup: Ghadek ma inghaqadx?
     google_oauth2: Account tal-Google
@@ -168,6 +165,8 @@ mt:
       finished_hoc: Jien lestejt l'Hour of Code tieghi
       sign_in_to_save: Idħol biex tissejvja l-progress
       project_gallery: Il-Proġetti
+      legal_privacy: Poliza dwar il-Privatezza
+      legal_tos: It-Termini tas-Servizz
     user:
       district_dashboard: Pannell tal-Kontroll Distrettwali
       label: Insellmulek %{username}
@@ -215,15 +214,12 @@ mt:
     delete_text_teacher_note: 'Innota: Billi tħassar tal-kont tiegħek mhux se jħassar
       il-kontijiet ta'' l-istudenti tiegħek.'
     delete_confirm: Żgur tixtieq tħassar l'Account tiegħek?
+    update_email: Aggorna
   user_level:
     completed: Lesta
     tried: Ppruvat
   home:
     title: Code Stuwdjo
-    description: Code Studio huwa id-dar tal-korsijiet online maħluqa mill-Code.org
-    lines_of_code: "%{lines_count} LINJI TAL-KODIĊI MIKTUBA MILL-ISTUDENTI"
-    lines_of_code_linebreak: "%{lines_count} linji tal-Kodiċi <br/> miktuba minn %{students_count}
-      MILJUNI ta ' studenti"
     all_courses: Ħarsa ġenerali tal-korsijiet 1, 2 u 3
     lesson_plans: Pjanijiet tal-Lezzjoni
     signin_message: Diġà rreġistrat? %{link}
@@ -261,11 +257,6 @@ mt:
     test_videos_help: Ittestja il-Video Plyer il-gdid taghna flis-skola tieghek
     try_beta_courses: Ġodda! Ipprova korsijiet beta tagħna għall-istudenti tal-primarja
     use_as_teacher: Uża dan is-sit bħala għalliem
-    heading_hoc2014: "<h2>Is-siegħa tal-Kodiċi għall-</h2> <h1>L-etajiet kollha</h1>"
-    heading_elementary: "<h2> korsijiet t-20 siegħa għall-</h2> <h1>fundamenti tax-Xjenza
-      fil-Kompjuter (etajiet kollha)</h1>"
-    heading_apps: "<h2>Gost għal</h2> <h1>Kulħadd.</h1>"
-    heading_legacy: "<h2>Il-kors aċċellerata għall-</h2> <h1>L-etajiet kollha</h1>"
     your_gallery: Gallery
     no_primary_course: Ipprova kors tal-Code Studio
     choose_next_course: Ipprova kors mill-Course Studio billi tagħżel wieħed minn
@@ -354,20 +345,6 @@ mt:
       title: Frozen
     infinity:
       title: Infinity Play Lab
-  gallery:
-    students_drew_these_with_code: Studenti pingewhom billi jiprogrammaw!
-    students_made_these_with_code: Studenti ghamluhom billi jiprogrammaw!
-    picture_count: Fil-passat<b>%{days}</b>, l-istudenti pingew <b>%{count}</b> stampi
-      billi kitbu programmi tal-kompjuter taghhom. Ikklikkja fuq l-istampi biex tara
-      kull programm jahdem.
-    activity_count: Fil-passat <b>%{days}</b> il-gurnata, l-istudenti għamlu <b>%{count}</b>
-      app u stampi biilli kitbu il-programmi tal-kompjuter taghhom stess. Ikklikkja
-      fuq l-istampi u screenshots biex tara kull programm jahdem.
-    want_to_make_your_own: Tixtieq tikteb il-porgramm tieghek stess?
-    more: Aktar &rarr;
-    caption_time_ago: "%{time_ago} ilu"
-    header: Gallery
-    report_abuse: Irrapporta l-Abbuż
   landing:
     support: Ikseb l-Għajnuna
   multi:
@@ -394,6 +371,7 @@ mt:
   race_interstitial:
     decline: Agħlaq
   progress:
+    completed_perfect: Komplut, perfett
     assessment: evalwazzjoni
   studio:
     all_courses: Il-korsijiet kollha

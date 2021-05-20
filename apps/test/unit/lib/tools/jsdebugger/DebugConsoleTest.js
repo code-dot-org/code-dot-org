@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
@@ -14,8 +14,23 @@ import {
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
-describe('The DebugConsole component', () => {
-  let root;
+const newJSInterpreter = () => {
+  let interpreter = new JSInterpreter({
+    shouldRunAtMaxSpeed: () => false,
+    studioApp: {hideSource: true}
+  });
+  const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
+  interpreter.calculateCodeInfo({code});
+  interpreter.parse({code});
+  interpreter.paused = true;
+  interpreter.nextStep = JSInterpreter.StepType.IN;
+  interpreter.executeInterpreter(true);
+
+  return interpreter;
+};
+
+describe('The DebugConsole component when the console is enabled', () => {
+  let root, jumpToBottomSpy;
 
   beforeEach(() => {
     stubRedux();
@@ -23,9 +38,11 @@ describe('The DebugConsole component', () => {
     getStore().dispatch(actions.initialize(sinon.spy()));
     root = mount(
       <Provider store={getStore()}>
-        <DebugConsole />
+        <DebugConsole debugConsoleDisabled={false} />
       </Provider>
     );
+    const debugConsoleInstance = root.find('DebugConsole').instance();
+    jumpToBottomSpy = sinon.spy(debugConsoleInstance, 'jumpToBottom');
   });
 
   afterEach(() => {
@@ -42,6 +59,14 @@ describe('The DebugConsole component', () => {
 
   it('renders a debug input div', () => {
     expect(debugInput()).to.exist;
+  });
+
+  it('jumps to bottom on componentDidUpdate if log output has changed', () => {
+    expect(jumpToBottomSpy).not.to.have.been.called;
+    getStore().dispatch(actions.attach(newJSInterpreter()));
+    expect(jumpToBottomSpy).not.to.have.been.called;
+    getStore().dispatch(actions.appendLog({output: 1 + 1}));
+    expect(jumpToBottomSpy).to.have.been.calledOnce;
   });
 
   function typeKey(keyCode) {
@@ -136,21 +161,10 @@ describe('The DebugConsole component', () => {
 
   describe('After an interpreter has been attached', () => {
     beforeEach(() => {
-      let interpreter = new JSInterpreter({
-        shouldRunAtMaxSpeed: () => false,
-        studioApp: {hideSource: true}
-      });
-      const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
-      interpreter.calculateCodeInfo({code});
-      interpreter.parse({code});
-      interpreter.paused = true;
-      interpreter.nextStep = JSInterpreter.StepType.IN;
-      interpreter.executeInterpreter(true);
-
-      getStore().dispatch(actions.attach(interpreter));
+      getStore().dispatch(actions.attach(newJSInterpreter()));
     });
 
-    describe('When typing into the text input and pressing enter,', () => {
+    describe('when typing into the text input and pressing enter,', () => {
       beforeEach(() => submit('1+1;'));
 
       it('the text gets appended to the output', () => {
@@ -273,7 +287,7 @@ describe('The DebugConsole component', () => {
       });
     });
 
-    describe('When typing bad code into the text input and pressing enter,', () => {
+    describe('when typing bad code into the text input and pressing enter,', () => {
       beforeEach(() => submit('a+b;'));
 
       it('the text gets appended to the output', () => {
@@ -343,6 +357,74 @@ describe('The DebugConsole component', () => {
       expect(debugOutput().instance().style.backgroundColor).to.equal(
         'rgb(255, 204, 204)'
       );
+    });
+  });
+});
+
+describe('The DebugConsole component when the debug console is disabled', () => {
+  let root;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(reducers);
+    getStore().dispatch(actions.initialize(sinon.spy()));
+    root = mount(
+      <Provider store={getStore()}>
+        <DebugConsole debugConsoleDisabled={true} />
+      </Provider>
+    );
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  const debugOutput = () => root.find('#debug-output');
+  const debugInput = () => root.find('#debug-input');
+
+  it('renders a debug output div', () => {
+    expect(debugOutput()).to.exist;
+  });
+
+  it('renders a debug input div', () => {
+    expect(debugInput()).to.exist;
+    expect(debugInput().instance().disabled).to.equal(true);
+  });
+
+  function typeKey(keyCode) {
+    debugInput().simulate('keydown', {
+      target: debugInput().instance(),
+      keyCode: keyCode
+    });
+  }
+
+  function type(text) {
+    for (let i = 0; i < text.length; i++) {
+      debugInput().instance().value += text[i];
+      typeKey(text[i].charCodeAt(0));
+    }
+  }
+
+  function submit(text) {
+    type(text);
+    typeKey(KeyCodes.ENTER);
+  }
+
+  describe('After an interpreter has been attached', () => {
+    beforeEach(() => {
+      getStore().dispatch(actions.attach(newJSInterpreter()));
+    });
+
+    describe('When typing into the text input and pressing enter,', () => {
+      it('the text does not get appended to the output if the html is unaltered', () => {
+        submit('console.log("test")');
+        expect(debugOutput().text()).not.to.contain('test');
+      });
+      it('the text does not get appended to the output if the html is changed to enable the input', () => {
+        debugInput().instance().disabled = false;
+        submit('console.log("test")');
+        expect(debugOutput().text()).not.to.contain('test');
+      });
     });
   });
 });

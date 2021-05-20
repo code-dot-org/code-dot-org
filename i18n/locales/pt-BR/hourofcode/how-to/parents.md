@@ -1,79 +1,98 @@
 ---
-title: Guia prático para os pais
-layout: wide
-nav: how_to_nav
+title: Guia de instruções da Hora do Código para os pais
 ---
 
-{{ signup_button }}
+# Como fazer uma Hora do Código com seus filhos
 
-# How to do an Hour of Code with your child
+Experimentar uma Hora do Código é uma maneira simples e divertida para apresentar às crianças a ciência da computação, talvez pela primeira vez. Além de a ciência da computação ser fundamental para todas as áreas de aprendizado, [pesquisas recentes mostram que](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): crianças que estudam ciência da computação têm desempenho melhor em outras matérias, se destacam na solução de problemas e têm mais <font color="00adbc"><b>17% de chance de entrar na faculdade</b></font>.
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+Você pode se juntar a milhões de alunos no mundo inteiro neste evento mundial. Juntos, podemos inspirar crianças a aprender, quebrar estereótipos e ajudá-las a descobrir um novo interesse. E o melhor: você já tem tudo que é necessário para trazer a sua Hora do Código para casa!
+
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
+
+<h3>O que é necessário para começar?</h3>
+
+A Hora do Código é simples de realizar, até para iniciantes. Você não precisa ter experiência em ciência da computação ou ensino para promover uma atividade divertida para as crianças aprenderem e se divertirem ao mesmo tempo.
+
+Você pode experimentar uma Hora do Código com um computador, tablet, smartphone ou totalmente desconectado! Veja como começar.
+
+[<button>Leia o guia em PDF</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
-## 1) Veja o guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Explore atividades e tutoriais.
 
-## 2) Choose a tutorial
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Há inúmeras [atividades da Hora do Código](https://hourofcode.com/us/learn) disponíveis se você estiver trabalhando em um computador conectado à internet. Incentivamos a conferir algumas de suas opções com antecedência para poder ajudar a orientar as crianças para os exercícios que elas irão adorar.
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Todas as nossas atividades combinam solução de problemas e pensamento crítico com diversão e criatividade, mas veja algumas favoritas dos alunos:
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+- Para crianças que adoram brincar: [Minecraft](https://code.org/minecraft) ou [Dance Party](https://code.org/dance)
+- Para crianças que adoram Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1) ou [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Para crianças que adoram aprender: [AI for Oceans](https://code.org/oceans) ou [Make Music with Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
-## 3) Planeje suas necessidades tecnológicas
+<h3>Pouca ou nenhuma tecnologia?</h3>
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+Se estiver usando pouca ou nenhuma tecnologia, você pode filtrar as [atividades da Hora do Código](https://hourofcode.com/us/learn) selecionando “Nenhum computador ou dispositivo” na seção *Tecnologia da Turma* .
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-## 4) Start your Hour of Code with an inspiring video
+Você também pode conferir estes [vídeos breves](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) para mais ideias de como promover uma atividade desconectada em casa!
 
-Dê o pontapé inicial na sua Hora do Código inspirando seu filho e debatendo sobre como a ciência da computação impacta tudo em nossas vidas.
+## 2) Prepare-se com antecedência
 
-**Mostre um vídeo inspirador:**
+Agora que você pensou em alguns tutoriais, pode ser útil experimentar as atividades no seu dispositivo antes de apresentá-las às crianças.
 
-- O vídeo original de lançamento da Code.org, com a participação de Bill Gates, Mark Zuckerberg e o astro da NBA, Chris Bosh (há versões de [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutos](https://www.youtube.com/watch?v=nKIu9yen5nc) e [9 minutos](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [O presidente Obama pede a todos os alunos que aprendam Ciência da Computação](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+[![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-Tudo bem se você e seu filho não tiverem experiência com ciência da computação. Confira algumas ideias para começar sua atividade da Hora do Código:
+<h3>Mais de uma criança em casa?</h3>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Monte uma lista com as coisas que usam a programação na vida cotidiana.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+Pense em distribuir fones de ouvido para cada criança caso estejam trabalhando em dispositivos separados. Assim elas poderão reproduzir atividades com som sem se distraírem.
 
-Quer mais ideias? Confira nosso [modelo de plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx) para as melhores práticas, preparado por educadores experientes.
+Se estiver usando apenas um dispositivo, ou só quiser tornar a sua Hora do Código mais interativa, experimente a [programação em dupla](https://www.youtube.com/watch?v=vgkahOzFH2Q) A computação em dupla incentiva as crianças a trabalhar juntas. Ao cooperarem, elas se ajudam a solucionar problemas. Eles também verão que a ciência da computação é uma atividade social e colaborativa.
 
-## 5) É hora de programar!
+<h3>Anime as crianças! </h3>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+Esta oportunidade é excelente para acrescentar um novo tipo de atividade ao dia das crianças. Vocês podem se divertir ainda mais do que em um tutorial com as sugestões a seguir.
 
-Quando tiver escolhido o tutorial que gostaria de fazer, você pode adicionar o link curto do tutorial aos favoritos.
+- Mostre um [vídeo motivacional](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) que apresenta seus exemplos favoritos
+- Inspire com um vídeo sobre uma das [muitas profissões](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) que a ciência da computação pode possibilitar
+- [Encomende alguns brindes](https://store.code.org/)! Você pode escolher camisetas, adesivos ou até tatuagens temporárias. Compartilhe com eles imediatamente para deixá-las animadas, ou guarde até o fim da sua Hora do Código como um prêmio especial. 
 
-**Quando seu filho tiver dificuldades**
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-Tudo bem responder:
+## 3) Dicas para apresentar às crianças a ciência da computação
 
-- "Eu não sei. Vamos descobrir juntos".
-- "A tecnologia nem sempre funciona da maneira que queremos".
-- "Aprender programação é como aprender uma nova língua, você não vai se tornar fluente imediatamente".
+Não tem problema se você ou seus alunos estão tendo seu primeiro contato com a ciência da computação. Veja a seguir algumas ideias para apresentar a sua atividade Hora do Código e fazer que todos reflitam sobre ciência da computação:
 
-## 6) Comemore
+- Explique como a tecnologia afeta nossas vidas, com exemplos específicos que interessem às crianças. Por exemplo, você poderia falar sobre medicina ou como a tecnologia aproxima as pessoas virtualmente. Confira também [Code.org/CSforGood](https://code.org/csforgood) para mais sugestões de tópicos de discussão.
+- Juntos, façam uma lista de coisas do dia a dia que usam codificação para funcionar.
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso também!
+<h3>Tem jovens mulheres em casa?</h3>
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+<a href="https://code.org/girls">Veja as nossas recomendações</a> para ajudar a despertar o interesse das crianças na ciência da computação. **Pro-tip**: Você já pode começar dizendo que elas se sairão muito bem!
 
-## O que vem depois da Hora do Código?
+<h3>Resolvam problemas juntos</h3>
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Finalmente, quando as crianças se enfrentarem dificuldades, sinta-se à vontade para responder -"Não sei". Vamos resolver isso juntos.” - “Nem sempre a tecnologia funciona como queremos.” - “Aprender a programar é como aprender um novo idioma. Não se fica fluente de uma hora para outra.”
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+Ciência da computação se trata de aprender a "depurar" situações que não apresentaram o resultado esperado. Juntos, você e as crianças podem pensar sobre maneiras criativas para resolver problemas!
 
-{{ signup_button }}
+## 4) Não se esqueça de comemorar!
+
+A Hora do Código é um evento mundial, e sua família merece comemorar. Veja algumas maneiras de tornar a sua Hora do Código incrível:
+
+- Imprima [certificados da Hora do Código](https://staging.code.org/certificates) para recompensar as crianças ao concluírem a atividade 
+- [Imprima adesivos](https://staging.hourofcode.com/us/promote/resources#stickers) em casa ou [compre-os on-line](https://store.code.org/), como uma supressa adicional. 
+- Compartilhe fotos e vídeos da sua Hora do Código em casa nas redes sociais. Use #HourOfCode e @codeorg para também colocarmos seu sucesso em destaque!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>O que vem depois da Hora do Código?</h2>
+
+A ciência da computação não precisa terminar com a Hora do Código! Apesar de 90% dos pais quererem que as crianças aprendam ciência da computação, a maioria das escolas ainda não ensina essa matéria. Para ajudar, nosso currículo é baseado na Web e gratuito, para sempre. [Saiba](https://code.org/yourschool) trazer a ciência da computação à escola do seu filho hoje.
+
+[<button>Leia o guia em PDF</button>]({{ localized_files/hourofcode_parent_how_to }})

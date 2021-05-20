@@ -1,0 +1,8 @@
+name 'CSD U6 test parameters multi_2020'
+question 'What makes functions with parameters more useful than functions without parameters?'
+wrong 'They can be used with physical devices or hardware.'
+wrong 'They can be used inside a for loop.'
+right 'They can be used as a general solution for problems with different specific details.'
+wrong 'They can be used to run the same code in many different places in the program.'
+wrong 'They can be used to detect when the user has provided input.'
+

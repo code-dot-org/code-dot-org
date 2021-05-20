@@ -2,6 +2,15 @@
   color: white;
 }
 
+.highlights-single {
+  display: none;
+  width: 100%;
+}
+
+.highlights-scroll {
+  height: 710px;
+}
+
 .highlights-content {
   width: 100%;
 }
@@ -79,6 +88,14 @@
 
   .highlight-description {
     display: none;
+  }
+
+  .highlights-scroll {
+    display: none;
+  }
+
+  .highlights-single {
+    display: inline-block;
   }
 
   .highlights-column {

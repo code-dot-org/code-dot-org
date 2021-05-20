@@ -14,8 +14,15 @@
     .info
       Open computing jobs
 -unless data[:growth_vs_average_f] < 0.0
-  %p.fact.subfact
+  %p.fact.subfact{style: "margin-bottom: 0px;"}
     (<b>#{data[:growth_vs_average_f]}x</b> the state average demand rate)
+%p.fact.subfact
+  with an average salary of <b>$#{format_integer_with_commas(data[:avg_sal_computing_i])}</b>
+%p.fact
+  %strong.figure
+    =number_to_percentage(data[:count_schools_teach_cs_i], precision: 0)
+  .info
+    of public high schools teach a CS class
 %p.fact
   -unless data[:cs_graduates] == 0
     %strong.figure
@@ -41,7 +48,9 @@
       .fact-text
         Dedicated state funding for CS PD
     - elsif data[:pd_funding_s] == "Other"
-      %i.fa.fa-check-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         = data[:pd_funding_exception_s]
   .fact.icon-fact
@@ -56,7 +65,9 @@
       .fact-text
         Requires all high schools to offer CS
     - elsif data[:require_hs_s] == "Other"
-      %i.fa.fa-check-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         = data[:require_hs_exception_s]
 
@@ -72,7 +83,9 @@
       .fact-text
         K-12 CS curriculum standards
     - elsif data[:cs_standards_s] == "Other"
-      %i.fa.fa-check-circle
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-1x
       .fact-text
         = data[:cs_standards_exception_s]
 
@@ -91,11 +104,7 @@
     .fact
       %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
       &nbsp;
-      = "#{data[:percent_ap_female_i]}% of them were female"
-    .fact
-      %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
-      &nbsp;
-      = "#{format_integer_with_commas(data[:total_ap_students_color_i])} were underrepresented minorities"
+      = "#{data[:percent_ap_female_i]}% of them were taken by female students"
 
 .state-buttons
   -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))

@@ -3,13 +3,15 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
-  setFeedback,
   setHasAuthoredHints,
   setInstructionsConstants
 } from '@cdo/apps/redux/instructions';
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import sectionData, {
+  setTtsAutoplayEnabled
+} from '@cdo/apps/redux/sectionDataRedux';
 import TopInstructions from './TopInstructions';
 
 /**
@@ -22,7 +24,9 @@ import TopInstructions from './TopInstructions';
  * @param {boolean} options.tts
  */
 const createCommonStore = function(options = {}) {
-  const store = createStore(combineReducers({...commonReducers, isRtl}));
+  const store = createStore(
+    combineReducers({...commonReducers, isRtl, sectionData})
+  );
   const pageConstants = {};
   const instructionsConstants = {};
 
@@ -54,12 +58,6 @@ const createCommonStore = function(options = {}) {
 
     pageConstants.showNextHint = () => {};
     instructionsConstants.noInstructionsWhenCollapsed = false;
-    store.dispatch(
-      setFeedback({
-        message:
-          'some simple, plaintext feedback, used to indicate that something went wrong'
-      })
-    );
     store.dispatch(setHasAuthoredHints(true));
     store.dispatch(
       enqueueHints(
@@ -98,7 +96,7 @@ const createCommonStore = function(options = {}) {
     pageConstants.failureAvatar = '/blockly/media/skins/bee/failure_avatar.png';
   } else {
     instructionsConstants.noInstructionsWhenCollapsed = true;
-    pageConstants.documentationUrl = 'https://docs.code.org/weblab/';
+    pageConstants.documentationUrl = 'https://studio.code.org/docs/weblab/';
     instructionsConstants.mapReference = '/docs/csd-1718/html_tags/index.html';
     instructionsConstants.levelVideos = [
       {
@@ -117,6 +115,7 @@ const createCommonStore = function(options = {}) {
 
   store.dispatch(setPageConstants(pageConstants));
   store.dispatch(setInstructionsConstants(instructionsConstants));
+  store.dispatch(setTtsAutoplayEnabled(false));
 
   return store;
 };

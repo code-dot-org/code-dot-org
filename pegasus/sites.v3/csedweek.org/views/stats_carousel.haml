@@ -24,7 +24,7 @@
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 :javascript
   $(document).ready(function() {
-    var statistics = #{JSON.pretty_generate(statistics)};
+    var statistics = #{raw JSON.pretty_generate(statistics)};
     var id = '#stats-carousel';
 
     // Define the carousel using the ID.

@@ -1714,9 +1714,17 @@ mi:
         text: Ki te hiahia koe ki te muku i tētahi paraka me tō noa iho i te pūkei
           ki te pouaka utauta.
     gumball_intro:
+      4:
+        text: Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio,
+          ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata
+          kua tuhia ki raro.
       6:
         text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      7:
+        text: Hei tīmatanga, me tūhono i o paraka ki te paraka "ina whakahaerehia"
+          karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka
+          tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri.
       9:
         text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
           kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi
@@ -1755,9 +1763,17 @@ mi:
           Mā te ako ki te whakamahinga o te whakahau tōai ka penapenatia te wā i a
           koe e hanga ana i tō ake kēmu ā tōna wā.
     iceage_intro:
+      4:
+        text: Kua wāhia tō mata ki ngā wāhanga e toru. Kei te taha mauī te papa tio,
+          ā, koinei te wāhi whakahaere i tō papatono. Ko ngā tohutohu mō ia taumata
+          kua tuhia ki raro.
       6:
         text: Ko te wāhanga kei te taha matau tērā e kīia nei ko te papamahi, ā, koinei
           te wāhi ka hanga tātou i tā tātou papatono.
+      7:
+        text: Hei tīmatanga, me tūhono i o paraka ki te paraka "ina whakahaerehia"
+          karaka. Ka taea ngā paraka huhua te tūhonohono mā te tō atu i aua paraka
+          tae noa ki te wā ka kite koe i tētahi rārangi kātahi aua paraka ka piri.
       9:
         text: Tīmata māi, ā, hei te mutunga kua mōhio koe ki te waihanga i tāu ake
           kēmu me ngā momo kaitātakaro rerekē ka pāhekoheko, ka maka mea, ka whiwhi
@@ -1901,3 +1917,7 @@ mi:
     mc_2017_agent_intro:
       11:
         text: Kei runga ngā tohutohu mō ia taumata ki te wareware i a koe me aha koe.
+    hoc_dance_events_2019:
+      4:
+        text: Ko te tangi a te kiore, te pātene pere, te pato rānei ki te mata ētahi
+          tauira o te takahanga e whakarongo ana.

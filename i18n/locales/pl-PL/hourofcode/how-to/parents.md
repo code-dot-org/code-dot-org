@@ -1,79 +1,191 @@
 ---
-title: Poradnik dla rodziców
-layout: wide
-nav: how_to_nav
+title: Godzina Kodowania - Przewodnik dla rodziców i opiekunów
 ---
 
-{{ signup_button }}
+# Spróbuj Godziny Kodowania ze swoim dzieckiem
 
-# How to do an Hour of Code with your child
+Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprowadzenia swojego dziecka w dziedzinę informatyki, być może po raz pierwszy. Informatyka ma znaczenie fundamentalne dla wszystkich dziedzin nauki, ale[ostatnie badania pokazują](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): dzieci, które uczą się informatyki osiągają lepsze wyniki w innych przedmiotach, przodują w rozwiązywaniu problemów i mają <font color="00adbc"><b> o 17% większe szanse dostać się na studia </font></b>.</p> 
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+<p>
+  Możesz dołączyć do dziesiątków milionów uczniów na całym świecie w ramach tego wydarzenia o zasięgu globalnym. Razem możemy zainspirować dzieci do nauki, łamać stereotypy i pomóc dzieciom odkrywać nowo wzbudzone zainteresowanie. Najlepsze jest jednak to, że masz już wszystko, czego potrzebujesz, aby wprowadzić "Godzinę kodowania" do swojego domu!
+</p>
 
-* * *
+<p>
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" /></a>
+</p>
 
-## 1) Obejrzyj ten filmik <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<h3>Czego potrzebuję, by rozpocząć?</h3>
 
-## 2) Choose a tutorial
+<p>
+  Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Nie jest potrzebne doświadczenie w dziedzinie informatyki ani dydaktyki, aby prowadzić atrakcyjne zajęcia dla Twoich dzieci, na których będą się one uczyć i śmiać.
+</p>
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+<p>
+  Możesz wypróbować "Godziny kodowania" korzystając z komputera, tabletu, smartfona lub w trybie całkowicie "unplugged" - bez komputera! Pokazujemy, od czego zacząć.
+</p>
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+<p>
+  <a href="{{ localized_files/hourofcode_parent_how_to }}"><button>Zobacz przewodnik PDF</button></a>
+</p>
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+<hr />
 
-## 3) Zaplanuj swoje potrzeby technologiczne
+<h2>
+  1) Poznawaj zajęcia i treści samouczków
+</h2>
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+<p>
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/tutorials.png" /></a>
+</p>
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+<p>
+  Istnieją niezliczone <a href="https://hourofcode.com/us/learn">Hour zajęcia w ramach "Godziny kodowania"</a> dostępne dla Ciebie jeśli pracujesz na komputerze z dostępem do internetu. Zachęcamy, aby z pewnym wyprzedzeniem czasowym zerknąć na opcje tak, abyś mógł pomagać w prowadzeniu swojego dziecka w kierunku ćwiczeń, które będą im się podobać.
+</p>
 
-## 4) Start your Hour of Code with an inspiring video
+<p>
+  Wszystkie nasze zajęcia obejmują zagadnienia rozwiązywania problemów i krytycznego myślenia w sposób atrakcyjny i kreatywny, a tutaj podajemy kilka ulubionych przez uczniów:
+</p>
 
-Na początku Godziny Kodowania postaraj się zainspirować swoje dziecko dyskutując o tym, jak informatyka wpływa na każdą sferę naszego życia.
+<ul>
+  <li>
+    Dla dziecka, które uwielbia się bawić: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Potańcówka</a>
+  </li>
+  <li>
+    Dla dziecka, które uwielbia Disney'a: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
+  </li>
+  <li>
+    Dla dziecka, które uwielbia się uczyć: <a href="https://code.org/oceans">AI dla oceanów "</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Twórz muzykę ze Scratchem</a>
+  </li>
+</ul>
 
-**Pokaż inspirujący film:**
+<h3>Niski poziom technologii lub brak technologii?</h3>
 
-- Oryginalny film inaugurujący Code.org, z udziałem Billa Gatesa, Marka Zuckerberga i gwiazdy NBA Chrisa Bosha (Dostępne są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [ Prezydent Obama wzywający wszystkich uczniów do nauki informatyki](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+<p>
+  Jeśli będziesz korzystać z technologii w ograniczonym zakresie lub nie będziesz z niej korzystać możesz filtrować <a href="https://hourofcode.com/us/learn">zajęcia w ramach "Godziny kodowania"</a> wybierając "Brak komputerów lub innych urządzeń” w części <em>"Technologia w klasie"</em>.
+</p>
 
-To nie szkodzi jeśli i Ty, i Twoje dziecko jesteście nowicjuszami w informatyce. Oto kilka pomysłów na rozpoczęcie waszej Godziny Kodowania:
+<p>
+  <a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" /></a>
+</p>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Wymień rzeczy, które używają kodu w codziennym życiu.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+<p>
+  Można również obejrzeć te <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">krótkie filmy wideo</a>, aby uzyskać więcej pomysłów jak prowadzić zajęcia w trybie "unplugged" w domu!
+</p>
 
-Potrzebujesz więcej pomysłów? Zajrzyj do naszego [ szablonu planu lekcji](/files/AfterschoolEducatorLessonPlanOutline.docx), zawierającego najlepsze praktyki doświadczonych pedagogów.
+<h2>
+  2) Przygotuj z wyprzedzeniem czasowym
+</h2>
 
-## 6) Programuj!
+<p>
+  Teraz, gdy masz już w głowie niektóre nasze samouczki, być może warto wypróbować te zajęcia na swoim urządzeniu zanim wprowadzicie je swoim dzieciom.
+</p>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+<p>
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" /></a>
+</p>
 
-Po wybraniu samouczka, który chcesz przerobić, możesz zaznaczyć krótki link do niego.
+<h3>Masz w domu więcej niż jedno dziecko?</h3>
 
-**Kiedy Twoje dziecko napotka trudności**
+<p>
+  Rozważ możliwość udostępnienia każdemu ze swoich dzieci słuchawek jeśli będą pracować na odrębnych urządzeniach. W taki sposób będą w brać czynny udział w zajęciach pełnych dźwięków nie przeszkadzając sobie wzajemnie.
+</p>
 
-Będzie w porządku, jeśli odpowiesz:
+<p>
+  Jeśli będziesz korzystać tylko z jednego urządzenia lub po prostu chcesz sprawić, aby zajęcia "Godzina kodowania" były bardziej interaktywne wypróbuj <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">programowanie w parach</a>. Programowanie w parach zachęca dzieci do współpracy. Gdy dobierają się w pary, to pomagają sobie nawzajem w rozwiązywania problemów. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
+</p>
 
-- "Nie wiem. Sprawdźmy to razem."
-- "Technologia nie zawsze działa w sposób, jaki chcemy."
-- "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
+<h3>Wywołaj w dzieciach entuzjazm! </h3>
 
-## 6) Świętuj
+<p>
+  Stanowi to świetną okazję do dodania nowego rodzaj zajęć do programu dnia Twojego dziecka. Można zwiększyć zakres rozrywki oferowanej przez samouczek korzystając z następujących sugestii:
+</p>
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+<ul>
+  <li>
+    Pokaż im <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirujący film wideo</a>, w którym występuje jeden z bohaterów stanowiących ich wzorzec
+  </li>
+  <li>
+    Zainspiruj ich filmem wideo poświęconym jednej <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">z wielu dróg zawodowych</a>, do których prowadzą umiejętności informatyczne
+  </li>
+  <li>
+    <a href="https://store.code.org/">Zamów jakieś trofeum</a>! Można wybrać spośród koszulek, nalepek, a nawet tymczasowych tatuaży. Udostępniaj im je od razu, aby je zainteresować lub zachowaj to na koniec twojej "Godziny kodowania" jako nagrodę specjalną.
+  </li>
+</ul>
 
-Udostępnij na mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
+<p>
+  
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## Co będzie się działo po Godzinie Kodowania?
+</p>
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+<h2>
+  3) Wskazówki w zakresie wprowadzania swojego dziecka do informatyki
+</h2>
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+<p>
+  Jeśli Ty i Twoje dziecko jesteście nowicjuszami w informatyce, to nie problem. Oto kilka pomysłów na rozpoczęcie "Godziny kodowania" i nakłonienia Was obojga do pomyślenia o informatyce:
+</p>
 
-{{ signup_button }}
+<ul>
+  <li>
+    Wyjaśnij, w jaki sposób technologia wpływa na nasze życie, podając konkretne przykłady, które moją zainteresować Twoje dziecko. Na przykład możesz porozmawiać o medycynie lub wirtualnym łączeniu dzieci. Sprawdź również <a href="https://code.org/csforgood">Code.org/CSforGood</a>, aby poznać sugerowane pytania do rozmowy.
+  </li>
+  <li>
+    Razem sporządźcie wykaz codziennych rzeczy, w których stosuje się kod w celu właściwego funkcjonowania.
+  </li>
+</ul>
+
+<p>
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" /></a>
+</p>
+
+<h3>Zachęć do kodowania dziewczyny</h3>
+
+<p>
+  <a href="https://code.org/girls">Przedstawiamy nasze rekomendacje </a>, aby pomóc rozbudzić ich zainteresowanie informatyką. <strong>Wskazówka od profesjonalisty</strong>: Możesz zacząć od powiedzenia im, że sobie z tym świetnie poradzą!
+</p>
+
+<h3>Wspólne rozwiązywanie problemów</h3>
+
+<p>
+  Na zakończenie - gdy Twoje dziecko napotka trudności, odpowiedź: "Nie wiem" jest jak najbardziej do przyjęcia. Rozwiążmy to razem.” - „Technologia nie zawsze działa tak, jak chcemy”. - „Nauka programowania jest jak nauka nowego języka; nie od razu będziesz biegły. ”
+</p>
+
+<p>
+  Informatyka polega na nauce jak "debugować" sytuacje, w których sprawy przybierają nie taki obrót, jak powinny. Wraz ze swoim dzieckiem przemyśl kreatywne sposoby rozwiązania problemu!
+</p>
+
+<h2>
+  4) Nie zapomnij celebrować!
+</h2>
+
+<p>
+  "Godzina kodowania" jest wydarzeniem ogólnoświatowym, a Twoja rodzina zasługuje na to, by je obchodzić. Oto kilka sposobów, aby uczynić "Godzinę kodowania" czym super specjalnym:
+</p>
+
+<ul>
+  <li>
+    Wydrukuj <a href="https://staging.code.org/certificates">świadectwa ukończenia "Godziny kodowania"</a>, którym nagradzasz swoje dziecko po ukończeniu zajęć
+  </li>
+  <li>
+    <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Wydrukuj naklejki</a> w domu albo <a href="https://store.code.org/">kup je online</a>, w ramach dodatkowej niespodzianki.
+  </li>
+  <li>
+    Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania w domu. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
+  </li>
+</ul>
+
+<p>
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
+</p>
+
+<h2>Co będzie się działo po Godzinie Kodowania?</h2>
+
+<p>
+  Informatyka nie musi kończyć się z Godziną Kodowania! Chociaż 90% rodziców chce, aby dziecko uczyło się informatyki, w większości szkół się jej nie wykłada. Nasz program nauczania działa w Internecie i można z niego korzystać bezpłatnie, zawsze, aby nieść pomoc. <a href="https://code.org/yourschool">Dowiedz się, jak </a> wprowadzić informatykę w szkole Twojego dziecka już dzisiaj.
+</p>
+
+<p>
+  <a href="{{ localized_files/hourofcode_parent_how_to }}"><button>Zobacz przewodnik PDF</button></a>
+</p>

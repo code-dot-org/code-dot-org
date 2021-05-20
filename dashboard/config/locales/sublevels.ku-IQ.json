@@ -1,0 +1,132 @@
+{
+  "ku-IQ": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "کردەوەکان",
+              "Loops": "گرێکان",
+              "Math": "بیرکاری",
+              "Logic": "لۆژيك",
+              "Games/Score": "یاریەکان/خاڵ"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Dancers": "سەماکاران",
+              "Properties": "خاسیەتەکان",
+              "Numbers": "ژمارەکان",
+              "Logic": "لۆژيك"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a circle": {
+                "name": "بازنێك دروست بكە"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "repeat": "دووبارە بکەوە"
+                }
+              },
+              "draw a house": {
+                "name": "ماڵێك دروست بكە"
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "کردەوەکان",
+              "Behaviors": "ڕەفتارەکان"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Dancers": "سەماکاران",
+              "Properties": "خاسیەتەکان",
+              "Numbers": "ژمارەکان",
+              "Logic": "لۆژيك"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "کردەوەکان",
+              "Brushes": "فڵچەکان",
+              "Loops": "گرێکان",
+              "Math": "بیرکاری",
+              "Logic": "لۆژيك",
+              "Functions": "فرمانەکان",
+              "Variables": "گۆڕاوەکان"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Locations": "شوێنەکان",
+              "Actions": "کردەوەکان",
+              "Behaviors": "ڕەفتارەکان",
+              "Variables": "گۆڕاوەکان",
+              "Math": "بیرکاری",
+              "Logic": "لۆژيك",
+              "Functions": "فرمانەکان",
+              "Text": "دەق",
+              "Comments": "سەرنجەکان"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Locations": "شوێنەکان",
+              "Actions": "کردەوەکان",
+              "Behaviors": "ڕەفتارەکان",
+              "Variables": "گۆڕاوەکان",
+              "Math": "بیرکاری",
+              "Logic": "لۆژيك",
+              "Functions": "فرمانەکان",
+              "Text": "دەق",
+              "Comments": "سەرنجەکان"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "کردەوەکان",
+              "Brushes": "فڵچەکان",
+              "Loops": "گرێکان",
+              "Math": "بیرکاری",
+              "Logic": "لۆژيك",
+              "Functions": "فرمانەکان",
+              "Variables": "گۆڕاوەکان"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "کردەوەکان",
+              "Logic": "لۆژيك",
+              "Math": "بیرکاری"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "کردەوەکان",
+              "Behaviors": "ڕەفتارەکان",
+              "Locations": "شوێنەکان",
+              "Logic": "لۆژيك",
+              "Loops": "گرێکان",
+              "Math": "بیرکاری",
+              "Variables": "گۆڕاوەکان",
+              "Functions": "فرمانەکان",
+              "Comments": "سەرنجەکان"
+            }
+          }
+        }
+      }
+    }
+  }
+}

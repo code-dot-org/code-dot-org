@@ -28,7 +28,7 @@ import {
   ScoreableQuestions as TeacherScoreableQuestions,
   MultiAnswerQuestionFields as TeacherMultiAnswerQuestionFields,
   ValidScores as TeacherValidScores
-} from '@cdo/apps/generated/pd/teacher1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   InterviewQuestions,
   LabelOverrides as FacilitatorLabelOverrides,
@@ -36,10 +36,11 @@ import {
   SectionHeaders as FacilitatorSectionHeaders,
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
-} from '@cdo/apps/generated/pd/facilitator1920ApplicationConstants';
+} from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
+import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import _ from 'lodash';
 import {
-  ApplicationStatuses,
+  getApplicationStatuses,
   ApplicationFinalStatuses,
   ApplicationTypes,
   ScholarshipStatusRequiredStatuses
@@ -48,7 +49,7 @@ import {FacilitatorScoringFields} from './detail_view/facilitator_scoring_fields
 import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
-import MarkdownSpan from '../components/markdownSpan';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
   notes: {
@@ -131,7 +132,7 @@ export class DetailViewContents extends React.Component {
       course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
-      regional_partner_emails_sent_by_system: PropTypes.bool,
+      update_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
       locked: PropTypes.bool,
       notes: PropTypes.string,
@@ -216,16 +217,6 @@ export class DetailViewContents extends React.Component {
   }
 
   getOriginalState() {
-    // Principal Implementation is only scoreable in csd applications. It was the one
-    // exception to the whole thing and not worth reimplimenting the consts file
-    const bonusPoints =
-      this.props.applicationData.course === 'csd'
-        ? this.scoreableQuestions['bonusPoints']
-        : _.filter(
-            this.scoreableQuestions['bonusPoints'],
-            x => x !== 'principal_implementation'
-          );
-
     return {
       editing: false,
       status: this.props.applicationData.status,
@@ -252,13 +243,12 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
-      bonus_point_questions: bonusPoints,
+      bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: ''
     };
   }
 
   componentWillMount() {
-    this.statuses = ApplicationStatuses[this.props.viewType];
     if (
       this.props.applicationData.application_type ===
         ApplicationTypes.facilitator &&
@@ -301,14 +291,17 @@ export class DetailViewContents extends React.Component {
       this.setState({
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
-                                ApplicationStatuses[this.props.viewType][
-                                  event.target.value
-                                ]
+                                getApplicationStatuses(
+                                  this.props.viewType,
+                                  this.props.applicationData
+                                    .update_emails_sent_by_system
+                                )[event.target.value]
                               }.`,
         showCantSaveStatusDialog: true
       });
     } else if (
-      this.props.applicationData.regional_partner_emails_sent_by_system &&
+      this.props.applicationData.regional_partner_id &&
+      this.props.applicationData.update_emails_sent_by_system &&
       !workshopAssigned &&
       ['accepted_no_cost_registration', 'registration_sent'].includes(
         event.target.value
@@ -506,10 +499,11 @@ export class DetailViewContents extends React.Component {
     return (
       <Button
         title={
-          !statusIsLockable &&
-          `Can only lock if status is one of ${ApplicationFinalStatuses.join(
-            ', '
-          )}`
+          !statusIsLockable
+            ? `Can only lock if status is one of ${ApplicationFinalStatuses.join(
+                ', '
+              )}`
+            : undefined
         }
         disabled={!(this.state.editing && statusIsLockable)}
         onClick={this.handleLockClick}
@@ -584,8 +578,14 @@ export class DetailViewContents extends React.Component {
     return (
       <ScholarshipDropdown
         scholarshipStatus={this.state.scholarship_status}
+        dropdownOptions={
+          CourseSpecificScholarshipDropdownOptions[
+            this.props.applicationData.course
+          ]
+        }
         onChange={this.handleScholarshipStatusChange}
         disabled={!this.state.editing}
+        isWorkshopAdmin={this.props.isWorkshopAdmin}
       />
     );
   };
@@ -623,14 +623,6 @@ export class DetailViewContents extends React.Component {
             >
               Delete Application
             </MenuItem>
-            <ConfirmationDialog
-              show={this.state.showDeleteApplicationConfirmation}
-              onOk={this.handleDeleteApplicationConfirmed}
-              onCancel={this.handleDeleteApplicationCancel}
-              headerText="Delete Application"
-              bodyText="Are you sure you want to delete this application? You will not be able to undo this."
-              okText="Delete"
-            />
             {this.props.applicationData.registered_fit_weekend && (
               <MenuItem
                 style={styles.delete}
@@ -653,27 +645,43 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     } else {
-      return <Button onClick={this.handleEditClick}>Edit</Button>;
+      return [
+        <Button id="edit" key="edit" onClick={this.handleEditClick}>
+          Edit
+        </Button>,
+        <Button
+          id="delete"
+          key="delete"
+          onClick={this.handleDeleteApplicationClick}
+        >
+          Delete
+        </Button>
+      ];
     }
   };
 
   renderStatusSelect = () => {
+    const statuses = getApplicationStatuses(
+      this.props.viewType,
+      this.props.applicationData.update_emails_sent_by_system
+    );
     const selectControl = (
       <div>
         <FormControl
           componentClass="select"
           disabled={this.state.locked || !this.state.editing}
           title={
-            this.state.locked &&
-            'The status of this application has been locked'
+            this.state.locked
+              ? 'The status of this application has been locked'
+              : undefined
           }
           value={this.state.status}
           onChange={this.handleStatusChange}
           style={styles.statusSelect}
         >
-          {Object.keys(this.statuses).map((status, i) => (
+          {Object.keys(statuses).map((status, i) => (
             <option value={status} key={i}>
-              {this.statuses[status]}
+              {statuses[status]}
             </option>
           ))}
         </FormControl>
@@ -700,6 +708,14 @@ export class DetailViewContents extends React.Component {
         {selectControl}
         <InputGroup.Button style={styles.editButton}>
           {this.renderEditButtons()}
+          <ConfirmationDialog
+            show={this.state.showDeleteApplicationConfirmation}
+            onOk={this.handleDeleteApplicationConfirmed}
+            onCancel={this.handleDeleteApplicationCancel}
+            headerText="Delete Application"
+            bodyText="Are you sure you want to delete this application? You will not be able to undo this."
+            okText="Delete"
+          />
         </InputGroup.Button>
       </InputGroup>
     );
@@ -725,6 +741,11 @@ export class DetailViewContents extends React.Component {
   };
 
   renderHeader = () => {
+    const rubricURL =
+      this.props.applicationData.application_type === ApplicationTypes.teacher
+        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
+        : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
+
     return (
       <div style={styles.headerWrapper}>
         <div>
@@ -733,10 +754,7 @@ export class DetailViewContents extends React.Component {
               this.props.applicationData.form_data.lastName
             }`}
           </h1>
-          <h4>
-            Meets minimum requirements?{' '}
-            {this.props.applicationData.meets_criteria}
-          </h4>
+          <h4>Meets Guidelines? {this.props.applicationData.meets_criteria}</h4>
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher && (
             <h4>
@@ -744,42 +762,14 @@ export class DetailViewContents extends React.Component {
               {this.props.applicationData.meets_scholarship_criteria}
             </h4>
           )}
+
           {this.renderPointsSection()}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher &&
-            this.props.applicationData.course === 'csp' && (
-              <h4>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1_X_Tw3tVMSL2re_DcrSUC9Z5CH9js3Gd/view"
-                >
-                  View CS Principles Rubric
-                </a>
-              </h4>
-            )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.teacher &&
-            this.props.applicationData.course === 'csd' && (
-              <h4>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/12Ntxq7TV1XYsD2eaZJVt5DqSctqR2hUj/view"
-                >
-                  View CS Discoveries Rubric
-                </a>
-              </h4>
-            )}
-          {this.props.applicationData.application_type ===
-            ApplicationTypes.facilitator && (
-            <h4>
-              <a
-                target="_blank"
-                href="https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub"
-              >
-                View Rubric
-              </a>
-            </h4>
-          )}
+
+          <h4>
+            <a target="_blank" rel="noopener noreferrer" href={rubricURL}>
+              View Rubric
+            </a>
+          </h4>
         </div>
 
         <div id="DetailViewHeader" style={styles.detailViewHeader}>
@@ -849,8 +839,6 @@ export class DetailViewContents extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return <h4>Bonus Points: {this.props.applicationData.bonus_points}</h4>;
     }
   };
 
@@ -973,7 +961,7 @@ export class DetailViewContents extends React.Component {
     ) {
       scoringDropdowns.push(
         <div key="meets_minimum_criteria_scores">
-          Meets minimum requirements?
+          Meets Guidelines?
           {this.renderScoringDropdown(
             snakeCaseKey,
             'meets_minimum_criteria_scores'
@@ -981,20 +969,22 @@ export class DetailViewContents extends React.Component {
         </div>
       );
     }
-    if (this.state.bonus_point_questions.includes(snakeCaseKey)) {
+
+    if (
+      this.props.applicationData.application_type === 'Facilitator' &&
+      this.state.bonus_point_questions.includes(snakeCaseKey)
+    ) {
       if (scoringDropdowns.length) {
         scoringDropdowns.push(<br key="bonus_points_br" />);
       }
 
       scoringDropdowns.push(
         <div key="bonus_points_scores">
-          {this.props.applicationData.application_type === 'Facilitator' &&
-          FacilitatorScoringFields[key]
+          {FacilitatorScoringFields[key]
             ? FacilitatorScoringFields[key]['title']
             : 'Bonus Points'}
           {this.renderScoringDropdown(snakeCaseKey, 'bonus_points_scores')}
-          {this.props.applicationData.application_type === 'Facilitator' &&
-            FacilitatorScoringFields[key] &&
+          {FacilitatorScoringFields[key] &&
             FacilitatorScoringFields[key]['rubric']}
         </div>
       );
@@ -1057,8 +1047,8 @@ export class DetailViewContents extends React.Component {
   renderDetailViewTableLayout = () => {
     const sectionsToRemove =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? ['section5AdditionalDemographicInformation', 'section6Submission']
-        : ['section6Submission'];
+        ? ['additionalDemographicInformation']
+        : ['submission'];
 
     return (
       <div>
@@ -1070,16 +1060,21 @@ export class DetailViewContents extends React.Component {
                 <tbody>
                   {Object.keys(this.pageLabels[header]).map((key, j) => {
                     return (
+                      // For most fields, render them only when they have values.
+                      // For explicitly listed fields, render them regardless of their values.
                       (this.props.applicationData.form_data[key] ||
                         key === 'csTotalCourseHours' ||
+                        key === 'alternateEmail' ||
                         header ===
                           'schoolStatsAndPrincipalApprovalSection') && (
                         <tr key={j}>
                           <td style={styles.questionColumn}>
-                            <MarkdownSpan>
-                              {this.labelOverrides[key] ||
-                                this.pageLabels[header][key]}
-                            </MarkdownSpan>
+                            <InlineMarkdown
+                              markdown={
+                                this.labelOverrides[key] ||
+                                this.pageLabels[header][key]
+                              }
+                            />
                           </td>
                           <td style={styles.answerColumn}>
                             {this.renderAnswer(
@@ -1196,7 +1191,11 @@ export class DetailViewContents extends React.Component {
           <h4>{this.props.applicationData.principal_approval_state}</h4>
           <p>
             Link to principal approval form:{' '}
-            <a href={principalApprovalUrl} target="_blank">
+            <a
+              href={principalApprovalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {principalApprovalUrl}
             </a>
           </p>
@@ -1273,7 +1272,7 @@ export class DetailViewContents extends React.Component {
             <td style={styles.answerColumn}>
               {this.renderRegionalPartnerAnswer()}
             </td>
-            {this.renderScoringSection('regionalPartnerName')}
+            <td style={styles.scoringColumn} />
           </tr>
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher && (

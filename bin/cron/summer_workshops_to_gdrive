@@ -1,0 +1,38 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/google/sheet'
+
+#
+# Uses a Google Cloud service account to write summer workshop data for this year into
+# a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
+# by our programs team.
+#
+def get_rows
+  subjects = [
+    Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP
+  ]
+
+  workshops = []
+
+  # The first row is an array of strings, one for each attribute name.
+  workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
+
+  # Subsequent rows are for each workshop.
+  Pd::Workshop.where(subject: subjects).find_each do |w|
+    if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2021, 5, 1) && w.workshop_starting_date <= Date.new(2021, 9, 16)
+      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
+    end
+  end
+
+  workshops
+end
+
+def main
+  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
+  sheet.export(tab_name: 'summer_workshops', rows: get_rows)
+end
+
+main

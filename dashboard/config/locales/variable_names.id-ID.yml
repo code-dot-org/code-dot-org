@@ -1,0 +1,30 @@
+---
+id:
+  data:
+    variable_names:
+      Blue: Biru
+      Green: Hijau
+      Red: Merah
+      actor: Pemain
+      cats: semua kucing
+      color: warna
+      counter: Pencacah
+      dogs: semua anjing
+      height: tinggi
+      honey: madu
+      i: i
+      left: kiri
+      length: panjang
+      name: nama
+      nectar: madu
+      points: poin
+      random: acak
+      repeat: Ulangi
+      right: kanan
+      score: Skor
+      size: ukuran
+      speed: kecepatan
+      variable: variabel
+      width: lebar
+      wizard: penyihir
+      x: x

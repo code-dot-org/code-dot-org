@@ -1,0 +1,31 @@
+fr:
+  data:
+    block_categories:
+      Actions: Actions
+      Advanced: Avancé
+      Behaviors: Comportements
+      Brushes: Pinceaux
+      Color: Couleur
+      Comment: Commentaire
+      Comments: Commentaires
+      Conditionals: Instructions conditionnelles
+      Dancers: Danseurs
+      Default: Par défaut
+      Events: Événements
+      Functions: fonctions
+      'Functions ': 'Fonctions '
+      Game/Score: Jeu/Score
+      Games/Score: Jeux/Score
+      Groups: Groupes
+      Input: Entrée
+      Locations: Emplacements
+      Logic: Logique
+      Loops: boucles
+      Math: Math
+      Numbers: Nombres
+      Properties: Propriétés
+      Sprites: Les Lutins
+      Text: Texte
+      Variables: variables
+      'Variables ': 'Variables '
+      World: Monde

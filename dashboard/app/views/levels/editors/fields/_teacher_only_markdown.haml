@@ -1,0 +1,28 @@
+// This file sets up the editor and preview for teacher only markdown for non-DSL levels
+
+:scss
+  $cyan: #0094ca;
+  $lightest_cyan: #d9eff7;
+
+  #level_teacher_markdown_preview {
+    border: 5px solid $cyan;
+    background-color: $lightest_cyan;
+    padding: 10px;
+  }
+
+  .field.teacher-only-markdown {
+    border: 5px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+%h1.control-legend{data: {toggle: "collapse", target: "#teacher_only_markdown"}}
+  Teacher Only Markdown
+
+#teacher_only_markdown.in.collapse
+  .field.teacher-only-markdown
+    %p Edit Teacher Only Markdown (visible only to authorized teachers):
+    = f.text_area 'teacher_markdown', placeholder: 'Enter teacher only markdown here', rows: 4, value: @level.teacher_markdown or ''
+    #level_teacher_markdown_preview
+    :javascript
+      levelbuilder.initializeCodeMirror('level_teacher_markdown', 'markdown');

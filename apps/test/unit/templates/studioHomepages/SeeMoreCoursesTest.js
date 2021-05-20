@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
@@ -14,6 +14,7 @@ describe('SeeMoreCourses', () => {
     assert(
       wrapper.containsMatchingElement(
         <Button
+          __useDeprecatedTag
           color={Button.ButtonColor.gray}
           icon="caret-down"
           text="View more"

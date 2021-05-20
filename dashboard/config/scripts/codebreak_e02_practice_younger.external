@@ -1,0 +1,23 @@
+name 'CodeBreak E02 Practice Younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+Create a Paper Prototype using one of the Activity Guides linked below. Print the Activity Guide, or complete it on your computer or tablet.
+
+**Do This:** [Interactive Card: Paper Prototype](https://docs.google.com/document/d/1AjJz2rtn6KPlUm_pYea6VAFPAlSY2c6gGKDwZ5-7yuA/edit?usp=sharing)
+
+![](https://images.code.org/9a0048ed72c029267e7c5d292059b41c-image-1585323794984.png)
+
+For more practice, check out [Lesson 9: About Me with Sprite Lab](https://studio.code.org/s/coursee-2019/lessons/9/levels/1) from Computer Science Fundamentals, [Course E](https://studio.code.org/s/coursee-2019).
+
+
+
+---
+*Over 13 year old? Find your practice level [here](https://studio.code.org/s/code-break/lessons/2/levels/2).*
+MARKDOWN

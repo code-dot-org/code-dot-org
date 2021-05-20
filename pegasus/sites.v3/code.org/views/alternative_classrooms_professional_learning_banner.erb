@@ -1,0 +1,5 @@
+<%# This banner is specifically for the alternative-classrooms page. Ideally, we wouldn't have separate
+view just for the professional_learning_apply_banner on that page, but because of how our partials work 
+(see "Advanced Partials" section here https://code.org/editing/concepts), we have to create a separate
+view in order to pass a parameter%>
+<%= view :professional_learning_apply_banner, :link_suffix => "middle-high" %>

@@ -1,0 +1,31 @@
+---
+fr:
+  data:
+    variable_names:
+      Blue: Bleu
+      Green: Vert
+      Red: Rouge
+      actor: acteur
+      cats: tous les chats
+      color: couleur
+      counter: compteur
+      dogs: tous les chiens
+      height: hauteur
+      honey: miel
+      i: i
+      left: vers la gauche
+      length: longueur
+      name: nom
+      nectar: nectar
+      points: points
+      random: aléatoire
+      repeat: répéter
+      right: vers la droite
+      score: score
+      sides: côtés
+      size: taille
+      speed: vitesse
+      variable: variable
+      width: largeur
+      wizard: assistant
+      x: x

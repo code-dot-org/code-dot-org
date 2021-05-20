@@ -1,7 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -43,14 +43,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.create(
       {
         user_id: current_user.id,
-        name: !params[:name].to_s.empty? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
+        name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
-        course_id: params[:course_id] && Course.valid_course_id?(params[:course_id]) ?
+        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
-        stage_extras: params[:stage_extras] || false,
-        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
+        stage_extras: params['lesson_extras'] || false,
+        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
+        tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
     render head :bad_request unless section
@@ -79,9 +81,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       script = Script.get_from_cache(script_id)
       return head :bad_request if script.nil?
       # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id != script.course.try(:id)
+      return head :bad_request if course_id && course_id != script.unit_group.try(:id)
       # If script has a course and no course_id was provided, use default course
-      course_id ||= script.course.try(:id)
+      course_id ||= script.unit_group.try(:id)
       # Unhide script for this section before assigning
       section.toggle_hidden_script script, false
     end
@@ -90,12 +92,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields = {}
     fields[:course_id] = set_course_id(course_id)
     fields[:script_id] = set_script_id(script_id)
-    fields[:name] = params[:name] unless params[:name].nil_or_empty?
+    fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
-    fields[:stage_extras] = params[:stage_extras] unless params[:stage_extras].nil?
+    fields[:stage_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
+    fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
+    fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
 
     section.update!(fields)
     if script_id
@@ -120,6 +124,20 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       return
     end
     result = @section.add_student current_user
+    # add_student returns 'failure' when id of current user is owner of @section
+    if result == 'failure'
+      render json: {
+        result: 'section_owned'
+      }, status: :bad_request
+      return
+    end
+    # add_student returns 'restricted' when @section is flagged to restrict access
+    if result == 'restricted'
+      render json: {
+        result: 'section_restricted'
+      }, status: :forbidden
+      return
+    end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
       result: result
@@ -164,6 +182,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: scripts
   end
 
+  # GET /api/v1/sections/require_captcha
+  # Get the recaptcha site key for frontend and whether current user requires captcha verification
+  def require_captcha
+    return head :forbidden unless current_user
+    site_key = CDO.recaptcha_site_key
+    render json: {key: site_key}
+  end
+
   private
 
   def find_follower
@@ -184,7 +210,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Update course_id if user provided valid course_id
   # Set course_id to nil if invalid or no course_id provided
   def set_course_id(course_id)
-    return course_id if Course.valid_course_id?(course_id)
+    return course_id if UnitGroup.valid_course_id?(course_id)
     nil
   end
 end

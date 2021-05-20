@@ -3,9 +3,22 @@
 / Note that content_class, source_level, hide_header, and postcontent are optional.
 - app, data, content_class, source_level, hide_header, postcontent = %i(app data content_class source_level hide_header postcontent).map{ |x| local_assigns[x] }
 - level = source_level || @level
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/common.js')}
+  / Import Blockly assets in order to render them in the Markdown section of
+  / content levels.
+  %script{src: webpack_asset_path('js/blockly.js')}
+  %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
+  - associated_blocks_json = {}
+  - if level.try(:associated_blocks) && level.associated_blocks
+    %script{src: webpack_asset_path("js/#{js_locale}/#{level.associated_blocks}_locale.js")}
+    - associated_blocks_json = level.associated_blocks.to_json
+
+  %script{src: webpack_asset_path('js/levels/_content.js'), data: {associatedblocks: associated_blocks_json}}
 
 - unless data['title'].blank? || hide_header
   %h1!= render_multi_or_match_content(level.localized_property('title')) unless app == 'external'
+
 %div.content-level{class: (content_class unless content_class.blank?)}
   - unless app == 'external'
     - unless data['content1'].blank?
@@ -14,10 +27,8 @@
       %p.content.content2!= render_multi_or_match_content(level.localized_property('content2'))
     - unless data['content3'].blank?
       %p.content.content3!= render_multi_or_match_content(level.localized_property('content3'))
-  / Markdown support using the 'markdown' property.
+  / Markdown will be rendered clientside by _content.js
   - if data['markdown'].present?
-    #markdown
-      - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.localized_property('markdown')
-      / Render markdown text through the ActionView template engine.
-      = ActionView::Base.new.render(inline: level_markdown, type: :md)
+    - level_markdown = level.try(:localized_replaced_markdown, current_user) || level.try(:localized_property, 'markdown')
+    .markdown-container{data: {markdown: level_markdown}}
   = postcontent

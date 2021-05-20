@@ -1,10 +1,50 @@
+---
 nl:
   data:
     course:
       name:
+        csp-2017:
+          assignment_family_title: Basisprincipes uit de informatica
+          title: Basisprincipes uit de informatica ('17-'18)
+          version_title: "'17-'18"
+          description_student: In het najaar van 2016 lanceerde het (Amerikaanse) College Board zijn nieuwste AP®-cursus, AP Computer Science Principles. De cursus laat studenten kennismaken met de basisconcepten van informatica en daagt hen uit om te onderzoeken hoe computers en technologie de wereld kunnen beïnvloeden. Het AP-programma heeft AP Computer Science Principles ontworpen met als doel leiders te creëren op het gebied van informatica en diegenen die traditioneel ondervertegenwoordigd zijn aan te trekken en uit te rusten met essentiële informaticavaardigheden en multidisciplinaire kansen.
+          description_teacher: In het najaar van 2016 lanceerde het (Amerikaanse) College Board zijn nieuwste AP®-cursus, AP Computer Science Principles. De cursus laat studenten kennismaken met de basisconcepten van informatica en daagt hen uit om te onderzoeken hoe computers en technologie de wereld kunnen beïnvloeden. Het AP-programma heeft AP Computer Science Principles ontworpen met als doel leiders te creëren op het gebied van informatica en diegenen die traditioneel ondervertegenwoordigd zijn aan te trekken en uit te rusten met essentiële informaticavaardigheden en multidisciplinaire kansen.
+          description_short: Leer basis computerwetenschappelijke principes.
         csd-2017:
-          assignment_family_title: Informatiekunde ontdekkingen
+          assignment_family_title: Ontdekkingen in de informatica
+          title: Ontdekkingen in de informatica ('17-'18)
+          version_title: "'17-'18"
+          description_student: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+          description_teacher: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+          description_short: Een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken.
         allthethingscourse:
           title: alledingencursus
+          description_short: Dit is een cursus voor alledingen
+          description_student: Dit is een cursus voor alledingen en heeft een langere beschrijving voor studenten
+          description_teacher: Dit is een cursus voor alledingen en heeft een langere beschrijving voor docenten
         csd-2018:
-          assignment_family_title: Informatiekunde ontdekkingen
+          assignment_family_title: Ontdekkingen in de informatica
+          title: Ontdekkingen in de informatica ('18-'19)
+          version_title: "'18-'19"
+          description_short: Een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken.
+          description_student: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+          description_teacher: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+        csp-2018:
+          assignment_family_title: Basisprincipes uit de informatica
+          title: Basisprincipes uit de informatica ('18-'19)
+          version_title: "'18-'19"
+          description_short: Leer basis computerwetenschappelijke principes.
+          description_student: In het najaar van 2016 lanceerde het (Amerikaanse) College Board zijn nieuwste AP®-cursus, AP Computer Science Principles. De cursus laat studenten kennismaken met de basisconcepten van informatica en daagt hen uit om te onderzoeken hoe computers en technologie de wereld kunnen beïnvloeden. Het AP-programma heeft AP Computer Science Principles ontworpen met als doel leiders te creëren op het gebied van informatica en diegenen die traditioneel ondervertegenwoordigd zijn aan te trekken en uit te rusten met essentiële informaticavaardigheden en multidisciplinaire kansen.
+          description_teacher: In het najaar van 2016 lanceerde het (Amerikaanse) College Board zijn nieuwste AP®-cursus, AP Computer Science Principles. De cursus laat studenten kennismaken met de basisconcepten van informatica en daagt hen uit om te onderzoeken hoe computers en technologie de wereld kunnen beïnvloeden. Het AP-programma heeft AP Computer Science Principles ontworpen met als doel leiders te creëren op het gebied van informatica en diegenen die traditioneel ondervertegenwoordigd zijn aan te trekken en uit te rusten met essentiële informaticavaardigheden en multidisciplinaire kansen.
+        csp-2019:
+          title: Basisprincipes uit de informatica ('19-'20)
+          version_title: "'19-'20"
+          description_short: Leer basis computerwetenschappelijke principes.
+          description_student: In het najaar van 2016 lanceerde het (Amerikaanse) College Board zijn nieuwste AP®-cursus, AP Computer Science Principles. De cursus laat studenten kennismaken met de basisconcepten van informatica en daagt hen uit om te onderzoeken hoe computers en technologie de wereld kunnen beïnvloeden. Het AP-programma heeft AP Computer Science Principles ontworpen met als doel leiders te creëren op het gebied van informatica en diegenen die traditioneel ondervertegenwoordigd zijn aan te trekken en uit te rusten met essentiële informaticavaardigheden en multidisciplinaire kansen.
+          description_teacher: In het najaar van 2016 lanceerde het (Amerikaanse) College Board zijn nieuwste AP®-cursus, AP Computer Science Principles. De cursus laat studenten kennismaken met de basisconcepten van informatica en daagt hen uit om te onderzoeken hoe computers en technologie de wereld kunnen beïnvloeden. Het AP-programma heeft AP Computer Science Principles ontworpen met als doel leiders te creëren op het gebied van informatica en diegenen die traditioneel ondervertegenwoordigd zijn aan te trekken en uit te rusten met essentiële informaticavaardigheden en multidisciplinaire kansen.
+        csd-2019:
+          title: Ontdekkingen in de informatica ('19-'20)
+          version_title: "'19-'20"
+          description_short: Een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken.
+          description_student: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+          description_teacher: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.

@@ -1,0 +1,46 @@
+{
+  "my-MM": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "လုပ်​ဆောင်ချက်များ",
+          "Loops": "Loops",
+          "Math": "သင်္ချာ",
+          "Logic": "Logic",
+          "Variables": "Variables"
+        },
+        "CourseD_EOC_dance": {
+          "Logic": "Logic"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "လုပ်​ဆောင်ချက်များ",
+          "Loops": "Loops",
+          "Math": "သင်္ချာ",
+          "Logic": "Logic"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "လုပ်​ဆောင်ချက်များ"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "လုပ်​ဆောင်ချက်များ",
+          "Variables": "Variables",
+          "Math": "သင်္ချာ",
+          "Logic": "Logic",
+          "Text": "စာ"
+        },
+        "outbreak_freeplay": {
+          "Actions": "လုပ်​ဆောင်ချက်များ",
+          "Logic": "Logic",
+          "Loops": "Loops",
+          "Math": "သင်္ချာ",
+          "Variables": "Variables"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "လုပ်​ဆောင်ချက်များ",
+          "Logic": "Logic",
+          "Math": "သင်္ချာ"
+        }
+      }
+    }
+  }
+}

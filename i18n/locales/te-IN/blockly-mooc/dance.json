@@ -1,15 +1,15 @@
 {
-  "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "మీరు ఒక డాన్సర్‌ను తయారు చేయాలి.",
+  "danceFeedbackNoDancers": "మీకు డాన్సర్లు లేరు.",
+  "danceFeedbackNoBackground": "మీరు బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ జోడించాలి.",
+  "danceFeedbackTooManyDancers": "జాగ్రత్తగా ఉండండి! మీరు ’మేక్ ఏ న్యూ’ బ్లాక్‌ను ’ఎవరీ 2 మెజర్స్’ లోపల పెడితే, మీరు చాలా డాన్సర్లను సృష్టిస్తారు.",
+  "danceFeedbackUseSetSize": "ఆ డాన్సర్‌ను చిన్నగా చేయడానికి ’సెట్ బ్యాక్‌అప్_డాన్సర్2 సైజ్’ బ్లాక్ ఉపయోగించండి.",
+  "danceFeedbackUseSetTint": "డాన్సర్ టింట్ మార్చడానికి ’సెట్ టింట్’ బ్లాక్ ఉపయోగించండి.",
+  "danceFeedbackUseStartMapping": "మీ ప్రోగ్రాంకు <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> బ్లాక్ జోడించడానికి ప్రయత్నించండి.",
+  "danceFeedbackStartNewMove": "నాలుగవ మెజర్ తరువాత మీ డాన్సర్ కొత్త మువ్ చేస్తూ ఉండలేదు.",
+  "danceFeedbackNeedDifferentDance": "మీరు వేరే డాన్స్ ఉపయోగించాల్సి ఉంది.",
+  "danceFeedbackNeedEveryTwoMeasures": "మీరు ’ఎవరీ 2 మెజర్స్’ బ్లాక్ ఉపయోగించేలా చూడండి",
+  "danceFeedbackNeedMakeANewDancer": "రెండవ డాన్సర్‌ను సృష్టించడానికి ’మేక్ ఏ న్యూ’ బ్లాక్ ఉపయోగించండి.",
+  "danceFeedbackKeyEvent": "మీరు ’వెన్ కీ’ బ్లాక్‌కు ఏదో ఒక కోడ్ అటాచ్ చేసేలా చూడండి మరియు మీ డాన్స్ నడుస్తున్నప్పుడు కీ నొక్కండి.",
+  "measure": "మెజర్:"
 }

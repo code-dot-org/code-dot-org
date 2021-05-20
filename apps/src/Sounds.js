@@ -1,5 +1,6 @@
 /* global AudioContext */
 import Sound from './Sound';
+import _ from 'lodash';
 
 /**
  * Interface for a sound registry and playback mechanism
@@ -78,6 +79,12 @@ export default function Sounds() {
 
   /** @private {function[]} */
   this.whenAudioUnlockedCallbacks_ = [];
+
+  /**
+   * Callbacks invoked when all audio is stopped (e.g., Sounds.stopAllAudio is invoked).
+   * @private {function[]}
+   */
+  this.onStopAllAudioCallbacks_ = [];
 }
 
 let singleton;
@@ -266,7 +273,7 @@ Sounds.prototype.registerByFilenamesAndID = function(soundPaths, soundID) {
 Sounds.prototype.register = function(config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
-  sound.preload();
+  sound.preloadFile();
   return sound;
 };
 
@@ -329,11 +336,33 @@ Sounds.prototype.playURL = function(url, playbackOptions) {
 };
 
 /**
- * @param {!string} url
+ * @param {string} id of the sound.
+ * @param {ArrayBuffer} bytes of the sound to play.
+ * @param {object} playbackOptions config for the playing of the sound.
+ */
+Sounds.prototype.playBytes = function(id, bytes, playbackOptions) {
+  if (this.isMuted) {
+    return;
+  }
+  let soundConfig = {};
+  soundConfig.forceHTML5 = playbackOptions && playbackOptions.forceHTML5;
+  soundConfig.allowHTML5Mobile =
+    playbackOptions && playbackOptions.allowHTML5Mobile;
+  soundConfig.playAfterLoad = true;
+  soundConfig.playAfterLoadOptions = playbackOptions;
+  soundConfig.bytes = bytes;
+  let sound = new Sound(soundConfig, this.audioContext);
+  this.soundsById[id] = sound;
+  sound.preloadBytes();
+  sound.play();
+};
+
+/**
+ * @param {!string} id of the sound. This is a URL for sounds played via playURL.
  * @returns {boolean} whether the given sound is currently playing.
  */
-Sounds.prototype.isPlayingURL = function(url) {
-  var sound = this.soundsById[url];
+Sounds.prototype.isPlaying = function(id) {
+  var sound = this.soundsById[id];
   if (sound) {
     return sound.isPlaying();
   }
@@ -370,6 +399,16 @@ Sounds.prototype.stopAllAudio = function() {
       this.soundsById[soundId].stop();
     }
   }
+
+  _.over(this.onStopAllAudioCallbacks_)();
+};
+
+/**
+ * Register a callback that will be invoked when all audio is stopped.
+ * @param {function} callback with no arguments.
+ */
+Sounds.prototype.onStopAllAudio = function(callback) {
+  this.onStopAllAudioCallbacks_.push(callback);
 };
 
 Sounds.prototype.stopLoopingAudio = function(soundId) {

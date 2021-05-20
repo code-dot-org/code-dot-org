@@ -28,7 +28,7 @@ de:
         Bounce: Bounce
         Flappy: Flappy Bird
         Jigsaw: Puzzle
-        MazeStep: Labyrinth-Schritt-Modus
+        MazeStep: Labyrinth Schritt Modus
         Wordsearch: Wörtersuche
         Webapp: App-Labor
         ArtistEC: Der Künstler
@@ -39,6 +39,7 @@ de:
         Custom: Künstler
         CustomStudio: Spielelabor
         Gamelab: Spielelabor
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronze
@@ -631,6 +632,7 @@ de:
         C4_unplugged_forloops: '"Zähle mit"-Schleifen'
         C4_unplugged_parameters: Songschreiben mit Parametern
         C4_unplugged_binary: Binärdatei
+        CSF_a_b_artist_loops: Schleifen beim Künstler
         CSF_artist_angles: Winkel in Künstler
         CSF_collector_k1_blocks: 'Einführung in Informatik und Programmieren: Der
           Sammler'
@@ -638,6 +640,8 @@ de:
         CSF_collector_text_blocks: 'Einführung in Informatik und Programmieren: Der
           Sammler'
         CSF_create_functions: Funktionen erstellen
+        CSF_debugging_k1_blocks: Debugging/Fehlerbeseitigung
+        CSF_debugging_text_blocks: Debugging/Fehlerbeseitigung
         CSF_EF_cs_matters: Informatik ist wichtig
         CSF_maze_intro_k1_blocks: Einführung in Code Studio
         CSF_maze_intro_text_blocks: Einführung in Code Studio
@@ -672,16 +676,24 @@ de:
         csd_external_netflix_data: Wie macht Netflix Serien- und Filmvorschläge?
         csd_external_waze_data: Warum sind So viele Nutzer von Waze besessen?
         csd_gamelab_animation_tab: Der Animations Tab
+        csd_gamelab_variables_1: Einführung in Variablen - Teil 1
         csd_gamelab_velocity: Geschwindigkeit
         csd_weblab_intro_1: Einführung in Web Lab - Teil 1
         csd_weblab_intro_2: Einführung in Web Lab - Teil 2
         csd_weblab_css_1: Einführung in CSS - Teil 1
         csd_weblab_css_2: Einführung in CSS - Teil 2
         csd_weblab_intro_3: Einführung in Web Lab - Teil 3
+        csp_applab_databases_1: Einführung in Datenbanken - Teil 1
+        csp_applab_databases_2: Einführung in Datenbanken - Teil 2
         csp_applab_functions: Einführung in Funktionen
         csp_applab_functions_parameters: Funktionen mit Parametern
         csp_applab_loops: Schleifen
+        csp_concept_http_html: 'Das Internet: HTTP & HTML'
+        csp_concept_what_is_internet: Was ist das Internet?
         csp_cs_is_changing_everything: Informatik verändert alles
+        csp_internetsimulator_1: Internet Simulator - Teil 1
+        csp_internetsimulator_2: Internet Simulator - Teil 2
+        csp_internetsimulator_3: Internet Simulator - Teil 3
         starwars_intro: 'Star Wars: Baue eine Galaxie aus Code – Einführung'
         starwars_typing: 'Star Wars: Baue eine Galaxie aus Code – JavaScript'
         starwars_events: 'Star Wars: Erbaue ein Galaxie aus Code – Ereignisse'
@@ -739,36 +751,95 @@ de:
         applab_intro_designmode: App-Labor - Designmodus
         applab_intro_share: App-Labor - Teile deine App
         csd_applab_arrays: Einführung in Arrays
-        CSF_skinOverview_Harvester: Der Erntearbeiter
+        CSF_skinOverview_Harvester: Die Erntearbeiterin
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_harvester_skinOverview_K-1: Der Erntearbeiter
+        CSF_bb8_loops_C-F: Schleifen mit BB-8
+        CSF_harvester_skinOverview_K-1: Die Erntearbeiterin
+        CSF_harvester_loops_K1: Schleifen mit der Erntearbeiterin
         CSF_scrat_loops_K1: Schleifen in Ice Age
         CSF_scrat_loops_CF: Schleifen in Ice Age
         CSF_if_allskins: Der Wenn-Block
+        CSF_ifelse_allskins: Verwendung von Wenn/Sonst-Bausteinen
+        CSF_ifelseifelse_allskins: Nutzung von if-then-else Blöcken
         CSF_loops_AB: Schleifen
+        csd_gamelab_booleans: Boolesche Ausdrücke
         csd_gamelab_conditional_statements: Bedingte Anweisungen
+        csd_gamelab_if_else: Wenn/Sonst Anweisungen
         CSF_SpriteLabIntro_CDEF: Hier ist das Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Wie du ein Sprite im Sprite Lab erstellst
         CDEF_Video_SpritesInAction: Sprites in Aktion
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Aktion
         CSF_StarWars_ProjectIntro: Einführung in das Star Wars Projekt
         mc_2018_intro: 'Minecraft: Voyage Aquatic Einführung'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic wiederholen bis'
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic Bedingungen'
         mc_2018_closing: 'Minecraft: Voyage Aquatic Glückwunsch'
-        hoc_dance_warmup: Tanzparty - Warm Up
-        hoc_dance_congrats: Tanzparty -Party On!
+        hoc_dance_warmup: Tanzparty- Aufwärmen
+        hoc_dance_events: Tanzparty - Ereignisse
+        hoc_dance_properties: Tanzparty - Eigenschaften
+        hoc_dance_congrats: Tanzparty- Party los!
+        c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu
+          spielen
+        c_and_c_digital_sharing: Digitale Teilhabe
         teaching_csf_how_it_works: 'Informatik Grundlagen: Wie der Kurs funktioniert'
+        elem_pd_2: Grundschul-Informatik - PD Video 2/2
         what_is_cs: Was ist Informatik?
         repeat_block: Benutze den Wiederholungsblock
+        lesson_planning: Unterrichtsplanung
+        opd_closing: 'Informatik-Grundlagenunterricht: Abschluss & nächste Schritte'
+        why_unplugged_lessons: Wie werde ich "unplugged"
         writing_first_program: Schreibe dein erstes Computerprogramm
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lektion über Aktion - Songwriting mit
+          Funktionen
         what_is_an_event: Was ist ein Ereignis?
+        teaching_cs_pair_programming: 'Informatik-Grundlagenunterricht: Paarprogrammierung'
+        teaching_problem_solving: 'Informatik-Grundlagenunterricht: Unterricht in
+          Problembehebung'
+        csd_applab_designmode: 'Informatik Entdeckungen: App Lab - Entwurfsmodus'
         csd_pair_programming: Paarprogrammierung
+        csd_gamelab_functions: Aufrufen und Definieren von Funktionen
         csd_applab_parameters: Funktionen mit Parametern
         csd_applab_loops: Schleifen im App-Labor
+        csd_problem_solving_process: Der Problemlösungsprozess
+        CSF_Going_Places_Safely: Meine Online-Nachbarschaft
         CSF_SpriteLab_Intro_v2: Einführung Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Wie man einen Sprite erstellt
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Aktion
+        csd_debugging: Debugging/Fehlerbeseitigung
+        csd_applab_designmode_short: App-Labor - Designmodus
+        csp-pd-welcome: Willkommen in der Familie!
+        CSF-Teaching-Problem-Solving: CSF Problemlösungskurs
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot-Video
+          - Datenblock
+        u7-libraries-explanation: 'App Lab: Baue deine eigenen Blöcke - wie du Bibliotheken
+          benutzen kannst'
+        how-to-k5-workshops: 'Code.org''s Informatikgrundlagen: mit jungen Menschen
+          getestet und von Lehrern genehmigt'
+        why-should-teach-unplugged-activities: 'FAQ: Warum sollte ich "unplugged"-Aktivitäten
+          unterrichten?'
+        cs-principles-intro-to-objects: 'Informatikprinzipien: Einführung in Objekte'
+        oceans_machine_learning: Maschinelles Lernen
+        oceans_training_data: Trainingsdaten
+        oceans_societal_implications: Gesellschaftliche Auswirkungen
+        hoc_dance_congrats_2019: Tanzparty 2019-Party an!
+        hoc_dance_warmup_2019: Tanzparty 2019-Aufwärmen
+        hoc_dance_events_2019: Tanzparty 2019- Events
+        hoc_dance_measures_2019: Tanzparty 2019-Takte
+        hoc_dance_properties_2019: Tanzparty 2019- Eigenschaften
+        csd_what_computers_do: Was tun Computer eigentlich?
+        csf_my_online_neighborhood_2020: Meine Online-Nachbarschaft
+        csf_follow_the_digital_trail: Folge der digitalen Spur
+        csf_private_and_personal_information: Private und persönliche Informationen
+        csd_what_computers_are: Was ist ein Computer?
+        codebreak_e01: 'Code Break 1.0: Algorithmen mit Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototypen mit Mark Cuban und Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Verschlüsselung mit Ashton Kutcher and Mia
+          Gil Epner'
+        codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
+        csd_how_teamwork_works: Wie Teamarbeit funktioniert
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den
@@ -883,8 +954,7 @@ de:
         Infinity_move_directions_callout: Welcher Baustein bewegt Baymax nach oben,
           wenn Pfeil-nach-oben gedrückt wird?
         Infinity_move_directions_callout_arrow: Benutze die Pfeiltasten zum Bewegen
-        Infinity_move_collide_callout: Spiele einen Geräusch ab, wenn dieses Ereignis
-          passiert.
+        Infinity_move_collide_callout: Spiele einen Ton, wenn dieses Ereignis passiert.
         Infinity_repeat_callout: Setze "bewegen"-Bausteine hier hinein
         craft_run_button_callout: Drücke auf "Ausführen", um dein Programm auszuprobieren.
         craft_drag_block_callout: Ziehe einen "moveForward();"-Baustein zu einem anderen

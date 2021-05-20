@@ -1,7 +1,8 @@
-stage 'Programming: My Robotic Friends', flex_category: 'csf_f_1'
+lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
+lesson 'Programming: My Robotic Friends', display_name: 'Programming: My Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_MRF'
 
-stage 'Sequence in Maze', flex_category: 'csf_f_1'
+lesson 'Sequence in Maze', display_name: 'Sequence in Maze', has_lesson_plan: false
 level 'courseD_video_ramp1'
 level 'courseD_maze_ramp1'
 level 'courseD_maze_ramp2'
@@ -13,10 +14,10 @@ level 'courseD_maze_ramp5b', challenge: true
 level 'courseD_maze_ramp5c'
 level 'courseD_maze_ramp5d'
 
-stage 'Building a Foundation', flex_category: 'csf_f_1'
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: false, unplugged: true
 level 'BuildingAFoundation'
 
-stage 'Debugging with Scrat', flex_category: 'csf_f_1'
+lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: false
 level 'courseC_video_debugging'
 level 'courseC_maze_debugging1'
 level 'courseC_maze_debugging2'
@@ -28,7 +29,7 @@ level 'courseC_maze_debugging7', challenge: true
 level 'courseC_maze_debugging8_predict1', assessment: true
 level 'courseC_maze_debugging9'
 
-stage 'Programming in Artist', flex_category: 'csf_f_1'
+lesson 'Programming in Artist', display_name: 'Programming in Artist', has_lesson_plan: false
 level 'courseC_video_artist'
 level 'courseC_artist_prog1'
 level 'courseC_artist_prog2'
@@ -42,10 +43,10 @@ level 'courseC_artist_prog6_predict1', assessment: true
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2'
 
-stage 'Loops: My Loopy Robotic Friends', flex_category: 'csf_f_1'
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'Loops: My Loopy Robotic Friends', has_lesson_plan: false, unplugged: true
 level 'courseB_unplugged_loopyMRF'
 
-stage 'Loops in Artist', flex_category: 'csf_f_1'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: false
 level 'ramp_video_artistIntro'
 level 'ramp_artist_loops1'
 level 'ramp_artist_loops2'
@@ -58,7 +59,7 @@ level 'ramp_artist_loops7'
 level 'ramp_artist_loops8', challenge: true
 level 'ramp_artist_loops9'
 
-stage 'Nested Loops in Bee/Zombie', flex_category: 'csf_f_1'
+lesson 'Nested Loops in Bee/Zombie', display_name: 'Nested Loops in Bee/Zombie', has_lesson_plan: false
 level 'courseD_bee_nestedLoops1a'
 level 'courseD_bee_nestedLoops1'
 level 'courseD_video_nestedLoops'
@@ -73,7 +74,7 @@ level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
 level 'courseD_bee_nestedLoops9_predict2', assessment: true
 
-stage 'Nested Loops with Frozen', flex_category: 'csf_f_1'
+lesson 'Nested Loops with Frozen', display_name: 'Nested Loops with Frozen', has_lesson_plan: false
 level 'courseD_artist_project1'
 level 'courseD_artist_project2'
 level 'courseD_artist_project3'
@@ -84,10 +85,11 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-stage 'Algorithms: Tangrams', flex_category: 'csf_f_2'
+lesson_group 'csf_f_2', display_name: 'Course F Content'
+lesson 'Algorithms: Tangrams', display_name: 'Algorithms: Tangrams', has_lesson_plan: false, unplugged: true
 level 'TangramAlgorithms'
 
-stage 'Course E Introduction', flex_category: 'csf_f_2'
+lesson 'Course E Introduction', display_name: 'Course E Introduction', has_lesson_plan: false
 level 'courseE_video_ramp1'
 level 'courseD_scrat_ramp1'
 level 'courseD_scrat_ramp2'
@@ -104,10 +106,10 @@ level 'courseE_artist_ramp8'
 level 'courseC_video_angles'
 level 'courseE_artist_ramp9'
 
-stage 'The Power of Words', flex_category: 'csf_f_2'
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: false, unplugged: true
 level 'courseF_unplugged_powerOfWords'
 
-stage 'Ice Age Play Lab', flex_category: 'csf_f_2'
+lesson 'Ice Age Play Lab', display_name: 'Ice Age Play Lab', has_lesson_plan: false
 level 'courseF_video_IceAgeIntro'
 variants
   level 'courseF_IceAge_1'
@@ -156,7 +158,7 @@ variants
   level 'iceage_free_play'
 endvariants
 
-stage 'Conditionals in Minecraft', flex_category: 'csf_f_2'
+lesson 'Conditionals in Minecraft', display_name: 'Conditionals in Minecraft', has_lesson_plan: false
 level 'Overworld Move to Sheep'
 level 'Overworld Chop Tree'
 level 'Overworld Shear Sheep'
@@ -172,10 +174,10 @@ level 'Underground If Statements'
 level 'Overworld Powered Minecart'
 level 'Overworld Free Play 20x20'
 
-stage 'Envelope Variables', flex_category: 'csf_f_2'
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: false, unplugged: true
 level 'EnvelopeVariables'
 
-stage 'Variables in Artist', flex_category: 'csf_f_2'
+lesson 'Variables in Artist', display_name: 'Variables in Artist', has_lesson_plan: false
 level 'grade5_artist_variables_triangles1'
 level 'courseF_artist_variables2'
 level 'courseF_video_artistVariables'
@@ -194,7 +196,7 @@ level 'courseF_artist_variablesFP'
 bonus 'courseF_artist_variables_challenge1'
 bonus 'courseF_artist_variables_challenge2'
 
-stage 'Variables in Play Lab', flex_category: 'csf_f_2'
+lesson 'Variables in Play Lab', display_name: 'Variables in Play Lab', has_lesson_plan: false
 level 'courseF_playlab_variables1a'
 level 'courseF_playlab_variables2b'
 level 'courseF_playlab_variables3b_josh'
@@ -208,10 +210,10 @@ level 'courseF_playlab_variables7b'
 bonus 'courseF_playlab_variables_challenge1'
 bonus 'courseF_playlab_variables_challenge2'
 
-stage 'For Loop Fun', flex_category: 'csf_f_2'
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: false, unplugged: true
 level 'ForLoopFun'
 
-stage 'For Loops in Bee', flex_category: 'csf_f_2'
+lesson 'For Loops in Bee', display_name: 'For Loops in Bee', has_lesson_plan: false
 level 'courseF_bee_for1'
 level 'courseF_bee_for2'
 level 'courseF_video_forBee'
@@ -227,7 +229,7 @@ level 'courseF_bee_for11'
 bonus 'courseF_bee_for_challenge1'
 bonus 'courseF_bee_for_challenge2'
 
-stage 'For Loops in Artist', flex_category: 'csf_f_2'
+lesson 'For Loops in Artist', display_name: 'For Loops in Artist', has_lesson_plan: false
 level 'courseF_video_forArtist'
 level 'courseF_artist_for1'
 level 'courseF_artist_for2'
@@ -243,10 +245,10 @@ level 'courseF_artist_for10'
 bonus 'courseF_artist_for_challenge1'
 bonus 'courseF_artist_for_challenge2'
 
-stage 'Songwriting with Parameters', flex_category: 'csf_f_2'
+lesson 'Songwriting with Parameters', display_name: 'Songwriting with Parameters', has_lesson_plan: false, unplugged: true
 level 'SongwritingWithParameters'
 
-stage 'Functions in Bee', flex_category: 'csf_f_2'
+lesson 'Functions in Bee', display_name: 'Functions in Bee', has_lesson_plan: false
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'
@@ -273,7 +275,7 @@ level 'coursef_functionsSummary_map'
 bonus 'courseF_bee_functions_challenge1'
 bonus 'courseF_bee_functions_challenge2'
 
-stage 'Functions with Parameters in Artist', flex_category: 'csf_f_2'
+lesson 'Functions with Parameters in Artist', display_name: 'Functions with Parameters in Artist', has_lesson_plan: false
 level 'courseF_video_artistFunctions'
 level 'courseF_artist_fwp1'
 level 'gradeF_video_artistParameters'
@@ -290,7 +292,7 @@ level 'courseF_artist_fwp9'
 bonus 'courseF_artist_fwp_challenge1'
 bonus 'courseF_artist_fwp_challenge2'
 
-stage 'Functions with Parameters in Bee', flex_category: 'csf_f_2'
+lesson 'Functions with Parameters in Bee', display_name: 'Functions with Parameters in Bee', has_lesson_plan: false
 level 'courseF_bee_fwp1'
 level 'courseF_bee_fwp2'
 level 'courseF_bee_fwp3'
@@ -303,23 +305,25 @@ level 'courseF_bee_fwp9_predict1', assessment: true
 bonus 'courseF_bee_fwp_challenge1'
 bonus 'courseF_bee_fwp_challenge2'
 
-stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'Explore Project Ideas', display_name: 'Explore Project Ideas', has_lesson_plan: false
 level 'courseF_video_csMatters', named: true
 level 'InspirationalArtwork', named: true
 level 'FoodFight', named: true
 level 'Guess The Number', named: true
 level 'Choose Your Own Adventure', named: true
 
-stage 'The Design Process', flex_category: 'end_of_course_project'
+lesson 'The Design Process', display_name: 'The Design Process', has_lesson_plan: false
 level 'Begin planning your project', named: true
 
-stage 'Build Your Project', flex_category: 'end_of_course_project'
+lesson 'Build Your Project', display_name: 'Build Your Project', has_lesson_plan: false
 level 'Course F: Artist Project', named: true
 level 'Course F: Play Lab Project', named: true
 
-stage 'Revise Your Project', flex_category: 'end_of_course_project'
+lesson 'Revise Your Project', display_name: 'Revise Your Project', has_lesson_plan: false
 level 'Course F: Artist Project - Revise', named: true
 level 'Course F: Play Lab Project - Revise', named: true
 
-stage 'Present Your Project', flex_category: 'end_of_course_project'
+lesson 'Present Your Project', display_name: 'Present Your Project', has_lesson_plan: false
 level 'Prepare for your presentation', named: true
+

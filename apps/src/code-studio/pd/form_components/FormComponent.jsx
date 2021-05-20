@@ -4,6 +4,7 @@ import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
 import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
 import SingleCheckbox from '../form_components/SingleCheckbox';
+import utils from './utils';
 
 /**
  * Helper class for dashboard forms. Provides helper methods for easily
@@ -127,9 +128,10 @@ export default class FormComponent extends React.Component {
    * @param {String} [placeholder] - if specified, will add a valueless option
    *        with the specified placeholder text
    * @param {boolean} [required=false]
-   * @param {String[]|Object} options - can be specified as either an array (in which case
-   *        the values and display name will be the same) or an object (in which case
-   *        we'll use the keys for the values and the values for the display names)
+   * @param {Answer[]|SimpleAnswer[]|Object} options - can be specified as
+   *        either an array (of either Answers or SimpleAnswers, as defined in
+   *        utils.js) or an object (in which case we'll use the keys for the
+   *        values and the values for the display names)
    *
    * @returns {FieldGroup}
    */
@@ -143,11 +145,14 @@ export default class FormComponent extends React.Component {
   }) {
     let renderedOptions;
     if (Array.isArray(options)) {
-      renderedOptions = options.map(value => (
-        <option key={value} value={value}>
-          {value}
-        </option>
-      ));
+      renderedOptions = options.map(value => {
+        const {answerText, answerValue} = utils.normalizeAnswer(value);
+        return (
+          <option key={answerValue} value={answerValue}>
+            {answerText}
+          </option>
+        );
+      });
     } else {
       renderedOptions = Object.keys(options).map(key => (
         <option key={key} value={key}>

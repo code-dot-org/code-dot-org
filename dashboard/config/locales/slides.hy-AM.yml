@@ -2594,3 +2594,11 @@ hy:
         text: In this next puzzle, our goal is to help the actor do a job continuously.
           Learning how the repeat commands work will save you a ton of time later
           when you build your own game.
+    mc_2016_intro:
+      8:
+        text: If you ever want to delete a block, just remove it from the stack and
+          drag it back into the toolbox.
+    hoc_dance_events_2019:
+      4:
+        text: Some examples of events are listening for a mouse click, an arrow button,
+          or a tap on the screen.

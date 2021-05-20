@@ -1,0 +1,17 @@
+{
+  "func": "dropdown",
+  "category": "UI controls",
+  "paramButtons": {
+    "minArgs": 1
+  },
+  "paletteParams": [
+    "id",
+    "option1",
+    "etc"
+  ],
+  "params": [
+    "\"id\"",
+    "\"option1\"",
+    "\"etc\""
+  ]
+}

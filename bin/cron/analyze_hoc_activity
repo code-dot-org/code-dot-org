@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative './only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 #
 # This script analyzes the activity that is launched from code.org/learn. We track outgoing clicks,
 # hidden image calls at the beginning and end of [3rd party] tutorials, and visits to our finish
@@ -14,20 +16,17 @@
 #
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
-require 'cdo/only_one'
 require 'cdo/properties'
 require 'dynamic_config/dcdo'
 
 # Provides helper methods (analyze_day_fast and add_hashes) as well as the
-# *_DB_READONLY constants.
+# *_DB_READER constants.
 require_relative '../../lib/analyze_hoc_activity_helper'
 
 # This default number of lines of code is from 2016-11-23.
 DEFAULT_LINES_OF_CODE = 20_886_942_901
 
 def main
-  return unless only_one_running?(__FILE__)
-
   to_date = JSON.load(IO.read(pegasus_dir("cache/HourOfActivity_Totals_2014-12-05.json")))
 
   total_started = to_date['started']
@@ -50,11 +49,14 @@ def main
   # discussion of ways to resolve the problem can be found in this document:
   # https://docs.google.com/document/d/1RTTCpkDYZjqZxfVehkZRkk1HckYMvFdFGs6SEZnK1I8
   total_started += 14_861_327
+  # March 2021:
+  # Microsoft provided data about Hour of Code served through their tutorials.
+  total_started += 3_774_215
 
-  today = DateTime.now.to_date
-  day = Date.strptime('2014/12/06', '%Y/%m/%d')
+  today = Date.today
+  day = Date.new(2014, 12, 6)
 
-  while day <= today
+  while day < today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
     if (day != today) && File.file?(cache_path)
       day_data = JSON.load(IO.read(cache_path))
@@ -82,8 +84,8 @@ def main
   # Compute the number of hoc events (the grand total and broken down by company and country).
   hoc_country_totals = Hash.new(0)
   hoc_company_totals = Hash.new(0)
-  unique_hoc_events = DB[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
-  total_hoc_count = DB[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:email, :name).count
+  unique_hoc_events = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
+  total_hoc_count = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:email, :name).count
 
   unique_hoc_events.each do |row|
     data = JSON.parse(row[:data])
@@ -140,7 +142,7 @@ def main
   existing_lines_of_code = metrics['lines_of_code']
   lines_of_code = [lines_of_code, existing_lines_of_code].max
 
-  petition_signatures = PEGASUS_REPORTING_DB_READONLY[:forms].where(kind: 'Petition').group_by(:hashed_email).count
+  petition_signatures = PEGASUS_DB_READER[:forms].where(kind: 'Petition').group_by(:hashed_email).count
 
   existing_project_count = metrics['project_count']
 
@@ -156,15 +158,9 @@ def main
     project_count:            existing_project_count,
   }
 
-  total_females = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'f').exclude(last_sign_in_at: nil).count
-  total_males = DASHBOARD_REPORTING_DB_READONLY[:users].where(gender: 'm').exclude(last_sign_in_at: nil).count
-  total_with_gender = [1, total_females + total_males].max
-
   Properties.set :about_stats, {
-    number_served: total_started,
-    number_students: DASHBOARD_REPORTING_DB_READONLY[:users].where(user_type: 'student').exclude(last_sign_in_at: nil).count,
-    number_teachers: DASHBOARD_REPORTING_DB_READONLY[:users].where(user_type: 'teacher').exclude(last_sign_in_at: nil).count,
-    percent_female: ((100 * total_females) / total_with_gender).to_i,
+    number_students: DASHBOARD_DB_READER[:users].where(user_type: 'student').exclude(last_sign_in_at: nil).count,
+    number_teachers: DASHBOARD_DB_READER[:users].where(user_type: 'teacher').exclude(last_sign_in_at: nil).count,
   }
 end
 

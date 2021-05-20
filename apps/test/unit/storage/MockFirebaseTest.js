@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import MockFirebase from '../../util/MockFirebase';
 import {init, getProjectDatabase} from '@cdo/apps/storage/firebaseUtils';
 
@@ -162,6 +162,7 @@ describe('MockFirebase', () => {
       init({
         channelId: 'test-firebase-channel-id',
         firebaseName: 'test-firebase-name',
+        firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
         firebaseAuthToken: 'test-firebase-auth-token',
         showRateLimitAlert: () => {}
       });

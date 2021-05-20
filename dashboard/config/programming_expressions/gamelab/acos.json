@@ -1,0 +1,11 @@
+{
+  "func": "acos",
+  "category": "Math",
+  "paletteParams": [
+    "value"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

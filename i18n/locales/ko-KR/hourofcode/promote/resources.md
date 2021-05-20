@@ -1,7 +1,5 @@
 ---
 title: 각종 자료
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -10,167 +8,176 @@ nav: promote_nav
 
 # Hour of Code 를 홍보해주세요.
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### 아워오브코드를 주목받게 하기 위해 필요한 모든 자료를 찾으세요. 어디에서부터 시작해야 할지 모르세요? 아워오브코드 주최를 위한 [하우 투 가이드]({{ how_to_url }})부터 시작하세요!
 
 * * *
 
-{{ view :promote_handouts }} {{ view :promote_videos }}
+{{ promote_handouts }} {{ promote_videos }}
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## 이 포스터를 학교에 걸어주세요.
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+Malala, Stephen Curry, Shakira 등의 사진이 들어 있는 새 포스터가 나왔습니다! 올 해 각 세트는 6장의 포스터와 126장의 ""아워오브코드를 해냈다" 스티커와 함께 제공될 것입니다. 물량은 한정되어 있습니다.포스터를 주문/a>하세요. 직접 프린트하려면, 아래 이미지를 클릭하여 인쇄 가능한 버전을 보고 저장하세요.</p> 
 
-{{ view :promote_new_posters }}
+{{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* 이전 연도의 포스터를 찾고 있으세요? [여기서 찾으세요]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## 소셜미디어에 포스팅
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![이미지](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![이미지](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![이미지](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![이미지](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## 아워오브코드 로고를 사용해 세상에 널리 알려주세요.
 
-[![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![이미지]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![이미지]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[고해상도 버전 다운로드](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"아워오브코드"와 "Hora del Código"는 상표입니다. 이 상표의 사용은 금지하지는 않지만, 몇 가지 제한 사항을 지켜주셔야 합니다:**
 
-1. 의류 등 각종 패션 제품에 사용되는 "Hour of Code"라는 브랜드 이름으로서 사용되서는 안되며, Hour of Code 운동에 대한 참조를 달아야 합니다. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. 패션 제품에는 "아워오브코드" 또는 "Hora del Código" 라는 참조 표시를 사용해야 한다는 것은 그것이 귀사의 고유 브랜드명임을 나타내는 것이 아니라 "아워오브코드"를 풀뿌리 운동으로서 지칭하는 것입니다. 
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong>좋은 예</strong>: "YOUR-COMPANY.com에서 Hour of Code™에 참여하세요." 
+  </li>
+  <li>
+    <strong>나쁜 예</strong>: "귀사의 아워오브코드를 사용해 보세요." 
+  </li>
+</ul>
+
+1. 웹 사이트와 앱 설명에서 "아워오브코드"와 "Ⓡ" 첨자를 언급한 가장 눈에 띄는 장소와 "Hora del Código"를 언급한 가장 눈에 띄는 장소에서 "TM" 첨자를 사용하세요.
+2. CSEdWeek와 [Code.org]({{ codeorg_link }}) 웹사이트로의 링크를 포함하여, 페이지 상(또는 주석 내)에 다음과 같이 말하는 언어를 수록하세요. 
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *" '아워오브코드™'/'Hora del Código®'는 1시간 분량의 컴퓨터 과학과 컴퓨터 프로그래밍을 수 백만명의 학생들에게 소개하기 위한 컴퓨터 과학 교육주간[csedweek.org]과 Code.org [code.org]에 조직된 세계적인 운동입니다."*
 
-4. "Hour of Code"를 앱/프로그램 이름으로 사용하지 말아주세요.
+3. 앱 명칭에 "아워오브코" 또는 "Hora del Código"를 사용하지 마세요.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## 스티커를 인쇄해 학생들에게 나누어 주세요.
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(스티커는 직경 1인치이고 시트 당 63장.)<br />
 
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![이미지](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## 지역 주민을 아워오브코드에 초대하고 이메일을 통해 이벤트 홍보.
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### [더 자세한 내용과 아워오브코드에 관해 이야기할 때 사용할 언어를 찾으세요]({{ promote/stats_url }}) .
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### 학교와 직장, 친구들에게 가입을 권합니다:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**제목:**아워오브코드를 위해 저와 1억 명 이상 학생들과 함께 해주세요. <br />
 
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+컴퓨터는 어디에나 존재하고, 지구상에 모든 산업을 변화시킵니다. 하지만 전체 고등학교 중 47%만이 컴퓨터 과학을 가르치고 있습니다. 희소식은, 우리가 이러한 상황을 바꾸어가고 있다는 것입니다! 이전에 아워오브코브에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 1억명 이상의 학생들이 아워오브코드를 해보고 있습니다.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+아워오브코드로, 컴퓨터 과학이 구글과 MSN, 야후!, 디즈니의 홈페이지에 이미 있습니다. 100개 이상의 파트너가 이 운동을 지원하기 위해 함께 협력하고 있습니다. 전세계 모든 애플스토어에서도 아워오브코드를 개최했으며 오바마 대통령과 캐나다 쥐스탱 트뤼도 총리 등과 같은 지도자는 캠페인의 일부로서 그들의 첫 번째 코드 라인을 작성했습니다. 
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+올해는 더 크게 만들어 봅시다. 아워오브코드에 참여해 줄 것을 요청합니다 {{ campaign_date/year }}. 컴퓨터 과학 교육 주간 {{ campaign_date/full }}동안 아워오브코드 이벤트에 참여해 주십시오. ({{ campaign_date/short }})
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+널리 알리고, 이벤트를 주최하고 지역 학교에 가입하도록 요청하세요. 또는 직접 아워오브코드를 해보세요 -- 기초를 배움으로써 누구나 유익함을 얻을 수 있습니다.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+http://hourofcode.com/{{ country }}에서 시작하세요. <br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### 학교에서 자원 봉사하기:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [학교에서 자원봉사하는 것과 관련된 더 자세한 자료와 정보는 여기에서 찾으세요]({{ how_to_volunteers_url }}).
 
-**Subject line:** Can we help you host an Hour of Code?
+**제목:**아워오브코드 주최와 관련하여 도움을 드릴까요?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+{{ campaign_date/short }} 사이에, 전세계 학생 중 10 퍼센트가 학교에서 아워오브코드를 하며 컴퓨터 과학 교육주간을 기념할 것입니다. 모든 어린이가 기술이 우리 주위에서 어떠한 일을 하는지 배울 기회입니다.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[조직/내 이름]는(은) [학교명]가(이) 아워오브코드 이벤트를 진행하는데 도움을 드리고 싶습니다. 우리는 선생님이 교실에서 아워오브코드를 개최할 때 도움을 드리거나 (심지어 우리는 컴퓨터가 필요하지 않습니다!) 또는 학교 회의를 열고 싶으면, 기술이 어떻게 작용하는지 또한 소프트웨어 엔지니어가 되는 것은 어떤 것인지 등을 이야기할 강연자를 섭외할 수 있습니다.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+학생은 각자 자신의 앱 또는 게임을 만들어 학부모에게 보여줄 것이며 우리 역시 아워오브코드 인증서를 인쇄하여 학생들에게 나눠 줄 것입니다. 무엇보다 재밌습니다! 인터랙티브, 체험형 활동으로 학생은 접근 가능한 방식으로 컴퓨팅 사고력을 배울 것입니다.
 
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+컴퓨터는 어디에나 존재하고, 지구상에 모든 산업을 변화시킵니다. 하지만 전체 고등학교 중 47%만이 컴퓨터 과학을 가르치고 있습니다. 좋은 소식은 우리가 이러한 상황을 바꾸어가고 있다는 것입니다! 이전에 아워오브코드에 대해 들어봤다면, 이것이 역사를 만들었다는 걸 아실겁니다. 전세계 1억 명 이상의 학생들이 아워오브코드를 해 봤습니다. 심지어 오바마 대통령과 캐나다 쥐스탱 트뤼도 총리 등과 같은 지도자는 캠페인의 일부로서 그들의 첫 번째 코드 라인을 작성했습니다. 
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+이벤트에 관한 더 자세한 내용은 http://hourofcode.com에서 읽을 수 있습니다. 또는 [학교명]가 (이) 참여하는 방법에 관해 논의할 시간을 갖고 싶으면 저희에게 말씀해 주십시오. <br />
 
 * * *
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### 부모님들에게 학교 이벤트에 대해 말합니다:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**제목:**학생들이 아워오브코드로 미래를 바꾸고 있습니다.
 
-Dear Parents,
+학부모님들께,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+우리는 기술로 둘러싸인 세상속에서 살아가고 있습니다. 그리고 우리는 학생들이 자라나 어른이 되면서 어떤 진로와 분야를 선택하게 되던지, 현재와 같은 IT 기술을 이해하고 활용할 수 있는 능력이 그 진로와 분야에서 성공하는데 전적으로 달려있다는 것을 알고 있습니다.
 
-But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
+하지만 우리 중 극히 일부 만이 **기술** 이 어떻게 작동되는지 배우고 있습니다. 전체 고등학교 중 47% 만이 컴퓨터 과학을 가르치고 있습니다.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+그래서 우리 학교 전체가 컴퓨터 과학 교육주간 ({{ campaign_date/full }})에 역사상 가장 큰 학습 이벤트인 아워오브코드에 참여하려 합니다. 전세계 1억명 이상의 학생들이 이미 아워오브코드를 경험해 보았습니다. 우리의 아워오브코드는 [학교 이름]은 이러한 기본적인 21세기 스킬을 가르칠 준비가 되었다는 선언문을 만들고 있습니다. 우리 학생들이 프로그래밍 활동들을 계속 할 수 있도록 하기 위해, 아워오브코드 이벤트를 아주 크게 열고 싶습니다. 자원봉사를 하고 지역 언론매체에 연락하며 소셜 미디어 채널에서 뉴스를 공유하고 커뮤니티에서 추가적인 아워오브코드 이벤트를 열어주시면 좋겠습니다.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+[타운/도시명]에서 교육의 미래를 바꿀 기회입니다.
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+자세한 내용은 http://hourofcode.com/{{ country }}을 참조하고 입소문이 나도록 도와주세요. <br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### 언론매체를이벤트에 초대하세요:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [언론 매체를 이벤트에 초대하는 것과 관련된 더 자세한 내용은 언론보도 키트를 확인하세요.]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**제목**: 학생들에게 컴퓨터 과학을 소개하는 미션에 지역 학교 참여.
 
-Computers are everywhere, changing every industry on the planet, but only 35% of all high schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
+컴퓨터는 어디에나 있고 지구 상의 모든 산업을 변화시키고 있지만 전체 고등학교 중 47%만이 컴퓨터 과학을 가르칩니다. 소외된 인종 및 민족 그룹의 어린 여성과 학생들은 컴퓨터 과학 수업을 받는 경우는 매우 적으며 더구나 테크 산업에 진출한 인원 역시 매우 적습니다. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+아워오브코드로, 컴퓨터 과학이 구글과 MSN, 야후!, 디즈니의 홈페이지에 이미 있습니다. 100개 이상의 파트너가 이 운동을 지원하기 위해 함께 협력하고 있습니다. 전세계의 애플 스토어가 아워오브코들 주최하고 있습니다. 오바마 대통령은 캠페인의 일환으로 그의 첫번째 코드를 작성했습니다.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+그래서 [SCHOOL NAME] 학생 [X number] 명은 컴퓨터 과학 교육 주간(12월 3~9일) 동안 한 명도 빠짐없이 역사상 가장 큰 학습의 현장인 아워 오브 코드에 참여합니다.
 
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+[DATE]에 열리는 우리의 개회식 행사에 참석하여 학생들이 활동을 시작하는 모습을 봐주시길 요청하며 이 초대의 글을 씁니다.
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+비영리 단체 Code.org와 100 개 이상의 다른 파트너가 함께 조직하는 아워오브코드는 오늘날의 학생들이 21세기 성공을 위해 필수적인 중요한 기량을 배울 준비가 되었다고 믿는 세계적인 운동입니다. 우리와 함께 해주세요.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+연락처: [이름], [TITLE],, 전화: (212) 555-5555 날짜: [이벤트 날짜 및 시간] 장소: [주소 또는 찾아오는 길]
 
-I look forward to being in touch. <br />
+여러분의 연락을 기다리겠습니다.<br />
 
 * * *
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### 지역 정치인인을 학교 이벤트에 초대하세요:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [더 많은 정보가 필요하세요? 정치인을 초대하여 이벤트에 참석하게 하려면 먼저 우리의 자료를 보세요]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**제목:**우리는 아워오브코드로 미래를 바꾸고 있습니다. 저희 학교와 함께 해 주세요.
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+친애하는 [시장/주지사/대표/상원의원] 님께:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+컴퓨팅 직종이 미국에서 가장 임금이 높은 직종인 걸 알고 계셨어요? 전국적으로 500,000개 이상의 컴퓨터 관련 일자리가 있지만, 작년엔 불과 42,969명의 컴퓨터 과학 전공자 만이 취업했습니다.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+오늘날 컴퓨터 과학은 각 산업의 기반이지만 대부분의 학교에서 가르치고 있지 않습니다. [학교명]에서, 우리는 이를 바꾸려 합니다.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+그래서 우리 학교 전체가 컴퓨터 과학 교육주간 ({{ campaign_date/full }})에 역사상 가장 큰 학습 이벤트인 아워오브코드에 참여하려 합니다. 전세계 1억명 이상의 학생들이 이미 아워오브코드를 경험해 보았습니다.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+저는 귀하에게 우리 학교의 아워오브코드 이벤트에 참여하여 개회식에서 연설을 해주실 것을 요청하기 위해 이 초대장을 씁니다. 이 이벤트는 [DATE, TIME, PLACE]에 열리고 [주 또는 도시 이름]가 21세기의 가장 중요한 능력을 학생들에게 가르칠 준비가 되었다는 강한 성명서를 발표할 것입니다. 우리는 우리 학생들이 단순히 소비만 하는 것이 아니라, 미래의 기술을 창조하는 최전선에 서있길 바랍니다. 
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+[전화 번호 또는 이메일 주소]로 저에게 연락주십시오. 여러분의 응답을 기다리고 있겠습니다. 
 
-{{ view :signup_button }}
+{{ signup_button }}

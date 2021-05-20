@@ -1,3 +1,4 @@
+#Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 he:
   devise:
     confirmations:
@@ -39,6 +40,7 @@ he:
       update_needs_confirmation: "עדכון החשבון שלך הושלם, אבל אתה צריך לאמת את חשבון האימייל החדש. בבקשה\nבדוק באימייל שלך ולחץ על קישור האימות בשביל לסיים את תהליך אימות האימייל שלך."
       updated: "אתה עדכנת את החשבון שלך בהצלחה."
     sessions:
+      signed_in: " "
       signed_out: "יצאת בהצלחה."
     unlocks:
       send_instructions: "אתה תקבל הודעת דוא״ל עם הוראות כיצד לבטל את נעילת החשבון שלך תוך מספר דקות."

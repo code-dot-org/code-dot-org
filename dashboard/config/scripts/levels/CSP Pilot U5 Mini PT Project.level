@@ -185,11 +185,11 @@
     "mini_rubric": "false",
     "preload_asset_list": null,
     "reference_links": [
-      "/docs/concepts/app-lab/patterns/list-filter-pattern/",
-      "/docs/concepts/app-lab/patterns/list-scrolling-pattern/",
-      "/docs/concepts/app-lab/patterns/random-list-access/",
-      "/docs/concepts/app-lab/patterns/update-screen-pattern/",
-      "/docs/concepts/app-lab/patterns/when-to-make-a-function"
+      "/docs/concepts/patterns/list-filter-pattern/",
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/random-list-access/",
+      "/docs/concepts/patterns/update-screen-pattern/",
+      "/docs/concepts/patterns/when-to-make-a-function"
     ]
   },
   "published": true,

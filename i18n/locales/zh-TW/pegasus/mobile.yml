@@ -12,14 +12,23 @@
   csedweek_dates: "2018 年 12 月 3-9 日"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">一小時玩程式</a>活動即將開始。所有的教師以及召集人，趕快<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">開始計畫您的活動吧！</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源</a>'
+  csedweek_banner_teachers_text: "您是教電腦或資訊科學的老師嗎？請看看其它 CSEdWeek 的資源"
   n_have_learned_an_hoc: "<h1>立刻嘗試</h1><h3> # 人已體驗的</h3><h2>一小時玩程式活動</h2>"
+  try_hoc_num_served: "<h1>立即嘗試</h1> <h3>%{num} 人已體驗的</h3><h2>一小時玩程式活動</h2>"
+  try_hoc_num_served_markdown: |-
+    # 立即嘗試\\## %{num} 人已體驗的\\### 一小時玩程式活動 #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "任何人都可以學習。"
   learn_now: "現在就開始學習"
   petition_message: "每個在學校的學生都應該有機會學習計算機科學"
   petition_sign_message: '如果您同意，請簽署您的名字。目前已有 # 人簽署。'
-  petition_sign_message_support: '如果您支持我們的理想，請在此簽署您的名字。目前已有 # 人簽署。'
+  petition_sign_message_num: "若你同意，請簽署你的名字，已加入我們的郵寄名單。目前已有 %{num} 人簽署。"
   petition_join_others: '目前已有 # 人簽署。'
-  name: "你的名字"
+  petition_join_others_num: "加入這個已有 %{num} 人參與的活動"
+  name: "名稱"
   email: "電子郵件"
   zipcode: "郵遞區號或國家"
   submit: "提交"
@@ -31,7 +40,7 @@
   og_description: "每一個學校的每一個學生都應該要有學習計算機科學的機會。"
   og_description_celeb: "試試新的教程，為你或你的班級贏得與名人視訊聊天的機會！"
   csedweek_og_title: "計算機科學教育週"
-  csedweek_og_description: "2018 年 12 月的 3-9 日。計算機科學是每一個學生都要學習的基礎。"
+  csedweek_og_description: "計算機科學是每一個學生都要學習的基礎。"
   csedweek_og_description_soon: "一小時玩程式活動即將在 2018 年 12 月 3 - 9 日進行。計算機科學是每一個學生都要學習的基礎。"
   csedweek_og_description_here: "一小時玩程式（Hour of Code）活動來囉。計算機科學是每個學生都有具備的基礎知識喔。"
   hoc2014_heading: "加入<a href=\"http://hourofcode.com\">一小時的程式設計課程</a> <br/>，2014 年 12 月 8 日至 14 日 <br/>"
@@ -43,6 +52,7 @@
   hoc2014_support: "支援 &#x25BE;"
   hoc2014_whatishoc: "一小時玩程式（Hour of Code）是什麼？"
   csedweek_map_header: "# 個計算機科學教育週 / 一小時玩程式活動在全球"
+  csedweek_map_header_num: "全球各地有 %{num} 個 CSEdWeek  / 一小時玩程式活動"
   csedweek_map_signup: "註冊您的活動"
   csedweek_map_search_placeholder: "搜尋一小時玩程式活動"
   csedweek_map_search_search: "搜尋"
@@ -145,11 +155,21 @@
   enter_valid_email: "請輸入有效的電子信箱"
   get_a_certificate_message: "我們將會寄送給您一份證書，以及有關<a href='/learn/beyond'>一小時課程後的學習</a>的相關訊息。"
   get_a_certificate_message_after: "點擊證書可以下載或列印。現在，繼續我們的<a href='http://studio.code.org'>其它課程</a>，或點擊<a href='/learn/beyond'>超越一小時玩程式</a>以觀看更多學習內容。"
+  get_a_certificate_message_after_markdown: "請點擊下載或列印證書。現在，請繼續我們的[其他課程](http://studio.code.org)，或查看[超越一小時玩程式](/learn/beyond)，觀看更多學習內容。"
   thanks_for_submitting: "感謝您的提交！"
   if_you_enjoyed: "如果你喜歡這樣的學習方式，不妨邀請你的朋友一起體驗！我們希望全世界都能學習。"
-  personalize_certificate: "在證書上留下你的英文姓名"
+  personalize_certificate: "在證書上留下你的姓名（可以用中文喲）"
+  print_batch_certificates: "列印證書"
+  print_certificates: "列印所有證書"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨捐助禮物，以贊助你學習課程。"
+  print_ice_art_from_frozen: "列印冰雪奇緣教程的冰雕藝術"
+  want_a_blank_certificate_template: "你是否需要空白的證書範本，以寫下你的學生姓名？"
+  landscape_recommended_certificates: "列印證書時，建議你選擇**水平**列印。"
+  print_one_here_certificates: "在此處列印一份。"
+  enter_certificate_names: "輸入最多 30 個姓名，**每行一個**。系統會產生可列印的頁面，並印上個人化的%{script_name}。"
   share_achievement: "分享你的成就"
   beyond_hour_message: "繼續<a href='http://studio.code.org'>其它的課程</a>，或前往<a href='/learn/beyond'>超越一小時玩程式</a>觀看更多可學習的項目。"
+  beyond_hour_message_markdown: "請繼續[其他課程](http://studio.code.org)，或前往[超越一小時玩程式](/learn/beyond)觀看更多可學習的項目。"
   leaderboards_for_hoc: "一小時玩程式的排行榜。"
   support_url: "http://support.code.org"
   country: "國家"
@@ -224,6 +244,9 @@
   stats_nina: '「每一天學生都 100% 投入。」Nina Nichols Peery，老師'
   stats_student: '「這可是<b>一生只有一次</b>的難得機會。」Mariana Alzate，五年級學生'
   stats_michael: '「我<b>從來沒有</b>看過我的學生們如些熱衷學習。」Frank Martinez，老師'
+  stats_nina_markdown: '「每一天學生都 100% 投入。」Nina Nichols Peery，老師'
+  stats_student_markdown: '「這可是**一生只有一次**的難得機會。」Mariana Alzate，五年級學生'
+  stats_michael_markdown: '「我**從來沒有**看過我的學生如此熱衷學習。」Frank Martinez，老師'
   studiobar_title: "探索 <a href='Http://studio.code.org'>Code.org 上的課程</a>"
   studiobar_title_nolink: "探索 Code.org"
   studiobar_elementary_title: "國小課程"
@@ -300,6 +323,7 @@
   homepage_action_text_signpetition: "在意願書上簽名"
   homepage_action_text_wincelebritychat: "贏得與名人聊天的機會"
   homepage_signpetition_dropdown: "我同意 &#x25BE;"
+  homepage_signpetition_dropdown_text: "我同意"
   homepage_diversity_pledge: "承諾多樣性"
   homepage_banner_text_prizes: '一小時玩程式（Hour of Code）又來囉，就在 12 月的 7 - 13 日。 '
   homepage_banner_link_prizes: '參加史上最大的學習盛會。 '
@@ -335,6 +359,7 @@
   homepage_slot_text_link_high: "高中"
   homepage_slot_text_link_k5: "K-5 階段課程"
   homepage_slot_text_link_fullcurriculum: "看看我們完整的課程"
+  homepage_slot_text_link_pd: "專業發展"
   homepage_slot_text_title_advocates: "推廣者"
   homepage_slot_text_blurb_advocates: "支持資訊學習多元性"
   homepage_slot_text_link_stats: "觀看統計結果"
@@ -386,7 +411,9 @@
   class_submission_level_vocational: "專業級"
   class_submission_languages_other: "其他語言"
   videos_more: "更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>"
+  videos_more_markdown: "更多來自學習楷模及知名人士的[啟發影片](%{inspiring_videos_playlist})"
   careers_page_more: "更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>"
+  careers_page_more_markdown: "更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>"
   playlab_choose_theme: "選擇一個 Play Lab 主題"
   playlab_classic_title: "經典"
   playlab_gumball_title: "阿甘妙世界"
@@ -492,12 +519,16 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 名教師需要志工。<br>%{num_volunteers} 人已自願參加，加入他們。"
   volunteer_engineer_submission_intro_background: "一小時玩程式（Hour of Code）是一個介紹計算機科學的全球性活動，在超過 180 個國家，有數以千萬計的學生響應。歡迎你在計算機科學教育週（CsedWeek，12/7-12/13）一同參與活動。"
   volunteer_engineer_submission_intro_recruit: '這些老師希望有<span style="font-family: ''Gotham 7r'', sans-serif;">熱衷於計算機科學教育的人士</span>能夠在課堂上提供幫助，或是藉由談論計算機科學的可能性有多大（不一定要面對面，或許也能透過視訊）來<span style="font-family: ''Gotham 7r'', sans-serif;">啟發</span>學生的人。'
+  volunteer_engineer_submission_intro_recruit_markdown: "老師都希望有**熱衷於電腦科學教育**的人士能夠在課堂上提供幫助，或是有人談論電腦科學的可能性有多大（不一定要面對面，或許也能以視訊通話），從而**啟發**學生。"
   volunteer_engineer_submission_intro_guide: "進一步了解我們的<a href=\"%{volunteer_guide}\">志工專案</a>。"
+  volunteer_engineer_submission_intro_guide_markdown: "進一步了解我們的<a href=\"%{volunteer_guide}\">志工專案</a>。"
   volunteer_engineer_submission_intro_signup: "如果你是學習計算機科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿 18 歲才能申請為志工，所有填寫的訊息都會在<a href=\"/volunteer/local\">志工地圖</a>上公開顯示。<span class=\"form-required-field\">*</span>為必填。"
+  volunteer_engineer_submission_intro_signup_markdown: "如果你是學習電腦科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿 18 歲才能申請為志工。在本節填寫的所有訊息都會在[志工地圖](/volunteer/local)上公開顯示。_*_為必填。"
   volunteer_engineer_submission_intro_links: "需要些志工嗎？在我們的<a href=\"%{volunteer_local}\">志工地圖</a>上尋找本地有哪些志願者。"
+  volunteer_engineer_submission_intro_links_markdown: "你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找在地有哪些志願者。"
   volunteer_engineer_submission_update_information: "更新你的個人資訊"
   volunteer_engineer_submission_header_shared: "在志工地圖上分享給老師的資訊"
-  volunteer_engineer_submission_field_name: "你的名字"
+  volunteer_engineer_submission_field_name: "名稱"
   volunteer_engineer_submission_field_name_placeholder: "全名"
   volunteer_engineer_submission_field_company: "企業（或大學）"
   volunteer_engineer_submission_field_company_placeholder: "公司(或大學)"
@@ -528,6 +559,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "我很確定我滿 18 歲。"
   volunteer_engineer_submission_submit: "送出"
   volunteer_engineer_submission_thankyou: "感謝你！你的志工請願表已提交。請允許我們將你的資料公開在地圖上 48 小時，這樣一來教師才可以從<a href=\"%{url}\">地圖</a>中搜尋或聯絡到像你一樣的志工。"
+  volunteer_engineer_submission_thankyou_markdown: "感謝你！你的志工請願表已提交。請等候 48 小時，讓你的資料在地圖上正確顯示。這樣一來，教師才可以從[此地圖](%{url})中搜尋並聯絡到像你一樣的志工。"
   volunteer_engineer_submission_commitment_uncertain: "不確定"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 小時 / 週"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 小時 / 週"
@@ -578,6 +610,7 @@
   dashboard_landing_progress_biggest: "這是你最大的學習小組的進度。"
   dashboard_landing_view_progress: "檢視 %{biggest_section} 的進度"
   dashboard_landing_print_progress: "列印進度"
+  dashboard_landing_available_title: "可用課程"
   dashboard_landing_available_courses: "這裡是你和你的學生目前可用的課程。"
   dashboard_landing_more_tutorials: "想看更多教程？"
   dashboard_landing_more_tutorials_desc: "這裡有更多<a href=\"/learn/beyond\">由我們的合作夥伴提供的</a>的教程。像是學習為機器人編程、製作站台網頁、製作自己的應用程式，或是探索其他的編程語言，像是 C++、Ruby 或 Python！"
@@ -607,7 +640,7 @@
   dashboard_action_delete: "删除"
   dashboard_action_delete_yes: '是'
   dashboard_action_delete_no: '否'
-  dashboard_action_confirm: "要刪除嗎？"
+  dashboard_action_confirm: "確定要刪除？"
   dashboard_action_done: "完成"
   dashboard_action_print_certificates: "列印所有證書"
   dashboard_assessments_view: '檢視評量：'
@@ -647,7 +680,7 @@
   dashboard_progress_submitted: "已提交"
   dashboard_progress_view: '檢視進度：'
   dashboard_progress_student_in_script: "%{student_name} 在 %{script_name} 的進度"
-  dashboard_progress_pair_programming: "小組編程"
+  dashboard_progress_pair_programming: "結對編程"
   dashboard_responses_view: '檢視文字回應：'
   dashboard_responses_none: "我們開設的大部分的課程都是面向年輕一代的。我們並不要求這些同學用文字的方法回答問題，因此你不會在這裏找到任何文字回應。而對於較爲年長的在國中及高中的學生的課程，可以從上方的下拉清單選擇的開放式問題給他們用文字作答。"
   dashboard_sections_new_section: "新的學習小組"
@@ -657,13 +690,14 @@
   dashboard_sections_table_secret: "登入方式"
   dashboard_sections_table_grade: "年級"
   dashboard_sections_table_course: "課程"
-  dashboard_sections_table_pairing_allowed: "小組編程"
+  dashboard_sections_table_pairing_allowed: "結對編程"
   dashboard_sections_table_stage_extras: "階段額外資源"
   dashboard_sections_table_students: "所有學生"
   dashboard_sections_table_code: "學習小組代碼"
   dashboard_sections_name: '學習小組名稱'
   dashboard_sections_choose_secret: "如果您想要提供帳號給學生使用，請為該學習小組選擇一個 <b>通關文字</b> 或 <b>通關圖片</b> 做為進入密鑰。"
   dashboard_sections_secret_word: "<b>通關文字</b> 允許您為每個學生設置一個機密文字。"
+  dashboard_sections_secret_picture: "<b>通關圖片</b> 是針對年紀小到無法輸入文字的學生，由您為他們設置秘密圖片作為通關密鑰。"
   dashboard_sections_secret_none: "如果您想讓學生去管理他們自己的帳戶，包括選擇他們自己的密碼，通關類型請選擇「無」。"
   dashboard_sections_print_secrets: "您可以列印一張帳戶資訊的小卡，再個別分發給學生。"
   dashboard_sections_switch_section: '切換學習小組：'
@@ -686,18 +720,18 @@
   dashboard_students_add_multiple: '輸入或貼上學生的姓名，一個學生一行：'
   dashboard_students_new_google_classroom_section: "若要添加學生，請先登入 <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> 然後點擊下方的<b>從 Google Classroom 同步學生資料</b>按鈕。"
   dashboard_students_new_section: "你已經創建新的學習小組了！現在用下方的<b>新增一個學生</b>和<b>新增多個學生</b>按鈕來添加學生到小組中。"
-  dashboard_students_name: '你的名字'
+  dashboard_students_name: '名稱： '
   dashboard_students_progress: "進度"
   dashboard_students_male: "男性"
   dashboard_students_female: "女性"
   dashboard_students_completed_levels: "已完成的階段"
   dashboard_students_total_lines: "程式碼行數總計"
   dashboard_students_share_section: "告訴你的學生連結到 <a href=%{join_url}>%{join_url}</a> 並輸入學習小組代碼（%{section_code}）"
-  dashboard_students_share_section_secondary: '或者，分享學習小組的登入頁面給你的學生：'
+  dashboard_students_share_section_secondary: '此外，你要把學習小組的登入頁面提供給學生：'
   dashboard_students_print_info: "列印學生登入卡片"
   dashboard_students_secret_picture_title: "通關圖片"
-  dashboard_students_secret_picture: "這個學習小組用了<b>通關圖片</b>作為通關方式。意思是說你的每個學生有個取代登入密碼的秘密圖片，可以透過上方的網址，用它來登入。"
-  dashboard_students_reset_picture: "如果你要重設一個學生的通關圖片，可以先選<b>顯示通關圖片</b>，接著選<b>重置通關圖片</b>。你可以隨時重置，系統將產生新的通關圖片讓學生在登入時使用。"
+  dashboard_students_secret_picture: "這個學習小組使用<b>圖片</b>作為登入方式。意思是說學生會利用一個取代密碼用途的圖片，在學習小組登入頁面中登入。"
+  dashboard_students_reset_picture: "如果你要重設一個學生的通關圖片，可以先選<b>顯示通關密鑰</b>，接著選<b>重設</b>。你可以隨時重置，系統將產生新的通關圖片讓學生在登入時使用。"
   dashboard_students_secret_word_title: "通關密語"
   dashboard_students_secret_word: "這個學習小組使用<b>通關密語</b>作為通關方式。這個意思是說你的每個學生會有取代登入密碼的一對秘密單字，他們可以透過上方的連結，使用它來登入。"
   dashboard_students_reset_word: '如果你要重設一個學生的通關密語，可以先選<b>顯示通關密語</b>，接著選<b>重置通關密語</b>。你可以隨時重置，系統將產生新的通關密語讓學生在登入時使用。 '
@@ -713,6 +747,8 @@
   dashboard_lesson_plans: "教學計畫"
   dashboard_view_all_lesson_plans: "下載完整的 1-4 課程"
   dashboard_course1: '課程 1：'
+  dashboard_course2: '課程 2：'
+  dashboard_course3: '課程 3：'
   dashboard_course4: '課程 4： '
   dashboard_coursea: '課程 A：'
   dashboard_courseb: '課程 B：'
@@ -723,13 +759,17 @@
   dashboard_pre-express: '學前兒童的速學課程：'
   dashboard_express: '速學課程：'
   dashboard_unplugged: "如果你沒有電腦，你可以在你的教室<a href='%{unplugged_url}'>試試這些不插電教學活動 </a>。"
+  dashboard_unplugged_markdown: "如果你沒有電腦，[不妨試試這些不插電教學活動](%{unplugged_url})。"
   dashboard_tools: '工具：'
   dashboard_curriculum: "課程"
   dashboard_curriculum_overview: "K-5 課程概覽"
   dashboard_overview: "概覽"
   dashboard_sequence: "序列 "
   dashboard_framework: "框架（Framework）"
+  dashboard_standards: "標準"
+  dashboard_implementation_guide: "實施指南"
   dashboard_glossary: "詞彙表"
+  dashboard_classroom_strategies: "教師的教學策略"
   dashboard_debugging: '除錯：'
   dashboard_puzzle_solving: '關卡解法：'
   dashboard_student_worksheet: "學生工作表"
@@ -770,8 +810,10 @@
   dashboard_sections_password_question: "學生要用什麼當作「密碼」？"
   dashboard_sections_picture_account_creation: "由 Code.org 分配的圖片"
   dashboard_sections_word_account_creation: "由 Code.org 分配的簡單單字"
+  dashboard_sections_sign_in_question: "學生從何處登入？"
   dashboard_sections_sign_in_unique: "在「管理學生」頁籤上列出的單獨網頁"
   dashboard_sections_sign_in_main: "http://code.org 並點擊「登入」"
+  dashboard_sections_password_account_creation: "學生建立的文字密碼"
   dashboard_sections_login_type_explanation: "本表協助説明你可以選擇的學習小組登入類型，<b>通關圖片、 通關密語或電子信箱</b>。"
   dashboard_faq: "常見問答"
   dashboard_faq_k5: "K-5 常見問答"
@@ -815,6 +857,7 @@
   carousel_heading_beyond_languages: "學習其他編程語言的教程"
   carousel_heading_apps_games: "建立自己的應用程式或遊戲"
   carousel_heading_university: "大學的線上課程"
+  carousel_heading_online_university: "提供網上大學課程"
   carousel_heading_webpages: "學習如何製作網頁"
   carousel_heading_robots: "學習機器人編程"
   carousel_heading_ide: "教師愛用的平台"
@@ -830,6 +873,7 @@
   more_resources_educators: "更多的教師資源"
   beyond_submission: "想要提交超越一小時玩程式的教程嗎？看看規範和提交表單。"
   third_party_submission: "想要分享你的教程嗎？<a href=\"%{submission_url}\">檢視條件和提交表單</a>。"
+  participants: "參與者"
   teachers_notes: "教師備註"
   teachers_notes_hoc: '教師：請閱讀這些重要的教師備註'
   previous: "上一個"
@@ -841,6 +885,7 @@
   starwars_name: '星際大戰：用程式建立一個銀河系'
   codeorg_name: "經典迷宮"
   codeintl_name: "經典迷宮"
+  khan_name: "JavaScript 簡介"
   khanes_name: "JavaScript 簡介"
   khanpt_name: "JavaScript 簡介"
   khanhe_name: "JavaScript 簡介"
@@ -848,13 +893,16 @@
   khanpl_name: "JavaScript 簡介"
   tynker_name: "建立你自己的遊戲"
   scratch_name: "透過編程發揮創意"
+  thinkersmith_name: "我的機器人朋友"
   condcards_name: "用撲克牌學習條件判斷（Conditionals）"
   codehs_name: "與小狗 Karel 一起學習編程"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "用 JavaScript 創建一個遊戲"
+  processing_name: "用程式繪圖"
   robomind_name: "編程一個虛擬機器人"
   groklearning_name: "Eliza the Chatterbot Doctor"
   quorum_name: "無障礙編程（可用螢幕閱讀器輔助）"
+  codespark_name: "Foos (歡迎學齡前使用者)"
   kodable_name: "Kodable（歡迎學齡前使用者）"
   tynkerapp_name: "Tynker - 適用於平板"
   robomindnl_name: "用程式設計出虛擬機器人"
@@ -908,9 +956,23 @@
   coursed-2019_name: 課程 D（2019）
   coursee-2019_name: 課程 E（2019）
   coursef-2019_name: 課程 F（2019）
+  coursea-2020_name: 課程 A（2019）
+  courseb-2020_name: 課程 B（2019）
+  coursec-2020_name: 課程 C（2019）
+  coursed-2020_name: 課程 D（2019）
+  coursee-2020_name: 課程 E（2019）
+  coursef-2020_name: 課程 F（2019）
+  express-2018_name: 速學課程（2018）
   pre-express-2018_name: 學前兒童的速學課程（2018）
+  express-2019_name: 速學課程（2019）
+  pre-express-2019_name: 學前兒童的速學課程（2019）
+  express-2020_name: 速學課程（2019）
+  pre-express-2020_name: 學前兒童的速學課程（2020）
+  csd2_name: '單元 2：網頁開發'
+  csd3_name: '單元 3：動畫與遊戲'
   accelerated_name: "速成課程"
   express_name: "速學課程"
+  pre-express_name: 學前兒童的速學課程
   20-hour_name: 速成課程
   algebra_name: "代數裡的 CS"
   AlgebraA_name: "代數裡的 CS 課程 A"
@@ -1005,6 +1067,12 @@
   coursed-2019_gradelevel: 年級 8+
   coursee-2019_gradelevel: 年齡 8-12
   coursef-2019_gradelevel: 年齡 9-13
+  coursea-2020_gradelevel: 年齡 4-7
+  courseb-2020_gradelevel: 年齡 5-8
+  coursec-2020_gradelevel: 年齡 6-10
+  coursed-2020_gradelevel: 年級 8+
+  coursee-2020_gradelevel: 年齡 8-12
+  coursef-2020_gradelevel: 年齡 9-13
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "主流的瀏覽器、手機、平板"
   codeintl_platformtext: "主流的瀏覽器、手機、平板"
@@ -1067,11 +1135,14 @@
   lightbot_shortdescription: "編程 Lightbot 以完成關卡！"
   thinkersmith_shortdescription: "給團體的不插電計算機科學"
   condcards_shortdescription: "透過一副撲克牌學習演算法（algorithms）"
+  lightbotintl_shortdescription: "教導程式設計概念的遊戲"
   codehs_shortdescription: "與小狗 Karel 一同學習程式設計，是一個有趣的視覺化的編程入門 ！"
   codecademy_shortdescription: "透過網頁瀏覽器學習 JavaScript 程式。"
+  codecombat_shortdescription: "在這個史詩般的電腦遊戲中，打敗食人魔並學會 Python 或 JavaScript 程式語言！"
   codemonkey_shortdescription: "學生為一隻猴子編程，目標是獲得香蕉。"
   codeavengers_shortdescription: "透過網頁瀏覽器學習 JavaScript 程式。"
   processing_shortdescription: "語言處理器的一小時教程"
+  robomind_shortdescription: "為虛擬機器器人編寫程式碼"
   groklearning_shortdescription: "教聊天機器人 Eliza 捉弄你的朋友，讓他們誤以為她是人類！"
   quorum_shortdescription: "與瑪麗一同探索學習 Quorum 編程語言。"
   codespark_shortdescription: "Foos 是一個學習程式設計的遊戲，有趣且適合孩子。"
@@ -1105,24 +1176,34 @@
   course4_shortdescription_congrats: "準備更進一步了嗎？學生會進入比之前更深入的編程主題，替更複雜的問題找出彈性的解決方案。在課程的最後，學生能創造並分享的自己的互動式故事和遊戲。建議年級 4-8。"
   coursea_shortdescription_congrats: "為學齡前兒童設計的計算機科學指引。"
   courseb_shortdescription_congrats: "為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）"
+  coursec_shortdescription_congrats: "學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。"
   coursed_shortdescription_congrats: "快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。"
   coursee_shortdescription_congrats: "快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。"
   coursef_shortdescription_congrats: "學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。"
   coursea-2017_shortdescription_congrats: 為學齡前兒童設計的計算機科學指引。
   courseb-2017_shortdescription_congrats: 為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）
+  coursec-2017_shortdescription_congrats: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
   coursed-2017_shortdescription_congrats: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
   coursee-2017_shortdescription_congrats: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
   coursef-2017_shortdescription_congrats: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
   coursea-2018_shortdescription_congrats: 為學齡前兒童設計的計算機科學指引。
   courseb-2018_shortdescription_congrats: 為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）
+  coursec-2018_shortdescription_congrats: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
   coursed-2018_shortdescription_congrats: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
   coursee-2018_shortdescription_congrats: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
   coursef-2018_shortdescription_congrats: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
   coursea-2019_shortdescription_congrats: 為學齡前兒童設計的計算機科學指引。
   courseb-2019_shortdescription_congrats: 為學前兒童準備的計算機科學介紹（類似課程 A，但對年紀大些的學童提供了更多變化）
+  coursec-2019_shortdescription_congrats: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
   coursed-2019_shortdescription_congrats: 快速地導覽在課程 C 的概念，進一步的介紹演算法、巢狀迴圈、條件判斷式…等的使用。
   coursee-2019_shortdescription_congrats: 快速地導覽在課程 C 和課程 D 的概念，進一步的介紹函式的使用。
   coursef-2019_shortdescription_congrats: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+  coursea-2020_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  courseb-2020_shortdescription_congrats: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+  coursec-2020_shortdescription_congrats: 以序列、迴圈與事件製作程式。將你的姓名首字母轉換成二進制碼，瞭解不同的問題解決技巧，以及學習怎樣應付網路欺凌。在課程結束時，你可創造出自己的遊戲或故事，然後向別人分享！
+  coursed-2020_shortdescription_congrats: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+  coursee-2020_shortdescription_congrats: 首先使用演算法（algorithm）、迴圈（loop）、條件式（conditional）和事件（event）開始編寫程式，然後你將會學習函式（function）。在本課程的第 2 部分，你便會開始設計和製作一個總結專案，並可與你的好友和家人分享。
+  coursef-2020_shortdescription_congrats: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第 2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
   codeorg_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   codeintl_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 · 佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   thinkersmithspanish_longdescription: "使用預先定義的「字彙機器人(Vocabulary Robot )」，學生就可以在討論前就理解如何引導彼此去完成特定的任務。此課程教導孩子建立符號及動作的連結，及非常具有價值的除錯技能。My Robotic Friends（我的機器人朋友）以小組活動方式進行最佳，裡頭包含教師手冊給班級使用。"
@@ -1141,7 +1222,9 @@
   codehs_longdescription: "透過指令來操作電腦，這就是編程，就像是對小狗發號施令。讓初學者能夠學習如何用程式控制 Karel 這隻小狗&mdash;透過有趣的、沒有障礙的視覺化指南，來學習純文字式的編程概念，像是指令和函式。教程內容是學生自學導向，不過教師可以註冊以獲得教師工具並追蹤學生進度！"
   codecademy_longdescription: "Codecademy 透過 JavaScript，以互動式、學生導向的方式介紹基礎的計算機科學，已經有數以千萬計、來自世界各地的學生使用它。我們已經準備了可以減少初學瓶頸的「一小時學程式」課程活動，內容有隨堂測驗、教學簡報，並給學生一個完整的專題為結束。"
   codecombat_longdescription: "在這個史詩般的電腦遊戲中，打敗食人魔並學會 Python 或 JavaScript 程式語言！"
+  codemonkey_longdescription: 'CodeMonkey 是一個線上的遊戲，用真正的程式語言教授程式碼編寫 ！學生設計程式讓一隻猴子抓住香蕉，而它在每個級別會稍微增加複雜程度。他們在解決問題時獲得星星分數並點擊一下就可以分享。'
   codeavengers_longdescription: "使用 JavaScrip 語言建立的雙人直向捲軸遊戲，共有 10 個簡短任務。當您建立一個問答遊戲與朋友分享時，能持續學習程式設計的一些基礎知識（變數和如果陳述式） 。在到達班級排行榜榜首的過程中賺取積分和徽章。"
+  processing_longdescription: "使用程式語言處理器，在視覺藝術的情境中介紹程式設計。簡短的影片課程介紹引導設計互動式繪圖程式的編寫程式碼練習"
   robomind_longdescription: '通過控制他們自己的虛擬機器人，學生可以學習編程的基礎知識。這個線上課程很完整，包含了簡報、影片、測驗與自動的指引/提示來協助編程練習。 '
   groklearning_longdescription: "使用編程語言 Python 來把名為 Eliza 的聊天機器人編程成為一個精神治療醫師。你將教導 Eliza 如何說話和說出正確的事情。她可以捉弄你的朋友，讓他們誤以為她是個人不是台電腦嗎？"
   quorum_longdescription: "本教案可供視障人士透過輔助器閱讀與瀏覽。從程式設計師的角度，與瑪麗一同探索生物學實驗室，並學習 Quorum 語言。教程包含線上示例，是學生自學式的活動。"
@@ -1173,6 +1256,7 @@
   khan_beyond_name: "學習計算機編程"
   tynker_beyond_name: "在家學習編程"
   scratch_beyond_name: "透過編程發揮創意"
+  kodable_beyond_name: "Kodable"
   scratchjr_beyond_name: "給學齡前幼童的 ScratchJR"
   hopscotch_beyond_name: 'Hopscotch：在你的 iPad 上設計程式'
   groklearning_beyond_name: "學習 Python 編程"
@@ -1188,9 +1272,11 @@
   udacity_beyond_name: "CS 101"
   teachingtree_beyond_name: "大學的線上課程"
   w3schools_beyond_name: "學習 HTML"
+  codeavengers_beyond_name: "學習網站程式設計"
   codea_beyond_name: "Codea"
   finch_beyond_name: "Finch"
   arduino_beyond_name: "Arduino 與 Sparkfun"
+  processing_beyond_name: "處理常式"
   alice_beyond_name: "Alice"
   sphero_beyond_name: "SPRK"
   codeorg_beyond_gradelevel: "年齡 4-104"
@@ -1308,7 +1394,7 @@
   khan_beyond_longdescription: "學習同時創造樂趣的 JavaScript 程式設計的基礎知識與您的代碼的圖紙。做你自己或你的類 ！"
   tynker_beyond_longdescription: "Tynker 讓學習程式設計變得輕鬆有趣。它是用視覺化方式程現，孩子們透過排放積木來建立遊戲和應用程式。它去除了需要了解程式語法的障礙，孩子們可以馬上把想法轉變成動畫故事和數學藝術，它促進了漸進式學習。在孩子們學習基礎後，Tynker 會介紹更進一步的概念，當中包含了驅動編程的語法。"
   scratch_beyond_longdescription: "透過 Scratch，你可以創建您自己的互動遊戲、故事、動畫。並將你的創作分享給朋友。從讓你的名字動起來、 創作節日卡片，製作彈跳球遊戲開始。"
-  lightbot_beyond_longdescription: "從非常基本的程式設計開始學習核心程式設計邏輯，適合年紀為4歲以上，作業系統可使用iOS 或 android 系統 （或 Web 瀏覽器）。學習如何排列命令、 識別模式、 使用程序與利用迴圈 ！"
+  lightbot_beyond_longdescription: "學習核心的程式邏輯，從最簡單的編程基礎開始。適合年齡為 4+，可在 iOS 或 Android（或 Web 瀏覽器）使用。學習怎樣序列一連串的指令、抽象化模型、使用程序以及利用迴圈！"
   codecademy_beyond_longdescription: "Codecademy 透過 JavaScript，以互動式、學生導向的方式介紹基礎的計算機科學，已經有數以千萬計、來自世界各地的學生使用它。我們已經準備了可以減少初學瓶頸的「一小時學程式」課程活動，內容有隨堂測驗、教學簡報，並給學生一個完整的專題為結束。"
   kodable_beyond_longdescription: "Kodable 是一個自我引導的 iPad 遊戲，為 5 歲以上的 孩子介紹程式設計的基礎知識。最好有老師或家長的陪伴，但不是必需的。"
   scratchjr_beyond_longdescription: "ScratchJr 是入門級的程式設計語言，使年幼的孩童能夠創建他們自己的互動故事和遊戲。孩童將圖像式的積木貼合在一起，使角包移動、跳躍、 跳舞和唱歌。"
@@ -1343,7 +1429,7 @@
   sphero_beyond_longdescription: "不管你是教師還是家長，SPRK 教學內容會給孩子一個有趣的機器人編程速成課程，並同時磨鍊孩子在數學和科學上的技能。"
   compatibility_hide_this_warning: "隱藏這個警告"
   compatibility_unsupported_browser: "您的瀏覽器不支援。請升級您的瀏覽器到<a href='%{supported_browsers_url}', target='_blank'>支援的瀏覽器版本之一</a>。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
-  compatibility_unsupported_browser_markdown: "您的瀏覽器不支援。請升級您的瀏覽器到 [one of our supported browsers](%{supported_browsers_url})。您還是可以瀏覽此頁面，但有些有功能是會無法正常運作。"
+  compatibility_unsupported_browser_markdown: "你的瀏覽器不支援。請改用[支援的瀏覽器版本](%{supported_browsers_url})。你還是可以瀏覽此頁面，但有些功能會無法正常運作。"
   starwars_shortcode: "星號"
   mc_shortcode: "mc"
   frozen_shortcode: "frzn"
@@ -1387,10 +1473,23 @@
   header_teacher_community: "教師社群"
   header_help_support: '幫助與支援'
   header_report_bug: "回報問題"
+  header_report_abuse: "檢舉濫用"
+  header_legal: "法律與隱私權"
+  header_legal_privacy: "隱私政策"
+  header_legal_tos: "服務條款"
   header_tutorials: "所有教程"
+  header_screen_reader_hamburger: "選單"
+  header_screen_reader_help: "說明選單"
+  app_lab_documentation: "App Lab 說明文件"
+  app_lab_tutorials: "App Lab 教程"
+  game_lab_documentation: "Game Lab 說明文件"
+  game_lab_tutorials: "Game Lab 教程"
+  sprite_lab_documentation: "Sprite Lab 說明文件"
+  sprite_lab_tutorials: "Sprite Lab 教程"
   header_documentation: "說明文件"
   user_header_label: "嗨，%{username}"
   user_header_team: "團隊"
+  user_header_my_projects: "我的專案"
   user_header_settings: "帳戶設定"
   user_header_logout: "登出"
   user_header_signin: "登入"
@@ -1444,12 +1543,15 @@
   account_sign_up_child_accept_terms: "我確定我的監護人已允許我使用 Code.org 提供的服務。 "
   hoc_overview_dance_title: "舞蹈派對"
   hoc_overview_dance_subtitle: "編寫舞蹈派對的程式，和你的朋友分享。共有超過 25 位巨星登場，Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara…還有更多！"
+  hoc_overview_dance_2019_subtitle: "編寫舞蹈派對的程式，和你的朋友分享。共有超過 34 位巨星登場，Featuring Katy Perry、Shawn Mendes、 Panic! At The Disco、Lil Nas X、Jonas Brothers、Nicki Minaj…還有更多！"
   hoc_overview_title: "Code.org 的一小時玩程式活動"
-  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">一小時玩程式（Hour of Code）</a>是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 200 個以上的一小時教程，支援超過 45 種語言。"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">一小時玩程式（Hour of Code）</a>是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過 45 種語言。"
+  hoc_overview_subtitle_markdown: "[一小時玩程式（Hour of Code）](https://hourofcode.com) 是個全球性的運動，遍及 180 多個國家中數以千萬計的學生。不管你是誰，也不管你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有 500 個以上的一小時教程，支援超過 45 種語言。"
   hoc_overview_partner_activities_title: "合作夥伴的更多活動"
-  hoc_overview_partner_activities_body: "一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 100 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。"
+  hoc_overview_partner_activities_body: "一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 500 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。"
   hoc_overview_partner_activities_link: "查看活動"
   hoc_overview_start_tutorial: "開始"
+  hoc_overview_more_resources: "有關如何參與遠端教室的更多資源，請參見[虛擬一小時玩程式（Hour of Code）](https://hourofcode.com/us/how-to/virtual）舉辦指南（。對於那些缺乏技術條件或網路連接的學生，[請共用這個[不插電一小時玩程式（Hour of Code）](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf）活動]包。"
   hoc_overview_view_teacher_guide: "檢視教學指引"
   hoc2018_creativity: "創造力"
   hoc2018_creativity_create: "建立"
@@ -1467,6 +1569,7 @@
   hoc2018_mc_aquatic_announcement: "為你的班級註冊，試試一小時玩程式活動（Hour of Code，每年的 12 月 3- 9 日舉辦）的其中一個，我們有超過 150 個的主題活動，其中推薦你試試我們在 2018 年推出的全新一小時玩  Minecraft  - 水上巡航。快來註冊你的班級吧！"
   hoc2018_mc_aquatic_title: "Minecraft 水世界"
   hoc2018_mc_aquatic_description: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
+  hoc2019_mc_aquatic_description: "用程式探索並打造海底世界。"
   hoc2018_mc_hero_title: "Minecraft 英雄之旅"
   hoc2018_mc_hero_description: "全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。"
   hoc2018_mc_designer_title: "Minecraft 設計師"
@@ -1476,8 +1579,19 @@
   hoc2018_mc_start: "開始"
   hoc2018_mc_no_internet: "沒有網路嗎？"
   hoc2018_mc_download_adventurer: "下載離線版的 Minecraft 探險家。"
+  hoc2018_mc_educators: "致教師"
   hoc2018_mc_educators_box1_title: "在 Minecraft 裡寫程式"
+  hoc2018_mc_educators_box1_desc: 'Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。'
+  hoc2018_mc_educators_box1_button: "這就啟動"
+  hoc2018_mc_educators_box2_title: "下載主持人指南"
+  hoc2018_mc_educators_box2_desc: "這個工具包會幫助你主持一小時玩程式，並讓你的學生投入到計算機科學。"
   hoc2018_mc_educators_box2_button: "下載"
+  hoc2018_mc_educators_box3_title: "參加免費的學生工作坊。"
+  hoc2018_mc_educators_box3_desc: "到你地區的 Microsoft 商店參加免費的一小時玩程式工作坊，適合任何技能級別、六歲或以上的人參加。"
+  hoc2018_mc_educators_box3_button: "尋找工作坊"
+  hoc2018_mc_educators_box4_title: "查看更多計算機科學資源"
+  hoc2018_mc_educators_box4_desc: "利用Microsoft的數位技能與電腦科學教育資源，為你的社區帶來變化。"
+  hoc2018_mc_educators_box4_button: "探索資源"
   hoc2018_mc_watch_videos: "開始前不妨先看個勵志影片"
   hoc2018_mc_videos_more: "更多來自模特兒及知名人士的<a href='%{inspiring_videos_playlist}'>啟發影片</a>"
   hoc2018_mc_careers_more: "更多來自科技領域專業人士的<a href='%{careers_url}' target='_blank'>啟發影片</a>"
@@ -1495,8 +1609,9 @@
   hoc2018_mc_video_title_hoc_is_here: "任何人都可以學得會的一小時玩程式（Hour of Code）來了"
   hoc2018_mc_video_title_anybody_can_learn: "任何人都可以學習"
   hoc2018_mc_video_title_my_name_is_aracely: "我是 Aracely"
-  hoc2018_mc_homepage_hoc_coming: "一小時程式設計就要開始了..."
+  hoc2018_mc_homepage_hoc_coming: "一小時玩程式（Hour of Code）活動來囉..."
   hoc2018_mc_homepage_what_create: "你想創造啥？"
+  hoc2018_mc_homepage_give_flight: "催生無限創意，讓想像飛翔。從一小時玩程式（Hour of Code）開始創造僅屬於你天馬行空的創意。"
   hoc2018_mc_homepage_watch_video: "觀賞我們的影片"
   hoc2018_mc_homepage_join_us: "加入我們"
   hoc2018_mc_homepage_try_it: "試一試"
@@ -1522,13 +1637,35 @@
   hoc2018_dance_keep_on_dancing_specs: "語言 | 格式 | 年齡 13+"
   hoc2018_dance_keep_on_dancing_button: "開始第 2 部分"
   hoc2018_dance_teacher_resources_title: "教師資源"
-  hoc2018_dance_teacher_resources_tile1_description: "課程計畫、證書和音樂篩選。"
+  hoc2018_dance_teacher_resources_tile1_description: "教學計畫、證書和音樂篩選。"
   hoc2018_dance_teacher_resources_tile1_button: "教學計畫"
   hoc2018_dance_teacher_resources_tile2_title: "舞蹈派對不插電活動"
   hoc2018_dance_teacher_resources_tile2_description: "不用電腦！從舞蹈派對裡一邊跳舞，一邊學習寫程式的概念。"
   hoc2018_dance_teacher_resources_tile2_button: "不插電活動"
+  hoc2018_dance_featured_student_creations_title: "學生作品精選"
+  hoc2018_dance_videos_section_heading: "獲得啟發"
+  hoc2018_dance_video_title_what_is_creativity: "什麼是創意？"
+  hoc2018_dance_view_creativity_video_playlist: "什麼是創意？觀看完整系列影片（5分鐘）"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "合作夥伴"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* 是一個由童年到職業的全面計劃，旨在鼓勵、教育和培養低收入或弱勢的兒童和青少年投身計算機科學事業。<a href='%{amazon_future_engineer_link}' target='_blank'>了解更多</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* 是一項由童年到職業的全面計畫，旨在鼓勵、教育和培養低收入或弱勢的兒童和青少年投身電腦科學事業。[瞭解更多](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "如果你是法國的學生或教師，請瀏覽 [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})"
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "進一步瞭解亞馬遜未來工程師（Amazon Future Engineer）"
+  hoc2018_dance_amazon_about_future_engineer_title: "有關亞馬遜未來工程師計畫 (Amazon Future Engineer)"
+  hoc2018_dance_amazon_about_future_engineer_description: "了解 Amazon 幼稚園到職業的計劃，進一步探索計算機科學教育。尋找有關參與我們的夏令營、高中計算機科學課程、獎學金和實習資訊。"
   hoc2018_dance_amazon_about_future_engineer_button: "進一步了解"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "今年夏天試試學習編碼"
+  hoc2018_dance_amazon_try_coding_this_summer_description: "參與Amazon Future Engineer所舉辦的免費、有趣且包羅萬象的電腦科學營！2019年夏天，居住在美國多個地區的學生（從幼兒園到8年級）都可參加夏令營。"
+  hoc2018_dance_amazon_try_coding_this_summer_button: "參加營隊"
+  hoc2018_dance_amazon_scholarship_programs_title: "獎學金計劃"
+  hoc2018_dance_amazon_scholarship_programs_description: "Amazon 向修畢或正在就讀計算機科學先修課程，並準備在美國院校或大學修讀 4 年計算機科學學位的貧困學生，每年發放 $10,000 美元的獎學金。"
   hoc2018_dance_amazon_scholarship_programs_button: "立即申請"
+  hoc2018_dance_amazon_internships_title: "來亞馬遜實習"
+  hoc2018_dance_amazon_internships_description: "2019 年夏季 Amazon Future Engineer 實習現正開放報名。實習生將與經理、技術導師和其他實習生一起為 Amazon 客戶創造新功能和服務。實習崗位位於美國和加拿大。"
+  hoc2018_dance_amazon_internships_button: "尋找一個實習機會"
+  hoc2018_dance_amazon_k8_programs_title: "幼稚園到8年級的計畫課程"
+  hoc2018_dance_amazon_funding_title: "為你的電腦科學學位獲取資金"
+  hoc2018_dance_amazon_future_engineer_footer: "* 在教程中使用的音樂的創作者本身不一定贊助或認可 Amazon，而是把他們的音樂使用許可權給了 Code.org。\n\n"
   hoc2018_dance_measure: "小節"
   hoc2018_dance_measure_colon: '小節：'
   hoc2018_aquatic_video1: "Minecraft: 水上巡航 - 介紹"
@@ -1541,3 +1678,38 @@
   hoc2018_dance_video4: "舞蹈派對 - 恭喜"
   page_not_found_title: "找不到頁面"
   page_not_found_header: ' 404：找不到頁面'
+  page_not_found_description: "你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。"
+  page_not_found_button: "返回主頁"
+  hoc2018_mc_with_microsoft: "合作夥伴"
+  hoc2018_mc_thank_microsoft: "感謝Microsoft支持我們的願景與使命，以確保每位孩童都有機會學習電腦科學及掌握在21世紀獲得成功的技能。"
+  hoc2019_mc_mee_title: "Minecraft AI for Good"
+  hoc2019_mc_mee_description1: '新的《Minecraft Hour of Code》教程現已在 Minecraft 教育版上線：適用於 Windows、Mac 與 iPad。和你的學生一同學習編碼的基礎知識，一起探索人工智慧！'
+  hoc2019_mc_mee_description2: "免費獲得資源，包括課程計劃、影片、電腦科學課程及教師培訓。"
+  hoc2019_mc_more_coding_resources: "更多編程資源"
+  hoc2019_dance_previous_versions: "你在找之前的舞蹈派對嗎？\n這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。"
+  homepage_slot_text_title_at_home: "在家學習\n"
+  homepage_slot_text_blurb_at_home: "這些資源讓它可以輕鬆達成"
+  homepage_slot_text_link_code_break: "來場程式休憩時刻"
+  homepage_slot_text_link_do_hoc: "試試「一小時玩程式」！"
+  homepage_slot_text_link_express_course: "嘗試速學課程吧！"
+  page_not_available_title: "沒有可用的頁面"
+  page_not_available_description: "我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎寄信給我們[support@code.org](%{support_email_link})，告知您的需求"
+  page_not_available_button: "返回主頁"
+  hoc2020_mc_available_code_org: "可於 Code.org 取得"
+  hoc2020_mc_available_mee: '可於 Minecraft 教育版取得'
+  hoc2020_mc_mee_description: '現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新 Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。'
+  footer_powered_by_aws: "Powered by Amazon Web Services"
+  footer_built_on_github: "構建於 Microsoft 的 Github"
+  codebytes_skinny_banner_title: "12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。"
+  codebytes_skinny_banner_description: '每天加入我們 CS 教育週的 CodeBytes，20 分鐘的計算機科學互動課程。每天兩次直播，CodeBytes 是學生參與虛擬 #HourOfCode 的好方法！'
+  codebytes_skinny_banner_english_only: "僅有英語版本"
+  codebytes_skinny_banner_learn: "前往 [code.org/codebytes](%{code_bytes_url}) 了解更多。"
+  footer_privacy_policy: "隱私政策"
+  footer_privacy_policy_updated: "隱私政策（更新）"
+  footer_about: "關於"
+  footer_partners: "合作夥伴"
+  footer_blog: "網誌"
+  footer_donate: "贊助"
+  footer_store: "商店"
+  footer_support: "支援"
+  footer_terms: "條款"

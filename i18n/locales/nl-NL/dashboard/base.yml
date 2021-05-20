@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 nl:
   errors:
     messages:
@@ -7,6 +19,11 @@ nl:
       pair_programmer: 'Momenteel programmeer je samen met een leerling die nog geen toegang heeft tot deze inhoud. Om toegang te krijgen tot deze inhoud, moet je stoppen met het samen programmeren en opnieuw proberen.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "is ongeldig. Let op dat elke link slechts eenmaal gebruikt kan worden om uw wachtwoord te herstellen en dat enkel de meest recent gestuurde link werkt."
       messages:
         blank: "is vereist"
         blank_plural: "is vereist"
@@ -14,11 +31,12 @@ nl:
         invalid_plural: "zijn ongeldig"
     attributes:
       user:
-        name: 'Weergegeven naam'
-        name_example: 'Weergavenaam <br/> (bv. Stoere Coder of Emma S.)'
+        name: 'Weergavenaam'
+        name_example: 'Weergavenaam (bv. Stoere Coder of Emma S.)'
         email: 'Email'
-        parent_email: 'E-mail van de ouder/voogd'
-        personal_email: "Persoonlijke e-mailadres <a href=\"%{url}\"> (Klik hier als u geen e-mailadres hebt)</a>"
+        parent_email: 'E-mailadres van ouder/voogd'
+        personal_email: "Persoonlijk e-mailadres <a href=\"%{url}\"> (Klik hier als je geen e-mailadres hebt)</a>"
+        personal_email_markdown: "Persoonlijk e-mailadres [(Klik hier als je geen e-mailadres hebt)](%{url})"
         username: 'gebruikersnaam'
         password: 'Wachtwoord'
         password_confirmation: 'Wachtwoord bevestiging'
@@ -29,7 +47,10 @@ nl:
         edit_header: 'Accountdetails bewerken'
         finish_sign_up_header: 'Voltooi het maken van je account'
         finish_sign_up_subheader: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor <strong>%{email}</strong> te voltooien.'
+        finish_sign_up_subheader_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor **%{email}** te voltooien.'
         finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
+        finish_sign_up_subheader_provider_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met **%{provider}** voor **%{email}** te voltooien.'
+        reset_password_token: "De link die u heeft gevolgd om uw wachtwoord te herstellen"
         error:
           future: kan niet in de toekomst
   beta: "beta"
@@ -46,25 +67,25 @@ nl:
   okay: "Oké"
   or: "of"
   heading_x_of_y: "%{heading} (pagina %{x} van %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Voeg een leraar toe:'
+      title: 'Een sectie toetreden op Code.org'
       placeholder: "Sectiecode (ABCDEF)"
-      instructions: "Voer hier de code in die je van je leraar hebt gekregen. De code bestaat uit 6 letters zoals \"ABCDEF\"."
+      instructions: "Vul alsjeblieft de 6-letterige code in die je leerkracht je heeft gegeven (bijv.: \"ABCDEF\") om de sectie toe te treden."
       instructions_short: "Voer je code van 6 letters van de sectie in"
-    submit: 'voeg leraar toe'
+      submit: 'Inschrijven'
   add_hint_form:
     placeholder: 'Voer hier uw hint'
     submit: 'Hint toevoegen'
   appname: "Code.org"
   stage: "level"
-  stage_number: "Niveau %{number}"
+  stage_number: "Les %{number}"
   puzzle: "Puzzel"
   trophies: "prijzen"
   courses: 'Cursussen'
   courses_page:
-    title_student: "Leer meer op Code Studio"
-    title_teacher: "Leren met Code Studio"
+    title_student: "Leer Informatica"
+    title_teacher: "Informaticawetenschappen onderwijzen"
   unplugged_activity: 'Unplugged Activiteit'
   of: "van"
   more: "MEER"
@@ -81,8 +102,8 @@ nl:
     continue_with: 'Ga verder met %{provider}'
     sign_in_with: 'Meld je aan met %{provider}'
     signed_in: 'Ingelogd!'
-    signed_out: 'Je bent nu uitgelogd uit <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Je hebt %{provider} gebruikt om in te loggen. <a href="%{url}">Klik hier </a> om je af te melden bij %{provider}.'
+    signed_out_markdown: '### Je bent uitgelogd bij [Code.org](%{url})'
+    sign_out_of_markdown: '#### Je hebt %{provider} gebruikt om in te loggen. [Klik hier](%{url}) om uit te loggen bij %{provider}.'
     already_signedup: 'Al aangemeld?'
     notyet_signedup: "nog niet aangesloten?"
     google_oauth2: 'Google Account'
@@ -93,14 +114,28 @@ nl:
     clever: 'Slimme Account'
     powerschool: 'Powerschool'
     forgot_password: 'Wachtwoord vergeten?'
+    migration_success: 'Gelukt! Je hebt geüpdatet naar onze nieuwe accountervaring.'
+    demigration_success: 'De nieuwe accountervaring is nu afgezet voor je account.'
     need_confirmation: "Geen bevestigingsinstructies ontvangen?"
     need_unlock: "Nog geen unlock instructies ontvangen?"
     not_linked: "Sorry, je Code.org account is niet gelinkt aan je %{provider}. Om in te loggen zal je onderaan je wachtwoord moeten invullen."
     use_clever: "Sorry, uw Code.org account is niet gekoppeld aan uw %{provider}. Gelieve aan te melden via uw Clever Portal."
+    invalid_provider: "Je %{provider}-account kan niet worden verbonden met je Code.org-account."
+    migration_required: "Sorry, we kunnen geen accounts die nog gebruikmaken van de oude accountervaring verbinden of loskoppelen. Gelieve te updaten naar de nieuwe accountervaring."
+    unable_to_connect_provider: "Het lukt niet om je Code.org account te verbinden met je %{provider} account. Probeer opnieuw aub."
+    disconnect_successful: "Gelukt! We hebben het externe account losgekoppeld van je Code.org account."
+    already_in_use: "Je %{provider}-account is al verbonden met een ander Code.org-account."
+    already_linked: "Je %{provider}-account is al verbonden met je Code.org-account."
+    existing_account:
+      account_exists: "Goed nieuws! Je hebt al een Code.org-account dat %{email} gebruikt"
+      sign_in: "Log alsjeblieft in met je bestaande account. Daarna kun je met je %{provider}-account verbinden in je Accountinstellingenpagina."
+      sign_up: "Niet jouw emailadres? Wil je een nieuw account maken met een ander emailadres? Als je kiest om een nieuw account te maken, kan je nadien je %{provider} profiel verbinden via de Accountinstellingen pagina."
   signup_form:
+    email_signup: 'Aanmelden met je e-mailadres'
     student_count: '%{count} studenten hebben zich reeds aangemeld.'
     teacher_count: '%{count} leraren hebben zich reeds aangemeld.'
     overview: 'Maak een account aan om je vorderingen te volgen of je klad te managen.<a href="/">Je kan de verschillende stadia en puzzels</a>browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
+    overview_markdown: 'Maak een account aan om je vorderingen te volgen of je klad te managen.[Je kan de verschillende stadia en puzzels](/)browsen maar als je je vorderingen en projecten wil opslaan dan moet je ingelogd zijn.'
     hoc_already_signed_up_heading: 'Aan de slag zonder in te loggen'
     hoc_already_signed_up_content: 'U bent aangemeld als leraar van Hour of Code! U en uw leerlingen hoeven niet aan te melden bij Code Studio om deel te nemen aan dit project. Om te beginnen, <a href="%{learn_url}"> Kies een cursus</a> voor uw klas en deel de link met hen. <br/> <br/> Als U het leuk vond en verder wil gaan met Hour of Code, kunt u hieronder een gebruikersnaam en wachtwoord instellen voor uw leerlingen.<a href="%{educate_url}"> langere cursussen</a>.'
     teacher_educator_guide: 'Kijk in de lerarengids'
@@ -113,6 +148,7 @@ nl:
     age: 'Leeftijd'
     user_type: 'Bent u een leerling of een leraar?'
     submit: 'Meld je aan'
+    go_to_account: 'Naar mijn account gaan'
     teacher: 'Bent u een leraar?'
     valid_username: "Beschikbaar!"
     invalid_username: "Gebruikersnaam moet minstens 5 tekens zijn"
@@ -120,10 +156,13 @@ nl:
     valid_password: "Geldig wachtwoord!"
     invalid_password: "Wachtwoord moet ten minste 6 tekens lang zijn"
     mismatch_password: "De twee wachtwoorden komen niet overeen"
-    under_13_consent: "Indien ik jonger dan 13 jaar ben, bevestig ik dat ik toestemming heb van mijn ouders of wettelijke voogd om gebruik te maken van de diensten van Code.org."
-    agree_us_website: "Ik ga akkoord met het gebruik van een website die in de Verenigde Staten gevestigd is."
-    my_data_to_us: "Gegevens over mijn gebruik van deze site mogen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten."
+    student_consent: "Ik bevestig dat ik toestemming heb van mijn ouder of voogd om the Code.org diensten te gebruiken."
+    agree_us_data_transfer_teacher: '**Ik ga ermee akkoord dat Code.org data overbrengt (waaronder persoonlijke gegevens) van mijn gebruik (en het gebruik door mijn studenten) van deze website naar de Verenigde Staten** met als doel het hosten en verwerken van dergelijke data.'
+    data_collection_us: "Ik begrijp dat Code.org een in de VS gevestigde non-profit website is en dat de wetten waaronder het verzamelen van data in de VS valt kunnen afwijken van de wetten in mijn land."
+    visit_privacy: 'Ga naar het [Privacybeleid](%{privacy_url}) van Code.org voor meer informatie.'
+    student_terms_markdown: "Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze [privacy policy](http://code.org/privacy) voor meer informatie."
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
+    user_type_button: "Accounttype bijwerken"
     user_type_label: "Accounttype"
     user_type_teacher: "Leraar"
     user_type_student: "Leerling"
@@ -134,10 +173,15 @@ nl:
     email_preference_privacy: "(Zie ons privacy beleid)"
     email_preference_yes: "Ja"
     email_preference_no: "Nee"
+    email_preference_required: "Je moet een emailvoorkeur instellen."
+    parent_account_checkbox: "Ik ben een ouder/voogd die zich aanmeld namens mijn kind."
+    parent_account_email_progress_permission: "Kunnen wij u af en toe e-mailen over de voortgang van uw kind en de projecten, en u op de hoogte houden van hun cursus en informatica?  [(Zie ons privacybeleid)](%{privacy_policy_url})"
+    parent_account_email_label: "E-mail ouder/voog"
   school_info:
     title: 'Schoolinformatie (optioneel)'
     school_country: 'Land van de school'
     select_school_type: 'Type van de school'
+    charter: 'Charter'
     private: 'Privé'
     public: 'Openbaar'
     homeschool: 'Thuisonderwijs'
@@ -173,7 +217,7 @@ nl:
     login: 'Aanmelden'
     invalid_login: 'Onjuiste login, probeer opnieuw'
     pair_programming: 'Ik werk met een partner achter de computer'
-    student_privacy: "Meer informatie over waarom u niet uw volledige naam ziet vindt u <a href='%{student_privacy_blog}' target='_blank'> hier</a>."
+    student_privacy_markdown: "Meer informatie over waarom u niet uw volledige naam ziet vindt u [hier](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Wachtwoord vergeten?'
@@ -200,8 +244,10 @@ nl:
       %{name}
   parent_mailer:
     student_associated_subject: 'Logininformatie voor Code.org'
+    parent_email_added_subject: 'Welkom bij Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Welkom bij Code.org!'
+    delete_teacher_subject: 'Code.org melding: Je account is verwijderd.'
   section:
     your_section:
       one: 'Jouw sectie:'
@@ -209,6 +255,7 @@ nl:
     code_with_teacher: '%{section_code} met %{teacher_name}'
     confirm:
       remove: 'Weet je zeker dat je deze groep wilt verlaten?'
+    default_name: 'Naamloze sectie'
     remove: '(sectie verwijderen)'
     type:
       picture: 'Foto wachtwoord'
@@ -248,6 +295,12 @@ nl:
     updated: '%{model} bijgewerkt.'
     destroyed: '%{model} is succesvol verwijderd.'
     access_denied: 'Je hebt geen toegang tot dit %{model}.'
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: "Het emailadres dat je hebt ingegeven, komt niet overeen met het emailadres van dit account."
+        personal_login_created_email: 'Het aanmaken van je persoonlijk account is gelukt. Je kan nu je account bereiken door in te loggen met je emailadres en wachtwoord.'
+        personal_login_created_username: 'Het aanmaken van je persoonlijk account is gelukt. Je kan nu je account bereiken door in te loggen met je gebruikersnaam (%{username}) en wachtwoord'
   nav:
     header:
       finished_hoc: "Ik heb mijn Uur Code afgemaakt"
@@ -262,11 +315,14 @@ nl:
       professional_learning: "Professioneel Leren"
       documentation: "Documentatie"
       tutorials: "Tutorials"
+      web_lab_documentation: "Web Lab Documentatie"
+      educate_overview: "Leerkracht Overzicht"
       educate_elementary: "Basisschool"
       educate_middle: "Middelbare school"
       educate_high: "Middelbare school"
       educate_hoc: "Uur Code"
       educate_partner: "Partner met ons"
+      educate_beyond: "Achter Code.org"
       educate_inspire: "Inspireer een Student"
       educate_community: "Online gemeenschap"
       educate_tools: "Hulpmiddelen en video's"
@@ -275,6 +331,7 @@ nl:
       about_donors: "Sponsors"
       about_partners: "Partners"
       about_team: "Volledig Team"
+      about_news: "Persinfo"
       about_evaluation: "Beoordeling"
       about_jobs: "Vacatures"
       about_contact: "Neem contact met ons op"
@@ -284,6 +341,8 @@ nl:
       help_us: "Help ons"
       teach: "Onderwijzen"
       about: "Over"
+      legal_privacy: "Privacybeleid"
+      legal_tos: "Gebruiksvoorwaarden"
     user:
       classroom: 'Startpagina voor de leerkracht'
       district_dashboard: 'Regio-overzicht'
@@ -294,6 +353,7 @@ nl:
       signin: 'Aanmelden'
       signup: 'Maak een account aan'
       already_registered: 'Al aangemeld?'
+      pair_programming: 'Programmeren in Tweetallen'
       team: 'Team'
       driver: 'Ingelogd'
       navigator: 'Navigator'
@@ -314,11 +374,15 @@ nl:
       gumball: 'Gumball'
       iceage: 'Ice Age'
       infinity: 'Oneindig'
+      makerlab: 'Maker Gereedschap'
       minecraft_adventurer: 'Minecraft avonturier'
+      minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Code Verbinding'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Held'
       playlab: 'Speel Lab'
       playlab_k1: 'Play Lab (Peuter)'
+      scratch: 'Scratch'
       starwars: 'Star Wars'
       weblab: 'Web Lab'
     popup:
@@ -354,6 +418,7 @@ nl:
       example: 'Voorbeeld uitkomst'
       example_with_number: 'Voorbeeld uitkomst getal %{solution_number}'
       submitted_on: 'Ingeleverd op %{date}'
+      last_updated: 'Last geüpdatet:'
       unsubmit: 'Intrekken'
       worked_with: 'Werkte samen met'
       update_lock_settings: 'Update lock instellingen hier.'
@@ -363,26 +428,45 @@ nl:
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
     email_confirm_wrong_email: '(Verkeerde e-mailadres?)'
     email_resend_confirm: 'Verstuur de bevestigingsinstructie nog een keer'
+    new_email_hint: '(Wees er zeker van dat je emails kan ontvangen op dit email adres.)'
     new_password_hint: "(laat leeg als je het niet wilt veranderen)"
     current_password_hint: '(we hebben je huidige wachtwoord nodig om je veranderingen te bevestigen)'
     delete: 'Verwijder jouw account'
     delete_text: "Door op de knop hieronder te drukken verwijder je jouw account."
+    delete_text_teacher_managed_note: "Je hebt niet de nodige rechten om dit account te verwijderen omdat het door je leerkracht wordt beheerd. Je leerkracht(en) moeten je verwijderen uit hun groepen, voordat je je account kan verwijderen."
     delete_text_teacher_note: "Let op: door jouw account te verwijderen, worden de accounts van de leerlingen niet verwijderd."
     delete_confirm: 'Weet je zeker dat je jouw account wil verwijderen?'
     deleted_user: 'verwijder gebruiker'
+    no_password_because_oauth: 'Geen wachtwoord nodig omdat je inlogt met een externe provider.'
     no_password_because_sponsored: 'Neem contact op met uw leraar voor het beheren van uw wachtwoord.'
     create_personal_login: 'Maak een persoonlijke login'
+    create_personal_login_under_13_info: 'Als je je Code.org account wilt kunnen blijven gebruiken na dit schooljaar, vraag dan aan je ouder/voogd om je te helpen bij het aanmaken van een persoonlijke login hieronder.'
     create_personal_login_under_13_username: "Gebruikersnaam (gebruik niet uw echte naam!)"
     create_personal_login_under_13_parent_email: 'E-mailadres van ouder/voogd'
+    create_personal_login_info: 'Als je je Code.org account wilt kunnen blijven gebruiken na dit schooljaar, kan je hieronder een persoonlijke login aanmaken.'
+    create_personal_login_link_account: 'Als alternatief kan je ook kiezen dit account te verbinden met een persoonlijke account onder de "Beheer verbonden accounts" sectie.'
+    create_personal_login_email_note: "Merk op: Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> voor meer informatie."
+    create_personal_login_email_note_markdown: 'Merk op: Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze [privacy policy](%{privacy_policy_url}) voor meer informatie.'
     enter_new_login_info: 'Voer je nieuwe aanmeldgegevens in'
+    confirm_secret_words: 'Bevestig dat jij het bent door je huidige geheime woorden in te geven.'
+    parent_email_label: "E-mailadres van ouder/verzorger (optioneel)"
+    parent_email_hint: "(dit kan worden gebruikt voor wachtwoordherstel)"
+    enter_parent_email: "Geef het emailadres van je ouder of voogd in (voor wachtwoordherstel)"
+    update: "Account bijwerken"
+    account_successfully_updated: "Account succesvol bijgewerkt."
+    update_email: "Bijwerken"
+    for_parents_and_guardians: "Voor ouders en voogden"
+    link_a_parent_email: "Koppel het e-mailadres van een ouder/voogd aan dit account om op de hoogte te blijven van de voorgang van uw kind en de projecten. U kunt dit e-mailadres ook gebruiken om wachtwoorden te herstellen."
+    parent_guardian_email_label: "E-mailadres van ouder/voogd"
+    remove_parent_email_label: "Verwijderen"
+    none: "Geen"
+    only_one_parent_email_supported_warning: "Opmerking: wij kunnen op dit moment slechts één e-mailadres van een ouder/voogd per account ondersteunen."
+    encrypted: "Versleuteld"
   user_level:
     completed: 'Voltooid'
     tried: 'Geprobeerd'
   home:
     title: "Code Studio"
-    description: 'Code Studio is de basis voor online cursussen gemaakt door code.org'
-    lines_of_code: "%{lines_count} REGELS CODE DIE GESCHREVEN DOOR STUDENTEN"
-    lines_of_code_linebreak: "%{lines_count} REGELS CODE<br/>GESCHREVEN DOOR %{students_count} MILJOEN LEERLINGEN"
     all_courses: "Overzicht van cursussen 1, 2 en 3"
     lesson_plans: "Lesplannen"
     signin_message: "Al aangemeld? %{link}"
@@ -412,11 +496,6 @@ nl:
     test_videos_help: 'Test de nieuwe video-speler op uw school'
     try_beta_courses: 'Nieuw! Probeer cursussen die nog in ontwikkeling zijn voor basisschoolleerlingen'
     use_as_teacher: 'Gebruik de site als leerkracht'
-    heading_hoc2014: "<h2>Uur Code voor</h2><h1>Alle leeftijden</h1>"
-    heading_elementary: "<h2>20 uur cursussen voor</h2><h1>Beginners (alle leeftijden)</h1>"
-    heading_apps: "<h2>Leuk voor</h2><h1>Iedereen</h1>"
-    heading_tools: "<h2>Klaar voor de volgende stap?</h2><h1>JavaScript Tools voor de Middelbare School</h1>"
-    heading_legacy: "<h2>Onze algemene cursus voor</h2><h1>Alle Leeftijden</h1>"
     your_gallery: Galerij
     no_primary_course: "Probeer een cursus bij Code Studio"
     choose_next_course: "Probeer een Code Studio cursus door er hier onder één te kiezen"
@@ -481,6 +560,7 @@ nl:
     download: 'Video downloaden'
     show_notes: 'Toon Notities'
     show_video: 'Toon Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
@@ -519,11 +599,13 @@ nl:
   upsell:
     applab:
       title: 'App Lab'
-      body: "App Lab is een programmeer omgeving waar jij simpele apps kan maken. Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een par seconden."
+      body: "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
     dance:
+      title: 'Dansfeest'
+    dance-2019:
       title: 'Dansfeest'
     hoc:
       title: 'Klassiek doolhof'
@@ -543,10 +625,14 @@ nl:
       body: "Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers"
     gamelab:
       title: "Game Lab"
+      body: "Game Lab is een programmeeromgeving waarin je eenvoudige animaties en games kan maken met objecten en personages die met elkaar interageren."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
+    hoc-encryption:
+      body: "Leerlingen willen technieken leren om versleutelde berichten te maken en te breken."
     weblab:
       title: "Web Lab (bèta)"
+      body: "Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele seconden."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
     frozen:
@@ -566,7 +652,10 @@ nl:
       title: "Minecraft"
     hero:
       title: "Minecraft"
-      body: "Minecraft is terug bij Hour of Code met een gloednieuwe activiteit! Gebruik code om door Minecraft te reizen."
+      body: "Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen."
+    text-compression:
+      title: "Tekstcompressie"
+      body: "In deze les zullen leerlingen de Tekstcompressiewidget gebruiken om tekst te comprimeren door patronen te vervangen door symbolen."
     unplugged:
       title: "'Unplugged' lessen"
       audience: "Leeftijden 6+"
@@ -574,26 +663,13 @@ nl:
       body_short: "Als je geen computers hebt, probeer dan deze 'unplugged' lessen in je klaslokaal."
     unplugged_conditionals:
       title: "Voorwaardelijke instructies"
+      body: "Leer over algoritmes en conditionele statements in deze \"unplugged\" activiteit door gebruik te maken van een kaartspel."
     widgets:
       title: "Widgets"
+      body: "Studenten kunnen concepten uit onze 'CW Principles cursus' diepgaand verkennen door gebruik te maken van deze digitale hulpmiddelen. Gebruik de widgets op zichzelf, of maak een één-concept-les."
       audience: "Leeftijd 14+"
       cta: "Leer hoe"
-  gallery:
-    students_drew_these_with_code: "Leerlingen wonnen deze met programmeren!"
-    students_made_these_with_code: "Leerlingen hebben dit gemaakt met code!"
-    picture_count: "In het afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b> afbeeldingen getekend door hun eigen computerprogramma te schrijven. Klik op de afbeeldingen om elk programma uit te voeren."
-    activity_count: "In de afgelopen <b>%{days}</b> dagen hebben leerlingen <b>%{count}</b> apps en plaatjes gemaakt door hun eigen computerprogramma's te schrijven. Klik op de plaatjes en screenshots om ieder programma in actie te zien."
-    want_to_make_your_own: "Wil je dit zelf doen?"
-    more: "Meer &rarr;"
-    caption_by_name_age: "door %{name}, %{age} jaar"
-    caption_time_ago: "%{time_ago} geleden"
-    header: "Galerij"
-    header_playlab: "Speel Lab"
-    header_artist: "Kunstenaar"
-    report_abuse: "Misbruik Melden"
   landing:
-    prerelease: "Deze cursus is in <span class='betatext'>beta</span>. Dat betekent dat het nog niet de uiteindelijke versie van de cursus is, en nog zal worden aangepast wanneer we feedback krijgen en verbeteringen doorvoeren."
-    prerelease_hoc2014: "Deze handleiding is in <span class='betatext'>beta</span>. Deze handleiding wordt bijgewerkt afhankelijk van ontvangen feedback en er worden verbeteringen aan aangebracht."
     report_bug: "Meld Bug"
     support: "Help"
     support_url: "//support.code.org"
@@ -601,6 +677,8 @@ nl:
     help_support: "Hulp en ondersteuning"
     documentation: "Documentatie"
     tutorials: "Tutorials"
+  free_response:
+    placeholder: "Voer uw antwoord hier in"
   multi:
     wrong_title: "Onjuist antwoord"
     wrong_body: "Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!"
@@ -646,6 +724,8 @@ nl:
     open_response_body: "Bedankt voor uw reactie!"
     correct_title: "Juist"
     correct_body: "Dat is het juiste antwoord."
+  lesson_extras:
+    bonus_level: "Bonuslevel"
   dialog:
     ok: "OK"
     startover_title: "Weet je zeker dat je opnieuw wilt beginnen?"
@@ -659,14 +739,25 @@ nl:
   age_interstitial:
     age: Je leeftijd
     header: Update Account Informatie
-    message: "We zijn bezig onze ervaring te verbeteren zodat je privacy nog beter wordt gewaarborgd. Hiervoor moeten we bestaande gebruikers vragen hier hun leeftijd in te vullen.<br/>Zoals altijd zal code.org deze informatie nooit uitlenen, verkopen of delen met anderen."
-    sign_out: 'Als je je leeftijd niet wilt geven kun je <a href="%{url}">uitloggen</a>.'
+    disclaimer: "Zoals altijd zal code.org deze informatie nooit uitlenen, verkopen of delen met derden."
+    sign_out_markdown: 'Als je je leeftijd niet wilt ingeven, kan je [uitloggen](%{url}).'
   terms_interstitial:
+    title: "Aangepaste gebruiksvoorwaarden en privacy policy"
     tos: "Gebruiksvoorwaarden"
     privacy: "Privacybeleid"
     privacy_notice: "Privacyverklaring"
+    accept_label: 'Ik ga akkoord met de <a href="%{tos_url}" target="_blank">gebruiksvoorwaarden</a> en <a href="%{privacy_url}" target="_blank">privacy policy</a>.'
+    accept_label_markdown: Ik ga akkoord met de [gebruiksvoorwaarden](%{tos_url}) en [privacy policy](%{privacy_url}).
     accept: "Accepteren"
     print: "Afdrukken"
+    review_terms: "Herzie de aangepaste gebruiksvoorwaarden"
+  donor_interstitial:
+    title: "Je gratis informaticacursussen worden mogelijk gemaakt door..."
+    local_supporters: "Lokale ondersteuners"
+    global_supporters: "Globale ondersteuners"
+    support_codeorg_1: "Elke euro die Code.org ontvangt, geeft meer leerlingen kansen."
+    support_codeorg_2: "[Doneer nu](%{donate_url}) om Code.org te ondersteunen."
+    get_started: "Ga aan de slag op Code.org"
   school_info_interstitial:
     save: "Opslaan"
   race_interstitial:
@@ -680,6 +771,7 @@ nl:
     submit: "Insturen"
     decline: "Afsluiten"
   zendesk_too_young_message: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag <a href="http://support.code.org">support.code.org</a> wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
+  zendesk_too_young_message_markdown: 'Sorry, jeugdige gebruikers mogen niet inloggen op onze ondersteuningssite. Je mag [support.code.org](http://support.code.org) wel bekijken zonder in te loggen of je ouder of leraar vragen met ons contact op te nemen.'
   progress:
     not_started: niet gestart
     in_progress: wordt uitgevoerd
@@ -740,43 +832,16 @@ nl:
   peer_review:
     accepted:
       name: 'Geaccepteerd'
-      description: '<strong>Ja</strong>, deze inschrijving <strong>voldoet aan</strong> de eisen'
     rejected:
       name: 'Afgewezen'
-      description: '<strong>Nee</strong>, deze inschrijving <strong>voldoet niet aan</strong> de eisen'
     escalated:
       name: 'Gëscaleerd'
       description: 'Ik wil dat een instructeur deze inschrijving herziet'
-  flex_category:
-    required: 'Overzicht'
-    content: 'Content'
-    practice: 'Leraarpraktijken'
-    main_course: 'Hoofdcursus'
-    extra_course_content: 'Extra cursusinhoud'
-    csf_digcit: 'Digitaal Burgerschap'
-    csf_jigsaw: 'Legpuzzel'
-    csf_loops: 'Lussen'
-    csf_events: 'Gebeurtenissen'
-    csf_binary: 'Binaire'
-    csf_conditionals: 'Voorwaardelijke instructies'
-    csf_nested_loops: 'Genestelde lussen'
-    csf_functions: 'Functies'
-    csf_variables: 'Variabelen'
-    csf_for_loops: 'For-lussen'
-    csf_internet: 'Internet'
-    csd6_1: 'Hoofdstuk 1: Hardware uitgang'
-    csd6_2: 'Hoofdstuk 2: Hardware Input'
-    csp1_2: 'Hoofdstuk 2: Uitvinden van het Internet'
-    cspSurvey: 'Vragenlijst'
-    csp_variables: 'Variabelen'
-    csp_conditionals: 'Voorwaardelijke instructies'
-    csp_functions: 'Functies'
-    csp_lists: 'Lijsten'
-    csp_loops: 'Lussen'
   external_links:
     disclaimer: Disclaimer
   hoc_download:
     instructions_headline: 'Geen Internet?'
+    minecraft_name: 'Minecraft Uur Code'
     download_in_Chinese: 'Download in het Chinees:'
     download_in_Croatian: 'Download in het Kroatisch:'
     download_in_Dutch: 'Downloaden in het Nederlands:'
@@ -788,28 +853,51 @@ nl:
   view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
+      last_name: 'Achternaam'
       email: 'Email'
       school_name: 'Naam van de school'
       school_city: 'School Stad'
       school_country: 'Land van de school'
+      colombian_school_city: 'School Stad'
+      colombian_school_name: 'Naam van de school'
     form_entries:
       gender:
         male: 'Man'
         female: 'Vrouw'
         non_binary: 'Niet-binair'
         none: 'Wil ik liever niet zeggen'
+      school_country:
+        canada: 'Canada'
+        chile: 'Chili'
+        colombia: 'Colombia'
+        israel: 'Israël'
+        malaysia: 'Maleisië'
+        mexico: 'Mexico'
+        thailand: 'Thailand'
       subjects:
-        cs: 'informatica'
+        cs: 'informaticawetenschappen'
         ict: 'ICT'
         math: 'wiskundige'
         science: 'Wetenschap'
         la: 'Taalvaardigheden'
+        music: 'Muziek'
+        art: 'Kunst'
+        other: "Anders:"
       resources:
         bootstrap: 'Bootstrap'
+        khan: 'Khan Academy'
         kodable: 'Kodable'
         lightbot: 'LightBot'
+        scratch: 'Scratch'
+        tynker: 'Tynker'
+        other: "Anders:"
       robotics:
         kodable: 'Kodable'
+        microbit: 'Microbit'
+        ozobot: 'Ozobot'
+        sphero: 'Sphero'
+        raspberry: 'Raspberry Pi'
+        other: "Anders:"
       workshop_course:
         csp: 'CW Principes'
       email_opt_in:
@@ -818,6 +906,12 @@ nl:
   courses_category: 'Volledige Cursussen'
   cookie_banner:
     accept: 'Ik ga akkoord'
-  gdpr_dialog:
-    message: 'Gegevens over uw gebruik van deze site kunnen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten.'
-    yes: 'Ja'
+  page_not_found_title: "Pagina niet gevonden"
+  copy: 'Kopieër'
+  parent_email_banner:
+    text: "Bent u een ouder of voogd? Koppel uw e-mailadres aan dit account om op de hoogte te blijven van de voortgang van uw kind en projecten."
+    link_your_email: "Koppel uw e-mailadres"
+    not_now: "Niet nu"
+  behaviors:
+    this_sprite: "deze sprite"
+  unit_prefix: "Unit %{n}"

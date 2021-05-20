@@ -2,7 +2,7 @@
 :javascript
   window.levelData = #{data.to_json};
 
-%script{src: minifiable_asset_path('js/levels/_contract_match.js')}
+%script{src: webpack_asset_path('js/levels/_contract_match.js')}
 = stylesheet_link_tag 'levels/contract_match'
 = render partial: 'levels/common_audio'
 

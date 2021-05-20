@@ -1,16 +1,34 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 my:
   activerecord:
     attributes:
       user:
         email: 'email လိပ္စာ'
+        username: 'အသုံးပြုမည့်အမည်'
+        locale: 'ဘာသာစကား'
+        age: 'အသက်'
         gender: 'က်ား/မ'
   hello: "မဂၤလာပါ ကမာၻၾကီး"
   submit: ပေးပို့ပါ
   cancel: "ပယ်ဖျတ်သည်"
   or: "သို့မဟုတ်"
+  appname: "Code.org"
   continue: 'ဆက်လုပ်ပါ'
   auth:
     clever: 'Clever'
+  signup_form:
+    age: 'အသက်'
   signin_form:
     login: 'email လိပ္စာ'
   password:
@@ -22,10 +40,12 @@ my:
       google_classroom: 'Google Classroom'
       clever: 'Clever'
   crud:
+    edit: 'ပြုပြင်သည်'
     submit: 'ပေးပို့ပါ'
   nav:
     header:
       my_dashboard: "ကျွန်ုပ်ကျောက်သင်ပုံး"
+      sections: "တန်းခွဲများ"
       professional_learning: "Professional Learning"
     user:
       create: 'ဖန်တီးပါ'
@@ -41,6 +61,12 @@ my:
   teacher:
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
+  user:
+    none: "ဘာမှမရှိ"
+  home:
+    trynow: 'ဆက်သင်ယူရန်'
+  video:
+    label: 'ဗီဒီယို'
   compatibility:
     upgrade:
       link: "ဆက်သင်ယူရန်"
@@ -56,21 +82,19 @@ my:
     print: "ပုံနှိပ်သည်"
   race_interstitial:
     submit: "ပေးပို့ပါ"
-    decline: "ပိတ်မည်"
+    decline: "ပိတ်ပါ"
   project:
     name: "အမည္"
     saved: "သိမ်းထားပြီးပါပြီ"
-  flex_category:
-    csf_loops: 'Loops'
-    csf_variables: 'Variables'
-    csp_variables: 'Variables'
-    csp_lists: 'စာရင်းများ'
-    csp_loops: 'Loops'
+  hoc_download:
+    minecraft_name: 'Minecraft Hour of Code'
   pd:
     form_labels:
       email: 'email လိပ္စာ'
       school_city: 'ကျောင်းမြို့'
+      colombian_school_city: 'ကျောင်းမြို့'
     form_entries:
       subjects:
         cs: 'ကွန်ပျုတာသိပ္ပံ'
         math: 'သင်္ချာ'
+  copy: 'မိတ္တူ'

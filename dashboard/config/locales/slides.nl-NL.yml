@@ -997,6 +997,15 @@ nl:
           Nadat je alles op volgorde hebt, zal je je algoritme ruilen met een andere
           groep leerlingen om te kijken of je algoritme werkt. Een goed ontworpen
           algoritme is zeer belangrijk voor het maken van het beste papieren vliegtuigje.
+      4:
+        text: Wanneer we chocolade willen maken, zijn er vele grote stappen van dat
+          proces dat bestaan uit vele kleinere stappen. Er bestaan vele recepten/algoritmen
+          en manieren afhankelijk van de chocolade dat we willen maken. Elke stap
+          is belangrijk, zelfs de kleinste! Zonder die ene kleine stap kan de rest
+          van het proces niet uitgevoerd worden. Algoritmen maken zodat anderen ze
+          kunnen verstaan is heel belangrijk. Daarom zorgen we ervoor dat elke kleine
+          stap uitgeschreven is zodat de oplossing van het algoritme, voor iedereen
+          die ze uitvoert, hetzelfde is.
     C2_playlab_createstory:
       1:
         text: Tot nu toe maakte je een animatie of verhaal dat telkens hetzelfde deed
@@ -1013,6 +1022,11 @@ nl:
           totdat je de plek vindt waar iets fout gaat en daarna het probleem op te
           lossen.
     C2_zuck_repeat_loop:
+      1:
+        text: Iets waar computers heel goed in zijn is het herhalen van commando's.
+          Mensen worden het constant herhalen van dezelfde opdracht snel beu. Computers
+          kunnen dezelfde opdracht miljoenen of zelfs miljarden keren nauwkeurig uitvoeren
+          zonder verveeld te raken.
       2:
         text: Dus het duurt bijvoorbeeld erg lang om alle e-mails te schrijven als
           ik iedereen op Facebook een fijne verjaardag wil wensen door ze een email
@@ -1122,10 +1136,32 @@ nl:
           elk blok is een commando die de vogel kan begrijpen. De witruimte aan de
           rechterkant wordt de werkruimte genoemd en dit is waar we ons programma
           gaan bouwen.
+      3:
+        text: Wat gebeurt er als ik het blok naar onze werkplek sleep en op "uitvoeren"
+          druk? Dan gaat de vogel een vakje naar voren. Wat moet ik doen als de vogel
+          daarna nog iets moet doen? Dan moet je een nieuw blokje aan het programma
+          vastmaken.
+      4:
+        text: Ik kies de "draai rechts"-blok en ik sleep het onder mijn ga-vooruit
+          blok, tot er een gele pijl verschijnt. Dan laat ik het blok los en de blokken
+          maken zich aan elkaar vast. Als ik opnieuw op "uitvoeren" druk, voert de
+          vogel alle opdrachten uit van onze werkplek.
       5:
         text: Als je een blok wilt weghalen, verwijder die dan uit de stapel en sleep
           het naar de prullenmand. Als je dan op "uitvoeren" drukt, kun je op de herstelknop
           drukken om de vogel opnieuw te laten beginnen. Kom op, pak de varkens!
+    starwars_events:
+      4:
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
+          een pijltjestoets of een tik op het scherm.'
+    starwars_blocks_intro:
+      9:
+        text: Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de
+          gereedschapskist.
+    starwars_blocks_events:
+      4:
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
+          een pijltjestoets of een tik op het scherm.'
     mc_intro:
       1:
         text: Mijn naam is Jens Bergensten, maar ik ben beter bekend als Jeb. Ik ben
@@ -1261,11 +1297,25 @@ nl:
       4:
         text: Nu kun je maken wat je maar wilt. Veel plezier!
     gumball_intro:
+      4:
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
+          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
       6:
         text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+      7:
+        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
+          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
+          lijn ziet, en dan zullen ze samengekoppelt worden.
     iceage_intro:
+      4:
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
+          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
       6:
         text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+      7:
+        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
+          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
+          lijn ziet, en dan zullen ze samengekoppelt worden.
     mc_2016_intro:
       1:
         text: Hallo, mijn naam is Jens en ik ben de lead creative Designer van Minecraft
@@ -1371,3 +1421,7 @@ nl:
       11:
         text: Als je vergeten bent wat je moet doen dan staan de instructies voor
           elk niveau boven aan de pagina.
+    hoc_dance_events_2019:
+      4:
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
+          een pijltjestoets of een tik op het scherm.'

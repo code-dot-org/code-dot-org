@@ -1,0 +1,149 @@
+{
+  "mi-NZ": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Events": "Ngā Takunetanga",
+              "Loops": "Ngā Koromeke",
+              "Math": "Pāngarau",
+              "Logic": "Ararau"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Ngā Takunetanga",
+              "Logic": "Ararau"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "tāngia he whetū",
+                "parameters": {
+                  "points": "ngā piro",
+                  "length": "roanga"
+                }
+              },
+              "draw a circle": {
+                "name": "tāngia he porohita"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "roanga",
+                  "repeat": "tōai"
+                }
+              },
+              "draw a triangle": {
+                "name": "tāngia he tapatoru",
+                "parameters": {
+                  "length": "roanga"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "roanga"
+                }
+              },
+              "draw a house": {
+                "name": "tāngia he whare",
+                "parameters": {
+                  "length": "roanga"
+                }
+              },
+              "draw a square": {
+                "name": "tāngia he tapawhā",
+                "parameters": {
+                  "length": "roanga"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Events": "Ngā Takunetanga"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Ngā Takunetanga",
+              "Logic": "Ararau"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Loops": "Ngā Koromeke",
+              "Math": "Pāngarau",
+              "Logic": "Ararau",
+              "Functions": "Ngā Taumahi",
+              "Variables": "Ngā Taurangi"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Events": "Ngā Takunetanga",
+              "Variables": "Ngā Taurangi",
+              "Math": "Pāngarau",
+              "Logic": "Ararau",
+              "Functions": "Ngā Taumahi",
+              "Text": "Kuputuhi"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Events": "Ngā Takunetanga",
+              "Variables": "Ngā Taurangi",
+              "Math": "Pāngarau",
+              "Logic": "Ararau",
+              "Functions": "Ngā Taumahi",
+              "Text": "Kuputuhi"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Loops": "Ngā Koromeke",
+              "Math": "Pāngarau",
+              "Logic": "Ararau",
+              "Functions": "Ngā Taumahi",
+              "Variables": "Ngā Taurangi"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Events": "Ngā Takunetanga",
+              "Logic": "Ararau",
+              "Math": "Pāngarau"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Ngā Hohenga",
+              "Events": "Ngā Takunetanga",
+              "Logic": "Ararau",
+              "Loops": "Ngā Koromeke",
+              "Math": "Pāngarau",
+              "Variables": "Ngā Taurangi",
+              "Functions": "Ngā Taumahi"
+            }
+          }
+        }
+      }
+    }
+  }
+}

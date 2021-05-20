@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   data:
     game:
       name:
@@ -112,8 +112,8 @@ pt-BR:
           bloco vire.'
         turtle_1_5: Agora, para praticar, desenhe um envelope usando um triângulo
           e um quadrado.
-        turtle_1_6: 'Você consegue descobrir como desenhar esse triângulo e esse quadrado?
-          Dica: faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
+        turtle_1_6: 'você consegue descobrir como desenhar esse triângulo e esse quadrado?
+          Dica: Faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
           de desenhar o quadrado.'
         turtle_1_7: Ok, vamos dificultar um pouco - veja se você consegue desenhar
           esses óculos verdes. Os quadrados têm 100 pixels de cada lado, e eles são
@@ -208,9 +208,9 @@ pt-BR:
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco
           de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe
           3 bonecos de neve com cores diferentes, separados por 100 pixels.
-        turtle_2_9: Use um laço "contar com" para desenhar uma família de bonecos
-          de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem
-          estar separados por 60 pixels.
+        turtle_2_9: Use um laço "for" para desenhar uma família de bonecos de neve,
+          com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem estar separados
+          por 60 pixels.
         turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes
           espirais. O que acontece se você alterar a quantidade de voltas? Ou definir
           uma cor aleatória no laço? Desenhe o que você quiser.
@@ -634,6 +634,7 @@ pt-BR:
         C4_unplugged_forloops: Laços para
         C4_unplugged_parameters: Composição de música com parâmetros
         C4_unplugged_binary: Binário
+        CSF_a_b_artist_loops: Laços no Artista
         CSF_artist_angles: Ângulos em Artista
         CSF_collector_k1_blocks: 'Fundamentos de CS: O Coletor'
         CSF_collector_repeat_loops: Laços Repita em Coletor
@@ -776,7 +777,9 @@ pt-BR:
         CSF_skinOverview_Harvester: A Colheitadeira
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: Laços com BB-8
         CSF_harvester_skinOverview_K-1: A Colheitadeira
+        CSF_harvester_loops_K1: Laços com Colheitadeira
         CSF_scrat_loops_K1: Laços na Era do gelo
         CSF_scrat_loops_CF: Laços na Era do gelo
         CSF_if_allskins: O Bloco Se
@@ -822,11 +825,37 @@ pt-BR:
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_applab_parameters: Funções com Parâmetros
         csd_applab_loops: Loops em App Lab
+        csd_problem_solving_process: O Processo de Resolução de Problemas
         CSF_Going_Places_Safely: Minha Vizinhança Online
         CSF_SpriteLab_Intro_v2: Introdução ao Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Como fazer um Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites em Ação
         csd_debugging: Analisando
+        csd_applab_designmode_short: Modo de design do laboratório de aplicativos
+        csp-pd-welcome: Bem-vindo à familia!
+        CSF-Teaching-Problem-Solving: Resolução de problemas de ensino no CSF
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Vídeo piloto
+          - Bloco de dados
+        u7-libraries-explanation: 'App Lab: Crie seus próprios blocos - Como usar
+          bibliotecas'
+        how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor
+          aprovado'
+        why-should-teach-unplugged-activities: 'FAQ: Por que devo ensinar atividades
+          "desplugadas"?'
+        cs-principles-intro-to-objects: 'Princípios de CS: Introdução aos Objetos'
+        oceans_machine_learning: Máquina de aprendizado
+        oceans_training_data: Dados de treinamento
+        oceans_societal_implications: 'Vídeo: Impactos na Sociedade'
+        hoc_dance_congrats_2019: Dance Party 2019 - Festejar!
+        hoc_dance_warmup_2019: Dance Party 2019 - Aquecimento
+        hoc_dance_events_2019: Dance Party 2019 - Eventos
+        hoc_dance_measures_2019: Dance Party 2019 - Compassos
+        hoc_dance_properties_2019: Dance Party 2019 - Propriedades
+        csd_what_computers_do: O que os computadores fazem?
+        csf_my_online_neighborhood_2020: Minha Vizinhança Online
+        csf_follow_the_digital_trail: Siga o Trilha Digital
+        csf_private_and_personal_information: Informações Privadas e Pessoais
+        csd_what_computers_are: O que é um computador?
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

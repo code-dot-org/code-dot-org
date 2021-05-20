@@ -1,0 +1,39 @@
+{
+  "hr-HR": {
+    "data": {
+      "long_instructions": {
+        "2-3 Artist 4": "Pomozi mi dovršiti kuću za ovu mačku.",
+        "2-3 Artist 6": "Ova kuća treba krov! Nacrtaj trokut. \n\nSavjet: sve tri strane su iste duljine.\n\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>",
+        "2-3 Artist 9 NEW": "Dovrši ovog zmaja",
+        "2-3 Artist Free Play": "Besplatna igra! Nacrtaj što god želiš.",
+        "2-3 Artist Nested Loops 10": "Ponovi ovak kod 12 puta kako bi dovršio uzorak.",
+        "2-3 Artist Nested Loops 12": "Ponovi ovaj kod 12 puta kako bi dovršio kovrče.",
+        "2-3 Maze 1": "Možeš li mi pomoći uhvatiti nestašnu svinju? \nNaniži nekoliko 'idi naprijed' blokova ispod 'kod pokretanja' bloka i pritisni 'Kreni'. ",
+        "Overworld Move to Sheep": "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.",
+        "Overworld Move to Sheep_2019": "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.",
+        "Overworld Move to Sheep_2020": "Dodajte drugu 'pomakni desno' naredbu u svoj kod kako biste došli do ovce.",
+        "Standalone_Artist_2": "Nacrtaj ovaj romb s kutevima od 120 i 60 stupnjeva te stranicama dugačkim 150 piksela.",
+        "Standalone_Artist_3": "Možeš li nacrtati ovaj šesterokut sa stranicama dugačkim 100 piksela i okretima od 60 stupnjeva?",
+        "Standalone_Artist_4": "Sad imamo novi blok za igranje, petlju. Ona će ponavljati niz naredbi. Što će se dogoditi ako ove naredbe ponoviš 6 puta?",
+        "Standalone_Artist_5": "Koliko puta trebaš u petlji ponoviti crtanje ovog romba da nacrtaš cvijet?",
+        "Standalone_Artist_5.5": "Zapazi kako smo pojednostavili kôd za crtanje romba stavivši ga u petlju. Možeš u petlji ponoviti taj cijeli niz 12 puta da bi nacrtao cvijet. Savjet: Nakon svake petlje za crtanje romba trebaš se okrenuti za 30 stupnjeva zato da ne crtaš uvijek po istom rombu.",
+        "Standalone_Artist_6": "Ponovi ovaj kôd za crtanje šesterokuta 6 puta da dobiješ uzorak. Za koliko se stupnjeva trebaš svaki put okrenuti? Savjet: podijeli broj stupnjeva u krugu s brojem ponavljanja u petlji.",
+        "Standalone_Artist_7": "Funkcija je još jedan programski alat koji ti pomaže da se ne ponavljaš. Ova funkcija crta cvijet, tako da je možeš koristiti kad god želiš nacrtati cvijet. Koristi nju i novi blok za skok da nacrtaš ovo cvijeće. Savjet: Cvjetovi su razmaknuti 150 piksela",
+        "Standalone_Artist_8": "Ovo je funkcija nazvana \"Nacrtaj oblik\" koju smo isprogramirali da crta šesterokute. Pokreni program da vidiš što ona radi i onda eksperimentiraj s tom funkcijom da vidiš što će se dogoditi. Možeš li napraviti da ona crta uzorke od kvadrata, trokuta ili osmerokuta?",
+        "Standalone_Artist_9": "Sada samo naprijed i napravi sliku kakvu god želiš! Čak imaš i praznu funkciju u kojoj možeš napraviti što god poželiš!",
+        "course4_artist_fwp_challenge1": "Pokušaj pokrenuti ovaj program i napravi izmjene da vidiš što će se dogoditi. Možeš li shvatiti kako radi? (Ili ga izbriši i zamijeni s nečim posve drugačijim)",
+        "courseD_maze_nestedLoops4": "Odvedi me do suncokreta!",
+        "courseD_maze_nestedLoops4_2018": "Odvedi me do suncokreta!",
+        "courseD_maze_nestedLoops4_2019": "Odvedi me do suncokreta!",
+        "courseD_maze_nestedLoops4_2020": "Odvedi me do suncokreta!",
+        "spritelab_extras_repeat": "<img src=\"https://images.code.org/a364f402e2052a73c513e0606d658cf7-image-1593014310879.2020-06-24 11_58_08.gif\" style=\"float:right\">\n\n# Previše spriteova!\n\nUžurbanu scenu možete brzo stvoriti izradom spriteova u <xml><block type=\"gamelab_randomLocation\" block-text=\"random location\"></block></xml> i upotrebom bloka <xml><block type=\"controls_repeat_ext\" block-text=\"repeat\"><value name=\"TIMES\"><block type=\"math_number\"><title name=\"NUM\">???</title></block></value></block></xml>.\n\nStvorite puno spriteova, a zatim ih potaknite na ponašanje. Koristite barem dvije različite vrste riba.\n\n\\*\\* Savjet: \\*\\* Treba vam samo jedan blok <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"sprite begins\"></block></xml> kako bi svi spriteovi s odgovarajućim kostimom započeli isto ponašanje.",
+        "CourseD_EOC_artist": "Stvori vlastiti crtež!",
+        "CourseD_EOC_bounce1": "Stvori vlastitu košarkašku utakmicu!",
+        "CourseD_EOC_dance": "Stvori vlastiti ples!",
+        "CourseD_EOC_starwars": "Stvori vlastitu igru Star Wars!",
+        "courseA_playLab_events3_2020": "Pomozite psu Jorgeu da se pokrene tako što ćete povezati blok [blockly block][0] s blokom događaja [blockly block][1] koji je već u radnom prostoru.\n\nUpotrijebite strelice na tastaturi ili pritisnite tipke sa strelicama da premjestite Jorgea do zastave i završite razinu!",
+        "courseF_extras_sim": "# Stvori osobnu simulaciju!\n\nEvo još jedne verzije simulacije. Pokušaj unijeti neke promjene u kostime spritea ili u kod. Zabavi se prilagođavajući osobnu simulaciju!"
+      }
+    }
+  }
+}

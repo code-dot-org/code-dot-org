@@ -1,9 +1,9 @@
 name 'cspu5_assess1_snowman_exam_prep'
-wrong '<img src="https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png">'
-wrong '<img src="https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png">'
-right '<img src="https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png">'
-wrong '<img src="https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png">'
-wrong '<img src="https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png">'
+wrong 'https://images.code.org/5b75fcab058869295ae28cbde049df38-image-1475972640258.png'
+wrong 'https://images.code.org/d2375df4bdc876e26a57e0ed3a9ab8db-image-1475972640259.png'
+right 'https://images.code.org/e841d8a061937b7c452eb1c67e27bc90-image-1475972640242.png'
+wrong 'https://images.code.org/c05f8c8bbb9b18430d3175baf39e137d-image-1475972640244.png'
+wrong 'https://images.code.org/113b9de7c9474dd3be53f01195f3e6b6-image-1475972640255.png'
 
 markdown <<MARKDOWN
 A student decides to draw a series of three dots (sort of like a snowman) as shown in the diagram.  She wants each dot to be half the radius of the previous dot, and for the center to be on the edge of the dot below it.  She writes the following code segment to do it:  

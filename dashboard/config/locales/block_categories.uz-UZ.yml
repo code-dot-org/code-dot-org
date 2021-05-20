@@ -3,52 +3,30 @@ uz:
   data:
     block_categories:
       Actions: Harakatlar
-      Loops: Sikllar
-      Functions: Funksiyalar
+      Advanced: Chuqurlashtirilgan
+      Behaviors: Xatti-harakatlar
+      Brushes: Choʻtkalar
       Color: Rang
-      Brushes: Cho'tka
-      Math: Matematik
-      Logic: Mantiq
-      Variables: O‘zgaruvchilar
-      Number: Raqam
-      String: Satr
-      Image: Tasvir
-      Boolean: Mantiqiy
-      Conditionals: Shart buyruqlari
-      Games/Score: O'yin/Hisob
-      Comments: Izohlar
-      Category: Turkum
-      Prebuilt: Oldindan qurilgan
-      Text: Matn
-      Picker: Yig'uvchi
-      Comment: Izoh
-      World: Dunyo
-      Behaviors: Hatti-harakatlar
-      'Variables ': 'O''zgaruvchilar '
-      Locations: Manzil
-      everythingelse: hamma narsa
-      Location: Manzil
-      numbers: raqamlar
-      Numbers: Raqamlar
+      Comment: Fikr
+      Comments: Fikrlar
+      Conditionals: Shartli bayonotlar
       Dancers: Raqqoslar
+      Default: Standart
+      Events: Hodisalar
+      Functions: Funksiyalar
+      'Functions ': 'Funksiyalar '
+      Game/Score: O‘yin/Hisob
+      Games/Score: O‘yinlar/Hisob
       Groups: Guruhlar
-      Advanced: Rivojlangan
-      Start: Boshlash
-      Dancing: Raqsga tushayotgan
-      Sprite: Sprait
-      Brush: Cho'tka
-      Make Sprite: Sprait yasash
-      Movement: Harakat
-      Functional: Vazifali
-      While Events: Voqealar paytida
-      Sprite Properties: Sprait hususiyatlari
-      Predefined: Oldindan belgilangan
-      test: test
-      test2: test2
-      Use These Blocks: Bu bloklardan foydalaning
-      Do Not Use: Foydalanmang
-      Name: Ismi
-      NEW BLOCKS: YANGI BLOKLAR
-      'Functions ': 'Vazifalar '
-      Game/Score: O'yin/Hisob
-      Function: Funksiya
+      Input: Kiritish
+      Locations: Joylashuvlar
+      Logic: Mantiq
+      Loops: Sikllar
+      Math: Matematik
+      Numbers: Sonlar
+      Properties: Xususiyatlar
+      Sprites: Spraytlar
+      Text: Matn
+      Variables: O‘zgaruvchilar
+      'Variables ': 'Oʻzgaruvchilar '
+      World: Dunyo

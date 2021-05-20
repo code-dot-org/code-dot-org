@@ -1,19 +1,17 @@
 ---
-title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
+title: குறியீடு சுவரொட்டிகளின் கடந்த நேரம்
 ---
 
 {{signup_button}}
 
-# Past Hour of Code Posters
+# குறியீடு சுவரொட்டிகளின் கடந்த நேரம்
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### உங்கள் வகுப்பறையில் அச்சிட்டு தொங்கவிட முந்தைய ஆண்டுகளிலிருந்து எங்கள் சுவரொட்டிகளைக் கண்டுபிடி! புதிய சுவரொட்டிகளைத் தேடுகிறீர்களா? [ இங்கே கிளிக் செய்யவும் ]({{விளம்பரப்படுத்தவும் / புரோமோட்_போஸ்டர்கள்_உர்ல் }==).
 
 * * *
 
 <br />
 
-{{ promote_posters }}
+{{விளம்பர_போஸ்டர்கள்}}
 
 {{signup_button}}

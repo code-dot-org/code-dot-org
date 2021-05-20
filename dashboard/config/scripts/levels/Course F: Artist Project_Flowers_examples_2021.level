@@ -1,0 +1,792 @@
+<Artist>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "artist",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "start_direction": "90",
+    "x": "200",
+    "y": "200",
+    "impressive": "false",
+    "discard_background": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "true",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "name_suffix": "_2021",
+    "display_name": "Flowers (Artist)",
+    "show_type_hints": "false",
+    "parent_level_id": 27114,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "thumbnail_url": "https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/f9ac0d7422ab4596af4e0b503b43e640=levelbuilder/52736.png",
+    "validation_enabled": "false",
+    "encrypted_examples": [
+
+    ],
+    "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
+    "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
+    "enable_download_image": "false",
+    "preload_asset_list": null
+  },
+  "game_id": 23,
+  "published": true,
+  "created_at": "2021-03-23T19:40:02.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:44 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:40:19 +0000\",\"changed\":[\"contained_level_names\",\"toolbox_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-22 14:56:13 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"},{\"changed_at\":\"2018-01-04 20:23:49 +0000\",\"changed\":[\"toolbox_blocks\",\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-03-01 00:19:07 +0000\",\"changed\":[\"toolbox_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-18 19:57:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-18 20:38:46 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2020-03-12 15:14:44 +0000\",\"changed\":[\"toolbox_blocks\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-31 13:03:24 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-31 13:11:36 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-31 13:11:50 +0000\",\"changed\":[\"toolbox_blocks\",\"free_play\",\"solution_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-31 13:12:08 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-31 14:19:59 +0000\",\"changed\":[\"solution_image_url\",\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-24 21:39:01 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"thumbnail_url\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 13:59:13 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-23 19:50:02 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-23 19:51:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="true" movable="true" editable="true" id="when_run">
+          <next>
+            <block type="variables_set" deletable="true" movable="true" editable="true">
+              <title name="VAR">flowers</title>
+              <value name="VALUE">
+                <block type="math_random_int" deletable="true" movable="true" editable="true">
+                  <value name="FROM">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">6</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="jump_to" deletable="true" movable="true" editable="true">
+                  <title name="VALUE">17</title>
+                  <next>
+                    <block type="controls_repeat_ext" deletable="true" movable="true" editable="true">
+                      <value name="TIMES">
+                        <block type="variables_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">flowers</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="jump" deletable="true" movable="true" editable="true">
+                          <title name="DIR">jumpForward</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" deletable="true" movable="true" editable="true">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">400</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_arithmetic" deletable="true" movable="true" editable="true">
+                                  <title name="OP">ADD</title>
+                                  <value name="A">
+                                    <block type="variables_get" deletable="true" movable="true" editable="true">
+                                      <title name="VAR">flowers</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">1</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" deletable="true" movable="true" editable="true">
+                              <title name="DIR">turnLeft</title>
+                              <value name="VALUE">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">90</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_colour" deletable="true" movable="true" editable="true" id="draw-color">
+                                  <value name="COLOUR">
+                                    <block type="colour_picker" deletable="true" movable="true" editable="true">
+                                      <title name="COLOUR">#228b22</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="draw_move" deletable="true" movable="true" editable="true">
+                                      <title name="DIR">moveForward</title>
+                                      <value name="VALUE">
+                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                          <title name="NUM">150</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_line_style_pattern" deletable="true" movable="true" editable="true">
+                                          <title name="VALUE">swirlyLine</title>
+                                          <next>
+                                            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true">
+                                              <value name="TIMES">
+                                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                                  <title name="NUM">12</title>
+                                                </block>
+                                              </value>
+                                              <statement name="DO">
+                                                <block type="draw_move" deletable="true" movable="true" editable="true">
+                                                  <title name="DIR">moveForward</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                                      <title name="NUM">25</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="draw_move" deletable="true" movable="true" editable="true">
+                                                      <title name="DIR">moveBackward</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                                          <title name="NUM">25</title>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="draw_turn" deletable="true" movable="true" editable="true">
+                                                          <title name="DIR">turnRight</title>
+                                                          <value name="VALUE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">30</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="jump" deletable="true" movable="true" editable="true">
+                                                  <title name="DIR">jumpBackward</title>
+                                                  <value name="VALUE">
+                                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                                      <title name="NUM">150</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="draw_turn" deletable="true" movable="true" editable="true">
+                                                      <title name="DIR">turnRight</title>
+                                                      <value name="VALUE">
+                                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                                          <title name="NUM">90</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="points"/>
+            <arg name="length"/>
+            <description>draw a star with given points and sides of given length</description>
+          </mutation>
+          <title name="NAME">draw a star</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+              <value name="TIMES">
+                <block type="parameters_get" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="VAR">points</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="parameters_get" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="parameters_get" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="VAR">points</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="DIR">moveForward</title>
+                          <value name="VALUE">
+                            <block type="parameters_get" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="VAR">length</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="DIR">turnRight</title>
+                              <value name="VALUE">
+                                <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                                  <title name="OP">DIVIDE</title>
+                                  <value name="A">
+                                    <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                                      <title name="NUM">720</title>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="parameters_get" deletable="true" movable="true" editable="true" uservisible="false">
+                                      <title name="VAR">points</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="radius"/>
+            <description>draw a circle of given radius</description>
+          </mutation>
+          <title name="NAME">draw a circle</title>
+          <statement name="STACK">
+            <block type="variables_set" deletable="true" movable="true" editable="true" uservisible="false">
+              <title name="VAR">circ</title>
+              <value name="VALUE">
+                <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="OP">MULTIPLY</title>
+                  <value name="A">
+                    <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="OP">MULTIPLY</title>
+                      <value name="A">
+                        <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="NUM">3.14</title>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="parameters_get" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="VAR">radius</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="NUM">180</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="VAR">circ</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="NUM">180</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="DIR">turnLeft</title>
+                          <value name="VALUE">
+                            <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="NUM">2</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="sides"/>
+            <arg name="length"/>
+            <arg name="repeat"/>
+          </mutation>
+          <title name="NAME">draw a pinwheel</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+              <value name="TIMES">
+                <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="VAR">repeat</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="VAR">sides</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="VAR">length</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="OP">DIVIDE</title>
+                              <value name="A">
+                                <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                                  <title name="NUM">360</title>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                                  <title name="VAR">sides</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="NUM">60</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a triangle</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="sides"/>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a shape</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+              <value name="TIMES">
+                <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="VAR">sides</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_arithmetic" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="OP">DIVIDE</title>
+                          <value name="A">
+                            <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="NUM">360</title>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="VAR">sides</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a house</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="NUM">3</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">turnLeft</title>
+                      <value name="VALUE">
+                        <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="NUM">120</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+                  <value name="TIMES">
+                    <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="NUM">4</title>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">moveForward</title>
+                      <value name="VALUE">
+                        <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="VAR">length</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="DIR">turnRight</title>
+                          <value name="VALUE">
+                            <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                              <title name="NUM">90</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" uservisible="false">
+          <mutation>
+            <arg name="length"/>
+          </mutation>
+          <title name="NAME">draw a square</title>
+          <statement name="STACK">
+            <block type="controls_repeat_ext" deletable="true" movable="true" editable="true" uservisible="false">
+              <value name="TIMES">
+                <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="draw_move" deletable="true" movable="true" editable="true" uservisible="false">
+                  <title name="DIR">moveForward</title>
+                  <value name="VALUE">
+                    <block type="variables_get" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="VAR">length</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn" deletable="true" movable="true" editable="true" uservisible="false">
+                      <title name="DIR">turnRight</title>
+                      <value name="VALUE">
+                        <block type="math_number" deletable="true" movable="true" editable="true" uservisible="false">
+                          <title name="NUM">90</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="draw_move" inline="true">
+            <title name="DIR">moveForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnRight</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_turn" inline="true">
+            <title name="DIR">turnLeft</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="jump" inline="true">
+            <title name="DIR">jumpForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="jump_to">
+            <title name="VALUE">7</title>
+          </block>
+          <block type="jump_to_xy">
+            <title name="XPOS">0</title>
+            <title name="YPOS">0</title>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true" id="draw-color">
+            <value name="COLOUR">
+              <block type="colour_rgb" inline="false">
+                <value name="RED">
+                  <block type="math_number">
+                    <title name="NUM">255</title>
+                  </block>
+                </value>
+                <value name="GREEN">
+                  <block type="math_number">
+                    <title name="NUM">255</title>
+                  </block>
+                </value>
+                <value name="BLUE">
+                  <block type="math_number">
+                    <title name="NUM">255</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="alpha" inline="true">
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_width" inline="false">
+            <value name="WIDTH">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_line_style_pattern">
+            <title name="VALUE">DEFAULT</title>
+          </block>
+          <block type="sticker">
+            <title name="VALUE">Elephant</title>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_for" inline="true">
+            <title name="VAR">counter</title>
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="BY">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="controls_repeat_ext" inline="true">
+            <value name="TIMES">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Math">
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_arithmetic" inline="true">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">???</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" inline="true">
+                <title name="OP">EQ</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_get">
+            <title name="VAR">counter</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">sides</title>
+          </block>
+          <block type="variables_get">
+            <title name="VAR">length</title>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

@@ -1,0 +1,29 @@
+ro:
+  data:
+    block_categories:
+      Actions: Acţiuni
+      Advanced: Avansat
+      Behaviors: Comportamente
+      Brushes: Pensule
+      Color: Culoare
+      Comment: Comentariu
+      Comments: Comentarii
+      Conditionals: Condiţionale
+      Dancers: Dansatori
+      Default: Predefinit
+      Events: Evenimente
+      Functions: Funcţii
+      'Functions ': 'Funcţii '
+      Game/Score: Joc/Scor
+      Games/Score: Jocuri/Scor
+      Groups: Grupuri
+      Locations: Locaţii
+      Logic: Logică
+      Loops: Bucle
+      Math: Matematică
+      Numbers: Numere
+      Properties: Proprietăţi
+      Text: Text
+      Variables: Variabile
+      'Variables ': 'Variabile '
+      World: Lume

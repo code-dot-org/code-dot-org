@@ -2,14 +2,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {TestResults} from '@cdo/apps/constants';
 import {getStore} from '../redux';
-import {SignInState, mergeProgress} from '../progressRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {
+  setAppLoadStarted,
+  setAppLoaded
+} from '@cdo/apps/code-studio/headerRedux';
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
-var progress = require('../progress');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
@@ -20,45 +20,13 @@ var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var reporting = require('@cdo/apps/code-studio/reporting');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-import {
-  lockContainedLevelAnswers,
-  getContainedLevelId
-} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
-
-// Max milliseconds to wait for last attempt data from the server
-var LAST_ATTEMPT_TIMEOUT = 5000;
+import msg from '@cdo/locale';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
-
-/**
- * When we have a publicly cacheable script, the server does not send down the
- * user's levelProgress, and instead we get it asynchronously. This method adds
- * that progress to our redux store, and then also updates the clientState (i.e.
- * sessionStorage)
- * Note: A better approach to backing up progress in sessionStorage would likely
- * be to attach a listener to our redux store, and then update clientState whenever
- * levelProgress changes in the store.
- * @param {string} scriptName
- * @param {Object<number, TestResult>} serverProgress Mapping from levelId to TestResult
- */
-function mergeProgressData(scriptName, serverProgress) {
-  const store = getStore();
-  store.dispatch(mergeProgress(serverProgress));
-
-  Object.keys(serverProgress).forEach(levelId => {
-    // Write down new progress in sessionStorage
-    clientState.trackProgress(
-      null,
-      null,
-      serverProgress[levelId],
-      scriptName,
-      levelId
-    );
-  });
-}
 
 /**
  * Legacy Blockly initialization that was moved here from _blockly.html.haml.
@@ -71,8 +39,6 @@ export function setupApp(appOptions) {
     throw new Error('Assume existence of window.dashboard');
   }
   timing.startTiming('Puzzle', window.script_path, '');
-
-  var lastSavedProgram;
 
   if (appOptions.hasContainedLevels) {
     if (appOptions.readonlyWorkspace) {
@@ -129,28 +95,15 @@ export function setupApp(appOptions) {
         // already stored in the channels API.)
         delete report.program;
         delete report.image;
-      } else if (report.testResult !== TestResults.SKIPPED) {
-        // Only locally cache non-channel-backed levels. Use a client-generated
-        // timestamp initially (it will be updated with a timestamp from the server
-        // if we get a response.
-        lastSavedProgram = decodeURIComponent(report.program);
-
-        // If the program is the result for a contained level, store it with
-        // the contained level id
-        const levelId =
-          appOptions.hasContainedLevels && !appOptions.level.edit_blocks
-            ? getContainedLevelId()
-            : appOptions.serverProjectLevelId || appOptions.serverLevelId;
-        clientState.writeSourceForLevel(
-          appOptions.scriptName,
-          levelId,
-          +new Date(),
-          lastSavedProgram
-        );
       }
-      // report.callback will already have the correct milestone post URL in
-      // the contained level case, unless we're editing blocks
+
+      // Our report will already have the correct callback and program
+      // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
+        if (appOptions.hasContainedLevels) {
+          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+          report.program = Blockly.Xml.domToText(xml);
+        }
         report.callback = appOptions.report.callback;
       }
       trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
@@ -164,17 +117,6 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onComplete: function(/*LiveMilestoneResponse*/ response) {
-      if (!appOptions.channel && !appOptions.hasContainedLevels) {
-        // Update the cache timestamp with the (more accurate) value from the server.
-        clientState.writeSourceForLevel(
-          appOptions.scriptName,
-          appOptions.serverProjectLevelId || appOptions.serverLevelId,
-          response.timestamp,
-          lastSavedProgram
-        );
-      }
-    },
     onResetPressed: function() {
       reporting.cancelReport();
     },
@@ -185,16 +127,15 @@ export function setupApp(appOptions) {
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
         const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${window.dashboard.i18n.t('stage')} ${
-          stageInfo.position
-        }: ${stageInfo.name}`;
+        const stageName = `${msg.stage()} ${stageInfo.position}: ${
+          stageInfo.name
+        }`;
         ReactDOM.render(
           <PlayZone
             stageName={stageName}
             onContinue={() => {
               dialog.hide();
             }}
-            i18n={window.dashboard.i18n}
           />,
           body
         );
@@ -299,20 +240,19 @@ function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
     project.load().then(() => {
       if (project.hideBecauseAbusive()) {
-        renderAbusive(project, window.dashboard.i18n.t('project.abuse.tos'));
+        renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
         return;
       }
       if (project.hideBecausePrivacyViolationOrProfane()) {
-        renderAbusive(
-          project,
-          window.dashboard.i18n.t('project.abuse.policy_violation')
-        );
+        renderAbusive(project, msg.policyViolation());
         return;
       }
       if (project.getSharingDisabled()) {
         renderAbusive(
           project,
-          window.dashboard.i18n.t('project.sharing_disabled')
+          msg.sharingDisabled({
+            sign_in_url: 'https://studio.code.org/users/sign_in'
+          })
         );
         return;
       }
@@ -350,22 +290,6 @@ function loadAppAsync(appOptions) {
   }
 
   return new Promise((resolve, reject) => {
-    let lastAttemptLoaded = false;
-
-    const loadLastAttemptFromSessionStorage = () => {
-      if (!lastAttemptLoaded) {
-        lastAttemptLoaded = true;
-
-        // Load the locally-cached last attempt (if one exists)
-        appOptions.level.lastAttempt = clientState.sourceForLevel(
-          appOptions.scriptName,
-          appOptions.serverProjectLevelId || appOptions.serverLevelId
-        );
-
-        resolve(appOptions);
-      }
-    };
-
     if (appOptions.publicCaching) {
       // Disable social share by default on publicly-cached pages, because we don't know
       // if the user is underage until we get data back from /api/user_progress/ and we
@@ -376,71 +300,40 @@ function loadAppAsync(appOptions) {
     $.ajax(
       `/api/user_progress` +
         `/${appOptions.scriptName}` +
-        `/${appOptions.stagePosition}` +
+        `/${appOptions.lessonPosition}` +
         `/${appOptions.levelPosition}` +
         `/${appOptions.serverLevelId}`
     )
       .done(data => {
         appOptions.disableSocialShare = data.disableSocialShare;
 
-        // Merge progress from server (loaded via AJAX)
-        const serverProgress = data.progress || {};
-        mergeProgressData(appOptions.scriptName, serverProgress);
+        // We do not need to process data.progress here because labs do not use
+        // the level progress data directly. (The progress bubbles in the header
+        // of the level pages are rendered by header.build in header.js.)
 
-        if (!lastAttemptLoaded) {
-          if (data.lastAttempt) {
-            lastAttemptLoaded = true;
-
-            var timestamp = data.lastAttempt.timestamp;
-            var source = data.lastAttempt.source;
-
-            var cachedProgram = clientState.sourceForLevel(
-              appOptions.scriptName,
-              appOptions.serverLevelId,
-              timestamp
-            );
-            if (cachedProgram !== undefined) {
-              // Client version is newer
-              appOptions.level.lastAttempt = cachedProgram;
-            } else if (source && source.length) {
-              // Sever version is newer
-              appOptions.level.lastAttempt = source;
-
-              // Write down the lastAttempt from server in sessionStorage
-              clientState.writeSourceForLevel(
-                appOptions.scriptName,
-                appOptions.serverLevelId,
-                timestamp,
-                source
-              );
-            }
-            resolve(appOptions);
-          } else {
-            loadLastAttemptFromSessionStorage();
-          }
-
-          if (data.pairingDriver) {
-            appOptions.level.pairingDriver = data.pairingDriver;
-            appOptions.level.pairingAttempt = data.pairingAttempt;
-            appOptions.level.pairingChannelId = data.pairingChannelId;
-          }
+        if (data.lastAttempt) {
+          appOptions.level.lastAttempt = data.lastAttempt.source;
+        } else if (!data.signedIn) {
+          // User is not signed in, load last attempt from session storage.
+          appOptions.level.lastAttempt = clientState.sourceForLevel(
+            appOptions.scriptName,
+            appOptions.serverProjectLevelId || appOptions.serverLevelId
+          );
         }
 
-        const store = getStore();
-        const signInState = store.getState().progress.signInState;
-        if (signInState === SignInState.SignedIn) {
-          progress.showDisabledBubblesAlert();
+        if (data.pairingDriver) {
+          appOptions.level.pairingDriver = data.pairingDriver;
+          appOptions.level.pairingAttempt = data.pairingAttempt;
+          appOptions.level.pairingChannelId = data.pairingChannelId;
         }
-        if (data.isVerifiedTeacher) {
-          store.dispatch(setVerified());
-        }
+
+        resolve(appOptions);
       })
-      .fail(loadLastAttemptFromSessionStorage);
-
-    // Use this instead of a timeout on the AJAX request because we still want
-    // the header progress data even if the last attempt data takes too long.
-    // The progress dots can fade in at any time without impacting the user.
-    setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
+      .fail(() => {
+        // TODO: Show an error to the user here? (LP-1815)
+        console.error('Could not load user progress.');
+        resolve(appOptions);
+      });
   });
 }
 
@@ -473,6 +366,12 @@ const sourceHandler = {
   getLevelHtml() {
     return window.Applab && Applab.getHtml();
   },
+  setInitialLibrariesList(libraries) {
+    getAppOptions().level.libraries = libraries;
+  },
+  getLibrariesList() {
+    return getAppOptions().level.libraries;
+  },
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
@@ -481,9 +380,7 @@ const sourceHandler = {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
-      if (appOptions.level && appOptions.level.scratch) {
-        resolve(appOptions.getCode());
-      } else if (window.Blockly) {
+      if (window.Blockly && Blockly.mainBlockSpace) {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.mainBlockSpace.isReadOnly()
           ? currentLevelSource
@@ -495,9 +392,10 @@ const sourceHandler = {
         source = appOptions.getCode();
         resolve(source);
       } else if (appOptions.getCodeAsync) {
-        appOptions.getCodeAsync().then(source => {
-          resolve(source);
-        });
+        appOptions
+          .getCodeAsync()
+          .then(source => resolve(source))
+          .catch(err => reject(err));
       }
     });
   },
@@ -576,8 +474,10 @@ export default function loadAppOptions() {
       // immediately
       resolve(appOptions);
     } else {
+      getStore().dispatch(setAppLoadStarted());
       loadAppAsync(appOptions).then(appOptions => {
         project.init(sourceHandler);
+        getStore().dispatch(setAppLoaded());
         resolve(appOptions);
       });
     }

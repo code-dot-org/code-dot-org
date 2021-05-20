@@ -1,0 +1,56 @@
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js')}
+
+%h1.control-legend{data: {toggle: "collapse", target: "#special-levels"}}
+  Special Level Types
+
+#special-levels.in.collapse
+  -# Dance and Spritelab are special types of Gamelab levels
+  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse)
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
+    %p
+      If checked, students with teachers can "submit" a solution for
+      grading. Submitting a solution means that it is marked as
+      submitted and they can no longer edit it (unless a teacher returns
+      it).
+  - if @level.respond_to? :free_play
+    .field
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
+      %p Embedded levels hide the Blockly workspace, only showing the visualization area (and the 'finish' button, if 'freeplay' is also set).
+
+  - if @level.is_a?(Applab)
+    .field
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_mode, description: "Enable Widget Mode"}
+      %p Creates an embeded level with a double-width app screen that auto-runs on page load.
+      %ul
+        %li For users: The coding workspace, design mode, data mode, the reset button, and sharing are all disabled.
+        %li For levelbuilders: The coding workspace and design mode are available in start mode.
+
+  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab))
+    .field
+      = f.label :project_template_level_name, 'Project Template Level Name'
+      %p What this does:
+      %ul
+        %li if start_blocks are defined in the project template level, use those instead of the start blocks for this level
+        %li if toolbox_blocks are defined in the project template level, use those instead of the toolbox blocks for this level
+        %li For Weblab - if Starting Sources are defined in the project template level, use those instead of the Starting Sources for this level
+        %li autocreate a project that is shared with all levels with the same project template level
+      %p
+        (Leave blank if you do not want all of this)
+      %p
+        To learn how to make and use project templates
+        =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-and-Using-Templates', target: '_blank'
+      = f.text_field :project_template_level_name, placeholder: 'name of level you want to use as the project template'
+
+  - if @level.is_a?(Blockly)
+    .field
+      = f.label :contained_level_names, 'Contained Level Names'
+      %p The text area to add contained levels to create predict levels. Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+      %p
+        Learn how to create predict levels
+        =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-a-Predict-Level', target: '_blank'
+      - @level.contained_level_names = [''] unless @level.contained_level_names.try(:present?)
+      - @level.contained_level_names.each do |level_name|
+        = text_field_tag 'level[contained_level_names][]', level_name, placeholder: 'name of contained level'
+      #plusAnswerContainedLevel
+        %i.fa.fa-plus-circle

@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 eu:
   errors:
     messages:
@@ -35,12 +47,9 @@ eu:
   cancel: "Ezeztatu"
   okay: "Ongi da"
   or: "edo"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Irakaslea gehitu:'
       placeholder: "Atal Kodea (ABCDEF)"
-      instructions: "Mesedez, sartu zure irakasleak zurekin partekatutako kodea. 6 letrako kodea da, \"ABCDEF\" bezalakoa."
-    submit: 'Gehitu irakaslea'
   add_hint_form:
     placeholder: 'Mesedez sartu hemen zure pista'
     submit: 'Gehitu pista'
@@ -67,8 +76,6 @@ eu:
   auth:
     sign_in_with: 'Sartu  %{provider}ekin'
     signed_in: 'Barruan zaude!'
-    signed_out: 'Saioa amaitu duzu  <a href="%{url}">Code.org</a>-n.'
-    sign_out_of: '%{provider} erabili duzu. <a href="%{url}">Klikatu hemen</a> saioa amaitzeko %{provider}.'
     already_signedup: 'Dagoeneko izena eman duzu?'
     notyet_signedup: "Ez zara batu oraindik?"
     google_oauth2: 'Google kontua'
@@ -182,8 +189,12 @@ eu:
     header:
       finished_hoc: "Nire Kode Ordua bukatu dut"
       sign_in_to_save: 'Sartu aurrerapenak gordetzeko'
+      course_catalog: "Ikastaroak"
       project_gallery: "Proiektuak"
       educate_hoc: "Kode Ordua"
+      about: "Code.org-i buruz"
+      legal_privacy: "Pribatutasun politika"
+      legal_tos: "Erabilera baldintzak"
     user:
       classroom: 'Irakasleen sarrera orria'
       district_dashboard: 'Hezkuntza distritua'
@@ -255,14 +266,13 @@ eu:
     delete_text: "Beheko botoia klikatuz gero zure kontua ezabatuko da."
     delete_text_teacher_note: "Mesedez kontutan izan: zure kontua ezabatzeak ez ditu zure ikasleen kontuak ezabatuko."
     delete_confirm: 'Ziur zaude zure kontua ezabatu nahi duzula?'
+    update_email: "Eguneratu"
+    parent_guardian_email_label: "Guraso/tutore emaila"
   user_level:
     completed: 'Amaituta'
     tried: 'Saiatua'
   home:
     title: "Kode Estudioa"
-    description: 'Code Studio Code.org-ek sortutako online kurtsoen hasiera da'
-    lines_of_code: "%{lines_count} KODE LERRO IKASLEEK IDATZITA"
-    lines_of_code_linebreak: "%{lines_count} KODE LERRO<br/> %{students_count} MILIOI IKASLEK IDATZITA"
     all_courses: "1., 2. eta 3. Kurtsoen laburpena"
     lesson_plans: "Ikasketa plana"
     signin_message: "Jadanik erregistratuta? %{link}"
@@ -292,10 +302,6 @@ eu:
     test_videos_help: 'Probatu gure bideo irakurgailu berria zure eskolan'
     try_beta_courses: 'Berria! proba itzazu LH5 ikasleentzako beta ikastaroak'
     use_as_teacher: 'Erabili gune hau irakasle gisa'
-    heading_hoc2014: "<h2>Kode Ordua</h2><h1>Adin guztietarako</h1>"
-    heading_elementary: "<h2>20 orduko ikastaroak</h2><h1>informatikaren oinarriei buruz (adin guztiak)</h1>"
-    heading_apps: "<h2>Dibertsioa</h2><h1>Guztiontzat</h1>"
-    heading_legacy: "<h2>Gure kurtso azkarra</h2><h1>adin guztietarako</h1>"
     your_gallery: Galeria
     no_primary_course: "Probatu Code Studioko ikastaro bat"
     choose_next_course: "Probatu Code Studioko ikastaro bat hauetako bat aukeratuta"
@@ -417,24 +423,11 @@ eu:
       title: "Minecraft"
     unplugged_conditionals:
       title: "Baldintzak"
-  gallery:
-    students_drew_these_with_code: "Ikasleek hauek irudikatu dituzte kodea erabiliz!"
-    students_made_these_with_code: "Ikasleek hauek egin dituzte kodearekin!"
-    picture_count: "Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan programak martxan ikusteko."
-    activity_count: "Iragan <b>%{days}</b> egunetan, ikasleek <b>%{count}</b> app eta irudi egin dituzte konputagailu programak idatziz. Egin klik irudietan eta pantaila-argazkietan programa bakoitza martxan ikusteko."
-    want_to_make_your_own: "Zurea egin nahi duzu?"
-    more: "Gehiago &rarr;"
-    caption_by_name_age: "%{name}, adina %{age}"
-    caption_time_ago: "orain dela %{time_ago}"
-    header: "Galeria"
-    header_playlab: "Istorio eta jokoak"
-    header_artist: "Arte kodea"
-    report_abuse: "Erabilera okerra jakinarazi"
   landing:
-    prerelease: "Kurtso hau <span class='betatext'>beta</span> bertsioa da. Horrek esan nahi du ez dela azken bertsioa eta iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo direla."
-    prerelease_hoc2014: "Tutorial hau <span class='betatext'>beta</span> bertsioa da. Iruzkinak iritsi ahala berrikusi eta hobekuntzak egingo dira."
     report_bug: "Akatsa jakinarazi"
     support: "Lortu laguntza"
+  free_response:
+    placeholder: "Idatzi hemen zure erantzuna"
   multi:
     wrong_title: "Erantzun okerra"
     wrong_body: "Erantzuna ez da zuzena. Saiatu berriro!"
@@ -481,8 +474,6 @@ eu:
   age_interstitial:
     age: Zure adina
     header: Kontuaren Informazioa Eguneratu
-    message: "Gure zerbitzua eguneratzen ari gara pribatasun babes handiagoa eskaintzeko. Horretarako, erabiltzaileek adina sar dezaten behar dugu.<br/>Betiko legez, code.org-ek ez die sekula informazio hori bitartekoei alokatuko, ez salduko eta ez konpartituko."
-    sign_out: 'Zure adina eman nahi ez baduzu <a href="%{url}">deskonektatu</a> zaitezke.'
   terms_interstitial:
     tos: "Erabilera baldintzak"
     privacy: "Pribatutasun politika"
@@ -495,6 +486,7 @@ eu:
     submit: "Bidali"
     decline: "Itxi"
   zendesk_too_young_message: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan jartzeko.'
+  zendesk_too_young_message_markdown: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. [support.code.org](http://support.code.org) webgunean nabigatu dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan jartzeko.'
   progress:
     not_started: hasi gabe
     in_progress: bidean
@@ -544,25 +536,8 @@ eu:
           other: 'Beste bat'
         detail: 'Mesedez, salatzen ari zaren edukiaren inguruko ahalik eta xehetasun gehien eman.'
         acknowledge: 'Informazio hau bidaliz, %{link_start_privacy}Pibatutasun Politika%{link_end} eta %{link_start_tos}Zerbitzuaren Baldintzak%{link_end} adierazitako terminoetan erabiliko dela onartzen duzu'
-  flex_category:
-    required: 'Bista orokorra'
-    csf_digcit: 'Hiritartasun digitala'
-    csf_jigsaw: 'Buruhaustea'
-    csf_loops: 'Itzuliak'
-    csf_events: 'Gertaerak'
-    csf_binary: 'Bitarra'
-    csf_data: 'Datu'
-    csf_conditionals: 'Baldintzak'
-    csf_nested_loops: 'Kabiatutako begiztak'
-    csf_functions: 'Funtzioak'
-    csf_variables: 'Aldagaiak'
-    csf_for_loops: 'For begiztak'
-    csf_internet: 'Internet'
-    csp_variables: 'Aldagaiak'
-    csp_conditionals: 'Baldintzak'
-    csp_functions: 'Funtzioak'
-    csp_lists: 'Zerrendak'
-    csp_loops: 'Itzuliak'
+  hoc_download:
+    minecraft_name: 'Minecraft Kode Ordua'
   pd:
     form_labels:
       email: 'E-posta'
@@ -586,5 +561,4 @@ eu:
         opt_in_no: 'Ez'
   cookie_banner:
     accept: 'Ados'
-  gdpr_dialog:
-    yes: 'Bai'
+  copy: 'Kopiatu'

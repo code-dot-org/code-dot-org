@@ -6,18 +6,6 @@ import Button from '../Button';
 import shapes from './shapes';
 import color from '../../util/color';
 
-const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  },
-  button: {
-    float: 'right',
-    marginBottom: 20
-  }
-};
-
 // This component - used on the teacher and student homepages - shows a button to view more courses if the user has more than a few courses. Students and teachers will see up to 5 courses, with their most recent as a TopCourse, and the button if they have more. Clicking the button will show CoursesCards for all of the users' courses beyond the top 5.
 
 export default class SeeMoreCourses extends Component {
@@ -54,6 +42,7 @@ export default class SeeMoreCourses extends Component {
         )}
         {!this.state.open && (
           <Button
+            __useDeprecatedTag
             onClick={this.showMoreCourses.bind(this)}
             color={Button.ButtonColor.gray}
             icon="caret-down"
@@ -65,3 +54,15 @@ export default class SeeMoreCourses extends Component {
     );
   }
 }
+
+const styles = {
+  spacer: {
+    width: 20,
+    float: 'left',
+    color: color.white
+  },
+  button: {
+    float: 'right',
+    marginBottom: 20
+  }
+};

@@ -1,19 +1,19 @@
 ---
-title: Past Hour of Code Posters
+title: پوستر های ساعت کدنویسی های قبلی
 layout: wide
 nav: promote_nav
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# پوستر های ساعت کدنویسی های قبلی
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### پوستر های ما را از از سال های قبل پیدا کنید و آنها را پرینت کنید و به دیوار کلاس بچسبانید! به دنبال جدیدترین پوسترها می گردید؟ [اینجا کلیک کنید.]({{ promote/promote_posters_url }})
 
----
+* * *
 
 <br />
 
-{{ promote_posters }}
+تبلیغ_پوسترها
 
 {{ signup_button }}

@@ -7,15 +7,6 @@ import FilterGroupContainer from './filterGroupContainer';
 import {TutorialsSortByOptions} from './util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-const styles = {
-  select: {
-    width: '100%',
-    marginTop: 10,
-    height: 26,
-    fontSize: 13
-  }
-};
-
 export default class FilterGroupSortBy extends React.Component {
   static propTypes = {
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
@@ -48,7 +39,11 @@ export default class FilterGroupSortBy extends React.Component {
 
     return (
       <FilterGroupContainer text={i18n.filterSortBy()}>
+        <label htmlFor="filter-sort-by-dropdown" className="hidden-label">
+          {i18n.filterSortBy()}
+        </label>
         <select
+          id="filter-sort-by-dropdown"
           value={this.props.sortBy}
           onChange={this.handleChangeSort}
           style={styles.select}
@@ -61,3 +56,12 @@ export default class FilterGroupSortBy extends React.Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    width: '100%',
+    marginTop: 10,
+    height: 26,
+    fontSize: 13
+  }
+};

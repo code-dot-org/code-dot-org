@@ -1,0 +1,296 @@
+{
+  "script": {
+    "name": "hoc-encryption",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "hoc-encryption"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Simple Encryption",
+      "name": "Simple Encryption",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      },
+      "level_keys": [
+        "Crack a Caesar Cipher"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Terminology Recap"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Terminology Recap"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      },
+      "level_keys": [
+        "Terminology Recap"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Challenge Introduction"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Challenge Introduction"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      },
+      "level_keys": [
+        "New Challenge Introduction"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Crack Random Substitution"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack Random Substitution"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      },
+      "level_keys": [
+        "Crack Random Substitution"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Technique: Frequency Analysis"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      },
+      "level_keys": [
+        "Technique: Frequency Analysis"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video - Encryption and Public Keys"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      },
+      "level_keys": [
+        "Video - Encryption and Public Keys"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Crack a Caesar Cipher",
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Terminology Recap",
+        "script_level.level_keys": [
+          "Terminology Recap"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Challenge Introduction",
+        "script_level.level_keys": [
+          "New Challenge Introduction"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack Random Substitution",
+        "script_level.level_keys": [
+          "Crack Random Substitution"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Technique: Frequency Analysis",
+        "script_level.level_keys": [
+          "Technique: Frequency Analysis"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video - Encryption and Public Keys",
+        "script_level.level_keys": [
+          "Video - Encryption and Public Keys"
+        ],
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "",
+        "script.name": "hoc-encryption"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,16 +1,17 @@
 professional_learning_course 'Equity Support'
-login_required 'true'
+login_required true
 
-stage 'Necessary Background'
+lesson 'Necessary Background', display_name: 'Necessary Background', has_lesson_plan: false
 level 'equity Intro'
 level 'equity v equality'
 level 'equity is more'
 level 'equity in CS'
 
-stage 'Code.org Equity PD'
+lesson 'Code.org Equity PD', display_name: 'Code.org Equity PD', has_lesson_plan: false
 level 'equity lead 1'
 level 'equity activity'
 level 'equity vids'
 level 'equity expect'
 level 'equity discuss'
-level 'equity resources'
+level 'Equity Resources'
+

@@ -23,11 +23,13 @@ sq:
     attributes:
       user:
         name: Shfaq Emrin
-        name_example: Shfaq Emrin<br/>(Psh. Cool Coder or Jane S.)
+        name_example: Shfaq Emrin (Psh. Cool Coder or Jane S.)
         email: Email
         parent_email: Prindi/ kujdestari email
         personal_email: Adresa vetjake e email-it <a href="%{url}">(kliko këtu nëse
           nuk ke një adresë email-i)</a>
+        personal_email_markdown: Adresa vetjake e email-it [(kliko këtu nëse nuk ke
+          një adresë email-i)](%{url})
         username: Emri i përdoruesit
         password: Fjalëkalimi
         password_confirmation: Konfirmimi i fjalëkalimit
@@ -39,9 +41,14 @@ sq:
         finish_sign_up_header: Përfundo krijimin e llogarisë
         finish_sign_up_subheader: Plotëso informacionin e mëposhtëm për të përfunduar
           krijimin e një llogarie në Code.org <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Plotëso informacionin e mëposhtëm për të
+          përfunduar krijimin e një llogarie në Code.org **%{email}**.
         finish_sign_up_subheader_provider: Plotëso informacionin e mëposhtëm për të
           përfunduar krijimin e një llogarie në Code.org <strong>%{provider}</strong>
           për <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Plotëso informacionin e mëposhtëm
+          për të përfunduar krijimin e një llogarie në Code.org **%{provider}** për
+          **%{email}**.
         error:
           future: nuk mund të jetë në të ardhmen
   beta: beta
@@ -58,14 +65,10 @@ sq:
   okay: Në rregull
   or: ose
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Shto një mësues:'
       placeholder: Kodi i Seksionit (ABCDEF)
-      instructions: Ju lutemi shtypni kodin e ndarë me ju nga mësuesi/ja juaj. Është
-        një kod 6-shkronjësh si për shembull "ABCDEF".
       instructions_short: Fut kodin e seksionit me 6 shkronja
-    submit: Shto mësues
   add_hint_form:
     placeholder: Të lutem fut udhëzimin tënd këtu
     submit: Shto udhëzim
@@ -94,9 +97,6 @@ sq:
     continue_with: Hyr me %{provider}
     sign_in_with: Logohu me %{provider}
     signed_in: U loguat!
-    signed_out: Ti ke dalë nga <a href="%{url}">Code.org</a>.
-    sign_out_of: Ti përdore %{provider} për tu loguar. <a href="%{url}">Kliko këtu</a>
-      për të dalë %{provider}.
     already_signedup: Jeni regjistruar?
     notyet_signedup: Nuk jeni të regjistruar akoma?
     google_oauth2: Llogaria e Google
@@ -129,6 +129,10 @@ sq:
       menaxhuar klasën tuaj. <a href="/"> Ju mund të shfletoni fazat e  ndryshme dhe
       puzzles </a>   pa një llogari, por do t'ju duhet të rregjistroheni  për të ruajtur
       progresin dhe projektet tuaja.
+    overview_markdown: Rregjistrohuni për një llogari për të ndjekur progresin tuaj
+      ose të menaxhuar klasën tuaj. [Ju mund të shfletoni fazat e ndryshme dhe puzzles](/)
+      pa një llogari, por do t'ju duhet të rregjistroheni për të ruajtur progresin
+      dhe projektet tuaja.
     hoc_already_signed_up_heading: 'Fillo pa u loguar '
     hoc_already_signed_up_content: |2-
 
@@ -151,26 +155,8 @@ sq:
     valid_password: Fjalëkalimi i vlefshëm!
     invalid_password: Fjalëkalimi duhet të ketë të paktën 6 karaktere
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
-    agree_tos_privacy: Unë pajtohem me <a href='http://code.org/tos'>Kushtet e Sherbimit</a>
-      and <a href='http://code.org/privacy'>Privacy Policy</a>.
-    under_13_consent: Nëse jam nën moshën 13 vjeç, konfirmoj se kam lejen e prindit
-      ose të kujdestarit ligjor për të përdorur shërbimet e Code.org.
     student_consent: Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për
       të përdorur shërbimet e Code.org.
-    agree_us_website: Unë pajtohem me përdorimin e një faqe interneti të themeluar
-      në Shtetet e Bashkuara.
-    my_data_to_us: Të dhënat nga përdorimi im i kësaj faqeje mund të dërgohen dhe
-      të ruhen ose përpunohen në Shtetet e Bashkuara.
-    student_terms: Unë pranoj tu përmbahem <a href='http://code.org/tos'> kushteve
-      të shërbimit</a> të Code.org. Nëse unë jam nën 13 vjeç, unë konfirmoj me dorëzimin
-      e këtij formulari që kam lejen e prindin tim apo kujdestarit ligjor për të përdorur
-      shërbimet Code.org. <br/> <br/> Adresat e Email-ve nuk janë ruajtur në një formë
-      që na lejon të kontaktojmë studentët. Studentët nuk do të marrin email nga Code.org
-      përveç për të rimarr fjalëkalimin. Shiko <a href='http://code.org/privacy'>
-      Termat e privatesisë</a>tonë për më shumë informacion.
-    teacher_terms: Unë pranoj tu përmbahem <a href='http://code.org/tos'> kushteve
-      të shërbimit</a> të Code.org. Për më shumë informacion shiko <a href='http://code.org/privacy'>
-      Termat e privatesisë</a>.
     additional_information: Kemi nevojë për disa informacione shtesë për të vazhduar
       me rregjistrimin tuaj.
     user_type_button: Përditëso llojin e llogarisë
@@ -226,8 +212,6 @@ sq:
     login: Futu
     invalid_login: Login i pavlefshme, ju lutem provoni përsëri
     pair_programming: Unë kam një partner në kompjuterin tim
-    student_privacy: Mëso më shumë rreth arsyes pse nuk e sheh emrin tënd të plotë
-      <a href='%{student_privacy_blog}' target='_blank'>here</a>.
   password:
     reset_form:
       title: Keni harruar fjalëkalimin?
@@ -293,6 +277,8 @@ sq:
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
       project_gallery: Projekte
       educate_hoc: Ora e Kodimit
+      legal_privacy: Rregullat e Privatësisë
+      legal_tos: Kushtet e shërbimit
     user:
       classroom: Faqja Kryesore e Mësuesit
       district_dashboard: Pulti i Qarkut
@@ -363,6 +349,7 @@ sq:
     email_confirm_needed_required: 'Email-i juaj %{email} nuk është konfirmuar:'
     email_confirm_wrong_email: "(Email i gabuar?)"
     email_resend_confirm: Ridërgo udhëzimet e konfirmimit
+    new_email_hint: "(Sigurohuni se mund të merrni email-e në këtë adresë email-i.)"
     new_password_hint: "(lëre bosh nëse nuk do ta ndryshosh atë)"
     current_password_hint: "(ne kemi nevojë për fjalëkalimin tënd aktual që të konfirmojmë
       ndryshimet e bëra)"
@@ -371,15 +358,14 @@ sq:
     delete_text_teacher_note: 'Ju lutem vini re: duke fshirë llogarinë tuaj nuk do
       të fshihen llogaritë e studentëve të tjerë.'
     delete_confirm: A je i sigurtë që do të fshish llogarinë tënde?
+    update_email: Përditëso
+    parent_guardian_email_label: Prindi/ kujdestari email
+    none: Asnjë
   user_level:
     completed: E përfunduar
     tried: U përpoqe
   home:
     title: Code Studio
-    description: Code Studio është një shtëpi për kurset online të krijuara nga Code.org
-    lines_of_code: "%{lines_count} RRESHTA KODIMI TË SHKRUARA NGA NXËNËSIT"
-    lines_of_code_linebreak: "%{lines_count} RRESHTAT E KODIT <br/> TE SHKRUARA NGA
-      %{students_count} MILION STUDENTË"
     all_courses: Pamja e përgjithshme e Kurseve 1,2 dhe 3
     lesson_plans: Planet e mësimore
     signin_message: Jeni i rregjistruar? %{link}
@@ -419,12 +405,6 @@ sq:
     test_videos_help: Testoni video playerin e ri në shkollën tuaj
     try_beta_courses: E re! Provo kurset tona beta për studentët e K-5
     use_as_teacher: Përdore këtë faqe si një mësues
-    heading_hoc2014: "<h2>Ora e Kodimit për</h2><h1>Të gjitha moshat</h1>"
-    heading_elementary: "<h2>20 orë kurse për</h2><h1>Fillestarët (të gjitha moshat)</h1>"
-    heading_apps: "<h2>Zbavitje për</h2><h1>Të Gjithë</h1>"
-    heading_tools: "<H2> Gati për hapin e ardhshëm? </ H2> <h1> Mjetet e JavaScript
-      për shkollën e mesme </ h1>"
-    heading_legacy: "<h2>Kursi jonë i përgjithshëm për</h2><h1>Të Gjitha Moshat</h1>"
     your_gallery: Galeria
     no_primary_course: Provo një kurs të Code Studio
     choose_next_course: Provo një kurs nga Studio e Kodimit duke zgjedhur një më poshtë
@@ -624,35 +604,13 @@ sq:
       title: Kushtet
     widgets:
       cta: 'Mëso si '
-  gallery:
-    students_drew_these_with_code: Studentët vizatuan këto me kod!
-    students_made_these_with_code: Studentët e bënë këtë me kod!
-    picture_count: Në këto <b>%{days}</b> ditë, studentët kanë vizatuar <b>%{count}</b>
-      piktura duke shkruar programet e tyre kompjuterike. Kliko tek pikturat për të
-      parë çdo program që funksionon.
-    activity_count: Në këto <b>%{days}</b> ditë, studentët kanë bërë <b>%{count}</b>
-      apliakcione dhe piktura duke shkruar programet e tyre kompjuterike. Kliko në
-      pikturat dhe screenshotet për të parë çdo program që funksionon.
-    want_to_make_your_own: Dëshiron të bësh tëndin?
-    how_to_save: Në nivelin e fundit të këtyre mësime, kliko "Finish" dhe "Save" për
-      të ruajtur punën tuaj në galeri.
-    more: Më shumë &rarr;
-    caption_by_name_age: nga %{name}, mosha %{age}
-    caption_time_ago: "%{time_ago} më përpara"
-    header: Galeria
-    header_playlab: Play Lab
-    header_artist: Artisti
-    report_abuse: Raporto abuzimin
   landing:
-    prerelease: Ky kurs është në<span class='betatext'>beta</span>. Kjo nënkupton
-      që nuk është versioni final i këtij kursi dhe referohet të përsëritet sapo feedbacku
-      të merret dhe të bëhen përmirësime.
-    prerelease_hoc2014: Ky tutorial është në <span class='betatext'>beta</span>. Referohet
-      të rishikohet sapo feedbacku të merret dhe të bëhen përmirësimet.
     report_bug: Raportoni një problem
     support: Merr Ndihmë
     support_url: "//support.code.org"
     help_resources: Ndihmë dhe Burime
+  free_response:
+    placeholder: Shkruani përgjigjen tuaj këtu
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!
@@ -720,11 +678,6 @@ sq:
   age_interstitial:
     age: Mosha juaj
     header: Përditësimi i Informacionit të Llogarisë
-    message: Ne jemi në proçesin e përditësimit të eksperiencës sonë, për t'ju siguruar
-      juve mbrojtje edhe më të fortë të sigurisë. Për të bërë këtë, ne kemi nevojë
-      për përdorues ekzistues, që të fusin moshën e tyre këtu.<br/>Si gjithmonë, code.org
-      nuk do e shesi apo ta shpërndajë këtë informacion me palë të treta.
-    sign_out: Nëse nuk do të japësh moshën tënde, ti mund të <a href="%{url}">dalësh</a>.
   terms_interstitial:
     title: Përditësimi i Kushtet e Shërbimit dhe Rregullave të Privatësisë
     intro_desc: 'Ne kemi përditësuar kushtet tona të sherbimit dhe Rregullat e Privatësisë,
@@ -734,6 +687,13 @@ sq:
       që kjo të përcaktoj një standard i ri për privatësinë e studentëve në shkollat
       teknologjike. Ne ju kemi  dërguar një përmbledhje të ndryshimeve të tjera përmes
       emailit.'
+    intro_desc_markdown: 'Ne kemi përditësuar kushtet tona të sherbimit dhe Rregullat
+      e Privatësisë, siç tregohet më poshtë. Ndryshimet janë në fuqi që nga 24 gusht
+      2016. Ndryshimi më i madh: ne _nuk do të ruajmë me adresat e e-mail për llogaritë
+      e studentëve në Code Studio<!-- i-->Kjo është një arritje e madhe për ne dhe
+      ne shpresojmë që kjo të përcaktoj një standard i ri për privatësinë e studentëve
+      në shkollat teknologjike. Ne ju kemi dërguar një përmbledhje të ndryshimeve
+      të tjera përmes emailit._'
     intro_instructions: Ju do të duhet të pranoni këto kushte të reja për studentët
       nën moshën 13 në klasën tuaj për të pasur qasje të plotë në të gjitha vecoritë
       e fundit në Code Studio. Kur regjistrimit një llogari për një student nën 13,
@@ -746,6 +706,10 @@ sq:
     accept_label: Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank">
       Kushteve të Shërbimit </a> dhe <a href="%{privacy_url}" target="_blank"> Politika
       e Privatësisë </ a>
+    accept_label_markdown: |-
+      Unë pajtohem me përditësimet e [Kushteve të Shërbimit](%{tos_url}) dhe [Politika e Privatësisë](%{privacy_url})
+
+      <!-- a-->
     accept: Pranoj
     print: Printo
     reminder_desc: Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank">
@@ -753,6 +717,12 @@ sq:
       e Privatësisë </ a>. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini
       re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion
       për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.
+    reminder_desc_markdown: |-
+      Unë pajtohem me përditësimet e [Kushteve të Shërbimit](%{tos_url}) dhe [Politika e Privatësisë](%{privacy_url})
+
+      <!-- a-->
+
+      [. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.](%{privacy_url})
     review_terms: Rishikimi i kushteve të përditësimit
   school_info_interstitial:
     save: Ruaj
@@ -773,6 +743,9 @@ sq:
     decline: Mbyll
   zendesk_too_young_message: Na vjen keq, përdoruesit e vegjël nuk mund të futen tek
     faqja jonë e suportit. Ju mund të shfletosh në <a href="http://support.code.org">support.code.org</a>
+    pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.
+  zendesk_too_young_message_markdown: Na vjen keq, përdoruesit e vegjël nuk mund të
+    futen tek faqja jonë e suportit. Ju mund të shfletosh në [support.code.org](http://support.code.org)
     pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.
   progress:
     not_started: nuk është nisur
@@ -851,40 +824,15 @@ sq:
   peer_review:
     accepted:
       name: Pranuar
-      description: "<strong> Po </ strong>, ky nënshtrim <strong> përmbush </ strong>
-        kërkesat"
     rejected:
       name: Refuzuar
-      description: "<strong> Jo</ strong>, ky nënshtrim <strong> nuk përmbush </ strong>
-        kërkesat"
     escalated:
       name: përshkallëzuar
       description: Unë do të doja një instruktor për të shqyrtuar këtë dorëzim
     instructor_feedback: Instruktor i Përgjigjes
     peer_feedback: Reagim i ndërsjelltë
     outdated: Ky reagim është shtuar për një version të dorëzuar më parë
-  flex_category:
-    required: Përmbledhja
-    content: Përmbajtja
-    practice: Praktikat mësimore
     peer_review: Rishikimi i ndërsjellë
-    csf_digcit: Shtetësi Dixhitale
-    csf_jigsaw: Jigsaw
-    csf_loops: 'cikle '
-    csf_events: Ngjarje
-    csf_binary: Binare
-    csf_data: të dhëna
-    csf_conditionals: Kushtet
-    csf_nested_loops: Përsëritjet e Mbivendosura
-    csf_functions: funksione
-    csf_variables: variabla
-    csf_for_loops: Për Ciklet
-    csf_internet: Internet
-    csp_variables: variabla
-    csp_conditionals: Kushtet
-    csp_functions: funksione
-    csp_lists: Listat
-    csp_loops: 'cikle '
   external_links:
     disclaimer: Mohim
     leaving_domain: Ju tani jeni duke e lënë këtë domain, në një vend që nuk është
@@ -912,6 +860,8 @@ sq:
     starwars_blocks_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (blloqe)'
     starwars_javascript_name: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
     download_message: Shkarko%{app_name} përdorim offline (136MB)
+    download_in_English: 'Shkarko në Anglisht:'
+    download_in_Spanish: 'Shkarko në Spanjisht:'
     windows: Windows (64-bit)
     mac: Mac OS X
   locked_stage: Përmbajtjet e kësaj faze nuk janë të dukshme për shkak se kjo fazë
@@ -919,12 +869,14 @@ sq:
     koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.
   hidden_stage: Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj
     se cili mësim duhet të jetë.
+  return_unit_overview: Shko në njësinë e rishikimit
   return_course_overview: Shko në njësinë e rishikimit
   pd:
     form_labels:
       email: Email
       school_name: Emri i shkollës
       school_country: Qyteti i shkollës
+      colombian_school_name: Emri i shkollës
     form_entries:
       gender:
         male: Mashkull
@@ -945,5 +897,4 @@ sq:
         opt_in_no: Jo
   cookie_banner:
     accept: Pranoj
-  gdpr_dialog:
-    true: Po
+  copy: Kopjo

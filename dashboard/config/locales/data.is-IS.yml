@@ -771,6 +771,26 @@ is:
         CSF_Spritelab_MakeSprite_v2: Hvernig á að búa til kvika
         CSF_SpriteLab_SpritesInAction_v2: Kvikar í verki
         csd_debugging: Villuleit
+        csd_applab_designmode_short: Hönnunarstaða Appsmiðju
+        csp-pd-welcome: Velkomin í fjölskylduna!
+        CSF-Teaching-Problem-Solving: CSF Kennsla þrautalausna
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Kynningarmyndband
+          - Gagnakubbur
+        u7-libraries-explanation: 'Appsmiðjan: Búa til eigin kubba - Notkun kóðasafna'
+        how-to-k5-workshops: 'Undirstöðuatriði tölvunarfræði hjá Code.org: Prófað
+          af börnum, Viðurkennt af kennurum'
+        why-should-teach-unplugged-activities: 'Algeng spurning: Af hverju ætti ég
+          að kenna æfingar "án tölvu"?'
+        cs-principles-intro-to-objects: 'Grunnhugtök tölvunarfræði: Kynning á hlutum'
+        oceans_machine_learning: Vélarnám
+        oceans_training_data: Þjálfunargögn
+        oceans_societal_implications: Samfélagslegar afleiðingar
+        hoc_dance_congrats_2019: Danspartý 2019 - Meira fjör!
+        hoc_dance_warmup_2019: Danspartý 2019 - Upphitun
+        hoc_dance_events_2019: Danspartý 2019 - Atvik
+        hoc_dance_measures_2019: Danspartý 2019 - Taktar
+        hoc_dance_properties_2019: Danspartý 2019 - Eiginleikar
+        csf_my_online_neighborhood_2020: Netumhverfið mitt
     callout:
       text:
         drag_blocks: Dragðu "færa" kubb og festu hann neðan í hinn kubbinn

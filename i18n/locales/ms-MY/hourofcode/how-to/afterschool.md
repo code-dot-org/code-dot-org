@@ -1,14 +1,18 @@
 ---
-title: Panduan Bagaimana
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Panduan mengajar satu Hour of Code dalam kelas-kelas selepas waktu persekolahan dan kelab-kelab
 
-### Sertai gerakan ini dan perkenalkan sekumpulan pelajar kepada jam pertama mereka dalam sains komputer dengan langkah-langkah ini. Hour of Code mudah untuk dilaksanakan - walaupun untuk pemula! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -30,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Rancangkan keperluan teknologi anda - komputer adalah tidak diwajibkan
 
-Pengalaman Hour of code yang terbaik melibatkan komputer yang disambungkan kepada Internet. Tetapi anda **tidak** memerlukan sebuah komputer untuk setiap kanak-kanak, malah anda boleh melaksanakan Hour of Code tanpa sebuah komputer langsung.
+Pengalaman Hour of code yang terbaik melibatkan komputer yang disambungkan kepada Internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Pastikan untuk menguji tutorial pada komputer atau peranti pelajar untuk memastikan mereka berfungsi dengan betul dalam pelayar dengan adanya bunyi dan video. **Mempunyai jalur lebar yang rendah?** Rancangkan untuk menyiarkan video-video di hadapan kelas, agar setiap pelajar tidak perlu untuk memuat turun video mereka sendiri. Atau cubalah tutorial tercabut / luar talian.
+Pastikan untuk menguji tutorial pada komputer atau peranti pelajar untuk memastikan mereka berfungsi dengan betul dalam pelayar dengan adanya bunyi dan video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Sediakan fon kepala untuk kelas anda, atau meminta pelajar untuk menyediakan sendiri, sekiranya tutorial yang anda pilih memerlukan fungsi bunyi.
 
-**Tidak mempunyai peranti yang mencukupi?** Gunakan [pengaturcaraan pasangan](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan dapat melihat bahawa sains komputer adalah berkaitan dengan sosial dan kerjasama.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Apabila pelajar-pelajar berpasangan, mereka saling membantu antara mereka dan mengurangkan penggantungan kepada guru. Mereka akan dapat melihat bahawa sains komputer adalah berkaitan dengan sosial dan kerjasama.
 
 ## 5. Mulakan Hour of Code anda dengan suatu video yang memberi inspirasi
 
@@ -81,6 +85,6 @@ Mulakan Hour of Code anda dengan memberi inspirasi kepada para peserta dan membi
 
 ## Apakah pula selepas Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

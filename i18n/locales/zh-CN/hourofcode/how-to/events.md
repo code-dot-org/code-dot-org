@@ -1,7 +1,5 @@
 ---
 title: 编程一小时操作指南
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- ** 其他活动创意**: 
     - 邀请当地的行业领导者，讨论他们涉及到计算机科学的工作。
     - 邀请当地的官员，让学生们教他们编程。
     - 让学生展示离线活动。

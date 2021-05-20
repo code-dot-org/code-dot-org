@@ -9,6 +9,52 @@ import {getResponsiveValue} from './responsive';
 import Image from './image';
 import LazyLoad from 'react-lazy-load';
 
+export default class Tutorial extends React.Component {
+  static propTypes = {
+    item: shapes.tutorial.isRequired,
+    tutorialClicked: PropTypes.func.isRequired
+  };
+
+  keyboardSelectTutorial = event => {
+    if (event.keyCode === 32 || event.keyCode === 13) {
+      event.preventDefault();
+      this.props.tutorialClicked();
+    }
+  };
+
+  render() {
+    const tutorialOuterStyle = {
+      ...styles.tutorialOuter,
+      width: getResponsiveValue({lg: 33.3333333, sm: 50, xs: 100})
+    };
+
+    const imageSrc = this.props.item.image
+      .replace('/images/', '/images/fill-480x360/')
+      .replace('.png', '.jpg');
+
+    return (
+      <div
+        style={tutorialOuterStyle}
+        onClick={this.props.tutorialClicked}
+        onKeyDown={this.keyboardSelectTutorial}
+        tabIndex="0"
+        role="button"
+      >
+        <div style={styles.tutorialImageContainer}>
+          <div style={styles.tutorialImageBackground} />
+          <LazyLoad offset={1000}>
+            <Image src={imageSrc} style={styles.tutorialImage} alt="" />
+          </LazyLoad>
+        </div>
+        <div style={styles.tutorialName}>{this.props.item.name}</div>
+        <div style={styles.tutorialSub}>
+          {getTutorialDetailString(this.props.item)}
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   tutorialOuter: {
     float: 'left',
@@ -53,36 +99,3 @@ const styles = {
     height: 40
   }
 };
-
-export default class Tutorial extends React.Component {
-  static propTypes = {
-    item: shapes.tutorial.isRequired,
-    tutorialClicked: PropTypes.func.isRequired
-  };
-
-  render() {
-    const tutorialOuterStyle = {
-      ...styles.tutorialOuter,
-      width: getResponsiveValue({lg: 33.3333333, sm: 50, xs: 100})
-    };
-
-    const imageSrc = this.props.item.image
-      .replace('/images/', '/images/fill-480x360/')
-      .replace('.png', '.jpg');
-
-    return (
-      <div style={tutorialOuterStyle} onClick={this.props.tutorialClicked}>
-        <div style={styles.tutorialImageContainer}>
-          <div style={styles.tutorialImageBackground} />
-          <LazyLoad offset={1000}>
-            <Image src={imageSrc} style={styles.tutorialImage} />
-          </LazyLoad>
-        </div>
-        <div style={styles.tutorialName}>{this.props.item.name}</div>
-        <div style={styles.tutorialSub}>
-          {getTutorialDetailString(this.props.item)}
-        </div>
-      </div>
-    );
-  }
-}

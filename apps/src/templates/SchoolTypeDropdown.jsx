@@ -3,41 +3,6 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '../util/color';
 
-const styles = {
-  asterisk: {
-    fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
-  },
-  errors: {
-    fontSize: 14,
-    fontFamily: '"Gotham 3r", sans-serif',
-    color: color.red,
-    paddingTop: 5,
-    paddingBottom: 5
-  },
-  singleLineLayoutStyles: {
-    display: 'table-cell',
-    width: 210,
-    verticalAlign: 'middle',
-    minHeight: 42,
-    fontSize: 13,
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: '#333',
-    padding: 0
-  },
-  singleLineContainerStyles: {
-    display: 'table',
-    width: '100%'
-  },
-  selectStyle: {
-    width: 390,
-    verticalAlign: 'top',
-    marginBottom: '5px',
-    marginTop: '5px'
-  }
-};
-
 export default class SchoolTypeDropdown extends Component {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
@@ -98,3 +63,38 @@ export default class SchoolTypeDropdown extends Component {
     );
   }
 }
+
+const styles = {
+  asterisk: {
+    fontSize: 20,
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red
+  },
+  errors: {
+    fontSize: 14,
+    fontFamily: '"Gotham 3r", sans-serif',
+    color: color.red,
+    paddingTop: 5,
+    paddingBottom: 5
+  },
+  singleLineLayoutStyles: {
+    display: 'table-cell',
+    width: 210,
+    verticalAlign: 'middle',
+    minHeight: 42,
+    fontSize: 13,
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: '#333',
+    padding: 0
+  },
+  singleLineContainerStyles: {
+    display: 'table',
+    width: '100%'
+  },
+  selectStyle: {
+    width: 390,
+    verticalAlign: 'top',
+    marginBottom: '5px',
+    marginTop: '5px'
+  }
+};

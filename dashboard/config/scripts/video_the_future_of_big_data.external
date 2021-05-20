@@ -2,9 +2,11 @@ name 'Video - The Future of Big Data'
 markdown <<MARKDOWN
 # The Future of Big Data
 
-<iframe width="560" height = "315" src="https://www.youtube.com/embed/l_a0ecZ2Oe0" frameborder="0" allowfullscreen></iframe>
+[![](https://images.code.org/ff14c09d2036ff65be8af3dd63d2da24-image-1571251950161.52.16 AM.png)](https://www.youtube.com/watch?v=l_a0ecZ2Oe0)
 
 [Source](http://www.fwthinking.com/video/clips/future-big-data-video/)
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
+
 MARKDOWN

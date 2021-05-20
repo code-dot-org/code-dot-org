@@ -1,0 +1,12 @@
+name 'CodeBreak E02 Younger Challenges'
+editor_experiment ''
+display_name 'Challenges'
+description "Pick the challenge you want to complete. When you are finished click 'Continue' and don't forget to share your project using the hashtag #CodeBreak!"
+
+sublevels
+level 'CodeBreak E02 Beg Challenge 1'
+level 'CodeBreak E02 Beg Challenge 2'
+
+markdown <<MARKDOWN
+
+MARKDOWN

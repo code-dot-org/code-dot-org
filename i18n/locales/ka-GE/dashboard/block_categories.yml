@@ -1,0 +1,29 @@
+ka:
+  data:
+    block_categories:
+      Actions: მოქმედებები
+      Advanced: დამატებით
+      Behaviors: ქცევა
+      Brushes: ფუნჯები
+      Color: ფერი
+      Comment: კომენტარი
+      Comments: კომენტარები
+      Conditionals: პირობითი ბრძანებები
+      Default: ნაგულისხმევი
+      Events: მოვლენები
+      Functions: ფუნქციები
+      'Functions ': 'ფუნქციები '
+      Game/Score: თამაში/ქულა
+      Games/Score: თამაშები/ქულა
+      Groups: ჯგუფები
+      Input: შემომავალი ინფორმაცია
+      Locations: მდებარეობები
+      Logic: ლოგიკა
+      Loops: ციკლები
+      Math: მათემატიკა
+      Numbers: რიცხვები
+      Sprites: სპრაიტები
+      Text: ტექსტი
+      Variables: ცვლადები
+      'Variables ': 'ცვლადები '
+      World: სამყარო

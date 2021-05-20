@@ -1,28 +1,32 @@
 ---
-title: イベント開催ガイド
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # 放課後クラスやクラブでHour of Codeを教える方法
 
-### この運動に参加して、以下の手順で生徒たちのグループに初めてのコンピュータサイエンスを紹介しましょう。 Hour of Codeは簡単に実施できます。初めての方でも心配いりません！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. この「やり方を説明している動画」を見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. チュートリアルを選ぶ
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**すべてのHour of Codeチュートリアル**は最低限の準備時間で済むようになっており、参加者は自分自身のペースやスキルレベルに応じて参加できる自習式となっています。
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**放課後にHour of Codeを実施するレッスンプランが必要ですか？**それならこの[テンプレート](/files/AfterschoolEducatorLessonPlanOutline.docx)をチェックしてみてください！
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. あなたのHour of Codeを宣伝する
 
@@ -30,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. 必要な技術を準備する（コンピューターは必須ではありません）
 
-最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 **必ずしも**一人一台のコンピュータを用意する必要ありません。もっと言えば、コンピュータがない環境でもHour of Codeを行うことができます。
+最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-児童・生徒のコンピュータやデバイス上でチュートリアルをテストします。ブラウザ上で音声やビデオが正しく動くか確認します。 **ネットワーク通信速度が遅いですか？**イベントの冒頭でビデオを全体に見せれば、各自がビデオをダウンロードする必要はありません。 もしくは、ネットワーク接続なしで実行できるオフラインチュートリアルを試してみます。
+児童・生徒のコンピュータやデバイス上でチュートリアルをテストします。ブラウザ上で音声やビデオが正しく動くか確認します。 **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 いくつかのチュートリアルでは音声が流れます。その場合は、ヘッドフォンを準備するか、生徒に自分のものを持ってくるように頼みます。
 
-**十分な数のデバイスがないですか？**[ペアプログラミング](https://www.youtube.com/watch?v=vgkahOzFH2Q)の出番です。 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
 
 ## 5. Hour of Codeの冒頭は興味を引くビデオで始める
 
@@ -49,13 +53,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [アメリカのオバマ大統領が生徒たちにコンピューターサイエンスを学ぶよう呼びかけている映像](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
 - その他のビデオは[こちら](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
-**コンピューターサイエンスのまったくの初心者でも大丈夫です。以下のような方法でHour of Codeアクティビティを始めます。**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - なぜ、コンピュータが我々の生活に大きなインパクトを与えているのか、男の子も女の子も興味を持つ分野の実例を交えて（例えば、コンピュータが医療の分野でどの様に使われているのか、人々を助けるためにどんな役割を担っているのか、もしくは人々を国境を超えてつなげるためにどんなアプリケーションが使われているのか）説明してみましょう。
 - コンピュータが使われているシーンをリストアップしてみましょう。
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**もっと知りたいですか？**[レッスンプランテンプレート](/files/AfterschoolEducatorLessonPlanOutline.docx)をダウンロードしてください。
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. コードを書く！
 
@@ -81,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Hour of Codeを終えたら？
 
-Hour of Codeは、あくまでコンピュータやアプリケーションがどうやって作られているのかを理解する最初の一歩にすぎません。 Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

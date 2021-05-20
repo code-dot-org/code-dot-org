@@ -1,7 +1,5 @@
 ---
 title: Panduan Bagaimana bagi Acara Hour of Code
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- ** Idea acara lain **: 
     - Menjemput seorang pemimpin industri tempatan untuk membincangkan kerja-kerja beliau yang terlibat dengan sains komputer.
     - Menjemput seorang ahli politik tempatan dan mengizinkan pelajar untuk mengajar beliau mengenai bagaimana untuk kod.
     - Mengizinkan sekumpulan pelajar menunjukkan suatu aktiviti tercabut.

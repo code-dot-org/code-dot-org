@@ -1,8 +1,9 @@
 ---
-title: <%= hoc_s(:title_country_resources).inspect %>
 layout: wide
 nav: promote_nav
 ---
+
+<% @header["title"] = hoc_s(:title_country_resources) %>
 
 <%= view :signup_button %>
 

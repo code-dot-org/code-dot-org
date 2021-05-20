@@ -1,0 +1,605 @@
+{
+  "published": true,
+  "title": "CS Fundamentals Deep Dive Post Survey",
+  "pages": [
+    {
+      "name":"preamble_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "overview_text",
+          "hideNumber": true,
+          "html": "<p>Thank you for spending the day with us at the CS Fundamentals Deep Dive workshop. Your participation in the workshop and responses to this post workshop survey will help Code.org and your facilitator(s) continue to reflect and adjust.</p>\n\n<p>The purpose of this survey is to:</p>\n<ul>\n    <li>Help us understand if the workshop supported your needs and development.</li>\n    <li>Give us ideas about how we might improve the workshop for the future.</li>\n</ul>\n<p>\nYour <strong>honesty and candor</strong> are appreciated. This survey should take about 10 minutes to complete.\n</p>"
+        }
+      ]
+    },
+    {
+      "name": "workshop_effectiveness",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "overall_success",
+          "title": "Please rate how much you agree or disagree with the following statements.",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "more_prepared",
+              "text": "I feel more prepared to teach the material covered in this workshop than before I came."
+            },
+            {
+              "value": "where_to_go",
+              "text": "I know where to go if I need help preparing to teach this material."
+            },
+            {
+              "value": "suitable_my_level",
+              "text": "This professional development was suitable for my level of experience with teaching CS."
+            },
+            {
+              "value": "feel_community",
+              "text": "I feel like I am a part of a community of teachers."
+            },
+            {
+              "value": "would_recommend",
+              "text": "I would recommend this professional development to others."
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "teacher_engagement",
+          "title": "Please rate the how much you agree or disagree with the following statements.",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "engaging",
+              "text": "I found the activities we did in this workshop interesting and engaging."
+            },
+            {
+              "value": "active",
+              "text": "I was highly active and participated a lot in the workshop activities."
+            },
+            {
+              "value": "talk_about_workshop",
+              "text": "When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others."
+            },
+            {
+              "value": "ideas",
+              "text": "I am definitely planning to make use of ideas and content covered in this workshop in my classroom."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "helped_learn_most_FR",
+          "title": "What helped you learn the most in this workshop and why?"
+        },
+        {
+          "type": "comment",
+          "name": "detracted_learning_FR",
+          "title": "What detracted from your learning in this workshop and why?"
+        }
+      ],
+      "title": "Workshop Effectiveness"
+    },
+    {
+      "name": "understanding_plans",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "how_much_plan_teach",
+          "title": "During the workshop you set a goal for how much CS Fundamentals you would like to teach with your students. As a result of the workshop, how much of the CS Fundamentals curriculum are you now planning to use with students?",
+          "columns": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "a_few",
+              "text": "A few lessons"
+            },
+            {
+              "value": "most",
+              "text": "Most lessons"
+            },
+            {
+              "value": "all",
+              "text": "All lessons"
+            }
+          ],
+          "rows": [
+            {
+              "value": "course_a",
+              "text": " Course A"
+            },
+            {
+              "value": "course_b",
+              "text": " Course B"
+            },
+            {
+              "value": "course_c",
+              "text": " Course C"
+            },
+            {
+              "value": "course_d",
+              "text": " Course D"
+            },
+            {
+              "value": "course_e",
+              "text": " Course E"
+            },
+            {
+              "value": "course_f",
+              "text": " Course F"
+            },
+            {
+              "value": "express_course",
+              "text": "Express Course"
+            },
+            {
+              "value": "accelerated_or_1_4",
+              "text": " Courses 1-4 or Accelerated"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "thinking_differently_FR",
+          "title": "As a result of the conversations and activities during the workshop, in what ways are you thinking differently about *how* you will teach CS Fundamentals lessons?"
+        }
+      ],
+      "title": "Understanding your plans for CS Fundamentals"
+    },
+    {
+      "name": "barriers_to_teaching",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "acquired_strategies",
+          "title": "During our workshop, did you acquire any strategies or ideas that will help you address the barriers you've experienced implementing CS Fundamentals?",
+          "choices": [
+            {
+              "value": "yes_lots",
+              "text": "Yes! I walked away with a lot of new strategies that I'm going to try to help confront my implementation barriers."
+            },
+            {
+              "value": "yes_couple",
+              "text": "Yes! I have one or two new strategies that I'll try out."
+            },
+            {
+              "value": "not_really",
+              "text": "Not really. I don't have new ideas for how to how address barriers."
+            }
+          ],
+          "hasOther": true,
+          "otherText": "Other (please describe)"
+        },
+        {
+          "type": "comment",
+          "name": "ideas_addressing_barriers_FR",
+          "title": "What idea(s) did you get at the Deep Dive workshop for *addressing barriers* that you are likely to use?"
+        },
+        {
+          "type": "comment",
+          "name": "new_different_barriers_FR",
+          "title": "Now that you've completed the Deep Dive workshop, are there any *new or different barriers* that you're thinking about that you hadn't considered before? If so, please share them below."
+        },
+        {
+          "type": "radiogroup",
+          "name": "able_help_others_barriers_FR",
+          "title": "During the Deep Dive workshop, did you feel you were able to help others by sharing ideas and strategies for addressing their barriers?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes! I felt like I was able to give other people new ideas that will help."
+            },
+            {
+              "value": "think_so",
+              "text": "I think so. I shared ideas that others might find helpful."
+            },
+            {
+              "value": "no",
+              "text": "No, I don't think so."
+            }
+          ],
+          "hasOther": true,
+          "otherText": "Other (please describe)"
+        }
+      ],
+      "title": "Barriers to Teaching CS Fundamentals"
+    },
+    {
+      "name": "teaching_practices_resources",
+      "elements": [
+        {
+          "type": "html",
+          "name": "self_assessment_description",
+          "html": "<p>There are a variety of teaching strategies that computer science teachers use with students in classrooms.</p>\n<p>Below, we ask you to use a \"true of me now\" scale to self-rate how true it is that you have concrete strategies - techniques or methods you could name or describe to another teacher - for doing these things right now. </p>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption> </caption>\n<tbody>\n<tr>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me now</strong></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong></span></td>\n</tr>\n</tbody>\n</table>"
+        },
+        {
+          "type": "matrix",
+          "name": "strategies_describe_you",
+          "title": "To what extent do the following statements about teaching strategies describe you?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "work_collaboratively",
+              "text": "I can ensure that students work collaboratively when writing code."
+            },
+            {
+              "value": "share_ideas",
+              "text": "I can ensure that every student has a daily opportunity to share ideas and be heard by classmates through partnered conversations, small-group or large-group discussion."
+            },
+            {
+              "value": "normalize_failure",
+              "text": "I can create a culture in which problems or failures are normalized and welcomed as a natural part of the problem solving process."
+            },
+            {
+              "value": "support_problem_solving",
+              "text": "I can support students in solving the various problems they encounter while working on programming activities."
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "access_materials_description",
+          "html": "<br/><p>Next, use the \"true of me now\" scale to self-rate your level of comfort accessing, navigating and using CS Fundamentals curricular materials and the Code.org website.</p>\n<table style=\"width: 100%; border: 1px solid black; margin-left: auto; margin-right: auto;\" cellpadding=\"1px\"><caption> </caption>\n<tbody>\n<tr>\n<td style=\"width: 23%; padding-top: 3px; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">1<span style=\"color: #ffffff;\">----</span>2</span></strong></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">3<span style=\"color: #ffffff;\">----</span>4<span style=\"color: #ffffff;\">----</span>5</span></strong></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: top;\"><strong><span style=\"font-size: 10pt;\">6<span style=\"color: #ffffff;\">----</span>7</span></strong></td>\n</tr>\n<tr>\n<td style=\"width: 23%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Not true of me now</strong></span></td>\n<td style=\"width: 24.7981%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Somewhat true of me now</strong></span></td>\n<td style=\"width: 20.2019%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 10pt;\"><strong>Very true of me now</strong></span></td>\n</tr>\n</tbody>\n</table>"
+        },
+        {
+          "type": "matrix",
+          "name": "codeorg_tools_familiarity",
+          "title": "Right now, I know exactly how to...",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7"
+            }
+          ],
+          "rows": [
+            {
+              "value": "access_lesson_plans",
+              "text": "access teacher-facing lesson plans online for CS Fundamentals courses."
+            },
+            {
+              "value": "view_student_work",
+              "text": "view student work through the teacher dashboard on the Code.org website."
+            },
+            {
+              "value": "access_sample_solutions",
+              "text": "access sample solutions to programming puzzles on the Code.org website."
+            },
+            {
+              "value": "create_sections",
+              "text": "create sections of students on the Code.org website."
+            },
+            {
+              "value": "manage_sections",
+              "text": "manage sections of students on the Code.org website (move students between sections, reset passwords, etc)."
+            }
+          ]
+        }
+      ],
+      "title": "Computer Science Fundamentals Teaching Practices and Course Resources"
+    },
+    {
+      "name": "feedback",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "most_useful_activites",
+          "title": "Which activities did you find MOST useful during the workshop? (select up to 2)",
+          "choices": [
+            {
+              "value": "identifying_barriers",
+              "text": "Identifying barriers to implementation and coming up with solutions as a group."
+            },
+            {
+              "value": "practicing_debugging",
+              "text": "Practicing and discussing debugging strategies for the classroom."
+            },
+            {
+              "value": "exploring_website",
+              "text": "Exploring the Code.org website through a scavenger hunt."
+            },
+            {
+              "value": "acting_learner",
+              "text": "Acting as a learner in a model lesson."
+            },
+            {
+              "value": "strategies_supporting_students",
+              "text": "Talking about strategies for supporting students who might struggle with lessons like those we saw during the model."
+            },
+            {
+              "value": "time_explore_plan",
+              "text": "Time to explore and plan a lesson or project."
+            },
+            {
+              "value": "time_talk_lesson",
+              "text": "Time to talk about your lesson with someone else."
+            },
+            {
+              "value": "open_ended_planning",
+              "text": "Open-ended planning time (at the end of the day)."
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "least_useful_activities",
+          "title": " Which activities did you find LEAST useful during the workshop? (select up to 2)",
+          "choices": [
+            {
+              "value": "identifying_barriers",
+              "text": "Identifying barriers to implementation and coming up with solutions as a group."
+            },
+            {
+              "value": "practicing_debugging",
+              "text": "Practicing and discussing debugging strategies for the classroom."
+            },
+            {
+              "value": "exploring_website",
+              "text": "Exploring the Code.org website through a scavenger hunt."
+            },
+            {
+              "value": "acting_learner",
+              "text": "Acting as a learner in a model lesson."
+            },
+            {
+              "value": "strategies_supporting_students",
+              "text": "Talking about strategies for supporting students who might struggle with lessons like those we saw during the model."
+            },
+            {
+              "value": "time_explore_plan",
+              "text": "Time to explore and plan a lesson or project."
+            },
+            {
+              "value": "time_talk_lesson",
+              "text": "Time to talk about your lesson with someone else."
+            },
+            {
+              "value": "open_ended_planning",
+              "text": "Open-ended planning time (at the end of the day)."
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "any_other_feedback_FR",
+          "title": "Is there anything you want to tell us about the workshop sessions?"
+        },
+        {
+          "type": "radiogroup",
+          "name": "would_you_recommend",
+          "title": "Would you recommend this workshop to a colleague?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes. I would recommend it to anyone who is teaching CS Fundamentals."
+            },
+            {
+              "value": "maybe",
+              "text": "Maybe. It depends on the situation with the person."
+            },
+            {
+              "value": "no",
+              "text": "No. I wouldn't recommend this workshop to my colleagues who teach CS Fundamentals."
+            }
+          ],
+          "hasOther": true,
+          "otherText": "Other (please describe)"
+        },
+        {
+          "type": "comment",
+          "name": "anything_else_FR",
+          "title": "Is there anything else you would like to tell us about your experience in the Deep Dive workshop?"
+        }
+      ],
+      "title": "Workshop Feedback",
+      "description": "The following questions are designed to gather your feelings about the workshop flow and activities."
+    },
+    {
+      "name": "facilitator_feedback_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "facilitator_feedback_intro",
+          "html": "<h2>Facilitator Feedback</h2>\n<p>Below we present the same set of questions for each facilitator of your workshop.  Please be thoughtful in your responses for each individual."
+        },
+        {
+          "type": "paneldynamic",
+          "name": "facilitators",
+          "title": "Facilitators",
+          "templateElements": [
+            {
+              "type": "matrix",
+              "name": "facilitator_effectiveness",
+              "title": "During my workshop, {panel.facilitator_name} did the following:",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "demonstrated_knowledge",
+                  "text": "Demonstrated knowledge of the curriculum."
+                },
+                {
+                  "value": "built_equitable",
+                  "text": "Built and sustained an equitable learning environment in our workshop."
+                },
+                {
+                  "value": "on_track",
+                  "text": "Kept the workshop and participants on track."
+                },
+                {
+                  "value": "productive_discussions",
+                  "text": "Supported productive workshop discussions."
+                },
+                {
+                  "value": "ways_equitable",
+                  "text": "Helped me see ways to create and support an equitable learning environment for my students."
+                },
+                {
+                  "value": "healthy_relationship",
+                  "text": "Demonstrated a healthy working relationship with their co-facilitator (if applicable)."
+                }
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "facilitator_did_well_fr",
+              "title": "What were two things {panel.facilitator_name} did well?",
+              "rows": 2
+            },
+            {
+              "type": "comment",
+              "name": "facilitator_could_improve_fr",
+              "title": "What were two things {panel.facilitator_name} could do better?",
+              "rows": 2
+            }
+          ],
+          "templateTitle": "Facilitator {panel.facilitator_position} of {num_facilitators} - {panel.facilitator_name}",
+          "allowAddPanel": false,
+          "allowRemovePanel": false
+        }
+      ]
+    }
+  ],
+  "showQuestionNumbers": "off"
+}

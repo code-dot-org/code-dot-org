@@ -1,64 +1,62 @@
 ---
 title: Hour of Code Event How-To
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# چگونه میزبان رویداد ساعت کدنویسی باشید
 
-### Get your entire school or community involved in an Hour of Code!
+### تمام مدرسه و جامعه ی خود را در ساعت کدنویسی درگیر کنید!
 
 * * *
 
-## 1. Prepare for your event
+## ۱) برای رویدادتان آماده شوید
 
-- Determine a venue, date, and time.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- یک محل برگزاری، روز و ساعت مشخص کنید.
+- یک [نامه](https://hourofcode.com/promote/resources#sample-emails) به شهردار منطقه تان، نماینده ی مجلس، فرماندار و یا افراد تاجر تاثیرگذار بنویسید و از آنها دعوت کنید که در رویداد سخنرانی کنند. [نحوه ی برگزاری]({{ localized_files/elected_official }}) ما را زمانی که میزبان یک فرد منتخب رسمی در ساعت کدنویسی هستید را ببینید.
+- از رسانه ها/ مطبوعات. یعنی ایستگاه های خبری محلی ، روزنامه ها ، وبلاگ نویسان آموزشی و تکنولوژی دعوت کنید. برای کمک، ما [ابزار مطبوعات]({{ promote/press_kit_url }}) ما را ببینید.
 
-## 2. During your event
+## ۲) در زمان اجرای رویداد
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- رویداد را با یکی از [فیلم های الهام بخش]({{ promote/videos }}) ما شروع کنید.
+- مقدمه ای را برای بررسی اهمیت علم کامپیوتر با استفاده از [آمارو اطلاعات گرافیکی](%= resolve_url('/promote/stats') %) را ارایه دهید.   
       
     
-- **Other event ideas**: 
-    - Invite a local industry leader to discuss his or her work involving computer science.
-    - Invite a local politician and have students teach him or her how to code.
+- **ایده هایی دیگر برای رویداد**: 
+    - از یک رهبر صنعتی در محله تان دعوت کنید تا درباره ی کارش که تحت تاثیر علوم کامپیوتر است صحبت کند.
+    - یک سیاستمدار محلی را دعوت کنید و از دانش آموزان بخواهید که به او کدنویسی یاد دهند.
     - Have a group of students demonstrate an unplugged activity.
-    - Have a group of students teach the principal or a group of teachers how to code.
-    - If your school already teaches computer science, have students demo projects.
+    - از گروهی از دانش آموزان بخواهید که به مدیر مدرسه یا گروهی از معلمان کدنویسی یاد دهند.
+    - اگر در مدرسه ی شما از قبل علوم کامپیوتر تدریس می شود، از دانش آموزان بخواهید پروژه هایی را به نمایش بگذارند.
 
-## 3. Share how it went
+## ۳) چگونگی انجام آن را به اشتراک بگذارید
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Host a Family Code Night with the Hour of Code and invite parents to participate
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+عکس های رویدادتان را بر روی فیسبئک و توئیتر با استفاده از هشتگ **#HourOfCode** به اشتراک بگذارید.
 
 * * *
 
-## Example plan for a school assembly or event
+## میزبان یک شب کدنویسی خانوادگی با ساعت کدنویسی شوید و از اولیاء بخواهید که شرکت کنند.
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. این یک راه عالی برای درگیر شدن با جامعه ای بزرگتر است و حمایت والدین را تشویق می کند که از علوم کامپیوتر در مدرسه شما حمایت کنند. شرکای ما در شب کدنویسی خانوادگی یک کیت همه جانبه با چک لیست برنامه ریزی، خط ارائه دهنده، ایمیل دعوت نامه، پوستر، پاورپوینت و موارد دیگر برای ایجاد رویداد ایجاد کرده اند. [برای دانلود کیت رویداد اینجا را کلیک کنید](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+* * *
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+## مثال یک برنامه ریزی برای رویداد مدرسه
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**رویداد:**هفته اول آموزش علوم کامپیوتر در سراسر مدارس
+
+**تاریخ: **دسامبر 5 (شروع هفته آموزش علوم کامپیوتر) 
+
+**زمان: **در طول روز مدرسه. ترجیحا اواسط صبح .تقریبا 1 ساعت.
+
+**مکان: **سالن اجتماعات مدرسه (مثلا سالن تئاتر، سالن ورزشی، کافه تریا)
 
 ## اجرای نمایش
 
 | زمان                      | اقدامات                                                                                                                                          |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 10:00 تا 10:05 قیل از ظهر | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                               |
-| 10:05 تا 10:15 قبل از ظهر | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).            |
+| 10:00 تا 10:05 قیل از ظهر | رویداد را با یکی از [فیلم های الهام بخش]({{ promote/videos }}) ما شروع کنید.                                                                     |
+| 10:05 تا 10:15 قبل از ظهر | مدیر مدرسه مقدمه ای را برای بررسی اهمیت علم کامپیوتر با استفاده از [آمارو اطلاعات گرافیکی](%= resolve_url('/promote/stats') %) را ارایه دهد.     |
 | 10:15 تا 10:30 قبل از ظهر | مهمان ویژه در زمینه پیش زمینه و نحوه استفاده از تکنولوژی و علوم رایانه در زندگی روزمره آنها صحبت می کند.                                         |
 | 10:30 تا 10:40 قبل از ظهر | دانش آموزان یک ساعت از نسخه نمایشی برنامه برای مدرسه را انجام می دهند. پیچ و تاب و سرگرم کننده: آنها را به مدرس، سیاستمدار، یا دانش آموزان دیگر! |
 | 10:40 تا 11:00 قیل از ظهر | دانش آموزان یک فعالیت بی نظیر را نشان می دهند که چگونه می توان بدون استفاده از رایانه علوم کامپیوتر را آموزش داد.                                |

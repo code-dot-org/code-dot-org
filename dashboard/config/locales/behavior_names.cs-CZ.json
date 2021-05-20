@@ -1,0 +1,47 @@
+{
+  "cs-CZ": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "zotavuje se"
+        },
+        "outbreak2": {
+          "recovering": "zotavuje se"
+        },
+        "outbreak3": {
+          "recovering": "zotavuje se"
+        },
+        "outbreak4": {
+          "recovering": "zotavuje se",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "outbreak5": {
+          "recovering": "zotavuje se"
+        },
+        "outbreak6": {
+          "recovering": "zotavuje se"
+        },
+        "outbreak7": {
+          "recovering": "zotavuje se",
+          "moving left and right": "posun doleva a doprava",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "outbreak8": {
+          "recovering": "zotavuje se",
+          "moving left and right": "posun doleva a doprava",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "outbreak_freeplay": {
+          "recovering": "zotavuje se",
+          "moving left and right": "posun doleva a doprava",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "zotavuje se",
+          "moving left and right": "posun doleva a doprava",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        }
+      }
+    }
+  }
+}

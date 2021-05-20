@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require_relative '../deployment.rb'
 require 'cdo/only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require 'cdo/cdo_cli'
 include CdoCli
 
@@ -165,4 +167,4 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-main(options) if only_one_running?(__FILE__)
+main(options)

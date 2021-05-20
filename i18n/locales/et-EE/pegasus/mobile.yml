@@ -12,12 +12,12 @@
   csedweek_dates: "3-9. detsember, 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Koodi Tund</a> on saabumas. Üleskutse kõigile õpetajatele ja korraldajatele,<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">planeeri oma KoodiTund</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oled informaatika õpetaja? Vaata teisi arvutiteaduse hariduse nädala materjale</a>'
+  csedweek_banner_teachers_text: "Oled informaatika õpetaja? Vaata teisi arvutiteaduse hariduse nädala materjale"
   n_have_learned_an_hoc: "<h1>Proovi</h1><h2>KoodiTund</h2><h3># served</h3>"
   anybody_can_learn: "Igaüks võib õppida."
   learn_now: "Õpi nüüd"
   petition_message: "Igal õpilasel igas koolis peaks olema võimalus õppida arvutiteadust"
   petition_sign_message: 'Kui nõustud, logi sisse enda nimega. Liitu # teistega.'
-  petition_sign_message_support: 'Kui sa toetad meid, kirjuta oma nimi ning ühine # teistega.'
   petition_join_others: 'Ühine # teistega'
   name: "Nimi"
   email: "E-post"
@@ -92,6 +92,7 @@
   enter_valid_email: "Palun sisestage kehtiv e-posti aadress"
   get_a_certificate_message: "Me saadame sulle tunnistuse ja info, kuidas <a href='/learn/beyond'>õppida edasi pärast KoodiTundi</a>"
   get_a_certificate_message_after: "Kliki tunnistusel, et see alla laadida või välja printida. Nüüd jätka meie <a href='http://studio.code.org'>teiste kursustega</a>, või vaata rohkem valikuid <a href='/learn/beyond'>Õpi pärast KoodiTundi</a>."
+  get_a_certificate_message_after_markdown: "Kliki tunnistusel, et see alla laadida või välja printida. Nüüd jätka meie [teiste kursustega](http://studio.code.org), või vaata rohkem valikuid [Õpi pärast KoodiTundi](/learn/beyond)."
   thanks_for_submitting: "Aitäh esitamise eest!"
   if_you_enjoyed: "Kui õppimine meeldis, lase sõpradel ka seda proovida! Tahame, et terve maailmal oleks võimalus õppida."
   personalize_certificate: "Muuda oma tunnistus isikupäraseks"
@@ -213,6 +214,7 @@
   homepage_action_text_learn: "Alusta õppimist"
   homepage_action_text_signpetition: "Allkirjasta taotlus"
   homepage_signpetition_dropdown: "Ma nõustun &#x25BE;"
+  homepage_signpetition_dropdown_text: "Olen nõus"
   homepage_diversity_pledge: "Mitmekesisuse lubadus"
   homepage_banner_text_prizes: 'KoodiTund tuleb taas, 7.-13. detsembril. '
   homepage_banner_link_prizes: 'Liitu suurima õppimisüritusega ajaloos. '
@@ -752,6 +754,8 @@
   coursee-2018_gradelevel: Vanusele 8-12
   coursed-2019_gradelevel: 8.+ klassid
   coursee-2019_gradelevel: Vanusele 8-12
+  coursed-2020_gradelevel: 8.+ klassid
+  coursee-2020_gradelevel: Vanusele 8-12
   accelerated_gradelevel: "Vanustele 10-18"
   codeorg_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
   codeintl_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
@@ -1076,6 +1080,8 @@
   header_educate_hoc: "KoodiTund"
   header_teach: "Õpeta"
   header_about: "Info"
+  header_legal_privacy: "Privaatsuspoliitika"
+  header_legal_tos: "Teenuse tingimused"
   header_documentation: "Dokumentatsioon"
   user_header_label: "Tere, %{username}"
   user_header_team: "Võistkond"
@@ -1193,3 +1199,10 @@
   hoc2018_dance_video3: "Tantsuõhtu - omadused"
   hoc2018_dance_video4: "Tantsuõhtu - Palju õnne"
   hoc2018_mc_with_microsoft: "Koostöös: "
+  footer_powered_by_aws: "Amazoni poolt toetatud"
+  codebytes_skinny_banner_english_only: "Ainult inglise keeles"
+  footer_privacy_policy: "Privaatsuspoliitika"
+  footer_about: "Info"
+  footer_donate: "Anneta"
+  footer_support: "Abi ja kogukond"
+  footer_terms: "Tingimused"

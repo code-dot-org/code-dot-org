@@ -7,18 +7,11 @@ import {connect} from 'react-redux';
 import Spinner from '../components/spinner';
 import $ from 'jquery';
 import CohortViewTable from './cohort_view_table';
-import CohortCalculator from './cohort_calculator';
-import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType
 } from '../components/regional_partner_dropdown';
 import {Button, Col, Row} from 'react-bootstrap';
-
-const styles = {
-  button: {
-    margin: '20px 20px 20px auto'
-  }
-};
 
 class CohortView extends React.Component {
   static propTypes = {
@@ -100,16 +93,6 @@ class CohortView extends React.Component {
     if (this.state.loading) {
       return <Spinner />;
     } else {
-      let accepted = 0;
-      let registered = 0;
-      if (this.state.applications !== null) {
-        accepted = this.state.applications.filter(app =>
-          CohortCalculatorStatuses.includes(app.status)
-        ).length;
-        registered = this.state.applications.filter(
-          app => app.registered_workshop === 'Yes'
-        ).length;
-      }
       return (
         <div>
           {this.state.applications && (
@@ -118,15 +101,17 @@ class CohortView extends React.Component {
               regionalPartnerFilterValue={
                 this.props.regionalPartnerFilter.value
               }
-              accepted={accepted}
-              registered={registered}
+              accepted={countAcceptedApplications(this.state.applications)}
             />
           )}
+
           {this.props.showRegionalPartnerDropdown && (
             <RegionalPartnerDropdown />
           )}
+
           <h1>{this.props.regionalPartnerFilter.label}</h1>
           <h2>{this.props.route.applicationType}</h2>
+
           <Row>
             <Col md={6} sm={6}>
               <Button
@@ -140,6 +125,7 @@ class CohortView extends React.Component {
               </Button>
             </Col>
           </Row>
+
           <CohortViewTable
             data={this.state.applications}
             viewType={this.props.route.viewType}
@@ -150,6 +136,12 @@ class CohortView extends React.Component {
     }
   }
 }
+
+const styles = {
+  button: {
+    margin: '20px 20px 20px auto'
+  }
+};
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,

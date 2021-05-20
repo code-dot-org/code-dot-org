@@ -98,6 +98,7 @@
   "setSpeed": "ange hastighet",
   "setSpeedTooltip": "Anger nivåns hastighet",
   "shareFlappyTwitter": "Kolla in Flappyspelet jag gjort. Jag skrev det själv med @codeorg",
+  "shareFlappyTwitterDonor": "Kolla in spelet som jag har gjort. (Tack till {donor} för att ni stöttar @codeorg)",
   "shareGame": "Dela ditt spel:",
   "soundRandom": "slumpad",
   "soundBounce": "studsa",

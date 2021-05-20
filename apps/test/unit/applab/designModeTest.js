@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import designMode from '@cdo/apps/applab/designMode';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
 
@@ -209,6 +209,33 @@ describe('setProperty and read Property', () => {
       expect(designMode.readProperty(dropdown, 'value')).to.equal(
         'Epsilon Zeta'
       );
+    });
+  });
+
+  describe('assignImageType', () => {
+    const {assignImageType} = designMode;
+    let picture;
+
+    beforeEach(() => {
+      picture = document.createElement('img');
+    });
+
+    it('Returns icon for icon input', () => {
+      expect(assignImageType(picture, 'icon://someIcon')).to.equal('icon');
+    });
+
+    it('Return url for url input', () => {
+      expect(
+        assignImageType(picture, 'https://code.org/images/logo.png')
+      ).to.equal('url');
+    });
+
+    it('Return default for empty input', () => {
+      expect(assignImageType(picture, '')).to.equal('default');
+    });
+
+    it('Return file for non empty, non url, non icon input', () => {
+      expect(assignImageType(picture, 'some_random_string')).to.equal('file');
     });
   });
 });

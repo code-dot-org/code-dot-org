@@ -432,6 +432,14 @@ ca:
         text: Fins ara heu estat fent una animació o una història que fa exactament
           la mateixa cosa cada vegada que s'executa. Ara podeu fer un joc interactiu
           que de fet podeu jugar.
+    starwars_events:
+      4:
+        text: Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una
+          tecla de fletxa o quan es toca la pantalla.
+    starwars_blocks_events:
+      4:
+        text: Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una
+          tecla de fletxa o quan es toca la pantalla.
     mc_intro:
       1:
         text: Em dic Jens Bergensten però em coneixen com Jeb. Jo sóc el desenvolupador
@@ -566,10 +574,22 @@ ca:
       4:
         text: Ara pots construir el que vulguis. Diverteix-te!
     gumball_intro:
+      4:
+        text: La pantalla es divideix en 3 parts. L'esquerra és l'espai del joc on
+          el programa s'executarà. Les instruccions per a cada nivell estan escrites
+          a sota.
       6:
         text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
           el nostre programa.
     iceage_intro:
+      4:
+        text: La pantalla es divideix en 3 parts. L'esquerra és l'espai del joc on
+          el programa s'executarà. Les instruccions per a cada nivell estan escrites
+          a sota.
       6:
         text: L'espai blanc a la dreta s'anomena l'espai de treball i aquí és on construirem
           el nostre programa.
+    hoc_dance_events_2019:
+      4:
+        text: Alguns exemples d'esdeveniments s'activen amb un clic del ratolí, una
+          tecla de fletxa o quan es toca la pantalla.

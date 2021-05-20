@@ -39,6 +39,10 @@ export function createButton(pin) {
   return executeCmd(null, 'createButton', {pin});
 }
 
+export function createCapacitiveTouchSensor(pin) {
+  return executeCmd(null, 'createCapacitiveTouchSensor', {pin});
+}
+
 export function onBoardEvent(component, event, callback) {
   return executeCmd(null, 'onBoardEvent', {component, event, callback});
 }

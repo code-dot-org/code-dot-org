@@ -1,7 +1,5 @@
 ---
 title: Une Heure de Code comment faire ?
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- ** Autres idées d'événements**: 
     - Invitez un chef d'industrie locale à discuter de ses travails liés à l'informatique.
     - Invitez un politicien locale et demandez aux élèves de lui apprendre le codage.
     - Demandez un groupe d'élèves de faire une démonstration d'une activité hors ligne.

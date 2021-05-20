@@ -13,7 +13,7 @@ ky:
     attributes:
       user:
         name: Атын көрсөт
-        name_example: Атын көрсөт<br/>(м. Мыкты кодер же Жаңыл)
+        name_example: Атын көрсөт (м. Мыкты кодер же Жаңыл)
         email: Эмейл
         username: Колдонуучунун аты
         password: Сырсөз
@@ -52,6 +52,8 @@ ky:
     change_form:
       new_password: Жаңы сырсөз
       confirm_password: Жаңы сырсөздү тастыкта
+  parent_mailer:
+    parent_email_added_subject: Code.org сайтына кош келиңиз!
   teacher_mailer:
     new_teacher_subject: Code.org сайтына кош келиңиз!
   section:
@@ -60,10 +62,13 @@ ky:
       google_classroom: Google Classroom
   crud:
     new_model: Жаңы %{model}
+    show: көрсөт
+    edit: өзгөртүү
     submit: Кошуу
   nav:
     header:
       my_dashboard: Менин тактам
+      sections: Класс секциялары
       educate_hoc: Код сааты
       about_news: Жаңылыктар
     user:
@@ -81,13 +86,19 @@ ky:
       minecraft_adventurer: Minecraft тентек
       minecraft_hero: Minecraft каарманы
       playlab_k1: Play Lab (мектепке чейин)
+      scratch: Scratch
       weblab: Web Lab
   teacher:
     panel:
       section: Секция
+  user:
+    none: Жок
+  home:
+    trynow: Дагы кара
   video:
     notes: Видео жокпу? Эскертмелери көрсөт.
     show_notes: Эскертмелери көрсөт
+    label: Видео
   compatibility:
     upgrade:
       link: Дагы кара
@@ -126,6 +137,8 @@ ky:
     startover_title: Кайрадан баштагыңыз келгени аныкпы?
     startover_ok: Кайра баштоо
     startover_cancel: Жок кыл
+  time:
+    day: күн
   terms_interstitial:
     print: Бастыр
   race_interstitial:
@@ -147,31 +160,27 @@ ky:
       report_abuse_form:
         abuse_type:
           other: Башка
-  flex_category:
-    csf_jigsaw: Jigsaw
-    csf_loops: Циклдер
-    csf_events: Окуялар
-    csf_conditionals: Шартуулар
-    csf_functions: Функциялар
-    csf_variables: Өзгөрмөлөр
-    csp_variables: Өзгөрмөлөр
-    csp_conditionals: Шартуулар
-    csp_functions: Функциялар
-    csp_lists: Тизмелер
-    csp_loops: Циклдер
+  hoc_download:
+    minecraft_name: Minecraft код сааты
+    windows: Windows
   view_all_units: Бардык бирдиктерди көрүү
   pd:
     form_labels:
       email: Эмейл
       school_city: Мектеп жайгашкан шаар
+      colombian_school_city: Мектеп жайгашкан шаар
     form_entries:
       subjects:
         cs: Информатика
         math: Математика
         science: Илим
         la: Тил өнөрлөрү
+      resources:
+        khan: Khan Academy
+        scratch: Scratch
+      robotics:
+        grok: Grok үйрөнүү
       email_opt_in:
         opt_in_yes: Ооба
         opt_in_no: Жок
-  gdpr_dialog:
-    true: Ооба
+  copy: Көчүрүү

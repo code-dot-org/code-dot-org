@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 sv:
   slides:
     maze_intro:
@@ -231,7 +236,7 @@ sv:
       3:
         text: "När du har lärt en dator hur den kan göra en åtgärd en gång med en viss följd av kommandon, kan du hitta på ditt eget namn för åtgärden så att det är lätt att upprepa den senare. När du definierar ditt eget kommando och ger det ett namn, kallas det en funktion."
       4:
-        text: "Hej, jag heter Jess. När du programmerar med block använder du funktioner om där finns en samling åtgärder du vill använda flera gånger. Du har till exempel skrivit kod för att skapa en kvadrat."
+        text: "Hej, jag heter Jess. När du programmerar med block använder du funktioner om det finns en samling åtgärder du vill använda flera gånger. Du har till exempel skrivit kod för att skapa en kvadrat."
       5:
         text: "Du kan definiera detta som en funktion kallad \"skapa en kvadrat.\" "
       6:
@@ -1183,3 +1188,24 @@ sv:
         text: "Detta är ett \"Upprepa för evigt\"-block. Allt inuti detta block kommer att hända för evigt i spelet. Om vi vill att en skådespelare gör något om och om igen utan att spelaren att gör något så lägger vi dessa block inne i ett \"Upprepa för evigt\"-block."
       3:
         text: "I nästa pussel är vårt mål att hjälpa skådespelaren gör ett jobb kontinuerligt. När du lär dig hur upprepa-kommandon fungerar så kommer du att spara massor av tid senare när du bygger ditt eget spel."
+    mc_2016_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+        text: "Om du någonsin vill ta bort ett block, dra bort den från stacken och dra den tillbaka in i verktygslådan."
+      9:
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Några exempel på händelser är att lyssna efter ett musklick, en pilknapp eller ett tryck på skärmen."
+      5:
+      6:
+      7:
+      8:

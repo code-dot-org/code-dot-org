@@ -1,0 +1,1108 @@
+{
+  "script": {
+    "name": "algebraPD1",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "CS in Algebra Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:47 UTC",
+    "seeding_key": {
+      "script.name": "algebraPD1"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to PD",
+      "name": "Introduction to PD",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "Course Overview",
+      "name": "Course Overview",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "Why Computer Science belongs in Algebra",
+      "name": "Why Computer Science belongs in Algebra",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "Evaluation Blocks",
+      "name": "Evaluation Blocks",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "Teacher Dashboard",
+      "name": "Teacher Dashboard",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "key": "Preparing for in-person PD",
+      "name": "Preparing for in-person PD",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Intro"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg Intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg commitment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg commitment"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg commitment match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg commitment match"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg commitment match"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Teacher Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Teacher Introduction"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg Teacher Introduction"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Scope"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Scope"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg Scope"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg implementation"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg implementation"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg implementation"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg course goals"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg course goals"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg course goals"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AlgPD Break"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AlgPD Break"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "AlgPD Break"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg functions"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg functions"
+        ],
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg functions"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg hard video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg hard video"
+        ],
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg hard video"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg functional"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg functional"
+        ],
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg functional"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Blocks Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Blocks Video"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg Blocks Video"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 1"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 2"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 3"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 3"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 5"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 5"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 6"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 6"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 7"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 7"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 8"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 8"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval 9"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval 9"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Calc Circles of Eval Free Play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Calc Circles of Eval Free Play"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "Calc Circles of Eval Free Play"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Teacher Dashboard 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Teacher Dashboard 1"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDK5 Teacher Dashboard 1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Teacher Dashboard 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Teacher Dashboard 2"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDK5 Teacher Dashboard 2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Teacher Dashboard"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Teacher Dashboard"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg Teacher Dashboard"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg End of P1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg End of P1"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg End of P1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDAlg Post Survey"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDAlg Post Survey"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      },
+      "level_keys": [
+        "PDAlg Post Survey"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Intro",
+        "script_level.level_keys": [
+          "PDAlg Intro"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg commitment",
+        "script_level.level_keys": [
+          "PDAlg commitment"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg commitment match",
+        "script_level.level_keys": [
+          "PDAlg commitment match"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Teacher Introduction",
+        "script_level.level_keys": [
+          "PDAlg Teacher Introduction"
+        ],
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Scope",
+        "script_level.level_keys": [
+          "PDAlg Scope"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg implementation",
+        "script_level.level_keys": [
+          "PDAlg implementation"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg course goals",
+        "script_level.level_keys": [
+          "PDAlg course goals"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AlgPD Break",
+        "script_level.level_keys": [
+          "AlgPD Break"
+        ],
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg functions",
+        "script_level.level_keys": [
+          "PDAlg functions"
+        ],
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg hard video",
+        "script_level.level_keys": [
+          "PDAlg hard video"
+        ],
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg functional",
+        "script_level.level_keys": [
+          "PDAlg functional"
+        ],
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Blocks Video",
+        "script_level.level_keys": [
+          "PDAlg Blocks Video"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 1",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 1"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 2",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 2"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 3",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 3"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 5",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 5"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 6",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 6"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 7",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 7"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 8",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 8"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval 9",
+        "script_level.level_keys": [
+          "Calc Circles of Eval 9"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Calc Circles of Eval Free Play",
+        "script_level.level_keys": [
+          "Calc Circles of Eval Free Play"
+        ],
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Teacher Dashboard 1",
+        "script_level.level_keys": [
+          "PDK5 Teacher Dashboard 1"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Teacher Dashboard 2",
+        "script_level.level_keys": [
+          "PDK5 Teacher Dashboard 2"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Teacher Dashboard",
+        "script_level.level_keys": [
+          "PDAlg Teacher Dashboard"
+        ],
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg End of P1",
+        "script_level.level_keys": [
+          "PDAlg End of P1"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDAlg Post Survey",
+        "script_level.level_keys": [
+          "PDAlg Post Survey"
+        ],
+        "lesson.key": "Preparing for in-person PD",
+        "lesson_group.key": "",
+        "script.name": "algebraPD1"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

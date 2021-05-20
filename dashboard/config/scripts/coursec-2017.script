@@ -1,7 +1,6 @@
 hidden false
-hideable_stages true
-stage_extras_available true
-has_lesson_plan true
+hideable_lessons true
+lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
@@ -9,13 +8,15 @@ new_name 'coursec-2017'
 family_name 'coursec'
 version_year '2017'
 is_stable true
-supported_locales ["es-ES", "es-MX", "sk-SK"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
+tts true
+is_course true
 
-stage 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Persistence: Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 
-stage 'Programming in Maze'
+lesson 'Programming in Maze', display_name: 'Programming in Maze', has_lesson_plan: true
 level 'courseC_video_maze'
 level 'courseC_maze_programming1'
 level 'courseC_maze_programming2'
@@ -30,7 +31,7 @@ level 'courseC_maze_programming9'
 bonus 'courseC_maze_programming_challenge1'
 bonus 'courseC_maze_programming_challenge2'
 
-stage 'Debugging in Maze'
+lesson 'Debugging in Maze', display_name: 'Debugging in Maze', has_lesson_plan: true
 level 'courseC_video_debugging'
 level 'courseC_maze_debugging1'
 level 'courseC_maze_debugging2'
@@ -44,10 +45,10 @@ level 'courseC_maze_debugging9'
 bonus 'courseC_maze_debugging_challenge1'
 bonus 'courseC_maze_debugging_challenge2'
 
-stage 'Real-life Algorithms: Paper Planes'
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true, unplugged: true
 level 'PaperPlanes'
 
-stage 'Programming in Collector'
+lesson 'Programming in Collector', display_name: 'Programming in Collector', has_lesson_plan: true
 level 'courseC_video_collector'
 level 'courseC_collector_prog1'
 level 'courseC_collector_prog2'
@@ -64,7 +65,7 @@ level 'grade2_collector_10'
 bonus 'courseC_collector_prog_challenge1'
 bonus 'courseC_collector_prog_challenge2'
 
-stage 'Programming in Artist'
+lesson 'Programming in Artist', display_name: 'Programming in Artist', has_lesson_plan: true
 level 'courseC_video_artist'
 level 'courseC_artist_prog1'
 level 'courseC_artist_prog2'
@@ -78,10 +79,10 @@ level 'courseC_artist_prog6_predict1'
 bonus 'courseC_artist_prog_challenge1'
 bonus 'courseC_artist_prog_challenge2a'
 
-stage 'Loops: Getting Loopy'
+lesson 'Loops: Getting Loopy', display_name: 'Loops: Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 
-stage 'Loops with Rey and BB-8'
+lesson 'Loops with Rey and BB-8', display_name: 'Loops with Rey and BB-8', has_lesson_plan: true
 level 'courseC_starWars_loops1'
 level 'courseC_starWars_loops1_predict1'
 level 'courseC_starWars_loops2'
@@ -97,7 +98,7 @@ level 'courseC_starWars_loops11'
 bonus 'courseC_maze_loops_challenge1a'
 bonus 'courseC_collector_loops_challenge2'
 
-stage 'Loops in Artist'
+lesson 'Loops in Artist', display_name: 'Loops in Artist', has_lesson_plan: true
 level 'courseC_artist_loopsPrePre1a'
 level 'courseC_artist_loopsPre1a'
 level 'courseC_artist_loop1'
@@ -111,7 +112,7 @@ level 'courseC_artist_loops6a'
 level 'courseC_artist_loops7a'
 level 'courseC_artist_loops8a'
 
-stage 'Loops in Harvester'
+lesson 'Loops in Harvester', display_name: 'Loops in Harvester', has_lesson_plan: true
 level 'courseC_harvester_loops1'
 level 'courseC_harvester_loops2'
 level 'courseC_harvester_loops3'
@@ -127,10 +128,10 @@ level 'courseC_harvester_loops11_predict1'
 bonus 'courseC_harvester_loops_challenge1a'
 bonus 'courseC_harvester_loops_challenge2'
 
-stage 'Events: The Big Event'
+lesson 'Events: The Big Event', display_name: 'Events: The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 
-stage 'Build a Flappy Game'
+lesson 'Build a Flappy Game', display_name: 'Build a Flappy Game', has_lesson_plan: true
 level 'courseC_video_flappyIntro'
 level 'courseC_flappy_events1'
 level 'courseC_flappy_events2'
@@ -143,7 +144,7 @@ level 'courseC_flappy_events8'
 level 'courseC_flappy_events9'
 level 'courseC_flappy_events10'
 
-stage 'Events in Play Lab'
+lesson 'Events in Play Lab', display_name: 'Events in Play Lab', has_lesson_plan: true
 level 'courseC_PlayLab_events1'
 level 'courseC_PlayLab_events2'
 level 'courseC_PlayLab_events3'
@@ -157,8 +158,9 @@ level 'courseC_PlayLab_eventsA'
 level 'courseC_PlayLab_eventsFP'
 bonus 'courseC_PlayLab_events_challenge1'
 
-stage 'Screen Out the Mean'
+lesson 'Screen Out the Mean', display_name: 'Digital Citizenship: Screen Out the Mean', has_lesson_plan: true, unplugged: true
 level 'courseC_Unplugged_ScreenOutTheMean'
 
-stage 'Binary Bracelets'
+lesson 'Binary Bracelets', display_name: 'Beyond Programming: Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets'
+

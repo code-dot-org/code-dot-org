@@ -8,14 +8,6 @@ import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 class ControlProjectSharingDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -48,11 +40,13 @@ class ControlProjectSharingDialog extends Component {
           </div>
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.props.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
+              __useDeprecatedTag
               text={i18n.projectSharingDialogButton()}
               onClick={this.handleShowSharingClick}
               color={Button.ButtonColor.orange}
@@ -63,6 +57,14 @@ class ControlProjectSharingDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
 

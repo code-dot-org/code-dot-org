@@ -27,10 +27,11 @@ class ImageModerationTest < Minitest::Test
     assert_equal :racy, ImageModeration.rate_image(@image_body, @content_type, test_image_url)
   end
 
-  def test_allow_everything_when_moderation_fails
+  def test_returns_unknown_when_moderation_fails
     test_err = AzureContentModerator::AzureError.new('Test error')
     AzureContentModerator.any_instance.stubs(:rate_image).raises(test_err)
     Honeybadger.expects(:notify).once.with(test_err)
-    assert_equal :everyone, ImageModeration.rate_image(@image_body, @content_type)
+    FirehoseClient.any_instance.expects(:put_record).with(:analysis, {study: 'azure-content-moderation', study_group: 'v1', event: 'moderation-error', data_string: test_err})
+    assert_equal :unknown, ImageModeration.rate_image(@image_body, @content_type)
   end
 end

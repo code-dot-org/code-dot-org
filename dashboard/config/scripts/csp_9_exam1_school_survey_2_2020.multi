@@ -1,0 +1,27 @@
+name 'csp-9-exam1-school-survey-2-2020'
+editor_experiment ''
+wrong 'How Travel'
+right 'How Long'
+wrong 'Time Arrive'
+wrong 'Biggest Challenges'
+
+markdown <<MARKDOWN
+This question refers to the same table of data described above.
+
+Which column of data might be able to be  visualized or analyzed but first would need to be cleaned?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** After deciding on a standard form for the data in this column, the data could all be converted to this form and then visualized and analyzed.
+
+Students worked on cleaning data in [Lesson 3 - Cleaning and Filtering Data](https://curriculum.code.org/csp-20/unit9/3/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.C: Identify the challenges associated with processing data.
+:::
+
+
+MARKDOWN

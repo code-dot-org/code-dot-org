@@ -1,0 +1,15 @@
+---
+ca:
+  data:
+    parameter_names:
+      actor: actor
+      counter: comptador
+      height: alçcada
+      honey: mel
+      left: esquerra
+      length: longitud
+      min: min
+      points: punts
+      size: mida
+      speed: velocitat
+      width: amplada

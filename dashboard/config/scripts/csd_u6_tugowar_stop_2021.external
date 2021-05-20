@@ -1,0 +1,8 @@
+name 'CSD U6 tugowar stop_2021'
+display_name 'Plan Your Project'
+css 'unplugged'
+markdown <<MARKDOWN
+# Stop
+
+Before you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher as well.
+MARKDOWN

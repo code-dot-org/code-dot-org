@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # The map on code.org/yourschool is run off of Mapbox.
 # This script updates the data on Mapbox by querying all rows from
@@ -10,7 +12,6 @@
 #   CDO.mapbox_upload_token: (the auth token for uploading tiles to Mapbox's servers)
 
 require_relative '../../dashboard/config/environment'
-require 'cdo/only_one'
 require 'cdo/properties'
 
 require_relative 'upload_to_mapbox'
@@ -22,7 +23,24 @@ def make_location(lat, long)
 end
 
 def main
-  return unless only_one_running?(__FILE__)
+  # Update summaries before updating the fusion table
+  # If any single teaches_cs category in a given year changes by more than
+  # 10% of the total number of schools then issue a Honeybadger notification.
+  threshold = School.count * 0.1
+  old_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
+  Census::CensusSummary.summarize_census_data
+  new_summary_counts = Census::CensusSummary.group(:school_year, :teaches_cs).count
+
+  unless old_summary_counts.select {|k, c| (c - new_summary_counts[k]).abs > threshold}.empty?
+    Honeybadger.notify(
+      error_message: "High rate of change in census_summaries. This may be expected if summary logic was recently changed or if a new data source was just added.",
+      error_class: "Census Summary High Rate of Change",
+      context: {
+        old_counts: old_summary_counts,
+        new_counts: new_summary_counts
+      }
+    )
+  end
 
   # The map should show the data from the school year that began
   # in the previous calendar year. So, Aug-Dec we show the previous school

@@ -1,0 +1,59 @@
+name 'Rules About Choosing Good IDs_2018_2019_virtual'
+title 'title'
+description 'description here'
+css 'unplugged'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Choosing Good IDs
+
+**Good IDs** are **meaningful and descriptive**.
+
+Just like good names for functions, you will want an ID to describe the intended purpose of the element.  
+
+For example, if you have many buttons in your program, you will want to give each an ID that describes what the button does. 
+
+So, instead of this:
+ 
+ * `button1` and `button2`
+
+You might make IDs that convey not only that it's a button but what you intend the button to be used for, like:
+
+ * `forwardButton` and `leftButton` or
+ * `fwdBtn` and `leftBtn` or
+ * `forwardBtn` and `leftBtn`
+ * it's up to you!
+
+<img src="https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png" style="display: block; margin: auto;">
+
+# Rules About IDs
+In making descriptive and meaningful IDs there **are some rules about IDs** you need to know.  IDs...
+
+* are case-sensitive
+* cannot contain spaces.
+* *must* begin with a letter (A-Z or a-z) and may be followed by any number of digits and letters.
+* can contain hyphens ("-"), underscores ("_"), colons (":"), or periods (".").
+
+**Why no spaces?** 
+
+Many computer systems do not allow function names and IDs to contain spaces. We typically use camelcase in our lessons. 
+
+You've already seen several examples like this: `moveForward`, `onEvent`, `turnLeft`, etc.  It's important to realize that camelcase is a style convention, not a hard and fast rule of JavaScript.
+
+**Case-sensitive?**
+
+This means there is a difference between `LeftBtn` and `leftBtn`  (notice the Capital L on the first one).
+
+These differences seem annoying at first, but you get used to it, and actually learn to appreciate the fact that the computer requires such precision.
+
+There are a few common styles for capitalizing and spelling multi-word IDs:
+
+* **"Camelcase"** -- `aCamelcaseNameMightLookLikeThis`
+* **Underscores** -- `Some_people_like_to_use_underscores_to_separate_words`
+* **dashes** -- `Others-like-to-use-hyphens-or-dashes`
+
+Whatever you choose is up to you.  It's your style.  It just helps to be consistent.
+
+
+
+
+MARKDOWN

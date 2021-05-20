@@ -40,7 +40,7 @@ vi:
         NetSim: bộ mô phỏng internet
         Custom: Họa sĩ
         CustomStudio: Phòng trò chơi
-        Gamelab: Kho Trò chơi
+        Gamelab: Phòng thí nghiệm trò chơi
     trophy:
       name:
         Bronze: Đồng
@@ -416,22 +416,44 @@ vi:
         studio_playlab_10: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
           thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
           của họ.
-        studio_iceage_hello1: Sid muốn tập hợp tất cả mọi người một chuyến phiêu lưu
-          mới. Bạn có thể giúp cậu ấy nói "Xin chào" bằng cách kéo các khối "nói"
-          vào khu vực làm việc và gõ từ "xin chào" bên trong?
+        studio_iceage_hello1: Sid muốn tập hợp tất cả mọi người trong một chuyến phiêu
+          lưu mới. Bạn có thể giúp cậu ấy nói “Xin chào” bằng cách kéo các khối “nói”
+          vào không gian làm việc và gõ từ “xin chào” bên trong không?
         studio_iceage_hello2: Manny (nhân vật 1) tìm thấy Sid (nhân vật 2) và muốn
-          mời anh ta vào cuộc phiêu lưu. Giúp họ chào nhau bằng cách sử dụng khối
-          "nhân vật nói" hai lần.
-        studio_iceage_move_to_flag: Scrat đang tìm kiếm acorn của mình!  Giúp cậu
-          ấy đi tới cuối 200 pixels bằng cách sử dụng  khối "di chuyển".
+          mời anh ta tham gia cuộc phiêu lưu. Hãy giúp họ chào nhau bằng cách sử dụng
+          khối “nhân vật nói” hai lần.
+        studio_iceage_move_to_flag: Scrat đang tìm kiếm hạt sồi của mình! Hãy giúp
+          cậu ấy đi tới 200 pixel cuối bằng cách sử dụng khối “di chuyển”.
         studio_iceage_move_to_actor: Diego (nhân vật 1) đang tìm kiếm Manny (nhân
-          vật 2). Giúp Diego di chuyển 200 điểm ảnh xuống để Manny sử dụng khối "di
-          chuyển nhân vật". Tiếp theo, kết nối một khối với sự kiện "khi nhân vật
-          chạm" để phát âm thanh khi họ tìm thấy nhau.
+          vật 2). Hãy giúp Diego di chuyển xuống 200 pixel tới chỗ Manny bằng khối
+          “di chuyển nhân vật”. Tiếp theo, hãy nối một khối với sự kiện “khi nhân
+          vật chạm” để phát âm thanh khi họ tìm thấy nhau.
         studio_iceage_repeat: Khối lệnh "lặp lại mãi mãi" cho phép bạn có
           thể chạy đoạn mã liên tục. Bạn có thể gắn khối lệnh để giúp
           Granny tập thể dục bằng cách di chuyển qua trái và qua phải lặp
           lại không?
+        studio_iceage_click_hello: Bạn có thể giúp Sid thử gọi bạn bè lần cuối khi
+          nhấp chuột không? Đừng quên nhấp chuột vào cậu ta sau khi nhấn Chạy.
+        studio_iceage_move_events: Scrat vẫn đang tìm hạt sồi! Hãy giúp cậu ấy lùng
+          sục xung quanh bằng cách gắn khối “di chuyển” vào mỗi sự kiện và thay đổi
+          hướng hoạt động cho mỗi phím mũi tên. Khi bạn hoàn tất, hãy nhấp chuột vào
+          Chạy và cố gắng thu thập tất cả các hạt sồi nhé.
+        studio_iceage_sound_and_points: Chúng tôi đã cung cấp hầu hết các mã lệnh
+          giúp Granny di chuyển sang trái và phải cũng như mã lệnh để di chuyển Sid
+          quanh màn hình. Bạn có thể hoàn thành mã lệnh và thêm các khối vào sự kiện
+          “khi diễn viên chạm vào” để tạo ra sự kiện đó và cả hai cùng phát ra âm
+          thanh cũng như ghi điểm khi Sid và Granny va chạm không? Nhấn Chạy để chơi
+          trò chơi.
+        studio_iceage_warn_ice_age: Mọi người cần phải di chuyển nhanh hơn vì kỷ băng
+          hà đang đến gần! Hãy đổi cảnh nền thành băng giá và đặt tốc độ của Sid thành
+          nhanh, sau đó nhấn Chạy và di chuyển cậu ta đến chỗ Diego để cảnh báo.
+        studio_iceage_throw_hearts: Sid muốn cho bà của mình, Granny, biết rằng anh
+          yêu bà. Hãy sử dụng lệnh “diễn viên ném” để Sid (diễn viên 1) ném trái tim
+          vào Granny (diễn viên 2)! Đặt tâm trạng của Granny thành hạnh phúc khi bà
+          nhận được trái tim.
+        studio_iceage_free_play: Đã đến lúc làm game hoặc câu chuyện của riêng bạn
+          rồi! Khi bạn hoàn tất, hãy nhấp chuột vào Hoàn tất để cho bạn bè của mình
+          chơi thử game của bạn trên điện thoại, máy tính bảng hoặc máy tính của họ!
         studio_full_sandbox: Tạo trò chơi của chính bạn. Sau khi hoàn thành, bấm "Hoàn
           thành" để cho bạn của bạn chơi thử trò chơi bạn vừa tạo ra trên điện thoại
           của họ.
@@ -493,7 +515,7 @@ vi:
         Unplug7: Sáng tác nhạc
         Unplug8: Trừu tượng
         Unplug9: Chương trình chuyển tiếp
-        Unplug10: Kết nối mạng
+        Unplug10: internet
         Unplug11: Gói gọn
         C1_happy_maps_unplugged: Bản đồ thú vị
         C1_moveitmoveit_unplugged: Di chuyển nó, di chuyển nó
@@ -542,7 +564,7 @@ vi:
         C3_playlab_create_game: 'Phòng trò chơi: Thiết kế trò chơi'
         C3_computational_thinking: Tư duy máy tính
         C3_dice_race: Vòng quay xúc sắc
-        C3_internet: Kết nối mạng
+        C3_internet: internet
         C3_crowdsourcing: Đa nguồn
         C3_functional_suncatchers: Chức năng của tấm hứng ánh nắng
         C3_songwriting_with_parameters: Sáng tác nhạc với tham số
@@ -565,6 +587,8 @@ vi:
         C4_unplugged_forloops: Cho vòng lặp
         C4_unplugged_parameters: Sáng tác với tham số
         C4_unplugged_binary: Nhị phân
+        CSF_a_b_artist_loops: Vòng lặp trong Artist
+        CSF_artist_angles: Góc trong Artist
         CSF_maze_intro_k1_blocks: Hướng dẫn sử dụng Code Studio
         CSF_maze_intro_text_blocks: Hướng dẫn sử dụng Code Studio
         CSF_my_robotic_friends: Bạn bè robot của tôi
@@ -581,24 +605,54 @@ vi:
         csp_applab_functions: Giới thiệu về hàm
         csp_applab_functions_parameters: Hàm và tham số
         csp_applab_loops: Vòng lặp
+        csp_cs_is_changing_everything: Khoa học máy tính là Thay đổi Tất cả mọi thứ
+        starwars_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới thiệu'
+        starwars_typing: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - JavaScript'
+        starwars_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
+        starwars_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc mừng'
+        starwars_blocks_intro: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Giới
+          thiệu'
+        starwars_blocks_events: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Sự kiện'
+        starwars_blocks_congrats: 'Star Wars: Tạo ra một ngân hà bằng mã lệnh - Chúc
+          mừng'
         mc_intro: Minecraft - Giới thiệu
         mc_repeat: Minecraft - Lặp lại
         mc_if_statements: Minecraft - Lệnh if
         mc_congrats_share: Minecraft - Xin chúc mừng
         mc_congrats_no_share: Minecraft - Xin chúc mừng
+        mc_2016_intro: Giờ lập trình Minecraft - Giới thiệu
+        mc_2016_loops: Giờ lập trình Minecraft - Vòng lặp
+        mc_2016_events: Giờ lập trình Minecraft - Sự kiện
+        mc_2016_spawn: Giờ lập trình Minecraft - Tạo nhân vật
+        mc_2016_congrats: Giờ lập trình Minecraft - Chúc mừng
         mc_2017_agent_intro: Giờ lập trình Minecraft - Đặc vụ
+        mc_2017_repeat: Giờ lập trình Minecraft - Vòng lặp liên tiếp
+        mc_2017_functions: Giờ lập trình Minecraft - Hàm
+        mc_2017_congratulations: Giờ lập trình Minecraft - Chúc mừng
         mc_2017_puzzle_1: Giờ lập trình Minecraft - Đặc vụ
+        mc_2017_puzzle_3: Giờ lập trình Minecraft - Vòng lặp liên tiếp
+        mc_2017_puzzle_8: Giờ lập trình Minecraft - Hàm
+        mc_2017_puzzle_12: Giờ lập trình Minecraft - Chơi tự do
         csd_applab_arrays: Giới thiệu Danh sách
         CSF_scrat_loops_K1: Vòng lặp trong Kỷ băng hà
         CSF_scrat_loops_CF: Vòng lặp trong Kỷ băng hà
         CSF_loops_AB: Vòng lặp
+        CSF_StarWars_ProjectIntro: Giới thiệu Dự án Star Wars
         mc_2018_intro: 'Minecraft: Chuyến thám hiểm đại dương - Giới thiệu'
         MC_2018_loops: 'Minecraft: Chuyến thám hiểm đại dương - Lặp tới khi'
         mc_2018_conditionals: 'Minecraft: Chuyến thám hiểm đại dương - Điều kiện'
         mc_2018_closing: 'Minecraft: Chuyến thám hiểm đại dương - Chúc mừng'
+        hoc_dance_warmup: Bữa Tiệc Khiêu Vũ - Khởi động
+        hoc_dance_congrats: Bữa Tiệc Khiêu Vũ - Quẩy lên!
         csd_pair_programming: Lập trình đôi
         csd_applab_parameters: Hàm và tham số
         csd_problem_solving_process: Quá trình giải quyết vấn đề
+        hoc_dance_congrats_2019: Bữa Tiệc Khiêu Vũ 2019 - Quẩy lên!
+        hoc_dance_warmup_2019: Bữa Tiệc Khiêu Vũ 2019 - Khởi động
+        hoc_dance_events_2019: Bữa Tiệc Khiêu Vũ 2019 - Sự kiện
+        hoc_dance_measures_2019: Bữa Tiệc Khiêu Vũ 2019 - Nhịp
+        hoc_dance_properties_2019: Bữa Tiệc Khiêu Vũ 2019 - Thuộc tính
+        csd_what_computers_are: Máy tính là gì?
     callout:
       text:
         drag_blocks: Kéo một khối "di chuyển" và gán nó bên dưới khối khác

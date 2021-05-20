@@ -1,0 +1,14 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "countByAnimation",
+    "blockText": "number of {SPRITE}",
+    "returnType": "Number",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

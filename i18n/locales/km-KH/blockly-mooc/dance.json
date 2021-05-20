@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "ត្រូវប្រាកដថាអ្នកប្រើប្រាស់ 'every 2 measures' block",
   "danceFeedbackNeedMakeANewDancer": "ប្រើ 'make a new' block ដើម្បីបង្កើតអ្នករាំម្នាក់ទៀត",
   "danceFeedbackKeyEvent": "ត្រូវប្រាកដថាអ្នកភ្ជាប់កូដខ្លះទៅនឹង 'when key' block និងធ្វើការចុច key នៅពេលដែលអ្នករាំរបស់អ្នកកំពុងតែរាំ",
-  "measure": ""
+  "danceFeedbackDidntPress": "ចូរប្រាកដថាអ្នកបានចុចលើគ្រាប់ក្តារចុចសញ្ញាព្រួញ ខណះពេលការរាំរបស់អ្នកកំពុងមានចលនា។",
+  "danceFeedbackPressedKey": "អ្នកបានចុចលើគ្រាប់ក្តារចុច ប៉ុន្តែអ្នករបាំរបស់អ្នកមិនបានឆ្លើយតបនោះទេ។",
+  "danceFeedbackNeedTwoDancers": "អ្នកត្រូវបង្កើតអ្នករបាំពីរនាក់។",
+  "danceFeedbackOnlyOneDancerMoved": "មានតែអ្នករបាំម្នាក់គត់ដែលបានផ្លាស់ទីតាំង។",
+  "danceFeedbackNeedLead": "អ្នកក៏ត្រូវបង្កើតអ្នករបាំនាំមុខម្នាក់ជាមួយនឹង<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>ប្លុក។",
+  "danceFeedbackNeedBackup": "អ្នកត្រូវបង្កើតក្រុមអ្នករបាំបម្រុងទុកជាមួយ<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">១០</title><title name=\"COSTUME\">​\"សេះដុះស្នែង</title><title name=\"LAYOUT\">\"រង្វង់</title></block></xml>ប្លុក។",
+  "danceFeedbackSetSize": "អ្នកត្រូវផ្លាស់ប្តូរទំហំអ្នករាំយ៉ាងហោចណាស់ម្នាក់បន្ទាប់ពីតន្ត្រីចាប់ផ្តើម។",
+  "measure": "វាស់កំរិត៖"
 }

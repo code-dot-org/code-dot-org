@@ -1,0 +1,20 @@
+---
+lv:
+  data:
+    variable_names:
+      actor: aktieris
+      counter: cikla mainīgais
+      height: augstums
+      honey: medus
+      left: pa kreisi
+      length: garums
+      nectar: nektārs
+      points: punkti
+      random: nejaušs
+      repeat: atkārtot
+      right: pa labi
+      score: rezultāts
+      size: izmērs
+      speed: ātrums
+      variable: mainīgais
+      x: x

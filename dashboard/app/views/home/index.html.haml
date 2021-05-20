@@ -3,6 +3,9 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
+-if current_user&.school_donor_name
+  - content_for :above_footer_content do
+    = render partial: 'home/donor_footer'
 
 -# Student modal
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
@@ -12,9 +15,14 @@
 - if current_user && current_user.teacher? && !current_user.accepted_latest_terms?
   = render partial: 'layouts/terms_interstitial'
 - elsif SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user) || @force_school_info_confirmation_dialog
+  - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_confirmation_dialog'
 - elsif SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
+  - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
+
+- if ThankDonorsInterstitialHelper.show?(current_user, request)
+  = render partial: 'layouts/thank_donors_interstitial'
 
 - if current_user
   = render partial: 'home/homepage'

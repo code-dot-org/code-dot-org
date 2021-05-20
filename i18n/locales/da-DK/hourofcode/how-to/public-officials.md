@@ -1,10 +1,8 @@
 ---
 title: Guide for offentligt ansatte
-layout: wide
-nav: how_to_nav
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # How to involve your entire community
 
@@ -26,7 +24,7 @@ From left to right: *Governors from Arkansas, North Carolina, and Arizona partic
 
 ### 1. Read our one-pager
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Recruit local schools and districts
 
@@ -63,4 +61,4 @@ Consider publishing an opinion piece in your local paper. See this [sample op-ed
 
 [Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
 
-{{ signup_button }}
+{{ tilmeld_knap }}

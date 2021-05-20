@@ -1,19 +1,21 @@
-hideable_stages true
-stage_extras_available true
+hideable_lessons true
+lesson_extras_available true
 
-stage 'Jigsaw'
+lesson 'Jigsaw', display_name: 'Jigsaw', has_lesson_plan: false
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
 
-stage 'Maze'
+lesson 'Maze', display_name: 'Maze', has_lesson_plan: false
 level 'k-1 maze 1'
 level 'K-1 Maze Loops 3'
 level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
 level 'courseC_maze_programming3', challenge: true
+level 'allthethings-anigif-instructions'
 
-stage 'Artist'
+lesson 'Artist', display_name: 'Artist', has_lesson_plan: false
 level 'K-1 Artist1 1'
 level '2-3 Artist 1 new'
 level '2-3 Artist Functions 4'
@@ -24,7 +26,7 @@ level 'Angle Helper Test'
 level 'allthethings-artist-project-backed'
 level 'Artist Autorun Test'
 
-stage 'Bee'
+lesson 'Bee', display_name: 'Bee', has_lesson_plan: false
 level 'K-1 Bee 1'
 skin 'letters'
 video_key_for_next_level 'C1_spelling_bee_intro'
@@ -34,7 +36,7 @@ level '2-3 Bee Loops 2A'
 level '2-3 Bee Conditionals 5'
 level 'Bee Recommended Blocks test'
 
-stage 'PlayLab'
+lesson 'PlayLab', display_name: 'PlayLab', has_lesson_plan: false
 skin 'studio'
 video_key_for_next_level 'C1_playlab_storytelling'
 level_concept_difficulty '{"sequencing":1}'
@@ -48,34 +50,34 @@ level 'Course 4 Play Lab Params 2'
 level 'allthethings-playlab-project-backed'
 level 'Allthethings Encrypted Play Lab Level'
 
-stage 'Farmer'
+lesson 'Farmer', display_name: 'Farmer', has_lesson_plan: false
 level '4-5 While Loops 4'
 level 'Farmer for Authored Hint testing'
 level 'Farmer for TTS testing'
 
-stage 'Flappy'
+lesson 'Flappy', display_name: 'Flappy', has_lesson_plan: false
 level 'flappy_1'
 
-stage 'Bounce'
+lesson 'Bounce', display_name: 'Bounce', has_lesson_plan: false
 level 'bounce_1'
 
-stage 'Multi'
+lesson 'Multi', display_name: 'Multi', has_lesson_plan: false
 level 'K-1 Happy Maps Multi 1'
 level 'Multi Horizontal Scroll Test'
 level 'Submittable Multi'
 level 'test questionless single multi'
 
-stage 'Multi2'
+lesson 'Multi2', display_name: 'Multi2', has_lesson_plan: false
 level 'Choose 2 Test'
 
-stage 'Match'
+lesson 'Match', display_name: 'Match', has_lesson_plan: false
 level 'K-1 Maze Match 1'
 
-stage 'TextMatch'
+lesson 'TextMatch', display_name: 'TextMatch', has_lesson_plan: false
 level 'Blocks to Math 1'
 level 'PDK5 Strategies O'
 
-stage 'CSinA'
+lesson 'CSinA', display_name: 'CSinA', has_lesson_plan: false
 level 'Calc Circles of Eval .2'
 level 'Eval Strings Images .2'
 level 'Eval Contracts F'
@@ -88,27 +90,27 @@ level 'Sam the Butterfly 2'
 level 'Luigi\'s Pizza 1'
 level 'Eval Define Funcs Test'
 
-stage 'Netsim'
+lesson 'Netsim', display_name: 'Netsim', has_lesson_plan: false
 level 'U1L4 NetSim SendAB'
 level 'U2L5 NetSim Classroom Internet'
 level 'U2L7 NetSim Need for Packets'
 level 'U2L10 NetSim Automatic DNS'
 level 'NetSim_Superuser'
 
-stage 'Odometer'
+lesson 'Odometer', display_name: 'Odometer', has_lesson_plan: false
 level 'Odometer'
 
-stage 'Text Compression'
+lesson 'Text Compression', display_name: 'Text Compression', has_lesson_plan: false
 level 'U1L13 Text Compression'
 
-stage 'Pixelation'
+lesson 'Pixelation', display_name: 'Pixelation', has_lesson_plan: false
 level 'AllTheThings: Pixelation - Lesson 14 - Make the Letter A'
 level 'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color'
 level 'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4'
 level 'Pixelation - AllTheThings 4'
 level 'Pixelation - AllTheThings 5'
 
-stage 'AppLab'
+lesson 'AppLab', display_name: 'AppLab', has_lesson_plan: false
 level 'U3L2 Using Simple Commands'
 level 'U3L03 Define and use turnAround'
 level 'U3L07 - Starry Night Starter Code'
@@ -132,51 +134,52 @@ level 'Applab AllTheThings ResourcesTab AllResources'
 level 'AllTheThings Applab DesignModeDefault'
 level 'Applab allthethings Widget Mode'
 
-stage 'Gamelab'
+lesson 'Gamelab', display_name: 'Gamelab', has_lesson_plan: false
 level 'Gamelab AllTheThings With No Animation Tab'
 level 'Gamelab AllTheThings With Prepopulated Animation'
 level 'Gamelab AllTheThings Embed Level'
 
-stage 'Online PD'
+lesson 'Online PD', display_name: 'Online PD', has_lesson_plan: false
 level 'PDK5 Intro C'
 level 'PDK5 Foundations F'
 
-stage 'Markdown Details'
+lesson 'Markdown Details', display_name: 'Markdown Details', has_lesson_plan: false
 level 'Test External Markdown'
 level 'Test embedded Blockly in instructions'
 level 'Test embedded K1 Blockly in instructions'
 
-stage 'Studio'
+lesson 'Studio', display_name: 'Studio', has_lesson_plan: false
 level 'Resizing Test'
 
-stage 'Multi page assessment'
+lesson 'Multi page assessment', display_name: 'Multi page assessment', has_lesson_plan: false
 level 'K-1 Maze 11'
 level 'Test longassessment levelgroup split new', assessment: true
 
-stage 'Star wars'
+lesson 'Star wars', display_name: 'Star wars', has_lesson_plan: false
 skin 'hoc2015'
 video_key_for_next_level 'starwars_events'
-level_concept_difficulty '{}'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:StudioEC:js_hoc2015_event_two_items'
 skin 'hoc2015x'
-level_concept_difficulty '{}'
+concepts 'sequence'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_5'
 
-stage 'Minecraft'
+lesson 'Minecraft', display_name: 'Minecraft', has_lesson_plan: false
 level 'Overworld Chop Tree - allthethings'
 level 'MC Agent Freeplay'
 level 'Craft Aquatic - allthethings'
 
-stage 'Rich long assessment'
+lesson 'Rich long assessment', display_name: 'Rich long assessment', has_lesson_plan: false
 level 'PS U3 Assessment1 new', assessment: true
 
-stage 'Free Response'
+lesson 'Free Response', display_name: 'Free Response', has_lesson_plan: false
 level 'Sample Free Response'
 
-stage 'Sample PLC Assessment'
+lesson 'Sample PLC Assessment', display_name: 'Sample PLC Assessment', has_lesson_plan: false
 level 'Sample CSP Assessment', assessment: true
 
-stage 'Swapped Levels'
+lesson 'Swapped Levels', display_name: 'Swapped Levels', has_lesson_plan: false
 variants
   level '2-3 Maze 1', active: false
   level '2-3 Maze 4'
@@ -198,67 +201,90 @@ variants
   level 'ramp_video_loopsArtist', active: false
 endvariants
 variants
-  level '2-3 Artist Loops 4'
   level '2-3 Artist 3', active: false
+  level '2-3 Artist Loops 4'
 endvariants
 variants
-  level '4-5 Maze 4', active: false
   level '4-5 Maze 1'
+  level '4-5 Maze 4', active: false
 endvariants
 variants
-  level '4-5 Maze 5', active: false
   level '4-5 Maze 2'
+  level '4-5 Maze 5', active: false
 endvariants
 variants
-  level '4-5 Maze 6', active: false
   level '4-5 Maze 3'
+  level '4-5 Maze 6', active: false
 endvariants
 variants
-  level 'csp_socialBelonging_control'
   level 'csp_socialBelonging_intervention', experiments: ["socialBelongingTest"]
+  level 'csp_socialBelonging_control'
 endvariants
 
-stage 'Anonymous student survey'
+lesson 'Anonymous student survey', display_name: 'Anonymous student survey', has_lesson_plan: false
 level 'Test anonymous student survey', assessment: true
 
-stage 'Anonymous student survey 2', lockable: true
+lesson 'Anonymous student survey 2', display_name: 'Anonymous student survey 2', lockable: true, has_lesson_plan: false
 level 'CSP pre-assessment survey', assessment: true
 
-stage 'Public Key Cryptography'
+lesson 'Public Key Cryptography', display_name: 'Public Key Cryptography', has_lesson_plan: false
 level 'AllTheThings Modulo Clock'
 level 'AllTheThings Public Key Cryptography'
 
-stage 'Web Lab'
+lesson 'Web Lab', display_name: 'Web Lab', has_lesson_plan: false
 level 'Web Lab 1'
 
-stage 'Single page assessment'
+lesson 'Single page assessment', display_name: 'Single page assessment', has_lesson_plan: false
 level 'Test longassessment levelgroup new', assessment: true
 
-stage 'Standalone video'
+lesson 'Standalone video', display_name: 'Standalone video', has_lesson_plan: false
 level 'AllTheThings_StandaloneVideo'
 
-stage 'Curriculum Reference'
+lesson 'Curriculum Reference', display_name: 'Curriculum Reference', has_lesson_plan: false
 level 'allthethings_curriculum_reference'
 level 'allthethings_map'
 
-stage 'Sprite Lab'
+lesson 'Sprite Lab', display_name: 'Sprite Lab', has_lesson_plan: false
 level 'allthethings_fish_tank'
+level 'AllTheThings sprite lab with video'
 
-stage 'Dance Lab'
+lesson 'Dance Lab', display_name: 'Dance Lab', has_lesson_plan: false
 level 'allthethings HOC Dance 1'
 level 'allthethings HOC Dance 10 Measures'
 
-stage 'Mini Rubric'
+lesson 'Mini Rubric', display_name: 'Mini Rubric', has_lesson_plan: false
 level 'allthethings-mini-rubric', assessment: true
 level 'allthethings-mini-rubric-weblab', assessment: true
 level 'allthethings-mini-rubric-gamelab', assessment: true
 
-stage 'Pluralsight Test', lockable: true
+lesson 'Pluralsight Test', display_name: 'Pluralsight Test', lockable: true, has_lesson_plan: false
 level 'Pluralsight LevelGroup Test', assessment: true
 
-stage 'Externals Optionally Displayed as Unplugged'
+lesson 'Externals Optionally Displayed as Unplugged', display_name: 'Externals Optionally Displayed as Unplugged', has_lesson_plan: false, unplugged: true
 level 'allthethings_external_displayed_as_unplugged'
 level 'allthethings_external_not_displayed_as_unplugged'
 
-stage 'Bubble Choice'
+lesson 'Bubble Choice', display_name: 'Bubble Choice', has_lesson_plan: false
 level 'allthethings_bubble_choice'
+
+lesson 'Contained Levels', display_name: 'Contained Levels', has_lesson_plan: false
+level 'contained_single_multi'
+level 'Test GameLab Predictive'
+level 'PS predictive Applab level test'
+level 'contained_applab_choose2'
+level 'contained_csf_multi2'
+level 'contained_csf_free_response'
+level 'Test GameLab Submittable Free Response'
+level 'Video - The Future of Big Data'
+
+lesson 'ML Fish', display_name: 'ML Fish', has_lesson_plan: false
+level 'allthethings HOC ML Fish 1'
+
+lesson 'AI Lab', display_name: 'AI Lab', has_lesson_plan: false
+level 'allthethings AI Lab 1'
+level 'AppLab AI Enabled'
+
+lesson 'Java Lab', display_name: 'Java Lab', has_lesson_plan: false
+level 'Allthethings Java Lab 1'
+level 'Allthethings Java Lab 2'
+

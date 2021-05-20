@@ -1,10 +1,8 @@
 ---
 title: Spred budskabet
-layout: wide
-nav: promote_nav
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Get your community involved in the Hour of Code
 
@@ -30,4 +28,4 @@ Tell your friends about the **#HourOfCode**!
 
 [Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
-{{ signup_button }}
+{{ tilmeld_knap }}

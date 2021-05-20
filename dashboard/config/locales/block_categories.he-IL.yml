@@ -3,53 +3,29 @@ he:
   data:
     block_categories:
       Actions: פעולות
-      Loops: חזרות
-      Functions: פונקציות
-      Color: צבע
-      Brushes: מברשות
-      Math: מתמטיקה
-      Logic: לוגיקה
-      Variables: משתנים
-      Number: מספר
-      String: מחרוזת
-      Image: תמונה
-      Boolean: ערך בוליאני
-      Conditionals: תנאים
-      Events: אירועים
-      Games/Score: משחקים/נקודות
-      Comments: תגובות
-      Category: קטגוריה
-      Prebuilt: טרום בניה
-      Text: טקסט
-      Picker: בוחר
-      Comment: תגובה
-      World: עולם
-      Behaviors: התנהגויות
-      'Variables ': 'משתנים '
-      Default: ברירת מחדל
-      Locations: מיקומים
-      everythingelse: כלהשאר
-      Location: מיקום
-      numbers: מספרים
-      Numbers: מספרים
-      Dancers: רקדנים
-      Groups: קבוצות
       Advanced: מתקדם
-      Start: התחל
-      Music: מוסיקה
-      Dancing: ריקוד
-      Sprite: ספרייט
-      Brush: מברשת
-      Make Sprite: צור ספרייט
-      Movement: תנועה
-      Functional: תפקוד
-      While Events: מאורעות כל עוד
-      Sprite Properties: מאפייני ספרייט
-      Predefined: מוגדרים מראש
-      test: בדיקה
-      test2: בדיקה2
-      Name: שם
-      NEW BLOCKS: בלוקים חדשים
+      Behaviors: התנהגויות
+      Brushes: מברשות
+      Color: צבע
+      Comment: תגובה
+      Comments: תגובות
+      Conditionals: תנאים
+      Dancers: רקדנים
+      Default: ברירת מחדל
+      Events: אירועים
+      Functions: פונקציות
       'Functions ': 'פונקציות '
       Game/Score: משחק/נקודות
-      Function: פונקציה
+      Games/Score: משחקים/נקודות
+      Groups: קבוצות
+      Locations: מיקומים
+      Logic: לוגיקה
+      Loops: חזרות
+      Math: מתמטיקה
+      Numbers: מספרים
+      Properties: מאפיינים
+      Sprites: דמויות
+      Text: טקסט
+      Variables: משתנים
+      'Variables ': 'משתנים '
+      World: עולם

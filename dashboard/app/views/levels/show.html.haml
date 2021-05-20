@@ -8,15 +8,16 @@
 #notes-content{style: 'display: none;'}
   %ul
     %li
-      %a{href: '#video'}
+      %a{href: '#videoTabContainer'}
         = I18n.t('video.tab')
         %span.video-name
     %li
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
 - if @script_level
-  - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.course&.name }
-  %script{ src: minifiable_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
+  - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, tts_autoplay_enabled: @tts_autoplay_enabled}
+  %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
 
@@ -35,12 +36,12 @@
     Check that @script_level exists, because it won't for a /level/ view.
   - if @script_level && @script_level.should_hide_survey(current_user, @user)
     = I18n.t('level_group.hide_survey_last_answer')
-  - elsif @script_level && @script_level.stage.lockable? && (!current_user || @script_level.locked?(current_user))
+  - elsif @script_level && @script_level.lesson.lockable? && (!current_user || @script_level.locked?(current_user))
     -# anonymous users shouldn't ever see lockable stages, but give them the locked_stage message if they do
     = render 'levels/locked_stage'
   - else
     -# If we're a teacher, render the locked_stage UI, which the client will conditionally hide based on Student/Teacher toggle
-    - if @script_level && @script_level.stage.lockable? && current_user.try(:teacher?)
+    - if @script_level && @script_level.lesson.lockable? && current_user.try(:teacher?)
       = render 'levels/locked_stage', hidden: true
 
     - if @game.unplugged?
@@ -57,8 +58,6 @@
         = render partial: "levels/#{@level.class.to_s.underscore}"
       - unless @level.is_a?(StandaloneVideo) || @level.properties['hide_reference_area']
         = render partial: 'levels/reference_area'
-    - elsif @level.is_a?(Scratch)
-      = render partial: 'levels/scratch', locals: {app: @game.app}
     - else
       = render partial: 'levels/blockly'
 

@@ -3,23 +3,29 @@ az:
   data:
     block_categories:
       Actions: Əmrlər
-      Loops: dövrlər
-      Functions: funksiyalar
+      Advanced: Ətraflı
+      Behaviors: Davranışlar
+      Brushes: Fırçalar
       Color: Rəng
-      Math: Riyaziyyat
-      Logic: Məntiq
-      Variables: dəyişənlər
-      Number: Ədəd
-      Image: Şəkil
-      Conditionals: Şərti ifadələr
-      Events: Hadisələr
-      Text: mətn
       Comment: Şərh
-      World: Dünya
-      Location: Yer
+      Comments: Şərhlər
+      Conditionals: Şərti ifadələr
+      Dancers: Rəqqaslar
+      Default: İlkin
+      Events: Hadisələr
+      Functions: Funksiyalar
+      'Functions ': 'Funksiyalar '
+      Game/Score: Oyun/Hesab
+      Games/Score: Oyunlar/Hesab
+      Groups: Qruplar
+      Input: Giriş
+      Locations: Məkanlar
+      Logic: Məntiq
+      Loops: dövrlər
+      Math: Riyaziyyat
       Numbers: Ədədlər
-      Start: Başlayın
-      Brush: Fırça
-      test: yoxla
-      Name: Ad
-      Function: Funksiya
+      Properties: Xüsusiyyətlər
+      Text: mətn
+      Variables: dəyişənlər
+      'Variables ': 'Dəyişənlər '
+      World: Dünya

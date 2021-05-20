@@ -1,0 +1,453 @@
+{
+  "script": {
+    "name": "dlp19-csd-mod-fit",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "CS Discoveries Deeper Learning 2019 - 2020",
+      "peer_reviews_to_complete": 2,
+      "student_detail_progress_view": true,
+      "exclude_csf_column_in_legend": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:37 UTC",
+    "seeding_key": {
+      "script.name": "dlp19-csd-mod-fit"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Deeper Learning Overview",
+      "name": "Deeper Learning Overview",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "key": "Focus Area 1",
+      "name": "Curriculum",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "key": "Focus Area 2",
+      "name": "Learning Platform",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_overview1"
+        ],
+        "progression": "Background"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_overview1"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_overview1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_overview2"
+        ],
+        "progression": "Process"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_overview2"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_overview2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_overview3"
+        ],
+        "progression": "Preparation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_overview3"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_overview3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_overview4"
+        ],
+        "progression": "Evaluation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_overview4"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_overview4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_overview5"
+        ],
+        "progression": "Due Dates"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_overview5"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_overview5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ],
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_csd_prework-fit_content1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ],
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_csd_prework-fit-prompt"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ],
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_csd_prework-fit_content1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ],
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      },
+      "level_keys": [
+        "dlp19_csd_prework-fit-prompt"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "dlp19_overview1",
+        "script_level.level_keys": [
+          "dlp19_overview1"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_overview2",
+        "script_level.level_keys": [
+          "dlp19_overview2"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_overview3",
+        "script_level.level_keys": [
+          "dlp19_overview3"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_overview4",
+        "script_level.level_keys": [
+          "dlp19_overview4"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_overview5",
+        "script_level.level_keys": [
+          "dlp19_overview5"
+        ],
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_csd_prework-fit_content1",
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ],
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_csd_prework-fit-prompt",
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ],
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_csd_prework-fit_content1",
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit_content1"
+        ],
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dlp19_csd_prework-fit-prompt",
+        "script_level.level_keys": [
+          "dlp19_csd_prework-fit-prompt"
+        ],
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

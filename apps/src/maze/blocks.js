@@ -32,7 +32,7 @@ var msg = require('./locale');
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
-  var generator = blockly.Generator.get('JavaScript');
+  var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   if (mazeUtils.isBeeSkin(skin.id)) {

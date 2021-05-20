@@ -1,0 +1,27 @@
+name 'csp-u3-exam1-debug3_2021'
+height 'auto'
+
+question ‘The following program is run. Then the user clicks the "topButton" button ONCE. What will be displayed in the console?’
+
+wrong ‘`cat`  
+`bird`  
+`dog`’
+wrong ‘`dog`  
+`cat`  
+`bird`’
+right ‘`cat`  
+`dog`  
+`bird`’
+wrong ‘`bird`  
+`cat`  
+`dog`’
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/fe54f1ae0503ffe114b69c6f2465f27b-image-1567611942214.45.32 AM.png" style="width:500px">
+MARKDOWN

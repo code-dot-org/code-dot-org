@@ -1,7 +1,8 @@
 @import "color";
 @import "font";
-@import "style-constants";
+@import "curriculum/markdown";
 @import "responsive-visualization";
+@import "style-constants";
 
 $common_root: '/blockly/media/common_images/';
 
@@ -105,6 +106,13 @@ html[dir='rtl'] #visualizationColumn {
     position: absolute;
     overflow: auto;
   }
+}
+
+// Use the focus-visible pseudoclass to hide the outline when clicked.
+// This leaves the outline behavior unchanged for keyboard navigation.
+// Note: this isn't supported in every browser yet.
+.no-focus-outline:focus:not(:focus-visible) {
+  outline: none;
 }
 
 div.droplet-palette-group-header {
@@ -224,7 +232,7 @@ button.arrow {
   border: 1px solid #FFA000;
   background-color: #FFA000;
   color: #fff;
-  margin-left: 5px;
+  margin-left: 9px;
   margin-right: 0px;
   display: none;
 }
@@ -243,18 +251,16 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-left: -5px;
+  margin-left: -9px;
   -webkit-touch-callout: none;
-  &.soft-buttons-none {
-    display: none;
-  }
   &.soft-buttons-compact {
-    margin-left: 0;
+    margin: 0;
     button {
-      margin: 0;
+      margin: 0 4px 0 0;
     }
   }
 }
+
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
@@ -310,7 +316,7 @@ html[dir='rtl'] .editor-column {
 
 // #codeWorkspace.readonly is used when we are displaying a workspace but it
 // is not editable (like someone else project), or when app is running
-#codeWorkspace.readonly, #codeWorkspace.dimmed {
+#codeWorkspace.readonly, #codeWorkspace.dimmed, .libraryCodeViewerContainer {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view
@@ -460,33 +466,37 @@ html[dir='rtl'] div#visualizationResizeBar {
   }
 }
 
-@media screen and (min-width: 1101px) and (max-width: 1150px) {
+@media screen and (min-width: 1101px) and (max-width: 1150px),
+       screen and (min-height: 801px) and (max-height: 900px) {
   @include visualization-width(350px);
   @include studio-dpad-container-width(350px);
   @include karel-counter(20px, 1.2px);
 }
 
-@media screen and (min-width: 1051px) and (max-width: 1100px) {
+@media screen and (min-width: 1051px) and (max-width: 1100px),
+       screen and (min-height: 701px) and (max-height: 800px) {
   @include visualization-width(300px);
   @include studio-dpad-container-width(300px);
   @include karel-counter(24px, 1.4px);
 }
 
-@media screen and (min-width: 1001px) and (max-width: 1050px) {
+@media screen and (min-width: 1001px) and (max-width: 1050px),
+       screen and (min-height: 601px) and (max-height: 700px) {
   @include visualization-width(250px);
   @include studio-dpad-container-width(250px);
   @include karel-counter(28px, 1.6px);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px),
+       screen and (max-height: 600px) {
   @include visualization-width(200px);
   @include studio-dpad-container-width(200px);
   @include karel-counter(32px, 2px);
 
   #soft-buttons {
-    margin-left: 0;
+    margin: 5px -8px 0 0;
     button {
-      margin: 0;
+      margin: 0 4px 0 0;
     }
   }
   .small-footer-base.responsive {
@@ -770,6 +780,12 @@ input[type="radio"] {
     font-size: 16px;
     color: $light-gray;
     margin-right: 10px;
+
+    html[dir=rtl] & {
+      float: right;
+      margin-right: 0;
+      margin-left: 10px;
+    }
   }
 
   svg {
@@ -826,7 +842,6 @@ input[type="radio"] {
   vertical-align: top;
   width: 50px;
   padding-right: 10px;
-  padding-bottom: 10px;
   height: auto;
 
   /* authored hints */
@@ -910,42 +925,7 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
-#ani-gif-preview-wrapper {
-  vertical-align: top;
-}
-
-$aniGifPreviewWidth: 80px;
-$aniGifPreviewHeight: 60px;
-#ani-gif-preview {
-  display: table-cell;
-  background-size: $aniGifPreviewWidth $aniGifPreviewHeight;
-  // background-image set via javascript
-  width: $aniGifPreviewWidth;
-  height: $aniGifPreviewHeight;
-  vertical-align: middle;
-  text-align: center;
-  border-radius: 12px;
-
-  #play-button {
-    clear: both;
-    height: 40px;
-    position: relative;
-  }
-}
-
-/* Place ani-gif next to text for column width 300px or wider. */
-@media screen and (min-width: 1051px) {
-  #prompt-table.with-ani-gif {
-    margin-right: $aniGifPreviewWidth;
-    padding-right: 5px;
-  }
-
-  #ani-gif-preview-wrapper {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-}
+@import "aniGif";
 
 .workspace-header {
   text-align: center;
@@ -962,6 +942,15 @@ $aniGifPreviewHeight: 60px;
   }
   .fa {
     font-size: 18px;
+  }
+  /* We don't want some of these styles to affect modal content. */
+  .ml-modal {
+    span {
+      line-height: 12px;
+    }
+    .fa {
+      font-size: 12px;
+    }
   }
 }
 
@@ -1113,10 +1102,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 #showVersionsModal {
   width: 700px;
   margin-left: -350px;
-}
-
-#showVersionsModal .versionRow p {
-  margin: 15px 0 0 0;
+  h1 {
+    border-bottom: solid 1px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+  td {
+    vertical-align: middle;
+  }
+  tr:nth-child(even){
+    background-color: $lightest_purple;
+  }
 }
 
 .blocklyText, .blocklyMenuText, .blocklyTreeLabel, .blocklyHtmlInput,
@@ -1156,6 +1154,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
     .generated-code-container {
       margin: 25px 10px 25px -80px;
+
+      html[dir=rtl] & {
+        margin: 25px -80px 25px 10px;
+      }
     }
   }
 
@@ -1171,6 +1173,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .generated-code-container {
   margin-top: 10px;
   .generatedCodeMessage {
+    html[dir=rtl] & {
+      text-align: right;
+    }
+
     p {
       font-size: 14px;
       line-height: inherit;
@@ -1288,7 +1294,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 #sharing {
   clear: both;
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 18px;
   color: $charcoal;
 
   $image-width: 180px;
@@ -1300,7 +1306,11 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin: 0;
     float: left;
     border: $lighter_gray;
-    border-style: solid
+    border-style: solid;
+
+    html[dir=rtl] & {
+      float: right;
+    }
   }
 
   div {
@@ -1310,13 +1320,22 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       margin-right: 25px;
       &.no-image {
         margin-left: 0;
+
+        html[dir=rtl] & {
+          margin-right: 0;
+        }
+      }
+
+      html[dir=rtl] & {
+        margin-right: $image_width + 15px;
+        margin-left: 25px;
       }
     }
   }
 
   label {
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .social-buttons {
@@ -1328,12 +1347,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       text-decoration: none;
       color: white;
     }
+
+    html[dir=rtl] & {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
   }
 
   button {
     background-color: $purple;
     color: white;
-    font-size: 0.7em;
+    font-size: 14px;
     min-width: 40px;
     text-align: center;
     margin: 2px 0;
@@ -1345,10 +1371,27 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       background-color: $lighter_gray;
       box-shadow: none;
     }
+  }
 
-    #send-to-phone {
-      clear: both;
-    }
+  #send-to-phone {
+    clear: both;
+  }
+
+  #send-to-phone-left {
+    float: left;
+    width: 65%;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  #send-to-phone-right {
+    float: left;
+    width: 35%;
+    margin-bottom: 0px;
+  }
+
+  #send-to-phone-qr-code {
+    margin-bottom: 0px;
   }
 
   button.saved-to-gallery {
@@ -1462,13 +1505,20 @@ $examples-link-font: $gotham-extra-bold;
 
 $see-examples-thick-underline-color: $yellow;
 
-.tooltip-example-link, .tooltip-choose-link {
+.tooltip-example-link,
+.tooltip-choose-link,
+.tooltip-code-link {
   margin-top: 5px;
   float: right;
 }
 
-.tooltip-example-link > a, .tooltip-choose-link > a {
-  &:hover, &:link, &:active, &:visited {
+.tooltip-example-link > a,
+.tooltip-choose-link > a,
+.tooltip-code-link > a {
+  &:hover,
+  &:link,
+  &:active,
+  &:visited {
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
     font-family: $gotham-bold;
@@ -1691,3 +1741,5 @@ a.WireframeButtons_active, div.WireframeButtons_active {
 }
 
 @import "RotateContainer";
+@import "HideToolbarHelper";
+@import "blockly";

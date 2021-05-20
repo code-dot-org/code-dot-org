@@ -1,7 +1,5 @@
 ---
 title: Klukkustund kóðunar - leiðarvísir fyrir viðburði
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

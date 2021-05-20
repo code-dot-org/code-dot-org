@@ -1,7 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
+title: மாவட்டங்களுக்கான Hour of Code எவ்வாறு செய்வது
 ---
 
 {{signup_button}}
@@ -16,29 +14,29 @@ nav: how_to_nav
 
 ### 1. உள்ளூர் பள்ளிகளை சேர்ப்பது
 
-Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
+[ இந்த மின்னஞ்சலை ](== {விளம்பரப்படுத்தவும் / மாதிரி_மெயில்கள் }a>) மற்றும் [ ஆசிரியரை எவ்வாறு வழிநடத்துவது ](=== urls/how_to_guide }a>) என்பதைப் பகிரவும், அல்லது <a செய்திமடல்கள் / மாவட்ட தகவல்தொடர்புகளில் href = "{{விளம்பரப்படுத்து / புள்ளிவிவரங்கள்_}> குறுகிய குறும்பு </a>. <br />
 
 ### 2. பள்ளிகள் ஒரு மாதிரி தளவாட திட்டத்தை வழங்குதல்
 
-Share this [sample logistics plan]({{ hoc_logistics_plan }}) with schools to give them ideas of how to organize whole school participation. ஒவ்வொரு கணித வகுப்பிலும், ஹோமரூம் காலத்திலும் அல்லது வாரம் முழுவதும் கணினி ஆய்வகத்தின் மூலமாக சுழலும் போது இது எளிது.
+முழு பள்ளி பங்கேற்பையும் எவ்வாறு ஒழுங்கமைப்பது என்பது குறித்த யோசனைகளை வழங்க பள்ளிகளுடன் இந்த [ மாதிரி தளவாடத் திட்டத்தை ](== {hoc_logistics_plan }ibl) பகிர்ந்து கொள்ளுங்கள். ஒவ்வொரு கணித வகுப்பிலும், ஹோமரூம் காலத்திலும் அல்லது வாரம் முழுவதும் கணினி ஆய்வகத்தின் மூலமாக சுழலும் போது இது எளிது.
 
 ### 3. சமூக ஊடகத்தில் பங்கு
 
-[ Facebook ](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) அல்லது <a href = "https க்கு அனுப்பு ?: //twitter.com/intent/tweet url = http% 3A% 2F% 2Fhourofcode.com amp; உரை = நான்% 27m% 20participating% 20in% 20this% 20year% 27s% 20% 23HourOfCode% 2C% 20are% 20you% 3F % 20% 40codeorg amp; original_referer = https ஐப்% 3A% 2F% 2Fwww.google.com% 2Furl% 3Fq% 3Dhttps% 253A% 252F% 252Ftwitter.com% 252Fshare% 253Fhashtags% 253D% 2526amp% 253Brelated% 253Dcodeorg% 2526amp% 253Btext% 253DI % 252527m% 252Bparticipating% 252Bin% 252Bthis% 252Byear% 252527s% 252B% 252523HourOfCode% 25252C% 252Bare% 252Byou% 25253F% 252B% 252540codeorg% 2526amp% 253Burl% 253Dhttp% 25253A% 25252F% 25252Fhourofcode.com% 26sa% 3DD% 26sntz% 3D1 % 26usg% 3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ amp; தொடர்பான = codeorg amp; ஹாஷ்டேக்குகளைச் = "> ட்விட்டர் </a>. Or share one of these inspirational [pictures and quotes]({{ promote/resources_social }}) from world leaders, or [stats]({{ promote/stats_url }}).
+[ Facebook ](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) அல்லது <a href = "https க்கு அனுப்பு ?: //twitter.com/intent/tweet url = http% 3A% 2F% 2Fhourofcode.com amp; உரை = நான்% 27m% 20participating% 20in% 20this% 20year% 27s% 20% 23HourOfCode% 2C% 20are% 20you% 3F % 20% 40codeorg amp; original_referer = https ஐப்% 3A% 2F% 2Fwww.google.com% 2Furl% 3Fq% 3Dhttps% 253A% 252F% 252Ftwitter.com% 252Fshare% 253Fhashtags% 253D% 2526amp% 253Brelated% 253Dcodeorg% 2526amp% 253Btext% 253DI % 252527m% 252Bparticipating% 252Bin% 252Bthis% 252Byear% 252527s% 252B% 252523HourOfCode% 25252C% 252Bare% 252Byou% 25253F% 252B% 252540codeorg% 2526amp% 253Burl% 253Dhttp% 25253A% 25252F% 25252Fhourofcode.com% 26sa% 3DD% 26sntz% 3D1 % 26usg% 3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ amp; தொடர்பான = codeorg amp; ஹாஷ்டேக்குகளைச் = "> ட்விட்டர் </a>. அல்லது உலகத் தலைவர்களிடமிருந்து இந்த உத்வேகம் தரும் [ படங்கள் மற்றும் மேற்கோள்களை ](== {விளம்பர / ஆதாரங்கள்_சமூக }==) பகிர்ந்து கொள்ளுங்கள், அல்லது <a href=" {{விளம்பரப்படுத்தவும் / புள்ளிவிவரங்கள்_அறிவு}> புள்ளிவிவரங்கள் </ a
 
 ### 4. உங்கள் மாவட்டத்தின் முகப்பு பக்கத்தில் ஊக்குவிக்கவும்
 
-Let visitors know about your participation and Hour of Code events. Link it to [Hour of Code]({{ urls/home }}).
+உங்கள் பங்கேற்பு மற்றும் மணிநேர குறியீடு நிகழ்வுகள் குறித்து பார்வையாளர்களுக்கு தெரியப்படுத்துங்கள். இதை [ குறியீட்டின் மணிநேரம் ](==== urls/home }a>) உடன் இணைக்கவும்.
 
 ### 5. கோட் நிகழ்வின் மாவட்ட மணிநேரத்தை நடத்தவும்
 
-See our [event how to guide]({{ urls/how_to_events }}) for a sample run of show, media outreach kit, and other supports.
+நிகழ்ச்சி, மீடியா அவுட்ரீச் கிட் மற்றும் பிற ஆதரவுகளின் மாதிரி ஓட்டத்திற்காக எங்கள் [ நிகழ்வை எவ்வாறு வழிநடத்துவது ](== {urls/how_to_events }ibl) ஐப் பார்க்கவும்.
 
 ## கோட் ஆஃப் ஹவர் என்ன ஆனது?
 
 தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும்.
 
-- Encourage students to continue to [learn online]({{ urls/learn_beyond }}).
-- [Attend]({{ urls/professional_development_workshops }}) a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)
+- [ ஆன்லைனில் கற்றுக்கொள்ள ]({{urls/learn_beyond }a>) தொடர மாணவர்களை ஊக்குவிக்கவும்.
+- ஒரு அனுபவமிக்க கணினி அறிவியல் வசதியாளரிடமிருந்து அறிவுறுத்தலைப் பெற [ கலந்து கொள்ளுங்கள் ]({{urls/professional_development_workshops }ibl) 1 நாள், நேரில் பயிலரங்கில் கலந்து கொள்ளுங்கள். (அமெரிக்க கல்வியாளர்கள் மட்டும்)
 
 {{signup_button}}

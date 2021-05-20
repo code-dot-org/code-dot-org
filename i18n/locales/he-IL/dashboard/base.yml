@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 he:
   errors:
     messages:
@@ -15,10 +27,11 @@ he:
     attributes:
       user:
         name: 'שם תצוגה'
-        name_example: 'שם לתצוגה<br/> (לדוגמה: תכניתן מגניב או ישראל י.)'
+        name_example: 'שם לתצוגה (לדוגמה: תכניתן מגניב או ישראל י.)'
         email: 'דואר אלקטרוני'
         parent_email: 'דוא"ל של הורה/אפוטרופוס'
         personal_email: "כתובת דוא\"ל אישי <a href=\"%{url}\"> (לחץ כאן אם אין לך כתובת דואר אלקטרוני)</a>"
+        personal_email_markdown: "כתובת דוא\"ל אישי [(לחץ כאן אם אין לך כתובת דואר אלקטרוני)](%{url})"
         username: 'שם משתמש'
         password: 'סיסמה'
         password_confirmation: 'וידוא סיסמא'
@@ -29,6 +42,7 @@ he:
         edit_header: 'שינוי פרטי החשבון'
         finish_sign_up_header: 'סיים ליצור את החשבון שלך'
         finish_sign_up_subheader: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור **%{email}**.'
         error:
           future: לא יכול להיות בעתיד
   beta: "בטא"
@@ -45,13 +59,11 @@ he:
   okay: "בסדר"
   or: "או"
   heading_x_of_y: "%{heading} (עמוד %{x} מתוך %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'הוסף מורה:'
       placeholder: "קוד קבוצה (ABCDEF)"
-      instructions: "אנא הזן את הקוד ששותף איתך בידי המורה. זה קוד בן 6 תווים כמו \"ABCDEF\"."
       instructions_short: "הזן את קוד הקבוצה שלך באורך 6 תווים"
-    submit: 'הוסף מורה'
+      submit: 'הצטרף'
   add_hint_form:
     placeholder: 'הכניסו בבקשה את הרמז שלכם כאן'
     submit: 'הוסף רמז'
@@ -80,8 +92,6 @@ he:
     continue_with: 'המשך באמצעות %{provider}'
     sign_in_with: 'היכנס באמצעות %{provider}'
     signed_in: 'נכנסת!'
-    signed_out: 'התנתקת מ<a href="%{url}">Code.org</a>.'
-    sign_out_of: 'השתמשת ב- %{provider} להכנס. in. <a href="%{url}"> לחץ כאן</a> כדי לצאת מ- %{provider}.'
     already_signedup: 'כבר נרשמת?'
     notyet_signedup: "לא הצטרפת עדיין?"
     google_oauth2: 'חשבון גוגל'
@@ -104,9 +114,11 @@ he:
     student_count: '%{count} תלמידים כבר נרשמו.'
     teacher_count: '%{count} מורים כבר נרשמו.'
     overview: 'הרשם לקבלת חשבון בכדי לעקוב אחר התקדמות וניהול הכיתה שלך. <a href="/">באפשרותך לדפדף בין השלבים והפאזלים השונים</a> ללא חשבון, אבל תידרש להירשם בכדי לשמור את התקדמותך ואת הפרויקטים שלך.'
+    overview_markdown: 'הרשם לקבלת חשבון בכדי לעקוב אחר התקדמות וניהול הכיתה שלך. [באפשרותך לדפדף בין השלבים והפאזלים השונים](/) ללא חשבון, אבל תידרש להירשם בכדי לשמור את התקדמותך ואת הפרויקטים שלך.'
     hoc_already_signed_up_heading: 'התחל ללא כניסה לחשבון'
     hoc_already_signed_up_content: 'אתה רשום כמורה של "שעת קוד"! אתה ותלמידיך אינם נדרשים להיכנס לסטודיו קוד בכדי להשתתף באירוע זה. כדי להתחיל <a href="%{learn_url}">בחר הדרכה</a> עבור כיתתך ושתף את הקישור איתם.<br/><br/>אם נהנית מ"שעת קוד" וברצונך להתקדם הלאה, באפשרותך להגדיר סיסמא ולצור חשבון קוד סטודיו מטה ולרשום את תלמידך לכל אחד מ<a href="%{educate_url}">הקורסים הארוכים יותר</a> שלנו.'
     hoc_already_signed_up_content_post_hoc: 'תודה לך עבור אירוח שעת קוד. לכניסה לסטודיו קוד, תידרש להגדיר סיסמה לחשבונך. זה יאפשר לך לשמור את ההתקדמות וניהול כיתתך. תהיה באפשרותך להקצות קורסים לתלמידים ולעקוב אחר התקדמותם. <a href="%{studio_url}">באפשרותך להמשיך ולתור אחר שלבים ופאזלים</a> בלי יצירת חשבון.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'תודה לך עבור אירוח שעת קוד. לכניסה לסטודיו קוד, תידרש להגדיר סיסמה לחשבונך. זה יאפשר לך לשמור את ההתקדמות וניהול כיתתך. תהיה באפשרותך להקצות קורסים לתלמידים ולעקוב אחר התקדמותם. [באפשרותך להמשיך ולתור אחר שלבים ופאזלים](%{studio_url}) בלי יצירת חשבון.'
     teacher_educator_guide: 'ראה מדריך למחנך'
     title: "הרשם לCode.org"
     school_name: 'שם בית הספר (אופציונלי)'
@@ -125,13 +137,7 @@ he:
     valid_password: "סיסמה תקינה!"
     invalid_password: "הסיסמא חייבת להכיל לפחות 6 תווים"
     mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
-    agree_tos_privacy: "אני מסכים ל-<a href='http://code.org/tos'>תנאי השימוש</a> ו-<a href='http://code.org/privacy'>תנאי הפרטיות</a>."
-    under_13_consent: "אני תחת גיל 13, אני מאשר שהורי או האפוטרופוסים החוקיים שלי מאשרים לי להשתמש בשירותי Code.org."
     student_consent: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
-    agree_us_website: "אני מאשר להשתמש באתר אינטרנט אשר נמצא בארצות הברית."
-    my_data_to_us: "יתכן כי נתוני השימוש שלי ישלחו או ישמרו או יעובדו בארצות הברית."
-    student_terms: "כתובות דוא\"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים. תלמידים לעולם לא יקבלו דוא\"ל מCode.org למעט עבור שחזור סיסמא. צפה ב<a href='http://code.org/privacy'>מדיניות הפרטיות</a> לפרטים נוספים."
-    teacher_terms: "אני מסכים להיות מחויב לתנאי השירות של Code.org. לקבלת מידע נוסף אודות פרטיות, עיין ב-<a href='http://code.org/privacy'>מדיניות הפרטיות</a>."
     additional_information: "יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך."
     user_type_button: "עדכן סוג חשבון"
     user_type_label: "סוג חשבון"
@@ -185,7 +191,6 @@ he:
     login: 'התחבר'
     invalid_login: 'נתוני חיבור שגויים, אנא נסה שנית'
     pair_programming: 'אני יחד עם שותף במחשב שלי'
-    student_privacy: "למד עוד מדוע אינך רואה את שמך המלא <a href='%{student_privacy_blog}' target='_blank'>כאן</a>."
   password:
     reset_form:
       title: 'שכחת את הסיסמא שלך?'
@@ -213,6 +218,7 @@ he:
       %{name}
   parent_mailer:
     student_associated_subject: 'פרטי החיבור עבור Code.org'
+    parent_email_added_subject: 'ברוך הבא לCode.org!'
   teacher_mailer:
     new_teacher_subject: 'ברוך הבא לCode.org!'
     delete_teacher_subject: 'הודעת Code.org: החשבון שלך נמחק'
@@ -308,6 +314,8 @@ he:
       help_us: "עזור לנו"
       teach: "למד"
       about: "אודות"
+      legal_privacy: "הצהרת פרטיות"
+      legal_tos: "תנאים"
     user:
       classroom: 'דף הבית של המורה'
       district_dashboard: 'לוח ניהול מחוזי'
@@ -317,7 +325,7 @@ he:
       settings: 'החשבון שלי'
       logout: 'התנתק'
       signin: 'התחבר'
-      signup: 'צור חשבון'
+      signup: 'צור חשבון משתמש'
       already_registered: 'כבר נרשמת?'
       pair_programming: 'תכנות בזוגות'
       team: 'צוות'
@@ -335,8 +343,11 @@ he:
       frozen: 'לשבור את הקרח'
       gamelab: 'מעבדת המשחקים'
       gamelab_jr: 'מעבדת המשחקים (בטא)'
+      gumball: 'העולם המופלא של גאמבול'
       iceage: 'עידן הקרח'
       infinity: 'אינסוף'
+      minecraft_adventurer: 'הרפתקן מיינקראפט'
+      minecraft_aquatic: 'מיינקראפט ימי'
       minecraft_designer: 'מיינקראפט'
       minecraft_hero: 'גיבור מיינקרפט'
       playlab: 'מעבדת הצעצועים'
@@ -403,7 +414,9 @@ he:
     create_personal_login_under_13_parent_email: 'דוא"ל של הורה/אפוטרופוס'
     create_personal_login_info: 'אם ברצונך להמשיך להשתמש בחשבון Code.org שלך גם לאחר סיום שנת הלימודים, באפשרותך ליצור חשבון כניסה אישי משלך מטה.'
     create_personal_login_terms: "על-ידי יצירת חשבון כניסה אישי, אני מסכים להיות מחויב ל<a href='%{terms_of_service_url}', target='_blank'>תנאי השימוש</a> של Code.org. אם אני תחת גיל 13, אני מאשר שיש בידי אישור מהורה או אפוטרופוס חוקי רשות להשתמש בשירותי Code.org גם ללא מורה."
+    create_personal_login_terms_markdown: "על-ידי יצירת חשבון כניסה אישי, אני מסכים להיות מחויב ל[תנאי השימוש](%{terms_of_service_url}) של Code.org. אם אני תחת גיל 13, אני מאשר שיש בידי אישור מהורה או אפוטרופוס חוקי רשות להשתמש בשירותי Code.org גם ללא מורה."
     create_personal_login_email_note: "שים לב: כתובות דוא\"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים. תלמידים לעולם לא יקבלו דוא\"ל מCode.org למעט עבור שחזור סיסמה. צפה ב<a href='%{privacy_policy_url}', target='_blank'>מדיניות הפרטיות</a> לפרטים נוספים."
+    create_personal_login_email_note_markdown: 'שים לב: כתובות דוא"ל אינם נשמרים בצורה המאפשרת לנו ליצור קשר עם תלמידים. תלמידים לעולם לא יקבלו דוא"ל מCode.org למעט עבור שחזור סיסמה. צפה ב[מדיניות הפרטיות](%{privacy_policy_url}) לפרטים נוספים.'
     enter_new_login_info: 'הזן את פרטי ההתחברות החדשים שלך'
     confirm_secret_words: 'אשר שזה אתה על-ידי הזנת המילים הסודיות הנוכחיות שלך'
     parent_email_label: "כתובת אימייל של הורה/אפוטרופוס (אופציונלי)"
@@ -411,14 +424,15 @@ he:
     enter_parent_email: "הזן את כתובת הדוא\"ל של ההורה או האופוטרופוס החוקי (לצורך שחזור סיסמה)"
     update: "עדכן חשבון"
     account_successfully_updated: "חשבון עודכן בהצלחה."
+    update_email: "עדכון"
+    parent_guardian_email_label: "דוא\"ל של הורה/אפוטרופוס"
+    none: "כלום"
+    encrypted: "מוצפן"
   user_level:
     completed: 'הושלם'
     tried: 'נוסה'
   home:
     title: "ההתקדמות שלי"
-    description: 'ב"code studio"  נמצאים קורסים אינטרנטיים שמיוצרים על ידי code.org'
-    lines_of_code: "%{lines_count} שורות קוד נכתבו על ידי תלמידים"
-    lines_of_code_linebreak: "%{lines_count} שורות של קוד<br/>נכתבו על ידי %{students_count} מיליון תלמידים"
     all_courses: "סקירה של קורסים 1, 2 ו- 3"
     lesson_plans: "מערכי שיעור"
     signin_message: "כבר רשום?  %{link}"
@@ -448,15 +462,11 @@ he:
     test_videos_help: 'נסה את נגן הוידאו החדש שלנו בבית ספרך'
     try_beta_courses: 'חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'''
     use_as_teacher: 'השתמש באתר הזה כמורה'
-    heading_hoc2014: "<h2>שעת הקוד עבור</h2><h1>כל הגילאים</h1>"
-    heading_elementary: "<h2>20 שעות קורסים עבור</h2><h1>יסודות מדעי המחשב (כל הגילאים)</h1>"
-    heading_apps: "<h2>כיף</h1><h2>לכולם</h1>"
-    heading_tools: "<h2>מוכן לשלב הבא?</h2><h1>כלים לחטיבות והתיכונים</h1>"
-    heading_legacy: "<h2>הקורס המואץ שלנו עבור</h2><h1>כל הגילאים</h1>"
     your_gallery: גלריה
     no_primary_course: "נסה קורס קוד סטודיו"
     choose_next_course: "נסה קורס מסטודיו קוד ע\"י בחירת אחד מטה"
     print_certificate: "הדפס תעודה"
+  certificate_sponsor_message: "%{sponsor_name} נתנו את המתנה הנדיבה כדי לתת חסות ללמידה שלך."
   move_students:
     new_section_dne: "מצטערים, אבל הקבוצה %{new_section_code} איננה קיימת. אנה בחר קוד קבוצה אחרת."
     section_code_cant_be_current_section: "הקבוצה הנוכחית אינה יכולה להיות זהה כמו הקבוצה החדשה."
@@ -513,6 +523,7 @@ he:
     download: 'הורד סרטון'
     show_notes: 'הצג הערות'
     show_video: 'הצג סרטון'
+    label: 'סרטון'
   compatibility:
     upgrade:
       unsupported_message: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
@@ -558,6 +569,8 @@ he:
       cta: 'למד כיצד'
     dance:
       title: 'מסיבת ריקודים'
+    dance-2019:
+      title: 'מסיבת ריקודים'
     hoc:
       title: 'מבוך קלאסי'
       body: 'נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.'
@@ -598,7 +611,7 @@ he:
       body: "גלה את העולם של מיינקראפט באמצעות קוד"
     minecraft2016:
       title: "מיינקראפט"
-      body: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקרפט משלך."
+      body: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך."
     aquatic:
       title: "מיינקראפט"
     hero:
@@ -606,10 +619,10 @@ he:
     text-compression:
       body: "בשיעור זה, התלמידים ישתמשו בווידג'ט של דחיסת טקסט כדי לכווץ אותו על-ידי החלפת תבניות עם סמלים."
     unplugged:
-      title: "שיעורים ללא מחשב"
+      title: "שיעורים מנותקים"
       audience: "גילאי 4+"
       body: "הרכבנו עבורך מספר שיעורים ללא מחשב לשימוש בכיתתך. כעת תוכל ללמד את יסודות מדעי המחשב, גם אם אין ברשותך מחשבים בכיתה! נסה להשתמש בשיעורים אלו כקורס בפני עצמו או כקורס משלים לשיעורים במדעי המחשב."
-      body_short: "אם אין ברשותך מחשבים, נסה להשתמש בשיעורים ללא מחשב בכיתתך."
+      body_short: "אם אין ברשותך מחשבים, נסה להשתמש בשיעורים המנותקים האלו בכיתתך."
     unplugged_conditionals:
       title: "תנאים"
       body: "למד על אלגוריתמים והתניות בפעילות הזו ללא מחשב בעזרת סט קלפים."
@@ -618,29 +631,15 @@ he:
       body: "תלמידים יכולים להרחיב אופקים מקורסי העקרונות במדעי המחשב שלנו ולהתנסות בעזרת הכלים הדיגיטליים שלנו. השתמש בווידג'טים לבדם או צור שיעור מבוסס עיקרון יחיד לכיתתך."
       audience: "גילאי 14+"
       cta: "למד כיצד"
-  gallery:
-    students_drew_these_with_code: "תלמידים ציירו את אלה בעזרת קוד!"
-    students_made_these_with_code: "תלמידים יצרו את אלה בעזרת קוד!"
-    picture_count: "בימים<b>%{days}</b> האחרונים, תלמידים ציירו  <b>%{count}</b> תמונות בעזרת כתיבת תוכנות במחשב שלהם. לחץ על כל תמונה כדי לראות את ההתקדמות של כל אחד."
-    activity_count: "בימים<b>%{days}</b> האחרונים, תלמידים יצרו <b>%{count}</b> אפליקציות ותמונות בעזרת כתיבת תוכנות מחשב משלהם. לחץ על כל תמונה וצילום מסך כדי לראות את ההתקדמות של כל אחד."
-    want_to_make_your_own: "רוצה להכין אחד משלך?"
-    how_to_save: "בשלב האחרון של מדריכים אלו, לחץ \"סיים\" ו \"שמור\" כדי לשמור את העבודה שלך בגלריה."
-    more: "עוד &rarr;"
-    caption_by_name_age: "מאת %{name}, גיל %{age}"
-    caption_time_ago: "%{time_ago} לפני"
-    header: "גלריה"
-    header_playlab: "סיפורים ומשחקים"
-    header_artist: "אמן"
-    report_abuse: "דווח על התעללות"
   landing:
-    prerelease: "קורס זה נמצא בגרסת <span class='betatext'>ביטא</span>. זה אומר שזו לא גירסה סופית של הקורס, והוא נמצא בפוטנציאל לשינויים בהתאם לתגובות שיתקבלו ושיפורים שיעשו."
-    prerelease_hoc2014: "הדרכה זו נמצא בגרסת <span class='betatext'>ביטא</span>. היא בפוטנציאל לשינויים בהתאם לתגובות שיתקבלו ושיפורים שיבוצעו בה."
     report_bug: "דווח על באג"
     support: "קבל עזרה"
     help_resources: "עזרה ומשאבים"
     help_support: "עזרה ותמיכה"
     documentation: "מסמכים"
     tutorials: "מדריכים"
+  free_response:
+    placeholder: "הכנס את התשובה שלך כאן"
   multi:
     wrong_title: "תשובה לא נכונה"
     wrong_body: "התשובה שענית אינה נכונה. נא נסה שנית!"
@@ -700,18 +699,20 @@ he:
   age_interstitial:
     age: הגיל שלך
     header: פרטי החשבון עודכנו
-    sign_out: 'אם אינך מעוניין לציין את הגיל שלך, ניתן <a href="%{url}">להתנתק מהמשתמש</a>.'
   terms_interstitial:
     title: "תנאי השירות ותנאי הפרטיות עודכנו"
     intro_desc: "עדכנו את תנאי השירות ותנאי הפרטיות שלנו כפי שמופיע מטה. השינויים יחלו ב-24 לאוגוסט 2016. השינויים המשמעותיים הם: אנחנו <i>לא שומרים יותר כתובות דוא\"ל של תלמידים במעבדת הקוד.</i> זה משהו משמעותי עבורנו ואנחנו מקוויים שזה יציב סטנדרט חדש לשמירת פרטיות התלמיד בטכנולוגיות למידה. שלחנו לך סיכום של שינויים נוספים שבוצעו בדוא\"ל."
+    intro_desc_markdown: "עדכנו את תנאי השירות ותנאי הפרטיות שלנו כפי שמופיע מטה. השינויים יחלו ב-24 לאוגוסט 2016. השינויים המשמעותיים הם: אנחנו _לא שומרים יותר כתובות דוא\"ל של תלמידים במעבדת הקוד._ זה משהו משמעותי עבורנו ואנחנו מקוויים שזה יציב סטנדרט חדש לשמירת פרטיות התלמיד בטכנולוגיות למידה. שלחנו לך סיכום של שינויים נוספים שבוצעו בדוא\"ל."
     intro_instructions: "עליך לאשר את התנאים החדשים עבור תלמידים אשר מתחת לגיל 13 בכיתה שלך כדי לקבל הרשאות מלאות לכל האפשרויות החדשות שהוספנו למעבדת הקוד. כאשר מבצעים רישום של חשבון עבור תלמיד שמתחת לגיל 13, יש לאשר שלבית הספר שלך יש אישור הורי לאיסוף מידע אישי של התלמידים, בין היתר לשימוש בתכניות לימוד כמו מעבדת הקוד."
     tos: "תנאים"
     privacy: "הצהרת פרטיות"
     privacy_notice: "הערה בנושא פרטיות"
     accept_label: 'אני מאשר את <a href="%{tos_url}" target="_blank">תנאי השימוש</a> וגם את <a href="%{privacy_url}" target="_blank">תנאי הפרטיות</a>.'
+    accept_label_markdown: אני מאשר את [תנאי השימוש](%{tos_url}) וגם את [תנאי הפרטיות](%{privacy_url}).
     accept: "אשר"
     print: "הדפס"
     reminder_desc: 'עדכנו את <a href="%{tos_url}" target="_blank">תנאי השירות</a> שלנו ואת <a href="%{privacy_url}" target="_blank">מדיניות הפרטיות</a>. אנא קרא אותם היטב בטרם תסכים להם. שים לב שכלי הלימוד של JavaScript לא יהיו זמינים לתלמידים בטרם יסכימו לתנאי השירות המעודכנים.'
+    reminder_desc_markdown: עדכנו את [תנאי השירות](%{tos_url}) שלנו ואת [מדיניות הפרטיות](%{privacy_url}). אנא קרא אותם היטב בטרם תסכים להם. שים לב שכלי הלימוד של JavaScript לא יהיו זמינים לתלמידים בטרם יסכימו לתנאי השירות המעודכנים.
     review_terms: "סקור את התנאים המעודכנים"
   school_info_interstitial:
     title: "אנו רוצים לאפשר לכל תלמיד ללמוד מדעי המחשב - עזור לנו לעקוב אחר ההתקדמות!"
@@ -733,6 +734,7 @@ he:
     submit: "שלח"
     decline: "סגור"
   zendesk_too_young_message: 'מצטערים, משתמשים צעירים אינם יכולים להתחבר לאתר התמיכה שלנו. תוכל לגלוש ל- <a href="http://support.code.org">support.code.org</a> ללא הזדהות או בקש מהוריך או המורה שלך ליצור איתנו קשר בשימך.'
+  zendesk_too_young_message_markdown: 'מצטערים, משתמשים צעירים אינם יכולים להתחבר לאתר התמיכה שלנו. תוכל לגלוש ל- [support.code.org](http://support.code.org) ללא הזדהות או בקש מהוריך או המורה שלך ליצור איתנו קשר בשימך.'
   progress:
     not_started: לא החל
     in_progress: בביצוע
@@ -796,62 +798,13 @@ he:
   peer_review:
     accepted:
       name: 'אושר'
-      description: '<strong>כן</strong>, השליחה הזו <strong>עונה</strong> על הדרישות'
     rejected:
       name: 'נדחה'
-      description: '<strong>לא</strong>, השליחה הזו <strong>לא עונה</strong> על הדרישות'
     escalated:
       name: 'הועבר לאישור'
       description: 'אני מבקש שמדריך יבדוק את הטופס'
     instructor_feedback: 'התייחסות המדריך'
     outdated: 'משוב זה נוסף לגרסה הקודמת שנשלחה'
-  flex_category:
-    required: 'סקירה'
-    ramp_up: 'העלה רמה'
-    main_course: 'קורס ראשי'
-    extra_course_content: 'תוכן נוסף של הקורס'
-    csf_e_1: 'המשך אל קורס ה (רשות)'
-    csf_e_2: 'תכני קורס ה'
-    csf_f_1: 'המשך אל קורס ו (רשות)'
-    csf_f_2: 'תכני קורס ו'
-    csf_jigsaw: 'פאזל'
-    csf_loops: 'חזרות'
-    csf_events: 'אירועים'
-    csf_online_safety: 'בטיחות ברשת'
-    csf_binary: 'בינארי'
-    csf_conditionals: 'תנאים'
-    csf_functions: 'פונקציות'
-    csf_variables: 'משתנים'
-    csf_for_loops: 'בשביל לולאות'
-    csf_internet: 'אינטרנט'
-    csf_warmup: 'חימום'
-    csd1_1: 'פרק 1: הדרך לפתרון תהליך'
-    csd1_2: 'פרק 2: מחשבים ופתרון בעיות'
-    csd2_1: 'פרק 1: תוכן אינטרנט ו-HTML'
-    csd2_2: 'פרק 2: עיצוב ו-CSS'
-    csd3_1: 'פרק 1: תמונות ואנימציות'
-    csd3_2: 'פרק 2: יצירת משחקים'
-    csd4_1: 'פרק 1: עיצוב מכוון משתמש'
-    csd4_2: 'פרק 2: תכנון אפליקציה'
-    csd5_1: 'פרק 1: ייצוג מידע'
-    csd5_2: 'פרק 2: פתרון בעיות נתונים'
-    csd6_1: 'פרק 1: תכנות עם חומרה'
-    csd6_2: 'פרק 2: יצור אב טיפוס פיזי'
-    csd_survey: 'סקר שלאחר הקורס'
-    csp1_1: 'פרק 1: ייצוג ושליחת מידע'
-    csp1_2: 'פרק 2: המצאת האינטרנט'
-    csp2_1: 'פרק 1: קידוד וכיווץ מידע מורכב'
-    csp3_1: 'פרק 1: שפות תכנות ואלגוריתמים'
-    cspSurvey: 'סקר'
-    cspAssessment: 'הערכה לפרק'
-    csp_postap_2: 'פרק 2: אפליקציות ומסדי נתונים'
-    csp3_1_2018: 'יחידה 3: מבוא לתכנות'
-    csp_variables: 'משתנים'
-    csp_conditionals: 'תנאים'
-    csp_functions: 'פונקציות'
-    csp_project: 'פּרוֹיֶקט'
-    csp_lists: 'רשימות'
-    csp_loops: 'חזרות'
   external_links:
     disclaimer: כתב ויתור
     leaving_domain: אתה עוזב כעת את התחום הזה לעבר אתר אשר אינו מנוהל על-ידי Code.org.
@@ -909,7 +862,6 @@ he:
     download_in_Vietnamese: 'הורד בוייטנאמית:'
     windows: 'חלונות (64-סיביות)'
     mac: 'Mac OS X'
-  stage_extras_teacher_message: "כיבית את האפשרות לתוספות לשיעור עבור חלק מהקבוצות שלך. התלמידים שלך לא יוכלו לראות את הדפים האלו אלא אם כן תאפשר זאת. תוכל לאפשר את התוספות לשיעור ע\"י ניווט ל <a href='http://code.org/teacher-dashboard'>לוח הבקרה למורה</a> שלך."
   locked_stage: 'התכנים בשלב זה אינם ניתנים לשימוש מכיוון ששלב זה נעול כרגע. המורה שלך יכול לשחרר את הנעילה של השלב ברגע שיגיע הזמן לעבוד עליו או הזמן לבדוק את תשובותיך.'
   hidden_stage: "המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון אותך לשיעור שאתה אמור להיות בו."
   hidden_script: "המורה שלך לא ציפה לראות אותך כאן. אנא בקש עזרה מהמורה שלך שיכוון אותך ליחידה שאתה אמור להיות בה."
@@ -927,6 +879,8 @@ he:
       school_name: 'שם בית הספר'
       school_city: 'יישוב בית הספר'
       school_country: 'ארץ בית הספר'
+      colombian_school_city: 'יישוב בית הספר'
+      colombian_school_name: 'שם בית הספר'
       ages: 'איזה גיל(אים) אתה מלמד השנה?'
       subjects: 'איזה נושא(אים) אתה מלמד השנה?'
       resources: 'באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?'
@@ -980,10 +934,4 @@ he:
   cookie_banner:
     more_information: "הצג את מדיניות הפרטיות של Code.org."
     accept: 'מסכים'
-  gdpr_dialog:
-    heading: 'האם אתה מאשר להשתמש באתר המבוסס בשטח ארצות הברית?'
-    message: 'יתכן ונתוני השימוש שלך באתר ישלחו, ישמרו או יעובדו בארצות הברית.'
-    link_intro: 'לפרטים נוספים ראה את'
-    privacy_policy: 'מדיניות פרטיות'
-    logout: 'התנתק'
-    yes: 'כן'
+  copy: 'העתק'

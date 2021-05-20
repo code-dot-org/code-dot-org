@@ -1,0 +1,15 @@
+hidden false
+tts true
+
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: false
+level 'Dance_2019_01'
+level 'Dance_2019_02'
+level 'Dance_2019_03'
+level 'Dance_2019_04'
+level 'Dance_2019_05'
+level 'Dance_2019_06'
+level 'Dance_2019_07'
+level 'Dance_2019_08'
+level 'Dance_2019_09'
+level 'Dance_2019_10'
+

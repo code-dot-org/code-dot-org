@@ -6,7 +6,7 @@
 # which changes frequently such as news or sports scores.
 #
 # To reduce the likelihood of abuse, we only proxy content with an allowed
-# whitelist of JSON response types. We will need to monitor usage to detect
+# list of JSON response types. We will need to monitor usage to detect
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
@@ -26,71 +26,76 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
-    accuweather.com
     apex.oracle.com
-    api.coinmarketcap.com
-    api.data.gov
+    api.blizzard.com
+    api.coinlayer.com
     api.datamuse.com
+    api.duckduckgo.com
     api.energidataservice.dk
     api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
+    api.github.com
+    api.mojang.com
     api.nasa.gov
+    api.nookipedia.com
+    api.opencagedata.com
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.scryfall.com
+    api.si.edu
+    api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
+    api.uclassify.com
+    api.waqi.info
     api.zippopotam.us
-    atlas.media.mit.edu
     bible-api.com
     code.org
-    compete.hsctf.com
+    covidtracking.com
+    cryptonator.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
-    developers.zomato.com
-    donordrive.com
+    dataservice.accuweather.com
     dweet.io
     enclout.com
-    githubusercontent.com
-    googleapis.com
-    hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
     images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
+    maker.ifttt.com
+    myschoolapp.com
+    noaa.gov
+    numbersapi.com
     opentdb.com
+    pastebin.com
+    pixabay.com
     pokeapi.co
     qrng.anu.edu.au
     quandl.com
-    quizlet.com
-    rejseplanen.dk
-    maker.ifttt.com
-    noaa.gov
-    nuevaschool.ngrok.io
-    nuevaschool2.ngrok.io
-    nuevaschool3.ngrok.io
-    numbersapi.com
     random.org
+    rejseplanen.dk
     restcountries.eu
-    rhcloud.com
     runescape.com
-    samples.openweathermap.org
-    sheets.googleapis.com
+    sessionserver.mojang.com
     spreadsheets.google.com
     stats.minecraftservers.org
-    swapi.co
+    swapi.dev
+    textures.minecraft.net
+    thecatapi.com
+    thedogapi.com
+    theunitedstates.io
     transitchicago.com
-    translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
-    words.bighugelabs.com
+    worldclockapi.com
   ).freeze
 
   # How long the content is allowed to be cached
@@ -102,12 +107,6 @@ class XhrProxyController < ApplicationController
   def get
     channel_id = params[:c]
     url = params[:u]
-
-    headers = {}
-    ALLOWED_WEB_REQUEST_HEADERS.each do |header|
-      headers[header] = request.headers[header]
-    end
-    headers.compact!
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
@@ -130,7 +129,6 @@ class XhrProxyController < ApplicationController
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
       infer_content_type: false,
-      headers: headers,
     )
   end
 end

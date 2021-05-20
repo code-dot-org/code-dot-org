@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Hidden Images: Getting Started",
-    "long_instructions": "Have you ever seen hidden-image stereograms...an image hidden within what appears to be a colorful geometric pattern? See an example <a href=\"http://www.vision3d.com/sghidden.html\" target=\"_blank\"> here.\n\n</a>How do you think stereograms are created?\n",
+    "long_instructions": "Have you ever seen hidden-image stereograms...an image hidden within what appears to be a colorful geometric pattern? See an example <a href=\"http://www.vision3d.com/sghidden.html\" target=\"_blank\" rel=\"noopener noreferrer\"> here.\n\n</a>How do you think stereograms are created?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

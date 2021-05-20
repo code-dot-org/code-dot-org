@@ -1,0 +1,17 @@
+name 'CSP-PL M7 - Data Viz 1'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Using the Data Visualizer Tool
+
+**Goal:** The purpose of this and the following three levels is to understand how to use the Data Visualizer tool in the Unit 9 lessons. *(Estimated time: ~45 minutes)*
+
+Students will use the Data Visualizer tool in Lessons 2-4 as well as in the unit project. Each of these lessons focuses on using the Data Analysis Process to generate new information. The Data Analysis Process is shown below.
+
+![](https://images.code.org/e11f1a5eabc6d51430133388b1bb340c-image-1605729378552.55.44 PM.png)
+
+
+In the next three levels, we are going to look at how the Data Visualization tool and Data Analysis Process are used in Unit 9.
+MARKDOWN

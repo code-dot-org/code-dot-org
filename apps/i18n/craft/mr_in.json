@@ -1,5 +1,10 @@
 {
   "blockActionRepeat": "पुन्हा करा",
   "blockIf": "जर",
+  "directionDown": "खाली",
+  "directionLeft": "डावा",
+  "directionRight": "उजवा",
+  "directionUp": "वर",
+  "downloadButton": "डाउनलोड करा",
   "to": "पर्यंत"
 }

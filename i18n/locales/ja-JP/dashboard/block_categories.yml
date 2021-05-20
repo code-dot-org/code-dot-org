@@ -1,0 +1,29 @@
+ja:
+  data:
+    block_categories:
+      Actions: うごき
+      Advanced: 高度
+      Behaviors: 行動
+      Brushes: ブラシ
+      Color: 色
+      Comment: コメント
+      Comments: コメント
+      Conditionals: 条件
+      Dancers: ダンサー
+      Default: デフォルト
+      Events: イベント
+      Functions: 関数(かんすう) 
+      'Functions ': '関数(かんすう) '
+      Game/Score: ゲーム/スコア
+      Games/Score: ゲーム/スコア
+      Groups: グループ
+      Locations: 場所
+      Logic: ロジック
+      Loops: くりかえし
+      Math: 計算(けいさん)
+      Numbers: 数 (かず) 
+      Properties: プロパティ
+      Text: テキスト
+      Variables: 変数（へんすう）
+      'Variables ': '変数（へんすう）'
+      World: 世界

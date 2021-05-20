@@ -1,0 +1,28 @@
+name 'Episode 4 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Unplugged Pixel Painter
+Create your own pixel art coloring pages using CS Unplugged's [Pixel Painter](https://csunplugged.org/en/resources/pixel-painter/). Fill in the 0's and 1's, then cut out the pages and rearrange to create an image. 
+
+### Black & White Pixelation Widget
+Practice using 0's and 1's to create the Letter A or a smiley emoji. 
+
+![](https://images.code.org/268fc726bbcec14f1f6afc35de51f91e-image-1586542913086.png)
+
+### Color Pixelation Widget
+Use the Color Pixelation widget to represent color first using 3 bits, and then using 6 bits. 
+
+![](https://images.code.org/9a932d7ec5daec3f2221a346b95e7ed2-image-1586544765356.gif)
+
+---
+Looking for more practice? Check out the [Pixelation Levels](https://studio.code.org/s/pixelation).
+
+
+MARKDOWN

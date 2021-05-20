@@ -33,6 +33,14 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
   end
 
+  test "section code with preceding and trailing whitespaces should redirect to login" do
+    get :student_user_new, params: {section_code: '    ' + @word_section.code + '   '}
+    assert_redirected_to controller: 'sections', action: 'show', id: @word_section.code
+
+    get :student_user_new, params: {section_code: '    ' + @picture_section.code + '   '}
+    assert_redirected_to controller: 'sections', action: 'show', id: @picture_section.code
+  end
+
   test "student_user_new when not signed in" do
     get :student_user_new, params: {section_code: @chris_section.code}
 
@@ -118,6 +126,19 @@ class FollowersControllerTest < ActionController::TestCase
     assert_redirected_to '/'
     expected = I18n.t('follower.error.provider_managed_section', provider: 'Clever')
     assert_equal(expected, flash[:alert])
+  end
+
+  test 'student_user_new errors when joining a restricted section' do
+    sign_in @student
+    section = create(:section, login_type: 'email', restrict_section: true)
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/join'
+    expected = I18n.t('follower.error.restricted_section', section_code: section.code)
+    assert_equal(expected, flash[:inline_alert])
   end
 
   test "student_user_new does not allow joining your own section" do
@@ -275,7 +296,7 @@ class FollowersControllerTest < ActionController::TestCase
     user_script = UserScript.where(user: assigns(:user), script: @laurel_section_script.script).first
     assert user_script
     assert user_script.assigned_at
-    assert_equal @laurel_section_script.script, assigns(:user).primary_script
+    assert_equal @laurel_section_script.script, Queries::ScriptActivity.primary_script(assigns(:user))
   end
 
   test "student_register with a picture/word section redirects to section login" do
@@ -306,5 +327,41 @@ class FollowersControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to admin_directory_path
+  end
+
+  test "student_user_new increments join section attempts when signed in" do
+    refute @chris_section.students.include? @student
+    sign_in @student
+    section_join_attempts = @student.num_section_attempts
+    assert_does_not_create(User) do
+      post :student_register, params: {section_code: @chris_section.code}
+    end
+    @student.reload
+    updated_section_join_attempts = @student.num_section_attempts
+    change_in_section_attempts = updated_section_join_attempts - section_join_attempts
+    assert_equal 1, change_in_section_attempts
+  end
+
+  test 'student_user_new displays captcha when joining 3 or more sections in 24 hours' do
+    @new_student = create(:user)
+    sign_in @new_student
+    3.times do
+      post :student_register, params: {section_code: 'INVALID'}
+      @new_student.reload
+    end
+    assert_equal true, @new_student.display_captcha?
+  end
+
+  # Enable reCAPTCHA gem in test env for just this unit test.
+  # Restores original configuration after testing the assertion
+  test 'student_user_new displays error when joining 3 or more sections in 24 hours without completing captcha' do
+    Recaptcha.configuration.skip_verify_env.delete("test")
+    @new_student = create(:user)
+    sign_in @new_student
+    4.times do
+      post :student_register, params: {section_code: @chris_section.code}
+    end
+    assert_equal(I18n.t('follower.captcha_required'), flash[:alert])
+    Recaptcha.configuration.skip_verify_env.append("test")
   end
 end

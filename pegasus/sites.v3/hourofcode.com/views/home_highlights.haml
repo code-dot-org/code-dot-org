@@ -1,20 +1,71 @@
+:ruby
+  highlights = [
+    {
+      id: 64,
+      heading_s: hoc_s(:highlights_constant_trudeau_heading),
+      short_heading_s: hoc_s(:highlights_constant_trudeau_short_heading),
+      image_url_s: "hoc-trudeau.jpg",
+      link_text_s: hoc_s(:highlights_watchvideo),
+      url_s: "https://www.youtube.com/watch?v=8QwT58VTj_g"
+    },
+    {
+      id: 63,
+      heading_s: hoc_s(:highlights_constant_ny_heading),
+      short_heading_s: hoc_s(:highlights_constant_ny_short_heading),
+      image_url_s: "chicago-2.png",
+      link_text_s: hoc_s(:highlights_readmore),
+      url_s: "http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html"
+    },
+    {
+      id: 65,
+      heading_s: hoc_s(:highlights_constant_athletes_heading),
+      short_heading_s: hoc_s(:highlights_constant_athletes_short_heading),
+      image_url_s: "athletes.png",
+      link_text_s: hoc_s(:highlights_watchvideo),
+      url_s: "https://code.org/athletes"
+    }
+  ]
+
 -if @language == 'en'
   .row
     .col-md-8
       %br/
       %h2
-        Hour of Code Highlights
-      %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/925449654308704256"}
-        Hour of Code Highlights
+        =hoc_s(:highlights_header)
+      %div.highlights-single
+        %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/925449654308704256"}
+          =hoc_s(:highlights_header)
+      %div.highlights-scroll
+        %a.twitter-timeline{data: {chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/925449654308704256", height: "100%"}
+          =hoc_s(:highlights_header)
       %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
     .col-md-3.highlights-column
-      %h2 Highlights from previous years
+      %h2
+        =hoc_s(:highlights_previous)
       %div.highlight-tiles
-        - HIGHLIGHTS_CONSTANTS.each do |item|
+        - highlights.each do |item|
           = view :highlight_item, item: item
         .clear
         %a{href: "/highlights"}
-          %button See more highlights
+          %button 
+            =hoc_s(:highlights_see_more)
+-elsif latam_country_code?(@country) || @country == 'la' || @language == 'la'
+  -# For LATAM countries and Spanish-LATAM language, show only the LATAM HoC Twitter Feed.
+  -# For historical reasons, we also use 'la' code to represent LATAM countries in
+  -# i18n/countries.json. Unfortunately, it is a real country code for Laos Republic
+  -# (ISO_3166-1_alpha-2 codes). We should change it to a different code later.
+  .row
+    .col-md-8
+      %br/
+      %h2
+        =hoc_s(:highlights_header)
+      %div.highlights-single
+        %a.twitter-grid{data: {tweet: {limit: "1"}, chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/1299406095904116742"}
+          =hoc_s(:highlights_header)
+      %div.highlights-scroll
+        %a.twitter-timeline{data: {chrome: "noheader nofooter"}, href: "https://twitter.com/codeorg/timelines/1299406095904116742", height: "100%"}
+          =hoc_s(:highlights_header)
+      %script{async: "", charset: "utf-8", src: "//platform.twitter.com/widgets.js"}
 -else
   -# Highlights
   %br/

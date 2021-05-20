@@ -1,0 +1,471 @@
+{
+  "script": {
+    "name": "gumball",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "gumball"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Gumball Play Lab",
+      "name": "Gumball Play Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_hello1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_hello1"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_hello1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_hello2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_hello2"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_hello2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_move_to_flag"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_move_to_flag"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_move_to_flag"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_move_to_actor"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_move_to_actor"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_move_to_actor"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_repeat"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_repeat"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_repeat"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_click_hello"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_click_hello"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_click_hello"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_move_events"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_move_events"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_move_events"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_sound_and_points"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_sound_and_points"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_sound_and_points"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_warn_food_fight"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_warn_food_fight"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_warn_food_fight"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_join_food_fight"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_join_food_fight"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_join_food_fight"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:gumball_free_play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_free_play"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      },
+      "level_keys": [
+        "blockly:Studio:gumball_free_play"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_hello1",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_hello1"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_hello2",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_hello2"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_move_to_flag",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_move_to_flag"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_move_to_actor",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_move_to_actor"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_repeat",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_repeat"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_click_hello",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_click_hello"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_move_events",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_move_events"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_sound_and_points",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_sound_and_points"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_warn_food_fight",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_warn_food_fight"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_join_food_fight",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_join_food_fight"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:gumball_free_play",
+        "script_level.level_keys": [
+          "blockly:Studio:gumball_free_play"
+        ],
+        "lesson.key": "Gumball Play Lab",
+        "lesson_group.key": "",
+        "script.name": "gumball"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

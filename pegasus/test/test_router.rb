@@ -1,3 +1,5 @@
+require 'action_view'
+
 require_relative './test_helper'
 require_relative '../router'
 
@@ -33,21 +35,17 @@ class RouterTest < Minitest::Test
   end
 
   def test_erb_error_body
-    err = assert_raises(RuntimeError) do
+    err = assert_raises(ActionView::Template::Error) do
       get('/erb_error_body')
     end
-    file, line = err.backtrace.first.split(':')
-    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.md.erb')
-    assert_equal 8, line.to_i
+    assert_equal app.helpers.content_dir('code.org/public/erb_error_body.md.erb'), err.backtrace.first
   end
 
   def test_haml_error
-    err = assert_raises(Haml::Error) do
+    err = assert_raises(ActionView::Template::Error) do
       get('/haml_error')
     end
-    file, line = err.backtrace.first.split(':')
-    assert_equal file, app.helpers.content_dir('code.org/public/haml_error.haml')
-    assert_equal 10, line.to_i
+    assert_equal app.helpers.content_dir('code.org/public/haml_error.haml'), err.backtrace.first
   end
 
   def test_markdown_partial
@@ -100,5 +98,20 @@ class RouterTest < Minitest::Test
     resp = get(path)
     assert_equal 200, resp.status, path
     assert_match "Hello", resp.body
+  end
+
+  def test_no_erb_in_yaml
+    # This test exists for mostly historic reasons; it used to be the case that
+    # the YAML headers in pegasus documents would be parsed first as ERB before
+    # being parsed as YAML.
+    #
+    # In addition to being somewhat confusing, this also led to a security risk
+    # once we started allowing translators to translate entire files.
+    #
+    # This tests exists just to enforce that we don't revert back to the old
+    # functionality.
+    resp = get('/test_no_erb_in_yaml')
+    refute_match "<title>1,2,3</title>", resp.body
+    assert_match "<title>&lt;%= (1..3).to_a.join(&#39;,&#39;).inspect %&gt;</title>", resp.body
   end
 end

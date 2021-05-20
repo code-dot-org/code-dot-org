@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'cdo/delete_accounts_helper'
 
 class Pd::WorkshopTest < ActiveSupport::TestCase
   include Pd::WorkshopConstants
@@ -298,6 +299,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.start!
 
     Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::Workshop.any_instance.expects(:send_facilitator_post_surveys)
 
     workshop.end!
 
@@ -394,7 +396,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true)
 
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).once
     Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
       with(Pd::Enrollment.for_user(teacher_attended).first)
 
@@ -440,13 +441,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
     create(:pd_workshop_participant, workshop: workshop_29d, enrolled: true, attended: true)
 
-    Pd::WorkshopMailer.any_instance.expects(:check_should_send).once
     Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
       with(Pd::Enrollment.for_user(teacher_30d).first)
 
     Pd::Workshop.send_follow_up_after_days(30)
   end
 
+  # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create :pd_workshop, num_sessions: 0
     session = create :pd_session, workshop: workshop
@@ -454,8 +455,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.reload.destroy!
 
     assert workshop.reload.deleted?
-    refute Pd::Workshop.exists? workshop.attributes
-    assert Pd::Workshop.with_deleted.exists? workshop.attributes
+    refute Pd::Workshop.exists? id: workshop.id
+    assert Pd::Workshop.with_deleted.exists? id: workshop.id
 
     # Make sure dependent sessions and enrollments are also soft-deleted.
     assert session.reload.deleted?
@@ -800,6 +801,42 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(1)
   end
 
+  test '10 day reminder for academic year workshop sends pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :academic_year_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csf_deep_dive_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
+  end
+
+  test '3 day reminder for summer workshop does not send pre email to facilitators' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csp_summer_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::Workshop.send_reminder_for_upcoming_in_days(3)
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Date.today + 15.days),
@@ -840,6 +877,53 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
 
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
+  end
+
+  test 'teachers_attending_all_sessions' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSP,
+      sessions_from: Date.new(2019, 7, 1)
+
+    2.times do
+      create :pd_workshop_participant, enrolled: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, cdo_scholarship_recipient: true, workshop: workshop
+    end
+
+    assert_equal 4, workshop.teachers_attending_all_sessions.count
+
+    # Test that scholarship filter works.
+    # Set argument to filter to only scholarship teachers to true.
+    assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+  end
+
+  test 'teachers_attending_all_sessions with a teacher who deleted their account' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSF
+
+    workshop_participant = create :pd_workshop_participant,
+      enrolled: true,
+      attended: true,
+      cdo_scholarship_recipient: true,
+      workshop: workshop
+
+    # Should return 1 before we've done anything.
+    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+
+    # Delete the user.
+    workshop_participant.destroy!
+    workshop.reload
+
+    # With no user account, the user doesn't show up in array of attending teachers.
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+
+    # Fully purge the user account's PD records,
+    # which removes their user ID from attendances.
+    DeleteAccountsHelper.new.clean_and_destroy_pd_content workshop_participant.id
+    workshop.reload
+
+    # Should still return 0 once we've fully purged the teacher user ID from the attendance
+    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
@@ -883,14 +967,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'process_location' do
     mock_geocoder_result = [
       OpenStruct.new(
-        latitude: 47.6101003,
-        longitude: -122.33746,
+        latitude: 47.610183,
+        longitude: -122.337401,
         city: 'Seattle',
         state: 'WA',
         formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
       )
     ]
-    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    expected_processed_location = '{"latitude":47.610183,"longitude":-122.337401,"city":"Seattle","state":"WA","formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
     Honeybadger.expects(:notify).never
 
     # Normal lookup
@@ -905,8 +989,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @workshop.process_location
     assert_nil @workshop.processed_location
 
-    # Don't bother looking up blank addresses or TBA/TBDs
-    ['', 'tba', 'TBA', 'tbd', 'N/A'].each do |address|
+    # Don't bother looking up blank addresses, TBA/TBDs, or virtual locations
+    ['', 'tba', 'TBA', 'tbd', 'N/A', 'virtual', 'Virtual workshop'].each do |address|
       Geocoder.expects(:search).never
       @workshop.location_address = address
       @workshop.process_location
@@ -970,28 +1054,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'pre_survey_units_and_lessons' do
-    course = create :course, name: 'pd-workshop-pre-survey-test'
+    unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
-      create(:script).tap do |script|
-        create :course_script, course: course, script: script, position: (next_position += 1)
-        I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
-        lesson_names.each {|lesson_name| create :stage, script: script, name: lesson_name}
+      create(:script, name: unit_name).tap do |script|
+        create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
+        create :lesson_group, script: script
+        lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, key: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
-    add_unit.call 'Unit 1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
-    add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
-    add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
+    add_unit.call 'pre-survey-unit-1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
+    add_unit.call 'pre-survey-unit-2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
+    add_unit.call 'pre-survey-unit-3', ['Unit 3 - Lesson 1']
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
-      ['Unit 1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
-      ['Unit 2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
-      ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
+      ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
+      ['pre-survey-unit-2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
+      ['pre-survey-unit-3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
@@ -1008,11 +1092,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # With valid course name
     workshop.stubs(:pre_survey?).returns(true)
     workshop.stubs(:pre_survey_course_name).returns(course_name)
-    Course.expects(:find_by_name!).with(course_name).returns(mock_course)
+    UnitGroup.expects(:find_by_name!).with(course_name).returns(mock_course)
     assert_equal mock_course, workshop.pre_survey_course
 
     # With invalid course name
-    Course.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
+    UnitGroup.expects(:find_by_name!).with(course_name).raises(ActiveRecord::RecordNotFound)
     e = assert_raises RuntimeError do
       workshop.pre_survey_course
     end
@@ -1064,6 +1148,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 'March 30 - April 3, 2017, Seattle WA TeacherCon', workshop.date_and_location_name
   end
 
+  test 'date_and_location_name with virtual location and sessions' do
+    workshop = build :workshop, num_sessions: 5, sessions_from: Date.new(2017, 3, 30),
+      location_address: 'virtual'
+    workshop.process_location
+
+    assert_equal 'March 30 - April 3, 2017, Virtual Workshop', workshop.date_and_location_name
+  end
+
+  test 'date_and_location_name with virtual location but no sessions' do
+    workshop = build :workshop, num_sessions: 0, sessions_from: Date.new(2017, 3, 30),
+      location_address: 'virtual'
+    workshop.process_location
+
+    assert_equal 'Dates TBA, Virtual Workshop', workshop.date_and_location_name
+  end
+
   test 'friendly_location TBA' do
     workshop = build :workshop, location_address: 'tba'
     assert_equal 'Location TBA', workshop.friendly_location
@@ -1083,6 +1183,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'friendly_location with no location returns tba' do
     workshop = build :workshop, location_address: '', processed_location: nil
     assert_equal 'Location TBA', workshop.friendly_location
+  end
+
+  test 'friendly_location with virtual location' do
+    workshop = build :workshop, location_address: 'virtual', processed_location: nil
+    assert_equal 'Virtual Workshop', workshop.friendly_location
   end
 
   test 'workshops organized by a non program manager are not assigned regional partner' do
@@ -1265,7 +1370,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # csf workshop has workshop admins, program managers, and other csf facilitators in list
     csf_workshop = create :workshop, course: COURSE_CSF
-    potential_organizer_ids = csf_workshop.potential_organizers.map {|org| org[:value]}
+    potential_organizer_ids = csf_workshop.potential_organizers.ids
 
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? program_manager.id
@@ -1275,7 +1380,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # non-csf workshop without regional partner has workshop admins and all program managers in list
     csd_workshop = create :workshop, course: COURSE_CSD
-    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    potential_organizer_ids = csd_workshop.potential_organizers.ids
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? program_manager.id
     # facilitators cannot be organizers for non-csf workshops
@@ -1285,10 +1390,83 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_partner = create :regional_partner
     workshop_partner_program_manager = create :program_manager, regional_partner: workshop_partner
     csd_workshop.regional_partner = workshop_partner
-    potential_organizer_ids = csd_workshop.potential_organizers.map {|org| org[:value]}
+    potential_organizer_ids = csd_workshop.potential_organizers.ids
     assert potential_organizer_ids.include? workshop_admin.id
     assert potential_organizer_ids.include? workshop_partner_program_manager.id
     refute potential_organizer_ids.include? program_manager.id
+  end
+
+  test 'virtual workshops don\'t automatically suppress email' do
+    workshop = build :workshop
+
+    # Non-virtual workshops may suppress email or not
+    workshop.virtual = false
+    workshop.suppress_email = false
+    assert workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+
+    # Virtual workshops may suppress email or not (change from previous behavior)
+    workshop.virtual = true
+    workshop.suppress_email = false
+    assert workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'academic year workshops must suppress email' do
+    workshop = build :workshop, course: COURSE_CSP
+
+    # Non-academic year workshops may suppress email or not
+    workshop.subject = SUBJECT_SUMMER_WORKSHOP
+    workshop.suppress_email = false
+    assert workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+
+    # Academic year workshops must suppress email
+    workshop.subject = SUBJECT_CSP_WORKSHOP_1
+    workshop.suppress_email = false
+    refute workshop.valid?
+
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'virtual specific subjects must be virtual' do
+    workshop = build :pd_workshop,
+      course: COURSE_CSP,
+      subject: SUBJECT_CSP_WORKSHOP_1,
+      virtual: false,
+      suppress_email: true
+
+    assert workshop.valid?
+
+    workshop.subject = VIRTUAL_ONLY_SUBJECTS.first
+    refute workshop.valid?
+
+    workshop.virtual = true
+    assert workshop.valid?
+  end
+
+  test 'friday_institute workshops must be virtual' do
+    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
+    refute workshop.valid?
+
+    workshop.virtual = true
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
+  test 'workshops third_party_provider must be nil or from specified list' do
+    workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
+    refute workshop.valid?
+
+    workshop.third_party_provider = nil
+    assert workshop.valid?
   end
 
   private

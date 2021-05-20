@@ -1,0 +1,28 @@
+th:
+  data:
+    variable_names:
+      Blue: สีฟ้า
+      Green: สีเขียว
+      Red: สีแดง
+      actor: นักแสดง
+      cats: แมวทั้งหมด
+      color: สี
+      counter: ตัวนับ
+      dogs: สุนัขทั้งหมด
+      height: ความสูง
+      honey: น้ำผึ้ง
+      i: i
+      left: ซ้าย
+      length: ความยาว
+      name: ชื่อ
+      nectar: น้ำหวาน
+      points: คะแนน
+      random: สุ่ม
+      repeat: ทำซ้ำ
+      right: ขวา
+      score: คะแนน
+      size: ขนาด
+      speed: ความเร็ว
+      width: ความกว้าง
+      wizard: พ่อมด
+      x: x

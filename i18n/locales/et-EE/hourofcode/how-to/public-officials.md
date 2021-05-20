@@ -1,7 +1,5 @@
 ---
 title: Juhendid avalikule sektorile
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ Vasakult paremale:* rahvasaadikud Arkansasest, North Carolinast ja Arizonasest K
 
 ### 1. Loe meie 1-leheküljelist juhendit
 
-Vaata [miks arvutiteaduse alane haridus on oluline](/files/hoc-one-pager.pdf) ning kuidas saad KoodiTund toimumisele kaasa aidata.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Kaasa kohalikke koole ja piirkondasid
 

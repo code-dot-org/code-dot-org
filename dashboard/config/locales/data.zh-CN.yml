@@ -39,7 +39,7 @@ zh-CN:
         Custom: 小艺术家
         CustomStudio: 游戏实验室
         Gamelab: 游戏实验室
-        Spritelab: 精灵实验室
+        Spritelab: 精灵图实验室
     trophy:
       name:
         Bronze: 铜牌
@@ -84,7 +84,7 @@ zh-CN:
         turtle_1_3: 只用三个模块画一个正方形。
         turtle_1_4: 让我们来画一个三条边都是不同颜色的三角形。你可以用“随机颜色”块来选择不同的颜色。提示：你得在“转向”块上写上需要转多少度。
         turtle_1_5: 现在，让我们来画一个信封。先画一个三角形，再画一个正方形。
-        turtle_1_6: 能想出来怎么能画个三角形和正方形吗？提示： 第一，先画三角形，然后转个弯，来画正方形。
+        turtle_1_6: 知道怎么画出三角形和正方形吗？提示： 首先画三角形，然后在画正方形之前，考虑一下怎么转弯。
         turtle_1_7: 好的，让我们来试试更难一点的 —— 看看能不能画一个绿色的眼镜。正方形的每边长为100个像素。两个正方形之间相距50像素。别忘了把它画成绿色！
         turtle_1_8: 好的，试试看运行这段代码会发生什么（按下"运行"）。然后，重复它来完成我们要画的图。每次的颜色都会不同。
         turtle_1_9: 如果要画一个圆，你知道应该在画问号的地方填上什么数字么？
@@ -398,8 +398,8 @@ zh-CN:
         csd_external_netflix_data: Netflix（网飞）是如何生成电视和电影建议的？
         csd_external_waze_data: 为什么如此多的用户都着迷于Waze？
         csd_gamelab_animation_tab: 动画标签页
-        csd_gamelab_sprites_1: 精灵简介
-        csd_gamelab_sprites_2: 精灵的动画
+        csd_gamelab_sprites_1: 精灵图简介
+        csd_gamelab_sprites_2: 精灵图的动画
         csd_gamelab_velocity: 矢量
         csd_weblab_intro_1: 网络实验室介绍-第 1 部分
         csd_weblab_intro_2: 网络实验室介绍-第 2 部分
@@ -481,10 +481,10 @@ zh-CN:
         csd_gamelab_booleans: 布尔表达式
         csd_gamelab_conditional_statements: 条件表达式
         csd_gamelab_if_else: 如果/否则 语句
-        CSF_SpriteLabIntro_CDEF: 这是精灵实验室
-        CSF_Spritelab_MakeSprite_CDEF: 如何在精灵实验室制作精灵
-        CDEF_Video_SpritesInAction: 动作精灵
-        CSF_SpriteLab_SpritesInAction_CDEF: 动作精灵
+        CSF_SpriteLabIntro_CDEF: 这是精灵图实验室
+        CSF_Spritelab_MakeSprite_CDEF: 如何在精灵图实验室制作精灵图
+        CDEF_Video_SpritesInAction: 动作精灵图
+        CSF_SpriteLab_SpritesInAction_CDEF: 动作精灵图
         CSF_StarWars_ProjectIntro: 星球大战项目介绍
         mc_2018_intro: "《我的世界》：水上航行简介"
         MC_2018_loops: "《我的世界》：水上航行 重复直到"
@@ -516,10 +516,53 @@ zh-CN:
         csd_applab_loops: 应用实验室的循环
         csd_problem_solving_process: 解决问题的过程
         CSF_Going_Places_Safely: 我的在线邻居
-        CSF_SpriteLab_Intro_v2: 向你介绍精灵实验室
-        CSF_Spritelab_MakeSprite_v2: 如何制作精灵
-        CSF_SpriteLab_SpritesInAction_v2: 动作精灵
+        CSF_SpriteLab_Intro_v2: 向你介绍精灵图实验室
+        CSF_Spritelab_MakeSprite_v2: 如何制作精灵图
+        CSF_SpriteLab_SpritesInAction_v2: 动作精灵图
         csd_debugging: 调试
+        csd_applab_designmode_short: 应用程序实验室 - 设计模式
+        csp-pd-welcome: 欢迎加入大家庭！
+        CSF-Teaching-Problem-Solving: 计算机科学基础中解决问题的教学
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video
+          - 数据块
+        u7-libraries-explanation: 应用实验室：创建自己的模块 - 如何使用库
+        how-to-k5-workshops: Code.org 的计算机科学基础：孩子们测试，老师批准
+        why-should-teach-unplugged-activities: 常见问答：为什么我要教"线下"活动？
+        cs-principles-intro-to-objects: 计算机科学原理：介绍对象
+        oceans_machine_learning: 机器学习
+        oceans_training_data: 训练数据
+        oceans_societal_implications: 社会意义
+        hoc_dance_congrats_2019: 舞蹈派对 2019 - 开跳！
+        hoc_dance_warmup_2019: 舞蹈派对 2019 - 热身！
+        hoc_dance_events_2019: 舞蹈派对 2019 - 事件
+        hoc_dance_measures_2019: 舞蹈派对 2019 - 小节
+        hoc_dance_properties_2019: 舞蹈派对 2019 - 属性
+        csd_what_computers_do: 计算机做什么？
+        csf_my_online_neighborhood_2020: 我的在线邻居
+        csf_follow_the_digital_trail: 请跟随数码小径
+        csf_private_and_personal_information: 私人和个人信息
+        csd_what_computers_are: 什么是计算机？
+        codebreak_e01: 编程解密 1.0：与 Hill Harper 的计算程序
+        codebreak_e02: 编程解密 2.0：跟Mark Cuban 和 Lyndsey Scott 一起学雏形和最初形态
+        codebreak_e03: 编程解密 3.0：跟 Ashton Kutcher 和 Mia Gil Epner 一起学加密技术
+        codebreak_e04: 编程解密 4.0：跟 Mike Krieger 和 Alice Keeler 一起学数据信息
+        codebreak_e05: 编程解密 5.0： 跟 Bill Gates 学模拟器和数据
+        csd_how_teamwork_works: 如何运用团队合作
+        csd_teamwork_and_disagreement: 团队合作 - 处理分歧
+        codebreak_e06: 编程解密 6.0：跟 Keegan-Michael Scott 和 Vint Cerf 一起学网络
+        codebreak_e07: 编程解密 7.0：跟 Sal Khan 和 Flo Vaughn 一起学条件语句
+        codebreak_e08: '编程解密 8.0： 跟 Yara Shahidi 和 Fuzzy Khosrowshahi 一起学变量 '
+        codebreak_e09: 编程解密 9.0： 跟 Macklemore 和 Scott Forstall 一起学事件
+        codebreak_e10: 编程解密 10.0：跟 Kat Graham 和 Kate Park 一起学AI
+        codebreak_e11: 编程解密 11.0：跟Susan Wojcicki 和 China Anne McClain 一起学抽象概念
+        codebreak_e12: 编程解密 12.0：跟 Aloe Blacc、Bret Taylor 和 Paula Mejia 一起学硬件
+        csf21pilot_events: 精灵图实验室：在活动的精灵图 （计算机科学基础 2021 试航）
+        csf21pilot_prompts: 精灵图实验室：精灵实验室：文本和提示 (CSF 2021 Pilot)
+        outbreak_mike: 麦克的CodeBytes第3集-爆发模拟器
+        poembot-pilot-prompts: 俳句机器人-带选择的提示[PILOT]
+        poembot-pilot-text: 俳句机器人-存储文本[PILOT]
+        poembot-pilot-haiku: 俳句机器人-显示你的俳句[PILOT]
+        csd_ml_import_model: 导入AI模型
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

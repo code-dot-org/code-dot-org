@@ -1,4 +1,5 @@
 name 'Pluralsight for CSP'
+editor_experiment ''
 title 'Pluralsight for CSP'
 description 'description here'
 
@@ -9,31 +10,29 @@ Ready for a future in tech? Now you can get access to Pluralsight courses free f
 
 Take advantage of on-demand courses authored by an elite network of industry experts. Master skills in software development, data security, cloud, game design, mobile, Adobe Creative Suite and more. Pluralsight can also prepare you for important certifications with industry leading practice exams. 
 
-Get started today with these specially curated Pluralsight courses, and keep learning for free for one whole year. To get started, sign up below and you’ll receive a redemption code to access the free courses on the Pluralsight platform. 
+Get started today with these specially curated Pluralsight courses, and keep learning for free for one whole year. To get started, sign up below and you’ll receive a redemption code to access the free courses on the Pluralsight platform.
 
 
-<a class=“btn btn-large btn-primary” href="https://www.pluralsightone.org/product/education/code-org-redemption"> Get started </a>
-
-
+<a class="btn btn-large btn-primary" href="https://www.pluralsight.com/redeemlink/genericV4?redemptionId=211f6c2a-5450-4d1e-9fdb-9ddbce39dc35&mac=cc1ef8c2ddfe0236eaad3867f00c3339441482bf3e30171198c80efa230d6318#/"> Get started </a>
 
 <h3>
 What can you expect with your Pluralsight One access?
 </h3>
-You’ll have access to a library of over 350 courses, totaling over 1,000 hours of expert-led content  mapped to computer science standards and AP CSP curriculum across four major areas: IT/OPs, software development, design/creative, and product management.  [Learn more](https://vimeo.com/319103540).
-<h3>
-*************************************************************************************************
-</h3>
+
+You’ll have access to a library of over 350 courses, totaling over 1,000 hours of expert-led content  mapped to computer science standards and AP CSP curriculum across four major areas: IT/OPs, software development, design/creative, and product management. [Learn more](https://vimeo.com/319103540).
+
+------
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-**Give your students the chance to continue their tech skills journey with Pluralsight.** 
+**Give your students the chance to continue their tech skills journey with Pluralsight.**
 
-Through Pluralsight One, your students can build on what they’ve learned through Code.org by accessing over 350 expert-authored Pluralsight courses mapped to computer science standards and AP CSP curriculum—completely free for one year.
+Through Pluralsight One, your students can build on what they've learned through Code.org by accessing over 350 expert-authored Pluralsight courses mapped to computer science standards and AP CSP curriculum — completely free for one year.
 
 To access this offer, have your students do the following:
+
 1. Have your students visit this page when they are signed in
-2. Ask them to click the “Get started” button above to sign up for the Pluralsight One offer
+2. Ask them to click the "Get started" button above to sign up for the Pluralsight One offer
 3. After signing up, the student will receive an email with a link to activate the offer
 4. Once they've activated the offer via the link, the student will have 12 months free access to Pluralsight One
-
 MARKDOWN

@@ -1,7 +1,5 @@
 ---
 title: 公职人员的操作指南
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ From left to right: *Governors from Arkansas, North Carolina, and Arizona partic
 
 ### 1. 请阅读我们的单页报告
 
-详见[为什么计算机科学教育如此重要](/files/hoc-one-pager.pdf)，以及您如何支持编程一小时活动。
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. 招募本地学校和社区作为合作机构
 

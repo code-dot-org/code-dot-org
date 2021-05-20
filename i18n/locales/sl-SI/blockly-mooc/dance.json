@@ -1,15 +1,3 @@
 {
-  "danceFeedbackNeedNewDancer": "Naredi plesalca.",
-  "danceFeedbackNoDancers": "",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "Naredi plesalca."
 }

@@ -77,6 +77,8 @@ he:
         title: כיף עם לולאת "עבור"
         desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב,
           אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות עם מבנה מתוחכם יותר.
+      SongwritingWithParameters:
+        title: כתיבת שירים
       BinaryImages:
         title: תמונות בינאריות
       DesignRecipe:
@@ -98,6 +100,8 @@ he:
         title: פעילות ללא עבודה במחשב
       courseF_unplugged_powerOfWords:
         title: פעילות ללא עבודה במחשב
+      deeper learning description:
+        title: " "
       courseAB_unplugged_plantASeed:
         title: 'אלגוריתמים מהחיים: שתול זרעון'
         desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
@@ -123,6 +127,8 @@ he:
         title: התניות עם כרטיסים
       courseD_unplugged_binaryImages:
         title: תמונות בינאריות
+      courseE_unplugged_songwritingParameters:
+        title: כתיבת שירים
       courseE_unplugged_internet:
         title: אינטרנט
       courseE_unplugged_songwriting:
@@ -133,8 +139,46 @@ he:
         title: כיף עם לולאת "עבור"
         desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב,
           אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות עם מבנה מתוחכם יותר.
+      courseF_unplugged_songwritingParameters:
+        title: כתיבת שירים
       courseB_unplugged_MRF_2018:
         title: חברי הרובוטיים
+      BuildingAFoundation_2018:
+        title: " "
+        desc: " "
+      courseB_unplugged_loopyMRF_2018:
+        title: " "
+        desc: " "
+      DiceRace_2018:
+        title: " "
+        desc: " "
+      courseE_unplugged_privateInformation_2018:
+        title: " "
+        desc: " "
+      SongwritingParameters_2018:
+        title: " "
+        desc: " "
+      Internet_2018:
+        title: " "
+        desc: " "
+      Crowdsourcing_2018:
+        title: " "
+        desc: " "
+      TangramAlgorithms_2018:
+        title: " "
+        desc: " "
+      courseF_unplugged_powerOfWords_2018:
+        title: " "
+        desc: " "
+      EnvelopeVariables_2018:
+        title: " "
+        desc: " "
+      ForLoopFun_2018:
+        title: " "
+        desc: " "
+      SongwritingWithParameters_2018:
+        title: " "
+        desc: " "
       PlantASeed_2018:
         title: 'אלגוריתמים מהחיים: שתול זרעון'
         desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
@@ -164,6 +208,7 @@ he:
           ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
       MoveItMoveIt_2018:
         title: זוזו, זוזו
+        desc: " "
       RelayProgramming_2018:
         title: הרץ פעולה בשנית
         desc: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות
@@ -171,6 +216,8 @@ he:
           בכל פעם.
       courseB_unplugged_MRF_2019:
         title: חברי הרובוטיים
+      courseB_unplugged_loopyMRF_2019:
+        desc: " "
       Conditionals_2019:
         title: תנאים
       GraphPaperProgramming_2019:
@@ -196,6 +243,8 @@ he:
           ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
       PaperPlanes_2019:
         title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      test-uid-passthrough:
+        title: " "
       PlantASeed_2019:
         title: 'אלגוריתמים מהחיים: שתול זרעון'
         desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
@@ -205,5 +254,6 @@ he:
         title: מפות שמחות
       MoveItMoveIt_2019:
         title: זוזו, זוזו
+        desc: " "
       timeforcs_demo_conditionals:
         title: תנאים

@@ -19,6 +19,8 @@ km:
         title: លក្ខខណ្ឌ
       ComputationalThinking:
         title: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+      courseD_unplugged_conditionalsCards:
+        title: ការប្រើលក្ខខណ្ឌជាមួយកាត
       swipeRightPassThrough:
         desc: "# Recruitment Scenarios Session\r\n\r\n## Swipe Right for CS\r\nFor
           this session we'll use a tool called \"Swipe Right for CS\", which has been
@@ -57,8 +59,12 @@ km:
           hit save and publish.\r\n2. “destroyed” the level\r\n3. made a `markdown`
           level with the same content and same name. checked to box to encrypt it.
           hit save and plush"
+      courseB_unplugged_MRF_2018:
+        title: មិត្តរ៉ូបូតរបស់ខ្ញុំ
       Conditionals_2018:
         title: លក្ខខណ្ឌ
+      courseB_unplugged_MRF_2019:
+        title: មិត្តរ៉ូបូតរបស់ខ្ញុំ
       Conditionals_2019:
         title: លក្ខខណ្ឌ
       timeforcs_demo_conditionals:

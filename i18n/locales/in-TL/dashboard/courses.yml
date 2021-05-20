@@ -1,0 +1,50 @@
+---
+in:
+  data:
+    course:
+      name:
+        csp-2017:
+          assignment_family_title: crwdns135181:0crwdne135181:0
+          title: crwdns135182:0crwdne135182:0
+          version_title: crwdns135183:0crwdne135183:0
+          description_student: crwdns135184:0crwdne135184:0
+          description_teacher: crwdns135185:0crwdne135185:0
+          description_short: crwdns135186:0crwdne135186:0
+        csd-2017:
+          assignment_family_title: crwdns135187:0crwdne135187:0
+          title: crwdns135188:0crwdne135188:0
+          version_title: crwdns135189:0crwdne135189:0
+          description_student: crwdns135190:0crwdne135190:0
+          description_teacher: crwdns135191:0crwdne135191:0
+          description_short: crwdns135192:0crwdne135192:0
+        allthethingscourse:
+          title: crwdns91090:0crwdne91090:0
+          description_short: crwdns91091:0crwdne91091:0
+          description_student: crwdns91092:0crwdne91092:0
+          description_teacher: crwdns91093:0crwdne91093:0
+        csd-2018:
+          assignment_family_title: crwdns134602:0crwdne134602:0
+          title: crwdns133747:0crwdne133747:0
+          version_title: crwdns134603:0crwdne134603:0
+          description_short: crwdns133748:0crwdne133748:0
+          description_student: crwdns133749:0crwdne133749:0
+          description_teacher: crwdns133750:0crwdne133750:0
+        csp-2018:
+          assignment_family_title: crwdns134604:0crwdne134604:0
+          title: crwdns134605:0crwdne134605:0
+          version_title: crwdns134606:0crwdne134606:0
+          description_short: crwdns134607:0crwdne134607:0
+          description_student: crwdns134608:0crwdne134608:0
+          description_teacher: crwdns134609:0crwdne134609:0
+        csp-2019:
+          title: crwdns774782:0crwdne774782:0
+          version_title: crwdns774784:0crwdne774784:0
+          description_short: crwdns774786:0crwdne774786:0
+          description_student: crwdns774788:0crwdne774788:0
+          description_teacher: crwdns774790:0crwdne774790:0
+        csd-2019:
+          title: crwdns774792:0crwdne774792:0
+          version_title: crwdns774794:0crwdne774794:0
+          description_short: crwdns774796:0crwdne774796:0
+          description_student: crwdns774798:0crwdne774798:0
+          description_teacher: crwdns774800:0crwdne774800:0

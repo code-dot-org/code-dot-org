@@ -1,10 +1,9 @@
 ---
 title: Bütün Okul Katılımı
-layout: wide
 ---
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Bütün okulunuzu dahil edin
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Bütün okulları Hour of Code'a dahil etmek için gerekli tüm bilgiler yakında burada olacak.

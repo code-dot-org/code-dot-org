@@ -3,43 +3,49 @@ el-GR:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Πολλαπλή Επιλογή
-        questions:
-        - text: Διάλεξε έναν αλγόριθμο για την εικόνα που δίνεται.
         answers:
         - text: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο πάνω από το τετράγωνο
             <br/> Βάλε ένα τρίγωνο κάτω από το από το τετράγωνο
-        - {}
+        - text: Ξεκίνα με ένα τετράγωνο  Βάλε ένα τρίγωνο δεξιά του τετραγώνου  Βάλε
+            ένα παραλληλόγραμμο κάτω από το τετράγωνο  Βάλε τρίγωνο δεξιά του παραλληλογράμμου
+          correct: true
         - text: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα παραλληλόγραμμο πάνω από το
             τετράγωνο <br/> Βάλε ένα τρίγωνο δεξιά του παραλληλογράμμου
         - text: Ξεκίνα με ένα τετράγωνο <br/> Βάλε ένα τρίγωνο κάτω από το τετράγωνο
             <br/> Βάλε ένα παραλληλόγραμμο δεξιά του τριγώνου
-      2-3 Algorithms Multi 2:
+        questions:
+        - text: Διάλεξε έναν αλγόριθμο για την εικόνα που δίνεται.
         title: Πολλαπλή Επιλογή
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         content1: Ξεκίνα με ένα τρίγωνο <br/> Βάλε ένα τετράγωνο κάτω από το τρίγωνο
           <br/> Βάλε ένα άλλο τρίγωνο κάτω από το τετράγωνο
         questions:
         - text: Ποια εικόνα <em>δεν </em> ταιριάζει με τον αλγόριθμο;
+        title: Πολλαπλή Επιλογή
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Big Event Match 1:
-        title: Ταίριαξε
         content2: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Ταίριαξε
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Ταίριαξε
         content2: Χρησιμοποιήστε το πλήκτρο για να ταιριάξεις  κάθε κωδικό στο γράμμα
           του
         questions:
@@ -47,193 +53,192 @@ el-GR:
         - text: "<strong>Ο</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Ταίριαξε
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Σύμφωνα με τους κανόνες του παιχνιδιού, ποιο σύνολο καρτών έχει βαθμολογηθεί
             σωστά;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: Πολλαπλή Επιλογή
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
+        title: Πολλαπλή Επιλογή
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Ταίριαξε
         content1: Ταίριαξε  το πλέγμα στο πρόγραμμα.
         questions:
         - {}
         - {}
         - {}
+        title: Ταίριαξε
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Ποιο πρόγραμμα δημιουργεί την εικόνα;
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Πολλαπλή Επιλογή
       2-3 Maze Match 2:
-        title: Λαβύρινθο ταίριαξε
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Ταίριαξε  τα παζλ στα μπλοκς
-        pre_title: Οδηγίες
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Λαβύρινθο ταίριαξε
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Ποιος συνδυασμός μπλοκ θα με οδηγήσει στο γουρούνι;
         title: Λαβύρινθος Πολλαπλή Επιλογή
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Πολλαπλή Επιλογή
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: Πολλαπλή Επιλογή
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Ποιος συνδυασμός εικόνας - προγράμματος δεν έχει λάθη;
+        title: Πολλαπλή Επιλογή
+      2-3 artist debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 artist debug multi 1:
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 artist functions multi 1:
-        title: Καλλιτέχνης Συναρτήσεις Πολλαπλή Επιλογή Ένα
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Πάρε τα σωστά μπλοκ για να σχεδιάσεις αυτήν την εικόνα με χρήση των
             δεδομένων συναρτήσεων
+        title: Καλλιτέχνης Συναρτήσεις Πολλαπλή Επιλογή Ένα
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: Ταιριάξτε το βρόχο με το σχήμα
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
         questions:
         - text: Ποιο σχήμα δημιουργείται από αυτόν τον βρόχο;
+        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+        - correct: true
         questions:
         - text: Ποιο σχήμα δημιουργείται από αυτό το πρόγραμμα;
+        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: Καλλιτέχνης που ταιριάζουν
         content1: Ταιριάξε  το σχήμα με τα μπλοκς που το ολοκληρώνουν.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Καλλιτέχνης που ταιριάζουν
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Ποια από τις παρακάτω συγκρίσεις είναι αληθής;
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Επιλέξτε τα καλύτερα μπλοκ.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: Μέλισσα Επαναλήψεις Πολλαπλή Επιλογή Ένα
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ποια μπλοκ συλλέγουν όλο το νέκταρ;
+        title: Μέλισσα Επαναλήψεις Πολλαπλή Επιλογή Ένα
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: Λαβύρινθο ταίριαξε  ένα
         content1: Ταίριαξε  τα παζλ στα μπλοκς
         questions:
         - {}
         - {}
         - {}
+        title: Λαβύρινθο ταίριαξε  ένα
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: Λαβύρινθος Πολλαπλή Επιλογή Ένα
         questions:
         - text: Ποιό σύνολο μπλοκς είναι η σωστή απάντηση;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Λαβύρινθος Πολλαπλή Επιλογή Ένα
       4-5 Algorithms Match 1:
-        title: Ταίριαξε
+        answers:
+        - text: "<h4>Κάνε Παίκτης 1 σκορ σε 0</h4>"
+        - text: "<h4>Παίκτης 1 ρίξε τα ζάρια</h4>"
+        - text: "<h4>Προσθέστε τη βαθμολογία του Παίκτη 1 στο συνοικό σκορ</h4>"
+        - text: "<h4>Συγκρίνετε βαθμολογίες παικτών για να δούμε ποιος κερδίζει</h4>"
         content1: Ταίριαξε  τα βήματα στο παιχνίδι αγώνα Ζάρια με τη σειρά που πρέπει
           να εμφανίζονται στον αλγόριθμο.
         questions:
@@ -241,22 +246,23 @@ el-GR:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Κάνε Παίκτης 1 σκορ σε 0</h4>"
-        - text: "<h4>Παίκτης 1 ρίξε τα ζάρια</h4>"
-        - text: "<h4>Προσθέστε τη βαθμολογία του Παίκτη 1 στο συνοικό σκορ</h4>"
-        - text: "<h4>Συγκρίνετε βαθμολογίες παικτών για να δούμε ποιος κερδίζει</h4>"
+        title: Ταίριαξε
       4-5 Algorithms Multi 1:
-        title: Πολλαπλή Επιλογή
-        questions:
-        - text: Ποιο από αυτά τα αντικείμενα είναι δύσκολο να περιγραφεί με αλγόριθμο;
         answers:
         - text: Βουρτσίζοντας τα δόντια σας
         - text: Ψήνοντας μπισκότα
         - text: Αγοράζοντας από μια λίστα του μπακάλη
         - text: Μπανάνα
+          correct: true
+        questions:
+        - text: Ποιο από αυτά τα αντικείμενα είναι δύσκολο να περιγραφεί με αλγόριθμο;
+        title: Πολλαπλή Επιλογή
       4-5 Computational Thinking Match 1:
-        title: Ταίριαξε
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Κάθε ένα από αυτά τα οχήματα έχει διαλυθεί σε μικρότερα κομμάτια.
           Ταίριαξε  κάθε όχημα με την λίστα αποσύνθεσης.
         questions:
@@ -264,80 +270,86 @@ el-GR:
         - text: "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 1</h3>"
         - text: "<h3>Τροχούς/πλευρά: 2 <br/>Παράθυρα/πλευρά: 6</h3>"
         - text: "<h3>Τροχούς/πλευρά: 3 <br/>Παράθυρα/πλευρά: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Ταίριαξε
       4-5 Computational Thinking Multi 1:
-        title: Πολλαπλή Επιλογή
-        questions:
-        - text: Το Σιάτλ είναι μια μεγάλη πόλη. <br/> Eugene είναι μια πόλη μεσαίου
-            <br/> Hillview είναι μια μικρή πόλη.
         answers:
         - text: Seattle _____ μια _____ _____.
         - text: _____ είναι μια _____ πόλη.
+          correct: true
         - text: _____ είναι μια _____ _____.
         - text: Eugene είναι μια _____ πόλη.
-      4-5 Crowdsourcing Multi 1:
+        content1: Εδώ είναι τρεις προτάσεις. Ποιο από τα παρακάτω πρότυπα είναι κατάλληλα
+          αφαιρετικό ώστε και οι τρεις να ταιριάζουν με το ίδιο μοτίβο όπως το πρότυπο;
+        questions:
+        - text: Το Σιάτλ είναι μια μεγάλη πόλη. <br/> Το Γιουτζίν είναι μια μεσαία
+            πόλη <br/> Hillview είναι μια μικρή πόλη.
         title: Πολλαπλή Επιλογή
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - {}
+        - correct: true
         questions:
         - text: Ποια από τις παρακάτω εικόνες αναπαριστά καλύτερα το crowdsourcing;
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: Πολλαπλή Επιλογή
-        questions:
-        - text: Ποια από αυτές τις δραστηριότητες θα ήταν καλύτερη για την πραγματοποίηση
-            του crowdsourcing;
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: καθαρίζοντας το δωμάτιο σου
+          correct: true
         - text: Τρώγοντας το επίδόρπιο σου
         - text: Βουρτσίζοντας τα μαλλιά σου
         - text: Πλένοντας το πρόσωπό σου
-      4-5 Digital Footprint Multi 1:
-        title: Πολλαπλή Επιλογή
         questions:
-        - text: Ποια από τις παρακάτω πληροφορίες μπορούμε άνετα να μοιραστούμε στο
-            διαδίκτυο;
+        - text: Ποια από αυτές τις δραστηριότητες θα ήταν καλύτερη για την πραγματοποίηση
+            του crowdsourcing;
+        title: Πολλαπλή Επιλογή
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Τα γενέθλιά σου
         - text: Η αγαπημένη σου τροφή
+          correct: true
         - text: Η διεύθυνση σου
         - text: Ο αριθμός πιστωτικής κάρτας των γονιών σου
-      4-5 Internet Multi 1:
+        questions:
+        - text: Ποια από τις παρακάτω πληροφορίες μπορούμε άνετα να μοιραστούμε στο
+            διαδίκτυο;
         title: Πολλαπλή Επιλογή
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Όταν συνδέεστε στο code.org, σε ποια διεύθυνση IP είναι πιθανότερο
             να σας οδηγήσει το DNS;
+        title: Πολλαπλή Επιλογή
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Αν το DNS σας έστειλε στη σελίδα με διεύθυνση IP 100.42.50.110, σε
             ποιον ιστότοπο είστε;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Πολλαπλή Επιλογή
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Λου, Λου, πάμε στη Λου,
         - text: Λου, Λου, πάμε στη Λου,<br/>Λου, Λου, πάμε στη Λου,<br/>Λου, Λου,
             πάμε στη Λου,<br/>Πάμε στη Λου, αγάπη μου.
+          correct: true
         - {}
         - {}
+        questions:
+        - {}
+        title: Πολλαπλή Επιλογή
       4-5 Suncatchers Match 1:
-        title: Ταίριαξε
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Ταίριαξε  κάθε πρόγραμμα με τη λέξη που σχηματίζει , χρησιμοποιώντας
           την  παρεχόμενη ομάδα δεξιοτήτων.
         questions:
@@ -345,211 +357,199 @@ el-GR:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Ταίριαξε
       4-5 Suncatchers Multi 1:
-        title: Πολλαπλή Επιλογή
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: Ποιά από τα παρακάτω προγράμματα <em> δεν κάνουν </em> ακριβώς την
             ίδια ακολουθία με το πρόγραμμα 1;
+        title: Πολλαπλή Επιλογή
+      4-5 artist loops multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
         questions:
         - text: Ποια μπλοκ θα δημιουργήσουν το σχέδιο;
+        title: Καλλιτέχνης Επαναλήψεις Πολλαπλή Επιλογή
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: Καλλιτέχνης Πολλαπλή Επιλογή
         questions:
         - text: Ποια μπλοκ σχεδιάζουν ένα ορθογώνιο με περίμετρο από 100;
+        title: Καλλιτέχνης Πολλαπλή Επιλογή
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Καλλιτέχνης Πολλαπλή Επιλογή
         questions:
         - text: Ποιο σχέδιο είναι συμμετρικό;
+        title: Καλλιτέχνης Πολλαπλή Επιλογή
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: Μέλισσα Συνθήκες Πολλαπλή Επιλογή
         questions:
         - text: Επιλέξτε τα καλύτερα μπλοκ.
+        title: Μέλισσα Συνθήκες Πολλαπλή Επιλογή
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: Πολλαπλές επιλογές εκσφαλμάτωσης (debug) της μέλισσας
         questions:
         - text: Ποια εκδοχή της συνάρτησης δουλεύει;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Πολλαπλές επιλογές εκσφαλμάτωσης (debug) της μέλισσας
       4-5 bee loops multi 1:
-        title: Πολλαπλές επιλογές βρόχων μέλισσας
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ποια μπλοκ θα λύσουν το γρίφο;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Πολλαπλές επιλογές βρόχων μέλισσας
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Ποια μπλοκ λύνουν το γρίφο;
         title: Πολλαπλές επιλογές συνθηκών λαβυρίνθου
-        questions:
-        - text: Ποια μπλοκ λύνουν το γρίφο;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Λαβύρινθο ταίριαξε
-        content1: Ταίριαξε  τα παζλ στα μπλοκς
-        pre_title: Οδηγίες
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Ταίριαξε  τα παζλ στα μπλοκς
+        questions:
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        title: Λαβύρινθο ταίριαξε
       4-5 maze multi 1:
-        title: Λαβύρινθος Πολλαπλή Επιλογή
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Ποια μπλοκ λύνουν το γρίφο;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Λαβύρινθος Πολλαπλή Επιλογή
       Begin planning your project:
-        title: τίτλος
         content1: περιγραφή εδώ
       Begin planning your project_2018:
         content1: περιγραφή εδώ
       Begin planning your project_2018_2019:
         content1: περιγραφή εδώ
+      Begin planning your project_2018_2019_2020:
+        content1: περιγραφή εδώ
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 Design Project_2018:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 Design Project_2018_2019:
-        title: τίτλος
+        content1: περιγραφή εδώ
+      CSD U2 L1 Overview:
         content1: περιγραφή εδώ
       CSD U2 L2 Overview:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 L3 Overview:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 L4 Overview:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 L5 Overview:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 L6 Overview:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 Lesson 6 Overview:
         content1: περιγραφή εδώ
       CSD U2 expand project:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 expand project_2018:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 expand project_2018_2019:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -562,71 +562,71 @@ el-GR:
       CSD U2 project guide_2018_2019:
         content1: περιγραφή εδώ
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: τίτλος
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: τίτλος
       CSD U3 Boolean MC_2018:
-        title: τίτλος
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: τίτλος
       CSD U3 Boolean MC_2018_2019:
-        title: τίτλος
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: τίτλος
       CSD U3 Card Examples_2018:
         content1: περιγραφή εδώ
       CSD U3 Card Examples_2018_2019:
@@ -635,122 +635,119 @@ el-GR:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U3 combining rep_2018:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U3 combining rep_2018_2019:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -768,13 +765,10 @@ el-GR:
       CSD U3 platform intro_2018_2019:
         content1: περιγραφή εδώ
       CSD U5 Encryption 1:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 Encryption 1_2018:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 Encryption 1_2018_2019:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 Encryption 2:
         content1: περιγραφή εδώ
@@ -783,7 +777,6 @@ el-GR:
       CSD U5 Encryption 2_2018_2019:
         content1: περιγραφή εδώ
       CSD U5 L13 SFLP Interpreting Data:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 crosstab warmup:
         content1: περιγραφή εδώ
@@ -792,22 +785,16 @@ el-GR:
       CSD U5 crosstab warmup_2018_2019:
         content1: περιγραφή εδώ
       CSD U5 data visualization:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 data visualization_2018:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 data visualization_2018_2019:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 student record:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 student record_2018:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U5 student record_2018_2019:
-        title: τίτλος
         content1: περιγραφή εδώ
       CSD U6 LED create intro:
         content1: περιγραφή εδώ
@@ -816,28 +803,28 @@ el-GR:
       CSD U6 LED create intro_2018_2019:
         content1: περιγραφή εδώ
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: περιγραφή εδώ
@@ -846,916 +833,1549 @@ el-GR:
       CSD U6 final intro_2018_2019:
         content1: περιγραφή εδώ
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "#Συνεχίστε να \n\nχορεύετε! Για το μέρος 2, θα δημιουργήσετε το
+          δικό σας έργο. Δεν υπάρχουν παζλ εδώ - αντ 'αυτού υπάρχει μια δέσμη έργων
+          που παρουσιάζουν διαφορετικούς τρόπους για να κάνετε πιο σύνθετα χορευτικά
+          πάρτι. \n\nΜπορείτε να κάνετε αυτά τα επίπεδα _με οποιαδήποτε σειρά_. Περιηγηθείτε
+          για να δείτε πώς έγινε κάτι σε προηγούμενο επίπεδο, ή για να συνδυάσετε
+          τις έννοιες μεταξύ των έργων. Δοκιμάστε τα όλα, επιλέξτε το αγαπημένο σας,
+          και αφιερώστε το χρόνο σας δουλεύοντας για να προσθέσετε κάτι σε αυτό το
+          έργο για να το κάνετε δικό σας. \n\n<a class=\"btn btn-large btn-primary
+          next-stage submitButton pull-right\">Συνέχεια</a> \n\n<div class=\"clearfix\"></div>
+          \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"2\">\n <h2> \nΜπρος-Πίσω\n</h2>
+          \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"3\">
+          \n<h2>\n Περισσότερα κουμπιά \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"4\"> \n<h2>
+          \nΑπόκτηση Πληροφοριών\n </h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px \">\n <h2>\n <a href=\"5\">\nΠού
+          θα πήγαιναν;\n</a> \n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"6\">\n
+          <h2>\n Πληρώματα χορευτών\n </h2>\n\n <img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"7\">\n
+          <h2>\n Νότες του ενός τετάρτου\n </h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"8\">
+          \n<h2> \nΜπάσα Μεσαία, Πρίμα\n </h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\">
+          \n<h2>\nΕπιτάχυνση, επιβράδυνση\n </h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          "#Συνεχίστε να χορεύετε!
+
+          Για το μέρος 2, θα δημιουργήσετε το δικό σας έργο. Δεν υπάρχουν γρίφοι εδώ - αντ 'αυτών υπάρχει μια δέσμη έργων που παρουσιάζουν διαφορετικούς τρόπους για να κάνετε πιο σύνθετα χορευτικά πάρτι.
+
+          Μπορείτε να κάνετε αυτά τα επίπεδα _με οποιαδήποτε σειρά_. Περιηγηθείτε για να δείτε πώς έγινε κάτι σε προηγούμενο επίπεδο, ή για να συνδυάσετε τις έννοιες μεταξύ των έργων. Δοκιμάστε τα όλα, επιλέξτε το αγαπημένο σας, και αφιερώστε το χρόνο σας δουλεύοντας για να προσθέσετε κάτι σε αυτό το έργο για να το κάνετε δικό σας.
+
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Συνέχεια</a>
+
+          <div class=""clearfix""></div>
+
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""2"">
+          <h2>
+          Εμπρός και Πίσω
+          </h2>
+
+          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px""> <a href=""3""> <h2> Περισσότερα κουμπιά </h2> <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a> </div> <div style=""float: left; margin: 10px"">
+          <a href=""4"">
+          <h2>
+          Εισαγωγή πληροφοριών
+          </h2>
+
+          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""5"">
+          <h2>
+          Πού θα πήγαιναν;
+          </h2>
+
+          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""6"">
+          <h2>
+          Χορευτικές ομάδες
+          </h2>
+
+          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""7"">
+          <h2>
+          Νότες του ενός τετάρτου
+          </h2>
+
+          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""8"">
+          <h2>
+          Μπάσα, Μεσαία, Πρίμα
+          </h2>
+
+          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""9"">
+          <h2>
+          Πιο γρήγορα,Πιο αργά
+          </h2>
+
+          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
+
+          </div>"
       Internet Simulator Setup:
         content1: περιγραφή εδώ
       Internet Simulator Setup 2:
-        title: τίτλος
         content1: περιγραφή εδώ
       Internet Simulator Setup 3:
         content1: περιγραφή εδώ
       K-1 Artist 1 Multi 1:
-        title: Πολλαπλή Επιλογή
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Ποια μπλοκ λύνουν αυτό το παζλ;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Πολλαπλή Επιλογή
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ποια μπλοκ σχεδιάζουν το τετράγωνο;
+        title: Πολλαπλή Επιλογή
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Ταίριαξε
         content2: Ταίριαξε τα σχήματα βασιζόμενος στο είδος.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Πολλαπλή Επιλογή
-        questions:
-        - text: Πόσο νέκταρ είναι αυτό;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Πολλαπλή Επιλογή
-        questions:
-        - text: Πόσο νέκταρ είναι αυτό;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Ταίριαξε
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Πόσο νέκταρ είναι αυτό;
+        title: Πολλαπλή Επιλογή
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Πόσο νέκταρ είναι αυτό;
+        title: Πολλαπλή Επιλογή
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Ταίριαξε  τα μπλοκ
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Ταίριαξε
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Ταίριαξε
         content2: Ταίριαξε τον συνδυασμό των κουμπιών με τις χορευτικές κινήσεις.
         questions:
         - {}
         - {}
         - {}
+        title: Ταίριαξε
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Πολλαπλή Επιλογή
+        - correct: true
         questions:
         - text: Ποιο ζώο έχει το ψηφιακό αποτύπωμα που το αφήνει <strong>πιο ανασφαλές</strong>;
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: Πολλαπλή Επιλογή
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Πως θα απλοποιούσες αυτή την ακολουθία βρόχων;
+        title: Πολλαπλή Επιλογή
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Ποιο βέλος πάει τον Flurb στο θησαυρό;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: Πολλαπλή Επιλογή
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Ποια πληροφορία <strong>δεν</strong> πρέπει να μοιράζεσαι στο Internet;
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: Πολλαπλή Επιλογή
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Ποια επιλογή πρέπει να είναι το τελικό μπλοκ;
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Πολλαπλή Επιλογή
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Ποιο μπλοκ επανάληψης είναι το ίδιο;
+        title: Πολλαπλή Επιλογή
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: Πολλαπλή Επιλογή
+        - correct: true
         questions:
         - text: Επιλέξετε το σωστό μπλοκ επανάληψης.
+        title: Πολλαπλή Επιλογή
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Ταίριαξε
+        - {}
         content2: Ταίριαξε τα πάζλ και τα μπλοκ
-        pre_title: Οδηγίες
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Ταίριαξε
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Λαβύρινθος
         questions:
         - text: Ποια απάντηση λύνει αυτό το επίπεδο;
+        title: Λαβύρινθος
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Ποιος αλγόριθος πάει τον Flurb στα λουλούδια;
+        title: Πολλαπλή Επιλογή
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Πολλαπλή Επιλογή
+        - correct: true
         questions:
         - text: Ποιο βήμα πρέπει να πάει στην αρχή αυτού του αλγόριθμου;
+        title: Πολλαπλή Επιλογή
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Ποιο βήμα πρέπει να συμπληρώσεις στο κενό αυτού του αλγόριθμου;
+        title: Πολλαπλή Επιλογή
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: Πολλαπλή Επιλογή
         questions:
         - text: Ποια μπλοκ σημαίνουν "ΜΕΤΑΚΙΝΗΣΗ";
+        title: Πολλαπλή Επιλογή
+      K-1 Word Search Multi 3:
         answers:
         - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
-        title: Πολλαπλή Επιλογή
+        - correct: true
+        - text: ΝΟΤΙΑ
         questions:
         - text: Ποια λέξη σχηματίζεται;
-        answers:
-        - {}
-        - {}
-        - text: ΝΟΤΙΑ
+        title: Πολλαπλή Επιλογή
       Multi-Screen Apps:
-        title: τίτλος
         content1: περιγραφή εδώ
       New Challenge Introduction:
-        title: τίτλος
+        content1: περιγραφή εδώ
+      OPD-K5 Reviewing Reflections:
         content1: περιγραφή εδώ
       OPD-K5 Stage3aGo:
-        title: τίτλος
+        content1: περιγραφή εδώ
+      OPD-K5 Stage3aGo_copy:
+        content1: περιγραφή εδώ
+      OPD-K5 conditionals introduced:
+        content1: περιγραφή εδώ
+      OPD-K5 debugging:
+        content1: περιγραφή εδώ
+      OPD-K5 diving deeper intro:
+        content1: περιγραφή εδώ
+      OPD-K5 events introduced:
+        content1: περιγραφή εδώ
+      OPD-K5 for loops:
+        content1: περιγραφή εδώ
+      OPD-K5 for loops intro:
+        content1: περιγραφή εδώ
+      OPD-K5 for loops introduction:
+        content1: περιγραφή εδώ
+      OPD-K5 functions introduced:
+        content1: περιγραφή εδώ
+      OPD-K5 journaling:
+        content1: περιγραφή εδώ
+      OPD-K5 lesson implementation planning:
+        content1: περιγραφή εδώ
+      OPD-K5 lesson plans:
+        content1: περιγραφή εδώ
+      OPD-K5 loops introduced:
+        content1: περιγραφή εδώ
+      OPD-K5 project:
+        content1: περιγραφή εδώ
+      OPD-K5 projects introduction:
+        content1: περιγραφή εδώ
+      OPD-K5 role_of_teacher:
+        content1: περιγραφή εδώ
+      OPD-K5 sequencing introduced:
+        content1: περιγραφή εδώ
+      OPD-K5 sprite lab:
+        content1: περιγραφή εδώ
+      OPD-K5 sprite lab introduction:
+        content1: περιγραφή εδώ
+      OPD-K5 sprite lab unplugged:
+        content1: περιγραφή εδώ
+      OPD-K5 sprite lab video:
+        content1: περιγραφή εδώ
+      OPD-K5 types of lessons:
+        content1: περιγραφή εδώ
+      OPD-K5 using lesson plans:
+        content1: περιγραφή εδώ
+      OPD-K5 variables:
+        content1: περιγραφή εδώ
+      OPD-K5 variables introduction:
+        content1: περιγραφή εδώ
+      OPD-K5 variables unplugged:
+        content1: περιγραφή εδώ
+      OPD-K5 where to next:
+        content1: περιγραφή εδώ
+      OPD-K5-projects-1:
         content1: περιγραφή εδώ
       Prepare for your presentation:
-        title: τίτλος
         content1: περιγραφή εδώ
       'Technique: Frequency Analysis':
         content1: περιγραφή εδώ
       Terminology Recap:
         content1: περιγραφή εδώ
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Εσφαλμένο
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Εσφαλμένο
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Εσφαλμένο
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: Εσφαλμένο
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_external_binary1:
+        markdown: "<h1>Ζωγράφισε με δυαδικό σύστημα!</h1>\n \n<h3>Το δυαδικό είναι
+          ένα σύστημα αναπαράστασης πληροφορίας χρησιμοποιώντας μόνο δύο επιλογές.
+          Σε αυτή την περίπτωση,  <b>σβηστό</b> και <b>αναμμένο</b>.\n<br/>\nΕδώ,
+          θα χρησιμοποιήσουμε τον αριθμό <b>0</b> σαν κώδικα για το \"σβηστό φωτάκι\"
+          και τον αριθμό <b>1</b> σαν κώδικα για το \"αναμμένο φωτάκι\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Στις επόμενες ασκήσεις, σας έχουμε ετοιμάσει πλέγματα
+          \"εικονοστοιχείων\" (pixels) όπου μπορείτε να φτιάξετε σχέδια ασπρίζοντας
+          κάποια από τα τετραγωνάκια τους!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n
+          \nhttps://studio.code.org/s/fesbinary/stage/3/puzzle/1 -> dsls -> markdown\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>Ζωγράφισε με δυαδικό σύστημα!</h1>\n \n<h3>Το δυαδικό είναι
+          ένα σύστημα αναπαράστασης πληροφορίας χρησιμοποιώντας μόνο δύο επιλογές.
+          Σε αυτή την περίπτωση,  <b>σβηστό</b> και <b>αναμμένο</b>.\n<br/>\nΕδώ,
+          θα χρησιμοποιήσουμε τον αριθμό <b>0</b> σαν κώδικα για το \"σβηστό φωτάκι\"
+          και τον αριθμό <b>1</b> σαν κώδικα για το \"αναμμένο φωτάκι\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Στις επόμενες ασκήσεις, σας έχουμε ετοιμάσει πλέγματα
+          \"εικονοστοιχείων\" (pixels) όπου μπορείτε να φτιάξετε σχέδια ασπρίζοντας
+          κάποια από τα τετραγωνάκια τους!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n
+          \nhttps://studio.code.org/s/fesbinary/stage/3/puzzle/1 -> dsls -> markdown\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>Ζωγράφισε με δυαδικό σύστημα!</h1>\n \n<h3>Το δυαδικό είναι
+          ένα σύστημα αναπαράστασης πληροφορίας χρησιμοποιώντας μόνο δύο επιλογές.
+          Σε αυτή την περίπτωση,  <b>σβηστό</b> και <b>αναμμένο</b>.\n<br/>\nΕδώ,
+          θα χρησιμοποιήσουμε τον αριθμό <b>0</b> σαν κώδικα για το \"σβηστό φωτάκι\"
+          και τον αριθμό <b>1</b> σαν κώδικα για το \"αναμμένο φωτάκι\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Στις επόμενες ασκήσεις, σας έχουμε ετοιμάσει πλέγματα
+          \"εικονοστοιχείων\" (pixels) όπου μπορείτε να φτιάξετε σχέδια ασπρίζοντας
+          κάποια από τα τετραγωνάκια τους!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n
+          \nhttps://studio.code.org/s/fesbinary/stage/3/puzzle/1 -> dsls -> markdown\n"
+      courseD_external_binary1_2018_2019_2020:
+        markdown: "<h1>Ζωγράφισε με δυαδικό σύστημα!</h1>\n \n<h3>Το δυαδικό είναι
+          ένα σύστημα αναπαράστασης πληροφορίας χρησιμοποιώντας μόνο δύο επιλογές.
+          Σε αυτή την περίπτωση,  <b>σβηστό</b> και <b>αναμμένο</b>.\n<br/>\nΕδώ,
+          θα χρησιμοποιήσουμε τον αριθμό <b>0</b> σαν κώδικα για το \"σβηστό φωτάκι\"
+          και τον αριθμό <b>1</b> σαν κώδικα για το \"αναμμένο φωτάκι\".\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>Στις επόμενες ασκήσεις, σας έχουμε ετοιμάσει πλέγματα
+          \"εικονοστοιχείων\" (pixels) όπου μπορείτε να φτιάξετε σχέδια ασπρίζοντας
+          κάποια από τα τετραγωνάκια τους!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n
+          \nhttps://studio.code.org/s/fesbinary/stage/3/puzzle/1 -> dsls -> markdown\n"
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: Α
         - text: Β
         - text: Γ
         - text: Δ
+          correct: true
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>Α)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Β)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Γ)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>Δ)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: Α
         - text: Β
         - text: Γ
         - text: Δ
+          correct: true
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>Α)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Β)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Γ)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>Δ)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: Α
         - text: Β
         - text: Γ
         - text: Δ
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>Α)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Β)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Γ)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>Δ)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: Α
         - text: Β
         - text: Γ
+        - text: Δ
+          correct: true
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>Α)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Β)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>Γ)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>Δ)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: Α
+          correct: true
+        - text: Β
+        - text: Γ
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: Α
+          correct: true
         - text: Β
         - text: Γ
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: Α
+          correct: true
         - text: Β
         - text: Γ
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: Α
+          correct: true
+        - text: Β
+        - text: Γ
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: περιγραφή εδώ
+      csf_password_power-up:
+        content1: περιγραφή εδώ
+      csf_putting_a_stop_to_online_meanness:
+        content1: περιγραφή εδώ
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_story:
+        content1: περιγραφή εδώ
+        markdown: |-
+          # Έξαρση: Κωδικοποιήσετε την δική σας προσομοίωση
+
+          ## Καλωσορίσατε στην Πόλη Τεράτων!
+          Η Πόλη Τεράτων ήταν κάποτε μια ευτυχισμένη και υγιής τοποθεσία. Τα τέρατα της Πόλης Τεράτων τους άρεσε να περιτριγυρίζουν για να επισκέπτονται τους φίλους τους.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Μια ημέρα, ένα από τα τέρατα άρχισε να αισθάνεται αδιάθετο. Το τέρας είχε κολλήσει έναν **ιό**!! Ένας ιός είναι μικροσκοπικό μικρόβιο που μπορεί να σου προκαλέσει ασθένεια. Τα άλλα τέρατα δεν ανησύχησαν και πολύ. Συνέχισαν να επισκέπτονται τους φίλους τους.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Σε ελάχιστο χρονικό διάστημα, άλλα δύο τέρατα αρρώστησαν. Ήταν ο ίδιος ιός! Φαίνεται να κόλλησαν
+          τον ίο από τον φίλο τους.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Ο ιός αργά και σιγά εξαπλώθηκε στα άλλα τέρατα που ήταν κοντά. Τα υγιή τέρατα άρχισαν να ανησυχούν ότι θα αρρωστήσουν όλα. Τα άρρωστα τέρατα άρχισαν να ανησυχούν ότι θα κόλλαγαν τον ιό σε όλους τους άλλους.<img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Σταματώντας την εξάπλωση
+          Ευτυχώς, έπειτα από την μελέτη του ιού, οι γείτονες της Πόλης Τεράτων έκαναν μία σημαντική ανακάλυψη. Συνειδητοποιήσαν ότι υπήρχαν λιγότερες πιθανότητες μετάδοσης του ιού με την ύπαρξη μασκών πάνω από το στόμα. Φορώντας τις μάσκες τους, τα άρρωστα τέρατα ήταν λιγότερο πιθανό να κολλήσουν τον ιό σε υγιή τέρατα.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"><img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ##Τι θα γίνει μετά;
+
+          Στη σημερινή μας συνάντηση, θα γράψετε ένα κώδικα για να δημιουργήσετε και να εκτελέσετε την δική σας **εξομοίωση"* έξαρσης του ιού στην Πόλη Τεράτων. Μια εξομοίωση είναι ένα μοντέλο ηλεκτρονικού υπολογιστή μιας διαδικασίας ή ενός συστήματος. Μάθετε πως να κωδικοποιείτε και να κάνετε προβλέψεις σχετικά με το τι θα συμβεί στους γείτονες της Πόλης Τεράτων.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Πόσο γρήγορα θα εξαπλωθεί ο ιός;*
+
+          * *Θα αρρωστήσουν όλοι;*
+
+          * *Πώς θα βοηθήσουν οι μάσκες;*
+
+
+
+          Όταν ολοκληρώσεις, μοιράσου την προσομοίωσή σου με άλλους. Μοίρασε το μήνυμα σου σχετικά με το τι νομίζεις ότι μπορούμε να κάνουμε για να βοηθήσουμε να παραμείνουν οι άλλοι υγιείς όταν ένας ιός έρχεται στην πόλη.
+      outbreak_story2:
+        content1: περιγραφή εδώ
+        markdown: "# Έξαρση: Σκέφτομαι σαν ένας επιστήμονας\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nΟι προσομοιώσεις είναι ένας εξαιρετικός
+          τρόπος να αρχίσετε να μαθαίνετε οτιδήποτε είναι δύσκολο να παρατηρηθεί στον
+          πραγματικό κόσμο. Βοηθούν τους επιστήμονες να επιλύουν προβλήματα και να
+          δοκιμάσουν νέες ιδέες με ασφάλεια και αποδοτικότητα. Μια προσομοίωση δημιουργημένη
+          από εσάς είναι ένας τρόπος να δείξετε πώς μπορεί να μοιάζει μια έξαρση του
+          ιού στην Πόλη Τεράτων .\n \n\n## Επαναφέρετε και ξαναπαίξτε!\nΑκόμα και
+          όταν γράφετε τον κώδικα εσείς οι ίδιοι, είναι αδύνατον να ξέρετε τι θα συμβεί
+          όταν πατάτε εκτέλεση. Τα τέρατα περιφέρονται τυχαία, συνεπώς δεν μπορείτε
+          να ξέρετε αν ο ιός θα εξαπλωθεί γρήγορα ή αργά. Οποτεδήποτε αλλάζετε τον
+          κωδικό που δημιουργήσατε, βεβαιωθείτε ότι εκτελέσατε την προσομοίωση που
+          παράγετε πάνω από μία φορά. Τίποτα δεν θα συμβεί με τον ίδιο τρόπο δύο φορές.\n\n##Συλλέγοντας
+          δεδομένα\nΔοκιμάστε να σημειώσετε κάτω τις παρατηρήσεις σας καθώς εκτελείτε
+          την προσομοίωση που φτιάξατε. Μπορείτε να μετρήσετε τον αριθμό των τεράτων
+          που αρρωσταίνουν ή να χρησιμοποιήσετε ένα χρονοδιακόπτη για να δείτε την
+          ταχύτητα των συμβάντων. Για παράδειγμα , πόσος χρόνος συνήθως χρειάζεται
+          για να αρρωστήσουν όλα τα τέρατα αν κανένα δεν έχει μάσκες;\n\n##Κάνοντας
+          Προβλέψεις\nΑν κατανοείτε το μοντέλο που παράγετε, μπορείτε να το χρησιμοποιήσετε
+          για να κάνετε προβλέψεις. Μπορείτε ακόμα να αλλάζετε τον τρόπο με τον οποίο
+          εκτελείται η προσομοίωση που παράγετε και να μαντέψετε τι θα συμβεί διαφορετικά.
+          Για παράδειγμα:\n*Τι θα συνέβαινε αν υπήρχαν διπλάσια τέρατα από όσα υπάρχουν
+          τώρα;\n*Τι θα συνέβαινε αν τα τέρατα μετακινούνταν με τη μισή ταχύτητα;\n\n<img
+          src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Είναι η Πόλη Τεράτων σαν τον πραγματικό κόσμο;\nΥπάρχει
+          ένα όριο σχετικά με τον βαθμό ρεαλισμού στον οποίο κάθε μοντέλο μπορεί να
+          φτάσει.\n* Τι κοινό έχει η προσομοίωση της έξαρσης που δημιουργήσατε  με
+          τις εξάρσεις του ιού στον πραγματικό κόσμο;\n* Ποιες είναι οι διαφορές;\nΌταν
+          τελειώσετε αυτή τη δραστηριότητα, συζητήστε τις παραπάνω ερωτήσεις με τους
+          δασκάλους ή την οικογένειά σας!\n\n##Για τι άλλο μπορούμε να φτιάξουμε μοντέλα;\nΈχετε
+          ήδη δημιουργήσει ένα λειτουργικό μοντέλο μιας έξαρσης ιού στην Πόλη Τεράτων.
+          Τι δεν μπορεί να κάνει η προσομοίωσή σας ή τι δεν δείχνει που θα ευχόσασταν
+          να έδειχνε; Πατήστε συνέχεια για τα επόμενα στάδια και μάθετε πως να δημιουργείτε
+          μοντέλα για ακόμα περισσότερα:\n* Αύξηση του αριθμού των τεράτων στην προσομοίωση\n*
+          Συμβολή στην ανάρρωση των τεράτων από τον ιό\n* Πιθανότητα, ανοσία, εμβόλια,
+          και πολλά άλλα!\n\nΜπορείτε να μοιραστείτε το μοντέλο προσομοίωσης που δημιουργήσατε
+          με άλλους, ή να μοιράσετε ένα μήνυμα σχετικά με το τι νομίζετε ότι μπορούμε
+          να κάνουμε να διατηρήσουμε τους άλλους υγιείς όταν ένας ιός έρχεται στην
+          πόλη.\n\n"
+      outbreak_freeplay_choice:
+        display_name: Ελεύθερο παιχνίδι
+        description: 'Τελειώσατε το εκπαιδευτικό βίντεο! Συνεχίστε να κάνετε αλλαγές
+          ή βελτιώσεις στο έργο σας. Μπορείτε να επιλέξετε να συνεχίζετε να εργάζεστε
+          με τα ίδια κομμάτια παζλ ή να δοκιμάσετε μια εκτεταμένη εργαλειοθήκη. '

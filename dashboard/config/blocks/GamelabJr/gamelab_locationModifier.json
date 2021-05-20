@@ -1,0 +1,40 @@
+{
+  "category": "Location",
+  "config": {
+    "func": "locationModifier",
+    "blockText": "{DISTANCE} pixels {DIRECTION} of {LOCATION}",
+    "returnType": "Location",
+    "args": [
+      {
+        "name": "DISTANCE",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "DIRECTION",
+        "options": [
+          [
+            "North",
+            "\"North\""
+          ],
+          [
+            "East",
+            "\"East\""
+          ],
+          [
+            "South",
+            "\"South\""
+          ],
+          [
+            "West",
+            "\"West\""
+          ]
+        ]
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

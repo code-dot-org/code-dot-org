@@ -1,14 +1,14 @@
 login_required true
-has_lesson_plan true
 
-stage 'Explore PT Prep'
+lesson 'Explore PT Prep', display_name: 'Explore PT Prep', has_lesson_plan: true
 level 'U5 - Explore PT Prep - Student Introduction'
 
-stage 'Explore PT'
+lesson 'Explore PT', display_name: 'Explore PT', has_lesson_plan: true
 level 'U5 - Explore PT - Student Introduction'
 
-stage 'Create PT Prep'
+lesson 'Create PT Prep', display_name: 'Create PT Prep', has_lesson_plan: true
 level 'U5 - Create PT Prep - Student Introduction'
 
-stage 'Create PT'
+lesson 'Create PT', display_name: 'Create PT', has_lesson_plan: true
 level 'U5 - Create PT - Student Introduction'
+

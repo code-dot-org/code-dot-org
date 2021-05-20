@@ -1,0 +1,31 @@
+---
+el:
+  data:
+    variable_names:
+      Blue: Μπλε
+      Green: Πράσινο
+      Red: Κόκκινο
+      actor: ηθοποιός
+      cats: όλες οι γάτες
+      color: χρώμα
+      counter: μετρητής
+      dogs: όλοι οι σκύλοι
+      height: ύψος
+      honey: μέλι
+      i: ι
+      left: αριστερά
+      length: μήκος
+      name: όνομα
+      nectar: νέκταρ
+      points: πόντοι
+      random: τυχαίο
+      repeat: επανάλαβε
+      right: δεξιά
+      score: σκορ
+      sides: πλευρές
+      size: μέγεθος
+      speed: ταχύτητα
+      variable: μεταβλητή
+      width: πλάτος
+      wizard: μάγος
+      x: x

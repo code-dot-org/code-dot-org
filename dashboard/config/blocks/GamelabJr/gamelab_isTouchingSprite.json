@@ -1,0 +1,23 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "isTouchingSprite",
+    "blockText": "{SPRITE} is touching {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ],
+    "returnType": "Boolean",
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

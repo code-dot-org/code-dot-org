@@ -1,0 +1,19 @@
+{
+  "mt-MT": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a pinwheel": {
+                "parameters": {
+                  "repeat": "Irrepeti"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

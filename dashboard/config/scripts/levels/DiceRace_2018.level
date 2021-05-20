@@ -1,12 +1,12 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-02-07T22:20:02.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C3_dice_race",
     "name_suffix": "_2018"
   },
+  "game_id": 31,
+  "created_at": "2018-02-07T22:20:02.000Z",
+  "user_id": 1,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2018-01-18 00:34:08 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
 }]]></config>

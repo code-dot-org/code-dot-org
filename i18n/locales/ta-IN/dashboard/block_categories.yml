@@ -1,0 +1,16 @@
+ta:
+  data:
+    block_categories:
+      Actions: செயல்கள்
+      Color: நிறம்
+      Dancers: நடனக்கலைஞர்கள்
+      Events: நிகழ்வுகள்
+      Functions: செயல்பாடுகள்
+      Groups: குழுக்கள்
+      Logic: தர்க்கம்
+      Loops: சுழற்சிகள்
+      Math: கணிதம்
+      Numbers: எண்கள்
+      Text: உரை
+      Variables: மாறிலிகள்
+      World: உலகம்

@@ -1,0 +1,657 @@
+{
+  "script": {
+    "name": "csp-march-virtual",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "peer_reviews_to_complete": 4,
+      "professional_learning_course": "CS Principles Curriculum Training for Facilitators",
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:47 UTC",
+    "seeding_key": {
+      "script.name": "csp-march-virtual"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Saturday Session Resources",
+      "name": "Saturday Session Resources",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Saturday Session Resources",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "key": "Getting Familiar with Traversals EIPM",
+      "name": "Getting Familiar with Traversals EIPM",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "key": "Comparing Make Lessons",
+      "name": "Comparing Make Lessons",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Prework_0"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Prework_0"
+        ],
+        "lesson.key": "Saturday Session Resources",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Prework_0"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_1"
+        ],
+        "progression": "Overview and Setup"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_1"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_2"
+        ],
+        "progression": "Overview and Setup"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_2"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task1"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task1"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task2"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task2"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task3"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task3"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task4"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task4"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task5"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task5"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task6"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task6"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task7"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part1_Task7"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part1_Task7"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part2_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part2_1"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part2_1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task1"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part2_Task1"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part2_Task1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task2"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part2_Task2"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part2_Task2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task3"
+        ],
+        "progression": "Tasks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part2_Task3"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part2_Task3"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task4"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mar20 Part2_Task4"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      },
+      "level_keys": [
+        "Mar20 Part2_Task4"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Prework_0",
+        "script_level.level_keys": [
+          "Mar20 Prework_0"
+        ],
+        "lesson.key": "Saturday Session Resources",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_1",
+        "script_level.level_keys": [
+          "Mar20 Part1_1"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_2",
+        "script_level.level_keys": [
+          "Mar20 Part1_2"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task1",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task1"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task2",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task2"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task3",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task3"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task4",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task4"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task5",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task5"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task6",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task6"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part1_Task7",
+        "script_level.level_keys": [
+          "Mar20 Part1_Task7"
+        ],
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part2_1",
+        "script_level.level_keys": [
+          "Mar20 Part2_1"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part2_Task1",
+        "script_level.level_keys": [
+          "Mar20 Part2_Task1"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part2_Task2",
+        "script_level.level_keys": [
+          "Mar20 Part2_Task2"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part2_Task3",
+        "script_level.level_keys": [
+          "Mar20 Part2_Task3"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mar20 Part2_Task4",
+        "script_level.level_keys": [
+          "Mar20 Part2_Task4"
+        ],
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

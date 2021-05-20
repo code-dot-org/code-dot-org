@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek t
 
 #### Waarom is dit belangrijk?
 
-Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. But 65 percent of schools in the U.S. don't teach computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
+Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. But 53 percent of schools in the U.S. don't teach computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -40,11 +38,11 @@ Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open bane
 
 #### Over Code.org
 
-Code.org® is een 501c3 publieke non-profit die zich richt op het uitbreiden van deelname aan programmeren en het vergroten van de deelname door vrouwen en studenten uit ondergerepresenteerde getinte leerlingen. Its vision is that every student in every school has the opportunity to learn computer programming. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![image](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

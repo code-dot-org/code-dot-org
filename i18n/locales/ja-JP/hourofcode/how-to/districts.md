@@ -1,7 +1,5 @@
 ---
 title: 地域向けのイベント開催ガイド
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## すべての学校が参加し、すべての生徒が学ぶ！
 
-### 1. Recruit local schools
+### 1.地域の学校を募集 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

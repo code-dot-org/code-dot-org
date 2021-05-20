@@ -1,33 +1,38 @@
-import {expect} from '../util/reconfiguredChai';
-var testUtils = require('./../util/testUtils');
 import React from 'react';
-import {mount} from 'enzyme';
-import {StatelessMarkdownInstructions} from '@cdo/apps/templates/instructions/MarkdownInstructions';
+import {shallow} from 'enzyme';
+
+import {expect} from '../util/reconfiguredChai';
+import {setExternalGlobals} from '../util/testUtils';
+
 import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
+import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('instructions components', () => {
-  testUtils.setExternalGlobals();
+  setExternalGlobals();
 
   describe('MarkdownInstructions', function() {
     it('standard case had top padding and no left margin', function() {
-      const wrapper = mount(
-        <StatelessMarkdownInstructions
+      const wrapper = shallow(
+        <MarkdownInstructions
           markdown="md"
           markdownClassicMargins={false}
           inTopPane={false}
           noInstructionsWhenCollapsed={true}
         />
       );
-      const element = wrapper.find('.instructions-markdown').first();
-      expect(element.props().style.paddingTop).to.equal(19);
-      expect(element.props().style.marginBottom).to.equal(35);
-      expect(element.props().style.marginLeft).to.equal(undefined);
-      expect(element.text()).to.equal('md');
+
+      const containerElement = wrapper.find('.instructions-markdown').first();
+      expect(containerElement.props().style.paddingTop).to.equal(19);
+      expect(containerElement.props().style.marginBottom).to.equal(35);
+      expect(containerElement.props().style.marginLeft).to.equal(undefined);
+
+      const markdownElement = wrapper.find('EnhancedSafeMarkdown').first();
+      expect(markdownElement.props().markdown).to.equal('md');
     });
 
     it('inTopPane has no top padding', function() {
-      const wrapper = mount(
-        <StatelessMarkdownInstructions
+      const wrapper = shallow(
+        <MarkdownInstructions
           markdown="md"
           inTopPane={true}
           noInstructionsWhenCollapsed={true}
@@ -40,7 +45,7 @@ describe('instructions components', () => {
 
   describe('NonMarkdownInstructions', function() {
     it('can have just instructions', function() {
-      const wrapper = mount(
+      const wrapper = shallow(
         <NonMarkdownInstructions
           puzzleTitle="title"
           shortInstructions="instructions"
@@ -52,15 +57,20 @@ describe('instructions components', () => {
         .children();
       expect(elements.length).to.equal(2);
       expect(elements.first().text()).to.equal('title');
-      expect(elements.last().text()).to.equal('instructions');
+
+      const markdownElements = wrapper.find('SafeMarkdown');
+      expect(markdownElements.length).to.equal(1);
+      expect(markdownElements.first().props().markdown).to.equal(
+        'instructions'
+      );
     });
 
     it('can have both instructions and instructions2', function() {
-      const wrapper = mount(
+      const wrapper = shallow(
         <NonMarkdownInstructions
           puzzleTitle="title"
-          shortInstructions="instructions"
-          instructions2="instructions2"
+          shortInstructions="short instructions"
+          instructions2="long instructions"
         />
       );
       const elements = wrapper
@@ -69,8 +79,15 @@ describe('instructions components', () => {
         .children();
       expect(elements.length).to.equal(3);
       expect(elements.at(0).text()).to.equal('title');
-      expect(elements.at(1).text()).to.equal('instructions');
-      expect(elements.at(2).text()).to.equal('instructions2');
+
+      const markdownElements = wrapper.find('SafeMarkdown');
+      expect(markdownElements.length).to.equal(2);
+      expect(markdownElements.first().props().markdown).to.equal(
+        'short instructions'
+      );
+      expect(markdownElements.last().props().markdown).to.equal(
+        'long instructions'
+      );
     });
   });
 });

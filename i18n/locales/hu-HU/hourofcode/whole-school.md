@@ -1,10 +1,9 @@
 ---
-title: Whole School Participation
-layout: wide
+title: Teljes Iskolás Részvétel
 ---
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Szervezd meg, hogy az egész iskolád a részese lehessen
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Ide kattintva találhatsz részleteket arról, ha be akarod vonni egész iskoládat a Kódolás órája programba.

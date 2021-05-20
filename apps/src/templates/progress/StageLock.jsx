@@ -14,21 +14,6 @@ import {
 } from '@cdo/apps/code-studio/stageLockRedux';
 import {lessonType} from './progressTypes';
 
-const styles = {
-  main: {
-    marginTop: 5
-  },
-  buttonContainer: {
-    marginLeft: 15,
-    marginRight: 15
-  },
-  button: {
-    paddingLeft: 0,
-    paddingRight: 0,
-    width: '100%'
-  }
-};
-
 class StageLock extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
@@ -57,6 +42,7 @@ class StageLock extends React.Component {
       <div style={styles.main}>
         <div style={styles.buttonContainer} className="uitest-locksettings">
           <Button
+            __useDeprecatedTag
             onClick={this.openLockDialog}
             color={Button.ButtonColor.gray}
             text={saving ? i18n.saving() : i18n.lockSettings()}
@@ -70,10 +56,25 @@ class StageLock extends React.Component {
   }
 }
 
+const styles = {
+  main: {
+    marginTop: 5
+  },
+  buttonContainer: {
+    marginLeft: 15,
+    marginRight: 15
+  },
+  button: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    width: '100%'
+  }
+};
+
 export const UnconnectedStageLock = StageLock;
 export default connect(
   state => ({
-    sectionId: state.teacherSections.selectedSectionId,
+    sectionId: state.teacherSections.selectedSectionId.toString(),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     saving: state.stageLock.saving
   }),

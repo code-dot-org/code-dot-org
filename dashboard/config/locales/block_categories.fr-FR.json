@@ -1,0 +1,76 @@
+{
+  "fr-FR": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Actions",
+          "Brushes": "Pinceaux",
+          "Loops": "boucles",
+          "Math": "Math",
+          "Logic": "Logique",
+          "Functions": "fonctions",
+          "Variables": "variables"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Monde",
+          "Dancers": "Danseurs",
+          "Properties": "Propriétés",
+          "Events": "Événements",
+          "Numbers": "Nombres",
+          "Logic": "Logique"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Actions",
+          "Events": "Événements",
+          "Loops": "boucles",
+          "Math": "Math",
+          "Logic": "Logique",
+          "Games/Score": "Jeux/Score"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Monde",
+          "Sprites": "Les Lutins",
+          "Actions": "Actions",
+          "Events": "Événements",
+          "Behaviors": "Comportements"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Monde",
+          "Sprites": "Les Lutins",
+          "Locations": "Emplacements",
+          "Actions": "Actions",
+          "Events": "Événements",
+          "Behaviors": "Comportements",
+          "Variables": "variables",
+          "Math": "Math",
+          "Logic": "Logique",
+          "Functions": "fonctions",
+          "Text": "Texte",
+          "Comments": "Commentaires"
+        },
+        "outbreak_freeplay": {
+          "World": "Monde",
+          "Sprites": "Les Lutins",
+          "Actions": "Actions",
+          "Behaviors": "Comportements",
+          "Events": "Événements",
+          "Locations": "Emplacements",
+          "Logic": "Logique",
+          "Loops": "boucles",
+          "Math": "Math",
+          "Variables": "variables",
+          "Functions": "fonctions",
+          "Comments": "Commentaires"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Monde",
+          "Sprites": "Les Lutins",
+          "Actions": "Actions",
+          "Events": "Événements",
+          "Logic": "Logique",
+          "Math": "Math"
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
-endpoint: https://acme-v01.api.letsencrypt.org/
-# For staging API, use this endpoint instead:
-#endpoint: https://acme-staging.api.letsencrypt.org/
+directory: https://acme-v02.api.letsencrypt.org/directory
+
+# For staging API, use this directory instead (see https://letsencrypt.org/docs/acme-protocol-updates/#acme-v2-rfc-8555):
+#directory: https://acme-staging-v02.api.letsencrypt.org/directory
 storage:
   type: s3
   region: 'us-east-1'

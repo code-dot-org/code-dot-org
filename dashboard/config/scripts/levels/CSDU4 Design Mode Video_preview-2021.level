@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-01-05T01:27:44.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_applab_designmode",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Intro to Design Mode",
+    "parent_level_id": 20232,
+    "name_suffix": "_preview-2021",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* Where in App Lab can you design the user interface of your app?\r\n* What are some types of elements that you can add to your app?",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nThe purpose of this video is to give students a quick tour of design mode in App Lab, which they will be using for the rest of the unit.  Students should know how to switch to design mode so that they can create the user interface of the app.  They should also recognize the various elements that can be added in design mode.  These are similar to those that they saw in the activity guide for Paper Prototypes, two lessons previously."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-18 15:48:18 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-19 16:51:16 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 05:09:01 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 05:11:08 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

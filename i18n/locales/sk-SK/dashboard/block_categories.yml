@@ -1,0 +1,31 @@
+sk:
+  data:
+    block_categories:
+      Actions: Akcie
+      Advanced: Pokročilé
+      Behaviors: Správanie
+      Brushes: Štetce
+      Color: Farba
+      Comment: Komentár
+      Comments: Komentáre
+      Conditionals: Podmienky
+      Dancers: Tanečníci
+      Default: Predvolené
+      Events: Udalosti
+      Functions: Funkcie
+      'Functions ': 'Funkcie '
+      Game/Score: Hra/skóre
+      Games/Score: Hry/skóre
+      Groups: Skupiny
+      Input: Vstup
+      Locations: Miesta
+      Logic: Logické
+      Loops: Cykly
+      Math: Matematické
+      Numbers: Čísla
+      Properties: Vlastnosti
+      Sprites: Objekt "sprite"
+      Text: Text
+      Variables: Premenné
+      'Variables ': 'Premenné '
+      World: Prostredie

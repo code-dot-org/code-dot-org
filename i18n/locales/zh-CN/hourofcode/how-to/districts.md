@@ -1,7 +1,5 @@
 ---
 title: 地区如何主办编程一小时
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## 让每个学校都参加，每个学生都来学习！
 
-### 1. Recruit local schools
+### 1.招募当地学校
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

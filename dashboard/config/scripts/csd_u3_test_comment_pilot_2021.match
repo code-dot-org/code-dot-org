@@ -1,0 +1,18 @@
+name 'CSD U3 Test comment_pilot_2021'
+title 'Question 6'
+question 'Line 5'
+answer 'Give the bubble an outline'
+question 'Line 11'
+answer 'Jump up'
+question 'Line 14'
+answer 'Fall down'
+question 'Line 17'
+answer 'Float up'
+question 'Line 19'
+answer 'Shake back and forth'
+
+markdown <<MARKDOWN
+Look at the following code, and match the comments to where they should go in the program.
+
+<img src="https://images.code.org/df3e8343eae473fd5af62370579f66e9-image-1552419576823.52.17 PM.png" style="width:400px;">
+MARKDOWN

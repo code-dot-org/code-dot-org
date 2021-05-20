@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2019-10-14T18:50:36.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "<br>\r\n\r\n# Response: Demonstrate Understanding\r\n\r\n###  At a break during your workshop, a new-to-CS teacher approaches you and asks the following question: \r\n> **Prompt:** “Most of my students aren’t strong math students so I am concerned about the activities in this unit.  How do I make sure I don’t lose them?”\r\n\r\n\r\nUse the space below to write a response. An acceptable response has clear, convincing and consistent evidence of your\r\n\r\n* commitment to the role of a Code.org facilitator \r\n* understanding of the Code.org Professional Learning Values\r\n* application of the approaches to those values\r\n* knowledge of the curriculum content including resources, supports, and tools. \r\n\r\n\r\n ",
+    "instructions_important": "false",
+    "display_name": "Assessment",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "optional": "false",
+    "parent_level_id": 19327,
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 23:37:41 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-07-16 02:36:46 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-09-05 19:41:42 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-09-22 17:31:37 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-10-11 19:00:38 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2019-02-18 18:47:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-08-05 14:28:53 +0000\",\"changed\":[\"name\",\"long_instructions\",\"allow_user_uploads\",\"peer_reviewable\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 14:29:32 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 14:45:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 14:46:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 14:54:09 +0000\",\"changed\":[\"long_instructions\",\"submittable\",\"peer_reviewable\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 15:01:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 15:07:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 15:08:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 15:09:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-05 15:09:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-07 03:15:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-07 03:20:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-12 19:09:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-12 21:46:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-08-14 22:09:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-09-03 16:31:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-10-14 18:50:00 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-10-14 18:50:46 +0000\",\"changed\":[],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"},{\"changed_at\":\"2019-10-18 17:41:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":838,\"changed_by_email\":\"andrea@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -3,43 +3,30 @@ ru:
   data:
     block_categories:
       Actions: Действия
-      Loops: Циклы
-      Functions: функции
-      Color: Цвет
-      Brushes: Кисти
-      Math: Математика
-      Logic: Логика
-      Variables: переменные
-      Number: Число
-      String: Строка
-      Image: Изображение
-      Boolean: Логическое значение
-      Conditionals: Условные команды
-      Events: События
-      Comments: Комментарии
-      Category: Категория
-      Text: Текст
-      Comment: Комментарий
-      World: Мир
-      'Variables ': 'Переменные '
-      Default: По умолчанию
-      Locations: Места
-      Location: Место
-      numbers: числа
-      Numbers: Числа
-      Input: Ввод
-      Dancers: Танцоры
-      Groups: Группы
       Advanced: Расширенный
-      Start: Начать
-      Music: Музыка
-      Dancing: Танцы
-      Brush: Кисть
-      Movement: Движение
-      Booleans: Логические выражения
-      test: тест
-      Do Not Use: Не используйте
-      Name: Имя
-      NEW BLOCKS: НОВЫЕ БЛОКИ
+      Behaviors: Режимы работы
+      Brushes: Кисти
+      Color: Цвет
+      Comment: Комментарий
+      Comments: Комментарии
+      Conditionals: Условные команды
+      Dancers: Танцоры
+      Default: По умолчанию
+      Events: События
+      Functions: функции
       'Functions ': 'Функции '
-      Function: Функция
+      Game/Score: Игра/Счет
+      Games/Score: Игры/Счет
+      Groups: Группы
+      Input: Ввод
+      Locations: Места
+      Logic: Логика
+      Loops: Циклы
+      Math: Математика
+      Numbers: Числа
+      Properties: Свойства
+      Sprites: Спрайты
+      Text: Текст
+      Variables: Переменные
+      'Variables ': 'Переменные '
+      World: Мир

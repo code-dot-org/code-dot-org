@@ -1,19 +1,21 @@
 hidden false
-hideable_stages true
-teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"]]
-stage_extras_available true
-has_lesson_plan true
+hideable_lessons true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csf-19/coursed/"], ["teacherForum", "https://forum.code.org/c/csf"], ["vocabulary", "https://curriculum.code.org/csf-19/coursed/vocab/"], ["standardMappings", "https://curriculum.code.org/csf-19/coursed/standards/"], ["curriculumGuide", "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"]]
+lesson_extras_available true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}'
-script_announcements [{"notice"=>"Our 2019 CS Fundamentals Lessons are Live!", "details"=>"Click \"Learn More\" to view all of the lesson plans for the 2019 version of Course D!", "link"=>"https://curriculum.code.org/csf-19/coursed", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'coursed'
 version_year '2019'
 is_stable true
+supported_locales ["cs-CZ", "sk-SK"]
 curriculum_umbrella 'CSF'
+tts true
+is_course true
 
-stage 'Algorithms: Graph Paper Programming', flex_category: 'csf_sequencing'
+lesson_group 'csf_sequencing', display_name: 'Sequencing'
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming-Unplugged'
 
-stage 'Introduction to Online Puzzles', flex_category: 'csf_sequencing'
+lesson 'Introduction to Online Puzzles', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
 level 'courseD_video_ramp1_2019', progression: 'Maze Intro: Programming with Blocks'
 level 'courseD_maze_ramp1_2019', progression: 'Practice'
 level 'courseD_maze_ramp2_2019', progression: 'Practice'
@@ -25,10 +27,10 @@ level 'courseD_maze_ramp5b_2019', progression: 'Challenge', challenge: true
 level 'courseD_maze_intro5c_2019', progression: 'Practice'
 level 'courseD_maze_ramp5d_2019', progression: 'Practice'
 
-stage 'Relay Programming', flex_category: 'csf_sequencing'
+lesson 'Relay Programming', display_name: 'Relay Programming', has_lesson_plan: true, unplugged: true
 level 'RelayProgramming-Unplugged'
 
-stage 'Debugging in Collector', flex_category: 'csf_sequencing'
+lesson 'Debugging in Collector', display_name: 'Debugging with Laurel', has_lesson_plan: true
 level 'courseD_video_debugging_2019', progression: 'De-bugging with the Step Button'
 level 'courseD_collector_debugging1a_2019', progression: 'Practice'
 level 'courseD_collector_debugging2a_2019', progression: 'Practice'
@@ -39,7 +41,8 @@ level 'courseD_collector_debugging6a_2019', progression: 'Challenge', challenge:
 level 'courseD_collector_debugging8a_2019', progression: 'Practice'
 level 'courseD_collector_debugging9a_2019', progression: 'Practice'
 
-stage 'Events in Bounce', flex_category: 'csf_events'
+lesson_group 'csf_events', display_name: 'Events'
+lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: true
 level 'courseD_bounce_events1s_2019', progression: 'Practice'
 level 'courseD_bounce_events2s_2019', progression: 'Practice'
 level 'courseD_bounce_events5s_2019', progression: 'Practice'
@@ -49,29 +52,38 @@ level 'courseD_bounce_events10s_2019', progression: 'Practice'
 level 'courseD_bounce_events11s_2019', progression: 'Practice'
 level 'courseD_bounce_events12s_2019', progression: 'Free Play'
 
-stage 'Build a Star Wars Game', flex_category: 'csf_events'
+lesson 'Build a Star Wars Game', display_name: 'Build a Star Wars Game', has_lesson_plan: true
 level 'courseE_video_StarWarsProject_2019', progression: 'Practice'
 skin 'hoc2015'
 level 'blockly:Studio:hoc2015_blockly_7_no_video', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_8', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_9', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_10', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_11', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_12', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_13', progression: 'Practice'
 skin 'hoc2015'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_14', progression: 'Practice'
 skin 'hoc2015'
 video_key_for_next_level 'starwars_blocks_congrats'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Studio:hoc2015_blockly_15', progression: 'Free Play'
 
-stage 'Loops in Ice Age', flex_category: 'csf_loops'
+lesson_group 'csf_loops', display_name: 'Loops'
+lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age', has_lesson_plan: true
 level 'courseD_iceage_loops1_2019', progression: 'Practice'
 level 'courseD_iceage_loops2_2019', progression: 'Practice'
 level 'scrat_loops_C-F_video_2019', progression: 'Using the Repeat Block'
@@ -85,7 +97,7 @@ level 'courseD_iceage_loops10_2019', progression: 'Challenge', challenge: true
 level 'courseD_iceage_loops11_2019', progression: 'Practice'
 level 'courseD_iceage_loops12_2019', progression: 'Practice'
 
-stage 'Loops in Artist', flex_category: 'csf_loops'
+lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops', has_lesson_plan: true
 level 'ramp_video_artistIntro_2019', progression: 'Artist Intro with JR Hildebrand'
 level 'ramp_artist_loops1_2019', progression: 'Practice'
 level 'ramp_artist_loops2_2019', progression: 'Practice'
@@ -98,7 +110,7 @@ level 'ramp_artist_loops7_2019', progression: 'Practice'
 level 'ramp_artist_loops8_2019', progression: 'Challenge', challenge: true
 level 'ramp_artist_loops9_2019', progression: 'Practice'
 
-stage 'Nested Loops in Bee', flex_category: 'csf_loops'
+lesson 'Nested Loops in Bee', display_name: 'Nested Loops in Maze', has_lesson_plan: true
 level 'courseD_bee_nestedLoops1a_2019', progression: 'Practice'
 level 'courseD_bee_nestedLoops1_2019', progression: 'Practice'
 level 'courseD_video_nestedLoops_2019', progression: 'Nested Loops with the Bee'
@@ -115,10 +127,11 @@ level 'courseD_bee_nestedLoops9_predict2_2019', progression: 'Prediction'
 bonus 'courseD_harvester_nested_loops_challenge1_2019'
 bonus 'courseD_collector_nested_loops_challenge2_2019'
 
-stage 'Conditionals with Cards', flex_category: 'csf_conditionals'
+lesson_group 'csf_conditionals', display_name: 'Conditionals'
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'ConditionalsWithCards-Unplugged'
 
-stage 'Conditionals in Bee', flex_category: 'csf_conditionals'
+lesson 'Conditionals in Bee', display_name: 'If/Else with Bee', has_lesson_plan: true
 level 'courseD_bee_conditionalsVid1_2019', progression: 'Conditionals: If Statements'
 level 'courseD_bee_conditionals1_predict1_2019', progression: 'Prediction'
 level 'courseD_bee_conditionals2_2019', progression: 'Practice'
@@ -135,7 +148,7 @@ level 'courseD_bee_conditionals10_2019', progression: 'Practice'
 bonus 'courseD_bee_conditionals_challenge1_2019'
 bonus 'courseD_bee_conditionals_challenge2_2019'
 
-stage 'While Loops in Farmer', flex_category: 'csf_conditionals'
+lesson 'While Loops in Farmer', display_name: 'While Loops in Farmer', has_lesson_plan: true
 level 'courseD_farmer_while1_2019', progression: 'Practice'
 level 'courseD_farmer_while2_2019', progression: 'Practice'
 level 'courseD_farmer_while3_2019', progression: 'Practice'
@@ -151,7 +164,7 @@ level 'courseD_farmer_while10_2019', progression: 'Practice'
 level 'courseD_farmer_while10_predict2_2019', progression: 'Prediction'
 bonus 'courseD_farmer_while_challenge1_2019'
 
-stage 'Until Loops in Maze', flex_category: 'csf_conditionals'
+lesson 'Until Loops in Maze', display_name: 'Until Loops in Maze', has_lesson_plan: true
 level 'courseD_maze_until1_2019', progression: 'Practice'
 level 'courseD_video_repeatUntil_2019', progression: 'Repeat Until Statements'
 level 'courseD_maze_until2_predict1_2019', progression: 'Prediction'
@@ -164,7 +177,7 @@ level 'courseD_maze_until9_2019', progression: 'Challenge', challenge: true
 level 'courseD_maze_until10_2019', progression: 'Practice'
 level 'courseD_maze_until10_predict2_2019', progression: 'Prediction'
 
-stage 'Conditionals & Loops in Harvester', flex_category: 'csf_conditionals'
+lesson 'Conditionals & Loops in Harvester', display_name: 'Harvesting with Conditionals', has_lesson_plan: true
 level 'harvester_skinOverview_video_2019', progression: 'The Harvester'
 level 'courseD_farmer_condLoops1_2019', progression: 'Practice'
 level 'courseD_farmer_condLoops2_2019', progression: 'Practice'
@@ -179,10 +192,11 @@ level 'courseD_farmer_condLoops9_predict1_2019', progression: 'Prediction'
 bonus 'courseD_farmer_condLoops_challenge1_2019'
 bonus 'courseD_farmer_condLoops_challenge2_2019'
 
-stage 'Unplugged: Binary', flex_category: 'csf_binary'
+lesson_group 'csf_binary', display_name: 'Binary'
+lesson 'Unplugged: Binary', display_name: 'Binary Images', has_lesson_plan: true, unplugged: true
 level 'BinaryImages-Unplugged'
 
-stage 'Artist Binary', flex_category: 'csf_binary'
+lesson 'Artist Binary', display_name: 'Binary Images with Artist', has_lesson_plan: true
 level 'courseD_external_binary1_2018_2019', progression: 'Practice'
 level 'courseD_artist_binary1_2019', progression: 'Practice'
 level 'courseD_artist_binary2_2019', progression: 'Practice'
@@ -197,10 +211,12 @@ level 'courseD_artist_binaryFP_2019', progression: 'Free Play'
 bonus 'courseD_artist_binary_challenge1_2019'
 bonus 'courseD_artist_binary_challenge2_2019'
 
-stage 'Digital Citizenship', flex_category: 'csf_digcit'
+lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship', has_lesson_plan: true, unplugged: true
 level 'DigitalCitizenship-Unplugged'
 
-stage 'Dance Party', flex_category: 'end_of_course_project'
+lesson_group 'end_of_course_project', display_name: 'End of Course Project'
+lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: true
 level 'CourseD_Dance_Party_01', progression: 'Practice'
 level 'CourseD_Dance_Party_02', progression: 'Practice'
 level 'CourseD_Dance_Party_03', progression: 'Practice'
@@ -214,3 +230,4 @@ level 'CourseD_Dance_Party_11', progression: 'Practice'
 level 'CourseD_Dance_Party_11b', progression: 'Practice'
 level 'CourseD_Dance_Party_11_5', progression: 'Practice'
 level 'CourseD_Dance_Party_12', progression: 'Free Play'
+

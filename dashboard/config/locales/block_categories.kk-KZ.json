@@ -1,0 +1,55 @@
+{
+  "kk-KZ": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Іс-әрекеттер",
+          "Loops": "Ілмек",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "Функциялар",
+          "Variables": "Айнымалылар"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Шаралар",
+          "Logic": "Логика"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Іс-әрекеттер",
+          "Events": "Шаралар",
+          "Loops": "Ілмек",
+          "Math": "Математика",
+          "Logic": "Логика"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Іс-әрекеттер",
+          "Events": "Шаралар"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Іс-әрекеттер",
+          "Events": "Шаралар",
+          "Variables": "Айнымалылар",
+          "Math": "Математика",
+          "Logic": "Логика",
+          "Functions": "Функциялар",
+          "Text": "Мәтін"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Іс-әрекеттер",
+          "Events": "Шаралар",
+          "Logic": "Логика",
+          "Loops": "Ілмек",
+          "Math": "Математика",
+          "Variables": "Айнымалылар",
+          "Functions": "Функциялар"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Іс-әрекеттер",
+          "Events": "Шаралар",
+          "Logic": "Логика",
+          "Math": "Математика"
+        }
+      }
+    }
+  }
+}

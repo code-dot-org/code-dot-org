@@ -1,10 +1,5 @@
 ---
 title: Hour of Code වැඩසටහනක් සංවිධානය කිරීම සඳහා ලියාපදිංචී වීම පිලිබඳ ඔබට ස්තුතියි!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Hour of Code වැඩසටහනක් සංවිධානය කිරීම සඳහා ලියාපදිංචී වීම පිලිබඳ ඔබට ස්තුතියි!

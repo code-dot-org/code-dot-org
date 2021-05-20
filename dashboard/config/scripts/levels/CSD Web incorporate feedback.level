@@ -6,7 +6,7 @@
   "user_id": 155,
   "properties": {
     "long_instructions": "# Use Feedback\r\n\r\nNow it's time to use the peer feedback to make your site even better.\r\n\r\n# Do This\r\n\r\n* Use the plan that your team came up with to improve your website.\r\n",
-    "project_template_level_name": "CSD U2 Project Template_pilot",
+    "project_template_level_name": "CSD Web Multi-page Template",
     "instructions_important": "false",
     "display_name": "Final Personal Website",
     "hide_share_and_remix": "false",
@@ -28,14 +28,14 @@
       "/docs/concepts/css/layout-properties/"
     ],
     "encrypted": "false",
+    "mini_rubric": "false",
     "encrypted_examples": [
 
-    ],
-    "mini_rubric": "false"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-07-12 21:00:51 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 23:48:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:16:49 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-07-12 21:00:51 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-01-30 23:48:06 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-22 17:16:49 +0000\",\"changed\":[\"name\",\"long_instructions\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-25 23:11:46 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

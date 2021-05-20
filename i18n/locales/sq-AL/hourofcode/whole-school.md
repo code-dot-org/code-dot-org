@@ -1,6 +1,5 @@
 ---
 title: Pjesëmarrje nga gjithë Shkolla
-layout: wide
 ---
 
 {{ signup_button }}

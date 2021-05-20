@@ -1,87 +1,85 @@
 ---
 title: 언론매체 관련 키트
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# 아워오브코드 이벤트에 언론의 관심을 이끄는 방법
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### 아워오브코드 이벤트로 파장을 일으키고 지역 매체를 초대해 컴퓨터 과학이 학교에 왜 중요한지 보게 합니다.
 
-*For all press and media inquiries, contact <press@code.org>*
+*모든 언론 및 매체 문의는<press@code.org>로 연락하세요.*
 
 * * *
 
-## Key Tips
+## 핵심 팁
 
 - 이벤트를 개최하기 2주 전에 이메일로 미디어들을 보내드립니다. 처음에 연락이 닿지 않으면 이메일과 휴대폰으로 알림이 발송됩니다.
 - 학교 직원들이나 자원봉사자들에게 행사 사진을 찍어 온라인으로 공유하거나 언론에 보낼 수 있도록 도움을 요청하세요.
 - 여러분의 웹사이트와 홈페이지에 Hour of Code에 대한 글을 올리고, 학교 신문에도 게제하세요. 여러분이 진행한 이벤트의 상세한 내용, 학생들의 사진과 활동을 올리세요.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- {{ campaign_date/year }} 동안 페이스북과 트위터에 계획 업데이트를 공유하고 이벤트를 알리며 사진을 포스팅 하세요. **#HourOfCode** 해쉬 태그를 사용해서 Code.org(@code.org)가 보고 이벤트를 홍보할 수 있게 하세요.
 
-## Step-by-step guide
+## 단계별 가이드
 
-### 1. Plan your event
+### 1. 이벤트 계획
 
 - Hour of Code를 시작하기 위한 단계적 절차들을 계획하세요.
-- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
-- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- 학부모에게[편지]({{ promote/sample_emails }}) 를 보내 입소문을 내달라고 요청하세요.
+- [편지]({{ promote/sample_emails }})를 지역 시장과 시의원, 주지사, 영향력 있는 지역 사업가에게 보내 행사에 참석하여 학생들에게 강연해 줄 것을 요청합니다.
 - 모둠 활동(언플러그드 프로그래밍 활동과 같은...)을 조직하거나, 학생들이 만들어낸 것들을 발표하고, 여러 가지 활동들을 이끌어내세요.
-- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
+- Code.org의[아워오브코드 동영상]({{ urls/home }}) 또는[다음의 동영상]({{ promote/videos }})중 하나를 보여주어 학생들에게 영감을 주세요. <br />
 
-### 2. Identify specific reporters that cover education or local events
+### 2. 교육 또는 지역 이벤트에 관한 글을 쓰는 신문기사 파악
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+지역 신문, TV방송, 라디오국 또는 블로그 등. <br />
 
-### 3. Contact local media
+### 3. 지역 언론 매체에 연락.
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+가장 좋은 방법은 이메일로 연락하는 것입니다. 내용은 짧고 "왜 사람들이 이 이벤트 행사에 관심을 가져야 하는가?"를 전달할 수 있어야 합니다. 이벤트에 참석할 이들을 위한 연락처(휴대폰 번호 포함) 정보를 포함시켜 주세요. **[언론매체로 보내는 홍보자료 샘플 참조 a]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+리포터 연락처 정보는 온라인으로를 찾아보세요. 찾을 수 없으면 발행국에 전화하여 물어보거나 또는 조직의 일반 이메일 주소로 이메일을 보내 메시지를 해당 리포터에게 전달해 달라고 요청하세요. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. 학교 이벤트와 관련된 현장 질문에 답할 준비를 하세요. 여기 몇 가지 예시 질문이 있습니다.
 
-#### Why is your school doing an Hour of Code?
+#### 학교는 왜 아워오브코드를 합니까?
 
-While all of us know that it’s important for students to learn how to navigate today’s tech-saturated world, many teachers aren’t experienced in computer science and don’t know where to start. This event is a chance for all of us to see what computer science is about.
+오늘날의 기술로 포화된 세상을 헤쳐나가는 법을 배우는 것이 학생들에게 매우 중요하다는 것을 잘 알고 있지만, 많은 교사들이 컴퓨터 과학 경험이 없고 어디서 어떻게 시작해야 할지 모릅니다. 이 이벤트는 우리 모두에게 컴퓨터 과학이 어떤 것인지 알아볼 좋은 기회입니다.
 
-We hope it’ll spark interest in students to keep learning. Research also shows that kids can pick up programming concepts before they know how to read and write. In fact, their brains are more receptive to computer languages at a young age, just like foreign languages. <br /> <br />
+우리는 이것이 학생들의 관심을 불러 일으켜 학생들이 계속 학습하길 희망합니다. 연구에 따르면, 아이들은 읽고 쓰는 법을 알기 전에 프로그래밍 개념을 인지할 수 있다고 합니다. 사실, 그들의 두뇌는 외국어와 마찬가지로 어린 나이에 컴퓨터 언어를 더 쉽게 수용합니다. <br /> <br />
 
-#### Why is this important?
+#### 왜 중요한가요?
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br />
+기술은 지구상의 모든 산업을 바꾸고 있습니다. 2015년 미국에서 코딩 기술을 높이 평가하는 예술과 디자인을 포함하여 각종 직업군에 7백만 개의 일자리 비워있습니다. 하지만 미국의 60퍼센트의 학교에서는 컴퓨터 과학을 가르치지 않습니다. 지금은 우리가 21세기를 따라잡을 때입니다. 우리는 우리의 학생들이 성인이 되었을 때 무슨 일을 할지 상관 없이 다시 말해 그들이 제약 또는 사업, 정치, 예술 등 어느 분야로 진출하든, 기술 구축 방식을 아는 것은 그들에게 자신감과 경쟁력을 준다는 사실을 잘 알고있습니다. <br />
 
 <a id="sample-emails"></a>
 
-## Sample email to send to invite local media to your event
+## 지역 언론매체를 이벤트에 초대하기 위해 발송하는 이메일 샘플
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**제목**: 학생들에게 컴퓨터 과학을 소개하는 미션에 지역 학교 참여.
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
+컴퓨터는 어디에나 있고 지구 상의 모든 산업을 변화시키고 있지만 전체 학교의 절반 미만 만이 학교에서 컴퓨터 과학을 가르칩니다. 소외된 인종 및 민족 그룹의 어린 여성과 학생들은 컴퓨터 과학 수업을 받는 경우는 매우 적으며 더구나 테크 산업에 진출한 인원 역시 매우 적습니다. 그래도 좋은 소식은, 이제 우리가 이러한 상황을 바꾸어가고 있다는 것입니다.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+아워오브코드로, 컴퓨터 과학이 구글과 MSN, 야후!, 디즈니의 홈페이지에 이미 있습니다. 100개 이상의 파트너가 이 운동을 지원하기 위해 함께 협력하고 있습니다. 전세계의 애플 스토어가 아워오브코들 주최하고 있습니다. 오바마 대통령은 캠페인의 일환으로 그의 첫번째 코드를 작성했습니다.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+그래서 [SCHOOL NAME] 학생 [X number] 명은 컴퓨터 과학 교육 주간(12월 3~9일) 동안 한 명도 빠짐없이 역사상 가장 큰 학습의 현장인 아워 오브 코드에 참여합니다.
 
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+[DATE]에 열리는 우리의 개회식 행사에 참석하여 학생들이 활동을 시작하는 모습을 봐주시길 요청하며 이 초대의 글을 씁니다.
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+비영리 단체 Code.org와 100 개 이상의 다른 파트너가 함께 조직하는 아워오브코드는 오늘날의 학생들이 21세기 성공을 위해 필수적인 중요한 기량을 배울 준비가 되었다고 믿는 세계적인 운동입니다. 우리와 함께 해주세요.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+연락처: [이름], [TITLE],, 전화: (212) 555-5555 날짜: [이벤트 날짜 및 시간] 장소: [주소 또는 찾아오는 길]
 
-I look forward to being in touch. <br />
+여러분의 연락을 기다리겠습니다.<br />
 
-## Additional details and a quote you can use in materials
+## 자료에서 활용할 수 있는 더 많은 세부 정보 및 인용문
 
-"The Hour of Code is designed to demystify code and show that computer science is not rocket science—anybody can learn the basics," said Hadi Partovi, founder and CEO of Code.org. "Over 100 million students worldwide have tried an Hour of Code. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+Code.org의 창시자이자 CEO인 하디 파르토비는 "아워오브코드는 코드를 쉽게 설명하고, 컴퓨터 과학은 로켓 과학이 아니라 누구나 기초를 배울 수 있음을 보여주도록 설계되었습니다"라고 말했습니다. "전세계 1억명 이상의 학생들이 이미 아워오브코드를 해봤습니다. 21세기 컴퓨터 과학 교육에 대한 수요는 높아 모든 장벽을 넘고 경계를 없앴습니다." <br /> <br />
 
-#### About Code.org
+#### Code.org 소개
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by women and underrepresented students of color. Its vision is that every student in every school has the opportunity to learn computer programming. After launching in 2013, Code.org organized the Hour of Code campaign – which has introduced over 100 million students to computer science to date – and partnered with 70 public school districts nationwide to expand computer science programs. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org는 소외된 그룹의 어린 여성과 학생에 의한 컴퓨터 과학 참여 확대와 증가를 위해 일하는 미국의 501c3 조항에 의한 비영리 조직입니다. 이 조직의 비전은 각 학교의 각 학생이 컴퓨터 프로그래밍을 배울 기회를 갖는 것입니다. 2013년 출범 후, Code.org는 아워오브코드 캠페인을 조직했습니다. 1억명 이상의 학생에게 최신 컴퓨터 과학을 소개하고 컴퓨터 과학 프로그램 확장을 위해 전국적으로 70개 공립학교 학군과 파트너십을 맺었습니다. Code.org는 Microsoft, Facebook, Infosys Foundation USA, Amazon 등을 포함하여 기업과 재단, 개인의 기부금으로 후원되고 있습니다. 더 많은 정보은 [code.org]({{ urls/codeorg }})를 방문하세요.
 
   
-Find more resources and sample emails [here]({{ promote/sample_emails }}).
+더 많은 자료와 샘플 이메일은 [여기]({{ promote/sample_emails }})에서 찾을 수 있습니다.
 
 {{ signup_button }}

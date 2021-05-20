@@ -1,0 +1,72 @@
+{
+  "sl-SI": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Dejanja",
+          "Brushes": "Čopiči",
+          "Loops": "Zanke",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Funkcije",
+          "Variables": "Spremenljivke"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Svet",
+          "Dancers": "Plesalci",
+          "Properties": "Lastnosti",
+          "Events": "Dogodki",
+          "Numbers": "Številke",
+          "Logic": "Logika"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Dejanja",
+          "Events": "Dogodki",
+          "Loops": "Zanke",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Games/Score": "Igra/rezultat"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Svet",
+          "Actions": "Dejanja",
+          "Events": "Dogodki",
+          "Behaviors": "Vedenje"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Svet",
+          "Locations": "Lokacije",
+          "Actions": "Dejanja",
+          "Events": "Dogodki",
+          "Behaviors": "Vedenje",
+          "Variables": "Spremenljivke",
+          "Math": "Matematika",
+          "Logic": "Logika",
+          "Functions": "Funkcije",
+          "Text": "Besedilo",
+          "Comments": "Komentarji"
+        },
+        "outbreak_freeplay": {
+          "World": "Svet",
+          "Actions": "Dejanja",
+          "Behaviors": "Vedenje",
+          "Events": "Dogodki",
+          "Locations": "Lokacije",
+          "Logic": "Logika",
+          "Loops": "Zanke",
+          "Math": "Matematika",
+          "Variables": "Spremenljivke",
+          "Functions": "Funkcije",
+          "Comments": "Komentarji"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Svet",
+          "Actions": "Dejanja",
+          "Events": "Dogodki",
+          "Logic": "Logika",
+          "Math": "Matematika"
+        }
+      }
+    }
+  }
+}

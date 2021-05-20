@@ -8,6 +8,11 @@ zh-CN:
       pair_programmer: 你正在与另一个不能访问此内容的学生结伴编程。要访问此内容，请停止结伴编程后再尝试。
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: 是无效的。 请注意，每个链接只能重置一次密码，并且只有最近发送的链接才能使用。
       messages:
         blank: 必填
         blank_plural: 必填
@@ -16,10 +21,11 @@ zh-CN:
     attributes:
       user:
         name: 显示名称
-        name_example: 显示的名字<br/>（如炫酷码农或小明）
+        name_example: 显示的名字 （如炫酷码农或小明）
         email: 电子邮件
         parent_email: 父母/监护人电子邮箱
         personal_email: 个人电子邮箱地址 <a href="%{url}">（如果没有电子邮箱请点击这里）</a>
+        personal_email_markdown: 个人电子邮箱地址 [（没有电子邮箱请点击这里）](%{url})
         username: 用户名
         password: '密码:'
         password_confirmation: 密码确认：
@@ -30,8 +36,12 @@ zh-CN:
         edit_header: 编辑用户信息
         finish_sign_up_header: 完成创建帐户
         finish_sign_up_subheader: 填写以下信息为 <strong>%{email}</strong> 创建 Code.org 帐户。
+        finish_sign_up_subheader_markdown: 填写以下信息为 **%{email}** 创建 Code.org 帐户。
         finish_sign_up_subheader_provider: 填写信息，来使用 <strong>%{provider}</strong> 的
           <strong>%{email}</strong> 创建 Code.org 账户。
+        finish_sign_up_subheader_provider_markdown: 填写信息，来使用 **%{provider}** 的 **%{email}**
+          创建 Code.org 账户。
+        reset_password_token: 重置密码链接
         error:
           future: 不能选择将来的时间
   beta: 测试版
@@ -48,13 +58,13 @@ zh-CN:
   okay: 好吧
   or: 或
   heading_x_of_y: "%{heading} (第%{x} 页 共%{y} 页)"
-  add_teacher_form:
+  join_section:
     code:
-      label: 添加一个老师：
+      title: 加入一个小组。
       placeholder: 小组代码（ABCDEF）
-      instructions: 请输入与你的老师共享的代码。这是一个像“ABCDEF”的6位字母代码。
-      instructions_short: 输入你的6位小组代码
-    submit: 添加老师
+      instructions: 请输入老师给您的 6 字代码, 参加小组。（比如：“ABCDEF”。）
+      instructions_short: 输入您的6位小组代码。
+      submit: 加入
   add_hint_form:
     placeholder: 请在这里输入您的密码提示
     submit: 添加密码提示
@@ -83,15 +93,15 @@ zh-CN:
     continue_with: 用%{provider}继续
     sign_in_with: 用%{provider}登录
     signed_in: 登录成功！
-    signed_out: 您已注销 <a href="%{url}"> Code.org</a>。
-    sign_out_of: '%{provider} 用于登录 <a href="%{url}"> 点击这里</a> 来注销 %{provider}.'
+    signed_out_markdown: "###，您已注销 [Code.org](%{url})"
+    sign_out_of_markdown: "#### 当前使用了 %{provider} 登录，[单击这里](%{url}) 来注销 %{provider}。"
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
-    google_oauth2: 谷歌
+    google_oauth2: 谷歌账号
     twitter: Twitter
     facebook: Facebook
-    windowslive: 微软
-    microsoft_v2_auth: 微软
+    windowslive: 微软账号
+    microsoft_v2_auth: 微软账号
     clever: Clever
     powerschool: Powerschool
     forgot_password: 忘记了您的密码吗？
@@ -101,20 +111,29 @@ zh-CN:
     need_unlock: 未收到解锁指令吗？
     not_linked: 对不起，你的编程一小时账户没有连接到 %{provider}。需要通过输入密码来登录。
     use_clever: 对不起，你的 Code.org 帐号无法连接到%{provider}。请尝试通过 Clever 登录。
+    invalid_provider: 对不起，%{provider} 的账号不可以被连接到 Code.org 账号。
+    migration_required: 对不起，我们不能链接或断接还在使用旧版账号体验的账号。请升级到新版账号体验的账号。
     unable_to_connect_provider: 无法将您的 Code.org 帐户连接到 %{provider}。请重试。
+    disconnect_successful: 我们成功将你的第三方账号从你的Code.org 账号中移除。
     already_in_use: 你的 %{provider} 已连接到另一个 Code.org 帐户。
     already_linked: 你的 %{provider} 已连接到了 Code.org 帐户。
+    existing_account:
+      account_exists: 恭喜！已经有了 Code.org 的账户 %{email}。
+      sign_in: 请登录，我们将连接 %{provider} 的个人资料。
+      sign_up: 不是你的邮箱？ 想用其他邮箱创建新帐户？ 如果选择创建新帐户，我们仍将链接 %{provider} 的个人资料。
   signup_form:
     email_signup: 用电子邮件地址登录
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
     overview: 注册一个帐户来跟踪你的进度或管理您的教室。 <a href="/">您可以浏览不同阶段和谜题</a>而不需要一个帐户，但你需要注册以保存进度和项目。
+    overview_markdown: 注册一个帐户来跟踪进度或管理教室。可以不需要帐户来[浏览不同阶段和谜题](/)，但需要注册才能保存进度和项目。
     hoc_already_signed_up_heading: 使用访客身份开始
     hoc_already_signed_up_content: 你已经注册教授《编程一小时》！你和你的学生不需要登录到代码工作室来参加该活动。想要开始，为你的班级
       <a href="%{learn_url}">选择一个教程</a> 并将链接分享给他们。<br/><br/>如果你喜欢《编程一小时》并希望更深入地使用，你可以在下面设置一个密码并创建一个代码工作室账号，以为你的学生在我们所有的
       <a href="%{educate_url}">大型课程</a>里注册。
     hoc_already_signed_up_content_post_hoc: 谢谢你主办编程一小时。要登录到代码工作室，你需要设置您的帐户的密码。这将允许您保存您的进展和管理你的教室。你将能够分配课程给学生，并跟踪其进度。<a
       href="%{studio_url}"> 你还可以继续浏览各个阶段和谜题</a> 而无需创建一个帐户。
+    hoc_already_signed_up_content_post_hoc_markdown: 感谢主办编程一小时！要登录到代码工作室，需要设置帐户的密码。这样能保存进度并管理教室。还可以将课程分配给学生，并跟踪进度。也可以不创建帐户，[继续浏览各个阶段和谜题](%{studio_url})。
     teacher_educator_guide: 请参阅教师指南
     title: 注册 Code.org
     school_name: 学校名称（可选）
@@ -133,15 +152,13 @@ zh-CN:
     valid_password: 有效的密码 ！
     invalid_password: 密码必须至少为 6 个字符
     mismatch_password: 您输入的两个密码不匹配
-    agree_tos_privacy: 我同意 <a href='http://code.org/tos'>服务条款</a> 和 <a href='http://code.org/privacy'>隐私策略</a>。
-    under_13_consent: 如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。
     student_consent: 我确认我的父母或法定监护人同意我使用 Code.org 的服务。
-    agree_us_website: 我同意使用美国的网站。
-    my_data_to_us: 我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
-    student_terms: 电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org 寄来的任何邮件。更多信息请查看<a
-      href='http://code.org/privacy'>隐私政策</a>。
-    teacher_terms: 我同意 Code.org 的服务条款。有关隐私的详细信息，请参阅我们的 <a href='http://code.org/privacy'>
-      隐私政策</a>。
+    agree_us_data_transfer_student: "**我同意 Code.org 在我使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国**以保存和使用本资料。"
+    agree_us_data_transfer_teacher: "**我同意 Code.org 在我（和我学生的）使用本网站的过程中会传输资料（包括个人资料）到美利坚合众国**以保存和使用本资料。"
+    data_collection_us: 我理解 Code.org 是基于美国的非营利组织，在美国管理该网站资料收集的法律可能会与我所从的国家有不同。
+    visit_privacy: 访问 Code.org 的[隐私条款]（%{privacy_url}）以了解跟多。
+    student_terms_markdown: 注意：电子邮箱不会被存储，并用作与学生取得联系。Code.org 不会向学生发送与密码恢复无关的任何邮件。更多信息请查阅
+      [隐私政策](http://code.org/privacy)。
     additional_information: 我们需要一些额外的信息来继续为你注册.
     user_type_button: 更新帐户类型
     user_type_label: 帐户类型
@@ -155,6 +172,9 @@ zh-CN:
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
+    parent_account_checkbox: 我是家长/监护人，代表我的孩子登录
+    parent_account_email_progress_permission: 我们是否可以偶尔通过电子邮件向你发送关于你孩子进度和项目的最新信息，以及关于其课程和计算机科学的最新信息？[(参见我们的隐私政策)](%{privacy_policy_url})
+    parent_account_email_label: 家长/监护人电子邮箱
   school_info:
     title: 学校信息（选填）
     school_country: 学校所在国家
@@ -195,7 +215,7 @@ zh-CN:
     login: 登录
     invalid_login: 登录无效，请重试
     pair_programming: 我在我的电脑上有伙伴
-    student_privacy: 了解更多：<a href='%{student_privacy_blog}' target='_blank'>为什么你看不到你的名字？</a>
+    student_privacy_markdown: 了解为什么看不到完整的姓名，请查阅[这里](%{student_privacy_blog})。
   password:
     reset_form:
       title: 忘记了您的密码吗？
@@ -222,6 +242,7 @@ zh-CN:
       %{name}
   parent_mailer:
     student_associated_subject: Code.org 的登录信息
+    parent_email_added_subject: 欢迎来到 Code.org ！
   teacher_mailer:
     new_teacher_subject: 欢迎来到 Code.org ！
     delete_teacher_subject: Code.org 通知：你的帐户已被删除
@@ -244,6 +265,7 @@ zh-CN:
     invite_sent: 邀请已发送
     added_teacher: 添加%{name}为你的老师
     registered: 你已经注册了 %{section_name}。
+    captcha_required: 请填写验证码加入本小组。
     error:
       signed_in: 请在注销后继续下一步操作。
       username_not_found: 找不到用户名 %{用户名}
@@ -251,7 +273,7 @@ zh-CN:
       no_teacher: 找不到用户名 %{teacher_email_or_code}。请让该用户先注册，再次尝试添加。
       section_not_found: 找不到代码 '%{section_code}' 节.
       blank_code: 请输入一节代码
-      cant_join_own_section: 对不起，你不能加入你自己的部分.
+      cant_join_own_section: 对不起，不能加入自己的小组。
       provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
     mail:
       student_disassociated:
@@ -289,6 +311,7 @@ zh-CN:
       sections: 小组
       help_support: 帮助与支持
       report_bug: 报告错误
+      report_abuse: 举报滥用
       teacher_community: 教师社区
       professional_learning: 专业学习
       documentation: 使用文档
@@ -297,6 +320,9 @@ zh-CN:
       app_lab_tutorials: 应用程序实验室说明
       game_lab_documentation: 游戏实验室文档
       game_lab_tutorials: 游戏实验室说明
+      sprite_lab_documentation: 精灵图实验室文档
+      sprite_lab_tutorials: 精灵图实验室教程
+      web_lab_documentation: 网站程序实验室文档
       educate_overview: 教育工作者概述
       educate_elementary: 小学
       educate_middle: 中学
@@ -322,6 +348,9 @@ zh-CN:
       help_us: 帮助我们
       teach: 教学
       about: 关于
+      legal: 隐私与法律
+      legal_privacy: 隐私政策
+      legal_tos: 使用条款
     user:
       classroom: 教师主页
       district_dashboard: 分区信息
@@ -364,7 +393,7 @@ zh-CN:
       playlab_k1: 剧本实验室（学龄前）
       scratch: Scratch
       sports: 运动
-      spritelab: 精灵实验室
+      spritelab: 精灵图实验室
       starwars: 星球大战
       starwarsblocks: 星球大战(块)
       starwarsblocks_hour: 星球大战(块)
@@ -408,6 +437,7 @@ zh-CN:
       worked_with: 共事
       update_lock_settings: 在这里更新锁设置。
       clear_response: 清除回复
+    student_code_view_diabled: 无法查看该活动的学生代码。
   user:
     email_confirm_needed: 电子邮件地址尚未被确认：
     email_confirm_needed_required: 你的电子邮件地址%{email} 尚未被确认：
@@ -432,8 +462,12 @@ zh-CN:
     create_personal_login_link_account: 也可以在"管理连接的账号"部分下连接到个人账户。
     create_personal_login_terms: 通过创建个人账户，我同意接受 Code.org 的<a href='%{terms_of_service_url}',
       target='_blank'>服务条款</a>。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用 Code.org 的服务。
+    create_personal_login_terms_markdown: 通过创建个人账户，我同意接受 Code.org 的[服务条款](%{terms_of_service_url})。我确认我的父母或法定监护人已经允许我在没有老师的情况下使用
+      Code.org 的服务。
     create_personal_login_email_note: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从 Code.org
       寄来的任何邮件。更多信息请查看<a href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。
+    create_personal_login_email_note_markdown: 注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从
+      Code.org 寄来的任何邮件。更多信息请查看[隐私政策](%{privacy_policy_url})。
     enter_new_login_info: 输入新的登录信息
     confirm_secret_words: 输入你当前的秘密单词来确认你的身份
     parent_email_label: 家长/监护人电子邮件 (可选)
@@ -441,14 +475,21 @@ zh-CN:
     enter_parent_email: 输入你的父母或监护人的电子邮件地址（用于恢复密码）
     update: 更新帐户
     account_successfully_updated: 账号已成功更新。
+    auth_option_saved: 已成功连接 %{provider} 账号的邮件地址 %{email}。
+    auth_option_saved_no_email: 已成功连接 %{provider} 账号 。
+    update_email: 更新
+    for_parents_and_guardians: 各位家长及监护人
+    link_a_parent_email: 将家长/监护人的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息。您也可以使用此电邮地址进行密码恢复。
+    parent_guardian_email_label: 父母/监护人电子邮箱
+    remove_parent_email_label: 移除
+    none: 没有
+    only_one_parent_email_supported_warning: 注意：我们目前对每位学生帐户只支持一位家长/监护人的电邮地址。
+    encrypted: 已加密
   user_level:
     completed: 已完成
     tried: 试过了
   home:
     title: 代码工作室
-    description: 代码工作室是 Code.org 创办的在线课程的家园
-    lines_of_code: 由学生编写了 %{lines_count} 行代码
-    lines_of_code_linebreak: 有 %{students_count} 百万学生编写了<br/>%{lines_count} 行程序代码。
     all_courses: 课程1、 2 和 3 的概要
     lesson_plans: 课程计划
     signin_message: 已经注册了吗？%{link}
@@ -478,23 +519,23 @@ zh-CN:
     test_videos_help: 在你的学校测试我们新的视频。
     try_beta_courses: 新增功能！尝试我们为 K-5 学生准备的 beta 版课程
     use_as_teacher: 做为教师来使用本网站
-    heading_hoc2014: "<h2>编程一小时</h2>适合<h1>所有年龄</h1>"
-    heading_elementary: "<h2>20 小时课程</h2><h1>初学者 （所有年龄）</h1>"
-    heading_apps: "<h1>为每个人</h1><h2>的乐趣</h2>"
-    heading_tools: "<h2>准备好进行下一步了吗？</h2><h1>高中的 JavaScript 工具</h1>"
-    heading_legacy: "<h1>为所有年龄</h1><h2>的加速课程</h2>"
+    heading_elementary_markdown: |-
+      ## 20小时课程
+
+      ＃计算机科学基础知识（所有年龄段）
     your_gallery: 作品
     no_primary_course: 试试代码工作室的课程
     choose_next_course: 从下面代码工作室的课程中选一个体验
     print_certificate: 打印证书
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   move_students:
-    new_section_dne: 抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。
-    section_code_cant_be_current_section: 当前章节不能与新建单元相同。
+    new_section_dne: 抱歉，小组 %{new_section_code} 不存在。请输入不同的小组代码。
+    section_code_cant_be_current_section: 当前小组不能与新建小组相同。
     current_section_dne: 抱歉，小组%{current_section_code} 不存在。请输入一个不同的小组代码。
     student_ids_not_entered: 请提供 student_ids。
     student_not_found: 无法找到这一个或多个学生。
-    all_students_must_be_in_current_section: 所有的学生都必须注册到您的章节中。
-    already_enrolled_in_new_section: 您无法移动这些学生，因为他们已经在这个新的小组里了。
+    all_students_must_be_in_current_section: 所有的学生都必须注册到小组中。
+    already_enrolled_in_new_section: 无法移动这些学生，因为他们已经在这个新的小组里了。
     third_party_login: 不能将从第三方工具同步的学生移动到另一个小组。
   share:
     title: 在代码工作室学习
@@ -527,6 +568,8 @@ zh-CN:
     code_from_html: Code.org 使用 p5.play 游戏资源库，根据 <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a> 之许可。
     powered_by_aws: 由亚马逊网络服务
+    built_on_github: 在微软的GitHub上构建
+    google_copyright: "© Google Inc，在有许可下使用。谷歌课堂是Google Inc的一个商标。"
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE Logo 和 Hour
       of Code&reg; 是 Code.org 的注册商标。"
     copyright: 版权
@@ -538,6 +581,7 @@ zh-CN:
     tos_short: 条款
     tos: 使用条款
     privacy: 隐私政策
+    privacy_updated: 隐私政策（已更新）
     secure: 安全版本
     report_abuse: 举报滥用
     built_on_code_studio: 在代码工作室中建立
@@ -560,6 +604,7 @@ zh-CN:
     download: 下载视频
     show_notes: 显示备注
     show_video: 显示视频
+    label: 视频
   compatibility:
     upgrade:
       unsupported_message: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
@@ -567,6 +612,7 @@ zh-CN:
       link: 了解详情
       applab_unsupported_tablet: 应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
       gamelab_unsupported_tablet: 游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。
+      oceans_unsupported_browser: 本教程不支持此浏览器。 请尝试使用 Edge，Chrome，Firefox 或其他现代浏览器访问此页面。
       weblab_unsupported_browser: 很遗憾，在当前浏览器中加载网络实验室时遇到一些问题。您也许可以先试试另一个浏览器，直到我们解决了这个问题。很抱歉造成您的不便。
       weblab_unsupported_locale_storage: 在私密浏览模式下使用 Web Lab 可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。
   slow_loading: 请再多等一会儿...
@@ -608,6 +654,8 @@ zh-CN:
       audience: 13岁以上
       cta: 了解操作方法
     dance:
+      title: 舞蹈派对
+    dance-2019:
       title: 舞蹈派对
     hoc:
       title: 经典迷宫
@@ -675,23 +723,8 @@ zh-CN:
       body: 学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。
       audience: 14 岁或以上
       cta: 了解操作方法
-  gallery:
-    students_drew_these_with_code: 学生使用代码画了这些图案!
-    students_made_these_with_code: 学生使用代码做了这些内容！
-    picture_count: 在过去的 <b>%{days}</b> 天，学生们用程序画了 <b>%{count}</b> 幅图片。点击图片来查看每个程序如何运行。
-    activity_count: 在过去的 <b>%{days}</b> 天中，学生用程序完成了 <b>%{count}</b> 个应用程序和图片。单击图片和屏幕截图来查看每个程序如何运行。
-    want_to_make_your_own: 想要做你自己的作品？
-    how_to_save: 在这些教程的最后一个级别，单击"完成"和"保存"以在画廊里保存您的作品。
-    more: 更多 &rarr;
-    caption_by_name_age: "%{name}，%{age} 岁"
-    caption_time_ago: "%{time_ago}之前"
-    header: 作品
-    header_playlab: 游戏实验室
-    header_artist: 艺术家
-    report_abuse: 举报滥用
   landing:
-    prerelease: 本课程是 <span class='betatext'>beta 版</span>中。这表示它不是最终版本。它会根据反馈而被修订和改善
-    prerelease_hoc2014: 本教程是<span class='betatext'> beta 版</span>。它会根据反馈而被修订和改善。
+    prerelease_tutorial: 本教程为 **beta** 版，将根据反馈信息对其进行改进和修订。
     report_bug: 报告错误
     support: 获取帮助
     support_url: "//support.code.org"
@@ -699,6 +732,8 @@ zh-CN:
     help_support: 帮助与支持
     documentation: 使用文档
     tutorials: 教程
+  free_response:
+    placeholder: 在这里输入你的答案
   multi:
     wrong_title: 不正确的答案
     wrong_body: 你已输入的答案不正确。请再试一次 ！
@@ -748,6 +783,8 @@ zh-CN:
     open_response_body: 感谢您的回复！
     correct_title: 正确。
     correct_body: 这是正确的答案。
+  lesson_extras:
+    bonus_level: 更多关卡
   dialog:
     ok: 确定
     startover_title: 你确定要重新开始吗？
@@ -761,23 +798,37 @@ zh-CN:
   age_interstitial:
     age: 你的年龄
     header: 帐户信息更新
-    message: 我们正在更新我们的经验，为您提供更强的隐私保护。要做到这一点，我们需要现有用户在这里输入自己的年龄。<br/>一如往常，code.org
-      将永远不会出租、 出售或与任何第三方共享此信息。
-    sign_out: 如果你不想提供你的年龄你可以 <a href="%{url}">注销</a>。
+    warning: 我们正在不断完善现有体验，以提供更强的隐私保护。 为此，需要用户在此处输入年龄。
+    disclaimer: Code.org 永远不会把这信息租，或买给第三方。
+    sign_out_markdown: 如果不愿意提供年龄信息，可以[退出](%{url})。
   terms_interstitial:
     title: 更新的服务条款和隐私政策
     intro_desc: 我们更新了我们的服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将 <i>不再将学生帐户的电子邮件地址存储在代码工作室。</i>这是对我们来说，一个大改变，我们希望它在教育技术中设置学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
+    intro_desc_markdown: 我们更新了服务条款和隐私政策，如下所示。这些变化自 2016 年 8 月 24 日起生效。 最大的变化是︰ 我们将
+      *不再将学生帐户的电子邮件地址存储在代码工作室*。对我们来说，这是个大改变，我们希望它在教育技术中设立学生隐私的新标准。我们已经通过电子邮件给你发送了其它更改的摘要。
     intro_instructions: 你需要为你教室里的 13 岁以下的学生接受这些新的条款来完全拥有代码工作室访问权限中的所有最新功能。 当你为13岁以下的学生注册帐户，你要确认你的学校有父母的同意来收集学生的个人信息来为学校的所使用，包括代码工作室这样的教育程序。
     tos: 使用条款
     privacy: 隐私政策
     privacy_notice: 隐私声明
     accept_label: 我同意更新的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
       隐私政策</a>
+    accept_label_markdown: 我同意更新的[服务条款](%{tos_url})和[隐私政策](%{privacy_url})。
+    accept_tos: 报名 Code.org，即表示同意我们的 [服务条款](%{tos_url}) 和 [隐私策略](%{privacy_url})。
     accept: 同意
     print: 打印
     reminder_desc: 我们更新了我们的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
       隐私政策</a>。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，我们教学 JavaScript 的工具学生可能不能使用。
+    reminder_desc_markdown: 我们更新了[服务条款](%{tos_url})和[隐私政策](%{privacy_url})。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，学生可能不能使用
+      JavaScript 工具。
     review_terms: 查看更新后的条款
+  donor_interstitial:
+    title: 你的免费计算机科学课程是由...创造的。
+    subtitle: 我们想向能使 Code.org 成功的捐赠人表示感谢。我们下决心要使 Code.org 向所有地区的学校和学生免费开放，感谢您[donors]的（%{donors_url}）！
+    local_supporters: 地区支持者
+    global_supporters: 全球支持者
+    support_codeorg_1: 您所给予 Code.org 的每一元给予了更多学生机会。
+    support_codeorg_2: "[现在捐赠](%{donate_url})以支持 Code.org 。"
+    get_started: '开始使用 Code.org '
   school_info_interstitial:
     title: 我们想将计算机科学带给每一个学生——帮助我们记录进度！
     message: 请在下方输入您的学校信息。
@@ -799,6 +850,8 @@ zh-CN:
     decline: 关闭
   zendesk_too_young_message: 对不起，年轻的用户不能登录到支持站点。你可以不登录来浏览 <a href="http://support.code.org">
     support.code.org</a> 或让你的父母或老师来联系我们。
+  zendesk_too_young_message_markdown: 对不起，年轻用户不能登录到支持站点。可以不登录来浏览 [support.code.org](http://support.code.org)
+    或让你的父母或老师联系我们。
   progress:
     not_started: 未开始
     in_progress: 正在进行
@@ -862,91 +915,17 @@ zh-CN:
   peer_review:
     accepted:
       name: 已接受
-      description: "<strong>是的</strong>，这个提交<strong>符合</strong>要求"
+      description_markdown: "**是**，此提交**符合**要求"
     rejected:
       name: 已拒绝
-      description: "<strong>不</strong>，这个提交<strong>不能满足</strong> 要求"
+      description_markdown: "**否**，此提交**不符合**要求。"
     escalated:
       name: 升级
       description: 我想让老师来审查此提交
     instructor_feedback: 教师反馈
     peer_feedback: 同伴反馈
     outdated: 这个反馈是添加给以前提交的版本
-  flex_category:
-    required: 概览
-    content: 内容
-    practice: 教学训练
     peer_review: 互相检查
-    ramp_up: 热身
-    main_course: 主要课程
-    extra_course_content: 额外的课程内容
-    csf_e_1: 提升到课程E（可选）
-    csf_e_2: 课程E的内容
-    csf_f_1: 提升到课程F（可选）
-    csf_f_2: 课程F的内容
-    csf_digcit: 数字公民
-    csf_jigsaw: 拼图
-    csf_sequencing: 序列
-    csf_loops: 循环
-    csf_events: 事件
-    csf_online_safety: 在线安全
-    csf_binary: 二进制
-    csf_conditionals: 条件语句
-    csf_sprites: 精灵
-    csf_spritelab: 精灵实验室
-    csf_nested_loops: 循环嵌套
-    csf_functions: 函数
-    csf_variables: 变量
-    csf_for_loops: 计数循环
-    csf_internet: 互联网
-    csf_impacts: 计算的影响
-    csf_warmup: 热身
-    csd1_1: 第 1 章︰ 解决问题的流程
-    csd1_2: 第 2 章︰ 计算机和解决问题的能力
-    csd2_1: 第 1 章︰ 网站内容和 HTML
-    csd2_2: 第 2 章︰ 样式和 CSS
-    csd3_1: 第 1 章︰图像和动画
-    csd3_2: 第 2 章︰ 创建游戏
-    csd4_1: 第 1 章︰ 用户为中心的设计
-    csd4_2: 第 2 章︰ 应用程序原型
-    csd5_1: 第 1 章︰ 表达信息
-    csd5_2: 第 2 章︰ 解决数据问题
-    csd6_1: 第 1 章︰ 用硬件编程
-    csd6_2: 第 2 章︰ 创建物理原型
-    csd_survey: 课后问卷
-    csp1_1: 第一章：表达和传输信息
-    csp1_2: 第二章：发明互联网
-    csp2_1: 第一章：编码和压缩复杂信息
-    csp2_2: 第二章：使用和可视化数据
-    csp3_1: 第一章：编程语言和算法
-    csp4_1: 第一章：大数据和加密的世界
-    csp5_1: 第一章：事件驱动编程
-    csp5_2: 第二章：用数据结构编程
-    cspSurvey: 调查
-    cspAssessment: 章节测验
-    csp_ap_1: 第一章：安装
-    csp_ap_2: 第二章：浏览成绩工具
-    csp_ap_3: 第三章：创建性能工具
-    csp_postap_1: 第一章：使用和可视化数据
-    csp_postap_2: 第二章：应用程序和数据库
-    csp2_1_2018: 第2单元︰ 数字信息
-    csp3_1_2018: 单元3：编程入门
-    csp4_1_2018: 单元4 - 大数据和隐私
-    csp_variables: 变量
-    csp_conditionals: 条件语句
-    csp_functions: 函数
-    csp_project: 项目
-    csp_lists: 列表
-    csp_loops: 循环
-    csp_traversals: 遍历
-    csp_libraries: 库
-    csp_parameters_return_values: 参数和返回值
-    dlp: 反思提示
-    time4cs_c1: 湿地及其生态系统
-    time4cs_c2: 湿地里的食物链
-    time4cs_c3: 生活在湿地
-    time4cs_c4: 对湿地的入侵影响
-    time4cs_c5: 市民对湿地变化的影响
   external_links:
     disclaimer: 免责声明
     leaving_domain: 你现在正在离开 Code.org，访问一个不由我们创建的站点。
@@ -1007,10 +986,11 @@ zh-CN:
     download_in_Vietnamese: 下载越南语版本︰
     windows: Windows（64位）
     mac: Mac OS X
-  stage_extras_teacher_message: 您已经关闭了一些小组的课程附加内容。除非重新打开，否则您的学生将看不到此页。可以通过访问<a href='http://code.org/teacher-dashboard'>教师控制台</a>来打开课程附加内容。
   locked_stage: 这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候，你的老师可以解锁这一阶段。
   hidden_stage: 你的老师没有预料到你来到这里。请询问你的老师你应该上什么课。
   hidden_script: 你的老师不期待你来这里。请询问你的老师应该上哪个单元。
+  no_course_access_student: 无权访问此课程。请问问老师，应该上什么课程。
+  no_course_access_teacher: 不能访问此课程。如果确定应该能访问次课程，请写信给 support@code.org，以便能修复此情况。
   no_script_access_student: 无权访问此单元。请询问教师，应该访问什么单元。
   no_script_access_teacher: 你不能进入这个单元。如果你认为可以访问这个单元，请写信给 support@code.org，以便我们可以解决这种情况。
   return_unit_overview: 转到单元概述
@@ -1028,16 +1008,20 @@ zh-CN:
       school_name: 学校名称
       school_city: 学校所在城市
       school_country: 学校所在国家
+      colombian_school_city: 学校所在城市
+      colombian_school_department: 学校部门
+      colombian_school_municipality: 学校政府
+      colombian_school_name: 学校名称
       ages: 今年将教什么年纪的学生？
       subjects: 今年教的科目是什么？
       resources: 您使用以下哪种计算机科学教育资源？
       robotics: 您使用以下哪种机器人设备？
       workshop_organizer: 工作室组织者
-      workshop_facilitator: 工作室引导员
+      workshop_facilitator: 工作室主持人
       workshop_course: 工作室课程
       email_opt_in: 我们是否能发给你关于 Code.org 国际项目，课程更新或其它计算机科学新闻的邮件？
-      legal_opt_in: 提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和引导员的 Code.org 国际合作伙伴共享有关您如何使用
-        Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量、你的教室的人员数据以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息：所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和引导员在合同上有义务以和
+      legal_opt_in: 提交此表单即表示您同意允许 Code.org 与您的所在国家、所在学区和主持人的 Code.org 国际合作伙伴共享有关您如何使用
+        Code.org 和专业学习资源的信息。我们将分享您的联系信息， 您正在使用哪些课程/组件以及如何与这些合作伙伴聚合有关您的数据。这包括你的班级的学生数量、你的教室的人员数据以及您的学校和地区的名称。我们不会与我们的合作伙伴分享关于个别学生的任何信息：所有学生的信息将不会被识别和聚合。我们的国际合作伙伴和主持人在合同上有义务以和
         Code.org 相同的保密级别对待这一信息。
     form_entries:
       gender:
@@ -1049,6 +1033,7 @@ zh-CN:
       school_country:
         canada: 加拿大
         chile: 智利
+        colombia: 哥伦比亚
         israel: 以色列
         malaysia: 马来西亚
         mexico: 墨西哥
@@ -1097,6 +1082,7 @@ zh-CN:
         csf_express: 计算机科学基础课程（预快速或快速）
         csd: 计算机科学发现
         csp: 计算机科学原理
+        not_applicable: 不适用
       email_opt_in:
         opt_in_yes: 对
         opt_in_no: 不
@@ -1104,25 +1090,45 @@ zh-CN:
       title: 工作坊参与者
       intro: 非常感谢您抽出时间接受 Code.org 的培训课程。没有像您这样的人的帮助，我们让世界各地所有学校的孩子们都能有机会学习计算机科学知识的使命或许永远也不会成功。
       instructions: 请填写下方的表格，表明 1) 你参加了一个由 Code.org 的国际合作伙伴运作的培训研讨班，并且 2) 你同意我们将你的情况告知我们在你所在国家的国际合作伙伴，以便他们支持你作为计算机科学教师的工作。
-      thanks: 感谢您的提交！我们期待着能帮助您熟悉 Code.org 的课程及教学工具。请与我们分享你的问题和反馈，可发邮件至<a href='%{support_email_url}'>support@code.org</a>，或在<a
-        href='%{teacher_forum_url}' target='_blank'>教师论坛</a>上发帖！
+      thanks_markdown: 感谢提交！我们期待着能帮您熟悉 Code.org 的课程和教学工具。如有任何问题和反馈，请及时告知我们，可向 [support@code.org](%{support_email_url})
+        发邮件或在[教师论坛](%{teacher_forum_url})发帖！
+      facilitator_not_listed: 我的主持人没有出现在此列表中
+      facilitator_not_applicable: 不适用
+      organizer_not_listed: 我的组织者没有出现在列表中
     logged_out:
       heading: 感谢您对专业学习计划的兴趣！
       body: 开始前，首先需要登录到 Code.org 帐户。如果希望在启动应用程序之前了解有关该程序的更多信息，请查看 <a href="%{url}">专业学习计划概述</a>。
     not_teacher:
-      body: 感谢对 Code.org 专业学习项目的兴趣。现在已经注册了一个学生账户，请创建教师账户或<a href="%{user_settings}">转到用户设置</a>将账户升级为教师账户。
-      more: 如果在开始申请前希望看到更多信息，点击 <a href="%{pl_overview}">专业学习计划概述</a>。
+      body_markdown: 感谢对 Code.org 专业学习项目的兴趣。现在登录的是学生账户，请创建教师账户或转到[用户设置](%{user_settings})将账户升级为教师账户。
+      more_markdown: 如果在开始申请前希望看到更多信息，点击[专业学习计划概述](%{pl_overview})。
     no_teacher_email:
-      body: 账号还没有填写电子邮件地址。请<a href="%{user_registration}">访问帐户设置</a>以在完成表单前添加电子邮件地址。
+      body_markdown: 账号还没有填写电子邮件地址。请访问[帐户设置](%{user_registration})，在完成表单前添加电子邮件地址。
   courses_category: 完整课程
   cookie_banner:
     message: 通过继续浏览我们的网站或单击"我同意"，您同意在你的计算机或设备上存储 cookies。
     more_information: 查看 Code.org 的隐私政策。
     accept: 我同意
-  gdpr_dialog:
-    heading: 你同意使用一个美国的网站吗？
-    message: 您使用本网站产生的数据可能会被传输至美国并在美国存储或处理。
-    link_intro: 有关详细信息，请参阅我们
-    privacy_policy: 隐私条款
-    logout: 注销
-    true: 对
+  page_not_found_title: 找不到页面
+  page_not_found_header: 404：找不到页面
+  page_not_found_description: 您要查找的页面地址不存在。检查网址并重新提交。或者返回主页。
+  page_not_found_button: 返回主页
+  copy: 复制
+  confirm: 确认
+  maker:
+    google_oauth:
+      login_with_google: 登录到Google的制作者应用
+      enter_code: 当你使用默认浏览器并使用Google账号登入时，请输入提示的代码
+      copy_code: 复制这段代码并粘贴到 Maker App 来登录到 Code.org
+      error_token_expired: 验证已过期，请重新登录获取一个新的验证码。
+      error_wrong_provider: 错误的提供方，请确认你使用的是Google登录
+      error_invalid_user: 无效的用户ID，请重新登录。
+      error_no_code: 请输入您的登录代码。
+      confirm_login: 选择“确认”以使用您的Google帐户登录。
+  parent_email_banner:
+    text: "**您是否是一位家长或监护人？**将您的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息！"
+    link_your_email: 关联您的电子邮箱
+    not_now: 现在不想
+  behaviors:
+    this_sprite: 这个精灵
+  unit_prefix: 单位%{n}
+  code_org_logo_alt: Code.org首页

@@ -1,14 +1,12 @@
 ---
-title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
+title: Προηγούμενες Αφίσες της Ώρας του Κώδικα
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# Προηγούμενες Αφίσες της Ώρας του Κώδικα
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Βρείτε εδώ τις αφίσες προηγούμενων ετών για να διακοσμήσετε την τάξη σας! Αναζητάτε νέες αφίσες; [Κάνετε κλικ εδώ]({{ promote/promote_posters_url }}).
 
 * * *
 

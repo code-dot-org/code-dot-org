@@ -1,0 +1,30 @@
+name 'csp-9-exam1-school-survey-3-2020'
+editor_experiment ''
+right 'Whether students who are new to the school take longer to get to school than other students'
+wrong 'The average time it takes students to get to school'
+wrong 'The most common travel mode students use to get  to school'
+wrong 'Whether students who arrive to school later take longer to get to school'
+
+
+markdown <<MARKDOWN
+This question refers to the same table of data described above.
+
+Which information could likely NOT be found with the data collected?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Since there is no information about how long each student has attended the school, we can’t make any claims about how long new students take to get to school.
+
+ [Lesson 1 - Learning From Data](https://curriculum.code.org/csp-20/unit9/1/) helped students understand the distinction between what we can and cannot claim based on data.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+
+* DAT-2.A: Describe what information can be extracted from data.
+:::
+
+
+MARKDOWN

@@ -1,8 +1,9 @@
 = stylesheet_link_tag 'css/pd', media: 'all'
-%script{src: minifiable_asset_path('js/pd/application/principal_approval_application/new.js'), data: @script_data}
+%script{src: webpack_asset_path('js/pd/application/principal_approval_application/new.js'), data: @script_data}
 
 %h1
-  2019-2020 Code.org Principal Approval Form
+  = @year
+  Code.org Principal Approval Form
 
 #application-container
   -# populated by React

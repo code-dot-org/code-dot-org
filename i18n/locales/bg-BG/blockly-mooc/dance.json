@@ -3,13 +3,14 @@
   "danceFeedbackNoDancers": "Няма танцьори.",
   "danceFeedbackNoBackground": "Трябва да поставиш фон.",
   "danceFeedbackTooManyDancers": "Внимавай! Ако поставищ \"направи нов\" блок във \"всеки 2 размера\", ще създадеш много танцьори.",
-  "danceFeedbackUseSetSize": "",
   "danceFeedbackUseSetTint": "\"Настройка на нюанса\" се използва за промяна на оттенъка на танцьор.",
   "danceFeedbackUseStartMapping": "Опитай да добавиш <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_pineapple</title><title name=\"PROPERTY\">\"мащаб\"</title><title name=\"RANGE\">\"бас\"</title></block></xml> блока към твоята програма.",
   "danceFeedbackStartNewMove": "Танцьорът ти не правеше нов ход след четвъртият размер.",
   "danceFeedbackNeedDifferentDance": "Вие трябва да използвате различен танц.",
   "danceFeedbackNeedEveryTwoMeasures": "Уверете се, че използвате \"всеки 2 размера\" блок",
   "danceFeedbackNeedMakeANewDancer": "Използвайте \"направи нов\" блок, за да създадете втори танцьор.",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackDidntPress": "Уверете се, че натискате стрелките по време на танца",
+  "danceFeedbackPressedKey": "Натисна клавиш, но танцьорът не отговори",
+  "danceFeedbackNeedTwoDancers": "Трябва да направиш двама танцьори.",
+  "danceFeedbackOnlyOneDancerMoved": "Само един от таньцорите се премести."
 }

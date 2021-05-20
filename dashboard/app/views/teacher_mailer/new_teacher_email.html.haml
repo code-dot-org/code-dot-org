@@ -10,7 +10,8 @@
   On Code.org,
   %a{href:"https://studio.code.org/courses?view=teacher"}you’ll find courses for all grade levels
   \- from pre-readers to seniors in high school, and everyone in between. All our courses
-  are available at no cost. Looking for a quick activity? Try starting with an Hour of Code.
+  are available at no cost. Looking for a quick activity? Try starting with an
+  %a{href:"https://hourofcode.com"}Hour of Code.
 %h3
   Step 2: Set up your classroom section
 %p
@@ -37,15 +38,31 @@
     %a{href:"https://code.org/educate/professional-learning"}Find a professional development workshop near you.
 
 %h3
-  Still have questions? Check out our
-  %a{href:"https://support.code.org/hc/en-us/sections/115000120211-Getting-started-on-Code-org"}
-    Getting Started guide
-  or reach out to
-  %a{href:"mailto:support@code.org"}support@code.org
+  Still have questions?
 %p
+  Check out our
+  %a{href:"https://support.code.org/hc/en-us/sections/115000120211-Getting-started-on-Code-org"}Getting Started guide
+  or reach out to
+  %a{href:"mailto:support@code.org"}support@code.org.
+
+%h3
+  Join the movement!
+%p
+  Follow us
+  %a{href:"https://twitter.com/codeorg"}on Twitter,
+  %a{href:"https://www.instagram.com/codeorg"}on Instagram,
+  %a{href:"https://www.facebook.com/Code.org"}on Facebook,
+  or
+  %a{href:"https://www.linkedin.com/company/code-org"}on LinkedIn.
   You’re part of a movement of over 750,000 teachers and over 25 million students that have used
   Code.org globally, making it the most broadly used coding education platform and computer science
-  curriculum in K-12. Thank you for all you do to give our children the opportunity to build their future.
+  curriculum in K-12.
+%p
+  %a{href:"https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536"}Six different studies show:
+  children who study computer science perform better in other subjects,
+  excel at problem solving,
+  and are 17% more likely to attend college.
+  Thank you for all you do to give our children the opportunity to build their future.
 
 %p
   Best,
@@ -59,8 +76,12 @@
 
 %p
   (1)
-  = get_random_donor_email_message.html_safe
+  - donor = get_random_donor_name_and_twitter
+  - tweet = "I just signed up to teach computer science using Code.org! Thanks #{donor[:twitter]} for supporting @codeorg."
+  %a{href: "https://twitter.com/intent/tweet?text=#{tweet}"} Tweet a message of thanks
+  to #{donor[:name]}, one of our donors.
   %br
+
   (2) If you shop at Amazon,
   %a{href: "https://code.org/donate/amazonsmile"}use Amazon Smile
   to donate proceeds to Code.org.

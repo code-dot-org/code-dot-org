@@ -46,8 +46,9 @@
   "filterHeaderTutorialCountSingle": "1 találat",
   "filterHeaderTutorialCountPlural": "{tutorial_count} találat",
   "roboticsButtonText": "Robotika tevékenységek megtekintése",
-  "roboticsText": "Vannak robotjaid? Használd ezeket a tevékenységeket, és hozz létre egy bármely korosztály számára alkalmas Kódolás óráját!",
+  "roboticsText": "Vannak robotjaid? Használd ezeket a tevékenységeket, és hozz létre egy bármely korosztály számára alkalmas Kódolás Óráját!",
   "tutorialSetNoTutorials": "A keresés nem hozott eredményt. Kérjük, próbáld meg újra kevesebb szűrővel, hogy megtaláld a tevékenységeket.",
+  "tutorialDetailsMoreResources": "További erőforrások",
   "tutorialDetailsTeacherNotes": "Tanári jegyzetek",
   "tutorialDetailsShortLink": "Rövid link",
   "tutorialDetailInternationalLanguages": "Nyelvek",
@@ -57,6 +58,6 @@
   "showAllTutorialsButton": "Tevékenységek mutatása különböző nyelvekre",
   "hideAllTutorialsButton": "Tevékenységek elrejtése különböző nyelvekre",
   "noTutorialsYourLanguage": "Nincsenek a saját anyanyelveden elérhető tevékenységek. Más nyelveken elérhető tevékenységekért kattints a lenti gombra.",
-  "bottomGuidelinesLink": "Kattints ide az Hour of Code gyakorlatokhoz tartozó kritériumok és beadási útmutatók eléréséhez.",
+  "bottomGuidelinesLink": "Kattints ide az Kódolás Órája gyakorlatokhoz tartozó kritériumok és beadási útmutatók eléréséhez.",
   "bottomSpecialNeedsLink": "Kattints ide, ha szeretnél további információkhoz jutni a speciális igényekkel rendelkező tanulók segítéséről."
 }

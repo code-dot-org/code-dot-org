@@ -1,39 +1,50 @@
+---
 fr:
   data:
     course:
       name:
         csp-2017:
-          assignment_family_title: Les principes des sciences informatiques
-          title: Les principes des sciences informatiques (2017-2018)
-          version_title: "2017-2018"
-          description_short: Apprenez les concepts fondamentaux des sciences informatiques.
+          assignment_family_title: Les Principes de l’Informatique
+          title: Les Principes de l’Informatique (2017-2018)
+          version_title: 2017-2018
+          description_student: À l'automne 2016, le Conseil D'administration de l'Université a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique. Le cours initie les étudiants aux concepts fondamentaux de l'informatique et les met au défi d'explorer comment l'informatique et la technologie peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes de L'informatique AP dans le but de créer des leaders dans les domaines de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement sous-représentés, avec des outils informatiques essentiels et des opportunités multidisciplinaires.
+          description_teacher: À l'automne 2016, le Conseil D'administration de l'Université a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique. Le cours initie les étudiants aux concepts fondamentaux de l'informatique et les met au défi d'explorer comment l'informatique et la technologie peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes de L'informatique AP dans le but de créer des leaders dans les domaines de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement sous-représentés, avec des outils informatiques essentiels et des opportunités multidisciplinaires.
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
         csd-2017:
-          assignment_family_title: Découvertes des sciences informatiques
-          title: Découvertes des sciences informatiques (2017-2018)
-          version_title: "2017-2018"
-          description_student: Découvertes des sciences informatiques (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer des artefacts authentiques et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes des sciences informatiques (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer des artefacts authentiques et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
-          description_short: La version 2018-2019 du cours Découvertes des sciences informatiques.
+          assignment_family_title: Les Découvertes de l’Informatique
+          title: Les Découvertes de l’Informatique (2017-2018)
+          version_title: 2017-2018
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_short: Un cours d’initiation à l’informatique qui permet aux étudiants de créer d’authentiques artéfacts.
         allthethingscourse:
           title: courstoutesleschoses
           description_short: Ceci est un cours pour toutesleschoses
           description_student: Ceci est un cours pour toutesleschoses et il a une description plus longue pour les élèves
           description_teacher: Ceci est un cours pour toutesleschoses et il a une description plus longue pour les enseignants
         csd-2018:
-          assignment_family_title: Découvertes des sciences informatiques
-          title: Découvertes des sciences informatiques (2018-2019)
-          version_title: "2018-2019"
-          description_short: La version 2018-2019 du cours Découvertes des sciences informatiques.
-          description_student: Découvertes des sciences informatiques (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer des artefacts authentiques et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes des sciences informatiques (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer des artefacts authentiques et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          assignment_family_title: Les Découvertes de l’Informatique
+          title: Les Découvertes de l’Informatique (2018-2019)
+          version_title: 2018-2019
+          description_short: Un cours d’initiation à l’informatique qui permet aux étudiants de créer d’authentiques artéfacts.
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
         csp-2018:
-          assignment_family_title: Les principes des sciences informatiques
-          title: Les principes des sciences informatiques (2018-2019)
-          version_title: "2018-2019"
-          description_short: Apprenez les concepts fondamentaux des sciences informatiques.
+          assignment_family_title: Les Principes de l’Informatique
+          title: Les Principes de l’Informatique (2018-2019)
+          version_title: 2018-2019
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+          description_student: À l'automne 2016, le Conseil D'administration de l'Université a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique. Le cours initie les étudiants aux concepts fondamentaux de l'informatique et les met au défi d'explorer comment l'informatique et la technologie peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes de L'informatique AP dans le but de créer des leaders dans les domaines de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement sous-représentés, avec des outils informatiques essentiels et des opportunités multidisciplinaires.
+          description_teacher: À l'automne 2016, le Conseil D'administration de l'Université a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique. Le cours initie les étudiants aux concepts fondamentaux de l'informatique et les met au défi d'explorer comment l'informatique et la technologie peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes de L'informatique AP dans le but de créer des leaders dans les domaines de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement sous-représentés, avec des outils informatiques essentiels et des opportunités multidisciplinaires.
         csp-2019:
-          description_short: Apprenez les concepts fondamentaux des sciences informatiques.
+          title: Les Principes de l'Informatique (2019-2020)
+          version_title: 2019-2020
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+          description_student: À l'automne 2016, le Conseil D'administration de l'Université a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique. Le cours initie les étudiants aux concepts fondamentaux de l'informatique et les met au défi d'explorer comment l'informatique et la technologie peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes de L'informatique AP dans le but de créer des leaders dans les domaines de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement sous-représentés, avec des outils informatiques essentiels et des opportunités multidisciplinaires.
+          description_teacher: À l'automne 2016, le Conseil D'administration de l'Université a lancé son tout nouveau cours AP®, AP Les Principes de l'Informatique. Le cours initie les étudiants aux concepts fondamentaux de l'informatique et les met au défi d'explorer comment l'informatique et la technologie peuvent avoir un impact sur le monde. Le Programme AP a conçu Les Principes de L'informatique AP dans le but de créer des leaders dans les domaines de l'informatique et d'attirer et d'impliquer ceux qui sont traditionnellement sous-représentés, avec des outils informatiques essentiels et des opportunités multidisciplinaires.
         csd-2019:
-          description_short: La version 2018-2019 du cours Découvertes des sciences informatiques.
-          description_student: Découvertes des sciences informatiques (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer des artefacts authentiques et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
-          description_teacher: Découvertes des sciences informatiques (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer des artefacts authentiques et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          title: Les Découvertes de l’Informatique (2019-2020)
+          version_title: 2019-2020
+          description_short: Un cours d’initiation à l’informatique qui permet aux étudiants de créer d’authentiques artéfacts.
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux étudiants de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.

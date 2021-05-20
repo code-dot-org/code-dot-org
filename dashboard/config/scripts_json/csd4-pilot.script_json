@@ -1,0 +1,431 @@
+{
+  "script": {
+    "name": "csd4-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "pilot_experiment": "csd-piloters"
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csd4-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd1_2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 2: Computers and Problem Solving"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "What is a Computer?",
+      "name": "What is a Computer?",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "key": "Input and Output",
+      "name": "Input and Output",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "key": "Processing",
+      "name": "Processing",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "key": "Apps and Storage",
+      "name": "Apps and Storage",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "key": "Project - Propose an App",
+      "name": "Project - Propose an App",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "key": "Post-Project Test",
+      "name": "Post-Project Test",
+      "absolute_position": 6,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L04 TFMD_pilot"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD U1L04 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video_pilot"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD What Makes a Computer a Computer Video_pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L05 TFMD_pilot"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD U1L05 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd wiac pet chooser"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "csd wiac pet chooser"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd wiac mad libs"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "csd wiac mad libs"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L06 TFMD_pilot"
+        ],
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD U1L06 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L07 TFMD_pilot"
+        ],
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD U1L07 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1L09 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD U1L09 TFMD_pilot"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Test_pilot"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      },
+      "level_keys": [
+        "CSD U1 Test_pilot"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L04 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L04 TFMD_pilot"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD What Makes a Computer a Computer Video_pilot",
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video_pilot"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L05 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L05 TFMD_pilot"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd wiac pet chooser",
+        "script_level.level_keys": [
+          "csd wiac pet chooser"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd wiac mad libs",
+        "script_level.level_keys": [
+          "csd wiac mad libs"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L06 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L06 TFMD_pilot"
+        ],
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L07 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L07 TFMD_pilot"
+        ],
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1L09 TFMD_pilot",
+        "script_level.level_keys": [
+          "CSD U1L09 TFMD_pilot"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019_pilot"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Test_pilot",
+        "script_level.level_keys": [
+          "CSD U1 Test_pilot"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd4-pilot"
+      }
+    }
+  ]
+}

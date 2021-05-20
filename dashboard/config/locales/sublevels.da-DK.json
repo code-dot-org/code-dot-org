@@ -1,0 +1,190 @@
+{
+  "da-DK": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Handlinger",
+              "Events": "Hændelser",
+              "Loops": "Løkker",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Games/Score": "Spil/score"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Verden",
+              "Dancers": "Dansere",
+              "Properties": "Egenskaber",
+              "Events": "Hændelser",
+              "Numbers": "Tal",
+              "Logic": "Logik"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "tegn en stjerne",
+                "parameters": {
+                  "points": "point",
+                  "length": "længde"
+                }
+              },
+              "draw a circle": {
+                "name": "tegn en cirkel"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "længde",
+                  "repeat": "gentag"
+                }
+              },
+              "draw a triangle": {
+                "name": "tegn en trekant",
+                "parameters": {
+                  "length": "længde"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "længde"
+                }
+              },
+              "draw a house": {
+                "name": "tegn et hus",
+                "parameters": {
+                  "length": "længde"
+                }
+              },
+              "draw a square": {
+                "name": "tegn en firkant",
+                "parameters": {
+                  "length": "længde"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Verden",
+              "Sprites": "figure",
+              "Actions": "Handlinger",
+              "Events": "Hændelser",
+              "Behaviors": "Opførsel"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Verden",
+              "Dancers": "Dansere",
+              "Properties": "Egenskaber",
+              "Events": "Hændelser",
+              "Numbers": "Tal",
+              "Logic": "Logik"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Handlinger",
+              "Brushes": "Pensler",
+              "Loops": "Løkker",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Funktioner",
+              "Variables": "Variabler"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Verden",
+              "Sprites": "figure",
+              "Locations": "Placering",
+              "Actions": "Handlinger",
+              "Events": "Hændelser",
+              "Behaviors": "Opførsel",
+              "Variables": "Variabler",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Funktioner",
+              "Text": "Tekst",
+              "Comments": "Kommentarer"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Verden",
+              "Sprites": "figure",
+              "Locations": "Placering",
+              "Actions": "Handlinger",
+              "Events": "Hændelser",
+              "Behaviors": "Opførsel",
+              "Variables": "Variabler",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Funktioner",
+              "Text": "Tekst",
+              "Comments": "Kommentarer"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Handlinger",
+              "Brushes": "Pensler",
+              "Loops": "Løkker",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Funktioner",
+              "Variables": "Variabler"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Verden",
+              "Sprites": "figure",
+              "Actions": "Handlinger",
+              "Events": "Hændelser",
+              "Logic": "Logik",
+              "Math": "Matematik"
+            },
+            "behavior_names": {
+              "recovering": "kommer sig",
+              "moving left and right": "bevæger sig til venstre og højre",
+              "moving with arrow keys": "bevæger sig med piletasterne"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Verden",
+              "Sprites": "figure",
+              "Actions": "Handlinger",
+              "Behaviors": "Opførsel",
+              "Events": "Hændelser",
+              "Locations": "Placering",
+              "Logic": "Logik",
+              "Loops": "Løkker",
+              "Math": "Matematik",
+              "Variables": "Variabler",
+              "Functions": "Funktioner",
+              "Comments": "Kommentarer"
+            },
+            "behavior_names": {
+              "recovering": "kommer sig",
+              "moving left and right": "bevæger sig til venstre og højre",
+              "moving with arrow keys": "bevæger sig med piletasterne"
+            }
+          }
+        }
+      }
+    }
+  }
+}

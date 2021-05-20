@@ -1,7 +1,5 @@
 ---
 title: Hour of Code Event How-To
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- ** แนวคิดสำหรับกิจกรรมต่างๆ **: 
     - เชิญผู้นำอุตสาหกรรมท้องถิ่นมาพูดคุยเรื่องงานของเขาหรือเธอที่เกี่ยวกับวิทยาการคอมพิวเตอร์
     - เชิญนักการเมืองท้องถิ่นและให้นักเรียนสอนเขาหรือเธอเขียนโปรแกรม
     - ให้นักเรียนกลุ่มหนึ่งสาธิตกิจกรรมที่ไม่ใช้การเชื่อมต่อ

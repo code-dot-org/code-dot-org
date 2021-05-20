@@ -1,0 +1,15 @@
+---
+ka:
+  data:
+    parameter_names:
+      actor: პერსონაჟი
+      counter: მრიცხველი
+      height: სიმაღლე
+      honey: თაფლი
+      left: მარცხნივ
+      length: სიგრძე
+      min: მინ
+      points: ქულები
+      size: ზომა
+      speed: სიჩქარე
+      width: სიგრძე

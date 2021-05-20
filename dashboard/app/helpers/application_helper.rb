@@ -5,6 +5,7 @@ require 'cdo/graphics/certificate_image'
 require 'cdo/pegasus/donor'
 require 'dynamic_config/gatekeeper'
 require 'cdo/shared_constants'
+require 'cdo/asset_helper'
 
 module ApplicationHelper
   include LocaleHelper
@@ -69,8 +70,6 @@ module ApplicationHelper
       LEVEL_STATUS.review_rejected
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
       LEVEL_STATUS.review_accepted
-    elsif user_level.try(:locked)
-      LEVEL_STATUS.locked
     elsif user_level.try(:submitted)
       LEVEL_STATUS.submitted
     elsif result.nil? || result == 0
@@ -209,11 +208,6 @@ module ApplicationHelper
       course: script.name,
       course_title: data_t_suffix('script.name', script.name, 'title')
     )
-  end
-
-  def minifiable_asset_path(path)
-    path.sub!(/\.js$/, '.min.js') unless Rails.configuration.pretty_sharedjs || params[:pretty_sharedjs]
-    asset_path(path)
   end
 
   # Returns a client state object for the current session and cookies.

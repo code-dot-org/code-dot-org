@@ -1,10 +1,5 @@
 ---
 title: მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!

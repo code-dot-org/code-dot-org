@@ -1,0 +1,21 @@
+%h3 Pilot Experiments
+
+- @pilots.each do |pilot|
+  %p
+    = link_to pilot[:display_name], show_pilot_path(pilot_name: pilot[:name])
+
+%hr
+
+%h3 Add a Pilot
+
+= form_for Pilot.new, url: {controller: 'admin_search', action: 'create_pilot'} do |f|
+  .field
+    = f.label 'Pilot name (all lowercase, no spaces)'
+    = f.text_field :name, placeholder: 'ex: csf-2021-pilot'
+  .field
+    = f.label 'Display name'
+    = f.text_field :display_name, placeholder: 'ex: CSF 2021 Pilot'
+  .field
+    = f.label 'Allow joining via url'
+    = f.check_box :allow_joining_via_url
+  = f.submit "Add Pilot", class: 'btn'

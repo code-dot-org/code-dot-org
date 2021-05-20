@@ -1,16 +1,9 @@
-:scss
-  $cyan: #0094ca;
-  $lightest_cyan: #d9eff7;
-
-  #level_teacher_markdown_preview {
-    border: 5px solid $cyan;
-    background-color: $lightest_cyan;
-    padding: 10px;
-  }
-
 .field
   = f.label :reference, 'Curriculum Reference'
   %p
-    String representing the URL on docs.code.org or curriculum.code.org that you want to embed,
+    String representing the URL on studio.code.org/docs or studio.code.org/curriculum that you want to embed,
     i.e. "/docs/csd/maker_leds/index.html" or "/curriculum/csd/index.html"
   = f.text_field :reference, placeholder: 'i.e /docs/csd/maker_leds/index.html', style: 'width: 100%'
+
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}

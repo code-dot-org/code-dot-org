@@ -1,0 +1,189 @@
+{
+  "ur-PK": {
+    "data": {
+      "authored_hints": {
+        "CourseD_Dance_2020_01": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   یقینی بنائیں کہ ایک ڈانسر اسکرین پر رونما ہوتا ہے۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنجز**\n\n-   پلے کے لئے ایک مختلف گانا منتخب کریں۔\n-   اپنے ڈانسر کو ایک نئی جگہ پر منتقل کریں۔\n-   ایک سے زیادہ ڈانسر بنائیں۔."
+        },
+        "CourseD_Dance_2020_02": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ڈانسر کو ایک حرکت لازمی کرنی ہے۔\n-   آپ کو ایک ایرو کلید لازمی دبانی ہے۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n-   ایک سے زیادہ <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> بلاک کا استعمال کریں۔."
+        },
+        "CourseD_Dance_2020_03": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   دونوں ڈانسرز کو ایک حرکت لازمی کرنی ہے۔\n-   آپ کو ایرو کی کلیدیں لازمی دبانی ہیں۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n-   ڈانسر کو بائیں اور دائیں ایرو کی کلیدوں سے ردعمل کرائیں۔."
+        },
+        "CourseD_Dance_2020_04": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ڈانسر کو 4 پیمائشوں کے بعد ایک نئی حرکت کرنے کی ضرورت ہے۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_"
+        },
+        "CourseD_Dance_2020_05": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   6 پیمائشوں کے بعد، آپ کے ڈانسر کو ایک مختلف ڈانس کرنے کی ضرورت ہے بہ نسبت جو یہ 4 پیمائشوں کے بعد تھا۔\n\n_یہ لیول 11 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنج**\n\n-   جب بھی ڈانسر حرکت میں آتا ہے تو پس منظر تبدیل کریں۔."
+        },
+        "CourseD_Dance_2020_06": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ایک قیادتی ڈانسر اور بیک اپ ڈانسرز کا ایک گروپ بنائیں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n-   بیک اپ ڈانسرز کے متعدد گروپ بنائیں۔."
+        },
+        "CourseD_Dance_2020_07": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   میوزک شروع ہونے کے بعد کم از کم ایک ڈانسر کا سائز تبدیل کریں۔\n\n_یہ لیول 6 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n    -   دیگر خصوصیات  جیسا کہ چوڑائی یا گردش کو تبدیل کرکے تجربہ کریں۔."
+        },
+        "CourseD_Dance_2020_08": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   کم از کم ایک ڈانسر کی رنگت تبدیل کریں۔\n\n_یہ لیول 6 پیمائشوں کے بعد ختم ہوگا۔_",
+          "tint_hint": "کیا آپ نے نوٹس کیا کہ آپ کا ڈانسر آپ کا منتخب کردہ ہوبہو رنگ تبدیل نہیں کرتا ہے؟ اس کی وجہ یہ ہے کہ \\*_رنگت_ آپ کے منتخب کردہ رنگ کو ڈانسر کے رنگوں کے ساتھ ملا دیتا ہے۔."
+        },
+        "CourseD_Dance_2020_09": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   بس \"ختم کریں\" بٹن دبائیں!",
+          "repeat_every_ideas": "**کچھ تصورات کی ضرورت ہے؟**\n\n-   ڈانسر کو بڑھنے دینے کے لئے اس کے سائز کو بار بار تبدیل کریں۔\n-   ڈانسر کو گھمانے کے لئے اس کی گردش کو بار بار تبدیل کریں۔\n-   ڈانسر کی افقی یا عمودی پوزیشن کو بار بار تبدیل کریں تاکہ اسے اسکرین پر ہر طرف حرکت دی جا سکے۔\n\n_آپ ایک متضاد اثر پیدا کرنے کے لئے منفی اعداد کا بھی استعمال کر سکتے ہیں!_",
+          "next_previous": "**اختیاری چیلنج**\n\n    -   آپ حرکت کو '(بے ترتیبانہ)'، '(اگلا)'، یا '(پچھلا)' پر مقرر کرکے ڈانس کی حرکات کی فہرست کی گردش کے ذریعے اس نئے ایونٹ بلاک کا استعمال کر سکتے ہیں۔\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "CourseD_Dance_2020_bonus1": {
+          "alternate": "متبادل بلاک \"ڈانسرز\" کے زمرے میں ہے۔."
+        },
+        "CourseD_Dance_Party_01": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   یقینی بنائیں کہ ایک ڈانسر اسکرین پر رونما ہوتا ہے۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "\"\\*\\*اختیاری چیلنجز\n\n\\*\\*\\* ایک مختلف گانا چلانے کے لئے منتخب کریں۔\n\n-   اپنے ڈانسر کو دوبارہ نام دیں۔\"."
+        },
+        "CourseD_Dance_Party_02": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ڈانسر کو 4 پیمائشوں کے بعد ایک نئی حرکت کرنے کی ضرورت ہے۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_"
+        },
+        "CourseD_Dance_Party_03": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   6 پیمائشوں کے بعد، آپ کے ڈانسر کو ایک مختلف ڈانس کرنے کی ضرورت ہے بہ نسبت جو یہ 4 پیمائشوں کے بعد تھا۔\n\n_یہ لیول 11 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "CourseD_Dance_Party_04": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   آپ کو بعض اوقات گانے کی ساتویں پیمائش سے پہلے پس منظر کا اثر تبدیل کرنے کی ضرورت ہوتی ہے۔\n\n_یہ لیول 9 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنج**گانے کے دوران <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ایونٹس کے تحت نئے بلاکس کو مربوط کرکے مختلف مقامات پر پس منظر کا اثر تبدیل کریں۔."
+        },
+        "CourseD_Dance_Party_06": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   آپ کے پاس کم از کم دو ڈانسرز ہونے کی ضرورت ہے۔\n\n_یہ لیول 5 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "\"**اختیاری چیلنج\\***\n\n ایک تیسرا ڈانسر شامل کریں (یا جتنے چاہیں!)\n\n-   اپنے تمام ڈانسرز سے گانے میں مختلف مقامات پر مختلف حرکتیں کرنے والے بنائیں۔\"."
+        },
+        "CourseD_Dance_Party_08": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   دو ڈانسرز کا سائز 100 کے علاوہ ہونے کی ضرورت ہے۔\n\n_یہ لیول 5 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنج\\*** \n\nدیگر خصوصیات (چوڑائی، اونچائی، گردش، وغیرہ) کو تبدیل کرکے تجربہ کریں۔"
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   کم از کم ایک ڈانسر کی رنگت تبدیل کریں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   دو یا زائد ڈانسرز کے لئے خصوصیات تبدیل کرنی لازمی ہیں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   بس تخلیقی بنیں!\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   بس تخلیقی بنیں!\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "CourseD_Dance_Party_11b": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   روبوٹس سے ڈانس کرانے کے لئے 'جب بایاں ایرو دبایا جاتا ہے' بلاک کو آپ کے اسے دبانے پر استعمال کریں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_2019_01": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   یقینی بنائیں کہ ایک ڈانسر اسکرین پر رونما ہوتا ہے۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنجز**\n\n-   پلے کے لئے ایک مختلف گانا منتخب کریں۔\n-   اپنے ڈانسر کو ایک نئی جگہ پر منتقل کریں۔\n-   ایک سے زیادہ ڈانسر بنائیں۔."
+        },
+        "Dance_2019_02": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ڈانسر کو ایک حرکت لازمی کرنی ہے۔\n-   آپ کو ایک ایرو کلید لازمی دبانی ہے۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n-   ایک سے زیادہ <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> بلاک کا استعمال کریں۔."
+        },
+        "Dance_2019_03": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   دونوں ڈانسرز کو ایک حرکت لازمی کرنی ہے۔\n-   آپ کو ایرو کی کلیدیں لازمی دبانی ہیں۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n-   ڈانسر کو بائیں اور دائیں ایرو کی کلیدوں سے ردعمل کرائیں۔."
+        },
+        "Dance_2019_04": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ڈانسر کو 4 پیمائشوں کے بعد ایک نئی حرکت کرنے کی ضرورت ہے۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_"
+        },
+        "Dance_2019_05": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   6 پیمائشوں کے بعد، آپ کے ڈانسر کو ایک مختلف ڈانس کرنے کی ضرورت ہے بہ نسبت جو یہ 4 پیمائشوں کے بعد تھا۔\n\n_یہ لیول 11 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنج**\n\n-   جب بھی ڈانسر حرکت میں آتا ہے تو پس منظر تبدیل کریں۔."
+        },
+        "Dance_2019_06": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ایک قیادتی ڈانسر اور بیک اپ ڈانسرز کا ایک گروپ بنائیں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n-   بیک اپ ڈانسرز کے متعدد گروپ بنائیں۔."
+        },
+        "Dance_2019_07": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   میوزک شروع ہونے کے بعد کم از کم ایک ڈانسر کا سائز تبدیل کریں۔\n\n_یہ لیول 6 پیمائشوں کے بعد ختم ہوگا۔_",
+          "challenges": "**اختیاری چیلنج**\n\n    -   دیگر خصوصیات  جیسا کہ چوڑائی یا گردش کو تبدیل کرکے تجربہ کریں۔."
+        },
+        "Dance_2019_08": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   کم از کم ایک ڈانسر کی رنگت تبدیل کریں۔\n\n_یہ لیول 6 پیمائشوں کے بعد ختم ہوگا۔_",
+          "tint_hint": "کیا آپ نے نوٹس کیا کہ آپ کا ڈانسر آپ کا منتخب کردہ ہوبہو رنگ تبدیل نہیں کرتا ہے؟ اس کی وجہ یہ ہے کہ \\*_رنگت_ آپ کے منتخب کردہ رنگ کو ڈانسر کے رنگوں کے ساتھ ملا دیتا ہے۔."
+        },
+        "Dance_2019_09": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟**\n\n-   بس \"ختم کریں\" بٹن دبائیں!",
+          "repeat_every_ideas": "**کچھ تصورات کی ضرورت ہے؟**\n\n-   ڈانسر کو بڑھنے دینے کے لئے اس کے سائز کو بار بار تبدیل کریں۔\n-   ڈانسر کو گھمانے کے لئے اس کی گردش کو بار بار تبدیل کریں۔\n-   ڈانسر کی افقی یا عمودی پوزیشن کو بار بار تبدیل کریں تاکہ اسے اسکرین پر ہر طرف حرکت دی جا سکے۔\n\n_آپ ایک متضاد اثر پیدا کرنے کے لئے منفی اعداد کا بھی استعمال کر سکتے ہیں!_",
+          "next_previous": "**اختیاری چیلنج**\n\n    -   آپ حرکت کو '(بے ترتیبانہ)'، '(اگلا)'، یا '(پچھلا)' پر مقرر کرکے ڈانس کی حرکات کی فہرست کی گردش کے ذریعے اس نئے ایونٹ بلاک کا استعمال کر سکتے ہیں۔\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+        },
+        "Dance_Party_01": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   یقینی بنائیں کہ ایک ڈانسر اسکرین پر رونما ہوتا ہے۔\n\n_یہ لیول 4 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "\"\\*\\*اختیاری چیلنجز\n\n\\*\\*\\* ایک مختلف گانا چلانے کے لئے منتخب کریں۔\n\n-   اپنے ڈانسر کو دوبارہ نام دیں۔\"."
+        },
+        "Dance_Party_02": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   ڈانسر کو 4 پیمائشوں کے بعد ایک نئی حرکت کرنے کی ضرورت ہے۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_"
+        },
+        "Dance_Party_03": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   6 پیمائشوں کے بعد، آپ کے ڈانسر کو ایک مختلف ڈانس کرنے کی ضرورت ہے بہ نسبت جو یہ 4 پیمائشوں کے بعد تھا۔\n\n_یہ لیول 11 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_Party_04": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   آپ کو بعض اوقات گانے کی ساتویں پیمائش سے پہلے پس منظر کا اثر تبدیل کرنے کی ضرورت ہوتی ہے۔\n\n_یہ لیول 9 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنج**گانے کے دوران <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> ایونٹس کے تحت نئے بلاکس کو مربوط کرکے مختلف مقامات پر پس منظر کا اثر تبدیل کریں۔."
+        },
+        "Dance_Party_05": {
+          "validation": "**میں اس لیول کو کیسے عبور کروں؟** \n\n-   آپ کے ڈانسر کو لیول ختم ہونے سے پہلے کم از کم 4 مختلف ڈانس حرکات کے سلسلہ سے گزرنے کی ضرورت ہے۔ \n\n_یہ لیول 12 پیمائشوں کے بعد ختم ہوتا ہے۔_"
+        },
+        "Dance_Party_06": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   آپ کے پاس کم از کم دو ڈانسرز ہونے کی ضرورت ہے۔\n\n_یہ لیول 5 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "\"**اختیاری چیلنج\\***\n\n ایک تیسرا ڈانسر شامل کریں (یا جتنے چاہیں!)\n\n-   اپنے تمام ڈانسرز سے گانے میں مختلف مقامات پر مختلف حرکتیں کرنے والے بنائیں۔\"."
+        },
+        "Dance_Party_08": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   دو ڈانسرز کا سائز 100 کے علاوہ ہونے کی ضرورت ہے۔\n\n_یہ لیول 5 پیمائشوں کے بعد ختم ہوتا ہے۔_\"",
+          "challenges": "**اختیاری چیلنج\\*** \n\nدیگر خصوصیات (چوڑائی، اونچائی، گردش، وغیرہ) کو تبدیل کرکے تجربہ کریں۔"
+        },
+        "Dance_Party_09": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   کم از کم ایک ڈانسر کی رنگت تبدیل کریں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_Party_10": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   دو یا زائد ڈانسرز کے لئے خصوصیات تبدیل کرنی لازمی ہیں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_Party_11": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   بس تخلیقی بنیں!\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_Party_11_5": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   بس تخلیقی بنیں!\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_Party_11b": {
+          "validation": "\"**میں اس لیول کو کیسے عبور کروں؟**\n\n-   روبوٹس سے ڈانس کرانے کے لئے 'جب بایاں ایرو دبایا جاتا ہے' بلاک کو آپ کے اسے دبانے پر استعمال کریں۔\n\n_یہ لیول 7 پیمائشوں کے بعد ختم ہوتا ہے۔_\""
+        },
+        "Dance_Party_extras_alternate_2019": {
+          "alternate": "متبادل بلاک \"ڈانسرز\" کے زمرے میں ہے۔."
+        },
+        "outbreak1": {
+          "step1": "اپنے سپرائٹ بنانے کے لئے یہ بلاک استعمال کریں:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nیہ بلاک ٹول باکس میں **Sprites** کے زمرے میں آتا ہے.",
+          "step2": "سپرائٹ کا سائز اس بلاک کے ساتھ تبدیل کر لیں: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nاس بلاک کو ٹول باکس میں **Actions** کے زمرے میں رکھا گیا ہے.",
+          "step3": "تمام سپرائٹوں کو اس بلاک کے ذریعے گھمائیں پھرائیں: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nیہ بلاک ٹول باکس **Actions** کے زمرے میں رکھا گیا ہے."
+        },
+        "outbreak2": {
+          "hint1": "ایونٹ بلاک میں `+` کے بٹن پر کلک کر لیں اور `change costume` بلاک میں خالی جگہ کو اندر موجود `subject` کے ساتھ بھر لیں.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "outbreak3": {
+          "hint1": "مانسٹرز کو ماسک دینے کے لئے `change costume` بلاک کو `when clicked` کے ساتھ استعمال کر لیں:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nیقینی بنائیں کہ آپ چھوٹا سرخ `clicked` بلاک بھی گھسیٹ کر اندر لے آئیں!",
+          "hint2": "اس لیول کے لئے نیا کوڈ اس طرح نظر آنا چاہیئے:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "outbreak4": {
+          "challenge": "## کیا آپ ایک اور چیلنج کی تلاش میں ہیں؟\n\nآپ ان بھوتوں کو زیادہ تیز یا زیادہ سست حرکت دے سکتے ہیں.\n\n1.  اس بلاک میں`Edit` پر کلک کر لیں <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  اس بلاک میں عدد کو زیادہ یا کم کر لیں: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nبھوتوں کو زیادہ سست حرکت دینے کے لئے اعشاریہ عدد `0.5` یا `0.25` منتخب کر لیں. انہیں زیادہ تیز حرکت دینے کے لئے 1 سے بڑا کوئی عدد منتخب کر لیں."
+        },
+        "outbreak5": {
+          "solution2": "آپ کا نیا بلاک اس طرح نظرآنا چاہیئے:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "outbreak6": {
+          "hint2": "یقینی بنائیں کہ دوسرے \"action\" بلاک کو `if chance` کے بلاک کے اندرضرور ڈالیں:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint1": " آپ کو `when touches` کے 3 مزید ایونٹ اضافہ کرنے ہوں کے تاکہ صحتمند اور بیمار سپرائٹس کے درمیان `touches` مکمل طور پر کور ہو جائیں۔\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "outbreak7": {
+          "whenclicked": "## ویکسین\n\nآپ سیمولیشن میں ایسا اضافہ کر سکتے ہیں کہ مانسٹر پر کلک کیے جانے پر وہ ویکسین شدہ بن جائیں. یہ کام کرنے کے لئے، `change costume` کے بلاک کو اس ایونٹ کے ساتھ استعمال کریں:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "کیا آپ کہیں پھنس گئے ہیں؟  آپ ہر وقت چاہیں نیچے `Version History` پر کلک کر کے \"Start Over\" منتخب کر سکتے ہیں."
+        }
+      }
+    }
+  }
+}

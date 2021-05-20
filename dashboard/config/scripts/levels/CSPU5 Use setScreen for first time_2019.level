@@ -71,16 +71,25 @@
         ],
         "matchType": "exact",
         "minTimes": 2,
-        "message": "Did you run the program and veryify that you can toggle back and forth between the two screens?  We did not detect two calls to setScreen.  Do you have two event handlers? each with a call to setScreen that switches to the other screen?"
+        "message": "Did you run the program and verify that you can toggle back and forth between the two screens?  We did not detect two calls to setScreen.  Do you have two event handlers? each with a call to setScreen that switches to the other screen?"
       }
     ],
     "parent_level_id": 13556,
     "name_suffix": "_2019",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-01-27 18:11:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

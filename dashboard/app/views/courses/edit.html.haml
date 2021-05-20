@@ -1,10 +1,9 @@
-- course = local_assigns[:course]
-- course_editor_data = {course_summary: course.summarize,
+- unit_group = local_assigns[:unit_group]
+- course_editor_data = {course_summary: unit_group.summarize,
                         script_names: Script.all.map(&:name),
-                        course_families: Course::FAMILY_NAMES,
-                        version_year_options: Course.get_version_year_options}
+                        course_families: UnitGroup::FAMILY_NAMES,
+                        version_year_options: UnitGroup.get_version_year_options}
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
-= form_for(course) do |f|
+  %script{ src: webpack_asset_path('js/courses/edit.js'), data: {course_editor: course_editor_data.to_json}}
+= form_for(unit_group, {url: course_path(unit_group)}) do |f|
   #course_editor
-  %button.btn.btn-primary{type: 'submit', style: 'margin: 0'} Save Changes

@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -101,6 +101,7 @@ class DSLDefined < Level
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
+    text = set_editor_experiment(text, level_params[:editor_experiment])
     transaction do
       # Parse data, save updated level data to database
       data, _ = dsl_class.parse(text, '')
@@ -157,7 +158,7 @@ class DSLDefined < Level
   end
 
   def clone_with_name(new_name, editor_experiment: nil)
-    raise "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
+    raise ArgumentError, "A level named '#{new_name}' already exists" if Level.find_by_name(new_name)
     old_dsl = dsl_text
     new_dsl = old_dsl.try(:sub, "name '#{name}'", "name '#{new_name}'")
 
@@ -166,9 +167,7 @@ class DSLDefined < Level
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
     if new_dsl && editor_experiment
-      # define editor_experiment on the second line of the dsl file.
-      index = new_dsl.index("\n")
-      new_dsl = new_dsl.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+      new_dsl = self.class.set_editor_experiment(new_dsl, editor_experiment)
     end
 
     level_params = {}
@@ -177,7 +176,8 @@ class DSLDefined < Level
   end
 
   def dsl_text
-    self.class.decrypt_dsl_text_if_necessary(File.read(file_path)) if file_path && File.exist?(file_path)
+    path = file_path
+    self.class.decrypt_dsl_text_if_necessary(File.read(path)) if path && File.exist?(path)
   end
 
   def assign_attributes(params)
@@ -201,6 +201,19 @@ class DSLDefined < Level
   # don't allow markdown in DSL levels unless child class overrides this
   def supports_markdown?
     false
+  end
+
+  def self.set_editor_experiment(dsl_text, editor_experiment)
+    return dsl_text unless editor_experiment
+
+    # remove previous editor experiment
+    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
+
+    # define editor_experiment on the second line of the dsl file.
+    index = dsl_text.index("\n")
+    dsl_text = dsl_text.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+
+    dsl_text
   end
 
   private

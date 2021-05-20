@@ -1,4 +1,5 @@
 name 'U6 Explore PT Review - Student Links'
+editor_experiment ''
 css 'unplugged'
 title 'title'
 description 'description here'
@@ -47,5 +48,5 @@ Students can find all the links they need on this page. (If you are viewing this
 
 **Warning:**
 
-We have ***included links on this student page to the the scoring commentary** for the sample tasks. If you you want students to try applying the scoring guidelines to tasks without knowing ahead of time you’ll have to invoke some kind of honor system or strategy to have them hold off looking.
+We have **included links on this student page to the the scoring commentary** for the sample tasks. If you you want students to try applying the scoring guidelines to tasks without knowing ahead of time you’ll have to invoke some kind of honor system or strategy to have them hold off looking.
 MARKDOWN

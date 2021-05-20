@@ -1,0 +1,35 @@
+---
+az:
+  data:
+    variable_names:
+      "???": "???"
+      actor: personaj
+      age: yaş
+      answer: cavab
+      binary: ikilik
+      birds: quşlar
+      bit: bit
+      blue1: mavi1
+      blue2: mavi2
+      counter: sayğac
+      firstName: Ad
+      height: hündürlük
+      honey: bal
+      i: i
+      left: sola
+      length: uzunluq
+      name: ad
+      nectar: nektar
+      points: xallar
+      random: təsadüfi
+      red1: qırmızı1
+      red2: qırmızı2
+      repeat: təkrar et
+      right: sağa
+      score: xal
+      sides: tərəflər
+      size: ölçü
+      speed: sürət
+      variable: dəyişən
+      wizard: sehrbaz
+      x: x

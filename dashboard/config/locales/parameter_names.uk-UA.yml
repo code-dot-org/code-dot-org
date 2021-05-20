@@ -1,0 +1,18 @@
+---
+uk:
+  data:
+    parameter_names:
+      actor: персонаж
+      color: колір
+      counter: лічильник
+      height: висота
+      honey: мед
+      left: ліворуч
+      length: довжина
+      min: мінімум
+      points: балів
+      radius: радіус
+      sides: сторони
+      size: розмір
+      speed: швидкість
+      width: ширина

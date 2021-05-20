@@ -9,14 +9,9 @@ import {
   HelpBlock
 } from 'react-bootstrap';
 
-const otherString = 'Other:';
+import utils from './utils';
 
-const styles = {
-  inputLabel: {
-    verticalAlign: 'top',
-    marginRight: 15
-  }
-};
+const otherString = 'Other:';
 
 class ButtonList extends React.Component {
   static propTypes = {
@@ -26,16 +21,21 @@ class ButtonList extends React.Component {
     groupName: PropTypes.string.isRequired,
     answers: PropTypes.arrayOf(
       PropTypes.oneOfType([
-        // Standard string answer
+        // Standard string answer ...
+        // (see typedef SimpleAnswer in utils)
         PropTypes.string,
 
-        // or an answer followed by an input for additional text
+        // ... or an answer followed by an input for additional text ...
+        // (see typedef ExtraInputAnswer in utils)
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
           inputId: PropTypes.string,
           inputValue: PropTypes.string,
           onInputChange: PropTypes.func
         }),
+
+        // ... or an answer with different strings for display vs value.
+        // (see typedef Answer in utils)
         PropTypes.shape({
           answerText: PropTypes.string.isRequired,
           answerValue: PropTypes.string.isRequired
@@ -48,7 +48,12 @@ class ButtonList extends React.Component {
     required: PropTypes.bool,
     validationState: PropTypes.string,
     errorText: PropTypes.string,
-    columnCount: PropTypes.number
+    columnCount: PropTypes.number,
+    suppressLineBreak: PropTypes.bool
+  };
+
+  static defaultProps = {
+    suppressLineBreak: false
   };
 
   handleChange = event => {
@@ -89,10 +94,7 @@ class ButtonList extends React.Component {
     }
 
     const options = answers.map((answer, i) => {
-      const answerText =
-        typeof answer === 'string' ? answer : answer.answerText;
-      const answerValue =
-        typeof answer === 'string' ? answer : answer.answerValue || answerText;
+      const {answerText, answerValue} = utils.normalizeAnswer(answer);
 
       const checked =
         this.props.type === 'radio'
@@ -161,11 +163,18 @@ class ButtonList extends React.Component {
           {this.renderInputComponents()}
         </FormGroup>
         {this.props.errorText && <HelpBlock>{this.props.errorText}</HelpBlock>}
-        <br />
+        {!this.props.suppressLineBreak && <br />}
       </FormGroup>
     );
   }
 }
+
+const styles = {
+  inputLabel: {
+    verticalAlign: 'top',
+    marginRight: 15
+  }
+};
 
 export default ButtonList;
 export {ButtonList, otherString};

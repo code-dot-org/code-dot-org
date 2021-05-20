@@ -1,33 +1,31 @@
 ---
 title: Terjeszd az igét
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
 
-# Vond be a közösségedet a "Hour of Code" kezdeményezésbe
+# Vond be közösségedet a Kódolás órája kezdeményezésbe
 
 ## 1. Mondd el másoknak
 
-Tell your friends about the **#HourOfCode**!
+Mesélj barátaidnak a **#Kódolásórája**-ról!
 
 {{ promote/share_buttons }}
 
-## 2. Javasold, hogy az egész iskola tartsa meg a "Hour of Code" eseményt
+## 2. Javasold, hogy az egész iskola tartsa meg a Kódolás órája eseményt
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+Küldd el ezt az[ e-mailt]({{ promote/sample_emails }}) a felettesednek, és bátoríts minden osztályt a csatlakozásra.
 
-## 3. Kérd meg a munkáltatódat, hogy vegyetek részt
+## 3. Kérvényezd a részvételt a munkáltatódtól
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+Küldd el ezt az [e-mailt]({{ promote/sample_emails }}) az iskolaigazgatónak.
 
-## 4. Népszerűsítsd a Kódolás Óráját a közösségben
+## 4. Népszerűsítsd a Kódolás óráját a közösségben
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nem kell az iskolába járnod ahhoz, hogy új készségeket sajátíts el. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+Toborozz [helyi csapatot]({{ promote/sample_emails }}) - ami lehet akár fiú/lány cserkész klub, egyházi, egyetemi vagy veterán csoport, szakszervezet, sőt akár néhány barát is. Nem kell iskolába járnod ahhoz, hogy új készségeket sajátíts el. Használt fel ezeket a [plakátokat, bannereket, matricákat, videókat és egyéb tartalmakat](/promote/resources) arra, hogy megszervezd a saját eseményedet.
 
-## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kód Órája kezdeményezést
+## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kódolás órája kezdeményezést
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Ez az egy óra képes növelni a számítástechnika oktatás támogatását a saját térségedben.
+Küldd el ezt az [e-mailt]({{ promote/sample_emails }}) a helyi képviselőnek, a városi tanácsnak vagy iskolatanácsnak, és hívd meg őket a Kódolás órája rendezvényre. Ez az egy óra képes növelni a számítástechnika oktatás támogatását a saját térségedben.
 
 {{ signup_button }}

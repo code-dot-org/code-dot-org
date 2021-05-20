@@ -8,12 +8,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
+import objectFitImages from 'object-fit-images';
 import DesignWorkspace from './DesignWorkspace';
 import * as assetPrefix from '../assetManagement/assetPrefix';
 import elementLibrary from './designElements/library';
 import * as elementUtils from './designElements/elementUtils';
 import {singleton as studioApp} from '../StudioApp';
-import {KeyCodes} from '../constants';
+import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
 import * as applabConstants from './constants';
 import sanitizeHtml from './sanitizeHtml';
 import * as utils from '../utils';
@@ -22,15 +23,20 @@ import logToCloud from '../logToCloud';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import {getStore} from '../redux';
-import {applabObjectFitImages} from './applabObjectFitImages';
 import firehoseClient from '../lib/util/firehose';
 import project from '../code-studio/initApp/project';
+import {ImageMode} from '../code-studio/components/AssetManager';
+import autogenerateML from '@cdo/apps/applab/ai';
 
 var designMode = {};
 export default designMode;
 
 var ICON_PREFIX = applabConstants.ICON_PREFIX;
 var ICON_PREFIX_REGEX = applabConstants.ICON_PREFIX_REGEX;
+
+const HTTP_PREFIX_REGEX = applabConstants.ABSOLUTE_REGEXP;
+
+let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
 
 var currentlyEditedElement = null;
 var clipboardElement = null;
@@ -188,6 +194,18 @@ designMode.fontFamilyOptionFromStyle = function(style) {
   return applabConstants.fontFamilyOptions[fontIndex === -1 ? 0 : fontIndex];
 };
 
+designMode.assignImageType = function(element, image_source) {
+  if (ICON_PREFIX_REGEX.test(image_source)) {
+    return ImageMode.ICON;
+  } else if (HTTP_PREFIX_REGEX.test(image_source)) {
+    return ImageMode.URL;
+  } else if (image_source === '') {
+    return ImageMode.DEFAULT;
+  } else {
+    return ImageMode.FILE;
+  }
+};
+
 /**
  * Handle a change from our properties table.
  * @param element {Element}
@@ -229,6 +247,9 @@ designMode.updateProperty = function(
   if (timestamp) {
     cacheBustSuffix = `?t=${new Date(timestamp).valueOf()}`;
   }
+  // relevant for image-specific case statements below
+  let dataImageType;
+
   switch (name) {
     case 'id':
       elementUtils.setId(element, value);
@@ -327,6 +348,9 @@ designMode.updateProperty = function(
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
+      dataImageType = designMode.assignImageType(element, value);
+      element.setAttribute('data-image-type', dataImageType);
+
       var fitImage = function() {
         // Fit the image into the button
         element.style.backgroundSize = 'contain';
@@ -359,6 +383,9 @@ designMode.updateProperty = function(
     case 'screen-image': {
       element.setAttribute('data-canonical-image-url', value);
 
+      dataImageType = designMode.assignImageType(element, value);
+      element.setAttribute('data-image-type', dataImageType);
+
       // We stretch the image to fit the element
       var width = parseInt(element.style.width, 10);
       var height = parseInt(element.style.height, 10);
@@ -381,8 +408,13 @@ designMode.updateProperty = function(
       originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
+      dataImageType = designMode.assignImageType(element, value);
+      element.setAttribute('data-image-type', dataImageType);
+
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
+      } else if (DATA_PREFIX_REGEX.test(value)) {
+        element.src = value;
       } else {
         element.src =
           value === ''
@@ -865,7 +897,7 @@ function duplicateScreen(element) {
       Duplicated <b>{sourceScreenId}</b> to <b>{newScreenId}</b>
     </div>
   );
-  studioApp().displayPlayspaceNotification(alert);
+  studioApp().displayPlayspaceAlert(NOTIFICATION_ALERT_TYPE, alert);
 
   return newScreenId;
 }
@@ -919,7 +951,7 @@ designMode.onCopyElementToScreen = function(element, destScreen) {
       <b>{elementUtils.getId(duplicateElement)}</b>
     </div>
   );
-  studioApp().displayPlayspaceNotification(alert);
+  studioApp().displayPlayspaceAlert(NOTIFICATION_ALERT_TYPE, alert);
 };
 
 designMode.onDeletePropertiesButton = function(element, event) {
@@ -1008,6 +1040,15 @@ designMode.onDepthChange = function(element, depthDirection) {
 
 designMode.onInsertEvent = function(code) {
   Applab.appendToEditor(code);
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
+  Applab.scrollToEnd();
+};
+
+// By switchig to design mode, auto-generated design elements (see ai.js) will
+// appear without the user needing to click the "Run" button.
+designMode.onInsertAICode = function(code) {
+  Applab.appendToEditor(code);
+  getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.DESIGN));
   getStore().dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
   Applab.scrollToEnd();
 };
@@ -1373,9 +1414,7 @@ function makeDraggable(jqueryElements) {
 
     elm.css('position', 'static');
   });
-  setTimeout(() => {
-    applabObjectFitImages();
-  }, 0);
+  setTimeout(() => objectFitImages(), 0);
 }
 
 /**
@@ -1679,7 +1718,13 @@ designMode.renderDesignWorkspace = function(element) {
     onInsertEvent: designMode.onInsertEvent.bind(this),
     handleVersionHistory: Applab.handleVersionHistory,
     isDimmed: Applab.running,
-    screenIds: designMode.getAllScreenIds()
+    screenIds: designMode.getAllScreenIds(),
+    currentTheme: elementLibrary.getCurrentTheme(designMode.activeScreen()),
+    handleScreenChange: designMode.onPropertyChange.bind(
+      this,
+      designMode.activeScreen()
+    ),
+    autogenerateML
   };
   ReactDOM.render(
     <Provider store={getStore()}>

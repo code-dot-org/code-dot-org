@@ -1,0 +1,191 @@
+{
+  "script": {
+    "name": "aws-demo",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "seeding_key": {
+      "script.name": "aws-demo"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "new stage",
+      "name": "new stage",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AWS Demo"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AWS Demo"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      },
+      "level_keys": [
+        "AWS Demo"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AWS applab"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AWS applab"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      },
+      "level_keys": [
+        "AWS applab"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AWS link"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AWS link"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      },
+      "level_keys": [
+        "AWS link"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "AWS Demo",
+        "script_level.level_keys": [
+          "AWS Demo"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AWS applab",
+        "script_level.level_keys": [
+          "AWS applab"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AWS link",
+        "script_level.level_keys": [
+          "AWS link"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "aws-demo"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

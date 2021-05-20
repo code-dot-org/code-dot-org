@@ -17,41 +17,14 @@ export const setValidScripts = (
   validScripts,
   studentScriptIds,
   validCourses,
-  assignedCourseId
+  selectedSection
 ) => ({
   type: SET_VALID_SCRIPTS,
   validScripts,
   studentScriptIds,
   validCourses,
-  assignedCourseId
+  selectedSection
 });
-
-export const loadValidScripts = (section, validScripts) => {
-  return async (dispatch, getState) => {
-    const promises = [
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/sections/${section.id}/student_script_ids`,
-        dataType: 'json'
-      }),
-      $.ajax({
-        method: 'GET',
-        url: `/dashboardapi/courses`,
-        dataType: 'json'
-      })
-    ];
-    const [studentScriptsData, validCourses] = await Promise.all(promises);
-    const {studentScriptIds} = studentScriptsData;
-    dispatch(
-      setValidScripts(
-        validScripts,
-        studentScriptIds,
-        validCourses,
-        section.course_id
-      )
-    );
-  };
-};
 
 // Selectors
 export const getSelectedScriptName = state => {
@@ -77,6 +50,18 @@ export const getSelectedScriptFriendlyName = state => {
   return script ? script.name : null;
 };
 
+/* Get the description of a script(the unit or course name) */
+export const getSelectedScriptDescription = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
+  }
+
+  const scripts = state.scriptSelection.validScripts;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.description : null;
+};
+
 /**
  * Shape for a validScript
  */
@@ -85,7 +70,8 @@ export const validScriptPropType = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  position: PropTypes.number
+  position: PropTypes.number,
+  description: PropTypes.string
 });
 
 // Initial state of scriptSelectionRedux
@@ -102,16 +88,15 @@ export default function scriptSelection(state = initialState, action) {
     };
   }
 
+  // Note: This listens to the sectionData redux, not the scriptSelection redux.
   if (action.type === SET_SECTION) {
     // Default the scriptId to the script assigned to the section
     const defaultScriptId = action.section.script
       ? action.section.script.id
       : null;
-    // Setting the section is the first action to be called when switching
-    // sections, which requires us to reset our state. This might need to change
-    // once switching sections is in react/redux.
+
     return {
-      ...initialState,
+      ...state,
       scriptId: defaultScriptId
     };
   }
@@ -126,6 +111,13 @@ export default function scriptSelection(state = initialState, action) {
 
     if (action.studentScriptIds && action.validCourses) {
       const idMap = {};
+      let actionScriptId =
+        action.selectedSection &&
+        action.selectedSection.script &&
+        action.selectedSection.script.id;
+      if (!!actionScriptId) {
+        idMap[actionScriptId] = true;
+      }
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
       action.studentScriptIds.forEach(id => (idMap[id] = true));
@@ -136,7 +128,8 @@ export default function scriptSelection(state = initialState, action) {
       action.validCourses.forEach(course => {
         if (
           course.script_ids.some(id => idMap[id]) ||
-          (action.assignedCourseId && action.assignedCourseId === course.id)
+          (action.selectedSection &&
+            action.selectedSection.course_id === course.id)
         ) {
           course.script_ids.forEach(id => (idMap[id] = true));
         }
@@ -156,9 +149,9 @@ export default function scriptSelection(state = initialState, action) {
           scriptId = state.scriptId;
           break;
         // When there is an assigned course, set scriptId to the first script in the assigned course.
-        case !!action.assignedCourseId:
+        case !!(action.selectedSection && action.selectedSection.course_id):
           action.validCourses.forEach(course => {
-            if (course.id === action.assignedCourseId) {
+            if (course.id === action.selectedSection.course_id) {
               scriptId = course.script_ids[0];
             }
           });

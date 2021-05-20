@@ -85,35 +85,6 @@ export class Summary extends React.Component {
         {this.props.showRegionalPartnerDropdown && <RegionalPartnerDropdown />}
         <h1>{this.props.regionalPartnerFilter.label}</h1>
         <Row>
-          <Col sm={4}>
-            <SummaryTable
-              id="summary-csf-facilitators"
-              caption="CS Fundamentals Facilitators"
-              data={this.state.applications['csf_facilitators']}
-              path="csf_facilitators"
-              applicationType="facilitator"
-            />
-          </Col>
-          <Col sm={4}>
-            <SummaryTable
-              id="summary-csd-facilitators"
-              caption="CS Discoveries Facilitators"
-              data={this.state.applications['csd_facilitators']}
-              path="csd_facilitators"
-              applicationType="facilitator"
-            />
-          </Col>
-          <Col sm={4}>
-            <SummaryTable
-              id="summary-csp-facilitators"
-              caption="CS Principles Facilitators"
-              data={this.state.applications['csp_facilitators']}
-              path="csp_facilitators"
-              applicationType="facilitator"
-            />
-          </Col>
-        </Row>
-        <Row>
           <Col sm={6}>
             <SummaryTable
               id="summary-csd-teachers"

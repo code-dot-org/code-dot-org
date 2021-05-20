@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>rotate a sprite to its left</description>
   </mutation>
-  <title name="NAME">spinning left</title>
+  <title name="NAME" id="spinning left">spinning left</title>
   <statement name="STACK">
     <block type="gamelab_turn">
       <title name="DIRECTION">"left"</title>

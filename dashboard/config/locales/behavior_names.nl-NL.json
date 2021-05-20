@@ -1,0 +1,47 @@
+{
+  "nl-NL": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "herstellend"
+        },
+        "outbreak2": {
+          "recovering": "herstellend"
+        },
+        "outbreak3": {
+          "recovering": "herstellend"
+        },
+        "outbreak4": {
+          "recovering": "herstellend",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "outbreak5": {
+          "recovering": "herstellend"
+        },
+        "outbreak6": {
+          "recovering": "herstellend"
+        },
+        "outbreak7": {
+          "recovering": "herstellend",
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "outbreak8": {
+          "recovering": "herstellend",
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "outbreak_freeplay": {
+          "recovering": "herstellend",
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "herstellend",
+          "moving left and right": "links en rechts bewegen",
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        }
+      }
+    }
+  }
+}

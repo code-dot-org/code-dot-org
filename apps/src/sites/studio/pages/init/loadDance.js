@@ -1,7 +1,7 @@
 import appMain from '@cdo/apps/appMain';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import Dance from '@cdo/apps/dance/Dance';
-import blocks from '@cdo/apps/p5lab/spritelab/blocks';
+import blocks from '@cdo/apps/dance/blocks';
 
 export default function loadGamelab(options) {
   options.blocksModule = blocks;

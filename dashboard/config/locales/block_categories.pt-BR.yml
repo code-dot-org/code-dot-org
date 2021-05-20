@@ -1,62 +1,32 @@
 ---
-pt-BR:
+pt:
   data:
     block_categories:
       Actions: Ações
-      Loops: laços
-      Functions: funções
-      Color: Cor
-      Brushes: Pincéis
-      Math: Matemática
-      Logic: Lógica
-      Variables: variáveis
-      Number: Número
-      String: String
-      Image: Imagem
-      Boolean: Booleano
-      Conditionals: Condições
-      Events: Eventos
-      Games/Score: Jogos/Pontuação
-      Comments: Comentários
-      Category: Categoria
-      Prebuilt: Pré-construídos
-      Text: Texto
-      Picker: Seletor
-      Comment: Comentário
-      World: Mundo
-      Sprites: Sprite
-      Behaviors: Comportamentos
-      'Variables ': 'Variáveis '
-      Default: Padrão
-      Locations: Localizações
-      Bunny Game: Jogo do Coelho
-      everythingelse: todoresto
-      Location: Localização
-      numbers: números
-      Numbers: Números
-      Input: Entrada
-      Dancers: Bailarinos
-      Groups: Grupos
       Advanced: Avançado
-      Start: Começar
-      Music: Música
-      Dancing: Dança
-      Sprite: Sprite
-      Brush: Pincel
-      Make Sprite: Fazer Sprite
-      Movement: Movimento
-      Booleans: Booleanos
-      Functional: Funcional
-      While Events: Eventos Enquanto
-      Sprite Properties: Propriedades do Sprite
-      Predefined: Predefinido
-      test: teste
-      test2: teste2
-      Use These Blocks: Use estes blocos
-      Do Not Use: Não use
-      Foo: Foo
-      Name: Nome
-      NEW BLOCKS: NOVOS BLOCOS
+      Behaviors: Comportamentos
+      Brushes: Pincéis
+      Color: Cor
+      Comment: Comentário
+      Comments: Comentários
+      Conditionals: Condições
+      Dancers: Bailarinos
+      Default: Padrão
+      Events: Eventos
+      Functions: funções
       'Functions ': 'Funções '
       Game/Score: Jogo/Pontuação
-      Function: Função
+      Games/Score: Jogos/Pontuação
+      Groups: Grupos
+      Input: Entrada
+      Locations: Localizações
+      Logic: Lógica
+      Loops: laços
+      Math: Matemática
+      Numbers: Números
+      Properties: Propriedades
+      Sprites: Sprite
+      Text: Texto
+      Variables: variáveis
+      'Variables ': 'Variáveis '
+      World: Mundo

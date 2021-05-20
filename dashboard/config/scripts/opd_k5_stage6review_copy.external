@@ -1,0 +1,15 @@
+name 'OPD-K5 Stage6Review_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Reflect
+
+In this lesson, we explored how functions can make you a faster and better programmer by allowing you to reuse segments of your code. In the next lesson, we'll look at the concept of variables.
+
+![](https://images.code.org/47e2d3956aaafb745e462f0017c2a2b1-image-1549053916687.jpg)
+
+> Take a moment now to review how functions are introduced in the CS Fundamentals curriculum and consider how you might implement the suggested activities in your classroom.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

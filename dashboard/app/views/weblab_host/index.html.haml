@@ -4,6 +4,8 @@
   %body{style: 'margin: 0'}
     #bramble{style: 'height: 100vh;overflow: hidden;'}
     -# webpack-runtime.js must appear exactly once on any page containing webpack entries
-    %script{src: asset_path('js/webpack-runtime.js')}
-    %script{src: asset_path('js/bramble/thirdparty/require.min.js'), 'data-main': asset_path('js/brambleHost.js')}
-    =# DEVMODE: %script{src: asset_path('http://127.0.0.1:8000/src/thirdparty/require.min.js'), 'data-main': asset_path('js/brambleHost.js')}
+    %script{src: webpack_asset_path('js/webpack-runtime.js')}
+    -# Bramble source files reference each other. We cannot use digested asset
+    -# paths here without breaking these references.
+    - data = {bramble: {baseUrl: @bramble_base_url, devMode: @dev_mode}.to_json}
+    %script{src: "#{@bramble_base_url}/thirdparty/require.min.js", 'data-main': webpack_asset_path('js/brambleHost.js'), data: data}

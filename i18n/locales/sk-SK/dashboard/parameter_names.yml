@@ -1,0 +1,24 @@
+sk:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: postava
+      color: farba
+      counter: počítadlo
+      dir: adr
+      direction: smer
+      height: výška
+      honey: med
+      left: vľavo
+      length: dĺžka
+      min: min
+      nectar units: jednotky nektáru
+      nectars: nektár
+      numOctagons: početOsemuholníkov
+      points: body
+      radius: polomer
+      sides: Strany
+      size: veľkosť
+      speed: rýchlosť
+      theGuess: Tip
+      width: šírka

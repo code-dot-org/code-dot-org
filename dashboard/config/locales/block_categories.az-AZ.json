@@ -1,0 +1,61 @@
+{
+  "az-AZ": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Əmrlər",
+          "Loops": "dövrlər",
+          "Math": "Riyaziyyat",
+          "Logic": "Məntiq",
+          "Functions": "Funksiyalar",
+          "Variables": "dəyişənlər"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Dünya",
+          "Events": "Hadisələr",
+          "Numbers": "Ədədlər",
+          "Logic": "Məntiq"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Əmrlər",
+          "Events": "Hadisələr",
+          "Loops": "dövrlər",
+          "Math": "Riyaziyyat",
+          "Logic": "Məntiq"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Dünya",
+          "Actions": "Əmrlər",
+          "Events": "Hadisələr"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Dünya",
+          "Actions": "Əmrlər",
+          "Events": "Hadisələr",
+          "Variables": "dəyişənlər",
+          "Math": "Riyaziyyat",
+          "Logic": "Məntiq",
+          "Functions": "Funksiyalar",
+          "Text": "mətn"
+        },
+        "outbreak_freeplay": {
+          "World": "Dünya",
+          "Actions": "Əmrlər",
+          "Events": "Hadisələr",
+          "Logic": "Məntiq",
+          "Loops": "dövrlər",
+          "Math": "Riyaziyyat",
+          "Variables": "dəyişənlər",
+          "Functions": "Funksiyalar"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Dünya",
+          "Actions": "Əmrlər",
+          "Events": "Hadisələr",
+          "Logic": "Məntiq",
+          "Math": "Riyaziyyat"
+        }
+      }
+    }
+  }
+}

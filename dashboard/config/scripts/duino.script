@@ -1,15 +1,16 @@
-stage 'Basic Circuits'
+lesson 'Basic Circuits', display_name: 'Basic Circuits', has_lesson_plan: false
 level 'duino battery led'
 level 'duino button led'
 
-stage 'Blinky Lights'
+lesson 'Blinky Lights', display_name: 'Blinky Lights', has_lesson_plan: false
 level 'duino multi leds'
 level 'duino pov'
 
-stage 'Making Music'
+lesson 'Making Music', display_name: 'Making Music', has_lesson_plan: false
 level 'duino music'
 level 'duino auduino'
 
-stage 'JunkBot'
+lesson 'JunkBot', display_name: 'JunkBot', has_lesson_plan: false
 level 'duino junkbot build'
 level 'duino junkbot software'
+

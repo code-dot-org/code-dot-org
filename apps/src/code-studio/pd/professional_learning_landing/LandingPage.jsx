@@ -11,27 +11,6 @@ import {EnrolledWorkshops} from './EnrolledWorkshops';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
-const styles = {
-  headerImage: {
-    width: '100%',
-    height: '300px',
-    background: `url(/blockly/media/BannerKids.png) no-repeat`,
-    backgroundSize: 'cover',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  headerText: {
-    backgroundColor: 'rgba(0, 0, 0, .5)',
-    alignSelf: 'flex-end',
-    width: '100%',
-    textAlign: 'center',
-    padding: '30px',
-    fontSize: '40px',
-    color: 'white'
-  }
-};
-
 export default class LandingPage extends Component {
   static propTypes = {
     lastWorkshopSurveyUrl: PropTypes.string,
@@ -66,6 +45,27 @@ export default class LandingPage extends Component {
   }
 }
 
+const styles = {
+  headerImage: {
+    width: '100%',
+    height: '300px',
+    background: `url(/blockly/media/BannerKids.png) no-repeat`,
+    backgroundSize: 'cover',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  headerText: {
+    backgroundColor: 'rgba(0, 0, 0, .5)',
+    alignSelf: 'flex-end',
+    width: '100%',
+    textAlign: 'center',
+    padding: '30px',
+    fontSize: '40px',
+    color: 'white'
+  }
+};
+
 const HeaderImage = () => (
   <div style={styles.headerImage}>
     <div style={styles.headerText}>{i18n.plLandingHeading()}</div>
@@ -80,7 +80,7 @@ export const LastWorkshopSurveyBanner = ({
   <TwoColumnActionBlock
     isRtl={false}
     responsiveSize="lg"
-    imageUrl={pegasus('/shared/images/fill-540x289/misc/teacher.png')}
+    imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
     subHeading={subHeading}
     description={description}
     buttons={[

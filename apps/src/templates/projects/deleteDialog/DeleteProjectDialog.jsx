@@ -7,14 +7,6 @@ import Button from '../../Button';
 import i18n from '@cdo/locale';
 import {hideDeleteDialog, deleteProject} from './deleteProjectDialogRedux';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 class DeleteProjectDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -40,12 +32,14 @@ class DeleteProjectDialog extends Component {
         <div style={{marginBottom: 10}}>{i18n.deleteProjectConfirm()}</div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
           />
           <Button
+            __useDeprecatedTag
             text={i18n.delete()}
             onClick={this.delete}
             color={Button.ButtonColor.orange}
@@ -58,6 +52,14 @@ class DeleteProjectDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedDeleteProjectDialog = DeleteProjectDialog;
 

@@ -47,7 +47,7 @@ az:
       Unplug10:
         title: İnternet
       Unplug11:
-        title: Sarımaq
+        title: Yekun
       UnplugHappyMaps:
         title: Şən xəritələr
       RelayProgramming:
@@ -58,10 +58,16 @@ az:
         title: Millimetrlik kağızda proqramlaşdırma
       ComputationalThinking:
         title: Hesablama təfəkkürü
+      FunctionalSuncatchers:
+        title: Funksional muncuqlar
+      SongwritingParameters:
+        title: Mahnı yazma
       Internet:
         title: İnternet
         desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
           metodlarını təmsil edən ismarışlar göndərirlər.
+      DigitalCitizenship:
+        title: Rəqəmsal vətəndaşlıq
       BinaryImages:
         title: İkilik təsvirlər
       courseB_unplugged_MRF:
@@ -86,6 +92,8 @@ az:
         title: İnternet
         desc: Şagirdlər kağız parçalarından istifadə edərək müxtəlif internet yayım
           metodlarını təmsil edən ismarışlar göndərirlər.
+      courseE_unplugged_songwriting:
+        title: Mahnı yazma
       UnplugHappyMaps_2018:
         title: Şən xəritələr
       GraphPaperProgramming_2018:

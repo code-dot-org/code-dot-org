@@ -1,0 +1,35 @@
+name 'csp-9-exam1-dog-scatter-1_2020'
+editor_experiment ''
+right 'Dog breeds with a higher maximum weight tend to have shorter maximum lifespans'
+wrong 'Dog breeds with a higher maximum weight tend to have longer maximum lifespans'
+wrong 'All dog breeds tend to have the same average lifespan'
+wrong 'Older dogs weigh more than younger dogs'
+
+
+markdown <<MARKDOWN
+The next two questions refer to the following chart.
+
+The chart below has a single point for every breed of dog. Each point indicates the maximum weight of that breed and the maximum number of years that breed of dog lives to.
+
+Which of the following conclusions is BEST supported by the scatter plot?
+
+![](https://images.code.org/484d16cbff8fbc481e71113a83ec0eb2-image-1583551350105.05.37 PM.png)
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** The points on the left side of the graph tend to be higher than the points on the right side of the graph. You can see this pattern if you add a trendline to the data (see below). 
+
+![](https://images.code.org/a8759f92a2272bfb6b17fe2bbfdff854-image-1616460116167.png)
+
+Students made and interpreted scatterplots similar to this one in [Lesson 4 - Exploring Two Columns](https://curriculum.code.org/csp-20/unit9/4/) 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-2.D: Extract information from data using a program.
+:::
+
+
+MARKDOWN

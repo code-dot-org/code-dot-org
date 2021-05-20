@@ -10,6 +10,13 @@
   "danceFeedbackNeedDifferentDance": "Je moet een andere dans gebruiken.",
   "danceFeedbackNeedEveryTwoMeasures": "Zorg ervoor dat je het blok 'elke 2 maten' gebruikt",
   "danceFeedbackNeedMakeANewDancer": "Gebruik het blok 'nieuwe maken' om een tweede danser te maken.",
-  "danceFeedbackKeyEvent": "Zorg dat je wat code toevoegt aan de \"wanneer toets\" en druk op de de toets terwijl je dans afspeelt.",
+  "danceFeedbackKeyEvent": "Zorg dat je wat code toevoegt aan het blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"omhoog\"</title></block></xml> en druk op de toets terwijl je dans afspeelt.",
+  "danceFeedbackDidntPress": "Zorg ervoor dat je op de pijltjestoetsen drukt terwijl je dans wordt uitgevoerd.",
+  "danceFeedbackPressedKey": "Je drukte op een toets, maar je danser reageerde niet.",
+  "danceFeedbackNeedTwoDancers": "Je moet twee dansers maken.",
+  "danceFeedbackOnlyOneDancerMoved": "Slechts één van je dansers bewoog.",
+  "danceFeedbackNeedLead": "Je moet ook een leaddancer maken met het blok <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "Je moet een groep back-up dansers met het blok <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
+  "danceFeedbackSetSize": "Je moet de grootte van ten minste één danser veranderen nadat de muziek begint.",
   "measure": "Maten:"
 }

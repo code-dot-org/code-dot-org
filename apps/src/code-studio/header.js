@@ -1,8 +1,5 @@
 /* globals dashboard */
 
-import $ from 'jquery';
-import _ from 'lodash';
-
 import {
   showProjectHeader,
   showMinimalProjectHeader,
@@ -16,8 +13,16 @@ import {
   setShowTryAgainDialog
 } from './headerRedux';
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
+
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -27,143 +32,107 @@ import {getStore} from '../redux';
 var header = {};
 
 /**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-const PUZZLE_PAGE_NONE = -1;
-
-/**
  * @param {object} scriptData
  * @param {boolean} scriptData.disablePostMilestone
  * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
- * @param {object} stageData{{
+ * @param {object} lessonData{{
  *   script_id: number,
  *   script_name: number,
- *   script_stages: id,
+ *   num_script_lessons: number,
  *   title: string,
  *   finishLink: string,
  *   finishText: string,
  *   levels: Array.<{
- *     id: number,
+ *     id: string,
  *     position: number,
  *     title: string,
  *     kind: string
  *   }>
  * }}
  * @param {object} progressData
- * @param {string} currentLevelId
- * @param {number} puzzlePage
+ * @param {string} currentLevelId The id of the level the user is currently
+ *   on. This gets used in the url and as a key in many objects. Therefore,
+ *   it is a string despite always being a numerical value
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
  * @param {boolean} stageExtrasEnabled Whether this user is in a section with
  *   stageExtras enabled for this script
+ * @param {boolean} isLessonExtras Boolean indicating we are not on a script
+ *   level and therefore are on lesson extras
  */
 header.build = function(
   scriptData,
-  stageData,
+  lessonGroupData,
+  lessonData,
   progressData,
   currentLevelId,
-  puzzlePage,
+  currentPageNumber,
   signedIn,
-  stageExtrasEnabled
+  stageExtrasEnabled,
+  scriptNameData,
+  isLessonExtras
 ) {
   scriptData = scriptData || {};
-  stageData = stageData || {};
+  lessonGroupData = lessonGroupData || {};
+  lessonData = lessonData || {};
   progressData = progressData || {};
 
-  const scriptName = scriptData.name;
+  const linesOfCodeText = progressData.linesOfCodeText;
+  let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
-  if (stageData.finishLink) {
-    $('.header_finished_link')
-      .show()
-      .append(
-        $('<a>')
-          .attr('href', stageData.finishLink)
-          .text(stageData.finishText)
-      );
-  }
-  if (stageData.script_stages > 1) {
-    $('.header_popup_link').show();
-  }
-
-  let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(
+  // Set up the store immediately. Note that some progress values are populated
+  // asynchronously.
+  progress.generateStageProgress(
     scriptData,
-    stageData,
+    lessonGroupData,
+    lessonData,
     progressData,
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled
+    stageExtrasEnabled,
+    isLessonExtras,
+    currentPageNumber
   );
 
-  /**
-   * Track boolean "visible" state of header popup to avoid
-   * expensive lookup on window resize.
-   * @type {boolean}
-   */
-  var isHeaderPopupVisible = false;
-
-  function showHeaderPopup() {
-    sizeHeaderPopupToViewport();
-    $('.header_popup').show();
-    $('.header_popup_link_glyph').html('&#x25B2;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('less'));
-    $(document).on('click', hideHeaderPopup);
-    progress.renderMiniView(
-      $('.user-stats-block')[0],
-      scriptName,
-      currentLevelId,
-      progressData.linesOfCodeText,
-      scriptData.student_detail_progress_view
+  // Hold off on rendering HeaderMiddle.  This will allow the "app load"
+  // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
+  // the opportunity to wait until the app is loaded before rendering.
+  const store = getStore();
+  $(document).ready(function() {
+    ReactDOM.render(
+      <Provider store={store}>
+        <HeaderMiddle
+          scriptNameData={scriptNameData}
+          lessonData={lessonData}
+          scriptData={scriptData}
+          currentLevelId={currentLevelId}
+          linesOfCodeText={linesOfCodeText}
+        />
+      </Provider>,
+      document.querySelector('.header_level')
     );
-    isHeaderPopupVisible = true;
-  }
-  function hideHeaderPopup(event) {
-    // Clicks inside the popup shouldn't close it, unless it's on close button
-    const target = event && event.target;
-    if (
-      $('.header_popup').find(target).length > 0 &&
-      !$(event.target).hasClass('header_popup_close')
-    ) {
-      return;
+    // Only render sign in callout if the course is CSF and the user is
+    // not signed in
+    if (scriptData.is_csf && signedIn === false) {
+      ReactDOM.render(
+        <SignInCalloutWrapper />,
+        document.querySelector('.signin_callout_wrapper')
+      );
     }
-    $('.header_popup').hide();
-    $('.header_popup_link_glyph').html('&#x25BC;');
-    $('.header_popup_link_text').text(dashboard.i18n.t('more'));
-    $(document).off('click', hideHeaderPopup);
-    isHeaderPopupVisible = false;
-  }
-
-  $('.header_popup_link').click(function(e) {
-    e.stopPropagation();
-    $('.header_popup').is(':visible') ? hideHeaderPopup() : showHeaderPopup();
   });
+};
 
-  $(window).resize(
-    _.debounce(function() {
-      if (isHeaderPopupVisible) {
-        sizeHeaderPopupToViewport();
-      }
-    }, 250)
+header.buildProjectInfoOnly = function() {
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <HeaderMiddle projectInfoOnly={true} />
+    </Provider>,
+    document.querySelector('.header_level')
   );
-
-  /**
-   * Adjust the maximum size of the popup's inner scroll area so that the whole popup
-   * will fit within the browser viewport.
-   */
-  function sizeHeaderPopupToViewport() {
-    var viewportHeight = $(window).height();
-    var headerWrapper = $('.header-wrapper');
-    var headerPopup = $('.header_popup');
-    var popupTop =
-      parseInt(headerWrapper.css('padding-top'), 10) +
-      parseInt(headerPopup.css('top'), 10);
-    var popupBottom = parseInt(headerPopup.css('margin-bottom'), 10);
-    headerPopup
-      .find('.header_popup_scrollable')
-      .css('max-height', viewportHeight - (popupTop + popupBottom));
-  }
 };
 
 function setupReduxSubscribers(store) {

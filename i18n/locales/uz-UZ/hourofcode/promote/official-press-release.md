@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
-layout: wide
-nav: promote_nav
+title: Saylangan mansabdor shaxslar uchun soat soati uchun press-reliz
 ---
 
 {{ signup_button }}

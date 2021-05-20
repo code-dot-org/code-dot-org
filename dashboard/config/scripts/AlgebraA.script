@@ -1,10 +1,9 @@
 hidden false
 login_required true
-hideable_stages true
-has_lesson_plan true
+hideable_lessons true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/algebra/courseA/{LESSON}'
 
-stage 'Calc: Evaluation Blocks'
+lesson 'Calc: Evaluation Blocks', display_name: 'Calc: Evaluation Blocks', has_lesson_plan: true
 level 'Calc Circles of Eval .1'
 level 'Calc Circles of Eval .2'
 level 'Calc Circles of Eval .3'
@@ -21,7 +20,7 @@ level 'Blocks to Math 3'
 level 'Blocks to Math 4'
 level 'Calc Circles of Eval Free Play'
 
-stage 'Eval: Strings and Images'
+lesson 'Eval: Strings and Images', display_name: 'Eval: Strings and Images', has_lesson_plan: true
 level 'Eval Strings Images .1'
 level 'Eval Strings Images .2'
 level 'Eval Strings Images 1'
@@ -35,10 +34,10 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
-stage 'Unplugged: Contracts'
+lesson 'Unplugged: Contracts', display_name: 'Unplugged: Contracts', has_lesson_plan: true, unplugged: true
 level 'Contracts'
 
-stage 'Eval: Writing Contracts'
+lesson 'Eval: Writing Contracts', display_name: 'Eval: Writing Contracts', has_lesson_plan: true
 level 'Eval Contracts A'
 level 'Eval Contracts B'
 level 'Eval Contracts C'
@@ -48,7 +47,7 @@ level 'Eval Contracts F'
 level 'Eval Contracts 4'
 level 'Eval Contracts 4 B'
 
-stage 'Calc: Defining Variables'
+lesson 'Calc: Defining Variables', display_name: 'Calc: Defining Variables', has_lesson_plan: true
 level 'Calc Vars 1'
 level 'Calc Vars 1.1'
 level 'Calc Vars 2'
@@ -65,10 +64,10 @@ level 'msm variables multi 4'
 level 'msm variables multi 5'
 level 'msm variables multi 6'
 
-stage 'Unplugged: Fast Functions'
+lesson 'Unplugged: Fast Functions', display_name: 'Unplugged: Fast Functions', has_lesson_plan: true, unplugged: true
 level 'DesignRecipe'
 
-stage 'Eval: Defining Functions'
+lesson 'Eval: Defining Functions', display_name: 'Eval: Defining Functions', has_lesson_plan: true
 level 'Eval Define Funcs 1'
 level 'Eval Define Funcs 2'
 level 'Eval Define Funcs 3'
@@ -85,10 +84,10 @@ level 'msm variables multi 10'
 level 'msm variables multi 11'
 level 'msm variables multi 13'
 
-stage 'Unplugged: The Design Recipe'
+lesson 'Unplugged: The Design Recipe', display_name: 'Unplugged: The Design Recipe', has_lesson_plan: true, unplugged: true
 level 'DesignRecipe'
 
-stage 'Eval: Functions'
+lesson 'Eval: Functions', display_name: 'Eval: Functions', has_lesson_plan: true
 level 'Eval Design Recipe .1'
 level 'Eval Design Recipe 3'
 level 'Eval Design Recipe 4'
@@ -100,7 +99,7 @@ level 'Calc Design Recipe 3'
 level 'Calc Design Recipe 4'
 level 'Eval Design Recipe Free Play'
 
-stage 'Play Lab: Defining Functions'
+lesson 'Play Lab: Defining Functions', display_name: 'Play Lab: Defining Functions', has_lesson_plan: true
 level 'Play Lab Rocket 1'
 level 'Rocket Height Course A'
 level 'Play Lab Rocket 3'
@@ -108,3 +107,4 @@ level 'Play Lab Rocket 6'
 level 'Play Lab Rocket 7'
 level 'Play Lab Rocket 8'
 level 'Play Lab Rocket Free Play'
+

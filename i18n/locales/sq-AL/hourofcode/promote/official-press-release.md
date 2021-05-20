@@ -1,7 +1,5 @@
 ---
 title: Deklarata për Shtyp e Orës së Kodimit për zyrtarët e zgjedhur
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

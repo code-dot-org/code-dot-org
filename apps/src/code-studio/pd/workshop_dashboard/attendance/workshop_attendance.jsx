@@ -167,7 +167,7 @@ export class WorkshopAttendance extends React.Component {
           {attendanceUrl && (
             <p>
               To take attendance, direct your attendees to go to&nbsp;
-              <a href={attendanceUrl} target="_blank">
+              <a href={attendanceUrl} target="_blank" rel="noopener noreferrer">
                 {attendanceUrl}
               </a>
             </p>

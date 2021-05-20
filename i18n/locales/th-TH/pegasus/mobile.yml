@@ -12,12 +12,12 @@
   csedweek_dates: "8-14 ธันวาคม 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> กำลังจะมาถึง บอกคุณครูของคุณ <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> เพื่อช่วยคุณวางแผนการเรียนโครงการ Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">คุณเป็นครูสอนวิทยาการคอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก CSEdWeek ได้ที่นี่</a>'
+  csedweek_banner_teachers_text: "คุณเป็นครูสอนวิทยาการคอมพิวเตอร์หรือเปล่า? เรียกดูเนื้อหาจาก CSEdWeek ได้ที่นี่"
   n_have_learned_an_hoc: "<h1>ลองเรียน</h1><h2>Hour of Code</h2><h3># คน ได้เริ่มเรียนไปแล้ว</h3>"
   anybody_can_learn: "ทุกคนสามารถเรียนรู้ได้"
   learn_now: "เรียนตอนนี้"
   petition_message: "นักเรียนทุกคนจากทุกโรงเรียนควรมีโอกาสที่จะได้เรียนรู้วิทยาการคอมพิวเตอร์"
   petition_sign_message: 'ถ้าคุณเห็นด้วย ลงชื่อของคุณได้เลย มาเข้าร่วม #'
-  petition_sign_message_support: 'ถ้าคุณสนับสนุนเรา ลงชื่อของคุณ เข้าร่วมกับคนอื่นอีก # คน'
   petition_join_others: 'เข้าร่วม # อื่น'
   name: "ชื่อ"
   email: "อีเมล"
@@ -71,7 +71,7 @@
   congratulations_on_completing_hoc: "ขอแสดงความยินดีในการผ่านการเรียนเขียนโปรแกรมกับ Hour of Code 1 หลักสูตร"
   congratulations_volunteer: 'ยินดีด้วย: หลังจากที่คุณได้ลองชั่วโมงแห่งการโค้ด <a href="https://code.org/volunteer">ลงทะเบียนเป็นอาสาสมัครในห้องเรียน</a>และช่วยนักเรียนเรียนรู้เป็นชั่วโมงแห่งการโค้ด'
   congratulations_on_completing_course: "ยินดีด้วยกับที่คุณทำบทเรียนได้ %{course}"
-  congrats_next_tutorials_title: "ลองการแนะนำการสอยอื่นต่อ"
+  congrats_next_tutorials_title: " ลองการแนะนำการสอนอื่นต่อ"
   congrats_next_tutorials_desc: "ลองแบบสั้นกว่านี้ 1 ชั่วโมงสำหรับการทบทวน หรือลอง<a href=\"%{current_path}/next\">บททบทวนที่ใกล้เคียง</a>"
   get_a_certificate_of_achievement: "รับใบประกาศนียบัตร"
   view_course: "ดูหลักสูตร"
@@ -121,6 +121,7 @@
   thanks_for_submitting: "ขอบคุณสำหรับการสมัคร!"
   if_you_enjoyed: "หากคุณชื่นชอบกับการเรียน ไม่ลองชวนเพื่อนๆมาเรียนด้วยหละ! เราอยากให้ทุกคนบนโลกได้เรียนแบบคุณ"
   personalize_certificate: "ออกแบบประกาศนียบัตรของคุณ"
+  print_certificates: "พิมพ์ใบรับรอง"
   share_achievement: "แบ่งปันความสำเร็จของคุณ"
   beyond_hour_message: "เรียนรู้เพิ่มเติมกับ<a href='http://studio.code.org'>คอร์สอื่นๆ</a> หรือศึกษาข้อมูล<a href='/learn/beyond'>การเรียนมากกว่า 1 ชั่วโมง</a>."
   leaderboards_for_hoc: "ตารางสรุปคะแนนสำหรับ Hour of Code"
@@ -183,7 +184,7 @@
   studiobar_title_nolink: "ทำความรู้จัก Code Studio"
   studiobar_elementary_title: "หลักสูตรพื้นฐาน"
   studiobar_elementary_body: "สามหลักสูตรใหม่ของเราสำหรับ K &#8209; 5"
-  studiobar_dance_title: "งานเต้นรำ"
+  studiobar_dance_title: "Dance Party"
   studiobar_dance_body: "สร้างและแชร์เกม Dance Party ของคุณเอง"
   studiobar_hoc_title: "The Hour of Code"
   studiobar_hoc_body: "เรียนรู้การเขียนโค้ดกับเกม Angry Birds"
@@ -259,6 +260,7 @@
   homepage_action_text_signpetition: "ลงนามในคำร้อง"
   homepage_action_text_wincelebritychat: "ได้รับรางวัลเพื่อพูดคุยกับดารา"
   homepage_signpetition_dropdown: "ลงนามในคำร้อง &#x25BE;"
+  homepage_signpetition_dropdown_text: "ฉันเห็นด้วย"
   homepage_diversity_pledge: "รองรับความหลากหลาย"
   homepage_banner_text_prizes: 'ชั่วโมงแห่งการโค้ดจะกลับมาอีกครั้งในวันที่ 7-13 ธันวาคม '
   homepage_banner_link_prizes: 'เข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์ '
@@ -566,6 +568,7 @@
   dashboard_question: "คำถาม"
   dashboard_response: "คำตอบ"
   dashboard_correctness_unsubmitted: "ยังไม่ส่ง"
+  dashboard_correctness_correct: "ถูกต้อง"
   dashboard_correctness_incorrect: "ไม่ถูกต้อง"
   dashboard_submission_submitted: "ส่งแล้ว"
   dashboard_submission_in_progress: "อยู่ระหว่างการดำเนินการ"
@@ -670,6 +673,7 @@
   starwarsblocks_name: "สตาร์วอร์ส (บล็อก)"
   applab_name: "แอ๊ปแล็บ"
   gamelab_name: "เกมแล๊บ (Game Lab)"
+  applab_gradelevel: "อายุ 13+"
   codeorg_gradelevel: "อายุ 4 - 104 ปี"
   codeintl_gradelevel: "อายุ 4 - 104 ปี"
   khan_gradelevel: "มัธยมศึกษาตอนต้นขึ้นไป"
@@ -731,6 +735,8 @@
   coursee-2018_gradelevel: อายุ 8-12 ปี
   coursed-2019_gradelevel: เกรด 8 +
   coursee-2019_gradelevel: อายุ 8-12 ปี
+  coursed-2020_gradelevel: เกรด 8 +
+  coursee-2020_gradelevel: อายุ 8-12 ปี
   accelerated_gradelevel: "อายุ 10-18 ปี"
   codeorg_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
   codeintl_platformtext: "เบราว์เซอร์ที่ทันสมัย สมาร์ทโฟน แท็บเล็ต"
@@ -814,6 +820,9 @@
   frozen_shortdescription: "ลองใช้โค้ด เพื่อเข้าช่วย Anna และ Elsa สำรวจความมหัศจรรย์แห่งเมืองน้ำแข็ง"
   starwars_shortdescription: "ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ"
   artist_shortdescription: "Draw cool pictures and designs with the ศิลปิน!"
+  coursea-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  courseb-2020_shortdescription_congrats: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+  coursed-2020_shortdescription_congrats: ผู้เรียนจะพัฒนาความเข้าใจในเรื่องของ ลูปซ้อนลูป (nested loops) ลูปขณะที่ (while loops) เงื่อนไข (conditions) และอีเวนท์ (events) นอกเหนือจากการเขียนโค้ดแล้ว ผู้เรียนยังเรียนรู่การเป็นพลเมืองยุคดิจิทัลอีกด้วย
   codeorg_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา"
   codeintl_longdescription: "เรียนรู้แนวคิดพื้นฐานของวิทยาการคอมพิวเตอร์ ผ่านการลากและวาง  เริ่มเข้าสู่บทเรียน โดย Bill Gates, Mark Zuckerberg, Angry Birds และ Plants vs. Zombies เรียนรู้เรื่อง Loop เงื่อนไข และอัลกอริทึมพื้นฐาน ซึ่งมีให้เรียนมากถึง 34 ภาษา"
   thinkersmithspanish_longdescription: "ด้วยการใช้คำศัพท์ของ Robot (ซึ่งมีมาให้แล้ว) นักเรียนจะได้ศึกษาวิธีการทำกิจกรรมต่างๆให้สำเร็จโดยไม่ต้องปรึกษากันมาก่อน บทเรียนนนี้สอนให้นักเรียนรู้จักการเชื่อมต่อของสัญลักษณ์และการกระทำ รวมไปถึงทักษะในการแก้ไขจุดบกพร่องต่างๆ"
@@ -999,25 +1008,29 @@
   header_courses: "คอร์ส"
   header_course_catalog: "รายการหลักสูตร"
   header_project_gallery: "โปรเจกต์"
+  header_sections: "ส่วนต่างๆ ของชั้นเรียน"
   header_professional_learning: "การเรียนรู้อย่างมืออาชีพ"
   header_educate_hoc: "ช่วงเวลาของ Code"
   header_about_us: "เกี่ยวกับเรา"
   header_about_donors: "ผู้บริจาค"
   header_about_jobs: "งาน"
   header_about_contact: "ติดต่อเรา"
+  header_about_faqs: "ถามตอบ"
   header_learn: "เรียนรู้"
   header_teach: "สอน"
   header_stats: "สถิติ"
   header_help_us: "ช่วยเรา"
   header_about: "เกี่ยวกับ"
   header_teacher_community: "ชุมชนครูผู้สอน"
+  header_legal_privacy: "นโยบายความเป็นส่วนตัว"
+  header_legal_tos: "เงื่อนไขการให้บริการ"
   user_header_label: "สวัสดี %{username}"
   user_header_team: "ทีม"
   user_header_settings: "บัญชีของฉัน"
   user_header_logout: "ออกจากระบบ"
   user_header_signin: "เข้าสู่ระบบ"
   user_header_gamelab: "เกมแล๊บ (Game Lab)"
-  user_header_dance: "งานเต้นรำ"
+  user_header_dance: "Dance Party"
   user_header_minecraft: "ไมน์คราฟท์"
   user_header_view_my_projects: "ดูโปรเจกต์ต่าง ๆของฉัน"
   signing_in: "เข้าสู่ระบบ"
@@ -1025,7 +1038,10 @@
   applab_tile_start_tutorial: "เริ่มต้น"
   applab_tile_teacher_guide: "ดูคำแนะนำสำหรับครู"
   aquatic_name: 'ไมน์คราฟท์: การผจญภัยใต้น้ำ'
-  hoc_overview_dance_title: "งานเต้นรำ"
+  account_sign_up_child_accept_terms: "ฉันยืนยันว่าฉันได้รับอนุญาตจากผู้ปกครองหรือผู้พิทักษ์ตามกฏหมายให้ใช้บริการของ Code.org ได้"
+  hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_subtitle: "สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณฟีเจอริ่งกับ Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และอีก 25 คน!"
+  hoc_overview_dance_2019_subtitle: "สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณฟีเจอริ่งกับ Katy Perry, Shawn Mendes Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, และอีก 34 คน!"
   hoc_overview_partner_activities_title: "กิจกรรมเพิ่มเติมจากพันธมิตร"
   hoc_overview_partner_activities_body: "เว็บไซต์ Hour of Code มีกิจกรรมที่เกี่ยวกับวิทยาการด้านคอมพิวเตอร์มากกว่า 100 กิจกรรมสำหรับทุกวัยและทุกระดับประสบการณ์ ได้รับการพัฒนาโดย Code.org และพันธมิตร"
   hoc_overview_partner_activities_link: "ดูกิจกรรม"
@@ -1059,9 +1075,9 @@
   hoc2018_mc_teacher_guide: "ดูคำแนะนำสำหรับครู"
   hoc2018_mc_short_description_shorter: "ใช้ความคิดสร้างสรรค์และทักษะต่างๆในการแก้ปัญหาของคุณ เพื่อสำรวจและสร้างโลกใต้น้ำด้วยโค้ด!"
   hoc2018_mc_journey: "ท่องไปในไมน์คราฟท์ด้วยการใช้โค้ด"
-  hoc2018_dance_party_main_heading: "งานเต้นรำ"
+  hoc2018_dance_party_main_heading: "Dance Party"
   hoc2018_dance_create_your_own_dance_title: "สร้างเกม Dance Party ของคุณเอง"
-  hoc2018_dance_party_box_title: "งานเต้นรำ"
+  hoc2018_dance_party_box_title: "Dance Party"
   hoc2018_dance_party_box_description: "สร้างโค้ดของเกม Dance Party เพื่อแชร์กับเพื่อนๆ ของคุณ"
   hoc2018_dance_party_button: "เริ่มต้น"
   hoc2018_dance_keep_on_dancing_box_title: "สร้างโค้ดเต้นรำกันต่อไป"
@@ -1081,3 +1097,11 @@
   page_not_found_description: "หน้าที่ท่านกำลังหาอยู่นั้นไม่ปรากฎตามที่อยู่ดังกล่าว เช็คที่อยู่ของเว็ปแล้วลองส่งใหม่อีกครั้ง หรือกลับไปที่โฮมเพจของเรา"
   page_not_found_button: "กลับไปที่หน้าแรก"
   hoc2018_mc_with_microsoft: "ด้วยความร่วมมือกับ: "
+  hoc2018_mc_thank_microsoft: "  เราขอขอบคุณ Microsoft ที่ให้การสนับสนุนวิสัยทัศน์และภารกิจของเราที่มีขึ้นเพื่อสร้างหลักประกันว่าเด็กทุกคนจะมีโอกาสได้ทำความรู้จักกับวิทยาการคอมพิวเตอร์และทักษะเพื่อความสำเร็จในศตวรรษที่ 21  "
+  page_not_available_button: "กลับไปที่หน้าแรก"
+  footer_powered_by_aws: "ขับเคลื่อนระบบด้วย Amazon Web Services"
+  footer_privacy_policy: "นโยบายความเป็นส่วนตัว"
+  footer_about: "เกี่ยวกับ"
+  footer_donate: "ร่วมบริจาค"
+  footer_support: "ศูนย์ช่วยเหลือและชุมชน"
+  footer_terms: "เงื่อนไข"

@@ -2,68 +2,56 @@
 my:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE1:
+            MOVES.Rest: ဘာမှမရှိ
+          MOVE2:
+            MOVES.Rest: ဘာမှမရှိ
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: အားလုံး
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: အားလုံး
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_ifDanceIs:
         options:
           DANCE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: အားလုံး
+          FORMAT:
+            '"diamond"': စိန်
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
+          LAYOUT:
+            '"diamond"': စိန်
       Dancelab_randomColor:
         text: ကျဘန်းအရောင်
       Dancelab_setBackgroundEffect:
@@ -104,7 +92,15 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: အားလုံး
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: အားလုံး
@@ -112,6 +108,19 @@ my:
         options:
           THIS:
             sprites: အားလုံး
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: အားလုံး
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': စိန်
+            '"x"': "×"
       Dancelab_whenKey:
         options:
           KEY:
@@ -120,20 +129,41 @@ my:
         options:
           CONDITION:
             '"when"': အချိန်
+            '"while"': စဉ်တွင်
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"x"': "×"
       gamelab_keyPressed:
         options:
           CONDITION:
             '"when"': အချိန်
+            '"while"': စဉ်တွင်
           KEY:
             '"x"': "×"
       gamelab_randColor:
         text: ကျဘန်းအရောင်
       gamelab_randomColor:
         text: ကျဘန်းအရောင်
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': အလယ်အလတ်
+            '100': large
+      gamelab_setProp_dropdown:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': အလယ်အလတ်
+            '100': large
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': အချိန်
+            '"while"': စဉ်တွင်
       Mikelab_groupChangeAnim:
         options:
           SELECT:
@@ -172,27 +202,30 @@ my:
             MOVES.Rest: ဘာမှမရှိ
       Mikelab_randomColor:
         text: ကျဘန်းအရောင်
-      aalab_checkTouching:
+      Mikelab_whenKeyPressed:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_clickedOn:
+          KEY:
+            '"a"': က
+            '"d"': ဃ
+      Mikelab_whenKeyReleased:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_keyPressed:
+          KEY:
+            '"a"': က
+            '"d"': ဃ
+      aalab_someGraduallyStartIntervention:
         options:
-          CONDITION:
-            '"when"': အချိန်
-      aalab_setCollidable:
+          PORTION:
+            '1': အားလုံး
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': အမြဲတမ်​း
+          PORTION:
+            '1': အားလုံး
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       craft_ifPath:
         options:
           DIR:

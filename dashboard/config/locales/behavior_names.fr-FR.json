@@ -1,0 +1,47 @@
+{
+  "fr-FR": {
+    "data": {
+      "behavior_names": {
+        "outbreak7": {
+          "moving left and right": "déplacer à gauche et à droite",
+          "recovering": "récupération",
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "outbreak8": {
+          "moving left and right": "déplacer à gauche et à droite",
+          "recovering": "récupération",
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "outbreak1": {
+          "recovering": "récupération"
+        },
+        "outbreak2": {
+          "recovering": "récupération"
+        },
+        "outbreak3": {
+          "recovering": "récupération"
+        },
+        "outbreak4": {
+          "recovering": "récupération",
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "outbreak5": {
+          "recovering": "récupération"
+        },
+        "outbreak6": {
+          "recovering": "récupération"
+        },
+        "outbreak_freeplay": {
+          "recovering": "récupération",
+          "moving left and right": "déplacer à gauche et à droite",
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "récupération",
+          "moving left and right": "déplacer à gauche et à droite",
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        }
+      }
+    }
+  }
+}

@@ -19,14 +19,13 @@ nn-NO:
     din</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Er du en lærar i IT? Sjå andre CSEdWeek-ressursar</a>'
+  csedweek_banner_teachers_text: Er du en lærar i IT? Sjå andre CSEdWeek-ressursar
   n_have_learned_an_hoc: "<h1>Prøv ein</h1><h2>Kodetime</h2><h3># har prøvd</h3>"
   anybody_can_learn: Alle kan læra.
   learn_now: Lær no
   petition_message: Alle elevar på alle skular burde få høve til å lære koding
   petition_sign_message: 'Om du er einig, skriv under med namnet ditt. Gå saman med
     # andre.'
-  petition_sign_message_support: 'Signér om du støttar oss, registrer namnet ditt
-    og bli med på epostlista vår med # andre.'
   petition_join_others: 'Bli med # andre'
   name: Namn
   email: E-post
@@ -213,6 +212,9 @@ nn-NO:
   if_you_enjoyed: Hvis du likte opplæringa, kan du be venane dine om å prøve det også!  Vi
     vil at heile verda skal lære.
   personalize_certificate: Tilpass diplomet
+  print_certificates: Skriv ut diplomar
+  print_ice_art_from_frozen: Print iskunst fra Frozen-opplæringen
+  print_one_here_certificates: Print en her.
   share_achievement: Del det du har klart
   beyond_hour_message: Hald fram med dei <a href='http://studio.code.org'>andre kursa
     våre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir etter
@@ -389,6 +391,7 @@ nn-NO:
   homepage_action_text_signpetition: Signér oppropet
   homepage_action_text_wincelebritychat: Vinn ein kjendis-chat
   homepage_signpetition_dropdown: Eg er einig &#x25BE;
+  homepage_signpetition_dropdown_text: Eg er einig
   homepage_diversity_pledge: Slå eit slag for mangfaldet
   homepage_banner_text_prizes: 'Kodetimen kjem tilbake, 7.-13. desember. '
   homepage_banner_link_prizes: Bli med på det største læringsarrangementet i historia.
@@ -433,6 +436,7 @@ nn-NO:
   homepage_slot_text_link_donate: Gi eit bidrag
   homepage_slot_text_link_shop: T-skjorter, hattar & meir
   homepage_slot_text_link_administrators: Ta datavitskap med til skulen din
+  homepage_gallery_header: Over %{project_count} millionar prosjekt oppretta
   homepage_header_donors: Code.org takkar støttespelarane sine
   homepage_donors_seall: Sjå alt
   homepage_donors_donate: Gi eit bidrag
@@ -1102,7 +1106,8 @@ nn-NO:
   carousel_heading_languages: Leksjonar i andre programmeringsspråk
   carousel_heading_beyond_languages: Lær andre programmeringsspråk
   carousel_heading_apps_games: Lag dine eigne app'ar eller spel
-  carousel_heading_university: Universitetskurs på nettet
+  carousel_heading_university: Kurs og skular på nettet
+  carousel_heading_online_university: Universitetskurs tilgjengelege på nett
   carousel_heading_webpages: Lær å lage Internett-sider
   carousel_heading_robots: Lær å programmere med robotar
   carousel_heading_ide: Plattformer som er populære blant lærarar
@@ -1195,9 +1200,13 @@ nn-NO:
   coursed-2017_name: Kurs D (2017)
   coursee-2017_name: Kurs E (2017)
   coursef-2017_name: Kurs F (2017)
+  express-2018_name: Ekspresskurs (2018)
   pre-express-2018_name: Ekspresskurs før ein kan lese (2018)
+  pre-express-2019_name: Ekspresskurs før ein kan lese (2019)
+  csd2_name: 'Eining 2: Nettutvikling'
+  csd3_name: 'Eining 3: Animasjonar og spel'
   accelerated_name: Framskunda kurs
-  express_name: Ekspresskurs
+  pre-express_name: Programmeringskurs før ein kan lese
   20-hour_name: Framskunda kurs
   algebra_name: Heilt kurs i algebra for datavitskap
   AlgebraA_name: Informatikk i algebra kurs A
@@ -1293,6 +1302,12 @@ nn-NO:
   coursed-2019_gradelevel: 8.+ klasse
   coursee-2019_gradelevel: Alder 8–12 år
   coursef-2019_gradelevel: Alder 9-13 år
+  coursea-2020_gradelevel: Alder 4-7 år
+  courseb-2020_gradelevel: Alder 5-8 år
+  coursec-2020_gradelevel: Alder 6-10 år
+  coursed-2020_gradelevel: 8.+ klasse
+  coursee-2020_gradelevel: Alder 8–12 år
+  coursef-2020_gradelevel: Alder 9-13 år
   accelerated_gradelevel: Frå 10+ år (etter Kurs 3)
   codeorg_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
   codeintl_platformtext: Moderne nettlesarar, smarttelefonar, nettbrett
@@ -1943,7 +1958,7 @@ nn-NO:
   compatibility_unsupported_browser: Nettleseran din blir ikkje støtta. Ver vennleg
     å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein nettlesar
     vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at noko ikkje
-    vil virke slik det er meint.
+    virkar slik det er meint.
   compatibility_unsupported_browser_markdown: Nettleseran din blir ikkje støtta. Ver
     vennleg å oppdatere til <a href='%{supported_browsers_url}', target='_blank'>ein
     nettlesar vi støttar</a>. Du må gjerne forsøke å sjå sida, men det kan vere at
@@ -1985,10 +2000,19 @@ nn-NO:
   header_teacher_community: Lærarforum
   header_help_support: Hjelp og støtte
   header_report_bug: Rapporter feil
-  header_tutorials: Guide
+  header_legal_privacy: Personvern
+  header_legal_tos: Vilkår
+  header_tutorials: Rettleiingar
+  app_lab_documentation: Dokumentasjon i App-lab
+  app_lab_tutorials: Øvingar i App-lab
+  game_lab_documentation: Dokumentasjon i Spel-lab
+  game_lab_tutorials: Øvingar i Spel-lab
+  sprite_lab_documentation: Dokumentasjon i Sprite-lab
+  sprite_lab_tutorials: Øvingar i Sprite-lab
   header_documentation: Dokumentasjon
   user_header_label: Hei %{username}
   user_header_team: Team
+  user_header_my_projects: Mine prosjekt
   user_header_settings: Kontoinnstillingar
   user_header_logout: Logg ut
   user_header_signin: Logg inn
@@ -2000,7 +2024,8 @@ nn-NO:
   user_header_dance: Dansefest
   user_header_minecraft: Minecraft
   user_header_flappy: Flakse
-  user_header_view_project_gallery: Se prosjektgalleri
+  user_header_view_all: Sjå alle prosjekt...
+  user_header_view_project_gallery: Sjå prosjektgalleri
   user_header_view_my_projects: Vis prosjekta mine
   view_all_sections: Vis alle seksjonane
   view_section: Vis seksjon
@@ -2050,28 +2075,59 @@ nn-NO:
     frå Google Classroom" i fana "Administrér elevar":'
   google_sign_in_instruct: 'Derfra bør dei velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Helten si reise'
-  applab-intro_name: Lab-intro til appen
+  applab-intro_name: Introduksjon til App-lab
+  applab_tile_title: Introduksjon til App-lab (alder 13+)
+  applab_tile_subtitle: Lag din eigen app i JavaScript ved å bruke blokkbasert programmering.
+    Eller ta ferdigheitene dine til neste nivå med tekstbasert programmering. (Berre
+    på engelsk)
   applab_tile_start_tutorial: Start
-  applab_tile_teacher_guide: Sjekk lærerveiledning
-  account_sign_up_email_opt_in: Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter
-    eller andre IT-relaterte nyheter?
-  account_sign_up_child_accept_terms: Jeg bekrefter at jeg har mine foreldre eller
-    foresattes tillatelse til å bruke tjenestene fra Code.org.
+  applab_tile_teacher_guide: Sjekk lærerrettleiing
+  account_sign_up_email_opt_in: Kan vi sende deg nyheter om kursa våre, lokale jobbmoglegheiter
+    eller andre IT-relaterte nyheiter? (Omlag ein gong i månaden)
+  account_sign_up_child_accept_terms: Eg stadfestar at eg har løyve frå foreldre eller
+    føresatte til å nytte tenestene frå Code.org.
   hoc_overview_dance_title: Dansefest
-  hoc_overview_partner_activities_title: Flere aktiviteter fra partnere
-  hoc_overview_partner_activities_body: Kodetime-nettstedet har over 100 dataaktiviteter
-    for alle aldre og erfaringsnivåer, utviklet av Code.org og partnere.
-  hoc_overview_partner_activities_link: Sjekk aktiviteter
+  hoc_overview_dance_subtitle: Programmer ein dansefest du kan dele med venene dine.
+    Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 andre!
+  hoc_overview_dance_2019_subtitle: Programmer ein dansefest du kan dele med venene
+    dine. Med Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers
+    og 34 fleire artistar!
+  hoc_overview_title: Kodetimen-aktivitetar frå Code.org
+  hoc_overview_subtitle: <a href="https://hourofcode.com">Kodetimen</a> er ei global
+    rørsle som når ut til eit titalls millionar elever i over 180 land. Kven som helst
+    kan organisere ein kodetime kvar som helst eller prøve ei av over 500 timeslange
+    øvingar, tilgjengelege på over 45 språk.
+  hoc_overview_partner_activities_title: Fleire aktivitetar frå partnarar
+  hoc_overview_partner_activities_body: Kodetime-nettstaden har over 500 aktivitetar
+    i programmering for alle aldre og erfaringsnivå, utvikla av Code.org og partnarar.
+  hoc_overview_partner_activities_link: Sjå aktivitetar
   hoc_overview_start_tutorial: Start
-  hoc_overview_view_teacher_guide: Sjekk lærerveiledning
+  hoc_overview_view_teacher_guide: Sjekk lærerrettleiing
+  hoc2018_creativity: kreativitet
   hoc2018_creativity_create: Opprett
-  hoc2018_creativity_hoc_coming: Kodetimen kommer …
+  hoc2018_creativity_hoc_coming: Kodetimen kjem…
   hoc2018_creativity_what_will_you_create: Kva vil du skape?
+  hoc2018_creativity_homepage: Løft fantasien og gi liv til innovasjon. Start med
+    Kodetimen og di eige kreativitetsmerkevare, uansett kva det er. Sjå videoen vår.
+  hoc2018_creativity_hoc_about: 'I år handlar Kodetimen om kreativitet. '
+  hoc2018_creativity_social_media: 'I år handlar #Kodetimen om kreativitet. Eg er
+    med! Er du? #hourofcode'
+  hoc2018_creativity_social_media_2: 'I år handlar #Kodetimen om kreativitet. Kva
+    vil du skape? #hourofcode'
+  hoc2018_creativity_courses: Gå vidare med Code.org-kurs
+  hoc2018_creativity_courses_link: Gå vidare med <a href="https://studio.code.org/courses">Code.org-kurs</a>
+  hoc2018_homepage: Registrer deg til din time for å prøve ein av desse 150 NYE aktivitetane
+    for Kodetimen (3.-9. des.)!
   hoc2018_mc_page_title: Rettleiingar for Kodetimen i Minecraft
   hoc2018_mc_details: Mange språk | Moderne nettlesarar og nettbrett | 2. klasse og
     oppover
+  hoc2018_mc_aquatic_announcement: Registrer klassen din til å prøve ein av desse
+    over 150 NYE aktivtetane for Kodetimen (3.-9. desember). Sørg for å sjekke vår
+    nye aktivitet i Minecraft for 2018;  Akvatisk reise! Registrer klassen din i dag.
+  hoc2018_mc_aquatic_title: Akvatisk reise i Minecraft
   hoc2018_mc_aquatic_description: Minecraft er tilbake i Kodetimen med ein heilt ny
     aktivitet! Reis gjennom Minecraft med kode.
+  hoc2019_mc_aquatic_description: Utforsk og bygg ei verd under vatn med kode.
   hoc2018_mc_hero_title: 'Minecraft: Helten si reise'
   hoc2018_mc_hero_description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet!
     Reis gjennom Minecraft med kode.
@@ -2084,7 +2140,23 @@ nn-NO:
   hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Har du ikkje internett?
   hoc2018_mc_download_adventurer: Last ned Minecraft-eventyrar for bruk utan internett.
+  hoc2018_mc_educators: For lærarar
+  hoc2018_mc_educators_box1_title: Programmer med Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Utdanningsutgåva gir standardisert pensum,
+    opplæring og koding i Minecraft.'
+  hoc2018_mc_educators_box1_button: Kom i gang
+  hoc2018_mc_educators_box2_title: Last ned fasilitatorguiden
+  hoc2018_mc_educators_box2_desc: Dette verktøyet vil hjelpe deg å ha Kodetimen og
+    engasjere elevane dine i programmering.
   hoc2018_mc_educators_box2_button: Last ned
+  hoc2018_mc_educators_box3_title: Bli med på ein gratis elevworkshop
+  hoc2018_mc_educators_box3_desc: 'Gå til ein Microsoft-butikk i området ditt for
+    ein gratis Kodetimen-workshop. For deltakarar på alle nivå, frå 6 år og oppover. '
+  hoc2018_mc_educators_box3_button: Finn ein workshop
+  hoc2018_mc_educators_box4_title: Få tilgang på fleire programmeringsressursar
+  hoc2018_mc_educators_box4_desc: Få til endring i lokalsamfunnet med digitale ferdigheiter
+    og utdanningsressursar i programmering frå Microsoft.
+  hoc2018_mc_educators_box4_button: Utforsk ressursar
   hoc2018_mc_watch_videos: Før du kjem i gong kan du sjå ein av desse inspirerande
     filmane
   hoc2018_mc_videos_more: Fleire <a href='%{inspiring_videos_playlist}'>inspirerande
@@ -2105,30 +2177,40 @@ nn-NO:
   hoc2018_mc_video_title_hoc_is_here: Kodetimen er her - Alle kan lære
   hoc2018_mc_video_title_anybody_can_learn: Alle kan lære
   hoc2018_mc_video_title_my_name_is_aracely: Eg heiter Aracely
-  hoc2018_mc_homepage_hoc_coming: Kodetimen kommer ...
+  hoc2018_mc_homepage_hoc_coming: Kodetimen kjem...
   hoc2018_mc_homepage_what_create: Kva vil du skape?
+  hoc2018_mc_homepage_give_flight: Løft fantasien og gi liv til innovasjon. Start
+    med Kodetimen og di eige kreativitetsmerkevare, uansett kva det er.
+  hoc2018_mc_homepage_watch_video: Sjå videoen vår
   hoc2018_mc_homepage_join_us: Bli med oss
   hoc2018_mc_homepage_try_it: Prøv sjølv
   hoc2018_mc_back: Minecraft er tilbake med ein heilt ny aktivitet i Kodetimen!
   hoc2018_mc_back_journey: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet!
     Reis gjennom Minecraft med kode.
-  hoc2018_mc_teacher_guide: Sjekk lærerveiledning
+  hoc2018_mc_teacher_guide: Sjekk lærerrettleiing
   hoc2018_mc_minecraft_education: Minecraft Education
   hoc2018_mc_continue_learning: Hald fram med å lære med Minecraft.
   hoc2018_mc_go_to_mc_education: Gå til Minecraft Education
+  hoc2018_mc_short_description: 'Bruk kreativiteten og ferdigheiter i problemløysing
+    til å utforske og bygge undersjøiske verdenar med kode. '
+  hoc2018_mc_short_description_shorter: 'Bruk kreativiteten og ferdigheiter i problemløysing
+    til å utforske og bygge undersjøiske verdenar med kode. '
+  hoc2018_mc_journey: Ei reise gjennom Minecraft med koding.
   hoc2018_dance_party_main_heading: Dansefest
   hoc2018_dance_party_landing_title: Dans
-  hoc2018_dance_party_subheading: Hjelp oversette Dansefest
-  hoc2018_dance_create_your_own_dance_title: Lag din egen dansefest
+  hoc2018_dance_party_subheading: Hjelp oss med å oversette Dansefest
+  hoc2018_dance_create_your_own_dance_title: Lag din eigen dansefest
   hoc2018_dance_party_box_title: Dansefest
-  hoc2018_dance_party_box_description: Programmer en dansefest du kan dele med vennene
+  hoc2018_dance_party_box_description: Programmer en dansefest du kan dele med venene
     dine!
+  hoc2018_dance_party_specs: Språk | Format | Alder 6-106 år
   hoc2018_dance_party_button: Start
-  hoc2018_dance_keep_on_dancing_box_title: Fortsett å danse
-  hoc2018_dance_keep_on_dancing_description: Fortsett etter den første timen med større
-    prosjektideer.
+  hoc2018_dance_keep_on_dancing_box_title: Dans vidare
+  hoc2018_dance_keep_on_dancing_description: Gå vidare etter den første timen med
+    større prosjektidear.
+  hoc2018_dance_keep_on_dancing_specs: Språk | Format | Alder 13 år og eldre
   hoc2018_dance_keep_on_dancing_button: Start del 2
-  hoc2018_dance_teacher_resources_title: Lærerressurser
+  hoc2018_dance_teacher_resources_title: Lærerressursar
   hoc2018_dance_teacher_resources_tile1_description: Timeplanar, sertifikat og musikkfiltrering.
   hoc2018_dance_teacher_resources_tile1_button: Plan over oppgåver
   hoc2018_dance_teacher_resources_tile2_title: Dansefest utan datamaskin
@@ -2194,3 +2276,25 @@ nn-NO:
     nettadressa og send inn på nytt. Eller gå tilbake til heimesida vår.
   page_not_found_button: Gå heim
   hoc2018_mc_with_microsoft: I samarbeid med
+  hoc2018_mc_thank_microsoft: Vi takkar Microsoft for å støtte visjonen og målet vårt
+    om å sikre at kvar barn har høvet til å lære programmering og dei ferdigheitene
+    for å lukkast i det 21. århundre.
+  hoc2019_mc_mee_title: Minecraft AI for det gode
+  hoc2019_mc_mee_description1: 'Den nye rettleiinga for Minecraft-kodetimen er no
+    tilgjengeleg i Minecraft: Utdanningsversjonen for Windows, Mac og iPad. Lær det
+    grunnleggjande i koding og utforsk AI med elevane dine!'
+  hoc2019_mc_mee_description2: Få tilgang til gratisressursar som oppgåveplan, videoar,
+    programmeringspensum og opplæring for lærarar.
+  hoc2019_mc_more_coding_resources: Fleire koderessursar
+  hoc2019_dance_previous_versions: "Ser du etter ein tidlegare versjon av Dansefest?
+    \nKlikk her for å starte [Del 1](%{dance_2018_link}) og [Del 2](%{dance_extras_2018_link})
+    frå i fjor."
+  page_not_available_button: Gå heim
+  footer_powered_by_aws: Drive av Amazon Web Services
+  codebytes_skinny_banner_english_only: Berre på engelsk
+  footer_privacy_policy: Personvern
+  footer_about: Om
+  footer_partners: Partnarar
+  footer_donate: Gi eit bidrag
+  footer_support: Brukarstøtte
+  footer_terms: Vilkår for bruk

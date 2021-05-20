@@ -2,35 +2,42 @@
 lt:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: Nė vienas
+          MOVE2:
+            MOVES.Rest: Nė vienas
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Nė vienas
       Dancelab_changeMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Nė vienas
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_changePropEachBy:
         options:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
       Dancelab_doMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Nė vienas
       Dancelab_doMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Nė vienas
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -44,6 +51,10 @@ lt:
         options:
           UNIT:
             '"seconds"': sekundes
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Nė vienas
       Dancelab_ifTime:
         options:
           UNIT:
@@ -54,58 +65,66 @@ lt:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atsitiktinis
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': deimantą
             '"random"': atsitiktinis
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': ateivis
+            '"CAT"': katė
+            '"DOG"': šuo
+            '"DUCK"': antis
+            '"ROBOT"': robotas
+            '"UNICORN"': vienaragis
+          LOCATION:
+            "{x: 100, y: 200}": kairėn
+            "{x: 300, y: 200}": dešinėn
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': ateivis
+            '"CAT"': katė
+            '"DOG"': šuo
+            '"DUCK"': antis
+            '"ROBOT"': robotas
+            '"UNICORN"': vienaragis
           LOCATION:
             "{x: 100, y: 200}": kairėn
             "{x: 300, y: 200}": dešinėn
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atsitiktinis
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
+            '"diamond"': deimantą
             '"random"': atsitiktinis
       Dancelab_randomColor:
         text: Atsitiktinė spalva
-      Dancelab_setDanceSpeed:
+      Dancelab_setBackgroundEffect:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
+          EFFECT:
+            '"none"': Nė vienas
+      Dancelab_setBackgroundEffectWithPalette:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+          EFFECT:
+            '"none"': Nė vienas
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Nė vienas
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Nė vienas
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +140,17 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': dydis
@@ -131,6 +160,16 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+            '"height"': aukštis
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': deimantą
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,12 +179,17 @@ lt:
             '"right"': dešinėn
             '"space"': kosmosas
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': greitis
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -157,6 +201,20 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': greitis
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': aukštyn
+            '"down"': žemyn
+            '"left"': kairėn
+            '"right"': dešinėn
+            '"space"': kosmosas
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -178,6 +236,8 @@ lt:
         text: Atsitiktinė spalva
       gamelab_randomColor:
         text: Atsitiktinė spalva
+      gamelab_repeatForever:
+        text: kartok visada
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -187,12 +247,29 @@ lt:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vaivorykštė
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': po vandeniu
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': žiema
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': šiek tiek
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': greitis
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': dydis
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': šiek tiek
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -264,8 +341,14 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Nė vienas
       Mikelab_randomColor:
         text: Atsitiktinė spalva
+      Mikelab_repeatUntilComplete:
+        text: kartok visada
       Mikelab_setBG:
         options:
           BG:
@@ -315,63 +398,20 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': atsitiktinis
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:
         text: pasisuk į kairę
       RyanLab_turnRight:
         text: pasisuk į dešinę
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kada
-            '"while"': kol
-          KEY:
-            '"up"': aukštyn
-            '"down"': žemyn
-            '"left"': kairėn
-            '"right"': dešinėn
-            '"space"': kosmosas
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': miestas
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': Taip
-            '"false"': klaida
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': dydis
-            '"x"': x pozicija
-            '"y"': y pozicija
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': amžinai
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': parodyk
-            '"hide"': pa(si)slėpk
+          FORMAT:
+            '"random"': atsitiktinis
       binary_move:
         options:
           DIR:

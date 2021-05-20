@@ -5,14 +5,11 @@
 # and update the questions.
 
 require_relative '../../lib/cdo/only_one'
-exit unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../config/environment'
 
 JOT_FORM_CLASSES = [
-  Pd::WorkshopDailySurvey,
-  Pd::WorkshopFacilitatorDailySurvey,
-  Pd::PostCourseSurvey,
   Pd::MiscSurvey,
 ].freeze
 

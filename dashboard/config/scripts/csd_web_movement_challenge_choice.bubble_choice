@@ -1,0 +1,9 @@
+name 'CSD web movement challenge choice'
+editor_experiment ''
+display_name 'Sprite Movement Challenges'
+description 'Add more to your fish scene or create something new.'
+
+sublevels
+level 'CSD U3 Movement Fish challenge_2020'
+level 'CSD U3 Movement Fish challenge2_2020'
+level 'CSD U3 L9 Freeplay_2020'

@@ -1,7 +1,5 @@
 ---
 title: رہنمائی کیسے کریں – برائے عوامی-نمائندگان
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ nav: how_to_nav
 
 ### 1 ۔ ہماری ایک صفحہ کار کا مطالعہ
 
-** ہمارے ایک صفحہ کو پڑھیں </ strong> پر کیوں کمپیوٹر سائنس تعلیم ضروری ہے، اور آپ کو کوڈ کے قیام کی حمایت سے کیسے کوشش کر سکتی ہے.</p> 
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2 ۔ بھرتی مقامی اسکولوں اور اضلاع
 

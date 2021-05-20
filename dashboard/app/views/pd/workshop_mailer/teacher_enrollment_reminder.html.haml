@@ -12,6 +12,10 @@
     This is a reminder about your upcoming 5-day summer workshop on the Code.org
     = @workshop.course
     curriculum.
+- elsif @workshop.course == Pd::Workshop::COURSE_FACILITATOR
+  %p
+    I wanted to remind you about your upcoming Code.org summer workshop prep
+    session.
 - elsif @workshop.course == Pd::Workshop::COURSE_CSF
   %p
     I wanted to remind you about your upcoming Code.org
@@ -38,18 +42,18 @@
     = render partial: "#{survey_type.underscore}_survey"
   -elsif !Pd::PreWorkshopSurvey.where(pd_enrollment: @enrollment).exists?
     If you have not already done so, please complete the
-    = link_to "#{survey_type} survey", @pre_survey_url, target: "_blank"
+    = link_to "#{survey_type} survey", @pre_workshop_survey_url, target: "_blank", rel: "noopener noreferrer"
     and review the
     following logistical details about your workshop. If you have any questions about
     your workshop, reach out to your workshop organizer directly:
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."
-- else
+- elsif @workshop.subject != Pd::Workshop::COURSE_FACILITATOR
   %p
     - if @workshop.course == Pd::Workshop::COURSE_CSF
       This is a great step towards bringing computer science to your classroom!
-    - else
-    We’re excited to continue to work together to bring computer science to your classroom.
+    - unless @workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
+      We’re excited to continue to work together to bring computer science to your classroom.
     If you have any questions, reach out to your workshop organizer directly:
     = "#{@organizer.name} at "
     = mail_to @organizer.email, "#{@organizer.email}."
@@ -58,7 +62,7 @@
   %p
     Please remember that this workshop is for educators who are already using the CS Fundamentals curriculum in their classroom.
     If you have not used CS Fundamentals with students yet, or don’t plan to do so before this workshop, please
-    = link_to 'click here to cancel your registration', @cancel_url, target: "_blank"
+    = link_to 'click here to cancel your registration', @cancel_url, target: "_blank", rel: "noopener noreferrer"
     to this workshop and sign up for a
     = link_to 'CS Fundamentals Intro workshop', 'https://code.org/professional-development-workshops'
     near you to help you get started.
@@ -68,10 +72,13 @@
 
   %p
     Don’t forget to fill out
-    = link_to 'this survey', 'https://studio.code.org/pd/workshop_survey/csf/pre201'
+    = link_to 'this survey', @pre_workshop_survey_url
+
     at least 24 hours before the workshop so that your facilitator can make this workshop as effective and useful for you as possible!
 
 -if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
+-elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
+  = render partial: 'teacher_enrollment_details_facilitator'
 -else
   = render partial: 'teacher_enrollment_details'

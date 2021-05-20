@@ -1,0 +1,15 @@
+he:
+  data:
+    parameter_names:
+      actor: שחקן
+      color: צבע
+      counter: סופר
+      height: גובה
+      honey: דבש
+      left: שמאלה
+      length: אורך
+      min: מינימום
+      points: נקודות
+      size: גודל
+      speed: מהירות
+      width: רוחב

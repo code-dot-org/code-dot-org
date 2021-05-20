@@ -10,17 +10,6 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getCurrentQuestion} from './sectionAssessmentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  instructions: {
-    marginTop: 20
-  }
-};
-
 class FreeResponseDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
@@ -44,6 +33,7 @@ class FreeResponseDetailsDialog extends Component {
         </div>
         <DialogFooter>
           <Button
+            __useDeprecatedTag
             text={i18n.done()}
             onClick={this.props.closeDialog}
             color={Button.ButtonColor.gray}
@@ -53,6 +43,17 @@ class FreeResponseDetailsDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  instructions: {
+    marginTop: 20
+  }
+};
 
 export const UnconnectedFreeResponseDetailsDialog = FreeResponseDetailsDialog;
 

@@ -1,6 +1,5 @@
 ---
 title: Účasť celej školy
-layout: wide
 ---
 
 {{ signup_button }}

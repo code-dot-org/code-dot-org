@@ -3,7 +3,7 @@
 # visibility. Visible scripts are ready to be assigned and used in production.
 # Hidden scripts tend to be internal scripts used for curriculum development.
 
-require_relative '../../config/environment'
+require_relative '../../../dashboard/config/environment'
 
 def feedbacks_without_script_level_id
   TeacherFeedback.where(script_level_id: nil)

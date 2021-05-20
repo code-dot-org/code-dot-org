@@ -1,0 +1,22 @@
+name 'Episode 11 Challenge Instructions younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+## Sprite Lab
+
+**Do This:** Create your own game using functions to check if you've won or to reset the game. Check out the samples below.
+
+![](https://images.code.org/c952c070462a2745d999221e3fe37229-image-1590759851639.gif) ![](https://images.code.org/cebf52616d6f34003c56f8abf74c3ad5-image-1590780945933.gif)
+
+[Snake Snack](https://studio.code.org/projects/spritelab/mZwGO4BdPXn4RkDc21IAnL3FHRs5NPz51NOwumDmHN4/view)
+
+[Cat & Mouse](https://studio.code.org/projects/spritelab/Y_UeL7v8WAYotgvPBT71xyfVMbq6J8zUifpq2e07Ivo)
+
+---
+
+*Over 13 year old? Find your challenge level [here](https://studio.code.org/s/code-break/lessons/11/levels/15).*
+MARKDOWN

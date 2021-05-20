@@ -6,12 +6,17 @@ import Sounds from '../Sounds';
  * @param useRestrictedSongs {boolean} if true, request signed cloudfront
  * cookies in parallel with the request for the manifest, and use /restricted/
  * urls instead of curriculum.code.org urls for music files.
+ * @param manifestFilename {string} Optional. Specify the name of the manifest
+ * to request from S3. Must be located in cdo-sound-library/hoc_song_meta.
  * @returns {Promise<*>} The song manifest.
  */
-export async function getSongManifest(useRestrictedSongs) {
-  const manifestFilename = useRestrictedSongs
-    ? 'songManifest.json'
-    : 'testManifest.json';
+export async function getSongManifest(useRestrictedSongs, manifestFilename) {
+  if (!manifestFilename || manifestFilename.length === 0) {
+    manifestFilename = useRestrictedSongs
+      ? 'songManifest2021.json'
+      : 'testManifest.json';
+  }
+
   const songManifestPromise = fetch(
     `/api/v1/sound-library/hoc_song_meta/${manifestFilename}`
   ).then(response => response.json());

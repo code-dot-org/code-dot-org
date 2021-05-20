@@ -1,7 +1,5 @@
 ---
 title: Resolución de exemplo como soporte da Semana da Educación en Informática e a Hora do Código
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -219,7 +219,7 @@ NetSim.prototype.init = function(config) {
     return page({
       data: {
         localeDirection: getStore().getState().isRtl ? 'rtl' : 'ltr',
-        instructions: this.level.instructions
+        instructions: this.level.shortInstructions
       }
     });
   }.bind(this);
@@ -470,7 +470,7 @@ NetSim.prototype.onBeforeUnload_ = function(event) {
  */
 NetSim.prototype.onUnload_ = function() {
   if (this.isConnectedToShard()) {
-    this.synchronousDisconnectFromShard_();
+    this.disconnectFromShardOnUnload_();
   }
 };
 
@@ -548,12 +548,12 @@ NetSim.prototype.createMyClientNode_ = function(displayName, onComplete) {
 };
 
 /**
- * Synchronous disconnect, for use when navigating away from the page
+ * Disconnect, for use when navigating away from the page.
  * @private
  */
-NetSim.prototype.synchronousDisconnectFromShard_ = function() {
+NetSim.prototype.disconnectFromShardOnUnload_ = function() {
   this.myNode.stopSimulation();
-  this.myNode.synchronousDestroy();
+  this.myNode.destroyOnUnload();
   this.myNode = null;
   // Attempt to unsubscribe from Pusher as we navigate away
   this.shard_.disconnect();

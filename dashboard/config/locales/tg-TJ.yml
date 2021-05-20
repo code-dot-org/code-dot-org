@@ -13,8 +13,6 @@ tg:
         edit_header: Таҳрир кардани тафсилоти ҳисоб
   hello: Салом ҷаҳон
   submit: Пешниҳод кардан
-  add_teacher_form:
-    submit: Илова кардани муаллим
   stage: Давра
   puzzle: Муаммо
   trophies: Ҷомҳо
@@ -23,6 +21,7 @@ tg:
   more: БЕШТАР
   less: КАМТАР
   prize: ҷоиза
+  more_info: маълумоти бештар
   auth:
     signed_in: Ворид шудед!
     facebook: Фейсбук
@@ -99,9 +98,12 @@ tg:
       student: Донишҷӯ
   user:
     new_password_hint: "(агар нахоҳед, ки онро тағйир диҳед, холӣ монед)"
+    update_email: Навсозӣ кардан
   home:
+    student_reg_link: Донишҷӯ
     online: онлайн
     view_course: Намоиш додани дарс
+    trynow: Маълумоти бештар
   gender:
     male: Мард
     female: Зан

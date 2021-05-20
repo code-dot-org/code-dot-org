@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
@@ -105,6 +105,25 @@ describe('MultiCheckboxSelector', () => {
     it('should call onChange with an empty selection when the header checkbox is clicked', () => {
       allSelectedCheckbox.simulate('change');
       expect(onChange.lastCall.args[0]).to.deep.equal([]);
+    });
+  });
+  describe('no header', () => {
+    beforeEach(() => {
+      render(
+        <MultiCheckboxSelector
+          noHeader={true}
+          header="Some Items"
+          items={['one', 'two', 'three']}
+          selected={['two']}
+          onChange={onChange}
+        >
+          <ItemComponent />
+        </MultiCheckboxSelector>
+      );
+    });
+
+    it('should not render a header', () => {
+      expect(header).to.have.lengthOf(0);
     });
   });
 });

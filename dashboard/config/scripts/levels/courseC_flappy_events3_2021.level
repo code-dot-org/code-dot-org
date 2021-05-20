@@ -1,0 +1,88 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2020-12-04T22:23:57.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "ground": "true",
+    "goal": "{\"startX\":100,\"startY\":324}",
+    "scale": "{\"snapRadius\":2}",
+    "success_condition": "function successCondition() {\r\n\t        // this only happens after avatar hits ground, and we spin him because of\r\n\t        // game over\r\n\t        return Flappy.avatarY === 322 && Flappy.avatarX === 110;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        var avatarBottom = Flappy.avatarY + 24;\r\n\t        var ground = Flappy.MAZE_HEIGHT - Flappy.GROUND_HEIGHT;\r\n\t        return avatarBottom >= ground && Flappy.gameState === Flappy.GameStates.ACTIVE;\r\n\t      }",
+    "short_instructions": "Attach the `end game` block to the `when hit the ground` event.   Play the game and crash the bird into the ground to continue.",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "default_flap": "NORMAL",
+    "free_play": "false",
+    "obstacles": "false",
+    "score": "false",
+    "shareable": "false",
+    "long_instructions": "Now we've added the ground. \r\n\r\nAttach the `end game` block to the `when hit the ground` event. \r\n\r\n---\r\n\r\nPlay the game and crash the bird into the ground to continue.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.\",\"hint_id\":\"courseC_flappy_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/92b05661c83483b98bdb3d2779251a18/courseC_flappy_events3.mp3\"}]",
+    "parent_level_id": 21261,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 02:11:47 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ground\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 19:12:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 19:16:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:37:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:45:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:01:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 22:15:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-30 01:50:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="flappy_setSpeed">
+              <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+            </block>
+          </next>
+        </block>
+        <block type="flappy_whenCollideGround" deletable="false"/>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height">
+              <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="flappy_flap_height"/>
+        <block type="flappy_endGame"/>
+        <block type="flappy_playSound">
+          <title name="VALUE">"sfx_wing"</title>
+        </block>
+        <block type="flappy_setSpeed">
+          <title name="VALUE">Flappy.LevelSpeed.NORMAL</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_endGame"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

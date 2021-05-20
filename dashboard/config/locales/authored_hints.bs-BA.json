@@ -1,0 +1,143 @@
+{
+  "bs-BA": {
+    "data": {
+      "authored_hints": {
+        "2-3 Artist 1 new": {
+          "2-3_Artist_1_new_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "2-3_Artist_1_new_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "2-3 Artist 4": {
+          "2-3_Artist_4_a": "Da biste završili kuću, sve što trebamo učiniti je nacrtati Kvadrat!"
+        },
+        "CourseD_Dance_2020_01": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Postarajte se da se plesač pojavi na ekranu.\n\n_Ovaj level se završava nakon 4 takta._"
+        },
+        "CourseD_Dance_2020_04": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Plesač mora promjeniti novi pokret svako četiri takta.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_2020_05": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.\n\n_Level se završava nakon 11 taktova._"
+        },
+        "CourseD_Dance_Party_01": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Postarajte se da se plesač pojavi na ekranu.\n\n_Ovaj level se završava nakon 4 takta._",
+          "challenges": "**Neobavezni izazovi**\n\n-   Odaberite drugu pjesmu.\n-   Promijenite ime plesača."
+        },
+        "CourseD_Dance_Party_02": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Plesač mora promjeniti novi pokret svako četiri takta.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_Party_03": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.\n\n_Level se završava nakon 11 taktova._"
+        },
+        "CourseD_Dance_Party_04": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš promjeniti efekat pozadine negdje oko sedmog takta pjesme.\n\n_Level se završava nakon 9 taktova._",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "CourseD_Dance_Party_06": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš imati barem dva plesača.\n\n_Level se završava nakon 5 taktova._",
+          "challenges": "**Neobavezni izazovi**\n\n-   dodaj trećeg plesača (ili onoliko koliko želiš!)\n-   Postigni da svaki od tvojih plesača radi drugačije pokrete u drugim dijelovima pjesme."
+        },
+        "CourseD_Dance_Party_08": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Dva plesača moraju imati visinu drugačiju od 100.\n\n_Level se završava nakon 5 taktova._",
+          "challenges": "**Neobavezni izazovi**\n\n-   Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)"
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Promjeni nijanse boje barem jednog plesača.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Osobine dva ili više plesača moraju da se izmjene.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Samo budi kreativan.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Samo budi kreativan.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "CourseD_Dance_Party_11b": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Iskoristi blok `kada je lijeva strelica pritisnuta` da bi robot napravio pokret kada pristisneš na strelicu.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_2019_01": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Postarajte se da se plesač pojavi na ekranu.\n\n_Ovaj level se završava nakon 4 takta._"
+        },
+        "Dance_2019_04": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Plesač mora promjeniti novi pokret svako četiri takta.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_2019_05": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.\n\n_Level se završava nakon 11 taktova._"
+        },
+        "Dance_Party_01": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Postarajte se da se plesač pojavi na ekranu.\n\n_Ovaj level se završava nakon 4 takta._",
+          "challenges": "**Neobavezni izazovi**\n\n-   Odaberite drugu pjesmu.\n-   Promijenite ime plesača."
+        },
+        "Dance_Party_02": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Plesač mora promjeniti novi pokret svako četiri takta.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_Party_03": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Nakon 6 taktova, vaš plesač mora da uradi drugačiji ples od onog od nakon 4 takta.\n\n_Level se završava nakon 11 taktova._"
+        },
+        "Dance_Party_04": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš promjeniti efekat pozadine negdje oko sedmog takta pjesme.\n\n_Level se završava nakon 9 taktova._",
+          "challenges": "**Neobavezni izazovi**\n\nIzmjeni efekat pozadine u drugim dijelovima pjesme spajajući nove blokobe ispod <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"taktova\"</title></block></xml> događaja."
+        },
+        "Dance_Party_06": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Moraš imati barem dva plesača.\n\n_Level se završava nakon 5 taktova._",
+          "challenges": "**Neobavezni izazovi**\n\n-   dodaj trećeg plesača (ili onoliko koliko želiš!)\n-   Postigni da svaki od tvojih plesača radi drugačije pokrete u drugim dijelovima pjesme."
+        },
+        "Dance_Party_08": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Dva plesača moraju imati visinu drugačiju od 100.\n\n_Level se završava nakon 5 taktova._",
+          "challenges": "**Neobavezni izazovi**\n\n-   Eksperimentiši mijenjajući druge osobine (širina, visina, rotacija i sl.)"
+        },
+        "Dance_Party_09": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Promjeni nijanse boje barem jednog plesača.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_Party_10": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Osobine dva ili više plesača moraju da se izmjene.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_Party_11": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Samo budi kreativan.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_Party_11_5": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Samo budi kreativan.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "Dance_Party_11b": {
+          "validation": "**Kako da pređem ovaj level?**\n\n-   Iskoristi blok `kada je lijeva strelica pritisnuta` da bi robot napravio pokret kada pristisneš na strelicu.\n\n_Level se završava nakon 7 taktova._"
+        },
+        "course3_playLab_challenge1": {
+          "courseE_playLab_challenge1_a": "Ovo su neke stvari koje bi mogao uraditi kada igrač pobijedi u igri:\n\n-   Napraviti da dinosaur nestane.\n-   Zaustaviti vjeverice.\n-   Učiniti vjeverice i viteza sretnim.\n-   Postaviti novu pozadinu.\n-   Napraviti da vitez zahvali igraču na pomoći.\n-   Napraviti da svi učesnici nestanu i pokazati poruku \"Pobijedio si!\".",
+          "courseE_playLab_challenge1_b": "Ovo su neke stvari koje bi mogao uraditi kada igrač izgubi u igri:\n\n-   Napraviti da vitez nestane.\n-   Napraviti da je vjeverica tužna.\n-   Napraviti da dinosaur nešto kaže.\n-   Postaviti novu pozadinu.\n-   Napraviti da svi učesnici nestanu i pokazati poruku \"Igra je gotova!\"."
+        },
+        "courseC_artist_prog2": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseC_artist_prog2_2018": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseC_artist_prog2_2019": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseC_artist_prog2_2020": {
+          "courseC_artist_prog2_a": "Koristite li blok 'kreni naprijed za 100 piksela', sam će povući liniju automatski.",
+          "courseC_artist_prog2_b": "Imate problema sa skretanjem? Upotrijebite 'okreni za 90 stepeni' blok."
+        },
+        "courseD_scrat_ramp5": {
+          "courseC_maze_programming5_b": "Koliko daleko trebaš da se pomakneš da dođeš u ugao?"
+        },
+        "courseE_farmer_concept3": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Šta bi trebao uraditi kada dođeš do kraja puta?"
+        },
+        "courseE_farmer_concept3_2018": {
+          "grade3_robotFarmer_ConditionalsIntro_8_b": "Šta bi trebao uraditi kada dođeš do kraja puta?"
+        },
+        "courseE_farmer_functions8b": {
+          "courseE_farmer_functions8b_c": "Koliko puta trebate pozvati funkciju?"
+        },
+        "courseE_playLab_challenge1": {
+          "courseE_playLab_challenge1_a": "Ovo su neke stvari koje bi mogao uraditi kada igrač pobijedi u igri:\n\n-   Napraviti da dinosaur nestane.\n-   Zaustaviti vjeverice.\n-   Učiniti vjeverice i viteza sretnim.\n-   Postaviti novu pozadinu.\n-   Napraviti da vitez zahvali igraču na pomoći.\n-   Napraviti da svi učesnici nestanu i pokazati poruku \"Pobijedio si!\".",
+          "courseE_playLab_challenge1_b": "Ovo su neke stvari koje bi mogao uraditi kada igrač izgubi u igri:\n\n-   Napraviti da vitez nestane.\n-   Napraviti da je vjeverica tužna.\n-   Napraviti da dinosaur nešto kaže.\n-   Postaviti novu pozadinu.\n-   Napraviti da svi učesnici nestanu i pokazati poruku \"Igra je gotova!\"."
+        }
+      }
+    }
+  }
+}

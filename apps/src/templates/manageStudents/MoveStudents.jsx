@@ -2,16 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import Immutable from 'immutable';
-import {orderBy, compact} from 'lodash';
+import {compact} from 'lodash';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Button from '../Button';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
+import Button from '@cdo/apps/templates/Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 import {
   updateStudentTransfer,
   transferStudents,
@@ -21,70 +17,12 @@ import {
 } from './manageStudentsRedux';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
-const TABLE_WIDTH = 300;
 const DIALOG_WIDTH = 800;
 const INPUT_WIDTH = 225;
-const CHECKBOX_CELL_WIDTH = 50;
-
-const styles = {
-  dialog: {
-    padding: PADDING,
-    width: DIALOG_WIDTH,
-    marginLeft: -(DIALOG_WIDTH / 2)
-  },
-  container: {
-    display: 'flex'
-  },
-  table: {
-    width: TABLE_WIDTH,
-    margin: 2
-  },
-  checkboxCell: {
-    width: CHECKBOX_CELL_WIDTH,
-    textAlign: 'center'
-  },
-  checkbox: {
-    margin: 0
-  },
-  rightColumn: {
-    flex: 1,
-    paddingLeft: PADDING,
-    paddingRight: PADDING
-  },
-  infoText: {
-    paddingTop: PADDING / 4,
-    paddingBottom: PADDING / 2
-  },
-  label: {
-    paddingTop: PADDING / 2
-  },
-  input: {
-    marginLeft: PADDING / 2
-  },
-  sectionInput: {
-    marginLeft: PADDING / 2,
-    width: INPUT_WIDTH
-  },
-  radioOption: {
-    paddingLeft: PADDING / 2,
-    fontFamily: '"Gotham 4r", sans-serif'
-  },
-  error: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red,
-    paddingBottom: PADDING / 2
-  }
-};
-
-const DEFAULT_SORT = {
-  1: {
-    direction: 'asc',
-    position: 0
-  }
-};
 
 class MoveStudents extends Component {
   static propTypes = {
@@ -122,12 +60,22 @@ class MoveStudents extends Component {
   };
 
   state = {
-    isDialogOpen: false,
-    sortingColumns: DEFAULT_SORT
+    isDialogOpen: false
   };
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students-actions',
+        event: 'move-students-button-click',
+        data_json: JSON.stringify({
+          sectionId: this.props.currentSectionId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeDialog = () => {
@@ -137,22 +85,6 @@ class MoveStudents extends Component {
 
   getStudentIds = () => {
     return this.props.studentData.map(s => s.id);
-  };
-
-  areAllSelected = () => {
-    return Immutable.Set(this.props.transferData.studentIds).isSuperset(
-      this.getStudentIds()
-    );
-  };
-
-  toggleSelectAll = () => {
-    let studentIds = [];
-
-    if (!this.areAllSelected()) {
-      studentIds = this.getStudentIds();
-    }
-
-    this.props.updateStudentTransfer({studentIds});
   };
 
   toggleStudentSelected = studentId => {
@@ -168,96 +100,6 @@ class MoveStudents extends Component {
     this.props.updateStudentTransfer({studentIds});
   };
 
-  selectedStudentHeaderFormatter = () => {
-    return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={this.areAllSelected()}
-        onChange={this.toggleSelectAll}
-      />
-    );
-  };
-
-  selectedStudentFormatter = (_, {rowData}) => {
-    return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={rowData.isChecked}
-        onChange={() => this.toggleStudentSelected(rowData.id)}
-      />
-    );
-  };
-
-  getColumns = sortable => {
-    return [
-      {
-        property: 'selected',
-        header: {
-          label: '',
-          formatters: [this.selectedStudentHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.checkboxCell
-            }
-          }
-        },
-        cell: {
-          formatters: [this.selectedStudentFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.checkboxCell
-            }
-          }
-        }
-      },
-      {
-        property: 'name',
-        header: {
-          label: i18n.name(),
-          props: {
-            id: 'uitest-name-header',
-            style: {
-              ...tableLayoutStyles.headerCell
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          props: {
-            className: 'uitest-name-cell',
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      }
-    ];
-  };
-
-  getSortingColumns = () => {
-    return this.state.sortingColumns || {};
-  };
-
-  // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = selectedColumn => {
-    this.setState({
-      sortingColumns: sort.byColumn({
-        sortingColumns: this.state.sortingColumns,
-        // Custom sortingOrder removes 'no-sort' from the cycle
-        sortingOrder: {
-          FIRST: 'asc',
-          asc: 'desc',
-          desc: 'asc'
-        },
-        selectedColumn
-      })
-    });
-  };
-
   isValidDestinationSection = section => {
     const isSameAsSource = section.id === this.props.currentSectionId;
     const isExternallyRostered = ![
@@ -269,30 +111,20 @@ class MoveStudents extends Component {
     return !isSameAsSource && !isExternallyRostered;
   };
 
-  renderOptions = () => {
+  getOptions = () => {
     const {sections} = this.props;
     let options = Object.keys(sections).map(sectionId => {
       const section = sections[sectionId];
       if (this.isValidDestinationSection(section)) {
-        return (
-          <option key={section.id} value={section.id}>
-            {section.name}
-          </option>
-        );
+        return {id: section.id, name: section.name};
       } else {
         return null;
       }
     });
     options = compact(options);
 
-    // Add initial empty and final 'other teacher' options
-    options.unshift(<option key="empty" value="" />);
-    options.push(
-      <option key={OTHER_TEACHER} value={OTHER_TEACHER}>
-        {i18n.otherTeacher()}
-      </option>
-    );
-
+    // Add final 'other teacher' options
+    options.push({id: OTHER_TEACHER, name: i18n.otherTeacher()});
     return options;
   };
 
@@ -346,34 +178,35 @@ class MoveStudents extends Component {
     }
   };
 
+  toggleAll = shouldSelectAll => {
+    let studentIds = [];
+
+    if (shouldSelectAll) {
+      studentIds = this.getStudentIds();
+    }
+
+    this.props.updateStudentTransfer({studentIds});
+  };
+
   render() {
     const {studentData, transferData, transferStatus} = this.props;
-
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
-      sortableOptions
-    );
-    const columns = this.getColumns(sortable);
-    const sortingColumns = this.getSortingColumns();
-    const decoratedRows = studentData.map(row => ({
+
+    const pendingTransfer = transferStatus.status === TransferStatus.PENDING;
+
+    const selectedStudentData = studentData.map(row => ({
       ...row,
       isChecked: transferData.studentIds.includes(row.id)
     }));
 
-    const sortedRows = sort.sorter({
-      columns,
-      sortingColumns,
-      sort: orderBy
-    })(decoratedRows);
-
     return (
       <div>
         <Button
+          __useDeprecatedTag
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.moveStudents()}
+          icon="sign-out"
         />
         <BaseDialog
           useUpdatedStyles
@@ -381,28 +214,22 @@ class MoveStudents extends Component {
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <div style={styles.container}>
-            <Table.Provider columns={columns} style={styles.table}>
-              <Table.Header />
-              <Table.Body rows={sortedRows} rowKey="id" />
-            </Table.Provider>
-            <div style={styles.rightColumn}>
+          <SortedTableSelect
+            rowData={selectedStudentData}
+            onRowChecked={id => this.toggleStudentSelected(id)}
+            options={this.getOptions()}
+            onChooseOption={this.onChangeSection}
+            descriptionText={i18n.selectStudentsToMove()}
+            optionsDescriptionText={`${i18n.moveToSection()}:`}
+            titleText={i18n.moveStudents()}
+            onSelectAll={shouldSelectAll => this.toggleAll(shouldSelectAll)}
+          >
+            <div>
               {transferStatus.status === TransferStatus.FAIL && (
                 <div id="uitest-error" style={styles.error}>
                   {transferStatus.error}
                 </div>
               )}
-              <div style={styles.infoText}>{i18n.selectStudentsToMove()}</div>
-              <label htmlFor="sections" style={styles.label}>
-                {`${i18n.moveToSection()}:`}
-              </label>
-              <select
-                name="sections"
-                style={styles.input}
-                onChange={this.onChangeSection}
-              >
-                {this.renderOptions()}
-              </select>
               {transferData.otherTeacher && (
                 <div id="uitest-other-teacher">
                   <label htmlFor="sectionCode" style={styles.label}>
@@ -444,20 +271,22 @@ class MoveStudents extends Component {
                 </div>
               )}
             </div>
-          </div>
+          </SortedTableSelect>
           <DialogFooter>
             <Button
-              id="uitest-cancel"
+              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              id="uitest-submit"
+              __useDeprecatedTag
               text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
-              disabled={this.isButtonDisabled()}
+              disabled={pendingTransfer || this.isButtonDisabled()}
+              isPending={pendingTransfer}
+              pendingText={i18n.movingStudents()}
             />
           </DialogFooter>
         </BaseDialog>
@@ -465,6 +294,32 @@ class MoveStudents extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: PADDING,
+    width: DIALOG_WIDTH,
+    marginLeft: -(DIALOG_WIDTH / 2)
+  },
+  label: {
+    paddingTop: PADDING / 2
+  },
+  input: {
+    marginLeft: PADDING / 2
+  },
+  sectionInput: {
+    width: INPUT_WIDTH
+  },
+  radioOption: {
+    paddingLeft: PADDING / 2,
+    fontFamily: '"Gotham 4r", sans-serif'
+  },
+  error: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.red,
+    paddingBottom: PADDING / 2
+  }
+};
 
 export const UnconnectedMoveStudents = MoveStudents;
 

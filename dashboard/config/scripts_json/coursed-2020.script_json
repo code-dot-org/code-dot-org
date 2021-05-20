@@ -1,0 +1,6407 @@
+{
+  "script": {
+    "name": "coursed-2020",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csf-20/coursed/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csf"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csf-20/coursed/vocab/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csf-20/coursed/standards/"
+        ],
+        [
+          "curriculumGuide",
+          "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
+        ]
+      ],
+      "has_lesson_plan": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}",
+      "version_year": "2020",
+      "curriculum_umbrella": "CSF",
+      "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "Our 2020 CS Fundamentals Lessons are Live!",
+          "details": "Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course D!",
+          "link": "https://curriculum.code.org/csf-20/coursed",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "is_course": true
+    },
+    "new_name": null,
+    "family_name": "coursed",
+    "serialized_at": "2021-05-03 23:55:43 UTC",
+    "seeding_key": {
+      "script.name": "coursed-2020"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csf_sequencing",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Sequencing"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "csf_events",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Events"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "csf_loops",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Loops"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "csf_conditionals",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Conditionals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "csf_binary",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Binary"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "csf_digcit",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Digital Citizenship"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "end_of_course_project",
+      "user_facing": true,
+      "position": 7,
+      "properties": {
+        "display_name": "End of Course Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2020"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Algorithms: Graph Paper Programming",
+      "name": "Graph Paper Programming",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Introduction to Online Puzzles",
+      "name": "Introduction to Online Puzzles",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Relay Programming",
+      "name": "Relay Programming",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Debugging in Collector",
+      "name": "Debugging with Laurel",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Events in Bounce",
+      "name": "Events in Bounce",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Build a Star Wars Game",
+      "name": "Build a Star Wars Game",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Dance Party",
+      "name": "Dance Party",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Loops in Ice Age",
+      "name": "Loops in Ice Age",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Loops in Artist",
+      "name": "Drawing Shapes with Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Nested Loops in Bee",
+      "name": "Nested Loops in Maze",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Conditionals with Cards",
+      "name": "Conditionals with Cards",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Conditionals in Bee",
+      "name": "If/Else with Bee",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "While Loops in Farmer",
+      "name": "While Loops in Farmer",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Until Loops in Maze",
+      "name": "Until Loops in Maze",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Conditionals & Loops in Harvester",
+      "name": "Harvesting with Conditionals",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Unplugged: Binary",
+      "name": "Binary Images",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Artist Binary",
+      "name": "Binary Images with Artist",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "Be A Super Digital Citizen",
+      "name": "Be A Super Digital Citizen",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Be A Super Digital Citizen",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2020"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GraphPaperProgramming-Unplugged_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GraphPaperProgramming-Unplugged_2020"
+        ],
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "GraphPaperProgramming-Unplugged_2020"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_ramp1_2020"
+        ],
+        "progression": "Maze Intro: Programming with Blocks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_ramp1_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_video_ramp1_2020"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp1_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_ramp1_2020"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp2_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_ramp2_2020"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp3_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_ramp3_2020"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_intro4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_intro4_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_intro4_2020"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5_2020"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_intro5a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_intro5a_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_intro5a_2020"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_maze_ramp5b_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5b_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5b_2020"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_intro5c_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_intro5c_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_intro5c_2020"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5d_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_ramp5d_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_ramp5d_2020"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "RelayProgramming-Unplugged_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "RelayProgramming-Unplugged_2020"
+        ],
+        "lesson.key": "Relay Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "RelayProgramming-Unplugged_2020"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_debugging_2020"
+        ],
+        "progression": "De-bugging with the Step Button"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_debugging_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_video_debugging_2020"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging1a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging1a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging1a_2020"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging2a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging2a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging2a_2020"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging3a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging3a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging3a_2020"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging4a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging4a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging4a_2020"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging5a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging5a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging5a_2020"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_collector_debugging6a_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging6a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging6a_2020"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging8a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging8a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging8a_2020"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_debugging9a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_debugging9a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_debugging9a_2020"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events1s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events1s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events1s_2020"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events2s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events2s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events2s_2020"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events5s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events5s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events5s_2020"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events6s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events6s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events6s_2020"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events7s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events7s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events7s_2020"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events10s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events10s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events10s_2020"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events11s_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events11s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events11s_2020"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bounce_events12s_2020"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bounce_events12s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bounce_events12s_2020"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_video_StarWarsProject_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_video_StarWarsProject_2020"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseE_video_StarWarsProject_2020"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_7_no_video"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_8"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_9"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_10"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_11"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_12"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_13"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_14"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "blockly:Studio:hoc2015_blockly_15"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1"
+        ],
+        "progression": "Warm Up"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid1"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_01"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid2"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_02"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_03"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3"
+        ],
+        "progression": "Measures"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid3"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04"
+        ],
+        "progression": "Measures"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_04"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05"
+        ],
+        "progression": "Measures"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_05"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06"
+        ],
+        "progression": "Measures"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_06"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4"
+        ],
+        "progression": "Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid4"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07"
+        ],
+        "progression": "Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_07"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08"
+        ],
+        "progression": "Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_08"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09"
+        ],
+        "progression": "Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_09"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5"
+        ],
+        "progression": "Wrap-up"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid5"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_10"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus1"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus3"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops1_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops1_2020"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops2_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops2_2020"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "scrat_loops_C-F_video_2020"
+        ],
+        "progression": "Using the Repeat Block"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "scrat_loops_C-F_video_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "scrat_loops_C-F_video_2020"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops3_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops3_2020"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops4_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops4_2020"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops6_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops6_2020"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops7_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops7_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops7_2020"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops8_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops8_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops8_2020"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops9_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops9_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops9_2020"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_iceage_loops10_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops10_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops10_2020"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops11_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops11_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops11_2020"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_iceage_loops12_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_iceage_loops12_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_iceage_loops12_2020"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_artistIntro_2020"
+        ],
+        "progression": "Artist Intro with JR Hildebrand"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_artistIntro_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_video_artistIntro_2020"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops1_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops1_2020"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops2_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops2_2020"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_2020"
+        ],
+        "progression": "Loops with the Artist"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_video_loopsArtist_2020"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops3_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops3_2020"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops4_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops4_2020"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops5_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops5_2020"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops6_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops6_2020"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops7_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops7_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops7_2020"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops8_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops8_2020"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ramp_artist_loops9_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ramp_artist_loops9_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ramp_artist_loops9_2020"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1a_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1a_2020"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops1_2020"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoops_2020"
+        ],
+        "progression": "Nested Loops with the Bee"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_video_nestedLoops_2020"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_predict1_2020"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops2_2020"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops3_2020"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops4_2020"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops5_2020"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_nestedLoops6_2020"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_nestedLoops7_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops7_2020"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops8_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops8_2020"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_2020"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_nestedLoops9_predict2_2020"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_harvester_nested_loops_challenge1_2020"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_collector_nested_loops_challenge2_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_collector_nested_loops_challenge2_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_collector_nested_loops_challenge2_2020"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ConditionalsWithCards-Unplugged_2020"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "ConditionalsWithCards-Unplugged_2020"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2020"
+        ],
+        "progression": "Conditionals: If Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVid1_2020"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals1_predict1_2020"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals2_2020"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals3_2020"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals4_2020"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals5_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals5_2020"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals6_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals6_2020"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2020"
+        ],
+        "progression": "Conditionals: If and If/Else Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionalsVidIfElse_2020"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals7_2020"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7_predict2_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals7_predict2_2020"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals8_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals8_2020"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals9_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals9_2020"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals10_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals10_2020"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge1_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals_challenge1_2020"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge2_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_bee_conditionals_challenge2_2020"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while1_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while1_2020"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while2_2020"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while3_2020"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_2020"
+        ],
+        "progression": "While Loops with the Farmer"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_video_whileIntro_2020"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while4_predict1_2020"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while4_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while4_2020"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while5_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while5_2020"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while6_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while6_2020"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while7_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while7_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while7_2020"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_farmer_while8_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while8_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while8_2020"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while9_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while9_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while9_2020"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while10_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while10_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while10_2020"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while10_predict2_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while10_predict2_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while10_predict2_2020"
+      ]
+    },
+    {
+      "chapter": 124,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_while_challenge1_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_while_challenge1_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_while_challenge1_2020"
+      ]
+    },
+    {
+      "chapter": 125,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until1_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until1_2020"
+      ]
+    },
+    {
+      "chapter": 126,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_2020"
+        ],
+        "progression": "Repeat Until Statements"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_video_repeatUntil_2020"
+      ]
+    },
+    {
+      "chapter": 127,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until2_predict1_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until2_predict1_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until2_predict1_2020"
+      ]
+    },
+    {
+      "chapter": 128,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until3_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until3_2020"
+      ]
+    },
+    {
+      "chapter": 129,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until4_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until4_2020"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until5_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until5_2020"
+      ]
+    },
+    {
+      "chapter": 131,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until6_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until6_2020"
+      ]
+    },
+    {
+      "chapter": 132,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until7_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until7_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until7_2020"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_maze_until9_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until9_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until9_2020"
+      ]
+    },
+    {
+      "chapter": 134,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until10_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until10_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until10_2020"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_maze_until10_predict2_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_maze_until10_predict2_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_maze_until10_predict2_2020"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "harvester_skinOverview_video_2020"
+        ],
+        "progression": "The Harvester"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "harvester_skinOverview_video_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "harvester_skinOverview_video_2020"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops1_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops1_2020"
+      ]
+    },
+    {
+      "chapter": 138,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops2_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops2_2020"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops3_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops3_2020"
+      ]
+    },
+    {
+      "chapter": 140,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops4_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops4_2020"
+      ]
+    },
+    {
+      "chapter": 141,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops5_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops5_2020"
+      ]
+    },
+    {
+      "chapter": 142,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops6_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops6_2020"
+      ]
+    },
+    {
+      "chapter": 143,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseD_farmer_condLoops7_2020"
+        ],
+        "progression": "Challenge"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops7_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops7_2020"
+      ]
+    },
+    {
+      "chapter": 144,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops8_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops8_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops8_2020"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops9_2020"
+      ]
+    },
+    {
+      "chapter": 146,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9_predict1_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9_predict1_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops9_predict1_2020"
+      ]
+    },
+    {
+      "chapter": 147,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops_challenge1_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge1_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops_challenge1_2020"
+      ]
+    },
+    {
+      "chapter": 148,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops_challenge2_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge2_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_farmer_condLoops_challenge2_2020"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BinaryImages-Unplugged_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryImages-Unplugged_2020"
+        ],
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "BinaryImages-Unplugged_2020"
+      ]
+    },
+    {
+      "chapter": 150,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_external_binary1_2018_2019_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_external_binary1_2018_2019_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_external_binary1_2018_2019_2020"
+      ]
+    },
+    {
+      "chapter": 151,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary1_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary1_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary1_2020"
+      ]
+    },
+    {
+      "chapter": 152,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary2_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary2_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary2_2020"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary3_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary3_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary3_2020"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary4_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary4_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary4_2020"
+      ]
+    },
+    {
+      "chapter": 155,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary5_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary5_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary5_2020"
+      ]
+    },
+    {
+      "chapter": 156,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary6_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary6_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary6_2020"
+      ]
+    },
+    {
+      "chapter": 157,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary7_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary7_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary7_2020"
+      ]
+    },
+    {
+      "chapter": 158,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary8_2020"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary8_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary8_2020"
+      ]
+    },
+    {
+      "chapter": 159,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary8_predict1_2020"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary8_predict1_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary8_predict1_2020"
+      ]
+    },
+    {
+      "chapter": 160,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binaryFP_2020"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binaryFP_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binaryFP_2020"
+      ]
+    },
+    {
+      "chapter": 161,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary_challenge1_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge1_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary_challenge1_2020"
+      ]
+    },
+    {
+      "chapter": 162,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_artist_binary_challenge2_2020"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge2_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_artist_binary_challenge2_2020"
+      ]
+    },
+    {
+      "chapter": 163,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csf_be_a_super_digital_citizen"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csf_be_a_super_digital_citizen"
+        ],
+        "lesson.key": "Be A Super Digital Citizen",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "csf_be_a_super_digital_citizen"
+      ]
+    },
+    {
+      "chapter": 164,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_project_exemplars_2020_2021"
+        ],
+        "progression": "Example projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_project_exemplars_2020_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_project_exemplars_2020_2021"
+      ]
+    },
+    {
+      "chapter": 165,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_EOC_2020"
+        ],
+        "progression": "Create your project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_EOC_2020"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2020"
+      },
+      "level_keys": [
+        "courseD_EOC_2020"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "GraphPaperProgramming-Unplugged_2020",
+        "script_level.level_keys": [
+          "GraphPaperProgramming-Unplugged_2020"
+        ],
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ramp1_2020",
+        "script_level.level_keys": [
+          "courseD_video_ramp1_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp1_2020",
+        "script_level.level_keys": [
+          "courseD_maze_ramp1_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp2_2020",
+        "script_level.level_keys": [
+          "courseD_maze_ramp2_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp3_2020",
+        "script_level.level_keys": [
+          "courseD_maze_ramp3_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_intro4_2020",
+        "script_level.level_keys": [
+          "courseD_maze_intro4_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5_2020",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_intro5a_2020",
+        "script_level.level_keys": [
+          "courseD_maze_intro5a_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5b_2020",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5b_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_intro5c_2020",
+        "script_level.level_keys": [
+          "courseD_maze_intro5c_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_ramp5d_2020",
+        "script_level.level_keys": [
+          "courseD_maze_ramp5d_2020"
+        ],
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "RelayProgramming-Unplugged_2020",
+        "script_level.level_keys": [
+          "RelayProgramming-Unplugged_2020"
+        ],
+        "lesson.key": "Relay Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_debugging_2020",
+        "script_level.level_keys": [
+          "courseD_video_debugging_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging1a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging1a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging2a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging2a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging3a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging3a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging4a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging4a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging5a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging5a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging6a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging6a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging8a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging8a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_debugging9a_2020",
+        "script_level.level_keys": [
+          "courseD_collector_debugging9a_2020"
+        ],
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events1s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events1s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events2s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events2s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events5s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events5s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events6s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events6s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events7s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events7s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events10s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events10s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events11s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events11s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bounce_events12s_2020",
+        "script_level.level_keys": [
+          "courseD_bounce_events12s_2020"
+        ],
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_StarWarsProject_2020",
+        "script_level.level_keys": [
+          "courseE_video_StarWarsProject_2020"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_7_no_video",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_8",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_9",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_10",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_11",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_12",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_13",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_14",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Studio:hoc2015_blockly_15",
+        "script_level.level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ],
+        "lesson.key": "Build a Star Wars Game",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid1",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_01",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid2",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_02",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_03",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid3",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_04",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_05",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_06",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid4",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_07",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_08",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_09",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid5",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_10",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus1",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus3",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops1_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops1_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops2_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops2_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "scrat_loops_C-F_video_2020",
+        "script_level.level_keys": [
+          "scrat_loops_C-F_video_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops3_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops3_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops4_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops4_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops6_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops6_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops7_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops7_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops8_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops8_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops9_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops9_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops10_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops10_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops11_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops11_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_iceage_loops12_2020",
+        "script_level.level_keys": [
+          "courseD_iceage_loops12_2020"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_artistIntro_2020",
+        "script_level.level_keys": [
+          "ramp_video_artistIntro_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops1_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops1_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops2_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops2_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist_2020",
+        "script_level.level_keys": [
+          "ramp_video_loopsArtist_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops3_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops3_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops4_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops4_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops5_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops5_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops6_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops6_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops7_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops7_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops8_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops8_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_artist_loops9_2020",
+        "script_level.level_keys": [
+          "ramp_artist_loops9_2020"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1a_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1a_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops1_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops1_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_nestedLoops_2020",
+        "script_level.level_keys": [
+          "courseD_video_nestedLoops_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_predict1_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops2_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops2_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops3_2020",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops3_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops4_2020",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops4_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops5_2020",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops5_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_nestedLoops6_2020",
+        "script_level.level_keys": [
+          "courseD_maze_nestedLoops6_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops7_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops7_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops8_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops8_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_nestedLoops9_predict2_2020",
+        "script_level.level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_harvester_nested_loops_challenge1_2020",
+        "script_level.level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_collector_nested_loops_challenge2_2020",
+        "script_level.level_keys": [
+          "courseD_collector_nested_loops_challenge2_2020"
+        ],
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ConditionalsWithCards-Unplugged_2020",
+        "script_level.level_keys": [
+          "ConditionalsWithCards-Unplugged_2020"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVid1_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVid1_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals1_predict1_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals1_predict1_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals2_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals2_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals3_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals3_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals4_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals4_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals5_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals5_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals6_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals6_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionalsVidIfElse_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals7_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals7_predict2_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals7_predict2_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals8_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals8_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals9_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals9_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals10_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals10_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals_challenge1_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge1_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_bee_conditionals_challenge2_2020",
+        "script_level.level_keys": [
+          "courseD_bee_conditionals_challenge2_2020"
+        ],
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while1_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while1_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while2_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while2_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while3_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while3_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_whileIntro_2020",
+        "script_level.level_keys": [
+          "courseD_video_whileIntro_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4_predict1_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while4_predict1_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while4_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while4_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while5_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while5_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while6_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while6_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while7_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while7_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while8_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while8_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while9_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while9_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while10_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while10_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while10_predict2_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while10_predict2_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_while_challenge1_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_while_challenge1_2020"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until1_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until1_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_repeatUntil_2020",
+        "script_level.level_keys": [
+          "courseD_video_repeatUntil_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until2_predict1_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until2_predict1_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until3_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until3_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until4_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until4_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until5_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until5_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until6_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until6_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until7_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until7_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until9_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until9_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until10_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until10_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_maze_until10_predict2_2020",
+        "script_level.level_keys": [
+          "courseD_maze_until10_predict2_2020"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "harvester_skinOverview_video_2020",
+        "script_level.level_keys": [
+          "harvester_skinOverview_video_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops1_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops1_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops2_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops2_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops3_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops3_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops4_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops4_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops5_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops5_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops6_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops6_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops7_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops7_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops8_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops8_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops9_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops9_predict1_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops9_predict1_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops_challenge1_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge1_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_farmer_condLoops_challenge2_2020",
+        "script_level.level_keys": [
+          "courseD_farmer_condLoops_challenge2_2020"
+        ],
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BinaryImages-Unplugged_2020",
+        "script_level.level_keys": [
+          "BinaryImages-Unplugged_2020"
+        ],
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_external_binary1_2018_2019_2020",
+        "script_level.level_keys": [
+          "courseD_external_binary1_2018_2019_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary1_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary1_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary2_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary2_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary3_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary3_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary4_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary4_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary5_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary5_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary6_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary6_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary7_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary7_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary8_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary8_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary8_predict1_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary8_predict1_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binaryFP_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binaryFP_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary_challenge1_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge1_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_artist_binary_challenge2_2020",
+        "script_level.level_keys": [
+          "courseD_artist_binary_challenge2_2020"
+        ],
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "csf_binary",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csf_be_a_super_digital_citizen",
+        "script_level.level_keys": [
+          "csf_be_a_super_digital_citizen"
+        ],
+        "lesson.key": "Be A Super Digital Citizen",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_project_exemplars_2020_2021",
+        "script_level.level_keys": [
+          "courseD_project_exemplars_2020_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_EOC_2020",
+        "script_level.level_keys": [
+          "courseD_EOC_2020"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2020"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

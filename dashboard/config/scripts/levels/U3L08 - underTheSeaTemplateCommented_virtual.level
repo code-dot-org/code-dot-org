@@ -1,0 +1,114 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T16:56:09.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "moveForward": null,
+      "moveBackward": null,
+      "move": null,
+      "moveTo": null,
+      "dot": null,
+      "turnLeft": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnRight": {
+        "paramButtons": {
+          "maxArgs": 1,
+          "minArgs": 1
+        }
+      },
+      "turnTo": null,
+      "arcRight": null,
+      "arcLeft": null,
+      "getX": null,
+      "getY": null,
+      "getDirection": null,
+      "penUp": null,
+      "penDown": null,
+      "penWidth": null,
+      "penColor": null,
+      "show": null,
+      "hide": null,
+      "speed": null,
+      "randomNumber_min_max": null,
+      "penRGB": {
+        "paramButtons": {
+          "maxArgs": 4,
+          "minArgs": 4
+        },
+        "params": [
+          "__",
+          "__",
+          "__",
+          "__"
+        ],
+        "paletteParams": [
+          "r",
+          "g",
+          "b",
+          "a"
+        ]
+      },
+      "functionParams_none": null,
+      "functionParams_n": null,
+      "callMyFunction": null,
+      "callMyFunction_n": null,
+      "comment": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "start_blocks": "// Prepare Turtle to Draw\r\nhide();\r\npenUp();\r\n\r\n// First draw the background\r\ndrawBackground();\r\n\r\n\r\nmoveTo(150,400);\r\ndrawStarfish();\r\n\r\n// Draw all the seagrass on bottom of screen\r\nmoveTo(50,450);\r\nturnTo(0);\r\ndrawSeagrass();\r\n\r\n// Draw all the fish\r\nmoveTo(100,100);\r\ndrawFish();\r\n\r\n// Make the background by drawing a large dot\r\nfunction drawBackground(){\r\n  penColor(\"DarkBlue\");\r\n  dot(1000);\r\n}\r\n\r\n// Draw a five pointed star with a wide pen.\r\nfunction drawStarfish(){\r\n  // Setting up the pen\r\n  penRGB(255,0,255);\r\n  penWidth(20);\r\n  penDown();\r\n  \r\n  turnTo(0);\r\n  moveForward(60);\r\n  turnRight(144);\r\n  moveForward(60);\r\n  turnRight(144);\r\n  moveForward(60);\r\n  turnRight(144);\r\n  moveForward(60);\r\n  turnRight(144);\r\n  moveForward(60);\r\n  turnRight(144);\r\n  penUp();\r\n}\r\n\r\n// Switches between left and right arcs to make sea grass\r\nfunction drawSeagrass(){\r\n  // Setting up the pen\r\n  penRGB(0,255,0);\r\n  penWidth(10);\r\n  penDown();\r\n  \r\n  // Draw four arcs to make grass\r\n  arcLeft(30,100);\r\n  arcRight(60,100);\r\n  arcLeft(60,100);\r\n  arcRight(60,100);\r\n  \r\n  penUp();\r\n}\r\n\r\n// Draw a single fish at current turtle location\r\nfunction drawFish(){\r\n  // Setting up the pen\r\n  penRGB(250,125,0);\r\n  penWidth(30);\r\n  penDown();\r\n  \r\n  // Fish body\r\n  dot(30);\r\n  turnTo(90);\r\n  moveForward(30);\r\n  \r\n  // Fish tail\r\n  turnLeft(30);\r\n  moveForward(30);\r\n  turnRight(120);\r\n  moveForward(30);\r\n  turnRight(120);\r\n  moveForward(30);\r\n  turnRight(120);\r\n  \r\n  penUp();\r\n}\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "slider_speed": "1.0",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "true",
+    "autocomplete_palette_apis_only": "true",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "execute_palette_apis_only": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "debugger_disabled": "false",
+    "fail_on_lint_errors": "false",
+    "instructions_important": "false",
+    "show_debug_watch": "false",
+    "makerlab_enabled": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
+    "parent_level_id": 16941,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-24 17:57:52 +0000\",\"changed\":[\"name\",\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-10-25 19:39:43 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-10-25 19:40:28 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

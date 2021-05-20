@@ -1,7 +1,5 @@
 ---
 title: Proširi riječ
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

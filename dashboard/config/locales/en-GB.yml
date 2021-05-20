@@ -14,6 +14,7 @@ en-GB:
         current_password: Current password
         age: Age
         gender: Gender
+  beta: beta
   hello: Hello World
   submit: Submit
   next_page: Next page
@@ -34,6 +35,7 @@ en-GB:
     type:
       email: Email
   crud:
+    edit: editar
     submit: Submit
   nav:
     user:
@@ -56,12 +58,6 @@ en-GB:
   project:
     name: Name
     saved: Saved
-  flex_category:
-    csf_loops: Loops
-    csf_variables: Variables
-    csp_variables: Variables
-    csp_lists: Lists
-    csp_loops: Loops
   pd:
     form_labels:
       email: Email
@@ -72,5 +68,4 @@ en-GB:
       email_opt_in:
         opt_in_yes: 'Yes'
         opt_in_no: 'No'
-  gdpr_dialog:
-    true: 'Yes'
+  copy: Copy

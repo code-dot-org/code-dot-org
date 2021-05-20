@@ -3,237 +3,279 @@ pt-PT:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Múltipla Escolha
-        questions:
-        - text: Escolha um algoritmo para a imagem fornecida.
         answers:
         - text: Comece com um quadrado<br/>Coloque um triângulo acima do quadrado<br/>Coloque
             um triângulo abaixo do quadrado
-        - {}
+        - text: Comece com um quadrado<br/>Coloque um triângulo à direita do quadrado<br/>Coloque
+            um paralelogramo abaixo do quadrado<br/>Coloque um triângulo à direita
+            do paralelogramo
+          correct: true
         - text: Comece com um quadrado<br/>Coloque um paralelogramo acima do quadrado<br/>Coloque
             um triângulo à direita do paralelogramo
         - text: Comece com um quadrado<br/>Coloque um triângulo abaixo do quadrado<br/>Coloque
             um paralelogramo à direita do triângulo
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
+        questions:
+        - text: Escolha um algoritmo para a imagem fornecida.
+        title: Escolha múltipla
       2-3 Algorithms Multi 2:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         content1: Comece com um triângulo<br/>Coloque um quadrado abaixo do triângulo<br/>Coloque
           outro triângulo abaixo do quadrado
         questions:
         - text: Qual imagem <em>não</em> segue esse algoritmo?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       2-3 Big Event Match 1:
-        title: Associação
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Faça a correspondência da combinação de botões para os movimentos
           de dança.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Binary Match 1:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Associação
+      2-3 Binary Match 1:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Use a chave para relacionar cada código a sua letra
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Associação
       2-3 Conditionals Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: De acordo com as regras do jogo, qual conjunto de cartas foi marcado
             corretamente?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       2-3 Getting Loopy Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Como simplificarias esta sequência sem usares ciclos?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       2-3 Graph Paper Match 1:
-        title: Associação
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Associe a grelha ao programa.
         questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        title: Associação
       2-3 Graph Paper Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Que programa cria esta imagem?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       2-3 Maze Match 2:
-        title: Jogo do labirinto
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         content1: Associe os desafios aos blocos
-        pre_title: Instruções
         questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        title: Jogo do labirinto
       2-3 Maze Multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
+        questions:
+        - text: Que conjunto de blocos me leva ao porco?
         title: Labirinto - Pergunta de escolha múltipla
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       2-3 Relay Programming Multi 2:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
         - text: Qual combinação entre imagem e programa não contém erros?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       2-3 artist debug multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 artist functions multi 1:
-        title: Funções do Artista - Múltipla escolha 1
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
         questions:
         - text: Escolha os blocos corretos para desenhar a imagem usando as funções
             dadas
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Funções do Artista - Múltipla escolha 1
       2-3 artist loops match 1:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Associe o loop à forma
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: Repetições do Artista Associação 1
       2-3 artist loops multi 1:
-        title: Laços do Artista - Múltipla escolha
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Qual forma é criada por esse laço?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 artist loops multi 2:
         title: Laços do Artista - Múltipla escolha
+      2-3 artist loops multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Qual forma é criada por esse programa?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Laços do Artista - Múltipla escolha
       2-3 artist match 1:
-        title: O Artista - Associação
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Associe a forma com os blocos que a completam.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        title: O Artista - Associação
       2-3 bee conditionals multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Qual comparação abaixo é verdadeira?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee conditionals multi 3:
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: Escolha os melhores blocos.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: Os Laços da Abelha - Múltipla escolha 1
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Quais blocos coletam todo o néctar?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Os Laços da Abelha - Múltipla escolha 1
       2-3 maze match 1:
-        title: Labirinto Um
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Associe os desafios aos blocos
         questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
+        title: Labirinto Um
       2-3 maze multi 1:
-        title: Labirinto de Múltipla Escolha Um
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Qual destes conjuntos de blocos é a resposta correta?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirinto de Múltipla Escolha Um
       4-5 Algorithms Match 1:
-        title: Associação
+        answers:
+        - text: "<h4>Define a pontuação do jogador 1 como 0</h4>"
+        - text: "<h4>O jogador 1 joga o dado</h4>"
+        - text: "<h4>Adiciona o resultado do jogador 1 à pontuação total</h4>"
+        - text: "<h4>Compara a pontuação dos jogadores para ver quem vence</h4>"
         content1: Associe os passos do Jogo de Dados à ordem em que devem aparecer
           no algoritmo.
         questions:
@@ -241,22 +283,23 @@ pt-PT:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Define a pontuação do jogador 1 como 0</h4>"
-        - text: "<h4>O jogador 1 joga o dado</h4>"
-        - text: "<h4>Adiciona o resultado do jogador 1 à pontuação total</h4>"
-        - text: "<h4>Compara a pontuação dos jogadores para ver quem vence</h4>"
+        title: Associação
       4-5 Algorithms Multi 1:
-        title: Múltipla Escolha
-        questions:
-        - text: Qual desses itens é o mais difícil para ser descrito com um algoritmo?
         answers:
         - text: Lavar os dentes
         - text: Fazendo cookies
         - text: Fazer compras a partir de uma lista
         - text: Banana
+          correct: true
+        questions:
+        - text: Qual desses itens é o mais difícil para ser descrito com um algoritmo?
+        title: Escolha múltipla
       4-5 Computational Thinking Match 1:
-        title: Associação
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Cada um desses veículos foi decomposto em partes menores. Associe
           cada veículo com sua lista de partes correta.
         questions:
@@ -264,79 +307,94 @@ pt-PT:
         - text: "<h3>Rodas/lado: 2 <br/>janelas/lado: 1</h3>"
         - text: "<h3>Rodas/lado: 2 <br/>janelas/lado: 1</h3>"
         - text: "<h3>Rodas/lado: 2 <br/>janelas/lado: 1</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Associação
       4-5 Computational Thinking Multi 1:
-        title: Múltipla Escolha
-        questions:
-        - text: Seattle é uma cidade grande.<br/>Eugene é uma cidade média<br/>Hillview
-            é uma cidade pequena.
         answers:
         - text: Seattle _____ uma _____ _____.
         - text: _____ é uma cidade _____.
+          correct: true
         - text: _____ é uma _____ _____.
         - text: Eugene é uma cidade _____.
+        content1: "? Apresentamos aqui três frases. Qual dos modelos abaixo é a abstração
+          correta para que as três aceitem o mesmo padrão do modelo?"
+        questions:
+        - text: Seattle é uma cidade grande.<br/>Eugene é uma cidade média<br/>Hillview
+            é uma cidade pequena.
+        title: Escolha múltipla
       4-5 Crowdsourcing Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: Qual dessas figuras representa melhor o crowdsourcing?
-        answers:
-        - {}
-        - {}
+        title: Escolha múltipla
       4-5 Crowdsourcing Multi 2:
-        title: Múltipla Escolha
-        questions:
-        - text: Qual dessas atividades seria melhor para praticar crowdsourcing?
         answers:
         - text: Limpando seu quarto
+          correct: true
         - text: Comendo a sobremesa
         - text: Penteando o cabelo
         - text: Lavando o rosto
-      4-5 Digital Footprint Multi 1:
-        title: Múltipla Escolha
         questions:
-        - text: Qual é a única informação, de entre as seguintes, que podes partilhar
-            na Internet?
+        - text: Qual dessas atividades seria melhor para praticar crowdsourcing?
+        title: Escolha múltipla
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: O teu aniversário
         - text: A tua comida favorita
+          correct: true
         - text: A tua morada
         - text: O número do cartão de crédito dos teus pais
-      4-5 Internet Multi 1:
-        title: Múltipla Escolha
         questions:
-        - text: Quando você tenta se conectar à code.org, para qual endereço IP o
-            DNS provavelmente vai direcioná-lo?
+        - text: Qual é a única informação, de entre as seguintes, que podes partilhar
+            na Internet?
+        title: Escolha múltipla
+      4-5 Internet Multi 1:
         answers:
         - text: 23.23.224.106
         - text: 54.209.61.132
         - text: 64.14.68.10
         - text: 54.243.71.82
+          correct: true
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
+        questions:
+        - text: Quando você tenta se conectar à code.org, para qual endereço IP o
+            DNS provavelmente vai direcioná-lo?
+        title: Escolha múltipla
       4-5 Internet Multi 2:
-        title: Múltipla Escolha
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Se o DNS o mandou para a página com endereço IP 100.42.50.110, em
             qual site você está?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       4-5 Songwriting Multi 1:
-        title: Múltipla Escolha
-        questions:
-        - {}
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
-        - {}
-        - {}
+          correct: true
+        - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
+            Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's
+            in the buttermilk, <br/>Shoo, fly, shoo,
+        - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
+            <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
+            <br/>Skip to my Lou, my darlin.
+        questions:
+        - text: Qual é a maior parte desta música que consegues definir como sendo
+            o refrão de forma a que se repita cada vez que a música for chamada?
+        title: Escolha múltipla
       4-5 Suncatchers Match 1:
-        title: Associação
+        answers:
+        - {}
+        - {}
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Associe cada programa à palavra que ele produz, usando o grupo de
           habilidades fornecidas.
         questions:
@@ -344,216 +402,315 @@ pt-PT:
         - {}
         - {}
         - {}
+        title: Associação
+      4-5 Suncatchers Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
-      4-5 Suncatchers Multi 1:
-        title: Múltipla Escolha
         questions:
         - text: Qual dos programas abaixo <em>não</em> realiza a mesma sequência exata
             do Programa 1?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       4-5 artist loops multi 1:
-        title: Laços do Artista - Múltipla escolha
+        answers:
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
         questions:
         - text: Quais blocos vão criar o desenho?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Laços do Artista - Múltipla escolha
       4-5 artist multi 1:
-        title: O Artista - Múltipla escolha
+        answers:
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: Quais blocos desenham um retângulo com um perímetro de 100?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 artist multi 2:
         title: O Artista - Múltipla escolha
+      4-5 artist multi 2:
+        answers:
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Qual desenho é simétrico?
+        title: O Artista - Múltipla escolha
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: Condicionais da abelha - Múltipla escolha
+        content2: ": Uma flor roxa deve ter 3, 2 ou 1 néctar, mas você não sabe quantos.
+          Quais blocos verificam corretamente e coletam todo o néctar de uma flor
+          roxa?"
         questions:
         - text: Escolha os melhores blocos.
+        title: Condicionais da abelha - Múltipla escolha
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: Depuração da abelha - Múltipla escolha
         questions:
         - text: Qual versão da função vai funcionar?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Depuração da abelha - Múltipla escolha
       4-5 bee loops multi 1:
-        title: Os Laços da Abelha - Múltipla escolha
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Quais blocos vão resolver o desafio?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Os Laços da Abelha - Múltipla escolha
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Quais blocos resolvem o desafio?
         title: Condicionais do labirinto - Múltipla escolha
-        questions:
-        - text: Quais blocos resolvem o desafio?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Jogo do labirinto
-        content1: Associe os desafios aos blocos
-        pre_title: Instruções
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
+        content1: Associe os desafios aos blocos
+        questions:
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        title: Jogo do labirinto
       4-5 maze multi 1:
-        title: Labirinto - Pergunta de escolha múltipla
+        answers:
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: Quais blocos resolvem o desafio?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirinto - Pergunta de escolha múltipla
       Begin planning your project:
-        title: título
         content1: descrição
       Begin planning your project_2018:
         content1: descrição
       Begin planning your project_2018_2019:
         content1: descrição
+      Begin planning your project_2018_2019_2020:
+        content1: descrição
       CSD Header Size MC:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+      CSD U1 Lesson 5 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição aprenderás sobre os diferentes dispositivos de entrada e saída usados por computadores e os tipos de informação que eles enviam e recebem.
+
+          ## Vocabulário
+
+          * **Entrada** - Um dispositivo ou componente que permite que informações sejam dadas a um computador
+          * **Saída** - Qualquer dispositivo ou componente que recebe informações dum computador
+
+
+          ## Recursos
+
+          * [Entrada e Saída - Guia da Atividade](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+      CSD U1 Lesson 6 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição aprenderás como o processamento é usado por humanos e computadores para transformar entradas em saídas.
+
+          ## Vocabulário
+
+          * **Algoritmo** - Uma sequência precisa de instruções para processos que conseguem ser executados por um computador
+
+          ## Recursos
+
+          * [Algoritmo de Ordenação de Cartões - Guia da Atividade](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+      CSD U1 Lesson 7 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição aprenderás sobre os tipos de informações que os computadores armazenam e de como o armazenamento é uma parte crítica do processamento de informação.
+
+          ## Recursos
+
+          * [Armazenamento e Processamento - Guia da Atividade](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição explorarás as maneiras de que as aplicações processam diferentes tipos de informação de modo a resolver problemas.
+
+          ## Recursos
+
+          * [Exploração da Aplicação - Guia da Atividade](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      CSD U1 Lesson 9 Overview:
+        markdown: |
+          # Visão Geral
+
+          Para este projeto, elaborarás a tua própria aplicação que resolve um problema que chegarás a definir.
+
+          ## Recursos
+
+          *[Aplicações e Solução do Problema - Guia do Projeto](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
+          *[Aplicações e Solução do Problema - Análise de Par](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          *[Aplicações e Solução do Problema - Rubrica](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
-        title: título
         content1: descrição
       CSD U2 Design Project_2018:
-        title: título
         content1: descrição
       CSD U2 Design Project_2018_2019:
-        title: título
+        content1: descrição
+      CSD U2 L1 Overview:
         content1: descrição
       CSD U2 L2 Overview:
-        title: título
         content1: descrição
       CSD U2 L3 Overview:
-        title: título
         content1: descrição
       CSD U2 L4 Overview:
-        title: título
         content1: descrição
       CSD U2 L5 Overview:
-        title: título
         content1: descrição
       CSD U2 L6 Overview:
-        title: título
         content1: descrição
       CSD U2 Lesson 6 Overview:
         content1: descrição
       CSD U2 expand project:
-        title: título
         content1: descrição
       CSD U2 expand project_2018:
-        title: título
         content1: descrição
       CSD U2 expand project_2018_2019:
-        title: título
         content1: descrição
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Há um espaço no nome do ficheiro
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
       CSD U2 project guide:
         content1: descrição
       CSD U2 project guide_2018:
@@ -561,71 +718,71 @@ pt-PT:
       CSD U2 project guide_2018_2019:
         content1: descrição
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: título
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: título
       CSD U3 Boolean MC_2018:
-        title: título
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: título
       CSD U3 Boolean MC_2018_2019:
-        title: título
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: título
       CSD U3 Card Examples_2018:
         content1: descrição
       CSD U3 Card Examples_2018_2019:
@@ -634,122 +791,119 @@ pt-PT:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: título
         content1: descrição
       CSD U3 combining rep_2018:
-        title: título
         content1: descrição
       CSD U3 combining rep_2018_2019:
-        title: título
         content1: descrição
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -767,13 +921,10 @@ pt-PT:
       CSD U3 platform intro_2018_2019:
         content1: descrição
       CSD U5 Encryption 1:
-        title: título
         content1: descrição
       CSD U5 Encryption 1_2018:
-        title: título
         content1: descrição
       CSD U5 Encryption 1_2018_2019:
-        title: título
         content1: descrição
       CSD U5 Encryption 2:
         content1: descrição
@@ -782,7 +933,6 @@ pt-PT:
       CSD U5 Encryption 2_2018_2019:
         content1: descrição
       CSD U5 L13 SFLP Interpreting Data:
-        title: título
         content1: descrição
       CSD U5 crosstab warmup:
         content1: descrição
@@ -791,22 +941,16 @@ pt-PT:
       CSD U5 crosstab warmup_2018_2019:
         content1: descrição
       CSD U5 data visualization:
-        title: título
         content1: descrição
       CSD U5 data visualization_2018:
-        title: título
         content1: descrição
       CSD U5 data visualization_2018_2019:
-        title: título
         content1: descrição
       CSD U5 student record:
-        title: título
         content1: descrição
       CSD U5 student record_2018:
-        title: título
         content1: descrição
       CSD U5 student record_2018_2019:
-        title: título
         content1: descrição
       CSD U6 LED create intro:
         content1: descrição
@@ -815,28 +959,28 @@ pt-PT:
       CSD U6 LED create intro_2018_2019:
         content1: descrição
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: descrição
@@ -845,917 +989,1611 @@ pt-PT:
       CSD U6 final intro_2018_2019:
         content1: descrição
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Continua a dançar!\n\nPara a parte 2, tu vais criar o teu próprio
+          projeto. Não há quebra-cabeças aqui - em vez disso, há vários projetos que
+          mostram maneiras diferentes de fazer festas de dança mais complexas. \n\nPodes
+          fazer esses níveis em qualquer _ordem_. Dá uma vista de olhos de como é
+          que algo foi feito num nível anterior ou combina conceitos entre os projetos.
+          Experimenta-os a todos, escolhe o teu favorito e dedica o teu tempo a trabalhar
+          a esse projeto para que se torne teu.\n\n<a class=\"btn btn-large btn-primary
+          next-stage submitButton pull-right\">Continuar</a>\n\n<div class=\"clearfix\">\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"2\">\n<h2>\nPonham-se em
+          formação\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nPara onde é
+          que eles foram?\n</h2>\n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nMaltas da Dança\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nSemínimas\n</h2>\n\n<img
+          src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nGrave, Médio
+          e Agudo\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\">\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nAcelera-a, Abranda-a\n</h2>\n\n<img
+          src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\">\n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Continua a dançar!
+
+          Para a parte 2, irás criar o teu próprio projeto. Não há quaisquer puzzles aqui, em vez disso, há uma variedade de projetos que mostram diferentes formas de criar festas de dança mais complexas.
+
+          Poderás completar estes níveis _em qualquer ordem_. Dá uma vista de olhos para veres em como algo foi feito num nível anterior, ou combina conceitos entre os projetos. Experimenta-os a todos, escolhe o teu favorito e passa o teu tempo a adicionar coisas ao teu projeto para torná-lo teu.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Continuar</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Para a frente e para trás
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Mais botões
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Ponham-se em formação
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Para onde é que eles foram?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Maltas da Dança
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Semínimas
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Grave, Médio e Agudo
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Acelera-a, abranda-a
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup:
         content1: descrição
       Internet Simulator Setup 2:
-        title: título
         content1: descrição
       Internet Simulator Setup 3:
         content1: descrição
       K-1 Artist 1 Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Quais blocos resolvem o desafio?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Artist 1 Multi 2:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Quais blocos formam o quadrado?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Artist 2 Match 2:
-        title: Associação
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Associe as formas com base no tipo.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Múltipla Escolha
-        questions:
-        - text: Quanto néctar isso representa?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Múltipla Escolha
-        questions:
-        - text: Quanto néctar isso representa?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Associação
+      K-1 Bee 1 Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
+        questions:
+        - text: Quanto néctar isso representa?
+        title: Escolha múltipla
+      K-1 Bee 1 Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+        questions:
+        - text: Quanto néctar isso representa?
+        title: Escolha múltipla
+      K-1 Bee Loops Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Associa os blocos
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Big Event Match 1:
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Associação
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Faça a correspondência da combinação de botões para os movimentos
           de dança.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        title: Associação
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Múltipla Escolha
+        - correct: true
         questions:
         - text: Qual animal tem o rastro digital que o coloca <strong>mais em risco</strong>?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Getting Loopy Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Como simplificarias esta sequência sem usares ciclos?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Happy Maps Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Qual seta leva o Flurb ao tesouro?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Keep it Private Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Quais informações você <strong>não</strong> deve compartilhar online?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Maze Debugging Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Qual opção deve ser o bloco final?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Maze Loops Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Qual bloco repetir é o mesmo?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Maze Loops Multi 2:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Escolha o bloco de repetição correto.
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Maze Match 1:
-        title: Associação
-        content2: Associar os desafios aos blocos
-        pre_title: Instruções
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+        content2: Associar os desafios aos blocos
+        questions:
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: Associação
       K-1 Maze Multiple Choice 2:
-        title: Labirinto
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Qual resposta é a solução para este nível?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirinto
       K-1 Move It Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Qual algoritmo leva o Flurb até as flores?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Plant a Seed Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Qual passo deve ficar no começo desse algoritmo?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Plant a Seed Multi 2:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Qual passo deve preencher o espaço em branco para esse algoritmo?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Word Search Multi 1:
-        title: Múltipla Escolha
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: Quais blocos formam a palavra "MOVE"?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Escolha múltipla
       K-1 Word Search Multi 3:
-        title: Múltipla Escolha
-        questions:
-        - text: Qual palavra é formada?
         answers:
         - text: SET
         - text: SQUARE
+          correct: true
         - text: SOUTH
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
+        questions:
+        - text: Qual palavra é formada?
+        title: Escolha múltipla
       Multi-Screen Apps:
-        title: título
         content1: descrição
       New Challenge Introduction:
-        title: título
+        content1: descrição
+      OPD-K5 Reviewing Reflections:
         content1: descrição
       OPD-K5 Stage3aGo:
-        title: título
+        content1: descrição
+      OPD-K5 Stage3aGo_copy:
+        content1: descrição
+      OPD-K5 conditionals introduced:
+        content1: descrição
+      OPD-K5 debugging:
+        content1: descrição
+      OPD-K5 diving deeper intro:
+        content1: descrição
+      OPD-K5 events introduced:
+        content1: descrição
+      OPD-K5 for loops:
+        content1: descrição
+      OPD-K5 for loops intro:
+        content1: descrição
+      OPD-K5 for loops introduction:
+        content1: descrição
+      OPD-K5 functions introduced:
+        content1: descrição
+      OPD-K5 journaling:
+        content1: descrição
+      OPD-K5 lesson implementation planning:
+        content1: descrição
+      OPD-K5 lesson plans:
+        content1: descrição
+      OPD-K5 loops introduced:
+        content1: descrição
+      OPD-K5 project:
+        content1: descrição
+      OPD-K5 projects introduction:
+        content1: descrição
+      OPD-K5 role_of_teacher:
+        content1: descrição
+      OPD-K5 sequencing introduced:
+        content1: descrição
+      OPD-K5 sprite lab:
+        content1: descrição
+      OPD-K5 sprite lab introduction:
+        content1: descrição
+      OPD-K5 sprite lab unplugged:
+        content1: descrição
+      OPD-K5 sprite lab video:
+        content1: descrição
+      OPD-K5 types of lessons:
+        content1: descrição
+      OPD-K5 using lesson plans:
+        content1: descrição
+      OPD-K5 variables:
+        content1: descrição
+      OPD-K5 variables introduction:
+        content1: descrição
+      OPD-K5 variables unplugged:
+        content1: descrição
+      OPD-K5 where to next:
+        content1: descrição
+      OPD-K5-projects-1:
         content1: descrição
       Prepare for your presentation:
-        title: título
         content1: descrição
       'Technique: Frequency Analysis':
         content1: descrição
       Terminology Recap:
         content1: descrição
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição irás aprender um processo formal de solução do problema que irá-te ajudar a estruturar a tua abordagem a uma vasta variedade de problemas.
+
+
+          ## Recursos
+
+          * [O Processo de Soçuão do Problema - Guia da Atividade](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição aplicarás o processo de solução do problema a uma variedade de problemas para explorar como cada passo ajuda-te a desenvolver e a melhorar soluções para problemas.
+
+          ## Recursos
+
+          * [Resolvendo Problemas - Guia da Atividade](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          # Visão Geral
+
+          Nesta lição começarás a pensar sobre como computadores ajudam a resolver certos tipos de problemas e aprender as características-chave de cada computador.
+
+          ## Recursos
+
+          * [O que é um Computador - Guia da Atividade](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 1 Lesson 6 Overview:
+        teacher_markdown: "* [Pixel Filtering](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
+          - Soluções"
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - feedback: Incorreto
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - feedback: Incorreto
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - feedback: Incorreto
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - feedback: Incorreto
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Certo!
+        - text: '15'
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Certo!
+        - text: '15'
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Certo!
+        - text: '15'
+        - text: Eu não sei.
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Certo!
+        - text: '15'
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
-        - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
-        - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
+        questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
         - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - text: 'O pássaro irá contra a dinamite. '
+        - text: Eu não sei.
+          feedback: Este código faz o pássaro chegar perfeitamente ao porco.
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei
+        questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+          feedback: Certo!
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+          feedback: Certo!
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
+          feedback: Certo!
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+          correct: true
+          feedback: Certo!
+        markdown: |
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+          feedback: Certo!
+        - text: B
+        - text: C
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: Certo!
         - text: B
         - text: C
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: Certo!
         - text: B
         - text: C
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: Certo!
+        - text: B
+        - text: C
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Certo!
+        - text: '12'
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Certo!
+        - text: '12'
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Certo!
+        - text: '12'
+        - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Certo!
+        - text: '12'
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        - text: Eu não sei.
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - text: O pássaro cai conseguir chegar ao porco.
+          correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
+        - text: Nada. O Scrat não se vai mexer.
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Certo!
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        - text: Eu não sei.
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
         - {}
+        questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: 'Inquérito aos Estudantes do Fim do Curso de CS Discoveries '
+      csd-post-survey-levelgroup-2018:
+        title: 'Inquérito aos Estudantes do Fim do Curso de CS Discoveries '
+      csd-pre-survey-2017-levelgroup:
+        markdown: |
+          # Visão Geral
+
+          A aula funciona em grupos de modo a conceberem barcos em folha de alumínio que irão suportar o n.º máximo de cêntimos possível. No final da lição, os grupos refletem as suas experiências sobre a atividade e estabelecem ligações aos tipos de solução do problema que realizarão para o resto do curso.
+
+          ## Recursos
+
+          * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guia da Atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Documento do Google](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csf_be_a_super_digital_citizen:
+        content1: descrição
+      csf_password_power-up:
+        content1: descrição
+      csf_putting_a_stop_to_online_meanness:
+        content1: descrição
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
-        - {}
+        - text: Eu não sei.
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Certo!
         - {}
+        - text: Eu não sei.
+        questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
         - {}
+        - correct: true
+          feedback: Certo!
+        - {}
+        - text: Eu não sei.
+        questions:
+        - {}
+      gradek1_activity_beNice:
+        markdown: "# Comportando-se no Laboratório do Computador\n  \n<br/><br/>    \n
+          \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nIr para plano da lição\n</button> \n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>"
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          # Visão Geral
+
+          A aula funciona em grupos de modo a conceberem barcos em folha de alumínio que irão suportar o n.º máximo de cêntimos possível. No final da lição, os grupos refletem as suas experiências sobre a atividade e estabelecem ligações aos tipos de solução do problema que realizarão para o resto do curso.
+
+          ## Recursos
+
+          * [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Guia da Atividade (copiar como [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Documento do Google](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      outbreak_story:
+        content1: descrição
+      outbreak_story2:
+        content1: descrição
+      outbreak_freeplay_choice:
+        display_name: Atividade livre

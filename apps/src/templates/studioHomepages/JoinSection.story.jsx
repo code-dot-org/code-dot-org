@@ -1,5 +1,5 @@
 import React from 'react';
-import JoinSection from './JoinSection';
+import {UnconnectedJoinSection as JoinSection} from './JoinSection';
 import {action} from '@storybook/addon-actions';
 
 export default storybook => {

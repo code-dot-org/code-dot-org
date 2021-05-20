@@ -1,0 +1,30 @@
+nl:
+  data:
+    variable_names:
+      Blue: Blauw
+      Green: Groen
+      Red: Rood
+      actor: speler
+      cats: katten
+      color: kleur
+      counter: teller
+      dogs: honden
+      height: hoogte
+      honey: honing
+      i: i
+      left: links
+      length: lengte
+      name: naam
+      nectar: nectar
+      points: punten
+      random: willekeurig
+      repeat: herhaal
+      right: rechts
+      score: score
+      sides: zijden
+      size: grootte
+      speed: snelheid
+      variable: variabele
+      width: breedte
+      wizard: tovenaar
+      x: x

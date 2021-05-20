@@ -1,0 +1,47 @@
+{
+  "ta-IN": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "மீட்கிறது"
+        },
+        "outbreak2": {
+          "recovering": "மீட்கிறது"
+        },
+        "outbreak3": {
+          "recovering": "மீட்கிறது"
+        },
+        "outbreak4": {
+          "recovering": "மீட்கிறது",
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "outbreak5": {
+          "recovering": "மீட்கிறது"
+        },
+        "outbreak6": {
+          "recovering": "மீட்கிறது"
+        },
+        "outbreak7": {
+          "recovering": "மீட்கிறது",
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving left and right": "இடது மற்றும் வலது நகரும்"
+        },
+        "outbreak8": {
+          "recovering": "மீட்கிறது",
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving left and right": "இடது மற்றும் வலது நகரும்"
+        },
+        "outbreak_freeplay": {
+          "recovering": "மீட்கிறது",
+          "moving left and right": "இடது மற்றும் வலது நகரும்",
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "மீட்கிறது",
+          "moving left and right": "இடது மற்றும் வலது நகரும்",
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        }
+      }
+    }
+  }
+}

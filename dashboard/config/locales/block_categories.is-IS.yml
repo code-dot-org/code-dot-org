@@ -3,60 +3,30 @@ is:
   data:
     block_categories:
       Actions: Aðgerðir
-      Loops: Lykkjur
-      Functions: Föll
-      Color: Litir
-      Brushes: Penslar
-      Math: Reikningur
-      Logic: Rökvísi
-      Variables: Breytur
-      Number: Tölur
-      String: Texti
-      Image: Mynd
-      Boolean: Boole gildi
-      Conditionals: Skilyrði
-      Events: Atvik
-      Games/Score: Leikir/skor
-      Comments: Athugasemdir
-      Category: Flokkur
-      Prebuilt: Forsmíðað
-      Text: texti
-      Picker: Veljari
-      Comment: Athugasemd
-      World: Heimur
-      Sprites: Kvikar
-      Behaviors: Hegðun
-      'Variables ': 'Breytur '
-      Default: Sjálfgefið
-      Locations: Staðir
-      Bunny Game: Kanínuleikur
-      everythingelse: alltannað
-      Location: Staður
-      numbers: tölur
-      Numbers: Tölur
-      Input: Inntak
-      Dancers: Dansarar
-      Groups: Hópar
       Advanced: Ítarlegt
-      Start: Byrja
-      Music: Tónlist
-      Dancing: Dans
-      Sprite: Kviki
-      Brush: Pensill
-      Make Sprite: Búa til kvika
-      Movement: Hreyfing
-      Booleans: Boolean gildi
-      Functional: Föll
-      While Events: Á-meðan atvik
-      Sprite Properties: Eiginleikar kvika
-      Predefined: Forstillt
-      test: prófun
-      test2: próf2
-      Use These Blocks: Notaðu þessa kubba
-      Do Not Use: Ekki nota
-      Foo: Fú
-      Name: Nafn
-      NEW BLOCKS: NÝIR KUBBAR
+      Behaviors: Hegðun
+      Brushes: Penslar
+      Color: Litir
+      Comment: Athugasemd
+      Comments: Athugasemdir
+      Conditionals: Skilyrði
+      Dancers: Dansarar
+      Default: Sjálfgefið
+      Events: Atvik
+      Functions: Föll
       'Functions ': 'Föll '
       Game/Score: Leikur/skor
-      Function: Aðgerð
+      Games/Score: Leikir/skor
+      Groups: Hópar
+      Input: Inntak
+      Locations: Staðir
+      Logic: Rökvísi
+      Loops: Lykkjur
+      Math: Reikningur
+      Numbers: Tölur
+      Properties: Eiginleikar
+      Sprites: Kvikar
+      Text: texti
+      Variables: Breytur
+      'Variables ': 'Breytur '
+      World: Heimur

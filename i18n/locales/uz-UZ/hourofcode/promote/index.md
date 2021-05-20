@@ -1,7 +1,5 @@
 ---
-title: Spread the word
-layout: wide
-nav: promote_nav
+title: Targ‘ibot qiling
 ---
 
 {{ signup_button }}

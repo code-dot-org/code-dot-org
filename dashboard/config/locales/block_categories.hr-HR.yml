@@ -3,18 +3,30 @@ hr:
   data:
     block_categories:
       Actions: Akcije
-      Loops: Petlje
-      Functions: Funkcije
+      Advanced: Napredno
+      Behaviors: Ponašanja
+      Brushes: Kistovi
       Color: Boja
-      Math: Matematika
-      Logic: Logika
-      Variables: Varijable
+      Comment: Komentar
+      Comments: Komentari
       Conditionals: Uvjeti
+      Dancers: Plesači
+      Default: Zadano
       Events: Događaji
-      Text: tekst
-      Location: Lokacija
-      Start: Početak
-      Booleans: Logičke varijable
-      test: provjera
-      Name: Ime
-      Function: Funkcija
+      Functions: Funkcije
+      'Functions ': 'Funkcije '
+      Game/Score: Igra/Bodovi
+      Games/Score: Igre/Bodovi
+      Groups: Grupe
+      Input: Ulaz
+      Locations: Lokacije
+      Logic: Logika
+      Loops: Petlje
+      Math: Matematika
+      Numbers: Brojevi
+      Properties: Svojstva
+      Sprites: Likovi
+      Text: Tekst
+      Variables: Varijable
+      'Variables ': 'Varijable '
+      World: Svijet

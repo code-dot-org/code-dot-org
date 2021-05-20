@@ -10,6 +10,35 @@ import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
 import color from '../util/color';
 
+/**
+ * A purple pane header that can have be focused (purple) or unfocused (light purple).
+ */
+class PaneHeader extends React.Component {
+  static propTypes = {
+    hasFocus: PropTypes.bool.isRequired,
+    style: PropTypes.object,
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool
+  };
+
+  render() {
+    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
+
+    // TODO: AnimationTab should likely use components from PaneHeader, at
+    // which point purpleHeader style should move in here.
+    const composedStyle = {
+      ...style,
+      ...commonStyles.purpleHeader,
+      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
+      ...(teacherOnly && commonStyles.teacherBlueHeader),
+      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
+      ...(isMinecraft && commonStyles.minecraftHeader)
+    };
+
+    return <div {...props} style={composedStyle} />;
+  }
+}
+
 const styles = {
   paneSection: {
     textAlign: 'center',
@@ -80,35 +109,6 @@ const styles = {
     paddingLeft: 0
   }
 };
-
-/**
- * A purple pane header that can have be focused (purple) or unfocused (light purple).
- */
-class PaneHeader extends React.Component {
-  static propTypes = {
-    hasFocus: PropTypes.bool.isRequired,
-    style: PropTypes.object,
-    teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool
-  };
-
-  render() {
-    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
-
-    // TODO: AnimationTab should likely use components from PaneHeader, at
-    // which point purpleHeader style should move in here.
-    const composedStyle = {
-      ...style,
-      ...commonStyles.purpleHeader,
-      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
-      ...(teacherOnly && commonStyles.teacherBlueHeader),
-      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
-      ...(isMinecraft && commonStyles.minecraftHeader)
-    };
-
-    return <div {...props} style={composedStyle} />;
-  }
-}
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some

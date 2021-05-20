@@ -1,11 +1,14 @@
-"no":
+---
+'no':
   data:
     course:
       name:
         csp-2017:
           assignment_family_title: Informatikkprinsipper
+          version_title: "'17-'18"
         csd-2017:
           assignment_family_title: Informatikkoppdagelser
+          version_title: "'17-'18"
           description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.
         allthethingscourse:
           title: allthethingscourse
@@ -21,5 +24,8 @@
           assignment_family_title: Informatikkprinsipper
           title: Informatikkprinsipper ('18-'19)
           version_title: "'18-'19"
+        csp-2019:
+          version_title: "'19-'20"
         csd-2019:
+          version_title: "'19-'20"
           description_short: En introduksjon til kurs i datavitenskap som gir elevene muligheten til å skape autentiske artifakter.

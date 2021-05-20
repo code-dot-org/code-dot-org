@@ -1,7 +1,6 @@
 ---
 from: "Hadi Partovi (Code.org) <hadi_partovi@code.org>"
 subject: "Get ready for the Hour of Code"
-litmus_tracking_id: "5g5lyi1a"
 ---
   <% hourofcode = CDO.canonical_hostname('hourofcode.com') %>
   <% codedotorg = CDO.canonical_hostname('code.org') %>
@@ -9,8 +8,6 @@ litmus_tracking_id: "5g5lyi1a"
 
 ### Thanks for signing up to host an Hour of Code!
 Thank you for helping make it possible for students to start learning computer science! Computer Science Education Week and the Hour of Code run from December 9-15, and we couldn't be more excited.
-
-As a special thank you to Hour of Code organizers, we have a poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters](https://hourofcode.com/promote/resources#posters).
 
 In the meantime, what can you do now?
 
@@ -26,7 +23,7 @@ Help recruit more people from your school and community by [sending our sample e
 Choose an [Hour of Code activity](https://<%= hourofcode %>/learn) for your classroom and [review this how-to guide](https://<%= hourofcode %>/how-to) for more information on getting started.
 
 ### 4. Stock up on swag
-Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/dp/B07J6T18DH?m=A2ZEA2ORKPFEVK), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 ### From an Hour of Code to years of computer science
 <% if form.data["hoc_event_country_s"] == 'US' %> An Hour of Code is just the beginning. Whether you’re an administrator, teacher, or advocate, we have [professional learning, curriculum, and resources to help you bring computer science classes to your school or expand your offerings.](https://<%= codedotorg %>/yourschool) If you already teach computer science, use these resources during CS Education Week to rally support!
@@ -41,7 +38,7 @@ Founder, Code.org<br />
 
 <hr/>
 <small>
-You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is [1501 4th Avenue, Suite 900, Seattle, WA 98101](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= unsubscribe_link %>).
+You're receiving this email because you signed up for the Hour of Code, supported by more than 200 partners and organized by Code.org. Code.org is a 501c3 non-profit. Our address is [1501 4th Avenue, Suite 900, Seattle, WA 98101](https://maps.google.com/?q=1501+4th+Avenue,+Suite+900,+Seattle,+WA+98101&entry=gmail&source=g). Don't want these emails? [Unsubscribe](<%= local_assigns.fetch(:unsubscribe_link, "") %>).
 </small>
 
-![](<%= tracking_pixel %>)
+![](<%= local_assigns.fetch(:tracking_pixel, "") %>)

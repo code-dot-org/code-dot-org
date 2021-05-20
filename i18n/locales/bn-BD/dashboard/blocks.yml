@@ -6,31 +6,16 @@ bn:
         options:
           UNIT:
             '"seconds"': সেকেন্ড
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -54,58 +39,38 @@ bn:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": এলোমেলো
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': এলোমেলো
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': হাঁস
+          LOCATION:
+            "{x: 100, y: 200}": বামে
+            "{x: 300, y: 200}": ডানে
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"DUCK"': হাঁস
           LOCATION:
             "{x: 100, y: 200}": বামে
             "{x: 300, y: 200}": ডানে
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": এলোমেলো
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"random"': এলোমেলো
       Dancelab_randomColor:
         text: যেকোনো রঙ
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +86,17 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': আকার
@@ -131,6 +106,15 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"height"': উচ্চতা
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': এক্স
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,10 +124,15 @@ bn:
             '"right"': ডানে
             '"space"': স্থান
             '"x"': এক্স
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"speed"': গতি
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -153,6 +142,20 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"speed"': গতি
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': উপরে
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"x"': এক্স
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -174,6 +177,8 @@ bn:
         text: যেকোনো রঙ
       gamelab_randomColor:
         text: যেকোনো রঙ
+      gamelab_repeatForever:
+        text: সবসময় পুনরাবৃত্তি করুন
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -184,6 +189,11 @@ bn:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': পানির নিচে
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': শীতকাল
       gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"speed"': গতি
+      gamelab_setProp_dropdown:
         options:
           PROPERTY:
             '"scale"': আকার
@@ -250,6 +260,8 @@ bn:
             '"scale"': আকার
       Mikelab_randomColor:
         text: যেকোনো রঙ
+      Mikelab_repeatUntilComplete:
+        text: সবসময় পুনরাবৃত্তি করুন
       Mikelab_setBG:
         options:
           BG:
@@ -293,55 +305,20 @@ bn:
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': এলোমেলো
       RyanLab_moveForward:
         text: সামনে এগিয়ে যান
       RyanLab_turnLeft:
         text: বামে যান
       RyanLab_turnRight:
         text: ডানে যান
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': আকার
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': সত্যি
-            '"false"': মিথ্যা
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': প্রদর্শন করুন
-            '"hide"': লুকিয়ে রাখুন
+          FORMAT:
+            '"random"': এলোমেলো
       binary_move:
         options:
           DIR:

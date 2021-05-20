@@ -2,24 +2,71 @@
 sl:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekund(e)
+      Dancelab_changeColorBy:
+        options:
+          METHOD:
+            '"hue"': odtenek
+            '"saturation"': nasičenost
+            '"brightness"': svetlost
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: vse
-          DIR:
-            '1': "→"
-            "-1": "←"
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
+          MOVE:
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
       Dancelab_changeMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
@@ -27,14 +74,16 @@ sl:
         options:
           GROUP:
             sprites: vse
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -58,62 +107,99 @@ sl:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": naključno
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
           FORMAT:
+            '"diamond"': diamant
             '"random"': naključno
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"CAT"': muca
+            '"DOG"': kuža
+            '"DUCK"': raca
+            '"MOOSE"': los
+            '"ROBOT"': robot
+          LOCATION:
+            "{x: 100, y: 200}": levo
+            "{x: 300, y: 200}": desno
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"CAT"': muca
+            '"DOG"': kuža
+            '"DUCK"': raca
+            '"MOOSE"': los
+            '"ROBOT"': robot
           LOCATION:
             "{x: 100, y: 200}": levo
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
+          COSTUME:
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
           LAYOUT:
+            '"diamond"': diamant
             '"random"': naključno
       Dancelab_randomColor:
         text: naključna barva
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: vse
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -123,6 +209,16 @@ sl:
         options:
           GROUP:
             sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
@@ -131,16 +227,84 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
       Dancelab_setTintEach:
         options:
           THIS:
             sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
       Dancelab_setVisibleEach:
         options:
           THIS:
             sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
       Dancelab_startMapping:
         options:
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
@@ -149,6 +313,29 @@ sl:
           PROPERTY:
             '"scale"': velikost
             '"height"': višina
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: vse
+            '"ALIEN"': marsovec
+            '"BEAR"': medvedi
+            '"CAT"': muce
+            '"DOG"': kužki
+            '"DUCK"': race
+            '"FROG"': žabe
+            '"MOOSE"': los
+            '"PINEAPPLE"': ananasi
+            '"ROBOT"': roboti
+            '"SHARK"': morski psi
+          PROPERTY:
+            '"scale"': velikost
+            '"height"': višina
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -159,12 +346,17 @@ sl:
             '"space"': vesolje
             '"x"': x
             '"y"': 'y'
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+            '"speed"': hitrost
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -176,6 +368,21 @@ sl:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+            '"speed"': hitrost
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': gor
+            '"down"': dol
+            '"left"': levo
+            '"right"': desno
+            '"space"': vesolje
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -198,6 +405,8 @@ sl:
         text: naključna barva
       gamelab_randomColor:
         text: naključna barva
+      gamelab_repeatForever:
+        text: ponavljaj kar naprej
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -207,12 +416,29 @@ sl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': mavrica
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodo
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': srednje
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': velikost
             '"x"': x položaj
             '"y"': y položaj
+            '"speed"': hitrost
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': velikost
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': srednje
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -314,6 +540,8 @@ sl:
             '"all"': vse
       Mikelab_randomColor:
         text: naključna barva
+      Mikelab_repeatUntilComplete:
+        text: ponavljaj kar naprej
       Mikelab_setBG:
         options:
           BG:
@@ -363,63 +591,34 @@ sl:
             '"down"': puščica dol
             '"left"': puščica levo
             '"right"': puščica desno
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': naključno
       RyanLab_moveForward:
         text: premakni se naprej
       RyanLab_turnLeft:
         text: obrni se levo
       RyanLab_turnRight:
         text: obrni se desno
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      aalab_checkTouching:
+          FORMAT:
+            '"random"': naključno
+      aalab_someGraduallyStartIntervention:
         options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-      aalab_clickedOn:
+          PORTION:
+            '1': vse
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': ko
-            '"while"': dokler
-          KEY:
-            '"up"': gor
-            '"down"': dol
-            '"left"': levo
-            '"right"': desno
-            '"space"': vesolje
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': mesto
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': velja
-            '"false"': ne velja
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': velikost
-            '"x"': x položaj
-            '"y"': y položaj
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': neskončno
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': prikaži
-            '"hide"': skrij
+          PORTION:
+            '1': vse
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:
@@ -472,3 +671,8 @@ sl:
         text: svetel prismarin
       craft_placeTorch:
         text: postavi baklo
+      craft_turn:
+        options:
+          DIR:
+            right: desno↻
+            left: levo↺

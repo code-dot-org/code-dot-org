@@ -1,0 +1,711 @@
+{
+  "script": {
+    "name": "csd1-2017",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true,
+      "exclude_csf_column_in_legend": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csd/unit1"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csd1"
+        ],
+        [
+          "vocabulary",
+          "https://curriculum.code.org/csd/unit1/vocab/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csd/unit1/standards/"
+        ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2017",
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "Are you signed up for the AP exam?",
+          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
+          "link": "",
+          "type": "information"
+        }
+      ],
+      "project_sharing": true,
+      "curriculum_umbrella": "CSD",
+      "family_name": "csd1",
+      "hideable_lessons": true,
+      "announcements": [
+        {
+          "notice": "Are you signed up for the AP exam?",
+          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
+          "link": "",
+          "type": "information"
+        }
+      ]
+    },
+    "new_name": "csd1-2017",
+    "family_name": "csd1",
+    "serialized_at": "2021-05-03 23:54:53 UTC",
+    "seeding_key": {
+      "script.name": "csd1-2017"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "csd1_1",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 1: The Problem Solving Process"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "csd1_2",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Chapter 2: Computers and Problem Solving"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CS Discoveries Pre-survey",
+      "name": "CS Discoveries Pre-survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Intro to Problem Solving",
+      "name": "Intro to Problem Solving",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "The Problem Solving Process",
+      "name": "The Problem Solving Process",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Exploring Problem Solving",
+      "name": "Exploring Problem Solving",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "What is a Computer?",
+      "name": "What is a Computer?",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Input and Output",
+      "name": "Input and Output",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Processing",
+      "name": "Processing",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Storage",
+      "name": "Storage",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Apps and Problem Solving",
+      "name": "Apps and Problem Solving",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Apps and Problem Solving",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "key": "Project - Propose an App",
+      "name": "Project - Propose an App",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pre-survey-2017-levelgroup"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-2017-levelgroup"
+        ],
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "csd-pre-survey-2017-levelgroup"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 1 Overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ],
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 2 Overview"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ],
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 3 Overview"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "Unit 1 Lesson 4 Overview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "CSD What Makes a Computer a Computer Video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 5 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Lesson 5 Overview"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "CSD U1 Lesson 5 Overview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 6 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Lesson 6 Overview"
+        ],
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "CSD U1 Lesson 6 Overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 7 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Lesson 7 Overview"
+        ],
+        "lesson.key": "Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "CSD U1 Lesson 7 Overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 8 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Lesson 8 Overview"
+        ],
+        "lesson.key": "Apps and Problem Solving",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "CSD U1 Lesson 8 Overview"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U1 Lesson 9 Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U1 Lesson 9 Overview"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "CSD U1 Lesson 9 Overview"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2"
+        ],
+        "progression": "Reflection"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U1Ch2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-2017-levelgroup",
+        "script_level.level_keys": [
+          "csd-pre-survey-2017-levelgroup"
+        ],
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 1 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ],
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 2 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ],
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 3 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ],
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Unit 1 Lesson 4 Overview",
+        "script_level.level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD What Makes a Computer a Computer Video",
+        "script_level.level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ],
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Lesson 5 Overview",
+        "script_level.level_keys": [
+          "CSD U1 Lesson 5 Overview"
+        ],
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Lesson 6 Overview",
+        "script_level.level_keys": [
+          "CSD U1 Lesson 6 Overview"
+        ],
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Lesson 7 Overview",
+        "script_level.level_keys": [
+          "CSD U1 Lesson 7 Overview"
+        ],
+        "lesson.key": "Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Lesson 8 Overview",
+        "script_level.level_keys": [
+          "CSD U1 Lesson 8 Overview"
+        ],
+        "lesson.key": "Apps and Problem Solving",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U1 Lesson 9 Overview",
+        "script_level.level_keys": [
+          "CSD U1 Lesson 9 Overview"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U1Ch2",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2"
+        ],
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2017"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

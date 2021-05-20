@@ -1,7 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
+title: జిల్లాల కోసం అవర్ ఆఫ్ కోడ్ హౌ-టు
 ---
 
 {{ signup_button }}

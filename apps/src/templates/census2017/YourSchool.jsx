@@ -12,29 +12,8 @@ import Notification, {NotificationType} from '../Notification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import CensusMap from './CensusMap';
 import CensusMapReplacement from './CensusMapReplacement';
-import experiments from '@cdo/apps/util/experiments';
-
-const styles = {
-  heading: {
-    marginTop: 20,
-    marginBottom: 0
-  },
-  description: {
-    marginTop: 10,
-    marginBottom: 20,
-    fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
-    lineHeight: '1.5em'
-  },
-  mapFooter: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    fontSize: 20,
-    marginLeft: 25,
-    marginRight: 25
-  }
-};
+import ProfessionalLearningApplyBanner from '../ProfessionalLearningApplyBanner';
 
 class YourSchool extends Component {
   static propTypes = {
@@ -43,9 +22,10 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    fusionTableId: PropTypes.string,
     hideMap: PropTypes.bool,
-    currentCensusYear: PropTypes.number
+    currentCensusYear: PropTypes.number,
+    showProfessionalLearningBanner: PropTypes.bool,
+    teacherApplicationMode: PropTypes.bool
   };
 
   state = {
@@ -122,6 +102,15 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
+        {this.props.showProfessionalLearningBanner && (
+          <ProfessionalLearningApplyBanner
+            nominated={false}
+            useSignUpText={false}
+            style={styles.banner}
+            linkSuffix={'middle-high'}
+            teacherApplicationMode={this.props.teacherApplicationMode}
+          />
+        )}
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">
@@ -145,20 +134,10 @@ class YourSchool extends Component {
               schoolFilter={this.hasLocation}
             />
             <br />
-            {experiments.isEnabled('censusMapOnMapbox') && (
-              <CensusMapReplacement
-                fusionTableId={this.props.fusionTableId}
-                school={schoolForMap}
-                onTakeSurveyClick={this.handleTakeSurveyClick}
-              />
-            )}
-            {!experiments.isEnabled('censusMapOnMapbox') && (
-              <CensusMap
-                fusionTableId={this.props.fusionTableId}
-                school={schoolForMap}
-                onTakeSurveyClick={this.handleTakeSurveyClick}
-              />
-            )}
+            <CensusMapReplacement
+              school={schoolForMap}
+              onTakeSurveyClick={this.handleTakeSurveyClick}
+            />
           </div>
         )}
         <CensusForm
@@ -174,6 +153,30 @@ class YourSchool extends Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    marginTop: 20,
+    marginBottom: 0
+  },
+  description: {
+    marginTop: 10,
+    marginBottom: 20,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    lineHeight: '1.5em'
+  },
+  mapFooter: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    fontSize: 20,
+    marginLeft: 25,
+    marginRight: 25
+  },
+
+  banner: {
+    marginBottom: 35
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

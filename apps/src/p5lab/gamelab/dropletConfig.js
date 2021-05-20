@@ -55,6 +55,7 @@ module.exports.blocks = [
   //  {func: 'height', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   {...audioApiDropletConfig.playSound, category: 'World'},
   {...audioApiDropletConfig.stopSound, category: 'World'},
+  {...audioApiDropletConfig.playSpeech, category: 'World'},
   {
     func: 'keyIsPressed',
     category: 'World',
@@ -649,6 +650,14 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.tint',
+    type: 'property'
+  },
+  {
+    func: 'alpha',
+    blockPrefix: spriteBlockPrefix,
+    category: 'Sprites',
+    tipPrefix: spriteMethodPrefix,
+    modeOptionName: '*.alpha',
     type: 'property'
   },
   {
@@ -1967,7 +1976,7 @@ module.exports.categories = {
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: color.droplet_blue,
+    rgb: color.droplet_bright_blue,
     blocks: []
   }
 };

@@ -1,5 +1,5 @@
 ---
-title: Guia prático
+title: Guia de instruções da Hora do Código para os pais
 layout: wide
 nav: how_to_nav
 ---
@@ -8,35 +8,41 @@ nav: how_to_nav
 
 # Como ensinar a Hora do Código em aulas extracurriculares e em clubes
 
-### Junte-se ao movimento e apresente para um grupo de estudantes a sua primeira hora de Ciência da Computação com estes passos. É fácil realizar uma Hora do Código, mesmo para principiantes! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Junte-se ao movimento e apresente aos seus alunos a ciência da computação com estes passos.
 
----
+O pensamento computacional ajuda a desenvolver habilidades de solução de problemas, lógica e criatividade. Além disso, a tecnologia está transformando todas as profissões no mundo. Hoje em dia, os alunos devem aprender a criar tecnologia, não apenas usá-la. Ao começar cedo, eles terão elementos para alcançar o sucesso em qualquer profissão do século XXI.
+
+A Hora do Código é uma maneira simples e divertida de apresentar às crianças, talvez pela primeira vez, a ciência da computação. Se você quiser ajuda, você pode localizar um [voluntário ]({{ urls/volunteer_local }}) para te ajudar com a Hora do Código.
+
+### Uma Hora do Código também pode ser realizada remotamente! Para começar, confira as nossas [dicas para realizar um evento Hora do Código virtual](https://hourofcode.com/us/how-to/virtual).
+
+* * *
 
 ## 1. Veja esse guia prático em vídeo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 ## 2. Escolha um tutorial
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Oferecemos tutoriais divertidos[, com uma hora de duração]({{ urls/learn }}), criados por diferentes parceiros, para participantes de todas as idades. [Experimente!]({{ urls/learn }})
 
-**Todos os tutoriais da Hora do Código** requerem um tempo de preparação minimo para os organizadores, além de serem autoguiados - permitindo às crianças trabalhar no seu próprio ritmo e nível de habilidade.
+**Todos os tutoriais da Hora do Código** requerem pouco tempo de preparação e são auto-explicativos, permitindo que os participantes trabalhem no seu próprio ritmo e nível de conhecimento.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Precisa de um plano de aula para Hora do Código extracurricular?** Confira este [ modelo](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Precisa de um planejamento de aula para Hora do Código?** Confira este [ modelo](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Promova sua Hora do Código
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Promova sua Hora do Código [com essas ferramentas](%= resolve_url('/promote') %) e estimule outras pessoas a organizar seus próprios eventos.
 
-## 4. Planeje suas necessidades tecnológicas — não é preciso ter computadores
+## 4. Avalie suas necessidades tecnológicas — não é preciso ter computadores
 
-A melhor experiência da Hora do Código inclui computadores conectados à Internet. Mas você **não** precisa de um computador para cada criança, e pode inclusive realizar a Hora do Código sem computador nenhum.
+A melhor experiência da Hora do Código inclui computadores conectados à Internet. Mas você **não** precisa de um computador para cada criança e pode, inclusive, praticar a Hora do Código sem computador nenhum.
 
-Certifique-se de testar os tutoriais nos computadores ou dispositivos dos alunos, para garantir que eles funcionem corretamente nos navegadores com som e vídeo. **Sua Internet é lenta?** Apresente os vídeos na frente da classe, para que cada aluno não tenha que baixar seus próprios vídeos. Ou tente os tutoriais desconectados / off-line.
+Não se esqueça de testar os tutoriais nos computadores ou dispositivos dos alunos para garantir que funcionam bem nos navegadores com som e vídeo. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Forneça fones de ouvido para sua turma, ou peça aos alunos que tragam seus próprios fones, se o tutorial escolhido funcionar melhor com som.
 
-**Não tem dispositivos suficientes?** Use a [programação em duplas](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando os alunos trabalham em equipe, eles ajudam uns aos outros e dependem menos do professor. Eles também verão que a ciência da computação é uma atividade social e colaborativa.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quando os alunos trabalham em equipe, eles ajudam uns aos outros e dependem menos do professor. Eles também verão que a ciência da computação é uma atividade social e colaborativa.
 
 ## 5. comece sua Hora do Código com um vídeo inspirador
 
@@ -49,19 +55,19 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 - [O presidente Obama pede a todos os alunos que aprendam Ciência da Computação](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encontre mais vídeos inspiradores [aqui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Não tem problema se você não tiver experiência com ciência da computação. Veja aqui algumas ideias para começar sua atividade da Hora do Código:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Explique de que forma a tecnologia afeta nossas vidas, usando exemplos que sensibilizem tanto meninos como meninas (fale sobre apps e tecnologias que são usados para salvar vidas, ajudar pessoas, conectá-las etc.).
 - Monte uma lista com as coisas que usam a programação na vida cotidiana.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Precisa de mais orientação?** Baixe este [plano de aula](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. É hora de programar!
 
-**Direcione os participantes para a atividade** - Excreva o link do tutorial no quadro. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Encontre o link listado nas [informações do tutorial selecionado]({{ urls/learn }}) abaixo da quantidade de participantes.
 
-**Quando alguem se deparar com problemas, Não tem problema responder:** - "Eu não sei. Vamos resolver isso juntos." - "Tecnologia nem sempre functiona como nós queremos." -"Aprender a programar computadores é como aprender uma nova lingua: você não será fluente logo no início."
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Vamos resolver isso juntos.” - “Nem sempre a tecnologia funciona como queremos.” - “Aprender a programar é como aprender um novo idioma. Não se fica fluente de uma hora para outra.”
 
 **What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
 
@@ -81,6 +87,6 @@ Comece seu evento da Hora do Código inspirando os participantes e discutindo so
 
 ## O que vem depois da Hora do Código?
 
-A Hora do Código é apenas o primeiro passo de uma jornada para aprender mais sobre como a tecnologia funciona e como criar aplicativos e/ou software. Ajude estudantes a continuar a jornada deles e incentive eles a [aprender mais online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

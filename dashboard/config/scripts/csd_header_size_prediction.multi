@@ -1,8 +1,10 @@
 name 'CSD Header Size Prediction'
-wrong '<img src="https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png" style="width:125px">'
-right '<img src="https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png" style="width:125px">'
-wrong '<img src="https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png" style="width:125px">'
-wrong '<img src="https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png" style="width:125px">'
+editor_experiment ''
+wrong '![](https://images.code.org/252b4819b87deb76de5270589b4d5cc3-image-1579822778237.png)'
+right '![](https://images.code.org/a3e724ec9f854f74ac61f2ebb9c9b621-image-1579824954212.png)'
+wrong '![](https://images.code.org/8daf8600ef51eb6af62e35cf2d8e1f10-image-1579825122163.png)'
+wrong '![](https://images.code.org/351f55deb8bd3b933f214ac5f50bbb23-image-1579825155900.png)'
+
 markdown <<MARKDOWN
 # Size of Headers
 
@@ -10,7 +12,8 @@ There are different sized headers which are marked by the number next to the h i
 
 | Example | Result |
 | ------- | ------ |
-| <pre>&lt;h1&gt; Shoulders &lt;/h1&gt; <br> &lt;h2&gt; Knees &lt;/h2&gt; <br> &lt;h3&gt; Toes &lt;/h3&gt;</pre> | <img src="https://images.code.org/4f252e3dce84a14e1bfdab373d3edbad-image-1473432674187.50.43 AM.png" style="width:200px"> |
+| <pre>&lt;h1&gt; Shoulders &lt;/h1&gt; <br>&lt;h2&gt; Knees &lt;/h2&gt; <br>&lt;h3&gt; Toes &lt;/h3&gt;</pre> | <img src="https://images.code.org/4f252e3dce84a14e1bfdab373d3edbad-image-1473432674187.50.43 AM.png" style="width:200px"> |
 
 Predict what the result of the code in the following code will be.  <pre>&lt;h3&gt; Eggs &lt;/h3&gt;<br>&lt;h1&gt; Bacon &lt;/h1&gt;<br>&lt;h6&gt; Waffles &lt;/h6&gt;<br> </pre>  Pick from one of the 4 options
+
 MARKDOWN

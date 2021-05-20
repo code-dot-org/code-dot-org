@@ -1,6 +1,5 @@
 ---
 title: تمام اسکول کی شرکت
-layout: wide
 ---
 
 {{ signup_button }}

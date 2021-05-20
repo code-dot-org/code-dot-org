@@ -7,6 +7,10 @@ class HomeControllerTest < ActionController::TestCase
   setup do
     # stub properties so we don't try to hit pegasus db
     Properties.stubs(:get).returns nil
+
+    # ensure consistent query counts by calling Scripts.all_scripts to populate
+    # the script cache here
+    _ = Script.all_scripts
   end
 
   test "teacher without progress or assigned course/script redirected to index" do
@@ -142,21 +146,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to script_path(pilot_script)
   end
 
-  test "student with assigned course or script during account takeover will go to index" do
-    student = create :student
-    script = create :script
-    sign_in student
-    student.assign_script(script)
-    begin_fake_account_takeover
-    get :index
-
-    assert_redirected_to '/home'
-  end
-
-  def begin_fake_account_takeover
-    @request.session[HomeController::ACCT_TAKEOVER_EXPIRATION] = 5.minutes.from_now
-  end
-
   test "redirect index when signed out" do
     assert_queries 0 do
       get :index
@@ -230,40 +219,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  def setup_user_with_gallery
-    @user = create(:user)
-    5.times do
-      create :gallery_activity,
-        level_source: create(:level_source, level_source_image: create(:level_source_image)),
-        user: @user,
-        autosaved: true
-    end
-    sign_in @user
-  end
-
-  test "do not show gallery activity pagination when not signed in" do
-    assert_queries 0 do
-      get :gallery_activities
-    end
-    assert_redirected_to_sign_in
-  end
-
-  test "show gallery activity pagination when signed in" do
-    setup_user_with_gallery
-
-    assert_queries 13 do
-      get :gallery_activities
-    end
-    assert_response :success
-
-    assert_select 'div.gallery_activity img', 5
-  end
-
-  test "do not show gallery when not logged in" do
-    get :index
-    assert_select 'h4', text: "Gallery", count: 0
-  end
-
   test "do not show admin links when not admin" do
     sign_in create(:user)
     get :index
@@ -329,6 +284,63 @@ class HomeControllerTest < ActionController::TestCase
     assert_select '#age-modal', false
   end
 
+  test 'anonymous does not get thank donors dialog' do
+    assert_nil current_user
+
+    get :home
+
+    assert_select '#thank-donors-modal', false
+  end
+
+  test 'student on first login gets thank donors dialog' do
+    # Devise does not run callbacks (eg, increment sign in count)
+    # when using sign_in according to this 2014 discussion:
+    # https://github.com/heartcombo/devise/issues/2905
+    student = create(:user, sign_in_count: 1)
+
+    sign_in student
+    get :home
+
+    assert_select '#thank-donors-modal', true
+  end
+
+  test 'teacher on first login gets thank donors dialog' do
+    teacher = create(
+      :teacher,
+      :with_terms_of_service,
+      sign_in_count: 1
+    )
+
+    sign_in teacher
+    get :home
+
+    assert_select '#thank-donors-modal', true
+  end
+
+  test 'student on second login does not get thank donors dialog' do
+    # Devise does not run callbacks (eg, increment sign in count)
+    # when using sign_in.
+    student = create(:user, sign_in_count: 2)
+
+    sign_in student
+    get :home
+
+    assert_select '#thank-donors-modal', false
+  end
+
+  test 'teacher on second login does not get thank donors dialog' do
+    teacher = create(
+      :teacher,
+      :with_terms_of_service,
+      sign_in_count: 2
+    )
+
+    sign_in teacher
+    get :home
+
+    assert_select '#thank-donors-modal', false
+  end
+
   # This exception is actually annoying to handle because it never gets to
   # ActionController (so we can't use the rescue in ApplicationController).
   # test "bad http methods are rejected" do
@@ -354,7 +366,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 14
+    query_count = 13
     assert_queries query_count do
       get :home
     end
@@ -363,7 +375,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 16
+    query_count = 15
     assert_queries query_count do
       get :home
     end
@@ -391,7 +403,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'teachers cannot see dashboard links' do
     sign_in create(:terms_of_service_teacher)
-    query_count = 12
+    query_count = 11
     assert_queries query_count do
       get :home
     end
@@ -411,7 +423,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
-    query_count = 16
+    query_count = 15
     assert_queries query_count do
       get :home
     end
@@ -421,7 +433,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test 'program managers see application dashboard links' do
     sign_in create(:program_manager, :with_terms_of_service)
-    query_count = 16
+    query_count = 15
     assert_queries query_count do
       get :home
     end
@@ -432,7 +444,7 @@ class HomeControllerTest < ActionController::TestCase
   # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service)
-    query_count = 14
+    query_count = 13
     assert_queries query_count do
       get :home
     end

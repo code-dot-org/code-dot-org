@@ -8,6 +8,8 @@ import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
+import NameFailureError from '../NameFailureError';
+import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -25,7 +27,7 @@ var sourcesPublic = require('./clientApi').create('/v3/sources-public');
 var channels = require('./clientApi').create('/v3/channels');
 
 var showProjectAdmin = require('../showProjectAdmin');
-var header = require('../header');
+import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 
 // Name of the packed source file
@@ -103,7 +105,7 @@ let thumbnailPngBlob = null;
 var currentSources = {
   source: null,
   html: null,
-  makerAPIsEnabled: false,
+  makerAPIsEnabled: null,
   animations: null,
   selectedSong: null
 };
@@ -129,7 +131,8 @@ function unpackSources(data) {
     animations: data.animations,
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
-    selectedSong: data.selectedSong
+    selectedSong: data.selectedSong,
+    libraries: data.libraries
   };
 }
 
@@ -164,6 +167,39 @@ var projects = (module.exports = {
       return;
     }
     return current.name;
+  },
+
+  /**
+   * @returns {string} name of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryName() {
+    if (!current) {
+      return;
+    }
+    return current.libraryName;
+  },
+
+  /**
+   * @returns {array} list of all class ids that this library has been shared
+   * with. Or undefined if we don't have a current project.
+   */
+  getCurrentLibrarySharedClasses() {
+    if (!current) {
+      return;
+    }
+    return current.sharedWith;
+  },
+
+  /**
+   * @returns {string} description of the most recently published library from the
+   * project, or undefined if we don't have a current project
+   */
+  getCurrentLibraryDescription() {
+    if (!current) {
+      return;
+    }
+    return current.libraryDescription;
   },
 
   /**
@@ -241,6 +277,21 @@ var projects = (module.exports = {
     }
   },
 
+  /**
+   * Returns the project URL for the current project.
+   *
+   * This URL accesses the dashboard API for the sources S3 bucket where
+   * the main.json is generally stored.
+   *
+   * This function depends on the document location to determine the current
+   * application environment.
+   *
+   * @returns {string} Fully-qualified sources URL for the current project.
+   */
+  getProjectSourcesUrl() {
+    return `${this.getLocation().origin}/v3/sources/${this.getCurrentId()}`;
+  },
+
   getCurrentTimestamp() {
     if (!current) {
       return;
@@ -260,10 +311,14 @@ var projects = (module.exports = {
   },
 
   /**
-   * Whether this project's source has Maker APIs enabled.
-   * @returns {boolean}
+   * Whether this project's source has the micro:bit or Circuit Playground Maker APIs enabled.
+   * Deprecated values: false/true.
+   * Updated values: 'circuitPlayground', 'microbit', or null.
+   * Deprecated value {false} maps to updated value {null}.
+   * Deprecated value {true} maps to updated value {circuitPlayground}.
+   * @returns {string}
    */
-  useMakerAPIs() {
+  getMakerAPIs() {
     return currentSources.makerAPIsEnabled;
   },
 
@@ -309,9 +364,9 @@ var projects = (module.exports = {
   },
 
   /**
-   * Sets abuse score to zero, saves the project, and reloads the page
+   * Sets abuse score, saves the project, and reloads the page
    */
-  adminResetAbuseScore() {
+  adminResetAbuseScore(score = 0) {
     var id = this.getCurrentId();
     if (!id) {
       return;
@@ -320,16 +375,16 @@ var projects = (module.exports = {
       if (err) {
         throw err;
       }
-      assets.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      assets.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
       });
-      files.patchAll(id, 'abuse_score=0', null, function(err, result) {
+      files.patchAll(id, `abuse_score=${score}`, null, function(err, result) {
         if (err) {
           throw err;
         }
-        $('.admin-abuse-score').text(0);
+        $('.admin-abuse-score').text(score);
       });
     });
   },
@@ -444,6 +499,9 @@ var projects = (module.exports = {
 
   __TestInterface: {
     // Used by UI tests
+    getCurrent() {
+      return current;
+    },
     isInitialSaveComplete() {
       return initialSaveComplete;
     },
@@ -452,6 +510,9 @@ var projects = (module.exports = {
     },
     setCurrentData(data) {
       current = data;
+    },
+    setCurrentSources(data) {
+      currentSources = data;
     },
     setSourceVersionInterval(seconds) {
       newSourceVersionInterval = seconds * 1000;
@@ -541,6 +602,55 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
+  setLibrarySharedClasses(newSharedClasses, callback) {
+    current = current || {};
+    if (Array.isArray(newSharedClasses)) {
+      current.sharedWith = newSharedClasses;
+      this.updateChannels_(callback);
+    }
+  },
+  /**
+   * Updates the current channel's library details.
+   *
+   * @param {Object} config - Object containing library details.
+   * @param {string} config.libraryName
+   * @param {string} config.libraryDescription
+   * @param {string} config.latestLibraryVersion - S3 version ID for the current library version. Passing this value as -1 will nullify libraryLatestVersion.
+   * @param {boolean} config.publishing - true if library is being published, false if library is being unpublished, undefined otherwise.
+   */
+  setLibraryDetails(config = {}) {
+    current = current || {};
+    const {
+      libraryName,
+      libraryDescription,
+      latestLibraryVersion,
+      publishing
+    } = config;
+
+    if (libraryName !== current.libraryName) {
+      current.libraryName = libraryName;
+    }
+
+    if (libraryDescription !== current.libraryDescription) {
+      current.libraryDescription = libraryDescription;
+    }
+
+    if (latestLibraryVersion !== current.latestLibraryVersion) {
+      current.latestLibraryVersion =
+        latestLibraryVersion === -1 ? null : latestLibraryVersion;
+    }
+
+    if (publishing) {
+      // Tells the server to set libraryPublishedAt timestamp.
+      current.publishLibrary = true;
+    } else if (publishing === false) {
+      // Unpublishing, so nullify libraryPublishedAt timestamp.
+      current.libraryPublishedAt = null;
+      current.publishLibrary = false;
+    }
+
+    this.updateChannels_();
+  },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
@@ -579,7 +689,7 @@ var projects = (module.exports = {
 
       setMakerAPIsStatusFromLevel();
       setMakerAPIsStatusFromQueryParams();
-      if (currentSources.makerAPIsEnabled) {
+      if (this.getMakerAPIs()) {
         sourceHandler.setMakerAPIsEnabled(currentSources.makerAPIsEnabled);
       }
 
@@ -589,6 +699,10 @@ var projects = (module.exports = {
 
       if (currentSources.animations) {
         sourceHandler.setInitialAnimationList(currentSources.animations);
+      }
+
+      if (currentSources.libraries) {
+        sourceHandler.setInitialLibrariesList(currentSources.libraries);
       }
 
       if (currentSources.generatedProperties) {
@@ -738,10 +852,10 @@ var projects = (module.exports = {
       case 'dance':
       case 'eval':
       case 'flappy':
-      case 'scratch':
       case 'weblab':
       case 'gamelab':
       case 'spritelab':
+      case 'javalab':
         return appOptions.app; // Pass through type exactly
       case 'turtle':
         if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
@@ -865,6 +979,40 @@ var projects = (module.exports = {
       });
     });
   },
+
+  /**
+   * Tests whether provided sample code is different from the current project code.
+   * This also normalizes the code so incidental differences in line endings or
+   * empty xml tags are not recognized as differences.
+   * @param {string} sampleCodeInput the code to diff against the current project code
+   */
+  isCurrentCodeDifferent(sampleCodeInput) {
+    // We can't use a default param here because we need to check for null and undefined
+    const sampleCode = sampleCodeInput || '';
+    const currentCode = currentSources.source || '';
+    let normalizedSample, normalizedCurrent;
+    const parser = new DOMParser();
+    const parsedCurrent = parser.parseFromString(currentCode, 'text/xml');
+    const parsedSample = parser.parseFromString(sampleCode, 'text/xml');
+    // We normalize in different ways due to the difference in how droplet and blockly
+    // store code. Blockly is xml based and Droplet is plaintext based.
+    if (
+      parsedCurrent.getElementsByTagName('parsererror').length > 0 ||
+      parsedSample.getElementsByTagName('parsererror').length > 0
+    ) {
+      // Remove all whitespace from the code.
+      normalizedSample = sampleCode.replace(/\s+/g, '');
+      normalizedCurrent = currentCode.replace(/\s+/g, '');
+    } else {
+      // Normalize XML to ignore differences in closing tags.
+      const serializer = new XMLSerializer();
+      normalizedSample = serializer.serializeToString(parsedSample);
+      normalizedCurrent = serializer.serializeToString(parsedCurrent);
+    }
+
+    return normalizedSample !== normalizedCurrent;
+  },
+
   /**
    * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
@@ -882,11 +1030,11 @@ var projects = (module.exports = {
      * resolves once the data has been written to the server.
      */
     const completeAsyncSave = () =>
-      new Promise(resolve =>
+      new Promise((resolve, reject) =>
         this.getUpdatedSourceAndHtml_(sourceAndHtml =>
           this.saveSourceAndHtml_(
             sourceAndHtml,
-            resolve,
+            (err, result) => (err ? reject(err) : resolve()),
             forceNewVersion,
             preparingRemix
           )
@@ -976,14 +1124,14 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
-              window.location.reload();
+              utils.reload();
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_(
                 'conflict-save-sources-reload',
                 saveSourcesErrorCount,
                 err.message
               );
-              window.location.reload();
+              utils.reload();
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_(
@@ -1040,7 +1188,7 @@ var projects = (module.exports = {
       function(err, data) {
         initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
+        executeCallback(callback, err, data);
       }.bind(this)
     );
   },
@@ -1095,20 +1243,25 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(source => {
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const selectedSong = this.sourceHandler.getSelectedSong();
-        const generatedProperties = this.sourceHandler.getGeneratedProperties();
-        callback({
-          source,
-          html,
-          animations,
-          makerAPIsEnabled,
-          selectedSong,
-          generatedProperties
-        });
-      })
+      this.sourceHandler
+        .getLevelSource()
+        .then(source => {
+          const html = this.sourceHandler.getLevelHtml();
+          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+          const selectedSong = this.sourceHandler.getSelectedSong();
+          const generatedProperties = this.sourceHandler.getGeneratedProperties();
+          const libraries = this.sourceHandler.getLibrariesList();
+          callback({
+            source,
+            html,
+            animations,
+            makerAPIsEnabled,
+            selectedSong,
+            generatedProperties,
+            libraries
+          });
+        })
+        .catch(error => callback({error}))
     );
   },
 
@@ -1121,17 +1274,17 @@ var projects = (module.exports = {
   },
 
   /**
-   * Save the project with the maker API state toggled, then reload the page
+   * Save the project with the maker API state set, then reload the page
    * so that the toolbox gets re-initialized.
    * @returns {Promise} (mostly useful for tests)
    */
-  toggleMakerEnabled() {
+  setMakerEnabled(apisEnabled) {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
-            makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled
+            makerAPIsEnabled: apisEnabled
           },
           () => {
             resolve();
@@ -1141,18 +1294,62 @@ var projects = (module.exports = {
       });
     });
   },
+  setProjectLibraries(updatedLibrariesList) {
+    if (appOptions.level.editBlocks) {
+      // If we're in start_blocks on levelbuilder, reload is disabled, so we
+      // need to set currentSources so it can be saved when the save button is
+      // clicked.
+      currentSources.libraries = updatedLibrariesList;
+      updatedLibrariesList.forEach(library => {
+        library.fromLevelbuilder = true;
+      });
+    }
+    return new Promise(resolve => {
+      this.getUpdatedSourceAndHtml_(sourceAndHtml => {
+        this.saveSourceAndHtml_(
+          {
+            ...sourceAndHtml,
+            libraries: updatedLibrariesList
+          },
+          () => {
+            resolve();
+            utils.reload();
+          }
+        );
+      });
+    });
+  },
+  getProjectLibraries() {
+    let startLibraries = appOptions.level.startLibraries;
+    return (
+      currentSources.libraries || (startLibraries && JSON.parse(startLibraries))
+    );
+  },
+  /**
+   * @returns {string} searches through all data we have on a level to find its
+   * name.
+   */
+  getLevelName() {
+    let name = current && current.name;
+    name = name || appOptions.level.name;
+    return name;
+  },
   showSaveError_(errorType, errorCount, errorText) {
     header.showProjectSaveError();
     this.logError_(errorType, errorCount, errorText);
   },
   logError_: function(errorType, errorCount, errorText) {
+    // Share URLs only make sense for standalone app types.
+    // This includes most app types, but excludes pixelation.
+    const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
+
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
         study_group: 'v4',
         event: errorType,
         data_int: errorCount,
-        project_id: current.id + '',
+        project_id: current && current.id + '',
         data_string: errorText,
         // Some fields in the data_json are repeated in separate fields above, so
         // that they can be easily searched on as separate fields, and also have
@@ -1162,7 +1359,7 @@ var projects = (module.exports = {
           errorText: errorText,
           isOwner: this.isOwner(),
           currentUrl: window.location.href,
-          shareUrl: this.getShareUrl(),
+          shareUrl: shareUrl,
           currentSourceVersionId: currentSourceVersionId
         })
       },
@@ -1258,6 +1455,12 @@ var projects = (module.exports = {
     }
 
     this.getUpdatedSourceAndHtml_(newSources => {
+      if (newSources.error) {
+        header.showProjectSaveError();
+        callCallback();
+        return;
+      }
+
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
         hasProjectChanged = false;
         callCallback();
@@ -1272,10 +1475,19 @@ var projects = (module.exports = {
   },
   /**
    * Renames and saves the project.
+   * @param {string} newName
+   * @return {Promise}
    */
-  rename(newName, callback) {
+  rename(newName) {
     this.setName(newName);
-    this.save().then(callback);
+    return this.save().catch(error => {
+      if (error.responseText) {
+        const parsed = JSON.parse(error.responseText);
+        throw new NameFailureError(parsed['nameFailure']);
+      } else {
+        throw new Error('Unknown error');
+      }
+    });
   },
   /**
    * Freezes the project. Also hides so that it's not available for
@@ -1318,6 +1530,8 @@ var projects = (module.exports = {
     const queryParams = current.id ? {parent: current.id} : null;
     delete current.id;
     delete current.hidden;
+    delete current.libraryName;
+    delete current.libraryDescription;
     current.projectType = this.getStandaloneApp();
     if (shouldPublish) {
       current.shouldPublish = true;
@@ -1389,89 +1603,81 @@ var projects = (module.exports = {
       executeCallback(callback, data);
     });
   },
+
   /**
-   * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
+   * @returns {Promise} A Promise which will resolve when the project loads.
    */
   load() {
-    var deferred = new $.Deferred();
-
-    // Use the sources-public API for dancelab shares. Responses from this API
-    // can be publicly cached, which is helpful for HoC scalability in the
-    // celebrity tweet scenario where a single share link gets many hits.
-    const useSourcesPublic =
-      appOptions.share &&
-      appOptions.level &&
-      appOptions.level.projectType === 'dance';
-    let sourcesApi;
-    if (this.useSourcesApi()) {
-      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
-    }
-
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        deferred.resolve();
-        return deferred;
+        return Promise.resolve();
       }
-      var pathInfo = parsePath();
+      return this.loadStandaloneProject_();
+    } else if (appOptions.channel) {
+      return this.loadProjectBackedLevel_();
+    } else {
+      return Promise.resolve();
+    }
+  },
 
-      if (pathInfo.channelId) {
-        if (pathInfo.action === 'edit') {
-          isEditing = true;
-        } else {
-          $('#betainfo').hide();
-        }
+  /**
+   * Loads the channel and source for a standalone project. The channel id
+   * is determined by parsing the current url path.
+   * @returns {Promise} A Promise which will resolve when the project loads.
+   */
+  loadStandaloneProject_: function() {
+    var pathInfo = parsePath();
 
-        // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, (err, data) => {
-          if (err) {
-            // Project not found, redirect to the new project experience.
-            location.href = location.pathname
-              .split('/')
+    if (pathInfo.channelId) {
+      if (pathInfo.action === 'edit') {
+        isEditing = true;
+      } else {
+        $('#betainfo').hide();
+      }
+
+      // Load the project ID, if one exists
+      return this.fetchChannel(pathInfo.channelId)
+        .catch(err => {
+          if (err.message.includes('error: Not Found')) {
+            // Project not found. Redirect to the most recent project of this
+            // type, or a new project of this type if none exists.
+            const newPath = utils
+              .currentLocation()
+              .pathname.split('/')
               .slice(PathPart.START, PathPart.APP + 1)
               .join('/');
-          } else {
-            this.fetchSource(
-              data,
-              () => {
-                if (current.isOwner && pathInfo.action === 'view') {
-                  isEditing = true;
-                }
-                fetchAbuseScoreAndPrivacyViolations(this, function() {
-                  deferred.resolve();
-                });
-              },
-              queryParams('version'),
-              sourcesApi
-            );
+            utils.navigateToHref(newPath);
           }
+          // Reject even after navigation, to allow unit tests which stub
+          // navigateToHref to confirm that navigation has happened.
+          return Promise.reject(err);
+        })
+        .then(this.fetchSource.bind(this))
+        .then(() => {
+          if (current.isOwner && pathInfo.action === 'view') {
+            isEditing = true;
+          }
+          return fetchAbuseScoreAndPrivacyViolations(this);
         });
-      } else {
-        isEditing = true;
-        deferred.resolve();
-      }
-    } else if (appOptions.channel) {
-      isEditing = true;
-      channels.fetch(appOptions.channel, (err, data) => {
-        if (err) {
-          deferred.reject();
-        } else {
-          this.fetchSource(
-            data,
-            () => {
-              projects.showHeaderForProjectBacked();
-              fetchAbuseScoreAndPrivacyViolations(this, function() {
-                deferred.resolve();
-              });
-            },
-            queryParams('version'),
-            sourcesApi
-          );
-        }
-      });
     } else {
-      deferred.resolve();
+      isEditing = true;
+      return Promise.resolve();
     }
-    return deferred;
+  },
+
+  /**
+   * Loads the channel and source for a project-backed level. The channel id
+   * is determined by appOptions.channel.
+   * @returns {Promise} A Promise which will resolve when the project loads.
+   */
+  loadProjectBackedLevel_: function() {
+    isEditing = true;
+    return this.fetchChannel(appOptions.channel)
+      .then(this.fetchSource.bind(this))
+      .then(() => {
+        projects.showHeaderForProjectBacked();
+        return fetchAbuseScoreAndPrivacyViolations(this);
+      });
   },
 
   /**
@@ -1559,14 +1765,33 @@ var projects = (module.exports = {
   },
 
   /**
+   * Given a channel id, fetches the channel's data from the server.
+   * @param {string} channelId to fetch.
+   * @returns {Promise} A promise which resolves with the channel data.
+   */
+  fetchChannel(channelId) {
+    return new Promise((resolve, reject) => {
+      channels.fetch(channelId, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
+    }).catch(err => {
+      this.logError_(
+        'load-channel-error',
+        null,
+        `unable to fetch project channel: ${err}`
+      );
+      return Promise.reject(err);
+    });
+  },
+
+  /**
    * Given data from our channels api, updates current and gets sources from
    * sources api
    * @param {object} channelData Data we fetched from channels api
-   * @param {function} callback
    * @param {string?} version Optional version to load
-   * @param {boolean} sources api to use, if present.
+   * @returns {Promise} A promise that resolves when the source is loaded.
    */
-  fetchSource(channelData, callback, version, sourcesApi) {
+  fetchSource(channelData) {
     // Explicitly remove levelSource/levelHtml from channels
     delete channelData.levelSource;
     delete channelData.levelHtml;
@@ -1577,35 +1802,51 @@ var projects = (module.exports = {
     current = channelData;
 
     projects.setTitle(current.name);
+    const sourcesApi = this.getSourcesApi_();
     if (sourcesApi && channelData.migratedToS3) {
       var url = current.id + '/' + SOURCE_FILE;
+      const version = queryParams('version');
       if (version) {
         url += '?version=' + version;
       }
-      sourcesApi.fetch(url, (err, data, jqXHR) => {
-        if (err) {
+      return new Promise((resolve, reject) => {
+        sourcesApi.fetch(url, (err, data, jqXHR) =>
+          err ? reject(err) : resolve({data, jqXHR})
+        );
+      })
+        .catch(err => {
           this.logError_(
             'load-sources-error',
             null,
             `unable to fetch project source file: ${err}`
           );
-          console.warn();
-          data = {
-            source: '',
-            html: '',
-            animations: ''
-          };
-        }
-        currentSourceVersionId =
-          jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-        unpackSources(data);
-        callback();
-      });
+          return Promise.reject(err);
+        })
+        .then(({data, jqXHR}) => {
+          currentSourceVersionId =
+            jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
+          unpackSources(data);
+        });
     } else {
       // It's possible that we created a channel, but failed to save anything to
       // S3. In this case, it's expected that html/levelSource are null.
-      callback();
+      return Promise.resolve();
     }
+  },
+
+  getSourcesApi_() {
+    // Use the sources-public API for dancelab shares. Responses from this API
+    // can be publicly cached, which is helpful for HoC scalability in the
+    // celebrity tweet scenario where a single share link gets many hits.
+    const useSourcesPublic =
+      appOptions.share &&
+      appOptions.level &&
+      appOptions.level.projectType === 'dance';
+    let sourcesApi;
+    if (this.useSourcesApi()) {
+      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
+    }
+    return sourcesApi;
   }
 });
 
@@ -1667,24 +1908,26 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [
+/**
+ * @param project
+ * @returns {Promise} A Promise which resolves when all network calls complete.
+ */
+function fetchAbuseScoreAndPrivacyViolations(project) {
+  const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure)
   ];
 
   if (project.getStandaloneApp() === 'playlab') {
-    deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
+    promises.push(new Promise(fetchPrivacyProfanityViolations));
   } else if (
     project.getStandaloneApp() === 'applab' ||
     project.getStandaloneApp() === 'gamelab' ||
     project.isWebLab()
   ) {
-    deferredCallsToMake.push(new Promise(fetchSharingDisabled));
+    promises.push(new Promise(fetchSharingDisabled));
   }
-  Promise.all(deferredCallsToMake).then(function() {
-    callback();
-  });
+  return Promise.all(promises);
 }
 
 /**
@@ -1692,12 +1935,12 @@ function fetchAbuseScoreAndPrivacyViolations(project, callback) {
  */
 function setMakerAPIsStatusFromQueryParams() {
   if (hasQueryParam('enableMaker')) {
-    currentSources.makerAPIsEnabled = true;
+    currentSources.makerAPIsEnabled = CP_API;
     updateQueryParam('enableMaker', undefined, true);
   }
 
   if (hasQueryParam('disableMaker')) {
-    currentSources.makerAPIsEnabled = false;
+    currentSources.makerAPIsEnabled = null;
     updateQueryParam('disableMaker', undefined, true);
   }
 }
@@ -1707,10 +1950,12 @@ function setMakerAPIsStatusFromQueryParams() {
  * This is the case with New Maker Lab Project.level, and projects created
  * based off of that template (/p/makerlab), done prior to maker API support
  * within applab.
+ *
+ * Note: for backwards compatibility, levels with makerLabEnabled default to circuitPlayground
  */
 function setMakerAPIsStatusFromLevel() {
   if (appOptions.level.makerlabEnabled) {
-    currentSources.makerAPIsEnabled = appOptions.level.makerlabEnabled;
+    currentSources.makerAPIsEnabled = CP_API;
   }
 }
 
@@ -1718,9 +1963,9 @@ function setMakerAPIsStatusFromLevel() {
  * Only execute the given argument if it is a function.
  * @param callback
  */
-function executeCallback(callback, data) {
+function executeCallback(callback, ...args) {
   if (typeof callback === 'function') {
-    callback(data);
+    callback(...args);
   }
 }
 
@@ -1794,12 +2039,12 @@ function redirectFromHashUrl() {
  * that we may have hash based route or not
  */
 function parsePath() {
-  var pathname = location.pathname;
+  var pathname = utils.currentLocation().pathname;
 
   // We have a hash based route. Replace the hash with a slash, and append to
   // our existing path
-  if (location.hash) {
-    pathname += location.hash.replace('#', '/');
+  if (utils.currentLocation().hash) {
+    pathname += utils.currentLocation().hash.replace('#', '/');
   }
 
   var tokens = pathname.split('/');
@@ -1823,7 +2068,7 @@ function parsePath() {
   // embed url. Since a lot of our javascript depends on having the decoded channel
   // id, we do that here when parsing the page's path.
   let channelId = tokens[PathPart.CHANNEL_ID];
-  if (location.search.indexOf('nosource') >= 0) {
+  if (utils.currentLocation().search.indexOf('nosource') >= 0) {
     channelId = channelId
       .split('')
       .map(char => ALPHABET[CIPHER.indexOf(char)] || char)

@@ -1,0 +1,14 @@
+name 'CSD U1 Test_2020'
+title 'Computers and Problem Solving Post-Project Test'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'CSD U1 Test define a computer_2020'
+level 'CSD U1 Test PSP match_2020'
+level 'CSD U1 IOSP match_2020'
+level 'CSD U1 Test define problem_2020'
+level 'CSD U1 Test storage FR_2020'
+level 'CSD U1 Test Feedback FR_2020'
+level 'CSD U1 Test Collaborate FR_2020'
+level 'CSD U1 Test Iteration FR_2020'

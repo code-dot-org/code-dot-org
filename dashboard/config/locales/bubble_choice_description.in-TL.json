@@ -1,0 +1,17 @@
+{
+  "in-TL": {
+    "data": {
+      "bubble_choice_description": {
+        "courseF_extras_sim": "crwdns2485910:0crwdne2485910:0",
+        "outbreak4": "crwdns2485890:0crwdne2485890:0",
+        "outbreak5": "crwdns2485892:0crwdne2485892:0",
+        "outbreak6": "crwdns2485894:0crwdne2485894:0",
+        "outbreak7": "crwdns2485896:0crwdne2485896:0",
+        "outbreak8": "crwdns2485898:0crwdne2485898:0",
+        "outbreak_freeplay": "crwdns2485902:0crwdne2485902:0",
+        "outbreak_freeplay_basic": "crwdns2485900:0crwdne2485900:0",
+        "spritelab_extras_repeat": "crwdns2485908:0crwdne2485908:0"
+      }
+    }
+  }
+}

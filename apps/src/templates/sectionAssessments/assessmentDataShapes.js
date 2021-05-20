@@ -19,7 +19,9 @@ export const freeResponsesDataPropType = PropTypes.shape({
 const multipleChoiceAnswerDataPropType = PropTypes.shape({
   multipleChoiceOption: PropTypes.string,
   numAnswered: PropTypes.number,
-  isCorrect: PropTypes.bool
+  isCorrect: PropTypes.bool,
+  percentAnswered: PropTypes.number,
+  text: PropTypes.string
 });
 
 // Represents a single question and a section summary of answers

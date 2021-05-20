@@ -1,0 +1,36 @@
+%p
+  Hello
+  = @application.first_name + ','
+
+%p
+  Thank you for your interest in
+  = @application.effective_regional_partner_name + "'s"
+  Professional Learning Program! We've received your application.
+  = @application.regional_partner&.name || 'We'
+  will review your application soon.
+
+- if !@application.regional_partner
+  %p
+    We do not have a Regional Partner in your area. However, we have a number of partners in nearby states or regions who may have space available in their program. We'll let you know if we can find you a nearby spot in the program!
+
+  %p
+    If we find a spot, we'll let you know the workshop dates and program fees (if applicable) so you can decide at that point if it is something you or your school can cover.
+
+%p
+  In the meantime, please visit
+  = link_to 'https://code.org/yourschool', 'https://code.org/yourschool'
+  and tell us more about what computer science opportunities are available at your school.
+  Or, visit
+  = link_to 'https://code.org/educate', 'https://code.org/educate'
+  for additional resources and opportunities to connect with other computer science educators.
+  Thank you for supporting computer science for every student!
+
+- if !(@application.regional_partner)
+  = render partial: 'questions_concerns'
+- else
+  %p
+    Thanks again for applying, and let us know if you have any questions or concerns!
+
+%p
+  = render partial: 'partner_signature'
+

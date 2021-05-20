@@ -1,0 +1,102 @@
+teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
+
+lesson_group 'introduction', display_name: 'Introduction'
+lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'
+lesson 'Course F Introduction', display_name: 'Introducing Sprite Lab', has_lesson_plan: false
+level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
+level 'courseF_intro_apps', progression: 'Exploration: Sample Programs'
+level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
+
+lesson 'Making Sprites', display_name: 'Making Sprites', has_lesson_plan: false
+level 'courseF_sprites_predict', progression: 'Predict'
+level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
+level 'courseF_sprites_make', progression: 'Skill Building'
+level 'courseF_sprites_positioning', progression: 'Skill Building'
+level 'courseF_sprites_moreSprites', progression: 'Skill Building'
+level 'courseF_sprites_properties', progression: 'Skill Building'
+level 'courseF_sprites_behaviors', progression: 'Skill Building'
+level 'courseF_sprites_practice', progression: 'Practice'
+level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
+
+lesson 'Sprites in Action', display_name: 'Sprites in Action', has_lesson_plan: false
+level 'courseF_events_predict', progression: 'Predict'
+level 'courseF_pilotVideo_events', progression: 'Video: Sprites in Action'
+level 'courseF_events_review', progression: 'Skill Building'
+level 'courseF_events_time', progression: 'Skill Building'
+level 'courseF_events_key', progression: 'Skill Building'
+level 'courseF_events_conflict', progression: 'Skill Building'
+level 'courseF_events_practice', progression: 'Practice'
+level 'courseF_events_freeplay', progression: 'Free Play: Make an Interactive Scene'
+
+lesson_group 'lessonGroup-3', display_name: 'Variables'
+lesson_group_description 'Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!'
+lesson 'blank space stories', display_name: 'Blank Space Stories', has_lesson_plan: false, unplugged: true
+level 'EnvelopeVariables-Unplugged_2021', progression: 'Video: Variables in Envelopes'
+
+lesson 'lesson-2', display_name: 'Text and Prompts', has_lesson_plan: false
+level 'courseF_variables_predict', progression: 'Prediction'
+level 'courseF_pilotVideo_prompts', progression: 'Video: Text and Prompts'
+level 'courseF_text_review', progression: 'Skill Building'
+level 'courseF_text_print', progression: 'Skill Building'
+level 'courseF_text_events', progression: 'Skill Building'
+level 'courseF_text_prompts', progression: 'Skill Building'
+level 'courseF_text_answer', progression: 'Skill Building'
+level 'courseF_text_concat', progression: 'Skill Building'
+level 'courseF_text_practice', progression: 'Practice'
+
+lesson 'lesson-3', display_name: 'Mini-Project: User Input Programs', has_lesson_plan: false
+level 'courseF_variables_samples', progression: 'Exploration: Sample Programs'
+level 'courseF_variables_stop', progression: 'Prepare Your Plan'
+level 'courseF_variables_projects', progression: 'Application: Create Your Project'
+
+lesson_group 'debugging', display_name: 'Debugging'
+lesson 'lesson-4', display_name: 'Debugging Prototypes', has_lesson_plan: false
+level 'courseF_events_practice_reorder_prototype'
+level 'courseF_events_choice_conflict_prototype'
+level 'courseF_events_freeplay_aquatic_prototype'
+
+lesson_group 'outbreak', display_name: 'Outbreak Simulator'
+lesson 'Virus Simulation for Code Bytes', display_name: 'Coding a Simulation', has_lesson_plan: false
+level 'CourseF_outbreak_story', progression: 'Welcome to Monster Town'
+level 'CourseF_outbreak1', progression: 'Skill Building'
+level 'CourseF_outbreak2', progression: 'Skill Building'
+level 'CourseF_outbreak3', progression: 'Skill Building'
+level 'CourseF_outbreak4', progression: 'Skill Building'
+level 'CourseF_outbreak_story2', progression: 'Learning from Simulations'
+level 'CourseF_outbreak5', progression: 'Mini-Project: Outbreak Simulator'
+level 'CourseF_outbreak6', progression: 'Mini-Project: Outbreak Simulator'
+level 'CourseF_outbreak7', progression: 'Mini-Project: Outbreak Simulator'
+level 'CourseF_outbreak8', progression: 'Mini-Project: Outbreak Simulator'
+level 'CourseF_outbreak_freeplay', progression: 'Mini-Project: Outbreak Simulator'
+
+lesson 'Outbreaklab', display_name: 'Outbreak Standalone Lab', has_lesson_plan: false
+level 'outbreak_library'
+level 'outbreak_virus_v2', progression: 'New library'
+
+lesson_group 'AB EOC', display_name: 'Course A and B EOC Project'
+lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: false
+level 'courseAB_EOC_2021', progression: 'Project'
+level 'courseB_EOC_2021', progression: 'Project'
+
+lesson_group 'Toolbox Levels', display_name: 'Toolbox Levels'
+lesson 'Sprite Lab', display_name: 'Sprite Lab Blocks', has_lesson_plan: false
+level 'sprite lab - ask and answer', progression: 'Text Input'
+level 'anjali- Math Blocks', progression: 'Math Blocks'
+level '2020 new SL stuff', progression: 'New Sprite Animations'
+level 'symmetry', progression: 'Symmetry'
+level 'courseF_2021_template', progression: 'Full Toolbox and/or Template'
+level 'avoid_follow', progression: 'A/B Test for Following Behavior'
+level 'avoid_follow_lines', progression: 'Draw Lines'
+level 'drawshape', progression: 'Draw Shape'
+
+lesson_group 'Loom Levels', display_name: 'Loom Levels'
+lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false
+level 'courseF_events_loom_sandbox', progression: 'Events'
+level 'courseF_text_events_loom', progression: 'Text'
+level 'courseF_text_concat_loom', progression: 'Prompts'
+level 'courseF_variables_loom_sandbox', progression: 'Variables'
+
+lesson_group 'Argentina', display_name: 'Argentina'
+lesson 'aboutme', display_name: 'Storytelling with Sprite Lab', has_lesson_plan: false
+level 'argentina_aboutme_template', progression: 'Template'
+

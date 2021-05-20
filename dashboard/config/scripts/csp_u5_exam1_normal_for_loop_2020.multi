@@ -1,0 +1,61 @@
+name 'csp-u5-exam1-normal-for-loop_2020'
+editor_experiment ''
+right '
+0  
+1  
+2  
+3
+'
+wrong '0  
+1  
+2  
+3  
+4'
+wrong '1  
+2  
+3'
+wrong '1  
+2  
+3  
+4'
+
+
+
+
+markdown <<MARKDOWN
+What will the following program display in the console?
+
+```
+for(var i = 0; i < 4; i++){
+  console.log(i);
+}
+```
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Walking through the program line-by-line, paying attention to the value stored in `i`:
+* At the start of the for-loop, `i` is initialized with a value of `0`
+* The expression `i < 4` evaluates to true meaning the console prints the value currently stored in `i`, `0`
+* The value stored in `i` increases by 1, from 0 to 1
+* The expression `i < 4` evaluates to true meaning the console prints the value currently stored in `i`, `1`
+* The value stored in `i` increases by 1, from 1 to 2
+* The expression `i < 4` evaluates to true meaning the console prints the value currently stored in `i`, `2`
+* The value stored in `i` increases by 1, from 2 to 3
+* The expression `i < 4` evaluates to true meaning the console prints the value currently stored in `i`, `3`
+* The value stored in `i` increases by 1, from 3 to 4
+* The expression `i < 4` evaluates to false and so the program exits the for-loop and the program ends.
+
+
+
+[Lesson 7 - Loops Practice](https://curriculum.code.org/csp-20/unit5/7/) contains a very similar program to the one in this question.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.K: For iteration:
+a. Write iteration statements.
+b. Determine the result or side-effect of iteration statements.
+:::
+
+MARKDOWN

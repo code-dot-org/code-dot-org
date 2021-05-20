@@ -1,1 +1,20 @@
---- {}
+---
+te:
+  data:
+    block_categories:
+      Advanced: అత్యాధునికమైన
+      Behaviors: ప్రవర్తన
+      Brushes: కుంచెలు
+      Comment: వ్యాఖ్య
+      Comments: వ్యాఖ్యలు
+      Dancers: నాట్యకారులు
+      Events: ఈవెంట్లు
+      'Functions ': క్రియలు
+      Game/Score: ఆటలు  /మార్కులు
+      Games/Score: ఆటలు/మార్కులు
+      Groups: గుంపులు
+      Locations: స్థానాలు
+      Numbers: అంకెలు
+      Properties: లక్షణాలు
+      'Variables ': చలరాసులు
+      World: ప్రపంచం

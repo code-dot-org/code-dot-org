@@ -8,9 +8,7 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  # Commenting this stuff out because even if we don't have a reader configured
-  # it will set stuff in the session.
-  # include SeamlessDatabasePool::ControllerFilter
+  include SeamlessDatabasePool::ControllerFilter
   # use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
@@ -19,6 +17,8 @@ class ApplicationController < ActionController::Base
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
+
+  before_action :setup_i18n_tracking
 
   around_action :with_locale
 
@@ -63,6 +63,8 @@ class ApplicationController < ActionController::Base
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
+    elsif rack_env? :development
+      raise
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -78,8 +80,8 @@ class ApplicationController < ActionController::Base
 
   def render_404
     respond_to do |format|
-      format.html {render file: 'public/404.html', layout: 'layouts/application', status: :not_found}
-      format.all {head :not_found}
+      format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
+      format.all {head :not_found, content_type: 'text/html'}
     end
   end
 
@@ -113,6 +115,14 @@ class ApplicationController < ActionController::Base
     :school_name_other
   ].freeze
 
+  # We create users via HTTP requests in UI tests.
+  # This list includes attributes we might want to
+  # set in accounts created/updated in tests, but do not
+  # want to be set via account creates/updates otherwise.
+  UI_TEST_ATTRIBUTES = [
+    :sign_in_count
+  ].freeze
+
   PERMITTED_USER_FIELDS = [
     :name,
     :username,
@@ -123,7 +133,8 @@ class ApplicationController < ActionController::Base
     :gender,
     :login,
     :remember_me,
-    :age, :school,
+    :age,
+    :school,
     :full_address,
     :user_type,
     :hashed_email,
@@ -131,13 +142,24 @@ class ApplicationController < ActionController::Base
     :email_preference_opt_in,
     :data_transfer_agreement_accepted,
     :data_transfer_agreement_required,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES
-  ].freeze
+    :parent_email_preference_opt_in_required,
+    :parent_email_preference_opt_in,
+    :parent_email_preference_email,
+    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
+  ]
+
+  PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
+  PERMITTED_USER_FIELDS.freeze
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
+  end
+
+  # Capture the current request URL for i18n string tracking
+  def setup_i18n_tracking
+    Thread.current[:current_request_url] = request.url
   end
 
   def with_locale
@@ -192,23 +214,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    # logged in users can:
-    if current_user
-      # save solved levels to a gallery (subject to
-      # additional logic in the blockly code because blockly owns
-      # which levels are worth saving)
-      if options[:level_source].try(:id) &&
-          options[:solved?] &&
-          options[:level_source_image]
-        response[:save_to_gallery_url] = gallery_activities_path(
-          gallery_activity: {
-            level_source_id: options[:level_source].try(:id),
-            user_level_id: options[:user_level] && options[:user_level].id
-          }
-        )
-      end
-    end
-
     response[:activity_id] = options[:activity] && options[:activity].id
 
     response
@@ -222,8 +227,30 @@ class ApplicationController < ActionController::Base
     cookies[:language_] = {value: locale, domain: :all, expires: 10.years.from_now}
   end
 
+  def require_english_in_levelbuilder_mode
+    redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
+  end
+
   def require_levelbuilder_mode
+    require_english_in_levelbuilder_mode
+
     unless Rails.application.config.levelbuilder_mode
+      raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
+    end
+  end
+
+  # Allow us to get some UI test coverage on levelbuilder-only features. This
+  # protection must be applied carefully to make sure that script and level
+  # files in the test environment are never modified.
+  #
+  # UI test authors must be careful to clean up after themselves so that they do
+  # not modify curriculum content in a way could introduce intermittent failures
+  # in other tests. Developers wishing to run these tests locally should run
+  # their local server in levelbuilder_mode.
+  def require_levelbuilder_mode_or_test_env
+    require_english_in_levelbuilder_mode
+
+    unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
       raise CanCan::AccessDenied.new('Cannot create or modify levels from this environment.')
     end
   end
@@ -238,13 +265,14 @@ class ApplicationController < ActionController::Base
 
   def pairings=(pairings_from_params)
     # remove pairings
-    if pairings_from_params.blank?
+    if pairings_from_params[:pairings].blank?
       session[:pairings] = []
+      session[:pairing_section_id] = nil
       return
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params.map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -253,17 +281,29 @@ class ApplicationController < ActionController::Base
         nil
       end
     end.compact
+
+    session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
 
   def pairings
     return [] if session[:pairings].blank?
-
-    User.find(session[:pairings])
+    if pairing_still_enabled
+      User.find(session[:pairings])
+    else
+      # clear the pairing data from the session cookie
+      self.pairings = {pairings: []}
+      return []
+    end
   end
 
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
   def pairing_user_ids
+    unless pairing_still_enabled
+      # clear the pairing data from the session cookie
+      self.pairings = {pairings: []}
+    end
+
     # TODO(asher): Determine whether we need to guard against it being nil.
     session[:pairings].nil? ? [] : session[:pairings]
   end
@@ -274,5 +314,11 @@ class ApplicationController < ActionController::Base
       session.delete(:sign_up_type)
       session.delete(:sign_up_tracking_expiration)
     end
+  end
+
+  private
+
+  def pairing_still_enabled
+    session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
 end

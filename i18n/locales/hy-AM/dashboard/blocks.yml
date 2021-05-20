@@ -6,31 +6,16 @@ hy:
         options:
           UNIT:
             '"seconds"': վայրկյան
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -54,58 +39,50 @@ hy:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": կամայական
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': ադամանդ
             '"random"': կամայական
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
           LOCATION:
             "{x: 100, y: 200}": ձախ
             "{x: 300, y: 200}": ճիշտ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
+            '"diamond"': ադամանդ
             '"random"': կամայական
       Dancelab_randomColor:
         text: կամայական գույն
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +98,17 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': չափ
@@ -131,6 +118,16 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ադամանդ
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,10 +137,15 @@ hy:
             '"right"': ճիշտ
             '"space"': տարածություն
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"speed"': արագություն
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -153,6 +155,20 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"speed"': արագություն
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -174,6 +190,8 @@ hy:
         text: կամայական գույն
       gamelab_randomColor:
         text: կամայական գույն
+      gamelab_repeatForever:
+        text: կրկնել հավերժ
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -184,6 +202,11 @@ hy:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
       gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"speed"': արագություն
+      gamelab_setProp_dropdown:
         options:
           PROPERTY:
             '"scale"': չափ
@@ -250,6 +273,8 @@ hy:
             '"scale"': չափ
       Mikelab_randomColor:
         text: կամայական գույն
+      Mikelab_repeatUntilComplete:
+        text: կրկնել հավերժ
       Mikelab_setBG:
         options:
           BG:
@@ -293,59 +318,20 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': կամայական
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:
         text: դիմել է մնացել
       RyanLab_turnRight:
         text: աջ շրջադարձ
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': չափ
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': երբ
-            '"while"': ժամանակ
-          KEY:
-            '"up"': մինչեւ
-            '"down"': ներքեւ
-            '"left"': ձախ
-            '"right"': ճիշտ
-            '"space"': տարածություն
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': ճիշտ
-            '"false"': կեղծ
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ընդմիշտ
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': ցուցադրում
-            '"hide"': թաքցնել
+          FORMAT:
+            '"random"': կամայական
       binary_move:
         options:
           DIR:

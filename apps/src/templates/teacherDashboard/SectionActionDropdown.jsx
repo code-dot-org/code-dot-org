@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
-import {sortableSectionShape, OAuthSectionTypes} from './shapes.jsx';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import {sortableSectionShape} from './shapes.jsx';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {
@@ -22,22 +23,6 @@ import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {getStore} from '@cdo/apps/redux';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-
-const styles = {
-  xIcon: {
-    paddingRight: 5
-  },
-  heading: {
-    borderTopWidth: 0,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.default_text,
-    paddingBottom: 20,
-    marginBottom: 30
-  }
-};
 
 class SectionActionDropdown extends Component {
   static propTypes = {
@@ -113,14 +98,22 @@ class SectionActionDropdown extends Component {
 
     return (
       <span>
-        <QuickActionsCell>
+        <QuickActionsCell type={'header'}>
+          <PopUpMenu.Item
+            onClick={this.onClickEdit}
+            className="edit-section-details-link"
+          >
+            {i18n.editSectionDetails()}
+          </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
+            className="view-progress-link"
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            className="manage-students-link"
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
@@ -128,19 +121,13 @@ class SectionActionDropdown extends Component {
             sectionData.loginType !== OAuthSectionTypes.clever && (
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
+                className="print-login-link"
               >
                 {sectionData.loginType === SectionLoginType.email
                   ? i18n.joinInstructions()
                   : i18n.printLoginCards()}
               </PopUpMenu.Item>
             )}
-          <MenuBreak />
-          <PopUpMenu.Item
-            onClick={this.onClickEdit}
-            className="edit-section-details-link"
-          >
-            {i18n.editSectionDetails()}
-          </PopUpMenu.Item>
           <PrintCertificates
             sectionId={sectionData.id}
             assignmentName={sectionData.assignmentNames[0]}
@@ -176,15 +163,17 @@ class SectionActionDropdown extends Component {
           <h2 style={styles.heading}>{i18n.deleteSection()}</h2>
           <div>{i18n.deleteSectionConfirm()}</div>
           <br />
-          <div>{i18n.deleteSectionHideSuggestion()}</div>
+          <div>{i18n.deleteSectionArchiveSuggestion()}</div>
           <DialogFooter>
             <Button
+              __useDeprecatedTag
               class="ui-test-cancel-delete"
               text={i18n.dialogCancel()}
               onClick={this.onCancelDelete}
               color="gray"
             />
             <Button
+              __useDeprecatedTag
               class="ui-test-confirm-delete"
               text={i18n.delete()}
               onClick={this.onConfirmDelete}
@@ -196,6 +185,22 @@ class SectionActionDropdown extends Component {
     );
   }
 }
+
+const styles = {
+  xIcon: {
+    paddingRight: 5
+  },
+  heading: {
+    borderTopWidth: 0,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.default_text,
+    paddingBottom: 20,
+    marginBottom: 30
+  }
+};
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 

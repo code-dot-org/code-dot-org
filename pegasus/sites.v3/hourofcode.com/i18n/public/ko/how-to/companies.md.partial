@@ -1,100 +1,185 @@
 ---
-title: Hour of Code 행사 운영 방법 - 회사
+title: 회사를 위한 아워오브코드 하우 투 가이드
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Hour of Code 를 회사에서 진행하는 방법
+# 회사가 아워오브코드에 참가하는 방법
 
 ### 당신과 당신의 직원들이 어떻게 하면 학생들에게 컴퓨터 과학에 도전하도록 영감을 줄 수 있을지 알아보세요!
 
----
+* * *
 
-## Hour of Code를 위해 학교 교실과 자원 봉사자를 연결
+컴퓨팅 사고는 문제해결 능력과 논리력, 창의력을 키워주는데 도움이 됩니다. 기술은 지구상의 모든 산업을 변모시키고 있습니다. 오늘날 학생은 단순히 사용법만이 아닌 기술을 창조하는 방법을 배워야 합니다. 일찍 시작함으로써, 그들은 21세기 직업경로에서 성공을 위한 기반을 갖게 될 것입니다.
 
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+아워오브코드 캠페인 동안, 회사는 컴퓨터 과학 운동에 관한 인식을 제고하는데 도움을 줄 수 있습니다. 개인자격으로 자원봉사를 하든 아니면 회사를 위한 이벤트를 계획하든, 여러분의 모든 노력은 소외된 인종 및 민족 그룹의 어린 여성과 학생이 컴퓨터 과학과 그들 자신의 잠재력을 바라보는 방식에 엄청난 영향을 미칠 수 있습니다.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
+- [직원들에게 교실에서 자원봉사하도록 장려.](#encourage-employees)
+- [회사와 학교를 연결합니다.](#connect-with-a-school)
+- [아워오브코드 이벤트를 주최하세요.](#host-hour-of-code)
+- [Hour of Code 를 홍보해주세요.](#promote-hour-of-code)
+- [아워오브코드를 지원하는 더 많은 방법](#support-hour-of-code)
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+* * *
 
-## 기업들이 Hour of Code를 지원할 수 있는 다른 방법들:
+<a id="encourage-employees"></a>
 
-- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+## 직원들에게 교실에서 자원봉사하도록 장려.
 
-# How to host an Hour of Code event with students
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-## 1. Promote your Hour of Code
+아워오브코드에 참여하는 가장 크게 성취감을 주는 방법 중 하나는 지역 학급에서 직접 또는 가상적으로 자원봉사를 하는 것입니다 무엇보다도, 자원봉사자가 되기 위해 엔지니어이어야 할 필요는 없습니다. 자신의 직업 경험과 CS 또는 기술이 여러분의 역할에 어떤 영향을 미쳤는지 공유함으로써 학생들에게 의미있는 경험을 제공할 수 있습니다.
 
-- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+[<button>자원봉사자로 등록하십시오.</button>]({{ urls/volunteer }})
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+일단 자원봉사자 등록을 하면 교사가 [자원봉사 맵](https://code.org/volunteer/local)에서 프로필을 검토하며 그러므로 프로필은 가능한 자세한 내용으로 기재하여 제출해야 합니다. 학급에 잘 맞으면, 교사가 플랫폼을 통해 연락할 것입니다 (당사는 교사와 신청인의 이메일 주소를 공유하지 않습니다). 그 다음 [주위의 교사와 자원봉사를 교실에서 가장 잘 하는 방법에 관한 세부사항을 직접 조율할 수 있습니다](https://hourofcode.com/us/how-to/volunteers).
 
-## 3. Choose an activity
+자원봉사에 관한 더 자세한 안내와 회사에게 아워오브코드 관심과 흥미를 갖게 할 샘플 메시지는 [회사 파트너를 위한 가이드]({{ localized_files/hoc_corporate_toolkit }})에서 확인하세요.
 
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+* * *
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a id="connect-with-a-school"></a>
+
+## 회사와 학교를 연결합니다.
+
+학급 또는 학교와 연결되기 위해 자원봉사 맵을 사용할 필요는 없습니다. 종종, 우리는 지역에서 시작할 것을 추천합니다. 귀하 및 귀사 직원에게 모교 또는 자녀의 학교 등과 같은 이미 강한 연결고리가 있는 학교가 있는지 또는 컴퓨터 과학에서 역사적으로 소외된 인구를 대변하는 데 중점을 두고 있는 조직 또는 학교가 있는지 고려하세요.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+거기서 부터 시작하여 학교의 웹사이트를 방문하여, 교장 또는 교감 등과 같은 관리자, 기술 또는 컴퓨터 과학 교사, 심지어 학교의 PTSA와 상담하기 위한 연락처를 찾을 수 있습니다. 또한 Boys & Girls Clubs of America, YMCA 지점 등과 같은 조직과 이벤트를 공동 주최하기 위해 파트너 관계를 맺을 수도 있습니다.
+
+학교와 직접 연락할 수 없으시면 [저희에게 문의](https://support.code.org/hc/en-us/requests/new)하시면 저희가 가능한 지역 파트너와 자원봉사 신청자를 연결해 드리겠습니다. 
+
+* * *
+
+<h4><font color="00adbc"><i>"나는 아이들이 즐거워하는 것을 보는게 아주 즐겁습니다. 한 가지 놀라운 일은, 일부 학과 성적이 그리 좋지 못한 학생이 개발자처럼 사고하고 다른 이를 돕는 일에 뛰어난 역량을 발휘해 스스로 자신감을 갖는 기회가 되었다는 사실입니다."</i></font></h4>
+
+-아워오브코드 자원봉사자
+
+* * *
+
+<a id="host-hour-of-code"></a>
+
+## 아워오브코드 이벤트를 주최하세요.
+
+특별히 더 애쓰고 싶으시면, 여러분의 회사 역시 아워오브코드 이벤트를 주최할 수 있습니다. 이벤트 주최와 관련하여 정해진 어떤 공식은 없으므로 창의성을 발휘할 것을 권합니다! 직원 수가 적어 (하지만 강력함!), Code.org는 아워오브코드 이벤트 업무를 전담하는 팀은 없습니다. 하지만 여기 시작하기 위한 몇 가지 팁이 있습니다.
+
+### 1. 이 하우 투 동영상 시청 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+### 2. 이벤트 날짜와 형식, 위치 정하기
+
+회사 사무실에서 열리는 또는 지역사회에서, 전 연령의 학생들을 위해[가상](https://hourofcode.com/us/how-to/virtual) 또는 대면 이벤트가 개최되고 있습니다! 또한 영감을 주는 아이디어를 얻기 위해 다른 [기업 파트너](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) 와 [기부자](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f)가 과거에 했던 사례를 살펴 볼수 있습니다.
+
+<br />
+
+#### 예시 안건:
+
+|시간 | 의제 항목 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 분 | [영감을 주는 동영상](https://hourofcode.com/us/promote/resources#videos)|  
+보여 주기 |5-10 분 | 자기 소개 및 학생에 대해 알아보기: 어디에서 일하는지, 맡은 업무, 지금 하는 일에서 가장 좋은 점은? 무엇이 또는 누가 영감을 주었습니까? 컴퓨터 과학에 어떻게 관심을 갖게 되었습니까? 멘토가 있었습니까? 학생의 질문에 답하고 Q&A 시간을 남겨 두세요. |  
+|30-60 분 | 코딩! 이벤트에 직접 참석하는 경우, 학생들 질문에 답하고 어려운 퍼즐을 통해 학생들을 지도하세요. 그들에게 해답을 바로 알려주지 마세요. 대신, 질문을 하여 무엇을 틀렸는지 스스로 답하게 하며, 질문이 있는 경우 서로 간에 물어보도록 권합니다. 가상의 자원봉사를 하면, 최고의 접근방식이 무엇인지 교사와 협의하세요. 세션 끝 부분에서 다시 돌아와 학생의 진도를 확인하는 것이 더 좋을 수 있습니다. | | |1-3 분 | 모두에게 감사한다고 말하고 고무적인 작별 인사를 나눕니다. 회사 장식용 천([스티커](#celebrate) 등)을 나눠 줍니다! | | <br />
+
+#### 이벤트에 추가할 기타 아이디어
+
+- 모든 배경의 학생들이 관심 있어할 만 예를 들며, 기술이 우리의 삶에 미치는 영향에 대해 설명하고 생명을 구하고, 사람을 돕고, 사람을 서로 연결해 주는 기술에 대해 얘기합니다. 
+- 만약 여러분이 기술 회사에 근무하면 여러분 회사가 취급하는 재미 있고 혁신적인 제품을 보여주세요. 기술 회사가 아니면, 기술이 문제를 해결하고 목표를 달성하는데 어떻게 활용하는지 이야기하세요.
+- 회사의 소프트웨어 엔지니어를 초대하여 컴퓨터 과학을 공부하게 된 이유와 수행했던 프로젝트에 관해 학생들에게 말해 달라고 합니다.
+- 귀사의 일부 직원이 이벤트를 용이하게 하거나 또는 지역 학교에 자원봉사하려 하는 경우, 그 그룹을 위한[맞춤형 티셔츠](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)주문을 고려하세요.
+
+### 3. 필요한 기술 용품 계획
+
+[![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
+
+#### 기기:
+
+Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. 학생마다 한 대의 컴퓨터가 있을 필요는 없으며 심지어 컴퓨터가 없이도 아워오브코드를 할 수 있습니다. 언플러그드 활동을 위해, "컴퓨터 또는 기기 없음' 옵션을 보여주도록 간단히 클래스룸 테크놀로지 섹션을 필터링하세요. 
+
+- 컴퓨터나 기기 상에서 **활동을 테스트** 하세요. 브라우저 상에서 소리와 동영상이 모두 적절히 잘 나오는 확인하세요.
+- **기기가 충분하지 않으세요?** 페어 프로그래밍을 사용합니다. 학생들을 짝 지어주면, 선생님보다 서로 서로 도움을 주고 받을 수 있도록 할 수 있습니다. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
+- 사운드가 있어야 최고의 효과를 기대할 수 있는 튜토리얼을 할 때는 참가자에게 **헤드폰을 제공** 하거나 가져오도록 요청하세요.
+- **인터넷 접속속도가 느립니까 **? 이벤트 장 앞에 비디오를 보여주는 방법을 계획하여 각 참가자가 비디오를 다운로드할 필요가 없게 합니다. 또는 언플러그드/오프라인 활동을 시도해 보세요.
+
+#### 가상 이벤트:
+
+이벤트를 가상으로 열 계획이면, 이벤트 전에 회의 플랫폼을 결정 (및 테스트)해야 합니다. 이는 참여할 학생 수에 영향을 미칠 수 있으므로 교실에 초대하거나 또는 이벤트를 홍보하기 전에 결정하는 것이 바람직합니다. 아워오브코드를 원격으로 운영하는 방법에 관한 아이디어는 [가상 아워오브코드 이벤트를 위한 팁](https://hourofcode.com/us/how-to/virtual)을 읽으세요.
+
+### 4. 활동 선택
+
+전 연령 그룹과 경험 수준을 위한 다양하고 재미 있는 자기 주도형 튜토리얼을 제공합니다. 모두가 함께 볼 수 있는 [영감을 주는 비디오](https://hourofcode.com/us/promote/resources#videos)로 이벤트를 시작하고 싶더라도, 대부분은 학생들에게 자기 주도형 튜토리얼을 해보게 합니다.<a href="https://hourofcode.com/us/learn">활동 탐구</a>를 통해 모든 게스트에게 한 가지 튜토리얼 만 사용하게 하고 싶은지 아니면 각 어린이에게 스스로 선택하게 하고 싶은지 미리 결정합니다. **모든 아워오브코드 활동**은 최소한의 준비시간을 요구하고 자기 주도형으로 -참가자 스스로 자신의 속도와 스킬 수준에 맞게 활동하게 합니다.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+일단 견고한 이벤트 로드맵이 나오면, 학생과 학교 또는 더 큰 커뮤니티를 초대하기 시작할 수 있습니다. 관계가 있는 현지 학교부터 알아보거나 또는 [아워오브코드 이벤트 맵에서 검색](https://hourofcode.com/us/map)할 것을 권합니다.
 
-Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 컴퓨터입니다. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+<a id="celebrate"></a>
 
-**Plan Ahead!** Do the following before your event starts:
+### 5. 축하하기
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **충분한 장비가 없습니까?**[페어 프로그래밍 방법을](https://www.youtube.com/watch?v=vgkahOzFH2Q) 활용하세요. When participants partner up, they help each other and rely less on the organizer. 그렇게 함으로서 컴퓨터과학(정보과학)은 사회적이며 협동적이다라는 것을 알게 될 수 있습니다.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+[![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-## 5. Start your Hour of Code off with an inspiring video
+학생 또는 게스트가 아워오브코드를 완료하면, 성공적으로 이수한 것을 축하해 줍니다. 여기 이벤트를 더욱 재미 있게 만드는 몇 가지 아이디어입니다.
 
-참가자들을 격려하는 것으로부터 여러분의 Hour of Code를 시작하세요. 그리고 컴퓨터 과학이 우리의 삶의 모든 부분에 어떻게 영향을 주는지 토론해보세요. Share more about what inspired you to pursue computer science and your role at your company.
-
-**영감을 주는 동영상을 보여주세요:**
-
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- 전세계 코드의 시간 비디오 [](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- 영감을 주는 많은 영상들을 여기서 찾아보세요. [](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
-
-**Ideas to introduce your Hour of Code activity to students:**
-
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
-
-## 6. Code!
-
-**참가자들이 활동하도록 이끌어 주세요.**
-
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
-
-**When participants come across difficulties it's okay to respond:**
-
-- "나도 잘 모른단다. 우리 함께 생각해 보자."
-- "프로그램을 배우는 것은 새로운 언어를 배우는 것과 같아; 곧바로 능숙할 수는 없는 것이란다."
-
-**누군가 일찍 완료 했을 때는 어떻게 할까요?**
-
-- They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
-
-## 7) 축하하기
-
-- [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- 참가자와 학생을 위한[수료증 인쇄]({{ urls/certificates }}).
+- ["아워오브코드를 해냈다! 스티커"]({{ promote/resources_stickers }})를 인쇄하거나 또는[Code.org Amazon Store](https://code.org/shop)에서 다른 상과 장식용 천을 찾으세요. 
 - 소셜 미디어에 여러분의 Hour of Code 이벤트 사진이나 동영상을 공유하세요. #HourOfCode 와 @codeorg를 이용하면 우리도 여러분의 성공을 강조할 수 있어요.
+
+* * *
+
+<a id="promote-hour-of-code"></a>
+
+## Hour of Code 를 홍보해주세요.
+
+도움을 주는 가장 좋은 방법 중 하나는 아워오브코드를 입소문내고 홍보하는 것입니다.
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+### 1. 이벤트 등록
+
+아워오브코드 이벤트에 가입 시, 성공적인 아워오브코드를 주최하기 위해 필요한 뉴스와 팁이 담긴 유용한 이메일을 받게 될 것입니다. 또한 등록을 하면, 지역 학교 또는 학부모에게 이벤트 주최 소식을 알리는 효과가 있습니다. 
+
+### 2. 소셜 미디어에 게시
+
+소셜 미디어에 게시하고 직원과 공유하기 위한 이 샘플 콘텐츠로 컴퓨터 과학 운동에 관한 인식을 높이는데 기여합니다. 
+
+#### 아워오브코드 일반 발표
+
+- 컴퓨터 과학은 세상을 변화시킵니다. #HourOfCode를 시작으로 학생들이 이 변화의 일부가 되도록 도와 주십시오. https://hourofcode.com/ 
+- 단지 기술 사용법 만이 아니라 구축되는 방식을 배웁니다. 누군가 #HourOfCode로 시작할 수 있게 도와 주십시오. https://hourofcode.com/ 
+
+#### 통계
+
+- 미국 학교의 45% 만이 컴퓨터 과학을 가르치고 있다는 사실을 아세요? 각 학생들에게#HourOfCode https://hourofcode.com/을 배울 기회를 주세요 
+- 미국에서 소프트웨어 전문가 중 26% 만이 여성입니다. 더 많은 젊은 여성에게 #HourOfCode https://hourofcode.com/으로 컴퓨터 과학을 소개하세요. 
+- 미국에서 컴퓨팅 일자리의 67%는 테크 부문이 아닙니다. #HourOfCode https://hourofcode.com/으로 컴퓨터 과학이 기본 커리큘럼 안에 포함되도록 도와주세요. 
+
+#### 직접 만들기
+
+- 한 번의 #HourOfCode가 [자신의 이야기 작성]으로 이끌 수 있습니다. https://hourofcode.com/ 
+- [자신의 생각을 작성]이기 때문에 #HourOfCode를 지지합니다. https://hourofcode.com에 가입하세요. 
+
+#### 엔지니어
+
+- 여러분의 맨 처음 코드 라인이 여러분의 인생을 바꿨다면, 여러분 주위 학생들이 그들의 첫 번째 #HourOfCode를 적을 수 있도록 도와주세요. https://code.org/volunteer 
+- 코딩을 배운 경우—어떤 사연을 갖고 계십니까? 근처 학생에게 그들의 첫 번째 #HourOfCode를 통해 영감을 주세요. https://code.org/volunteer
+
+포스터와 동영상, 스티커, 이벤트를 지역사회에 홍보하는 기타 방법에 관해 <a href="https://hourofcode.com/promote/resources#posters">더 알아보기</a> .
+
+* * *
+
+<a id="support-hour-of-code"></a>
+
+## 아워오브코드를 지원하는 더 많은 방법
+
+[![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
+
+- [Code.org 장식용 천](https://store.code.org/)을 착용하여 인식 확산 (더 많은 학생이 컴퓨터 과학 교육에 접근하도록 지원).
+- [AmazonSmile](https://code.org/donate/amazonsmile)에서 쇼핑 시 Code.org에게 혜택이 환급되도록 선택. 
+- CEO에게 컴퓨터 과학의 중요성을 강조하고 직원에게 입소문을 내도록 권하는 이메일을 회사 전체에 발송하도록 요청.
+- [나눔 캠페인](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).</a>에서 동료 직원들과 함께 재밌는 시간을 가지세요.
+- 모든 학생이 컴퓨터 과학을 배울 기회를 갖도록[이 청원서에 서명](https://code.org/promote)하세요. 
+- Code.org에[기부](https://code.org/donate) 하여 우리의 교육자료를 계속 무료로 제공하고 모두에게 접근 가능하도록 만들 수 있게 해주세요. 
+
+Code.org와 아워오브코드를 지원하는 방법에 관한 더 많은 제안이 있으시면[Code.org/Help](https://code.org/help)를 방문해 주십시오.
 
 {{ signup_button }}

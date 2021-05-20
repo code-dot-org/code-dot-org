@@ -1,0 +1,173 @@
+{
+  "eu-ES": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Ekintzak",
+              "Events": "Gertaerak",
+              "Loops": "Itzuliak",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Games/Score": "Jokoak/Puntuak"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundua",
+              "Dancers": "Dantzariak",
+              "Events": "Gertaerak",
+              "Numbers": "Zenbakiak",
+              "Logic": "Logika"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "marraztu izar bat",
+                "parameters": {
+                  "points": "puntuak",
+                  "length": "luzera"
+                }
+              },
+              "draw a circle": {
+                "name": "marraztu zirkulu bat"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "luzera",
+                  "repeat": "errepikatu"
+                }
+              },
+              "draw a triangle": {
+                "name": "marraztu triangelu bat",
+                "parameters": {
+                  "length": "luzera"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "luzera"
+                }
+              },
+              "draw a house": {
+                "name": "marraztu etxe bat",
+                "parameters": {
+                  "length": "luzera"
+                }
+              },
+              "draw a square": {
+                "name": "marraztu karratu bat",
+                "parameters": {
+                  "length": "luzera"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundua",
+              "Actions": "Ekintzak",
+              "Events": "Gertaerak",
+              "Behaviors": "Jokabideak"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Mundua",
+              "Dancers": "Dantzariak",
+              "Events": "Gertaerak",
+              "Numbers": "Zenbakiak",
+              "Logic": "Logika"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Ekintzak",
+              "Brushes": "Pintzelak",
+              "Loops": "Itzuliak",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funtzioak",
+              "Variables": "Aldagaiak"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundua",
+              "Locations": "Kokalekuak",
+              "Actions": "Ekintzak",
+              "Events": "Gertaerak",
+              "Behaviors": "Jokabideak",
+              "Variables": "Aldagaiak",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funtzioak",
+              "Text": "Testua",
+              "Comments": "Iruzkinak"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Mundua",
+              "Locations": "Kokalekuak",
+              "Actions": "Ekintzak",
+              "Events": "Gertaerak",
+              "Behaviors": "Jokabideak",
+              "Variables": "Aldagaiak",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funtzioak",
+              "Text": "Testua",
+              "Comments": "Iruzkinak"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Ekintzak",
+              "Brushes": "Pintzelak",
+              "Loops": "Itzuliak",
+              "Math": "Matematika",
+              "Logic": "Logika",
+              "Functions": "Funtzioak",
+              "Variables": "Aldagaiak"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Mundua",
+              "Actions": "Ekintzak",
+              "Events": "Gertaerak",
+              "Logic": "Logika",
+              "Math": "Matematika"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Mundua",
+              "Actions": "Ekintzak",
+              "Behaviors": "Jokabideak",
+              "Events": "Gertaerak",
+              "Locations": "Kokalekuak",
+              "Logic": "Logika",
+              "Loops": "Itzuliak",
+              "Math": "Matematika",
+              "Variables": "Aldagaiak",
+              "Functions": "Funtzioak",
+              "Comments": "Iruzkinak"
+            }
+          }
+        }
+      }
+    }
+  }
+}

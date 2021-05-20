@@ -1,0 +1,426 @@
+{
+  "script": {
+    "name": "pixelation",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:38 UTC",
+    "seeding_key": {
+      "script.name": "pixelation"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Black & White Pixelation Tutorial",
+      "name": "Black & White Pixelation Tutorial",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Black & White Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "Black & White Pixelation Freeplay",
+      "name": "Black & White Pixelation Freeplay",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Black & White Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "Color Pixelation Tutorial",
+      "name": "Color Pixelation Tutorial",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "Color Pixelation Examples",
+      "name": "Color Pixelation Examples",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Color Pixelation Examples",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "Color Pixelation Freeplay",
+      "name": "Color Pixelation Freeplay",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Color Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation 4x4 Empty"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation 4x4 Empty"
+        ],
+        "lesson.key": "Black & White Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation 4x4 Empty"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation 1"
+        ],
+        "lesson.key": "Black & White Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation 1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Complete 3-bit color"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ],
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Color Shades"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ],
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation - Lesson 15 - Color Shades 4x4"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation Flappy"
+        ],
+        "lesson.key": "Color Pixelation Examples",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation Flappy"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pixelation Bee"
+        ],
+        "lesson.key": "Color Pixelation Examples",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Pixelation Bee"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Mixing Colors"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Mixing Colors"
+        ],
+        "lesson.key": "Color Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      },
+      "level_keys": [
+        "Mixing Colors"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Pixelation 4x4 Empty",
+        "script_level.level_keys": [
+          "Pixelation 4x4 Empty"
+        ],
+        "lesson.key": "Black & White Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation 1",
+        "script_level.level_keys": [
+          "Pixelation 1"
+        ],
+        "lesson.key": "Black & White Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Complete 3-bit color",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Color Shades",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ],
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation - Lesson 15 - Color Shades 4x4",
+        "script_level.level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ],
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation Flappy",
+        "script_level.level_keys": [
+          "Pixelation Flappy"
+        ],
+        "lesson.key": "Color Pixelation Examples",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pixelation Bee",
+        "script_level.level_keys": [
+          "Pixelation Bee"
+        ],
+        "lesson.key": "Color Pixelation Examples",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Mixing Colors",
+        "script_level.level_keys": [
+          "Mixing Colors"
+        ],
+        "lesson.key": "Color Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

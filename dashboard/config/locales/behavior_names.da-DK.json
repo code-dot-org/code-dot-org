@@ -1,0 +1,47 @@
+{
+  "da-DK": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "kommer sig"
+        },
+        "outbreak2": {
+          "recovering": "kommer sig"
+        },
+        "outbreak3": {
+          "recovering": "kommer sig"
+        },
+        "outbreak4": {
+          "recovering": "kommer sig",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "outbreak5": {
+          "recovering": "kommer sig"
+        },
+        "outbreak6": {
+          "recovering": "kommer sig"
+        },
+        "outbreak7": {
+          "recovering": "kommer sig",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "outbreak8": {
+          "recovering": "kommer sig",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "outbreak_freeplay": {
+          "recovering": "kommer sig",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "kommer sig",
+          "moving left and right": "bevæger sig til venstre og højre",
+          "moving with arrow keys": "bevæger sig med piletasterne"
+        }
+      }
+    }
+  }
+}

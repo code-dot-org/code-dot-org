@@ -1,5 +1,5 @@
 ---
-pt-BR:
+pt:
   slides:
     maze_intro:
       1:
@@ -470,74 +470,61 @@ pt-BR:
           na neve?
     playlab_intro:
       1:
-        image: notes/playlab_intro_1.png
         text: Nós vamos criar jogos usando o Laboratório. Os bons jogos têm histórias,
           e toda história tem personagens. Nós vamos aprender como criar nossos personagens,
           como bruxas, alienígenas e animais que falam, andam e interagem uns com
           os outros. Ao final deste tutorial, você poderá criar um jogo a partir do
           zero e compartilhá-lo com seus amigos.
       2:
-        image: notes/playlab_intro_2.png
         text: Sua tela está dividida em três partes principais. À esquerda está o
           espaço do jogo, onde seu programa será executado. As instruções para cada
           nível estão escritas abaixo.
       3:
-        image: notes/playlab_intro_3.png
         text: A parte do meio é onde fica a caixa de ferramentas, e cada um desses
           blocos representa uma parte do código. O espaço em branco à direita é chamado
           de área de trabalho e é onde criaremos nosso programa.
       4:
-        image: notes/playlab_intro_4.png
         text: Para começar, você terá que conectar seus blocos ao bloco laranja "quando
           executar". É possível conectar diversos blocos uns aos outros, arrastando-os
           até ver a linha amarela e, então, eles se encaixam.
       5:
-        image: notes/playlab_intro_5.png
         text: Neste primeiro desafio, nosso personagem é um pinguim, e nós o faremos
           dizer "Olá!", arrastando o bloco "diga", conectando-o ao bloco "quando executar"
           e digitando "Olá". Nós também podemos fazer com que o pinguim se mova usando
           os blocos "mova à direita" e "mova à esquerda". Depois que seus blocos estiverem
           no lugar certo, aperte o botão "executar" para ver o que você programou.
       6:
-        image: notes/playlab_intro_6.png
         text: Comece agora mesmo! Ao final, você conseguirá criar seu próprio jogo,
           com todos os tipos de jogadores que poderão interagir, ficar felizes ou
           tristes, marcar pontos ou lançar bolas de fogo, ou até mesmo fazer desaparecer
           uns aos outros. Depende da sua imaginação e do jogo que você quer criar.
     playlab_events:
       1:
-        image: notes/playlab_events_1.png
         text: 'Agora, vamos aprender um pouco sobre algo que os programadores de jogos
           usam todos os dias: os eventos. Um evento diz ao seu programa que ele deve
           ouvir quando algo acontece. Quando tal coisa acontece, ele realiza uma ação.'
       2:
-        image: notes/playlab_events_2.png
         text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar
           uma tecla de direção ou tocar a tela.'
       3:
-        image: notes/playlab_events_3.png
         text: Agora, vamos fazer o robô espacial cumprimentar os terráqueos quando
           um jogador clicar nele. Nós usaremos o bloco "quando clicado" e conectaremos
           o bloco "diga" a ele. Quando o jogador clicar no robô espacial, tudo que
           estiver conectado ao bloco de evento "quando clicado" será realizado. O
           que seu alienígena diz?
       4:
-        image: notes/playlab_events_4.png
         text: Há também os blocos "quando a seta estiver pressionada". Se você conectar
           os blocos "mova" a eles, será possível começar a mover seus personagens
           para cima, para baixo, para esquerda e para a direita. Pouco a pouco, seu
           jogo está ficando cada vez mais interativo.
     playlab_repeat_forever:
       1:
-        image: notes/playlab_repeat_forever_1.png
         text: Este é o bloco "repita infinitamente". Tudo que estiver contido neste
           bloco acontecerá repetidamente no jogo.
       2:
-        image: notes/playlab_repeat_forever_2.png
         text: Se quisermos que um personagem faça algo repetidamente, sem nenhuma
           ação do jogador, colocaremos esses blocos dentro do bloco "repita infinitamente".
       3:
-        image: notes/playlab_repeat_forever_3.png
         text: Neste desafio, nosso objetivo é ajudar o mago a proteger as fronteiras
           do reino, andando da esquerda para a direita e vice-versa, continuamente.
           Aprender como repetir ações de comandos vai economizar muito do seu tempo
@@ -1501,12 +1488,10 @@ pt-BR:
           avançar cinco vezes para chegar ao saboroso girassol.
     C3_playlab_create_game:
       1:
-        image: notes/C3_playlab_create_game_1.png
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas
           coisas quando você as executa. Agora, você pode fazer um jogo interativo
           e jogá-lo de verdade.
       2:
-        image: notes/C3_playlab_create_game_2.png
         text: Existem alguns novos blocos para experimentar. Há os blocos "quando
           a seta estiver pressionada" e "mova o personagem". Você pode juntar esses
           blocos para mover os personagens com as setas do teclado. E há alguns blocos
@@ -3681,11 +3666,11 @@ pt-BR:
         text: Dançarinos profissionais praticam sua coreografia contando as batidas
           da música.
       6:
-        text: Na música, uma medida se refere a um certo número de batidas. Na maioria
-          das músicas populares, uma medida é de quatro tempos.
+        text: Na música, um compasso se refere a um certo número de batidas. Na maioria
+          das músicas populares, um compasso é de quatro tempos.
       7:
         text: Para que seus dançarinos se soltem, você precisará de um bloco de evento
-          verde. Este bloco de eventos diz "após 4 medidas".
+          verde. Este bloco de eventos diz "após 4 compassos".
       8:
         text: Se você arrastar um bloco roxo "do pra sempre", você pode escolher uma
           dança para o seu dançarino fazer. Porque está sob o bloco de eventos "após
@@ -3811,7 +3796,7 @@ pt-BR:
           complicados, é melhor aprendermos mais habilidades. O que é isso? Uma caverna?
       2:
         text: Sejam bem-vindos, aventureiros! Meu nome é Squid. Eu notei que você
-          estava utilizando o mesmo conunto de comandos em alguns dos últimos desafios.
+          estava utilizando o mesmo conjunto de comandos em alguns dos últimos desafios.
           Deve ter sido cansativo. Você já se perguntou se havia um jeito de fazer
           algo várias vezes, como por exemplo, lavar a louça ou escovar os dentes
           sem ficar cansado ou entediado? Isso seria legal.
@@ -3927,7 +3912,7 @@ pt-BR:
           blocos para construir programas e solucionar desafios.
       2:
         image: notes/writing_first_program_2.png
-        text: Cada desafio tem quatro partes.
+        text: Cada quebra-cabeça tem quatro partes.
       3:
         image: notes/writing_first_program_3.png
         text: O espaço do jogo está à esquerda, onde o programa é executado.
@@ -3941,7 +3926,7 @@ pt-BR:
           para construir seu programa.
       6:
         image: notes/writing_first_program_7.png
-        text: Acima da área de trabalho estão instruções para cada desafio.
+        text: Acima da área de trabalho estão instruções para cada quebra-cabeça.
       7:
         image: notes/writing_first_program_7.png
         text: Se você arrastar muitos blocos para fora da caixa de ferramentas (toolbox),
@@ -3986,10 +3971,211 @@ pt-BR:
     opd_closing:
       1:
         image: notes/opd_closing_1.png
-        text: Parabéns! Você completou o curso online Teaching Computer Science Fundamentals.
-          Você agora faz parte de uma comunidade crescente de professores que estão
-          preparando seus estudantes para o futuro.
+        text: Parabéns! Você completou o curso online de ensino de fundamentos da
+          ciência da computação. Você agora faz parte de uma comunidade crescente
+          de professores que estão preparando seus estudantes para o futuro.
       2:
         image: notes/opd_closing_2.png
         text: 'Cheque estes recursos caso precise de mais suporte: 1. forum.code.org;
           2. @teachcode no Twitter; e 3. studio.code.org '
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hora do Código | Festa Dançante: Aquecimento'
+      2:
+        text: Olá. Meu nome é Miral Kotb e eu sou um dançarino, desenvolvedor de software
+          e criador do iLuminate.
+      3:
+        text: A ciência da computação está relacionada à criatividade de várias maneiras.
+          É imensurável, na verdade. Quer dizer, uma vez que você tenha a habilidade
+          de escrever software, você pode colocar idéias em qualquer coisa. Eu faço
+          isso com roupas leves. Há muito o que você pode fazer quando você tem as
+          ferramentas para escrever software, e as possibilidades são realmente infinitas.
+      4:
+        text: Na próxima hora, você começará a trabalhar com ciência da computação
+          programando sua própria festa de dança! Reunimos algumas músicas de sucesso
+          e uma equipe de ótimos dançarinos para você tocar.
+      5:
+        image: notes/hoc_dance_warmup_2019_5.png
+        text: Você usará blocos de código para escolher diferentes dançarinos, mudar
+          seus movimentos de dança, fazê-los responder à música e torná-los interativos.
+      6:
+        image: notes/hoc_dance_warmup_2019_6.png
+        text: Você verá que sua tela é dividida em três partes principais. À esquerda
+          está o espaço de jogo. É aqui que seus dançarinos aparecerão.
+      7:
+        image: notes/hoc_dance_warmup_2019_7.png
+        text: A área central é a caixa de ferramentas. Novos blocos de código estarão
+          disponíveis neste espaço à medida em que você prosseguir pelas lições.
+      8:
+        image: notes/hoc_dance_warmup_2019_8.png
+        text: O espaço à direita é o espaço de trabalho. Você pode arrastar blocos
+          para fora da caixa de ferramentas e para o espaço de trabalho para criar
+          seu programa.
+      9:
+        image: notes/hoc_dance_warmup_2019_9.png
+        text: As instruções para cada nível estarão aqui na parte superior da tela.
+          Se você precisar de uma dica, basta clicar na lâmpada.
+      10:
+        image: notes/hoc_dance_warmup_2019_10.png
+        text: Para começar, vamos criar um novo dançarino com este bloco vermelho.
+          Primeiro, arraste-o para fora da caixa de ferramentas e encaixe-o embaixo
+          deste bloco laranja de "preparação". Este dançarino é um gato.
+      11:
+        image: notes/hoc_dance_warmup_2019_11.png
+        text: Você também pode mudar onde o dançarino aparece no seu espaço de jogo
+          com isso.
+      12:
+        image: notes/hoc_dance_warmup_2019_12.png
+        text: Acima do espaço de jogo temos um menu para escolher música. Há uma tonelada
+          de músicas para escolher, então divirta-se encontrando suas favoritas. Abaixo
+          do espaço de jogo temos o botão de execução. Quando você clica verá os dançarinos
+          do seu programa aparecerem no espaço de jogo e a música tocará.
+      13:
+        text: Tente você mesmo! E se você está se sentindo travado, tudo bem! Apenas
+          se levante e siga em frente! E antes que você perceba, você terá criado
+          sua própria festa de dança. Então, o que você vai criar?
+    hoc_dance_events_2019:
+      1:
+        text: 'Hora do Código | Festa Dançante: Eventos'
+      2:
+        image: notes/hoc_dance_events_2019_2.png
+        text: Meu nome é Erin, e eu sou um engenheiro de software aqui na Code.org,
+          e eu ajudei a criar a Festa Dançante.
+      3:
+        image: notes/hoc_dance_events_2019_3.png
+        text: Para fazer com que os diferentes movimentos de dança aconteçam no momento
+          certo com a música, você pode usar algo chamado eventos. Um evento diz ao
+          seu programa para "escutar" algo acontecer e então reagir imediatamente.
+      4:
+        image: notes/hoc_dance_events_2019_4.png
+        text: 'Alguns exemplos de eventos são: ouvir o clique de mouse, pressionar
+          uma tecla de direção ou tocar a tela.'
+      5:
+        image: notes/hoc_dance_events_2019_5.png
+        text: Aqui nós iremos programar um dançarino para fazer um movimento quando
+          você pressionar os botões de seta na tela, ou as teclas em seu teclado.
+      6:
+        image: notes/hoc_dance_events_2019_6.png
+        text: Nós podemos usar o bloco de evento "quando seta para cima" e conectar
+          a ele um bloco "faça uma vez". Quando alguém pressionar a seta para cima,
+          o código vinculado ao bloco "quando seta para cima" é executado. Qual movimento
+          de dança você irá escolher?
+      7:
+        image: notes/hoc_dance_events_2019_7.png
+        text: Tenha certeza que o tipo de dançarino que você escolheu coincide com
+          um dos dançarinos que você criou dentro do bloco de "setup", ou você poderá
+          não ver nada acontecer.
+      8:
+        image: notes/hoc_dance_events_2019_8.png
+        text: Eventualmente, você poderá criar mais eventos como este, para fazer
+          seus dançarinos executarem diferentes movimentos com cada tecla. Experimente
+          fazer isto, e com um pequeno número de linhas de código você poderá criar
+          sua própria dança interativa.
+    hoc_dance_measures_2019:
+      1:
+        image: notes/hoc_dance_measures_2019_1.png
+        text: 'Hora de Código | Festa Dançante: Compassos'
+      2:
+        image: notes/hoc_dance_measures_2019_2.png
+        text: Eu sou Aloe Blacc. Eu sou um cantor, compositor e artista. Eu acho que
+          a ciência da computação é realmente importante para aprender porque ciência
+          da computação é o futuro, e eu acho que é importante para as pessoas estarem
+          no controle da tecnologia que está literalmente controlando suas vidas.
+      3:
+        image: notes/hoc_dance_measures_2019_3.png
+        text: O evento que iremos utilizar agora irá escutar por uma mudança na música.
+          Esta mudança irá fazer seu dançarino executar novos passos.
+      4:
+        image: notes/hoc_dance_measures_2019_4.png
+        text: Dançarinos profissionais praticam suas coreografias contando os tempos
+          da música. Em música, um compasso se refere a um determinado número de tempos.
+          Na maioria das músicas populares, um compasso possui quatro tempos.
+      5:
+        image: notes/hoc_dance_measures_2019_5.png
+        text: Para que seus dançarinos se soltem, você precisará de um bloco de evento
+          verde. Este bloco de eventos diz "após 4 compassos".
+      6:
+        image: notes/hoc_dance_measures_2019_6.png
+        text: Se você arrastar um bloco roxo "do pra sempre", você pode escolher uma
+          dança para o seu dançarino fazer. Porque está sob o bloco de eventos "após
+          4 compassos", o seu dançarino irá esperar por quatro compassos da música
+          antes de iniciar a dança.
+      7:
+        image: notes/hoc_dance_measures_2019_7.png
+        text: Fique de olho no contador de compassos na parte superior da área de
+          exibição.
+      8:
+        image: notes/hoc_dance_measures_2019_8.png
+        text: Procure e ouça o evento que acionará o código de dança. E na hora certa,
+          nossa dançarina começa a ir.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hora do Código | Festa Dançante: Propriedades'
+      2:
+        text: Meu nome é Maria, sou júnior na Universidade de Washington e sou engenheira
+          amazônica do futuro.
+      3:
+        text: Eu amo ciência da computação porque ela incorpora resolução de problemas
+          e pensamento crítico e depois de colocar horas de trabalho em algo você
+          pode obter algo muito legal e gratificante.
+      4:
+        text: Até agora, você teve a chance de dançar com alguns tipos diferentes
+          de dançarinos e os programou para fazer diferentes passos de dança. Mas
+          como esses movimentos funcionam realmente?
+      5:
+        text: Cada movimento de dança é composto de uma série de imagens chamadas
+          frames. Cada frame é um pouco diferente do anterior. Quando o programa é
+          executado, o computador mostra um frame após o outro. Eles são mostrados
+          tão rápido que parece que a dançarina está se movendo. Este é o segredo
+          por trás de toda animação.
+      6:
+        text: Não só você pode mudar os movimentos da sua dançarina, como também pode
+          alterar as propriedades da dançarina. As propriedades descrevem coisas como
+          a posição da bailarina na tela, o tamanho da bailarina e a cor da bailarina.
+      7:
+        image: notes/hoc_dance_properties_2019_7.png
+        text: Para alterar as propriedades de um dançarino você irá usar um bloco
+          de definição. Vamos usar um bloco de definição para fazer seus dançarinos
+          parecerem menores. Primeiro, arraste o bloco de definição para o seu programa.
+      8:
+        image: notes/hoc_dance_properties_2019_8.png
+        text: Em seguida, selecione o dançarino que você gostaria de alterar, e digite
+          o tamanho que eles deverão ser mostrados na tela. O tamanho completo é 100.
+          Se você escolher um valor menor, isto irá fazer o dançarino ficar menor.
+          Quanto menor for o dançarino, mais longe ele vai parecer que está.
+      9:
+        image: notes/hoc_dance_properties_2019_9.png
+        text: Usando o bloco de definição, você também pode alterar as dimensões de
+          um dançarino, além de sua rotação, posição e cor. Ao experimentar com estas
+          propriedades, você pode fazer todos os tipos de alterações e vinculá-las
+          a diferentes trechos da música.
+      10:
+        image: notes/hoc_dance_properties_2019_10.png
+        text: Lembre-se, você só pode definir as propriedades de um dançarino que
+          já existe. Certifique-se de que o bloco de definição vem depois do bloco
+          "Criar um novo dançarino". Sinta-se à vontade para experimentar, ser criativo
+          e se divertir!
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hora do Código | Festa da Dança: Que comece a Festa!'
+      2:
+        text: Parabéns! Você acabou de aprender o básico da ciência da computação.
+          Agora você pode usar estes blocos para criar uma festa de dança com seu
+          próprio design para compartilhar com seus amigos.
+      3:
+        text: Se você olhar na caixa de ferramentas, você encontrará alguns blocos
+          totalmente novos que você não havia visto antes. Por exemplo, você pode
+          usar o bloco de layout para organizar os dançarinos de formas diferentes
+          na tela.
+      4:
+        text: Dê uma olhada ao redor e tente experimentar com estes novos blocos e
+          funcionalidades. Você consegue criar cuidadosamente uma dança coreografada
+          da sua canção favorita?
+      5:
+        text: Ou uma batalha de dança com seus amigos?
+      6:
+        text: Ou algo completamente diferente?
+      7:
+        image: notes/hoc_dance_congrats_7.png
+        text: No final do tutorial você pode compartilhar um link para sua criação
+          com seus amigos. Exercite a sua imaginação e apenas se divirta!

@@ -12,12 +12,12 @@
   csedweek_dates: "Ika 18-14 ng Disyembre, 2014"
   csedweek_banner_hoc: 'Ang <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> ay parating na. Tinatawagan ang lahat ng guro at mga organizer, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">pagplanuhan ang iyong Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ikaw ba ay isang CS teacher? Tingnan ang ibang mga resource para sa CSEdWeek"
   n_have_learned_an_hoc: "<h1> Subukan ang</h1><h2>Hour of Code</h2><h3>#served</h3>"
   anybody_can_learn: "Lahat ay puwedeng matuto."
   learn_now: "Matuto Ngayon"
   petition_message: "Ang bawat estudyante sa bawat paaralan ay dapat may pagkakataon na matuto ng computer science"
   petition_sign_message: 'Kung ikaw ang sumasang-ayon, isulat ang iyong pangalan. Sumali sa # pang iba.'
-  petition_sign_message_support: 'Kung ikaw ay sumusuporta sa amin, isulat ang iyong pangalan. At sumali sa # iba.'
   petition_join_others: 'Sumali sa # iba'
   name: "Pangalan"
   email: "Email"
@@ -26,7 +26,7 @@
   twentyhours_heading: "Subukan ang aming Intro sa kurso ng Computer Science"
   twentyhours_text: "Tapos ka na sa iyong unang Hour of Code? Matuto pa ng ibang computer science at mga programming concept sa follow-up na kurso na ito."
   og_title: 'Code.org: Kahit Sino ay Maaaring Matuto'
-  og_title_soon: "Ang Hour of Code ay paparating na"
+  og_title_soon: "Paparating ang Oras ng Code"
   og_title_here: "Ang Hour of Code ay nandito na!"
   og_description: "Bawat estudyante sa bawat paaralan ay dapat magkaroon ng pagkakataon na makapag-aral ng computer science."
   og_description_celeb: "Subukan ang mga bagong tutoryal, manalo ng isang celebrity video na chat para sa iyong sarili o sa iyong klase!"
@@ -147,6 +147,7 @@
   thanks_for_submitting: "Salamat sa pag-submit!"
   if_you_enjoyed: "Kung ikaw ang natuwang matuto, sabihan ang iyong mga kaibigan na subukan rin ito! Gusto namin na buong mundo ay matuto."
   personalize_certificate: "Gawing pansarili ang iyong certificate"
+  print_certificates: "Magprinta ng mga sertipiko"
   share_achievement: "Ibahagi ang iyong achievement"
   beyond_hour_message: "Magpatuloy sa <a href='http://studio.code.org'>ibang kurso</a>, o kaya tingnan ang ibang option upang <a href='/learn/beyond'>Matuto ng higit sa Isang Oras</a>."
   leaderboards_for_hoc: "Mga leaderboard para sa Hour of Code."
@@ -226,6 +227,8 @@
   studiobar_title_nolink: "Tuklasin ang mga kurso sa Code.org"
   studiobar_elementary_title: "Mga kurso pang elementary"
   studiobar_elementary_body: "Ang tatlong bagong kurso namin para sa K&#8209;5"
+  studiobar_dance_title: "Dance Party"
+  studiobar_dance_body: "Likhain at ibahagi ang iyong sariling Dance Party"
   studiobar_hoc_title: "Ang Hour of Code"
   studiobar_hoc_body: "Matutong mag-code gamit ang Angry Birds"
   studiobar_flappy_title: "Flappy Code"
@@ -285,7 +288,7 @@
   homepage_hero_text_stat_loc: "8.5 milyong kababaihan ang naka-enrol para matuto sa Code.org"
   homepage_hero_text_stat_students: "#student_count na mga account ng estudyante sa Code.org"
   homepage_hero_text_stat_served: 'Ang Hour of Code #served nakahanda na'
-  homepage_hero_hoc_is_coming: "Ang Hour of Code ay paparating na"
+  homepage_hero_hoc_is_coming: "Paparating ang Oras ng Code"
   homepage_hero_hoc_is_here: "Ang Hour of Code ay nandito na"
   homepage_slot_text_hoc: "Ang Hour of Code"
   homepage_slot_text_frozen: "Frozen kasama sina Anna at Elsa"
@@ -308,6 +311,7 @@
   homepage_action_text_signpetition: "Mag-sign sa petisyon"
   homepage_action_text_wincelebritychat: "Manalo ng isang celebrity chat"
   homepage_signpetition_dropdown: "Mag-sign sa aming petisyon & # x25BE;"
+  homepage_signpetition_dropdown_text: "Ako ay sumasang-ayon"
   homepage_diversity_pledge: "Tanggapin ang kayamuan na pangako"
   homepage_banner_text_prizes: 'Ang Hour of Code ay darating ulit, sa ika-7 hanggang ika-13 ng Disyembre. '
   homepage_banner_link_prizes: 'Sumali sa pinakamalaking pag-aaral na pangyayari sa buong kasaysayan. '
@@ -532,7 +536,7 @@
   volunteer_engineer_submission_commitment_annually: "2-3 beses kada taon"
   volunteer_engineer_submission_commitment_monthly: "Mga iilang oras kada buwan"
   volunteer_engineer_submission_commitment_weekly: "Mga iilang oras kada linggo"
-  volunteer_engineer_submission_commitment_more: "More"
+  volunteer_engineer_submission_commitment_more: "Mas Marami"
   volunteer_engineer_submission_location_flexibility_onsite: "On-site sa paaralan"
   volunteer_engineer_submission_location_flexibility_remote: "Tinuturuan ng magkalayo (guro o mga estudyante)"
   volunteer_engineer_submission_location_flexibility_curriculum: "Ninanais na tumulong magbahagi sa open-source na curriculum na mga proyekto"
@@ -996,6 +1000,12 @@
   coursed-2019_gradelevel: Baitang 8+
   coursee-2019_gradelevel: Baitang 9+
   coursef-2019_gradelevel: Baitang 10+
+  coursea-2020_gradelevel: Baitang 5+
+  courseb-2020_gradelevel: Baitang 6+
+  coursec-2020_gradelevel: Baitang 7+
+  coursed-2020_gradelevel: Baitang 8+
+  coursee-2020_gradelevel: Baitang 9+
+  coursef-2020_gradelevel: Baitang 10+
   accelerated_gradelevel: "Mga edad na 10-18"
   codeorg_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
   codeintl_platformtext: "Makabagong mga browser, smartphone, at mga tablet"
@@ -1120,6 +1130,11 @@
   coursed-2019_shortdescription_congrats: Mabilis na dinaanan ang mga konsepto mula sa Kursong C, pagkatapos ay pupunta pa tayo sa mga algoritmo, mga naka-nest na mga loop, mga kondisyonal, at iba pa.
   coursee-2019_shortdescription_congrats: Madaling dumaan sa mga konsepto sa Kursong C & D at pagkatapos ay pumunta pa sa mga function.
   coursef-2019_shortdescription_congrats: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+  coursea-2020_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+  courseb-2020_shortdescription_congrats: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+  coursec-2020_shortdescription_congrats: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
+  coursee-2020_shortdescription_congrats: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+  coursef-2020_shortdescription_congrats: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
   codeorg_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   codeintl_longdescription: "Matuto ng mga pangunahing konsepto ng Computer Science gamit ang drag and drop na pagprogram. Ito ay isang parang laro, pansariling-gabay na mga tutoryal na naglakip sa mga video ng mga lektura nina Bill Gates, Mark Zuckerberg, Angry Birds at Plants vs. Zombies. Matuto ng mga repeat na loops, mga kondisyonal, at pangunahing kaalaman sa mga algoritmo. Magagamit sa 34 na mga wika."
   khan_longdescription: "Pag-aralan ang mga pangunahing konsepto ng pagprogram sa Javascript habang lumikha ng mga masasayang drowing gamit ang iyong code. Gawin ito nang ikaw lang o sa iyong klase!"
@@ -1338,7 +1353,7 @@
   header_home: "Home"
   header_my_dashboard: "Aking Dashboard"
   header_courses: "Mga kurso"
-  header_course_catalog: "Katalogo ng Kurso"
+  header_course_catalog: "Catalog ng Kurso"
   header_project_gallery: "Mga Proyekto"
   header_sections: "Mga Seksyon"
   header_professional_learning: "Propesyonal na Pag-aaral"
@@ -1366,19 +1381,23 @@
   header_teach: "Magturo"
   header_stats: "Mga Stats"
   header_help_us: "Tulungan Kami"
-  header_about: "Tungkol"
+  header_about: "Tungkol sa"
   header_teacher_community: "Komunidad ng mga Guro"
-  header_help_support: 'Tulong at Suporta '
-  header_report_bug: "I-report ang bug"
+  header_help_support: 'Tulong at suporta '
+  header_report_bug: "I-report ang problema"
+  header_legal_privacy: "Patakaran sa Pagkapribado"
+  header_legal_tos: "Mga Alituntunin ng Serbisyo"
   header_tutorials: "Mga Tutorial"
   header_documentation: "Dokumentasyon"
   user_header_label: "Mabuhay %{username}"
   user_header_team: "Koponan"
   user_header_settings: "Account Ko"
   user_header_logout: "Mag-sign out"
-  user_header_signin: "Sign in"
+  user_header_signin: "Mag-sign in"
+  user_header_create: 'Lumikha '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
+  user_header_dance: "Dance Party"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_my_projects: "Tingnan ang aking mga proyekto"
@@ -1412,6 +1431,11 @@
   hero_name: 'Minecraft: Ang Paglalakbay ng Bayani'
   applab-intro_name: Panimula ng App Lab
   applab_tile_start_tutorial: "Panimula"
+  account_sign_up_email_opt_in: "Maaari ba kaming mag-email sa iyo tungkol sa mga pag-update sa aming mga kurso, lokal na mga oportunidad, o iba pang balita sa agham ng computer? (halos isang beses sa isang buwan)"
+  account_sign_up_child_accept_terms: "Kinukumpirma ko na may pahintulot ako ng aking magulang o ligal na tagapag-alaga na gamitin ang mga serbisyo ng Code.org."
+  hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, at karagdagang 25 pa!"
+  hoc_overview_dance_2019_subtitle: "I-code ang isang Dance Party para ibahagi sa iyong mga kaibigan. Itinatampok sina Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, at karagdagang 34 pa!"
   hoc_overview_start_tutorial: "Panimula"
   hoc2018_creativity_create: "I-create"
   hoc2018_mc_page_title: "Mga Tutoryal sa Minecraft Hour of Code"
@@ -1448,8 +1472,20 @@
   hoc2018_mc_minecraft_education: "Edukasyon ng Minecraft"
   hoc2018_mc_continue_learning: "Magpatuloy sa pag-aaral ng Minecraft."
   hoc2018_mc_go_to_mc_education: "Pumunta sa Edukasyon ng Minecraft"
+  hoc2018_dance_party_main_heading: "Dance Party"
+  hoc2018_dance_party_box_title: "Dance Party"
   hoc2018_dance_party_button: "Panimula"
   hoc2018_dance_teacher_resources_tile1_button: "Banghay-aralin"
   hoc2018_dance_teacher_resources_tile2_button: "Unplugged na Aktibidad"
   hoc2018_dance_amazon_about_future_engineer_button: "Matuto nang higit pa"
   hoc2018_dance_amazon_scholarship_programs_button: "Mag-apply ngayon"
+  hoc2018_dance_measure: "Measure"
+  hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_mc_thank_microsoft: " Nagpapasalamat kami sa Microsoft sa pagsuporta sa aming bisyon at misyon na matiyak na ang bawat bata ay may pagkakataon na matuto ng computer science at sa mga skill para magtagumpay sa ika-21 siglo.  "
+  footer_powered_by_aws: "Pinagana sa pamamagitan ng Amazon Web Services"
+  footer_privacy_policy: "Patakaran sa Pagkapribado"
+  footer_about: "Tungkol sa"
+  footer_partners: "Mga Partner"
+  footer_donate: "Magbigay ng donasyon"
+  footer_support: "Tulong at Komunidad"
+  footer_terms: "Mga Alituntunin"

@@ -2,6 +2,16 @@
 az:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: bütün
+          MOVE1:
+            MOVES.Drop: Burax
+            MOVES.Rest: Heç biri
+          MOVE2:
+            MOVES.Drop: Burax
+            MOVES.Rest: Heç biri
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -11,19 +21,28 @@ az:
           GROUP:
             sprites: bütün
           MOVE:
+            '"next"': "(Növbəti)"
+            '"prev"': "(Əvvəlki)"
+            '"rand"': "(İxtiyari)"
+            MOVES.Drop: Burax
             MOVES.Rest: Heç biri
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
+            '"next"': "(Növbəti)"
+            '"prev"': "(Əvvəlki)"
+            '"rand"': "(İxtiyari)"
+            MOVES.Drop: Burax
             MOVES.Rest: Heç biri
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: bütün
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
@@ -32,17 +51,15 @@ az:
           GROUP:
             sprites: bütün
           MOVE:
+            '"rand"': "(İxtiyari)"
+            MOVES.Drop: Burax
             MOVES.Rest: Heç biri
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
+            '"rand"': "(İxtiyari)"
+            MOVES.Drop: Burax
             MOVES.Rest: Heç biri
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -59,6 +76,7 @@ az:
       Dancelab_ifDanceIs:
         options:
           DANCE:
+            MOVES.Drop: Burax
             MOVES.Rest: Heç biri
       Dancelab_ifTime:
         options:
@@ -67,20 +85,76 @@ az:
       Dancelab_jumpTo:
         options:
           LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: bütün
+          LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
+            "{x: 100, y: 200}": sola
+            "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": təsadüfi
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: bütün
           FORMAT:
+            '"border"': kənar
+            '"diamond"': almaz
+            '"circle"': dairə
+            '"plus"': üstəgəl
             '"random"': təsadüfi
-      Dancelab_makeNewDanceSprite:
+      Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': yadplanetli
+            '"CAT"': pişik
+            '"DOG"': it
+            '"DUCK"': ördək
+            '"ROBOT"': robot
+            '"UNICORN"': tək buynuzlu at
           LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': yadplanetli
+            '"CAT"': pişik
+            '"DOG"': it
+            '"DUCK"': ördək
+            '"ROBOT"': robot
+            '"UNICORN"': tək buynuzlu at
+          LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
+            "{x: 100, y: 200}": sola
+            "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": təsadüfi
       Dancelab_makeNewDanceSpriteGroup:
         options:
@@ -105,6 +179,10 @@ az:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"border"': kənar
+            '"diamond"': almaz
+            '"circle"': dairə
+            '"plus"': üstəgəl
             '"random"': təsadüfi
       Dancelab_randomColor:
         text: ixtiyari rəng
@@ -112,28 +190,42 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
+            '"circles"': Çevrələr
+            '"color_cycle"': Rənglər
+            '"diamonds"': Almazlar
+            '"fireworks"': Fişənglər
+            '"galaxy"': Boşluq
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"stars"': Ulduzlar
+          PALETTE:
+            '"rave"': Ağ və Qara
+            '"electronic"': Elektronik
+            '"iceCream"': Dondurma
+            '"default"': Işıq
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
             '"none"': Heç biri
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '"rand"': "(İxtiyari)"
+            '"circles"': Çevrələr
+            '"color_cycle"': Rənglər
+            '"diamonds"': Almazlar
+            '"fireworks"': Fişənglər
+            '"flowers"': Güllər
+            '"galaxy"': Boşluq
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"stars"': Ulduzlar
+          PALETTE:
+            '"rave"': Ağ və Qara
+            '"electronic"': Elektronik
+            '"iceCream"': Dondurma
+            '"default"': Işıq
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: bütün
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -142,6 +234,7 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
+            '"rand"': "(İxtiyari)"
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -159,7 +252,18 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: bütün
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: bütün
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: bütün
@@ -172,11 +276,45 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: bütün
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ölçü
             '"height"': hündürlük
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: bütün
+          PROPERTY:
+            '"scale"': ölçü
+            '"height"': hündürlük
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"flowers"': Güllər
+            '"diamond"': almaz
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         options:
           KEY:
@@ -185,12 +323,48 @@ az:
             '"down"': aşağı
             '"right"': sağa
             '"space"': kosmos
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"speed"': sürət
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -200,6 +374,48 @@ az:
         options:
           PROPERTY:
             '"scale"': ölçü
+            '"speed"': sürət
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': digər
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': saniyələr
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': yuxarı
+            '"down"': aşağı
+            '"left"': sola
+            '"right"': sağa
+            '"space"': kosmos
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -211,6 +427,29 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': 'y'
       gamelab_mirrorSprite:
@@ -222,6 +461,8 @@ az:
         text: ixtiyari rəng
       gamelab_randomColor:
         text: ixtiyari rəng
+      gamelab_repeatForever:
+        text: təkrar et sonsuz
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -232,6 +473,11 @@ az:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suyun altı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qış
       gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
+            '"speed"': sürət
+      gamelab_setProp_dropdown:
         options:
           PROPERTY:
             '"scale"': ölçü
@@ -258,6 +504,10 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       gamelab_whileKey:
         options:
           KEY:
@@ -266,6 +516,10 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -273,8 +527,14 @@ az:
       Mikelab_createNewSprite:
         options:
           LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -292,8 +552,14 @@ az:
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
       Mikelab_groupDestroy:
         options:
           SELECT:
@@ -327,9 +593,12 @@ az:
       Mikelab_ifDanceIs:
         options:
           DANCE:
+            MOVES.Drop: Burax
             MOVES.Rest: Heç biri
       Mikelab_randomColor:
         text: ixtiyari rəng
+      Mikelab_repeatUntilComplete:
+        text: təkrar et sonsuz
       Mikelab_setBG:
         options:
           BG:
@@ -346,8 +615,14 @@ az:
       Mikelab_sprite:
         options:
           LOCATION:
+            "{x: 200, y: 100}": yuxarı
+            "{x: 200, y: 300}": aşağı
             "{x: 100, y: 200}": sola
             "{x: 300, y: 200}": sağa
+            "{x: 100, y: 100}": yuxarı sol
+            "{x: 300, y: 100}": yuxarı sağ
+            "{x: 100, y: 300}": aşağı sol
+            "{x: 300, y: 300}": aşağı sağ
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -377,55 +652,36 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"random"': təsadüfi
       RyanLab_moveForward:
         text: irəli get
       RyanLab_turnLeft:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': ölçü
-      aalab_checkTouching:
+          FORMAT:
+            '"border"': kənar
+            '"random"': təsadüfi
+      aalab_someGraduallyStartIntervention:
         options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-      aalab_clickedOn:
+          PORTION:
+            '1': bütün
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': nə zaman
-            '"while"': hələ ki,
-          KEY:
-            '"up"': yuxarı
-            '"down"': aşağı
-            '"left"': sola
-            '"right"': sağa
-            '"space"': kosmos
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şəhər
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': doğru
-            '"false"': yalan
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ölçü
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': şov
-            '"hide"': gizlə
+          PORTION:
+            '1': bütün
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:
@@ -441,6 +697,10 @@ az:
             '"left"': sola
             '"right"': sağa
             '"space"': kosmos
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         options:
           DIR:

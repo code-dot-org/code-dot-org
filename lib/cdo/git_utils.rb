@@ -9,7 +9,7 @@ module GitUtils
 
   # Returns whether any files in this branch or locally changed from base version
   def self.changed_in_branch_or_local?(base_branch, glob_patterns)
-    files_changed_in_branch_or_local(base_branch, glob_patterns).empty?
+    !files_changed_in_branch_or_local(base_branch, glob_patterns).empty?
   end
 
   def self.files_changed_in_branch_or_local(base_branch, glob_patterns, ignore_patterns: [])
@@ -48,6 +48,23 @@ module GitUtils
 
   def self.current_branch
     `git rev-parse --abbrev-ref HEAD`.strip
+  end
+
+  # Get a list of the names of all branches merged into the given branch
+  def self.merged_branches(base_branch)
+    merged_branches = `git branch --merged #{base_branch}`.split("\n")
+    merged_branches.each do |branch|
+      # The return format here is a bit messy, so in addition to splitting by
+      # newline to turn it into a list we also want to make sure to clean up
+      # whitespace and the "* " string used to denote the current branch.
+      branch.strip!
+      branch.delete_prefix! "* "
+    end
+    return merged_branches
+  end
+
+  def self.current_branch_merged_into?(base_branch)
+    merged_branches(base_branch).include? current_branch
   end
 
   def self.get_latest_commit_merged_branch
@@ -93,11 +110,7 @@ module GitUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
-    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
-    pr_json['base']['ref']
-  rescue => _
-    nil
+    ENV['DRONE_TARGET_BRANCH']
   end
 
   # Given a branch name, returns its likely base branch / merge destination
@@ -108,7 +121,8 @@ module GitUtils
       when 'test'
         'origin/production'
       else # levelbuilder, feature branches, etc.
-        'origin/staging'
+        # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
+        CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
     end
   end
 
@@ -119,26 +133,5 @@ module GitUtils
 
   def self.merge_branch
     "origin/#{pr_base_branch_or_default_no_origin}"
-  end
-
-  CIRCLE_CONFIG_FILE = '.circleci/config.yml'.freeze
-
-  def self.circle_yml_changed
-    system("git fetch origin #{pr_base_branch_or_default_no_origin}")
-    !`git diff ...#{merge_branch} -- #{CIRCLE_CONFIG_FILE}`.empty?
-  end
-
-  # Most changes can be merged from the base branch (usually staging) into the
-  # feature branch under test here and the build can proceed as usual.
-  # Changes to the CircleCI configuration file are a special case though, because
-  # it can control how the Circle container is created, and by the time we run
-  # this merge step we're already _in_ the container itself - so the only way
-  # to guarantee we're accurately testing the merge result is to have the config
-  # change in our feature branch from the moment the build starts.  Therefore we
-  # must stop and ask the user to manually merge the base branch into their own.
-  def self.ensure_latest_circle_yml
-    if circle_yml_changed
-      raise "#{CIRCLE_CONFIG_FILE} has changed.\nPlease merge the #{merge_branch} branch into your branch and try again."
-    end
   end
 end

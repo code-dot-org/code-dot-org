@@ -1,14 +1,18 @@
 ---
-title: How-to Guide
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # How to teach one Hour of Code in after-school classes and clubs
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -30,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-अवर ऑफ कोड चा सर्वोत्तम अनुभव घेण्यासाठी इंटरनेट ला जोडलेला संगणक आवश्यक आहे. पण सर्वांकडे संगणक पाहिजेच असे काही **नाही** आणि तुम्ही अवर ऑफ कोड संगणकाशिवायपण करू शकता.
+अवर ऑफ कोड चा सर्वोत्तम अनुभव घेण्यासाठी इंटरनेट ला जोडलेला संगणक आवश्यक आहे. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 प्रतीयोगींना स्वत: चा हेडफोन आणावयास सांगणे किंवा उपलब्ध करून देणे. शिकवण्या आवाजासाहित नीट चालतात हे पाहणे.
 
-**संगणकीय उपकरणे पर्याप्त नाहीत?** [जोडीने प्रोग्रामिंग](https://www.youtube.com/watch?v=vgkahOzFH2Q) करावे. जेंव्हा प्रतियोगी जोडीने काम करतात, तेंव्हा ते एकमेकांना मदत करतात आणि त्यामुळे आयोजकांवर कमी अवलंबून राहतात. संगणकशास्त्र के परस्पर सहकार्याने करण्याचे आणि सामाजिक असल्याचे याने समजते.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). जेंव्हा प्रतियोगी जोडीने काम करतात, तेंव्हा ते एकमेकांना मदत करतात आणि त्यामुळे आयोजकांवर कमी अवलंबून राहतात. संगणकशास्त्र के परस्पर सहकार्याने करण्याचे आणि सामाजिक असल्याचे याने समजते.
 
 ## 5. Start your Hour of Code off with an inspiring video
 
@@ -81,6 +85,6 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## अवर ऑफ कोड नंतर पुढे काय?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

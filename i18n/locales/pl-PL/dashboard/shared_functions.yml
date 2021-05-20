@@ -1,0 +1,20 @@
+pl:
+  data:
+    shared_functions:
+      driving with arrow keys: poruszanie się za pomocą klawiszy strzałek
+      fluttering: trzepotanie
+      growing: rośnięcie
+      jittering: trzęsienie się
+      moving east: przechodzenie na wschód
+      moving east and looping: przechodząc na wschód i powtarzając w pętli
+      moving north: przechodzenie na północ
+      moving south: przechodzenie na południe
+      moving west: przechodzenie na zachód
+      moving west and looping: przechodząc na zachód i powtarzając w pętli
+      moving with arrow keys: poruszanie się za pomocą klawiszy strzałek
+      patrolling: patrolowanie
+      shrinking: zwężenie
+      spinning left: obracanie się w lewo
+      spinning right: obracanie się w prawo
+      wandering: wędrowanie
+      wobbling: chybotanie

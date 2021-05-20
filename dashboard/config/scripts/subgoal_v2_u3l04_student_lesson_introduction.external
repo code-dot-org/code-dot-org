@@ -17,10 +17,10 @@ markdown <<MARKDOWN
 
 ## New Blocks
 
-*  **[moveForward](//docs.code.org/applab/moveForward/)** - `moveForward`
-*  **[penUp](//docs.code.org/applab/penUp/)** - `penUp`
-*  **[turnLeft](//docs.code.org/applab/turnLeft/)** - `turnLeft`
-*  **[penDown](//docs.code.org/applab/penDown/)** - `penDown`
+*  **[moveForward](//studio.code.org/docs/applab/moveForward/)** - `moveForward`
+*  **[penUp](//studio.code.org/docs/applab/penUp/)** - `penUp`
+*  **[turnLeft](//studio.code.org/docs/applab/turnLeft/)** - `turnLeft`
+*  **[penDown](//studio.code.org/docs/applab/penDown/)** - `penDown`
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
 MARKDOWN

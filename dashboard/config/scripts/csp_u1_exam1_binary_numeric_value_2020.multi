@@ -2,12 +2,24 @@ name 'csp-u1-exam1-binary-numeric-value_2020'
 height 'auto'
 
 question 'Which of the following binary (base-2) numbers is LARGEST?’
-right ‘<pre>11000000</pre>’
-wrong ‘<pre>01111111</pre>’
-wrong ‘<pre>00000001</pre>’
-wrong ‘<pre>10111111</pre>’
+right ‘`11000000`’
+wrong ‘`01111111`’
+wrong ‘`00000001`’
+wrong ‘`10111111`’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** Since all of these are 8-bit binary digits, the leftmost place value is the 128s place. `11000000` and `10111111` both have a 1 in the 128s place. Since `11000000` has a 1 in the 64s place and `10111111` does not, `11000000` is larger no matter the rest of the digits.
+
+[Lesson 4 - Binary Numbers](https://curriculum.code.org/csp-20/unit1/4/) introduced the concept of place value in binary numbers.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-1.C.4: As with decimal, a digit’s position in the binary sequence determines its numeric value. The numeric value is equal to the bit’s value (0 or 1) multiplied by the place value of its position.
+
+* DAT-1.C.5: The place value of each position is determined by the base raised to the power of the position. Positions are numbered starting at the rightmost position with 0 and increasing by 1 for each subsequent position to the left.
+:::
+
 
 MARKDOWN
 

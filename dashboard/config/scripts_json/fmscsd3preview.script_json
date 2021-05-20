@@ -1,0 +1,872 @@
+{
+  "script": {
+    "name": "fmscsd3preview",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:59 UTC",
+    "seeding_key": {
+      "script.name": "fmscsd3preview"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Plotting Shapes",
+      "name": "Plotting Shapes",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "key": "Drawing in Game Lab",
+      "name": "Drawing in Game Lab",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Lesson Overview 2"
+        ],
+        "lesson.key": "Plotting Shapes",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "CSD U3 Lesson Overview 2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 Describe the Picture"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Describe the Picture"
+        ],
+        "lesson.key": "Plotting Shapes",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "CSD U3 Describe the Picture"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD-U3-SFLP Simple Drawing"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD-U3-SFLP Simple Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "CSD-U3-SFLP Simple Drawing"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "CSD: Drawing in Game Lab 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Rectangle"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Rectangle Width and Height"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Rectangle Width and Height"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Rectangle Width and Height"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - X and Y values"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - X and Y values"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - X and Y values"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Order of Blocks"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Drawing in Game Lab 2"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "CSD: Drawing in Game Lab 2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Fill"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Oval"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Oval"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Oval"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Simple Shape Drawing"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Simple Shape Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Simple Shape Drawing"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Ellipse and No Fill"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Ellipse and No Fill"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Ellipse and No Fill"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Stroke and Stroke Weight"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Stroke and Stroke Weight"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Stroke and Stroke Weight"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - No Fill"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - No Fill"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - No Fill"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Comments"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Comments"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Comments"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Road Rects and Color"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Road Rects and Color"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Road Rects and Color"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Road Ellipse"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Road Ellipse"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Road Ellipse"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - regular polygon"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - regular polygon"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - regular polygon"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - text"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - text"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - text"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 19,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Plan Personal Drawing"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Plan Personal Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Plan Personal Drawing"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 20,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Personal Drawing"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Personal Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      },
+      "level_keys": [
+        "U3 - Simple Drawing - Personal Drawing"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Lesson Overview 2",
+        "script_level.level_keys": [
+          "CSD U3 Lesson Overview 2"
+        ],
+        "lesson.key": "Plotting Shapes",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Describe the Picture",
+        "script_level.level_keys": [
+          "CSD U3 Describe the Picture"
+        ],
+        "lesson.key": "Plotting Shapes",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD-U3-SFLP Simple Drawing",
+        "script_level.level_keys": [
+          "CSD-U3-SFLP Simple Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Drawing in Game Lab 1",
+        "script_level.level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Rectangle",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Rectangle Width and Height",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Rectangle Width and Height"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - X and Y values",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - X and Y values"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Order of Blocks",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Drawing in Game Lab 2",
+        "script_level.level_keys": [
+          "CSD: Drawing in Game Lab 2"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Fill",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Oval",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Oval"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Simple Shape Drawing",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Simple Shape Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Ellipse and No Fill",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Ellipse and No Fill"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Stroke and Stroke Weight",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Stroke and Stroke Weight"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - No Fill",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - No Fill"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Comments",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Comments"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Road Rects and Color",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Road Rects and Color"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Road Ellipse",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Road Ellipse"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - regular polygon",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - regular polygon"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - text",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - text"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Plan Personal Drawing",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Plan Personal Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 - Simple Drawing - Personal Drawing",
+        "script_level.level_keys": [
+          "U3 - Simple Drawing - Personal Drawing"
+        ],
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "",
+        "script.name": "fmscsd3preview"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

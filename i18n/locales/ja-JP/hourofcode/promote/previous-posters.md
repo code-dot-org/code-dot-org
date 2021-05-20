@@ -1,14 +1,12 @@
 ---
-title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
+title: 過去のHour of Codeのポスター
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# 過去に使われたHour of Codeのポスター
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### 前年度までに使われたポスターを、印刷してクラスに貼ってください！最新のポスターをお探しですか？こちらをクリック</h3> 
 
 * * *
 

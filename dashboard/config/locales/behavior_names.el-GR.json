@@ -1,0 +1,47 @@
+{
+  "el-GR": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "αναρρώνοντας"
+        },
+        "outbreak2": {
+          "recovering": "αναρρώνοντας"
+        },
+        "outbreak3": {
+          "recovering": "αναρρώνοντας"
+        },
+        "outbreak4": {
+          "recovering": "αναρρώνοντας",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "outbreak5": {
+          "recovering": "αναρρώνοντας"
+        },
+        "outbreak6": {
+          "recovering": "αναρρώνοντας"
+        },
+        "outbreak7": {
+          "recovering": "αναρρώνοντας",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "moving left and right": "κίνηση αριστερά και δεξιά"
+        },
+        "outbreak8": {
+          "recovering": "αναρρώνοντας",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους",
+          "moving left and right": "κίνηση αριστερά και δεξιά"
+        },
+        "outbreak_freeplay": {
+          "recovering": "αναρρώνοντας",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "αναρρώνοντας",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        }
+      }
+    }
+  }
+}

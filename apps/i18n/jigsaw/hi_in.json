@@ -1,8 +1,10 @@
 {
   "continue": "जारी रखें",
+  "nextLevel": "बधाई हो! आपने यह पहेली पूरी कर ली है।",
   "no": "नहीं",
+  "numBlocksNeeded": "इस पहेली को %1 ब्लॉक्स के साथ हल किया जा सकता है। ",
   "reinfFeedbackMsg": "To go back and play the game press \"try to play again\"",
   "share": "शेयर करें",
   "shareGame": "अपनी गेम साझा करें:",
-  "yes": "हाँ"
+  "yes": "हां"
 }

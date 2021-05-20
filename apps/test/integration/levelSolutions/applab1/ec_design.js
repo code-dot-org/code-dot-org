@@ -670,8 +670,13 @@ module.exports = {
         assertPropertyRowValue(3, 'height (px)', 100, assert);
         assertPropertyRowValue(4, 'x position (px)', 0, assert);
         assertPropertyRowValue(5, 'y position (px)', 0, assert);
-        assertPropertyRowValue(6, 'text color', '#4d575f', assert);
-        assertPropertyRowValue(7, 'background color', '#f2f2f2', assert);
+        assertPropertyRowValue(6, 'text color', 'rgb(77, 87, 95)', assert);
+        assertPropertyRowValue(
+          7,
+          'background color',
+          'rgb(242, 242, 242)',
+          assert
+        );
         assertPropertyRowValue(8, 'font family', 'Arial', assert);
         assertPropertyRowValue(9, 'font size (px)', 13, assert);
 
@@ -1729,13 +1734,13 @@ module.exports = {
           'button was deleted'
         );
 
-        // TODO(dave): re-enable this section after we move to headless chrome.
-        // We don't know why this section started failing in phantomjs on
-        // circle, but it appears to pass in headless chrome on circle.
-
         // Drag image out of the app towards the bottom and verify element got deleted
-        // dragElement(image[0], 0, 550);
-        // assert.equal(designModeViz.find('#design_image1').length, 0, "image was deleted");
+        dragElement(image[0], 0, 550);
+        assert.equal(
+          designModeViz.find('#design_image1').length,
+          0,
+          'image was deleted'
+        );
 
         // Drag label out of the app towards the right and bottom and verify element got deleted
         dragElement(label[0], 200, 350);

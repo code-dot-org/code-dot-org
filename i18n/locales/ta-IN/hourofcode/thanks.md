@@ -1,13 +1,8 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
+title: ஒரு –ஐ நடத்த பதிவு செய்தமைக்கு நன்றி!
 ---
 
-# Thanks for signing up to host an Hour of Code!
+# ஒரு –ஐ நடத்த பதிவு செய்தமைக்கு நன்றி!
 
 <br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 

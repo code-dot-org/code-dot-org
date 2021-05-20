@@ -10,6 +10,13 @@
   "danceFeedbackNeedDifferentDance": "需要采用不同的舞蹈。",
   "danceFeedbackNeedEveryTwoMeasures": "确保使用了`每两个节拍`模块",
   "danceFeedbackNeedMakeANewDancer": "使用`创建一个新的`模块来创建第二个舞者。",
-  "danceFeedbackKeyEvent": "确保在\"当按键\"模块中加入一些代码，并在舞蹈运行时按下这些键。",
+  "danceFeedbackKeyEvent": "确保在<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">“向上”</title></block></xml>块中加入一些代码，并在舞蹈运行时按下这些键。",
+  "danceFeedbackDidntPress": "在你编排的舞蹈进行时请尝试按下方向键。",
+  "danceFeedbackPressedKey": "你按下了一个按键，但是你的舞者没有反应。",
+  "danceFeedbackNeedTwoDancers": "你需要创建两个舞者。",
+  "danceFeedbackOnlyOneDancerMoved": "你创建的舞者们只有一个移动了。",
+  "danceFeedbackNeedLead": "你需要通过 <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> 块创建一位领舞的舞者。",
+  "danceFeedbackNeedBackup": "你需要通过 <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> 块来创建一组替补的舞者。",
+  "danceFeedbackSetSize": "在音乐开始后，你需要改变至少一位舞者的大小。",
   "measure": "小节："
 }

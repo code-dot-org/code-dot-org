@@ -1,7 +1,5 @@
 ---
-title: Guía de instrucciones para funcionarios públicos
-layout: wide
-nav: how_to_nav
+title: Guía práctica para funcionarios públicos
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ De izquierda a derecha: *los gobernadores de Arkansas, California del Norte y Ar
 
 ### 1. Lee nuestra página informativa
 
-Mira [por qué es importante enseñar ciencias de la computación](/files/hoc-one-pager.pdf) y cómo puedes llevar a cabo la Hora del Código para aportar tu granito de arena.
+Mira [por qué es importante enseñar ciencias de la computación]({{ localized_files/hoc_one_pager }}) y cómo puedes llevar a cabo la Hora del Código para aportar tu granito de arena.
 
 ### 2. Involucra a escuelas locales y distritos
 

@@ -1,7 +1,7 @@
 professional_learning_course 'ECS Support'
-login_required 'true'
+login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'ECS Phase 3 Welcome'
 level 'ECS Phase 3 Overview'
 level 'PDECS tour'
@@ -9,11 +9,11 @@ level 'PD check your progress'
 level 'ECSPD Unit 2 Outline'
 level 'ECSPD P3 Plan'
 
-stage 'Intro to Unit 2'
+lesson 'Intro to Unit 2', display_name: 'Intro to Unit 2', has_lesson_plan: false
 level 'ECSPD Unit2 Connections'
 level 'ECSPD Unit 2 Lesson Overview'
 
-stage 'Teaching Strategies'
+lesson 'Teaching Strategies', display_name: 'Teaching Strategies', has_lesson_plan: false
 level 'Forum-ECSPD-Unit 2-Teaching Practice'
 level 'ECSPD Unit 2 Growth'
 level 'ECSPD Phase 3 - Unit 2 - Teaching Practice'
@@ -23,7 +23,7 @@ level 'ECSPD Real Life Problem Solving'
 level 'ECSPD Find Learning Strategy'
 level 'ECSPD strategies'
 
-stage 'Lesson Overviews'
+lesson 'Lesson Overviews', display_name: 'Lesson Overviews', has_lesson_plan: false
 level 'ecs unit 2 introduction'
 level 'ECSPD U2 D 1-2'
 level 'ECSPD U2 D 3'
@@ -39,7 +39,7 @@ level 'ECSPD U2L1516 Sorting Video'
 level 'ECSPD U2 D 17 Intro'
 level 'ECSPD U2 D 18-21 Intro'
 
-stage 'Unit 2 Challenge'
+lesson 'Unit 2 Challenge', display_name: 'Unit 2 Challenge', has_lesson_plan: false
 level 'ECSPD What is the Challenge'
 level 'ECSPD U2 Challenges'
 level 'ECS Unit 2 Challenge Selection', named: true
@@ -49,5 +49,6 @@ level 'CSPPD3-u2 reflect on challenge'
 level 'CSPPD3-u2 expectations'
 level 'ECS Unit 2 Challenge Submission', named: true
 
-stage 'Close & Next Steps'
+lesson 'Close & Next Steps', display_name: 'Close & Next Steps', has_lesson_plan: false
 level 'ECSPD Challenge Reflection'
+

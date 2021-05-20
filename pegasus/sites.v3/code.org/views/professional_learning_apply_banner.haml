@@ -1,35 +1,16 @@
-- link = "/educate/professional-learning/program-information"
-- link += "?nominated=true" if params[:nominated]
+- use_sign_up_text ||= false
+- link_suffix ||= nil
+- style ||= nil
+- data = {}
+- data[:useSignUpText] = use_sign_up_text
+- data[:nominated] = params[:nominated]
+- data[:linkSuffix] = link_suffix
+- data[:style] = style
+- teacher_application_mode = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
+- data[:teacherApplicationMode] = teacher_application_mode
 
-- buttons = capture_haml do
-  %div
-    %button{style: "margin-top: 29px; padding: 10px 40px 10px 40px; height: initial; margin-right: 30px; font-size: 18px;"}
-      Apply Now
+-# Professional Learning is only available in the US
+- if I18n.locale == :"en-US" && %w(open closing-soon).include?(teacher_application_mode)
+  %script{src: webpack_asset_path('js/code.org/views/professional_learning_apply_banner.js'), data: {props: data.to_json}}
 
-:css
-  .bigbanner p { margin: 0px }
-
-%div
-  %a.linktag#pl-apply-banner{href: link}
-    .bigbanner{style: "width: 100%; padding: 5px; background-color: #ebe8f1"}
-      .col-50{style: "background-color: #7665a0; min-height: 100px;"}
-        .arrowcontainer.desktop-feature{style: "float:left; width: 7%"}
-          .arrow{style: "width: 0; height: 0; border-style: solid; border-width: 50px 0 50px 25px; border-color: transparent transparent transparent #ebe8f1"}
-        .textcontainer{style: "float:left; width: 93%"}
-          .text{style: "color: white;  font-size: 18px; padding: 20px 10px 20px 10px; text-align: center; line-height: 1.5"}
-            - if params[:nominated]
-              CONGRATULATIONS! You’ve been nominated for a scholarship!
-            - else
-              Professional learning deadlines fast approaching! Sign up now to reserve your seat
-      .col-50{style: "background-color: #ebe8f1; color: white; height: 100px; font-size: 18px; text-align: center"}
-        .desktop-feature{style: "float:left; width: 30%"}
-          .arrowcontainer{style: "float:left"}
-            .arrow{style: "width: 0; height: 0; border-style: solid; border-width: 50px 0 50px 25px; border-color: transparent transparent transparent #7665a0;"}
-          .plane{style: "float:left; padding-top: 14px;"}
-            %img{src: "/images/professional-learning/plane.png", style: "width:100px"}
-        .desktop-feature{style: "float:left; width: 70%"}
-          = buttons
-        .mobile-feature{style: "float:left; width: 100%"}
-          = buttons
-
-      .clear{style: "clear: both"}
+  #apply-banner-container

@@ -1,0 +1,354 @@
+{
+  "script": {
+    "name": "cspunit1-support",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "seeding_key": {
+      "script.name": "cspunit1-support"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "cspunit1-support"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Intro to the Unit",
+      "name": "Intro to the Unit",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "Chapter Overviews",
+      "name": "Chapter Overviews",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Chapter Overviews",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "Tool Talk: Intro to Netsim",
+      "name": "Tool Talk: Intro to Netsim",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Tool Talk: Intro to Netsim",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "Supporting Peer Learning",
+      "name": "Supporting Peer Learning",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Supporting Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "cspunit1-support"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Sample Free Response"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Sample Free Response"
+        ],
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      },
+      "level_keys": [
+        "Sample Free Response"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      },
+      "level_keys": [
+        "U1L5 How the Internet Works - Video"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Sample External Resource"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Sample External Resource"
+        ],
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      },
+      "level_keys": [
+        "Sample External Resource"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Empty Markdown Level"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Empty Markdown Level"
+        ],
+        "lesson.key": "Chapter Overviews",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      },
+      "level_keys": [
+        "Empty Markdown Level"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Sample CSP Assessment"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Sample CSP Assessment"
+        ],
+        "lesson.key": "Tool Talk: Intro to Netsim",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      },
+      "level_keys": [
+        "Sample CSP Assessment"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U3L2 Free Response Reflection"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2 Free Response Reflection"
+        ],
+        "lesson.key": "Supporting Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "cspunit1-support"
+      },
+      "level_keys": [
+        "U3L2 Free Response Reflection"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Sample Free Response",
+        "script_level.level_keys": [
+          "Sample Free Response"
+        ],
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L5 How the Internet Works - Video",
+        "script_level.level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Sample External Resource",
+        "script_level.level_keys": [
+          "Sample External Resource"
+        ],
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Empty Markdown Level",
+        "script_level.level_keys": [
+          "Empty Markdown Level"
+        ],
+        "lesson.key": "Chapter Overviews",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Sample CSP Assessment",
+        "script_level.level_keys": [
+          "Sample CSP Assessment"
+        ],
+        "lesson.key": "Tool Talk: Intro to Netsim",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3L2 Free Response Reflection",
+        "script_level.level_keys": [
+          "U3L2 Free Response Reflection"
+        ],
+        "lesson.key": "Supporting Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "cspunit1-support"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

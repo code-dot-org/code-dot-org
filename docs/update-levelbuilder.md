@@ -1,4 +1,4 @@
-# Complete, external-facing Level Builder instructions live in this  [gdoc](https://docs.google.com/a/code.org/document/d/1HcYloRHibxk0Axnuw3A3w_Ht3AEmBHO0IUCaYFfs838/edit#heading=h.ihuilew1afmk).
+# Complete, external-facing Level Builder instructions live in this [wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Levelbuilders).
 This .md file should only contain information which is specific to Code.org engineers.
 
 # How to update level builder

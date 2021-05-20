@@ -1,0 +1,30 @@
+name 'Episode 10 Challenge Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Challenges
+
+### Teachable Machines
+
+**Do This:** Use [Teachable Machine](https://teachablemachine.withgoogle.com/) to make Machine Learning models just like Hadi! 
+
+---
+
+* Teach the machine to recognize rock, paper, and scissors. How many images do you need to add to the training set for the machine to consistently recognize your gestures? Will it recognize the gesture if another person uses your training set?
+
+![](https://images.code.org/71b65a87765210f6892aade2be5d6f92-image-1590072284632.gif)
+
+---
+
+* Create your own emotion reader. Can your machine recognize happy, sad, surprised, scared, and shocked?
+
+![](https://images.code.org/126ffe7f0bda03ae0a36ca25587372fe-image-1590072815668.gif)
+
+---
+
+* Train the machine to recognize snaps, claps, and whistles by following this tutorial [here](https://medium.com/@warronbebster/teachable-machine-tutorial-snap-clap-whistle-4212fd7f3555).
+
+![](https://images.code.org/615b6a17fe1e5e2a9824a944b64d6899-image-1590073472185.gif)
+MARKDOWN

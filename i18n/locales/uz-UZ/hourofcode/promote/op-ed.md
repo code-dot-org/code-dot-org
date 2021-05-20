@@ -1,7 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: '"Informatika bo‘yicha ta''lim haftaligi va soat soati" dasturining namunasi'
 ---
 
 {{ signup_button }}

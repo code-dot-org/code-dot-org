@@ -39,6 +39,7 @@ sk:
         Custom: Umelec
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronzová
@@ -143,7 +144,7 @@ sk:
           iné vzory, alebo experimentuj zmenením zvyšku kódu aby si nakreslil čo chceš.
         maze_karel_1_1: Ahoj, ja som farmárka. Potrebujem tvoju pomoc s vyrovnaním
           poľa na mojej farme tak, aby bolo pripravené pre výsadbu. Presuň ma na hromadu
-          hliny a použi blok "odstráň", aby si ju odstránil.
+          hliny a použi blok "odstráň" na jej odstránenie.
         maze_karel_1_2: Ďalej ma posuň do diery a vyplň ju dvoma plnými lopatami hliny,
           použitím bloku "vyplň".
         maze_karel_1_3: Posuň ma na hromadu hliny a povedz mi koľko plných lopát treba
@@ -327,8 +328,8 @@ sk:
           a potom ho presunúť šípkami až kým neskóruje?
         studio_c2_10: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla a potom
           ho presunúť pomocou šípok až kým neskóruje?
-        studio_c2_11: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni na Skončiť,
-          nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c2_11: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť"
+          a pošli ho kamarátom na mobil!
         studio_c3_story_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_c3_story_2: Viete nechať psa niečo povedať a potom nechať mačku takisto
           niečo povedať?
@@ -336,8 +337,8 @@ sk:
         studio_c3_story_4: Dokážeš napísať program, ktorý posunie psa k mačke, a nech
           mačka povie "ahoj", keď k nej pes príde?
         studio_c3_story_5: Viete pridať blok a spraviť chobotnicu šťastnou?
-        studio_c3_story_6: Vytvor si svoj vlastný príbeh. Keď budeš hotový, klikni
-          na Skončiť, nechaj kamarátov vyskúšať si tvoj príbeh na ich telefónoch.
+        studio_c3_story_6: Teraz si vytvor vlastný príbeh. Po skončení klikni na "Dokončiť"
+          a pošli ho kamarátom na mobil!
         studio_c3_game_1: Dokážeš napísať program vďaka ktorému povie chobotnica "ahoj",
           keď na ňu klikneš?
         studio_c3_game_2: Viete napísať program na pohyb tučniaka použitím kláves
@@ -351,7 +352,7 @@ sk:
           do chobotnice a potom ho presunúť šípkami až kým neskóruje?
         studio_c3_game_6: Viete pridať bloky pre zmenu pozadia a rýchlosti Waddla
           a potom ho presunúť pomocou šípok až kým neskóruje?
-        studio_c3_game_7: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_c3_game_7: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_playlab_1: Tučniačik chce povedať "ahoj" - môžeš mu s tým pomôcť?
         studio_playlab_2: Jaskynný muž (postava 1) a jaskynná žena (postava 2) by
@@ -374,7 +375,7 @@ sk:
         studio_playlab_9: Nastav pozadie pre túto inváziu mimozemšťanov a pomôž Spacebotovi
           čo najrýchlejšie sa dostať k mimozemštanovi tým, že zmeníš jeho rýchlosť.
           Potom ho presuň pomocou šípiek a upozorni na inváziu aj ostatných
-        studio_playlab_10: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_playlab_10: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_iceage_hello1: Sid chce dať všetkých dokopy pre nové dobrodružstvo.
           Viete mu pomôcť povedať "ahoj" presunutím bloku "povedať" na pracovnú plochu
@@ -409,9 +410,9 @@ sk:
           ju ľúbi. Použite príkaz "postavička hodí", aby Sid (postavička č. 1) hodil
           Babičke (postavička č. 2) srdiečka! Nastavte Babičkinu náladu na šťastnú
           akonáhle dostane srdiečka.
-        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru, alebo príbeh.
-          Keď budeš hotový, klikni na Skončiť, aby si mohli zahrať tvoju hru kamaráti
-          na svojich telefónoch, tabletoch, alebo na počítačoch!
+        studio_iceage_free_play: Je čas vytvoriť si svoju vlastnú hru alebo príbeh.
+          Keď skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti
+          na mobile, tablete, či počítači!
         studio_gumball_hello1: Anais si chce nájsť nových kamarátov. Pomôžeš jej povedať
           "ahoj" tým, že presunieš blok "povedz" na pracovnú plochu a napíšeš do neho
           "ahoj"?
@@ -446,10 +447,10 @@ sk:
           "postava hoď predmet vpravo", aby Banánový Joe (postava č. 1) odhodil jedlo
           na Antona (postava č. 2)! Ak Antona zasiahne, nastav Antonovu náladu na
           nahnevanú.
-        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh. Keď budeš
-          hotový klikni na Skončiť, aby si mohli kamaráti zahrať tvoju hru na svojich
-          telefónoch, tabletoch, alebo na počítačoch!
-        studio_full_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_gumball_free_play: Vytvor si svoju vlastnú hru, alebo príbeh.  Keď
+          skončíš, klikni na "Dokončiť", nech si ju môžu zahrať aj tvoji kamaráti
+          na mobile, tablete, či počítači!
+        studio_full_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
         studio_k1_1: Dokážeš naučiť tohto psa povedať "ahoj svet"?
         studio_k1_2: Viete nechať psa niečo povedať a potom nechať mačku takisto niečo
@@ -481,7 +482,7 @@ sk:
         turtle_ec_1_10: 'Dokázal si to! Teraz môžeš nakresliť čo len chceš. Pár vtipných
           nápadov: postavička z čiar, snehová vločka alebo špirála. Skús použiť aj
           blok "šírkaPera". Prajeme veľa zábavy!'
-        studio_ec_sandbox: Vytvor si vlastnú hru. Keď budeš hotový, klikni na "Dokončiť",
+        studio_ec_sandbox: Vytvor si vlastnú hru. Keď skončíš, klikni na "Dokončiť",
           nech si ju môžu zahrať aj kamaráti na svojich mobiloch.
     video:
       name:
@@ -495,7 +496,7 @@ sk:
         if_else: Blok "Ak/inak"
         if_else_scrat: Blok "Ak/inak"
         function: Funkcie
-        loop_while: Blok "Kým"
+        loop_while: Blok "Pokiaľ"
         loop_for: Blok "Počítadlo"
         parameters: Funkcie s parametrami
         hoc_wrapup: Zhrnutie Hodiny Kódu
@@ -580,6 +581,7 @@ sk:
         C4_unplugged_forloops: Cykly "For"
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
+        CSF_a_b_artist_loops: Cykly s Umelcom
         CSF_artist_angles: Uhly v Umelcovi
         CSF_collector_k1_blocks: 'Základy informatiky: Zberateľka'
         CSF_collector_repeat_loops: Použitie bloku "Opakuj"
@@ -619,12 +621,18 @@ sk:
         csd_external_netflix_data: Ako fungujú odporúčania seriálov a filmov v Netflixe?
         csd_external_waze_data: Prečo je tak veľa ľudí posadnutých Waze-om?
         csd_gamelab_animation_tab: Záložka s animáciami
+        csd_gamelab_draw_1: 'Video: Kreslenie v Game Labe - 1. časť'
+        csd_gamelab_draw_2: 'Video: Kreslenie v Game Labe - 2. časť'
+        csd_gamelab_variables_1: Predstavenie premenných - 1. časť
+        csd_gamelab_variables_2: Predstavenie premenných - 2. časť
         csd_gamelab_velocity: Rýchlosť
         csd_weblab_intro_1: Úvod do Web Labu - časť 1
         csd_weblab_intro_2: Úvod do Web Labu - časť 2
         csd_weblab_css_1: Úvod do CSS - časť 1
         csd_weblab_css_2: Úvod do CSS - časť 2
         csd_weblab_intro_3: Úvod do Web Labu - časť 3
+        csp_applab_variables_1: Predstavenie premenných - 1. časť
+        csp_applab_variables_2: Predstavenie premenných - 2. časť
         csp_applab_functions: Úvod do funkcií
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
@@ -655,7 +663,7 @@ sk:
         applab_hoc_welcome: App Lab Hodina Kódu - Vitajte
         applab_hoc_setproperty: App Lab Hodina Kódu - setProperty
         applab_hoc_onevent: App Lab Hodina Kódu - onEvent
-        applab_hoc_designmode: App Lab Hodina Kódu - Dizajnovací mód
+        applab_hoc_designmode: Hodina kódu s App Labom - Dizajnový mód
         applab_hoc_share: App Lab Hodina Kódu - Zdieľanie
         mc_2017_agent_intro: Minecraft Hodina Kódu - Agent
         mc_2017_repeat: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
@@ -682,8 +690,9 @@ sk:
         applab_intro_welcome: App Lab - Začíname
         applab_intro_events: App Lab - Spravme to interaktívne
         applab_intro_sounds: App Lab - Obrázky a zvuky
-        applab_intro_designmode: App Lab - Dizajnovací mód
-        applab_intro_share: App Lab - Zdieľanie Appky
+        applab_intro_designmode: App Lab - Dizajnový mód
+        applab_intro_share: App Lab - Zdieľaj svoju appku
+        csd_applab_arrays: Úvod do zoskupení
         CSF_skinOverview_Harvester: Záhradníčka
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -698,7 +707,7 @@ sk:
         CSF_loops_AB: Cykly
         csd_gamelab_booleans: Logické výrazy
         csd_gamelab_conditional_statements: Podmienkové výroky
-        csd_gamelab_if_else: Výroky Ak/Inak
+        csd_gamelab_if_else: Podmienkové výroky (if/else)
         CSF_SpriteLabIntro_CDEF: Toto je Sprite Lab
         CSF_Spritelab_MakeSprite_CDEF: Ako vytvoriť postavu v Sprite Labe
         CDEF_Video_SpritesInAction: Postavy v akcii
@@ -706,7 +715,7 @@ sk:
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         mc_2018_intro: 'Minecraft: Vodné Dobrodružstvo - Úvod'
         MC_2018_loops: 'Minecraft: Vodné Dobrodružstvo - Cyklus "Opakuj pokiaľ neplatí"'
-        mc_2018_conditionals: 'Minecraft: Vodné Dobrodružstvo - Podmienky'
+        mc_2018_conditionals: 'Minecraft: Vodné dobrodružstvo - podmienky'
         mc_2018_closing: 'Minecraft: Vodné Dobrodružstvo - Gratulujeme'
         hoc_dance_warmup: Tanečná párty - Zahrej sa
         hoc_dance_events: Tanečná Párty - Udalosti
@@ -729,13 +738,58 @@ sk:
         what_is_an_event: Čo je to udalosť?
         teaching_cs_pair_programming: 'Vyučujeme Základy informatiky: Párové programovanie'
         teaching_problem_solving: 'Vyučujeme Základy informatiky: Riešenie problémov'
-        csd_applab_designmode: 'Informatické objavy: App Lab - režim návrhov'
+        csd_applab_designmode: 'Objavujeme informatiku : App Lab - dizajnový mód'
         csd_pair_programming: Programovanie v páre
         csd_gamelab_functions: Názvy a definície funkcií
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
+        csd_problem_solving_process: Proces riešenia problémov
+        CSF_Going_Places_Safely: Moja internetová štvrť
+        CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
+        CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
         csd_debugging: Hľadanie a odstraňovanie chýb
+        csd_applab_designmode_short: App Lab  - Dizajnový mód
+        csp-pd-welcome: Vitaj v rodine!
+        CSF-Teaching-Problem-Solving: CSF riešenie problémov pri učení
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilotné video
+          - Dátový blok
+        u7-libraries-explanation: 'App Lab: Vytvor svoje vlastné bloky - Ako používať
+          knižnice'
+        how-to-k5-workshops: 'Základy informatiky s Code.org: Otestované žiakmi, schválené
+          učiteľmi'
+        why-should-teach-unplugged-activities: Prečo mám učiť aktivity bez počítača?
+        cs-principles-intro-to-objects: 'CS Princípy: Úvod do Predmetov'
+        oceans_machine_learning: Strojové učenie
+        oceans_training_data: Tréningové dáta
+        oceans_societal_implications: Spoločenské dôsledky
+        hoc_dance_congrats_2019: Tanečná párty 2019 - Párty pokračuje!
+        hoc_dance_warmup_2019: Tanečná párty 2019 - Zahrej sa
+        hoc_dance_events_2019: Tanečná párty 2019 - Udalosti
+        hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
+        hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
+        csd_what_computers_do: Čo robia počítače?
+        csf_my_online_neighborhood_2020: Moja internetová štvrť
+        csf_follow_the_digital_trail: Sleduj digitálnu stopu
+        csf_private_and_personal_information: Súkromné a osobné údaje
+        csd_what_computers_are: Čo je počítač?
+        codebreak_e01: 'Code Break 1.0: Algoritmy s Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Protoypy s Markom Cubanom a Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Šifrovanie s Ashtonom Kutcherom a Mia Gil
+          Epner'
+        codebreak_e04: Code Break 4.0 Digitálne informácie s Mikeom Kriegerom a Alice
+          Keeler
+        codebreak_e05: 'Code Break 5.0: Simulácie a dáta s Billom Gatesom '
+        csd_how_teamwork_works: Ako funguje tímová spolupráca
+        csd_teamwork_and_disagreement: Práca v tíme - ako riešiť nezhody
+        codebreak_e06: 'Code Break 6.0: O internete (Keegan-Michael Scott & Vint Cerf)'
+        codebreak_e07: 'Code Break 7.0: Podmienky (Sal Khan & Flo Vaughn)'
+        codebreak_e08: 'Code Break 8.0: Premenné (Yara Shahidi & Fuzzy Khosrowshahi) '
+        codebreak_e09: 'Code Break 9.0: Udalosti (Macklemore & Scott Forstall)'
+        codebreak_e10: 'Code Break 10.0: Umelá inteligencia (Kat Graham & Kate Park)'
+        codebreak_e11: 'Code Break 11.0: Abstrakcia (Susan Wojcicki & China Anne McClain)'
+        codebreak_e12: 'Code Break 12.0: Hardware (Aloe Blacc, Bret Taylor & Paula
+          Mejia)'
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

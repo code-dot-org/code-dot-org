@@ -1,12 +1,10 @@
 ---
 title: Kamu görevlileri için rehber
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# Butun cevremi nasil bu ise baslatirim
+# Bütün okul çevresini bu işe nasıl dahil ederim
 
 ### Bilgisayar bilimine sorumluluk geregi ulkeni, semtini, veya sehrini goster
 
@@ -16,51 +14,52 @@ nav: how_to_nav
 
 ## Senin Kode Saatinde resmi gorevli birini konuk ediyormusun?
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+Onların ziyaretini ve sizin etkinliğinizi harika hale getirmek için ihtiyacınız olan tüm bilgileri içeren [araç kitimizi görüntüleyin](/files/elected-official.pdf).
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+Soldan sağa: *Hour of Code'a katılan Arkansas, Kuzey Carolina ve Arizona valileri.*
 
 ## Tüm okulların katılmasını sağlayın, her öğrenci öğrensin!
 
-### 1. Read our one-pager
+### 1. Tek sayfalık dokümanımızı okuyun
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+[Bilgisayar bilimlerinin neden önemli olduğuna]({{ localized_files/hoc_one_pager }}) ve Kodlama Saati'ne destek vererek bu çabaya nasıl yardım edebileceğinize bakın.
 
-### 2. Recruit local schools and districts
+### 2. Yerel okulları ve bölgeleri dahil edin
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+Okul ve bölgeler için [bu e-postayı]({{ promote/sample_emails }}) veya [bu öneri yazısını]({{ promote/stats_url }}) bir başlangıç noktası olarak kullanın ve bu [nasıl yapılır]({{ urls/how_to_guide }}) rehberine bakın.
 
-### 3. Host an Hour of Code event
+### 3. Hour of Code etkinliğine ev sahipliği yapın
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.
+Örnek bir gösteri çalışması, [medya destek kiti]({{ promote/press_kit_url }}) ve diğer etkinlik planlama kaynakları için [etkinlik nasıl yapılır kılavuzumuza]({{ urls/how_to_events }}) bakın. Bir etkinliğe ev sahipliği yapmak, Hour of Code'u tanıtmanın ve katılımı artırmanın harika bir yoludur.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. Bilgisayar Bilimi Eğitim Haftası süresince {{ campaign_date/short }} "etkinliklerden birine katılın
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+Bölge, kent veya eyaletinizde katılan [sınıf ve okulları bulun]({{ urls/events }}).
 
-### 5. Issue a proclamation or resolution
+### 5. Bir bildiri veya karar yayınlayın
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+Bilgisayar Bilimi Eğitim Haftası'nı ve hedeflerini destekleyen, eyalet ve yerel yasama organları tarafından kullanılabilecek bu [örnek karara]({{ urls/proclamation }}) bakın.
 
-### 6. Draft an op-ed
+### 6. Bir fikir yazısı hazırlayın
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+Yerel gazetenizde bir fikir yazısı yayınlamayı düşünün. Bilgisayar Bilimleri Eğitim Haftası'nı ve hedeflerini destekleyen bu [örnek incelemeye]({{ promote/op_ed }}) bakın.
 
-### 7. Spread the word
+### 7. Herkese duyurun
 
-[Share the Hour of Code video on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) and [talk about your support on Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag **#HourOfCode** so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:
+[Hour of Code videosunu Facebook üzerinde paylaşın](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) ve [Twitter'da desteğiniz ile ilgili konuşun](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Etkinliğe ait fotoğrafları veya sizin ve çevrenizdeki yetişkinlerin Hour of Code yaparken çekilmiş videolarını paylaşın. Code.org (@code.org) un paylaşımlarınızı görebilmesi ve desteği artırabilmesi için paylaşımlarınızda **#HourOfCode** etiketini kullanın. Ya da şu örnek tweet'leri kullanabilirsiniz:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-
-### 8. Issue a press release
-
-[Use this sample]({{ promote/official_press_release }}) as a guide.
-
-### 9. Connect locally
-
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
-
-{{ signup_button }}
+- *Kız ya da erkek her öğrencinin bilgisayar bilimleri öğrenme şansı olmalı. Bir #HourOfCode ile başlatmada bize katılın</em></li> 
+    
+    - *Bugün, Hour of Code hareketine katılmaktan gurur duyuyoruz. Siz de var mısınız? #HourOfCode [https://hourofcode.com]({{ urls/home }})*</ul> 
+    
+    ### 8. Basın bülteni hazırlayın
+    
+    Kılavuz olarak [bu örneği kullanın]({{ promote/official_press_release }}).
+    
+    ### 9. Yerel olarak bağlanın
+    
+    [Eyaletinizdeki bilgisayar bilimleri eğitimi hakkında daha fazla bilgi edinin]({{ urls/advocacy }}). Dilekçeyi imzalayın, Code.org'un yerel, eyalet ve federal savunuculuk çabaları hakkında güncellemeler alacaksınız.
+    
+    {{ signup_button }}

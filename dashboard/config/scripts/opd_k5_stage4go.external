@@ -15,7 +15,7 @@ In this stage, we saw how adding loops to a program is more efficient when codin
 <br/>
 This is a video that you would show your students to help introduce the concept of loops and kick off the unplugged lesson.
 
-<iframe width="640" height="390" src="https://www.youtube.com/embed/JoKTqHCni0M" frameborder="0" allowfullscreen></iframe>
+[![](https://images.code.org/eb585fcc71f5f1d2fa4d3bcddcf74b8b-image-1571253274522.14.26 PM.png)](https://www.youtube.com/watch?v=JoKTqHCni0M)
 
 [Can't see the video? Click here](http://videos.code.org/2014/C1-getting-loopy.mp4)
 
@@ -24,7 +24,8 @@ This is a video that you would show your students to help introduce the concept 
 **3. Watch the teacher video: How to facilitate "Getting Loopy"**
 <br/>
 This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson. 
-<iframe width="640" height="390" src="https://www.youtube.com/embed/Vo2woYRRogA" frameborder="0" allowfullscreen></iframe>
+[![](https://images.code.org/fc594434f8b6869b1db1872fc85ca309-image-1571253220717.13.14 PM.png)](https://www.youtube.com/watch?v=Vo2woYRRogA)
+
 
 <br/>
 
@@ -39,9 +40,10 @@ This video is meant to be support for you as the teacher, if you are looking for
 > ## Reflect
 > How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)
 
-> <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank"><button class="plc">Discuss in the forums >></button></a>
+> <a href="http://forum.code.org/t/teaching-loops-and-efficiency/405/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuss in the forums >></button></a>
 
 After commenting in the forum, return here and click below to move on to the next stage.
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

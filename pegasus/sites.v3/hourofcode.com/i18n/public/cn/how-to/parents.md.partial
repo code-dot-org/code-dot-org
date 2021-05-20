@@ -1,79 +1,100 @@
 ---
-title: 家长操作指南
+title: Hour of Code How-to Guide for parents
 layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
-
 # How to do an Hour of Code with your child
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+尝试一小时玩程序是向你的孩子（也许是第一次）介绍计算机科学的简单而有趣的方式。 Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
 
----
+你可以和全球数千万学生一起参加这个全球性的活动。 我们可以一起激发孩子们的学习热情，打破陈规陋习，帮助孩子们发现新的兴趣。 最重要的是，你已经拥有了将“一小时玩程序”带入家中所需的一切！
 
-## 1) 观看指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
 
-## 2) Choose a tutorial
+<h3>  我需要什么才能开始？</h3>
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+一小时玩程序执行起来非常简单—即使是初学者也能胜任。 你不需要有计算机科学或教学经验，就能为你的孩子提供一个既能让他们学习又能让他们欢笑的有趣活动。
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
 
-## 3) 考虑你所需要的设备
+* * *
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+## 1) 探索活动和教程。
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 4) Start your Hour of Code with an inspiring video
+There are countless [Hour of Code activities](https://hourofcode.com/us/learn) available to you if you’re working on a computer with internet access. 我们鼓励你提前看看一些选择，这样你就可以帮助指导孩子们进行他们喜欢的练习。
 
-通过鼓励你的孩子讨论计算机如何影响我们的社会来引入“编程一小时”课程。
+我们所有的活动都将解决问题和批判性思维与趣味性和创造性结合在一起，而这里是一些学生最喜欢的活动：
 
-**播放鼓舞人心的视频：**
+- For the child who loves to play: [Minecraft](https://code.org/minecraft) or [Dance Party](https://code.org/dance)
+- For the child who loves Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1), or [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- 给爱学习的孩子：<a href="https://code.org/oceans">保护海洋的人工智能</a>或<a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">从零开始做音乐</a>
 
-- Code.org 推出比尔·盖茨，马克·扎克伯格，NBA球星克里斯·波什为主演的视频（它们的长度分别为[1分钟](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5分钟](https://www.youtube.com/watch?v=nKIu9yen5nc)，和[9分钟](https://www.youtube.com/watch?v=dU1xS07N-FA)。）
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+<h3>  设备有限或者无设备？</h3>
 
-因为您和您的孩子对计算机科学感到陌生而无从下手？这里有一些可以帮助介绍您“编程一小时”活动的点子：
+<p>If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.</p>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- 列举日常生活中需要使用程序的情况。
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+<p><a href="{{ urls/learn }}"><img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg"></a></p>
 
-更多的点子？看看我们富有经验的教育者总结出的[教学模板](/files/AfterschoolEducatorLessonPlanOutline.docx)。
+<p>You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!</p>
 
-## 5）编程！
+<h2>  2) 提前做好准备</h2>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+<p>  现在你想好了一些教程，那么在向孩子介绍这些活动之前，在你的设备上尝试这些活动可能会有所帮助。</p>
 
-建议在选择好课程以后把网址收藏起来，以便以后使用时能更快的找到。
+<p><a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg"></a></p>
 
-**当你的孩子遇到困难时**
+<h3>  家里不止一个孩子？</h3>
 
-最好说些诸如此类的话：
+<p>Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.</p>
 
-- "我也不知道。让我们一起来找到问题的答案吧"。
-- “科学技术并不总是同我们期望的方式一样工作。”
-- “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
+<p>If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>.   配对写程序活动鼓励孩子们一起工作。   当他们结成伙伴时，他们会互相帮助解决问题。 他们将明白编程也是一种社交和协作。</p>
 
-## 6）庆祝
+<h3>  让孩子们兴奋起来！ </h3>
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
 
-在社交媒体上分享关于您的编程一小时活动的照片或视频。请使用 #HourOfCode 和 @codeorg，这样我们也可以突出显示您活动的成功 ！
+- Show them an [inspirational video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) that features one of their favorite role models
+- Inspire them with a video on one of the [many careers](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) that computer science skills can lead to
+- [Order some swag](https://store.code.org/)! 你可以选择 T 恤、贴纸、甚至临时纹身。 马上与他们分享，让他们兴奋起来，或者将其作为特别奖品，在“一小时玩程序”结束时颁发。 
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 编程一小时之后该做什么？
+## 3) 给孩子介绍 CS 的技巧
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+- 解释技术如何影响我们的生活，并举出你的孩子可能感兴趣的具体例子。 例如，你可以谈论医学或虚拟联机。 Also, check out [Code.org/CSforGood](https://code.org/csforgood) for suggested discussion questions.
+- 一起列出日常中使用程序代码才能正常工作的事情。
 
-{{ signup_button }}
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
+
+<h3>Have young women at home?</h3>
+
+<a href="https://code.org/girls">这里是我们的建议</a>，可以帮助激发她们对计算机科学的兴趣。 **Pro-tip**: You can start just by telling them they’d be great at it!
+
+<h3>  一起解决问题</h3>
+
+Lastly, when your child comes across difficulties it's okay to respond: - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+
+Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+
+## 4) 别忘了庆祝！
+
+The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+
+- Print [Hour of Code Certificates](https://staging.code.org/certificates) that you award when your child completes their activity 
+- [Print stickers](https://staging.hourofcode.com/us/promote/resources#stickers) at home or [purchase them online](https://store.code.org/), as an added surprise. 
+- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>编程一小时之后该做什么？</h2>
+
+Computer science doesn’t have to end with the Hour of Code! 虽然 90% 的家长都希望自己的孩子学习计算机科学，但大多数学校却依然没有教授这门课程。 为了帮助大家，我们的课程都是基于网络的，永远免费。 [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
+
+[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})

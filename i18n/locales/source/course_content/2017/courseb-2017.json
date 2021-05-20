@@ -1,11 +1,22 @@
 {
-  "https://studio.code.org/s/courseb-2017/stage/1/puzzle/1": {
-    "display_name": "Unspotted Bugs"
+  "https://studio.code.org/s/courseb-2017/lessons/1/levels/1": {
+    "display_name": "Unspotted Bugs",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/q2BQ1a][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch!\n\nQ1) In this story, what do \"bugs\" do?\n\nQ2) In computer science, programmers talk about having \"bugs\" in their code.  What do you think that means?\n\nQ3) How did Jasmine and JD find the bugs that they were looking for?\n\nQ4) Can you remember this way of looking for bugs?\n\n-   Walk through step-by-step.\n-   Is everything good at the first step?\n-   Is everything good at the second step?\n-   The third?\n-   If you find something wrong, look around that place for the \"bug\".\n-   When you find the bug, give it a name, and say it out loud!"
   },
-  "https://studio.code.org/s/courseb-2017/stage/2/puzzle/1": {
-    "display_name": "Stevie and the Big Project"
+  "https://studio.code.org/s/courseb-2017/lessons/2/levels/1": {
+    "display_name": "Stevie and the Big Project",
+    "teacher_markdown": "**IMPORTANT:**  This story is meant to be read aloud by a teacher interacting with the class.  Find the PDF at [https://goo.gl/SZHo4z][0] .   \n\n* * *\n\nIf you are unable to read the story to your class, please be sure to ask students about this video. The intention is _not_ to have students passively watch! \n\nQ1) What two big words did Stevie learn in this story?\n\nQ2) What does it mean to be \"frustrated\"?\n\nQ3) Have you ever been frustrated?\n\nQ4) What are some things that you can do when you feel yourself getting frustrated?\n\nQ5)  What is \"persistence\"?\n\nQ6) Why is persistence a good thing?\n\nQ7) What are some things you can do to help yourself be persistent?"
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/2": {
+  "https://studio.code.org/s/courseb-2017/lessons/3/levels/1": {
+    "title": "Real-life Algorithms: Plant a Seed"
+  },
+  "https://studio.code.org/s/courseb-2017/lessons/5/levels/1": {
+    "title": "Your Digital Footprint"
+  },
+  "https://studio.code.org/s/courseb-2017/lessons/6/levels/1": {
+    "title": "Unplugged Activity"
+  },
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/2": {
     "short_instructions": "Play with these blocks to see what they make the bird do! \n\nGet the bird to the pig to complete the level.",
     "authored_hints": {
       "courseB_maze_seq1_a": "Connect blocks to the [blockly block][0] block to make the bird move!",
@@ -15,7 +26,7 @@
       "courseB_maze_seq1": "Click the lightbulb when you need a hint!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/4": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/4": {
     "short_instructions": "_\"A bug! Fix the code to get me to the pig.\"_",
     "authored_hints": {
       "courseB_maze_seq2_a": "This program is missing one block. Can you figure out which one?",
@@ -25,7 +36,7 @@
       "courseB_maze_seq2_callout1": "Use the step button to go step-by-step through the program. This will help you find the bug!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/5": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/5": {
     "short_instructions": "\"Fix the code to get me to the pig!\"",
     "long_instructions": "_\"Fix the code to get me to the pig!\"_",
     "authored_hints": {
@@ -37,14 +48,14 @@
       "courseB_maze_seq3_1": "The grey blocks are made of stone and can't be thrown away."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/6": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/6": {
     "short_instructions": "Add 2 blocks to get the bird to the pig.",
     "authored_hints": {
       "courseB_maze_seq4_a": "Try adding one instruction at a time until you get to the pig.",
       "courseB_maze_seq4_b": "You will want to use the [blockly block][0] block to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/7": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/7": {
     "short_instructions": "Now try this puzzle from the start!",
     "authored_hints": {
       "courseB_maze_seq5_a": "If you get stuck, try drawing out the path on paper.",
@@ -52,7 +63,7 @@
       "courseB_maze_seq5_c": "Not sure how to get to the pig?  Try this path."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/8": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/8": {
     "short_instructions": "Move one way, then another to get the bird to the pig!",
     "authored_hints": {
       "courseB_maze_seq6_a": "Your final code should have three movement blocks.",
@@ -61,7 +72,7 @@
       "courseB_maze_seq5_d": "Not sure how to get to the pig? Try this path!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/9": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/9": {
     "short_instructions": "Figure out what is missing and then add blocks to get the bird to the pig!",
     "authored_hints": {
       "courseB_maze_seq7_a": "Add 1 block to move the bird to the pig.",
@@ -69,7 +80,7 @@
       "courseB_maze_seq7_c": "Can't get to the pig?  Try this path!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/10": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/10": {
     "short_instructions": "Your turn!  What do you need to do to get the bird to the pig?",
     "authored_hints": {
       "courseB_maze_seq8_a": "Try adding one block at a time until you solve the puzzle.",
@@ -77,7 +88,7 @@
       "courseB_maze_seq8_c": "Don't know which way to go? Try this path!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/11": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/11": {
     "short_instructions": "Challenge: Move around the TNT to get the bird to the pig.",
     "long_instructions": "**Challenge:** Move around the TNT to get the bird to the pig.",
     "authored_hints": {
@@ -87,24 +98,24 @@
       "courseB_maze_seq9_d": "Stuck?  Try this path!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/12": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/12": {
     "short_instructions": "Fix the bugs to get the bird to the pig.",
     "authored_hints": {
       "courseB_maze_seq10_a": "Try writing down the steps on a piece of paper first.",
       "courseB_maze_seq10_b": "You will need to move in two different directions to reach the pig."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/13": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/13": {
     "short_instructions": "It's all you!  Get the bird to the pig.",
     "authored_hints": {
       "courseB_maze_seq11_a": "Try writing down the steps on a piece of paper first.",
       "courseB_maze_seq11_b": "Solve the puzzle in two parts: one before the corner and one after the corner."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/puzzle/14": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/levels/14": {
     "short_instructions": "Now get that pig any way you can!"
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/extras?level_name=courseB_maze_seq_challenge1": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/extras?level_name=courseB_maze_seq_challenge1": {
     "short_instructions": "Can you find a path before you run out of blocks?",
     "long_instructions": "You only have four of each move block. Can you find a path before you run out of blocks?",
     "authored_hints": {
@@ -112,14 +123,14 @@
       "courseB_maze_seq_challenge1_b": "Try using the [blockly block][0] block to start."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/7/extras?level_name=courseB_maze_seq_challenge2": {
+  "https://studio.code.org/s/courseb-2017/lessons/7/extras?level_name=courseB_maze_seq_challenge2": {
     "short_instructions": "Debug this level. These are the right blocks, but they're in the wrong order!",
     "authored_hints": {
       "courseB_maze_seq_challenge2_a": "You do not need to add or remove blocks to solve this puzzle.",
       "courseB_maze_seq_challenge2_b": "Rearrange the blocks and take the staircase pattern path."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/1": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/1": {
     "short_instructions": "\"Go get the scrap metal, BB-8!\"",
     "long_instructions": "[Rey][0]_\"Go get the scrap metal, BB-8!\"_\n\nWatch out for walls and crates. Scrap metal looks like this: [picture of scrap metal][1]",
     "authored_hints": {
@@ -127,14 +138,14 @@
       "courseB_starWars_prog1_b": "You will want to move East to solve this puzzle. How far do you need to move?\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/2": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/2": {
     "short_instructions": "Get all the metal.",
     "long_instructions": "[][0] _\"Get all the metal.\"_",
     "authored_hints": {
       "courseB_starWars_prog2_a": "Split this problem into two parts. Get one one pile of scrap metal, then figure out how to get to the other one."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/3": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/3": {
     "short_instructions": "Get all the scrap metal",
     "long_instructions": "[][0] _\"Keep going, BB-8!\"_",
     "authored_hints": {
@@ -142,7 +153,7 @@
       "courseB_starWars_prog3_b": "Build one piece of code at a time. Run it to figure out where to go from there."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/4": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/4": {
     "short_instructions": "Get all the scrap metal",
     "long_instructions": "[][0] _\"Get it, BB-8!\"_",
     "authored_hints": {
@@ -150,7 +161,7 @@
       "courseB_starWars_prog4_b": "Try using the `repeat` block for shorter code.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/5": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/5": {
     "short_instructions": "Get the scrap metal",
     "long_instructions": "[][0] _\"Can you get it all?\"_",
     "authored_hints": {
@@ -160,7 +171,7 @@
       "courseB_starWars_prog5_da": "Look what happens if you use the same solution as the stair-step puzzle:\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/6": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/6": {
     "short_instructions": "Get all the scrap metal",
     "long_instructions": "[][0] _\"You can do it!\"_",
     "authored_hints": {
@@ -168,7 +179,7 @@
       "courseB_starWars_prog6_b": "Try using the `repeat` block for shorter code.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/7": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/7": {
     "short_instructions": "Go get it!",
     "long_instructions": "[][0] _\"Go get it!\"_",
     "authored_hints": {
@@ -177,7 +188,7 @@
       "courseB_starWars_prog7_c": "Try drawing the large stair step pattern over this puzzle. Does it cover all of the scrap metal?"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/8": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/8": {
     "short_instructions": "**Challenge:** Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge**: Gather all the scrap metal.",
     "authored_hints": {
@@ -185,7 +196,7 @@
       "courseB_starWars_prog8_b": "Try using the `repeat` block to see what happens to the code that you put inside.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/9": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/9": {
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"You can do it!\"_",
     "authored_hints": {
@@ -194,15 +205,18 @@
       "courseB_starWars_prog9_c": "Could a `repeat` loop help out here?"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/10": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/10": {
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"Can you get it all?\"_"
   },
-  "https://studio.code.org/s/courseb-2017/stage/8/puzzle/11": {
+  "https://studio.code.org/s/courseb-2017/lessons/8/levels/11": {
     "short_instructions": "Help BB-8 gather the glowing scrap metal",
     "long_instructions": "[][0] _\"Keep going!\"_"
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/2": {
+  "https://studio.code.org/s/courseb-2017/lessons/9/levels/1": {
+    "title": "Unplugged Activity"
+  },
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/2": {
     "short_instructions": "This is Laurel the Adventurer!  Can you move her around and get treasure?",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can.\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "authored_hints": {
@@ -212,7 +226,7 @@
       "courseB_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/3": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/3": {
     "short_instructions": "Get all four piles to pass this level.",
     "long_instructions": "Move Laurel to the treasure, then use the[blockly block][0]block to pick it up.\n\nGet all four piles to pass this level.",
     "authored_hints": {
@@ -220,7 +234,7 @@
       "courseB_collector_loops2_b": "When you have reached a spot with treasure, use the [blockly block][0] block to pick it up."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/5": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/5": {
     "short_instructions": "How can Laurel get all five piles of treasure using only one `E -->` block?",
     "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
     "authored_hints": {
@@ -228,7 +242,7 @@
       "courseB_collector_prog3_b": "Remember you can put more than one block inside a repeat loop."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/6": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/6": {
     "short_instructions": "Fix Laurel's path to get all of this treasure!",
     "authored_hints": {
       "courseB_collector_loops4_a": "Try using the step button to figure out where things go wrong.",
@@ -236,14 +250,14 @@
       "courseB_collector_loops4_c": "Laurel needs to walk down and collect the treasure after she finishes the `repeat` loop!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/7": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/7": {
     "short_instructions": "Add to the code from the last puzzle to get all of the treasure. ",
     "authored_hints": {
       "courseB_collector_loops5_a": "Use more than one loop to get the job done.",
       "courseB_collector_loops5_b": "Try running the code a couple of times to see what happens."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/8": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/8": {
     "short_instructions": "Figure out the code to help Laurel get all of the treasure!",
     "authored_hints": {
       "courseB_collector_loops6_a": "Can't figure out where things start going wrong? Use the \"Step\" button to run through your program one block at a time.",
@@ -252,37 +266,37 @@
       "courseB_collector_loops6_d": "If you're confused, try breaking this puzzle into 3 pieces."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/9": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/9": {
     "short_instructions": "Write the code to get all of this treasure.",
     "authored_hints": {
       "courseB_collector_loops7_a": "If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.",
       "courseB_collector_loops7_b": "You will need 3 repeat loops to solve this puzzle, and don't forget the extra treasure at the end!"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/10": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/10": {
     "short_instructions": "**Challenge:** The treasure goes all the way down these stairs!  Write the code to help Laurel get it all.",
     "authored_hints": {
       "courseB_collector_loops8_challenge_a": "If you can't figure out where to put the repeat loops, write out the code step-by-step and look for a pattern."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/11": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/11": {
     "short_instructions": "_\"Help me get the treasure from this deep valley.\"_",
     "authored_hints": {
       "courseB_collector_loops9_a": "Does this seem too hard?  Break it up into 3 little problems to make it feel easier.",
       "courseB_collector_loops9_b": "You will need 3 repeat loops, one after the other, for this solution."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/12": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/12": {
     "short_instructions": "Help Laurel get all of the treasure from this cave.",
     "authored_hints": {
       "courseB_collector_loops10_a": "If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.",
       "courseB_collector_loops10_b": "Try writing the moves down on a piece of paper and looking for a pattern."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/puzzle/13": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/levels/13": {
     "short_instructions": "Eureka!  Get as much treasure as you can!"
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/extras?level_name=courseB_collector_loops_challenge1": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/extras?level_name=courseB_collector_loops_challenge1": {
     "short_instructions": "This time you have limited blocks. Get all of the treasure! ",
     "authored_hints": {
       "courseB_collector_loops_challenge1_b": "Start by looping the following commands:\n\n[blockly block][0]",
@@ -290,7 +304,7 @@
       "courseB_collector_loops_challenge1_d": "Try this!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/10/extras?level_name=courseB_collector_loops_challenge2a": {
+  "https://studio.code.org/s/courseb-2017/lessons/10/extras?level_name=courseB_collector_loops_challenge2a": {
     "short_instructions": "Help Laurel get at least **5** pieces of treasure to finish this puzzle.",
     "long_instructions": "_\"Let's get the treasure!\"_\n\nHelp Laurel get at least **5** pieces of treasure to finish this puzzle.",
     "authored_hints": {
@@ -299,17 +313,17 @@
       "courseB_collector_loops_challenge2a_c": "To collect all of the treasure, you will either need to add two  [blockly block][0] blocks inside your loop, or put the block inside of its own `repeat` block."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/2": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/2": {
     "short_instructions": "This is a new type of puzzle called \"Artist\". Play with the level and draw something fun."
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/4": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/4": {
     "short_instructions": "The Artist is trying to draw a line **6** times, but can't get it right.  Can you help?",
     "authored_hints": {
       "courseB_artist_loops2_a": "If you want the loop to repeat more than 4 times, you can change the number at the top of the block.",
       "courseB_artist_loops2_b": "Try running the code first to see where the artist ends up."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/5": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/5": {
     "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
     "authored_hints": {
       "courseB_artist_loops3_a": "Remember to use a `repeat` loop for better code!",
@@ -319,7 +333,7 @@
       "courseB_artist_loops3_1": "There is only one of these blocks in the toolbox.  How will you use it?"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/6": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/6": {
     "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
     "authored_hints": {
       "courseB_artist_loops4_a": "The jump block lets you move forward without drawing a line.",
@@ -327,7 +341,7 @@
       "courseB_artist_loops4_c": "Don't forget to change the number of times the loop repeats."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/7": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/7": {
     "short_instructions": "Time to fix the stairs!  Repeat this pattern **5** times so the artist can reach the top of the bushes.",
     "authored_hints": {
       "courseB_artist_loops5_a": "Drag out a `repeat` loop, then put the other blocks inside of it. How many times do you need to repeat?"
@@ -336,14 +350,14 @@
       "courseB_artist_loops5_1": "This number means that there are no more of this block left in the toolbox."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/8": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/8": {
     "short_instructions": "Climb the vine and see where it goes?",
     "long_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
     "authored_hints": {
       "courseB_artist_loops6_b": "Try writing the moves down on a piece of paper and look for a pattern."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/9": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/9": {
     "short_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
     "long_instructions": "**Challenge:**  It's a hidden garden! Let's walk around.",
     "authored_hints": {
@@ -352,14 +366,14 @@
       "courseB_artist_loops7_c": "The loops should do this:\n\n-   Loop 1\n    -   Right\n    -   Down\n\n-   Loop 2\n    -   Right\n    -   Up\n\n-   Loop 3\n    -   Left\n    -   Up\n\n-   Loop 4\n    -   Left\n    -   Down"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/10": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/10": {
     "short_instructions": "Time to head home. Can you fix this ladder using only one block to help the artist get down?",
     "authored_hints": {
       "courseB_artist_loops8_a": "How many times should you repeat the pattern to make the ladder?",
       "courseB_artist_loops8_b": "Try running the code you're given to see what it does."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/11": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/11": {
     "short_instructions": "Let's take the short way home, over the pond. Can you help the artist stay on the stones?",
     "authored_hints": {
       "courseB_artist_loops9_a": "Remember that jump blocks can be used to move without drawing a line.",
@@ -367,11 +381,11 @@
       "courseB_artist_loops9_c": "Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/puzzle/12": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/levels/12": {
     "short_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.",
     "long_instructions": "Use what you have learned to draw a picture of what you think the artist saw when he got home.\n\n* * *\n\n### Ideas\n\n[][0]\n[][1]\n[][2]\n[][3]"
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/extras?level_name=courseB_artist_loops_challenge1": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/extras?level_name=courseB_artist_loops_challenge1": {
     "short_instructions": "\"It's time to toss the dice! Can you help me draw these?\"",
     "long_instructions": "_\"It's time to toss the dice! Can you help me draw these?\"_",
     "authored_hints": {
@@ -380,31 +394,36 @@
       "courseB_artist_loops_challenge1_c": "You will need to `move` or `jump` over some of the same lines twice. "
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/11/extras?level_name=courseB_artist_loops_challenge2": {
+  "https://studio.code.org/s/courseb-2017/lessons/11/extras?level_name=courseB_artist_loops_challenge2": {
     "short_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
     "long_instructions": "Draw as many X's as you can. Can you get 3 in a row?",
     "authored_hints": {
       "courseB_artist_loops_challenge2_a": "The code to draw an X is already given to you. All you need to do is repeat the X and `jump` to the next spot.",
       "courseB_artist_loops_challenge2_b": "You can use `jump` blocks to move to other spaces without drawing."
     },
-    "function_names": {
-      "potential solution": "potential solution"
+    "function_definitions": {
+      "potential solution": {
+        "name": "potential solution"
+      }
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/1": {
+  "https://studio.code.org/s/courseb-2017/lessons/12/levels/1": {
+    "title": "The Big Event"
+  },
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/1": {
     "short_instructions": "Need a better playlab/events combo"
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/2": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/2": {
     "short_instructions": "See if you can figure out what each block does.",
     "long_instructions": "This game is called \"Play Lab\".  \n\nSee if you can figure out what each block does."
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/3": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/3": {
     "short_instructions": "Have Daisy the Dragon say something when you click \"Run\".",
     "authored_hints": {
       "courseB_playlab_events2_a": "This is the block to have Daisy say something:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/4": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/4": {
     "short_instructions": "Use an event to make Daisy the Dragon switch to a random mood when you click on her.",
     "long_instructions": "Use an event to make Daisy the Dragon switch to a random [][0] mood when you click on her.",
     "authored_hints": {
@@ -412,7 +431,7 @@
       "courseB_playlab_events3_b": "This is the block you need to switch Daisy's mood:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/5": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/5": {
     "short_instructions": "Knight time!  Add an event so that the knight moves toward the dragon when the left arrow is clicked.",
     "long_instructions": "Knight time!  \n\nAdd an event so that the knight moves toward the dragon when the left arrow is clicked.",
     "authored_hints": {
@@ -420,14 +439,14 @@
       "courseB_playlab_events4_b": "This is the block that makes the knight move left.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/6": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/6": {
     "short_instructions": "Now add an event so that the knight runs away from the dragon when you press the right arrow.",
     "authored_hints": {
       "courseB_playlab_events5_a": "This is the event block that controls the right arrow: \n\n[blockly block][0]",
       "courseB_playlab_events5_b": "This is the block that makes the knight run away. \n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/7": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/7": {
     "short_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "long_instructions": "Help your knight get all of the flags!\n\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "authored_hints": {
@@ -439,7 +458,7 @@
       "courseB_playlab_events6_a": "Use the green drop down arrow to change directions."
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/8": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/8": {
     "short_instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags!  Play a sound when they collide to make it feel more real.",
     "long_instructions": "Make this game fun by setting the knight to vanish when he runs into the dragon on his way to get the flags! \n\nPlay a sound when they collide to make it feel more real.\n\nVisit all of the goals, then run into the dragon to pass the level.",
     "authored_hints": {
@@ -448,10 +467,10 @@
       "courseB_playlab_events7_c": "This is the block you need to make the knight vanish:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/puzzle/9": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/levels/9": {
     "short_instructions": "Use your imagination. What can you do to make this game more fun?"
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/extras?level_name=courseB_playlab_events_challenge1": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/extras?level_name=courseB_playlab_events_challenge1": {
     "short_instructions": "Make the animals move down when you press ▼. ",
     "long_instructions": "It's time for the Great Animal Race! Make the animals move down when you press `▼`. \n\nWho will run the fastest?",
     "authored_hints": {
@@ -460,7 +479,7 @@
       "courseB_playlab_events_challenge1_c": "What will the everyone say when the race is over? Make them talk with this event:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/courseb-2017/stage/13/extras?level_name=courseB_playlab_events_challenge2": {
+  "https://studio.code.org/s/courseb-2017/lessons/13/extras?level_name=courseB_playlab_events_challenge2": {
     "short_instructions": "Make the animals disappear when you click on them.",
     "long_instructions": "Let's make the animals disappear when you click on them.\nTry playing with the dog now, then help the other animals join in the fun. You can also add sounds and score points to create a game of Animal Tag!\n\n[][0]",
     "authored_hints": {

@@ -35,13 +35,9 @@ lv:
   cancel: Atcelt
   okay: Labi
   or: vai
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Pievienot skolotāju:'
       placeholder: Izvēles kods (ABCDEF)
-      instructions: Lūdzu, ievadiet kodu, ko jums piešķīra skolotājs. Tas ir 6 burtu
-        kods, kā piemēram "ABCDEF".
-    submit: Pievieno skolotāju
   add_hint_form:
     placeholder: Lūdzu, ievadi šeit savu mājienu
     submit: Pievieno mājienu
@@ -68,9 +64,6 @@ lv:
   auth:
     sign_in_with: Pieraksīties %{provider}
     signed_in: Pierakstījies!
-    signed_out: Izrakstījies <a href="%{url}">Code.org</a>.
-    sign_out_of: Izmantoji %{provider} ,lai pierakstītos <a href="%{url}">Spied šeit</a>
-      , lai izrakstītos %{provider}.
     already_signedup: Jau pierakstījies?
     notyet_signedup: Neesi pievienojies?
     google_oauth2: Google konts
@@ -100,6 +93,17 @@ lv:
     valid_password: Derīga parole!
     invalid_password: Parolē jābūt vismaz 6 rakstzīmēm
     mismatch_password: Abas ievadītās paroles nesakrīt
+    agree_us_data_transfer_student: "**Es piekrītu, ka Code.org pārsūta datus (tostarp
+      personas datus) no manas šīs vietnes izmantošanas Amerikas Savienotajām Valstīm**
+      ar mērķi viesot un apstrādāt šos datus."
+    agree_us_data_transfer_teacher: "**Es piekrītu, ka Code.org pārsūta datus (tostarp
+      personas datus) no manas (un manu studentu) šīs vietnes izmantošanas Amerikas
+      Savienotajām Valstīm** ar mērķi viesot un apstrādāt šos datus."
+    data_collection_us: Es saprotu, ka Code.org ir ASV reģistrēta bezpeļņas vietne
+      un likumi, kas pārrauga datu apkopošanu ASV, var atšķirties no manas valsts
+      likumiem.
+    visit_privacy: Skatiet Code.org [Privātuma politiku](%{privacy_url}), lai uzzinātu
+      vairāk.
     additional_information: Mums nepieciešama papildus informācija, lai turpinātu
       Tavu pieteikumu.
     user_type_label: Konta tips
@@ -203,6 +207,8 @@ lv:
       educate_hoc: Programmēšanas stunda
       about_us: Par mums
       about_partners: Partneri
+      legal_privacy: Privātuma politika
+      legal_tos: Nosacījumi
     user:
       classroom: Skolotāju mājas lapa
       label: Sveiki, %{username}
@@ -259,6 +265,7 @@ lv:
     email_confirm_needed_required: 'Jūsu e-pasta adrese %{email} nav apstiprināta:'
     email_confirm_wrong_email: "(Nepareiza e-pasta adrese?)"
     email_resend_confirm: Atkārtoti nosūtīt apstiprinājumu instrukcijas
+    new_email_hint: "(Pārliecinies, ka vari saņemt vēstuli uz šo e-pasta adresi.)"
     new_password_hint: "(atstājiet tukšu, ja nevēlaties mainīt to)"
     current_password_hint: "(nepieciešama jūsu pašreizējā parole, lai apstiprinātu
       izmaiņas)"
@@ -270,15 +277,13 @@ lv:
     deleted_user: dzēsts lietotājs
     create_personal_login_under_13_username: Lietotājvārds (neizmanto savu īsto vārdu!)
     create_personal_login_under_13_parent_email: Vecāka/aizbildņa e-pasta adrese
+    update_email: Atjaunināt
+    parent_guardian_email_label: Vecāka/aizbildņa e-pasts
   user_level:
     completed: Pabeigts
     tried: Mēģināts
   home:
     title: Kodu studija
-    description: Code Studio ir vietne Code.org izstrādātiem tiešsaistes kursiem
-    lines_of_code: "%{lines_count} koda rindiņas ir uzrakstījuši skolēni"
-    lines_of_code_linebreak: "%{lines_count} KODA RINDIŅAS<br/> IR UZRAKSTĪJUŠI %{students_count}
-      MILJONI SKOLĒNU"
     all_courses: Pārskats par kursiem, 1, 2 un 3
     lesson_plans: Nodarbību plāni
     signin_message: Jau reģistrējies? %{link}
@@ -316,10 +321,6 @@ lv:
     test_videos_help: Izmēģinat mūsu jauno video atskaņotāju savā skolā
     try_beta_courses: Jaunums! Izmēģinat mūsu BETA kursus K-5 (sākumskolas) skolēniem
     use_as_teacher: Izmantojiet šo vietni, kā skolotājs
-    heading_hoc2014: "<h2>Programmēšanas stunda</h2><h1>visiem vecumiem</h1>"
-    heading_elementary: "<h2>20 stundu kurss</h2><h1>visu vecumu iesācējiem</h1>"
-    heading_apps: "<h2>Izklaide </h2><h1>visiem</h1>"
-    heading_legacy: "<h2>Mūsu galvenais kurss ir </h2><h1>visiem vecumiem</h1>"
     your_gallery: Galerija
     no_primary_course: Izmēģināt Code Studio kursu
     choose_next_course: Izmēģini kādu no Code Studio kursiem izvēloties zemāk
@@ -349,6 +350,7 @@ lv:
     translate: Palīdzi mums tulkot savā valodā
     support: Atbalsts
     support_url: http://support.Code.org/
+    tos_short: Nosacījumi
     tos: Nosacījumi
     privacy: Privātuma politika
     secure: Droša versija
@@ -366,6 +368,7 @@ lv:
     notes_coming_soon: Piezīmes šim video, drīzumā.
     autoplay_option: Automātiski atskaņot videoklipu
     download: Lejupielādēt videoklipu
+    label: Video
   compatibility:
     upgrade:
       link: Uzzini vairāk
@@ -435,33 +438,14 @@ lv:
       title: Sazarojumi
     widgets:
       audience: Vecums 14+
-  gallery:
-    students_drew_these_with_code: Skolnieki uzzīmēja šos ar kodu!
-    students_made_these_with_code: Skolēni izveidoja šos ar kodu!
-    picture_count: Agrākās <b>%{days}</b> dienās, skolnieki zīmēja <b>%{count}</b>
-      attēlus taisot paši savas datorprogrammas. Noklikšķini uz attēla, lai apskatītu
-      katru programmu darbībā.
-    activity_count: Agrākās <b>%{days}</b> dienās, veidoja <b>%{count}</b> attēlus
-      un lietojamprogrammas  taisot paši savas datorprogrammas. Noklikšķini uz attēliem
-      un ekrānšāviņiem, lai apskatītu katru programmu darbībā.
-    want_to_make_your_own: Vēlies uzveidot pats savu?
-    more: Vēl &rarr;
-    caption_by_name_age: "%{name}, vecums %{age}"
-    caption_time_ago: "%{time_ago} pirms"
-    header: Galerija
-    header_playlab: Spēles laboratorija
-    header_artist: Mākslinieks
   landing:
-    prerelease: Šis kurss ir <span class='betatext'>BETA stadijā</span>.  Tas nozīmē,
-      ka tā nav kursa pēdējā versija un var tikt pakļauta pārskatam pēc atsauksmju
-      saņemšanas, jo informācija ir saņemta un uzlabojumi tiek veikti.
-    prerelease_hoc2014: Šī pamācība ir <span class='betatext'>beta</span >stadijā.
-      Tā tiks pārskatīta un uzlabota, ņemot vērā lietotāju atsauksmes.
     report_bug: Kļūdas ziņojums
     support: Saņemt palīdzību
     support_url: "//support.code.org"
     help_support: Palīdzība un atbalsts
     documentation: Dokumentācija
+  free_response:
+    placeholder: Ievadi savu atbildi šeit
   multi:
     wrong_title: Nepareiza atbilde
     wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!
@@ -501,11 +485,6 @@ lv:
   age_interstitial:
     age: Tavs vecums
     header: Konta informācijas atjaunināšana
-    message: Mēs esam procesā, kas atjaunina mūsu pieredzi, lai nodrošinātu jūs ar
-      vēl lielāku konfidencialitātes aizsardzību. Lai to paveiktu, mums ir nepieciešams
-      esošiem lietotājiem ievadīt šeit viņu vecumu. <br/>Kā vienmēr, code.org nekad
-      iznomāt, pārdot vai koplietot šo informāciju ar trešajām pusēm.
-    sign_out: Ja nevēlaties sniegt savu vecumu, jūs varat <a href="%{url}">izrakstīties</a>.
   terms_interstitial:
     tos: Nosacījumi
     privacy: Privātuma politika
@@ -519,6 +498,10 @@ lv:
     decline: Aizvērt
   zendesk_too_young_message: Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties
     mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a>
+    bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar
+    mums tavā vietā.
+  zendesk_too_young_message_markdown: Atvainojiet, jaunākiem lietotājiem nav iespējas
+    pierakstīties mūsu atbalsta lapā. Tu vari pārlūkot [support.code.org](http://support.code.org)
     bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar
     mums tavā vietā.
   progress:
@@ -536,26 +519,6 @@ lv:
       report_abuse_form:
         abuse_type:
           other: Citi
-  flex_category:
-    required: Pārskats
-    csf_e_2: Kursa E saturs
-    csf_f_2: Kursa F saturs
-    csf_digcit: Digitālā pilsonība
-    csf_jigsaw: Puzle
-    csf_loops: Cikli
-    csf_events: Pasākumi
-    csf_binary: Binārie
-    csf_conditionals: Sazarojumi
-    csf_nested_loops: Cikls ciklā
-    csf_functions: Funkcijas
-    csf_variables: Mainīgie
-    csf_for_loops: '"par" cikli'
-    csf_internet: Internets
-    csp_variables: Mainīgie
-    csp_conditionals: Sazarojumi
-    csp_functions: Funkcijas
-    csp_lists: Saraksti
-    csp_loops: Cikli
   hoc_download:
     capsule_title: Vai Tev ir internets?
     instructions_headline: Nav interneta?
@@ -565,6 +528,7 @@ lv:
       last_name: Uzvārds
       email: E-pasts
       school_name: Skolas nosaukums
+      colombian_school_name: Skolas nosaukums
     form_entries:
       gender:
         male: Vīrietis
@@ -589,5 +553,4 @@ lv:
         opt_in_no: Nē
   cookie_banner:
     accept: es piekrītu
-  gdpr_dialog:
-    true: Jā
+  copy: Kopija

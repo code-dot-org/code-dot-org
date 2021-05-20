@@ -1,87 +1,85 @@
 ---
 title: Paquete de prensa
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Cómo atraer a los medios de comunicación a tu Hora del Código
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### Promueve tu Hora del Código e invita a los medios locales a que vean por qué las ciencias de la computación son importantes en tu escuela.
 
-*Para las peticiones de prensa y los medios de comunicación, póngase en contacto con <press@code.org>*
+*Para peticiones de prensa y medios, ponte en contacto con <press@code.org>*
 
 * * *
 
-## Key Tips
+## Consejos clave
 
 - Contactar con los medios de comunicación dos semanas antes de su evento por correo electrónico. Continua por correo electrónico y teléfono si no recibe una respuesta inicial.
 - Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
 - Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Comparte actualizaciones sobre tus planes, anuncia tus eventos y publica fotografías durante {{ campaign_date/year }} en Facebook y Twitter. Utiliza el hashtag **#HourOfCode** para que Code.org pueda ver y promocionar tus eventos.
 
-## Step-by-step guide
+## Guía paso a paso
 
-### 1. Plan your event
+### 1. Planifica tu evento
 
 - Haga una reunión para iniciar la Hora del Código.
-- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
-- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
+- Envía [una carta]({{ promote/sample_emails }}) a los padres y pídeles que difundan el mensaje.
+- Envía [una carta]({{ promote/sample_emails }}) para invitar a tus autoridades locales, diputados, congresistas, gobernador o personas influyentes en el mundo de los negocios a que conversen con tus estudiantes.
 - Organice actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestre lo que han hecho los estudiantes y guíe las actividades.
-- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
+- Muestra [un video de la Hora del Código]({{ urls/home }}) de Code.org o uno de [estos videos]({{ promote/videos }}) para inspirar a los estudiantes. <br />
 
-### 2. Identify specific reporters that cover education or local events
+### 2. Identifica a los periodistas que cubren eventos escolares o locales
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+Como periódicos locales, estaciones de televisión y radio, o blogs. <br />
 
-### 3. Contact local media
+### 3. Ponte en contacto con medios locales
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+La mejor forma de ponerse en contacto es por correo electrónico. Debería ser breve y comunicar "por qué las personas deberían interesarse en este evento". Incluye información de contacto (como un número de teléfono móvil) para quien esté en el lugar el día del evento. **[Mira un ejemplo de mensaje para los medios]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Busca en línea la información de contacto de un periodista. Si no puedes encontrarla, llama a la editora para preguntar o envía un correo electrónico a la dirección del medio y pide que reenvíen tu mensaje al periodista adecuado. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. Prepárate para las preguntas que te hagan acerca de tu evento escolar. Estos son algunos ejemplos:
 
-#### ¿Por que hace tu escuela una Hora del Código?
+#### ¿Por qué tu escuela organiza una Hora del Código?
 
-Si bien todos sabemos que es importante que los estudiantes aprendan a navegar en este mundo saturado de tecnología, muchos profesores no tienen experiencia en Ciencias de la Computación y no saben por donde empezar. Este evento es una oportunidad para que todos nosotros veamos qué son las Ciencias de la Computación.
+Todos sabemos que es importante que los estudiantes aprendan a navegar en este mundo saturado de tecnología, pero muchos docentes no tienen experiencia en ciencias de la computación y no saben por dónde empezar. Este evento es una oportunidad para que podamos ver de qué se tratan las ciencias de la computación.
 
-Esperamos que despierte el interes en nuestros estudiantes para seguir aprendiendo. Los investigaciones también demuestran que los niños purden aprender conceptos de programación antes de que sepan leer y escribir. De hecho, sus cerebros son mas receptivos a los lenguajes de programación a temprana edad, tal como lo son para idiomas extranjeros. <br /> <br />
+Esperamos que despierte interés en nuestros estudiantes por seguir aprendiendo. Las investigaciones también muestran que los niños pueden aprender conceptos de programación incluso antes de saber leer y escribir. De hecho, sus cerebros son más receptivos a los lenguajes de programación a una temprana edad, como ocurre con los idiomas extranjeros. <br /> <br />
 
-#### ¿Por qué es esto importante?
+#### ¿Por qué es importante?
 
-La tecnologia esta transformando todas las industrias en el planeta. En el ano 2015, 7 millones de empleos en los Estados Unidos fueron en ocupaciones -incluyendo arte y diseno- que valoran las destrezas de codificacion. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Sabemos que sin importar la decisión que tomen nuestros estudiantes respecto a lo que harán de grandes; medicina, negocios, política o artes. Saber cómo se desarrolla la tecnología les dará confianza y aprendizaje para triunfar. <br />
+La tecnología transforma todas las industrias del planeta. En 2015, 7 millones de empleos en los Estados Unidos estuvieron relacionados con ocupaciones, como el arte y el diseño, que valoran las destrezas de programación. Pero el 60 por ciento de las escuelas en los Estados Unidos no enseñan ciencias de la computación. Es tiempo de avanzar al siglo 21. Sabemos que, más allá de lo que hagan cuando sean grandes (medicina, negocios, política o artes), al saber cómo se desarrolla la tecnología los estudiantes ganan en confianza y obtienen una ventaja competitiva. <br />
 
 <a id="sample-emails"></a>
 
-## Sample email to send to invite local media to your event
+## Ejemplo de un correo electrónico que puedes enviar para invitar a los medios locales a tu evento
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Los ordenadores están por todas partes, cambiando todas las industrias en el planeta, pero menos de la mitad de todas las escuelas enseñan informática. Las niñas y las minorías están seriamente subrepresentadas en clases de informática y en la industria de la tecnología. La buena noticia es que estamos trabajando para cambiar esto.
+Las computadoras están en todas partes, cambian todas las industrias del planeta, pero menos de la mitad de las escuelas enseñan ciencias de la computación. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buena noticia es que estamos trabajando para cambiar esto.
 
-Con la Hora del Código, la informática ha estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Cada tienda de Apple en el mundo ha organizado una hora de código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
+Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Es por eso que cada uno de los [número X] estudiantes en [NOMBRE DE LA ESCUELA] se unen al evento de aprendizaje más grande de la historia: la Hora del Código, durante la Semana por la Educación en Ciencias de la Computación (del 3 al 9 de diciembre).
 
-Le escribo para invitarle a asistir a nuestra Asamblea de comienzo y a ver cómo los niños comienzan la actividad el [DATE].
+Te escribo para invitarte el [DATE] a nuestra reunión inicial y ver cómo los niños comienzan la actividad.
 
-La Hora del Código, organizada por la entidad sin ánimo de lucro Code.org y más de otros 100, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales para el éxito en el siglo 21. Por favor, únete a nosotros.
+La Hora del Código, organizada por la entidad sin fines de lucro Code.org y más de 100 socios, es un movimiento que cree los estudiantes de hoy están listos para aprender las habilidades cruciales que garantizan el éxito en el siglo 21. Únete a nosotros.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Contacto: [TU NOMBRE], [TITLE], Teléfono: (212) 555-5555 Cuándo: [FECHA y HORA de tu evento]. Dónde: [DIRECCIÓN e INSTRUCCIONES PARA LLEGAR]
 
-I look forward to being in touch. <br />
+Espero tu contacto. <br />
 
-## Additional details and a quote you can use in materials
+## Más detalles y frases que puedes usar en tus materiales
 
-"La Hora del Código ha sido diseñada para desmitificar el código y mostrar que las Ciencias de la Computación no es dificil, cualquiera puede aprender lo basico," dijo Hadi Partovi, fundador y gerente general de Code.org. "Más de 100 millones de estudiantes de todo el mundo han participado en la Hora del Código. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"La Hora del Código ha sido diseñada para romper las barreras de la programación y mostrar que las ciencias de la computación no son difíciles: cualquier persona puede aprender los conceptos básicos", dijo Hadi Partovi, fundador y gerente general de Code.org. "Más de 100 millones de estudiantes de todo el mundo han participado en la Hora del Código. La demanda por una educación relevante en ciencias de la computación en el siglo 21 atraviesa todas las fronteras y no reconoce límites". <br /> <br />
 
 #### Acerca de Code.org
 
-Code.org® es un una organizacion 501c3-pública, sin fines de lucro dedicada a expandir la participación en ciencias de la computación y aumentar la participación de las mujeres y los estudiantes subrepresentados de color. Its vision is that every student in every school has the opportunity to learn computer programming. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código – que ha introducido más de 100 millones de estudiantes en ciencias de la computación hasta la fecha – y se ha asociado con 70 distritos de escuelas públicas en todo el país para expandir programas de ciencias de la computación. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Su visión es que todos los estudiantes, de todas las escuelas, tengan la oportunidad de aprender programación informática. Después de su lanzamiento en 2013, Code.org organizó la campaña la Hora del Código, que hasta la fecha ha introducido a más de 100 millones de estudiantes a las ciencias de la computación, y se ha asociado con 70 distritos de escuelas públicas en todo el país para ampliar los programas de ciencias de la computación. Code.org es apoyado por donaciones filantrópicas de corporaciones, fundaciones y personas generosas, como Microsoft, Facebook, Fundación de Infosys USA, Amazon, entre otras. Para obtener más información, visita [code.org]({{ urls/codeorg }}).
 
   
-Find more resources and sample emails [here]({{ promote/sample_emails }}).
+Encuentra más recursos y ejemplos de correos electrónicos [aquí]({{ promote/sample_emails }}).
 
 {{ signup_button }}

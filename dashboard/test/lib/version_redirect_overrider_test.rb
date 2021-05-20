@@ -8,8 +8,8 @@ class VersionRedirectOverriderTest < ActiveSupport::TestCase
     File.stubs(:write)
 
     @script = create :script
-    @course = create :course
-    create :course_script, course: @course, script: @script, position: 1
+    @unit_group = create :unit_group
+    create :unit_group_unit, unit_group: @unit_group, script: @script, position: 1
   end
 
   setup do
@@ -44,7 +44,7 @@ class VersionRedirectOverriderTest < ActiveSupport::TestCase
   end
 
   test 'override_script_redirect? is true if script\'s course name is present in course_version_overrides' do
-    @session[:course_version_overrides] = [@course.name]
+    @session[:course_version_overrides] = [@unit_group.name]
     assert VersionRedirectOverrider.override_script_redirect?(@session, @script)
   end
 
@@ -53,16 +53,16 @@ class VersionRedirectOverriderTest < ActiveSupport::TestCase
   end
 
   test 'override_course_redirect? is true if course name is present in course_version_overrides' do
-    @session[:course_version_overrides] = [@course.name]
-    assert VersionRedirectOverrider.override_course_redirect?(@session, @course)
+    @session[:course_version_overrides] = [@unit_group.name]
+    assert VersionRedirectOverrider.override_course_redirect?(@session, @unit_group)
   end
 
   test 'override_course_redirect? is true any default script name is present in script_version_overrides' do
     @session[:script_version_overrides] = [@script.name]
-    assert VersionRedirectOverrider.override_course_redirect?(@session, @course)
+    assert VersionRedirectOverrider.override_course_redirect?(@session, @unit_group)
   end
 
   test 'override_course_redirect? is false if neither course or any script name are in session overrides' do
-    refute VersionRedirectOverrider.override_course_redirect?(@session, @course)
+    refute VersionRedirectOverrider.override_course_redirect?(@session, @unit_group)
   end
 end

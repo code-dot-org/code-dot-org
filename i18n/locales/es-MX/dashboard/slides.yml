@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 es-MX:
   slides:
     maze_intro:
@@ -1767,7 +1772,7 @@ es-MX:
       1:
         text: "Hora del Código | Fiesta de baile: propiedades"
       2:
-        text: "Mi nombre es María. Soy junior en la Universidad de Washington y futura ingeniera en Amazon."
+        text: "Mi nombre es María. Soy estudiante de tercer año en la Universidad de Washington y futura ingeniera en Amazon."
       3:
         text: "Me encantan las ciencias de la computación porque incorporan la resolución de problemas y el pensamiento crítico, y porque, luego de horas de trabajar en algo, puedes obtener resultados realmente geniales y gratificantes."
       4:
@@ -1944,3 +1949,128 @@ es-MX:
       2:
         image: 'notes/opd_closing_2.png'
         text: "Echa un vistazo a estos recursos en caso de que necesites más soporte: 1. forum.code.org 2. @teachcode en Twitter 3. studio.code.org "
+    hoc_dance_warmup_2019:
+      1:
+        text: "Hora del Código | Fiesta de baile: calentamiento"
+      2:
+        text: "¡Hola! Mi nombre es Miral Kotb y soy bailarina, desarrolladora de software y creadora de iLuminate."
+      3:
+        text: "Las ciencias de la computación se relacionan con la creatividad de muchas maneras. Muchísimas, de hecho. Me refiero a que, una vez que tienes la capacidad de escribir software, puedes innovar en lo que sea. Yo lo hago en los trajes de luces. Hay tantas cosas que puedes hacer una vez que tienes las herramientas para escribir software, y las posibilidades son realmente infinitas."
+      4:
+        text: "Durante la siguiente hora darás tus primeros pasos con las ciencias de la computación y programarás tu propia fiesta. Hemos reunido algunas canciones exitosas y un equipo de grandes bailarines con los que puedes jugar."
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "Usarás bloques de código para elegir diferentes bailarines, cambiar sus movimientos de baile, hacerlos responder a la música y que puedan interactuar."
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "Verás que tu pantalla está dividida en tres partes. A la izquierda está el espacio de juego. Aquí es donde aparecerán tus bailarines."
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "El área del medio es la caja de herramientas. En este espacio verás nuevos bloques de código a medida que avances de lección."
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "El área a la derecha es el espacio de trabajo. Puedes arrastrar bloques desde la caja de herramientas para crear tu programa."
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "Las instrucciones para cada nivel estarán en la parte superior de la pantalla. Si necesitas una pista, simplemente haz clic en la bombilla."
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "Para comenzar, hagamos un nuevo bailarín con este bloque rojo. Primero, arrástralo fuera de la caja de herramientas y ponlo debajo de este bloque naranja de \"configuración\". Este bailarín es un gato."
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "Con esto puedes cambiar el lugar en el que aparece el bailarín en tu espacio de juego."
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "Arriba del espacio de juego verás un menú para seleccionar música. Diviértete encontrando tus canciones favoritas entre una gran cantidad de opciones. Debajo del espacio de juego está el botón Ejecutar. Si lo presionas, aparecerán los bailarines de tu programa y sonará la música."
+      13:
+        text: "¡Pruébalo tú mismo! Si no puedes avanzar, ¡no te preocupes! Sigue adelante y, pronto, habrás creado tu propia fiesta de baile. Entonces, ¿qué vas a crear?"
+    hoc_dance_events_2019:
+      1:
+        text: "Hora del Código | Fiesta de baile: eventos"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "Mi nombre es Erin, soy ingeniera de software aquí en Code.org y ayudé a construir Fiesta de baile."
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "Para que los diferentes movimientos de baile acompañen la música, puedes usar algo llamado eventos. Un evento le indica a tu programa que \"escuche\" algo que ocurre y que reaccione inmediatamente."
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "Algunos ejemplos de eventos son esperar a un clic en el mouse, un botón de flecha o pulsar en la pantalla."
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "Aquí vamos a programar un bailarín para que realice un movimiento cuando presionas los botones de flecha en la pantalla o las teclas de tu teclado."
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "Podemos usar el bloque de eventos \"cuando flecha arriba\" y conectarnos al bloque \"una vez\". Cuando alguien presiona la flecha hacia arriba, se ejecuta el código adjunto al bloque \"cuando flecha arriba\". ¿Qué movimiento de baile elegirás?"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "Asegúrate de que el tipo de bailarín que elijas coincida con uno de los bailarines que creaste dentro del bloque \"configuración\", o es posible que no suceda nada."
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "Eventualmente, puedes crear más eventos como este para que tus bailarines realicen diferentes movimientos con cada tecla. Pruébalo y, con unas pocas líneas de código, puedes crear tu propio baile interactivo."
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "Hora del Código | Fiesta de baile: compases"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "Soy Aloe Blacc, cantante, compositor y artista. Creo que las ciencias de la computación son el futuro, y por eso son realmente importantes de aprender. Además, pienso que es importante que las personas tengan el control de la tecnología que controla literalmente sus vidas."
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "El evento que vamos a usar ahora escuchará un cambio en la canción. Ese cambio hará que tu bailarín dance un nuevo baile."
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "Los bailarines profesionales practican su coreografía contando los ritmos de la canción. En música, un compás se refiere a un cierto número de ritmos. En las canciones más populares, un compás tiene cuatro tiempos."
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "Para que tus bailarines se muevan, necesitarás un bloque verde de eventos. Este bloque de eventos dice, \"después de 4 compases\"."
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "Si arrastra un bloque púrpura \"hacer siempre\", puedes escoger un baile para el bailarín. Al estar debajo del bloque de evento \"después de 4 compases\", tu bailarín esperará cuatro compases de la canción antes de empezar a bailar."
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "Ten en cuenta el contador de compases en la parte superior de la pantalla."
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "Mira y escucha el evento que activará el código del baile. En ese momento comenzará a moverse el bailarín."
+    hoc_dance_properties_2019:
+      1:
+        text: "Hora del Código | Fiesta de baile: propiedades"
+      2:
+        text: "Mi nombre es María. Soy estudiante de tercer año en la Universidad de Washington y futura ingeniera en Amazon."
+      3:
+        text: "Me encantan las ciencias de la computación porque incorporan la resolución de problemas y el pensamiento crítico, y porque, luego de horas de trabajar en algo, puedes obtener resultados realmente geniales y gratificantes."
+      4:
+        text: "Hasta ahora, has tenido la oportunidad de jugar con diferentes tipos de bailarines y los has programado para que hagan diferentes tipos de baile. Pero, ¿cómo funcionan estos movimientos?"
+      5:
+        text: "Cada movimiento de baile está compuesto por una serie de imágenes llamadas fotogramas. Cada fotograma es un poco diferente del anterior. Cuando se ejecuta tu programa, la computadora muestra un fotograma tras otro. Aparecen tan rápido que parece que el bailarín se mueve. Ese es el secreto detrás de toda animación."
+      6:
+        text: "No solo puedes cambiar los movimientos de tu bailarín, sino también sus propiedades. Las propiedades describen cosas como la posición del bailarín en la pantalla, su tamaño y su color."
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "Para cambiar las propiedades de un bailarín, usarás un bloque establecer. Usemos un bloque establecer para que nuestros bailarines se vean más pequeños. Primero, arrastra el bloque establecer a tu programa."
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "Luego selecciona un bailarín que te gustaría cambiar y escribe el tamaño en que aparecerá en la pantalla. El tamaño completo es 100. Si eliges un número más bajo, eso hará que el bailarín sea más pequeño. Cuanto más pequeño es el bailarín, más lejos se ve."
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "Con el bloque 'establecer' también puedes cambiar las dimensiones, la rotación, la posición y el color de un bailarín. Puedes jugar con estas propiedades para hacer todo tipo de cambios y conectarlos a diferentes partes de la canción."
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "Recuerda que solo puedes establecer las propiedades de un bailarín que ya existe. Asegúrate de que tu bloque venga después del bloque \"Hacer un nuevo bailarín\".¡Aprovecha para ser creativo y divertirte!"
+    hoc_dance_congrats_2019:
+      1:
+        text: "Hora del Código | Fiesta de baile: ¡que comience la fiesta!"
+      2:
+        text: "¡Felicitaciones! Acabas de aprender los aspectos básicos de las ciencias de la computación. Ahora puedes usar estos bloques para crear tu propia fiesta de baile y compartirla con tus amigos."
+      3:
+        text: "Si miras en la caja de herramientas, encontrarás algunos bloques nuevos que no has visto antes. Por ejemplo, puedes usar el bloque 'disposición' para organizar a los bailarines de diferentes maneras en la pantalla."
+      4:
+        text: "Echa un vistazo y comienza a experimentar con estos nuevos bloques y características. ¿Crearás una coreografía perfecta para tu baile con tu canción favorita?"
+      5:
+        text: "¿Una competencia de baile con tus amigos?"
+      6:
+        text: "¿U otra cosa?"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "Al final del tutorial podrás compartir un enlace a tu creación con tus amigos. ¡Diviértete a pura imaginación!"

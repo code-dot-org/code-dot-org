@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Speciális igényű diákok támogatása a Kódolás órája programban
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# Speciális igényű diákok támogatása a Kódolás órája programban
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Bárki kipróbálhatja a Kódolás óráját a számítástechnikai oktatási hét alatt. Autizmussal, figyelemhiányos hiperaktivitási-zavarral, illetve egyéb tanulási nehézségekkel küzdő diákok gyakran érdeklődnek a programozás iránt. Ezért is kell ösztönözni őket, hogy próbálják ki ezt a lehetőséget! Amikor megismertetitek saját osztályotokkal a programozás élményét, a részvételt jutalmazzátok, és ne magát a teljesítményt. Sőt, minden diák megérdemli [a részvételi igazolást]({{ supporting-special-needs-students/certificate }}) is, függetlenül attól, hogy hány rejtvényt vagy kihívást teljesített egy órán belül. [A páros programozás](https://www.youtube.com/watch?v=vgkahOzFH2Q) egy másik nagyszerű módja lehet annak, hogy megtanítsuk diákjainkat az együttműködésre és arra, hogyan kell egy problémát közösen megoldani.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Online gyakorlatok és manuális oktatási segédletek különféle igényekre szabva
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Az osztálytermi tevékenységek megtervezésekor és a megfelelő oktatási anyagok kiválasztásakor érdemes figyelembe venni, hogy az online lehetőségek mellett számítógépet nem igénylő opciók is rendelkezésre állnak. A manuális oktatási anyagok segítenek a diákoknak megismerni a számítástechnika alapvető fogalmait. A [Nagy Esemény](https://studio.code.org/s/course1/stage/15/puzzle/1) nemcsak segíti a tanárok munkáját abban, hogy nyomonkövethessék diákjaik tevékenységét, hanem nagyszerű lehetőséget kínál arra is, hogy igényekre szabva, minden gyermek saját képességeihez mérten alakíthassák ki a tanórák tartalmát.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Egyes tanulók sokkal jobb teljesítményt érnek el a számítógépekhez tartozó kiegészítőknek köszönhetően, mint a manuális tananyagokkal. Például, a siket és nagyothalló diákok számára teljes értékű részvételi lehetőséget kínál az online felület.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+A lehetőségek kiválasztását természetesen az is befolyásolja, hogy rendelkezik-e az iskola számítástechnikai oktatóteremmel, esetleg laptopokkal.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+Továbbá, azt is figyelembe kell venni, hogy van-e a diákok között csökkent mozgásképességgel, mozgáskoordinációs zavarral rendelkező gyermek? Érdemes lehet körbekérdezni az iskolában, akár maguktól a tanulóktól, akár a számítástechnika órát tartó kollégától, hogy használnak-e valamilyen kiegésztő eszközt, kelléket a számítógépekhez.
 
-## Sensory Impairments
+## Érzékszervi fogyatékosságok
 
-### Students who are blind or low vision
+### Vak vagy gyengénlátó diákok
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Azon diákok számára, akik használtak már képernyőolvasót, a [Quorum gyakorlat kezdőknek](https://quorumlanguage.com/hourofcode/astro1.html) vagy a [Quorum gyakorlat haladóknak ](https://quorumlanguage.com/hourofcode/part1.html) remek választás lehet. Ugyanis a Quorum nyelv kifejezetten képernyőolvasót használó emberek számára lett kifejlesztve. Mára általános programnyelvvé vált, így nemcsak a vakok és gyengénlátók számára lehet opció. Mindez lehetővé teszi ezeknek a tananyagoknak a használatát az egész osztály számára. Amennyiben mélyebben is szeretnél a Kódolás órájának ezzel a fajájával foglalkozni, a Quorum-csapat további eszközöket és tantervet tud ajánlani.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Abban az esetben, ha a diákok másfajta kiegészítőket is használnak a számítástechnika órán, érdemes azokat is beépíteni a Kódolás órája megtervezésekor. Ez lehet akár egy nagyobb monitor vagy képernyő nagyító, egy erősebb kontraszt beállítás, hangvezérlő, illetve egyéb más kellék is.
 
-### Students who are deaf or hard of hearing
+### Siket vagy nagyothalló diákok
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+A [Code.org gyakorlatok](https://studio.code.org/) kivétel nélkül úgy lettek tervezve, hogy hanggal és hang nélkül is használhatók. Minden videó tartalmaz ugyanis feliratokat. Egyes diákok számára előnyös lehet egy magasabb hangerőre beállított fejhallgató használata is.
 
 ## Tudj meg többet
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+Ahhoz, hogy többet tudj meg a speciális igényekkel rendelkező diákok és a számítástechnika oktatás kapcsolatáról, érdemes ellátogatnod erre [az oldalra]({{ supporting-special-needs-students/book }}).

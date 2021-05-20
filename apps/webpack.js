@@ -5,22 +5,35 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
-// Certain packages ship in ES6 and need to be transpiled for our purposes -
-// especially for tests, which run on PhantomJS with _zero_ ES6 support.
+// Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
   // All of our @cdo-aliased files should get transpiled as they are our own
   // source files.
   path.resolve(__dirname, 'node_modules', '@cdo'),
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
-  path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
-  path.resolve(__dirname, 'node_modules', 'enzyme-wait'),
   path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
+  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
   path.resolve(__dirname, 'node_modules', '@code-dot-org', 'snack-sdk'),
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
   path.resolve(__dirname, 'node_modules', 'parse5'),
-  path.resolve(__dirname, 'node_modules', 'vmsg')
+  path.resolve(__dirname, 'node_modules', 'vmsg'),
+  path.resolve(__dirname, 'node_modules', 'ml-knn'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-max'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-min'),
+  path.resolve(__dirname, 'node_modules', 'ml-array-rescale'),
+  path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
+  path.resolve(__dirname, 'node_modules', '@codemirror'),
+  path.resolve(__dirname, 'node_modules', 'style-mod'),
+  path.resolve(__dirname, 'node_modules', 'lezer-tree'),
+  path.resolve(__dirname, 'node_modules', 'lezer-java'),
+  path.resolve(__dirname, 'node_modules', 'lezer'),
+  path.resolve(
+    __dirname,
+    'node_modules',
+    'microsoft-cognitiveservices-speech-sdk'
+  )
 ];
 
 const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
@@ -53,6 +66,12 @@ var baseConfig = {
         'src',
         'p5lab',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/javalab/locale': path.resolve(
+        __dirname,
+        'src',
+        'javalab',
         'locale-do-not-import.js'
       ),
       '@cdo/spritelab/locale': path.resolve(
@@ -163,9 +182,7 @@ if (envConstants.COVERAGE) {
     loader: 'istanbul-instrumenter-loader',
     include: path.resolve(__dirname, 'src'),
     exclude: [
-      path.resolve(__dirname, 'src', 'lodash.js'),
-
-      // we need to turn off coverage for this file
+      // we need to turn off instrumentation for this file
       // because we have tests that actually make assertions
       // about the contents of the compiled version of this file :(
       path.resolve(__dirname, 'src', 'flappy', 'levels.js')
@@ -235,6 +252,13 @@ var karmaConfig = _.extend({}, baseConfig, {
         'test',
         'util',
         'gamelab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/javalab/locale': path.resolve(
+        __dirname,
+        'test',
+        'util',
+        'javalab',
         'locale-do-not-import.js'
       ),
       '@cdo/weblab/locale': path.resolve(
@@ -309,11 +333,10 @@ var karmaConfig = _.extend({}, baseConfig, {
  * @param {Array} options.externals - list of webpack externals
  */
 function create(options) {
-  var outputDir = options.output;
+  var outputDir = options.outputDir;
   var entries = options.entries;
   var minify = options.minify;
   var watch = options.watch;
-  var debugMinify = envConstants.DEBUG_MINIFIED;
   var watchNotify = options.watchNotify;
   var piskelDevMode = options.piskelDevMode;
   var plugins = options.plugins;
@@ -321,16 +344,14 @@ function create(options) {
   var optimization = options.optimization;
   var mode = options.mode;
 
+  // When minifying, this generates a 20-hex-character hash.
+  const suffix = minify ? 'wp[contenthash].min.js' : '.js';
+
   var config = _.extend({}, baseConfig, {
     output: {
       path: outputDir,
       publicPath: '/assets/js/',
-
-      // When debugging minified code, use the .js suffix (rather than .min.js)
-      // to allow the application to load minified js locally without running it
-      // through the rails asset pipeline. This is much simpler than hacking the
-      // application to load .min.js locally.
-      filename: '[name].' + (minify && !debugMinify ? 'min.' : '') + 'js'
+      filename: `[name]${suffix}`
     },
     devtool: !process.env.CI && options.minify ? 'source-map' : devtool,
     entry: entries,

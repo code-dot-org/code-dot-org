@@ -1,6 +1,5 @@
 ---
-title: Whole School Participation
-layout: wide
+title: Koko koulun osallistuminen
 ---
 
 {{ signup_button }}

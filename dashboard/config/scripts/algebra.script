@@ -1,14 +1,13 @@
 hidden false
 login_required true
-hideable_stages true
-has_lesson_plan true
+hideable_lessons true
 
-stage 'Unplugged: Video Games and Coordinate Planes'
+lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true, unplugged: true
 level 'VideoGamesCoordinatePlanes'
 level 'Ninjacat Demo B'
 level 'Coordinates Multi 1'
 
-stage 'Calc: Evaluation Blocks'
+lesson 'Calc: Evaluation Blocks', display_name: 'Evaluation Blocks and Arithmetic Expressions', has_lesson_plan: true
 level 'Calc Circles of Eval .1'
 level 'Calc Circles of Eval .2'
 level 'Calc Circles of Eval .3'
@@ -25,7 +24,7 @@ level 'Blocks to Math 3'
 level 'Blocks to Math 4'
 level 'Calc Circles of Eval Free Play'
 
-stage 'Eval: Strings and Images'
+lesson 'Eval: Strings and Images', display_name: 'Strings and Images', has_lesson_plan: true
 level 'Eval Strings Images .1'
 level 'Eval Strings Images .2'
 level 'Eval Strings Images 1'
@@ -39,10 +38,10 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
-stage 'Unplugged: Contracts'
+lesson 'Unplugged: Contracts', display_name: 'Unplugged: Contracts, Domain, and Range', has_lesson_plan: true, unplugged: true
 level 'Contracts'
 
-stage 'Eval: Writing Contracts'
+lesson 'Eval: Writing Contracts', display_name: 'Writing Contracts', has_lesson_plan: true
 level 'Eval Contracts A'
 level 'Eval Contracts B'
 level 'Eval Contracts C'
@@ -52,7 +51,7 @@ level 'Eval Contracts F'
 level 'Eval Contracts 4'
 level 'Eval Contracts 4 B'
 
-stage 'Calc: Defining Variables'
+lesson 'Calc: Defining Variables', display_name: 'Defining Variables and Substitution', has_lesson_plan: true
 level 'Calc Vars 1'
 level 'Calc Vars 1.1'
 level 'Calc Vars 2'
@@ -69,13 +68,13 @@ level 'msm variables multi 4'
 level 'msm variables multi 5'
 level 'msm variables multi 6'
 
-stage 'Play Lab: Defining Variables (Big Game)'
+lesson 'Play Lab: Defining Variables (Big Game)', display_name: 'The Big Game - Variables', has_lesson_plan: true
 level 'Big Game Vars 1'
 level 'Big Game Vars 2'
 level 'Big Game Vars 3'
 level 'Big Game Vars 4'
 
-stage 'Eval: Defining Functions'
+lesson 'Eval: Defining Functions', display_name: 'Composite Functions', has_lesson_plan: true
 level 'Eval Define Funcs 1'
 level 'Eval Define Funcs 2'
 level 'Eval Define Funcs 3'
@@ -92,10 +91,10 @@ level 'msm variables multi 10'
 level 'msm variables multi 11'
 level 'msm variables multi 13'
 
-stage 'Unplugged: The Design Recipe'
+lesson 'Unplugged: The Design Recipe', display_name: 'Unplugged: The Design Recipe', has_lesson_plan: true, unplugged: true
 level 'DesignRecipe'
 
-stage 'Play Lab: Defining Functions'
+lesson 'Play Lab: Defining Functions', display_name: 'Rocket Height', has_lesson_plan: true
 level 'Play Lab Rocket 1'
 level 'Rocket Contract 1'
 level 'Calc Rocket 1'
@@ -107,7 +106,7 @@ level 'Play Lab Rocket 7'
 level 'Play Lab Rocket 8'
 level 'Play Lab Rocket Free Play'
 
-stage 'Eval: Functions'
+lesson 'Eval: Functions', display_name: 'Solving Word Problems with the Design Recipe', has_lesson_plan: true
 level 'Eval Design Recipe .1'
 level 'Eval Design Recipe 3'
 level 'Eval Design Recipe 4'
@@ -119,16 +118,16 @@ level 'Calc Design Recipe 3'
 level 'Calc Design Recipe 4'
 level 'Eval Design Recipe Free Play'
 
-stage 'Play Lab: Animation (Big Game)'
+lesson 'Play Lab: Animation (Big Game)', display_name: 'The Big Game - Animation', has_lesson_plan: true
 level 'Big Game Animation 1'
 level 'Big Game Animation 2'
 level 'Big Game Animation 3'
 level 'Big Game Animation 4'
 
-stage 'Unplugged: Booleans'
+lesson 'Unplugged: Booleans', display_name: 'Unplugged: Booleans and Logic', has_lesson_plan: true, unplugged: true
 level 'Booleans'
 
-stage 'Eval: Boolean Operators'
+lesson 'Eval: Boolean Operators', display_name: 'Boolean Operators', has_lesson_plan: true
 level 'Eval Booleans 1'
 level 'Eval Booleans 2'
 level 'Eval Booleans 3'
@@ -140,24 +139,24 @@ level 'Blocks to Bools 3'
 level 'Blocks to Bools 4'
 level 'Eval Booleans Free Play'
 
-stage 'Play Lab: Booleans'
+lesson 'Play Lab: Booleans', display_name: 'Sam the Bat', has_lesson_plan: true
 level 'Sam the Butterfly 1'
 level 'Sam the Butterfly 2'
 level 'Sam the Butterfly 3'
 level 'Sam the Butterfly 4'
 level 'Sam the Butterfly 5'
 
-stage 'Play Lab: Boolean (Big Game)'
+lesson 'Play Lab: Boolean (Big Game)', display_name: 'The Big Game - Booleans', has_lesson_plan: true
 level 'Big Game Booleans 1'
 level 'Big Game Booleans 4'
 level 'Big Game Booleans 2'
 level 'Big Game Booleans 3'
 level 'Big Game Booleans 5'
 
-stage 'Unplugged: Conditionals and Piecewise Functions'
+lesson 'Unplugged: Conditionals and Piecewise Functions', display_name: 'Unplugged: Conditionals and Piecewise Functions', has_lesson_plan: true, unplugged: true
 level 'ConditionalsPiecewiseFunctions'
 
-stage 'Eval: Conditionals'
+lesson 'Eval: Conditionals', display_name: 'Conditionals', has_lesson_plan: true
 level 'Luigi\'s Pizza 1'
 level 'Luigi\'s Pizza 2'
 level 'Luigi\'s Pizza 3'
@@ -167,11 +166,12 @@ level 'Eval Cond 5'
 level 'Big Game Player 1'
 level 'Big Game Player 2'
 
-stage 'Unplugged: Collision Detection and the Distance Formula'
+lesson 'Unplugged: Collision Detection and the Distance Formula', display_name: 'Unplugged: Collision Detection and the Pythagorean Theorem', has_lesson_plan: true, unplugged: true
 level 'CollisionDetection'
 
-stage 'Play Lab: Collision Detection (Big Game)'
+lesson 'Play Lab: Collision Detection (Big Game)', display_name: 'The Big Game - Collision Detection', has_lesson_plan: true
 level 'Big Game Collision 1'
 level 'Big Game Collision 3'
 level 'Big Game Collision 4'
 level 'Big Game Final'
+

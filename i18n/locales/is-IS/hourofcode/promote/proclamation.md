@@ -1,7 +1,5 @@
 ---
 title: Dæmi um ályktun til stuðnings Viku tölvunarfræðináms og Klukkustund kóðunar
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,4 +1,4 @@
-import {assert} from '../../../util/configuredChai';
+import {assert} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
@@ -22,9 +22,11 @@ describe('DetailProgressTable', () => {
     fakeLevels(3)
   ];
 
+  const groupedLesson = {lessons, levelsByLesson};
+
   it('has ProgressLesson for each lesson', () => {
     const wrapper = shallow(
-      <DetailProgressTable lessons={lessons} levelsByLesson={levelsByLesson} />
+      <DetailProgressTable groupedLesson={groupedLesson} />
     );
 
     const rows = wrapper.props().children;
@@ -35,8 +37,10 @@ describe('DetailProgressTable', () => {
     assert.throws(() =>
       shallow(
         <DetailProgressTable
-          lessons={lessons}
-          levelsByLesson={levelsByLesson.slice(1)}
+          groupedLesson={{
+            ...groupedLesson,
+            levelsByLesson: levelsByLesson.slice(1)
+          }}
         />
       )
     );

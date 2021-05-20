@@ -1,10 +1,5 @@
 ---
 title: Takk for at du meldte deg på som vert for Kodetimen!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Takk for at du meldte deg på som vert for Kodetimen!

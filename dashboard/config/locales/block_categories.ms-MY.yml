@@ -3,16 +3,30 @@ ms:
   data:
     block_categories:
       Actions: Tindakan
-      Loops: Gelung
-      Functions: Fungsi
+      Advanced: Lanjutan
+      Behaviors: Tingkah laku
+      Brushes: Berus
       Color: Warna
-      Math: Matematik
-      Logic: Logik
-      Variables: Pembolehubah
+      Comment: Komen
+      Comments: Komen
       Conditionals: Bersyarat
+      Dancers: Penari
+      Default: Lalai
       Events: Acara-acara
+      Functions: Fungsi
+      'Functions ': 'Fungsi '
+      Game/Score: Permainan/Skor
+      Games/Score: Permainan/Skor
+      Groups: Kumpulan
+      Input: Input
+      Locations: Lokasi
+      Logic: Logik
+      Loops: Gelung
+      Math: Matematik
+      Numbers: Nombor
+      Properties: Hartanah
+      Sprites: Jin
       Text: teks
-      Start: Mula
-      test: ujian
-      Name: Nama
-      Function: Fungsi
+      Variables: Pembolehubah
+      'Variables ': 'Pembolehubah '
+      World: Dunia

@@ -3,19 +3,21 @@ title: Learn
 theme: responsive_wide
 layout: wide
 social:
-  "twitter:card": photo
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://<%=request.host%>/learn"
-  "twitter:title": "<%= hoc_s(:hour_of_code) %>"
-  "twitter:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
-  "twitter:image:src": "<%= 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png' %>"
-  "og:title": "<%= hoc_s(:hour_of_code) %>"
-  "og:description": "<%= hoc_s(:social_hoc2018_global_movement) %>"
-  "og:image" : "<%= 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png' %>"
-  "og:image:width": '1200'
-  "og:image:height": '630'
+  twitter:card: photo
+  twitter:site: "@codeorg"
+  og:image:width: '1200'
+  og:image:height: '630'
 style_min: false
 ---
+:ruby
+  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
+  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
+  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
+  @header["social"]["og:title"] = hoc_s(:hour_of_code)
+  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
+
 :css
   .noFocusButton:focus {
     outline: 0;
@@ -26,46 +28,64 @@ style_min: false
   }
 
   #fullwidth {
-    background: #0094a3; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#0094a3, #00adbc); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
-    background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
-    background: black;  /* hoc2018 override */
     overflow: hidden;
+    background-size: cover;
   }
   .banner {
-    color: white;
+    color: black;
     text-align: center;
-    padding-left: 12px;
-    padding-right: 12px;
+    margin-bottom: 10px;
   }
   .banner a {
-    color: white;
+    color: black;
     text-decoration: underline;
     font-family: 'Gotham 5r', sans-serif;
   }
   .bannerHeading {
     font-family: 'Gotham 5r', sans-serif;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 45px;
     padding: 20px 0px 20px 0px;
   }
   .bannerBeyond {
     padding-top: 15px;
   }
   .bannerTeachers {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 10px;
     opacity: 0;
   }
-  .bannerTeacherIcon {
-    height: 26px;
-    padding-right: 5px;
-    vertical-align: top;
+
+  /* Center the foreground image when it's below the header text. */
+  @media screen and (max-width: 970px) {
+    #studentImage img {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      height: 278px;
+    }
   }
-  #studentImage {
-    height: 278px;
+
+  @media screen and (min-width: 992px) {
+    #fullwidth {
+      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
+      background-position: 70% 70%;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #fullwidth {
+      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
+      background-position: 67% 50%;
+      padding-bottom: 200px;
+    }
+  }
+  /* Use the narrow image for narrower screens */
+  @media screen and (max-width: 767px) {
+    #fullwidth {
+      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
+      background-position: 50% 80%;
+      padding-bottom: 160px;
+    }
   }
 
 #fullwidth
@@ -81,22 +101,21 @@ style_min: false
         = view :mobile_header_responsive
 
   .banner.container_responsive
-    .col-50
+    .col-sm-12.col-md-6{style: "text-align: center"}
       .bannerHeading= hoc_s(:learn_banner_heading)
       = hoc_s(:learn_banner_blurb)
       .bannerBeyond
-        = hoc_s(:learn_banner_beyond)
+        != hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
       .bannerTeachers
-        %img.bannerTeacherIcon{src: "/images/learn/teacher_icon.png"}
-        = hoc_s(:learn_banner_teachers)
-    #studentImage.col-50.tablet-feature
+        %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
+        != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
 
   .clear{style: "clear:both"}
 
 -# Not ideal but we can pull the undigested files from /blockly.
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
 
@@ -111,9 +130,7 @@ style_min: false
   - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
   - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")
   - tutorial[:string_detail_programming_languages]  = hoc_s(prefix + "string_detail_programming_languages")
-
-- sort_by_popularity = request.site == 'code.org'
-- sort_by_popularity &&= [false, "pre-hoc"].include?(DCDO.get("hoc_mode", CDO.default_hoc_mode))
+  - tutorial[:teachers_notes]                       = CDO.curriculum_url(request.locale, tutorial[:teachers_notes], false)
 
 #tutorials
 
@@ -122,33 +139,27 @@ style_min: false
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorials_contents.to_json},
+      tutorials: #{tutorials_contents.to_json.html_safe},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
       showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
-      defaultSortByPopularity: #{sort_by_popularity}
+      disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
+      defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
-    var studentImage = '/images/learn/hoc2018_paint.png'; // hoc2018 override
-    var img = $('<img>');
-    img.attr('src', studentImage);
-    img.attr('style', 'opacity: 0');
-    img.appendTo('#studentImage');
-    img.on('load', function() {
-      img.fadeTo('normal', 1);
-    });
+    // Open banner links in new tab; we render them with markdown, so we can't do this in the haml
+    // Add the rel tag to attempt to mitigate the inherent danger in opening
+    // links in a new tab; will only work for modern browsers, though.
+    $(".banner a").attr({target: "_blank", rel: "noopener noreferrer nofollow"});
 
-    // Set up beyond hyperlink.
-    $("#learn_banner_beyond").attr({href: "https://hourofcode.com/beyond", target: "_blank"});
-
-    // Set up teacher hyperlinks.
-    $("#teacher_banner_host").attr({href: "https://hourofcode.com/#join", target: "_blank"}).click(function () {
+    // Set up google analytics tracking
+    $('.bannerTeachers a[href$="join"]').click(function () {
       ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
     });
-    $("#teacher_banner_howto").attr({href: "https://hourofcode.com/how-to", target: "_blank"}).click(function() {
+    $('.bannerTeachers a[href$="how-to"]').click(function () {
       ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
     });
+
     $(".bannerTeachers").fadeTo('slow', 1);
   });

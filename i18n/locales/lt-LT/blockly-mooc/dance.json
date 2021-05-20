@@ -3,13 +3,5 @@
   "danceFeedbackNoDancers": "Tu neturi šokėjų.",
   "danceFeedbackNoBackground": "Tau reikia pridėti fono efektą.",
   "danceFeedbackTooManyDancers": "Būk atsargus! Jeigu į blokelį „kas 2 taktus“ įdėsi blokelį „sukurti naują“, tu sukursi per daug šokėjų.",
-  "danceFeedbackUseSetSize": "Norėdamas sumažinti šokėją, panaudok blokelį „nustatyti pagalbinio_šokėjo2 dydį“.",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackUseSetSize": "Norėdamas sumažinti šokėją, panaudok blokelį „nustatyti pagalbinio_šokėjo2 dydį“."
 }

@@ -6,31 +6,16 @@ si:
         options:
           UNIT:
             '"seconds"': තත්පර
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -54,58 +39,48 @@ si:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": අහඹු
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': අහඹු
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවියා
+            '"CAT"': බළලා
+            '"DOG"': බල්ලා
+            '"DUCK"': තාරාවා
+            '"ROBOT"': රොබෝ
+            '"UNICORN"': කඟවේනා
+          LOCATION:
+            "{x: 100, y: 200}": වම
+            "{x: 300, y: 200}": දකුණ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': පිටසක්වල ජීවියා
+            '"CAT"': බළලා
+            '"DOG"': බල්ලා
+            '"DUCK"': තාරාවා
+            '"ROBOT"': රොබෝ
+            '"UNICORN"': කඟවේනා
           LOCATION:
             "{x: 100, y: 200}": වම
             "{x: 300, y: 200}": දකුණ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": අහඹු
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"random"': අහඹු
       Dancelab_randomColor:
         text: අහඹු වර්ණයක්
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +96,17 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
@@ -131,6 +116,15 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+            '"height"': උස
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,10 +134,15 @@ si:
             '"right"': දකුණ
             '"space"': අභ්‍යාවකාශය
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"speed"': වේගය
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -153,6 +152,20 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"speed"': වේගය
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': උඩ
+            '"down"': යට
+            '"left"': වම
+            '"right"': දකුණ
+            '"space"': අභ්‍යාවකාශය
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -174,6 +187,8 @@ si:
         text: අහඹු වර්ණයක්
       gamelab_randomColor:
         text: අහඹු වර්ණයක්
+      gamelab_repeatForever:
+        text: සදහටම නැවත කරන්න
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -185,10 +200,18 @@ si:
               යට
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ශීත
               ඍතුව
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': මධ්‍යස්ත
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"speed"': වේගය
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -252,6 +275,8 @@ si:
             '"scale"': විශාලත්වය
       Mikelab_randomColor:
         text: අහඹු වර්ණයක්
+      Mikelab_repeatUntilComplete:
+        text: සදහටම නැවත කරන්න
       Mikelab_setBG:
         options:
           BG:
@@ -301,49 +326,10 @@ si:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
-      aalab_changePropByFlexible:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': විට
-            '"while"': while
-          KEY:
-            '"up"': උඩ
-            '"down"': යට
-            '"left"': වම
-            '"right"': දකුණ
-            '"space"': අභ්‍යාවකාශය
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': නගරය
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': සත්‍ය
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': විශාලත්වය
-      aalab_toggleHideCustomText:
+      aalab_starwars_playSound:
         options:
           OPTION:
-            '"show"': පෙන්වන්න
-            '"hide"': හැංගෙන්න
+            '"random"': අහඹු
       binary_move:
         options:
           DIR:

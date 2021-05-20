@@ -3,128 +3,131 @@ th-TH:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: คำถามแบบปรนัย
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Big Event Match 1:
-        title: การจับคู่
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
         title: การจับคู่
+      2-3 Binary Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: ใช้คีย์เพื่อจับคู่โค้ดแต่ละอันกับตัวอักษร
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: การจับคู่
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: คำถามแบบปรนัย
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: คำถามแบบปรนัย
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: คุณมีวิธีที่จะทำให้การวางลำดับนี้ง่ายขึ้นด้วยการใช้ลูปได้อย่างไร?
+        title: คำถามแบบปรนัย
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: การจับคู่
         content1: จับคู่ตารางกับโปรแกรม
         questions:
         - {}
         - {}
         - {}
+        title: การจับคู่
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: คำถามแบบปรนัย
         questions:
         - text: โปรแกรมไหนใช้สร้างรูปนี้?
+        title: คำถามแบบปรนัย
+      2-3 Maze Match 2:
         answers:
         - {}
         - {}
         - {}
-      2-3 Maze Match 2:
-        title: จับคู่เขาวงกต
         content1: จับคู่ปริศนากับบล็อก
-        pre_title: คำแนะนำ
         questions:
         - {}
         - {}
         - {}
+        title: จับคู่เขาวงกต
+      2-3 Maze Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 Maze Multi 2:
-        title: เขาวงกต คำถามแบบปรนัย
         questions:
         - text: |-
             บล็อกชุดไหนที่จะพาฉันไปให้ถึงเจ้าหมูนั่น?
             บล็อก ` move forward ` คือบล็อกให้ ` ไปข้างหน้า `
             บล็อก ` turn right ` คือบล็อกให้ ` หันขวา `
             บล็อก ` turn left` คือบล็อกให้ ` หันซ้าย `
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: เขาวงกต คำถามแบบปรนัย
       2-3 Relay Programming Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       2-3 Relay Programming Multi 2:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       2-3 artist debug multi 1:
-        title: ศิลปิน คำถามแบบปรนัยในเรื่องการดีบั๊ก 1
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: |-
             คุณต้องแก้ไขอะไรบ้่าง เพื่อวาดให้เป็นวงกลมที่สมบูรณ์
@@ -133,81 +136,81 @@ th-TH:
             block: repeat 10 times คือบล็อกที่ลูป 10 ครั้ง (ลูปบล็อกสีฟ้าที่อยู่ภายในลูป)
             block: move backward by 10 pixels คือบล็อกที่ศิลปินถอยหลังไป 10 พิกเซล
             block: turn left by 18 degrees คือบล็อกที่ศิลปินหันซ้ายไป 18 องศา
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: ศิลปิน คำถามแบบปรนัยในเรื่องการดีบั๊ก 1
       2-3 artist functions multi 1:
-        title: ฟังก์ชั่นกับศิลปิน คำถามแบบปรนัย หนึ่ง
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: เลือกบล็อกที่ถูกต้องเพื่อวาดรูปนี้โดยใช้ฟังก์ชันที่กำหนด
+        title: ฟังก์ชั่นกับศิลปิน คำถามแบบปรนัย หนึ่ง
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
-        title: ศิลปินกับการจับคู่ลูป 1
+        - {}
         content2: จับคู่ลูปกับรูปภาพ
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: ศิลปินกับการจับคู่ลูป 1
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: ลูปกับศิลปิน คำถามแบบปรนัย
         questions:
         - text: ลูปนี้ทำให้เกิดรูปร่างแบบไหน?
+        title: ลูปกับศิลปิน คำถามแบบปรนัย
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: ลูปกับศิลปิน คำถามแบบปรนัย
+        - correct: true
         questions:
         - text: โปรแกรมนี้ทำให้เกิดรูปร่างแบบไหน
+        title: ลูปกับศิลปิน คำถามแบบปรนัย
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: การจับคู่ สำหรับ ศิลปิน
         content1: จับคู่รูปทรงเรขาคณิต กับ บล๊อก ที่เข้ากันได้
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: การจับคู่ สำหรับ ศิลปิน
       2-3 bee conditionals multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       2-3 bee conditionals multi 3:
-        questions:
-        - text: เลือกบล็อกที่ดีที่สุด
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
+        questions:
+        - text: เลือกบล็อกที่ดีที่สุด
       2-3 bee loops multi 1:
-        title: ลูปกับผึ้ง คำถามแบบปรนัย หนึ่ง
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: |-
             บล็อกกลุ่มไหนบ้างที่เก็บน้ำหวานจากเกสรดอกไม้มาทั้งหมด
@@ -215,1451 +218,1849 @@ th-TH:
             block: repeat 3 times เป็น บล็อก ลูปทำซ้ำ 3 ครั้ง
             block: move forward เป็น บล็อก ไปข้างหน้า
             block: get nectar เป็น บล็อก เก็บน้ำหวาน
+        title: ลูปกับผึ้ง คำถามแบบปรนัย หนึ่ง
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: จับคู่เขาวงกต หนึ่ง
         content1: จับคู่ปริศนากับบล็อก
         questions:
         - {}
         - {}
         - {}
+        title: จับคู่เขาวงกต หนึ่ง
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: เขาวงกต คำถามแบบปรนัย หนึ่ง
         questions:
         - text: กลุ่มบล๊อกไหนเป็นคำตอบที่ถูกต้อง?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: เขาวงกต คำถามแบบปรนัย หนึ่ง
       4-5 Algorithms Match 1:
-        title: การจับคู่
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - text: "<h4>ตั้งค่าคะแนนของผู้เล่นคนแรกเป็น 0</h4>"
         - text: "<h4>ผู้เล่นคนแรกแพ้แล้ว</h4>"
         - {}
         - text: "<h4>เปรียบเทียบคะแนนของผู้เล่น เพื่อดูว่าใครเป็นฝ่ายชนะ</h4>"
-      4-5 Algorithms Multi 1:
-        title: คำถามแบบปรนัย
         questions:
         - {}
+        - {}
+        - {}
+        - {}
+        title: การจับคู่
+      4-5 Algorithms Multi 1:
         answers:
         - {}
         - {}
         - {}
         - text: กล้วยหอม
+          correct: true
+        questions:
+        - {}
+        title: คำถามแบบปรนัย
       4-5 Computational Thinking Match 1:
-        title: การจับคู่
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: "<h3>ลูกล้อ/side: 2<br/>หน้าต่าง/side: 0</h3>"
         - text: "<h3>ลูกล้อ/side: 2<br/>หน้าต่าง/side: 1</h3>"
         - text: "<h3>ลูกล้อ/side: 2<br/>หน้าต่าง/side: 6</h3>"
         - text: "<h3>ลูกล้อ/side: 3<br/>หน้าต่าง/side: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: การจับคู่
       4-5 Computational Thinking Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       4-5 Crowdsourcing Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
-        title: คำถามแบบปรนัย
+        - correct: true
         questions:
         - {}
+        title: คำถามแบบปรนัย
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: ทำความสะอาดห้องของคุณ
+          correct: true
         - text: กินขนมหวานของคุณ
         - text: หวีผมของคุณ
         - text: ล้างหน้าของคุณ
-      4-5 Digital Footprint Multi 1:
-        title: คำถามแบบปรนัย
         questions:
         - {}
+        title: คำถามแบบปรนัย
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: วัดเกิดของคุณ
         - text: อาหารที่คุณโปรดปราน
+          correct: true
         - text: ที่อยู่ของคุณ
         - {}
+        questions:
+        - {}
+        title: คำถามแบบปรนัย
       4-5 Internet Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       4-5 Internet Multi 2:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       4-5 Songwriting Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       4-5 Suncatchers Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
         title: การจับคู่
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 Suncatchers Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
         title: คำถามแบบปรนัย
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       4-5 artist loops multi 1:
-        title: ลูปกับศิลปิน คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+        title: ลูปกับศิลปิน คำถามแบบปรนัย
       4-5 artist multi 1:
-        title: คำถามแบบปรนัย เรื่องศิลปิน
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: บล็อกใดวาดสี่เหลี่ยมผืนผ้าที่มีเส้นรอบรูปเท่ากับ 100?
+        title: คำถามแบบปรนัย เรื่องศิลปิน
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: คำถามแบบปรนัย เรื่องศิลปิน
         questions:
         - text: รูปวาดใดเป็นแบบสมมาตร?
+        title: คำถามแบบปรนัย เรื่องศิลปิน
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: เงื่อนไขกับผึ้ง คำถามแบบปรนัย
         questions:
         - text: เลือกบล็อกที่ดีที่สุด
+        title: เงื่อนไขกับผึ้ง คำถามแบบปรนัย
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: การดีบั๊ก ของผึ้ง คำถามแบบปรนัย
         questions:
         - text: ฟังก์ชั่นอันไหนทำงานตามภาพ?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: การดีบั๊ก ของผึ้ง คำถามแบบปรนัย
       4-5 bee loops multi 1:
-        title: ลูป สำหรับผึ้ง คำถามแบบปรนัย
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: บล็อกไหนบ้างที่จะแก้ปริศนาอันนี้?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: ลูป สำหรับผึ้ง คำถามแบบปรนัย
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
         title: เงื่อนไข สำหรับเขาวงกต คำถามแบบปรนัย
-        questions:
-        - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: จับคู่เขาวงกต
-        content1: จับคู่ปริศนากับบล็อก
-        pre_title: คำแนะนำ
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: จับคู่ปริศนากับบล็อก
+        questions:
+        - {}
+        - {}
+        - {}
+        title: จับคู่เขาวงกต
       4-5 maze multi 1:
-        title: เขาวงกต คำถามแบบปรนัย
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      Begin planning your project:
-        title: ชื่อเรื่อง
+        title: เขาวงกต คำถามแบบปรนัย
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      CSD U2 Design Project:
-        title: ชื่อเรื่อง
-      CSD U2 Design Project_2018:
-        title: ชื่อเรื่อง
-      CSD U2 Design Project_2018_2019:
-        title: ชื่อเรื่อง
-      CSD U2 L2 Overview:
-        title: ชื่อเรื่อง
-      CSD U2 L3 Overview:
-        title: ชื่อเรื่อง
-      CSD U2 L4 Overview:
-        title: ชื่อเรื่อง
-      CSD U2 L5 Overview:
-        title: ชื่อเรื่อง
-      CSD U2 L6 Overview:
-        title: ชื่อเรื่อง
-      CSD U2 expand project:
-        title: ชื่อเรื่อง
-      CSD U2 expand project_2018:
-        title: ชื่อเรื่อง
-      CSD U2 expand project_2018_2019:
-        title: ชื่อเรื่อง
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: ชื่อเรื่อง
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: ชื่อเรื่อง
       CSD U3 Boolean MC_2018:
-        title: ชื่อเรื่อง
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: ชื่อเรื่อง
       CSD U3 Boolean MC_2018_2019:
-        title: ชื่อเรื่อง
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: ชื่อเรื่อง
       CSD U3 Functions Prediction define first:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 combining rep:
-        title: ชื่อเรื่อง
-      CSD U3 combining rep_2018:
-        title: ชื่อเรื่อง
-      CSD U3 combining rep_2018_2019:
-        title: ชื่อเรื่อง
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: ชื่อเรื่อง
-      CSD U5 Encryption 1_2018:
-        title: ชื่อเรื่อง
-      CSD U5 Encryption 1_2018_2019:
-        title: ชื่อเรื่อง
-      CSD U5 L13 SFLP Interpreting Data:
-        title: ชื่อเรื่อง
-      CSD U5 data visualization:
-        title: ชื่อเรื่อง
-      CSD U5 data visualization_2018:
-        title: ชื่อเรื่อง
-      CSD U5 data visualization_2018_2019:
-        title: ชื่อเรื่อง
-      CSD U5 student record:
-        title: ชื่อเรื่อง
-      CSD U5 student record_2018:
-        title: ชื่อเรื่อง
-      CSD U5 student record_2018_2019:
-        title: ชื่อเรื่อง
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      Internet Simulator Setup 2:
-        title: ชื่อเรื่อง
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# เต้นรำกันต่อ!\n\nสำหรับส่วนที่ 2 คุณจะได้สร้างโปรเจ็กต์ของคุณเองจะไม่มีเกมปริศนาอีกแล้ว
+          แต่จะเป็นโปรเจ็กต์มากมายที่แสดงวิธีสร้างเกม Dance Party ที่สลับซับซ้อนยิ่งขึ้น\n\nคุณทำงานในเลเวลเหล่านี้ได้
+          _ในลำดับใดก็ได้_ข้ามไปดูสิว่า เราจะทำกิจกรรมต่างๆ ได้อย่างไรในเลเวลก่อนหน้านี้
+          หรือรวมแนวคิดของโปรเจ็กต์ต่างๆ เข้าด้วยกันได้อย่างไรลองทำทั้งหมดดู ก่อนเลือกอันที่คุณชอบมากที่สุด
+          แล้วใช้เวลาเพื่อเพิ่มเติมรายละเอียดลงในโปรเจ็กต์นั้นเพื่อสะท้อนความเป็นตัวตนของคุณ\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">ทำต่อ</a>
+          \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:10px\">\n
+          <a href=\"2\"> \n<h2>\n เดินหน้าถอยหลัง \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin:10px\"> \n<a href=\"3\"> \n<h2>
+          \nปุ่มมากกว่านี้ \n</h2>\n\n <img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\">\n\n <a href=\"4\">\n
+          <h2>\n จัดรูปแบบกลุ่มนักเต้น\n </h2>\n\n <img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\"> \n<a href=\"5\"> \n<h2>\n
+          พวกเขาหายไปไหนกัน\n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"6\">
+          \n<h2> \nนักเต้น\n </h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"7\"> \n<h2>\n
+          โน้ตตัวดำ \n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"8\">\n
+          <h2> \nเสียงต่ำ เสียงกลาง เสียงสูง \n</h2>\n\n <img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"9\">\n <h2>
+          \nเร่งจังหวะขึ้น ลดความเร็วลง \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          "# เต้นรำกันต่อ!
+
+          สำหรับส่วนที่ 2 คุณจะได้สร้างโปรเจ็กต์ของคุณเอง จะไม่มีเกมปริศนาอีกแล้ว แต่จะเป็นโปรเจ็กต์มากมายที่แสดงวิธีสร้างเกม Dance Party ที่สลับซับซ้อนยิ่งขึ้น
+
+          คุณทำงานในเลเวลเหล่านี้ได้ _ในลำดับใดก็ได้_ ข้ามไปดูสิว่า เราจะทำกิจกรรมต่างๆ ได้อย่างไรในเลเวลก่อนหน้านี้ หรือรวมแนวคิดของโปรเจ็กต์ต่างๆ เข้าด้วยกันได้อย่างไร ลองทำทั้งหมดดู ก่อนเลือกอันที่คุณชอบมากที่สุด แล้วใช้เวลาเพื่อเพิ่มเติมรายละเอียดลงในโปรเจ็กต์นั้นเพื่อสะท้อนความเป็นตัวตนของคุณ
+
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">ทำต่อ</a>
+
+          <div class=""clearfix""></div>
+
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""2"">
+          <h2>
+          เดินหน้าถอยหลัง
+          </h2>
+
+          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""3"">
+          <h2>
+          ปุ่มมากกว่านี้
+          </h2>
+
+          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
+
+          </div>
+          <div style=""float: left; margin: 10px"">
+          <a href=""4"">
+          <h2>
+          จัดรูปแบบกลุ่มนักเต้น
+          </h2>
+
+          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""5"">
+          <h2>
+          พวกเขาหายไปไหนกัน
+          </h2>
+
+          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""6"">
+          <h2>
+          นักเต้น
+          </h2>
+
+          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""7"">
+          <h2>
+          โน้ตตัวดำ
+          </h2>
+
+          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""8"">
+          <h2>
+          เสียงต่ำ เสียงกลาง เสียงสูง
+          </h2>
+
+          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""9"">
+          <h2>
+          เร่งจังหวะขึ้น ลดความเร็วลง
+          </h2>
+
+          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
+
+          </div>"
       K-1 Artist 1 Multi 1:
-        title: คำถามแบบปรนัย
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: คำถามแบบปรนัย
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: บล็อกกลุ่มไหน ที่วาดออกมาเป็นรูปสี่เหลี่ยมจตุรัส?
+        title: คำถามแบบปรนัย
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: การจับคู่
         content2: จับคู่รูปทรงเลขาคณิตตามชนิดของมัน.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - text: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: คำถามแบบปรนัย
-        questions:
-        - text: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: การจับคู่
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
+        title: คำถามแบบปรนัย
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
+        title: คำถามแบบปรนัย
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: จับคู่บล๊อก
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Big Event Match 1:
         title: การจับคู่
-        questions:
-        - {}
-        - {}
-        - {}
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        title: การจับคู่
       K-1 Digital Footprint Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      K-1 Getting Loopy Multi 1:
         title: คำถามแบบปรนัย
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: คุณมีวิธีที่จะทำให้การวางลำดับนี้ง่ายขึ้นด้วยการใช้ลูปได้อย่างไร?
+        title: คำถามแบบปรนัย
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: คำถามแบบปรนัย
         questions:
         - text: ลูกศรอันไหนที่จะพาเจ้าเฉิ่มนี่ไปยังสมบัติได้?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: คำถามแบบปรนัย
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: คำถามแบบปรนัย
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: ทางเลือกใดที่ควรจะเป็นบล็อกสุดท้าย?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: คำถามแบบปรนัย
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: บล็อกทำซ้ำ(Repeat block) อันไหนที่เหมือนกัน?.
+        title: คำถามแบบปรนัย
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: คำถามแบบปรนัย
+        - correct: true
         questions:
         - text: เลือกบล็อกทำซ้ำ(Repeat block) ที่ถูกต้อง
+        title: คำถามแบบปรนัย
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: การจับคู่
+        - {}
         content2: จับคู่ปริศนากับบล็อก
-        pre_title: คำแนะนำ
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: การจับคู่
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: เขาวงกต
         questions:
         - text: คำตอบใดแก้ปริศนาในด่านนี้?
+        title: เขาวงกต
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: คำถามแบบปรนัย
         questions:
         - text: อัลกอริทึมอันไหนที่ช่วยพาเจ้าเฉิ่มนี่ไปที่ดอกไม้ได้?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: คำถามแบบปรนัย
       K-1 Plant a Seed Multi 1:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+        title: คำถามแบบปรนัย
       K-1 Plant a Seed Multi 2:
-        title: คำถามแบบปรนัย
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
-      K-1 Word Search Multi 1:
         title: คำถามแบบปรนัย
+      K-1 Word Search Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: บล็อกกลุ่มไหนสะกดคำว่า "MOVE"?
+        title: คำถามแบบปรนัย
+      K-1 Word Search Multi 3:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 3:
-        title: คำถามแบบปรนัย
         questions:
         - text: สะกดเป็นคำว่าอะไร?
-        answers:
-        - {}
-        - {}
-        - {}
-      Multi-Screen Apps:
-        title: ชื่อเรื่อง
-      New Challenge Introduction:
-        title: ชื่อเรื่อง
-      OPD-K5 Stage3aGo:
-        title: ชื่อเรื่อง
-      Prepare for your presentation:
-        title: ชื่อเรื่อง
+        title: คำถามแบบปรนัย
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: ไม่ถูกต้อง
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: ไม่ถูกต้อง
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: ไม่ถูกต้อง
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - feedback: ไม่ถูกต้อง
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: ก
         - text: ข
         - text: ค
         - text: ง
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: ก
         - text: ข
         - text: ค
         - text: ง
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: ก
         - text: ข
         - text: ค
         - text: ง
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: ก
         - text: ข
         - text: ค
+        - text: ง
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: ก
+          correct: true
+        - text: ข
+        - text: ค
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: ก
+          correct: true
         - text: ข
         - text: ค
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: ก
+          correct: true
         - text: ข
         - text: ค
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: ก
+          correct: true
+        - text: ข
+        - text: ค
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_freeplay_choice:
+        display_name: เล่นฟรี
+        description: บทแนะนำได้สิ้นสุดลงแล้ว! ทำการเปลี่ยนแปลงหรือปรับปรุงโปรเจคของคุณต่อไป
+          คุณสามารถเลือกที่จะทำงานกับบล็อกเดิมต่อไปหรือลองใช้กล่องเครื่องมือแบบขยาย
+      outbreak_story:
+        markdown: "# การระบาด: เขียนโค้ดการจำลองของคุณเอง\n\n## ยินดีต้อนรับสู่ดินแดนมอนสเตอร์!\nดินแดนมอนสเตอร์เป็นสถานที่ที่ดีและมีความสุข
+          มอนสเตอร์ในเมืองมอนสเตอร์ชื่นชอบที่จะไปเยี่ยมเยียนเพื่อนบ้าน \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nวันหนึ่งมอนสเตอร์ตัวหนึ่งเริ่มรู้สึกไม่สบาย มอนสเตอร์ตัวนั้นติด**ไวรัส**!
+          ไวรัสเป็นเชื้อโรคขนาดเล็กที่สามารถทำให้คุณป่วยได้ ส่วนมอนสเตอร์ตัวอื่นนั้นก็ไม่ได้มีความกังวลใจ
+          พวกเขายังคงไปเยี่ยมเยียนเพื่อนๆอยู่\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nหลังจากนั้นไม่นานมอนสเตอร์อีกสองตัวก็ล้มป่วย มันคือไวรัสชนิดเดียวกัน!
+          ดูเหมือนว่าพวกเขาจะได้รับไวรัสมาจากเพื่อนๆ\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nไวรัสแพร่กระจายไปยังมอนสเตอร์ตัวอื่นที่อยู่ใกล้ๆ
+          อย่างช้าๆ มอนสเตอร์ที่มีสุขภาพแข็งแรงเริ่มกังวลว่าจะป่วยไปด้วย มอนสเตอร์ที่ป่วยก็เริ่มกังวลว่าพวกเขากำลังจะแพร่ไวรัสให้กับตัวอื่นๆ\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## การหยุดการแพร่กระจาย\nโชคดีที่หลังจากได้ศึกษาตัวไวรัสแล้ว
+          เพื่อนบ้านของดินแดนมอนสเตอร์ก็ได้ค้นพบครั้งสำคัญ พวกเขาค้นพบว่าหากสวมหน้ากาอนามัย
+          โอกาสจะแพร่เชื้อไวรัสจะน้อยลง เมื่อสวมหน้ากากอนามัยมอนสเตอร์ที่ป่วยมีโอกาสน้อยมากที่จะแพร่ไวรัสให้กับมอนสเตอร์ที่แข็งแรง\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          จะเกิดอะไรขึ้นต่อไป?\n\nวันนี้คุณจะเขียนโค้ดเพื่อสร้างและเรียกใช้ **การจำลอง**
+          การระบาดของไวรัสของคุณเองที่ดินแดนมอนสเตอร์ ซึ่งเป็นการจำลองโมเดลคอมพิวเตอร์ของกระบวนการหรือระบบ
+          เรียนรู้การเขียนโค้ดและคาดเดาว่าจะเกิดอะไรขึ้นกับเพื่อนบ้านของดินแดนมอนสเตอร์\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *ไวรัสจะแพร่กระจายเร็วแค่ไหน?*\n\n*
+          *ทุกคนจะป่วยหรือไม่?*\n\n* *หน้ากากอนามัยจะช่วยได้อย่างไร?*\n\n\nเมื่อคุณทำเสร็จแล้ว
+          ให้แบ่งปันการจำลองของคุณกับผู้อื่น แบ่งปันข้อความของคุณเกี่ยวกับสิ่งที่คุณคิดว่าเราสามารถทำได้เพื่อช่วยให้ผู้อื่นมีสุขภาพที่ดีเมื่อมีไวรัสเข้ามาในเมือง "
+      outbreak_story2:
+        markdown: "# การระบาด: การคิดแบบนักวิทยาศาสตร์\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nการจำลองเป็นวิธีที่ยอดเยี่ยมในการเรียนรู้สิ่งต่างๆ
+          ที่อาจสังเกตเห็นได้ยากในโลกแห่งความเป็นจริง ช่วยให้นักวิทยาศาสตร์แก้ปัญหาและทดสอบแนวคิดใหม่ๆได้อย่างปลอดภัยและมีประสิทธิภาพ
+          การจำลองของคุณเป็นวิธีที่แสดงให้เห็นว่าการระบาดของไวรัสในดินแดนมอนสเตอร์มีลักษณะอย่างไรได้บ้าง\n\n##
+          รีเซ็ตและเล่นซ้ำ!\nแม้ว่าคุณจะเขียนโค้ดด้วยตัวเอง แต่ก็ไม่สามารถรู้ได้ว่าจะเกิดอะไรขึ้นเมื่อคุณกดเล่น
+          มอนสเตอร์เดินไปมาแบบสุ่มดังนั้นคุณจึงไม่รู้ว่าไวรัสจะแพร่กระจายอย่างรวดเร็วหรือช้า
+          เมื่อใดก็ตามที่คุณเปลี่ยนโค้ด อย่าลืมกดเล่นการจำลองมากกว่าหนึ่งครั้ง สิ่งต่างๆจะไม่เกิดขึ้นเหมือนเดิมซ้ำสอง!\n\n##
+          การรวบรวมข้อมูล\nลองเขียนข้อสังเกตของคุณในขณะที่คุณกดเล่นการจำลอง คุณสามารถนับจำนวนมอนสเตอร์ที่ป่วยหรือใช้ตัวจับเวลาเพื่อดูว่าสิ่งต่างๆเกิดขึ้นเร็วแค่ไหน
+          ตัวอย่างเช่น ปกติแล้วใช้เวลานานแค่ไหนที่มอนสเตอร์ทั้งหมดจะป่วยหากไม่สวมใส่หน้ากากอนามัย?\n\n##
+          การทำนาย\nหากคุณเข้าใจแบบจำลองของคุณ คุณสามารถใช้เพื่อคาดคะเนได้ คุณยังสามารถเปลี่ยนวิธีการทำงานของการจำลองและคาดเดาสิ่งที่จะเกิดขึ้นในรูปแบบที่แตกต่างกันได้
+          ตัวอย่างเช่น:\n* จะเกิดอะไรขึ้นถ้ามีมอนสเตอร์เพิ่มขึ้นสองเท่า?\n* จะเกิดอะไรขึ้นถ้ามอนสเตอร์เคลื่อนที่ด้วยความเร็วลดลงครึ่งหนึ่ง?\n\n<img
+          src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## ดินแดนมอนสเตอร์เหมือนโลกแห่งความจริงหรือไม่?\nมีข้อจำกัดว่าแบบจำลองใดๆ
+          นั้นมีความสมจริงมากแค่ไหน \n* การจำลองการระบาดของคุณมีอะไรบ้างที่เหมือนกับการระบาดของไวรัสในโลกแห่งความเป็นจริง?\n*
+          อะไรคือความแตกต่าง?\nเมื่อคุณทำกิจกรรมนี้เสร็จแล้ว ให้พูดคุยแลกเปลี่ยนคำถามเหล่านี้กับครูหรือครอบครัวของคุณ!\n\n##
+          เราสามารถสร้างแบบจำลองอะไรได้อีกบ้าง?\nคุณได้สร้างแบบจำลองการทำงานของการระบาดที่ดินแดนมอนสเตอร์แล้ว
+          อะไรคือสิ่งที่การจำลองของคุณไม่สามารถทำได้หรือเป็นสิ่งที่คุณต้องการให้ทำได้?
+          กดดำเนินการต่อเพื่อดำเนินการและเรียนรู้การสร้างแบบจำลองเพิ่มเติม:\n* เพิ่มจำนวนมอนสเตอร์ในการจำลอง\n*
+          ช่วยเหลือมอนสเตอร์จากไวรัส\n* ความน่าจะเป็น ภูมิคุ้มกัน วัคซีน และอื่นๆ!\n\nคุณยังสามารถแบ่งปันแบบจำลองของคุณให้กับคนอื่นหรือแบ่งปันข้อความเกี่ยวกับสิ่งที่คุณคิดว่าเราสามารถทำได้เพื่อช่วยให้ผู้อื่นมีสุขภาพที่ดีเมื่อไวรัสแพร่มา "

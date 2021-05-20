@@ -23,11 +23,13 @@ gl:
     attributes:
       user:
         name: Nome a mostrar
-        name_example: 'Nome amosado<br/>(ex: Antía C. ou Trasno)'
+        name_example: 'Nome amosado (ex: Antía C. ou Trasno)'
         email: E-mail
         parent_email: Enderezo de correo electrónico da persoa responsable
         personal_email: Enderezo do correo persoal <a href="%{url}">(preme aquí se
           non tes un enderezo de correo)</a>
+        personal_email_markdown: Enderezo do correo persoal [(preme aquí se non tes
+          un enderezo de correo)](%{url})
         username: Nome de usuario
         password: Contrasinal
         password_confirmation: Confirmación do contrasinal
@@ -39,8 +41,12 @@ gl:
         finish_sign_up_header: Remata de crear a túa conta
         finish_sign_up_subheader: Completa a seguinte información para acabar de crear
           unha conta de Code.org para <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Completa a seguinte información para acabar
+          de crear unha conta de Code.org para **%{email}**.
         finish_sign_up_subheader_provider: Completa a seguinte información para acabar
           de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Completa a seguinte información
+          para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.
         error:
           future: non pode estar no futuro
   beta: beta
@@ -57,14 +63,10 @@ gl:
   okay: De acordo
   or: ou
   heading_x_of_y: "%{heading} (páxina %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Agrega un profesor:'
       placeholder: Código da sección (ABCDEF)
-      instructions: Por favor, introduce o código compartido entre ti e a túa mestra.
-        O código ten 6 letras, como por exemplo "ABCDEF".
       instructions_short: Introduce o teu código de sección de 6 letras
-    submit: Agregar profesor
   add_hint_form:
     placeholder: Por favor, dixite a súa pista aquí
     submit: Agregar pista
@@ -94,9 +96,6 @@ gl:
     continue_with: Continúa con %{provider}
     sign_in_with: Entre con %{provider}
     signed_in: Sesión iniciada!
-    signed_out: Vostede saiu da <a href="%{url}">Code.org</a>.
-    sign_out_of: Vostede usou %{provider} para entrar. <a href="%{url}">Clique aquí</a>
-      para saír de %{provider}.
     already_signedup: Xa estás rexistrado?
     notyet_signedup: Aínda non creaches unha conta?
     google_oauth2: Conta do Google
@@ -127,6 +126,9 @@ gl:
     overview: Rexístrese para seguir os seus progresos ou administrar a súa aula.
       <a href="/">Pode explorar as etapas e os desafíos</a> sen ter unha conta, pero
       cómpre un rexistro para gardar os avances e os proxectos.
+    overview_markdown: Rexístrese para seguir os seus progresos ou administrar a súa
+      aula. [Pode explorar as etapas e os desafíos](/) sen ter unha conta, pero cómpre
+      un rexistro para gardar os avances e os proxectos.
     hoc_already_signed_up_heading: Comezar sen iniciar sesión
     teacher_educator_guide: Consultar a guía do profesor
     title: Rexístrese en Code.org
@@ -146,23 +148,8 @@ gl:
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
-    agree_tos_privacy: Acepto os <a href='http://code.org/tos'> termos de servicio</a>
-      e <a href='http://code.org/privacy'> a Política de privacidade.
-    under_13_consent: De ter menos de 13 anos, confirmo que teño autorización de meus
-      pais ou titores legais para empregar os servizos de Code.org.
     student_consent: Confirmo que teño autorización de meus pais ou titores legais
       para empregrar os servizos de Code.org.
-    agree_us_website: Estou de acordo en usar un sitio web localizado nos Estados
-      Unidos.
-    student_terms: Acepto os <a href='http://code.org/tos'>Termos de uso</a> de Code.org.
-      Se son menor de 13 anos, declaro neste formulario que teño autorización de meus
-      pais para usar os servizos de Code.org.<br/><br/>Os enderezos de correo non
-      son gardados, o que impide a Code.org contactar cos alumnos, exceto cando para
-      recuperar o contrasinal. Consulta a nosa <a href='http://code.org/privacy'>Política
-      de privacidade</a> para saber máis.
-    teacher_terms: Acepto os Termos de Servizo de Code.org. Para máis información
-      sobre privacidade, consulte a nosa <a href='http://code.org/privacy'>política
-      de privacidade</a>.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
       de creacción da conta.
     user_type_button: Actualizar tipo de conta
@@ -219,8 +206,6 @@ gl:
     login: Iniciar Sesión
     invalid_login: Inicio de sesión non válido; por favor, tente de novo
     pair_programming: Estou traballando a medias no ordenador
-    student_privacy: Saiba máis sobre por que non está vendo o seu nome completo <a
-      href='%{student_privacy_blog}' target='_blank'>aquí</a>.
   password:
     reset_form:
       title: Esqueceu o seu contrasinal?
@@ -249,6 +234,7 @@ gl:
       %{name}
   parent_mailer:
     student_associated_subject: Información de inicio de sesión para Code.org
+    parent_email_added_subject: "¡Benvida a Code.org!"
   teacher_mailer:
     new_teacher_subject: "¡Benvida a Code.org!"
   section:
@@ -264,6 +250,7 @@ gl:
       picture: Contrasinal de imaxe
       word: Palabras secretas
       email: E-mail
+      clever: Conta intelixente
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi agregado como o teu profesor"
@@ -344,6 +331,8 @@ gl:
       help_us: Axúdenos
       teach: Ensinar
       about: Sobre
+      legal_privacy: Política de Privacidade
+      legal_tos: Termos de Servizo
     user:
       classroom: Páxina inicial do profesor
       district_dashboard: Panel do distrito
@@ -428,15 +417,17 @@ gl:
       target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos,
       declaro que teño autorización de meus pais ou responsables legais para usar
       os servizos de Code.org incluso sen a supervisión dun profesor.
+    create_personal_login_terms_markdown: Ao crear unha conta individual, acepto os
+      [termos de serviço](%{terms_of_service_url}) do Code.org. Se son menor de 13
+      anos, declaro que teño autorización de meus pais ou responsables legais para
+      usar os servizos de Code.org incluso sen a supervisión dun profesor.
+    update_email: Actualizar
+    parent_guardian_email_label: Enderezo de correo electrónico da persoa responsable
   user_level:
     completed: Concluído
     tried: Probado
   home:
     title: Code Studio
-    description: No Code Studio podes atopar os cursos online da Code.org
-    lines_of_code: "%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS"
-    lines_of_code_linebreak: "%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count}
-      MILLÓNS DE ALUMNOS"
     all_courses: Visión xeral dos cursos 1, 2 e 3
     lesson_plans: Plan de estudo
     signin_message: Xa estás rexistrado? %{link}
@@ -475,11 +466,6 @@ gl:
     try_beta_courses: Novo! Coñeza os nosos cursos experimentais para alumnos do pré
       ao 5º ano
     use_as_teacher: Use este sitio Web como profesor
-    heading_hoc2014: "<h2>A Hora de Código para</h2><h1>Todas as idades</h1>"
-    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas
-      as idades)</h1>"
-    heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
-    heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
     no_primary_course: Faga un curso no Code Studio
     choose_next_course: Experimenta un dos seguintes cursos do Code Studio
@@ -561,6 +547,7 @@ gl:
     download: Baixar Vídeo
     show_notes: Amosar notas
     show_video: Amosar video
+    label: Vídeo
   compatibility:
     upgrade:
       link: Aprender máis
@@ -641,31 +628,11 @@ gl:
       title: Minecraft
     unplugged_conditionals:
       title: Condicionais
-  gallery:
-    students_drew_these_with_code: Os alumnos crearon isto con programación!
-    students_made_these_with_code: Os alumnos crearon isto con programación!
-    picture_count: Nos <b>%{days}</b> días anteriores, os alumnos crearon <b>%{count}</b>
-      imaxes desenvolvendo os seus proprios programas de computador. Clique nas imaxes
-      para ver cada programa em execución.
-    activity_count: Nos últimos <b>%{days}</b> días, os alumnos crearon <b>%{count}</b>
-      aplicacións e figuras escribindo os seus proprios programas de computador. Clique
-      nas figuras e capturas de pantalla para ver cada programa en funcionamento.
-    want_to_make_your_own: Queres crear o teu propio programa?
-    more: Máis &rarr;
-    caption_by_name_age: feito por %{name}, anos %{age}
-    caption_time_ago: hai %{time_ago}
-    header: Galería
-    header_playlab: Laboratorio de xogos
-    header_artist: Artista
-    report_abuse: Reportar abuso
   landing:
-    prerelease: Este curso está na súa versión <span class='betatext'>beta</span>.
-      Isto significa que esta non é a versión final do curso, e está suxeito a revisións
-      segundo imos recibindo comentarios e se fan melloras.
-    prerelease_hoc2014: Este titorial está na versión <span class='betatext'>beta</span>.
-      Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras.
     report_bug: Comunicar erro
     support: Obter axuda
+  free_response:
+    placeholder: Insira a súa resposta aquí
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: A resposta que vostede tecleou non é correcta. Tente novamente!
@@ -715,11 +682,6 @@ gl:
   age_interstitial:
     age: A súa idade
     header: Actualización de informacións da conta
-    message: Estamos actualizando nosa experiencia para que vostede teña proteccións
-      de privacidade aínda máis fortes. Para iso, precisamos que os usunrios nos informem
-      da súa idade.<br/>Como sempre, a code.org nunca vai alugar, vender ou compartir
-      esta información con terceiros.
-    sign_out: Se vostede non quere informar a súa idade, vostede pode <a href="%{url}">saír</a>.
   terms_interstitial:
     tos: Termos de Servizo
     privacy: Política de Privacidade
@@ -733,6 +695,10 @@ gl:
     decline: Pechar
   zendesk_too_young_message: Pedimos desculpa, pero os usuarios máis novos non poden
     crear unha conta no noso sitio Web. Podes acceder a <a href="http://support.code.org">support.code.org</a>
+    sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren
+    en contacto connosco.
+  zendesk_too_young_message_markdown: Pedimos desculpa, pero os usuarios máis novos
+    non poden crear unha conta no noso sitio Web. Podes acceder a [support.code.org](http://support.code.org)
     sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren
     en contacto connosco.
   progress:
@@ -796,29 +762,14 @@ gl:
         acknowledge: Ao enviar esta información, acepta que esta será tratada de acordo
           cos termos da nosa %{link_start_privacy}Política de Privacidade%{link_end}
           e dos %{link_start_tos}Termos de Utilización%{link_end}
-  flex_category:
-    required: Visión xeral
-    csf_digcit: Cidadanía dixital
-    csf_jigsaw: Crebacabezas
-    csf_loops: Bucles
-    csf_events: Eventos
-    csf_binary: Binario
-    csf_conditionals: Condicionais
-    csf_nested_loops: Bucles aniñados
-    csf_functions: Funcións
-    csf_variables: Variables
-    csf_for_loops: Bucles "Para" (For)
-    csf_internet: Internet
-    csp_variables: Variables
-    csp_conditionals: Condicionais
-    csp_functions: Funcións
-    csp_lists: Listas
-    csp_loops: Bucles
+  hoc_download:
+    minecraft_name: Hora do Código Minecraft
   pd:
     form_labels:
       email: E-mail
       school_name: Nome da escola
       school_country: País da escola
+      colombian_school_name: Nome da escola
     form_entries:
       gender:
         male: Masculino
@@ -838,5 +789,4 @@ gl:
         opt_in_no: Non
   cookie_banner:
     accept: Acepto
-  gdpr_dialog:
-    true: Si
+  copy: Copiar

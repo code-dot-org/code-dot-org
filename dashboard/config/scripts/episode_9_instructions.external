@@ -1,0 +1,26 @@
+name 'Episode 9 Instructions'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Unplugged
+
+**Do This:** Play [The Big Event](https://curriculum.code.org/csf-19/coursec/14/) with a family member. 
+
+### Dance Party
+
+**Do This:** On the following practice levels, complete the Dance Party Hour of Code activity. 
+
+![](https://images.code.org/f91d03f71eabd7b19c583df7cda8a9bf-image-1589808114013.gif)
+
+### App Lab
+
+**Do This:** Learn how to build the Escape Room demoed during this week's Code Break by completing the [App Lab 1 Hour Workshop](https://studio.code.org/s/applab-1hour/lessons/1/levels/1).
+
+![](https://images.code.org/0b271577f40df9bab0a87cf17f016440-image-1589807973110.gif)
+MARKDOWN

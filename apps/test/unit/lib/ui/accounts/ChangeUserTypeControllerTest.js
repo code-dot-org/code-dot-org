@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {spy, stub} from 'sinon';
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import i18n from '@cdo/locale';
 import * as utils from '@cdo/apps/utils';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';

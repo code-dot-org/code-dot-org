@@ -1,1 +1,43 @@
---- {}
+---
+te-IN:
+  hello: హలో ప్రపంచం
+  'yes': అవును
+  'no': లేదు
+  email: |2-
+
+    ఇమెయిల్
+  gender: లింగం
+  studiobar_dance_title: డాన్స్ పార్టీ
+  starwars_blocks_title: బ్లాక్స్
+  volunteer_engineer_submission_field_email_preference_yes: అవును
+  volunteer_engineer_submission_field_email_preference_no: లేదు
+  volunteer_engineer_submission_commitment_more: ఎక్కువ
+  petition_age: వయస్సు
+  dashboard_action_delete_yes: అవును
+  dashboard_action_delete_no: లేదు
+  dashboard_login_none: |2-
+
+    ఇమెయిల్
+  dashboard_stage: వేదిక
+  dashboard_puzzle: పజిల్
+  header_courses: కోర్సులు
+  header_course_catalog: కోర్సు కేటలాగ్
+  header_project_gallery: ప్రాజెక్టులు
+  header_about: పరియచం
+  header_help_support: 'సహాయం మరియు మద్దతు '
+  header_report_bug: ఒక సమస్యను రిపోర్టు చేయండి
+  header_legal_privacy: గోప్యతా పాలసీ
+  header_legal_tos: సర్వీసు నిబంధనలు
+  user_header_signin: సైన్ ఇన్
+  user_header_create: 'సృష్టించు '
+  user_header_dance: డాన్స్ పార్టీ
+  hoc_overview_dance_title: డాన్స్ పార్టీ
+  hoc2018_dance_party_main_heading: డాన్స్ పార్టీ
+  hoc2018_dance_party_box_title: డాన్స్ పార్టీ
+  hoc2018_dance_teacher_resources_tile2_button: అన్‌ప్లగ్డ్ కార్యాచరణ
+  hoc2018_dance_measure: మెజర్
+  hoc2018_dance_measure_colon: 'మెజర్:'
+  hoc2018_dance_video2: డాన్స్ పార్టీ - ఈవెంట్స్
+  hoc2018_dance_video3: డాన్స్ పార్టీ - గుణాలు
+  footer_privacy_policy: గోప్యతా పాలసీ
+  footer_about: పరియచం

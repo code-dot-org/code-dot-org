@@ -10,6 +10,13 @@
   "danceFeedbackNeedDifferentDance": "Du må bruke en annen dans.",
   "danceFeedbackNeedEveryTwoMeasures": "Kontroller at du bruker blokken `hver 2 takt`",
   "danceFeedbackNeedMakeANewDancer": "Bruk blokken `lag ny` for å legge til en ny danser.",
-  "danceFeedbackKeyEvent": "",
+  "danceFeedbackKeyEvent": "Pass på at du fester kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"opp\"</title></block></xml>-blokken og trykk på \"pil opp\"-knappen mens dansen din kjører.",
+  "danceFeedbackDidntPress": "Hold piltasten imens dansen kjører.",
+  "danceFeedbackPressedKey": "Du trykket inn tasten, men danseren din reagerte ikke.",
+  "danceFeedbackNeedTwoDancers": "Du må lage to dansere.",
+  "danceFeedbackOnlyOneDancerMoved": "Kun en av dine dansere beveget seg.",
+  "danceFeedbackNeedLead": "Du må også lage en danseleder med <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>-blokken.",
+  "danceFeedbackNeedBackup": "Du må lage en gruppe med bakgrunnsdansere med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
+  "danceFeedbackSetSize": "Du trenger å endre størrelse av minst en danser når musikken er i gang.",
   "measure": "Takter:"
 }

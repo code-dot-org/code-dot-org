@@ -13,14 +13,15 @@ import ProjectExport from './ProjectExport';
 
 class ProjectHeader extends React.Component {
   static propTypes = {
-    includeExportInProjectHeader: PropTypes.bool.isRequired
+    includeExportInProjectHeader: PropTypes.bool.isRequired,
+    onChangedWidth: PropTypes.func
   };
 
   render() {
-    const {includeExportInProjectHeader} = this.props;
+    const {includeExportInProjectHeader, onChangedWidth} = this.props;
     return (
-      <div>
-        <EditableProjectName />
+      <div style={{display: 'flex'}}>
+        <EditableProjectName onChangedWidth={onChangedWidth} />
         <ProjectShare />
         {includeExportInProjectHeader && <ProjectExport />}
         <ProjectRemix lightStyle />

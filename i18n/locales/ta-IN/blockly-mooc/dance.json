@@ -1,15 +1,14 @@
 {
-  "danceFeedbackNeedNewDancer": "",
-  "danceFeedbackNoDancers": "",
-  "danceFeedbackNoBackground": "",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNeedNewDancer": "நீங்கள் ஒரு டான்சரை உருவாக்க வேண்டும்.",
+  "danceFeedbackNoDancers": "உங்களுக்கு டான்சர்கள் இல்லை.",
+  "danceFeedbackNoBackground": "ஒரு பின்னணி எஃபெக்டை நீங்கள் சேர்க்க வேண்டும்.",
+  "danceFeedbackTooManyDancers": "கவனமாக இருக்கவும்! `ஒவ்வொரு 2 அளவீடுகளுக்கும்`க்கு உள்ளே `புதிய ஒன்றை உருவாக்குக` –ஐ நீங்கள் போட்டால், நீங்கள் நிறைய டான்சர்களை உருவாக்குவீர்கள்.",
+  "danceFeedbackUseSetSize": "டான்சரை சிறியதாக்க `பேக்அப்_டான்சர்2 அளவை அமைக்க` ப்ளாக்கை பயன்படுத்தவும்.",
+  "danceFeedbackUseSetTint": "டான்சரின் டின்ட்டை மாற்ற `set tint` ப்ளாக்கை பயன்படுத்தவும்.",
+  "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ப்ளாக்கை உங்கள் நிரலில் சேர்க்க முயற்சிக்கவும்.",
+  "danceFeedbackStartNewMove": "உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவை செய்யவில்லை.",
+  "danceFeedbackNeedDifferentDance": "வேறு டான்சை நீங்கள் பயன்படுத்த வேண்டும்.",
+  "danceFeedbackNeedEveryTwoMeasures": "`ஒவ்வொரு 2 அளவீடுகள்`ப்ளாக்கை நீங்கள் பயன்படுத்துவதை உறுதி செய்து கொள்ளவும்",
+  "danceFeedbackNeedMakeANewDancer": "இரண்டாவது டான்சரை உருவாக்க `புதிய ஒன்றை உருவாக்குக` ப்ளாக்கை பயன்படுத்தவும்.",
+  "danceFeedbackKeyEvent": "உங்கள் நடனம் நடந்து கொண்டிருக்கையில், <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> உடன் சில குறியீட்டை இணைத்து விசையை அழுத்துவதை உறுதி செய்துகொள்ளவும்."
 }

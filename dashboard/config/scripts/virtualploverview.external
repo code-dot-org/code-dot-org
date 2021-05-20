@@ -1,0 +1,35 @@
+name 'VirtualPLOverview'
+editor_experiment ''
+markdown <<MARKDOWN
+# Online Support
+
+## What’s inside and how is it organized?  
+This online support module is designed to help you prepare to teach the CS Principles curriculum. You'll note that material is organized into four sections: overview, content, teaching practice, and peer review. Throughout these sections you'll find materials that help to clarify lesson content and better understand why lessons look the way they do. You'll also find resources to help you think about some of the core teaching practices that are useful for this curriculum.
+
+## Unit Overview
+
+The overview section is designed to provide a high level view into the unit. Here you'll find commentary about how to teach the unit as well as a view into the tools used to teach this unit. There's also a self-assessment in the overview section that generates one  recommended teaching practice and one content module for you to explore. Note that this is just a recommendation —  You have the ability to choose a different focus area after you have completed the self-assessment and you can change your focus area at any time. In order to complete this online support for unit one, you'll need to finish all of the tasks in your content focus and teaching practice focus areas, so make sure you select modules that cover material that is new to you and that you will benefit from look at more deeply.
+
+<img src="https://images.code.org/d6ae8039fcbb1a14917c3d0d6ce16281-image-1474653857808.gif" style="float:right; margin-left:30px; width:300px">
+
+## Unit Content
+
+
+The content section has been organized into groups of lessons that build off of one another. For unit one, there are six content modules they range in size from one lesson to three lessons. When we combine lessons together into a single module, it's because the material covered in those lessons is cumulative, so understanding the first of the lessons is necessary in order to understand the next. In this section you will find resources and commentary to help you better understand the lesson(s) as well as tasks to help you plan your own implementation of the lesson(s).
+
+<br><br>
+
+<img src="https://images.code.org/52fe6a9b031794fd28dc69e029f9358a-image-1474653863210.gif" style="float:left; margin-right:30px; width:300px">
+
+## Unit Teaching Practice
+<br>
+The teaching practice section is broken out into four modules that cover some of the core practices necessary for delivering this curriculum. Here, you will see an explanation of how the practice fit into the unit, as well as some resources to help you better understand the meaning and importance of the practice in your classroom. Modules also include a task that helps you think about fitting in these practices into your classroom.
+<br>
+
+<br><br>
+<img src="https://images.code.org/e12268cac0ad8acf456f93c340d59fa9-image-1474654038039.02.09 PM.png" style="float:right; margin-left:30px; width:300px">
+## Peer Reviews
+<br><br>
+The tasks that are completed in the content and teaching practice sections are intended to help you prepare to teach this material to your students, but they also provide an opportunity to share strategies and ideas with one another through the peer review process. The four peer reviews you will complete as part of your each unit of online support will help you give feedback to other teachers who are ramping up on this material but also gives you an opportunity to understand how other teachers are approaching their delivery of the CS Principles curriculum. In order to get credit for finishing this online support you will need to review the four tasks that are assigned to you in the peer review section. Note that to start, you won’t have any tasks assigned (because people need to complete tasks in order for you to have anything to review), but once tasks are ready for you to review, the icons at the bottom of the page will chance from a lock to a bubble (as shown on the right). 
+<br><br><br><br>
+MARKDOWN

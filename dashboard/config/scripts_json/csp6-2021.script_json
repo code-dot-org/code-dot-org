@@ -1,0 +1,2875 @@
+{
+  "script": {
+    "name": "csp6-2021",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "is_migrated": true,
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-18 03:03:34 UTC",
+    "seeding_key": {
+      "script.name": "csp6-2021"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_unit6_2020",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Unit 6: Algorithms",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.\n\n* **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.\n\n\n### Major Assessment and Projects\n\nThis unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.\n* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.9 Developing Algorithms\n* 3.11 Binary Search\n* 3.17 Algorithmic Efficiency\n* 3.18 Undecidable Problems\n* 4.3 Parallel and Distributed Computing"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Algorithms Solve Problems",
+      "name": "Algorithms Solve Problems",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
+        "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.",
+        "purpose": "This lesson is an approachable and interactive introduction to the main concepts of this short unit. Students have been writing a lot of code, and now they are ready to think on a high level about the patterns that make two different problems, or two different algorithms, similar or different. This mindset will be important as they tackle the more challenging material later in the unit where students will learn to compare different algorithms that address the same problem.",
+        "student_overview": "Learn how computer scientists think about problems and the way different algorithms can be designed to solve them.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "Algorithm Efficiency",
+      "name": "Algorithm Efficiency",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students follow a demonstration of Linear Search before writing their own search algorithms. Following this, students are introduced to Binary Search after which they compare graphs of the search algorithms to determine which is most efficient. ",
+        "preparation": "* Preview the slides and click through all animations\r\n* Practice running Binary Search yourself",
+        "purpose": "In the previous lesson students learned that there are many different ways to write an algorithm to solve a problem. However, not all solutions are good options, and some algorithms require many fewer steps to run than others. This lesson focuses on comparing Linear Search to Binary Search. The longer the length of the list being searched, the more efficient Binary Search is compared to Linear Search. That said, Binary Search has a constraint: the list must first be sorted. This lesson more broadly introduces students to thinking about the efficiency of an algorithm, an idea that will be explored more in future lessons.",
+        "student_overview": "Learn how computers describe how fast different algorithms are and the fact that different algorithms that solve the same problem may be faster than others.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "Unreasonable Time",
+      "name": "Unreasonable Time",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students investigate two different types of raffles that highlight the way seemingly small problems can quickly grow large. The first raffle asks students to hunt for pairs of tickets that add to a target value. The second raffle asks students to hunt for any group of tickets that adds to a target value. After trying out each raffle live students will try to figure out the patterns for how many total combinations need to be checked in each. At the end they discuss the difference between reasonable and unreasonable algorithms based on their experiences.",
+        "preparation": "* Review the slides to make sure you are prepared to lead the different discussions in this lesson.",
+        "purpose": "This lesson explores some tricky mathematical concepts in a hands on and interactive way. Building off the raffle analogy used in the previous lesson, it gives students an experience with two types of problems that grow quickly in size, though as they'll see one grows much faster than the other. This lesson should give students a sense of how computer scientists use mathematics to think about problems without relying too heavily on mathematical background that not all students may have.",
+        "student_overview": "Explore two different types of algorithms that seem similar but take fundamentally different amounts of computing power to run.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "The Limits of Algorithms",
+      "name": "The Limits of Algorithms",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students explore the limits of what algorithms are able to compute. First they use a widget that exposes students to the Traveling Salesman Problem. After recognizing this problem can only be solved using an unreasonable time algorithm the develop their own good enough solutions that run more efficiently. Later in the lesson students watch a video about undecidable problems for which no algorithm can ever be developed to solve them.",
+        "preparation": "* Read through the slides\r\n* Preview the Traveling Salesman widgets",
+        "purpose": "Prior to this lesson students have learned about the efficiencies of different algorithms and have considered the difference between reasonable and unreasonable algorithms. In this lesson they explore what happens when you reach that limit. In one instance the response is to accept good enough solutions that run more reasonably. In the other case the problem simply can't be solved at all.",
+        "student_overview": "Explore two different kinds of problems at the limits of what a computer is capable of solving and learn the difference in how computer scientists respond."
+      },
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "Parallel and Distributed Algorithms",
+      "name": "Parallel and Distributed Algorithms",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students explore the benefits and limitations of parallel and distributed computing. First they discuss the way human problem solving changes when additional people lend a hand. Then they run a series of demonstrations that show how simple tasks like sorting cards get faster when more people help, but there is a limitation to the efficiency gains. Later in the lesson students watch a video about distributed computing that highlights the ways distributed computing can help tackle new kinds of problems. To conclude the lesson students record new vocabulary in their journals and discuss any open questions.",
+        "preparation": "* Collect the manipulatives you will use for the main activity. While decks of cards are suggested, other manipulatives are possible. See the teaching tip in the main activity for suggestions.",
+        "purpose": "This lesson is a quick tour of the challenges and benefits of parallel and distributed computing. It caps off the unit to showcase ways these techniques are being used to push the boundaries of how efficiently computer can solve problems. ",
+        "student_overview": "Learn how algorithms are designed to run on many computers and the benefits and challenges that result.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "Lesson 6: Assessment Day",
+      "name": "Assessment Day",
+      "absolute_position": 6,
+      "lockable": true,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "assessment": true,
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students complete a multiple choice assessment which covers the unit topics.",
+        "preparation": "* Preview the assessment questions",
+        "student_overview": "Assessment day to conclude the unit."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b4f047df-4825-4768-9530-99bac0151e6e",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm  Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4f047df-4825-4768-9530-99bac0151e6e",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "23f2b699-2e3c-4388-b8be-8daa5b33461e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "8b328d0f-5443-4037-9d6a-1d772a87fa48",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b328d0f-5443-4037-9d6a-1d772a87fa48",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "d064627e-8910-4445-96ec-978318a5f0f6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm  Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d064627e-8910-4445-96ec-978318a5f0f6",
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1",
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c",
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "dad81c91-ad02-4d43-9a5c-62a1fdcfd0aa",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dad81c91-ad02-4d43-9a5c-62a1fdcfd0aa",
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "0cebaff7-4730-4254-ae11-7cc1919be24a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm  Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cebaff7-4730-4254-ae11-7cc1919be24a",
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "a8998c86-0e02-449e-b105-1317c771b8f5",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5",
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a",
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "a88a648a-28b4-4def-8065-2cf5c5aa0cb2",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a88a648a-28b4-4def-8065-2cf5c5aa0cb2",
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "26e73f35-8ea9-4750-ac47-92b44b825415",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm  Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26e73f35-8ea9-4750-ac47-92b44b825415",
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4",
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "255171a6-1638-4105-b586-3fe04b18bba4",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "255171a6-1638-4105-b586-3fe04b18bba4",
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "211e7b5a-5607-494e-941d-d078fbd4b60f",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "211e7b5a-5607-494e-941d-d078fbd4b60f",
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "7e883a55-82bf-4132-a037-dd29927314d1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm  Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e883a55-82bf-4132-a037-dd29927314d1",
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e",
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "b751df7f-1666-445d-b1d0-f363baad1754",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b751df7f-1666-445d-b1d0-f363baad1754",
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "32e5b327-d8d9-4335-965f-c929e23a8b66",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32e5b327-d8d9-4335-965f-c929e23a8b66",
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "2c9089d7-422a-4043-8347-25aed301d98b",
+      "position": 1,
+      "properties": {
+        "duration": 25,
+        "name": "Assessment"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c9089d7-422a-4043-8347-25aed301d98b",
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "be99363e-ee2e-40a2-acf3-f12faec40b15",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Assessment Review"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be99363e-ee2e-40a2-acf3-f12faec40b15",
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1",
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "88a741b7-9186-48b2-abcc-d316064077a4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** This is an optional discussion. If you are able to move directly to the main activity you should do so. This discussion should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "88a741b7-9186-48b2-abcc-d316064077a4",
+        "lesson_activity.key": "b4f047df-4825-4768-9530-99bac0151e6e"
+      }
+    },
+    {
+      "key": "ee1f7823-1a65-4e50-abce-553fd512484b",
+      "position": 2,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "ee1f7823-1a65-4e50-abce-553fd512484b",
+        "lesson_activity.key": "b4f047df-4825-4768-9530-99bac0151e6e"
+      }
+    },
+    {
+      "key": "6ef6a204-46a4-4546-a2bb-d8ba113c9855",
+      "position": 1,
+      "properties": {
+        "description": "Today we are going to kick off a short unit about how computer scientists think about problem solving. A really important skill will be recognizing patterns and similarities.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6ef6a204-46a4-4546-a2bb-d8ba113c9855",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "0abbf3fe-6a0c-48e1-93e3-51ba39cb64d6",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Ask students to take out their journals or give them some blank paper for working on the following problems\n\nShow the slides for the ten problems students will need to solve.",
+        "name": "Comparing Problems"
+      },
+      "seeding_key": {
+        "activity_section.key": "0abbf3fe-6a0c-48e1-93e3-51ba39cb64d6",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "a09625b0-a7c2-45c5-b785-f8617360b69f",
+      "position": 3,
+      "properties": {
+        "description": "**Circulate:** Ask students to review the problems for one minute, and then let them move around the room collecting information needed to solve the problems. This may take them several minutes."
+      },
+      "seeding_key": {
+        "activity_section.key": "a09625b0-a7c2-45c5-b785-f8617360b69f",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which problems did you need to do something similar in order to solve them?*\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "fe43cea7-dffd-4118-9d38-f7dfb2098f9d",
+      "position": 5,
+      "properties": {
+        "description": "Have students discuss the prompt with a neighbor before asking them to share with the room. Lead a discussion on their experiences."
+      },
+      "seeding_key": {
+        "activity_section.key": "fe43cea7-dffd-4118-9d38-f7dfb2098f9d",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "b04f3b67-2671-4458-9c19-24004c87788c",
+      "position": 6,
+      "properties": {
+        "description": "The first thing that we need to think about as computer scientists is what is a \"problem\". We just looked at 10 problems, but as we discussed, a lot of them are similar. If we solve one problem we may actually solve another, or at least have a good idea for how to start solving another. As computer scientists it's important to ask \"have I seen this problem before\" or \"how is this problem similar to others I've solved?\"",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b04f3b67-2671-4458-9c19-24004c87788c",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "ed59ad29-5a2c-4303-a2da-779aaa696e7d",
+      "position": 7,
+      "properties": {
+        "description": "We just thought about whether problems are similar. Now we're going to look at whether we're actually solving the same problem.",
+        "name": "Comparing Algorithms",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ed59ad29-5a2c-4303-a2da-779aaa696e7d",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which of these algorithms are “the same” as one another?*\n\n**Discussion Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "212c5de8-d427-4c75-afde-15549baa2a05",
+      "position": 9,
+      "properties": {
+        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side."
+      },
+      "seeding_key": {
+        "activity_section.key": "212c5de8-d427-4c75-afde-15549baa2a05",
+        "lesson_activity.key": "23f2b699-2e3c-4388-b8be-8daa5b33461e"
+      }
+    },
+    {
+      "key": "c01e282b-682f-48c4-8a79-f3a40fc3413a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: problem, algorithm, sequencing, selection, iteration."
+      },
+      "seeding_key": {
+        "activity_section.key": "c01e282b-682f-48c4-8a79-f3a40fc3413a",
+        "lesson_activity.key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18"
+      }
+    },
+    {
+      "key": "801fdc6f-bf0a-44f0-9e29-4ac82691a89b",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *How did today’s activities change the way you think about algorithms and problems?*\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "801fdc6f-bf0a-44f0-9e29-4ac82691a89b",
+        "lesson_activity.key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18"
+      }
+    },
+    {
+      "key": "4e8774b8-a0ca-425a-9648-a3b0626ceee5",
+      "position": 3,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e8774b8-a0ca-425a-9648-a3b0626ceee5",
+        "lesson_activity.key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18"
+      }
+    },
+    {
+      "key": "c2972bed-a441-4d22-b668-cc8132272077",
+      "position": 4,
+      "properties": {
+        "description": "Computer scientists don't just think about \"code\", they think about problems and the algorithms that solve them. In this unit we're going to explore what makes two problems, or two algorithms, similar or different from one another, and the way computer scientists talk about them. Not only will you be a better programmer, but you'll get to work on some really interesting problems along the way.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c2972bed-a441-4d22-b668-cc8132272077",
+        "lesson_activity.key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18"
+      }
+    },
+    {
+      "key": "12e124e9-4be6-46be-8fbb-d26a7d63ff59",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In your own words explain the difference between a problem and an algorithm.",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "12e124e9-4be6-46be-8fbb-d26a7d63ff59",
+        "lesson_activity.key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18"
+      }
+    },
+    {
+      "key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
+        "lesson_activity.key": "8b328d0f-5443-4037-9d6a-1d772a87fa48"
+      }
+    },
+    {
+      "key": "2a1ac74b-aca7-4991-9854-26330b83effb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Have you ever lost a pencil in a backpack? What are the steps you take to find the pencil?*\n\n**Discussion Goal:** Use this discussion to highlight the following points\n\n* Students may have as systematic approach (search through every pocket in order) or a random approach.\n* Some students may have a system where they place their books and materials in their backpack to be retrieved in the order of their class schedule. If they look in their bag at a certain spot and don't see the pencil, they have a pretty good idea where to search next. \n* There are no right answers here - the idea is to start thinking about the efficiency of different search methods. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a1ac74b-aca7-4991-9854-26330b83effb",
+        "lesson_activity.key": "d064627e-8910-4445-96ec-978318a5f0f6"
+      }
+    },
+    {
+      "key": "d19ac2ee-9bb6-41cc-aaf9-6f3aee4b3031",
+      "position": 2,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "d19ac2ee-9bb6-41cc-aaf9-6f3aee4b3031",
+        "lesson_activity.key": "d064627e-8910-4445-96ec-978318a5f0f6"
+      }
+    },
+    {
+      "key": "14d87061-d1a2-4943-bcd7-18f744f08c12",
+      "position": 3,
+      "properties": {
+        "description": "There are many different ways to achieve the same goal for this problem: finding your pencil. Today we are going to explore different search methods that computers use.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14d87061-d1a2-4943-bcd7-18f744f08c12",
+        "lesson_activity.key": "d064627e-8910-4445-96ec-978318a5f0f6"
+      }
+    },
+    {
+      "key": "99ab2370-b406-4107-bf8e-5abe8e51f3f7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students should have sticky notes and their journals\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Call for three volunteers. These students use the Ticket Generator on Code Studio to produce raffle tickets numbers (one per volunteer). Students write the number on a sticky note and come to the front of the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "99ab2370-b406-4107-bf8e-5abe8e51f3f7",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "c1d58639-1249-4cd5-8af1-eb9376904058",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Thank you, volunteers! Let's figure out if any of you have the winning number for this instance of the problem. I'm going to ask you one by one to show your number and we will compare it with the winning number.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before class, choose your own winning number (a number between 0-999), or alternatively use the Ticket Generator yourself!\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c1d58639-1249-4cd5-8af1-eb9376904058",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "a0d3d18b-89fb-466c-ac8c-de08e46f008f",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Each volunteer reveals their number and compares it to the winning number."
+      },
+      "seeding_key": {
+        "activity_section.key": "a0d3d18b-89fb-466c-ac8c-de08e46f008f",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "9dbbcbb0-bc8c-4ffc-9f57-97bc41904929",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How many steps did it take to find out if anyone had the winning ticket? What is the greatest possible number of steps it could take for this instance?*\n\n**Answer:** \n\n* The greatest possible number of steps for this instance is 3.\n* With six volunteers, the greates number of steps is 6.\n* The patterns is a 1:1 relationship. The number of tickets in the raffle exactly equals the number of steps it would take to check for a number in the worst case.  \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dbbcbb0-bc8c-4ffc-9f57-97bc41904929",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "e76cd7ae-1bb0-4291-a914-df826a786a5a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if we had six volunteers? The whole class? The whole school? What is the pattern here?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Look at the chart as a class and examine the graph. The graph visualizes the pattern the class discussed."
+      },
+      "seeding_key": {
+        "activity_section.key": "e76cd7ae-1bb0-4291-a914-df826a786a5a",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "1325292c-d0b4-4a23-b321-753b735aff1a",
+      "position": 6,
+      "properties": {
+        "description": "Now let's try a different way to search.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1325292c-d0b4-4a23-b321-753b735aff1a",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "6147bae7-d45c-45e2-889e-bc76c32968ed",
+      "position": 7,
+      "properties": {
+        "description": "**Group:** Place students in groups of two\n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With a partner, students navigate to Code Studio and use the Ticket Generator to create seven random numbers that are copied to sticky notes. Students organize these sticky notes in numerical order. Students choose one extra number as the \"winning number\" and write that number down on a separate sticky note.",
+        "progression_name": "Widget: Ticket Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "6147bae7-d45c-45e2-889e-bc76c32968ed",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "41d2ba90-288e-46a8-b6b7-0581a88f6a09",
+      "position": 8,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge:** Students work with their partner to write an algorithm to search for their winning number. Make sure the rules are displayed.\n\n* The search can start at any of the sticky notes\n* You can \"jump\" over sticky notes. In other words, you don't need to search the stickies in order. \n* You can determine which sticky notes to search next based on the current sticky note you are checking. \n* The goal is to make the determination in the least steps possible, but don't forget your number could be anywhere in the list - what is the worst possible case? What is the greatest number of comparison steps it would take to find any number in your list using your current algorithm?",
+        "progression_name": "Widget: Ticket Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "41d2ba90-288e-46a8-b6b7-0581a88f6a09",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "dc264093-a8dd-4ff3-b7a9-ce8c1c73b906",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Students share their algorithms with another group and determine which one runs faster, depending on the number of steps it takes to find a number in the list.*",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It's important for students to think about this problem as looking for the number in the worst possible situation. In other words, what is the least amount of steps it would take to definitevely cross off every option?\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc264093-a8dd-4ff3-b7a9-ce8c1c73b906",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "9ef0e7df-ed69-48aa-92d9-1cb3ec749a73",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students return to their partner and now run a given algorithm, displayed on the board, step by step (click through for animation). As they are doing this, they should think about whether or not this algorithm runs faster (has less steps) than their own algorithms.",
+        "progression_name": "Widget: Ticket Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ef0e7df-ed69-48aa-92d9-1cb3ec749a73",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "6316489c-7e26-4f8b-80e6-71146e1d37d7",
+      "position": 11,
+      "properties": {
+        "description": "This search algorithm is known as Binary Search. Let's see it in action.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6316489c-7e26-4f8b-80e6-71146e1d37d7",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "50128730-c11f-4d6a-b43e-a0c00f134637",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animations to see Binary Search in action on the activity slide. Discuss each step as it is happening.\r\n\r\n* Find the number in the middle and compare it with the given number. The given number is greater than the middle number, so remove the middle number and all to the left. \r\n* Find the number in the middle of the numbers left, and compare it with the given number. The given number is less than the middle number, so remove the middle number and all to the right.\r\n* Find the number in the middle of the numbers left (there is only one!), and compare it with the given number. The given number is equal to the middle number. We have found our number!"
+      },
+      "seeding_key": {
+        "activity_section.key": "50128730-c11f-4d6a-b43e-a0c00f134637",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "ab4e55ea-d12d-400e-b67b-96387fd56578",
+      "position": 13,
+      "properties": {
+        "description": "Binary search only works with a sorted list of numbers. This allows us to remove options from the search after we've made a decision. In other words, if we know the number is greater than 410, we can remove all numbers less than or equal to 410 and we don't have to manually check those numbers one by one.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab4e55ea-d12d-400e-b67b-96387fd56578",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "2948c67d-c61e-4eb2-9a55-aee742115e07",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Display the graph. Students copy the chart into their journals and fill out the missing parts. They can use their sticky note to try out each instance of the problem. When the class has mostly finished, click through the animations to see the answers.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "What if there is no middle number while performing a step in Binary Search? Students can come up with a protocol for this like: if there is no middle number, compare the number on the right. \r\n\r\n![](https://curriculum.code.org/media/uploads/binarysearch.png)\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2948c67d-c61e-4eb2-9a55-aee742115e07",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "deb5b7ba-166b-43ed-88f1-f40cb334282c",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Display the chart on the next slide. Click through the animations. This slide shows another way to fill out the chart, that does not require multiple sticky notes. Instead, we can use the flippy do! For Binary Search, for each instance the number of steps it take to run is equal to the number of bits required to represent the input.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a tricky concept! It's ok if students don't fully understand. What's most important is what is revealed next: Binary Search is more efficient than Linear Search. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "deb5b7ba-166b-43ed-88f1-f40cb334282c",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "576d7c61-6721-4613-9afc-c8e0e6a6d0ce",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Discuss the graph and click through the animation to see Binary Search graphed."
+      },
+      "seeding_key": {
+        "activity_section.key": "576d7c61-6721-4613-9afc-c8e0e6a6d0ce",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "afb4ee80-e671-4afc-9bb9-51dc60e7cf47",
+      "position": 17,
+      "properties": {
+        "description": "Both Binary Search and Linear Search find the answer to our search problem. However, one option is much faster than the other: Binary Search, although it requires that the numbers are sorted first.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "afb4ee80-e671-4afc-9bb9-51dc60e7cf47",
+        "lesson_activity.key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1"
+      }
+    },
+    {
+      "key": "afa358f2-6ee0-4f88-8209-7881a3c15a71",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *If I had one input, which algorithm would I use to get my answer with the fewest amount of steps? What if I had five? What about one hundred?*\n\n**Answers:**\n\n* For one input, either Binary Search or Linear Search would be appropriate. Students may argue for Linear as it does not need to first be sorted.\n* For five inputs, it's clear that Binary Search is fastest, although it only saves two steps over Linear Search. This is all the more true with one hundred inputs, which only takes seven steps (Binary number: 1100100) compared to Linear Search's one hundred steps. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "afa358f2-6ee0-4f88-8209-7881a3c15a71",
+        "lesson_activity.key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c"
+      }
+    },
+    {
+      "key": "8468c3da-573a-4a75-bb3e-cd42906dc0bb",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.*\n\n**Journal:** Students add the following vocabulary words and definitions to their journals: efficiency, linear search, binary search."
+      },
+      "seeding_key": {
+        "activity_section.key": "8468c3da-573a-4a75-bb3e-cd42906dc0bb",
+        "lesson_activity.key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c"
+      }
+    },
+    {
+      "key": "1b244d39-36ea-4654-8230-05dbf25eaea2",
+      "position": 3,
+      "properties": {
+        "description": "Well done! It's clear that there are many algorithms we can use to search for an item in a list. Some are faster, or more efficient, than others. In the case of Binary Search, the larger the list we are searching through, the greater the efficiency in using this algorithm instead of Linear Search.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b244d39-36ea-4654-8230-05dbf25eaea2",
+        "lesson_activity.key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c"
+      }
+    },
+    {
+      "key": "b32bdfd1-af1d-423d-9a29-362c9f7baf08",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the third step using Binary Search to look for the number 32 in this list? \r\n\r\n**Question:** Which of the following is true of two algorithms designed to solve the same problem?",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "b32bdfd1-af1d-423d-9a29-362c9f7baf08",
+        "lesson_activity.key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c"
+      }
+    },
+    {
+      "key": "4956632b-4b5d-41a7-b096-d48ca12916f2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Widget: Ticket Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "4956632b-4b5d-41a7-b096-d48ca12916f2",
+        "lesson_activity.key": "dad81c91-ad02-4d43-9a5c-62a1fdcfd0aa"
+      }
+    },
+    {
+      "key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99",
+        "lesson_activity.key": "dad81c91-ad02-4d43-9a5c-62a1fdcfd0aa"
+      }
+    },
+    {
+      "key": "a1dee69e-0914-4035-97ad-7aab30413277",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What does it mean to say one algorithm is “more efficient” than another?*\n\nHave students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** This discussion is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1dee69e-0914-4035-97ad-7aab30413277",
+        "lesson_activity.key": "0cebaff7-4730-4254-ae11-7cc1919be24a"
+      }
+    },
+    {
+      "key": "db08fc4e-afc3-4b90-884b-71c9981fbfdc",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "db08fc4e-afc3-4b90-884b-71c9981fbfdc",
+        "lesson_activity.key": "0cebaff7-4730-4254-ae11-7cc1919be24a"
+      }
+    },
+    {
+      "key": "493036fc-4cdc-4667-896e-e2ed1d42ece7",
+      "position": 3,
+      "properties": {
+        "description": "Yesterday we started looking at how computer scientists might compare two algorithms that solve the same problem. Today we're going to look at two different problems. They may seem similar but as we'll see they actually are much harder to solve than either of the two we saw yesterday. The question will be \"how much harder\"? Let's get to it!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "493036fc-4cdc-4667-896e-e2ed1d42ece7",
+        "lesson_activity.key": "0cebaff7-4730-4254-ae11-7cc1919be24a"
+      }
+    },
+    {
+      "key": "7bde10b5-a49b-486c-9af0-ca781adfba14",
+      "position": 1,
+      "properties": {
+        "name": "Running The Two Raffles\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Running the Raffles:** Both because it helps give students a sense of the problem space and because it's fun to run a raffle, you should run both the pair raffle and the group raffle in your classroom. Here's some helpful tips.\r\n\r\n* Insist that students check for the pair raffle silently. For this one it's very easy to just yell out what number you would pair with and lose the opporuntity to see how many total checks are necessary if they can just all yell from their seats.\r\n* The group raffle doesn't necessarily need to be silent. As students will see, it's an incredibly difficult problem and they're going to need to do a lot of checking even if they're able to talk out loud.\r\n* Think ahead about whether you actually want to award winners of the raffles. It's pretty unlikely that there will be a winner. \r\n* There's a pretty good chance that no one will win either raffle.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7bde10b5-a49b-486c-9af0-ca781adfba14",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "8ae4ce3b-5858-4bc4-8a89-48fda7232bbe",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Send students to the ticket generator widget on Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show slides that explain the pair raffle.\n\n**Circulate:** Give students a couple of minutes to walk around the room seeing if they can find a partner with which they can win the raffle. After a couple of minutes have them return to their desks. If there are any winners feel free to celebrate."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ae4ce3b-5858-4bc4-8a89-48fda7232bbe",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "9b07dba9-b815-4a2d-855b-ccc0c63e8b14",
+      "position": 3,
+      "properties": {
+        "description": "Alright, that was interesting. Let's try out a different version of the raffle. Last time I made you work silently so that we got a better sense of how many checks needed to happen. This time we're going to run a group raffle, but I'll let you talk out loud if you want.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b07dba9-b815-4a2d-855b-ccc0c63e8b14",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "ccf3f078-038f-4a88-878f-e74160854611",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show slides that explain the group raffle.\r\n\r\n**Circulate:** Give students a couple of minutes to walk around the room seeing if they can find a group with which they can win the raffle. After a couple of minutes have them return to their desks. If there are any winners feel free to celebrate."
+      },
+      "seeding_key": {
+        "activity_section.key": "ccf3f078-038f-4a88-878f-e74160854611",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "cf61000d-24ab-49b3-9779-2aebc3d03a6c",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:** *Which raffle felt like it was more difficult to check? Why?*\n\n**Discussion Goal:** This discussion is primarily designed to get quick reactions from students to motivate the second big activity in this lesson. Students will likely note that the group raffle felt a lot harder to check, even with the ability to talk. That said, there's no wrong answers at this point. You're about to check their intutions mathematically.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf61000d-24ab-49b3-9779-2aebc3d03a6c",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "09561286-e725-4dcc-9e24-4829100ad2fe",
+      "position": 6,
+      "properties": {
+        "description": "Have students discuss this with a neighbor. Then have a few students share out their reflections."
+      },
+      "seeding_key": {
+        "activity_section.key": "09561286-e725-4dcc-9e24-4829100ad2fe",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "73b4a240-2f96-4495-b138-1ed168fec636",
+      "position": 7,
+      "properties": {
+        "description": "As computer scientists we're getting better at thinking about problems and algorithms. We also saw last time that we can use a little mathematical reasoning to decide if one algorithm is more efficient than the other. Let's do a little work on these two raffles to see if our intuitions are correct.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "73b4a240-2f96-4495-b138-1ed168fec636",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "4a09b0ee-fe1e-42f0-9a73-38966b00a2dd",
+      "position": 8,
+      "properties": {
+        "description": "**Distribute:** Distribute copies of [r unreasonable-time-activity-guide/csp/2021]"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a09b0ee-fe1e-42f0-9a73-38966b00a2dd",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "5c904430-0377-416a-b82e-9bef35e4a1be",
+      "position": 9,
+      "properties": {
+        "name": "Activity Guide - Unreasonable Time\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Encouraging Drawing:** Students will likely be able to answer these questions much more easily if they draw on a sheet of paper. The question for the pair raffle becomes \"if I draw some dots on a sheet of paper, how many lines can I draw between them?\" since each line connects two points. For the group raffle it is a little more tricky but it's \"how many ways can I combine the dots?\"\r\n\r\n**8 is a Challenge:** The activity guide indicates that 8 is a challenge for both activities. Unless students are starting to see that patterns for each raffle size they will likely find this extremely challenging, especially for the group raffle. Reassure students it's a challenge and they don't need to complete it.\r\n\r\n**Ending Early:** It's more important that students get experience with how these two problems are different in how quickly they grow. If students are getting stuck with one encourage them to move on to the other.\r\n\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c904430-0377-416a-b82e-9bef35e4a1be",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "372ef136-5d57-4c7a-a456-daa9aa817bf6",
+      "position": 10,
+      "properties": {
+        "description": "**Pair Raffle:** Ask students to fill out the first page where they must figure out the total number of pairs for different sized \"pair raffles\". This may take several minutes and require students to draw pictures.\n\n**Group Raffle:** Ask students to fill out the second page where they must figure out the total number of groups for different sized \"group raffles\". This may take several minutes and require students to draw pictures.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Responses:** Ask students to share their responses with another group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slides summarizing the correct solutions for each as well as providing language to describe these two kinds of curves. \n\n**Discuss:** *Polynomial and exponential both curve up. Why do you think only exponential is considered “unreasonable”?*\n\nBriefly ask students for their ideas why before showing them the following slides. Exponential curves grow extremely quickly. You simply can't build a computer fast enough even for relatively small raffle sizes."
+      },
+      "seeding_key": {
+        "activity_section.key": "372ef136-5d57-4c7a-a456-daa9aa817bf6",
+        "lesson_activity.key": "a8998c86-0e02-449e-b105-1317c771b8f5"
+      }
+    },
+    {
+      "key": "f656a2f9-8797-426e-81e6-caac0728f84c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: unreasonable time, reasonable time"
+      },
+      "seeding_key": {
+        "activity_section.key": "f656a2f9-8797-426e-81e6-caac0728f84c",
+        "lesson_activity.key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a"
+      }
+    },
+    {
+      "key": "93d95de4-a4be-4553-ba9f-6baa1eb35298",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** *Your school is considering running the group raffle at an upcoming assembly to give away a prize. Write a brief explanation of what advice you would give them.*\n\n**Discussion Goal:** Use this discussion to reinforce vocabulary introduced in the slides and make sure they have understood the main concepts of the day. Students should be able to explain with the term reasonable, unreasonable, and exponential, why running a group raffle in a school of most sizes is impossible.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "93d95de4-a4be-4553-ba9f-6baa1eb35298",
+        "lesson_activity.key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a"
+      }
+    },
+    {
+      "key": "bc0e8a96-86e4-4cc6-abab-53f3d57d2788",
+      "position": 3,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0e8a96-86e4-4cc6-abab-53f3d57d2788",
+        "lesson_activity.key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a"
+      }
+    },
+    {
+      "key": "e40f89cd-e7b1-4e62-8ed9-aefd91f1b40c",
+      "position": 4,
+      "properties": {
+        "description": "The group raffle is just one example of an algorithm that is \"unreasonable\". It grows exponentially and so we'd never want to run it at our school. Next time we'll talk more about what to do when we encounter unreasonable problems.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e40f89cd-e7b1-4e62-8ed9-aefd91f1b40c",
+        "lesson_activity.key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a"
+      }
+    },
+    {
+      "key": "bf352800-3508-47f5-9d97-1b3894c8af31",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Which of the follow efficiencies would be considered unreasonable?\r\n\r\n**Question:** Based on the data provided, does this algorithm run in a reasonable or unreasonable time? Explain your answer",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf352800-3508-47f5-9d97-1b3894c8af31",
+        "lesson_activity.key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a"
+      }
+    },
+    {
+      "key": "54f355fa-0676-434b-afff-553540c71af3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3",
+        "lesson_activity.key": "a88a648a-28b4-4def-8065-2cf5c5aa0cb2"
+      }
+    },
+    {
+      "key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the difference between a reasonable and unreasonable time algorithm?*\n\n**Discussion Goal:** Use this discussion to quickly review topics brought up in the previous lesson.\n\n* Reasonable algorithms grow at a polynomial rate or slower. Unreasonable algorithms grow exponentially.\n* The time to solve an unreasonable algorithm grows very quickly even for relatively small problem sizes.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
+        "lesson_activity.key": "26e73f35-8ea9-4750-ac47-92b44b825415"
+      }
+    },
+    {
+      "key": "8ee21f0f-00b1-44ea-b137-779a080441e5",
+      "position": 2,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ee21f0f-00b1-44ea-b137-779a080441e5",
+        "lesson_activity.key": "26e73f35-8ea9-4750-ac47-92b44b825415"
+      }
+    },
+    {
+      "key": "112b232f-7d75-47e8-ab98-20083b163b7e",
+      "position": 3,
+      "properties": {
+        "description": "This was a good reminder of what we learned last time. Unreasonable time algorithms just don't make sense to run. Today we're going to be thinking more about what happens when we reach the limits of algorithms, and how sometimes we can make compromises.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "112b232f-7d75-47e8-ab98-20083b163b7e",
+        "lesson_activity.key": "26e73f35-8ea9-4750-ac47-92b44b825415"
+      }
+    },
+    {
+      "key": "0cca99a5-7575-45a7-b5e7-192a04f79e29",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Set Up:** Each student needs to have their journals and a pen or pencil. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the activity on the limits of algorithms.\t\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms.svg) |**Say:** Today we are going to explore the Traveling Salesman Problem. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms1_zZJMEDG.svg) |**Discuss:** How many different paths can you find to visit all of your friends' houses?<br><br> **Do This:** Students should sketch out different paths in their journals. Read through the rules together as a class. <br><br>**Rules:**<br><ul><li>You must start and end at your own house.</li><li>You can only visit each house once.</li></ul><br><br>**Discuss:** Students share their paths with a partner before discussing as a class. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms2.svg) | **Say:** Take a look at some of these paths on the screen. You may have similar ones in your journal. <br><br> **Discuss:** What do you need to know to determine the best path?   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms3.svg) | **Say:** Distance! If we know the distance between each house, we can make a better decision about which path to take. In this example, the first option is shortest, so that's the path we would choose. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms4.svg) | **Discuss:** What if we had a lot more places to visit? How would we determine the best path? <br><br> **Discussion Goal:** The goal here is for students to come to the realization that they would need to explore all possible paths in order to determine which one is the best.   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms5.svg) | **Say:** This is known as the Traveling Salesman Problem. For each new place to visit, the number of options for possible paths increases factorialy.  |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms6.svg) | **Say:** A factorial function is written with the letter \"n\" followed by an explanation point. Here's how n! works: Multiply all whole numbers from the given number down to the number 1.<br><br>**Note:** Talk through the examples and the table. The goal here isn't for students to memorize the math, but to understand that with each new house added, the number of potential paths that have to be checked expands very quickly.  | \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---AlgorithmsDecisions.svg) | **Say:** The Traveling Salesman is an Optimization Problem. It's not a Decision Problem. We know there is a path. Now we must determine which is the shortest or most efficient path. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms7.svg) | **Say:** The Traveling Salesman Problem can be solved with an algorithm, which checks each possible option. <br><br> BUT, it would take massive amounts of computing power to compare every single option, especially as the number of homes to visit (otherwise known as nodes) increases. <br><br> Therefore, it would take an **unreasonable** amount of time for the solution to be calculated for most instances of the problem. \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms8.svg) | **Say:** Welcome to **heuristics**! Heuristics provide a good enough solution to a problem when an actual solution is impractical or impossible. |\n\n<br><br>\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now navigate to Level 1 on Code Studio where they will use the Traveling Salesman Widget to find the \"best\" path to visit all nodes. \n\n* In their journal, students should write down a plan or **heuristic** for choosing a good path. \n\n**Discuss:** In pairs, students should share their heuristics and make adjustments to their own as needed. \n",
+        "name": "Traveling Salesman    \r",
+        "progression_name": "Widget: Traveling Salesman"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cca99a5-7575-45a7-b5e7-192a04f79e29",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "465ad5d0-3a02-4a6b-a0b5-54edb8d75789",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students navigate to Level 2 and use the Widget: Traveling Salesman with Random Nodes. Students test their heuristic on this widget, keeping a log in their journal of the distance for the path their heuristic finds and the best distance the student finds not using the stated heuristic (i.e. clicking around, or \"brute force\"). \n\n* Note: Click reset to try different paths on the same level. Click \"New Level\" to generate at new random assortment of nodes.",
+        "progression_name": "Widget: Traveling Salesman - Random Nodes"
+      },
+      "seeding_key": {
+        "activity_section.key": "465ad5d0-3a02-4a6b-a0b5-54edb8d75789",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "a10a4d75-2889-4f2a-ae40-bfc3f13b3a7f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How did you create your heuristic? Did you change your heuristic after testing it out?*\n\n**Discussion Goal:** Tease out what factors students used to create their heuristics. "
+      },
+      "seeding_key": {
+        "activity_section.key": "a10a4d75-2889-4f2a-ae40-bfc3f13b3a7f",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "894ba9f8-de1d-4542-a727-420ae1c42326",
+      "position": 4,
+      "properties": {
+        "description": "Call on several students to share their heuristics. As a class, discuss which heuristic we think is best, and will give us a \"good enough\" result for most cases.\n\n**Discussion Goal:** There are times when the Next-Closest heuristic will not provide the best option, but on average it's a good option. \n\n* Students can reflect back on the paper route problem from earlier in the class. This may have been the option they first suggested. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "894ba9f8-de1d-4542-a727-420ae1c42326",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "62340708-1d6d-440e-b507-899ad8047991",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the sample heuristic. This may be one that students already came up with. Discuss whether or not this heuristic is \"good enough\"."
+      },
+      "seeding_key": {
+        "activity_section.key": "62340708-1d6d-440e-b507-899ad8047991",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "6720ed4b-af9e-447f-b241-08c8992f76ab",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Traveling Salesman Problem is an optimization problem. We are attempting to find the best path. \r\n\r\nIt's also unreasonable because there is not an algorithm that can solve the problem in a reasonable amount of time.\r\n\r\nWe need to use a heuristic to come up wtih a solution that is \"good enough\" for most instances of the problem.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6720ed4b-af9e-447f-b241-08c8992f76ab",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "ae6bf149-1d2f-4d97-b551-e2cd04afec34",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We've learned how we address unreasonable problems. Before we finish our study of problems let's learn about one more type, problems that no algorithm will ever be able to solve. This video is a little tricky, but it gives you a good sense for the way this problem shows up.",
+        "name": "Undecidable Problems\r",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ae6bf149-1d2f-4d97-b551-e2cd04afec34",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "271eb129-5afe-442a-9757-2d09964fa685",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video:** Show the video on the halting problem, located on the slide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Do I Need to Understand the Halting Problem?:** Students don't actually need to understand the Halting Problem or the proof in this video. The main ideas are covered in the takeaways and are fairly simple. There are a few problems, most notably \"will this code run?\" that we've proven there is no algorithm that will ever be able to determine the correct answer in every case. The proof is interesting but if you are short on time you may opt to skip the video.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "271eb129-5afe-442a-9757-2d09964fa685",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "b37e5e7a-4862-4f80-b23f-57d1e5e32cce",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Review the main takeaways about undecidable problems."
+      },
+      "seeding_key": {
+        "activity_section.key": "b37e5e7a-4862-4f80-b23f-57d1e5e32cce",
+        "lesson_activity.key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4"
+      }
+    },
+    {
+      "key": "b15692f7-45b2-46f9-9285-d37d4f2cc434",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why is a heuristic acceptable when it doesn't always produce the \"best\" result?*\n\n**Answer:** A heuristic is used when it's impossible or impractical to use an algorithm to solve a problem. Therefore, we need something that is good enough on average for most instances. This is where a heuristic shines. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b15692f7-45b2-46f9-9285-d37d4f2cc434",
+        "lesson_activity.key": "255171a6-1638-4105-b586-3fe04b18bba4"
+      }
+    },
+    {
+      "key": "f6284d97-3291-47b9-a6ca-4cbf5abc3b91",
+      "position": 2,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "f6284d97-3291-47b9-a6ca-4cbf5abc3b91",
+        "lesson_activity.key": "255171a6-1638-4105-b586-3fe04b18bba4"
+      }
+    },
+    {
+      "key": "4f8b3c8f-697b-4461-9295-f5a3ac1faafe",
+      "position": 3,
+      "properties": {
+        "description": "Great! Heuristics are handy in every day life. Think about using mapping software to find the best route to a destination!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4f8b3c8f-697b-4461-9295-f5a3ac1faafe",
+        "lesson_activity.key": "255171a6-1638-4105-b586-3fe04b18bba4"
+      }
+    },
+    {
+      "key": "4df6e2ef-6327-4c80-ad28-605aade85468",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In which of the following situations is it most appropriate to use a heuristic solution?\r\n\r\n**Question:** In your own words, explain the difference between undecidable problems and unreasonable time algorithms.",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "4df6e2ef-6327-4c80-ad28-605aade85468",
+        "lesson_activity.key": "255171a6-1638-4105-b586-3fe04b18bba4"
+      }
+    },
+    {
+      "key": "1d88bbf9-572b-4ddb-aa62-60c6648da0f8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Widget: Traveling Salesman"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d88bbf9-572b-4ddb-aa62-60c6648da0f8",
+        "lesson_activity.key": "211e7b5a-5607-494e-941d-d078fbd4b60f"
+      }
+    },
+    {
+      "key": "036a57f4-8272-4af4-ab2f-400bb72360ac",
+      "position": 2,
+      "properties": {
+        "progression_name": "Widget: Traveling Salesman - Random Nodes"
+      },
+      "seeding_key": {
+        "activity_section.key": "036a57f4-8272-4af4-ab2f-400bb72360ac",
+        "lesson_activity.key": "211e7b5a-5607-494e-941d-d078fbd4b60f"
+      }
+    },
+    {
+      "key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
+        "lesson_activity.key": "211e7b5a-5607-494e-941d-d078fbd4b60f"
+      }
+    },
+    {
+      "key": "f1db5574-263e-4f1c-83fe-7871d9da6996",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Brainstorm a task that you can complete faster if you get other people to help. What’s the most number of people you’d want to help you and why?*\n\n**Discussion Goal:** This should be a quick discussion to foreshadow the main ideas of the lesson. Students should brainstorm many potential tasks. When they start mentioning the maximum number of people they'd want to help them direct attention towards why that's the case. You might hear that:\n\n* Adding extra people makes it more complicated\n* Sometimes extra people doesn't really speed things up\n* If you're working with lots of people then if one person is slower the whole group is slowed down\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1db5574-263e-4f1c-83fe-7871d9da6996",
+        "lesson_activity.key": "7e883a55-82bf-4132-a037-dd29927314d1"
+      }
+    },
+    {
+      "key": "a536da48-4cda-4e1c-995b-bdb2a67fc35f",
+      "position": 2,
+      "properties": {
+        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "a536da48-4cda-4e1c-995b-bdb2a67fc35f",
+        "lesson_activity.key": "7e883a55-82bf-4132-a037-dd29927314d1"
+      }
+    },
+    {
+      "key": "18487ddd-427d-4dfc-8e98-8c822111a2b2",
+      "position": 3,
+      "properties": {
+        "description": "As we've explored in this unit, computer scientists are always looking for more efficient ways to run programs. One way to do this is to develop faster algorithms that run on a single computer. Another idea we'll explore today, is figuring out ways to run programs on many computers at the same time. We just talked about some benefits and challenges when many people help with a task. As we'll see, the same is true with running programs on multiple computers. It can lead to some improvements, but also some new challenges.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "18487ddd-427d-4dfc-8e98-8c822111a2b2",
+        "lesson_activity.key": "7e883a55-82bf-4132-a037-dd29927314d1"
+      }
+    },
+    {
+      "key": "c27f3b0f-3688-4cd3-8d95-02a64a779faf",
+      "position": 1,
+      "properties": {
+        "name": "Card Sorting Challenge\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choosing Manipulatives:** This activity can easily be done with many different types of manipulatives, not just cards. For example, students could sort pennies by even / odd year, sort coins into piles of different denominations, sort blocks by color / size, or sort any other readily available item. Pick whatever makes the most sense for your context.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c27f3b0f-3688-4cd3-8d95-02a64a779faf",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "d23829e2-81aa-4f30-96b8-b47e84dc0493",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give one member of each group a deck of cards."
+      },
+      "seeding_key": {
+        "activity_section.key": "d23829e2-81aa-4f30-96b8-b47e84dc0493",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "c1563179-1b78-48ff-bcc4-83a52a2a849b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge 1 - One Person Sort:** At the front of the room display the directions for the first sort as well as the clock. Run the clock, and have students put the cards in order. Have students record their time. Then let the another partner repeat the process.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge 2 - Two Person Sort:** At the front of the room display the directions for the second. Run the clock, and have students put the cards in order. Have students record their time. If students are in groups of four offer to let the other two students try the challenge.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge 3 - Full Group Sort:** At the front of the room display the directions for the challenge. Run the clock, and have students put the cards in order. Have students record their time."
+      },
+      "seeding_key": {
+        "activity_section.key": "c1563179-1b78-48ff-bcc4-83a52a2a849b",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "84ec8c3b-7150-4263-b21f-6b1560936fb8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slides explaining the difference between parallel and sequential computing models. Talk through the different models.",
+        "name": "Debriefing the Challenge\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "84ec8c3b-7150-4263-b21f-6b1560936fb8",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "ffa20030-db47-4e84-8640-eb0a43e84183",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What portions of your algorithms for Challenges 2 and 3 were parallel? What makes things complicated or slows you down during parallel portions of your algorithm?*\n\n**Discussion Goal:** This discussion has two goals. The first is to reinforce the difference between parallel and sequential portions of an algorithm. Any time multiple processes are happening at once (for example multiple people are sorting cards), an algorithm is parallel. The second goal is to bring up some common challenges that come up when running parallel algorithms. The remarks cover some of the most important ones but the main point is that while parallel algorithms are faster, they still present challenges.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ffa20030-db47-4e84-8640-eb0a43e84183",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "d40da009-870c-4cf6-9ee6-c120f024ce6b",
+      "position": 6,
+      "properties": {
+        "description": "**Discuss:** Have groups discuss responses at their tables before sharing with the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "d40da009-870c-4cf6-9ee6-c120f024ce6b",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "3508a324-2564-4090-93a5-1ddf8ba244f0",
+      "position": 7,
+      "properties": {
+        "description": "A lot of the challenges you just encountered show up when you try to run a program on multiple computers as well.\r\n\r\n* Sometimes you need to wait because one computer finished before another\r\n* It can be complicated to split up work and recombine it when moving in and out of parallel portions\r\n* They're faster, but not always as much faster as you think.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3508a324-2564-4090-93a5-1ddf8ba244f0",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "a500cb91-1d95-4a30-9156-6e8bb4b5f5c8",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What was your group’s speedup in Challenge 2? What about in Challenge 3? Are you surprised?*\n\n**Discussion Goal:** Use this discussion to reinforce how speedup is calculated, but also to prime students to realize that adding additional parallel processes doesn't always lead to the same amount of speedup. During the parallel portion things are in fact moving faster, but sequential portions still take a long time (e.g. collecting individual piles once each group member has sorted their cards). Therefore speedup is rarely your original time divided by the number of computers running the process. Eventually it will level off.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a500cb91-1d95-4a30-9156-6e8bb4b5f5c8",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "9f5d397b-0697-4d64-b526-b9f06f48f2a5",
+      "position": 9,
+      "properties": {
+        "description": "Have groups calculate their speedup and share with the room. \n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cover the primary points of speed in the real world.\n\n* Students probably noticed their speedup is lower than the number of people helping sort. Sorting with two people doesn't give a speedup of 2. Sorting with 3 people doesn't give a speedup of 3.\n* Because some portions are always still sequential, the benefits of adding more processors will go down and eventually the speedup reaches a limit."
+      },
+      "seeding_key": {
+        "activity_section.key": "9f5d397b-0697-4d64-b526-b9f06f48f2a5",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "6dd6741b-d1a4-4dc9-8aff-b2335cb5bceb",
+      "position": 10,
+      "properties": {
+        "description": "We've just explored some of the core and theoretical ideas of parallel computing. It can speed things up, but not infinitely, and it adds complications and many more resources. That said, parallel computing can help tackle some big problems.",
+        "name": "Distributed Computing in Real World Settings\r",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6dd6741b-d1a4-4dc9-8aff-b2335cb5bceb",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "f419ec07-5b7a-4130-a041-5f5fe10b444d",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Before showing the video share these two questions.\n\n* Why is the type of computing presented “distributed”?\n* Why is distributed computing used to solve the problem?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video on Folding at home\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students share their responses to the two questions:\n\n* Why is the type of computing presented \"distributed\"?\n* Why is distributed computing used to solve the problem?"
+      },
+      "seeding_key": {
+        "activity_section.key": "f419ec07-5b7a-4130-a041-5f5fe10b444d",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "63883508-ea63-4e49-8d10-76d75aa3e3fd",
+      "position": 12,
+      "properties": {
+        "description": "Distributed computing is very similar to parallel computing. The main idea is that programs can be run on lots and lots of computers. Distributed and parallel computing are helpful for solving really big problems that you couldn't normally solve on a single computer.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "63883508-ea63-4e49-8d10-76d75aa3e3fd",
+        "lesson_activity.key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e"
+      }
+    },
+    {
+      "key": "0078c2be-5ed9-4bb7-8cc4-8a51b58499a0",
+      "position": 1,
+      "properties": {
+        "description": "Let's sum up what we learned: Parallel computing consists of both a parallel portion that is shared and a sequential portion. \r\n\r\nA sequential solution's efficiency is measured as the sum of all of its steps, but a parallel solution takes as along as its sequential tasks plus the longest of its paralell tasks. Often times a parallel solution will be the fastest option, but there is a limit. \r\n\r\nSolutions that use parallel computing can scale more effectively than solutions that use sequential computing. Why is this so? If we continue to add tasks, a sequential solution would continue to get larger and larger. However, with a parallel system, those tasks can be balanced.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0078c2be-5ed9-4bb7-8cc4-8a51b58499a0",
+        "lesson_activity.key": "b751df7f-1666-445d-b1d0-f363baad1754"
+      }
+    },
+    {
+      "key": "861fd17b-4dd9-47ab-9f46-44fc0fc72cfa",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup"
+      },
+      "seeding_key": {
+        "activity_section.key": "861fd17b-4dd9-47ab-9f46-44fc0fc72cfa",
+        "lesson_activity.key": "b751df7f-1666-445d-b1d0-f363baad1754"
+      }
+    },
+    {
+      "key": "f34dadb4-6ba3-4df6-8012-0901760a7b29",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.*\n\n**Discussion Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f34dadb4-6ba3-4df6-8012-0901760a7b29",
+        "lesson_activity.key": "b751df7f-1666-445d-b1d0-f363baad1754"
+      }
+    },
+    {
+      "key": "4c56fca1-03da-4531-8bce-b0fc4e126f18",
+      "position": 4,
+      "properties": {
+        "description": "Have students write their list, then share with a partner, and then finally discuss responses with the entire room."
+      },
+      "seeding_key": {
+        "activity_section.key": "4c56fca1-03da-4531-8bce-b0fc4e126f18",
+        "lesson_activity.key": "b751df7f-1666-445d-b1d0-f363baad1754"
+      }
+    },
+    {
+      "key": "7b8a36b5-6219-43a8-8df4-3440ad79b8cc",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the speedup of this parallel solution?\r\n\r\n**Question:** In your own words, explain why the speedup of a parallel algorithm will eventually reach some limit.",
+        "name": "Assessment: Check For Understanding\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8a36b5-6219-43a8-8df4-3440ad79b8cc",
+        "lesson_activity.key": "b751df7f-1666-445d-b1d0-f363baad1754"
+      }
+    },
+    {
+      "key": "c9bbe50e-af43-431f-9018-236529a32380",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380",
+        "lesson_activity.key": "32e5b327-d8d9-4335-965f-c929e23a8b66"
+      }
+    },
+    {
+      "key": "45fda808-fbed-42fc-a5d5-bcb365642709",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 6 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics6.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "45fda808-fbed-42fc-a5d5-bcb365642709",
+        "lesson_activity.key": "2c9089d7-422a-4043-8347-25aed301d98b"
+      }
+    },
+    {
+      "key": "146c807f-40b6-4c32-9410-005388b05ba8",
+      "position": 1,
+      "properties": {
+        "description": "Review the answers to the assessment with the class. Discuss any questions that come up and take note of topics where students may need extra review."
+      },
+      "seeding_key": {
+        "activity_section.key": "146c807f-40b6-4c32-9410-005388b05ba8",
+        "lesson_activity.key": "be99363e-ee2e-40a2-acf3-f12faec40b15"
+      }
+    },
+    {
+      "key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 6 Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
+        "lesson_activity.key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L01 Algorithms vs Problems_2021"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe"
+      },
+      "level_keys": [
+        "U6 L01 Algorithms vs Problems_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U6L2 Ticket Generator_2021"
+        ],
+        "progression": "Widget: Ticket Generator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U6L2 Ticket Generator_2021"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "6147bae7-d45c-45e2-889e-bc76c32968ed"
+      },
+      "level_keys": [
+        "CSP U6L2 Ticket Generator_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L2 CFU Binary Search Steps_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L2 CFU Binary Search Steps_2021"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99"
+      },
+      "level_keys": [
+        "U6L2 CFU Binary Search Steps_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L2 CFU Efficiency and Algorithms_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L2 CFU Efficiency and Algorithms_2021"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99"
+      },
+      "level_keys": [
+        "U6L2 CFU Efficiency and Algorithms_2021"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable_2021"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3"
+      },
+      "level_keys": [
+        "U6L3 CFU Reasonable vs Unreasonable_2021"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L03 Evaluate Reasonable or Not_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L03 Evaluate Reasonable or Not_2021"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3"
+      },
+      "level_keys": [
+        "U6 L03 Evaluate Reasonable or Not_2021"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman_2021"
+        ],
+        "progression": "Widget: Traveling Salesman"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U6L4 Traveling Salesman_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "0cca99a5-7575-45a7-b5e7-192a04f79e29"
+      },
+      "level_keys": [
+        "CSP U6L4 Traveling Salesman_2021"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2021"
+        ],
+        "progression": "Widget: Traveling Salesman - Random Nodes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "465ad5d0-3a02-4a6b-a0b5-54edb8d75789"
+      },
+      "level_keys": [
+        "CSP U6L4 Random Traveling Salesman_2021"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L4 CFU Reason for Heuristics_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L4 CFU Reason for Heuristics_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24"
+      },
+      "level_keys": [
+        "U6L4 CFU Reason for Heuristics_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L04 Unreasonable vs Undecidable_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L04 Unreasonable vs Undecidable_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24"
+      },
+      "level_keys": [
+        "U6 L04 Unreasonable vs Undecidable_2021"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6L5 CFU Calculate Speedup_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6L5 CFU Calculate Speedup_2021"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380"
+      },
+      "level_keys": [
+        "U6L5 CFU Calculate Speedup_2021"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "U6 L05 Speedup Forever_2021"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U6 L05 Speedup Forever_2021"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380"
+      },
+      "level_keys": [
+        "U6 L05 Speedup Forever_2021"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP Unit 6 AP-Style Assessment _2021"
+        ],
+        "progression": "Unit 6 Exam"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 6 AP-Style Assessment _2021"
+        ],
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc"
+      },
+      "level_keys": [
+        "CSP Unit 6 AP-Style Assessment _2021"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U6 L01 Algorithms vs Problems_2021",
+        "script_level.level_keys": [
+          "U6 L01 Algorithms vs Problems_2021"
+        ],
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U6L2 Ticket Generator_2021",
+        "script_level.level_keys": [
+          "CSP U6L2 Ticket Generator_2021"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "6147bae7-d45c-45e2-889e-bc76c32968ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6L2 CFU Binary Search Steps_2021",
+        "script_level.level_keys": [
+          "U6L2 CFU Binary Search Steps_2021"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6L2 CFU Efficiency and Algorithms_2021",
+        "script_level.level_keys": [
+          "U6L2 CFU Efficiency and Algorithms_2021"
+        ],
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "4d15b77a-45fa-4118-a9c3-4b59d0870c99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6L3 CFU Reasonable vs Unreasonable_2021",
+        "script_level.level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable_2021"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6 L03 Evaluate Reasonable or Not_2021",
+        "script_level.level_keys": [
+          "U6 L03 Evaluate Reasonable or Not_2021"
+        ],
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "54f355fa-0676-434b-afff-553540c71af3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U6L4 Traveling Salesman_2021",
+        "script_level.level_keys": [
+          "CSP U6L4 Traveling Salesman_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "0cca99a5-7575-45a7-b5e7-192a04f79e29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U6L4 Random Traveling Salesman_2021",
+        "script_level.level_keys": [
+          "CSP U6L4 Random Traveling Salesman_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "465ad5d0-3a02-4a6b-a0b5-54edb8d75789"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6L4 CFU Reason for Heuristics_2021",
+        "script_level.level_keys": [
+          "U6L4 CFU Reason for Heuristics_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6 L04 Unreasonable vs Undecidable_2021",
+        "script_level.level_keys": [
+          "U6 L04 Unreasonable vs Undecidable_2021"
+        ],
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6L5 CFU Calculate Speedup_2021",
+        "script_level.level_keys": [
+          "U6L5 CFU Calculate Speedup_2021"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U6 L05 Speedup Forever_2021",
+        "script_level.level_keys": [
+          "U6 L05 Speedup Forever_2021"
+        ],
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "c9bbe50e-af43-431f-9018-236529a32380"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 6 AP-Style Assessment _2021",
+        "script_level.level_keys": [
+          "CSP Unit 6 AP-Style Assessment _2021"
+        ],
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021",
+        "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_master_vocabulary",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Unit 6 - Algorithms",
+      "url": "https://docs.google.com/presentation/d/1gL5WpBPqyrQqATGO8IIP5DsI3T0xLfCZE-jG5mBxS1o/edit?usp=sharing",
+      "key": "csp_unit_6_-_algorithms",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "name": "Folding@home Supercomputing Project",
+      "url": "https://youtu.be/RGGzMQ2oFrA",
+      "key": "folding_home_supercomputing_project",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Halting Problem: The Unsolvable Problem",
+      "url": "https://youtu.be/VyHbd6sx5Po",
+      "key": "the_halting_problem_the_unsolvable_problem",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "name": "Unreasonable Time",
+      "url": "https://docs.google.com/document/d/13VSFGtFwbJT73aYr4VnNJrsbnbyZBTDiSImVkqJGc5w/edit?usp=sharing",
+      "key": "unreasonable-time-activity-guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "unreasonable-time-activity-guide"
+      }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "unreasonable-time-activity-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Assessment Day",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "course_master_vocabulary",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
+        "script.name": "csp6-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "e46f9a38-a79b-4a32-88ad-ad65132850e5",
+      "properties": {
+        "description": "Explain the formal definitions of a problem, an algorithm, sequencing, selection, and iteration."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "e46f9a38-a79b-4a32-88ad-ad65132850e5"
+      }
+    },
+    {
+      "key": "18da1a07-ba79-4b00-94b4-0d13c68dc1b7",
+      "properties": {
+        "description": "Explain that some problems may look different but be similar or look similar but be different."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "18da1a07-ba79-4b00-94b4-0d13c68dc1b7"
+      }
+    },
+    {
+      "key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7",
+      "properties": {
+        "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7"
+      }
+    },
+    {
+      "key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d",
+      "properties": {
+        "description": "Use Linear Search to determine if a number is in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d"
+      }
+    },
+    {
+      "key": "b8f2d496-5779-4895-8d40-ed1eb3e392de",
+      "properties": {
+        "description": "Use Binary Search to determine if a number is in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "b8f2d496-5779-4895-8d40-ed1eb3e392de"
+      }
+    },
+    {
+      "key": "2a30d494-ccf8-4e48-905e-d6c89e9bdb19",
+      "properties": {
+        "description": "Compare the efficiency of Linear Search and Binary Search"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "2a30d494-ccf8-4e48-905e-d6c89e9bdb19"
+      }
+    },
+    {
+      "key": "956905f6-487b-45b3-a1a2-bef4c1df1d26",
+      "properties": {
+        "description": "Explain the difference between problems that run in a reasonable time and those that do not"
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "objective.key": "956905f6-487b-45b3-a1a2-bef4c1df1d26"
+      }
+    },
+    {
+      "key": "5c4e571e-d6bb-4deb-a331-6558750b7561",
+      "properties": {
+        "description": "Explain how both formal mathematical reasoning and informal measurement can be used to determine an algorithms efficiency"
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "objective.key": "5c4e571e-d6bb-4deb-a331-6558750b7561"
+      }
+    },
+    {
+      "key": "536a7303-8822-4131-a076-6a62d1ed2a4d",
+      "properties": {
+        "description": "Determine if an algorithm runs in unreasonable time."
+      },
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "objective.key": "536a7303-8822-4131-a076-6a62d1ed2a4d"
+      }
+    },
+    {
+      "key": "4e4d01ec-8d65-4929-a831-8cf22d081fd7",
+      "properties": {
+        "description": "Develop a heuristic to solve a problem. "
+      },
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "objective.key": "4e4d01ec-8d65-4929-a831-8cf22d081fd7"
+      }
+    },
+    {
+      "key": "67627eba-d070-423a-bd7b-774fad35a986",
+      "properties": {
+        "description": "Distinguish between decision problems and optimization problems. "
+      },
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "objective.key": "67627eba-d070-423a-bd7b-774fad35a986"
+      }
+    },
+    {
+      "key": "5bc61024-f7c7-476c-9020-db5f7e099bbf",
+      "properties": {
+        "description": "Explain the existence of undecidable problems"
+      },
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "objective.key": "5bc61024-f7c7-476c-9020-db5f7e099bbf"
+      }
+    },
+    {
+      "key": "5d5a9cd3-2c10-4f3d-a8c5-c04ed262c634",
+      "properties": {
+        "description": "Explain the difference between sequential, parallel, and distributed computing."
+      },
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "objective.key": "5d5a9cd3-2c10-4f3d-a8c5-c04ed262c634"
+      }
+    },
+    {
+      "key": "330796cd-ace1-42dc-9608-f68f25fa852f",
+      "properties": {
+        "description": "Calculate the speedup of a parallel solution to a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "objective.key": "330796cd-ace1-42dc-9608-f68f25fa852f"
+      }
+    },
+    {
+      "key": "f7f9b5d1-2c17-4b12-a466-ac644a2c3376",
+      "properties": {
+        "description": "Describe the benefits and challenges of parallel and distributed computing."
+      },
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "objective.key": "f7f9b5d1-2c17-4b12-a466-ac644a2c3376"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.J.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.5"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,0 +1,16 @@
+---
+id:
+  data:
+    parameter_names:
+      actor: Pemain
+      color: warna
+      counter: Pencacah
+      height: tinggi
+      honey: madu
+      left: kiri
+      length: panjang
+      min: min
+      points: poin
+      size: ukuran
+      speed: kecepatan
+      width: lebar

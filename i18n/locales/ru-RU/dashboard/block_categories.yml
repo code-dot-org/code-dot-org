@@ -1,0 +1,31 @@
+ru:
+  data:
+    block_categories:
+      Actions: Действия
+      Advanced: Расширенный
+      Behaviors: Режимы работы
+      Brushes: Кисти
+      Color: Цвет
+      Comment: Комментарий
+      Comments: Комментарии
+      Conditionals: Условные команды
+      Dancers: Танцоры
+      Default: По умолчанию
+      Events: События
+      Functions: функции
+      'Functions ': 'Функции '
+      Game/Score: Игра/Счет
+      Games/Score: Игры/Счет
+      Groups: Группы
+      Input: Ввод
+      Locations: Места
+      Logic: Логика
+      Loops: Циклы
+      Math: Математика
+      Numbers: Числа
+      Properties: Свойства
+      Sprites: Спрайты
+      Text: Текст
+      Variables: Переменные
+      'Variables ': 'Переменные '
+      World: Мир

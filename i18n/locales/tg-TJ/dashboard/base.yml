@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 tg:
   activerecord:
     attributes:
@@ -12,8 +24,6 @@ tg:
         edit_header: 'Таҳрир кардани тафсилоти ҳисоб'
   hello: "Салом ҷаҳон"
   submit: Пешниҳод кардан
-  add_teacher_form:
-    submit: 'Илова кардани муаллим'
   stage: "Давра"
   puzzle: "Муаммо"
   trophies: "Ҷомҳо"
@@ -22,6 +32,7 @@ tg:
   more: "БЕШТАР"
   less: "КАМТАР"
   prize: 'ҷоиза'
+  more_info: 'маълумоти бештар'
   auth:
     signed_in: 'Ворид шудед!'
     facebook: 'Фейсбук'
@@ -97,9 +108,12 @@ tg:
       student: 'Донишҷӯ'
   user:
     new_password_hint: "(агар нахоҳед, ки онро тағйир диҳед, холӣ монед)"
+    update_email: "Навсозӣ кардан"
   home:
+    student_reg_link: 'Донишҷӯ'
     online: онлайн
     view_course: Намоиш додани дарс
+    trynow: 'Маълумоти бештар'
   gender:
     male: 'Мард'
     female: 'Зан'

@@ -8,28 +8,34 @@ import sinon from 'sinon';
 describe('Cohort Calculator', () => {
   describe('Initially', () => {
     let cohortCalculator;
+    let xhr;
     const regionalPartnerFilterValue = AllPartnersValue;
+
     before(() => {
+      xhr = sinon.useFakeXMLHttpRequest();
       cohortCalculator = shallow(
         <CohortCalculator
           regionalPartnerFilterValue={regionalPartnerFilterValue}
           role="csp_teachers"
           accepted={0}
-          registered={0}
         />
       );
     });
 
+    after(() => {
+      xhr.restore();
+    });
+
     it('Is loading', () => {
-      expect(cohortCalculator.state('loading')).to.be.true;
+      expect(cohortCalculator.state('loadingEnrollmentCount')).to.be.true;
     });
     it('Does not render a table', () => {
       expect(cohortCalculator.find('table')).to.have.length(0);
     });
   });
 
-  describe('After receiving null capacity from server', () => {
-    const data = {capacity: null};
+  describe('After receiving enrollment count from server', () => {
+    const data = {enrolled: 1};
     const regionalPartnerFilterValue = AllPartnersValue;
     let server;
     let cohortCalculator;
@@ -38,7 +44,7 @@ describe('Cohort Calculator', () => {
       server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
-        `/api/v1/regional_partners/capacity?role=csp_teachers&regional_partner_value=${regionalPartnerFilterValue}`,
+        `/api/v1/regional_partners/enrolled?role=csp_teachers&regional_partner_value=${regionalPartnerFilterValue}`,
         [200, {'Content-Type': 'json'}, JSON.stringify(data)]
       );
 
@@ -47,7 +53,6 @@ describe('Cohort Calculator', () => {
           regionalPartnerFilterValue={regionalPartnerFilterValue}
           role="csp_teachers"
           accepted={0}
-          registered={0}
         />
       );
 
@@ -58,43 +63,10 @@ describe('Cohort Calculator', () => {
     });
 
     it('Is no longer loading', () => {
-      expect(cohortCalculator.state('loading')).to.be.false;
+      expect(cohortCalculator.state('loadingEnrollmentCount')).to.be.false;
     });
-    it('Does not render anything', () => {
-      expect(cohortCalculator.html()).to.be.null;
-    });
-  });
-
-  describe('After receiving non-null capacity from server', () => {
-    const data = {capacity: 25};
-    const regionalPartnerFilterValue = 1;
-    let server;
-    let cohortCalculator;
-    before(() => {
-      server = sinon.fakeServer.create();
-      server.respondWith(
-        'GET',
-        `/api/v1/regional_partners/capacity?role=csp_teachers&regional_partner_value=${regionalPartnerFilterValue}`,
-        [200, {'Content-Type': 'json'}, JSON.stringify(data)]
-      );
-
-      cohortCalculator = shallow(
-        <CohortCalculator
-          regionalPartnerFilterValue={regionalPartnerFilterValue}
-          role="csp_teachers"
-          accepted={0}
-          registered={0}
-        />
-      );
-
-      server.respond();
-    });
-    after(() => {
-      server.restore();
-    });
-
-    it('Is no longer loading', () => {
-      expect(cohortCalculator.state('loading')).to.be.false;
+    it('Get correct enrollment count from server', () => {
+      expect(cohortCalculator.state('enrolled')).to.equal(data.enrolled);
     });
     it('Renders a table', () => {
       cohortCalculator.update();

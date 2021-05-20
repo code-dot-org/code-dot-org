@@ -1,10 +1,9 @@
-hidden false
 login_required true
 
-stage 'Pre Hour of Code Survey'
+lesson 'Pre Hour of Code Survey', display_name: 'Pre Hour of Code Survey', has_lesson_plan: false
 level 'HOC pre-survey 2016 levelgroup', assessment: true
 
-stage 'Hour of Code 2013'
+lesson 'Hour of Code 2013', display_name: 'Hour of Code 2013', has_lesson_plan: false
 skin 'birds'
 video_key_for_next_level 'maze_intro'
 concepts 'sequence'
@@ -89,5 +88,6 @@ concepts 'if_else', 'loop_until'
 level_concept_difficulty '{"sequencing":5,"repeat_until_while":4,"conditionals":5}'
 level 'blockly:Maze:2_19'
 
-stage 'Post Hour of Code Survey'
+lesson 'Post Hour of Code Survey', display_name: 'Post Hour of Code Survey', has_lesson_plan: false
 level 'HOC post-survey 2016 levelgroup', assessment: true
+

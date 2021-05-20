@@ -1,0 +1,49 @@
+{
+  "se-FI": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Brushes": "Peanselat"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Máilbmi",
+          "Dancers": "Dánsejeaddjit",
+          "Properties": "Iešvuođat",
+          "Events": "Dáhpáhusaid",
+          "Numbers": "Logut"
+        },
+        "CourseD_EOC_starwars": {
+          "Events": "Dáhpáhusaid",
+          "Games/Score": "Spealut/čuoggát"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Máilbmi",
+          "Sprites": "Sprite:at",
+          "Events": "Dáhpáhusaid",
+          "Behaviors": "Láhttemat"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Máilbmi",
+          "Sprites": "Sprite:at",
+          "Locations": "Báikkit",
+          "Events": "Dáhpáhusaid",
+          "Behaviors": "Láhttemat",
+          "Comments": "Kommentárat"
+        },
+        "outbreak_freeplay": {
+          "World": "Máilbmi",
+          "Sprites": "Sprite:at",
+          "Behaviors": "Láhttemat",
+          "Events": "Dáhpáhusaid",
+          "Locations": "Báikkit",
+          "Comments": "Kommentárat"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Máilbmi",
+          "Sprites": "Sprite:at",
+          "Events": "Dáhpáhusaid"
+        }
+      }
+    }
+  }
+}

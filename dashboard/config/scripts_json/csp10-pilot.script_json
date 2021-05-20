@@ -1,0 +1,1098 @@
+{
+  "script": {
+    "name": "csp10-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "pilot_experiment": "csp-piloters",
+      "curriculum_umbrella": "CSP",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp10-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Project - Innovation Simulation Part 1",
+      "name": "Project - Innovation Simulation Part 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Project - Innovation Simulation Part 2",
+      "name": "Project - Innovation Simulation Part 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Data Policies and Privacy",
+      "name": "Data Policies and Privacy",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Data Policies and Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "The Value of Privacy",
+      "name": "The Value of Privacy",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Value of Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Project - Innovation Simulation Part 3",
+      "name": "Project - Innovation Simulation Part 3",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Security Risks Part 1",
+      "name": "Security Risks Part 1",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Security Risks Part 2",
+      "name": "Security Risks Part 2",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Project: Innovation Simulation Part 4",
+      "name": "Project: Innovation Simulation Part 4",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Protecting Data Part 1",
+      "name": "Protecting Data Part 1",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Protecting Data Part 2",
+      "name": "Protecting Data Part 2",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Project: Innovation Simulation Part 5",
+      "name": "Project: Innovation Simulation Part 5",
+      "absolute_position": 11,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Project: Innovation Simulation Part 6",
+      "name": "Project: Innovation Simulation Part 6",
+      "absolute_position": 12,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Project: Innovation Simulation Part 7",
+      "name": "Project: Innovation Simulation Part 7",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "key": "Lesson 14: Unit Assessment Day",
+      "name": "Lesson 14: Unit Assessment Day",
+      "absolute_position": 14,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L1 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L1 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L01 CFU innovations"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10 L01 CFU innovations"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L2 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L2 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L02 CFU innovations part 2"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10 L02 CFU innovations part 2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L3 SFLP 20-21"
+        ],
+        "lesson.key": "Data Policies and Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L3 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10L3 CFU Why Collect PII"
+        ],
+        "lesson.key": "Data Policies and Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10L3 CFU Why Collect PII"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L4 SFLP 20-21"
+        ],
+        "lesson.key": "The Value of Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L4 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L5 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L5 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L6 SFLP 20-21"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L6 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Keylogging"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Keylogging"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP 20-21 Keylogging"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Phishing"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Phishing"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP 20-21 Phishing"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Malware"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Rogue Access Points"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP 20-21 Rogue Access Points"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L07 CFU security risks"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10 L07 CFU security risks"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L7 SFLP 20-21"
+        ],
+        "lesson.key": "Security Risks Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L7 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10 L08 CFU security risks"
+        ],
+        "lesson.key": "Security Risks Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10 L08 CFU security risks"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L8 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L8 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L9 SFLP 20-21"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L9 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Encryption Widgets"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher_2020"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "Crack a Caesar Cipher_2020"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Encryption Widgets"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Crack Random Substitution_2020"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "Crack Random Substitution_2020"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10L9 CFU public key"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10L9 CFU public key"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L10 SFLP 20-21"
+        ],
+        "lesson.key": "Protecting Data Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L10 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U10L10 CFU MFA"
+        ],
+        "lesson.key": "Protecting Data Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "U10L10 CFU MFA"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L11 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L11 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L12 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L12 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L13 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L13 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U10L14 SFLP 20-21"
+        ],
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP U10L14 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 10 Exam"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 10 Assessment"
+        ],
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      },
+      "level_keys": [
+        "CSP 20-21 Unit 10 Assessment"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L1 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L1 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L01 CFU innovations",
+        "script_level.level_keys": [
+          "U10 L01 CFU innovations"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L2 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L2 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L02 CFU innovations part 2",
+        "script_level.level_keys": [
+          "U10 L02 CFU innovations part 2"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L3 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L3 SFLP 20-21"
+        ],
+        "lesson.key": "Data Policies and Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10L3 CFU Why Collect PII",
+        "script_level.level_keys": [
+          "U10L3 CFU Why Collect PII"
+        ],
+        "lesson.key": "Data Policies and Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L4 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L4 SFLP 20-21"
+        ],
+        "lesson.key": "The Value of Privacy",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L5 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L5 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L6 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L6 SFLP 20-21"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Keylogging",
+        "script_level.level_keys": [
+          "CSP 20-21 Keylogging"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Phishing",
+        "script_level.level_keys": [
+          "CSP 20-21 Phishing"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Rogue Access Points",
+        "script_level.level_keys": [
+          "CSP 20-21 Rogue Access Points"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L07 CFU security risks",
+        "script_level.level_keys": [
+          "U10 L07 CFU security risks"
+        ],
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L7 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L7 SFLP 20-21"
+        ],
+        "lesson.key": "Security Risks Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10 L08 CFU security risks",
+        "script_level.level_keys": [
+          "U10 L08 CFU security risks"
+        ],
+        "lesson.key": "Security Risks Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L8 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L8 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L9 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L9 SFLP 20-21"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack a Caesar Cipher_2020",
+        "script_level.level_keys": [
+          "Crack a Caesar Cipher_2020"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Crack Random Substitution_2020",
+        "script_level.level_keys": [
+          "Crack Random Substitution_2020"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10L9 CFU public key",
+        "script_level.level_keys": [
+          "U10L9 CFU public key"
+        ],
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L10 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L10 SFLP 20-21"
+        ],
+        "lesson.key": "Protecting Data Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U10L10 CFU MFA",
+        "script_level.level_keys": [
+          "U10L10 CFU MFA"
+        ],
+        "lesson.key": "Protecting Data Part 2",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L11 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L11 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L12 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L12 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L13 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L13 SFLP 20-21"
+        ],
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U10L14 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U10L14 SFLP 20-21"
+        ],
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Unit 10 Assessment",
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 10 Assessment"
+        ],
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "lesson_group.key": "",
+        "script.name": "csp10-pilot"
+      }
+    }
+  ]
+}

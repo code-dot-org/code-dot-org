@@ -1,1 +1,157 @@
+---
 te:
+  data:
+    script:
+      name:
+        events:
+          title: ఈవెంట్లు
+          description: ఈవెంట్లు
+          description_short: ఈవెంట్లు
+          student_description: ఈవెంట్లు
+        gradeKinder:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        grade1:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        k5concepts:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        dance:
+          title: డాన్స్ పార్టీ
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        dance--draft:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        dance-draft:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        dance-low:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        coursed-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        express-2019:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        dance-2019:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        k5-onlinepd-2019:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursed-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        express-2020:
+          lessons:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        code-break:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        k5-onlinepd-2020:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursec-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        coursed-2021:
+          lessons:
+            Dance Party:
+              key: డాన్స్ పార్టీ
+              name: డాన్స్ పార్టీ
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        express-2021:
+          lessons:
+            Dance Party:
+              key: డాన్స్ పార్టీ
+              name: డాన్స్ పార్టీ
+            lesson-1:
+              name: డాన్స్ పార్టీ
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ఈవెంట్లు
+        k5-onlinepd-2021:
+          lessons:
+            Events:
+              key: ఈవెంట్లు
+              name: ఈవెంట్లు

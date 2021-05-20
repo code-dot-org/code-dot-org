@@ -2,35 +2,42 @@
 sq:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          MOVE1:
+            MOVES.Rest: Asnjë
+          MOVE2:
+            MOVES.Rest: Asnjë
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekondat
       Dancelab_changeMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Asnjë
       Dancelab_changeMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Asnjë
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
+      Dancelab_changePropEachBy:
         options:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
       Dancelab_doMoveEachLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Asnjë
       Dancelab_doMoveLR:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            MOVES.Rest: Asnjë
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -44,6 +51,10 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Asnjë
       Dancelab_ifTime:
         options:
           UNIT:
@@ -54,58 +65,66 @@ sq:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": zakonshëm
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': diamant
             '"random"': zakonshëm
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': mace
+            '"DOG"': qen
+            '"DUCK"': rosë
+            '"ROBOT"': Roboti
+            '"UNICORN"': njëbrirësh
+          LOCATION:
+            "{x: 100, y: 200}": majtas
+            "{x: 300, y: 200}": djathtas
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': mace
+            '"DOG"': qen
+            '"DUCK"': rosë
+            '"ROBOT"': Roboti
+            '"UNICORN"': njëbrirësh
           LOCATION:
             "{x: 100, y: 200}": majtas
             "{x: 300, y: 200}": djathtas
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": zakonshëm
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
+            '"diamond"': diamant
             '"random"': zakonshëm
       Dancelab_randomColor:
         text: ngjyrë e rastësishme
-      Dancelab_setDanceSpeed:
+      Dancelab_setBackgroundEffect:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
+          EFFECT:
+            '"none"': Asnjë
+      Dancelab_setBackgroundEffectWithPalette:
         options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+          EFFECT:
+            '"none"': Asnjë
+      Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Asnjë
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"none"': Asnjë
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,7 +140,17 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': madhësia
@@ -131,6 +160,16 @@ sq:
           PROPERTY:
             '"scale"': madhësia
             '"height"': gjatësia
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+            '"height"': gjatësia
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -140,10 +179,15 @@ sq:
             '"right"': djathtas
             '"space"': hapësirë
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -153,6 +197,20 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekondat
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': lart
+            '"down"': poshtë
+            '"left"': majtas
+            '"right"': djathtas
+            '"space"': hapësirë
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -174,6 +232,8 @@ sq:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
         text: ngjyrë e rastësishme
+      gamelab_repeatForever:
+        text: përsërit përgjithmonë
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -184,10 +244,27 @@ sq:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': nën
               ujë
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': dimër
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mesatar
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': madhësia
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mesatar
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -249,8 +326,14 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Asnjë
       Mikelab_randomColor:
         text: ngjyrë e rastësishme
+      Mikelab_repeatUntilComplete:
+        text: përsërit përgjithmonë
       Mikelab_setBG:
         options:
           BG:
@@ -277,7 +360,9 @@ sq:
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
             '"w"': P
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -286,7 +371,9 @@ sq:
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
             '"w"': P
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -294,59 +381,20 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': zakonshëm
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:
         text: kthehu majtas
       RyanLab_turnRight:
         text: kthehu djathtas
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': madhësia
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kur
-            '"while"': ndërsa
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': kur
-            '"while"': ndërsa
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kur
-            '"while"': ndërsa
-          KEY:
-            '"up"': lart
-            '"down"': poshtë
-            '"left"': majtas
-            '"right"': djathtas
-            '"space"': hapësirë
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': qytet
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': e saktë
-            '"false"': e gabuar
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': madhësia
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': përgjithmonë
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': trego
-            '"hide"': fsheh
+          FORMAT:
+            '"random"': zakonshëm
       binary_move:
         options:
           DIR:
@@ -403,7 +451,6 @@ sq:
             '"stoneBricks"': tulla guri
             '"mossyStoneBricks"': tulla guri me myshk
             '"crackedStoneBricks"': tulla guri të thyera
-            '"decorativeStoneBricks"': tulla guri zbukuruese
             '"blueCoralBlock"': blloku i koraleve blu
             '"pinkCoralBlock"': blloku i koraleve të kuqe
             '"magentaCoralBlock"': blloku i koraleve të purpurta

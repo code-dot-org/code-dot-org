@@ -1,10 +1,8 @@
 ---
 title: Hour of Code pressemeddelelse til politikere
-layout: wide
-nav: promote_nav
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Forslag til pressemeddelelse for valgte medlemmer
 
@@ -45,4 +43,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-{{ signup_button }}
+{{ tilmeld_knap }}

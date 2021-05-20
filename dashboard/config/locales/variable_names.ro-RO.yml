@@ -1,0 +1,30 @@
+---
+ro:
+  data:
+    variable_names:
+      Blue: Albastru
+      Green: Verde
+      Red: Roșu
+      actor: actor
+      cats: pisicile
+      color: culoare
+      counter: numărător
+      dogs: câinii
+      height: înălțime
+      honey: miere
+      i: i
+      left: stânga
+      length: lungime
+      name: nume
+      nectar: nectar
+      points: puncte
+      random: aleator
+      repeat: repetă
+      right: dreapta
+      score: scor
+      size: dimensiune
+      speed: viteză
+      variable: variabila
+      width: lăţime
+      wizard: vrăjitor
+      x: x

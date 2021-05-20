@@ -1,5 +1,5 @@
 - content_for(:head) do
-  %script{src: minifiable_asset_path('js/levelbuilder.js')}
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
   :scss
     .main .new-level {
       font-size: 20px;
@@ -87,7 +87,7 @@
 
         -# Level name column, linked to view action if permitted
         %td
-          - if can? :view, level
+          - if can? :show, level
             = link_to level.name, level, title: t('crud.show')
           - else
             = level.name
@@ -101,7 +101,7 @@
 
 = paginate @levels
 %br/
-#validation-error.validation-error{style: 'background-color: yellow'}
+#validation-error.validation-error{style: 'background-color: yellow; white-space: pre-wrap;'}
 :javascript
   window.levelbuilder.ajaxSubmit('.clone_level');
   $('.clone_level').on('ajax:beforeSend', function (e, xhr) {

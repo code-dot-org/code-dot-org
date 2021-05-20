@@ -3,13 +3,26 @@ ku:
   data:
     block_categories:
       Actions: کردەوەکان
-      Loops: گرێکان
+      Advanced: پێشکەوتوو
+      Behaviors: ڕەفتارەکان
+      Brushes: فڵچەکان
       Color: ڕەنگ
-      Math: بیرکاری
+      Comment: سەرنج
+      Comments: سەرنجەکان
+      Conditionals: مەرجیەکان
+      Dancers: سەماکاران
+      Default: بنەڕەتی
+      Functions: فرمانەکان
+      'Functions ': 'فرمانەکان '
+      Game/Score: یاری/خاڵ
+      Games/Score: یاریەکان/خاڵ
+      Groups: کۆمەڵەکان
+      Input: داخڵکردن
+      Locations: شوێنەکان
       Logic: لۆژيك
-      Variables: گۆڕاوەکان
+      Loops: گرێکان
+      Math: بیرکاری
+      Numbers: ژمارەکان
+      Properties: خاسیەتەکان
       Text: دەق
-      Start: دەستپێبکە
-      test: تاقیکردنەوە
-      Name: ناو
-      Function: فرمان
+      Variables: گۆڕاوەکان

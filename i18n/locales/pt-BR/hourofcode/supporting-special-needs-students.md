@@ -1,33 +1,33 @@
 ---
-title: Supporting special needs students for the Hour of Code
+title: Apoiando estudantes com necessidades especiais para a Hora do Código
 ---
 
-# Supporting students with disabilities for the Hour of Code
+# Apoiando estudantes com necessidades especiais para a Hora do Código
 
-Anyone can try an Hour of Code during Computer Science Education Week. Often, students with autism, ADHD or other learning differences find they love programming. Encourage all the students in your classroom to give it a try! In setting up the experience for your classroom, reward participation rather than completion. You can give everyone a [certificate]({{ supporting-special-needs-students/certificate }}) no matter how many puzzles or challenges they complete within the hour. [Pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) is another great way to teach collaboration and have students work together to solve problems.
+Anyone can try an Hour of Code during Computer Science Education Week. Frequentemente, estudantes com autismo, TDAH ou outras necessidades especiais descobrem que adoram programar. Encoraje todos os alunos de sua sala a aceitar o desafio! Ao preparar a experiência para a sua sala, recompense participação ao invés de competição. Você pode conceder um [certificado]({{ supporting-special-needs-students/certificate }}) a todos os participantes independentemente do número de desafios resolvidos no período de uma hora. [Programação em Duplas](https://www.youtube.com/watch?v=vgkahOzFH2Q) é outra ótima forma de ensinar colaboração e trabalho coletivo para solução de problemas.
 
-## Fit a variety of needs with unplugged and online tutorials
+## Atenda as várias necessidades com tutoriais online e offline
 
-In finding the right activity for everyone in your class, consider both online and “unplugged” options that do not require computers. Unplugged activities allow students to get hands on with computer science concepts. The [Big Event](https://studio.code.org/s/course1/stage/15/puzzle/1) puts teachers in control over the actions of students, allowing for a great opportunity to tailor the content to the abilities of each student.
+Ao buscar a atividade adequada para cada aluno de sua turma, considere tanto opções online quanto "desconectadas" que não precisam de computadores. Atividades desconectadas permitem que alunos exercitem conceitos da ciência da computação. O [Grande Evento](https://studio.code.org/s/course1/stage/15/puzzle/1) coloca os professores no controle das ações dos estudantes, permitindo uma ótima oportunidade para adequar o conteúdo às habilidades de cada aluno.
 
-For other students, the accommodations available on the computer may allow them to participate better than an unplugged choice. For example, students who are deaf or hard of hearing can participate fully in the online tutorials.
+Para outros alunos, as acomodações disponíveis no computador podem permitir uma participação melhor do que uma atividade desconectada. Por exemplo, alunos com deficiências auditivas podem participar plenamente nos tutoriais online.
 
-The most inclusive choice may also depend on whether you have an accessible computer lab or laptops.
+A escolha mais inclusiva pode ainda depender da disponibilidade de notebooks ou de um laboratório de informática acessível.
 
-For example, do your students have reduced mobility or dexterity? If all your students have access to technology at your school, ask your students or tech teacher what accommodations your students typically use with the computers available.
+Por exemplo, os seus alunos têm mobilidade ou destreza reduzida? Se todos os alunos têm acesso à tecnologia na sua escola, pergunte aos seus alunos ou ao técnico de informática quais acomodações os alunos normalmente usam diante dos computadores disponíveis.
 
-## Sensory Impairments
+## Deficiências sensoriais
 
-### Students who are blind or low vision
+### Alunos com deficiência visual
 
-For students who use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) is a great place to start. Quorum started as an interpreted language designed to be accessible to screen reader users. Eventually, it became a general purpose programming language designed for any user. You can use these Hour of Code tutorials with your entire classroom. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Para alunos que usam leitor de tela, o [tutorial Quforum para iniciantes](https://quorumlanguage.com/hourofcode/astro1.html) ou o [Tutorial Quorum para alunos já iniciados](https://quorumlanguage.com/hourofcode/part1.html) é uma ótima opção para se iniciar. Quorum se inicia como uma linguagem interpretada projetada para ser acessível para usuários que usam leitor de telas. Por acaso, Quorum tornou-se uma linguagem de programação de propósito geral projetada para qualquer usuário. Você pode usar este tutorial da Hora do Código com sua sala de aula inteira. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
 
-If your student uses other accommodations in technology classes, you may use those to help with Hour of Code as well. These can include larger monitors, software screen magnification, high contrast settings in their operating system, voice control and more.
+Se seu aluno usa outras acomodações em aulas de tecnologia, você pode usá-las para ajudar com a Hora do Código também. Podendo incluir monitores maiores, ampliação de tela do software, configurações de alto contraste em seu sistema operacional, controle de voz entre outros recursos.
 
-### Students who are deaf or hard of hearing
+### Alunos com deficiência auditiva
 
-The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
+Os [ tutoriais Code.org](https://studio.code.org/) são todos projetados para serem usados com ou sem som. Todos os vídeos têm legendas. Alguns alunos também podem se beneficiar ainda de fones de ouvido ajustados com um volume mais alto.
 
 ## Saiba mais
 
-To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).
+Para aprender mais sobre ensino de ciências da computação e alunos com necessidades especiais, n´so recomendamos estes [livros online]({{ supporting-special-needs-students/book }}).

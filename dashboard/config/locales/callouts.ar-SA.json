@@ -1,0 +1,1339 @@
+{
+  "ar-SA": {
+    "data": {
+      "callouts": {
+        "2-3 Artist Debugging 1": {
+          "2-3_Artist_Debugging_1_a": "ليس لدى الفنان زر \"خطوة\"، ولكن يمكنك سحب شريط التمرير لليسار لمشاهدة تشغيل البرنامج بعناية أكبر."
+        },
+        "4-5 Artist Patterns Free Play": {
+          "4-5_Artist_Patterns_Free_Play_1": "كافة القطع البرمجية منظمة في فئات. أنقر على هذه الكلمات لترى أين ذهب كل شيء!"
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "أدخل عدد المرات التي يجب أن يتحرك الزومبي ليقوم بدائرة كاملة"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "استخدم المربع البرمجي \"كرِّر\" ولفّ حوله المربعات البرمجية في مساحة العمل"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "سحب متغير العداد داخل مربع البرمجة هذا"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "استخدم المربع البرمجي \"كرِّر\" ولفّ حوله المربعات البرمجية في مساحة العمل"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "استخدم هذا المربع البرمجي لضبط \"الطول\" على القيمة الصحيحة."
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "استخدم هذا المربع البرمجي لضبط \"الطول\" على القيمة الصحيحة."
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "قسِّم 360 على عدد الأضلاع للحصول على مساحة كل زاوية بالدرجات."
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "استخدم هذا الزر لتعديل الدالة وتغيير اتجاه النحلة الذي ستسلكه للحصول على الرحيق."
+        },
+        "Course 4 Maze 4": {
+          "repeat": "ضع مربعات برمجة داخل الحلقة لتكرار الأوامر"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "انقر هنا لتحرير وظيفتك."
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "استخدم الأسهم لتحريك الفنان"
+        },
+        "CourseD_Dance_2020_01": {
+          "dance_callout_01": "أضف هذه القطعة البرمجية إلى برنامجك!"
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "أضف هذا المربع البرمجي إلى البرنامج الخاص بك.",
+          "arrow_buttons": "اضغط أزرار الأسهم للتحكم في الراقص الخاص بك."
+        },
+        "CourseD_Dance_2020_04": {
+          "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "إضافة حدث جديد إلى البرنامج."
+        },
+        "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_2020_07": {
+          "setprop_hint": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_2020_09": {
+          "new_block_3": "قطعة برمجية جديدة!",
+          "new_block_4": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_Party_01": {
+          "dance_callout_01": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "CourseD_Dance_Party_02": {
+          "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "CourseD_Dance_Party_04": {
+          "dance_callout_04": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "أضف راقصك الجديد هنا"
+        },
+        "CourseD_Dance_Party_11": {
+          "dance_callout_11_a": "قطعة برمجية جديدة!",
+          "dance_callout_11_b": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_Party_11_5": {
+          "dance_party_11_5_groups": "ابحث هنا عن القطع البرمجية \"كل البط\""
+        },
+        "Dance_2019_01": {
+          "dance_callout_01": "أضف هذه القطعة البرمجية إلى برنامجك!"
+        },
+        "Dance_2019_02": {
+          "dance_callout_11_a": "أضف هذا المربع البرمجي إلى البرنامج الخاص بك.",
+          "arrow_buttons": "اضغط أزرار الأسهم للتحكم في الراقص الخاص بك."
+        },
+        "Dance_2019_04": {
+          "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "Dance_2019_05": {
+          "dance_callout_05": "إضافة حدث جديد إلى البرنامج."
+        },
+        "Dance_2019_06": {
+          "dance_party_11_5_groups": "قطعة برمجية جديدة!"
+        },
+        "Dance_2019_07": {
+          "setprop_hint": "قطعة برمجية جديدة!"
+        },
+        "Dance_2019_09": {
+          "new_block_3": "قطعة برمجية جديدة!",
+          "new_block_4": "قطعة برمجية جديدة!"
+        },
+        "Dance_Party_01": {
+          "dance_callout_01": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "Dance_Party_02": {
+          "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "Dance_Party_04": {
+          "dance_callout_04": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "أضف راقصك الجديد هنا"
+        },
+        "Dance_Party_11": {
+          "dance_callout_11_a": "قطعة برمجية جديدة!",
+          "dance_callout_11_b": "قطعة برمجية جديدة!"
+        },
+        "Dance_Party_11_5": {
+          "dance_party_11_5_groups": "قم بإلقاء نظرة لمعرفة القطع البرمجية \"كل البط\""
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول كيفية عمل أوامرك البرمجية."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول كيفية عمل أوامرك البرمجية."
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
+        },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "كافة القطع البرمجية منظمة في فئات. أنقر على هذه الكلمات لترى أين ذهب كل شيء!"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "كافة القطع البرمجية منظمة في فئات. أنقر على هذه الكلمات لترى أين ذهب كل شيء!"
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "تشغيل صوت عند حدوث هذا الحدث."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "أي من مربعات البرمجة ستجعل بايماكس يتنقل إلى أعلى عند الضغط على السهم لأعلى؟",
+          "Infinity_move_directions_callout_arrow": "استخدم هذه الأسهم للتوجيه"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "إضافة مربع برمجة تنقّل هنا"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "وضع مربعات برمجة التنقّل هنا"
+        },
+        "InspirationalArtwork": {
+          "InspirationalArtwork_1": "جرب استخدام القطعة البرمجية \"تعليق\" الجديد أسفل هذه التسيمة لكي تترك تعليق بنفسك داخل البرنامج الخاص بك!"
+        },
+        "InspirationalArtwork_2018": {
+          "InspirationalArtwork_1": "حاول استخدام القطعة البرمجية \"تعليق\" أسفل هذا الملصق لتترك لنفسك ملاحظان داخل برنامجك!"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "عند الانتهاء من كتابة البرنامج، اضغط زر \"تشغيل\" لتتمكّن من تجريب برنامجك!"
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "اضغط على زر \"تشغيل\" لتبدأ بالتحرّك."
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "هذه هي حلقة \"التكرار\"! انقر فوقها في مساحة العمل، وأضف الكود البرمجي الذي تريد تشغيله مرارًا وتكرارًا."
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "هذه هي حلقة \"التكرار\"! انقر فوقها في مساحة العمل، وأضف الكود البرمجي الذي تريد تشغيله مرارًا وتكرارًا."
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "هذه هي حلقة \"التكرار\"! انقر فوقها في مساحة العمل، وأضف الكود البرمجي الذي تريد تشغيله مرارًا وتكرارًا."
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "لا يمكنك إزالة هذه القطع البرمجية، لكن يمكنك تعديلها!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "لا يمكنك إزالة هذه القطع البرمجية، لكن يمكنك تعديلها!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "لا يمكنك إزالة هذه القطع البرمجية، لكن يمكنك تعديلها!"
+        },
+        "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "انقر هنا لتحرير وظيفتك."
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "انقر هنا لتحرير وظيفتك."
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "انقر هنا لفتح القائمة المنبثقة \"الدوال\"، ثم انقر فوق الزر \"إنشاء دالة\"."
+        },
+        "NEW Course 4 Artist Params 9": {
+          "edit_add_parameter": "انقر فوق تعديل لإضافة معلمة في الدالة الخاصة بك",
+          "add_and_drag_parameter": "اكتب اسم المعلمة الخاصة بك هنا، انقر فوق إضافة ومن ثم اسحبه إلى تعريف الدالة الخاصة بك"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "اسحب متغير الطول هنا لاستبدال علامات الاستفهام"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "اكتسب مربع الأدوات شكلاً جديدا! وأصبحت المربعات البرمجية \"الإجراءات\" هنا الآن."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب الكتل البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من ندفات الثلج!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب الكتل البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Play Lab Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول كيفية عمل أوامرك البرمجية."
+        },
+        "OPD-K5-variables-1": {
+          "grade5_artist_variables_triangles1_1": "قم بملاحظة أن القطع البرمجية لديها الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب قِطع \"رياضيات\" وتحريكها!"
+        },
+        "OPD-K5-variables-5": {
+          "courseF_artist_variables3_a": "استخدم هذا لتعيين قيمة المتغير \"الطول\""
+        },
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "وضعنا بعض الكتل هنا لنساعدك في البدء"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "وضعنا بعض الكتل هنا لنساعدك في البدء"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "وضعنا بعض الكتل هنا لنساعدك في البدء"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
+        },
+        "Overworld Move to Sheep": {
+          "craft_run_button_callout": "انقر فوق \"تشغيل\" لتجربة البرنامج الخاص بك",
+          "craft_drag_block_callout": "اسحب القطع البرمجية \"التحرك إلى الأمام\" وألصقها بالقطعة البرمجية الأخرى"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_run_button_callout": "انقر فوق \"تشغيل\" لتجربة البرنامج الخاص بك",
+          "craft_drag_block_callout": "اسحب القطع البرمجية \"التحرك إلى الأمام\" وألصقها بالقطعة البرمجية الأخرى"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_run_button_callout": "انقر فوق \"تشغيل\" لتجربة البرنامج الخاص بك",
+          "craft_drag_block_callout": "اسحب القطع البرمجية \"التحرك إلى الأمام\" وألصقها بالقطعة البرمجية الأخرى"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
+        },
+        "Robot Doodle": {
+          "4-5_Artist_Patterns_Free_Play_2": "جرب استخدام القطعة البرمجية \"تعليق\" الجديد أسفل هذه التسيمة لكي تترك تعليق بنفسك داخل البرنامج الخاص بك!"
+        },
+        "Robot Doodle_2018": {
+          "4-5_Artist_Patterns_Free_Play_2": "جرب استخدام القطعة البرمجية \"تعليق\" الجديد أسفل هذه التسيمة لكي تترك تعليق بنفسك داخل البرنامج الخاص بك!"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
+        },
+        "Virtual Pet 2_2019": {
+          "": "انقر هنا!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "انقر هنا!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 3a": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم القطعة البرمجية \"هذه الصورة المتحركة\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل المربع البرمجي الخاص بهذا."
+        },
+        "behaviors 3a_2020": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم القطعة البرمجية \"هذه الصورة المتحركة\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل المربع البرمجي الخاص بهذا."
+        },
+        "behaviors 4": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "behaviors 5": {
+          "behaviors_edit": "أضِف قطعةً برمجيةً لهذا السلوك."
+        },
+        "behaviors 5_2020": {
+          "behaviors_edit": "أضِف قطعةً برمجيةً لهذا السلوك."
+        },
+        "behaviors free play": {
+          "behaviors_edit": "أضِف قطعةً برمجيةً لهذا السلوك."
+        },
+        "behaviors free play_2020": {
+          "behaviors_edit": "أضِف قطعةً برمجيةً لهذا السلوك."
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "course3_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "استخدم هذا الأمر لجعل النحل يتحرك للخلف."
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "ما الأوامر البرمجية التي يجب عليك وضعها في هذه الوظيفة؟",
+          "courseF_bee_functions_challenge1_2": "من الممكن استخدام الوظيفة \"الحصول على الرحيق أو العسل\" إذا قمت بالتحرير لصنع العسل عدة مرات."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "course4_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "ستقوم الوظيفة بعمل رائع حيال الذرة لكن ماذا عن أنواع الخضار الأخرى؟"
+        },
+        "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_artist_loops4_2018": {
+          "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_artist_loops4_2019": {
+          "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_artist_loops4_2020": {
+          "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
+        },
+        "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseA_collector_loops1_2019": {
+          "courseA_collector_loops1_1": "استخدِم هذه القطعة البرمجية لتجميع الكنز."
+        },
+        "courseA_collector_loops1_2020": {
+          "courseA_collector_loops1_1": "استخدِم هذه القطعة البرمجية لتجميع الكنز."
+        },
+        "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_collector_loops3_2018": {
+          "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_collector_loops3_2019": {
+          "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_collector_preLoops2": {
+          "courseA_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseA_collector_preLoops3": {
+          "courseA_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "استخدم زر الخطوة لتذهب خطوة بعد خطوة من خلال البرنامج. هذا يساعدك عل اكتشاف الخطأ!\n"
+        },
+        "courseA_maze_seq4": {
+          "made_of_stone": "هذه القطع مصنوعة من أحجار. يمكنك تحريكها لكنك لا تستطيع إلغائها!\n"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
+        },
+        "courseB_artist_loops5": {
+          "courseB_artist_loops5_1": "يعني هذا الرقم أنه لا يوجد المزيد من القطع البرمجية المتبقية في صندوق الأدوات."
+        },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "استخدِم هذه القطعة البرمجية لتجميع الكنز."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "استخدِم هذه القطعة البرمجية لتجميع الكنز."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "استخدم زر الخطوة لتذهب خطوة بعد خطوة من خلال البرنامج. هذا يساعدك عل اكتشاف الخطأ!\n"
+        },
+        "courseB_maze_seq3": {
+          "courseB_maze_seq3_1": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "هذه القطعة البرمجية مهمة جداً لبرنامجك. احرص على استخدامها!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "هذه القطعة البرمجية مهمة جداً لبرنامجك. احرص على استخدامها!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "أضف هذه في منتصف برنامجك."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "أضف هذه في منتصف برنامجك."
+        },
+        "courseC_artist_loopsPrePre1a": {
+          "courseC_artist_loopsPrePre1a_1": "ابدأ باستخدام هذه القطعة البرمجية لتجعل الفنان في منتصف الشاشة."
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_1": "ابدأ باستخدام هذه القطعة البرمجية لتجعل الفنان في منتصف الشاشة."
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_1": "ابدأ باستخدام هذه القطعة البرمجية لتجعل الفنان في منتصف الشاشة."
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_1": "ابدأ باستخدام هذه القطعة البرمجية لتجعل الفنان في منتصف الشاشة."
+        },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
+        },
+        "courseC_collector_prog1_2018": {
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
+        },
+        "courseC_collector_prog1_2019": {
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
+        },
+        "courseC_collector_prog1_2020": {
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "القطع البرمجية الرمادية لا يمكن إلغاؤها."
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_1": "هذه القطع الرمادية ثابتة ولا يمكنك حذفها!"
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "هذه البلوكات مغلقة ولايمكن حذفها!"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "هذه البلوكات مغلقة ولايمكن حذفها!"
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseC_maze_programming5": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
+          "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
+          "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
+          "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
+          "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
+        },
+        "courseD_artist_nestedLoops1a_2018": {
+          "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
+        },
+        "courseD_artist_nestedLoops1a_2019": {
+          "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
+        },
+        "courseD_artist_nestedLoops1a_2020": {
+          "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "يمكنك تغيير هذا الرقم.",
+          "courseD_artist_ramp11_2": "انقر هنا لطباعة رقم مرات تكرار الكود."
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا.",
+          "4_5_Bee_Conditionals_2_2": "هل تحتاج إلى مساعدة؟ انقر هنا لتلميحات فيديو!"
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا.",
+          "4_5_Bee_Conditionals_2_2": "هل تحتاج إلى مساعدة؟ انقر هنا لتلميحات فيديو!"
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "استخدم هذا الأمر لجعل النحل يتحرك للخلف."
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_callout1": "استخدم هذا الأمر لجعل النحل يتحرك للخلف."
+        },
+        "courseD_collector_ramp8": {
+          "courseD_collector_ramp8_1": "استخدم هذه القطعة البرمجية لجمع جوهرة واحدة."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام حلقة \"بينما الطريق إلى الأمام\" لحل هذا اللغز."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام حلقة \"بينما الطريق إلى الأمام\" لحل هذا اللغز."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام حلقة \"بينما الطريق إلى الأمام\" لحل هذا اللغز."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "stone_block_2": "القطع الرمادية ثابتة ولا يمكن حذفها."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "stone_block_2": "القطع الرمادية ثابتة ولا يمكن حذفها."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "stone_block_2": "القطع البرمجية الرمادية ثابتة لا يمكن حذفها."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "stone_block_2": "القطع البرمجية الرمادية ثابتة لا يمكن حذفها."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_maze_ramp5": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp6": {
+          "courseD_maze_ramp6_1": "مهما كان الكود الذي أدخلته هنا، فسيتم تكراره عدة مرات كما تخبره به، ثم استمر في تشغيل بقية البرنامج."
+        },
+        "courseD_playLab_condFP": {
+          "courseD_playLab_condFP_1": "قمنا بتنظيم القطع البرمجية في فئات لمنحك مزيدًا من التعليمات البرمجية للتلاعب بها! اضغط هنا لمشاهدة إين ذهبت."
+        },
+        "courseD_playLab_condFP_2018": {
+          "courseD_playLab_condFP_1": "قمنا بتنظيم القطع البرمجية في فئات لمنحك مزيدًا من التعليمات البرمجية للتلاعب بها! اضغط هنا لمشاهدة إين ذهبت."
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
+        "courseD_scrat_ramp5": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_scrat_ramp6": {
+          "courseD_maze_ramp6_1": "مهما كان الكود الذي أدخلته هنا، فسيتم تكراره عدة مرات كما تخبره به، ثم استمر في تشغيل بقية البرنامج."
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_maze_ramp6_1": "مهما كان الكود الذي أدخلته هنا، فسيتم تكراره عدة مرات كما تخبره به، ثم استمر في تشغيل بقية البرنامج."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها."
+        },
+        "courseE_aboutme_2": {
+          "": "انقر هنا!"
+        },
+        "courseE_aboutme_2_2020": {
+          "": "انقر هنا!"
+        },
+        "courseE_artist_functions1": {
+          "courseD_artist_functions1_1": "لنبدأ في استخدام هذه القطعة البرمجية للمساعدة في إنشاء المربع الأول."
+        },
+        "courseE_artist_functions1_copy": {
+          "courseD_artist_functions1_1": "لنبدأ في استخدام هذه القطعة البرمجية للمساعدة في إنشاء المربع الأول."
+        },
+        "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
+        "courseE_artist_functions2_2018": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
+        "courseE_artist_functions2_2019": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
+        "courseE_artist_functions2_2020": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
+        "courseE_artist_functions2_copy": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
+        "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
+        },
+        "courseE_artist_functions8a_2018": {
+          "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
+        },
+        "courseE_artist_functions8a_2019": {
+          "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
+        },
+        "courseE_artist_functions8a_2020": {
+          "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
+        },
+        "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "يمكنك تغيير هذا الرقم.",
+          "courseE_artist_ramp8_2": "انقر هنا لطباعة رقم مرات تكرار الكود."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "يمكنك تغيير هذا الرقم.",
+          "courseE_artist_ramp8_2": "انقر هنا لطباعة رقم مرات تكرار الكود."
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
+        },
+        "courseE_farmer_functions13_2018": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions13_2019": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
+        },
+        "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions1a_2018": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions1a_2019": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions1a_2020": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions2b_2018": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions2b_2019": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions2b_2020": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseE_playLab_scaffold3": {
+          "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
+        },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
+        },
+        "courseF_artist_fwp1": {
+          "courseF_artist_fwp1_1": "انقر على الزر \"تحرير\" لتغيير الأوامر البرمجية داخل الوظيفة."
+        },
+        "courseF_artist_fwp4": {
+          "courseF_artist_fwp4_1": "لإكمال الشكل المضلع الخاص بك، تأكد من أنك تقوم بالدوران بمقدار 360 ÷ الجوانب."
+        },
+        "courseF_artist_fwp5": {
+          "courseF_artist_fwp5_1": "ستجد وظيفة الشكل المضلع هنا."
+        },
+        "courseF_artist_variables3": {
+          "courseF_artist_variables3_a": "استخدم هذا لتعيين قيمة المتغير \"الطول\""
+        },
+        "courseF_artist_variables3_2018": {
+          "courseF_artist_variables3_a": "استخدم هذا لتعيين قيمة المتغير \"الطول\""
+        },
+        "courseF_artist_variables3_2019": {
+          "courseF_artist_variables3_a": "استخدم هذا لتعيين قيمة المتغير \"الطول\""
+        },
+        "courseF_artist_variables3_2020": {
+          "courseF_artist_variables3_a": "استخدم هذا لتعيين قيمة المتغير \"الطول\""
+        },
+        "courseF_artist_variables6": {
+          "courseF_artist_variables6_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6_2018": {
+          "courseF_artist_variables6_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6_2019": {
+          "courseF_artist_variables6_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6_2020": {
+          "courseF_artist_variables6_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6a": {
+          "courseF_artist_variables6a_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6a_2018": {
+          "courseF_artist_variables6a_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6a_2019": {
+          "courseF_artist_variables6a_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_artist_variables6a_2020": {
+          "courseF_artist_variables6a_1": "قد تكون المتغيرات مفيدة عندما يجب عليك تغيير عدد كبير من النسخ الخاصة بهذا العدد."
+        },
+        "courseF_bee_conditionals2": {
+          "courseF_bee_conditionals2_2": "صندوق الأدوات الآن في وضع الفئات. كل القطع البرمجية التي تحتاجها توجد أسفل هذه المُسمّيات!"
+        },
+        "courseF_bee_conditionals5": {
+          "courseF_bee_conditionals5_1": "استخدم هذه القطعة  البرمجية عندما يتغير طول المسار (كما في جوانب المستطيل!)"
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
+        },
+        "courseF_bee_functions2": {
+          "courseF_bee_functions2_1": "تستدعي هذه القطعة البرمجية الوظيفة. انقر على زر \"تحرير\" لمشاهدة ماذا يوجد بالداخل!"
+        },
+        "courseF_bee_functions6": {
+          "courseF_bee_functions6_1": "لا تنسَ البحث هنا لمعرفة المزيد من القطع البرمجية التي قد تساعدك وتجعل الأمر أكثر سهولة!"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "ما الأوامر البرمجية التي يجب عليك وضعها في هذه الوظيفة؟",
+          "courseF_bee_functions_challenge1_2": "من الممكن استخدام الوظيفة \"الحصول على الرحيق أو العسل\" إذا قمت بالتحرير لصنع العسل عدة مرات."
+        },
+        "courseF_bee_fwp1": {
+          "courseF_bee_fwp1_1": "يمكنك البحث عن عبارات \"إذا\" هنا."
+        },
+        "courseF_bee_fwp2": {
+          "courseF_bee_fwp2_a": "القطعة البرمجية التي تقوم باستدعاء وظيفتك موجودة هنا."
+        },
+        "courseF_bee_fwp3": {
+          "courseF_bee_fwp3_1": "هذه هي نفس الوظيفة التي يمكن استخدامها عند التحقق لمعرفة كل مساحات فارغة بالإضافة إلى السحاب."
+        },
+        "courseF_bee_fwp4": {
+          "courseF_bee_fwp4_1": "اضغط على زر \"تحرير\" لإضافة المُعامِل بهذا الوظيفة."
+        },
+        "courseF_bee_fwp_challenge2": {
+          "courseF_bee_fwp_challenge2_callout1": "ستقوم الوظيفة بعمل رائع حيال الذرة لكن ماذا عن أنواع الخضار الأخرى؟"
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "بإمكانك إيجاد المتغيرات الخاصة بك هنا!"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "بإمكانك إيجاد المتغيرات الخاصة بك هنا!"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "بإمكانك إيجاد المتغيرات الخاصة بك هنا!"
+        },
+        "courseF_playlab_variables1a": {
+          "courseF_playlab_variables1a_1": "تم تنظيم صندوق الأدوات هذا في فئات لجعله أكثر سهولة من حيث البحث عن القطع البرمجية التي تحتاجها."
+        },
+        "courseF_playlab_variables5c": {
+          "courseF_playlab_variables5c_1": "ستجد \"المتغيّر\" الخاص بك هنا."
+        },
+        "courseF_playlab_variables6c": {
+          "courseF_playlab_variables5c_1": "ستجد \"المتغيّر\" الخاص بك هنا."
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_1": "ابحث عن القطعة البرمجية \"اسأل\" هنا!"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع القطع البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "بعد وصل جميع القطع البرمجية معًا، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع القطع البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "استخدم القطعة \"ارسم دائرة\" وغيّر الحجم."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) استخدم هذا المربع البرمجي وضع حوله المربعات البرمجية الرمادية في مساحة العمل",
+          "repeat_blocks_2": "(2) حرِّك حلقة \"التكرار\" إلى هنا، ثم ضع القطع البرمجية الرمادية بداخلها"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "إستخدم القائمة لتغيير العلامات \"؟؟؟\" بعدداستخدم القائمة المنسدلة لتغيير العلامات \"؟؟؟\" بعدد"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "استخدم حلقة \"التكرار\" لعمل هذا الشكل."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "استخدم حلقة \"التكرار\" لعمل هذا الشكل."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "استخدم هذه القائمة المنسدلة لإنشاء مجموعة مختلفة من ندفات الثلج!"
+        },
+        "frozen line": {
+          "run": "انقر على \"تشغيل\" لتجربة البرنامج الخاص بك!",
+          "move_elsa_forward": "اسحب مربع البرمجة \"تقدم إلى الأمام\" وركّبها تحت مربع البرمجة \"عند التشغيل\" لجعل إلسا تتقدم إلى الأمام"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "إستخدم القطعة البرمجية \"اتجه\" لجعل إلسا تدور. العدد الموجود في القائمة يحدد الزاوية التي ستستدرها"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "استخدم القطعة البرمجية \"ارسم فرعًا لندفة الثلج\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "أَضف المزيد من القطع البرمجية هنا لرسم مربع"
+        },
+        "frozen square loop": {
+          "replace_questions": "إستخدم القائمة لتغيير العلامات \"؟؟؟\" بعدداستخدم القائمة المنسدلة لتغيير العلامات \"؟؟؟\" بعدد"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "إستخدم القائمة لتغيير العلامات \"؟؟؟\" بعدداستخدم القائمة المنسدلة لتغيير العلامات \"؟؟؟\" بعدد"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "إستخدم القائمة لتغيير العلامات \"؟؟؟\" بعدداستخدم القائمة المنسدلة لتغيير العلامات \"؟؟؟\" بعدد"
+        },
+        "grade5_artist_variables_triangles1": {
+          "grade5_artist_variables_triangles1_1": "قم بملاحظة أن القطع البرمجية لديها الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب قِطع \"رياضيات\" وتحريكها!"
+        },
+        "grade5_artist_variables_triangles1_2018": {
+          "grade5_artist_variables_triangles1_1": "قم بملاحظة أن القطع البرمجية لديها الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب قِطع \"رياضيات\" وتحريكها!"
+        },
+        "grade5_artist_variables_triangles1_2019": {
+          "grade5_artist_variables_triangles1_1": "قم بملاحظة أن القطع البرمجية لديها الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب قِطع \"رياضيات\" وتحريكها!"
+        },
+        "grade5_artist_variables_triangles1_2020": {
+          "grade5_artist_variables_triangles1_1": "قم بملاحظة أن القطع البرمجية لديها الآن وسيلة جديدة لإدخال الأرقام. من الممكن سحب قِطع \"رياضيات\" وتحريكها!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "مهما كان الكود الذي أدخلته هنا، فسيتم تكراره عدة مرات كما تخبره به، ثم استمر في تشغيل بقية البرنامج."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "يمكنك تغيير هذا الرقم.",
+          "courseE_artist_ramp8_2": "انقر هنا لطباعة رقم مرات تكرار الكود."
+        },
+        "outbreak2": {
+          "minitoolbox": "انقر هنا لتوسيع الكتلة.",
+          "pointerlocation": "اسحب كتلة الموضوع هنا."
+        },
+        "outbreak7": {
+          "costumes_callout": "انقر لصنع زي جديد"
+        }
+      }
+    }
+  }
+}

@@ -38,19 +38,19 @@ module Pd::Application
   class Facilitator1920Application < FacilitatorApplicationBase
     include Pd::Facilitator1920ApplicationConstants
 
-    validates_uniqueness_of :user_id
-
     has_one :pd_fit_weekend1920_registration,
       class_name: 'Pd::FitWeekend1920Registration',
       foreign_key: 'pd_application_id'
 
-    serialized_attrs %w(
-      status_log
-    )
+    validates_uniqueness_of :user_id
 
     before_save :log_status, if: -> {status_changed?}
 
     after_create :clear_extraneous_answers
+
+    serialized_attrs %w(
+      status_log
+    )
 
     #override
     def year
@@ -123,7 +123,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      Facilitator1920ApplicationMailer.send(email.email_type, self).deliver_now
+      FacilitatorApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     def log_status

@@ -1,7 +1,5 @@
 ---
 title: Paano-gawin ng Hour of Code para sa mga Distrito
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Kunin ang bawat paaralan para makilahok, bawat mag-aaral ay matututo!
 
-### 1. Recruit local schools
+### 1. Mag-recuit ng mga lokal na paaralan 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

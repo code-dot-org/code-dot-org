@@ -1,0 +1,21 @@
+name 'Aaron Dummy md level'
+title 'Aaron Dummy md level'
+description 'description here'
+
+markdown <<MARKDOWN
+<xml><block type="gamelab_allSpritesWithAnimation" block-text="the sprite picker block"><title name="ANIMATION">"tumbleweed"</title></block></xml>
+
+
+Help Jorge the Dog get moving by connecting the <xml><block type="studio_move" block-text="move dog west">
+    <title name="SPRITE">1</title>
+    <title name="DIR">8</title>
+  </block></xml> block to the <xml><block type="studio_whenArrow" block-text="when left arrow">
+    <title name="VALUE">left</title>
+  </block></xml> event block that is already in the workspace.
+  
+  
+Set the background: <xml>
+  <block type="studio_setBackground">
+    <title name="VALUE">random</title>
+  </block></xml>
+MARKDOWN

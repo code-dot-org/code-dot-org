@@ -3,17 +3,28 @@ km:
   data:
     block_categories:
       Actions: សកម្មភាព
-      Loops: រង្វិល​ជុំ
-      Functions: អនុ​គមន៍
+      Advanced: ជម្រើស​កម្រិត​ខ្ពស់
+      Behaviors: ឥរិយាបទ
+      Brushes: ច្រាស់
       Color: ពណ៌
-      Math: គណិត​វិទ្យា
-      Logic: តក្ក
-      Variables: អ​ថេរ
+      Comment: មតិយោបល់
+      Comments: មតិយោបល់
       Conditionals: លក្ខខណ្ឌ
+      Dancers: អ្នករាំ
+      Default: គម្រូ​ដើម
       Events: ព្រឹត្តិការណ៍
+      Functions: អនុ​គមន៍
+      'Functions ': មុខងារ
+      Game/Score: ល្បែង/ពិន្ទុ
+      Games/Score: ល្បែង/ពិន្ទុ
+      Groups: ក្រុម
+      Input: ធាតុបញ្ចូល
+      Locations: ទីតាំង
+      Logic: តក្ក
+      Loops: រង្វិល​ជុំ
+      Math: គណិត​វិទ្យា
+      Numbers: ចំនួន
+      Properties: ធាតុ
       Text: អត្ថ​​បទ
-      Location: ទីតាំង
-      Start: ចាប់​ផ្ដើម
-      test: សាក​ល្បង
-      Name: ឈ្មោះ
-      Function: អនុគមន៍
+      Variables: អ​ថេរ
+      World: ពិភពលោក

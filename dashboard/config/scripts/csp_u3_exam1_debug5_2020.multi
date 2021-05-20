@@ -3,14 +3,41 @@ height 'auto'
 
 question ‘The following program is run. Then the user clicks the “bottomButton” TWO TIMES. What will be displayed in the console?’
 
-wrong ‘<pre>aaa<br>bbb<br>ccc<br>ccc<br>ddd</pre>’
-right ‘<pre>bbb<br>ddd<br>ccc<br>ccc</pre>’
-wrong ‘<pre>bbb<br>ddd<br>aaa<br>aaa</pre>’
-wrong ‘<pre>bbb<br>ccc<br>ccc<br>ddd</pre>’
+wrong ‘`aaa`  
+`bbb`  
+`ccc`  
+`ccc`  
+`ddd`’
+right ‘`bbb`  
+`ddd`  
+`ccc`  
+`ccc`’
+wrong ‘`bbb`  
+`ddd`  
+`aaa`  
+`aaa`’
+wrong ‘`bbb`  
+`ccc`  
+`ccc`  
+`ddd`’
 
 
 
 teacher_markdown <<MARKDOWN
+
+**Explanation:** Walking through the code run based on the description in the question:
+* Lines 4 and 8 will run as soon as the program is run, in that order, displaying `bbb` then `ddd` to the console.
+* The user clicks the “bottomButton” the first time which causes line 6 to run, displaying `ccc` to the console.
+* The user clicks the “bottomButton” the second time which causes line 6 to run again, displaying `ccc` to the console again.
+
+[Lesson 6 - Intro to Programming](https://curriculum.code.org/csp-20/unit3/6/) showed students examples of programs like this one.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.C.5: In event-driven programming, program statements are executed when triggered rather than through the sequential flow of control.
+
+
+:::
 
 MARKDOWN
 

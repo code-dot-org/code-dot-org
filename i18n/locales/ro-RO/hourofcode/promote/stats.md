@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ Sperăm că va trezi interesul elevilor si ca acestia vor continua învăţarea.
 
 #### De ce este important acest lucru?
 
-Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de deschideri în Sua erau în ocupaţii — inclusiv de arta si design — acea valoare a aptitudinii de a programa. But 65 percent of schools in the U.S. don't teach computer science. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
+Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de deschideri în Sua erau în ocupaţii — inclusiv de arta si design — acea valoare a aptitudinii de a programa. But 53 percent of schools in the U.S. don't teach computer science. Este timpul să prindem din urmă secolul 21. Ştim că indiferent ce fac elevii noştrii atunci când cresc, indiferent dacă merg în domeniul medicinei, afaceri, politică sau arte, trebuie sa stie cum să construiască tehnologia, le va da încrederea şi un avantaj competitiv pentru a reuşi. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -40,11 +38,11 @@ Tehnologia transformă fiecare industrie pe planeta. În 2015, 7 milioane de des
 
 #### Despre Code.org
 
-Code.org® este o organizație non-profit dedicată extinderii educației cu privire la tehnologia computerelor și programare, prin promovarea acesteia în școli și prin creșterea participării femeilor dar și a minoritatilor. Its vision is that every student in every school has the opportunity to learn computer programming. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. După lansarea din 2013, Code.org a organizat campania Hour of Code – care a introdus peste 100 de milioane de studenţi in tainele informaticii pana in prezent – şi în parteneriat cu 70 districte reusesc la nivel naţional sa extinde programele de tehnologia computerelor si programare. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![imagine](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![imagine](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagine](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

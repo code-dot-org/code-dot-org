@@ -3,9 +3,6 @@ ne-NP:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Multiple Choice
-        questions:
-        - text: Choose an algorithm for the image provided.
         answers:
         - text: Start with a square<br/>Put a triangle above the square<br/>Put a
             triangle below the square
@@ -14,223 +11,229 @@ ne-NP:
             a triangle right of the parallelogram
         - text: Start with a square<br/>Put a triangle below the square<br/>Put a
             parallelogram right of the triangle
-      2-3 Algorithms Multi 2:
-        title: Multiple Choice
-        content1: Start with a triangle<br/>Put a square below the triangle<br/>Put
-          another triangle below the square
         questions:
-        - text: Which image does <em>not</em> follow this algorithm?
+        - text: Choose an algorithm for the image provided.
+        title: Multiple Choice
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
+        content1: Start with a triangle<br/>Put a square below the triangle<br/>Put
+          another triangle below the square
+        questions:
+        - text: Which image does <em>not</em> follow this algorithm?
+        title: Multiple Choice
       2-3 Big Event Match 1:
-        title: Matching
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Match the button combination to the dance moves.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Matching
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Matching
         content2: Use the key to match each code to its letter
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Matching
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Conditionals Multi 1:
-        title: Multiple Choice
         questions:
         - text: According to the rules of the game, which set of cards is scored correctly?
+        title: Multiple Choice
+      2-3 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Multiple Choice
         questions:
         - text: How would you simplify this sequence with loops?
+        title: Multiple Choice
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Matching
         content1: Match the grid to the program.
         questions:
         - {}
         - {}
         - {}
+        title: Matching
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 Graph Paper Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which program makes this image?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Multiple Choice
       2-3 Maze Match 2:
-        title: Maze Match
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Match the puzzles to the blocks
-        pre_title: Instructions
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Maze Match
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
         title: Maze Multiple Choice
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Multiple Choice
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
-      2-3 Relay Programming Multi 2:
+        questions:
+        - {}
         title: Multiple Choice
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
         questions:
         - text: Which image-program combo does not contain mistakes?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Multiple Choice
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        title: Artist Functions Multiple Choice One
-        questions:
-        - text: Pick the correct blocks to draw this image using the given functions
         answers:
         - {}
         - {}
         - {}
+        questions:
+        - text: Pick the correct blocks to draw this image using the given functions
+        title: Artist Functions Multiple Choice One
       2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Match the loop to the shape
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 1:
-        title: Artist Loops Multiple Choice
         questions:
         - text: Which shape is made by this loop?
+        title: Artist Loops Multiple Choice
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 2:
-        title: Artist Loops Multiple Choice
         questions:
         - text: Which shape is made by this program?
+        title: Artist Loops Multiple Choice
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: Artist Matching
         content1: Match the shape with the blocks that complete it.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Artist Matching
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Which comparison below is true?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Choose the best blocks.
+      2-3 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: Bee Loops Multiple Choice One
         questions:
         - text: Which blocks collect all of the nectar?
+        title: Bee Loops Multiple Choice One
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: Maze Match One
         content1: Match the puzzles to the blocks
         questions:
         - {}
         - {}
         - {}
+        title: Maze Match One
+      2-3 maze multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 maze multi 1:
-        title: Maze Multiple Choice One
+        - {}
         questions:
         - text: Which set of blocks is the correct answer?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Maze Multiple Choice One
       4-5 Algorithms Match 1:
-        title: Matching
+        answers:
+        - text: "<h4>Set Player 1 score to 0</h4>"
+        - text: "<h4>Player 1 rolls die</h4>"
+        - text: "<h4>Add Player 1 roll to total score</h4>"
+        - text: "<h4>Compare player scores to see who wins</h4>"
         content1: Match the steps in the Dice Race game to the order that they should
           appear in the algorithm.
         questions:
@@ -238,22 +241,22 @@ ne-NP:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Set Player 1 score to 0</h4>"
-        - text: "<h4>Player 1 rolls die</h4>"
-        - text: "<h4>Add Player 1 roll to total score</h4>"
-        - text: "<h4>Compare player scores to see who wins</h4>"
+        title: Matching
       4-5 Algorithms Multi 1:
-        title: Multiple Choice
-        questions:
-        - text: Which one of these items is hardest to describe an algorithm for?
         answers:
         - text: Brushing your teeth
         - text: Baking cookies
         - text: Shopping from a grocery list
         - text: Banana
+        questions:
+        - text: Which one of these items is hardest to describe an algorithm for?
+        title: Multiple Choice
       4-5 Computational Thinking Match 1:
-        title: Matching
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Each of these vehicles has been decomposed into smaller pieces.
           Match each vehicle with its decomposed list.
         questions:
@@ -261,77 +264,77 @@ ne-NP:
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>"
         - text: "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>"
         - text: "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Matching
       4-5 Computational Thinking Multi 1:
-        title: Multiple Choice
-        questions:
-        - text: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is
-            a small city.
         answers:
         - text: Seattle _____ a _____ _____.
         - text: _____ is a _____ city.
         - text: _____ is _____ a _____.
         - text: Eugene is a _____ city.
-      4-5 Crowdsourcing Multi 1:
-        title: Multiple Choice
         questions:
-        - text: Which of these pictures best represents crowdsourcing?
+        - text: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is
+            a small city.
+        title: Multiple Choice
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - {}
-      4-5 Crowdsourcing Multi 2:
-        title: Multiple Choice
         questions:
-        - text: Which one of these activities would be best for practicing crowdsourcing?
+        - text: Which of these pictures best represents crowdsourcing?
+        title: Multiple Choice
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Cleaning your room
         - text: Eating your dessert
         - text: Brushing your hair
         - text: Washing your face
-      4-5 Digital Footprint Multi 1:
-        title: Multiple Choice
         questions:
-        - text: Which piece of information listed below is okay to share on the internet?
+        - text: Which one of these activities would be best for practicing crowdsourcing?
+        title: Multiple Choice
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Your birthday
         - text: Your favorite food
         - text: Your address
         - text: Your parent's credit card number
-      4-5 Internet Multi 1:
+        questions:
+        - text: Which piece of information listed below is okay to share on the internet?
         title: Multiple Choice
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: When you try to log on to code.org, which IP address is the DNS most
             likely to take you to?
+        title: Multiple Choice
+      4-5 Internet Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Internet Multi 2:
-        title: Multiple Choice
         questions:
         - text: If the DNS has sent you to the page at the IP address 100.42.50.110,
             which website are you on?
+        title: Multiple Choice
+      4-5 Songwriting Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Songwriting Multi 1:
-        title: Multiple Choice
         questions:
         - {}
+        title: Multiple Choice
+      4-5 Suncatchers Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Suncatchers Match 1:
-        title: Matching
         content1: Match each program to the word it makes, using the provided group
           of skills.
         questions:
@@ -339,106 +342,99 @@ ne-NP:
         - {}
         - {}
         - {}
+        title: Matching
+      4-5 Suncatchers Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      4-5 Suncatchers Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which of the programs below <em>does not</em> make the exact same
             sequence as Program 1?
+        title: Multiple Choice
+      4-5 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: Artist Loops Multiple Choice
+        - {}
         questions:
         - text: Which blocks will create the design?
+        title: Artist Loops Multiple Choice
+      4-5 artist multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 1:
-        title: Artist Multiple Choice
         questions:
         - text: Which blocks draw a rectangle with a perimeter of 100?
+        title: Artist Multiple Choice
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 2:
-        title: Artist Multiple Choice
         questions:
         - text: Which drawing is symmetric?
+        title: Artist Multiple Choice
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee conditionals multi 1:
-        title: Bee Conditionals Multiple Choice
         questions:
         - text: Choose the best blocks.
+        title: Bee Conditionals Multiple Choice
+      4-5 bee debug multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee debug multi 1:
-        title: Bee Debug Multiple Choice
         questions:
         - text: Which version of the function will work?
+        title: Bee Debug Multiple Choice
+      4-5 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee loops multi 1:
-        title: Bee Loops Multiple Choice
         questions:
         - text: Which blocks will solve the puzzle?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Bee Loops Multiple Choice
       4-5 maze conditionals multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Which blocks solve the puzzle?
         title: Maze Conditionals Multiple Choice
-        questions:
-        - text: Which blocks solve the puzzle?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Maze Match
-        content1: Match the puzzles to the blocks
-        pre_title: Instructions
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Match the puzzles to the blocks
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Maze Match
       4-5 maze multi 1:
-        title: Maze Multiple Choice
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Which blocks solve the puzzle?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      Begin planning your project:
-        title: title
+        title: Maze Multiple Choice
       CSD Header Size MC:
         answers:
         - {}
@@ -457,146 +453,124 @@ ne-NP:
         - {}
         - {}
         - {}
-      CSD U2 Design Project:
-        title: title
-      CSD U2 Design Project_2018:
-        title: title
-      CSD U2 Design Project_2018_2019:
-        title: title
-      CSD U2 L2 Overview:
-        title: title
-      CSD U2 L3 Overview:
-        title: title
-      CSD U2 L4 Overview:
-        title: title
-      CSD U2 L5 Overview:
-        title: title
-      CSD U2 L6 Overview:
-        title: title
-      CSD U2 expand project:
-        title: title
-      CSD U2 expand project_2018:
-        title: title
-      CSD U2 expand project_2018_2019:
-        title: title
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: title
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: title
       CSD U3 Boolean MC_2018:
-        title: title
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: title
       CSD U3 Boolean MC_2018_2019:
-        title: title
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: title
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -616,1051 +590,1254 @@ ne-NP:
         - {}
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U3 combining rep:
-        title: title
-      CSD U3 combining rep_2018:
-        title: title
-      CSD U3 combining rep_2018_2019:
-        title: title
+        questions:
+        - {}
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: title
-      CSD U5 Encryption 1_2018:
-        title: title
-      CSD U5 Encryption 1_2018_2019:
-        title: title
-      CSD U5 L13 SFLP Interpreting Data:
-        title: title
-      CSD U5 data visualization:
-        title: title
-      CSD U5 data visualization_2018:
-        title: title
-      CSD U5 data visualization_2018_2019:
-        title: title
-      CSD U5 student record:
-        title: title
-      CSD U5 student record_2018:
-        title: title
-      CSD U5 student record_2018_2019:
-        title: title
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      Internet Simulator Setup 2:
-        title: title
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       K-1 Artist 1 Multi 1:
-        title: Multiple Choice
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Which blocks solve this puzzle?
+        title: Multiple Choice
+      K-1 Artist 1 Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 1 Multi 2:
-        title: Multiple Choice
         questions:
         - text: Which blocks draw the square?
+        title: Multiple Choice
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Matching
         content2: Match the shapes based on type.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Multiple Choice
-        questions:
-        - text: How many nectars is this?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Multiple Choice
-        questions:
-        - text: How many nectars is this?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Matching
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: How many nectars is this?
+        title: Multiple Choice
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: How many nectars is this?
+        title: Multiple Choice
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Match the blocks
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Matching
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Matching
         content2: Match the button combination to the dance moves.
         questions:
         - {}
         - {}
         - {}
+        title: Matching
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Digital Footprint Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which animal has the digital footprint that leaves him or her the
             <strong>most unsafe</strong>?
+        title: Multiple Choice
+      K-1 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Getting Loopy Multi 1:
-        title: Multiple Choice
         questions:
         - text: How would you simplify this sequence with loops?
+        title: Multiple Choice
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Multiple Choice
+        - {}
         questions:
         - text: Which arrow gets the Flurb to the treasure?
+        title: Multiple Choice
+      K-1 Keep it Private Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Keep it Private Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which information should you <strong>not</strong> share online?
+        title: Multiple Choice
+      K-1 Maze Debugging Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Debugging Multi 1:
-        title: Multiple Choice
+        - {}
         questions:
         - text: Which choice should be the final block?
+        title: Multiple Choice
+      K-1 Maze Loops Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which repeat block is the same?
+        title: Multiple Choice
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Loops Multi 2:
-        title: Multiple Choice
         questions:
         - text: Pick the correct repeat block.
+        title: Multiple Choice
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Matching
+        - {}
         content2: Match the puzzles and blocks
-        pre_title: Instructions
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Matching
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Maze Multiple Choice 2:
-        title: Maze
         questions:
         - text: Which answer solves this level?
+        title: Maze
+      K-1 Move It Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Move It Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which algorithm gets the Flurb to the flowers?
+        title: Multiple Choice
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which step should go at the beginning of this algorithm?
+        title: Multiple Choice
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Plant a Seed Multi 2:
-        title: Multiple Choice
         questions:
         - text: Which step should fill in the blank for this algorithm?
+        title: Multiple Choice
+      K-1 Word Search Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Word Search Multi 1:
-        title: Multiple Choice
         questions:
         - text: Which blocks spell "MOVE"?
+        title: Multiple Choice
+      K-1 Word Search Multi 3:
         answers:
         - {}
         - {}
         - {}
-      K-1 Word Search Multi 3:
-        title: Multiple Choice
         questions:
         - text: Which word is spelled?
-        answers:
-        - {}
-        - {}
-        - {}
-      Multi-Screen Apps:
-        title: title
-      New Challenge Introduction:
-        title: title
-      OPD-K5 Stage3aGo:
-        title: title
-      Prepare for your presentation:
-        title: title
+        title: Multiple Choice
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - feedback: Incorrect
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: Incorrect
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - feedback: Incorrect
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      behaviors 4 predict_2020:
         answers:
         - {}
         - {}
         - {}
+        - feedback: Incorrect
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - text: "घ \n"
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
+        - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
+        - text: 'क '
+        - text: 'ख '
+        - text: 'ग '
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}

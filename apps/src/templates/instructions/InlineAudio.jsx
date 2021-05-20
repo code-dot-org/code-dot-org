@@ -38,6 +38,276 @@ const VOICES = {
 
 const TTS_URL = 'https://tts.code.org';
 
+// pulled from the example here https://developers.google.com/web/updates/2018/11/web-audio-autoplay
+const AUDIO_ENABLING_DOM_EVENTS = [
+  'click',
+  'contextmenu',
+  'auxclick',
+  'dblclick',
+  'mousedown',
+  'mouseup',
+  'pointerup',
+  'touchend',
+  'keydown',
+  'keyup'
+];
+
+class InlineAudio extends React.Component {
+  static propTypes = {
+    assetUrl: PropTypes.func.isRequired,
+    locale: PropTypes.string,
+    textToSpeechEnabled: PropTypes.bool,
+    src: PropTypes.string,
+    message: PropTypes.string,
+    style: PropTypes.object,
+    ttsAutoplayEnabled: PropTypes.bool,
+
+    // when we need to wait for DOM event to trigger audio autoplay
+    // this is the element ID that we'll be listening to
+    autoplayTriggerElementId: PropTypes.string,
+
+    // Provided by redux
+    // To Log TTS usage
+    puzzleNumber: PropTypes.number,
+    userId: PropTypes.number,
+    isOnCSFPuzzle: PropTypes.bool
+  };
+
+  state = {
+    audio: undefined,
+    playing: false,
+    error: false,
+    hover: false,
+    loaded: false,
+    autoplayed: false
+  };
+
+  constructor(props) {
+    super(props);
+    this.autoplayAudio = this.autoplayAudio.bind(this);
+    this.autoplayTriggerElement = null;
+  }
+
+  componentDidMount() {
+    this.getAudioElement();
+    if (this.props.ttsAutoplayEnabled && !this.state.autoplayed) {
+      const {autoplayTriggerElementId} = this.props;
+      this.autoplayTriggerElement = autoplayTriggerElementId
+        ? document.getElementById(autoplayTriggerElementId)
+        : document;
+
+      this.playAudio();
+    }
+  }
+
+  componentWillUpdate(nextProps) {
+    const audioTargetWillChange =
+      this.props.src !== nextProps.src ||
+      this.props.message !== nextProps.message;
+
+    if (audioTargetWillChange) {
+      // unload current Audio object
+      const audio = this.state.audio;
+      if (audio) {
+        audio.pause();
+        audio.removeAttribute('src');
+        audio.load();
+      }
+
+      // remove reference to existing Audio object, so a new one will be
+      // created next time we try to play. Also clear the playing and error
+      // states, since we are essentially starting fresh.
+      this.setState({
+        audio: undefined,
+        playing: false,
+        error: false
+      });
+    }
+  }
+
+  getAudioElement() {
+    if (this.state.audio) {
+      return this.state.audio;
+    }
+
+    const src = this.getAudioSrc();
+    const audio = new Audio(src);
+    // iOS Safari does not automatically attempt to load the audio source,
+    // so we need to manually load.
+    audio.load();
+
+    audio.addEventListener('canplay', () => {
+      this.setState({loaded: true});
+    });
+
+    audio.addEventListener('ended', e => {
+      this.setState({
+        playing: false,
+        autoplayed: this.props.ttsAutoplayEnabled
+      });
+    });
+
+    audio.addEventListener('error', e => {
+      // e is an instance of a MediaError object
+      trackEvent('InlineAudio', 'error', e.target.error.code);
+      this.setState({
+        playing: false,
+        error: true
+      });
+    });
+
+    this.setState({audio});
+    trackEvent('InlineAudio', 'getAudioElement', src);
+    return audio;
+  }
+
+  isLocaleSupported() {
+    return VOICES.hasOwnProperty(this.props.locale);
+  }
+
+  getAudioSrc() {
+    if (this.props.src) {
+      return this.props.src;
+    } else if (this.props.message && VOICES[this.props.locale]) {
+      const voice = VOICES[this.props.locale];
+      const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
+
+      const message = this.props.message.replace('"???"', 'the question marks');
+      const hash = MD5(message).toString();
+      const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
+
+      return `${TTS_URL}/${voicePath}/${contentPath}`;
+    }
+  }
+
+  toggleAudio = () => {
+    this.state.playing ? this.pauseAudio() : this.playAudio();
+  };
+
+  recordPlayEvent() {
+    firehoseClient.putRecord({
+      study: 'tts-play',
+      study_group: 'v1',
+      event: 'play',
+      data_string: this.props.src,
+      data_json: JSON.stringify({
+        userId: this.props.userId,
+        puzzleNumber: this.props.puzzleNumber,
+        src: this.props.src,
+        csfStyleInstructions: this.props.isOnCSFPuzzle
+      })
+    });
+  }
+
+  // adds event listeners to the DOM which trigger audio
+  // when a significant enough user interaction has happened
+  addAudioAutoplayTrigger() {
+    AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
+      this.autoplayTriggerElement.addEventListener(event, this.autoplayAudio);
+    });
+  }
+
+  removeAudioAutoplayTrigger() {
+    AUDIO_ENABLING_DOM_EVENTS.forEach(event => {
+      this.autoplayTriggerElement.removeEventListener(
+        event,
+        this.autoplayAudio
+      );
+    });
+  }
+
+  playAudio() {
+    return this.getAudioElement()
+      .play()
+      .then(() => {
+        this.setState({playing: true});
+        this.recordPlayEvent();
+      })
+      .catch(err => {
+        const shouldAutoPlay =
+          this.props.ttsAutoplayEnabled && !this.state.autoplayed;
+
+        // there wasn't significant enough user interaction to play audio automatically
+        // for more information about this issue on Chrome, see
+        // https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+        if (err instanceof DOMException && shouldAutoPlay) {
+          this.addAudioAutoplayTrigger();
+        } else {
+          throw err;
+        }
+      });
+  }
+
+  autoplayAudio() {
+    this.playAudio().then(() => this.removeAudioAutoplayTrigger());
+  }
+
+  pauseAudio() {
+    this.getAudioElement().pause();
+    this.setState({playing: false});
+  }
+
+  toggleHover = () => {
+    this.setState({hover: !this.state.hover});
+  };
+
+  render() {
+    if (
+      this.props.textToSpeechEnabled &&
+      !this.state.error &&
+      this.state.loaded &&
+      this.isLocaleSupported() &&
+      this.getAudioSrc()
+    ) {
+      return (
+        <div
+          className="inline-audio"
+          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
+          onMouseOver={this.toggleHover}
+          onMouseOut={this.toggleHover}
+          onClick={this.toggleAudio}
+        >
+          <div
+            style={[
+              styles.button,
+              styles.volumeButton,
+              this.props.style && this.props.style.button,
+              this.state.hover && styles.hover
+            ]}
+            id="volume"
+          >
+            <i
+              className={'fa fa-volume-up'}
+              style={[
+                styles.buttonImg,
+                this.props.style && this.props.style.buttonImg
+              ]}
+            />
+          </div>
+          <div
+            className="playPause"
+            style={[
+              styles.button,
+              styles.playPauseButton,
+              this.props.style && this.props.style.button,
+              this.state.hover && styles.hover
+            ]}
+          >
+            <i
+              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
+              style={[
+                styles.buttonImg,
+                this.props.style && this.props.style.buttonImg
+              ]}
+            />
+          </div>
+        </div>
+      );
+    }
+    return null;
+  }
+}
+
 const styles = {
   error: {
     display: 'inline-block',
@@ -82,185 +352,9 @@ const styles = {
   }
 };
 
-class InlineAudio extends React.Component {
-  static propTypes = {
-    assetUrl: PropTypes.func.isRequired,
-    locale: PropTypes.string,
-    textToSpeechEnabled: PropTypes.bool,
-    src: PropTypes.string,
-    message: PropTypes.string,
-    style: PropTypes.object,
-
-    // Provided by redux
-    // To Log TTS usage
-    puzzleNumber: PropTypes.number,
-    userId: PropTypes.number,
-    isOnCSFPuzzle: PropTypes.bool
-  };
-
-  state = {
-    audio: undefined,
-    playing: false,
-    error: false,
-    hover: false
-  };
-
-  componentWillUpdate(nextProps) {
-    const audioTargetWillChange =
-      this.props.src !== nextProps.src ||
-      this.props.message !== nextProps.message;
-
-    if (audioTargetWillChange) {
-      // unload current Audio object
-      const audio = this.state.audio;
-      if (audio) {
-        audio.pause();
-        audio.removeAttribute('src');
-        audio.load();
-      }
-
-      // remove reference to existing Audio object, so a new one will be
-      // created next time we try to play. Also clear the playing and error
-      // states, since we are essentially starting fresh.
-      this.setState({
-        audio: undefined,
-        playing: false,
-        error: false
-      });
-    }
-  }
-
-  getAudioElement() {
-    if (this.state.audio) {
-      return this.state.audio;
-    }
-
-    const src = this.getAudioSrc();
-    const audio = new Audio(src);
-    audio.addEventListener('ended', e => {
-      this.setState({
-        playing: false
-      });
-    });
-
-    audio.addEventListener('error', e => {
-      // e is an instance of a MediaError object
-      trackEvent('InlineAudio', 'error', e.target.error.code);
-      this.setState({
-        playing: false,
-        error: true
-      });
-    });
-
-    this.setState({audio});
-    trackEvent('InlineAudio', 'getAudioElement', src);
-    return audio;
-  }
-
-  isLocaleSupported() {
-    return VOICES.hasOwnProperty(this.props.locale);
-  }
-
-  getAudioSrc() {
-    if (this.props.src) {
-      return this.props.src;
-    } else if (this.props.message) {
-      const voice = VOICES[this.props.locale];
-      const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
-
-      const message = this.props.message.replace('"???"', 'the question marks');
-      const hash = MD5(message).toString();
-      const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
-
-      return `${TTS_URL}/${voicePath}/${contentPath}`;
-    }
-  }
-
-  toggleAudio = () => {
-    this.state.playing ? this.pauseAudio() : this.playAudio();
-  };
-
-  playAudio() {
-    this.getAudioElement().play();
-    this.setState({playing: true});
-    firehoseClient.putRecord({
-      study: 'tts-play',
-      study_group: 'v1',
-      event: 'play',
-      data_string: this.props.src,
-      data_json: JSON.stringify({
-        userId: this.props.userId,
-        puzzleNumber: this.props.puzzleNumber,
-        src: this.props.src,
-        csfStyleInstructions: this.props.isOnCSFPuzzle
-      })
-    });
-  }
-
-  pauseAudio() {
-    this.getAudioElement().pause();
-    this.setState({playing: false});
-  }
-
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover});
-  };
-
-  render() {
-    if (
-      this.props.textToSpeechEnabled &&
-      !this.state.error &&
-      this.isLocaleSupported() &&
-      this.getAudioSrc()
-    ) {
-      return (
-        <div
-          className="inline-audio"
-          style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
-          onMouseOver={this.toggleHover}
-          onMouseOut={this.toggleHover}
-        >
-          <div
-            style={[
-              styles.button,
-              styles.volumeButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
-            id="volume"
-          >
-            <i
-              className={'fa fa-volume-up'}
-              style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
-              ]}
-            />
-          </div>
-          <div
-            className="playPause"
-            style={[
-              styles.button,
-              styles.playPauseButton,
-              this.props.style && this.props.style.button,
-              this.state.hover && styles.hover
-            ]}
-            onClick={this.toggleAudio}
-          >
-            <i
-              className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}
-              style={[
-                styles.buttonImg,
-                this.props.style && this.props.style.buttonImg
-              ]}
-            />
-          </div>
-        </div>
-      );
-    }
-    return null;
-  }
-}
+InlineAudio.defaultProps = {
+  ttsAutoplayEnabled: false
+};
 
 export const StatelessInlineAudio = Radium(InlineAudio);
 export default connect(function propsFromStore(state) {
@@ -271,6 +365,7 @@ export default connect(function propsFromStore(state) {
     locale: state.pageConstants.locale,
     userId: state.pageConstants.userId,
     puzzleNumber: state.pageConstants.puzzleNumber,
-    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed
+    isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
+    ttsAutoplayEnabled: state.sectionData.section.ttsAutoplayEnabled
   };
 })(StatelessInlineAudio);

@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 hu:
   slides:
     maze_intro:
@@ -311,6 +316,11 @@ hu:
         text: "Segíts a madárnak a malachoz jutni. Nézd meg a labirintust és döntsd el merre menjen."
       2:
         text: "Húzd a blokkokat az eszközkészletből a munkaterületre. Bizonyosodj meg róla, hogy a \"futtatáskor\" blokk alatt szerepel a helyes megoldásod, majd kattints a \"Futtatás\" gombra, és nézd meg, hogyan megy oda a madár a malachoz."
+    C1_maze_loops:
+      1:
+        text: "A számítógépek különösen jók a parancsok ismétlésében. Emberként elég hamar megunjuk, ha ugyanazokat a dolgokat sokszor kell megismételnünk. De a számítógép ugyanazt a dolgot képes milliószor, vagy akár milliárdszor is megcsinálni, és nem fogja megunni, hanem rendben végre fogja hajtani."
+      2:
+      3:
     C1_moveitmoveit_unplugged:
       1:
       2:
@@ -349,6 +359,7 @@ hu:
         text: "Beállítottam, hogy a kutya idejöjjön, és azt mondja, hogy \"Szia\", de ekkor a macska megijedt, és elfutott. \"Ahhh.\" Ha több időm lenne, akkor biztosan jól végződött volna. Vége!"
     C1_zuck_repeat_loop:
       1:
+        text: "A számítógépek különösen jók a parancsok ismétlésében. Emberként elég hamar megunjuk, ha ugyanazokat a dolgokat sokszor kell megismételnünk. De a számítógép ugyanazt a dolgot képes milliószor, vagy akár milliárdszor is megcsinálni, és nem fogja megunni, hanem rendben végre fogja hajtani."
       2:
       3:
       4:
@@ -488,9 +499,9 @@ hu:
         text: "Itt van a \"ha nyíl\" blokk és a \"mozgasd a szereplőt\" blokk. Ezeket a blokkokat összeillesztheted, hogy a szereplőket a nyilakkal mozgatni tudd."
     C4_bee_conditional:
       1:
-        text: "Ez egy feltételes blokk. Azt mondja, ha egy virágnál vagy lépnél vagy, akkor csinálj valamit. Ez akkor hasznos, ha nem tudjuk, hogy mennyi mézet vagy nektárt kell gyűjtenünk, mint például itt, és ezt kérdőjel jelzi."
+        text: "Ez egy feltételes blokk. Azt mondja, ha egy virágnál vagy méhsejtnél vagy, akkor csinálj valamit. Ez akkor hasznos, ha nem tudjuk, hogy mennyi mézet vagy nektárt kell gyűjtenünk, mint például itt, és ezt kérdőjel jelzi."
       2:
-        text: "Ebben a példában azt mondjuk, hogy ha egy virágnál vagyunk, akkor gyűjtsük be az összes nektárt, aztán egy másikkal pedig azt, hogy ha egy lépnél vagyunk, akkor készítsünk mézet. Kész is!"
+        text: "Ebben a példában azt mondjuk, hogy ha egy virágnál vagyunk, akkor gyűjtsük be az összes nektárt, aztán egy másikkal pedig azt, hogy ha egy méhsejtnél vagyunk, akkor készítsünk mézet. Kész is!"
     C4_conditionals:
       1:
         text: "Van egy új blokkunk, amit ha/különben blokknak hívunk. Ez egy feltételes utasítás, ugyanúgy, mint az if blokk, amit már korábbi feladványainkban használtunk. Azonban most van egy új tagja, ez a különben rész az alján. A ha/különben blokk lehetővé teszi, hogy a méh döntsön két művelet között. Ha a méh virágnál van, akkor azokat az utasításokat fogja elvégezni, amelyeket az első részbe teszel. Ha a méh nincs virágnál éppen, akkor azokat fogja végrehajtani, amiket a különbenhez tartozó részhez teszel."
@@ -542,6 +553,13 @@ hu:
         text: "A paraméterek lehetővé teszik, hogy értékeket adjunk át a függvénynek, amelyek a függvényen belül változók lesznek. Adjunk egy paramétert ehhez a függvényhez, amellyel különböző méretű négyzeteket tudunk rajzolni. A függvényszerkesztőben ugyanúgy szerkesztheted a nevet és a leírást, mint korábban, de most már paraméter hozzáadására is lehetőséged van. Írd a paraméter nevét a rendelkezésre álló fehér területre, majd kattints a Paraméter hozzáadása gombra. Ez létrehoz egy piros blokkot azzal a névvel, amit paraméterként az előbb megadtál. Most már kicserélhetjük a lépj előre 100 lépést blokkot a Length (hossz) paraméterrel, így Length (hossz) lépést fog előre lépni."
       3:
         text: "Kattints a mentésre, majd lép ki. Ezután húzd az újonnan alkotott függvényedet a munkaterületre az eszközkészletből. Észreveheted, hogy van egy üres hely a hossz mellett, mivel a függvény tudni szeretné, hogy mi legyen a Length (hossz) paraméter értéke. Húzz egy szám blokkot a Matematika (Math) kategóriából az üres helyre. Nézd meg, hogyan használhatod a függvényt újra és újra különböző hosszúságokkal, hogy különböző méretű négyzeteket rajzolj. Próbáld ki magad!"
+    C4_intro:
+      1:
+      2:
+      3:
+      4:
+        text: "Most a \"fordulj jobbra\" blokkot fogom használni, és addig húzom, amíg meg nem jelenik a sárga nyíl. Ekkor elengedem, és a két blokk összekapcsolódik. Amikor újra megnyomom a \"Futtatás\" gombot, a madár felülről lefelé haladva végrehajtja a munkaterületen egymás után pakolt parancsokat."
+      5:
     C4_math_artist:
       1:
         text: "Ha egy olyan téglalapot szeretnénk rajzolni, amely 50 képpont magas és kétszer olyan széles, mint amilyen magas, akkor ezt hogyan programozhatjuk le a számítógép számára? Hát, mondhatom a művésznek, hogy menjen fel 50-et, majd forduljon jobbra, majd menjen előre 100-at, és ezt kétszer tegye meg. De ekkor én végzem el a számítást a számítógép helyett."
@@ -575,7 +593,7 @@ hu:
       6:
         text: "A fehér terület a Munkaterület, és itt fogjuk építeni a programot."
       7:
-        text: "Ha a mozdulj balra blokkot a munkaterületre vonszolod, és a Futtatásra kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson."
+        text: "Ha a mozdulj balra blokkot a munkaterületre húzod, és a futtatásra kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson."
       8:
         text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés meg nem jelenik. Ekkor elengedem, és a két blokk összekattan."
       9:
@@ -609,9 +627,9 @@ hu:
       5:
         text: "Most R2-D2-nak felfelé kell mozognia, hogy elvigyen egy üzenetet egy lázadó pilótáknak, majd lefelé kell mozognia a másik Lázadóhoz. Eseményeket fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy gombokat használja."
       6:
-        text: "A \"ha van felfelé nyíl\" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a \"ha van felfelé nyíl\"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon."
+        text: "A \"felfelé nyíl megnyomásakor\" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a \"felfelé nyíl megnyomásakor\"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon."
       7:
-        text: "Ehhez a \"ha van felfelé nyíl\" whenUp() parancsot fogjuk használni. Amikor a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat."
+        text: "Ehhez a \"felfelé nyíl megnyomásakor\" whenUp() parancsot fogjuk használni. Amikor a parancsot kihúzod az eszköztárból, akkor látni fogod, hogy az egy-egy kapcsos zárójellel kezdődik és végződik a pontosvessző helyett. Ez lehetővé teszi, hogy középre más parancsokat illesszünk. Minden olyan parancs, amit ide beteszünk lefut majd, amikor a játékos megnyomja a felfelé mutató nyilat."
       8:
         text: "Azt akarjuk, hogy R2-D2 felfelé menjen, így tegyünk be egy menj fel blokkot a parancsba. És ugyanezt fogjuk tenni, hogy R2-D2 lefelé menjen."
       9:
@@ -647,7 +665,7 @@ hu:
       9:
         text: "Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba."
       10:
-        text: "Ha törölni szeretnél egy blokkot, csak vonszold vissza az eszköztárba."
+        text: "Miután megnyomtad a futtatást, bármikor visszatérhetsz a kezdeti állásba, és BB-8 is visszamegy oda, ahol a futtatás előtt állt. És most, gördüljünk tovább!"
     starwars_blocks_events:
       1:
         text: "Szia, az én nevem Charita Carter. Vezető kreatív producer vagyok a Walt Disney Imagineeringnél. Én vagyok felelős azokért a játékokért, amelyekkel a látogatóink találkoznak. Mindig keressük a lehetőségét annak, hogy fejlődjünk és emlékezetesebb élményt nyújtsunk a látogatóinknak, és a technológia alapvető ebben a folyamatban."
@@ -660,7 +678,7 @@ hu:
       5:
         text: "Most R2-D2-nak felfelé kell mozognia, hogy elvigyen egy üzenetet egy lázadó pilótáknak, majd lefelé kell mozognia a másik Lázadóhoz. Eseményeket fogunk használni a mozgatáshoz, amikor a játékos a föl-le billentyűket vagy gombokat használja."
       6:
-        text: "A \"ha van felfelé nyíl\" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a \"ha van felfelé nyíl\"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon. Így ahelyett, hogy a kóddal előre meghatároznánk a droid mozgását, R2-D2 a gombok nyomására fog reagálni és így fog mozogni a képernyőn."
+        text: "A \"felfelé nyíl megnyomásakor\" esemény blokkot fogjuk használni, és hozzácsatoljuk a menj fel blokkot. Ha a játékos megnyomja a felfelé nyilat, akkor a \"felfelé nyíl megnyomásakor\"-hoz kapcsolódó blokk elkezd futni. És ugyanezt fogjuk csinálni, hogy R2-D2 lefelé mozogjon. Így ahelyett, hogy a kóddal előre meghatároznánk a droid mozgását, R2-D2 a gombok nyomására fog reagálni és így fog mozogni a képernyőn."
       7:
         text: "Lépésről lépésre egyre interaktívabb lesz a játék."
     starwars_blocks_congrats:
@@ -746,10 +764,12 @@ hu:
       2:
       3:
       4:
+        text: "3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér, ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak odaírva."
       5:
       6:
         text: "A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni."
       7:
+        text: "Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga \"amikor fut\" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga vonalig, és akkor majd összekapcsolódnak."
       8:
       9:
     iceage_intro:
@@ -757,11 +777,24 @@ hu:
       2:
       3:
       4:
+        text: "3 fő részre van felosztva a képernyőd. A bal oldalon van a játéktér, ahol a program fog futni. Az utasítások minden egyes szinthez alól vannak odaírva."
       5:
       6:
         text: "A jobb oldali fehér rész a Munkaterület, ahol a programot fogjuk írni."
       7:
+        text: "Az indításhoz, a blokkjaidat hozzá kell csatolnod a narancssárga \"amikor fut\" blokkhoz. Több blokkot is összekapcsolhatsz úgy, hogy elhúzod őket a sárga vonalig, és akkor majd összekapcsolódnak."
       8:
+      9:
+    mc_2016_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+        text: "Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba."
       9:
     hoc_dance_warmup:
       1:
@@ -833,6 +866,91 @@ hu:
       10:
         text: "Ne feledd, hogy csak már létező táncosok tulajdonságait változtathatod meg. Győződj meg róla, hogy a beállítás blokk az új táncos készítése blokk után jön. Kísérletezz bátran, legyél kreatív, érezd jól magad."
     hoc_dance_congrats:
+      1:
+        text: "Kódolás Órája | Táncos buli: Induljon a party!"
+      2:
+        text: "Gratulálunk! Elsajátítottad a számítógép-tudomány alapjait. Most már használhatod ezeket a blokkokat, hogy a saját táncos bulidat létrehozd, és megoszd a barátaiddal."
+      3:
+        text: "Ha benézel az eszköztárba, olyan új blokkokat fogsz benne találni, amik korábban nem voltak ott. Például használhatod az elrendezés blokkot, hogy a táncosok különböző alakzatokat vegyenek fel a képernyőn."
+      4:
+        text: "Fedezd fel a lehetőségeket és próbálj kísérletezni az új blokkokkal és funkciókkal. Készítesz egy teljes koreográfiát a kedvenc dalodra?"
+      5:
+        text: "Vagy egy offline tánc a barátaiddal?"
+      6:
+        text: "Vagy valami más együtt?"
+      7:
+        text: "A lecke végén megoszthatod az alkotásodat a barátaiddal. Tornáztasd a képzelőerőd és érezd jól magad!"
+    hoc_dance_warmup_2019:
+      1:
+        text: "Kódolás Órája | Táncos buli: Bemelegítés"
+      2:
+        text: "Szia! Az én nevem Miral Kotb, táncos, szoftverfejlesztő, és az iLuminate megalkotója vagyok."
+      3:
+        text: "A számítógép-tudomány a kreativitáshoz sokféleképpen kapcsolódik. Ezernyi módon, tényleg. Úgy értem, ha képes vagy szoftvert írni, az ötleteidet bárhogy megvalósíthatod. Én világító ruhákkal dolgozom. Rengeteg dolgot megtehetsz, ha megvannak az eszközeid a szoftveríráshoz, és a lehetőségek végtelenek."
+      4:
+        text: "A következő órában úgy ismerkedhetsz meg a számítógép-tudománnyal, hogy beprogramozod a saját táncos bulidat! Összeállítottuk a zenét néhány slágerrel, és egy csapat kiváló táncossal játszhatsz majd."
+      5:
+        text: "Kód-blokkokat fogsz használni a különböző táncosok kiválasztásához, a mozdulatok megváltoztatásához, hogy reagáljanak a zenére és hogy interaktív legyen a tánc."
+      6:
+        text: "Látni fogod, hogy a képernyő három részre oszlik. Bal oldalt játszódnak az események. Itt fognak megjelenni a táncosaid."
+      7:
+        text: "Középen van az eszköztárad. Az újabb kód-blokkok itt fognak megjelenni, ahogy előrehaladsz a feladványokban."
+      8:
+        text: "A jobb oldali rész a munkaterület. Az eszköztárból áthúzhatsz blokkokat a munkaterületre, hogy felépítsd belőlük a programod."
+      9:
+        text: "A feladat leírása minden feladványnál itt a képernyő felső részén jelenik meg. Ha szükséged van segítségre, kattints a villanykörtére."
+      10:
+      11:
+        text: "Azt is megváltoztathatod, hol jelenjen meg a táncos a játéktereden."
+      12:
+        text: "A játéktér felett van egy menü, ahol zenét választhatsz. Rengeteg közül választhatsz, és reméljük jó szórakozás lesz, amíg megtalálod a kedvenceidet. A játéktér alatt van a futtatás gomb. Ha ezt megnyomod, akkor megjelennek a programod táncosai a játéktéren és felhangzik a zene."
+      13:
+        text: "Próbáld ki! Ha elakadsz, semmi gond! Csak pattanj fel és mozdulj rá, és mielőtt felocsúdnál, már el is kezdted a táncos bulit! Szóval, mit fogsz alkotni?"
+    hoc_dance_events_2019:
+      1:
+        text: "Kódolás Órája | Táncos buli: Események"
+      2:
+      3:
+        text: "Hogy a különböző modulatok a zenével összhangban történjenek, használhatunk egy dolgot, amit úgy hívnak, hogy \"esemény\". Az esemény megmondja a programodnak, hogy figyeljen oda valamilyen történésre és reagáljon rá."
+      4:
+        text: "Például eseményeknek tekintjük az egérkattintást, a nyilakat ábrázoló gombok leütését vagy a képernyő megérintését."
+      5:
+      6:
+      7:
+      8:
+    hoc_dance_measures_2019:
+      1:
+      2:
+        text: "A nevem Aloe Blacc. Énekes, zeneszerző és előadó vagyok. Szerintem nagyon fontos számítógép-tudományt tanulni, mert a számítógép-tudomány a jövő, és fontos tudni irányítani a technológiát ami úgy meghatározza az életünket."
+      3:
+      4:
+      5:
+        text: "Hogy a táncosok elszabaduljanak, egy zöld esemény blokkra lesz szükséged. Az esemény blokkra az van írva, \"4 ütem után\"."
+      6:
+        text: "Ha áthúzod a lila \"csináld örökké\" blokkot, választhatsz a táncosodnak egy mozdulatot, amit ismételni fog. Mivel a \"4 ütem után\" blokk alá kerül, így a táncosod 4 ütem után fog bekapcsolódni a táncba."
+      7:
+        text: "Figyeld a képernyő felső részén az ütem számlálót."
+      8:
+        text: "Figyeld és hallgasd az eseményt, ami ki fogja váltani a táncos kódot. És a megfelelő pillanatban a táncos elkezd majd táncolni."
+    hoc_dance_properties_2019:
+      1:
+        text: "Kódolás Órája | Táncos buli: Tulajdonságok"
+      2:
+        text: "A nevem Maria, a washingtoni egyetem hallgatója vagyok és az Amazon Jövő Mérnöke."
+      3:
+        text: "Szeretem a számítógép-tudományt, mert van benne problémamegoldás, kritikus gondolkodás és sok órányi munka után végül valami igazán menő és értékes jön létre."
+      4:
+      5:
+        text: "Minden mozdulat képek sorozatából áll, amelyeket frame-eknek nevezünk. Minden frame egy kicsit különbözik az előtte lévőtől. Amikor a program fut, a számítógép egymás után mutatja a frame-eket. Olyan gyorsan követik egymást, hogy úgy tűnik, mintha a táncos mozogna. Ez a titka minden animációnak."
+      6:
+        text: "Nem csak a táncos mozgását, de a tulajdonságait is meg lehet változtatni. A tulajdonságok olyan dolgokat írnak le, mint a táncos helye a képernyőn, a táncos mérete vagy színe."
+      7:
+      8:
+      9:
+        text: "A beállítás blokkal megváltoztathatod a táncos méreteit, irányát, helyét és színét. Próbálgathatod ezeket a tulajdonságokat, és különböző változásokat kapcsolhatsz a dal egyes részeihez."
+      10:
+        text: "Ne feledd, hogy csak már létező táncosok tulajdonságait változtathatod meg. Győződj meg róla, hogy a beállítás blokk az új táncos készítése blokk után jön. Kísérletezz bátran, legyél kreatív, érezd jól magad."
+    hoc_dance_congrats_2019:
       1:
         text: "Kódolás Órája | Táncos buli: Induljon a party!"
       2:

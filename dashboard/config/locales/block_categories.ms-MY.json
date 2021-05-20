@@ -1,0 +1,76 @@
+{
+  "ms-MY": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Tindakan",
+          "Brushes": "Berus",
+          "Loops": "Gelung",
+          "Math": "Matematik",
+          "Logic": "Logik",
+          "Functions": "Fungsi",
+          "Variables": "Pembolehubah"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Dunia",
+          "Dancers": "Penari",
+          "Properties": "Hartanah",
+          "Events": "Acara-acara",
+          "Numbers": "Nombor",
+          "Logic": "Logik"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Tindakan",
+          "Events": "Acara-acara",
+          "Loops": "Gelung",
+          "Math": "Matematik",
+          "Logic": "Logik",
+          "Games/Score": "Permainan/Skor"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Dunia",
+          "Sprites": "Jin",
+          "Actions": "Tindakan",
+          "Events": "Acara-acara",
+          "Behaviors": "Tingkah laku"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Dunia",
+          "Sprites": "Jin",
+          "Locations": "Lokasi",
+          "Actions": "Tindakan",
+          "Events": "Acara-acara",
+          "Behaviors": "Tingkah laku",
+          "Variables": "Pembolehubah",
+          "Math": "Matematik",
+          "Logic": "Logik",
+          "Functions": "Fungsi",
+          "Text": "teks",
+          "Comments": "Komen"
+        },
+        "outbreak_freeplay": {
+          "World": "Dunia",
+          "Sprites": "Jin",
+          "Actions": "Tindakan",
+          "Behaviors": "Tingkah laku",
+          "Events": "Acara-acara",
+          "Locations": "Lokasi",
+          "Logic": "Logik",
+          "Loops": "Gelung",
+          "Math": "Matematik",
+          "Variables": "Pembolehubah",
+          "Functions": "Fungsi",
+          "Comments": "Komen"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Dunia",
+          "Sprites": "Jin",
+          "Actions": "Tindakan",
+          "Events": "Acara-acara",
+          "Logic": "Logik",
+          "Math": "Matematik"
+        }
+      }
+    }
+  }
+}

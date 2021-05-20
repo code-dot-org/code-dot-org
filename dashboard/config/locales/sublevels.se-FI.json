@@ -1,0 +1,122 @@
+{
+  "se-FI": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Events": "Dáhpáhusaid",
+              "Games/Score": "Spealut/čuoggát"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Dancers": "Dánsejeaddjit",
+              "Properties": "Iešvuođat",
+              "Events": "Dáhpáhusaid",
+              "Numbers": "Logut"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "description": "tevdne nástti mearriduvvon čuoggáiguin ja siidduiguin main leat mearriduvvon guhkkodagat"
+              },
+              "draw a circle": {
+                "description": "tevdne jorbbá mas lea mearriduvvon rádius",
+                "parameters": {
+                  "radius": "rádius"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "tevdne bieggamillu",
+                "parameters": {
+                  "sides": "siiddut"
+                }
+              },
+              "draw a shape": {
+                "name": "tevdne hámi",
+                "parameters": {
+                  "sides": "siiddut"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Sprites": "Sprite:at",
+              "Events": "Dáhpáhusaid",
+              "Behaviors": "Láhttemat"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Dancers": "Dánsejeaddjit",
+              "Properties": "Iešvuođat",
+              "Events": "Dáhpáhusaid",
+              "Numbers": "Logut"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Brushes": "Peanselat"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Sprites": "Sprite:at",
+              "Locations": "Báikkit",
+              "Events": "Dáhpáhusaid",
+              "Behaviors": "Láhttemat",
+              "Comments": "Kommentárat"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Sprites": "Sprite:at",
+              "Locations": "Báikkit",
+              "Events": "Dáhpáhusaid",
+              "Behaviors": "Láhttemat",
+              "Comments": "Kommentárat"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Brushes": "Peanselat"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Sprites": "Sprite:at",
+              "Events": "Dáhpáhusaid"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Máilbmi",
+              "Sprites": "Sprite:at",
+              "Behaviors": "Láhttemat",
+              "Events": "Dáhpáhusaid",
+              "Locations": "Báikkit",
+              "Comments": "Kommentárat"
+            }
+          }
+        }
+      }
+    }
+  }
+}

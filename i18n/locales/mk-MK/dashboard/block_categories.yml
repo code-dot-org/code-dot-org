@@ -1,0 +1,9 @@
+mk:
+  data:
+    block_categories:
+      Actions: Акции
+      Logic: Логика
+      Loops: Лупови
+      Math: Математика
+      Text: Текст
+      Variables: Променливи

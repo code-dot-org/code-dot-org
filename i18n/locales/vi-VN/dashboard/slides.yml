@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 vi:
   slides:
     maze_intro:
@@ -230,7 +235,7 @@ vi:
         text: "Rất nhiều hình đơn giản có thể được sử dụng để tạo ra các hình phức tạp hơn. Trong trò chơi tiếp theo, mã bạn đã viết mới đây để tạo một vòng tròn sẽ được dùng để định nghĩa 1 hàm mới mà có thể tạo hình tròn với kích thước khác nhau. Bạn có thể sử dụng nó để giúp Elsa tạo ra các hình phức tạp và xinh đẹp trong tuyết?"
     playlab_intro:
       1:
-        text: "Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi từ đầu tới cuối và chia sẻ với bạn bè."
+        text: "Chúng ta sẽ tạo ra trò chơi bằng cách sử dụng Play Lab. Một trò chơi hay cần có cốt truyện, và mọi trò chơi cần có nhân vật. Chúng ta có thể học cách xây dựng nhân vật như phù thuỷ, công chúa, giọng nói của các con thú, chuyển động, nói chuyện. Ở cuối bài học này, bạn có thể làm 1 trò chơi từ Scratch và chia sẻ với bạn bè."
       2:
         text: "Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới."
       3:
@@ -524,6 +529,13 @@ vi:
         text: "Các nhà lập trình sử dụng việc gỡ lỗi rất nhiều để tìm và sửa chữa các thuật toán hoặc mã. Có rất nhiều cách để gỡ lỗi các vấn đề. 1 trong những cách dễ nhất là di chuyển từng bước một cho đến khi bạn thấy có chỗ sai, sau đó chữa nó."
       4:
         text: "Ở đây tôi đang cố thực hiện động tác lộn sau chống tay, nhưng tôi cứ bị thất bại. Tôi kiểm tra lại từng bước một, và nhận ra lỗi của mình ở đâu. Huấn luyện viên chỉ ra rằng tôi đang không đặt tay trên xà đúng cách. Vì vậy tôi thử làm lại với vị trí tay đã sửa và tôi đã thành công! Tôi thực sự rất vui vì đã gỡ được lỗi động tác lộn sau chống tay. Chúng ta đã tìm ra cách! Gỡ lỗi là tìm ra và sửa chữa các vấn đề. Làm tốt lắm!"
+    C2_zuck_repeat_loop:
+      1:
+        text: "Một trong những điều máy tính làm rất tốt đó là nhắc lại các câu lệnh. Con người sẽ thấy rất nhàm chán nếu phải làm một việc rất nhiều lần không ngừng nghỉ. Nhưng một máy tính có thể làm một việc cả triệu thậm chí cả tỷ lần mà không thấy nhàm chán và có thể thực hiện điều đó rất tốt."
+      2:
+      3:
+      4:
+      5:
     C3_artist_intro:
       1:
         text: "Bạn thậm chí không đủ tiêu chuẩn cho cuộc đua nếu bạn không có những người thành thạo trong khoa học máy tính vì số dữ liệu mà các xe phải thu thập và sự cần thiết của việc có những người có thể viết chương trình để tìm ra cách bạn tiếp tục xây dựng giao thức."
@@ -555,9 +567,124 @@ vi:
       2:
         text: "Blockly được chia thành 3 phần chính. Bên trái là mê cung của chú chim, nơi chương trình của bạn sẽ chạy. Các chỉ dẫn cho mỗi cấp độ được viết bên dưới mê cung. Khu vực ở giữa là hộp công cụ và mỗi 1 khối lệnh này là 1 mệnh lệnh mà chú chim có thể hiểu được. Khu vực trống ở bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình."
       3:
+        text: "Nếu tôi kéo khối lệnh Di chuyển tới không gian làm việc và nhấn \"Chạy\", điều gì sẽ xảy ra? Chú chim tiến về phía trước 1 ô trong khung. Và nếu tôi muốn chú chim làm gì khác sau khi tiến lên 1 ô? Tôi có thể thêm khối lệnh khác vào chương trình."
       4:
+        text: "Tôi sẽ chọn khối lệnh \"rẽ phải\" và tôi sẽ kéo nó đặt xuống dưới khối lệnh di chuyển sao cho mũi tên màu vàng xuất hiện. Sau đó tôi thả lệnh và 2 khối lệnh sẽ chập lại với nhau. Khi tôi nhấn \"Chạy\", chú chim sẽ thực hiện lần lượt các lệnh được xếp từ trên xuống dưới trong không gian làm việc."
       5:
         text: "Nếu bạn muốn xoá 1 khối lệnh, chỉ cần bỏ nó khỏi ngăn xếp và kéo đến thùng rác. Sau khi đã nhấn chạy, bạn vẫn có thể nhấn nút \"Thiết lập lại\" để chú chim trở lại điểm khởi đầu. Bây giờ hãy đi bắt những con lợn xấu xa!"
+    starwars_intro:
+      1:
+        text: "Xin chào, tôi là Kathleen Kennedy và tôi là nhà sản xuất của Chiến tranh giữa các vì sao: Thần lực thức tỉnh. Hôm nay bạn sẽ làm việc với một trong những ngôi sao của chúng tôi, BB-8. BB-8 là một droid hình cầu. Mọi hành động và chuyển động của cậu ấy đều được điều khiển bằng phần mềm máy tính. Khoa học máy tính tác động đến mọi lĩnh vực, từ tiếp thị đến chăm sóc sức khỏe cho đến phim ảnh. Trên thực tế, hàng trăm kỹ sư máy tính đã cùng nhau làm ra bộ phim như Thần lực thức tỉnh."
+      2:
+        text: "Xin chào, tôi là Rachel Rose, tôi là kỹ sư nghiên cứu và phát triển cấp cao tại ILM và tôi lãnh đạo nhóm phát triển hoạt họa và sinh vật. Trong Thần lực thức tỉnh, tôi chịu trách nhiệm giúp các nghệ sĩ xây dựng bộ khung là phần chuyển động của nhân vật, khiến nhân vật trông như thật ở một thiên hà xa rất xa."
+      3:
+        text: "Trong giờ tới, chúng ta sẽ làm game Chiến tranh giữa các vì sao của riêng mình. Chúng tôi sẽ dạy bạn những khái niệm cơ bản về lập trình. Thông thường, lập trình chỉ toàn văn bản nhưng ở đây, chúng ta sẽ sử dụng các khối để có thể kéo và thả khi viết chương trình. Về bản chất, bạn vẫn đang tạo mã lệnh. Sau khi thử những điều cơ bản với các khối, chúng tôi sẽ chuyển bạn sang JavaScript, một trong những ngôn ngữ lập trình phổ biến nhất trên web."
+      4:
+        text: "Để bắt đầu, chúng tôi sẽ làm việc với Rey để lập trình cho BB-8 đi bộ và thu thập tất cả các linh kiện phế liệu. Màn hình của bạn được chia thành ba phần. Ở bên trái là không gian trò chơi Chiến tranh giữa các vì sao, nơi chạy mã lệnh. Hướng dẫn cho mỗi cấp độ được viết bên dưới không gian trò chơi."
+      5:
+        text: "Khu vực ở giữa này là hộp công cụ và mỗi khối này là một lệnh mà BB-8 có thể hiểu được."
+      6:
+        text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình của mình."
+      7:
+        text: "Nếu tôi kéo khối moveLeft(); vào không gian làm việc của chúng ta và nhấn chạy, điều gì sẽ xảy ra? BB-8 di chuyển một ô sang trái trên lưới."
+      8:
+        text: "Và điều gì sẽ xảy ra nếu tôi muốn BB-8 làm điều gì đó sau khối moveLeft();? Tôi có thể thêm một khối khác vào chương trình của chúng ta. Tôi sẽ chọn khối moveUp(); và kéo vào bên dưới khối moveLeft(); cho đến khi viền sáng xuất hiện. Sau đó, tôi sẽ thả khối này xuống và hai khối sẽ dính vào nhau."
+      9:
+        text: "Khi tôi nhấn chạy một lần nữa, BB-8 sẽ thực hiện các lệnh xếp chồng lên nhau từ trên xuống dưới trong không gian làm việc của chúng ta. Nếu bạn muốn xóa một khối, chỉ cần xóa khối đó khỏi chồng và kéo khối trở lại hộp công cụ."
+      10:
+        text: "Sau khi nhấn chạy, bạn luôn có thể nhấn nút đặt lại để đưa BB-8 trở lại điểm xuất phát. Chúng ta hãy bắt đầu chạy nào!"
+    starwars_typing:
+      1:
+        text: "Bên trong các khối mà chúng tôi đang sử dụng là các lệnh JavaScript. JavaScript là ngôn ngữ lập trình phổ biến nhất của các nhà phát triển chuyên nghiệp hiện nay. Các khối là một cách tuyệt vời để bắt đầu học viết mã và trên thực tế, các trường đại học hàng đầu như Harvard và Berkeley bắt đầu dạy theo phương pháp này. Nhưng trong khi chúng ta học những kiến thức căn bản thì các kỹ sư viết mã bằng cách gõ văn bản vì cách đó cho phép chúng tôi lập trình nhanh hơn."
+      2:
+        text: "Chúng ta có thể gõ hàng trăm lệnh mà không cần phải tìm chúng trong hộp công cụ hoặc kéo chúng ra. Bởi vì trong giai đoạn học hỏi ban đầu, đánh máy có thể chậm hơn nhưng chúng tôi muốn bạn thử."
+      3:
+        text: "Ở góc trên bên phải trên không gian làm việc, bạn có thể nhấp chuột vào nút hiển thị văn bản trên bất kỳ bài tập nào để chuyển từ các khối sang nhập mã lệnh dưới dạng văn bản."
+      4:
+        text: "Trong bài học tiếp theo, chúng ta sẽ bắt đầu ở chế độ nhập văn bản. Ở đây, bạn vẫn có thể kéo khối từ hộp công cụ hoặc bạn có thể nhập tên lệnh. Khi bắt đầu nhập, bạn sẽ thấy tên của các lệnh khả dụng hiển thị bên dưới vị trí bạn đang nhập. Thay vì nhập toàn bộ tên lệnh, bạn có thể chọn một trong các lệnh này để lập trình nhanh hơn. Trong công việc, tôi luôn sử dụng tính năng tự động hoàn thành này khi viết mã."
+      5:
+        text: "Khi nhập mã, máy tính cần bạn phải thật chính xác. Bạn cần đánh vần và viết hoa tên lệnh một cách chính xác, bao gồm cả dấu ngoặc đơn và dấu chấm phẩy. Ngay cả một lỗi đánh máy nhỏ cũng khiến BB-8 cũng không thể hiểu được mã lệnh và sẽ không thể di chuyển."
+      6:
+        text: "Khi bạn mắc lỗi trên dòng, trình chỉnh sửa sẽ đánh dấu lỗi đó để bạn có thể thử thay đổi văn bản của mình để sửa lỗi đó."
+      7:
+        text: "Nếu gặp khó khăn, bạn luôn có thể bắt đầu lại bằng nút bắt đầu lại và bạn có thể chuyển về chế độ khối bất kỳ lúc nào bằng cách nhấp vào góc trên cùng bên phải. Được rồi, hãy thử đánh máy nào! Và nếu bạn mắc lỗi, đừng nản lòng nhé. Ai cũng phải mất một vài lần thử để làm cho đúng mà."
+    starwars_events:
+      1:
+        text: "Xin chào, tên tôi là Charita Carter. Tôi là nhà sản xuất sáng tạo cấp cao tại Walt Disney Imagineering. Tôi chịu trách nhiệm chỉ đạo các đội thực sự tạo ra thắng cảnh mà khách hàng của chúng tôi có thể trải nghiệm. Chúng tôi luôn tìm cách để có thể cải thiện và mang đến trải nghiệm tốt hơn cho khách hàng và công nghệ là trọng tâm của điều đó."
+      2:
+        text: "Xin chúc mừng, bạn đã làm được rồi! Bạn đã lập trình BB-8. Giờ tôi nghĩ là chúng ta đã sẵn sàng cho một thử thách khó hơn. Tiến lên nào. Bây giờ, bạn đã học những kiến thức cơ bản về lập trình, chúng ta sẽ quay ngược thời gian để làm game của riêng bạn, với sự tham gia của R2-D2 và C-3PO."
+      3:
+        text: "Để làm game, chúng ta cần tìm hiểu về một thứ mà các lập trình viên trò chơi sử dụng hàng ngày: chúng được gọi là sự kiện. Sự kiện yêu cầu chương trình của bạn phát hiện hoặc đợi khi có sự việc nào đó xảy ra và khi điều đó xảy ra, chương trình sẽ thực hiện một hành động."
+      4:
+        text: "Một số ví dụ về các sự kiện là phát hiện một cú nhấp chuột, một nút mũi tên hoặc một lần nhấn trên màn hình."
+      5:
+        text: "Ở đây, chúng tôi sẽ làm cho R2-D2 di chuyển lên để gửi lời nhắn cho một phi công phe khởi nghĩa rồi chuyển xuống phi công khác. Chúng ta sẽ sử dụng các sự kiện để khiến anh ấy di chuyển. Khi người chơi sử dụng các phím mũi tên lên/xuống hoặc các nút lên/xuống."
+      6:
+        text: "Chúng ta sử dụng khối sự kiện whenUp() và gắn khối goUp() vào nó. Khi người chơi nhấn phím mũi tên lên, mã lệnh gắn với khối whenUp() sẽ chạy. Và chúng ta sẽ làm thao tác tương tự để R2-D2 di chuyển xuống."
+      7:
+        text: "Để làm điều này, chúng ta sẽ sử dụng lệnh gọi là whenUp(). Khi kéo lệnh này ra khỏi hộp công cụ, bạn sẽ thấy lệnh bắt đầu và kết thúc bằng dấu ngoặc nhọn thay vì dấu chấm phẩy. Hình dạng này cho chúng ta không gian để đặt các lệnh khác ở giữa. Mọi lệnh mà chúng ta đặt bên trong các dấu ngoặc này sẽ chạy khi người chơi nhấn vào mũi tên lên."
+      8:
+        text: "Chúng ta muốn R2-D2 đi lên vì vậy hãy đặt khối goUp(); bên trong lệnh này. Và chúng ta sẽ thực hiện thao tác tương tự để làm cho R2-D2 đi xuống."
+      9:
+        text: "Bây giờ, thay vì viết trước tất cả mã lệnh để điều khiển droid, chúng ta có thể để R2-D2 phản ứng với các sự kiện nhấn nút làm anh ta di chuyển quanh màn hình. Từng bước một, khả năng tương tác trong trò chơi của bạn ngày càng cao."
+    starwars_congrats:
+      1:
+        text: "Xin chào, tên tôi là Alice và tôi điều hành nhóm sản phẩm và kỹ thuật tại Code.org. Tôi đã biên soạn bài hướng dẫn mà bạn đang xem."
+      2:
+        text: "Bạn vừa tới cấp độ cuối cùng. Xin chúc mừng! Bạn vừa học mọi thứ bạn cần biết để làm game Chiến tranh giữa các vì sao của riêng mình. Bây giờ không còn bài hướng dẫn nào để học hay bài tập nào để giải nữa. Bạn có thể làm game của riêng mình và chọn cách game hoạt động. Một điều nữa là bạn đã mở khóa âm thanh mới và lệnh mới để làm được nhiều điều hơn nữa."
+      3:
+        text: "[học sinh nói] Vậy là về cơ bản chúng ta đã tạo ra một tựa game trong đó bạn sẽ nhận được điểm khi tìm được những con heo puffer. Thử thách nằm ở chỗ bất cứ khi nào bạn tìm được một con heo puffer thì một stormtrooper sẽ xuất hiện. Trên thực tế, toàn bộ màn hình chỉ toàn là heo puffer và khi bạn chạm vào 10.000 con heo trong số đó, bạn sẽ giành chiến thắng."
+      4:
+        text: "[sinh viên nói] Chúng ta đã tạo ra một tựa game mà bạn không thể thua và tất cả những gì bạn giết được sẽ giúp bạn giành điểm. Trong chương trình của mình, tôi đã đảo ngược các phím để bất cứ khi nào bạn nhấp vào, nhân vật của bạn sẽ đi xuống và khi bạn đi sang phải, nhân vật của bạn sẽ đi sang trái. Thật sự rất khó đó! Đôi khi bạn sở hữu lợi thế, một lợi thế không công bằng nếu bạn là nhà phát triển của trò chơi. Tôi có lợi thế đó phải không? Tuyệt!"
+      5:
+        text: "Khi bạn hoàn thành game của mình, hãy chọn chia sẻ để nhận liên kết có thể chia sẻ với bạn bè hoặc chơi game của mình trên điện thoại. Chúc vui vẻ nhé!"
+    starwars_blocks_intro:
+      1:
+        text: "Xin chào, tôi là Kathleen Kennedy và tôi là nhà sản xuất của Chiến tranh giữa các vì sao: Thần lực thức tỉnh. Hôm nay bạn sẽ làm việc với một trong những ngôi sao của chúng tôi, BB-8. BB-8 là một droid hình cầu. Mọi hành động và chuyển động của cậu ấy đều được điều khiển bằng phần mềm máy tính. Khoa học máy tính tác động đến mọi lĩnh vực, từ tiếp thị đến chăm sóc sức khỏe cho đến phim ảnh. Trên thực tế, hàng trăm kỹ sư máy tính đã cùng nhau làm ra bộ phim như Thần lực thức tỉnh."
+      2:
+        text: "Xin chào, tôi là Rachel Rose, tôi là kỹ sư nghiên cứu và phát triển cấp cao tại ILM và tôi lãnh đạo nhóm phát triển hoạt họa và sinh vật. Trong Thần lực thức tỉnh, tôi chịu trách nhiệm giúp nghệ sĩ xây dựng bộ khung là phần chuyển động của nhân vật, khiến nhân vật trông như thật ở một thiên hà xa rất xa."
+      3:
+        text: "Trong giờ tới, chúng ta sẽ làm game Chiến tranh giữa các vì sao của riêng mình. Chúng tôi sẽ dạy bạn những khái niệm cơ bản về lập trình. Thông thường, lập trình chỉ toàn văn bản nhưng ở đây, chúng ta sẽ sử dụng các khối để có thể kéo và thả khi viết chương trình. Để bắt đầu, chúng ta sẽ làm việc cùng Rey để lập trình cho BB-8 đi thu thập tất cả các mảnh phế liệu."
+      4:
+        text: "Màn hình của bạn được chia thành ba phần. Ở bên trái là không gian trò chơi Chiến tranh giữa các vì sao, nơi mã lệnh sẽ chạy. Hướng dẫn cho mỗi cấp độ được viết bên dưới không gian trò chơi."
+      5:
+        text: "Khu vực ở giữa này là hộp công cụ và mỗi khối này là một lệnh mà BB-8 có thể hiểu được."
+      6:
+        text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi chúng ta sẽ xây dựng chương trình của mình."
+      7:
+        text: "Nếu tôi kéo khối moveLeft(); vào không gian làm việc của chúng ta, điều gì sẽ xảy ra? BB-8 di chuyển một ô sang trái trên lưới."
+      8:
+        text: "Và điều gì sẽ xảy ra nếu tôi muốn BB-8 làm điều gì đó sau khối moveLeft();? Tôi có thể thêm một khối khác vào chương trình của chúng ta. Tôi sẽ chọn khối moveUp(); và kéo vào bên dưới khối moveLeft(); cho đến khi viền sáng xuất hiện. Sau đó, tôi sẽ thả khối này xuống và hai khối sẽ dính vào nhau. Khi tôi nhấn chạy một lần nữa, BB-8 sẽ thực hiện các lệnh chồng từ trên xuống dưới trên không gian làm việc."
+      9:
+        text: "Nếu bạn muốn xóa một khối, chỉ cần xóa khối đó khỏi chồng và kéo trở lại hộp công cụ."
+      10:
+        text: "Sau khi nhấn chạy, bạn luôn có thể nhấn nút đặt lại để đưa BB-8 trở lại điểm xuất phát. Chúng ta hãy bắt đầu chạy nào!"
+    starwars_blocks_events:
+      1:
+        text: "Xin chào, tên tôi là Charita Carter. Tôi là nhà sản xuất sáng tạo cấp cao tại Walt Disney Imagineering. Tôi chịu trách nhiệm chỉ đạo các đội thực sự tạo ra thắng cảnh mà khách hàng của chúng tôi có thể trải nghiệm. Chúng tôi luôn tìm cách để có thể cải thiện và mang đến trải nghiệm tốt hơn cho khách hàng và công nghệ là trọng tâm của điều đó."
+      2:
+        text: "Xin chúc mừng, bạn đã làm được rồi! Bạn đã lập trình BB-8. Giờ tôi nghĩ là chúng ta đã sẵn sàng cho một thử thách khó hơn. Tiến lên nào. Bây giờ, bạn đã học những kiến thức cơ bản về lập trình, chúng ta sẽ quay ngược thời gian để làm game của riêng bạn, với sự tham gia của R2-D2 và C-3PO."
+      3:
+        text: "Để làm game, chúng ta cần tìm hiểu về một thứ mà các lập trình viên trò chơi sử dụng hàng ngày: chúng được gọi là sự kiện. Sự kiện yêu cầu chương trình của bạn phát hiện hoặc đợi khi có sự việc nào đó xảy ra và khi điều đó xảy ra, chương trình sẽ thực hiện một hành động."
+      4:
+        text: "Một số ví dụ về các sự kiện là phát hiện một cú nhấp chuột, một nút mũi tên hoặc một lần nhấn trên màn hình."
+      5:
+        text: "Ở đây, chúng tôi sẽ làm cho R2-D2 di chuyển lên để gửi lời nhắn cho một phi công phe khởi nghĩa rồi chuyển xuống phi công khác. Chúng ta sẽ sử dụng các sự kiện để khiến anh ấy di chuyển. Khi người chơi sử dụng các phím mũi tên lên/xuống hoặc các nút lên/xuống."
+      6:
+        text: "Chúng ta sử dụng khối sự kiện whenUp() và gắn khối goUp() vào nó. Khi người chơi nhấn phím mũi tên lên, mã lệnh gắn với khối whenUp() sẽ chạy. Và chúng ta sẽ làm thao tác tương tự để R2-D2 di chuyển xuống. Bây giờ, thay vì viết trước tất cả mã lệnh để điều khiển droid, chúng ta có thể để R2-D2 phản ứng với các sự kiện nhấn nút làm anh ta di chuyển quanh màn hình."
+      7:
+        text: "Từng bước một, khả năng tương tác trong trò chơi của bạn ngày càng cao."
+    starwars_blocks_congrats:
+      1:
+        text: "Xin chào, tên tôi là Alice và tôi điều hành nhóm sản phẩm và kỹ thuật tại Code.org. Tôi đã biên soạn bài hướng dẫn mà bạn đang xem."
+      2:
+        text: "Bạn vừa tới cấp độ cuối cùng. Xin chúc mừng! Bạn vừa học mọi thứ bạn cần biết để làm game Chiến tranh giữa các vì sao của riêng mình. Bây giờ không còn bài hướng dẫn nào để học hay bài tập nào để giải nữa. Bạn có thể làm game của riêng mình và chọn cách game hoạt động. Một điều nữa là bạn đã mở khóa âm thanh mới và lệnh mới để làm được nhiều điều hơn nữa."
+      3:
+        text: "[học sinh nói] Vậy là về cơ bản chúng ta đã tạo ra một tựa game trong đó bạn sẽ nhận được điểm khi tìm được những con heo puffer. Thử thách nằm ở chỗ bất cứ khi nào bạn tìm được một con heo puffer thì một stormtrooper sẽ xuất hiện. Trên thực tế, toàn bộ màn hình chỉ toàn là heo puffer và khi bạn chạm vào 10.000 con heo trong số đó, bạn sẽ giành chiến thắng."
+      4:
+        text: "[sinh viên nói] Chúng ta đã tạo ra một tựa game mà bạn không thể thua và tất cả những gì bạn giết được sẽ giúp bạn giành điểm. Trong chương trình của mình, tôi đã đảo ngược các phím để bất cứ khi nào bạn nhấp vào, nhân vật của bạn sẽ đi xuống và khi bạn đi sang phải, nhân vật của bạn sẽ đi sang trái. Thật sự rất khó đó! Đôi khi bạn sở hữu lợi thế, một lợi thế không công bằng nếu bạn là nhà phát triển của trò chơi. Tôi có lợi thế đó phải không? Tuyệt!"
+      5:
+        text: "Khi bạn hoàn thành game của mình, hãy chọn chia sẻ để nhận liên kết có thể chia sẻ với bạn bè hoặc chơi game của mình trên điện thoại. Chúc vui vẻ nhé!"
     mc_intro:
       1:
         text: "Tôi tên là Jens Bergensten, nhưng tốt hơn nên gọi tôi là Jeb. Tôi là trưởng nhóm lập trình viên của Minecraft, ở đây tại Mojang, Stockholm. Tôi nghĩ lúc tôi mười bảy tuổi hay có thể là mười hai tuổi, tôi đã bắt đầu lập chương vì tôi muốn tạo ra các trò chơi. Một trong số những người bạn của cha tôi nói với tôi là để tạo ra trò chơi thì tôi cần phải học cách lập trình. Đó là cách mà tôi bắt đầu. Tôi thích thiết kế và lập cấu trúc của các trò chơi. Đó là những gì tôi thực sự thích ở Minecraft."
@@ -630,10 +757,12 @@ vi:
       2:
       3:
       4:
+        text: "Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới."
       5:
       6:
         text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình."
       7:
+        text: "Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam \"khi chạy\". Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau."
       8:
       9:
     iceage_intro:
@@ -641,9 +770,94 @@ vi:
       2:
       3:
       4:
+        text: "Màn hình của bạn được chia thành ba phần chính. Ở bên trái là không gian chương trình sẽ chạy. Các lệnh cho từng cấp độ được viết bên dưới."
       5:
       6:
         text: "Vùng màu trắng bên phải được gọi là không gian làm việc và đây là nơi bạn sẽ xây dựng chương trình."
       7:
+        text: "Để bắt đầu, bạn sẽ cần liên kết các khối với khối màu cam \"khi chạy\". Bạn có thể liên kết nhiều khối với nhau bằng cách kéo chúng cho đến khi bạn nhìn thấy đường màu vàng, và sau đó chúng sẽ nối liền với nhau."
       8:
       9:
+    mc_2017_agent_intro:
+      1:
+        text: "Stacy: Stampy, Lizzy, Preston – cảm ơn các cậu đã đồng hành cùng tôi. Mấy thứ tôi muốn cho các cậu thấy chỉ ở ngay trên cao nguyên mesa này nè. Thế nào các cậu cũng thích mê cho xem!"
+      2:
+        text: "Khoan đã – có hố trên đường kìa! (la hét)"
+      3:
+        text: "Mọi người ổn chứ? Stampy: À, tôi thấy vấn đề rồi. Nhìn xem! Có một cái hố trên đường. Stacy: Thật á, Stampy? Lizzy: Có lẽ chúng ta nên tập hợp các khối để lấp hố. Preston: Coi như đây là một cuộc thi đi. Người đầu tiên trở lại đỉnh núi sẽ chiến thắng. Stacy: Rồi, sẵn sàng, BẮT ĐẦU! Được, tôi sẽ thu thập một ít đất nung này. Khoan. Các cậu, tôi không đào được! Preston: Tôi cũng thế. Lizzy: Tôi cũng không được. Stacy: Ờ, kỳ lạ ghê. Stampy, cậu đào được không? Stampy: Tôi không đào được! Stacy: Rồi, mọi người bình tĩnh. Stampy: Game bị hỏng rồi à? Stacy: Nếu thế thì chúng ta phải sửa ra sao? Lizzy: Tôi không biết. Stampy: Có ai biết cách viết mã lệnh Minecraft không?"
+      4:
+        text: "(bụp) Preston: Cái gì vậy? Stampy: Chưa từng thấy con gì giống vậy. Lizzy: Thật là đáng yêu! Stacy: Có... có thể thuần hóa được không ta? Preston: Được rồi, chuyện gì đang xảy ra thế này? Ai đó cần quay lại thế giới thực và sửa lỗi này. Tất cả: Không phải nó! Stacy: Không phải n- (Thở dài.) Được rồi, tôi sẽ đi."
+      5:
+        text: "Ồ, được rồi, giờ tôi đang ở thế giới thực. Tôi sẽ cố gắng tìm văn phòng Minecraft."
+      6:
+        text: "Nhưng, tôi sẽ cần sự giúp đỡ của bạn. Hãy bắt đầu làm bài hướng dẫn, bắt đầu học cách viết mã, và tôi sẽ bắt kịp với các bạn sau một vài cấp độ, được chứ? Chúc tôi may mắn đi! Tôi nghĩ là như thế này. Á! Cây xương rồng! Tôi không sao!"
+      7:
+        text: "Để hoàn thành thử thách Giờ lập trình, bạn cần viết mã lệnh để lập trình tác tử. Bạn sẽ làm việc cùng với Tác tử để xóa mọi chướng ngại vật trên đường đi của mình, vì vậy bạn có thể nhặt những vật phẩm cần thiết cho cuộc hành trình. Chỉ Tác tử mới có thể đặt và phá vỡ các khối, và chỉ bạn mới có thể thu thập các vật phẩm. Màn hình của bạn được chia thành ba phần chính. Bên trái là Minecraft."
+      8:
+        text: "Khu vực giữa là hộp công cụ với các lệnh mà Tác tử có thể hiểu được."
+      9:
+        text: "Còn bên phải là không gian làm việc. Đó là nơi bạn xếp chồng các lệnh để xây dựng chương trình của mình nhằm điều khiển Tác tử."
+      10:
+        text: "Tác tử có thể đi, rẽ và kích hoạt các tấm áp lực. Nó cũng có thể phá hủy các khối và đặt các khối. Khi đặt khối giống như những đường ray xe mỏ này, tác tử sẽ đặt khối bên dưới chính nó."
+      11:
+      12:
+        text: "Nếu muốn thử lại, bạn có thể nhấn vào nút đặt lại màu xanh dương để đặt lại mọi thứ về trạng thái ban đầu. Và nếu bạn cần xóa một khối mã lệnh, hãy kéo khối từ không gian làm việc của bạn vào hộp công cụ. Hãy nhớ nhấn nút chạy để khiến Tác tử di chuyển. Được rồi, hãy tiếp tục và thử vài cấp độ đầu tiên nhé. Chúc may mắn!"
+    mc_2017_repeat:
+      1:
+        text: "Stampy: Không biết Stacy định làm gì nhỉ?"
+      2:
+        text: "Stacy: Chà, tôi nghĩ mình đã đến đúng chỗ rồi. Thật đáng kinh ngạc!"
+      3:
+        text: "Tôi cảm thấy như mình đã trở lại Minecraft! Xin chào. Bạn khỏe không? Xin chào?"
+      4:
+        text: "Ồ, có một cây leo. Bạn không bận gì chứ? Katie: Stacy? Stacy: Chào, Katie? Katie: Vâng, chào mừng bạn đến với Minecraft!"
+      5:
+        text: "Stacy: Thật tuyệt vời. Vậy là bạn làm việc ở đây mỗi ngày với tư cách là một nhà phát triển đúng không? Katie: Vâng, cũng khá tuyệt vời đó. Tôi là nhà phát triển trong nhóm thị trường Minecraft. Stacy: Bạn biết bao nhiêu ngôn ngữ lập trình thế? Katie: Trong sự nghiệp của mình, có lẽ tôi đã làm việc với hơn chục loại rồi. Stacy: Cả chục á? Katie: Vâng. Stacy: Thế giờ, chắc bạn sẽ biết gì đó về anh chàng yêu tinh nhỏ bé tự xưng là Tác tử chứ? Katie: Chúng tôi sử dụng Tác tử để làm những điều mà Steve hoặc Alex không thể làm, như đi xuyên qua dung nham. Stacy: Chà, tôi muốn học cách viết mã lệnh và họ cũng muốn học nữa, vậy điều đầu tiên bạn cần biết khi học là gì?"
+      6:
+        text: "Katie: Chà, bạn cần học cách sử dụng các vòng lặp. Vòng lặp là những thứ mà các nhà phát triển viết để đưa ra các lệnh cho một máy tính có thể chạy đi chạy lại. Stacy: Được, tôi nghĩ các cấp độ sau thế nào cũng có vòng lặp xuất hiện đó, hãy tiếp tục và thử các vòng lặp đi."
+      7:
+        text: "Ở cấp độ tiếp theo, bạn có thể sử dụng vòng lặp để di chuyển Tác tử dọc theo con đường. Hãy kéo khối lặp lại vào không gian làm việc và đặt khối tiến về phía trước bên trong khối lặp lại. Thao tác này yêu cầu máy tính làm cùng một việc nhiều lần liên tiếp mà không cần phải kéo cả đống khối vào không gian làm việc. Bạn có thể chọn số lần lặp lại bằng cách đặt một số vào khối lặp lại."
+      8:
+        text: "Bạn cũng có thể đặt các lệnh rẽ và nhiều lệnh trong khối lặp lại, nhưng bây giờ hãy thử sử dụng lệnh lặp lại để di chuyển Tác tử về phía trước một vài bước. Hãy nhớ rằng, nếu bạn gặp khó khăn trong một bài tập, bạn luôn có thể nhấn vào nút đặt lại màu xanh dương và thử lại."
+      9:
+        text: "Nếu bạn đang nghĩ về một công việc thú vị như Katie, hãy tiếp tục và nhấp chuột vào nút hiển thị mã lệnh khi bạn hoàn thành mọi cấp độ. Thao tác đó sẽ hiển thị cho bạn mã Javascript mà một người như Katie sử dụng khi cô ấy thực sự lập trình Minecraft. Katie: Vâng, chúc mọi người may mắn!"
+    mc_2017_functions:
+      1:
+        text: "Preston: Tôi không định khoe khoang đâu, nhưng tôi khá giỏi môn parkour đấy. Lizzy: Chúng ta hãy đi ngủ để khi Stacy trở lại sẽ là ban ngày."
+      2:
+        text: "Stacy: Được rồi các câu, tôi đã trở lại văn phòng Minecraft và tôi nghĩ mình biết cách giải quyết vấn đề mà tôi đang gặp phải trong trò chơi. Chắc là tôi có thể sử dụng hàm. Để tôi mở cái này xem sao."
+      3:
+        text: "Hàm là một tập hợp các hướng dẫn cụ thể để hoàn thành một tác vụ nhất định, giống như một công thức. Trong vài cấp độ tiếp theo, bạn sẽ có quyền truy cập vào các hàm mà bạn có thể sử dụng để giải đố."
+      4:
+        text: "Hãy nhìn vào mã lệnh trong hàm khi nó ở trong không gian làm việc để xem cách hoạt động nhé."
+      5:
+        text: "Sau đó, hãy tìm khối có tên đó trong hộp công cụ và kéo từ hộp công cụ vào khối khi chạy."
+      6:
+        text: "Hãy nhớ rằng, bạn có thể sử dụng cùng một hàm mỗi khi bạn cần chạy cùng một bộ hướng dẫn để làm một việc gì đó, chẳng hạn như xây cầu. Chúc may mắn, tôi biết bạn có thể làm được mà!"
+    mc_2017_congratulations:
+      1:
+        text: "Preston: Xin chúc mừng!"
+      2:
+        text: "Lizzy: Chúc mừng!"
+      3:
+        text: "Stampy: Chúc mừng nhé, bạn đã làm được!"
+      4:
+        text: "Stacy: Xin chúc mừng các bạn, các bạn rất cừ đó! Bây giờ bạn đã hoàn thành Giờ lập trình rồi, bạn có thể bắt đầu viết mã lệnh trong Minecraft. Bạn đã tìm hiểu về các vòng lặp, hàm và hoạt động của Tác tử phần mềm."
+      5:
+        text: "Bây giờ đã đến lúc thử cấp độ chơi tự do, nơi bạn là nhà phát triển. Hãy sử dụng khoảng thời gian còn lại để viết các hàm của riêng bạn, để khám phá, khai thác và xây dựng."
+      6:
+        text: "Bạn có thể đưa mã lệnh mà bạn đã viết trong cấp độ này vào thế giới Minecraft của mình trên Minecraft: Education Edition. Chỉ cần nhấp chuột vào ‘Hoàn tất’ và làm theo hướng dẫn để nhận liên kết, sử dụng trong thế giới của bạn và tiếp tục viết mã với Tác tử. Chúc vui vẻ, bạn làm tốt lắm!"
+      7:
+        text: "Stacy: Tôi trở lại rồi đây! Được rồi, các câu, đây là Tác tử! Hãy để tôi chỉ cho cậu khả năng của anh bạn này. Nhìn kìa, nó đang làm việc đó! Tôi đã bảo nó xây cầu thang từ những khối đất nung này, bây giờ chúng ta có thể dùng cầu thang để ra khỏi đây. Mà nè, không chỉ có cầu thang đâu nhé. Tôi có thể yêu cầu Tác tử làm bất cứ điều gì tôi muốn, và Tác tử sẽ làm điều đó giúp tôi."
+      8:
+        text: "Stampy: Làm sao làm được vậy? Stacy: Thực ra thì rất dễ dàng. Tôi vừa mới sử dụng mã lệnh đấy!"
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Một số ví dụ về các sự kiện là: đang lắng nghe cho một nhấp chuột, phím mũi tên hoặc phím tab được nhấn."
+      5:
+      6:
+      7:
+      8:

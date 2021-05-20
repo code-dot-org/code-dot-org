@@ -35,6 +35,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "para cada elemento";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Para cada elemento en una lista, establece la variable '%1' en el elemento y luego hacer algunas declaraciones.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "de %1 a %2 por %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "contar con";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Deja que la variable %1  tome los valores desde el número inicial  hasta el número final, contando con el intervalo especificado, y haciendo los bloques especificados.";

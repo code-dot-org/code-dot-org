@@ -1,86 +1,104 @@
-# This decorator combines pieces of survey roll-up data from previous steps of the survey pipeline
-# and organize them in a format that the client view can consume.
+# SurveyRollupDecorator combines pieces of survey roll-up data from previous steps
+# of the survey pipeline and organize them in a format that the client view can consume.
 
 module Pd::SurveyPipeline
   class SurveyRollupDecorator
-    # Create roll-up report to send to client view.
+    # Create roll-up report to send to client.
     #
-    # @param [Hash] data a hash contains pieces of information from previous steps in the pipeline.
+    # Return value is a Hash with following keys
+    # :rollups [Hash<scenario_name, scenario_content>]. scenario_content is a Hash with these keys
+    #   :averages [Hash<question_name, Float>]
+    #   :response_count [Integer]
+    #   :facilitator_id [Integer]
+    #   :workshop_id [Integer]
+    #   :all_workshop_ids [Array<Integer>]
+    #   :course_name [String]
+    # :questions [Hash<question_name, question_text>]
+    # :facilitators [Hash<facilitator_id, facilitator_name>]
     #
-    # @return [Hash] a hash report contains following keys
-    #   :facilitators => {factilitator_id => facilitator_name}
-    #   :current_workshop => Integer
-    #   :related_workshops: {facilitator_id => Array<Integer>}
-    #   :facilitator_averages => a hash with following keys
-    #     :questions => {question_name => question_text}
-    #     facilitator_name => {question_name_or_category => {workshop_scope => score}}
-    #   :facilitator_response_counts =>
-    #     {workshop_scope => {factilitator_id => {submission_type => count}}}
-    #   :errors => Array
+    # @param data [Hash]
+    # @option data [Integer] :facilitator_id a facilitator in the current workshop
+    # @option data [Integer] :current_workshop_id the main workshop user is requesting survey results for
+    # @option data [Array<Integer>] :related_workshop_ids workshops related to the current workshop and the selected facilitator
+    # @option data [Hash] :parsed_questions questions parsed from Pd::SurveyQuestion
+    # @option data [Array<String>] :question_categories categories for roll-up results
+    # @option data [Array<Hash>] :question_answer_joined questions & answers joined together
+    # @option data [Array<Hash>] :summaries survey result summaries
+    # @param only_facilitator_questions [Boolean]
+    # @return [Hash]
     #
-    def self.decorate_facilitator_rollup(data)
+    def self.decorate_facilitator_rollup(data, only_facilitator_questions)
       report = {
-        facilitators: {},
-        current_workshop: data[:current_workshop_id],
-        related_workshops: {},
-        facilitator_averages: {},
-        facilitator_response_counts: {},
-        errors: data[:errors]
+        rollups: {},
+        questions: {},
+        facilitators: {}
       }
 
-      # Get facilitator name and related workshops
       facilitator_id = data[:facilitator_id]
-      facilitator_name = get_user_name_by_id(facilitator_id)
-      report[:facilitators][facilitator_id] = facilitator_name
-      report[:related_workshops][facilitator_id] = data[:related_workshop_ids]
+      report[:facilitators][facilitator_id] = get_user_name_by_id(facilitator_id)
 
-      # Get all questions in the selected categories, even if not all of them have responses.
-      # Then convert question names to the format that the UI expects.
-      # E.g. overall_success_<hash_string> -> overall_success_<index_number>.
-      category_questions =
+      report[:questions] =
         get_category_questions data[:parsed_questions], data[:question_categories]
-      q_name_replacements =
-        get_question_name_replacements category_questions, data[:question_categories]
-      report[:facilitator_averages][:questions] =
-        replace_question_name_keys category_questions, q_name_replacements
 
-      # Get question average scores
-      question_averages = get_question_averages data[:summaries], data[:current_workshop_id]
-      report[:facilitator_averages][facilitator_name] =
-        replace_question_name_keys question_averages, q_name_replacements
+      # For single workshop scenario (survey results come from one workshop), we only add
+      # facilitator id to scenario name if questions are facilitator-specific.
+      # (There are 2 type of questions, facilitator-specific and general workshop questions.)
+      single_ws_scenario =
+        only_facilitator_questions ? "facilitator_#{facilitator_id}_single_ws" : "single_ws"
 
-      # Get category average scores
-      category_averages = get_category_averages data[:question_categories], question_averages
-      report[:facilitator_averages][facilitator_name].merge! category_averages
-
-      # Count number of submissions contributed to category average scores.
-      report[:facilitator_response_counts] = {
-        this_workshop: {facilitator_id => {}},
-        all_my_workshops: {facilitator_id => {}}
+      report[:rollups][single_ws_scenario] = {
+        averages: get_averages_single_ws(data),
+        response_count: get_submission_count_single_ws(data),
+        workshop_id: data[:current_workshop_id]
       }
+      report[:rollups][single_ws_scenario][:facilitator_id] = facilitator_id if only_facilitator_questions
 
-      if data[:facilitator_submissions].present? || data[:workshop_submissions].present?
-        submission_type = data[:facilitator_submissions].present? ?
-          'Facilitator-specific submissions' : 'Workshop submissions'
+      # For scenario that collects survey results from multiple related workshops, it is always
+      # facilitator-specific because each facilitator has different set of related workshops.
+      # Thus, no matter what the question type is, we always add facilitator id to the scenario name.
+      all_ws_scenario = "facilitator_#{facilitator_id}_all_ws"
 
-        report[:facilitator_response_counts][:this_workshop][facilitator_id][submission_type] =
-          get_submission_counts(
-            data[:question_answer_joined], data[:question_categories], data[:current_workshop_id]
-          )
-        report[:facilitator_response_counts][:all_my_workshops][facilitator_id][submission_type] =
-          get_submission_counts data[:question_answer_joined], data[:question_categories]
-      end
+      report[:rollups][all_ws_scenario] = {
+        averages: get_averages_all_ws(data),
+        response_count: get_submission_count_all_ws(data),
+        facilitator_id: facilitator_id,
+        all_workshop_ids: data[:related_workshop_ids],
+        course_name: Pd::Workshop.find(data[:current_workshop_id]).course
+      }
 
       report
     end
 
-    private_class_method
+    # TODO: make these class methods private
+    def self.get_submission_count_single_ws(data)
+      get_submission_count(
+        data[:question_answer_joined], data[:question_categories], data[:current_workshop_id]
+      )
+    end
 
+    def self.get_submission_count_all_ws(data)
+      get_submission_count data[:question_answer_joined], data[:question_categories]
+    end
+
+    def self.get_averages_single_ws(data)
+      question_averages = get_question_averages data[:summaries], data[:current_workshop_id]
+      category_averages = get_category_averages data[:question_categories], question_averages
+      question_averages.merge(category_averages)
+    end
+
+    def self.get_averages_all_ws(data)
+      question_averages = get_question_averages data[:summaries]
+      category_averages = get_category_averages data[:question_categories], question_averages
+      question_averages.merge(category_averages)
+    end
+
+    # @note Copied from SurveyRollupDecorator.get_user_name_by_id
     def self.get_user_name_by_id(id)
       User.find(id)&.name || "UserId_#{id}"
     end
 
     # Get all questions in the selected categories.
+    # @note Copied from SurveyRollupDecorator.get_category_questions
     #
     # @param [Hash] parsed_questions {form_id => {question_id => question_content}}
     # @param [Array<String>] categories
@@ -101,97 +119,16 @@ module Pd::SurveyPipeline
       result
     end
 
-    # Create new names for questions in the selected categories.
-    # Old name: <category>_<hash string>. New name: <category>_<index number>.
-    #
-    # @param [Hash<question_name, question_text>] questions
-    # @param [Array<String>] categories
-    # @return [Hash] {old_question_name => new_question_name}
-    #
-    def self.get_question_name_replacements(questions = {}, categories = [])
-      q_name_replacements = {}
-      categories.each do |category|
-        # Sort question names by question texts so order of questions is always in alphabetical order.
-        sorted_q_names = questions.
-          select {|q_name, _| q_name.start_with? "#{category}_"}.
-          sort_by {|_, q_text| q_text}.
-          pluck(0)
-
-        sorted_q_names.each_with_index do |q_name, index|
-          q_name_replacements[q_name] = "#{category}_#{index}"
-        end
-      end
-
-      q_name_replacements
-    end
-
-    # Replace keys of an input hash which uses question names as keys.
-    #
-    # @param [Hash<question_name, some_value>] question_hash
-    # @param [Hash<old_name, new_name>] q_name_replacements
-    # @return [Hash] a new hash with the same values as the original input hash
-    #   but with the keys replaced.
-    #
-    def self.replace_question_name_keys(question_hash = {}, q_name_replacements = {})
-      question_hash.
-        select {|q_name, _| q_name_replacements.key? q_name}.
-        transform_keys {|q_name| q_name_replacements[q_name]}
-    end
-
-    # Get question average scores for a specific workshop and for all workshops.
-    #
-    # @param [Array<Hash>] summaries
-    # @param [Integer] workshop_id
-    # @return [Hash] {question_name => {workshop_scope => avg_score}}]
-    #
-    def self.get_question_averages(summaries = [], workshop_id)
-      result = {}
-
-      summaries.each do |summary|
-        # Acceptable workshop id value is either nil or the specified workshop_id
-        next if summary[:workshop_id] && summary[:workshop_id] != workshop_id
-
-        scope = summary[:workshop_id] ? :this_workshop : :all_my_workshops
-        q_name = summary[:name]
-        result[q_name] ||= {}
-        result[q_name][scope] = summary[:reducer_result].round(2)
-      end
-
-      result
-    end
-
-    # Get average results of all questions in the same category.
-    #
-    # @param [Array<String>] categories category names
-    # @param [Hash] question_averages {question_name => {workshop_scope => avg_score}}
-    # @return [Hash] {category_name => {workshop_scope => avg_score}}
-    #
-    def self.get_category_averages(categories = [], question_averages = {})
-      result = {}
-      categories.each do |category|
-        category_scores = question_averages.select {|q_name, _| q_name.start_with? "#{category}_"}
-        this_workshop_scores = category_scores.values.pluck(:this_workshop).compact
-        all_workshop_scores = category_scores.values.pluck(:all_my_workshops).compact
-
-        result[category] = {}
-        result[category][:this_workshop] =
-          (this_workshop_scores.sum * 1.0 / this_workshop_scores.length).round(2)
-        result[category][:all_my_workshops] =
-          (all_workshop_scores.sum * 1.0 / all_workshop_scores.length).round(2)
-      end
-
-      result
-    end
-
     # Count number of unique submissions that have answers for any question in
     # the selected categories.
+    # @note Modified from SurveyRollupDecorator.get_submission_counts
     #
     # @param [Hash] question_with_answers combination of questions and answers
     # @param [Array<String>] categories category names
     # @param [Integer] workshop_id limit counting to a specific workshop
     # @return [Integer] submission count
     #
-    def self.get_submission_counts(question_with_answers = [], categories = [], workshop_id = nil)
+    def self.get_submission_count(question_with_answers = [], categories = [], workshop_id = nil)
       submissions_ids = Set[]
       question_with_answers.each do |qa|
         next if workshop_id && qa[:workshop_id] != workshop_id
@@ -202,6 +139,43 @@ module Pd::SurveyPipeline
       end
 
       submissions_ids.length
+    end
+
+    # Get question average scores for selected workshop_id value.
+    # @note Modified from SurveyRollupDecorator.get_question_averages
+    #
+    # @param [Array<Hash>] summaries
+    # @param [Integer] workshop_id
+    # @return [Hash] {question_name => avg_score}]
+    #
+    def self.get_question_averages(summaries = [], workshop_id = nil)
+      {}.tap do |result|
+        summaries.each do |summary|
+          # Acceptable workshop id value is either nil or the specified workshop_id
+          next if summary[:workshop_id] != workshop_id
+          result[summary[:name]] = summary[:reducer_result].round(2)
+        end
+      end
+    end
+
+    # Get average results of all questions in the same category.
+    # @note Modified from SurveyRollupDecorator.get_category_averages
+    #
+    # @param [Array<String>] categories category names
+    # @param [Hash] question_averages {question_name => avg_score}
+    # @return [Hash] {category_name => avg_score}
+    #
+    def self.get_category_averages(categories = [], question_averages = {})
+      {}.tap do |result|
+        categories.each do |category|
+          category_scores =
+            question_averages.select {|q_name, _| q_name.start_with? "#{category}_"}.
+              values.compact
+
+          result[category] = category_scores.present? ?
+              (category_scores.sum * 1.0 / category_scores.length).round(2) : nil
+        end
+      end
     end
   end
 end

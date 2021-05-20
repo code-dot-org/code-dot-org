@@ -1,0 +1,226 @@
+{
+  "script": {
+    "name": "textbook",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:15 UTC",
+    "seeding_key": {
+      "script.name": "textbook"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "new stage",
+      "name": "new stage",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Test Map Level"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test Map Level"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      },
+      "level_keys": [
+        "Test Map Level"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "e_textbook_nested_loops_wrapup"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "e_textbook_nested_loops_wrapup"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      },
+      "level_keys": [
+        "e_textbook_nested_loops_wrapup"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_bee_seq1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_bee_seq1"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      },
+      "level_keys": [
+        "courseA_bee_seq1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_bee_seq2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_bee_seq2"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      },
+      "level_keys": [
+        "courseA_bee_seq2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Test Map Level",
+        "script_level.level_keys": [
+          "Test Map Level"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "e_textbook_nested_loops_wrapup",
+        "script_level.level_keys": [
+          "e_textbook_nested_loops_wrapup"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_bee_seq1",
+        "script_level.level_keys": [
+          "courseA_bee_seq1"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_bee_seq2",
+        "script_level.level_keys": [
+          "courseA_bee_seq2"
+        ],
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

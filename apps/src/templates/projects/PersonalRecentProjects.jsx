@@ -7,35 +7,6 @@ import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-const styles = {
-  grid: {
-    width: '100%'
-  },
-  card: {
-    display: 'inline-block',
-    paddingTop: 10,
-    paddingBottom: 20,
-    paddingRight: 0,
-    paddingLeft: 0
-  },
-  cardPadding: {
-    paddingRight: 35
-  },
-  cardPaddingRtl: {
-    paddingLeft: 35
-  },
-  description: {
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 16,
-    fontFamily: 'Gotham 3r',
-    zIndex: 2,
-    color: color.charcoal,
-    width: 940,
-    marginBottom: -10
-  }
-};
-
 class PersonalRecentProjects extends Component {
   static propTypes = {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired,
@@ -67,6 +38,35 @@ class PersonalRecentProjects extends Component {
     );
   }
 }
+
+const styles = {
+  grid: {
+    width: '100%'
+  },
+  card: {
+    display: 'inline-block',
+    paddingTop: 10,
+    paddingBottom: 20,
+    paddingRight: 0,
+    paddingLeft: 0
+  },
+  cardPadding: {
+    paddingRight: 35
+  },
+  cardPaddingRtl: {
+    paddingLeft: 35
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontSize: 16,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 940,
+    marginBottom: -10
+  }
+};
 
 export default connect(state => ({
   isRtl: state.isRtl

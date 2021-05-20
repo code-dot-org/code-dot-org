@@ -1,7 +1,5 @@
 ---
 title: Hour of Code-guide för kommuner
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## Få med varje skola och varje elev!
 
-### 1. Recruit local schools
+### 1. Engagera lokala skolor 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

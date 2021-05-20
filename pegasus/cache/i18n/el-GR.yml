@@ -21,6 +21,8 @@ el-GR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400"> Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους του
     CSEdWeek</a>'
+  csedweek_banner_teachers_text: Είστε καθηγητής πληροφορικής; Δείτε άλλους πόρους
+    του CSEdWeek
   n_have_learned_an_hoc: "<h1>Δοκιμάστε μία</h1><h2>Ώρα του Κώδικα</h2><h3># την δοκίμασαν</h3>"
   anybody_can_learn: Οποιοσδήποτε μπορεί να μάθει.
   learn_now: Μάθε τώρα
@@ -28,8 +30,6 @@ el-GR:
     μάθει την επιστήμη των υπολογιστών
   petition_sign_message: 'Αν συμφωνείτε, συμπληρώστε τα στοιχεία σας και γίνετε μέλος
     της λίστας αλληλογραφίας μας όπως # άλλοι.'
-  petition_sign_message_support: 'Αν μας υποστηρίζετε, υπογράψτε με το όνομά σας.
-    Ενωθείτε μαζί με # άλλους.'
   petition_join_others: 'Ενωθείτε μαζί με # άλλους'
   name: Όνομα
   email: Ηλεκτρονικό ταχυδρομείο
@@ -345,7 +345,7 @@ el-GR:
   studiobar_flappy_body: Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy
   studiobar_teacher_title: Φτιαγμένο για εκπαιδευτικούς
   studiobar_teacher_body: Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας
-  studiobar_frozen_title: Η Ώρα του Κώδικα
+  studiobar_frozen_title: Ώρα του Κώδικα
   studiobar_frozen_body: Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
     και την Έλσα
   studiobar_donate_title: Κάντε μια δωρεά
@@ -418,6 +418,7 @@ el-GR:
 '
   homepage_action_text_wincelebritychat: Κερδίστε μια συνομιλία με μία διασημότητα
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
+  homepage_signpetition_dropdown_text: Συμφωνώ
   homepage_diversity_pledge: Ακολούθησε τη δέσμευση για πολυμορφία
   homepage_banner_text_prizes: 'Η Ώρα του Κώδικα πλησιάζει πάλι, 7-13 Δεκεμβρίου. '
   homepage_banner_link_prizes: 'Πάρε μέρος στη μεγαλύτερη μαθησιακή εκδήλωση στην
@@ -441,7 +442,7 @@ el-GR:
   homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
   homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
   homepage_slot_text_title_students: Μαθητές
-  homepage_slot_text_blurb_students: Διερευνήστε όλα τα σεμινάρια μας
+  homepage_slot_text_blurb_students: Εξερευνήστε όλα τα μαθήματα μας
   homepage_slot_text_blurb_students_courses: Εξερευνείστε τα μαθήματά μας
   homepage_slot_text_link_codestudio: Δοκιμάστε το Studio κώδικα
   homepage_slot_text_link_local: Βρείτε μια τάξη κοντά στον τόπο σας
@@ -628,8 +629,10 @@ el-GR:
   video_title_real_madrid: Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης
   video_title_marco_belinelli: Η Ώρα του Κώδικα με τον Μάρκο Μπελινέλι
   video_title_chris_bosh: Ο Κρις Μπος για την Πληροφορική
+  video_title_my_name_is_aracely: Ονομάζομαι Aracely
   video_1min: 1 λεπτό
   video_2min: 2 λεπτά
+  video_3min: 3 λεπτά
   video_5min: 5 λεπτά
   speak_another_language: Μιλάτε άλλη γλώσσα;
   help_translate: Βοηθήστε μας με τη μετάφραση.
@@ -838,6 +841,8 @@ el-GR:
   dashboard_action_done: Ολοκληρώθηκε
   dashboard_assessments_view: 'Δείτε τις αξιολογήσεις σε:'
   dashboard_assessments_none: Δεν υπάρχουν αξιολογήσεις
+  dashboard_surveys_answers: Έρευνες
+  dashboard_percent: Ποσοστό
   dashboard_filter_by_stage: 'Φίλτρο κατά στάδιο:'
   dashboard_filter_all: Ολα
   dashboard_download_csv: Κατεβάστε το CSV
@@ -854,6 +859,7 @@ el-GR:
   dashboard_navigation_add_students: Προσθήκη μαθητών
   dashboard_navigation_manage_students: Διαχείριση μαθητών
   dashboard_navigation_lesson_plans_resources: Σχέδια μαθήματος και Πόροι
+  dashboard_navigation_view_stats: Στατιστικά
   dashboard_navigation_section: 'Τμήμα: %{section_name}'
   dashboard_navigation_student: 'Μαθητής: %{student_name}'
   dashboard_progress_not_started: δεν έχει ξεκινήσει
@@ -968,6 +974,13 @@ el-GR:
   dashboard_course2: 'Μάθημα 2:'
   dashboard_course3: 'Μάθημα 3:'
   dashboard_course4: 'Μάθημα 4 (beta): '
+  dashboard_coursea: 'Μάθημα A: '
+  dashboard_courseb: 'Μάθημα B: '
+  dashboard_coursec: 'Μάθημα C: '
+  dashboard_coursed: 'Μάθημα D: '
+  dashboard_coursee: 'Μάθημα E: '
+  dashboard_coursef: 'Μάθημα F: '
+  dashboard_tools: 'Εργαλεία: '
   dashboard_curriculum: Πρόγραμμα σπουδών
   dashboard_curriculum_overview: Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως
     Ε΄ Δημοτικού
@@ -1155,6 +1168,24 @@ el-GR:
   course2_name: Μάθημα 2
   course3_name: Μάθημα 3
   course4_name: Μάθημα 4
+  coursea-draft_name: Μάθημα A
+  coursea_name: Μάθημα A
+  courseb-draft_name: Μάθημα B
+  courseb_name: Μάθημα B
+  coursec-draft_name: Μάθημα C
+  coursec_name: Μάθημα C
+  coursed-draft_name: Μάθημα D
+  coursed_name: Μάθημα D
+  coursee-draft_name: Μάθημα E
+  coursee_name: Μάθημα E
+  coursef-draft_name: Μάθημα F
+  coursef_name: Μάθημα F
+  coursea-2017_name: Μάθημα A (2017)
+  courseb-2017_name: Μάθημα B (2017)
+  coursec-2017_name: Μάθημα C (2017)
+  coursed-2017_name: Μάθημα D (2017)
+  coursee-2017_name: Μάθημα E (2017)
+  coursef-2017_name: Μάθημα F (2017)
   accelerated_name: Επιταχυνόμενη πορεία μάθησης
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: Επιστήμη Υπολογιστών στην Αλγεβρα
@@ -1224,9 +1255,9 @@ el-GR:
   codesters_gradelevel: Ηλικίες 12-14
   texasinstruments_gradelevel: Ηλικίες 13-16
   teacherled_gradelevel: Ηλικίες 5+
-  course1_gradelevel: Ηλικίες 4+ (προ αναγνώστες)
+  course1_gradelevel: Ηλικίες 4-6
   course2_gradelevel: Ηλικίες 6+ (απαιτείται ανάγνωση)
-  course3_gradelevel: Ηλικίες 8+ (μετά το Μάθημα 2)
+  course3_gradelevel: Ηλικίες 8-18
   course4_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   coursea_gradelevel: Τάξεις Ε' Δημοτικού +
   coursec_gradelevel: Τάξεις Α' Γυμνασίου +
@@ -1248,6 +1279,11 @@ el-GR:
   coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2019_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2020_gradelevel: Τάξεις Ε' Δημοτικού +
+  coursec-2020_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2020_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2020_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2020_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
@@ -1360,8 +1396,8 @@ el-GR:
     πέτρα/ψαλίδι/χαρτί
   hourofcode_shortdescription: Μάθετε να γράφετε κώδικα με τον Mark Zuckerberg και
     τα Θυμωμένα Πουλιά!
-  frozen_shortdescription: Ας χρησιμοποιήσουμε τον Κώδικα να πάμε μαζί με την Άννα
-    και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
+  frozen_shortdescription: Ας χρησιμοποιήσουμε τον κώδικα για να πάμε μαζί με την
+    Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
   starwars_shortdescription: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
     δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
   playlab_shortdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο Εργαστήριο
@@ -1934,15 +1970,41 @@ el-GR:
     των ρομπότ, καθώς ακονίζουν τις δεξιότητές τους στα μαθηματικά και την επιστήμη.
   compatibility_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
   flappy_shortcode: Φτερούγισε
+  header_home: Αρχική
   header_courses: Τες
   header_course_catalog: Κατάλογος Μαθημάτων
   header_project_gallery: Έργα
-  header_educate_hoc: Η Ώρα του Κώδικα
+  header_sections: Ενότητες
+  header_educate_elementary: Δημοτικό σχολείο
+  header_educate_middle: Γυμνάσιο
+  header_educate_high: Λύκειο
+  header_educate_hoc: Ώρα του Κώδικα
+  header_educate_beyond: Πέρα από το Code.org
+  header_educate_inspire: Εμπνεύστε έναν Μαθητή
+  header_educate_community: Online Κοινότητα
+  header_about_us: Σχετικά με εμάς
+  header_about_donors: Δωρητές
+  header_about_partners: Συνεργάτες
+  header_about_evaluation: Αξιολογήσεις
+  header_about_jobs: Θέσεις εργασίας
+  header_about_contact: Επικοινωνία
+  header_about_faqs: Συχνές ερωτήσεις
+  header_learn: Εκμάθηση
+  header_teach: Διδασκαλία
+  header_stats: Στατιστικά
   header_about: Σχετικά
+  header_teacher_community: Κοινότητα δασκάλων
   header_help_support: 'Βοήθεια και υποστήριξη '
-  header_report_bug: Αναφορά σφάλματος
+  header_report_bug: Αναφορά προβλήματος
+  header_report_abuse: Αναφορά κατάχρησης
+  header_legal: Απόρρητο & Νομικά
+  header_legal_privacy: Πολιτική Απορρήτου
+  header_legal_tos: Όροι
+  header_tutorials: Οδηγοί εκμάθησης
+  header_documentation: Τεκμηρίωση
   user_header_label: Γεια σου %{username}
   user_header_team: Ομάδα
+  user_header_my_projects: Τα έργα μου
   user_header_settings: Ο λογαριασμός μου
   user_header_logout: Αποσύνδεση
   user_header_signin: Σύνδεση
@@ -1956,6 +2018,8 @@ el-GR:
   user_header_minecraft: Minecraft
   user_header_flappy: Πουλάκι
   user_header_view_all: Όλα τα έργα...
+  view_section: Προβολή ενότητας
+  view_named_section: Προβολή %{section_name}
   applab_tile_title: Εισαγωγή στο App Lab (Ηλικίες 13+)
   applab_tile_subtitle: Δημιουργήστε τη δική σας εφαρμογή σε Javascript με τη χρήση
     προγραμματισμού βασισμένου σε μπλοκ. Εναλλακτικά, αναβαθμίστε τις δεξιότητές σας
@@ -1967,6 +2031,9 @@ el-GR:
   hoc_overview_dance_subtitle: Γράψτε κώδικα για ένα Πάρτι Χορού και μοιραστείτε το
     με τους φίλους σας. Συμμετέχουν οι Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara, και πολλοί άλλοι!
+  hoc_overview_dance_2019_subtitle: Κωδικοποιήστε ένα χορευτικό πάρτι (Dance Party)
+    για να το κοινοποιήσετε στους φίλους σας. Με τους Katy Perry, Shawn Mendes, Panic!
+    At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, και 34 ακόμη!
   hoc_overview_title: Δραστηριότητες για την Ώρα του Κώδικα από το Code.org
   hoc_overview_subtitle: Η <a href="https://hourofcode.com">Ώρα του Κώδικα</a> είναι
     ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε πάνω από 180
@@ -1979,7 +2046,14 @@ el-GR:
     εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του.
   hoc_overview_partner_activities_link: Προβολή Δραστηριοτήτων
   hoc_overview_start_tutorial: Έναρξη
+  hoc_overview_more_resources: Για περισσότερα υλικά που χρησιμοποιούνται στην τάξη
+    και πηγές σχετικά με τον τρόπο με τον οποίο να κινήσετε το ενδιαφέρον της απομακρυσμένης
+    τάξης σας, δείτε τον οδηγό μας για την φιλοξενία μιας   [εικονικής Ώρα του Κώδικα]
+    (https://hourofcode.com/us/how-to/virtual). Για μαθητές με περιορισμένη ή καθόλου
+    πρόσβαση στη τεχνολογία ή σε συνδεσιμότητα, μοιραστείτε αυτό το πακέτο [δραστηριοτήτων
+    για μια εκτός διαδικτύου Ώρα του Κώδικα](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_creativity: δημιουργικότητα
   hoc2018_creativity_create: Δημιουργία
   hoc2018_creativity_what_will_you_create: Τι θα δημιουργήσετε;
   hoc2018_mc_page_title: Μαθήματα Minecraft από την Ώρα του Κώδικα
@@ -2019,6 +2093,7 @@ el-GR:
     βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας
   hoc2018_mc_video_1min: 1 λεπτό
   hoc2018_mc_video_2min: 2 λεπτά
+  hoc2018_mc_video_3min: 3 λεπτά
   hoc2018_mc_video_5min: 5 λεπτά
   hoc2018_mc_video_title_steph_curry: Η Ώρα του Κώδικα με τον Steph Curry
   hoc2018_mc_video_title_sports: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
@@ -2030,6 +2105,7 @@ el-GR:
   hoc2018_mc_video_title_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί
     να Μάθει
   hoc2018_mc_video_title_anybody_can_learn: Οποιοσδήποτε Μπορεί να Μάθει
+  hoc2018_mc_video_title_my_name_is_aracely: Ονομάζομαι Aracely
   hoc2018_mc_homepage_hoc_coming: Η Ώρα του Κώδικα πλησιάζει...
   hoc2018_mc_homepage_what_create: Τι θα δημιουργήσετε;
   hoc2018_mc_homepage_join_us: Ελάτε μαζί μας
@@ -2041,22 +2117,25 @@ el-GR:
     τις δεξιότητες επίλυσης προβλημάτων, για να εξερευνήσετε και να χτίσετε υποβρύχιους
     κόσμους με κώδικα.
   hoc2018_dance_party_main_heading: Πάρτι Χορού
+  hoc2018_dance_party_landing_title: Χορός
   hoc2018_dance_party_subheading: Βοηθήστε να μεταφράσουμε το Πάρτι Χορού
   hoc2018_dance_create_your_own_dance_title: Δημιουργήστε και μοιραστείτε το δικό
     σας Πάρτι Χορού
   hoc2018_dance_party_box_title: Πάρτι Χορού
   hoc2018_dance_party_box_description: Δημιουργήστε ένα δικό σας Πάρτι Χορού για να
     το μοιραστείτε με τους φίλους σας!
+  hoc2018_dance_party_specs: Γλώσσα | Μορφή | Ηλικία 6-106
   hoc2018_dance_party_button: Έναρξη
   hoc2018_dance_keep_on_dancing_box_title: Συνεχίστε να Χορεύετε
-  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς
+  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με πολλές
     ιδέες για πρότζεκτ.
+  hoc2018_dance_keep_on_dancing_specs: Γλώσσα | Μορφή | Ηλικία 13+
   hoc2018_dance_keep_on_dancing_button: Έναρξη δεύτερου μέρους
   hoc2018_dance_teacher_resources_title: Πηγές για εκπαιδευτικούς
   hoc2018_dance_teacher_resources_tile1_description: Σχέδια μαθήματος, πιστοποιητικά
     και φίλτρα μουσικής.
   hoc2018_dance_teacher_resources_tile1_button: Σχέδιο μαθήματος
-  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς καλώδια
+  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς υπολογιστή
   hoc2018_dance_teacher_resources_tile2_description: 'Δεν απαιτούνται υπολογιστές!  Μάθετε
     έννοιες προγραμματισμού για να χορογραφήσετε μαζί ένα πάρτι χορού. '
   hoc2018_dance_teacher_resources_tile2_button: Αποσυνδεδεμένη Δραστηριότητα
@@ -2066,10 +2145,32 @@ el-GR:
   hoc2018_dance_view_creativity_video_playlist: Τι είναι Δημιουργικότητα; Προβολή
     ολόκληρης της σειράς (5 λεπτά)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: Σε συνεργασία με
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Το πρόγραμμα
+    Amazon Future Engineer* έχει σκοπό να εμπνεύσει, να μορφώσει και να εκπαιδεύσει
+    παιδιά με χαμηλό εισόδημα ή άλλες δυσκολίες έτσι ώστε στο μέλλον να μπορέσουν
+    να διεκδικήσουν επαγγέλματα σχετικά με την επιστήμη των υπολογιστών.  <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Μάθετε περισσότερα</a>
   hoc2018_dance_amazon_about_future_engineer_button: Μάθετε περισσότερα
+  hoc2018_dance_amazon_scholarship_programs_button: Εφαρμογή τώρα
   hoc2018_dance_amazon_future_engineer_footer: "* Οι καλλιτέχνες των οποίων η μουσική
     χρησιμοποιείται σε αυτό τον οδηγό εκμάθησης δεν προωθούν την Amazon ως μέρος της
     άδειας χρήσης της μουσικής τους στο Code.org.\n\n"
   hoc2018_dance_measure: Μέτρα
   hoc2018_dance_measure_colon: 'Μέτρα:'
+  hoc2018_aquatic_video1: 'Minecraft: Υδάτινο Ταξίδι - Εισαγωγή'
+  hoc2018_aquatic_video3: 'Minecraft: Υδάτινο Ταξίδι - Συνθήκες'
+  hoc2018_aquatic_video4: 'Minecraft: Υδάτινο Ταξίδι - Συγχαρητήρια'
+  page_not_found_title: Η σελίδα δεν βρέθηκε
+  page_not_found_header: '404: Η σελίδα δεν βρέθηκε'
   hoc2018_mc_with_microsoft: Σε συνεργασία με
+  hoc2018_mc_thank_microsoft: Ευχαριστούμε πολύ την Microsoft για την υποστήριξη του
+    οράματός και της αποστολής μας για εξασφάλιση της ευκαιρίας για κάθε παιδί να
+    μαθαίνει την Επιστήμη της Πληροφορικής και να έχει τις δεξιότητες να επιτυγχάνει
+    στον 21ο αιώνα.
+  footer_powered_by_aws: Με την υποστήριξη των Amazon Web Services
+  footer_privacy_policy: Πολιτική Απορρήτου
+  footer_about: Σχετικά
+  footer_partners: Συνεργάτες
+  footer_donate: Κάντε μια δωρεά
+  footer_support: Βοήθεια και Κοινότητα
+  footer_terms: Όροι

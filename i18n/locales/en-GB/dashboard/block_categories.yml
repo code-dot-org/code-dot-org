@@ -1,0 +1,10 @@
+en-GB:
+  data:
+    block_categories:
+      Actions: Actions
+      Color: Color
+      Logic: Logic
+      Loops: Loops
+      Math: Mathematics
+      Text: Text
+      Variables: Variables

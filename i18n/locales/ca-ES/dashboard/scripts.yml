@@ -1,16 +1,18 @@
+---
 ca:
   data:
     script:
       category:
         hoc_category_name: L'hora del codi
         math_category_name: Matemàtiques
+        other_category_name: Altres
       name:
         course1:
           title: Curs 1
           description: El Curs 1 està dissenyat per permetre als lectors novells crear programes informàtics que els ajudaran a aprendre a col·laborar amb els altres, desenvolupar habilitats de resolució de problemes, i persistir a través de tasques difícils. Al final del curs, els alumnes creen el seu propi joc o història que poden compartir. Recomanat per infantil i cicle inicial de primària.
           description_short: Introducció a la informàtica per a primers lectors.
           description_audience: De 4 a 6 anys
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'Artista: bucles'
             'Artist: Sequence':
@@ -47,12 +49,13 @@ ca:
               name: 'Play Lab: Crea una història'
             The Big Event:
               name: El gran esdeveniment
+          student_description: El Curs 1 està dissenyat per permetre als lectors novells crear programes informàtics que els ajudaran a aprendre a col·laborar amb els altres, desenvolupar habilitats de resolució de problemes, i persistir a través de tasques difícils. Al final del curs, els alumnes creen el seu propi joc o història que poden compartir. Recomanat per infantil i cicle inicial de primària.
         course2:
           title: Curs 2
           description: El Curs 2 està dissenyat per a alumnes que saben llegir i no tenen experiència prèvia en programació. En aquest curs els alumnes crearan programes per resoldre problemes i desenvoluparan jocs interactius o històries que poden compartir. Recomanat per educació primària.
           description_short: Introducció a la informàtica per alumnes que saben llegir.
           description_audience: Més de 6 anys (cal saber llegir)
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'Artista: Correcció d''errors'
             'Artist: Loops':
@@ -91,11 +94,12 @@ ca:
               name: El gran esdeveniment
             Your Digital Footprint:
               name: La vostra empremta digital
+          student_description: El Curs 2 està dissenyat per a alumnes que saben llegir i no tenen experiència prèvia en programació. En aquest curs els alumnes crearan programes per resoldre problemes i desenvoluparan jocs interactius o històries que poden compartir. Recomanat per educació primària.
         course3:
           title: Curs 3
           description_short: Aprofundeix encara més en la programació creant jocs i històries interactives. El curs 3 és una continuació del curs 2.
           description_audience: De 8 a 18 anys
-          stages:
+          lessons:
             Artist:
               name: Artista
             'Artist: Functions':
@@ -140,36 +144,40 @@ ca:
           title: Play Lab
           description: Crea una història o fes una partida amb Play Lab!
           description_short: Crea una història o fes una partida amb Play Lab!
-          stages:
+          lessons:
             Play Lab:
               name: Play Lab
+          student_description: Crea una història o fes una partida amb Play Lab!
         artist:
           title: Artista
           description: Dibuixar imatges estupendes i dissenys amb l'artista!
           description_short: Dibuixar imatges estupendes i dissenys amb l'artista!
-          stages:
+          lessons:
             Artist:
               name: Artista
+          student_description: Dibuixar imatges estupendes i dissenys amb l'artista!
         hourofcode:
           title: Laberint clàssic
           description: Prova els bàsics de la informàtica amb els personatges d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
-          stages:
+          lessons:
             Maze:
               name: Laberint
+          student_description: Prova els bàsics de la informàtica amb els personatges d'Angry Birds, Plants vs. Zombies, i Scrat de Ice Age!
         frozen:
           title: Codi amb Anna i Elsa
           description: Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!
           description_short: Fes servir codi per unir-te a l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel.
-          stages:
+          lessons:
             Artist:
               name: Artista
+          student_description: Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!
         course4:
           title: Curs 4
           description: Curs.
           description_short: Crea programes més complexos amb conceptes com bucles i funcions amb paràmetres. El curs 4 és una continuació del curs 3.
           description_audience: De 9 a 18 anys
-          stages:
+          lessons:
             Artist:
               name: Artista
             Artist Binary:
@@ -210,9 +218,10 @@ ca:
               name: 'Sense connexió: Composició musical amb paràmetres'
             'Unplugged: Tangrams':
               name: 'Sense connexió: Tangrams'
+          student_description: Curs.
         Course4pre:
           title: Curs 4 prerequisit
-          stages:
+          lessons:
             'Artist: Functions':
               name: 'Artista: Funcions'
             'Artist: Loops':
@@ -234,7 +243,7 @@ ca:
         usability:
           title: Proves d'ús
           description: Una selecció de nivells del Curs 4 per proves d'ús.
-          stages:
+          lessons:
             Binary:
               name: Binari
             For Loops:
@@ -245,8 +254,9 @@ ca:
               name: Introducció
             Variables:
               name: Variables
+          student_description: Una selecció de nivells del Curs 4 per proves d'ús.
         algebra:
-          stages:
+          lessons:
             'Eval: Conditionals':
               name: Condicionals
             'Unplugged: Conditionals and Piecewise Functions':
@@ -257,11 +267,12 @@ ca:
           title: Disney infinit Play Lab
           description: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
           description_short: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
-          stages:
+          lessons:
             Infinity:
               name: Infinit
+          student_description: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
         algebrademo:
-          stages:
+          lessons:
             Defining Variables:
               name: Definició de variables
             Evaluation Blocks:
@@ -272,7 +283,7 @@ ca:
           title: Curs introductori de 20 hores
           description: Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
           description_audience: Edat 10 + (després del curs 3)
-          stages:
+          lessons:
             Abstraction:
               name: Abstracció
             Algorithms:
@@ -313,84 +324,88 @@ ca:
               name: El Laberint
             Wrap-up:
               name: Recapitulació
+          student_description: Aquest curs de 20 hores és una introducció als conceptes bàsics d'informàtica i programació. El curs ha estat dissenyat per impartir a alumnes de 1er d'ESO, però és divertit d'aprendre a qualsevol edat.
         edit-code:
           title: Edita el codi
           description: Edita el codi
           description_short: Edita el codi
-          stages:
+          lessons:
             Play Lab:
               name: Play Lab
             The Artist:
               name: L'artista
             The Maze:
               name: El Laberint
+          student_description: Edita el codi
         events:
           title: Esdeveniments
           description: Esdeveniments
           description_short: Esdeveniments
-          stages:
+          lessons:
             Bounce:
               name: Rebota
+          student_description: Esdeveniments
         flappy:
           title: Codi Flappy
           description: Vols 'escriure el teu propi joc en menys de 10 minuts? Prova el nostre tutorial Codi Flappy!
-          stages:
+          lessons:
             Flappy Code:
               name: Codi Flappy
+          student_description: Vols 'escriure el teu propi joc en menys de 10 minuts? Prova el nostre tutorial Codi Flappy!
         jigsaw:
           title: Puzzle
-          stages:
+          lessons:
             Jigsaw:
               name: Puzzle
         step:
           title: Un pas
-          stages:
+          lessons:
             Step:
               name: Un pas
         Hour of Code:
           title: Hora de codi 2013
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de codi 2013
         algebraPD:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Blocs d'avaluació
         algPDmiami:
-          stages:
+          lessons:
             Booleans:
               name: Veritat o fals
             Evaluation Blocks:
               name: Blocs d'avaluació
         cspunit3:
-          stages:
+          lessons:
             Creating Functions:
               name: Creant Funcions
             While Loops:
               name: Bucles Mentres
         algebraPD3:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Blocs d'avaluació
         algebraPD-NexTech:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Blocs d'avaluació
         algebraPD-iZone:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Blocs d'avaluació
         sciencePD2:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         cspunit2:
-          stages:
+          lessons:
             The Internet:
               name: Internet
         algebraPD2a:
-          stages:
+          lessons:
             Booleans:
               name: Veritat o fals
             Defining Variables:
@@ -401,7 +416,7 @@ ca:
               name: Joc lliure
         allthethings:
           title: Totes les coses!
-          stages:
+          lessons:
             Artist:
               name: Artista
             Bee:
@@ -425,7 +440,7 @@ ca:
             Sprite Lab:
               name: Laboratori de personatges
         algebraPD2b:
-          stages:
+          lessons:
             Booleans:
               name: Veritat o fals
             Defining Variables:
@@ -435,59 +450,41 @@ ca:
             Evaluation Blocks:
               name: Blocs d'avaluació
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: Laboratori d'aplicacions
             Internet Simulator:
               name: Simulador d'Internet
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: Fonaments de la informàtica
         ECSPD2:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Wrap-up:
               name: Recapitulació
         sciencePD2b:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         science-PD2:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         sciencePD2b-iZone:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         ECSPD2-iZone:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Wrap-up:
               name: Recapitulació
         ECSPD2-NexTech:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Wrap-up:
               name: Recapitulació
         asUnplugged:
-          stages:
+          lessons:
             Binary Bracelets:
               name: Polseres binàries
             Building a Foundation:
@@ -507,7 +504,7 @@ ca:
             The Big Event:
               name: El gran esdeveniment
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         Special Fun:
@@ -515,42 +512,45 @@ ca:
         SpecialSeries:
           description_audience: Edat 10 + (després del curs 3)
         cspunit3temp:
-          stages:
+          lessons:
             While Loops:
               name: Bucles Mentres
         starwars:
           title: 'Star Wars: Construcció d''una galàxia amb codi'
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Hora del codi 2015
+          student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         starwarsblocks:
           title: 'Star Wars: Construcció d''una galàxia amb codi'
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Hora del codi 2015
+          student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         mc:
           title: Hora del Codi de Minecraft
           description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
           description_short: Explora el món de Minecraft a través del codi
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Hora del codi 2015
+          student_description: Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft
         ScienceP3OLPT3:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         AlgebraA:
-          stages:
+          lessons:
             'Eval: Strings and Images':
               name: 'Eval: Cadenes i imatges'
             'Unplugged: The Design Recipe':
               name: 'Sense connexió: la recepta de disseny'
         AlgebraB:
-          stages:
+          lessons:
             'Eval: Boolean Operators':
               name: 'Eval: operadors Booleans'
             'Eval: Conditionals':
@@ -562,47 +562,59 @@ ca:
             'Unplugged: Conditionals and Piecewise Functions':
               name: 'Sense connexió: Condicionals i funcions definides a trossos'
         algebraPD1:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Blocs d'avaluació
         csp1-2017:
-          stages:
+          lessons:
             The Internet:
               name: Internet
         csp3-2017:
-          stages:
+          lessons:
             Creating Functions:
               name: Creant Funcions
         csp5-2017:
-          stages:
+          lessons:
             While Loops:
               name: Bucles Mentres
         CSDU3-Draft:
-          stages:
+          lessons:
             Functions:
               name: Funcions
         CSF_Secret_Sample:
           description_audience: De 8 a 18 anys
         algebraFacilitator:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Blocs d'avaluació
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Vista general
         allthehiddenthings:
-          stages:
+          lessons:
             Game Lab:
               name: Laboratori de jocs
         MikeTest:
-          stages:
+          lessons:
             Artist Functions:
               name: 'Artista: Funcions'
         artistExemplar:
           description_audience: De 8 a 18 anys
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Vista general
         kinderTest:
-          stages:
+          lessons:
             'Bee: Conditionals':
               name: 'Abella: Condicionals'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: Esdeveniments
             'Jigsaw: Learn to drag and drop':
@@ -612,13 +624,13 @@ ca:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Ciutadania digital
             Songwriting:
               name: Composició de cançons
         grade1:
-          stages:
+          lessons:
             Events:
               name: Esdeveniments
             'Jigsaw: Learn to drag and drop':
@@ -626,7 +638,7 @@ ca:
             Loops:
               name: Bucles
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: 'Artista: Per bucles'
             'Artist: Functions with Parameters':
@@ -648,17 +660,11 @@ ca:
             'Unplugged: Songwriting with Parameters':
               name: 'Sense connexió: Composició musical amb paràmetres'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Wrap-up:
               name: Recapitulació
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'Artista: bucles imbricats'
             Bee Debugging:
@@ -667,8 +673,12 @@ ca:
               name: Rebota
             'Farmer: While Loops':
               name: 'Pagesa: bucles mentre'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Vista general
         csd3-2017:
-          stages:
+          lessons:
             Functions:
               name: Funcions
             Variables:
@@ -676,7 +686,7 @@ ca:
             Conditionals:
               name: Condicionals
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Flappy
             Binary Bracelets:
@@ -686,7 +696,7 @@ ca:
             The Big Event:
               name: El gran esdeveniment
         k5concepts:
-          stages:
+          lessons:
             Binary:
               name: Binari
             Conditionals:
@@ -707,45 +717,49 @@ ca:
               name: Variables
             While Loops:
               name: Bucles Mentres
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         basketball:
-          stages:
+          lessons:
             Bounce:
               name: Rebota
-        fesbinary:
-          title: Binari
-          stages:
-            Binary Bracelets:
-              name: Polseres binàries
-            Binary Images:
-              name: Imatges binàries
-            Play Lab:
-              name: Play Lab
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: Llistes
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         minecraft:
           description_short: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
           description: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
+          student_description: Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft.
         flappy-impact-study:
-          stages:
+          lessons:
             Flappy Code:
               name: Codi Flappy
         coursea-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Going Places Safely:
               name: Anant a llocs segurs
         courseb-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Your Digital Footprint:
               name: La vostra empremta digital
         coursec-draft:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
             Binary Bracelets:
@@ -756,7 +770,7 @@ ca:
               name: Posant les bases
         coursed-draft:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          stages:
+          lessons:
             Conditionals with Cards:
               name: Condicionals amb targetes
             Digital Citizenship:
@@ -771,7 +785,7 @@ ca:
               name: Introducció
         coursee-draft:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          stages:
+          lessons:
             Digital Citizenship:
               name: Ciutadania digital
             Internet:
@@ -784,7 +798,7 @@ ca:
               name: Condicionals
         coursef-draft:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          stages:
+          lessons:
             Digital Citizenship:
               name: Ciutadania digital
             Songwriting with Parameters:
@@ -793,40 +807,52 @@ ca:
               name: Introducció
         classic-hoc-impact-study:
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de codi 2013
         hoc-impact-study:
           description_short: Prova els conceptes bàsics de la informàtica amb personatges divertits!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de codi 2013
         2016_sciencePD-phase2b:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         2016_sciencePD_phase2b:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         sciencepd4:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
         csf2harvey:
-          stages:
+          lessons:
             Binary:
               name: Binari
         sciencepd5:
-          stages:
+          lessons:
             Wrap-Up:
               name: Recapitulació
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Vista general
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Llistes
             For Loops:
@@ -834,15 +860,15 @@ ca:
             Functions with Parameters:
               name: Funcions amb Paràmetres
         workshop-gamelab:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
         coursed-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
         coursee-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
             Conditionals:
@@ -850,7 +876,7 @@ ca:
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmes de la vida real: cursa de daus'
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Llistes
             For Loops:
@@ -860,7 +886,7 @@ ca:
             Functions with Parameters_:
               name: Funcions amb Paràmetres
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -868,15 +894,15 @@ ca:
             Functions:
               name: Funcions
         csd3-old:
-          stages:
+          lessons:
             Functions:
               name: Funcions
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Llistes
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -884,69 +910,119 @@ ca:
             Functions:
               name: Funcions
             'null':
-              name: 'nul'
+              name: nul
         coursef-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
         artist-and-bb8:
-          stages:
+          lessons:
             Bounce:
               name: Rebota
         coursea-2017:
-          stages:
-            'Real-life Algorithms: Plant a Seed':
-              name: 'Algoritmes reals: Planta una llavor'
           title: Curs A
           assignment_family_title: Curs A
-          description_audience: 'De 4 a 7 anys'
+          description_audience: De 4 a 7 anys
           description_short: Una introducció a la informàtica per prelectors.
-        courseb-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
+        courseb-2017:
           title: Curs B
           assignment_family_title: Curs B
-          description_audience: 'De 5 a 8 anys'
+          description_audience: De 5 a 8 anys
           description_short: Una introducció a la informàtica per a prelectors. (Similar al curs A però més variat per alumnes més grans.)
+          lessons:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmes reals: Planta una llavor'
         coursec-2017:
-          stages:
-            'Real-life Algorithms: Paper Planes':
-              name: 'Algoritmes de la vida quotidiana: Avions de paper'
           title: Curs C
           assignment_family_title: Curs C
-          description_audience: 'De 6 a 10 anys'
+          description_audience: De 6 a 10 anys
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          lessons:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmes de la vida quotidiana: Avions de paper'
         coursed-2017:
-          stages:
-            Nested Loops:
-              name: Bucles imbricats
           title: Curs D
           assignment_family_title: Curs D
-          description_audience: 'De 7 a 11 anys'
+          description_audience: De 7 a 11 anys
           description_short: Cobriu amb rapidesa conceptes del curs C i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
+          lessons:
+            Nested Loops:
+              name: Bucles imbricats
         coursee-2017:
-          stages:
+          title: Curs E
+          assignment_family_title: Curs E
+          description_audience: De 8 a 12 anys
+          description_short: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
+          lessons:
             Songwriting with Parameters:
               name: Composició amb paràmetres
             Building a Foundation:
               name: Posant les bases
             Nested Loops:
               name: Bucles imbricats
-          title: Curs E
-          assignment_family_title: Curs E
-          description_audience: 'De 8 a 12 anys'
-          description_short: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
         coursef-2017:
-          stages:
-            Building a Foundation:
-              name: Posant les bases
           title: Curs F
           assignment_family_title: Curs F
-          description_audience: 'De 9 a 13 anys'
+          description_audience: De 9 a 13 anys
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          lessons:
+            Building a Foundation:
+              name: Posant les bases
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Vista general
         express-2017:
-          stages:
+          title: Curs exprés
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          lessons:
             Introduction:
               name: Introducció
             Internet:
@@ -961,26 +1037,24 @@ ca:
               name: Posant les bases
             Nested Loops:
               name: Bucles imbricats
-          title: Curs exprés
-          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
         pre-express-2017:
-          stages:
+          title: Prelector exprés
+          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Spelling Bee:
               name: Abella ortogràfica
-          title: Prelector exprés
-          description_short: 'Una introducció a la informàtica per a prelectors: combina el millor dels cursos de parvulari i primer.'
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: Gràcies
         csp3-research-mxghyt:
-          stages:
+          lessons:
             Creating Functions:
               name: Creant Funcions
         e-f-ramp:
-          stages:
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Nested Loops:
@@ -992,7 +1066,7 @@ ca:
             Crowdsourcing:
               name: Col·laboració oberta
         new-d:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
             Nested Loops:
@@ -1008,7 +1082,7 @@ ca:
             Building a Foundation:
               name: Posant les bases
         new-express:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
             Building a Foundation:
@@ -1016,7 +1090,7 @@ ca:
             Nested Loops:
               name: Bucles imbricats
         new-e:
-          stages:
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Conditionals:
@@ -1026,22 +1100,23 @@ ca:
             Crowdsourcing:
               name: Col·laboració oberta
         new-f:
-          stages:
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Songwriting with Parameters:
               name: Composició amb paràmetres
         csp3-staging:
-          stages:
+          lessons:
             Creating Functions:
               name: Creant Funcions
         hero:
-          stages:
+          description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
+          lessons:
             Minecraft Hour of Code:
               name: Hora del Codi de Minecraft
-          description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
+          student_description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
         course-e-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Nested Loops:
@@ -1055,7 +1130,7 @@ ca:
             Crowdsourcing:
               name: Col·laboració oberta
         course-f-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Introduction:
@@ -1063,13 +1138,13 @@ ca:
             Songwriting with Parameters:
               name: Composició amb paràmetres
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: Llistes
             For Loops:
               name: Per bucles
         csd3-1819draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1077,7 +1152,7 @@ ca:
             Functions:
               name: Funcions
         csd3-2018:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1085,20 +1160,20 @@ ca:
             Functions:
               name: Funcions
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: Llistes
         coursea-2018:
           assignment_family_title: Curs A
           description_short: Una introducció a la informàtica per prelectors.
-          description_audience: 'De 4 a 7 anys'
-          stages:
+          description_audience: De 4 a 7 anys
+          lessons:
             'Programming: Happy Maps':
               name: Mapes feliços
             Going Places Safely:
               name: Anant a llocs segurs
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
             Introduction:
@@ -1131,8 +1206,8 @@ ca:
               name: Programació de paper quadriculat
         courseb-2018:
           assignment_family_title: Curs B
-          description_audience: 'De 5 a 8 anys'
-          stages:
+          description_audience: De 5 a 8 anys
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Your Digital Footprint:
@@ -1141,8 +1216,8 @@ ca:
               name: Mou-lo, Mou-lo
         coursed-2018:
           assignment_family_title: Curs D
-          description_audience: 'De 7 a 11 anys'
-          stages:
+          description_audience: De 7 a 11 anys
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
             Introduction:
@@ -1164,8 +1239,8 @@ ca:
         coursec-2018:
           assignment_family_title: Curs C
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: 'De 6 a 10 anys'
-          stages:
+          description_audience: De 6 a 10 anys
+          lessons:
             Building a Foundation:
               name: Posant les bases
             'Loops: Getting Loopy':
@@ -1175,13 +1250,13 @@ ca:
             Binary Bracelets:
               name: Polseres binàries
         csd6-2018:
-          stages:
+          lessons:
             Functions with Parameters:
               name: Funcions amb Paràmetres
         coursee-2018:
           assignment_family_title: Curs E
-          description_audience: 'De 8 a 12 anys'
-          stages:
+          description_audience: De 8 a 12 anys
+          lessons:
             'Programming: My Robotic Friends':
               name: Els meus amics robòtics
             Building a Foundation:
@@ -1201,8 +1276,8 @@ ca:
         coursef-2018:
           assignment_family_title: Curs F
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: 'De 9 a 13 anys'
-          stages:
+          description_audience: De 9 a 13 anys
+          lessons:
             'Programming: My Robotic Friends':
               name: Els meus amics robòtics
             Building a Foundation:
@@ -1214,19 +1289,87 @@ ca:
             Conditionals with Cards:
               name: Condicionals amb targetes
         csp1-2018:
-          stages:
+          lessons:
             The Internet:
               name: Internet
         csp3-2018:
-          stages:
+          lessons:
             Creating Functions:
               name: Creant Funcions
         csp5-2018:
-          stages:
+          lessons:
             While Loops:
               name: Bucles Mentres
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Vista general
         pre-express-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
             Spelling Bee:
@@ -1235,46 +1378,68 @@ ca:
               name: Mou-lo, Mou-lo
             Your Digital Footprint:
               name: La vostra empremta digital
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Vista general
         frozen-2018:
-          stages:
+          lessons:
             Artist:
               name: Artista
         frozen-2018-test:
-          stages:
+          lessons:
             Artist:
               name: Artista
         dance:
-          stages:
-            Dance Party:
-              name: Festa de ball
           title: Festa de ball
           description_short: Amb música de Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, i 25 més!
           description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+          lessons:
+            Dance Party:
+              name: Festa de ball
+          student_description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
         frozen-2018-test-b:
-          stages:
+          lessons:
             Artist:
               name: Artista
         aquatic:
-          stages:
-            Aquatic:
-              name: Aquàtiques
           title: 'Minecraft: Viatge aquàtic'
           description_short: Utilitza la teva creativitat i les teves habilitats de resolució de problemes per explorar i crear mons submarins amb codi!
+          lessons:
+            Aquatic:
+              name: Aquàtiques
         dance--draft:
-          stages:
+          lessons:
             Dance Party:
               name: Festa de ball
         dance-draft:
-          stages:
+          lessons:
             Dance Party:
               name: Festa de ball
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
         dance-extras:
-          title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
+          student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         coursef-2019:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: 'De 9 a 13 anys'
-          stages:
+          description_audience: De 9 a 13 anys
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Ciutadania digital
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Conditionals with Cards:
@@ -1286,12 +1451,23 @@ ca:
             Crowdsourcing:
               name: Col·laboració oberta
         dance-low:
-          stages:
+          lessons:
             Dance Party:
               name: Festa de ball
         coursed-2019:
-          description_audience: 'De 7 a 11 anys'
-          stages:
+          description_audience: De 7 a 11 anys
+          lesson_groups:
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_binary:
+              display_name: Binari
+            csf_digcit:
+              display_name: Ciutadania digital
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programació de paper quadriculat
             Relay Programming:
@@ -1307,8 +1483,15 @@ ca:
             Dance Party:
               name: Festa de ball
         coursee-2019:
-          description_audience: 'De 8 a 12 anys'
-          stages:
+          description_audience: De 8 a 12 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+          lessons:
             Building a Foundation:
               name: Posant les bases
             Nested Loops:
@@ -1324,7 +1507,18 @@ ca:
             Songwriting:
               name: Composició de cançons
         express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+          lessons:
             Relay Programming:
               name: Programació en relleus
             Conditionals with Cards:
@@ -1342,16 +1536,29 @@ ca:
             Dance Party:
               name: Festa de ball
         andrea-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: Vista general
+          lessons:
             'null':
-              name: 'nul'
+              name: nul
         dance-extras-gallery:
           title: Seguir ballant
           description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
+          student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
         coursec-2019:
           description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
-          description_audience: 'De 6 a 10 anys'
-          stages:
+          description_audience: De 6 a 10 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_binary:
+              display_name: Binari
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmes de la vida quotidiana: Avions de paper'
             'Events: The Big Event':
@@ -1362,15 +1569,29 @@ ca:
           title: Laboratori de jocs
         coursea-2019:
           description_short: Una introducció a la informàtica per prelectors.
-          description_audience: 'De 4 a 7 anys'
-          stages:
+          description_audience: De 4 a 7 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
             'Programming: Happy Maps':
               name: Mapes feliços
             Going Places Safely:
               name: Anant a llocs segurs
         courseb-2019:
-          description_audience: 'De 5 a 8 anys'
-          stages:
+          description_audience: De 5 a 8 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
             Move It, Move It:
               name: Mou-lo, Mou-lo
             Your Digital Footprint:
@@ -1378,7 +1599,12 @@ ca:
             'Loops: Getting Loopy':
               name: Fent bucles
         pre-express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
             Move It, Move It:
               name: Mou-lo, Mou-lo
             Your Digital Footprint:
@@ -1386,15 +1612,15 @@ ca:
             Spelling Bee:
               name: Abella ortogràfica
         removed19:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmes reals: Planta una llavor'
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: Llistes
         csd3-2019:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1402,48 +1628,716 @@ ca:
             Functions:
               name: Funcions
         csd6-2019:
-          stages:
+          lessons:
             Functions with Parameters:
               name: Funcions amb Paràmetres
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+            required:
+              display_name: Vista general
         csp1-2019:
-          stages:
+          lessons:
             The Internet:
               name: Internet
         csp3-2019:
-          stages:
+          lessons:
             Creating Functions:
               name: Creant Funcions
         csp5-2019:
-          stages:
+          lessons:
             While Loops:
               name: Bucles Mentres
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
         time4csdemo:
-          stages:
+          lessons:
             Crowdsourcing:
               name: Col·laboració oberta
             Conditionals with Cards:
               name: Condicionals amb targetes
             Building a Foundation:
               name: Posant les bases
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: Programació de paper quadriculat
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+            required:
+              display_name: Vista general
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Vista general
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Llistes
         csd3-pilot:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
               name: Condicionals
             Functions:
               name: Funcions
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Vista general
+          lessons:
+            Focus Area 1:
+              name: Pla d'estudis
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
         peru-2019:
-          stages:
+          lessons:
             Introduction:
               name: Introducció
             Nested Loops:
               name: Bucles imbricats
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        dance-2019:
+          description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+          lessons:
+            Dance Party:
+              name: Festa de ball
+          student_description: Crea un codi amb la teva pròpia festa de ball i comparteix-la amb els teus amics!
+        k5-onlinepd-2019:
+          lessons:
+            Computer Science Fundamentals:
+              name: Fonaments de la informàtica
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionals
+            Events:
+              name: Esdeveniments
+            Functions:
+              name: Funcions
+            Sprite Lab:
+              name: Laboratori de personatges
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+        dance-extras-2019:
+          description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
+          student_description: Anar més enllà de la primera hora amb idees desenvolupades del projecte.
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        time4cs-original-unit-1:
+          lessons:
+            Conditionals:
+              name: Condicionals
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_conditionals:
+              display_name: Condicionals
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+          lessons:
+            Crowdsourcing:
+              name: Col·laboració oberta
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_events:
+              display_name: Esdeveniments
+            csf_digcit:
+              display_name: Ciutadania digital
+          lessons:
+            Conditionals:
+              name: Condicionals
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_events:
+              display_name: Esdeveniments
+            csf_digcit:
+              display_name: Ciutadania digital
+          lessons:
+            Conditionals:
+              name: Condicionals
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Vista general
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+        csd6-2020:
+          lessons:
+            Functions with Parameters:
+              name: Funcions amb Paràmetres
+        csd3-2020:
+          lessons:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+            Text:
+              name: text
+        coursea-2020:
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: De 4 a 7 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
+            Going Places Safely:
+              name: Anant a llocs segurs
+            'Programming: Happy Maps':
+              name: Mapes feliços
+        courseb-2020:
+          description_audience: De 5 a 8 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
+            Your Digital Footprint:
+              name: La vostra empremta digital
+            Move It, Move It:
+              name: Mou-lo, Mou-lo
+            'Loops: Getting Loopy':
+              name: Fent bucles
+        coursec-2020:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 6 a 10 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_binary:
+              display_name: Binari
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
+            Binary Bracelets:
+              name: Polseres binàries
+            'Events: The Big Event':
+              name: El gran esdeveniment
+        coursed-2020:
+          description_audience: De 7 a 11 anys
+          lesson_groups:
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_binary:
+              display_name: Binari
+            csf_digcit:
+              display_name: Ciutadania digital
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programació de paper quadriculat
+            Relay Programming:
+              name: Programació en relleus
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+            'Unplugged: Binary':
+              name: Imatges binàries
+            Artist Binary:
+              name: Artista binari
+            Digital Citizenship:
+              name: Ciutadania digital
+            Dance Party:
+              name: Festa de ball
+        coursee-2020:
+          description_audience: De 8 a 12 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_nested_loops:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+          lessons:
+            'Functions: Songwriting':
+              name: Composició de cançons
+        coursef-2020:
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 9 a 13 anys
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+          lessons:
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Col·laboració oberta
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+          lessons:
+            Dance Party:
+              name: Festa de ball
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          lessons:
+            Spelling Bee:
+              name: Abella ortogràfica
+        csp3-virtual:
+          lessons:
+            Creating Functions:
+              name: Creant Funcions
+        csp5-virtual:
+          lessons:
+            While Loops:
+              name: Bucles Mentres
+            Variables:
+              name: Variables
+        virtual-holding-place:
+          lessons:
+            Functions:
+              name: Funcions
+        code-break:
+          lessons:
+            Algorithms:
+              name: Algorismes
+            Events:
+              name: Esdeveniments
+        csp5-virtual-part2:
+          lessons:
+            While Loops:
+              name: Bucles Mentres
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Esdeveniments
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+            Variables:
+              name: Variables
+            For Loops:
+              name: Per bucles
+            Sprite Lab:
+              name: Laboratori de personatges
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: text
+            Conditionals:
+              name: Condicionals
+            Functions:
+              name: Funcions
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Curs A
+            Course B:
+              name: Curs B
+            Course E:
+              name: Curs E
+            Course F:
+              name: Curs F
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introducció
+            lessonGroup-3:
+              display_name: Variables
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: text
+              name: text
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funcions amb Paràmetres
+              name: Funcions amb Paràmetres
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+        coursea-2021:
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: De 4 a 7 anys
+          lessons:
+            'Programming: Happy Maps':
+              name: Mapes feliços
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        courseb-2021:
+          description_audience: De 5 a 8 anys
+          lessons:
+            Move It, Move It:
+              key: Mou-lo, Mou-lo
+              name: Mou-lo, Mou-lo
+            'Loops: Getting Loopy':
+              name: Fent bucles
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        coursec-2021:
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 6 a 10 anys
+          lessons:
+            Binary Bracelets:
+              key: Polseres binàries
+              name: Polseres binàries
+            'Events: The Big Event':
+              name: El gran esdeveniment
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_binary:
+              display_name: Binari
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        coursed-2021:
+          description_audience: De 7 a 11 anys
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programació de paper quadriculat
+            Relay Programming:
+              key: Programació en relleus
+              name: Programació en relleus
+            Dance Party:
+              key: Festa de ball
+              name: Festa de ball
+            Conditionals with Cards:
+              key: Condicionals amb targetes
+              name: Condicionals amb targetes
+            'Unplugged: Binary':
+              key: 'Sense connexió: Binari'
+              name: Imatges binàries
+            Artist Binary:
+              key: Artista binari
+              name: Artista binari
+          lesson_groups:
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_binary:
+              display_name: Binari
+            csf_digcit:
+              display_name: Ciutadania digital
+            lessonGroup-6:
+              display_name: Ciutadania digital
+        coursee-2021:
+          description_audience: De 8 a 12 anys
+          lessons:
+            Conditionals:
+              key: Condicionals
+            'Functions: Songwriting':
+              name: Composició de cançons
+          lesson_groups:
+            ramp_up:
+              display_name: Bucles imbricats
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_nested_loops:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+        coursef-2021:
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 9 a 13 anys
+          lessons:
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_variables:
+              display_name: Per bucles
+            csf_for_loops:
+              display_name: Per bucles
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: eliminar
+            lessonGroup-7:
+              display_name: Ciutadania digital
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Festa de ball
+              name: Festa de ball
+            lesson-1:
+              name: Festa de ball
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Introducció
+            lessonGroup-3:
+              display_name: Variables
+            variables:
+              display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introducció
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Esdeveniments
+              name: Esdeveniments
+            Conditionals:
+              key: Condicionals
+              name: Condicionals
+            Functions:
+              key: Funcions
+              name: Funcions
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Per bucles
+              name: Per bucles
+            Sprite Lab:
+              key: Laboratori de personatges
+              name: Laboratori de personatges
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introducció
+            Introduction:
+              display_name: Introducció

@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
 require_relative '../../deployment'
 require 'cdo/db'
 require 'aws-sdk-cloudwatch'

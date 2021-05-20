@@ -1,4 +1,4 @@
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 const FarmerHandler = require('@cdo/apps/maze/results/farmer');
 const BeeHandler = require('@cdo/apps/maze/results/bee');

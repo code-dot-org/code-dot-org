@@ -1,17 +1,12 @@
 ---
-title: Thanks for signing up to host an Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
+title: कोडचा तास आयोजित करण्यास साइन अप केल्या बद्दल धन्यवाद!
 ---
 
-# Thanks for signing up to host an Hour of Code!
+# कोडचा तास आयोजित करण्यास साइन अप केल्या बद्दल धन्यवाद!
 
-<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
+<br /> **कोडचा तास {{ campaign_date/full }} दरम्यान चालतो आणि आम्ही नवीन शिक्वण्यांबाबत स्पर्शात राहू आणि इतर रोमांचक अद्यतने जसे ते बाहेर येतील. मध्यंतरीमध्ये, तुम्ही आता काय करू शकता? ** 
 
-As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
+कोडच्या तासाच्या आयोजकांचा एक विशेष धन्यवाद म्हणून, आमच्याकडे एक नवीन पोस्टर सेट आहेत वैशिष्टयीकृत मलाला, स्टीफन करी, शकिरा आणि Amazon मधून ५०% सवलतीला [ऑर्डर करण्यासाठी अधिक उपलब्ध आहेत](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). ह्या वर्षी, प्रत्येक सेट ६ पोस्टर्स आणि १२६ "मी कोडचा तास केला" स्टिकर्स सह येतो. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 
 ## 1. Spread the word in your school and community
 

@@ -1,0 +1,149 @@
+{
+  "sq-AL": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Events": "Ngjarje",
+              "Loops": "cikle ",
+              "Math": "Matematikë",
+              "Logic": "Logjikë"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Ngjarje",
+              "Logic": "Logjikë"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "vizato një yll",
+                "parameters": {
+                  "points": "pikët",
+                  "length": "gjatesi"
+                }
+              },
+              "draw a circle": {
+                "name": "vizato një rreth"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "gjatesi",
+                  "repeat": "përsërit"
+                }
+              },
+              "draw a triangle": {
+                "name": "vizato nje trekendesh",
+                "parameters": {
+                  "length": "gjatesi"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "gjatesi"
+                }
+              },
+              "draw a house": {
+                "name": "vizato një shtëpi",
+                "parameters": {
+                  "length": "gjatesi"
+                }
+              },
+              "draw a square": {
+                "name": "vizato një katror",
+                "parameters": {
+                  "length": "gjatesi"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Events": "Ngjarje"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Ngjarje",
+              "Logic": "Logjikë"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Loops": "cikle ",
+              "Math": "Matematikë",
+              "Logic": "Logjikë",
+              "Functions": "funksione",
+              "Variables": "variabla"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Events": "Ngjarje",
+              "Variables": "variabla",
+              "Math": "Matematikë",
+              "Logic": "Logjikë",
+              "Functions": "funksione",
+              "Text": "Tekst"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Events": "Ngjarje",
+              "Variables": "variabla",
+              "Math": "Matematikë",
+              "Logic": "Logjikë",
+              "Functions": "funksione",
+              "Text": "Tekst"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Loops": "cikle ",
+              "Math": "Matematikë",
+              "Logic": "Logjikë",
+              "Functions": "funksione",
+              "Variables": "variabla"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Events": "Ngjarje",
+              "Logic": "Logjikë",
+              "Math": "Matematikë"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Veprime",
+              "Events": "Ngjarje",
+              "Logic": "Logjikë",
+              "Loops": "cikle ",
+              "Math": "Matematikë",
+              "Variables": "variabla",
+              "Functions": "funksione"
+            }
+          }
+        }
+      }
+    }
+  }
+}

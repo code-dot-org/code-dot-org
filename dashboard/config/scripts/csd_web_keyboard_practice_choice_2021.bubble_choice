@@ -1,0 +1,8 @@
+name 'CSD web keyboard practice choice_2021'
+display_name 'Keyboard Input Practice'
+description 'Practice keyboard input with these activities.'
+
+sublevels
+level 'CSD U3 Input Fish_2021'
+level 'CSD games input debug1_2021'
+level 'CSD games input debug2_2021'

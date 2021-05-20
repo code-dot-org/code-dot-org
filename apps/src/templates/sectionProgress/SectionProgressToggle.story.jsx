@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedSectionProgressToggle as SectionProgressToggle} from './SectionProgressToggle';
-import {ViewType} from './sectionProgressRedux';
+import {ViewType} from './sectionProgressConstants';
 
 export default storybook => {
   function isSummaryTrue() {
@@ -31,7 +31,23 @@ export default storybook => {
     };
   }
 
+  function isStandardsTrue() {
+    return {
+      name: 'Standards view toggle on',
+      story: () => (
+        <SectionProgressToggle
+          currentView={ViewType.STANDARDS}
+          showStandardsToggle={true}
+          setCurrentView={() => {
+            console.log('Toggle view.');
+          }}
+        />
+      )
+    };
+  }
+
   storybook
     .storiesOf('Progress/SectionProgressToggle', module)
-    .addStoryTable([isSummaryTrue(), isSummaryFalse()]);
+    .withReduxStore()
+    .addStoryTable([isSummaryTrue(), isSummaryFalse(), isStandardsTrue()]);
 };

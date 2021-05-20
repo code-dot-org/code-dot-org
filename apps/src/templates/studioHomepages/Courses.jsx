@@ -3,23 +3,16 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import {CourseBlocksAll} from './CourseBlocks';
+import {CourseBlocksIntl} from './CourseBlocks';
 import CoursesTeacherEnglish from './CoursesTeacherEnglish';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import SpecialAnnouncement from './SpecialAnnouncement';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
-
-const styles = {
-  content: {
-    width: '100%',
-    maxWidth: styleConstants['content-width'],
-    marginLeft: 'auto',
-    marginRight: 'auto'
-  }
-};
+import shapes from './shapes';
 
 class Courses extends Component {
   static propTypes = {
@@ -28,7 +21,8 @@ class Courses extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
-    modernElementaryCoursesAvailable: PropTypes.bool.isRequired
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   componentDidMount() {
@@ -38,67 +32,116 @@ class Courses extends Component {
       .show();
   }
 
+  getHeroStrings() {
+    const {isTeacher, isSignedOut, studentsCount} = this.props;
+
+    // Default to "Learn" view strings
+    let heroStrings = {
+      headingText: i18n.coursesLearnHeroHeading(),
+      subHeadingText: i18n.coursesLearnHeroSubHeading({studentsCount}),
+      buttonText: i18n.coursesLearnHeroButton()
+    };
+
+    // Apply overrides if this is the "Teach" view
+    if (isTeacher) {
+      heroStrings = {
+        headingText: i18n.coursesTeachHeroHeading(),
+        subHeadingText: i18n.coursesTeachHeroSubHeading(),
+        buttonText: i18n.coursesTeachHeroButton()
+      };
+    }
+
+    // We show a long version of the banner when you're signed out,
+    // so add a description string.
+    if (isSignedOut) {
+      heroStrings.description = isTeacher
+        ? i18n.coursesTeachHeroDescription()
+        : i18n.coursesLearnHeroDescription();
+    }
+    return heroStrings;
+  }
+
   render() {
     const {
       isEnglish,
       isTeacher,
       isSignedOut,
-      modernElementaryCoursesAvailable
+      modernElementaryCoursesAvailable,
+      specialAnnouncement
     } = this.props;
-    const headingText = isTeacher
-      ? i18n.coursesHeadingTeacher()
-      : i18n.coursesHeadingStudent();
-    const subHeadingText = i18n.coursesHeadingSubText({
-      linesCount: this.props.linesCount,
-      studentsCount: this.props.studentsCount
-    });
-    const headingDescription = isSignedOut
-      ? i18n.coursesHeadingDescription()
-      : null;
-    const showSpecialTeacherAnnouncement = false;
+
+    const {
+      headingText,
+      subHeadingText,
+      description,
+      buttonText
+    } = this.getHeroStrings();
+
+    // Verify background image works for both LTR and RTL languages.
+    const backgroundUrl = isTeacher
+      ? '/shared/images/banners/courses-hero-teacher.jpg'
+      : '/shared/images/banners/courses-hero-student.jpg';
 
     return (
-      <div style={styles.content}>
+      <div>
         <HeaderBanner
           headingText={headingText}
           subHeadingText={subHeadingText}
-          description={headingDescription}
+          description={description}
           short={!isSignedOut}
+          backgroundUrl={backgroundUrl}
         >
           {isSignedOut && (
             <Button
+              __useDeprecatedTag
               href="/users/sign_up"
               color={Button.ButtonColor.gray}
-              text={i18n.createAccount()}
+              text={buttonText}
             />
           )}
         </HeaderBanner>
+        <div className={'contentContainer'}>
+          <div className={'content'} style={styles.content}>
+            <ProtectedStatefulDiv ref="flashes" />
 
-        <ProtectedStatefulDiv ref="flashes" />
-
-        {/* English, teacher.  (Also can be shown when signed out.) */}
-        {isEnglish && isTeacher && (
-          <div>
-            {showSpecialTeacherAnnouncement && (
-              <SpecialAnnouncementActionBlock />
+            {/* English, teacher.  (Also can be shown when signed out.) */}
+            {isEnglish && isTeacher && (
+              <div className={'announcements'}>
+                {specialAnnouncement && (
+                  <SpecialAnnouncementActionBlock
+                    announcement={specialAnnouncement}
+                  />
+                )}
+                <CoursesTeacherEnglish />
+              </div>
             )}
-            <CoursesTeacherEnglish />
+
+            {/* English, student.  (Also the default to be shown when signed out.) */}
+            {isEnglish && !isTeacher && (
+              <div className={'announcements'}>
+                <SpecialAnnouncement isTeacher={isTeacher} />
+                <CoursesStudentEnglish />
+              </div>
+            )}
+
+            {/* Non-English */}
+            {!isEnglish && (
+              <CourseBlocksIntl
+                isTeacher={isTeacher}
+                showModernElementaryCourses={modernElementaryCoursesAvailable}
+              />
+            )}
           </div>
-        )}
-
-        {/* English, student.  (Also the default to be shown when signed out.) */}
-        {isEnglish && !isTeacher && <CoursesStudentEnglish />}
-
-        {/* Non-English */}
-        {!isEnglish && (
-          <CourseBlocksAll
-            isEnglish={false}
-            showModernElementaryCourses={modernElementaryCoursesAvailable}
-          />
-        )}
+        </div>
       </div>
     );
   }
 }
+
+const styles = {
+  content: {
+    maxWidth: styleConstants['content-width']
+  }
+};
 
 export default Courses;

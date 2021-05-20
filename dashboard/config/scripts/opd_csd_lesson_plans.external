@@ -1,0 +1,21 @@
+name 'OPD-CSD lesson plans'
+editor_experiment ''
+title 'Lesson Plan Structure'
+description 'description here'
+markdown <<MARKDOWN
+# Lesson Plans
+
+## Where do I find lesson plans?
+You can see all the lesson plans for all of the CS Discoveries courses <a href="https://curriculum.code.org" target="blank" rel="noopener noreferrer">curriculum.code.org</a>. For easy future access, it is recommended that you bookmark this site in your preferred web browser.
+
+## How are lesson plans structured?
+
+Every lesson plan has a common structure designed to make it easy to find what you need. As you plan for a lesson, we recommend starting with the overview, then reviewing the core activity to get a deeper sense of what will happen in the lesson and how long it might take.
+
+<img src="https://images.code.org/f108c4a1911eed1a64e97b4e5a375cff-image-1584647011015.png">
+
+## Where can I learn more about lesson plans?
+There is a ton more information about lesson plans in the <a href="https://docs.google.com/document/d/19Hne2rEZrvWA8OcsLpt9ShpkPzKKlxYnj-_cIfLwHwI/view#" target="blank" rel="noopener noreferrer">curriculum guide</a>!
+
+
+MARKDOWN

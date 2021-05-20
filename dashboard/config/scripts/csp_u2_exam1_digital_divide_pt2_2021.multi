@@ -1,0 +1,16 @@
+name 'csp-u2-exam1-digital-divide-pt2_2021'
+height 'auto'
+
+question 'Which of the following is MOST likely to be an outcome of the digital divide?'
+wrong ‘Certain companies will be unable to certify their technology as digitally secure.’
+right ‘People from some racial or ethnic groups have unequal access to computing technology.’
+wrong ’People will have equal access and influence both globally and locally.’
+wrong ‘Political groups in some countries are unable to agree on regulations of digital technology.’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

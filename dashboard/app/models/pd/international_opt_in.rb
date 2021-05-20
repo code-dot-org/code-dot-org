@@ -12,10 +12,17 @@
 #
 #  index_pd_international_opt_ins_on_user_id  (user_id)
 #
+require 'json'
 
 class Pd::InternationalOptIn < ApplicationRecord
   include Pd::Form
   include InternationalOptInPeople
+
+  COLOMBIAN_SCHOOL_DATA = JSON.parse(
+    File.read(
+      File.join(Rails.root, 'config', 'colombianSchoolData.json')
+    )
+  ).freeze
 
   belongs_to :user
 
@@ -40,6 +47,20 @@ class Pd::InternationalOptIn < ApplicationRecord
     ]
   end
 
+  def validate_with(options)
+    # Because we're using the special "answerText/answerValue" format in
+    # self.options, we need to normalize to just answerValue here for
+    # validation.
+    normalized_options = options.map do |key, values|
+      normalized_values = values.map do |value|
+        return value.fetch(:answerValue, nil) if value.is_a? Hash
+        value
+      end
+      [key, normalized_values]
+    end.to_h
+    super(normalized_options)
+  end
+
   def validate_required_fields
     super
 
@@ -54,20 +75,34 @@ class Pd::InternationalOptIn < ApplicationRecord
   def self.options
     entry_keys = {
       gender: %w(male female non_binary not_listed none),
-      schoolCountry: %w(canada chile israel malaysia mexico thailand),
+      schoolCountry: %w(canada chile colombia israel malaysia mexico thailand uzbekistan),
       ages: %w(ages_under_6 ages_7_8 ages_9_10 ages_11_12 ages_13_14 ages_15_16 ages_17_18 ages_19_over),
       subjects: %w(cs ict math science history la efl music art other),
       resources: %w(bootstrap codecademy csfirst khan kodable lightbot scratch tynker other),
       robotics: %w(grok kodable lego microbit ozobot sphero raspberry wonder other),
-      workshopCourse: %w(csf_af csf_express csd csp),
+      workshopCourse: %w(csf_af csf_express csd csp not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
     }
 
-    entries = Hash[entry_keys.map {|k, v| [k, v.map {|s| I18n.t("pd.form_entries.#{k.to_s.underscore}.#{s.underscore}")}]}]
+    # Convert all entry keys to objects which define the form value and display
+    # text (in this case, _translated_ display text) separately.
+    #
+    # See the definition of the "Answer" object in
+    # apps/src/code-studio/pd/form_components/utils.js
+    entries = Hash[entry_keys.map do |key, values|
+      [key, values.map do |value|
+        {
+          answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
+          answerValue: value
+        }
+      end]
+    end]
 
     entries[:workshopOrganizer] = INTERNATIONAL_OPT_IN_PARTNERS
     entries[:workshopFacilitator] = INTERNATIONAL_OPT_IN_FACILITATORS
+
+    entries[:colombianSchoolData] = COLOMBIAN_SCHOOL_DATA
 
     super.merge(entries)
   end
@@ -80,9 +115,9 @@ class Pd::InternationalOptIn < ApplicationRecord
       email
       emailAlternate
       gender
-      schoolName
       schoolCity
       schoolCountry
+      schoolName
       ages
       subjects
       resources
@@ -93,6 +128,16 @@ class Pd::InternationalOptIn < ApplicationRecord
       emailOptIn
       legalOptIn
     )
+
+    # Colombia has some specialized school categorization logic, so we
+    # provide some custom labels.
+    keys += %w(
+      colombianSchoolCity
+      colombianSchoolDepartment
+      colombianSchoolMunicipality
+      colombianSchoolName
+    )
+
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
   end
 

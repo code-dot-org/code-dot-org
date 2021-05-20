@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 pt:
   slides:
     maze_intro:
@@ -370,6 +375,10 @@ pt:
       4:
         text: "Crie o seu algoritmo colando setas no mapa que está a tentar resolver. O segundo é o mesmo, mas vai para baixo."
       5:
+    C2_bee_loops:
+      1:
+        text: "Um loop é uma repetição de uma atividade ou tarefa. Assim que abro uma colmeia para a inspecionar, retiro uma moldura, inspeciono-a, e depois coloco-a de volta no seu local. Seguidamente, eu repito essa tarefa várias vezes. vezes. Isso é um loop, ou seja, fazer a mesma atividade várias vezes."
+      2:
     C2_playlab_createstory:
       1:
         text: "Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade."
@@ -388,6 +397,38 @@ pt:
         text: "A ciência de computação é a base para muitas coisas que os alunos universitários e profissionais irão fazer nos próximos vinte ou trinta anos. Eu gosto de programação porque eu gosto de ajudar as pessoas. Eu tenho a oportunidade de criar algo que vai facilitar a vida das pessoas. Eu acho que é a coisa mais próxima que temos de uma superpotência. A parte mais importante é a de começar. Eu sou um principiante e eu quero aprender comigo próprio."
       3:
       4:
+      5:
+      6:
+      7:
+    starwars_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Alguns exemplos de eventos são: ouvir o clique do rato, pressionar uma seta no teclado ou tocar no ecrã."
+      5:
+      6:
+      7:
+      8:
+      9:
+    starwars_blocks_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+        text: "Se quiseres eliminar um bloco, basta removê-lo da pilha e arrastá-lo de volta para a caixa de ferramentas."
+      10:
+    starwars_blocks_events:
+      1:
+      2:
+      3:
+      4:
+        text: "Alguns exemplos de eventos são: ouvir o clique do rato, pressionar uma seta no teclado ou tocar no ecrã."
       5:
       6:
       7:
@@ -463,10 +504,12 @@ pt:
       2:
       3:
       4:
+        text: "Sua tela está dividida em três partes principais. À esquerda está o espaço do jogo, onde seu programa será executado. As instruções para cada nível estão escritas abaixo."
       5:
       6:
         text: "O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. "
       7:
+        text: "Para começar, você terá que conectar seus blocos ao bloco laranja \"quando executar\". É possível conectar diversos blocos uns aos outros, arrastando-os até ver a linha amarela e, então, eles se encaixam."
       8:
       9:
     iceage_intro:
@@ -474,10 +517,12 @@ pt:
       2:
       3:
       4:
+        text: "Sua tela está dividida em três partes principais. À esquerda está o espaço do jogo, onde seu programa será executado. As instruções para cada nível estão escritas abaixo."
       5:
       6:
         text: "O espaço branco à direita é chamado o espaço de trabalho, e é aí que vamos construir o nosso programa. "
       7:
+        text: "Para começar, você terá que conectar seus blocos ao bloco laranja \"quando executar\". É possível conectar diversos blocos uns aos outros, arrastando-os até ver a linha amarela e, então, eles se encaixam."
       8:
       9:
     mc_2016_intro:
@@ -539,3 +584,13 @@ pt:
       11:
         text: "Se te esqueceres do que tens de fazer, tens as instruções para cada nível ao cimo."
       12:
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Alguns exemplos de eventos são: ouvir o clique do rato, pressionar uma seta no teclado ou tocar no ecrã."
+      5:
+      6:
+      7:
+      8:

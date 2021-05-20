@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 sl:
   slides:
     maze_intro:
@@ -160,11 +165,22 @@ sl:
         text: "To je uporabno, če ne veš, koliko nektarja ali medu je potrebno dobiti oziroma narediti, kot lahko vidimo tu z vprašanjem."
       3:
         text: "V tem primeru bomo povedali: ČE ima vijolični cvet nektar, ki je večji od 0, dobi nektar. To bo naši čebeli povedalo, da naj pridobiva nektar tako dolgo, dokler ga je še kaj. Ta-da!"
+    C2_bee_loops:
+      1:
+        text: "Zanka je ponavljanje dejavnosti. Ko grem pregledat panj, pogledam vsak okvir in ga nato postavim nazaj, torej to aktivnost večkrat ponovim. To je zankanje, ponavljanje iste dejavnosti večkrat."
+      2:
     C2_playlab_createstory:
       1:
         text: "Do sedaj si ustvarjal/a animacijo ali zgodbo, ki vsakič, ko jo zaženeš, naredi točno isto stvar. Zdaj pa lahko narediš interaktivno igro, ki jo lahko dejansko igraš."
       2:
         text: "Tukaj je nekaj novih blokov, ki jih lahko preizkusiš. Tukaj sta bloka \"ko je pritisnjena puščica\" in \"premakni igralca\". Te bloke lahko postaviš skupaj, da premikaš igralce s pomočjo tipk s puščicami. Tu so tudi bloki, ki naredijo nekaj, ko se igralci srečajo ali ko jih kliknemo. Preveri jih in se zabavaj!"
+    C2_zuck_repeat_loop:
+      1:
+        text: "Ena stvar, pri kateri so računalniki res dobri, je ponavljanje ukazov. Človeku bi postalo res dolgčas, če bi moral neko stvar zaporedoma spet in spet ponavljati. Računalnik pa lahko naredi eno in isto stvar milijonkrat ali celo milijardo krat in se ne dolgočasi ter je sposoben izvesti to res dobro."
+      2:
+      3:
+      4:
+      5:
     C3_artist_functions:
       1:
         text: "Ena od super stvari pri računalniškem programiranju je, da ko računalnik naučiš, kako izvesti neko dejanje, lahko to funkcijo znova pokličeš. Daš ji ime in po tem imenu funkcijo pokličeš. To je res kot razširitev jezika."
@@ -257,6 +273,7 @@ sl:
       1:
         text: "Ena od super stvari pri računalniškem programiranju je, da ko računalnik naučiš, kako izvesti neko dejanje, lahko to funkcijo znova pokličeš. Daš ji ime in po tem imenu funkcijo pokličeš. To je res kot razširitev jezika."
       2:
+        text: "V programu, ki smo ga zgradili, smo se naučili, kako narisati kvadrat s premikanjem in štirikratnim obračanjem. Tej funkciji lahko damo ime, nariši kvadrat, tako da vsakič, ko bomo želeli to narediti, preprosto rečemo nariši kvadrat in bo šlo nazaj ter bo sprožilo to funkcijo, to kodo. Izvršilo se bo za nas. Ta koncept smo dodali v naš programski jezik."
       3:
       4:
     C4_unplugged_parameters:

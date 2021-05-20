@@ -1,0 +1,168 @@
+school_name,state_school_id,nces_id,course_id,course_name,teacher_name_or_id,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Hedgesville High School,WV-0400000-04501,540006000019,2832,Addl courses in Computer Science/Programming,unspecified,15,<10,<10,<10,,,<10,<10,<10
+Musselman High School,WV-0400000-04503,540006000027,2832,Addl courses in Computer Science/Programming,unspecified,11,<10,,<10,,,<10,<10,<10
+Spring Mills High School,WV-0400000-04504,540006001487,2832,Addl courses in Computer Science/Programming,unspecified,34,<10,<10,<10,,,11,,<10
+Oak Glen Middle School,WV-2900000-29303,540045001193,2832,Addl courses in Computer Science/Programming,unspecified,117,47,,,,,39,,23
+Oak Glen Middle School,WV-2900000-29303,540045001193,2832,Addl courses in Computer Science/Programming,unspecified,10,<10,,,,,<10,,<10
+Bridgeport High School,WV-3300000-33501,540051000284,2832,Addl courses in Computer Science/Programming,unspecified,<10,<10,,,,,<10,,<10
+Herbert Hoover High School,WV-3900000-39507,540060000403,2832,Addl courses in Computer Science/Programming,unspecified,18,<10,,,,,<10,,<10
+Saint Albans High School,WV-3900000-39509,540060000444,2832,Addl courses in Computer Science/Programming,unspecified,23,<10,<10,,,,<10,,<10
+South Charleston High School,WV-3900000-39511,540060000442,2832,Addl courses in Computer Science/Programming,unspecified,36,<10,<10,<10,,,23,,11
+South Charleston High School,WV-3900000-39511,540060000442,2832,Addl courses in Computer Science/Programming,unspecified,<10,<10,,,,,,,
+Wahama High School,WV-4900000-49503,540078000630,2833,Addl courses in Computer Science/Programming,unspecified,<10,,,,,,,,
+Keyser High School,WV-5300000-53503,540087000718,2832,Addl courses in Computer Science/Programming,unspecified,<10,,,,,,,,
+Winfield High School,WV-7200000-72520,540120000937,2833,Addl courses in Computer Science/Programming,unspecified,<10,,,,,,,,
+Wirt County High School,WV-9400000-94501,540159001140,2833,Addl courses in Computer Science/Programming,unspecified,<10,,,,,,,,
+Cabell Midland High School,WV-1200000-12550,540018000686,3030,AP COMPUTER SCIENCE A (MATH CREDIT),unspecified,64,30,<10,<10,,,13,<10,<10
+Lincoln County High School,WV-4300000-43506,540066001245,3030,AP COMPUTER SCIENCE A (MATH CREDIT),unspecified,10,<10,,,,,<10,,
+University High School,WV-5600000-56503,540093000803,3030,AP COMPUTER SCIENCE A (MATH CREDIT),unspecified,26,11,,<10,,,<10,,
+Pocahontas County High School,WV-6900000-69501,540114000896,3030,AP COMPUTER SCIENCE A (MATH CREDIT),unspecified,12,<10,,,,,<10,,
+Grafton High School,WV-8300000-83502,540138001053,3030,AP COMPUTER SCIENCE A (MATH CREDIT),unspecified,<10,,,,,,,,
+Jackson Middle School,WV-9600000-96405,540162001156,3030,AP COMPUTER SCIENCE A (MATH CREDIT),unspecified,17,<10,,,,,<10,,
+Spring Mills High School,WV-0400000-04504,540006001487,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,11,<10,<10,,,,<10,<10,
+Brooke High School,WV-1000000-10502,540015000075,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,,,,,,<10,,<10
+South Harrison High School,WV-3300000-33505,540051000314,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,,,
+Robert C Byrd High School,WV-3300000-33506,540051000320,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Ripley High School,WV-3500000-35502,540054000338,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Jefferson High School,WV-3700000-37501,540057000344,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,,,,,,,,
+George Washington High School,WV-3900000-39506,540060000397,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,44,23,<10,,,,<10,<10,
+George Washington High School,WV-3900000-39506,540060000397,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,20,11,,,,,<10,<10,
+Nitro High School,WV-3900000-39508,540060000426,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,18,<10,,<10,,,<10,,
+Lincoln County High School,WV-4300000-43506,540066001245,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,<10
+East Fairmont High School,WV-4700000-47501,540072000551,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,17,<10,,,,,<10,,
+Fairmont Senior High School,WV-4700000-47502,540072000553,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,,,,,,,,
+Fairmont Senior High School,WV-4700000-47502,540072000553,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,11,<10,<10,,,,<10,,
+North Marion High School,WV-4700000-47503,540072001282,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,18,<10,,,,,<10,,
+John Marshall High School,WV-4800000-48502,540075000594,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Morgantown High School,WV-5600000-56502,540093000786,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,14,<10,<10,,,,<10,<10,
+Wheeling Park High School,WV-6400000-64501,540105000875,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,14,,,<10,,,,,
+Preston High School,WV-7000000-70507,540117001511,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,,,,,,<10,,
+Hurricane High School,WV-7200000-72510,540120000926,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Hurricane High School,WV-7200000-72510,540120000926,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Independence High School,WV-7400000-74502,540123000958,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Elkins High School,WV-7500000-75504,540126000662,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,29,14,,<10,,,<10,<10,
+Tyler Consolidated High School,WV-8500000-85503,540144000671,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,<10,,
+Tyler Consolidated High School,WV-8500000-85503,540144000671,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,,,<10
+Magnolia High School,WV-9200000-92502,540156001126,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,<10,,,,,,,
+Parkersburg High School,WV-9600000-96501,540162001170,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,11,<10,,,,,<10,<10,
+Parkersburg South High School,WV-9600000-96502,540162001171,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,13,<10,,,,,<10,,
+Parkersburg South High School,WV-9600000-96502,540162001171,2806,AP COMPUTER SCIENCE PRINCIPLES,unspecified,<10,,,,,,<10,,<10
+Hedgesville High School,WV-0400000-04501,540006000019,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,<10,,
+Musselman High School,WV-0400000-04503,540006000027,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,<10,,
+Spring Mills High School,WV-0400000-04504,540006001487,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,<10,,
+Scott High School,WV-0600000-06501,540009000049,2801,AP COMPUTER SCIENCE: A & AB,unspecified,17,<10,,,,,<10,,
+Brooke High School,WV-1000000-10502,540015000075,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,<10,,<10
+Cabell Midland High School,WV-1200000-12550,540018000686,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+Greenbrier East High School,WV-2600000-26501,540039000230,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,,,
+Hampshire Senior High School,WV-2800000-28501,540042000248,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,<10,,
+East Hardy High School,WV-3100000-31501,540048001279,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,<10,,
+Lincoln High School,WV-3300000-33503,540051001238,2801,AP COMPUTER SCIENCE: A & AB,unspecified,10,<10,,,,,<10,,
+Ravenswood High School,WV-3500000-35501,540054000336,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+Ripley High School,WV-3500000-35502,540054000338,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,<10,,,,,
+Jefferson High School,WV-3700000-37501,540057000344,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,<10,,
+Jefferson High School,WV-3700000-37501,540057000344,2801,AP COMPUTER SCIENCE: A & AB,unspecified,27,12,<10,<10,,,<10,,
+Washington High School,WV-3700000-37502,540057001464,2801,AP COMPUTER SCIENCE: A & AB,unspecified,27,<10,<10,<10,,,<10,<10,
+George Washington High School,WV-3900000-39506,540060000397,2801,AP COMPUTER SCIENCE: A & AB,unspecified,20,<10,,,,,,,
+Lincoln County High School,WV-4300000-43506,540066001245,2801,AP COMPUTER SCIENCE: A & AB,unspecified,14,<10,,,,,<10,,<10
+East Fairmont High School,WV-4700000-47501,540072000551,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+John Marshall High School,WV-4800000-48502,540075000594,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,<10,,
+Frankfort High School,WV-5300000-53501,540087000717,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,<10,,
+Morgantown High School,WV-5600000-56502,540093000786,2801,AP COMPUTER SCIENCE: A & AB,unspecified,23,<10,<10,<10,,,<10,,<10
+University High School,WV-5600000-56503,540093000803,2801,AP COMPUTER SCIENCE: A & AB,unspecified,15,<10,,,,,<10,,<10
+Berkeley Springs High School,WV-5800000-58501,540099000819,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+River View High School,WV-6000000-60520,540081001477,2801,AP COMPUTER SCIENCE: A & AB,unspecified,16,<10,,,,,<10,,
+Preston High School,WV-7000000-70507,540117001511,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+Winfield High School,WV-7200000-72520,540120000937,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,<10,,,,,
+Shady Spring High,WV-7400000-74505,540123000980,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+Tygarts Valley Middle/High School,WV-7500000-75503,540126001011,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,<10,,,,,<10,,
+Buckhannon Upshur High School,WV-8700000-87501,540147001078,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,<10,,
+Magnolia High School,WV-9200000-92502,540156001126,2801,AP COMPUTER SCIENCE: A & AB,unspecified,12,<10,,,,,,,
+Wirt County High School,WV-9400000-94501,540159001140,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,<10,,
+Wirt County High School,WV-9400000-94501,540159001140,2801,AP COMPUTER SCIENCE: A & AB,unspecified,<10,,,,,,,,
+Hedgesville High School,WV-0400000-04501,540006000019,2816,BASIC PROGRAMMING,unspecified,<10,,,,,,<10,,
+Musselman High School,WV-0400000-04503,540006000027,2816,BASIC PROGRAMMING,unspecified,<10,,,,,,,,
+Musselman High School,WV-0400000-04503,540006000027,2816,BASIC PROGRAMMING,unspecified,<10,,,,,,,,
+Sherman High School,WV-0600000-06502,540009000051,2816,BASIC PROGRAMMING,unspecified,<10,,,,,,<10,,
+Princeton Senior High School,WV-5100000-51507,540084000701,2816,BASIC PROGRAMMING,unspecified,<10,<10,,,,,<10,,<10
+Mountaineer Middle School,WV-5600000-56301,540093000655,2816,BASIC PROGRAMMING,unspecified,96,39,<10,<10,<10,,32,<10,10
+Mountaineer Middle School,WV-5600000-56301,540093000655,2816,BASIC PROGRAMMING,unspecified,44,10,<10,<10,,,10,<10,<10
+Mountaineer Middle School,WV-5600000-56301,540093000655,2816,BASIC PROGRAMMING,unspecified,<10,<10,<10,,,,<10,,<10
+Van Devender Middle School,WV-9600000-96406,540162001180,2816,BASIC PROGRAMMING,unspecified,<10,,,,,,<10,,<10
+Hedgesville High School,WV-0400000-04501,540006000019,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,,,
+Musselman High School,WV-0400000-04503,540006000027,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,,,
+Musselman High School,WV-0400000-04503,540006000027,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Spring Mills High School,WV-0400000-04504,540006001487,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,,,
+Cabell Midland High School,WV-1200000-12550,540018000686,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,<10,<10
+Huntington High School,WV-1200000-12560,540018000860,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,<10,,,,<10,,
+Calhoun Middle/High School,WV-1400000-14501,540021000142,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+Clay County High School,WV-1600000-16501,540024000147,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Doddridge County High School,WV-1800000-18501,540027000159,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+Oak Glen High School,WV-2900000-29501,540045000268,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,<10,,,,<10,,<10
+Weir High School,WV-2900000-29502,540045000269,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,<10
+Ravenswood High School,WV-3500000-35501,540054000336,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Ripley High School,WV-3500000-35502,540054000338,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,<10
+Washington High School,WV-3700000-37502,540057001464,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,,,
+Nitro High School,WV-3900000-39508,540060000426,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,,,
+Nitro High School,WV-3900000-39508,540060000426,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+Saint Albans High School,WV-3900000-39509,540060000444,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,,,
+South Charleston High School,WV-3900000-39511,540060000442,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+River View High School,WV-6000000-60520,540081001477,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Mount View High School,WV-6000000-60527,540081001246,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Wheeling Park High School,WV-6400000-64501,540105000875,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Wheeling Park High School,WV-6400000-64501,540105000875,1457,"CODING, APP, AND GAME DESIGN",unspecified,12,<10,<10,,,,<10,,<10
+St. Marys High School,WV-6700000-67501,540111000889,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Pocahontas County High School,WV-6900000-69501,540114000896,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,,,
+Hurricane High School,WV-7200000-72510,540120000926,1457,"CODING, APP, AND GAME DESIGN",unspecified,12,<10,,,<10,,<10,,<10
+Poca High School,WV-7200000-72515,540120000931,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+Winfield High School,WV-7200000-72520,540120000937,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,<10,,<10,,<10
+Independence High School,WV-7400000-74502,540123000958,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,<10
+Liberty High School,WV-7400000-74503,540123000961,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+Shady Spring High,WV-7400000-74505,540123000980,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Woodrow Wilson High School,WV-7400000-74506,540123000991,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,<10,,,,<10,,<10
+Harman Elementary/High School,WV-7500000-75102,540126000999,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Elkins High School,WV-7500000-75504,540126000662,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,
+Ritchie County High School,WV-7700000-77501,540129001021,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Roane County High,WV-7900000-79503,540132000666,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,,,
+Grafton High School,WV-8300000-83502,540138001053,1457,"CODING, APP, AND GAME DESIGN",unspecified,16,<10,,,,,<10,,<10
+Tyler Consolidated High School,WV-8500000-85503,540144000671,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Hundred High School,WV-9200000-92501,540156001123,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Wirt County High School,WV-9400000-94501,540159001140,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,<10,,<10
+Parkersburg High School,WV-9600000-96501,540162001170,1457,"CODING, APP, AND GAME DESIGN",unspecified,22,<10,,<10,,,10,,<10
+West Virginia School For The Blind,WV-9700000-97602,540162101204,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,,,,,,<10
+Wyoming County East High School,WV-9800000-98507,540165001028,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,<10,,<10,,,<10,,<10
+Westside High School,WV-9800000-98508,540165001085,1457,"CODING, APP, AND GAME DESIGN",unspecified,<10,,,,,,<10,,
+Tucker County High School,WV-8400000-84501,540141001272,1410,COMPUTER SCIENCE AND SOFTWARE ENGINEERING (PLTW),unspecified,<10,,,,,,<10,,<10
+Poca High School,WV-7200000-72515,540120000931,1412,COMPUTER SCIENCE APPLICATIONS (PLTW),unspecified,19,10,<10,,,,<10,,
+Scott High School,WV-0600000-06501,540009000049,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,18,<10,<10,,,,<10,,
+Van Junior/Senior High School,WV-0600000-06503,540009000055,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,<10,,,,,,,
+Van Junior/Senior High School,WV-0600000-06503,540009000055,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,<10,,,,,,,
+Braxton County High School,WV-0800000-08501,540012000061,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,,,,,,<10,,
+Bridgeport High School,WV-3300000-33501,540051000284,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,39,12,,<10,,,<10,<10,<10
+Robert C Byrd High School,WV-3300000-33506,540051000320,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,,,,,,,<10,
+Saint Albans High School,WV-3900000-39509,540060000444,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,46,17,,,,,<10,,
+South Charleston High School,WV-3900000-39511,540060000442,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,11,<10,<10,,,,<10,,<10
+Capital High School,WV-3900000-39513,540060001443,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,23,<10,<10,,,,12,,<10
+Riverside High School,WV-3900000-39514,540060001043,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,18,<10,,,,,<10,<10,
+Lewis County High School,WV-4100000-41501,540063000472,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,12,<10,,<10,,,<10,,<10
+Frankfort High School,WV-5300000-53501,540087000717,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,,,,,,,,
+Keyser High School,WV-5300000-53503,540087000718,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,<10,,,,,<10,,
+Winfield High School,WV-7200000-72520,540120000937,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,10,<10,,,,,,,
+Ritchie County High School,WV-7700000-77501,540129001021,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,<10,,,,,,<10,,
+Buckhannon Upshur High School,WV-8700000-87501,540147001078,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,13,<10,,<10,,,<10,,
+Spring Valley High School,WV-8900000-89508,540150001023,2831,COMPUTER SCIENCE/PROGRAMMING,unspecified,29,12,,<10,,,12,<10,<10
+Brooke Middle School,WV-1000000-10304,540015001582,1918,GATEWAY COMPUTER SCIENCE 1,unspecified,96,34,<10,,<10,,45,,23
+Sherrard Middle School,WV-4800000-48402,540075000604,1918,GATEWAY COMPUTER SCIENCE 1,unspecified,135,70,<10,,,<10,48,,<10
+Buffalo Middle School,WV-8900000-89301,540150001294,1918,GATEWAY COMPUTER SCIENCE 1,unspecified,91,43,,,,,36,,18
+Buffalo Middle School,WV-8900000-89301,540150001294,1918,GATEWAY COMPUTER SCIENCE 1,unspecified,77,33,,,,,37,,14
+Vinson Middle School,WV-8900000-89306,540150001114,1918,GATEWAY COMPUTER SCIENCE 1,unspecified,121,73,<10,<10,,,56,,<10
+Brooke High School,WV-1000000-10502,540015000075,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,<10,,,,,,<10,,<10
+Hampshire Senior High School,WV-2800000-28501,540042000248,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,11,<10,,<10,,,<10,,
+Nitro High School,WV-3900000-39508,540060000426,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,18,<10,<10,,,,<10,,<10
+Sissonville High School,WV-3900000-39510,540060000450,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,<10,,,,,,<10,,
+Lincoln County High School,WV-4300000-43506,540066001245,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,10,<10,,,,,<10,,<10
+John Marshall High School,WV-4800000-48502,540075000594,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,<10,<10,,,,,<10,,
+Tucker County High School,WV-8400000-84501,540141001272,1408,INTRODUCTION TO COMPUTER SCIENCE (PLTW),unspecified,<10,<10,,,,,<10,,
+Hedgesville High School,WV-0400000-04501,540006000019,2856,OBJECT-ORIENTED LANGUAGES,unspecified,<10,,,,,,<10,,
+George Washington High School,WV-3900000-39506,540060000397,2856,OBJECT-ORIENTED LANGUAGES,unspecified,<10,<10,,,,,,<10,
+Morgantown High School,WV-5600000-56502,540093000786,2817,Use for additional courses in BASIC Programming,unspecified,<10,<10,,,,,,,
+Buckhannon Upshur High School,WV-8700000-87501,540147001078,2857,Use for addl courses in Object-Oriented Languages,unspecified,<10,,,,,,<10,,

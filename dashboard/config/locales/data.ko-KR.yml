@@ -38,7 +38,8 @@ ko:
         NetSim: 인터넷 시뮬레이터
         Custom: 화가
         CustomStudio: Play Lab
-        Gamelab: Game Lab
+        Gamelab: 게임 랩
+        Spritelab: 스프라이트 연구소
     trophy:
       name:
         Bronze: 동
@@ -89,8 +90,8 @@ ko:
         turtle_1_4: '사용할 때마다 색이 바뀌는 "랜덤 색" 블럭을 사용해서, 세 변의 색이 다른 삼각형을 그려봐. 힌트: 돌기 블럭을
           사용할 때에는 회전할 각도를 입력해 주어야 해.'
         turtle_1_5: 그럼 이번에는, 사각형 안에 삼각형이 들어있는 모양을 그려봐.
-        turtle_1_6: '이 삼각형과 사각형을 어떻게 그릴 수 있을까? 힌트: 삼각형을 먼저 그린 후, 사각형을 그리기 위해 얼마나 회전해야
-          할 지를 생각해야 해.'
+        turtle_1_6: '이 삼각형과 사각형을 그리는 법을 알아낼 수 있어요? 힌트: 삼각형을 먼저 그린 후, 사각형을 그리기 위해 얼마나
+          회전해야 할 지를 생각해보세요.'
         turtle_1_7: 자. 이제 좀더 어려운 것을 해보자. - 초록색 안경을 그릴 수 있을까? 사각형은 각 변의 크기가 100 픽셀이고
           , 50 픽셀 만큼 떨어져 있고, 초록 선으로 그려야 해!
         turtle_1_8: 이 코드를 실행시켰을 때에는 어떤 일이 벌어질까? 나머지 그림을 완성시켜보자. 색은 실행시킬 때마다 달라진다.
@@ -139,7 +140,7 @@ ko:
           그려보세요. 랜덤 색도 사용하세요.'
         turtle_2_4: '자 이제, 더 멋진 것을 만들어 봅시다. 100 픽셀 크기의 사각형 36개를 10 도씩 회전시켜서 그리는 코드로
           수정하면 됩니다. 힌트: 더 빨리 움직이게 하려면 슬라이더를 이용하세요.'
-        turtle_2_5: 50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요. "사각형 그리기" 함수 블럭을 5 번 사용면
+        turtle_2_5: 50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요. "사각형 그리기" 함수 블럭을 5 번 사용하면
           됩니다.
         turtle_2_6: '이번에는 사각형들을 그리기 위해서 카운터를 사용해 봅시다. 한 변의 길이가 카운터와 같은 사각형들을 그려야 합니다.
           "카운터" 블럭을 사용하세요. 힌트: 변수 분류에 들어있습니다.'
@@ -225,7 +226,7 @@ ko:
         jigsaw_8: 블럭들을 그림에 맞게 맞춰 보세요.
         jigsaw_9: 블럭들을 그림에 맞게 맞춰 보세요.
         jigsaw_10: 블럭들을 그림에 맞게 맞춰 보세요.
-        jigsaw_11: 블럭들을 그림에 맞게 맞춰 보세요.
+        jigsaw_11: 블럭을 번호 순서대로 놓으세요.
         jigsaw_12: 블럭들을 그림에 맞게 맞춰 보세요.
         jigsaw_13: 퍼즐을 맞춰 보세요!
         mazestep_1: 미로 퍼즐의 단계별 설명입력
@@ -452,12 +453,22 @@ ko:
         C4_unplugged_forloops: 반복을 위한
         C4_unplugged_parameters: 매개변수를 사용하는 음악 작곡
         C4_unplugged_binary: 2진
+        CSF_a_b_artist_loops: 아티스트 내 루프
+        CSF_artist_angles: 아티스트 내 각도
+        CSF_collector_k1_blocks: 'CS 기초: 모으는 이'
+        CSF_collector_repeat_loops: 모으는 이 반복 루프
+        CSF_collector_text_blocks: 'CS 기초: 모으는 이'
         CSF_create_functions: 함수 만들기
+        CSF_debugging_k1_blocks: 디버깅
+        CSF_debugging_text_blocks: 디버깅
         CSF_EF_cs_matters: 컴퓨터과학(정보과학) 문제들
-        CSF_maze_intro_k1_blocks: Code Studio 소개
-        CSF_maze_intro_text_blocks: Code Studio 소개
+        CSF_maze_intro_k1_blocks: 코드 스튜디오 소개
+        CSF_maze_intro_text_blocks: 코드 스튜디오 소개
         CSF_my_robotic_friends: 내 로봇 친구
+        CSF_Power_of_Words: 말의 힘
+        CSF_Super_Digital_Citizen: 슈퍼 디지털 시민
         CSF_stevie_big_project: 스티비와 큰 프로젝트
+        CSF_unspotted_bugs: 점이 없는 버그
         CSF_zuck_loops_short: 반복 루프
         frozen_intro: Hour of Code 소개
         frozen_loops: 반복(Loop) 소개
@@ -469,6 +480,16 @@ ko:
         infinity_playlab_intro: 플레이 랩 - 소개
         infinity_playlab_events: 플레이 랩 - 이벤트
         infinity_playlab_repeat_forever: 플레이 랩 - 무한 반복
+        csd_concept_how_computers_work: 컴퓨터 작동 방법 소개
+        csd_concept_computer: '컴퓨터 작동 방법: 무엇이 컴퓨터를 만드는가, 컴퓨터?'
+        csd_concept_binary_data: '컴퓨터 작동 방법: 바이너리와 데이터'
+        csd_concept_circuits_logic: '컴퓨터 작동 방법: 회로 및 로직'
+        csd_concept_memory_cpu_input_output: '컴퓨터 작동 방법: 메모리, CPU, 인풋 및 아웃풋'
+        csd_concept_hardware_software: '컴퓨터 작동 방법: 하드웨어 및 소프트웨어'
+        csd_concept_search: 검색 작동 방식
+        csd_external_amazon_data: 우리의 삶을 바꾸기 위한 아마존 추천 시스템에서 빅 데이터의 사용 방법
+        csd_external_netflix_data: 넥플릭스의 TV 쇼 및 영화 제안 방식은?
+        csd_external_waze_data: 많은 사용자가 웨이즈에 사로 잡혀 있는 이유는?
         csd_gamelab_animation_tab: 애니메이션 탭
         csd_gamelab_velocity: 속도
         csd_weblab_intro_1: 웹 연구소 소개 - 파트 1
@@ -480,6 +501,7 @@ ko:
         csp_applab_functions_parameters: 함수(값 전달)
         csp_applab_loops: 반복
         csp_concept_rgb: 픽셀에 관해서 조금
+        csp_cs_is_changing_everything: 컴퓨터 과학은 모든 것을 바꾸고 있습니다.
         csp_pixelation_color_1: 픽셀 색상 위젯 - 1부
         csp_pixelation_color_2: 픽셀 색상 위젯 - 2부
         csp_pixelation_color_3: 픽셀 색상 위젯 - 3부
@@ -527,10 +549,130 @@ ko:
         mc_2016_events: 마인크래프트 Hour of Code - 이벤트
         mc_2016_spawn: 마인크래프트 Hour of Code - 생성
         mc_2016_congrats: 마인크래프트 Hour of Code - 축하합니다
+        applab_hoc_welcome: 앱 랩 아워오브코드 - 환영합니다
+        applab_hoc_setproperty: 앱 랩 아워오브코드 - setProperty
+        applab_hoc_onevent: 앱 랩 아워오브코드 - onEvent
+        applab_hoc_designmode: 앱 랩 아워오브코드 - 디자인 모드
+        applab_hoc_share: 앱 랩 아워오브코드 - 공유
+        mc_2017_agent_intro: 마인크래프트 아워오브코드 - 에이전트
+        mc_2017_repeat: 마인크래프트 아워오브코드- 반복 루프
+        mc_2017_functions: 마인크래프트 아워오브코드 - 함수
         mc_2017_congratulations: 마인크래프트 Hour of Code - 축하합니다
+        mc_2017_puzzle_1: 마인크래프트 아워오브코드 - 에이전트
+        mc_2017_puzzle_3: 마인크래프트 아워오브코드- 반복 루프
+        mc_2017_puzzle_8: 마인크래프트 아워오브코드 - 함수
+        mc_2017_puzzle_12: 마인크래프트 아워오브코드 - 프리플레이
+        hint_videos_d_11_3_first: '힌트 비디오: D.11.3 퍼스트'
+        hint_videos_d_11_3_last: '힌트 비디오: D.11.3 라스트'
+        hint_videos_d_11_4_first: '힌트 비디오: D.11.4 퍼스트'
+        hint_videos_d_11_4_last: '힌트 비디오: D.11.4 라스트'
+        hint_videos_d_11_5_first: '힌트 비디오: D.11.5 퍼스트'
+        hint_videos_d_11_5_last: '힌트 비디오: D.11.5 라스트'
+        hint_videos_d_11_6_first: '힌트 비디오: D.11.6 퍼스트'
+        hint_videos_d_11_6_last: '힌트 비디오: D.11.6 라스트'
+        hint_videos_d_11_7_first: '힌트 비디오: D.11.7 퍼스트'
+        hint_videos_d_11_7_last: '힌트 비디오: D.11.7 라스트'
+        hint_videos_d_11_9_first: '힌트 비디오: D.11.9 퍼스트'
+        hint_videos_d_11_9_last: '힌트 비디오: D.11.9 라스트'
+        hint_videos_d_11_11_first: '힌트 비디오: D.11.11 퍼스트'
+        hint_videos_d_11_11_last: '힌트 비디오: D.11.11 라스트'
+        applab_intro_welcome: 앱 랩 -시작하기
+        applab_intro_events: 앱 랩 - 인터랙티브하게 만들기
+        applab_intro_sounds: '앱 랩: 이미지와 소리'
+        applab_intro_designmode: 앱 랩 - 디자인 모드
+        applab_intro_share: '앱 랩: 앱 공유'
+        csd_applab_arrays: 배열 소개
+        CSF_skinOverview_Harvester: 수확인
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_bb8_loops_C-F: BB-8을 사용한 루프
+        CSF_harvester_skinOverview_K-1: 수확인
+        CSF_harvester_loops_K1: 수확인 내 루프
+        CSF_scrat_loops_K1: 아이스 에이지 내 루프
+        CSF_scrat_loops_CF: 아이스 에이지 내 루프
+        CSF_if_allskins: If 블록
+        CSF_ifelse_allskins: If/Else 블록 사용
+        CSF_ifelseifelse_allskins: If/ElseIf/Else 블록 사용
         CSF_loops_AB: 반복
+        csd_gamelab_booleans: 불 연산식
+        csd_gamelab_conditional_statements: 조건문
+        csd_gamelab_if_else: If/Else 조건문
+        CSF_SpriteLabIntro_CDEF: 이것은 스프라이트 랩입니다
+        CSF_Spritelab_MakeSprite_CDEF: 스프라이트 랩에서 스프라이트 만드는 방법
+        CDEF_Video_SpritesInAction: 스프라이트 인 액션
+        CSF_SpriteLab_SpritesInAction_CDEF: 스프라이트 인 액션
+        CSF_StarWars_ProjectIntro: 스타 워즈 프로젝트 소개
+        mc_2018_intro: '마인크래프트: 보야지 아쿠아틱 소개'
+        MC_2018_loops: '마인크래프트: 보야지 아쿠아틱 까지 반복'
+        mc_2018_conditionals: '마인크래프트: 보야지 아쿠아틱 조건문'
+        mc_2018_closing: '마인크래프트: 보야지 아쿠아틱 축하'
+        hoc_dance_warmup: 댄스 파티 - 워밍 업
+        hoc_dance_events: 댄스 파티 - 이벤트
+        hoc_dance_properties: 댄스 파티 - 속성
+        hoc_dance_congrats: 댄스 파티 - 파티 시작!
+        c_and_c_great_to_create: 창작과 페어 플레이는 멋진 일입니다.
+        c_and_c_digital_sharing: 디지털 공유
+        teaching_csf_how_it_works: 'CS 기초 교습: 과정 진행 방식'
+        elem_pd_2: 초등학교 컴퓨터 과학 - PD 비디오 2/2
+        what_is_cs: 컴퓨터 과학이란?
+        repeat_block: 반복 블록 사용
+        lesson_planning: 레슨 계획
+        opd_closing: 'CS 기초 교습: 닫기 및 다음 단계'
+        why_unplugged_lessons: '"언플러그드" 되기'
+        writing_first_program: 생애 최초 컴퓨터 프로그램 작성하기
+        conditionals_with_cards: '언플러그드 레슨 인 액션: 카드 조건문'
+        songwriting_with_functions: '언플러그드 레슨 인 액션: 함수로 작사'
+        what_is_an_event: 이벤트란?
+        teaching_cs_pair_programming: 'CS 기초 교습: 페어 프로그래밍'
+        teaching_problem_solving: 'CS 기초 교습: 문제 해결 교습'
+        csd_applab_designmode: 'CS 발견: 앱 랩 - 디자인 모드'
         csd_pair_programming: 페어 프로그래밍
+        csd_gamelab_functions: 함수 호출 및 정의
         csd_applab_parameters: 함수(값 전달)
+        csd_applab_loops: 앱 랩 내 루프
+        csd_problem_solving_process: 문제 해결 과정
+        CSF_Going_Places_Safely: 내 온라인 이웃
+        CSF_SpriteLab_Intro_v2: 스프라이트 랩 소개
+        CSF_Spritelab_MakeSprite_v2: 스프라이트 만드는 방법
+        CSF_SpriteLab_SpritesInAction_v2: 스프라이트 인 액션
+        csd_debugging: 디버깅
+        csd_applab_designmode_short: 앱 랩 디자인 모드
+        csp-pd-welcome: 패밀리에 오신 걸 환영합니다!
+        CSF-Teaching-Problem-Solving: CSF 문제 해결 교습
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - 파일럿 비디오 - 데이터
+          블록
+        u7-libraries-explanation: '앱 랩: 자신만의 블록 만들기 - 라이브러리 이용 방법'
+        how-to-k5-workshops: 'Code.org의 CS 기본: 테스트된 아동, 승인된 교사'
+        why-should-teach-unplugged-activities: 'FAQ: "언플러그드" 활동을 가르쳐야 하는 이유는?'
+        cs-principles-intro-to-objects: 'CS 기초: 객체 소개'
+        oceans_machine_learning: 머신 러닝
+        oceans_training_data: 교육 데이터
+        oceans_societal_implications: 사회적 영향
+        hoc_dance_congrats_2019: 댄스 파티 2019 - 파티 시작!
+        hoc_dance_warmup_2019: 댄스 파티 2019 - 준비운동!
+        hoc_dance_events_2019: 댄스 파티 2019 - 이벤트
+        hoc_dance_measures_2019: 댄스 파티 - 마디
+        hoc_dance_properties_2019: 댄스 파티 2019 - 속성
+        csd_what_computers_do: 컴퓨터 하는 일은?
+        csf_my_online_neighborhood_2020: 내 온라인 이웃
+        csf_follow_the_digital_trail: 디지털 흔적 따라가기
+        csf_private_and_personal_information: 사생활 정보 및 개인 정보
+        csd_what_computers_are: 컴퓨터란?
+        codebreak_e01: '코드 브레이크 1.0: 힐 하퍼 알고리즘'
+        codebreak_e02: 코드 브레이크 2.0 - 마크 큐반 및 린제이 스콧 프로토타입
+        codebreak_e03: '코드 브레이크 3.0: 애쉬튼 커쳐와 미아 길 엡손 암호화'
+        codebreak_e04: 코드 브레이크 4.0 마이크 크리거와 앨리스 켈러 디지털 정보
+        codebreak_e05: 코드 브레이크 5.0 - 빌 게이츠 시뮬레이션과 데이터
+        csd_how_teamwork_works: 팀워크 작동 방식
+        csd_teamwork_and_disagreement: 팀워크 - 불일치 처리
+        codebreak_e06: '코드 브레이크 6.0: 키건 마이클 스커트와 빈트 서프 인터넷'
+        codebreak_e07: '코드 브레이크 7.0: 살만 칸과 플로 반 조건문'
+        codebreak_e08: '코드 브레이크 8.0: 야라 샤히디와 퍼지 코스로샤히 변수 '
+        codebreak_e09: '코드 브레이크 9.0: 맥클모어와 스콧 포스톨 이벤트'
+        codebreak_e10: '코드 브레이크 10.0: 캣 그레이엄과 케이트 파크 AI'
+        codebreak_e11: '코드 브레이크 11.0: 수잔 보이치키 및 차이나 앤 맥클레인 추상'
+        codebreak_e12: '코드 브레이크 12.0: 알로에 블라크, 브렛 테일러, 파울라 메이아 하드웨어'
+        csf21pilot_events: '스프라이트 랩: 스프라이트 인 액션 (CSF 2021 파일럿)'
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

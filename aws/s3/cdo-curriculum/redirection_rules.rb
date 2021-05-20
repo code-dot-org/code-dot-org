@@ -20,7 +20,8 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csp-19/"
+      replace_key_prefix_with: "csp-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -38,7 +39,8 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csd-19/"
+      replace_key_prefix_with: "csd-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -56,7 +58,8 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "csf-19/"
+      replace_key_prefix_with: "csf-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -65,7 +68,18 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsf-19/"
+      replace_key_prefix_with: "plcsf-20/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "plcsf-current/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsf-20/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -74,7 +88,18 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsd-19/"
+      replace_key_prefix_with: "plcsd-21/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "plcsd-current/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsd-21/",
+      http_redirect_code: "302"
     }
   },
   {
@@ -83,16 +108,27 @@ routing_rules = [
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "plcsp-19/"
+      replace_key_prefix_with: "plcsp-21/",
+      http_redirect_code: "302"
     }
   },
   {
     condition: {
-      key_prefix_equals: "docs/"
+      key_prefix_equals: "plcsp-current/"
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "documentation"
+      replace_key_prefix_with: "plcsp-21/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "documentation/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "docs/"
     }
   },
 ]

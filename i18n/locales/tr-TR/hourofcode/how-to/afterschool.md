@@ -1,14 +1,18 @@
 ---
-title: Etkinlik Rehberi
-layout: wide
-nav: how_to_nav
+title: Okul Sonrası için Hour of Code Nasıl Yapılır? Rehberi
 ---
 
 {{ signup_button }}
 
 # Etüt/Sosyal etkinlik veya okul sonrası faaliyetler için Kod Saati nasıl öğretilir
 
-### Bu harekete katıl ve bir grup öğrenciye onların bilgisayar bilimindeki ilk saatlerinde şu adımlarla yol göster. Kod-Saati yeni başlayanlar için bile çok kolaydır! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Bu harekete katılın ve öğrencilerinizi bilgisayar bilimiyle şu adımlarla tanıştırın.
+
+Bilişimsel düşünme, problem çözme becerilerini, mantığı ve yaratıcılığı geliştirmeye yardımcı olur. Teknoloji de gezegendeki her sanayiyi dönüştürüyor. Bugün öğrenciler teknolojiyi kullanmakla kalmayıp onu nasıl üretebileceğini de öğrenmeliler. Erken başlayan öğrenciler, 21. yüzyılın kariyer yolunda başarılı olmak için temel atmış olacaklar.
+
+Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tanıştırmanın basit ve eğlenceli bir yoludur. Kulüp ya da okul sonrası aktivitelerinizde Hour of Code eğitimleri için size yardım edecek birisini istiyorsanız [yerel bir gönüllü]({{ urls/volunteer_local }}) bulabilirsiniz.
+
+### Hour of Code'a uzaktan da ev sahipliği yapılabilir! Başlamak için [ sanal bir Hour of Code etkinliği düzenlemeye yönelik ipuçlarımıza](https://hourofcode.com/us/how-to/virtual) göz atın.
 
 * * *
 
@@ -16,27 +20,27 @@ nav: how_to_nav
 
 ## 2. Bir öğretici içerik seçin
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Çeşitli ortaklar tarafından oluşturulan, her yaştaki katılımcıya yönelik, [eğlenceli bir saatlik eğitimler]({{ urls/learn }}) sunuyoruz. [Bunları deneyin!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Tüm Hour of Code aktiviteleri**, düzenleyici açısından çok az hazırlık süresi gerektirir ve çocukların kendi tempo ve yetenek seviyelerinde kendi kendilerine çalışmalarına izin verir.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Okul sonrası Hour of Code için ders planına mı ihtiyacınız var?** Bu [şablona](/files/AfterschoolEducatorLessonPlanOutline.docx) bakabilirsiniz!
 
-## 3. Kendi Kod-Saatinizi tanıtın
+## 3. Kendi Hour of Code etkinliğinizi tanıtın
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+[Bu araçlar ile]({{ urls/promote }}) kendi Hour of Code'unuzu tanıtın ve başkalarını da kendi etkinliklerini düzenlemeleri için teşvik edin.
 
 ## 4. Teknolojik ihtiyaçlarınızı planlayın - bilgisayar kullanmak isteğinize bağlı
 
-En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayara ihtiyaç yok **yok** hatta hiç bilgisayar olmadan bile Kod-Saati dersleri yapabilirsiniz.
+En iyi Kod-Saati deneyimi için bilgisayarlarınız internete bağlı olmalı. Her çocuk için bir bilgisayar **gerekli değildir** ve hiç bilgisayar olmadan bile Hour of Code yapabilirsiniz.
 
-Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Bağlantı hızınız düşük mü?** Videoları sınıfın ön tarafından izletin, böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
+Etkinlik öncesinde kullanacağınız öğretici içerikleri, öğrenci bilgisayarlarında ve/veya cihazlarında deneyin, ses ve videoların tarayıcınızda düzgün bir şekilde çalıstığından emin olun. **Bağlantı hızınız düşük mü?** Videoları tüm sınıfa izletmeyi planlayın. Böylece her öğrencinin kendi videosunu indirmesine gerek kalmayacaktır. Ya da internet bağlantısı gerektirmeyen içerikleri deneyin.
 
 Seçtiğiniz içerik ses ile daha iyi öğrenilecekse sınıflarınız için kulaklıklar edinin ya da öğrencilere kendilerininkini getirmelerini söyleyin.
 
-**Yeterli ekipman yok mu?** O halde [ eşli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
+**Yeterli cihazınız yok mu?** O halde [çiftli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) kullanın. İki kişilik takımlar halinde çalışan öğrenciler birbirlerine yardımcı olurlar ve öğretmene daha az ihtiyaç duyarlar. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
 
 ## 5. Kod-Saati etkinliğinizi ilham verici bir video ile başlatın
 
@@ -49,38 +53,38 @@ Kod-Saati etkinliğinize katılımcılara ilham vererek ve bilgisayarın hayatı
 - [ Başkan Obama tüm öğrencileri kodlama öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Daha fazla ilham verici video için [buraya tıklayın](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Bilgisayar biliminde tecrübeniz yoksa sorun değil. İşte size Hour of Code aktivitelerini tanıtmak için birkaç fikir:**
 
 - Teknolojinin hayatımızdaki etkisini hem erkekleri hem de kızları ilgilendirecek şekilde örneklerle açıklayınız. (Örneğin; insan hayatı kurtarmak, yardım etmek, iletişim kurmak için kullanılan uygulama ve teknolojiler hakkında konuşun).
 - Günlük hayatımızda kod kullanılan şeyleri listeleyin.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Kız çocuklarının bilgisayar bilimi ile ilgilenmesine ilişkin ipuçları için [buraya]({{ urls/girls }}) bakın.
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Daha fazla yardıma mı ihtiyacınız var?** [Ders planı şablonu](/files/AfterschoolEducatorLessonPlanOutline.docx)nu indirin.
 
 ## 6. Kodlayın!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Katılımcıları aktiviteye yönlendirin** - Öğretici bağlantısını tahtaya yazın. Bu bağlantıyı [seçtiğiniz öğretici materyal hakkındaki bilgilerde]({{ urls/learn }}) katılımcı listesi altında bulabilirsiniz.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Zorluklarla karşılanlar olursa şu yanıtları verebilirsiniz:** - "Bilmiyorum. Bunu birlikte çözelim." - "Teknoloji her zaman istediğimiz gibi çalışmıyor." - “Programlamayı öğrenmek, yeni bir dil öğrenmek gibidir; hemen sular seller gibi olmayacak."
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Birisi erken bitirdiğinde ne yapmak gerekir?** - Katılımcıları başka bir Hour of Code aktivitesini denemeleri için [hourofcode.com/learn]({{ urls/learn }}) sayfasına yönlendirebilirsiniz - Ya da erken bitirenlerden sorun yaşayanlara yardımcı olmalarını rica edebilirsiniz.
 
 ## 7. Kutlama
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- Öğrencileriniz için [Sertifika basın]({{ urls/certificates }}).
+- Öğrencileriniz için ["I did an Hour of Code!"]({{ promote/resources_stickers }}) çıkartmalarından bastırın.
+- Katılımcılar için [özel tişörtler sipariş edin](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
 - Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
 
 ## Eğitimciler için diğer Kod-Saati kaynakları
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- Daha önce düzenlenmiş Hour of Code etkinliklerinden, [en iyi uygulamalara](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) göz atın.
+- [Eğitimci Rehberliğinde Hour of Code web seminerimizi](https://youtu.be/EJeMeSW2-Mw) izleyin.
+- Diğer eğitmenlerle fikir alışverişinde bulunmak ve birbirinizi desteklemek için [ Hour of Code Forumu'nu](http://forum.code.org/c/plc/hour-of-code) ziyaret edin.
 - [ Kodlama Saati SSS](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). gözden geçirin.
 
-## Kod Saati etkinliğinden sonra ne yapmalı?
+## Hour of Code etkinliğinden sonra ne yapmalı?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+Hour of Code teknolojinin nasıl çalıştığı ve yazılım uygulamalarının nasıl yapıldığını öğrenmeye giden yolculukta sadece bir ilk adımdır. Öğrencilerin yolculuklarına devam etmelerine yardım edin ve onları [çevrimiçi kaynaklardan daha fazla bilgi edinmeye](/beyond) teşvik edin!
 
 {{ signup_button }}

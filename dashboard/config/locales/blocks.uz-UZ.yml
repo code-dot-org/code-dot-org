@@ -2,39 +2,422 @@
 uz:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: " {MOVE1} va {MOVE2} orasida {GROUP} harakatlar guruhi har {N} o'lchovda
+          almashadi"
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          MOVE1:
+            MOVES.Roll: dumalash
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+          MOVE2:
+            MOVES.Roll: dumalash
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+      Dancelab_atTimestamp:
+        text: " {TIMESTAMP} {UNIT} dan keyin"
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
+      Dancelab_changeColorBy:
+        text: " {COLOR} {METHOD} almashtirish {AMOUNT} "
+        options:
+          METHOD:
+            '"hue"': tus (hue)
+            '"saturation"': to'yinganlik
+            '"brightness"': yorqinlik
       Dancelab_changeMoveEachLR:
+        text: "{GROUP} buni {MOVE} {DIR} doimiy qiladi"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          MOVE:
+            '"next"': "(Keyingi)"
+            '"prev"': "(Oldingi)"
+            '"rand"': "(Tasodifiy)"
+            MOVES.Roll: dumalash
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
       Dancelab_changeMoveLR:
+        text: "{SPRITE} doimo {MOVE} {DIR} qiladi"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"next"': "(Keyingi)"
+            '"prev"': "(Oldingi)"
+            '"rand"': "(Tasodifiy)"
+            MOVES.Roll: dumalash
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+      Dancelab_changePropBy:
+        text: " {SPRITE} {PROPERTY} ni {VAL} ga o‘zgartirish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+      Dancelab_changePropEachBy:
+        text: "{GROUP} {PROPERTY} ni {VAL} ga o‘zgartirish"
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
       Dancelab_doMoveEachLR:
+        text: "{GROUP} bir marta {MOVE} {DIR} qiladi"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          MOVE:
+            '"rand"': "(Tasodifiy)"
+            MOVES.XBend: Egilish
+            MOVES.Roll: dumalash
+            MOVES.XClapSide: Qarsak
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.XFever: Disko
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.XHeadHips: Bosh + sonlar
+            MOVES.XHop: xmel (o'simlik)
+            MOVES.XHighKick: Zarba
+            MOVES.XKnee: Tizza
+            MOVES.XKneel: Tiz cho‘kmoq
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Yetib bormoq
+            MOVES.XSlide: Slayd
+            MOVES.Kick: Yulduz raqsi
+            MOVES.XArmsUp: Cho'zilmoq
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
       Dancelab_doMoveLR:
+        text: "{SPRITE} bir marta {MOVE} {DIR} qiladi"
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          MOVE:
+            '"rand"': "(Tasodifiy)"
+            MOVES.XBend: Egilish
+            MOVES.Roll: dumalash
+            MOVES.XClapSide: Qarsak
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.XFever: Disko
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.XHeadHips: Bosh + sonlar
+            MOVES.XHop: xmel (o'simlik)
+            MOVES.XHighKick: Zarba
+            MOVES.XKnee: Tizza
+            MOVES.XKneel: Tiz cho‘kmoq
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Yetib bormoq
+            MOVES.XSlide: Slayd
+            MOVES.Kick: Yulduz raqsi
+            MOVES.XArmsUp: Cho'zilmoq
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+      Dancelab_everyMeasuresRange:
+        text: "{START} dan so'ng har {N} o'lchovda takrorlash"
+      Dancelab_everySeconds:
+        text: har {N} {UNIT} takrorlash
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
+      Dancelab_everySecondsRange:
+        text: " {START} dan {STOP} gacha har {N} {UNIT} "
+        options:
+          UNIT:
+            measures: O'lchovlar
+            seconds: Soniyalar
+      Dancelab_everyVerseChorus:
+        text: 'har {UNIT} '
+        options:
+          UNIT:
+            '"verse"': she'r
+            '"chorus"': xor
+      Dancelab_getEnergy:
+        text: "{RANGE} olish"
+        options:
+          RANGE:
+            '"low"': bas
+            '"mid"': o'rta
+            '"high"': uch barobar
+      Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"tint"': rang tusi
+      Dancelab_getTime:
+        text: joriy vaqt {UNIT}
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
+      Dancelab_ifDanceIs:
+        text: |-
+          agar {SPRITE} buni {DANCE}
+          {DO1} {DO2} qilsa
+        options:
+          DANCE:
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Roll: dumalash
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+      Dancelab_ifTime:
+        text: |-
+          {UNIT} agar  {OP} {N} bo'lsa
+          {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
+        text: "{SPRITE} {LOCATION} ga sakraydi"
         options:
           LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
-      Dancelab_layoutSprites:
+      Dancelab_jumpToEach:
+        text: "{GROUP}  {LOCATION} ga sakratish"
         options:
-          FORMAT:
-            '"random"': tasodifiy
-      Dancelab_makeNewDanceSprite:
-        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
           LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": tasodifiy
+      Dancelab_layoutSprites:
+        text: "{GROUP}  {FORMAT} sifatida tartiblash"
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          FORMAT:
+            '"border"': chegara
+            '"inner"': kvadrat ichida
+            '"diamond"': olmos
+            '"circle"': aylana
+            '"grid"': panjara
+            '"top"': tepa satr
+            '"row"': satr
+            '"bottom"': past satr
+            '"left"': chap ustun
+            '"column"': ustun
+            '"right"': o‘ng ustun
+            '"x"': xoch-xoch
+            '"plus"': plus
+            '"random"': tasodifiy
+      Dancelab_makeAnonymousDanceSprite:
+        text: yangi {COSTUME} ni {LOCATION} da yaratish
+        options:
+          COSTUME:
+            '"ALIEN"': O‘zga sayyoralik
+            '"BEAR"': ayiq
+            '"CAT"': mushuk
+            '"DOG"': it
+            '"DUCK"': o‘rdak
+            '"FROG"': qurbaqa
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananas
+            '"ROBOT"': robot
+            '"SHARK"': akula
+            '"SLOTH"': yalqov
+            '"UNICORN"': yakkashox
+          LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          yangi {COSTUME}
+           {NAME} nom bilan {LOCATION} da yaratish
+        options:
+          COSTUME:
+            '"ALIEN"': O‘zga sayyoralik
+            '"BEAR"': ayiq
+            '"CAT"': mushuk
+            '"DOG"': it
+            '"DUCK"': o‘rdak
+            '"FROG"': qurbaqa
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananas
+            '"ROBOT"': robot
+            '"SHARK"': akula
+            '"SLOTH"': yalqov
+            '"UNICORN"': yakkashox
+          LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": tasodifiy
       Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          {LAYOUT} da {N} ta yangi {COSTUME}
+          yaratish
         options:
           N:
             '2': '2'
@@ -56,75 +439,1388 @@ uz:
             '18': '18'
             '19': '19'
             '20': '20'
+          COSTUME:
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
           LAYOUT:
+            '"border"': chegara
+            '"inner"': kvadrat ichida
+            '"diamond"': olmos
+            '"circle"': aylana
+            '"grid"': panjara
+            '"top"': tepa satr
+            '"row"': satr
+            '"bottom"': past satr
+            '"left"': chap ustun
+            '"column"': ustun
+            '"right"': o‘ng ustun
+            '"x"': xoch-xoch
+            '"plus"': plus
             '"random"': tasodifiy
+      Dancelab_mixColors:
+        text: " {COLOR1} bilan {COLOR2} ni aralashtirish"
+      Dancelab_nMeasures:
+        text: "{N} o'lchov"
+      Dancelab_onPointerDown:
+        text: pastga ko'rsatgich bo'lganda
+      Dancelab_onPointerDrag:
+        text: '"drag" ko''rsatgich bo''lganda'
+      Dancelab_onPointerUp:
+        text: tepaga ko'rsatgich bo'lganda
       Dancelab_randomColor:
         text: tasodifiy rang
+      Dancelab_setBackground:
+        text: orqa fonni {COLOR} ga o'rnatish
+      Dancelab_setBackgroundEffect:
+        text: |-
+          orqa fon effektini
+          {EFFECT} {PALETTE} ga sozlash
+        options:
+          EFFECT:
+            '"none"': Hech biri
+            '"circles"': Aylanalar
+            '"color_cycle"': Ranglar
+            '"diamonds"': Brilliantlar
+            '"disco_ball"': Disko to'p
+            '"fireworks"': Feyerverklar
+            '"swirl"': Gipno
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazerli raqs maydonchasi
+            '"splatter"': Bo'yoq sachratmalari
+            '"rainbow"': Kamalak
+            '"snowflakes"': Qor
+            '"text"': Qo'shiq nomlari
+            '"galaxy"': Qoinot
+            '"sparkles"': Uchqunlar
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"stars"': Yulduzlar
+          PALETTE:
+            '"rave"': Qora va oq
+            '"cool"': Zo'r
+            '"electronic"': Elektronik
+            '"iceCream"': Muzqaymoq
+            '"default"': Chiroq
+            '"neon"': Neon
+            '"tropical"': Tropik
+            '"vintage"': Vintaj
+            '"warm"': Iliq
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          orqa fon effektini
+          {PALETTE} {EFFECT} ga sozlash
+        options:
+          EFFECT:
+            '"none"': Hech biri
+            '"rand"': "(Tasodifiy)"
+            '"circles"': Aylanalar
+            '"quads"': Burchaklar
+            '"color_cycle"': Ranglar
+            '"diamonds"': Brilliantlar
+            '"disco_ball"': Disko to'p
+            '"fireworks"': Feyerverklar
+            '"flowers"': Gullar
+            '"growing_stars"': O'sib borayotgan yulduzlar
+            '"swirl"': Gipno
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazerli raqs maydonchasi
+            '"splatter"': Bo'yoq sachratmalari
+            '"rainbow"': Kamalak
+            '"ripples_random"': Tasodifiy to‘lqinlar
+            '"ripples"': To‘lqinlar
+            '"snowflakes"': Qor
+            '"text"': Qo'shiq nomlari
+            '"squiggles"': Siqilish (burmalar)
+            '"galaxy"': Qoinot
+            '"sparkles"': Uchqunlar
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"stars"': Yulduzlar
+            '"music_wave"': Toʻlqinlar
+          PALETTE:
+            '"rave"': Qora va oq
+            '"cool"': Zo'r
+            '"electronic"': Elektronik
+            '"iceCream"': Muzqaymoq
+            '"default"': Chiroq
+            '"neon"': Neon
+            '"tropical"': Tropik
+            '"vintage"': Vintaj
+            '"warm"': Iliq
       Dancelab_setDanceSpeed:
+        text: "{SPRITE} raqs tezligini {SPEED} belgilash"
         options:
           SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '1': normada
+            '2': tez
+            '4': juda tez
+            '0.5': sekin
+            '0.25': juda sekin
       Dancelab_setDanceSpeedEach:
+        text: " {GROUP} raqs tezligini {SPEED} ga o'rnatish"
         options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
           SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
+            '1': normada
+            '2': tez
+            '4': juda tez
+            '0.5': sekin
+            '0.25': juda sekin
+      Dancelab_setForegroundEffect:
+        text: old plan effektini {EFFECT} o'rnatish
+        options:
+          EFFECT:
+            '"none"': Hech biri
+            '"bubbles"': Pufakchalar
+            '"confetti"': Konfetti
+            '"hearts_red"': Yuraklar
+            '"music_notes"': Musiqa notalari
+            '"pineapples"': Ananaslar
+            '"pizzas"': Pitssalar
+            '"smiling_poop"': Kaka
+            '"rain"': Yomg'ir
+            '"floating_rainbows"': Kamalak
+            '"smile_face"': Tabassumlar
+            '"spotlight"': Projektor
+            '"color_lights"': Sahna chiroqlari
+            '"raining_tacos"': Tako
+      Dancelab_setForegroundEffectExtended:
+        text: old plan effektini {EFFECT} o'rnatish
+        options:
+          EFFECT:
+            '"none"': Hech biri
+            '"rand"': "(Tasodifiy)"
+            '"bubbles"': Pufakchalar
+            '"hearts_colorful"': Rangli yuraklar
+            '"confetti"': Konfetti
+            '"emojis"': Emojilar
+            '"hearts_red"': Yuraklar
+            '"music_notes"': Musiqa notalari
+            '"paint_drip"': Bo'yoq tomchisi
+            '"pineapples"': Ananaslar
+            '"pizzas"': Pitssalar
+            '"smiling_poop"': Kaka
+            '"rain"': Yomg'ir
+            '"floating_rainbows"': Kamalak
+            '"smile_face"': Tabassumlar
+            '"spotlight"': Projektor
+            '"color_lights"': Sahna chiroqlari
+            '"exploding_stars"': Yulduzlar to'plami
+            '"raining_tacos"': Tako
+      Dancelab_setProp:
+        text: " {SPRITE} {PROPERTY} qiymatini {VAL} ga o'rnatish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+      Dancelab_setPropEach:
+        text: " {GROUP} {PROPERTY} qiymatini {VAL} ga o'rnatish"
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"tint"': rang tusi
+      Dancelab_setPropRandom:
+        text: " {SPRITE} {PROPERTY} tasodifiy qilish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"tint"': rang tusi
+      Dancelab_setPropRandomEach:
+        text: " {GROUP} {PROPERTY} tasodifiy qilish"
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"tint"': rang tusi
+      Dancelab_setTint:
+        text: "{SPRITE} rang tusini {VAL} ga o'rnatish"
+      Dancelab_setTintEach:
+        text: "{THIS} rang tusini {VAL} ga o'rnatish"
+        options:
+          THIS:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+      Dancelab_setTintEachInline:
+        text: "{THIS} rang tusini {VAL} ga o'rnatish"
+        options:
+          THIS:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+      Dancelab_setTintInline:
+        text: "{SPRITE} rang tusini {VAL} ga o'rnatish"
+      Dancelab_setVisible:
+        text: "{SPRITE} ko'rinuvchanligini {VISIBILITY} ga o'rnatish"
+        options:
+          VISIBILITY:
+            'true': ko'rinuvchan
+            'false': ko'rinmas
+      Dancelab_setVisibleEach:
+        text: "{THIS} ko'rinuvchanligini {VISIBILITY} ga o'rnatish"
+        options:
+          THIS:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          VISIBILITY:
+            'true': ko'rinuvchan
+            'false': ko'rinmas
+      Dancelab_startMapping:
+        text: "{SPRITE} {RANGE} ga ergashib {PROPERTY} ni boshlaydi "
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"tint"': rang tusi
+          RANGE:
+            '"bass"': bas
+            '"mid"': o'rta
+            '"treble"': uch barobar
+      Dancelab_startMappingEach:
+        text: "{GROUP} {RANGE} ga ergashib {PROPERTY} ni boshlaydi "
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"tint"': rang tusi
+          RANGE:
+            '"bass"': bas
+            '"mid"': o'rta
+            '"treble"': uch barobar
+      Dancelab_stopMapping:
+        text: "{SPRITE} {RANGE} ga ergashib {PROPERTY} ni to'xtatadi"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"direction"': harakatlanish yo‘nalishi
+            '"tint"': rang tusi
+          RANGE:
+            '"bass"': bas
+            '"mid"': o'rta
+            '"treble"': uch barobar
+      Dancelab_stopMappingEach:
+        text: "{GROUP} {RANGE} ga ergashib {PROPERTY} ni to'xtatadi"
+        options:
+          GROUP:
+            sprites: hamma
+            '"ALIEN"': o‘zga sayyoraliklar
+            '"BEAR"': ayiqlar
+            '"CAT"': mushuklar
+            '"DOG"': itlar
+            '"DUCK"': o‘rdaklar
+            '"FROG"': qurbaqalar
+            '"MOOSE"': los (hayvon)
+            '"PINEAPPLE"': ananaslar
+            '"ROBOT"': robotlar
+            '"SHARK"': akulalar
+            '"SLOTH"': yalqovlar
+            '"UNICORN"': yakkashoxlar
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+            '"rotation"': aylanish
+            '"x"': gorizontal joylashuv
+            '"y"': vertikal pozitsiya
+            '"direction"': harakatlanish yo‘nalishi
+            '"tint"': rang tusi
+          RANGE:
+            '"bass"': bas
+            '"mid"': o'rta
+            '"treble"': uch barobar
+      Dancelab_translateStrings:
+        text: "{STRING} tarjima qilish"
+        options:
+          STRING:
+            '"music_wave"': Toʻlqinlar
+            '"ripples"': To‘lqinlar
+            '"ripples_random"': Tasodifiy to‘lqinlar
+            '"quads"': Burchaklar
+            '"flowers"': Gullar
+            '"popsicles"': Mevali muzqaymoq
+            '"squiggles"': Siqilish (burmalar)
+            '"growing_stars"': O'sib borayotgan yulduzlar
+            '"emojis"': Emojilar
+            '"hearts_colorful"': Yuraklar
+            '"paint_drio"': Bo'yoq tomchisi
+            '"exploding_stars"': Yulduzlar to'plami
+            '"row_top"': tepa satr
+            '"row_bottom"': past satr
+            '"column_left"': chap ustun
+            '"column_right"': o‘ng ustun
+            '"diamond"': olmos
+            '"mural"': Freska
+            '"safari"': Safari
+            '"network"': Tarmoq
+            '"highway"': Magistral yo'l
+            '"stream"': Oqim
+            '"tile"': Plitka
+            '"shadow"': Soya
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
+        text: " {KEY} bosilganda"
         options:
           KEY:
+            '"up"': yuqoriga
+            '"left"': chap
+            '"down"': pastga
+            '"right"': o‘ng
             '"space"': koinot
+            '"enter"': kiritish
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: "{RANGE} avjga chiqqanda"
+        options:
+          RANGE:
+            '0': bas
+            '1': o'rta
+            '2': uch barobar
+      Dancelab_whenSetup:
+        text: o'rnatish
+      Dancelab_whenSetup2:
+        text: o'rnatish
+      gamelab_addBehaviorSimple:
+        text: " {SPRITE}  {BEHAVIOR} harakatini boshlaydi"
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        text: " {N} {UNIT} da"
+        options:
+          UNIT:
+            '"seconds"': soniyalar
+            '"frames"': freymlar
+      gamelab_bounceOff:
+        text: "{SPRITE} {TARGET} dan sakraydi "
+      gamelab_changePropBy:
+        text: " {SPRITE} {PROPERTY} ni {VAL} ga o‘zgartirish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+            '"speed"': tezlik
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1}{SPRITE2} ga tegadi "
+        options:
+          CONDITION:
+            '"when"': qachon
+            '"while"': while
+      gamelab_clickedOn:
+        text: "{SPRITE} bosilganda"
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_comment:
+        text: 'izoh: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: "{SPRITE} soni"
+      gamelab_createNewSprite:
+        text: " {LOCATION} da \n {COSTUME} kostyum bilan \n{NAME} nomli \nsprayt yaratish"
+      gamelab_destroy:
+        text: "{THIS} o'chirish"
+      gamelab_draggable:
+        text: sudranuvchan
+      gamelab_edgesDisplace:
+        text: chegaralar {SPRITE} harakatini bloklagan
+      gamelab_getAllSprites:
+        text: barcha spraytlar
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+            '"tint"': rang tusi
+            '"speed"': tezlik
+      gamelab_getThisSprite:
+        text: "{CHOICE} sprayt"
+        options:
+          CHOICE:
+            '"this"': bu
+            '"other"': boshqa
+      gamelab_getTime:
+        text: " {UNIT} da vaqt"
+        options:
+          UNIT:
+            '"seconds"': soniyalar
+            '"frames"': freymlar
+      gamelab_hideTitleScreen:
+        text: sarlavha ekranini yashirish
+      gamelab_ifVarEquals:
+        text: |-
+          agar {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} ning kostyumi {COSTUME}"
+      gamelab_isKeyPressed:
+        text: "{KEY} bosildi"
+        options:
+          KEY:
+            '"up"': yuqoriga
+            '"down"': pastga
+            '"left"': chap
+            '"right"': o‘ng
+            '"space"': koinot
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} chegaralarga tegmoqda"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} {TARGET} ga tegmoqda"
+      gamelab_jumpTo:
+        text: "{SPRITE} {LOCATION} ga sakraydi"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} bosildi"
         options:
+          CONDITION:
+            '"when"': qachon
+            '"while"': while
           KEY:
+            '"up"': yuqoriga
+            '"down"': pastga
+            '"left"': chap
+            '"right"': o‘ng
             '"space"': koinot
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+      gamelab_locationAt:
+        text: " x: {X} y: {Y} lokatsiya"
+      gamelab_locationModifier:
+        text: " {LOCATION} dan  {DIRECTION} yo'nalishda {DISTANCE} piksel masofada"
+        options:
+          DIRECTION:
+            '"North"': Shimol
+            '"East"': Sharq
+            '"South"': Janub
+            '"West"': G'arb
+      gamelab_locationMouse:
+        text: sichqoncha lokatsiyasi
+      gamelab_locationOf:
+        text: "{SPRITE} lokatsiyasi"
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeNumSprites:
+        text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_mirrorSprite:
+        text: "{SPRITE} {DIRECTION} ga yuzlangan"
+        options:
+          DIRECTION:
+            '"right"': o‘ng
+            '"left"': chap
+      gamelab_mouseLocation:
+        text: sichqoncha lokatsiyasi
+      gamelab_moveBackward:
+        text: "{SPRITE} {DISTANCE} piksel masofaga orqaga siljitish"
+      gamelab_moveForward:
+        text: "{SPRITE} {DISTANCE} piksel masofaga oldinga siljitish"
+      gamelab_moveInDirection:
+        text: "{SPRITE} piksel masofaga {DISTANCE} ga siljitish"
+        options:
+          DIRECTION:
+            '"North"': Shimol
+            '"East"': Sharq
+            '"South"': Janub
+            '"West"': G'arb
+      gamelab_moveToward:
+        text: " {SPRITE} ni {TARGET} tomon {DISTANCE} piksel masofaga siljitish"
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: yuqoriga va pastga qarab patrul qilish
+      gamelab_playSound:
+        text: " {SOUND} ijro etish"
+      gamelab_pointInDirection:
+        text: " {SPRITE} ga {DIRECTION} berish"
+        options:
+          DIRECTION:
+            '"North"': Shimol
+            '"East"': Sharq
+            '"South"': Janub
+            '"West"': G'arb
+      gamelab_printText:
+        text: "{TEXT} yozish"
       gamelab_randColor:
         text: tasodifiy rang
       gamelab_randomColor:
         text: tasodifiy rang
+      gamelab_randomLocation:
+        text: Tasodifiy lokatsiya
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} hammasini to'xtatadi"
+      gamelab_removeBehaviorSimple:
+        text: " {SPRITE}  {BEHAVIOR} harakatini to'xtatadi"
+      gamelab_removeTint:
+        text: " {THIS} dan rangni o'chirish"
+      gamelab_repeatForever:
+        text: abadiy takrorlash
+      gamelab_setAnimation:
+        text: " {THIS} kostyumini {ANIMATION} ga o'zgartirish"
+      gamelab_setBackground:
+        text: orqa fonni {COLOR} ga o'rnatish
       gamelab_setBackgroundImage:
+        text: orqa fonni {IMG} ga o'zgartirish
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': g‘or
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': sud
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': sahro
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaktika
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': panjara
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': kamalak
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': fantastika
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': yulduzlar
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': suvosti
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': qish
+            undefined: hech biri
+      gamelab_setBackgroundImageAs:
+        text: orqa fonni {IMG} ga o'zgartirish
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': o‘rta
+            '100': large
+      gamelab_setPrompt:
+        text: "{VAR} o'zgaruvchisi uchun foydalanuvchidan {QUESTION} so'rovi"
+      gamelab_setPromptWithChoices:
+        text: "{A}{B}{C} tanlovli {VAR} o'zgaruvchisi uchun foydalanuvchidan {QUESTION}
+          so'rovi"
+      gamelab_setProp:
+        text: " {SPRITE} {PROPERTY} qiymatini {VAL} ga o'rnatish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+            '"speed"': tezlik
+      gamelab_setSizes:
+        text: " {SPRITE} {PROPERTY} qiymatini {N}% ga o'rnatish"
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"width"': kenglik
+            '"height"': balandlik
+      gamelab_setTint:
+        text: "{THIS} rangini {COLOR} ga o'zgartirish"
+      gamelab_setupSim:
+        text: "{SPRITE3N}{SPRITE3COSTUME} yig'ishda\n{SPRITE1N}{SPRITE1COSTUME} tezligi
+          {SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME} tezligi {SPRITE2SPEED} \nbilan
+          simulyatsiya o'rnatish"
+      gamelab_showTitleScreen:
+        text: "{BREAK} ekrani {TITLE} sarlavhasi va {SUBTITLE} kichik sarlavhasini
+          ko'rsatish"
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} bosildi"
+        options:
+          CONDITION:
+            '"when"': qachon
+            '"while"': while
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_tumbling:
+        text: dumboloq oshish
+      gamelab_turn:
+        text: "{SPRITE} {DIRECTION} {N} darajaga burish"
+        options:
+          DIRECTION:
+            '"right"': o‘ng
+            '"left"': chap
+      gamelab_updateTitleWithColor:
+        text: "{BREAK} ekrani {TITLE} sarlavhasi va {COLOR} rangini ko'rsatish"
+      gamelab_whenDownArrow:
+        text: pastga o‘q bosilganda
       gamelab_whenKey:
+        text: " {KEY} bosilganda"
         options:
           KEY:
+            '"up"': yuqoriga
+            '"down"': pastga
+            '"left"': chap
+            '"right"': o‘ng
             '"space"': koinot
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: chap o‘q bosilganda
+      gamelab_whenPromptAnswered:
+        text: "{VAR} javob berilganda"
+      gamelab_whenRightArrow:
+        text: o‘ng o‘q bosilganda
+      gamelab_whenTouching:
+        text: "{SPRITE1} {SPRITE2} ga tegganda"
+      gamelab_whenUpArrow:
+        text: tepaga o‘q bosilganda
+      gamelab_whileDownArrow:
+        text: past o‘q bosib turilguncha
       gamelab_whileKey:
+        text: " {KEY} bosilguncha"
         options:
           KEY:
+            '"up"': yuqoriga
+            '"down"': pastga
+            '"left"': chap
+            '"right"': o‘ng
             '"space"': koinot
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: chap o‘q bosib turilguncha
+      gamelab_whileRightArrow:
+        text: o‘ng o‘q bosib turilguncha
+      gamelab_whileTouching:
+        text: "{SPRITE1} {SPRITE2} ga tegguncha"
+      gamelab_whileUpArrow:
+        text: tepaga o‘q bosilganda
+      gamelab_withPercentChance:
+        text: agar {NUM}% {STATEMENT} imkoniyat bo'lsa
+      gamelab_xLocationOf:
+        text: "{SPRITE} x koordinatasi"
+      gamelab_yLocationOf:
+        text: "{SPRITE} y koordinatasi"
+      Mikelab_addBehaviorSimple:
+        text: " {SPRITE}  {BEHAVIOR} harakatini boshlaydi"
+      Mikelab_addTrainingData:
+        text: 'trening ma''lumotlarini qo''shish: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": obyekt
+            "{x: 200, y: 100}": baliq
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": baliq
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": baliq emas
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": my-label emas
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: "{A}{B}{C} tanlovli {VAR} o'zgaruvchisi uchun foydalanuvchidan {QUESTION}
+          so'rovi"
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
+      Mikelab_getNext:
+        text: keyingi obyektni olish
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+      Mikelab_groupChangeAnim:
+        text: "{SELECT} {COSTUME} ni {COSTUME2}ga o'zgartirish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+      Mikelab_groupChangePropBy:
+        text: " {PROPERTY} {SELECT} ni {COSTUME} ga [VAL] qiymat bilan o‘zgartirish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+      Mikelab_groupCreateNewSprite:
+        text: yangi {COSTUME} ni {LOCATION} da yaratish
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
+      Mikelab_groupDestroy:
+        text: "{SELECT} {COSTUME} o'chirish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+      Mikelab_groupDisplace:
+        text: "{COSTUME} barchasi {COSTUME2} harakatini bloklaydi"
+      Mikelab_groupEdgesDisplace:
+        text: chegaralar {COSTUME} harakatini bloklaydi
+      Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME} ning {PROPERTY} "
+        options:
+          SELECT:
+            '"average"': oʻrtacha
+            '"this"': bu
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+      Mikelab_groupRemoveAllBehaviors:
+        text: " {SELECT} {COSTUME} xatti-harakatini to'xtatish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME}  {BEHAVIOR} to‘xtatadi"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+      Mikelab_groupRemoveTint:
+        text: "{SELECT} {COSTUME} rangini o'chirish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+      Mikelab_groupSetProp:
+        text: "{SELECT} {COSTUME} ning {PROPERTY} qiymatini {VAL} ga o'rnatish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+      Mikelab_groupSetTint:
+        text: "{SELECT} {COSTUME} rangini {COLOR} ga o'zgartirish"
+        options:
+          SELECT:
+            '"all"': hamma
+            '"this"': bu
+      Mikelab_groupWhenClickedOn:
+        text: "{COSTUME} chertilganda"
+      Mikelab_groupWhenXTouchesY:
+        text: "{COSTUME} {COSTUME2} ga tegganda"
+      Mikelab_groupWhileClicked:
+        text: "{COSTUME} chertilguncha"
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          {COSTUME} {COSTUME2} ga tegguncha
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} hozirda {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: "{TRASH} olib tashlash"
+        options:
+          TRASH:
+            object: obyekt
+            fish: baliq
+      Mikelab_ifDanceIs:
+        text: |-
+          agar {SPRITE} buni {DANCE}
+          {DO1} {DO2} qilsa
+        options:
+          DANCE:
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Roll: dumalash
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+      Mikelab_ifLabel:
+        text: |-
+          agar {DANCE}
+          qil {DO1} aks holda {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: baliq
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          agar obyekt {DANCE} dek tanilsa
+          {DO1} qilish, aks holda {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: baliq
+            MOVES.Clown: my-label
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          agar obyekt {DANCE} dek tanilsa
+          {DO1} qilish
+        options:
+          DANCE:
+            MOVES.ClapHigh: baliq
+            MOVES.Clown: my-label emas
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
+      Mikelab_locationAt:
+        text: " x: {X} y: {Y} lokatsiya"
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: tasodifiy rang
+      Mikelab_removeBehaviorSimple:
+        text: " {SPRITE}  {BEHAVIOR} harakatini to'xtatadi"
+      Mikelab_repeatUntilComplete:
+        text: abadiy takrorlash
+      Mikelab_sendBad:
+        text: obyektni chapga siljitish
+      Mikelab_sendGood:
+        text: obyektni o‘ngga siljitish
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_keyPressed:
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+            '"rotation"': aylanish
+            '"x"': x holati
+            '"y"': y pozitsiyasi
+            '"direction"': harakatlanish yo‘nalishi
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': o‘ng
+            '"left"': chap
+      Mikelab_sprite:
+        text: " {LOCATION} da yangi {COSTUME} sprayt"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": tepa
+            "{x: 200, y: 300}": past
+            "{x: 100, y: 200}": chap
+            "{x: 300, y: 200}": o‘ng
+            "{x: 200, y: 200}": markaz
+            "{x: 100, y: 100}": tepa chao
+            "{x: 300, y: 100}": tepa o‘ng
+            "{x: 100, y: 300}": past chap
+            "{x: 300, y: 300}": past o‘ng
+      Mikelab_whenClickedOn:
+        text: "{SPRITE} bosilganda"
+      Mikelab_whenKeyPressed:
+        text: " {KEY} bosilganda"
         options:
           KEY:
-            '"space"': koinot
-      aalab_setBG:
+            '"up"': yuqoriga o‘q
+            '"down"': pastga o‘q
+            '"left"': chap o‘q
+            '"right"': o‘ng o‘q
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenKeyReleased:
         options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': shahar
-      aalab_setCollidable:
+          KEY:
+            '"up"': yuqoriga o‘q
+            '"down"': pastga o‘q
+            '"left"': chap o‘q
+            '"right"': o‘ng o‘q
+            '"w"': W
+            '"a"': A
+            '"s"': S
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: sichqon bosilganda
+      Mikelab_whenYesNoClicked:
+        text: "{KEY} bosilganda"
+        options:
+          KEY:
+            '"yes"': ha
+            '"no"': yo‘q
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': yuqoriga o‘q
+            '"down"': pastga o‘q
+            '"left"': chap o‘q
+            '"right"': o‘ng o‘q
+      Mikelab_xLocationOf:
+        text: "{SPRITE} x koordinatasi"
+      Mikelab_yLocationOf:
+        text: "{SPRITE} y koordinatasi"
+      RyanLab_moveForward:
+        text: oldinga siljish
+      RyanLab_turnLeft:
+        text: chapga burilish
+      RyanLab_turnRight:
+        text: o‘ngga burilish
+      SpriteLab2Beta_spriteSay:
+        text: " {SPRITE} sprayt {TEXT} so'zlarni {SECONDS} sekund davomida aytadi"
+      Vector_createSpriteWith:
+        text: |-
+          sprayt yaratish
+          {STATEMENT} qilish
+      Vector_log:
+        text: "{MESSAGE} xabar logi"
+      Vector_positionCenter:
+        text: markaz
+      Vector_push:
+        text: "{VECTOR} tezligini o'rnatish"
+      Vector_randomLocation:
+        text: Tasodifiy lokatsiya
+      Vector_setColor:
+        text: "{COLOR} rang o'rnatish"
+      Vector_setSize:
+        text: kenglikni {WIDTH} balandlikni {HEIGHT} qilish
+      Vector_teleportTo:
+        text: "{POSITION} pozitisiyasini o'rnatish"
+      Vector_vectorNorth:
+        text: shimol
+      Vector_where:
+        text: "{PROPERTY} xususiyati {VALUE} qiymatga teng bo'lgan har bir sprayt
+          {STATEMENT} qiladi"
+        options:
+          PROPERTY:
+            "'shapeColor'": rang
+      aalab_addBehaviorForDuration:
+        text: " {SPRITE} sprayt {BEHAVIOR} harakati {SECONDS} sekund davomida bo'ladi"
+      aalab_addBehaviorUntilBoolean:
+        text: " {SPRITE} sprayt {BEHAVIOR} xatti-harakatini {CONDITION} gacha boshlaydi"
+      aalab_createNewSpriteAnonReturn2:
+        text: yangi {SPRITE_NAME} sprayt {ANIMATION_NAME} kostyum bilan {LOCATION}
+          da
+      aalab_goToScene:
+        text: " {SCENE} sahnasiga o‘tish"
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_moveInDirection:
+        text: "{SPRITE} piksel masofaga {DISTANCE} ga siljitish"
+        options:
+          DIRECTION:
+            '"North"': Shimol
+            '"East"': Sharq
+            '"South"': Janub
+            '"West"': G'arb
+      aalab_prompt:
+        text: savol berish {MESSAGE}
+      aalab_scene:
+        text: "{SCENE} sahnasi"
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_setupStory:
+        text: hikoyani o'rnatish
+      aalab_starwars_playSound:
+        text: "{OPTION} ovozni ijro etish"
+        options:
+          OPTION:
+            '"random"': tasodifiy
+            '"R2-D2 random"': R2-D2 tasodifiy
+            '"R2-D2 1"': R2-D2 1
+            '"R2-D2 2"': R2-D2 2
+            '"R2-D2 3"': R2-D2 3
+            '"R2-D2 4"': R2-D2 4
+            '"R2-D2 5"': R2-D2 5
+      binary_drawBin:
+        text: "{BIN} binar chizma qilish"
+      binary_drawBinScreen:
+        text: |-
+          ekran chizish
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: "{DEC} o‘nlikni chizish"
+      binary_drawPixelHere:
+        text: piksel {VAL} qiymatini o'rnatish
         options:
           VAL:
-            '"true"': rost
-            '"false"': yolgʻon
+            '0': o'chirilgan
+            '1': yoqilgan
+            '"toggle"': o‘chirib yoqish
+      binary_drawString:
+        text: "{STR} chizish"
+      binary_goTo:
+        text: "{LOC} ga sakrash"
+      binary_goToHome:
+        text: tepa chapga sakrash
+      binary_gridSize:
+        text: panjara kattaligini {SIZE} sozlash
+      binary_move:
+        text: " {DIR} ga o'tish"
+        options:
+          DIR:
+            '"up"': yuqoriga
+            '"down"': pastga
+            '"left"': chap
+            '"right"': o‘ng
       binary_whenKey:
+        text: " {KEY} bosilganda"
         options:
           KEY:
+            '"up"': yuqoriga
+            '"down"': pastga
+            '"left"': chap
+            '"right"': o‘ng
             '"space"': koinot
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      craft_ifPath:
+        text: |-
+          agar {DIR}
+          {STATEMENT} yo'l bo'lsa
+        options:
+          DIR:
+            "'ahead'": oldinda
+            "'right'": o‘ngga
+            "'left'": chapga
+      craft_ifStandingOn:
+        text: |-
+          agar {TYPE}
+          {STATEMENT} turgan bo'lsa
+        options:
+          TYPE:
+            "'blueCoralBlock'": ko'k korall
+            "'redCoralBlock'": qizil korall
+            "'sand'": qum
+            "'wool_blue'": chuqur suv
+            "'planksOak'": eman taxtalari
+            "'seaLantern'": dengiz chirog‘i
+      craft_ifStandingOnLimit:
+        text: |-
+          agar {TYPE}
+          {STATEMENT} turgan bo'lsa
+        options:
+          TYPE:
+            "'sand'": qum
+            "'darkPrismarine'": to'q prizmarin
+            "'seaLantern'": dengiz chirog‘i
+      craft_log:
+        text: "{MESSAGE} xabar logi"
+      craft_moveForward:
+        text: oldinga siljish
+      craft_placeBlock:
+        text: "{blockType} joylash"
+        options:
+          blockType:
+            '"strippedOak"': yo'l-yo'l eman
+            '"strippedDarkOak"': yo'l-yo'l to'q eman
+            '"stoneBricks"': tosh g'ishtlar
+            '"mossyStoneBricks"': moxli tosh g'ishtlar
+            '"crackedStoneBricks"': siniq tosh g'ishtlar
+            '"chiseledStoneBricks"': dekorativ tosh g'ishtlar
+            '"blueCoralBlock"': ko'k korall blok
+            '"pinkCoralBlock"': " pushti korall blok"
+            '"magentaCoralBlock"': safsar korall blok
+            '"redCoralBlock"': qizil korall blok
+            '"yellowCoralBlock"': sariq korall blok
+            '"blueDeadCoralBlock"': ko'k marjon blok
+            '"pinkDeadCoralBlock"': pushti marjon blok
+            '"magentaDeadCoralBlock"': safsar marjon blok
+            '"readDeadCoralBlock"': qizil marjon blok
+            '"yellowDeadCoralBlock"': sariq marjon blok
+            '"prismarine"': prizmarin
+            '"darkPrismarine"': to'q prizmarin
+            '"seaLantern"': dengiz chirog‘i
+            '"packedIce"': qadoqlangan muz
+            '"blueIce"': havorang muz
+            '"blackConcrete"': qora beton
+            '"seaGrass"': dengiz o‘ti
+            '"kelp"': laminariya
+            '"polishedGranite"': sayqallangan granit
+      craft_placePrismarine:
+        text: prizmarinni joylash
+      craft_placeTorch:
+        text: mash'alani joylashtiring
+      craft_repeatUntilConduit:
+        text: "{STATEMENT} kanal tugaguniga qadar takrorlang"
+      craft_repeatUntilGoal:
+        text: "{STATEMENT} maqsadgacha takrorlang"
+      craft_spawnEntity:
+        text: yaratish {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': treska
+            '"dolphin"': delfin
+            '"salmon"': sulaymonbaliq
+            '"seaTurtle"': dengiz toshbaqasi
+            '"squid"': kalmar
+            '"tropicalFish"': tropik baliq
+      craft_turn:
+        text: " {DIR} burilish"
+        options:
+          DIR:
+            right: o‘ngga ↻
+            left: chapga ↺

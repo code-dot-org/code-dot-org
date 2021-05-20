@@ -1,1 +1,28 @@
---- {}
+---
+se:
+  data:
+    game:
+      name:
+        StudioEC: Speallan-lab
+        Custom: Dáiddár
+        CustomStudio: Speallan-lab
+        Spritelab: Sprite-lab
+    video:
+      name:
+        Unplug7: Lávlagiid čállit
+        Unplug10: Interneahtta
+        C1_happy_maps_unplugged: Movttegis Kárttat
+        C1_bigevent_unplugged: Stuora Dáhpáhus
+        C1_getting_loopy: Šaddat Gáiggasin
+        C1_building_foundation: Hukset Vuođu
+        C1_going_places_safely: Mannat Sihkkaris Sajiide
+        C2_binary_bracelets: Binára Giehtabáttit
+        C2_digital_footprint: Du Digitála Luodda
+        C2_digital_footprint_v2: Du Digitála Luodda
+        C3_internet: Interneahtta
+        C3_crowdsourcing: Joavkočohkken
+        C3_functional_suncatchers: Doaibmi Beaivváščoaggit
+        csd_applab_arrays: Láidehus Matrisaide
+        c_and_c_great_to_create: Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat
+        c_and_c_digital_sharing: Digitála Juohkin
+        csf_private_and_personal_information: Priváhta ja Persovnnlaš Dieđut

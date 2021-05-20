@@ -1,15 +1,5 @@
 {
   "danceFeedbackNeedNewDancer": "شما به ساختن یک رقصنده نیاز دارید.",
   "danceFeedbackNoDancers": "شما هیچ رقصنده ای ندارید.",
-  "danceFeedbackNoBackground": "شما به اضافه کردن پشت زمینه نیاز دارید.",
-  "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
-  "danceFeedbackNeedDifferentDance": "",
-  "danceFeedbackNeedEveryTwoMeasures": "",
-  "danceFeedbackNeedMakeANewDancer": "",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackNoBackground": "شما به اضافه کردن پشت زمینه نیاز دارید."
 }

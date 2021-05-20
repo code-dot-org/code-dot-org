@@ -1,0 +1,22 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#design_mode"}}
+  Design Mode
+#design_mode.in.collapse
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :design_mode_at_start, description: "Start in Design Mode"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_design_mode, description: "Hide Design Mode"}
+
+  .field
+    = f.label :start_html, 'Starting design mode html'
+    %p
+      This should be equivalent to the level html created by design mode. Learn how to how to make them
+      =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Adding-Preloaded-Design-Elements-in-App-Lab', target: '_blank'
+
+    %p
+      IMPORTANT WARNING: If you have referenced images in the HTML and/or  CODE, then you need to get fully-qualified
+      code.org https URLS for these assets and update the HTML and the code to reflect these. You can quickly get full
+      image urls by drag-dropping the image into the markdown section of a dummy level in levelbuilder.
+      Copy the result and paste it here (it should start with something like
+      #{html_escape("<div xmlns='http://www.w3.org/1999/xhtml' id='divApplab'")}...)
+    = f.text_area :start_html, placeholder: 'Start html', rows: 4, value: @level.start_html
+    :javascript
+      levelbuilder.initializeCodeMirror('level_start_html', 'html');

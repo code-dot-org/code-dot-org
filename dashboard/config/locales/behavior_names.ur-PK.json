@@ -1,0 +1,47 @@
+{
+  "ur-PK": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "outbreak2": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "outbreak3": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "outbreak4": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "outbreak5": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "outbreak6": {
+          "recovering": "ریکور کرتے ہوئے"
+        },
+        "outbreak7": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "outbreak8": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "outbreak_freeplay": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "ریکور کرتے ہوئے",
+          "moving left and right": "دائیں اور بائیں حرکت کرنا",
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        }
+      }
+    }
+  }
+}

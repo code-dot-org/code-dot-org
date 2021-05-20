@@ -1,3 +1,4 @@
+#Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 cs:
   devise:
     confirmations:
@@ -7,7 +8,7 @@ cs:
     failure:
       already_authenticated: "Již jsi přihlášen."
       inactive: "Tvůj účet nebyl ještě aktivován."
-      invalid: "Neplatný email nebo heslo."
+      invalid: "Neplatný e-mail nebo heslo."
       invalid_token: "Neplatný ověřovací token."
       locked: "Tvůj účet je uzamčen."
       not_found_in_database: "Neplatný email nebo heslo."

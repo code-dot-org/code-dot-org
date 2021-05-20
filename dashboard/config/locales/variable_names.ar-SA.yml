@@ -1,0 +1,31 @@
+---
+ar:
+  data:
+    variable_names:
+      Blue: أرزق
+      Green: أخضر
+      Red: أحمر
+      actor: الممثل
+      birds: عصافير
+      cats: كل القطط
+      color: لون
+      counter: العداد
+      dogs: كل الكلاب
+      height: الارتفاع
+      honey: العسل
+      i: i
+      left: اليسار
+      length: الطول
+      name: اسم
+      nectar: رحيق
+      points: نقاط
+      random: عشوائي
+      repeat: تكرار
+      right: اليمين
+      score: النتيجة
+      size: الحجم
+      speed: السرعة
+      variable: متغير
+      width: العرض
+      wizard: ساحر
+      x: x

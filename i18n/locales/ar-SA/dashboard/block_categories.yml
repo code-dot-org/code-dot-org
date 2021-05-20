@@ -1,0 +1,31 @@
+ar:
+  data:
+    block_categories:
+      Actions: الإجراءات
+      Advanced: مُتقدم
+      Behaviors: السلوك
+      Brushes: فرش
+      Color: اللون
+      Comment: تعليق
+      Comments: "تعليقات\n"
+      Conditionals: الجمل الشرطية
+      Dancers: الراقصون
+      Default: الافتراضي
+      Events: الأحداث
+      Functions: دوال
+      'Functions ': 'الدوال '
+      Game/Score: لعبة/نقطة
+      Games/Score: "ألعاب/نقطة\n"
+      Groups: "مجموعات\n"
+      Input: الإدخال
+      Locations: مواقع
+      Logic: المنطق
+      Loops: الحلقات
+      Math: العمليات الحسابية
+      Numbers: أرقام
+      Properties: "خصائص\n"
+      Sprites: النقوش المتحركة
+      Text: النص
+      Variables: المتغيرات
+      'Variables ': "المتغيرات\n"
+      World: العالم

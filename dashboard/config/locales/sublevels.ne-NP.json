@@ -1,0 +1,149 @@
+{
+  "ne-NP": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "कार्य ",
+              "Loops": "Loops",
+              "Math": "Math",
+              "Logic": "Logic"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "कार्य ",
+              "Logic": "Logic"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "draw a star",
+                "parameters": {
+                  "points": "points",
+                  "length": "length"
+                }
+              },
+              "draw a circle": {
+                "name": "draw a circle"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "length",
+                  "repeat": "दोहोरिएको"
+                }
+              },
+              "draw a triangle": {
+                "name": "draw a triangle",
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a house": {
+                "name": "draw a house",
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a square": {
+                "name": "draw a square",
+                "parameters": {
+                  "length": "length"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "कार्य "
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "कार्य ",
+              "Logic": "Logic"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Loops": "Loops",
+              "Math": "Math",
+              "Logic": "Logic",
+              "Functions": "Functions",
+              "Variables": "Variables"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "कार्य ",
+              "Variables": "Variables",
+              "Math": "Math",
+              "Logic": "Logic",
+              "Functions": "Functions",
+              "Text": "Text"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "कार्य ",
+              "Variables": "Variables",
+              "Math": "Math",
+              "Logic": "Logic",
+              "Functions": "Functions",
+              "Text": "Text"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Loops": "Loops",
+              "Math": "Math",
+              "Logic": "Logic",
+              "Functions": "Functions",
+              "Variables": "Variables"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "कार्य ",
+              "Logic": "Logic",
+              "Math": "Math"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Actions",
+              "Events": "कार्य ",
+              "Logic": "Logic",
+              "Loops": "Loops",
+              "Math": "Math",
+              "Variables": "Variables",
+              "Functions": "Functions"
+            }
+          }
+        }
+      }
+    }
+  }
+}

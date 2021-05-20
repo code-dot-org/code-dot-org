@@ -62,6 +62,13 @@ em strong, strong em {
   font-family: Gotham\ 7i, sans-serif
 }
 
+/*This can be removed when Bootstrap is updated, as they've addressed
+the bug in the newest version. As-is, this overrides the display:block
+setting that removes our triangle dropdowns on list items.*/
+summary {
+  display: list-item;
+}
+
 th a:active, th a:hover, th a:link, th a:visited {
   color: #fff
 }
@@ -580,4 +587,13 @@ a.btn-default:active, a.btn-default:hover, a.btn-default:link, a.btn-default:vis
 
 .assign-confirm-modal .modal-buttons {
   margin-top: 15px
+}
+
+.hidden-label {
+  position: fixed;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

@@ -1,0 +1,55 @@
+cs:
+  data:
+    variable_names:
+      "???": "???"
+      Blue: Modrá
+      Green: Zelená
+      Red: Červená
+      actor: postava
+      age: věk
+      answer: odpověď
+      armlength: armlength
+      blue1: modrá1
+      blue2: modrá2
+      bodylength: bodylength
+      cats: všechny kočky
+      choice: volba
+      color: barva
+      counter: počítadlo
+      dogs: všichni psi
+      dragons: draci
+      enemy_speed: rychlost_nepřítele
+      energy: energie
+      green1: zelená1
+      green2: zelená2
+      height: výška
+      honey: med
+      i: i
+      left: vlevo
+      legangle: úhel_cesty
+      leglength: délka_cesty
+      length: délka
+      level: úroveň
+      myName: mojeJméno
+      name: jméno
+      nectar: nektar
+      points: body
+      random: náhodně
+      red1: červená1
+      red2: červená2
+      repeat: opakuj
+      repetitions: opakování
+      right: vpravo
+      score: výsledek
+      screenHeight: výškaObrazovky
+      screenWidth: šířkaObrazovky
+      size: velikost
+      speed: rychlost
+      startX: startX
+      startY: startY
+      variable: proměnná
+      width: šířka
+      wizard: čaroděj
+      x: x
+      your var 1: tvá proměnná 1
+      your var 2: tvá proměnná 2

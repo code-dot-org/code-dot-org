@@ -3,17 +3,12 @@ si:
   data:
     block_categories:
       Actions: ක්‍රියාවන්
-      Loops: ලූපයන්
-      Functions: ශ්‍රිතයන්
       Color: පාට
-      Math: ගණිත
-      Logic: තර්කය
-      Variables: විචල්‍යන්
       Conditionals: කන්ඩිෂනලස්
       Events: වැඩසටහන්
+      Functions: ශ්‍රිතයන්
+      Logic: තර්කය
+      Loops: ලූපයන්
+      Math: ගණිත
       Text: පෙළ
-      Location: ස්ථානය
-      Start: ආරම්භ කරන්න
-      test: පරික්ෂාව
-      Name: නම
-      Function: ශ්‍රිතය
+      Variables: විචල්‍යන්

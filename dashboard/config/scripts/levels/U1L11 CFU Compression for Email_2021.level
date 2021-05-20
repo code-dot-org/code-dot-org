@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:14.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection:",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "An author is preparing to send their book to a publisher as an email attachment. The file on their computer is 1000 bytes. When they attach the file to their email, it shows as 750 bytes. The author gets very upset because they are concerned that part of their book has been deleted by the email address.\r\n\r\nIf you could talk to this author, how would you explain what is happening to their book? ",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18880,
+    "name_suffix": "_2021",
+    "encrypted_solution": "jzn1qL1wOuIas0Vb0C0nu8JSvd/NL4FIMFdMIP04kC6dCKvqneutBDiZwR2B\nxG/ZhaSUu6wyEHiAP/6GMkGWqJBzSilOwMSg4WQg4DvwUuq2J9lg/V54IfH7\nB6Rx//NtBIFu+4W5BPAp3Qh0NEaGjlynGZRFcBqqHOx1taUhBHUbyDIhXlZ1\n5v2Rkl8PA957YyAmfuII1d3I90sy+H+3RuEX4lxYWMS9FACUuYbZQ212kx9j\n2h8t3sh/nb3wzw8mY62GcORvtplPW09mOMDVzXZkjz6Q1xr3+Djp+DE0tcA+\nk9Xx6Jls3Xg13kFiY8NbPBvLan9ApGnztBjJoDCPvfpL/LvuToI5lF2Wmyx2\nXXYy+T/4JXEF2t7uEFgvxiAcRDWw9GVxx8Lwi8fwoRccrDifJg7vBEn8mhlN\ne73xvGsfL6zixdgzFu/+Z99r6VfEsnAvQ5QaSjf4Pv1n0sFQNGi2gPR4wNhl\nVNCUlpN1lEiNC+Nwld+8QkZDUjL1X3rY7sjLekJPQxOtNMDrYdWXkw==\n",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-06-26 14:28:02 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-26 14:30:12 +0000\",\"changed\":[\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:09:57 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:19:13 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 14:42:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

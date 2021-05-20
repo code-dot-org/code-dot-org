@@ -6,31 +6,16 @@ gl:
         options:
           UNIT:
             '"seconds"': segundos
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -54,58 +39,48 @@ gl:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": aleatorio
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': aleatorio
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': extraterrestre
+            '"CAT"': gato
+            '"DOG"': can
+            '"DUCK"': pato
+            '"ROBOT"': robot
+            '"UNICORN"': unicornio
+          LOCATION:
+            "{x: 100, y: 200}": esquerda
+            "{x: 300, y: 200}": dereita
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': extraterrestre
+            '"CAT"': gato
+            '"DOG"': can
+            '"DUCK"': pato
+            '"ROBOT"': robot
+            '"UNICORN"': unicornio
           LOCATION:
             "{x: 100, y: 200}": esquerda
             "{x: 300, y: 200}": dereita
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aleatorio
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"random"': aleatorio
       Dancelab_randomColor:
         text: cor aleatoria
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -121,12 +96,27 @@ gl:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': tamaño
             '"height"': altura
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
       Dancelab_stopMapping:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
+            '"height"': altura
+      Dancelab_stopMappingEach:
         options:
           PROPERTY:
             '"scale"': tamaño
@@ -139,12 +129,17 @@ gl:
             '"down"': abaixo
             '"right"': dereita
             '"space"': espazo
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"speed"': velocidade
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -156,6 +151,19 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"speed"': velocidade
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': segundos
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': arriba
+            '"down"': abaixo
+            '"left"': esquerda
+            '"right"': dereita
+            '"space"': espazo
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -176,6 +184,8 @@ gl:
         text: cor aleatoria
       gamelab_randomColor:
         text: cor aleatoria
+      gamelab_repeatForever:
+        text: Repetir para sempre
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -191,6 +201,11 @@ gl:
             '"scale"': tamaño
             '"x"': posición x
             '"y"': posición y
+            '"speed"': velocidade
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': tamaño
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -264,6 +279,8 @@ gl:
             '"y"': posición y
       Mikelab_randomColor:
         text: cor aleatoria
+      Mikelab_repeatUntilComplete:
+        text: Repetir para sempre
       Mikelab_setBG:
         options:
           BG:
@@ -313,59 +330,20 @@ gl:
             '"down"': frecha cara abaixo
             '"left"': frecha esquerda
             '"right"': frecha dereita
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': aleatorio
       RyanLab_moveForward:
         text: avance
       RyanLab_turnLeft:
         text: vire á esquerda
       RyanLab_turnRight:
         text: vire á dereita
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': cando
-            '"while"': mentras
-          KEY:
-            '"up"': arriba
-            '"down"': abaixo
-            '"left"': esquerda
-            '"right"': dereita
-            '"space"': espazo
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cidade
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': verdadeiro
-            '"false"': falso
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': tamaño
-            '"x"': posición x
-            '"y"': posición y
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': mostrar
-            '"hide"': ocultar
+          FORMAT:
+            '"random"': aleatorio
       binary_move:
         options:
           DIR:

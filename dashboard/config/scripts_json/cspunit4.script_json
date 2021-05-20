@@ -1,0 +1,1367 @@
+{
+  "script": {
+    "name": "cspunit4",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "has_lesson_plan": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "cspunit4"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Intro to Data",
+      "name": "Introduction to Data",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Finding Trends with Visualizations",
+      "name": "Finding Trends with Visualizations",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Finding Trends with Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Check Your Assumptions",
+      "name": "Check Your Assumptions",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Check Your Assumptions",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Good and Bad Data Visualizations",
+      "name": "Good and Bad Data Visualizations",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Making Data Visualizations",
+      "name": "Making Data Visualizations",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Discover a Data Story",
+      "name": "Discover a Data Story",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Discover a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Cleaning Data",
+      "name": "Cleaning Data",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Creating Summary Tables",
+      "name": "Creating Summary Tables",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Practice PT - Tell a Data Story",
+      "name": "Practice PT - Tell a Data Story",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT - Tell a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "What is Big Data?",
+      "name": "What is Big Data?",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "What is Big Data?",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Rapid Research - Data Innovations",
+      "name": "Rapid Research - Data Innovations",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Identifying People with Data",
+      "name": "Identifying People with Data",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Identifying People with Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "The Cost of Free",
+      "name": "The Cost of Free",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Cost of Free",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "key": "Practice PT - Propose an Innovation",
+      "name": "Practice PT - Propose an Innovation",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT - Propose an Innovation",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L01 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L01 Student Lesson Introduction"
+        ],
+        "lesson.key": "Intro to Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L01 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L02v2 - Finding Trends"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L02v2 - Finding Trends"
+        ],
+        "lesson.key": "Finding Trends with Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L02v2 - Finding Trends"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L03v2 - Student Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L03v2 - Student Introduction"
+        ],
+        "lesson.key": "Check Your Assumptions",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L03v2 - Student Introduction"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L04v2 - Student Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L04v2 - Student Introduction"
+        ],
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L04v2 - Student Introduction"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GoodBadVisualizations_v1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GoodBadVisualizations_v1"
+        ],
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "GoodBadVisualizations_v1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GoodBadVisualizations_v2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GoodBadVisualizations_v2"
+        ],
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "GoodBadVisualizations_v2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Student Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Student Introduction"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Student Introduction"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Getting Started"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Getting Started"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Getting Started"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Scatter Plot"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Scatter Plot"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Scatter Plot"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Line Chart"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Line Chart"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Line Chart"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Bar Chart"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Bar Chart"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Bar Chart"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Edit Chart Appearance"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Edit Chart Appearance"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Edit Chart Appearance"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Making Data Visualizations - Free Play"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L06v2 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06v2 Student Lesson Introduction"
+        ],
+        "lesson.key": "Discover a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L06v2 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L16 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L16 Student Lesson Introduction"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L16 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Cleaning Data - Activity Guide"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Cleaning Data - Activity Guide"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Cleaning Data - Activity Guide"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Cleaning Data Activity Guide Pt2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Cleaning Data Activity Guide Pt2"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 Cleaning Data Activity Guide Pt2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Cleaning Data Activity Guide Pt3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 Cleaning Data Activity Guide Pt3"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 Cleaning Data Activity Guide Pt3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L08v2 Student Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08v2 Student Intro"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L08v2 Student Intro"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08v2 Making Pivot Tables"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L08v2 Making Pivot Tables"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08v2 Making Pivot Tables Part 2"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L08v2 Making Pivot Tables Part 2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L08v2 Making Pivot Tables Part 3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L09 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L09 Student Lesson Introduction"
+        ],
+        "lesson.key": "Practice PT - Tell a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L09 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L10 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L10 Student Lesson Introduction"
+        ],
+        "lesson.key": "What is Big Data?",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L10 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L11 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L11 Student Lesson Introduction"
+        ],
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L11 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video - Data and Medicine"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video - Data and Medicine"
+        ],
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "Video - Data and Medicine"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video - CS is Changing Everything"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video - CS is Changing Everything"
+        ],
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "Video - CS is Changing Everything"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L12 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L12 Student Lesson Introduction"
+        ],
+        "lesson.key": "Identifying People with Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L12 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L13 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L13 Student Lesson Introduction"
+        ],
+        "lesson.key": "The Cost of Free",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L13 Student Lesson Introduction"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 - Privacy Abandoned - Hot On Your Trail Video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 - Privacy Abandoned - Hot On Your Trail Video"
+        ],
+        "lesson.key": "The Cost of Free",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4 - Privacy Abandoned - Hot On Your Trail Video"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4L14 Student Lesson Introduction"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L14 Student Lesson Introduction"
+        ],
+        "lesson.key": "Practice PT - Propose an Innovation",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      },
+      "level_keys": [
+        "U4L14 Student Lesson Introduction"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U4L01 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L01 Student Lesson Introduction"
+        ],
+        "lesson.key": "Intro to Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L02v2 - Finding Trends",
+        "script_level.level_keys": [
+          "U4L02v2 - Finding Trends"
+        ],
+        "lesson.key": "Finding Trends with Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L03v2 - Student Introduction",
+        "script_level.level_keys": [
+          "U4L03v2 - Student Introduction"
+        ],
+        "lesson.key": "Check Your Assumptions",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L04v2 - Student Introduction",
+        "script_level.level_keys": [
+          "U4L04v2 - Student Introduction"
+        ],
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GoodBadVisualizations_v1",
+        "script_level.level_keys": [
+          "GoodBadVisualizations_v1"
+        ],
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GoodBadVisualizations_v2",
+        "script_level.level_keys": [
+          "GoodBadVisualizations_v2"
+        ],
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Student Introduction",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Student Introduction"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Getting Started",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Getting Started"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Scatter Plot",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Scatter Plot"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Line Chart",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Line Chart"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Bar Chart",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Bar Chart"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Edit Chart Appearance",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Edit Chart Appearance"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Making Data Visualizations - Free Play",
+        "script_level.level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ],
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06v2 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L06v2 Student Lesson Introduction"
+        ],
+        "lesson.key": "Discover a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L16 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L16 Student Lesson Introduction"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Cleaning Data - Activity Guide",
+        "script_level.level_keys": [
+          "U4 - Cleaning Data - Activity Guide"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Cleaning Data Activity Guide Pt2",
+        "script_level.level_keys": [
+          "U4 Cleaning Data Activity Guide Pt2"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 Cleaning Data Activity Guide Pt3",
+        "script_level.level_keys": [
+          "U4 Cleaning Data Activity Guide Pt3"
+        ],
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08v2 Student Intro",
+        "script_level.level_keys": [
+          "U4L08v2 Student Intro"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08v2 Making Pivot Tables",
+        "script_level.level_keys": [
+          "U4L08v2 Making Pivot Tables"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08v2 Making Pivot Tables Part 2",
+        "script_level.level_keys": [
+          "U4L08v2 Making Pivot Tables Part 2"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08v2 Making Pivot Tables Part 3",
+        "script_level.level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ],
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L09 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L09 Student Lesson Introduction"
+        ],
+        "lesson.key": "Practice PT - Tell a Data Story",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L10 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L10 Student Lesson Introduction"
+        ],
+        "lesson.key": "What is Big Data?",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L11 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L11 Student Lesson Introduction"
+        ],
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video - Data and Medicine",
+        "script_level.level_keys": [
+          "Video - Data and Medicine"
+        ],
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video - CS is Changing Everything",
+        "script_level.level_keys": [
+          "Video - CS is Changing Everything"
+        ],
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L12 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L12 Student Lesson Introduction"
+        ],
+        "lesson.key": "Identifying People with Data",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L13 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L13 Student Lesson Introduction"
+        ],
+        "lesson.key": "The Cost of Free",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 - Privacy Abandoned - Hot On Your Trail Video",
+        "script_level.level_keys": [
+          "U4 - Privacy Abandoned - Hot On Your Trail Video"
+        ],
+        "lesson.key": "The Cost of Free",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L14 Student Lesson Introduction",
+        "script_level.level_keys": [
+          "U4L14 Student Lesson Introduction"
+        ],
+        "lesson.key": "Practice PT - Propose an Innovation",
+        "lesson_group.key": "",
+        "script.name": "cspunit4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,7 +1,6 @@
 /** @file Tests for clientState.js */
 
 var assert = require('assert');
-var cookies = require('js-cookie');
 var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
 
@@ -35,88 +34,70 @@ describe('clientState#sourceForLevel', function() {
   });
 });
 
-describe('clientState#trackProgress', function() {
+describe('clientState#trackLines', function() {
   beforeEach(function() {
     state.reset();
   });
 
-  it('records level progress and line counts when level is completed', function() {
-    state.levelProgress('sample', 1).should.equal(0);
-    state.levelProgress('sample', 2).should.equal(0);
+  it('records line counts when level is completed', function() {
     state.lines().should.equal(0);
 
-    //User has passed a level with optimal solution
-    state.trackProgress(true, 5, 100, 'sample', 1);
-    state.levelProgress('sample', 1).should.equal(100);
-    state.levelProgress('sample', 2).should.equal(0);
+    //User has passed a level
+    state.trackLines(true, 5);
     state.lines().should.equal(5);
 
-    //User has passed another level but with suboptimal solution
-    state.trackProgress(true, 10, 20, 'sample', 2);
-    state.levelProgress('sample', 1).should.equal(100);
-    state.levelProgress('sample', 2).should.equal(20);
+    //User has passed another level
+    state.trackLines(true, 10);
     state.lines().should.equal(15);
-
-    //User passes the the same level but with a better solution
-    state.trackProgress(true, 5, 100, 'sample', 2);
-    state.levelProgress('sample', 1).should.equal(100);
-    state.levelProgress('sample', 2).should.equal(100);
-    state.lines().should.equal(20);
   });
 
-  it('records level progress but not line counts when level is failed', function() {
-    state.levelProgress('sample', 1).should.equal(0);
-    state.levelProgress('sample', 2).should.equal(0);
+  it('does not record line counts when level is failed', function() {
     state.lines().should.equal(0);
 
     //User has failed a level
-    state.trackProgress(false, 5, 3, 'sample', 1);
-    state.levelProgress('sample', 1).should.equal(3);
-    state.levelProgress('sample', 2).should.equal(0);
-    state.lines().should.equal(0);
-
-    //User failed a different level
-    state.trackProgress(false, 5, 3, 'sample', 2);
-    state.levelProgress('sample', 1).should.equal(3);
-    state.levelProgress('sample', 2).should.equal(3);
+    state.trackLines(false, 5);
     state.lines().should.equal(0);
   });
 
-  it('records level progress truncates line count at a certain level', function() {
-    state.trackProgress(true, 999, 20, 'sample', 1);
-    state.levelProgress('sample', 1).should.equal(20);
+  it('truncates line count at a certain level', function() {
+    state.trackLines(true, 999);
     state.lines().should.equal(999);
 
-    state.trackProgress(true, 5, 100, 'sample', 2);
-    state.levelProgress('sample', 2).should.equal(100);
+    state.trackLines(true, 5);
     state.lines().should.equal(1000);
 
-    state.trackProgress(true, 1, 100, 'sample', 1);
+    state.trackLines(true, 1);
     state.lines().should.equal(1000);
   });
 
-  it('records level progress does not allow negative line counts', function() {
-    state.trackProgress(true, 10, 100, 'sample', 1);
-    state.levelProgress('sample', 1).should.equal(100);
+  it('does not allow negative line counts', function() {
+    state.trackLines(true, 10);
     state.lines().should.equal(10);
 
-    state.trackProgress(true, -10, 100, 'sample', 1);
-    state.levelProgress('sample', 1).should.equal(100);
+    state.trackLines(true, -10);
     state.lines().should.equal(10);
   });
 
-  it('handles malformed cookies for level progress', function() {
-    cookies.set('progress', null, {expires: 365, path: '/'});
-    state.levelProgress('sample', 1).should.equal(0);
+  it('Does not record line counts when level progress does not have a line count', function() {
+    sessionStorage.setItem('lines', 50);
+    state.lines().should.equal(50);
+    state.trackLines(true, undefined);
+    state.lines().should.equal(50);
+    state.trackLines(true, Infinity);
+    state.lines().should.equal(50);
+    state.trackLines(true, NaN);
+    state.lines().should.equal(50);
+    state.trackLines(true, '');
+    state.lines().should.equal(50);
+    state.trackLines(true, 50);
+    state.lines().should.equal(100);
+  });
 
-    cookies.set('progress', '', {expires: 365, path: '/'});
-    state.levelProgress('sample', 1).should.equal(0);
-
-    cookies.set('progress', "{'malformed_json':true", {
-      expires: 365,
-      path: '/'
-    });
-    state.levelProgress('sample', 1).should.equal(0);
+  it('Handled malformed line counts in session storage', function() {
+    sessionStorage.setItem('lines', NaN);
+    state.lines().should.equal(0);
+    state.trackLines(true, 50);
+    state.lines().should.equal(50);
   });
 });
 
@@ -136,29 +117,6 @@ describe('clientState#queryParams', function() {
 describe('clientState#hasSeenVideo/hasSeenCallout', function() {
   beforeEach(function() {
     state.reset();
-  });
-
-  it('Does not record line counts when level progress does not have a line count', function() {
-    cookies.set('lines', 50, {expires: 365, path: '/'});
-    state.lines().should.equal(50);
-    state.trackProgress(true, undefined, 100, 1);
-    state.lines().should.equal(50);
-    state.trackProgress(true, Infinity, 100, 2);
-    state.lines().should.equal(50);
-    state.trackProgress(true, NaN, 100, 3);
-    state.lines().should.equal(50);
-    state.trackProgress(true, '', 100, 4);
-    state.lines().should.equal(50);
-    state.trackProgress(true, 50, 100, 5);
-    state.lines().should.equal(100);
-  });
-
-  it('Handled malformed line counts in cookie', function() {
-    cookies.set('lines', NaN, {expires: 365, path: '/'});
-    state.lines().should.equal(0);
-    state.trackProgress(true, 50, 100, 1);
-    state.lines().should.equal(50);
-    cookies.get('lines').should.equal('50');
   });
 
   it('records video progress', function() {
@@ -240,18 +198,16 @@ describe('clientState#reset', function() {
   it('Resetting client state actually resets everything', function() {
     state.recordCalloutSeen('someCallout');
     state.recordVideoSeen('someVideo');
-    state.trackProgress(true, 5, 100, 'sample', 1);
+    state.trackLines(true, 5);
 
     state.hasSeenCallout('someCallout').should.equal(true);
     state.hasSeenVideo('someVideo').should.equal(true);
-    state.levelProgress('sample', 1).should.equal(100);
     state.lines().should.equal(5);
 
     state.reset();
 
     state.hasSeenCallout('someCallout').should.equal(false);
     state.hasSeenVideo('someVideo').should.equal(false);
-    state.levelProgress('sample', 1).should.equal(0);
     state.lines().should.equal(0);
   });
 });

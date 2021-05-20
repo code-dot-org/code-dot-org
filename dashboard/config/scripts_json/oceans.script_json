@@ -1,0 +1,368 @@
+{
+  "script": {
+    "name": "oceans",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "has_lesson_plan": true,
+      "background": "oceans-blue"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:39 UTC",
+    "seeding_key": {
+      "script.name": "oceans"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Oceans",
+      "name": "Oceans",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_Video_Machine_Learning"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_FishVTrash"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrashDemo"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_CreaturesVTrash"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_Video_Training_Data"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Short"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_Short"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Societal_Implications"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_Video_Societal_Implications"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Long"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      },
+      "level_keys": [
+        "Oceans_Long"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Machine_Learning",
+        "script_level.level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_FishVTrash",
+        "script_level.level_keys": [
+          "Oceans_FishVTrash"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrashDemo",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_CreaturesVTrash",
+        "script_level.level_keys": [
+          "Oceans_CreaturesVTrash"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Training_Data",
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Short",
+        "script_level.level_keys": [
+          "Oceans_Short"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Societal_Implications",
+        "script_level.level_keys": [
+          "Oceans_Video_Societal_Implications"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Long",
+        "script_level.level_keys": [
+          "Oceans_Long"
+        ],
+        "lesson.key": "Oceans",
+        "lesson_group.key": "",
+        "script.name": "oceans"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

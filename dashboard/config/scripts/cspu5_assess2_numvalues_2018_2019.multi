@@ -2,7 +2,7 @@ name 'cspu5_assess2_numValues_2018_2019'
 wrong 'The code will display the middle of all three values'
 wrong 'The code will display the smallest of the three values'
 right 'The code will display the largest of the three values'
-wrong 'The code will always display the value stored in variable <code>a</code>'
+wrong 'The code will always display the value stored in variable `a`'
 wrong 'The code will not display anything due to an error'
 
 markdown <<MARKDOWN

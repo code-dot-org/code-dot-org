@@ -12,12 +12,12 @@
   csedweek_dates: "3.-9. Desember 2018"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Kodetimen</a> nærmer seg. Alle lærere og arrangører tilkalles! <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Planlegg din kodetime</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser</a>'
+  csedweek_banner_teachers_text: "Er du en lærer i datateknikk? Se andre CSEdWeek-ressurser"
   n_have_learned_an_hoc: "<h1>Prøv en</h1><h2>Time med Kode</h2><h3># served</h3>"
   anybody_can_learn: "Hvem som helst kan lære."
   learn_now: "Lær nå"
   petition_message: "Alle skoleelever burde ha muligheten til å lære koding"
   petition_sign_message: 'Om du samtykker, signer med navnet ditt. Bli med # andre.'
-  petition_sign_message_support: 'Signer dette dersom du ønsker å støtte oss. Gjør som # andre.'
   petition_join_others: 'Bli med # andre'
   name: "Navn"
   email: "E-post"
@@ -148,6 +148,9 @@
   thanks_for_submitting: "Takk for at du sender inn!"
   if_you_enjoyed: "Hvis du likte opplæringen, kan du be dine venner om å prøve det også!  Vi vil at hele verden skal lære."
   personalize_certificate: "Tilpass sertifikatet"
+  print_certificates: "Skriv ut diplomer"
+  print_ice_art_from_frozen: "Print iskunst fra Frozen-opplæringen"
+  print_one_here_certificates: "Print en her."
   share_achievement: "Del hva du har oppnådd"
   beyond_hour_message: "Fortsett med våre <a href='http://studio.code.org'>andre kurs</a>, eller utforsk mulighetene for å <a href='/learn/beyond'>lære videre utenfor Kodetimen</a>."
   leaderboards_for_hoc: "Resultatliste for kodetimen."
@@ -306,6 +309,7 @@
   homepage_action_text_signpetition: "Signér oppropet"
   homepage_action_text_wincelebritychat: "Vinne en kjendis-chat"
   homepage_signpetition_dropdown: "Jeg er enig &#x25BE; ▾"
+  homepage_signpetition_dropdown_text: "Jeg samtykker"
   homepage_diversity_pledge: "Slå et slag for mangfoldet"
   homepage_banner_text_prizes: 'Kodetimen kommer igjen, 7.-13. desember. '
   homepage_banner_link_prizes: 'Bli med på det største lærings-arrangementet i historien. '
@@ -347,6 +351,7 @@
   homepage_slot_text_link_donate: "Gi et bidrag"
   homepage_slot_text_link_shop: "T-skjorter, hatter, & mer"
   homepage_slot_text_link_administrators: "Ta med til skolen din eller distriktet ditt"
+  homepage_gallery_header: "Over %{project_count} million Code.org prosjekter startet"
   homepage_header_donors: "Code.org takker sine støttespillere"
   homepage_donors_seall: "Se alt"
   homepage_donors_donate: "Gi bidrag"
@@ -415,6 +420,7 @@
   minecraft_adventurer: "Minecraft-eventyrer"
   minecraft_tutorials: "Minecraft Kodetime-oppgaver"
   minecraft_specs: "Mange språk | Moderne nettlesere og nettbrett | 2. klasse og oppover"
+  minecraft_start_tutorial: "Start veiledning"
   minecraft_agent_description: "Minecraft er tilbake for Kodetimen med en helt ny aktivitet! Reis gjennom Minecraft med kode."
   minecraft_agent_button: "Start"
   minecraft_designer_description: "Programmer dyr og andre Minecraft-vesener i din egen versjon av Minecraft."
@@ -479,8 +485,10 @@
   video_title_real_madrid: "Kodetimen med Real Madrid"
   video_title_marco_belinelli: "Kodetimen med Marco Belinelli"
   video_title_chris_bosh: "Chris Bosh om programmering"
+  video_title_my_name_is_aracely: "Jeg heter Aracely"
   video_1min: "1 min"
   video_2min: "2 min"
+  video_3min: "3 min"
   video_5min: "5 min"
   speak_another_language: "Snakker du et annet språk?"
   help_translate: "Hjelp oss å oversette."
@@ -724,7 +732,10 @@
   dashboard_coursed: 'Kurs D: '
   dashboard_coursee: 'Kurs E: '
   dashboard_coursef: 'Kurs F: '
+  dashboard_pre-express: 'Førskole ekspress kurs: '
+  dashboard_express: 'Ekspress kurs: '
   dashboard_unplugged: "Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve disse øktene uten datamaskin</a>."
+  dashboard_tools: 'Verktøy: '
   dashboard_curriculum: "Pensum"
   dashboard_curriculum_overview: "K-5 (Barneskole) læreplanoversikt (amerikansk læreplan)"
   dashboard_overview: "Oversikt"
@@ -742,6 +753,8 @@
   dashboard_curriculum_csins: 'Datavitenskap i Vitenskap:'
   dashboard_curriculum_csp: 'IT-prinsipper:'
   dashboard_curriculum_ecs: 'Utforsking av datavitenskap:'
+  dashboard_curriculum_csd: 'Data vitenskap oppdagelser: '
+  dashboard_curriculum_apcsa: 'AP Informatikk med Java: '
   dashboard_grade_k: "K"
   dashboard_grade_other: "Andre"
   dashboard_login_word: "Ord"
@@ -819,6 +832,7 @@
   carousel_heading_beyond_languages: "Øvinger i andre programmeringsspråk"
   carousel_heading_apps_games: "Lag dine egne apper eller spill"
   carousel_heading_university: "Universitetskurs på nett"
+  carousel_heading_online_university: "Universitet kurs tilgjengelig online"
   carousel_heading_webpages: "Lær å lage nettsider"
   carousel_heading_robots: "Lær å programmere med roboter"
   carousel_heading_ide: "Plattformer som er populære blant lærere"
@@ -899,7 +913,19 @@
   coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
   coursef_name: "Kurs F"
+  coursea-2017_name: Kurs A (2017)
+  courseb-2017_name: Kurs B (2017)
+  coursec-2017_name: Kurs C (2017)
+  coursed-2017_name: Kurs D (2017)
+  coursee-2017_name: Kurs E (2017)
+  coursef-2017_name: Kurs F (2017)
+  express-2018_name: Ekspress kurs (2018)
+  pre-express-2018_name: Førskole ekspress kurs (2018)
+  pre-express-2019_name: Førskole ekspress kurs (2019)
+  csd2_name: 'Enhet 2: Web utvikling'
+  csd3_name: 'Enhet 3: Animasjon og spill'
   accelerated_name: "Framskyndet kurs"
+  pre-express_name: Førskole ekspress kurs
   20-hour_name: Framskyndet kurs
   algebra_name: "Informatikk i algebra"
   AlgebraA_name: "Informatikk i algebra Kurs A"
@@ -993,6 +1019,12 @@
   coursed-2019_gradelevel: 8.+ klasse
   coursee-2019_gradelevel: Alder 8–12
   coursef-2019_gradelevel: Alder 9-13
+  coursea-2020_gradelevel: Alder 4-7
+  courseb-2020_gradelevel: Alder 5-8
+  coursec-2020_gradelevel: Alder 6-10
+  coursed-2020_gradelevel: 8.+ klasse
+  coursee-2020_gradelevel: Alder 8–12
+  coursef-2020_gradelevel: Alder 9-13
   accelerated_gradelevel: "Alder 10+ (etter kurs 3)"
   codeorg_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
   codeintl_platformtext: "Moderne nettlesere, smart-telefoner, nettbrett"
@@ -1093,6 +1125,26 @@
   course2_shortdescription_congrats: "For elever med grunnleggende leseferdigheter. Dette kurset bygger på Kurs 1. Elevene vil lage prigrammer for å løse problemer og utvikle interaktive spill og historier som de etterpå kan dele. Anbefalt for 2.-5. klasse."
   course3_shortdescription_congrats: "Klar for neste nivå? Elevene vil gå dypere inn i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive historier og spill som de kan dele med andre. Anbefalt for 4.-5. klasse."
   course4_shortdescription_congrats: "Klar for å gå videre? Elevene vil gå dypere inn i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive historier og spill som de kan dele med andre. Anbefalt for 4.-8. klasse."
+  coursea_shortdescription_congrats: "En introduksjon til datavitenskap for førskolebarn."
+  courseb_shortdescription_congrats: "En introduksjon til datavitenskap for førskolebarn. (Likner på Kurs A, med større variasjon for eldre barn.)"
+  coursed_shortdescription_congrats: "Dekk rask konsepter fra kurs C, og fortsett med algoritmer, nøstede løkker, betingelser og mer."
+  coursee_shortdescription_congrats: "Dekk rask konsepter fra kurs C og D, og fortsett med funksjoner."
+  coursef_shortdescription_congrats: "Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill."
+  coursea-2017_shortdescription_congrats: En introduksjon til datavitenskap for førskolebarn.
+  courseb-2017_shortdescription_congrats: En introduksjon til datavitenskap for førskolebarn. (Likner på Kurs A, med større variasjon for eldre barn.)
+  coursed-2017_shortdescription_congrats: Dekk rask konsepter fra kurs C, og fortsett med algoritmer, nøstede løkker, betingelser og mer.
+  coursee-2017_shortdescription_congrats: Dekk rask konsepter fra kurs C og D, og fortsett med funksjoner.
+  coursef-2017_shortdescription_congrats: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+  coursea-2018_shortdescription_congrats: En introduksjon til datavitenskap for førskolebarn.
+  courseb-2018_shortdescription_congrats: En introduksjon til datavitenskap for førskolebarn. (Likner på Kurs A, med større variasjon for eldre barn.)
+  coursed-2018_shortdescription_congrats: Dekk rask konsepter fra kurs C, og fortsett med algoritmer, nøstede løkker, betingelser og mer.
+  coursee-2018_shortdescription_congrats: Dekk rask konsepter fra kurs C og D, og fortsett med funksjoner.
+  coursef-2018_shortdescription_congrats: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+  coursea-2019_shortdescription_congrats: En introduksjon til datavitenskap for førskolebarn.
+  courseb-2019_shortdescription_congrats: En introduksjon til datavitenskap for førskolebarn. (Likner på Kurs A, med større variasjon for eldre barn.)
+  coursed-2019_shortdescription_congrats: Dekk rask konsepter fra kurs C, og fortsett med algoritmer, nøstede løkker, betingelser og mer.
+  coursee-2019_shortdescription_congrats: Dekk rask konsepter fra kurs C og D, og fortsett med funksjoner.
+  coursef-2019_shortdescription_congrats: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
   codeorg_longdescription: "Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering. Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser og grunnleggende algoritmer. Tilgjengelig på 34 språk."
   codeintl_longdescription: "Lær de grunnleggende kodekonseptene med dra-og-slipp-programmering. Dette er spill-lignende, selvstyrt øving med videoforelesninger av Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lær løkker og betingelser og grunnleggende algoritmer. Tilgjengelig på 34 språk."
   thinkersmithspanish_longdescription: "Ved å bruke et forhåndsdefinert \"Robot-språk\" vil finne ut hvordan de kan instruere hverandere til å utføre bestemte oppgaver uten å diskutere dem først. Denne leksjonen lærer barn sammenhengen mellom symboler og handlinger, i tillegg til uvurderlige ferdigheter i å finne feil."
@@ -1345,20 +1397,31 @@
   header_teacher_community: "Brukergruppe for lærere"
   header_help_support: 'Hjelp og støtte '
   header_report_bug: "Rapporter feil"
+  header_legal_privacy: "Personvern"
+  header_legal_tos: "Vilkår"
   header_tutorials: "Guide"
+  app_lab_documentation: "Programmerings lab dokumentasjon"
+  app_lab_tutorials: "Programmerings lab veiledning"
+  game_lab_documentation: "Spill lab dokumentasjon"
+  game_lab_tutorials: "Spill lab veiledning"
+  sprite_lab_documentation: "Animerte figurer lab dokumentasjon"
+  sprite_lab_tutorials: "Animerte figurer lab veiledning"
   header_documentation: "Dokumentasjon"
   user_header_label: "Hei %{username}"
   user_header_team: "Team"
+  user_header_my_projects: "Mine prosjekter"
   user_header_settings: "Min konto"
   user_header_logout: "Logg ut"
   user_header_signin: "Logg inn"
   user_header_create: 'Opprett '
   user_header_applab: 'App-lab '
+  user_header_artist: 'Kunstner '
   user_header_gamelab: "Spill-lab"
   user_header_playlab: "Spill-lab"
   user_header_dance: "Dansefest"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flakse"
+  user_header_view_all: "Vis alle prosjekter..."
   user_header_view_project_gallery: "Se prosjektgalleri"
   user_header_view_my_projects: "Vis mine prosjekter"
   view_all_sections: "Vis alle avsnitt"
@@ -1390,16 +1453,22 @@
   google_sign_in_instruct: 'Derfra bør de velge alternativet "Logg på med Google-kontoen":'
   hero_name: 'Minecraft: Heltens reise'
   applab-intro_name: Lab-intro til appen
+  applab_tile_title: "Introduksjon til program lab (alder 13+)"
+  applab_tile_subtitle: "Lag din eget program ved bruk av JavaScript og modul basert programmering. Eller ta dine kunnskaper ett steg videre til tekst basert programmering. (Kun Engelsk)"
   applab_tile_start_tutorial: "Start"
   applab_tile_teacher_guide: "Sjekk lærerveiledning"
   account_sign_up_email_opt_in: "Kan vi sende deg nyheter om kursene våre, lokale jobbmuligheter eller andre IT-relaterte nyheter?"
   account_sign_up_child_accept_terms: "Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse til å bruke tjenestene fra Code.org."
   hoc_overview_dance_title: "Dansefest"
+  hoc_overview_dance_subtitle: "Programmer en Danse Party for å dele med dine venner. Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, og 25 til!"
+  hoc_overview_dance_2019_subtitle: "Programmer en Danse Party for å dele med dine venner. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, og 34 til!"
+  hoc_overview_title: "Kodetime aktiviteter fra Code.org"
   hoc_overview_partner_activities_title: "Flere aktiviteter fra partnere"
   hoc_overview_partner_activities_body: "Kodetime-nettstedet har over 100 dataaktiviteter for alle aldre og erfaringsnivåer, utviklet av Code.org og partnere."
   hoc_overview_partner_activities_link: "Sjekk aktiviteter"
   hoc_overview_start_tutorial: "Start"
   hoc_overview_view_teacher_guide: "Sjekk lærerveiledning"
+  hoc2018_creativity: "kreativitet"
   hoc2018_creativity_create: "Opprett"
   hoc2018_creativity_hoc_coming: "Kodetimen kommer …"
   hoc2018_creativity_what_will_you_create: "Hva vil du lage?"
@@ -1415,12 +1484,20 @@
   hoc2018_mc_start: "Start"
   hoc2018_mc_no_internet: "Har du ikke internett?"
   hoc2018_mc_download_adventurer: "Last ned Minecraft-eventyrer for bruk uten internett."
+  hoc2018_mc_educators: "For Lærere"
+  hoc2018_mc_educators_box1_title: "Programer med Minecraft"
+  hoc2018_mc_educators_box1_button: "Kom i gang"
+  hoc2018_mc_educators_box2_title: "Last Ned Tilrettelagt Guide"
   hoc2018_mc_educators_box2_button: "Last ned"
+  hoc2018_mc_educators_box3_button: "Finn et verksted"
+  hoc2018_mc_educators_box4_title: "Få tilgang til flere informatikkressurser"
+  hoc2018_mc_educators_box4_button: "Utforsk ressurser"
   hoc2018_mc_watch_videos: "Før du begynner, se en av disse videoene og la deg inspirere"
   hoc2018_mc_videos_more: "Flere <a href='%{inspiring_videos_playlist}'>inspirerende videoer</a> med rollemodeller og kjendiser"
   hoc2018_mc_careers_more: "Flere <a href='%{careers_url}' target='_blank'>inspirerende videoer</a> med profesjonelle innenfor teknologi"
   hoc2018_mc_video_1min: "1 min"
   hoc2018_mc_video_2min: "2 min"
+  hoc2018_mc_video_3min: "3 min"
   hoc2018_mc_video_5min: "5 min"
   hoc2018_mc_video_title_steph_curry: "Kodetimen med Steph Curry"
   hoc2018_mc_video_title_sports: "Press deg selv. Alle kan lære."
@@ -1431,8 +1508,10 @@
   hoc2018_mc_video_title_obama: "President Obama om informatikk"
   hoc2018_mc_video_title_hoc_is_here: "Kodetimen er her - alle kan lære"
   hoc2018_mc_video_title_anybody_can_learn: "Alle kan lære"
+  hoc2018_mc_video_title_my_name_is_aracely: "Jeg heter Aracely"
   hoc2018_mc_homepage_hoc_coming: "Kodetimen kommer ..."
   hoc2018_mc_homepage_what_create: "Hva vil du lage?"
+  hoc2018_mc_homepage_watch_video: "Se videoen vår"
   hoc2018_mc_homepage_join_us: "Bli med oss"
   hoc2018_mc_homepage_try_it: "Prøv"
   hoc2018_mc_back: "Minecraft er tilbake med en helt ny aktivitet til Kodetimen!"
@@ -1456,6 +1535,7 @@
   hoc2018_dance_teacher_resources_tile1_button: "Oppgaveplan"
   hoc2018_dance_teacher_resources_tile2_description: "Du trenger ingen datamaskiner!  Lær programmeringskonsepter som kan brukes til å koreografere en dansefest."
   hoc2018_dance_teacher_resources_tile2_button: "Aktivitet uten datamaskin"
+  hoc2018_dance_videos_section_heading: "Bli inspirert"
   hoc2018_dance_video_title_what_is_creativity: "Hva er kreativitet?"
   hoc2018_dance_amazon_about_future_engineer_button: "Lær mer"
   hoc2018_dance_amazon_scholarship_programs_button: "Søk nå"
@@ -1463,4 +1543,19 @@
   hoc2018_dance_measure_colon: 'Takter:'
   hoc2018_dance_video1: "Dansefest - Introduksjon"
   hoc2018_dance_video2: "Dansefest - Hendelser"
+  hoc2018_dance_video3: "Dansefest - Egenskaper"
   hoc2018_dance_video4: "Dansefest - Gratulerer"
+  page_not_found_title: "Side Ikke Funnet"
+  page_not_found_header: '404: Side Ikke Funnet'
+  page_not_found_description: "Siden du leter etter finnes ikke på denne adressen. Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden."
+  page_not_found_button: "Returner hjem"
+  hoc2019_mc_more_coding_resources: "Flere Programmeringsressurser"
+  page_not_available_button: "Returner hjem"
+  footer_powered_by_aws: "Drevet av Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Kun engelsk"
+  footer_privacy_policy: "Personvern"
+  footer_about: "Om"
+  footer_partners: "Partnere"
+  footer_donate: "Gi bidrag"
+  footer_support: "Brukerstøtte"
+  footer_terms: "Vilkår"

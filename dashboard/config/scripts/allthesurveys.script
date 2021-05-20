@@ -1,37 +1,38 @@
 login_required true
 
-stage 'CSP post course survey 2019 staging'
+lesson 'CSP post course survey 2019 staging', display_name: 'CSP post course survey 2019 staging', has_lesson_plan: false
 level 'csp-post-survey-levelgroup-2019', assessment: true
 
-stage 'CSD post course survey 2019 staging'
+lesson 'CSD post course survey 2019 staging', display_name: 'CSD post course survey 2019 staging', has_lesson_plan: false
 level 'csd-post-survey-2019', assessment: true
 
-stage 'CSP pre survey 2017 staging'
+lesson 'CSP pre survey 2017 staging', display_name: 'CSP pre survey 2017 staging', has_lesson_plan: false
 level 'csp-pre-survey-2017-levelgroup', assessment: true
 
-stage 'CSD pre survey 2017 staging'
+lesson 'CSD pre survey 2017 staging', display_name: 'CSD pre survey 2017 staging', has_lesson_plan: false
 level 'csd-pre-survey-2017-levelgroup', assessment: true
 
-stage 'CSD/P pulse check survey 2017'
+lesson 'CSD/P pulse check survey 2017', display_name: 'CSD/P pulse check survey 2017', has_lesson_plan: false
 level 'csd-pulse-check-survey-1-levelgroup', progression: 'pulse check model', assessment: true
 
-stage 'CSD mid and post survey 2017 staging'
+lesson 'CSD mid and post survey 2017 staging', display_name: 'CSD mid and post survey 2017 staging', has_lesson_plan: false
 level 'csd-post-survey-2017-levelgroup', assessment: true
 
-stage 'CSP mid and post survey 2017 staging'
+lesson 'CSP mid and post survey 2017 staging', display_name: 'CSP mid and post survey 2017 staging', has_lesson_plan: false
 level 'csp-post-survey-2017-levelgroup', assessment: true
 
-stage 'CSP post survey 2018 staging'
+lesson 'CSP post survey 2018 staging', display_name: 'CSP post survey 2018 staging', has_lesson_plan: false
 level 'csp-post-survey-2018-levelgroup', assessment: true
 
-stage 'CSD post survey 2018 staging'
+lesson 'CSD post survey 2018 staging', display_name: 'CSD post survey 2018 staging', has_lesson_plan: false
 level 'csd-post-survey-2017-levelgroup-2018-2nd-semester', assessment: true
 
-stage 'CSP pre survey 2018 staging'
+lesson 'CSP pre survey 2018 staging', display_name: 'CSP pre survey 2018 staging', has_lesson_plan: false
 level 'csp-pre-survey-2017-levelgroup_2018', assessment: true
 
-stage 'CSP mid survey 2018 staging'
+lesson 'CSP mid survey 2018 staging', display_name: 'CSP mid survey 2018 staging', has_lesson_plan: false
 level 'csp-post-survey-2017-levelgroup_2018', assessment: true
 
-stage 'Place for testing crazy stuff'
+lesson 'Place for testing crazy stuff', display_name: 'Place for testing crazy stuff', has_lesson_plan: false
 level 'Levelgroup-for-testing-stuff', assessment: true
+

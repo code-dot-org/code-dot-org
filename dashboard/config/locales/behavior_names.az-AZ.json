@@ -1,0 +1,27 @@
+{
+  "az-AZ": {
+    "data": {
+      "behavior_names": {
+        "outbreak4": {
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+        },
+        "outbreak7": {
+          "moving left and right": "sola və sağa hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+        },
+        "outbreak8": {
+          "moving left and right": "sola və sağa hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+        },
+        "outbreak_freeplay": {
+          "moving left and right": "sola və sağa hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+        },
+        "outbreak_freeplay_basic": {
+          "moving left and right": "sola və sağa hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin"
+        }
+      }
+    }
+  }
+}

@@ -84,7 +84,7 @@ en:
         turtle_1_3: Make a square using only 3 blocks.
         turtle_1_4: 'Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you''ll have to figure out how far to turn by clicking on the number in the turn block.'
         turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
+        turtle_1_6: 'Can you figure out how to draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
         turtle_1_7: Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!
         turtle_1_8: Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.
         turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
@@ -576,6 +576,49 @@ en:
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Action
         csd_debugging: Debugging
         csd_applab_designmode_short: App Lab Design Mode
+        csp-pd-welcome: Welcome to the Family!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Kid Tested, Teacher Approved'
+        why-should-teach-unplugged-activities: 'FAQ: Why should I teach "unplugged" activities?'
+        cs-principles-intro-to-objects: 'CS Principles: Intro to Objects'
+        oceans_machine_learning: Machine Learning
+        oceans_training_data: Training Data
+        oceans_societal_implications: Societal Implications
+        hoc_dance_congrats_2019: Dance Party - Party On!
+        hoc_dance_warmup_2019: Dance Party - Warm Up
+        hoc_dance_events_2019: Dance Party - Events
+        hoc_dance_measures_2019: Dance Party - Measures
+        hoc_dance_properties_2019: Dance Party - Properties
+        csd_what_computers_do: What Do Computers Do?
+        csf_my_online_neighborhood_2020: My Online Neighborhood
+        csf_follow_the_digital_trail: Follow the Digital Trail
+        csf_private_and_personal_information: Private and Personal Information
+        csd_what_computers_are: What is a Computer?
+        codebreak_e01: 'Code Break 1.0: Algorithms with Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototypes with Mark Cuban and Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Encryption with Ashton Kutcher and Mia Gil Epner'
+        codebreak_e04: Code Break 4.0 Digital Information with Mike Krieger and Alice Keeler
+        codebreak_e05: 'Code Break 5.0: Simulations & Data with Bill Gates'
+        csd_how_teamwork_works: How Teamwork Works
+        csd_teamwork_and_disagreement: Teamwork - Dealing with Disagreement
+        codebreak_e06: 'Code Break 6.0: The Internet with Keegan-Michael Scott & Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Conditionals with Sal Khan and Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variables with Yara Shahidi and Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Events with Macklemore & Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: AI with Kat Graham and Kate Park'
+        codebreak_e11: 'Code Break 11.0: Abstraction with Susan Wojcicki and China Anne McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware with Aloe Blacc, Bret Taylor, & Paula Mejia'
+        csf21pilot_events: 'Sprite Lab: Sprites in Action'
+        csf21pilot_prompts: 'Sprite Lab: Text and Prompts'
+        outbreak_mike: CodeBytes Episode 3 with Mike - Outbreak Simulator
+        poembot-pilot-prompts: Haiku Bots - Prompt with Choices [PILOT]
+        poembot-pilot-text: Haiku Bots - Storing Text [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Show Your Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Introduction to AI Lab
+        csd_ml_import_model: Importing an AI Model
+        csf_lots_of_sprites: 'Sprite Lab: Lots of Sprites'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

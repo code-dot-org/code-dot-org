@@ -2,6 +2,7 @@ require File.expand_path('../env', __FILE__)
 require 'cdo/rack/request'
 require 'cdo/yaml'
 require 'json'
+require_relative './text_render'
 
 def http_content_type(type, params={})
   params = params.map {|k, v| "#{k}=#{v}"}.join('; ')
@@ -226,7 +227,7 @@ module Pegasus
       settings.set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
       settings.set :template_extnames, ['.haml', '.md']
 
-      settings.set :blacklist, {}
+      settings.set :denylist, {}
       settings.set :vary, {}
     end
 

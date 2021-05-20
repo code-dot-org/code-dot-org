@@ -1,14 +1,18 @@
 ---
-title: 操作方法指南
-layout: wide
-nav: how_to_nav
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # 如何在课后及兴趣班中讲授编程一小时
 
-### 参与活动，并用下面的步骤向学生们介绍他们第一个小时的计算机科学。 编程一小时的课程哪怕是对初学者来说都非常容易上手！ If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -18,11 +22,11 @@ nav: how_to_nav
 
 We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-对组织者来说，**所有的编程一小时课程**都不需要额外再做其他准备，可以让参与者依照他们自己的进度和技术水平自我学习。
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**需要编程一小时的课外活动大纲？**来看看 [这个模版](/files/AfterschoolEducatorLessonPlanOutline.docx)吧！
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. 推广你的编程一小时活动
 
@@ -30,13 +34,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. 您所需的教学设备——电脑不是必需的
 
-要获得编程一小时活动的最佳体验，需要一台联网的电脑。 但您**并不**需要给每一个孩子提供电脑，您甚至可以在没有电脑的情况下开展编程一小时课程活动。
+要获得编程一小时活动的最佳体验，需要一台联网的电脑。 But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-在学生计算机或设备上测试这些指南，确保它们在播放器上的声音和视频能够正常运作。 **担心网速不好？** 可以在课程一开始就集中播放全部视频，这样学生就无需自行下载这些视频资料了。 也可采用线下离线的教学指南内容开展授课活动。
+在学生计算机或设备上测试这些指南，确保它们在播放器上的声音和视频能够正常运作。 **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 如果教程包含音频，那么应提前准备耳机，或者让学生自带耳机。
 
-**电脑不够？**采取[搭档合作编程](https://www.youtube.com/watch?v=vgkahOzFH2Q)的方式。 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 学生之间搭档之后，他们会互相帮助并减少对老师的依赖。 他们将明白编程也是一种社交和协作。
 
 ## 5. 用一段鼓舞人心的视频来开始你的编程一小时
 
@@ -49,13 +53,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - [总统奥巴马号召所有学生学习计算机科学](https://www.youtube.com/watch?v=6XvmhE1J9PY)。
 - 更多励志的视频可以[ 点此查看](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)。
 
-**如果您从未深入接触过计算机科学也没有关系。这里有一些帮助您介绍编程一小时活动的建议：**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - 用无论男孩还是女孩都会关心的例子来阐述技术是如何影响我们的生活的（比如一些用于挽救生命、帮助人类、沟通你我的一些软件和技术之类的例子）。
 - 列举日常生活中需要使用程序的情况。
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**需要更多的指导吗？**请点击下载[课程大纲模板](/files/AfterschoolEducatorLessonPlanOutline.docx)。
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. 编程！
 
@@ -81,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 编程一小时之后该做什么？
 
-编程一小时课程活动只是学习之旅的第一步：为学生建立了关于高科技如何运作、软件如何制作的基础概念。 接下来，帮助你的学生继续学习之旅，鼓励他们展开后续的[在线学习](%= codeorg_url('/learn/beyond') %)！
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

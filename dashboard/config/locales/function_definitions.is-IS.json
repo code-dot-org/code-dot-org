@@ -1,0 +1,3884 @@
+{
+  "is-IS": {
+    "data": {
+      "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "nánar"
+          },
+          "draw eyebrow": {
+            "name": "teikna augabrún"
+          },
+          "draw pupil": {
+            "name": "teikna sjáaldur"
+          }
+        },
+        "2-3 Artist 3.4": {
+          "draw a circle": {
+            "name": "teikna hring"
+          },
+          "draw a car": {
+            "name": "teikna bíl"
+          }
+        },
+        "2-3 Artist 7": {
+          "draw_rect": {
+            "name": "teikna_rétth",
+            "parameters": {
+              "width": "breidd",
+              "height": "hæð"
+            }
+          }
+        },
+        "2-3 Artist Debugging 10": {
+          "draw square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "width": "breidd",
+              "height": "hæð"
+            }
+          },
+          "jump to controller top left": {
+            "name": "hoppa efst til vinstri á stjórnborði"
+          },
+          "jump to middle": {
+            "name": "hoppa að miðju"
+          },
+          "draw a circle": {
+            "name": "teikna hring"
+          },
+          "draw a button": {
+            "name": "teikna hnapp"
+          },
+          "draw cord": {
+            "name": "teikna streng"
+          },
+          "draw R pad": {
+            "name": "teikna R borð"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "teikna vinstri fót"
+          },
+          "draw right leg": {
+            "name": "teikna hægri fót"
+          },
+          "draw body and arms": {
+            "name": "teikna búk og handleggi",
+            "parameters": {
+              "armlength": "armlengd",
+              "bodylength": "líkamslengd"
+            }
+          },
+          "draw a head": {
+            "name": "teikna höfuð"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "teikna hægri fót"
+          },
+          "draw sitting stick figure": {
+            "name": "teikna sitjandi Óla prik"
+          },
+          "draw head": {
+            "name": "teikna höfuð"
+          },
+          "draw arms": {
+            "name": "teikna handleggi"
+          },
+          "jump to neck": {
+            "name": "hoppa að hálsi"
+          },
+          "draw left leg": {
+            "name": "teikna vinstri fót"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "teikna O"
+          },
+          "draw D": {
+            "name": "teikna D"
+          },
+          "draw E": {
+            "name": "teikna E"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "2-3 Artist Functions 10": {
+          "big gear": {
+            "name": "stórt tannhjól"
+          },
+          "small gear": {
+            "name": "lítið tannhjól"
+          }
+        },
+        "2-3 Artist Functions 11": {
+          "draw a hexagon": {
+            "name": "teikna sexkant"
+          }
+        },
+        "2-3 Artist Functions 11.5": {
+          "draw a hexagon": {
+            "name": "teikna sexkant"
+          }
+        },
+        "2-3 Artist Functions 12": {
+          "draw a flower": {
+            "name": "teikna blóm"
+          }
+        },
+        "2-3 Artist Functions 2": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "2-3 Artist Functions 3": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "2-3 Artist Functions 4": {
+          "draw a square": {
+            "name": "teikna ferning"
+          }
+        },
+        "2-3 Artist Functions 9": {
+          "draw a snowflake": {
+            "name": "teikna snjókorn"
+          }
+        },
+        "2-3 Bee Functions 1": {
+          "get 2 nectar": {
+            "name": "sækja 2 blómasafa"
+          }
+        },
+        "2-3 Bee Functions 10": {
+          "collect purple nectar": {
+            "name": "safna fjólubláum safa"
+          }
+        },
+        "2-3 Bee Functions 2": {
+          "get 5": {
+            "name": "sækja 5"
+          }
+        },
+        "2-3 Bee Functions 4": {
+          "move and get nectar": {
+            "name": "færa og sækja safa"
+          }
+        },
+        "2-3 Bee Functions 5": {
+          "move and get 4": {
+            "name": "færa og sækja 4"
+          }
+        },
+        "2-3 Bee Functions 6": {
+          "move and get 4": {
+            "name": "færa og sækja 4"
+          }
+        },
+        "2-3 Bee Functions 8": {
+          "get 7 nectar make 7 honey": {
+            "name": "sækja 7 safa búa til 7 hunang"
+          }
+        },
+        "2-3 Bee Functions 9": {
+          "get 7 make 7": {
+            "name": "sækja 7 búa til 7"
+          }
+        },
+        "2-3 Bee Functions Assessment 1": {
+          "get 7": {
+            "name": "sækja 7"
+          }
+        },
+        "2-3 Bee Functions Assessment 2": {
+          "move and get 3": {
+            "name": "færa og sækja 3"
+          }
+        },
+        "4-5 Artist 3": {
+          "draw a flower": {
+            "name": "teikna blóm"
+          }
+        },
+        "4-5 Artist 6": {
+          "draw a tree": {
+            "name": "teikna tré"
+          }
+        },
+        "4-5 Artist 7": {
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          },
+          "draw a circle": {
+            "name": "teikna hring"
+          },
+          "draw a car": {
+            "name": "teikna bíl"
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "teikna hring"
+          },
+          "draw goal": {
+            "name": "teikna mark"
+          }
+        },
+        "4-5 Bee Conditionals 7": {
+          "check purple flower": {
+            "name": "athuga fjólublátt blóm"
+          }
+        },
+        "4-5 Bee Conditionals 8": {
+          "check flower make honey": {
+            "name": "athuga blóm búa til hunang"
+          }
+        },
+        "4-5 Bee Conditionals Assessment 1": {
+          "get nectar or make honey": {
+            "name": "safna blómasafa eða búa til hunang"
+          }
+        },
+        "4-5 Bee Debugging 7": {
+          "make 3 honey": {
+            "name": "búa til 3 hunang"
+          }
+        },
+        "4-5 Bee Debugging 8": {
+          "get 5 nectar": {
+            "name": "sækja 5 blómasafa"
+          }
+        },
+        "4-5 Bee Debugging 9": {
+          "make all honey": {
+            "name": "búa til allt hunang"
+          }
+        },
+        "Alien Defender": {
+          "game has been won": {
+            "name": "leikurinn hefur unnist"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "witch ending": {
+            "name": "nornarendir"
+          },
+          "story": {
+            "name": "saga"
+          },
+          "starting path": {
+            "name": "upphafsslóð"
+          }
+        },
+        "Course 4 Artist Binary 1": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary 2": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary 3": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary 4": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary 5": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary 6": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary 7": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2a": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary Free Play 2b": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "Course 4 Artist Binary pre1": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "Teikna ferning 20 díla breiðan"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga",
+            "description": "teikna 6 ferninga hlið við hlið"
+          },
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "Teikna ferning 20 díla breiðan"
+          }
+        },
+        "Course 4 Bee Params 1": {
+          "get 3 nectar": {
+            "name": "sækja 3 blómasafa"
+          }
+        },
+        "Course 4 Bee Params 2": {
+          "get 3 nectar": {
+            "name": "sækja 3 blómasafa"
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "name": "sækja 3 blómasafa",
+            "parameters": {
+              "direction": "stefna"
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "name": "sækja 3 blómasafa",
+            "parameters": {
+              "direction": "stefna"
+            }
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "name": "sækja 5 blómasafa",
+            "parameters": {
+              "direction": "stefna"
+            }
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "name": "sækja 5 blómasafa",
+            "parameters": {
+              "direction": "stefna",
+              "nectar units": "einingar blómasafa"
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "name": "sækja mikinn blómasafa",
+            "description": "Safnaðu tilteknu magni blómasafa í báðar áttir",
+            "parameters": {
+              "direction": "stefna",
+              "nectars": "blómasafar"
+            }
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "name": "safna blómasafa búa til hunang",
+            "parameters": {
+              "honey": "hunang",
+              "direction": "stefna",
+              "nectars": "blómasafar"
+            },
+            "description": "Hreyfast í stefnu til að safna blómasafa eða búa til hunang."
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "hoppa",
+            "description": "Lætur aðalleikveruna hoppa upp um 100 díla"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "level_up": {
+            "name": "borð_upp",
+            "description": "Hækka 'borð' um 1, stilla stig á 0, auka hraða óvinar og velja bakgrunn af handahófi."
+          },
+          "score_points": {
+            "name": "skora_stig",
+            "parameters": {
+              "points": "stig"
+            },
+            "description": "Bætir tilteknum fjölda stiga við breytuna skor_leikmanns."
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "hoppa",
+            "description": "Lætur aðalleikveruna hoppa upp um 'hæð' díla"
+          }
+        },
+        "Course 4 Play Lab Params 3": {
+          "jump": {
+            "name": "hoppa",
+            "parameters": {
+              "height": "hæð",
+              "actor": "leikmaður"
+            },
+            "description": "Lætur þessa leikveru hoppa tiltekna hæð"
+          }
+        },
+        "Course 4 Play Lab Params 4": {
+          "patrol": {
+            "name": "rása",
+            "description": "Færa kvika upp og niður"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "name": "rása",
+            "parameters": {
+              "actor": "leikmaður"
+            },
+            "description": "Færa kvika upp og niður"
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "name": "rása",
+            "parameters": {
+              "actor": "leikmaður"
+            },
+            "description": "Færa kvika upp og niður á tilteknum hraða"
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "name": "rása",
+            "parameters": {
+              "actor": "leikmaður",
+              "speed": "hraða"
+            },
+            "description": "Færa kvika upp og niður á tilteknum hraða"
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "name": "rása",
+            "parameters": {
+              "actor": "leikmaður",
+              "speed": "hraða"
+            },
+            "description": "Færa kvika upp og niður á tilteknum hraða"
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "name": "skora_stig",
+            "parameters": {
+              "points": "stig"
+            },
+            "description": "Bætir tilteknum fjölda stiga við breytuna skor_leikmanns."
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "setja stig á"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "setja stig á"
+          }
+        },
+        "Course 4 SCF 1": {
+          "draw a hexagon": {
+            "name": "teikna sexkant"
+          },
+          "draw a line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          },
+          "shift down/forward": {
+            "name": "hliðra niður/áfram"
+          },
+          "shift down/backward": {
+            "name": "hliðra niður/aftur á bak"
+          },
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          }
+        },
+        "Course 4 SCF 1a": {
+          "get nectar": {
+            "name": "sækja blómasafa",
+            "parameters": {
+              "counter": "teljari",
+              "dir": "stefna"
+            }
+          }
+        },
+        "Course 4 SCF 1b": {
+          "make honey up and over": {
+            "name": "gera hunang upp til hægri"
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          },
+          "draw octagons": {
+            "name": "teikna átthyrninga",
+            "parameters": {
+              "numOctagons": "numOctagons"
+            }
+          },
+          "draw an octagon": {
+            "name": "teikna átthyrning"
+          },
+          "shift down": {
+            "name": "hliðra niður"
+          }
+        },
+        "Course 4 SCF 3": {
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw an octagon": {
+            "name": "teikna átthyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "Course E: Play Lab Project": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "Find the Wizard": {
+          "check guess": {
+            "name": "athuga ágiskun"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "FoodFight": {
+          "level_up": {
+            "name": "borð_upp",
+            "description": "Hækka 'borð' um 1, stilla stig á 0, auka hraða óvinar og velja bakgrunn af handahófi."
+          },
+          "score_points": {
+            "name": "skora_stig",
+            "parameters": {
+              "points": "stig"
+            },
+            "description": "Bætir tilteknum fjölda stiga við breytuna skor_leikmanns."
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "byggja brú"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "byggja brú"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "byggja brú"
+          }
+        },
+        "Geometric Sun": {
+          "draw a door": {
+            "name": "teikna dyr"
+          },
+          "draw grass": {
+            "name": "teikna gras"
+          },
+          "draw windows": {
+            "name": "teikna glugga"
+          },
+          "rectangle": {
+            "name": "rétthyrningur"
+          },
+          "sun": {
+            "name": "sól"
+          },
+          "diamond": {
+            "name": "demant"
+          },
+          "window": {
+            "name": "gluggi"
+          },
+          "draw a house": {
+            "name": "teikna hús"
+          },
+          "triangle": {
+            "name": "þríhyrningur"
+          },
+          "square": {
+            "name": "ferningur"
+          }
+        },
+        "Geometric Sun_2018": {
+          "draw a door": {
+            "name": "teikna dyr"
+          },
+          "draw grass": {
+            "name": "teikna gras"
+          },
+          "draw windows": {
+            "name": "teikna glugga"
+          },
+          "rectangle": {
+            "name": "rétthyrningur"
+          },
+          "sun": {
+            "name": "sól"
+          },
+          "diamond": {
+            "name": "demant"
+          },
+          "window": {
+            "name": "gluggi"
+          },
+          "draw a house": {
+            "name": "teikna hús"
+          },
+          "triangle": {
+            "name": "þríhyrningur"
+          },
+          "square": {
+            "name": "ferningur"
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "athuga ágiskun"
+          }
+        },
+        "InspirationalArtwork": {
+          "n-sided shape": {
+            "name": "n-hliða form",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a loop": {
+            "name": "teikna lykkju",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw spiral circle": {
+            "name": "teikna spíral",
+            "parameters": {
+              "size": "stærð"
+            }
+          }
+        },
+        "InspirationalArtwork_2018": {
+          "draw a loop": {
+            "name": "teikna lykkju",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "n-sided shape": {
+            "name": "n-hliða form"
+          },
+          "draw spiral circle": {
+            "name": "teikna spíral",
+            "parameters": {
+              "size": "stærð"
+            }
+          }
+        },
+        "K-1 Artist2 3": {
+          "draw roof": {
+            "name": "teikna þak"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "teikna rétthyrning"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "teikna rétthyrning"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "hreinsa slóð"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "hreinsa slóð"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "hreinsa slóð"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "laga langa slóð"
+          },
+          "fix short path": {
+            "name": "laga stutta slóð"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "laga langa slóð"
+          },
+          "fix short path": {
+            "name": "laga stutta slóð"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "laga langa slóð"
+          },
+          "fix short path": {
+            "name": "laga stutta slóð"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "byggja stutta brú"
+          },
+          "build long bridge": {
+            "name": "byggja langa brú"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "byggja stutta brú"
+          },
+          "build long bridge": {
+            "name": "byggja langa brú"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "byggja stutta brú"
+          },
+          "build long bridge": {
+            "name": "byggja langa brú"
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "name": "teikna röð ferninga",
+            "description": "teikna 6 ferninga hlið við hlið"
+          },
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "Teikna ferning með 20 díla langar hliðar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "teikna ferning 20"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "empty function": {
+            "name": "tómt fall"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga",
+            "description": "teikna röð ferninga "
+          },
+          "draw a square 40": {
+            "name": "teikna ferning 40",
+            "description": "Teikna ferning með 40 díla hliðar"
+          },
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          }
+        },
+        "NEW Course 4 Artist Functions 3": {
+          "draw a square": {
+            "name": "teikna ferning"
+          }
+        },
+        "NEW Course 4 Artist Functions 4": {
+          "draw a square": {
+            "name": "teikna ferning",
+            "description": "teiknar ferning sem er 100 dílar á stærð"
+          }
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "draw a square": {
+            "name": "teikna ferning"
+          }
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "description": "teiknar þríhyrning sem er 100 dílar á stærð"
+          }
+        },
+        "NEW Course 4 Artist Functions 9": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning"
+          }
+        },
+        "NEW Course 4 Artist Params 1": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "Draw a triangle": {
+            "name": "Teikna þríhyrning"
+          }
+        },
+        "NEW Course 4 Artist Params 10": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a hexagon": {
+            "name": "teikna sexkant",
+            "parameters": {
+              "length": "lengd"
+            },
+            "description": "teikna sexhyrning sem er 100 dílar á stærð með stika fyrir lengd"
+          }
+        },
+        "NEW Course 4 Artist Params 11": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "do something": {
+            "name": "gera eitthvað",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 12": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            },
+            "description": "teikna fjölhyrning með stika fyrir hliðar og lengd"
+          }
+        },
+        "NEW Course 4 Artist Params 12a": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            },
+            "description": "teikna fjölhyrning með stika fyrir hliðar og lengd"
+          }
+        },
+        "NEW Course 4 Artist Params 13": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 14": {
+          "draw a spiral edge": {
+            "name": "teikna útlínu spírals",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            },
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd"
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "length": "lengd",
+              "repeat": "endurtaka",
+              "sides": "hliðar"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 2": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "description": "teikna þríhyrning"
+          }
+        },
+        "NEW Course 4 Artist Params 3": {
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "description": "teikna þríhyrning sem er 50 dílar á stærð"
+          }
+        },
+        "NEW Course 4 Artist Params 4": {
+          "draw a triangle with length": {
+            "name": "teikna þríhyrning með lengd",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 5": {
+          "draw a pentagon": {
+            "name": "teikna fimmhyrning",
+            "parameters": {
+              "length": "lengd"
+            },
+            "description": "teikna fimmhyrning sem er 100 dílar"
+          }
+        },
+        "NEW Course 4 Artist Params 6": {
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a hexagon": {
+            "name": "teikna sexkant",
+            "parameters": {
+              "length": "lengd"
+            },
+            "description": "teikna sexhyrning sem er 100 dílar á stærð"
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            },
+            "description": "teikna ferning sem er 100 dílar á lengd"
+          },
+          "draw a sqaure": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            },
+            "description": "teikna ferning sem er 100 dílar á stærð"
+          }
+        },
+        "NEW Course 4 Artist Params 7": {
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            },
+            "description": "teikna þríhyrning sem stika fyrir lengd"
+          }
+        },
+        "NEW Course 4 Artist Params 8": {
+          "draw a triangle with length": {
+            "name": "teikna þríhyrning með lengd",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 9": {
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "NEW Course 4 Artist Params inspire": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "jump": {
+            "name": "hoppa",
+            "parameters": {
+              "height": "hæð",
+              "actor": "leikmaður"
+            },
+            "description": "fallkubbur fyrir hopp með stika fyrir hæð og leikveru"
+          },
+          "patrol": {
+            "name": "rása",
+            "parameters": {
+              "actor": "leikmaður",
+              "speed": "hraða"
+            },
+            "description": "Færa kvika upp og niður á tilteknum hraða"
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring"
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
+        },
+        "New Play Lab Project": {
+          "jump": {
+            "name": "hoppa",
+            "parameters": {
+              "height": "hæð",
+              "actor": "leikmaður"
+            }
+          },
+          "patrol": {
+            "name": "rása",
+            "parameters": {
+              "actor": "leikmaður",
+              "speed": "hraða"
+            }
+          }
+        },
+        "Robot Doodle": {
+          "25 pixel square": {
+            "name": "25 díla ferningur"
+          },
+          "draw head": {
+            "name": "teikna höfuð"
+          },
+          "draw eye": {
+            "name": "teikna auga"
+          }
+        },
+        "Robot Doodle_2018": {
+          "25 pixel square": {
+            "name": "25 díla ferningur"
+          },
+          "draw head": {
+            "name": "teikna höfuð"
+          },
+          "draw eye": {
+            "name": "teikna auga"
+          }
+        },
+        "Standalone_Artist_7": {
+          "draw a flower": {
+            "name": "teikna blóm"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "teikna form"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "fallið mitt"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"einföld\" lausn"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
+        "course3_artist_functions_challenge1": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "course3_artist_functions_challenge2": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "course3_bee_functions_challenge1": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "get 3 nectar or honey": {
+            "name": "sækja 3 af safa eða hunangi"
+          }
+        },
+        "course3_bee_functions_challenge2": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "move and collect": {
+            "name": "færa og safna"
+          }
+        },
+        "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          },
+          "row of nectar": {
+            "name": "röð með blómasafa"
+          },
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          }
+        },
+        "course3_bee_functions_challenge4": {
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          },
+          "row of nectar": {
+            "name": "röð með blómasafa"
+          },
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          },
+          "move and check": {
+            "name": "færa og athuga"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "win game": {
+            "name": "vinna leik"
+          },
+          "lose game": {
+            "name": "tapa leik"
+          },
+          "keep playing": {
+            "name": "spila áfram"
+          }
+        },
+        "course4_artist_binary_challenge1": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "course4_artist_binary_challenge2": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "course4_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "teikna rellu"
+          }
+        },
+        "course4_artist_functions_challenge2": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "course4_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "teikna bakgrunn",
+            "parameters": {
+              "color": "litur"
+            }
+          },
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "sides": "hliðar"
+            }
+          },
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
+        },
+        "course4_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "tína beð",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "course4_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "tína beð",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"einföld\" lausn"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "name": "teikna loga",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "teikna eld"
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "name": "teikna loga",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "teikna eld"
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "name": "teikna loga",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "teikna eld"
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "name": "teikna loga",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "teikna eld"
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "magnari"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "magnari"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "magnari"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "magnari"
+          }
+        },
+        "courseC_data wizard": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseC_data wizard_2020": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseD_artist_binary1": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          }
+        },
+        "courseD_artist_binary1_2018": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          }
+        },
+        "courseD_artist_binary1_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          }
+        },
+        "courseD_artist_binary1_2020": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          }
+        },
+        "courseD_artist_binary2": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary2_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary2_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary2_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary3": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary3_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary3_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary3_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary4": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary4_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary4_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary4_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary5": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary5_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary5_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary5_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary6": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary6_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary6_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary6_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary7": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary7_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary7_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary7_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_predict1": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_predict1_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_predict1_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary8_predict1_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binaryFP_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binaryFP_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binaryFP_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary_challenge1_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary_challenge1_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary_challenge1_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary_challenge2_2018": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary_challenge2_2019": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_artist_binary_challenge2_2020": {
+          "draw": {
+            "name": "teikna",
+            "parameters": {
+              "binary": "tvíund"
+            }
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_autorun_binary2_2019": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_autorun_binary3_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary4_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary5_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary6_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary7_2019": {
+          "draw bit": {
+            "name": "teikna bita"
+          },
+          "draw": {
+            "name": "teikna"
+          }
+        },
+        "courseD_autorun_binary8_2019": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseD_autorun_binary8_predict1_2019": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "courseE_Dogger_2": {
+          "stop_everything": {
+            "name": "stöðva_allt"
+          },
+          "lose": {
+            "name": "tapa"
+          }
+        },
+        "courseE_artist_concept1": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a hexagon": {
+            "name": "teikna sexkant"
+          }
+        },
+        "courseE_artist_concept1_2018": {
+          "draw a hexagon": {
+            "name": "teikna sexkant"
+          }
+        },
+        "courseE_artist_concept4": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw a plane of squares": {
+            "name": "teikna flöt ferninga"
+          }
+        },
+        "courseE_artist_concept4_2018": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw a plane of squares": {
+            "name": "teikna flöt ferninga"
+          }
+        },
+        "courseE_artist_concept_challenge1": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_concept_challenge2": {
+          "draw pinwheel": {
+            "name": "teikna rellu"
+          }
+        },
+        "courseE_artist_concept_challenge2_2018": {
+          "draw pinwheel": {
+            "name": "teikna rellu"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions10": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          }
+        },
+        "courseE_artist_functions10_2018": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          }
+        },
+        "courseE_artist_functions10_2019": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          }
+        },
+        "courseE_artist_functions10_2020": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2_2018": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2_2019": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2_2020": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions2_copy": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions3_2018": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions3_2019": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions3_2020": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions4": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions4_copy": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5_2018": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5_2019": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5_2020": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions7": {
+          "draw a window": {
+            "name": "teikna glugga"
+          },
+          "draw a house": {
+            "name": "teikna hús"
+          }
+        },
+        "courseE_artist_functions7_2018": {
+          "draw a window": {
+            "name": "teikna glugga"
+          },
+          "draw a house": {
+            "name": "teikna hús"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "teikna glugga"
+          }
+        },
+        "courseE_artist_functions7_2020": {
+          "draw a window": {
+            "name": "teikna glugga"
+          },
+          "draw a house": {
+            "name": "teikna hús"
+          }
+        },
+        "courseE_artist_functions8": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8_2018": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8_2019": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8_2020": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8a_2019": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8a_2020": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8b_2018": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8b_2019": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8b_2020": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions8c_2018": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
+        "courseE_artist_functions8c_2019": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
+        "courseE_artist_functions8c_2020": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
+        "courseE_artist_functions9": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          },
+          "draw line of triangles": {
+            "name": "teikna röð þríhyrninga"
+          }
+        },
+        "courseE_artist_functions9_2018": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          },
+          "draw line of triangles": {
+            "name": "teikna röð þríhyrninga"
+          }
+        },
+        "courseE_artist_functions9_2019": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          },
+          "draw line of triangles": {
+            "name": "teikna röð þríhyrninga"
+          }
+        },
+        "courseE_artist_functions9_2020": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          },
+          "draw line of triangles": {
+            "name": "teikna röð þríhyrninga"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions_challenge1": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge1_2018": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge1_2019": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge1_2020": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge2": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge2_2018": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge2_2019": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_challenge2_2020": {
+          "my design": {
+            "name": "hönnun mín"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict1_2018": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict1_2019": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict1_2020": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict1_copy": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict2": {
+          "draw line of polygons": {
+            "name": "teikna röð marghyrninga"
+          },
+          "draw polygon": {
+            "name": "teikna marghyrning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_predict2_2018": {
+          "draw line of polygons": {
+            "name": "teikna röð marghyrninga"
+          },
+          "draw polygon": {
+            "name": "teikna marghyrning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_predict2_2019": {
+          "draw line of polygons": {
+            "name": "teikna röð marghyrninga"
+          },
+          "draw polygon": {
+            "name": "teikna marghyrning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_artist_functions_predict2_2020": {
+          "draw line of polygons": {
+            "name": "teikna röð marghyrninga"
+          },
+          "draw polygon": {
+            "name": "teikna marghyrning"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_bee_concept4": {
+          "honey nectar": {
+            "name": "hunang blómasafi"
+          }
+        },
+        "courseE_bee_functions1": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_bee_functions10": {
+          "move and make honey": {
+            "name": "færa og búa til hunang"
+          }
+        },
+        "courseE_bee_functions11_predict1": {
+          "move and make honey": {
+            "name": "færa og búa til hunang"
+          }
+        },
+        "courseE_bee_functions2": {
+          "get 2 nectar": {
+            "name": "sækja 2 blómasafa"
+          }
+        },
+        "courseE_bee_functions3": {
+          "get 5": {
+            "name": "sækja 5"
+          }
+        },
+        "courseE_bee_functions4": {
+          "move and get nectar": {
+            "name": "færa og sækja safa"
+          }
+        },
+        "courseE_bee_functions5": {
+          "move and get 4": {
+            "name": "færa og sækja 4"
+          }
+        },
+        "courseE_bee_functions6": {
+          "get 7 nectar make 7 honey": {
+            "name": "sækja 7 safa búa til 7 hunang"
+          }
+        },
+        "courseE_bee_functions7": {
+          "get 7 make 7": {
+            "name": "sækja 7 búa til 7"
+          }
+        },
+        "courseE_bee_functions8": {
+          "collect all nectar": {
+            "name": "safna öllum blómasafa"
+          }
+        },
+        "courseE_bee_functions9": {
+          "get all nectar": {
+            "name": "sækja allan blómasafa"
+          }
+        },
+        "courseE_bee_functions_challenge1": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "get 3 nectar or honey": {
+            "name": "sækja 3 af safa eða hunangi"
+          }
+        },
+        "courseE_bee_functions_challenge2": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "move and collect": {
+            "name": "færa og safna"
+          }
+        },
+        "courseE_farmer_concept1": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_farmer_concept2": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "get pumpkin": {
+            "name": "tína grasker"
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "tína grasker"
+          }
+        },
+        "courseE_farmer_concept3": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          }
+        },
+        "courseE_farmer_functions10b": {
+          "navigate": {
+            "name": "ferðast"
+          }
+        },
+        "courseE_farmer_functions11_predict": {
+          "check and pick": {
+            "name": "athuga og tína"
+          },
+          "find pumpkin": {
+            "name": "finna grasker"
+          },
+          "wander path": {
+            "name": "ráfa slóð"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get produce": {
+            "name": "sækja afurð"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get produce": {
+            "name": "sækja afurð"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get produce": {
+            "name": "sækja afurð"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check for corn": {
+            "name": "athuga með maís"
+          },
+          "corn rectangle": {
+            "name": "maísrétthyrningur"
+          },
+          "lettuce stairs": {
+            "name": "káltröppur"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check for corn": {
+            "name": "athuga með maís"
+          },
+          "corn rectangle": {
+            "name": "maísrétthyrningur"
+          },
+          "lettuce stairs": {
+            "name": "káltröppur"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check for corn": {
+            "name": "athuga með maís"
+          },
+          "corn rectangle": {
+            "name": "maísrétthyrningur"
+          },
+          "lettuce stairs": {
+            "name": "káltröppur"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2ba": {
+          "corn and pumpkin": {
+            "name": "maís og grasker"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c": {
+          "corn and pumpkin": {
+            "name": "maís og grasker"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions4b": {
+          "corn and pumpkin": {
+            "name": "maís og grasker"
+          }
+        },
+        "courseE_farmer_functions5c": {
+          "corn and pumpkin": {
+            "name": "maís og grasker"
+          }
+        },
+        "courseE_farmer_functions6c": {
+          "corn and pumpkin": {
+            "name": "maís og grasker"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions8b": {
+          "navigate": {
+            "name": "ferðast"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions9b": {
+          "navigate": {
+            "name": "ferðast"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "win game": {
+            "name": "vinna leik"
+          },
+          "lose game": {
+            "name": "tapa leik"
+          },
+          "keep playing": {
+            "name": "spila áfram"
+          }
+        },
+        "courseE_playLab_scaffold1": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_playLab_scaffold2": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_playLab_scaffold3": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseE_playLab_scaffold4": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseF_artist_fwp1": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "checker": {
+            "name": "athugari",
+            "parameters": {
+              "size": "stærð",
+              "color": "litur"
+            }
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "Make gingham": {
+            "name": "Búa til reiti",
+            "parameters": {
+              "size": "stærð"
+            }
+          },
+          "black outline": {
+            "name": "svört útlína",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_artist_fwp2": {
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "checker": {
+            "name": "athugari",
+            "parameters": {
+              "size": "stærð",
+              "color": "litur"
+            }
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "Make gingham": {
+            "name": "Búa til reiti",
+            "parameters": {
+              "size": "stærð"
+            }
+          },
+          "black outline": {
+            "name": "svört útlína",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_artist_fwp2_predict1": {
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_artist_fwp3": {
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square2": {
+            "name": "teikna ferning2",
+            "parameters": {
+              "size": "stærð"
+            }
+          },
+          "filled square": {
+            "name": "fylltur ferningur",
+            "parameters": {
+              "size": "stærð",
+              "color": "litur"
+            }
+          },
+          "black outline": {
+            "name": "svört útlína",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_artist_fwp4": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            },
+            "description": "teikna fjölhyrning með stika fyrir hliðar og lengd"
+          }
+        },
+        "courseF_artist_fwp5": {
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "courseF_artist_fwp6": {
+          "draw a spiral edge": {
+            "name": "teikna útlínu spírals",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "name": "teikna útlínu spírals",
+            "parameters": {
+              "length": "lengd",
+              "min": "min",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "name": "teikna útlínu spírals",
+            "parameters": {
+              "length": "lengd",
+              "min": "min",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            },
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd"
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "length": "lengd",
+              "repeat": "endurtaka",
+              "sides": "hliðar"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a spiral edge": {
+            "name": "teikna útlínu spírals",
+            "parameters": {
+              "length": "lengd",
+              "min": "min",
+              "sides": "hliðar"
+            }
+          }
+        },
+        "courseF_artist_fwp_challenge1": {
+          "draw background": {
+            "name": "teikna bakgrunn",
+            "parameters": {
+              "color": "litur"
+            }
+          },
+          "draw a polygon": {
+            "name": "teikna marghyrning",
+            "parameters": {
+              "sides": "hliðar"
+            }
+          },
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseF_artist_fwp_challenge2": {
+          "draw a square 20": {
+            "name": "teikna ferning 20",
+            "description": "teikna ferning í stærð 20 dílar"
+          },
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw an octagon": {
+            "name": "teikna átthyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "move and check": {
+            "name": "færa og athuga"
+          },
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
+        },
+        "courseF_bee_functions2": {
+          "get only nectar": {
+            "name": "sækja bara blómasafa"
+          }
+        },
+        "courseF_bee_functions3": {
+          "only make honey": {
+            "name": "aðeins gera hunang"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          }
+        },
+        "courseF_bee_functions4": {
+          "move and check": {
+            "name": "færa og athuga"
+          },
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "move and check": {
+            "name": "færa og athuga"
+          },
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          }
+        },
+        "courseF_bee_functions6": {
+          "get nectar make honey": {
+            "name": "safna blómasafa búa til hunang"
+          }
+        },
+        "courseF_bee_functions7": {
+          "get nectar make honey": {
+            "name": "safna blómasafa búa til hunang"
+          }
+        },
+        "courseF_bee_functions8a": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "get nectar make honey": {
+            "name": "safna blómasafa búa til hunang"
+          }
+        },
+        "courseF_bee_functionsPre7": {
+          "get nectar make honey": {
+            "name": "safna blómasafa búa til hunang"
+          }
+        },
+        "courseF_bee_functions_challenge1": {
+          "row of nectar": {
+            "name": "röð með blómasafa"
+          },
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          },
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          }
+        },
+        "courseF_bee_functions_challenge2": {
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          },
+          "move and check": {
+            "name": "færa og athuga"
+          },
+          "check nectar or honey": {
+            "name": "athuga safa og hunang"
+          }
+        },
+        "courseF_bee_fwp2": {
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          }
+        },
+        "courseF_bee_fwp3": {
+          "rowOfNectar": {
+            "name": "rowOfNectar"
+          }
+        },
+        "courseF_bee_fwp4": {
+          "rowOfNectar": {
+            "name": "rowOfNectar",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "name": "rowOfNectar",
+            "parameters": {
+              "width": "breidd"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "name": "rowOfNectar",
+            "parameters": {
+              "width": "breidd"
+            }
+          }
+        },
+        "courseF_bee_fwp7": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "breidd"
+            }
+          }
+        },
+        "courseF_bee_fwp8": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "breidd"
+            }
+          }
+        },
+        "courseF_bee_fwp9_predict1": {
+          "rowOfNectarOrHoney": {
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "breidd"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge1": {
+          "pick row": {
+            "name": "tína beð",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_bee_fwp_challenge2": {
+          "pick row": {
+            "name": "tína beð",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "courseF_bee_variables_1_2018": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_1_2019": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_1_2020": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_2_2018": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_2_2019": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_2_2020": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_3_2018": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_3_2019": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_3_2020": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_4_2018": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_4_2019": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_4_2020": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_5_2018": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_5_2019": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_5_2020": {
+          "collect row": {
+            "name": "safna röð"
+          }
+        },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "tröppuslóð"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "tröppuslóð"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "tröppuslóð"
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "safna"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "safna"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "safna"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "move and increment": {
+            "name": "færa og auka"
+          },
+          "collect": {
+            "name": "safna"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "move and increment": {
+            "name": "færa og auka"
+          },
+          "collect": {
+            "name": "safna"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "move and increment": {
+            "name": "færa og auka"
+          },
+          "collect": {
+            "name": "safna"
+          }
+        },
+        "grade5_artist_binary11": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary4": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary5": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary8": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "grade5_artist_binary9": {
+          "draw": {
+            "name": "teikna"
+          },
+          "draw bit": {
+            "name": "teikna bita"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "teikna stjörnu",
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "parameters": {
+              "points": "stig",
+              "length": "lengd"
+            }
+          },
+          "draw a circle": {
+            "name": "teikna hring",
+            "description": "teikna hring með tiltekinn radíus",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd",
+              "repeat": "endurtaka"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "sides": "hliðar",
+              "length": "lengd"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        }
+      }
+    }
+  }
+}

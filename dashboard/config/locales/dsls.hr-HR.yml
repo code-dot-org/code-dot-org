@@ -3,9 +3,6 @@ hr-HR:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Višestruki izbor
-        questions:
-        - text: Odaberi algoritam za priloženu sliku.
         answers:
         - text: Započni s kvadratom<br/>Stavi trokut iznad kvadrata<br/>Stavi trokut
             ispod kvadrata
@@ -14,223 +11,229 @@ hr-HR:
             trokut desno od paralelograma
         - text: Započni s kvadratom<br/>Stavi trokut ispod kvadrata<br/>Stavi paralelogram
             desno od trokuta
-      2-3 Algorithms Multi 2:
-        title: Višestruki izbor
-        content1: Započni s trokutom<br/>Stavi kvadrat ispod trokuta<br/>Stavi drugi
-          trokut ispod kvadrata
         questions:
-        - text: Koja slika <em>ne</em>slijedi ovaj algoritam?
+        - text: Odaberi algoritam za priloženu sliku.
+        title: Višestruki izbor
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
+        content1: Započni s trokutom<br/>Stavi kvadrat ispod trokuta<br/>Stavi drugi
+          trokut ispod kvadrata
+        questions:
+        - text: Koja slika <em>ne</em>slijedi ovaj algoritam?
+        title: Višestruki izbor
       2-3 Big Event Match 1:
-        title: Spoji parove
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Poveži kombinacije oblika s plesnim pokretima.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Spoji parove
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Spoji parove
         content2: Koristi gornje šifre da spojiš kodove i odgovarajuća slova
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Spoji parove
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Conditionals Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Prema pravilima igre, koji set karata je ispravno bodovan?
+        title: Višestruki izbor
+      2-3 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Kako ovaj slijed naredbi možeš pojednostaviti pomoću petlji?
+        title: Višestruki izbor
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Spoji parove
         content1: Spoji sliku i odgovarajući program.
         questions:
         - {}
         - {}
         - {}
+        title: Spoji parove
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 Graph Paper Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koji program stvara ovu sliku?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Višestruki izbor
       2-3 Maze Match 2:
-        title: Labirint - spoji parove
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Spoji zadatke i odgovarajuće blokove naredbi
-        pre_title: Upute
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Labirint - spoji parove
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
         title: Labirint - višestruki izbor
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Višestruki izbor
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
-      2-3 Relay Programming Multi 2:
+        questions:
+        - {}
         title: Višestruki izbor
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
         questions:
         - text: Koja kombinacija slike i programa nema grešaka?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Višestruki izbor
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        title: Umjetnik - funkcije - višestruki izbor 1
-        questions:
-        - text: Odaberi odgovarajuće blokove da nacrtaš ovu sliku koristeći dane funkcije
         answers:
         - {}
         - {}
         - {}
+        questions:
+        - text: Odaberi odgovarajuće blokove da nacrtaš ovu sliku koristeći dane funkcije
+        title: Umjetnik - funkcije - višestruki izbor 1
       2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Spoji petlju s oblikom
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 1:
-        title: Umjetnik - petlje - višestruki izbor
         questions:
         - text: Koji oblik je napravila ova petlja?
+        title: Umjetnik - petlje - višestruki izbor
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist loops multi 2:
-        title: Umjetnik - petlje - višestruki izbor
         questions:
         - text: Koji oblik je napravljen ovim programom?
+        title: Umjetnik - petlje - višestruki izbor
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: Umjetnik - spoji parove
         content1: Spoji oblik s blokom koji ga dovršava.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Umjetnik - spoji parove
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Koja dolje navedena usporedba je točna?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Odaberi najbolje blokove.
+      2-3 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: Pčela - petlje - višestruki izbor 1
         questions:
         - text: Koji blokovi mogu pokupiti sav sok?
+        title: Pčela - petlje - višestruki izbor 1
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: Labirint - spoji parove 1
         content1: Spoji zadatke i odgovarajuće blokove naredbi
         questions:
         - {}
         - {}
         - {}
+        title: Labirint - spoji parove 1
+      2-3 maze multi 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 maze multi 1:
-        title: Labirint - višestruki izbor 1
+        - {}
         questions:
         - text: Koji slijed blokova je točan odgovor?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirint - višestruki izbor 1
       4-5 Algorithms Match 1:
-        title: Spoji parove
+        answers:
+        - text: "<h4>Postavi bodove igrača 1 na 0</h4>"
+        - text: "<h4>Igrač 1 baca kocku</h4>"
+        - text: "<h4>Dodaj broj koji je dobio igrač 1 zbroju njegovih bodova</h4>"
+        - text: "<h4>Usporedi zbrojeve bodova igrača da vidiš tko je pobijedio</h4>"
         content1: Složi korake u igri Utrke kockicom onim redoslijedom kojim se trebaju
           pojaviti u algoritmu.
         questions:
@@ -238,22 +241,22 @@ hr-HR:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Postavi bodove igrača 1 na 0</h4>"
-        - text: "<h4>Igrač 1 baca kocku</h4>"
-        - text: "<h4>Dodaj broj koji je dobio igrač 1 zbroju njegovih bodova</h4>"
-        - text: "<h4>Usporedi zbrojeve bodova igrača da vidiš tko je pobijedio</h4>"
+        title: Spoji parove
       4-5 Algorithms Multi 1:
-        title: Višestruki izbor
-        questions:
-        - text: Koju od ovih stvari je najteže opisati algoritmom?
         answers:
         - text: Pranje zuba
         - text: Pečenje kolača
         - text: Kupovina prema popisu namirnica
         - text: Banana
+        questions:
+        - text: Koju od ovih stvari je najteže opisati algoritmom?
+        title: Višestruki izbor
       4-5 Computational Thinking Match 1:
-        title: Spoji parove
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Sva ova vozila rastavljena su na manje dijelove. Spoji vozila s
           njihovim popisima dijelova.
         questions:
@@ -261,78 +264,78 @@ hr-HR:
         - text: "<h3>Kotači/strana: 2<br/>Prozori/strana: 1</h3>"
         - text: "<h3>Kotači/strana: 2<br/>Prozori/strana: 6</h3>"
         - text: "<h3>Kotači/strana: 3<br/>Prozori/strana: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Spoji parove
       4-5 Computational Thinking Multi 1:
-        title: Višestruki izbor
-        questions:
-        - text: Seattle je velik grad.<br/>Eugene je osrednji grad.<br/>Hillview je
-            mali grad.
         answers:
         - text: Seattle _____ je _____ _____.
         - text: _____ je _____ grad.
         - text: _____ je _____.
         - text: Eugene je _____ grad.
-      4-5 Crowdsourcing Multi 1:
-        title: Višestruki izbor
         questions:
-        - text: Koja slika najbolje predstavlja crowdsourcing?
+        - text: Seattle je velik grad.<br/>Eugene je osrednji grad.<br/>Hillview je
+            mali grad.
+        title: Višestruki izbor
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - {}
-      4-5 Crowdsourcing Multi 2:
-        title: Višestruki izbor
         questions:
-        - text: Koja bi od ovih aktivnosti bilo najbolja za prakticiranje crowdsourcinga?
+        - text: Koja slika najbolje predstavlja crowdsourcing?
+        title: Višestruki izbor
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Čišćenje svoje sobe
         - text: Jedenje svog deserta
         - text: Češljanje kose
         - text: Umivanje
-      4-5 Digital Footprint Multi 1:
-        title: Višestruki izbor
         questions:
-        - text: Koje od navedenih informacija je u redu podijeliti na Internetu?
+        - text: Koja bi od ovih aktivnosti bilo najbolja za prakticiranje crowdsourcinga?
+        title: Višestruki izbor
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Tvoj rođendan
         - text: Tvoja omiljena hrana
         - text: Tvoja adresa
         - text: Broj kreditne kartice tvog roditelja
-      4-5 Internet Multi 1:
+        questions:
+        - text: Koje od navedenih informacija je u redu podijeliti na Internetu?
         title: Višestruki izbor
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Kada se pokušaš prijaviti na code.org, na koju IP adresu će te DNS
             najvjerojatnije odvesti?
+        title: Višestruki izbor
+      4-5 Internet Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Internet Multi 2:
-        title: Višestruki izbor
         questions:
         - text: Ukoliko te DNS odvede na stranicu s IP adresom 100.42.50.110, na kojoj
             se mrežnoj stranici nalaziš?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Višestruki izbor
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
         - {}
         - {}
+        questions:
+        - {}
+        title: Višestruki izbor
       4-5 Suncatchers Match 1:
-        title: Spoji parove
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Spojite svaki program sa rječju koju stvara, koristeći ponuđene
           setove vještina (skill).
         questions:
@@ -340,110 +343,106 @@ hr-HR:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Spoji parove
       4-5 Suncatchers Multi 1:
-        title: Višestruki izbor
+        answers:
+        - {}
+        - {}
+        - {}
         questions:
         - text: Koji od navedenih programa <em>ne bi</em> napravio točno isti slijed
             kao Program 1?
+        title: Višestruki izbor
+      4-5 artist loops multi 1:
         answers:
         - {}
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: Umjetnik - petlje - višestruki izbor
+        - {}
         questions:
         - text: Koji blokovi će stvoriti ovakav uzorak?
+        title: Umjetnik - petlje - višestruki izbor
+      4-5 artist multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 1:
-        title: Umjetnik - višestruki izbor
         questions:
         - text: Koji blokovi crtaju pravokutnik opsega 100?
+        title: Umjetnik - višestruki izbor
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 artist multi 2:
-        title: Umjetnik - višestruki izbor
         questions:
         - text: Koji crtež je simetričan?
+        title: Umjetnik - višestruki izbor
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee conditionals multi 1:
-        title: Pčela - uvjeti - višestruki izbor
         questions:
         - text: Odaberi najbolje blokove.
+        title: Pčela - uvjeti - višestruki izbor
+      4-5 bee debug multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee debug multi 1:
-        title: Pčela - ispravljanje grešaka - višestruki izbor
         questions:
         - text: Koja verzija funkcije će raditi ispravno?
+        title: Pčela - ispravljanje grešaka - višestruki izbor
+      4-5 bee loops multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 bee loops multi 1:
-        title: Pčela - petlje - višestruki izbor
         questions:
         - text: Koji blokovi će riješiti zadatak?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Pčela - petlje - višestruki izbor
       4-5 maze conditionals multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Koji blokovi rješavaju ovaj zadatak?
         title: Labirint - uvjeti - višestruki izbor
-        questions:
-        - text: Koji blokovi rješavaju ovaj zadatak?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Labirint - spoji parove
-        content1: Spoji zadatke i odgovarajuće blokove naredbi
-        pre_title: Upute
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Spoji zadatke i odgovarajuće blokove naredbi
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labirint - spoji parove
       4-5 maze multi 1:
-        title: Labirint - višestruki izbor
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Koji blokovi rješavaju ovaj zadatak?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirint - višestruki izbor
       Begin planning your project:
-        title: naslov
         content1: opis ovdje
       Begin planning your project_2018:
         content1: opis ovdje
       Begin planning your project_2018_2019:
+        content1: opis ovdje
+      Begin planning your project_2018_2019_2020:
         content1: opis ovdje
       CSD Header Size MC:
         answers:
@@ -464,87 +463,78 @@ hr-HR:
         - {}
         - {}
       CSD U2 Design Project:
-        title: naslov
         content1: opis ovdje
       CSD U2 Design Project_2018:
-        title: naslov
         content1: opis ovdje
       CSD U2 Design Project_2018_2019:
-        title: naslov
+        content1: opis ovdje
+      CSD U2 L1 Overview:
         content1: opis ovdje
       CSD U2 L2 Overview:
-        title: naslov
         content1: opis ovdje
       CSD U2 L3 Overview:
-        title: naslov
         content1: opis ovdje
       CSD U2 L4 Overview:
-        title: naslov
         content1: opis ovdje
       CSD U2 L5 Overview:
-        title: naslov
         content1: opis ovdje
       CSD U2 L6 Overview:
-        title: naslov
         content1: opis ovdje
       CSD U2 Lesson 6 Overview:
         content1: opis ovdje
       CSD U2 expand project:
-        title: naslov
         content1: opis ovdje
       CSD U2 expand project_2018:
-        title: naslov
         content1: opis ovdje
       CSD U2 expand project_2018_2019:
-        title: naslov
         content1: opis ovdje
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -557,71 +547,71 @@ hr-HR:
       CSD U2 project guide_2018_2019:
         content1: opis ovdje
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: naslov
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: naslov
       CSD U3 Boolean MC_2018:
-        title: naslov
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: naslov
       CSD U3 Boolean MC_2018_2019:
-        title: naslov
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: naslov
       CSD U3 Card Examples_2018:
         content1: opis ovdje
       CSD U3 Card Examples_2018_2019:
@@ -645,107 +635,104 @@ hr-HR:
         - {}
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: naslov
         content1: opis ovdje
       CSD U3 combining rep_2018:
-        title: naslov
         content1: opis ovdje
       CSD U3 combining rep_2018_2019:
-        title: naslov
         content1: opis ovdje
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -763,13 +750,10 @@ hr-HR:
       CSD U3 platform intro_2018_2019:
         content1: opis ovdje
       CSD U5 Encryption 1:
-        title: naslov
         content1: opis ovdje
       CSD U5 Encryption 1_2018:
-        title: naslov
         content1: opis ovdje
       CSD U5 Encryption 1_2018_2019:
-        title: naslov
         content1: opis ovdje
       CSD U5 Encryption 2:
         content1: opis ovdje
@@ -778,7 +762,6 @@ hr-HR:
       CSD U5 Encryption 2_2018_2019:
         content1: opis ovdje
       CSD U5 L13 SFLP Interpreting Data:
-        title: naslov
         content1: opis ovdje
       CSD U5 crosstab warmup:
         content1: opis ovdje
@@ -787,22 +770,16 @@ hr-HR:
       CSD U5 crosstab warmup_2018_2019:
         content1: opis ovdje
       CSD U5 data visualization:
-        title: naslov
         content1: opis ovdje
       CSD U5 data visualization_2018:
-        title: naslov
         content1: opis ovdje
       CSD U5 data visualization_2018_2019:
-        title: naslov
         content1: opis ovdje
       CSD U5 student record:
-        title: naslov
         content1: opis ovdje
       CSD U5 student record_2018:
-        title: naslov
         content1: opis ovdje
       CSD U5 student record_2018_2019:
-        title: naslov
         content1: opis ovdje
       CSD U6 LED create intro:
         content1: opis ovdje
@@ -811,28 +788,28 @@ hr-HR:
       CSD U6 LED create intro_2018_2019:
         content1: opis ovdje
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 final intro:
         content1: opis ovdje
@@ -841,916 +818,1356 @@ hr-HR:
       CSD U6 final intro_2018_2019:
         content1: opis ovdje
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       Internet Simulator Setup:
         content1: opis ovdje
       Internet Simulator Setup 2:
-        title: naslov
         content1: opis ovdje
       Internet Simulator Setup 3:
         content1: opis ovdje
       K-1 Artist 1 Multi 1:
-        title: Višestruki izbor
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - text: Koji blokovi rješavaju ovu zagonetku?
+        title: Višestruki izbor
+      K-1 Artist 1 Multi 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 1 Multi 2:
-        title: Višestruki izbor
         questions:
         - text: Koji blokovi crtaju kvadrat?
+        title: Višestruki izbor
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Spoji parove
         content2: Spojite oblike na temelju sličnosti.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Višestruki izbor
-        questions:
-        - text: Koliko je to nektara?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Višestruki izbor
-        questions:
-        - text: Koliko je to nektara?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Spoji parove
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Koliko je to nektara?
+        title: Višestruki izbor
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Koliko je to nektara?
+        title: Višestruki izbor
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Spoji parove blokova
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Spoji parove
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Spoji parove
         content2: Poveži kombinacije oblika s plesnim pokretima.
         questions:
         - {}
         - {}
         - {}
+        title: Spoji parove
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Digital Footprint Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koja životinja ima digitalni trag koji je čini <strong>najmanje zaštićenom</strong>?
+        title: Višestruki izbor
+      K-1 Getting Loopy Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Getting Loopy Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Kako ovaj slijed naredbi možeš pojednostaviti pomoću petlji?
+        title: Višestruki izbor
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Višestruki izbor
+        - {}
         questions:
         - text: Koja strelica vodi Flurba do blaga?
+        title: Višestruki izbor
+      K-1 Keep it Private Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Keep it Private Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koju informaciju <strong>ne smiješ</strong> dijeliti na internetu?
+        title: Višestruki izbor
+      K-1 Maze Debugging Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Debugging Multi 1:
-        title: Višestruki izbor
+        - {}
         questions:
         - text: Koji blok bi trebao biti na kraju?
+        title: Višestruki izbor
+      K-1 Maze Loops Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koji je blok ponavljanja isti?
+        title: Višestruki izbor
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Loops Multi 2:
-        title: Višestruki izbor
         questions:
         - text: Izaberite ispravan blok ponavljanja.
+        title: Višestruki izbor
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Spoji parove
+        - {}
         content2: Spoji zadatke i blokove
-        pre_title: Upute
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Spoji parove
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Maze Multiple Choice 2:
-        title: Labirint
         questions:
         - text: Koji odgovor rješava ovaj zadatak?
+        title: Labirint
+      K-1 Move It Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Move It Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koji algoritam vodi Flurba do cvijeća?
+        title: Višestruki izbor
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koji korak bi trebao biti na početku programa?
+        title: Višestruki izbor
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
         - {}
         - {}
-      K-1 Plant a Seed Multi 2:
-        title: Višestruki izbor
         questions:
         - text: Koji korak treba staviti na mjesto upitnika u ovom algoritmu?
+        title: Višestruki izbor
+      K-1 Word Search Multi 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Word Search Multi 1:
-        title: Višestruki izbor
         questions:
         - text: Koji blokovi slovkaju riječ "MOVE"?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
         title: Višestruki izbor
-        questions:
-        - text: Koja riječ je slovkana?
+      K-1 Word Search Multi 3:
         answers:
         - text: SET
         - text: SQUARE
         - text: SOUTH
+        questions:
+        - text: Koja riječ je slovkana?
+        title: Višestruki izbor
       Multi-Screen Apps:
-        title: naslov
         content1: opis ovdje
       New Challenge Introduction:
-        title: naslov
+        content1: opis ovdje
+      OPD-K5 Reviewing Reflections:
         content1: opis ovdje
       OPD-K5 Stage3aGo:
-        title: naslov
+        content1: opis ovdje
+      OPD-K5 Stage3aGo_copy:
+        content1: opis ovdje
+      OPD-K5 conditionals introduced:
+        content1: opis ovdje
+      OPD-K5 debugging:
+        content1: opis ovdje
+      OPD-K5 diving deeper intro:
+        content1: opis ovdje
+      OPD-K5 events introduced:
+        content1: opis ovdje
+      OPD-K5 for loops:
+        content1: opis ovdje
+      OPD-K5 for loops intro:
+        content1: opis ovdje
+      OPD-K5 for loops introduction:
+        content1: opis ovdje
+      OPD-K5 functions introduced:
+        content1: opis ovdje
+      OPD-K5 journaling:
+        content1: opis ovdje
+      OPD-K5 lesson implementation planning:
+        content1: opis ovdje
+      OPD-K5 lesson plans:
+        content1: opis ovdje
+      OPD-K5 loops introduced:
+        content1: opis ovdje
+      OPD-K5 project:
+        content1: opis ovdje
+      OPD-K5 projects introduction:
+        content1: opis ovdje
+      OPD-K5 role_of_teacher:
+        content1: opis ovdje
+      OPD-K5 sequencing introduced:
+        content1: opis ovdje
+      OPD-K5 sprite lab:
+        content1: opis ovdje
+      OPD-K5 sprite lab introduction:
+        content1: opis ovdje
+      OPD-K5 sprite lab unplugged:
+        content1: opis ovdje
+      OPD-K5 sprite lab video:
+        content1: opis ovdje
+      OPD-K5 types of lessons:
+        content1: opis ovdje
+      OPD-K5 using lesson plans:
+        content1: opis ovdje
+      OPD-K5 variables:
+        content1: opis ovdje
+      OPD-K5 variables introduction:
+        content1: opis ovdje
+      OPD-K5 variables unplugged:
+        content1: opis ovdje
+      OPD-K5 where to next:
+        content1: opis ovdje
+      OPD-K5-projects-1:
         content1: opis ovdje
       Prepare for your presentation:
-        title: naslov
         content1: opis ovdje
       'Technique: Frequency Analysis':
         content1: opis ovdje
       Terminology Recap:
         content1: opis ovdje
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: Scrat će doći do žira. U programskom kodu nema grešaka.
+          feedback: Netočno. Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
+            ne pomakne dovoljno naprijed da dosegne žir.
+        - text: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
+          feedback: Točno! Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
+            ne pomakne dovoljno naprijed da dosegne žir.
+        - text: Scrat neće doći do žira jer nema dovoljno blokova za "pomicanje naprijed".
+          feedback: Točno! Prvo, Scrat skrene u pogrešnom smjeru, a zatim se Scrat
+            ne pomakne dovoljno naprijed da dosegne žir.
+        - feedback: U ovom su kodu dvije greške. Prvo, Scrat skrene u pogrešnom smjeru,
+            a zatim se Scrat ne pomakne dovoljno naprijed da dosegne žir.
+        questions:
+        - text: Potražite greške u ovom kodu. Hoće li Scrat doći do žira ili postoji
+            problem?
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: opis ovdje
+        markdown: |
+          # Super digitalni građanin
+
+          ## Kako možemo reagirati kada vidimo internetsko zlostavljanje?
+      csf_password_power-up:
+        content1: opis ovdje
+        markdown: |
+          # Ojačajte zaporku
+
+          ## Savjeti za sigurnijom zaporkom
+
+          * Korisi ** frazu ** koju nećeš zaboraviti.
+          * Samo tvoji ** roditelji ** trebaju znati tvoju zaporku.
+          * Nikada u zaporci ne koristi ** privatne ** podatke o identitetu.
+          * Neka tvoje zaporke imaju najmanje ** osam ** znakova.
+          * U zaporkama koristi slova, brojke i ** simbole **.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        content1: opis ovdje
+        markdown: |
+          # STOP podlosti
+
+          ## Što bi trebao učiniti ako je netko na internetu zločest prema tebi?
+
+          *S**mjesta otići.
+          *T** Reći odrasloj osobi od povjerenja.
+          * **O**dlaziti na sigurna web sjedišta.
+          * **P**aziti i razmišljati dok sam online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_story:
+        content1: opis ovdje
+      outbreak_story2:
+        content1: opis ovdje
+      outbreak_freeplay_choice:
+        display_name: Slobodna igra
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # Snaga riječi
+
+          ## Što bi trebao učiniti kad netko koristi zli ili uvredljiv jezik na internetu?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Privatni i osobni podaci
+
+          ## Koje podatke o sebi možeš dijeliti na internetu?
+      courseD_EOC_2020:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseD_project_exemplars_2020_2021:
+        markdown: |+
+          # Primjeri projekata
+
+          Upravo započinjete svoj konačni projekt. Prije nego što započnete, provedite neko vrijeme gledajući primjere projekata.
+
+
+          | Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | Lopta mijenja brzinu kad odskoči! | Izbjegavajte olujne udare ili će se oni umnožavati! |
+
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Rezervni plesači nastavljaju mijenjati poteze! | Pokušajte dodati više boje i pozadine ovoj sceni! |
+
+      courseE_EOC_2020:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseE_project_exemplars_2019_2020:
+        markdown: |
+          # Primjeri projekata
+
+          Upravo započinjete svoj konačni projekt. Prije nego što započnete, provedite neko vrijeme gledajući primjere projekata.
+
+          ## Sprite Lab
+
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Pokušajte dodati tekst ili rezultat u ovu igru! | Pokušajte dodati tekst ili rezultat u ovu igru! |
+
+          ## Artist
+
+          | Pattern (Artist) | Snowflake Flowers (Frozen) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Krenimo kreativno s ugniježđenim petljama! | Krenimo kreativno s funkcijama! |
+      courseExpress_EOC_2020:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberi projekt
+          kojeg želiš izraditi.
+      courseExpress_project_exemplars_2019_2020:
+        markdown: |+
+          # Primjeri projekata
+
+          Upravo započinjete svoj konačni projekt. Prije nego što započnete, provedite malo vremena analizirajući primjere projekata.
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Uključite disko dok ga zamjenski rezervni plesači mijenjaju! | Pokušajte dodati više boje i pozadine ovoj sceni! |
+
+          | Snowflake Flowers (Frozen) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Krenimo kreativno s funkcijama! | Pokušajte dodati tekst ili rezultat u ovu igru! |
+
+      courseF_EOC_2020:
+        description: Stigao si do posljednje lekcije tečaja F! Odaberi projekt koji
+          želiš izraditi.
+      courseF_project_exemplars_2019_2020:
+        markdown: "# Primjeri projekata\n\nUpravo započinjete svoj konačni projekt.
+          Prije nego što započnete, provedite neko vrijeme gledajući primjere projekata.\n\n##
+          Sprite Lab\n\n| Cupcake Game (Sprite Lab) | \tAirplane Game (Sprite Lab)
+          |\n|---|---|\n| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Pokušajte dodati tekst ili rezultat u ovu igru! | Pokušajte dodati
+          tekst ili rezultat u ovu igru! |\n\n## Artist\n\n| Flowers (Artist) | Spiral
+          (Artist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Krenimo kreativno s varijablama! | Krenimo kreativno s for petljama!
+          |\n\n"
+      csf_digital_trails:
+        markdown: |-
+          # Slijedite Digitalni trag
+
+          ## Koje podatke možemo imati u svom digitalnom otisku?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Moja internetska četvrt
+
+          ## Kako sigurno odlazite na mjesta na mreži?

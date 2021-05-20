@@ -6,6 +6,6 @@
       -else
         = i[:name_s]
     -unless i[:role_s].nil_or_empty?
-      %p= "#{i[:role_s]}"
+      %p!= i[:role_s]
     -unless i[:description_t].nil_or_empty?
-      %p= "#{i[:description_t]}"
+      %p!= i[:description_t]

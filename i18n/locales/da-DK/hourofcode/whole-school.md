@@ -1,9 +1,8 @@
 ---
 title: Deltagelse - hele skoler
-layout: wide
 ---
 
-{{ signup_button }}
+{{ tilmeld_knap }}
 
 # Get your whole school to participate
 

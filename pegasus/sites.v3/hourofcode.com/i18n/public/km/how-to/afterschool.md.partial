@@ -1,86 +1,92 @@
 ---
-title: How-to Guide
+title: របៀបណែនាំ Hour of Code សម្រាប់ក្រោយម៉ោងសិក្សា
 layout: wide
 nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code in after-school classes and clubs
+# How to teach one Hour of Code in after-school classes and clubsរបៀបបង្រៀន Hour of Code មួយម៉ោងក្នុងថ្នាក់និងក្លឹបក្រោយម៉ោងសិក្សា
 
-### Join the movement and introduce a group of students to their first hour of computer science with these steps. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
 
----
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+សាកល្បង Hour of Code វាជាវិធីដ៏សាមញ្ញនិងរីករាយដើម្បីណែនាំសិស្សអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រដែលប្រហែលជាជាលើកដំបូងរបស់ពួក។ ប្រសិនបើអ្នកចង់បានជំនួយបន្ថែមដើម្បីជួយអ្នក អ្នកអាចរក [អ្នកស្ម័គ្រចិត្តក្នុងស្រុក]({{ urls/volunteer_local }}) ដើម្បីជួយរៀបចំ Hour of Code នៅក្នុងថ្នាក់ឬក្លឹបបន្ទាប់ពីម៉ោងសិក្សារបស់អ្នក។
 
-## 2. Choose a tutorial
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+* * *
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+## 1. មើលវីឌីអូរបៀបរៀបចំនេះ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+## 2. ជ្រើសរើសការបង្រៀនមួយ 
+
+យើងផ្តល់ជូននូវ [ការបង្រៀនរយៈពេលមួយម៉ោង ដែលសប្បាយៗ ជាច្រើន]({{ urls/learn }}) សម្រាប់អ្នកចូលរួមគ្រប់វ័យដែលបង្កើតដោយដៃគូជាច្រើន។ [សាកល្បងវាមើល!]({{ urls/learn }}) 
+
+**រាល់ការបង្រៀន Hour of Code ** តម្រូវឱ្យមានពេលវេលាត្រៀមមុនតិចបំផុតសម្រាប់អ្នករៀបចំកម្មវិធី និងដែលអាចណែនាំដោយខ្លួនឯង ដែលអនុញ្ញាតឱ្យកុមារធ្វើការតាមល្បឿននិងកម្រិតជំនាញរបស់ពួកគេ។ 
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**ត្រូវការគំរោងមេរៀនសម្រាប់ក្រោយម៉ោងសិក្សា Hour of Code របស់អ្នក?** សាកល្បងមើលនេះមើល[គំរូ](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. ផ្សព្វផ្សាយ Hour of Code របស់អ្នក 
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+ផ្សព្វផ្សាយ Hour of Code របស់អ្នក [ជាមួយឧបករណ៍ទាំងនេះ]({{ urls/promote }}) និងលើកទឹកចិត្តឱ្យអ្នកដទៃរៀបចំកម្មវិធីដោយខ្លួនឯង។ 
 
-## 4. Plan your technology needs - computers are optional
+## 4. គិតមើលបច្ចេកវិទ្យាណាខ្លះដែលអ្នកត្រូវការ - កុំព្យូទ័រមានក៏បាន មិនមានក៏បាន 
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+បទពិសោធន៍ល្អបំផុតនៃ Hour of Code រួមមានកុំព្យូទ័រដែលមានភ្ជាប់អ៊ីនធឺណិត។ ប៉ុន្តែអ្នក **មិន** ត្រូវការកំព្យូទ័រសំរាប់ក្មេងគ្រប់រូបនោះទេ ហើយអ្នកក៏អាចធ្វើ Hour of Code ដោយគ្មានកុំព្យូទ័រទាល់តែសោះដែរ។
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+សូមតេសសាកល្បងការបង្រៀននៅលើកុំព្យួទ័រឬឧបករណ៍របស់សិស្សដើម្បីធានាថាឧបករណ៍ទាំងនោះដើរបានត្រឹមត្រូវនៅលើ browsers ហើយមានសម្លេងនិងវីដេអូ។ **តើ bandwidth ទាបកំរិតណា?** គ្រោងនឹងបង្ហាញវីដេអូនៅខាងដើមថ្នាក់ដូច្នេះសិស្សម្នាក់ៗមិនទាញយកវីដេអូផ្ទាល់ខ្លួនរបស់ពួកគេទេ។ ឬសាកល្បងការបង្រៀនដែលមិនបានភ្ជាប់ទៅអ៊ីនធឺណិត។
 
-Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
+ប្រសិនបើការបង្រៀនដែលអ្នកជ្រើសរើសទាមទារអោយមានជាមួយសម្លេងដើម្បីបានគុណភាពល្អបំផុតនោះ គួរផ្តល់កាសត្រចៀកសម្រាប់សិស្សក្នុងថ្នាក់របស់អ្នក ឬសុំឱ្យសិស្សប្រើកាសរបស់ខ្លួនឯង។
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**មិនមានឧបករណ៍គ្រប់គ្រាន់ទេ?** ប្រើ [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). នៅពេលសិស្សចាប់ដៃគូពួកគេជួយគ្នាហើយពឹងផ្អែកលើគ្រូតិចជាងមុន។ ពួកគេក៏នឹងមើលឃើញថាវិទ្យាសាស្រ្តកុំព្យួទ័រគឺជាទំនាក់ទំនងសង្គមនិងមានការសហការគ្នា។
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. ចាប់ផ្តើម Hour of Code off របស់អ្នកជាមួយនឹង វីដេអូបំផុសគំនិត 
 
-Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+ចាប់ផ្តើម Hour of Code របស់អ្នកដោយបំផុសគំនិតដល់អ្នកចូលរួមនិងពិភាក្សាពីឥទ្ធិពលដែលវិទ្យាសាស្ត្រកុំព្យូទ័រមានលើគ្រប់ផ្នែកនៃជីវិតរបស់យើង
 
-**Show an inspirational video:**
+**បង្ហាញវីដេអូលើកទឹកចិត្ត៖**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- វីដេអូដាក់ឱ្យដំណើរការដំបូងរបស់ Code.org មានលោកប៊ីលហ្គេត លោកម៉ាកហ្សាក់ឃឺបឺក និងតារាបាល់បោះ NBA គ្រីស បូស មាន [1 នាទី](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 នាទី](https://www.youtube.com/watch?v=nKIu9yen5nc) និង [9 នាទី](https://www.youtube.com/watch?v=dU1xS07N-FA) 
+- វីដេអូ [Hour of Code នៅទូទាំងពិភពលោក](https://www.youtube.com/watch?v=KsOIlDT145A) 
+- [លោកប្រធានាធិបតីអូបាម៉ាអំពាវនាវឱ្យសិស្សទាំងអស់រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ](https://www.youtube.com/watch?v=6XvmhE1J9PY). 
+- ស្វែងរកវីដេអូបំផុសគំនិត[ទីនេះ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**បើអ្នកទាំងអស់គ្នាថ្មីសុទ្ធជាមួយនិងវិទ្យាសាស្ត្រកុំព្យូទ័រមិនអីទេ។ នេះគឺជាគំនិតមួយចំនួនដើម្បីណែនាំអ្នកអំពីសកម្មភាពHour of Code របស់អ្នក៖**
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about apps and technology that is used to save lives, help people, connect people etc).
-- List things that use code in everyday life.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- ពន្យល់ពីវិធីដែលបច្ចេកវិទ្យាជះឥទ្ធិពលដល់ជីវិតរបស់យើងដោយអោយជាឧទាហរណ៍ដែលទាំងក្មេងប្រុសនិងក្មេងស្រីយកចិត្តទុកដាក់ (និយាយអំពីកម្មវិធីនិងបច្ចេកវិទ្យាដែលត្រូវបានប្រើដើម្បីជួយសង្គ្រោះជីវិត ជួយមនុស្ស ភ្ជាប់ទំនាក់ទំនងមនុស្សជាដើម) ។
+- រាយមុខរបស់របស់ដែលប្រើកូដនៅក្នុងជីវិតប្រចាំថ្ងៃ។
+- មើលព័ត៌មានជំនួយដើម្បីទាក់ទាញឱ្យក្មេងស្រីចាប់អារម្មណ៍លើវិទ្យាសាស្ត្រកុំព្យូទ័រ [ទីនេះ]({{ urls/girls }}). 
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**ត្រូវការការណែនាំបន្ថែម?** ទាញយកពីត្រង់នេះ [នូវផែនការមេរៀនគំរូ](/files/AfterschoolEducatorLessonPlanOutline.docx). 
 
-## 6. Code!
+## 6. កូដ!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**នាំអ្នកចូលរួមទៅកាន់សកម្មភាព** - សរសេរតំណមេរៀននៅលើក្ដារខៀន។ ស្វែងរកតំណដែលមានរាយនៅលើ [ព័ត៌មានបង្រៀនដែលអ្នកបានជ្រើសរើស]({{ urls/learn }}) ក្រោមចំនួនអ្នកចូលរួម។ 
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**នៅពេលនរណាម្នាក់ឆ្លងកាត់ការលំបាកវា មិនអីទេក្នុងការឆ្លើយតប:** - “ខ្ញុំមិនដឹងទេ។ Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**ធ្វើដូចម្តេចប្រសិនបើនរណាម្នាក់បញ្ចប់មុនពេលកំណត់?** - លើកទឹកចិត្តឱ្យអ្នកចូលរួមសាកល្បងសកម្មភាព Hour of Code ផ្សេងទៀតនៅ [hourofcode.com/learn]({{ urls/learn }}) - ឬសួរអ្នកដែលបញ្ចប់ឆាប់អោយជួយអ្នកដទៃដែលកំពុងមានបញ្ហា។ 
 
-## 7. Celebrate
+## 7. អបអរសាទរ
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [បោះពុម្ពវិញ្ញាបនបត្រ]({{ urls/certificates }}) អោយសិស្សរបស់អ្នក។ 
+- [បោះពុម្ភស្ទីកឃ័រ "ខ្ញុំបានធ្វើ Hour of Code!"]({{ promote/resources_stickers }}) អោយសិស្សរបស់អ្នក។ 
+- [បញ្ជាទិញអាវយឺត](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) សំរាប់អ្នកចូលរួម។ 
+- ចែករំលែករូបថតនិងវីដេអូនៃកម្មវិធី Hour of Code របស់អ្នកនៅលើប្រព័ន្ធផ្សព្វផ្សាយសង្គម។ ប្រើ #HourOfCode និង @codeorg ដើម្បីអោយយើងអាចបង្ហាញភាពជោគជ័យរបស់អ្នកផងដែរ!
 
-## Other Hour of Code resources for educators
+## ធនធាន Hour of Code សម្រាប់អ្នកអប់រំ
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- ពិនិត្យ​មើល [គន្លឹះអនុវត្តល្អៗ](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ពីអ្នករៀបចំកម្មវិធី Hour of Code ពីមុន។ 
+- មើលការថតសម្លេងរបស់យើង[មគ្គុទេសក៍របស់អ្នកអប់រំសំរាប់សិក្ខាសាលាអំពី Hour of Code](https://youtu.be/EJeMeSW2-Mw). 
+- សូមចូលទៅមើល [វេទិកា Hour of Code](http://forum.code.org/c/plc/hour-of-code) ដើម្បីទទួលបានដំបូន្មានការយល់ដឹងនិងការគាំទ្រពីអ្នករៀបចំផ្សេងទៀត។ 
+- ពិនិត្យឡើងវិញ [Hour of Code សំណួរគេសួរញឹកញាប់](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). 
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+Hour of Code គ្រាន់តែជាជំហានដំបូងនៃដំណើរស្វែងយល់បន្ថែមអំពីរបៀបដែលបច្ចេកវិទ្យាដំណើរការ និងរបៀបបង្កើតកម្មវិធីសូហ្វវែរ។ ជួយសិស្សបន្តដំណើររបស់ពួកគេនិងលើកទឹកចិត្តពួកគេ[ស្វែងយល់បន្ថែមតាមអ៊ីនធឺណិត](/beyond)! 
 
 {{ signup_button }}

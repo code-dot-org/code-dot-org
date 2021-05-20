@@ -1,0 +1,121 @@
+{
+  "script": {
+    "name": "dance-extras-gallery",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:29 UTC",
+    "seeding_key": {
+      "script.name": "dance-extras-gallery"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "dance-extras-gallery"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Dance Party - Go Further",
+      "name": "Dance Party - Go Further",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-gallery"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_Party_extras_gallery_intro"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_Party_extras_gallery_intro"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-gallery"
+      },
+      "level_keys": [
+        "Dance_Party_extras_gallery_intro"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Dance_Party_extras_gallery_intro",
+        "script_level.level_keys": [
+          "Dance_Party_extras_gallery_intro"
+        ],
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-gallery"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

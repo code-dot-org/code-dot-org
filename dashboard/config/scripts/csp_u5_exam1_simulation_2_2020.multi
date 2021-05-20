@@ -1,0 +1,38 @@
+name 'csp-u5-exam1-simulation-2_2020'
+editor_experiment ''
+
+
+wrong '`random(1,100) = 40`'
+wrong '`random(1,100) = 60`'
+wrong '`random(1,100) <= 40`'
+right '`random(1,100) <= 60`'
+
+
+markdown <<MARKDOWN
+A restaurant knows from historical data that 60 out of 100 of its customers purchase a full meal while 40 out of 100 only order a side dish. The program below is intended to simulate the orders of 1000 customers.
+
+![](https://images.code.org/9c47c2e2639f5a81648ac18c790e3063-image-1615248162500.01.57 PM.png)
+
+Which of the following can be used to replace `<MISSING CODE>` so that the simulation works as intended?
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Since the value stored in `fullMeal` will be increased by 1 when this statement evaluates to true, it should evaluate to true 60 out of 100 times. Since a number chosen at random between 1 and 100 will be less than or equal to 60, 60 out of every 100 times, this expression can be used to make the simulation work as intended.
+
+Students practiced writing their own simulation program for rolling a dice in [Lesson 7 - Loops Practice](https://curriculum.code.org/csp-20/unit5/7/). 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-3.F: For simulations:
+a. Explain how computers can be used to represent real-world phenomena or outcomes.
+b. Compare simulations with real-world contexts.
+:::
+
+
+
+
+MARKDOWN

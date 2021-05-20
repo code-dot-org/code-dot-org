@@ -10,6 +10,13 @@
   "danceFeedbackNeedDifferentDance": "Másik táncot kell használnod.",
   "danceFeedbackNeedEveryTwoMeasures": "Ügyelj rá, hogy használd a „2 ütemenként“ blokkot",
   "danceFeedbackNeedMakeANewDancer": "Második táncos létrehozásához használd az „új készítése“ blokkot.",
-  "danceFeedbackKeyEvent": "Bizonyosod meg róla, hogy csatoltál kódot a \"amikor gomb\" blokkhoz, és nyomd meg a gombot, amíg a tánc fut.",
+  "danceFeedbackKeyEvent": "Bizonyosodj meg róla, hogy csatoltál kódot a <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"fel\"</title></block></xml> blokkhoz, és nyomd meg a gombot, amíg a tánc fut.",
+  "danceFeedbackDidntPress": "Mindenképpen nyomd meg a gombot, amíg a tánc folyamatban van.",
+  "danceFeedbackPressedKey": "Megnyomtad valamely gombot, de a táncosod nem reagált.",
+  "danceFeedbackNeedTwoDancers": "Két táncost kell létrehoznod.",
+  "danceFeedbackOnlyOneDancerMoved": "Csak az egyik táncos mozdult meg.",
+  "danceFeedbackNeedLead": "Egy vezető táncost is létre kell hoznod a <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> block segítségével.",
+  "danceFeedbackNeedBackup": "Létre kell hoznod háttértáncosok egy csoportját a <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blokk segítségével.",
+  "danceFeedbackSetSize": "Legalább egy táncos méretét meg kell változtatnod miután a zene elindul.",
   "measure": "Ütem:"
 }

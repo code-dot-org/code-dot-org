@@ -2,6 +2,49 @@
 ja:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        text: |-
+          {GROUP} は {MOVE1} と {MOVE2}
+          の間の毎 {N} 小節を変更する
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
+          MOVE1:
+            MOVES.Roll: ボディロール
+            MOVES.ClapHigh: 手を高く上げてたたく
+            MOVES.Dab: ダブ
+            MOVES.DoubleJam: ダブルダウン
+            MOVES.Drop: ドロップ
+            MOVES.Floss: フロス
+            MOVES.Fresh: フレッシュ
+            MOVES.Clown: カンナム
+            MOVES.Kick: 星
+            MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Rest: 設定なし
+          MOVE2:
+            MOVES.Roll: ボディロール
+            MOVES.ClapHigh: 手を高く上げてたたく
+            MOVES.Dab: ダブ
+            MOVES.DoubleJam: ダブルダウン
+            MOVES.Drop: ドロップ
+            MOVES.Floss: フロス
+            MOVES.Fresh: フレッシュ
+            MOVES.Clown: カンナム
+            MOVES.Kick: 星
+            MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Rest: 設定なし
       Dancelab_atTimestamp:
         text: "{TIMESTAMP} {UNIT} 後"
         options:
@@ -30,6 +73,7 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーンだらけ
           MOVE:
             '"next"': "(次へ)"
@@ -42,13 +86,10 @@ ja:
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ガンナム
+            MOVES.Clown: カンナム
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} で実行 {MOVE} {DIR} ずっとくりかえす"
         options:
@@ -63,16 +104,39 @@ ja:
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ガンナム
+            MOVES.Clown: カンナム
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+      Dancelab_changePropEachBy:
+        text: |-
+          {VAL} で{GROUP} {PROPERTY}
+           を変更する
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
@@ -95,44 +159,65 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           MOVE:
             '"rand"': "(ランダム)"
+            MOVES.XBend: 曲げる
             MOVES.Roll: ボディロール
+            MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
+            MOVES.XFever: ディスコ
             MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ガンナム
+            MOVES.Clown: カンナム
+            MOVES.XHeadHips: 頭+腰
+            MOVES.XHop: 跳ぶ
+            MOVES.XHighKick: キック
+            MOVES.XKnee: 膝
+            MOVES.XKneel: ひざまずく
+            MOVES.XOle: オレ
+            MOVES.XArmsSide: リーチ
+            MOVES.XSlide: 滑り台
             MOVES.Kick: 星
+            MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} で実行 {MOVE} {DIR} いちどだけ"
         options:
           MOVE:
             '"rand"': "(ランダム)"
+            MOVES.XBend: 曲げる
             MOVES.Roll: ボディロール
+            MOVES.XClapSide: 拍手
             MOVES.ClapHigh: 手を高く上げてたたく
             MOVES.Dab: ダブ
+            MOVES.XFever: ディスコ
             MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
             MOVES.Floss: フロス
             MOVES.Fresh: フレッシュ
-            MOVES.Clown: ガンナム
+            MOVES.Clown: カンナム
+            MOVES.XHeadHips: 頭+腰
+            MOVES.XHop: 跳ぶ
+            MOVES.XHighKick: キック
+            MOVES.XKnee: 膝
+            MOVES.XKneel: ひざまずく
+            MOVES.XOle: オレ
+            MOVES.XArmsSide: リーチ
+            MOVES.XSlide: 滑り台
             MOVES.Kick: 星
+            MOVES.XArmsUp: ストレッチ
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
-          DIR:
-            '1': "→"
-            "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: "{START} 後に、毎 {N} 小節 "
       Dancelab_everySeconds:
-        text: 'すべての {N} {UNIT} '
+        text: "{N} ごとに{UNIT} を繰り返します "
         options:
           UNIT:
             '"measures"': 小節
@@ -157,6 +242,7 @@ ja:
             '"mid"': ミドル
             '"high"': トレブル
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -179,7 +265,7 @@ ja:
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
-            MOVES.Clown: ガンナム
+            MOVES.Clown: カンナム
             MOVES.Dab: ダブ
             MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
@@ -190,10 +276,17 @@ ja:
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
       Dancelab_ifTime:
+        text: |-
+          もし、{UNIT} が {OP}
+           {N} {DO1} {DO2} の場合
         options:
           UNIT:
             '"measures"': 小節
             '"seconds"': 秒
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE}　{LOCATION}にとぶ"
         options:
@@ -208,6 +301,34 @@ ja:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
+      Dancelab_jumpToEach:
+        text: "{GROUP} から{LOCATION} にジャンプ"
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
+          LOCATION:
+            "{x: 200, y: 100}": 上
+            "{x: 200, y: 300}": 下
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ランダム に
       Dancelab_layoutSprites:
         text: "{GROUP} を {FORMAT} にレイアウト"
         options:
@@ -223,17 +344,50 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           FORMAT:
             '"border"': 境界
             '"inner"': 四角の中
+            '"diamond"': ダイヤモンド
             '"circle"': 円
             '"grid"': グリッド
+            '"top"': 一番上の行
             '"row"': 行
+            '"bottom"': 最終行
+            '"left"': 左の列
             '"column"': 列
+            '"right"': 右の列
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
+      Dancelab_makeAnonymousDanceSprite:
+        text: "{LOCATION} で新しい{COSTUME} を作成します"
+        options:
+          COSTUME:
+            '"ALIEN"': エイリアン
+            '"BEAR"': クマ
+            '"CAT"': ねこ
+            '"DOG"': 犬
+            '"DUCK"': アヒル
+            '"FROG"': カエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': パイナップル
+            '"ROBOT"': ロボット
+            '"SHARK"': サメ
+            '"SLOTH"': sloth
+            '"UNICORN"': ユニコーン
+          LOCATION:
+            "{x: 200, y: 100}": 上
+            "{x: 200, y: 300}": 下
+            "{x: 100, y: 200}": 左 に
+            "{x: 300, y: 200}": 右 に
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム に
       Dancelab_makeNewDanceSprite:
         text: |-
           {COSTUME} を新しくつくる
@@ -250,6 +404,7 @@ ja:
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
+            '"SLOTH"': sloth
             '"UNICORN"': ユニコーン
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -298,14 +453,20 @@ ja:
             '"PINEAPPLE"': パイナップル
             '"ROBOT"': ロボット
             '"SHARK"': サメ
+            '"SLOTH"': sloths
             '"UNICORN"': ユニコーン
           LAYOUT:
             '"border"': 境界
             '"inner"': 四角の中
+            '"diamond"': ダイヤモンド
             '"circle"': 円
             '"grid"': グリッド
+            '"top"': 一番上の行
             '"row"': 行
+            '"bottom"': 最終行
+            '"left"': 左の列
             '"column"': 列
+            '"right"': 右の列
             '"x"': 十字
             '"plus"': プラス
             '"random"': ランダム に
@@ -332,9 +493,10 @@ ja:
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
+            '"fireworks"': 花火
             '"swirl"': ヒプノ
-            '"kaleidoscope"': 万華鏡
-            '"lasers"': レーザーのダンスフロア
+            '"kaleidoscope"': カレイドスコープ
+            '"lasers"': レーザーダンスフロア
             '"splatter"': 塗料のしぶき
             '"rainbow"': 虹
             '"snowflakes"': 雪
@@ -345,42 +507,56 @@ ja:
             '"disco"': 正方形
             '"stars"': 星
           PALETTE:
-            '"rave"': 白黒
-            '"cool"': 青
+            '"rave"': モノクロ
+            '"cool"': クール
+            '"electronic"': エレクトロニクス
+            '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
-            '"tropical"': 熱帯
-            '"vintage"': ヴィンテージ
+            '"tropical"': トロピカル
+            '"vintage"': ビンテージ
             '"warm"': 赤
       Dancelab_setBackgroundEffectWithPalette:
-        text: 背景エフェクトを {EFFECT} {PALETTE} にセット
+        text: |-
+          "バックグラウンド効果を設定します
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
             '"circles"': トンネル
+            '"quads"': アングル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
+            '"fireworks"': 花火
+            '"flowers"': フラワー
+            '"growing_stars"': 成長する星
             '"swirl"': ヒプノ
-            '"kaleidoscope"': 万華鏡
-            '"lasers"': レーザーのダンスフロア
+            '"kaleidoscope"': カレイドスコープ
+            '"lasers"': レーザーダンスフロア
             '"splatter"': 塗料のしぶき
             '"rainbow"': 虹
+            '"ripples_random"': ランダムなさざ波
+            '"ripples"': さざ波
             '"snowflakes"': 雪
             '"text"': 曲名
+            '"squiggles"': 波線
             '"galaxy"': 宇宙
             '"sparkles"': きらめき
             '"spiral"': スパイラル
             '"disco"': 正方形
             '"stars"': 星
+            '"music_wave"': 波
           PALETTE:
-            '"rave"': 白黒
-            '"cool"': 青
+            '"rave"': モノクロ
+            '"cool"': クール
+            '"electronic"': エレクトロニクス
+            '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
-            '"tropical"': 熱帯
-            '"vintage"': ヴィンテージ
+            '"tropical"': トロピカル
+            '"vintage"': ビンテージ
             '"warm"': 赤
       Dancelab_setDanceSpeed:
         text: "{SPRITE} のダンスの速さを {SPEED} に変更"
@@ -392,6 +568,7 @@ ja:
             '0.5': おそい
             '0.25': すごくおそい
       Dancelab_setDanceSpeedEach:
+        text: "{GROUP} のダンス速度を {SPEED} に設定"
         options:
           GROUP:
             sprites: すべて
@@ -405,7 +582,8 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           SPEED:
             '1': ノーマル
             '2': はやい
@@ -422,10 +600,13 @@ ja:
             '"hearts_red"': ハート
             '"music_notes"': 音符
             '"pineapples"': パイナップル
-            '"smiling_poop"': うんち
+            '"pizzas"': ピザ
+            '"smiling_poop"': 落し物
             '"rain"': 雨
             '"floating_rainbows"': 虹
             '"smile_face"': スマイル
+            '"spotlight"': 'Spotligh+A188: A192t'
+            '"color_lights"': ステージライト
             '"raining_tacos"': タコス
       Dancelab_setForegroundEffectExtended:
         text: 前景エフェクトを {EFFECT} にセット
@@ -434,14 +615,21 @@ ja:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
             '"bubbles"': 泡
+            '"hearts_colorful"': カラフルなハート
             '"confetti"': 紙吹雪
+            '"emojis"': 絵文字
             '"hearts_red"': ハート
             '"music_notes"': 音符
+            '"paint_drip"': ペイントドリップ
             '"pineapples"': パイナップル
-            '"smiling_poop"': うんち
+            '"pizzas"': ピザ
+            '"smiling_poop"': 落し物
             '"rain"': 雨
             '"floating_rainbows"': 虹
             '"smile_face"': スマイル
+            '"spotlight"': 'Spotligh+A188: A192t'
+            '"color_lights"': ステージライト
+            '"exploding_stars"': スターバースト
             '"raining_tacos"': タコス
       Dancelab_setProp:
         text: "{SPRITE} {PROPERTY} を {VAL} にセット "
@@ -453,7 +641,6 @@ ja:
             '"rotation"': 回転
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
-            '"tint"': 色合い
       Dancelab_setPropEach:
         text: "{GROUP} {PROPERTY} を {VAL} にセット"
         options:
@@ -469,7 +656,8 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
@@ -489,9 +677,35 @@ ja:
             '"x"': 水平方向の位置
             '"y"': 垂直方向の位置
             '"tint"': 色合い
+      Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY} をランダム化します"
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+            '"tint"': 色合い
       Dancelab_setTint:
         text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setTintEach:
+        text: "{THIS} の色合いを {VAL} に設定"
         options:
           THIS:
             sprites: すべて
@@ -505,6 +719,25 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
+      Dancelab_setTintEachInline:
+        text: "{THIS} の色合いを {VAL} に設定"
+        options:
+          THIS:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
       Dancelab_setTintInline:
         text: "{SPRITE} の色合いを {VAL} にセット"
       Dancelab_setVisible:
@@ -528,13 +761,43 @@ ja:
             '"PINEAPPLE"': すべてのパイナップル
             '"ROBOT"': すべてのロボット
             '"SHARK"': すべてのサメ
-            '"UNICORN"': ユニコーンだらけ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           VISIBILITY:
             'true': 見える
             'false': 見えない
       Dancelab_startMapping:
         text: "{SPRITE} が {PROPERTY} をはじめる、{RANGE} のあとに"
         options:
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+            '"tint"': 色合い
+          RANGE:
+            '"bass"': ベース
+            '"mid"': ミドル
+            '"treble"': トレブル
+      Dancelab_startMappingEach:
+        text: "{GROUP} は{PROPERTY} を{RANGE} の後に開始"
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
           PROPERTY:
             '"scale"': 大きさ
             '"width"': 幅
@@ -563,6 +826,82 @@ ja:
             '"bass"': ベース
             '"mid"': ミドル
             '"treble"': トレブル
+      Dancelab_stopMappingEach:
+        text: "{GROUP} は{PROPERTY} を{RANGE} の後に終了"
+        options:
+          GROUP:
+            sprites: すべて
+            '"ALIEN"': すべてのエイリアン
+            '"BEAR"': すべてのクマ
+            '"CAT"': すべてのネコ
+            '"DOG"': すべてのイヌ
+            '"DUCK"': すべてのアヒル
+            '"FROG"': すべてのカエル
+            '"MOOSE"': すべてのムース
+            '"PINEAPPLE"': すべてのパイナップル
+            '"ROBOT"': すべてのロボット
+            '"SHARK"': すべてのサメ
+            '"SLOTH"': sloths
+            '"UNICORN"': ユニコーン
+          PROPERTY:
+            '"scale"': 大きさ
+            '"width"': 幅
+            '"height"': 高さ
+            '"rotation"': 回転
+            '"x"': 水平方向の位置
+            '"y"': 垂直方向の位置
+            '"direction"': 動きの方向
+            '"tint"': 色合い
+          RANGE:
+            '"bass"': ベース
+            '"mid"': ミドル
+            '"treble"': トレブル
+      Dancelab_translateStrings:
+        text: "{STRING} を翻訳"
+        options:
+          STRING:
+            '"music_wave"': 波
+            '"ripples"': さざ波
+            '"ripples_random"': ランダムなさざ波
+            '"quads"': アングル
+            '"flowers"': フラワー
+            '"popsicles"': アイスキャンディー
+            '"squiggles"': 波線
+            '"growing_stars"': 成長する星
+            '"emojis"': 絵文字
+            '"hearts_colorful"': ハート
+            '"paint_drio"': ペイントドリップ
+            '"exploding_stars"': スターバースト
+            '"row_top"': 一番上の行
+            '"row_bottom"': 最終行
+            '"column_left"': 左の列
+            '"column_right"': 右の列
+            '"diamond"': ダイヤモンド
+            '"mural"': 壁画
+            '"safari"': サファリ
+            '"network"': ネットワーク
+            '"highway"': ハイウェイ
+            '"stream"': ストリーム
+            '"tile"': タイル
+            '"shadow"': 影
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: "{KEY} が押されたとき"
         options:
@@ -571,9 +910,44 @@ ja:
             '"left"': 左 に
             '"down"': 下 に
             '"right"': 右 に
-            '"space"': うちゅう
+            '"space"': スペース
+            '"enter"': 入る
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: "{RANGE} がいちばん大きいとき"
         options:
@@ -583,6 +957,16 @@ ja:
             '2': トレブル
       Dancelab_whenSetup:
         text: セットアップ
+      Dancelab_whenSetup2:
+        text: セットアップ
+      gamelab_addBehaviorSimple:
+        text: スプライト {SPRITE} 開始 {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
       gamelab_changePropBy:
         text: "{SPRITE} {PROPERTY} を {VAL} 変更"
         options:
@@ -592,12 +976,29 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+            '"speed"': スピード
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} 触れる {SPRITE2}"
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+      gamelab_clickedOn:
+        text: いつ {SPRITE} クリック
+      gamelab_clickedSpritePointer:
+        text: クリック {SPRITE}
+      gamelab_comment:
+        text: コメント： {COMMENT}
+      gamelab_createNewSprite:
+        text: "新しいスプライトを作る \n と呼ばれる {NAME} \n 衣装付き {COSTUME} \n で {LOCATION}"
+      gamelab_destroy:
+        text: 削除 {THIS}
+      gamelab_draggable:
+        text: ドラッグ可能
+      gamelab_edgesDisplace:
+        text: エッジ ブロック {SPRITE} 移動から
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -606,9 +1007,58 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
             '"tint"': 色合い
+            '"speed"': スピード
+      gamelab_getThisSprite:
+        text: "{CHOICE} スプライト"
+        options:
+          CHOICE:
+            '"this"': これ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': 秒
+      gamelab_hideTitleScreen:
+        text: タイトル画面を非表示にする
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': 上 に
+            '"down"': 下 に
+            '"left"': 左 に
+            '"right"': 右 に
+            '"space"': うちゅう
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} エッジに触れている"
       gamelab_jumpTo:
         text: "{SPRITE}　{LOCATION}にとぶ"
       gamelab_keyPressed:
+        text: "{CONDITION} {KEY} 押さ れた"
         options:
           CONDITION:
             '"when"': もし
@@ -619,30 +1069,130 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+      gamelab_locationAt:
+        text: '場所 x: {X} Y： {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': 北だ
+            '"East"': 東だ
+            '"South"': 南だ
+            '"West"': 西だ
+      gamelab_locationMouse:
+        text: マウスの位置
+      gamelab_locationOf:
+        text: の場所 {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_mirrorSprite:
+        text: "{SPRITE} 顔 {DIRECTION}"
         options:
           DIRECTION:
             '"right"': 右 に
             '"left"': 左 に
+      gamelab_mouseLocation:
+        text: マウスの位置
+      gamelab_moveForward:
+        text: 移動 {SPRITE} {DISTANCE} ピクセルフォワード
+      gamelab_moveInDirection:
+        text: 移動 {SPRITE} {DISTANCE} ピクセル {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北だ
+            '"East"': 東だ
+            '"South"': 南だ
+            '"West"': 西だ
+      gamelab_moveToward:
+        text: 移動 {SPRITE} ピクセル {DISTANCE} に向かって {TARGET}
+      gamelab_newSpritePointer:
+        text: クリック {SPRITE}
+      gamelab_objectSpritePointer:
+        text: クリック {SPRITE}
+      gamelab_playSound:
+        text: Playsound {SOUND}
+      gamelab_pointInDirection:
+        text: ポイント {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': 北だ
+            '"East"': 東だ
+            '"South"': 南だ
+            '"West"': 西だ
+      gamelab_printText:
+        text: 印刷 {TEXT}
       gamelab_randColor:
         text: てきとうな色
       gamelab_randomColor:
         text: てきとうな色
+      gamelab_randomLocation:
+        text: ランダムな位置
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} は、すべてを停止します"
+      gamelab_removeBehaviorSimple:
+        text: スプライト {SPRITE} 停止 {BEHAVIOR}
+      gamelab_removeTint:
+        text: 色の削除元 {THIS}
+      gamelab_repeatForever:
+        text: ずっと
+      gamelab_setAnimation:
+        text: 変更 {THIS} 衣装に {ANIMATION}
       gamelab_setBackground:
         text: 背景色を {COLOR} にセット
       gamelab_setBackgroundImage:
+        text: 背景を次の値に設定する {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': どうくつ
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': 裁判所
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': さばく
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 銀河
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': グリッド
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': にじ
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': サイエンスフィクション
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': みずのなか
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ふゆ
+            undefined: なし
+      gamelab_setBackgroundImageAs:
+        text: 背景を次の値に設定する {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 普通
+            '100': large
       gamelab_setProp:
+        text: 設定 {SPRITE} {PROPERTY} 宛先 {VAL}
         options:
           PROPERTY:
             '"scale"': 大きさ
@@ -650,6 +1200,16 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+            '"speed"': スピード
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': 大きさ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 普通
+            '100': large
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY} を {N}%に設定"
         options:
@@ -657,16 +1217,33 @@ ja:
             '"scale"': 大きさ
             '"width"': 幅
             '"height"': 高さ
+      gamelab_setTint:
+        text: 色を変更する {THIS} 宛先 {COLOR}
+      gamelab_setupSim:
+        text: |-
+          でシミュレーションを設定する
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          収集
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: タイトル画面の表示 {BREAK} タイトル {TITLE} テキスト {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} クリック"
         options:
           CONDITION:
             '"when"': もし
             '"while"': 以下の間
+      gamelab_subjectSpritePointer:
+        text: クリック {SPRITE}
       gamelab_turn:
+        text: ターン {SPRITE} {DIRECTION} {N} 度
         options:
           DIRECTION:
             '"right"': 右 に
             '"left"': 左 に
+      gamelab_whenDownArrow:
+        text: 下矢印が押されたとき
       gamelab_whenKey:
         text: "{KEY} が押されたとき"
         options:
@@ -676,7 +1253,22 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: 左矢印が押されたとき
+      gamelab_whenRightArrow:
+        text: 右矢印が押されたとき
+      gamelab_whenTouching:
+        text: いつ {SPRITE1} 触れる {SPRITE2}
+      gamelab_whenUpArrow:
+        text: 上矢印が押されたとき
+      gamelab_whileDownArrow:
+        text: 下矢印を押したまま
       gamelab_whileKey:
+        text: ながら {KEY} 押さ れた
         options:
           KEY:
             '"up"': 上 に
@@ -684,6 +1276,37 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: 左矢印を押したまま
+      gamelab_whileRightArrow:
+        text: 右矢印を押したまま
+      gamelab_whileTouching:
+        text: ながら {SPRITE1} 触れている {SPRITE2}
+      gamelab_whileUpArrow:
+        text: 上矢印を押したまま
+      gamelab_xLocationOf:
+        text: x 座標の {SPRITE}
+      gamelab_yLocationOf:
+        text: y 座標 {SPRITE}
+      Mikelab_addBehaviorSimple:
+        text: スプライト {SPRITE} 開始 {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'トレーニング データを追加する: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": オブジェクトを返します
+            "{x: 200, y: 100}": 魚
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": 魚
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 魚ではない
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": マイレーベル
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 私のラベルではありません
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -704,6 +1327,8 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+      Mikelab_getNext:
+        text: 次のオブジェクトを取得する
       Mikelab_getProp:
         options:
           PROPERTY:
@@ -713,13 +1338,17 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupChangeAnim:
+        text: "[SELECT] [0] [COSTUME] [1] を[COSTUME2] [2] に変更します"
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
       Mikelab_groupChangePropBy:
+        text: 変更 {PROPERTY} の {SELECT} {COSTUME} によって {VAL}
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
           PROPERTY:
             '"scale"': 大きさ
             '"rotation"': 回転
@@ -727,6 +1356,7 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupCreateNewSprite:
+        text: "{LOCATION} で新しい{COSTUME} を作成します"
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -739,11 +1369,21 @@ ja:
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
       Mikelab_groupDestroy:
+        text: 削除 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
+      Mikelab_groupDisplace:
+        text: すべての {COSTUME} ブロック {COSTUME2} 移動から
+      Mikelab_groupEdgesDisplace:
+        text: エッジ ブロック {COSTUME} 移動から
       Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}'s {PROPERTY}"
         options:
+          SELECT:
+            '"average"': 平均
+            '"this"': これ
           PROPERTY:
             '"scale"': 大きさ
             '"rotation"': 回転
@@ -751,21 +1391,29 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupRemoveAllBehaviors:
+        text: 停止 {SELECT} {COSTUME} 動作
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
       Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
       Mikelab_groupRemoveTint:
+        text: 色の削除元 {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
       Mikelab_groupSetProp:
+        text: 設定 {PROPERTY} の {SELECT} {COSTUME} 宛先 {VAL}
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
           PROPERTY:
             '"scale"': 大きさ
             '"rotation"': 回転
@@ -773,9 +1421,29 @@ ja:
             '"y"': y 位置
             '"direction"': 動きの方向
       Mikelab_groupSetTint:
+        text: 色を変更する {SELECT} {COSTUME} 宛先 {COLOR}
         options:
           SELECT:
             '"all"': すべて
+            '"this"': これ
+      Mikelab_groupWhenClickedOn:
+        text: いつ {COSTUME} クリック
+      Mikelab_groupWhenXTouchesY:
+        text: いつ{COSTUME} 触れる {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: をクリックしながら {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          ながら{COSTUME} 触れている {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} は現在 {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: 削除 {TRASH}
+        options:
+          TRASH:
+            object: オブジェクトを返します
+            fish: 魚
       Mikelab_ifDanceIs:
         text: |-
           もし {SPRITE} が {DANCE} をしてたら
@@ -783,7 +1451,7 @@ ja:
         options:
           DANCE:
             MOVES.ClapHigh: 手を高く上げてたたく
-            MOVES.Clown: ガンナム
+            MOVES.Clown: カンナム
             MOVES.Dab: ダブ
             MOVES.DoubleJam: ダブルダウン
             MOVES.Drop: ドロップ
@@ -793,8 +1461,44 @@ ja:
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
+      Mikelab_ifLabel:
+        text: |-
+          もし {DANCE}
+          行う {DO1} 他 {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 魚
+            MOVES.Clown: マイレーベル
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          オブジェクトを次のように認識する場合 {DANCE}
+          行う {DO1} 他 {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 魚
+            MOVES.Clown: マイレーベル
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          オブジェクトを次のように認識する場合 {DANCE}
+          行う {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 魚
+            MOVES.Clown: 私のラベルではありません
+      Mikelab_locationAt:
+        text: '場所 x: {X} Y： {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
       Mikelab_randomColor:
         text: てきとうな色
+      Mikelab_removeBehaviorSimple:
+        text: スプライト {SPRITE} 停止 {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ずっと
+      Mikelab_sendBad:
+        text: オブジェクトを左に移動
+      Mikelab_sendGood:
+        text: オブジェクトを右に移動
       Mikelab_setBG:
         options:
           BG:
@@ -807,12 +1511,20 @@ ja:
             '"x"': x 位置
             '"y"': y 位置
             '"direction"': 動きの方向
+      Mikelab_setupSim:
+        text: |-
+          でシミュレーションを設定する
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          収集
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': 右 に
             '"left"': 左 に
       Mikelab_sprite:
+        text: 新機能 {COSTUME} スプライト {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": 上
@@ -824,6 +1536,8 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+      Mikelab_whenClickedOn:
+        text: いつ {SPRITE} クリック
       Mikelab_whenKeyPressed:
         text: "{KEY} が押されたとき"
         options:
@@ -847,6 +1561,14 @@ ja:
             '"a"': A
             '"s"': 南
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: マウスがクリックされたとき
+      Mikelab_whenYesNoClicked:
+        text: いつ {KEY} クリック
+        options:
+          KEY:
+            '"yes"': はい
+            '"no"': いいえ
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -854,74 +1576,103 @@ ja:
             '"down"': 下矢じるしキーが おされたら
             '"left"': 左矢じるしキーが おされたら
             '"right"': 右矢じるしキーが おされたら
+      Mikelab_xLocationOf:
+        text: x 座標の {SPRITE}
+      Mikelab_yLocationOf:
+        text: y 座標 {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': グリッド
+            '"border"': 境界
+            '"row"': 行
+            '"random"': ランダム に
       RyanLab_moveForward:
         text: 前に すすむ
       RyanLab_turnLeft:
         text: ひだりに まがる
       RyanLab_turnRight:
         text: みぎに まがる
+      SpriteLab2Beta_spriteSay:
+        text: スプライト {SPRITE} 言う {TEXT} 用 {SECONDS} 秒
+      Vector_createSpriteWith:
+        text: |-
+          スプライトの作成
+          行う{STATEMENT}
+      Vector_log:
+        text: ログ メッセージ {MESSAGE}
       Vector_positionCenter:
         text: 中央
-      aalab_changePropByFlexible:
-        text: "{SPRITE} {PROPERTY} を {VAL} 変更"
+      Vector_push:
+        text: 速度を設定する {VECTOR}
+      Vector_randomLocation:
+        text: ランダムな位置
+      Vector_setColor:
+        text: 色を次に設定する {COLOR}
+      Vector_setSize:
+        text: 幅を設定する {WIDTH} 高さ {HEIGHT}
+      Vector_teleportTo:
+        text: 位置の設定 {POSITION}
+      Vector_vectorNorth:
+        text: 北
+      Vector_where:
+        text: 各スプライト {PROPERTY} は {VALUE} 行う{STATEMENT}
         options:
           PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-      aalab_checkTouching:
+            "'shapeColor'": 色
+      aalab_layoutSprites:
         options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      aalab_clickedOn:
+          FORMAT:
+            '"grid"': グリッド
+            '"border"': 境界
+            '"row"': 行
+            '"random"': ランダム に
+      aalab_someGraduallyStartIntervention:
         options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-      aalab_jumpTo:
-        text: "{SPRITE}　{LOCATION}にとぶ"
-      aalab_keyPressed:
+          PORTION:
+            '1': すべて
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          CONDITION:
-            '"when"': もし
-            '"while"': 以下の間
-          KEY:
-            '"up"': 上 に
-            '"down"': 下 に
-            '"left"': 左 に
-            '"right"': 右 に
-            '"space"': うちゅう
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': まち
-      aalab_setCollidable:
+          PORTION:
+            '1': すべて
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      binary_drawBin:
+        text: バイナリを描画する {BIN}
+      binary_drawBinScreen:
+        text: |-
+          描画画面
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: 10 進数を描画する {DEC}
+      binary_drawPixelHere:
+        text: ピクセルを設定する {VAL}
         options:
           VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': 大きさ
-            '"rotation"': 回転
-            '"x"': x 位置
-            '"y"': y 位置
-            '"direction"': 動きの方向
-            '"tint"': 色合い
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ずっとくりかえす
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': 表示(ひょうじ)する
-            '"hide"': かくす
+            '0': をオフにします
+            '1': に
+            '"toggle"': のトグルを選択します
+      binary_drawString:
+        text: 文字列を描画する {STR}
+      binary_goTo:
+        text: にジャンプする {LOC}
+      binary_goToHome:
+        text: 左上にジャンプ
+      binary_gridSize:
+        text: グリッド サイズを設定する {SIZE}
       binary_move:
+        text: 移動 {DIR}
         options:
           DIR:
             '"up"': 上 に
@@ -937,6 +1688,10 @@ ja:
             '"left"': 左 に
             '"right"': 右 に
             '"space"': うちゅう
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           {DIR}に道がある時
@@ -967,6 +1722,8 @@ ja:
             "'sand'": 砂
             "'darkPrismarine'": 暗海晶ブロック
             "'seaLantern'": 海のランタン
+      craft_log:
+        text: ログ メッセージ {MESSAGE}
       craft_moveForward:
         text: 前に すすむ
       craft_placeBlock:
@@ -978,7 +1735,6 @@ ja:
             '"stoneBricks"': 石レンガ
             '"mossyStoneBricks"': 苔石レンガ
             '"crackedStoneBricks"': ひびの入った石レンガ
-            '"decorativeStoneBricks"': 模様入り石レンガ
             '"blueCoralBlock"': 青色のサンゴブロック
             '"pinkCoralBlock"': 桃色のサンゴブロック
             '"magentaCoralBlock"': 赤紫色のサンゴブロック

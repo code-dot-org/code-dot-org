@@ -3,36 +3,27 @@ fa:
   data:
     block_categories:
       Actions: اقدامات
-      Loops: حلقه‌ها
-      Functions: توابع
-      Color: رنگ
-      Math: ریاضی
-      Logic: منطق
-      Variables: متغیرها
-      Number: عدد
-      String: رشته
-      Image: تصویر
-      Boolean: بولی
-      Conditionals: شرطی ها
-      Events: رویدادها
-      Games/Score: بازی‌ها/امتیاز
-      Comments: نظرات
-      Category: دسته بندی
-      Prebuilt: پیش‌ساخت
-      Text: متن
-      Comment: دیدگاه
-      World: دنیا
+      Advanced: پیشرفته
       Behaviors: عملکردها
-      'Variables ': 'متغیرها '
+      Brushes: قلم‌ها
+      Color: رنگ
+      Comment: دیدگاه
+      Comments: نظرات
+      Conditionals: شرطی ها
+      Dancers: رقاص‌ها
       Default: پیش‎فرض
-      Locations: موقعیت‌های مکانی
-      everythingelse: هرچیز دیگر
-      Location: مکان
-      numbers: اعداد
-      Numbers: اعداد
+      Events: رویدادها
+      Functions: توابع
+      'Functions ': 'توابع '
+      Game/Score: بازی‌/امتیاز
+      Games/Score: بازی‌ها/امتیاز
       Groups: گروه ها
-      Start: شروع
-      Booleans: بولی ها
-      test: آزمایش
-      Name: نام
-      Function: تابع
+      Locations: موقعیت‌های مکانی
+      Logic: منطق
+      Loops: حلقه‌ها
+      Math: ریاضی
+      Numbers: اعداد
+      Text: متن
+      Variables: متغیرها
+      'Variables ': 'متغیرها '
+      World: دنیا

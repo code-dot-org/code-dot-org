@@ -1,0 +1,29 @@
+name 'U4L3 CFU Variables Randomness Psuedocode_2021'
+editor_experiment ''
+title 'AP Pseudocode: Variables'
+description ''
+wrong '1 1 20 20'
+wrong '2 2 11 11'
+wrong '10 10 10 10'
+right '10 5 10 5'
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how variable assignment questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below. 
+
+![](https://images.code.org/d6fedddeaaac92b18aee34566fd11208-image-1568057349469.28.53 PM.png)
+![](https://images.code.org/9199ee4c8b9282e039a32dfb59c37bda-image-1580143562357.45.52 AM.png)
+
+## Practice Question
+
+The program below is run. Which of the following COULD NOT possibly be the output from that program?
+
+```
+a <- RANDOM(1,10)
+b <- RANDOM(10,20)
+DISPLAY(a)
+DISPLAY(a)
+DISPLAY(b)
+DISPLAY(b)
+MARKDOWN

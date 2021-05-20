@@ -1,0 +1,191 @@
+{
+  "script": {
+    "name": "Tutorial Video - Code Studio Puzzle Challenge",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:39 UTC",
+    "seeding_key": {
+      "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Puzzles",
+      "name": "Puzzles",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge Artist Screencast"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Artist Screencast"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge Artist Screencast"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge Artist Screencast 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Artist Screencast 2"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge Artist Screencast 2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Code Studio Puzzle Challenge Bee Screencast"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Bee Screencast"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      },
+      "level_keys": [
+        "Code Studio Puzzle Challenge Bee Screencast"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge Artist Screencast",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Artist Screencast"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge Artist Screencast 2",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Artist Screencast 2"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Code Studio Puzzle Challenge Bee Screencast",
+        "script_level.level_keys": [
+          "Code Studio Puzzle Challenge Bee Screencast"
+        ],
+        "lesson.key": "Puzzles",
+        "lesson_group.key": "",
+        "script.name": "Tutorial Video - Code Studio Puzzle Challenge"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

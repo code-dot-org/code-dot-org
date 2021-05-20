@@ -45,13 +45,9 @@ ne:
   okay: 'ओके '
   or: या
   heading_x_of_y: "%{heading} (page %{x} of %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Add a teacher:'
       placeholder: Section Code (ABCDEF)
-      instructions: Please enter the code shared with you by your teacher. It's a
-        6 letter code like "ABCDEF".
-    submit: शिक्षक थप्नुहोस्
   add_hint_form:
     placeholder: Please enter your hint here
     submit: Add hint
@@ -78,9 +74,6 @@ ne:
   auth:
     sign_in_with: "%{provider} प्रयोग गरेर साइन इन गर्नुहोस्"
     signed_in: साइन इन गरिएको!
-    signed_out: You have signed out of <a href="%{url}">Code.org</a>.
-    sign_out_of: You used %{provider} to sign in. <a href="%{url}">Click here</a>
-      to sign out of %{provider}.
     already_signedup: पहिले नै साइन अप गरिसक्नु भएको छ?
     notyet_signedup: अझै सहभागी हुनु भएको छैन?
     google_oauth2: Google Account
@@ -128,15 +121,6 @@ ne:
     valid_password: Valid password!
     invalid_password: Password must be at least 6 characters
     mismatch_password: The two passwords you entered do not match
-    student_terms: I agree to be bound by the Code.org <a href='http://code.org/tos'>terms
-      of service</a>. If I am under 13 years of age, I confirm by submitting this
-      form that I have my parent or legal guardian's permission to use the Code.org
-      services.<br/><br/>Email addresses are not stored in a form that allows us to
-      contact students. Students will never recieve emails from Code.org except for
-      password recovery. See our <a href='http://code.org/privacy'>privacy policy</a>
-      for more information.
-    teacher_terms: I agree to be bound by the Code.org terms of service. For more
-      information on privacy, see our <a href='http://code.org/privacy'>privacy policy</a>.
     additional_information: We need some additional information to continue signing
       you up.
     user_type_label: Account Type
@@ -233,6 +217,8 @@ ne:
       project_gallery: Projects
       educate_hoc: Hour of Code
       stats: Stats
+      legal_privacy: Privacy Policy
+      legal_tos: Terms of Service
     user:
       classroom: Teacher Home Page
       district_dashboard: District Dashboard
@@ -313,15 +299,12 @@ ne:
       your students'' accounts.'
     delete_confirm: Are you sure you want to delete your account?
     deleted_user: deleted user
+    update_email: Update
   user_level:
     completed: Completed
     tried: Tried
   home:
     title: Code Studio
-    description: Code Studio is home to online courses created by Code.org
-    lines_of_code: "%{lines_count} LINES OF CODE WRITTEN BY STUDENTS"
-    lines_of_code_linebreak: "%{lines_count} LINES OF CODE<br/>WRITTEN BY %{students_count}
-      MILLION STUDENTS"
     all_courses: Overview of Courses 1, 2, and 3
     lesson_plans: Lesson plans
     signin_message: Already registered? %{link}
@@ -359,13 +342,6 @@ ne:
     test_videos_help: Test our new video player at your school
     try_beta_courses: New! Try our beta courses for K-5 students
     use_as_teacher: Use this site as a teacher
-    heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
-    heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals
-      (all ages)</h1>"
-    heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High
-      School</h1>"
-    heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: Try a Code Studio course
     choose_next_course: Try a Code Studio course by choosing one below
@@ -559,34 +535,12 @@ ne:
       title: Conditionals
     widgets:
       cta: Learn how
-  gallery:
-    students_drew_these_with_code: Students drew these with code!
-    students_made_these_with_code: Students made these with code!
-    picture_count: In the past <b>%{days}</b> days, students have drawn <b>%{count}</b>
-      pictures by writing their own computer programs. Click on the pictures to see
-      each program in action.
-    activity_count: In the past <b>%{days}</b> days, students have made <b>%{count}</b>
-      apps and pictures by writing their own computer programs. Click on the pictures
-      and screenshots to see each program in action.
-    want_to_make_your_own: Want to make your own?
-    how_to_save: On the last level of these tutorials, click "Finish" and "Save" to
-      save your work to the gallery.
-    more: More &rarr;
-    caption_by_name_age: by %{name}, age %{age}
-    caption_time_ago: "%{time_ago} ago"
-    header: Gallery
-    header_playlab: Stories and games
-    header_artist: Code art
-    report_abuse: Report Abuse
   landing:
-    prerelease: This course is in <span class='betatext'>beta</span>.  This means
-      it is not the final version of the course, and is subject to revision as feedback
-      is received and improvements are made.
-    prerelease_hoc2014: This tutorial is in <span class='betatext'>beta</span>.  It
-      is subject to revision as feedback is received and improvements are made.
     report_bug: Report Bug
     support: Get Help
     help_resources: Help and Resources
+  free_response:
+    placeholder: Enter your answer here
   multi:
     wrong_title: Incorrect answer
     wrong_body: The answer you've entered is not correct.  Please try again!
@@ -654,17 +608,17 @@ ne:
   age_interstitial:
     age: Your age
     header: Account Information Update
-    message: We're in the process of updating our experience to provide you with even
-      stronger privacy protections. To do this, we need existing users to enter their
-      age here.<br/>As always, code.org will never rent, sell or share this information
-      with any third parties.
-    sign_out: If you do not wish to provide your age you may <a href="%{url}">sign
-      out</a>.
   terms_interstitial:
     title: Updated Terms of Service and Privacy Policy
     intro_desc: 'We updated our Terms of Service and Privacy Policy, as shown below.
       The changes are effective as of August 24, 2016.  The biggest change: we will
       <i>no longer store email addresses for student accounts on Code Studio.</i>
+      This is a big deal for us, and we hope it sets a new standard for student privacy
+      in education technology. We''ve sent you a summary of the other changes via
+      email.'
+    intro_desc_markdown: 'We updated our Terms of Service and Privacy Policy, as shown
+      below. The changes are effective as of August 24, 2016. The biggest change:
+      we will _no longer store email addresses for student accounts on Code Studio._
       This is a big deal for us, and we hope it sets a new standard for student privacy
       in education technology. We''ve sent you a summary of the other changes via
       email.'
@@ -679,6 +633,8 @@ ne:
     privacy_notice: Privacy Notice
     accept_label: I agree to the updated <a href="%{tos_url}" target="_blank">Terms
       of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>
+    accept_label_markdown: I agree to the updated [Terms of Service](%{tos_url}) and
+      [Privacy Policy](%{privacy_url})
     accept: Accept
     print: Print
     reminder_desc: We have updated our <a href="%{tos_url}" target="_blank">Terms
@@ -779,40 +735,15 @@ ne:
   peer_review:
     accepted:
       name: Accepted
-      description: "<strong>Yes</strong>, this submission <strong>meets</strong> the
-        requirements"
     rejected:
       name: फर्काइयो
-      description: "<strong>No</strong>, this submission <strong>does not meet</strong>
-        the requirements"
     escalated:
       name: Escalated
       description: I would like an instructor to review this submission
     instructor_feedback: Instructor Feedback
     peer_feedback: Peer Feedback
     outdated: This feedback was added for a previously submitted version
-  flex_category:
-    required: Overview
-    content: Content
-    practice: Teaching Practices
     peer_review: Peer Review
-    csf_digcit: Digital Citizenship
-    csf_jigsaw: Jigsaw
-    csf_loops: Loops
-    csf_events: 'कार्य '
-    csf_binary: Binary
-    csf_conditionals: Conditionals
-    csf_nested_loops: Nested Loops
-    csf_functions: Functions
-    csf_variables: Variables
-    csf_for_loops: For Loops
-    csf_internet: Internet
-    csp2_1_2018: 'Unit 2: Digital Information'
-    csp_variables: Variables
-    csp_conditionals: Conditionals
-    csp_functions: Functions
-    csp_lists: Lists
-    csp_loops: Loops
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
@@ -887,6 +818,7 @@ ne:
     your answers.
   hidden_stage: Your teacher didn't expect you to be here. Please ask your teacher
     which lesson you should be on.
+  return_unit_overview: Go to unit overview
   return_course_overview: Go to unit overview
   pd:
     form_labels:
@@ -912,5 +844,4 @@ ne:
         opt_in_no: होइन
   cookie_banner:
     accept: I agree
-  gdpr_dialog:
-    true: हो
+  copy: प्रतिलिपि गर्नुहोस्

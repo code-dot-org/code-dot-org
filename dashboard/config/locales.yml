@@ -134,7 +134,6 @@
 "fil-PH":
   english: "Filipino"
   native: "Pilipino"
-  debug: true
 
 "fr": "fr-FR"
 "fr-FR":
@@ -168,7 +167,6 @@
 "hi-IN":
   english: "Hindi"
   native: "हिन्दी"
-  debug: true
   webfonts: false
 
 "hr": "hr-HR"
@@ -192,6 +190,12 @@
 "id-ID":
   english: "Indonesian"
   native: "Bahasa Indonesia"
+
+"in": "in-TL"
+"in-TL":
+  english: "Crowdin In-Context"
+  native: "Crowdin In-Context"
+  debug: true
 
 "is": "is-IS"
 "is-IS":
@@ -269,11 +273,16 @@
   debug: true
   webfonts: false
 
+"mn": "mn-MN"
+"mn-MN":
+  english: "Mongolian"
+  native: "Монгол хэл"
+  webfonts: false
+
 "mr": "mr-IN"
 "mr-IN":
   english: "Marathi"
   native: "मराठी"
-  debug: true
   webfonts: false
 
 "ms": "ms-MY"
@@ -399,14 +408,12 @@
 "ta-IN":
   english: "Tamil"
   native: "தமிழ்"
-  debug: true
   webfonts: false
 
 "te": "te-IN"
 "te-IN":
   english: "Telugu"
   native: "తెలుగు"
-  debug: true
   webfonts: false
 
 "th": "th-TH"
@@ -438,7 +445,6 @@
 "uz-UZ":
   english: "Uzbekistan"
   native: "Oʻzbekcha"
-  debug: true
 
 "vi": "vi-VN"
 "vi-VN":

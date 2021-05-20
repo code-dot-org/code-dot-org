@@ -1,0 +1,521 @@
+{
+  "script": {
+    "name": "denny-science-copy",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:38 UTC",
+    "seeding_key": {
+      "script.name": "denny-science-copy"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Collision Detector: Designing Screens",
+      "name": "Collision Detector: Designing Screens",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "key": "Collision Detector: Processing with Events",
+      "name": "Collision Detector: Processing with Events",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD mini design mode video_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD mini design mode video_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "CSD mini design mode video_copy"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Design Mode Map_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Design Mode Map_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Design Mode Map_copy"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science earthquake 1_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science earthquake 1_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science earthquake 1_copy"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science earthquake text_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science earthquake text_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science earthquake text_copy"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science earthquake images_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science earthquake images_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science earthquake images_copy"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science earthquake reflect_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science earthquake reflect_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science earthquake reflect_copy"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science change screen map_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science change screen map_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science change screen map_copy"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science board event map_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science board event map_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science board event map_copy"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science Circuit Playground Test_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science Circuit Playground Test_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science Circuit Playground Test_copy"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science event demo_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science event demo_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science event demo_copy"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science event accel_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science event accel_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science event accel_copy"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Science event test_copy"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Science event test_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      },
+      "level_keys": [
+        "Science event test_copy"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD mini design mode video_copy",
+        "script_level.level_keys": [
+          "CSD mini design mode video_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Design Mode Map_copy",
+        "script_level.level_keys": [
+          "Design Mode Map_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science earthquake 1_copy",
+        "script_level.level_keys": [
+          "Science earthquake 1_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science earthquake text_copy",
+        "script_level.level_keys": [
+          "Science earthquake text_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science earthquake images_copy",
+        "script_level.level_keys": [
+          "Science earthquake images_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science earthquake reflect_copy",
+        "script_level.level_keys": [
+          "Science earthquake reflect_copy"
+        ],
+        "lesson.key": "Collision Detector: Designing Screens",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science change screen map_copy",
+        "script_level.level_keys": [
+          "Science change screen map_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science board event map_copy",
+        "script_level.level_keys": [
+          "Science board event map_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science Circuit Playground Test_copy",
+        "script_level.level_keys": [
+          "Science Circuit Playground Test_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science event demo_copy",
+        "script_level.level_keys": [
+          "Science event demo_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science event accel_copy",
+        "script_level.level_keys": [
+          "Science event accel_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Science event test_copy",
+        "script_level.level_keys": [
+          "Science event test_copy"
+        ],
+        "lesson.key": "Collision Detector: Processing with Events",
+        "lesson_group.key": "",
+        "script.name": "denny-science-copy"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

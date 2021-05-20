@@ -5,6 +5,7 @@ gl:
       category:
         hoc_category_name: Hora de Código
         math_category_name: Matemáticas
+        other_category_name: Outros
       name:
         course1:
           title: Curso 1
@@ -16,7 +17,7 @@ gl:
             para primeiro grao de primaria.
           description_short: O Curso 1 está deseñado para lectores temperáns.
           description_audience: Idades de 4 a 6 anos
-          stages:
+          lessons:
             'Artist: Loops':
               name: 'Artista: Bucles'
             'Artist: Sequence':
@@ -53,6 +54,12 @@ gl:
               name: 'Laboratorio de Xogo: Crea unha Historia'
             The Big Event:
               name: O Gran Evento
+          student_description: O Curso 1 esta deseñado para permitir aos lectores
+            primeirizos crear programas de computador que lles axuden a aprender a
+            colaborar con outros, desenvolver habilidades de solución de problemas,
+            e persistir en tarefas difíciles. Para o final deste curso, os estudantes
+            crean o seu propio xogo personalizado ou historia que poden compartir.
+            Recomendado para primeiro grao de primaria.
         course2:
           title: Curso 2
           description: O Curso 2 está deseñado para estudantes que poden ler e non
@@ -61,7 +68,7 @@ gl:
             historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
           description_short: O Curso 2 está deseñado para estudantes que poden ler.
           description_audience: A partir de 6 anos (cómpre saber ler)
-          stages:
+          lessons:
             'Artist: Debugging':
               name: 'Artista: Depuración (Debug)'
             'Artist: Loops':
@@ -100,6 +107,11 @@ gl:
               name: O Gran Evento
             Your Digital Footprint:
               name: A túa pegada dixital
+          student_description: O Curso 2 está deseñado para estudantes que poden ler
+            e non teñen experiencia previa en programación. Neste curso os estudantes
+            crearán programas para resolver problemas e desenvolver xogos interactivos
+            ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de
+            primaria.
         course3:
           title: Curso 3
           description: O Curso 3 está deseñado para estudantes que fixeron o Curso
@@ -110,7 +122,7 @@ gl:
             Primaria.
           description_short: O Curso 3 é unha continuación do Curso 2.
           description_audience: Idades de 8 a 18 anos
-          stages:
+          lessons:
             Artist:
               name: Artista
             'Artist: Functions':
@@ -153,30 +165,41 @@ gl:
               name: 'Laboratorio de Xogos: Crear un Xogo'
             'Studio: Create a Story':
               name: 'Laboratorio de Xogo: Crea unha Historia'
+          student_description: O Curso 3 está deseñado para estudantes que fixeron
+            o Curso 2. Profundarase en temas de programación xa presentados nos cursos
+            anteriores, e que dan solucións flexíbeis a problemas máis complexos.
+            Ao remate do curso, os estudantes son quen de crear historias e xogos
+            interactivos que poden compartir con calquera. Recomendado para os cursos
+            4º a 5º de Primaria.
         playlab:
           title: Laboratorio de Xogos
           description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
           description_short: Crea unha historia ou fai un xogo con Laboratorio de
             Xogos!
-          stages:
+          lessons:
             Play Lab:
               name: Laboratorio de Xogos
+          student_description: Crea unha historia ou fai un xogo con Laboratorio de
+            Xogos!
         artist:
           title: Artista
           description: Debuxa imaxes estupendas e deseños co Artista!
           description_short: Debuxa imaxes estupendas e deseños co Artista!
-          stages:
+          lessons:
             Artist:
               name: Artista
+          student_description: Debuxa imaxes estupendas e deseños co Artista!
         hourofcode:
           title: Labirinto clásico
           description: Proba os fundamentos da informática cos personaxes de Angry
             Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
           description_short: Proba os fundamentos da informática con moitos personaxes
             divertidos!
-          stages:
+          lessons:
             Maze:
               name: Labirinto
+          student_description: Proba os fundamentos da informática cos personaxes
+            de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
         frozen:
           title: Programa con Ana e Elsa
           description: Imos usar código para unirnos a Ana e Elsa mentres exploran
@@ -185,9 +208,13 @@ gl:
             cos teus amigos!
           description_short: Usa a programación para explorar a maxia e a beleza do
             xeo con Anna e Elsa.
-          stages:
+          lessons:
             Artist:
               name: Artista
+          student_description: Imos usar código para unirnos a Ana e Elsa mentres
+            exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a
+            medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes
+            compartir cos teus amigos!
         course4:
           title: Curso 4
           description: O Curso 4 está deseñado para estudantes que fixeron os cursos
@@ -199,7 +226,7 @@ gl:
           description_short: Os alumnos que fan o curso 4 deben ter feitos xa os cursos
             2 e 3.
           description_audience: Idades de 10 a 18 anos
-          stages:
+          lessons:
             Artist:
               name: Artista
             Artist Binary:
@@ -244,13 +271,19 @@ gl:
               name: 'Desconectado: Composición de cancións con parámetros'
             'Unplugged: Tangrams':
               name: 'Desconectado: Tangrams'
+          student_description: O Curso 4 está deseñado para estudantes que fixeron
+            os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
+            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
+            Ao remate do curso, os estudantes serán quen de crear programas que amosen
+            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
+            dende 4º de Primaria a 2º de ESO.
         Course4pre:
           title: Prerequisitos do Curso 4
           description: Un breve resumo de conceptos para os estudantes que non deron
             os cursos 2 e 3.
           description_short: Un breve resumo de conceptos para os estudantes que non
             deron os cursos 2 e 3.
-          stages:
+          lessons:
             'Artist: Functions':
               name: 'Artista: Funcións'
             'Artist: Loops':
@@ -269,8 +302,10 @@ gl:
               name: 'Granxeira: Bucles "Mentres" (While)'
             'Maze: Sequence':
               name: 'Labirinto: Secuencia'
+          student_description: Un breve resumo de conceptos para os estudantes que
+            non deron os cursos 2 e 3.
         usability:
-          stages:
+          lessons:
             Binary:
               name: Binario
             For Loops:
@@ -282,7 +317,7 @@ gl:
             Variables:
               name: Variables
         algebra:
-          stages:
+          lessons:
             'Eval: Conditionals':
               name: Condicionais
             'Eval: Strings and Images':
@@ -299,11 +334,13 @@ gl:
             xogo protagonizada por personaxes de Disney Infinity.
           description_short: Utiliza o laboratorio de xogos para crear unha historia
             ou xogo protagonizada por personaxes de Disney Infinity.
-          stages:
+          lessons:
             Infinity:
               name: Infinito
+          student_description: Utiliza o laboratorio de xogos para crear unha historia
+            ou xogo protagonizada por personaxes de Disney Infinity.
         algebrademo:
-          stages:
+          lessons:
             Defining Variables:
               name: Definición de Variábeis
             Evaluation Blocks:
@@ -321,7 +358,7 @@ gl:
           description_short: Este curso de 20 horas cobre os conceptos básicos de
             informática e programación dos cursos 2-4.
           description_audience: Idades de 10 a 18 anos
-          stages:
+          lessons:
             Abstraction:
               name: Abstracción
             Algorithms:
@@ -362,61 +399,73 @@ gl:
               name: O Labirinto
             Wrap-up:
               name: Sumario
+          student_description: Este curso de 20 horas introduce o núcleo da informática
+            e os conceptos da programación. O curso está deseñado para o seu uso en
+            clase para os cursos de primaria pero é divertido aprender con calquera
+            idade!
         edit-code:
           title: Editar código
           description: Editar código
           description_short: Editar código
-          stages:
+          lessons:
             Play Lab:
               name: Laboratorio de Xogos
             The Artist:
               name: O Artista
             The Maze:
               name: O Labirinto
+          student_description: Editar código
         events:
           title: Eventos
           description: Eventos
           description_short: Eventos
-          stages:
+          lessons:
             Bounce:
               name: Rebote
+          student_description: Eventos
         flappy:
           title: Código do Flappy bird
           description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente
             o noso titorial sobre o Código do Flappy bird!
           description_short: Escribe o teu propio xogo Flappy en menos de 10 minutos!
-          stages:
+          lessons:
             Flappy Code:
               name: Código do Flappy bird
+          student_description: Queer crear o seu proprio xogo en menos de 10 minutos?
+            Experimente o noso titorial sobre o Código do Flappy bird!
         jigsaw:
           title: Crebacabezas
           description: Proba o noso titorial de Jigsaw
           description_short: Proba o noso titorial de Jigsaw
-          stages:
+          lessons:
             Jigsaw:
               name: Crebacabezas
+          student_description: Proba o noso titorial de Jigsaw
         step:
           title: Paso
           description: Titorial paso a paso
           description_short: Titorial paso a paso
-          stages:
+          lessons:
             Step:
               name: Paso
+          student_description: Titorial paso a paso
         Hour of Code:
           title: Hora de Código 2013
           description: Proba os fundamentos da informática con personaxes de Angry
             Birds e Plantas vs. Zombis!
           description_short: Proba os fundamentos da informática con moitos personaxes
             divertidos!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
+          student_description: Proba os fundamentos da informática con personaxes
+            de Angry Birds e Plantas vs. Zombis!
         algebraPD:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Bloques de avaliación
         algPDmiami:
-          stages:
+          lessons:
             Booleans:
               name: Valores booleanos
             Evaluation Blocks:
@@ -424,13 +473,13 @@ gl:
             Strings and Images:
               name: Tiras de caracteres e imaxes
         cspunit3:
-          stages:
+          lessons:
             Creating Functions:
               name: Creando funcións
             While Loops:
               name: Bucles mentres
         algebraPD3:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Bloques de avaliación
             Strings and Images:
@@ -438,29 +487,30 @@ gl:
             The Design Recipe:
               name: A receita de deseño
         algebraPD-NexTech:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Bloques de avaliación
         algebraPD-iZone:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Bloques de avaliación
         sciencePD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         cspunit2:
-          stages:
+          lessons:
             The Internet:
               name: A Internet é para todos
         algebraPD2a:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             Booleans:
               name: Valores booleanos
             Defining Variables:
@@ -473,8 +523,9 @@ gl:
               name: Tiras de caracteres e imaxes
             The Design Recipe:
               name: A receita de deseño
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         allthethings:
-          stages:
+          lessons:
             Artist:
               name: Artista
             Bee:
@@ -492,7 +543,7 @@ gl:
         algebraPD2b:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             Booleans:
               name: Valores booleanos
             Defining Functions:
@@ -505,8 +556,9 @@ gl:
               name: Bloques de avaliación
             Strings and Images:
               name: Tiras de caracteres e imaxes
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         cspfacilitator:
-          stages:
+          lessons:
             App Lab:
               name: Laboratorio de aplicacións
             Internet Simulator:
@@ -514,85 +566,74 @@ gl:
             Welcome!:
               name: Benvido!
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: Fundamentos de Informática
         ECSPD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-up:
               name: Sumario
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         algebraPD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             The Design Recipe:
               name: A receita de deseño
             Welcome!:
               name: Benvido!
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         science-PD2:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         ECSPD2-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-up:
               name: Sumario
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         ECSPD2-NexTech:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-up:
               name: Sumario
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         asUnplugged:
-          stages:
+          lessons:
             Binary Bracelets:
               name: Pulseiras Binarias
             Building a Foundation:
@@ -612,7 +653,7 @@ gl:
             The Big Event:
               name: O Gran Evento
         ScienceP3OLPT2:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
@@ -627,11 +668,13 @@ gl:
             Idade de Xeo!
           description_short: Crea unha historia ou crea un xogo co laboratorio de
             xogo da Idade de Xeo!
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
+          student_description: Crea unha historia ou crea un xogo co laboratorio de
+            xogo da Idade de Xeo!
         cspunit3temp:
-          stages:
+          lessons:
             While Loops:
               name: Bucles mentres
         gumball:
@@ -640,43 +683,51 @@ gl:
             Gumball!
           description_short: Crea unha historia ou fai un xogo co laboratorio de xogo
             de Gumball!
-          stages:
+          lessons:
             Gumball Play Lab:
               name: Laboratorio de xogo de Gumball
+          student_description: Crea unha historia ou fai un xogo co laboratorio de
+            xogo de Gumball!
         starwars:
           title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+          student_description: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
         starwarsblocks:
           title: 'Star Wars: Contruíndo unha Galaxia con Código'
           description: Aprende a programar androides e crea o teu propio xogo Star
             Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo
             Star Wars nunha galaxia moi, moi afastada.
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+          student_description: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
         mc:
           title: Hora do Código Minecraft
           description: Usa bloques de código para acompañar a Steve ou a Alex nunha
             aventura polo mundo de Minecraft
           description_short: Explora o mundo de Minecraft a través do código
-          stages:
+          lessons:
             Hour of Code 2015:
               name: Hora do Código 2015
+          student_description: Usa bloques de código para acompañar a Steve ou a Alex
+            nunha aventura polo mundo de Minecraft
         ScienceP3OLPT3:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
         AlgebraA:
-          stages:
+          lessons:
             'Calc: Defining Variables':
               name: 'Calc: Definindo Variábeis'
             'Calc: Evaluation Blocks':
@@ -690,7 +741,7 @@ gl:
             'Unplugged: The Design Recipe':
               name: 'Desconectado: A receita de deseño'
         AlgebraB:
-          stages:
+          lessons:
             'Eval: Boolean Operators':
               name: 'Eval: Operadores booleanos'
             'Eval: Conditionals':
@@ -714,43 +765,55 @@ gl:
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: vídeo-xogos e plano de coordenadas'
         algebraPD1:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Bloques de avaliación
         csp1-2017:
-          stages:
+          lessons:
             The Internet:
               name: A Internet
         csp3-2017:
-          stages:
+          lessons:
             Creating Functions:
               name: Creando funcións
         csp5-2017:
-          stages:
+          lessons:
             While Loops:
               name: Bucles mentres
         CSDU3-Draft:
-          stages:
+          lessons:
             Functions:
               name: Funcións
         CSF_Secret_Sample:
           description_audience: Idades de 8 a 18 anos
         algebraFacilitator:
-          stages:
+          lessons:
             Evaluation Blocks:
               name: Bloques de avaliación
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         MikeTest:
-          stages:
+          lessons:
             Artist Functions:
               name: Funcións de artista
         artistExemplar:
           description_audience: Idades de 8 a 18 anos
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         kinderTest:
-          stages:
+          lessons:
             'Bee: Conditionals':
               name: 'Abella: Condicionais'
         gradeKinder:
-          stages:
+          lessons:
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -760,13 +823,13 @@ gl:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
         grade4:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Cidadanía dixital
             Songwriting:
               name: Composición
         grade1:
-          stages:
+          lessons:
             Events:
               name: Eventos
             'Jigsaw: Learn to drag and drop':
@@ -774,7 +837,7 @@ gl:
             Loops:
               name: Bucles
         grade5:
-          stages:
+          lessons:
             'Artist: For Loops':
               name: Artista Bucles "Para" (for)
             'Artist: Functions with Parameters':
@@ -796,19 +859,13 @@ gl:
             'Unplugged: Songwriting with Parameters':
               name: 'Desconectado: Composición de cancións con parámetros'
         ecs-unit1:
-          stages:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-up:
               name: Sumario
         grade3:
-          stages:
+          lessons:
             'Artist: Nested Loops':
               name: 'Artista: Bucles Aniñados'
             Bee Debugging:
@@ -817,8 +874,12 @@ gl:
               name: Rebote
             'Farmer: While Loops':
               name: 'Granxeira: Bucles "Mentres" (While)'
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csd3-2017:
-          stages:
+          lessons:
             Functions:
               name: Funcións
             Variables:
@@ -826,7 +887,7 @@ gl:
             Conditionals:
               name: Condicionais
         grade2:
-          stages:
+          lessons:
             Flappy:
               name: Flappy bird
             Binary Bracelets:
@@ -836,7 +897,7 @@ gl:
             The Big Event:
               name: O Gran Evento
         k5concepts:
-          stages:
+          lessons:
             Binary:
               name: Binario
             Conditionals:
@@ -858,46 +919,49 @@ gl:
             While Loops:
               name: Bucles mentres
         algebrapdnext:
-          stages:
+          lessons:
             The Design Recipe:
               name: A receita de deseño
             Welcome!:
               name: Benvido!
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         basketball:
-          stages:
+          lessons:
             Bounce:
               name: Rebote
-        fesbinary:
-          title: Binario
-          stages:
-            Binary Bracelets:
-              name: Pulseiras Binarias
-            Binary Images:
-              name: Imaxes binárias
-            Play Lab:
-              name: Laboratorio de Xogos
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: Listas
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         flappy-impact-study:
-          stages:
+          lessons:
             Flappy Code:
               name: Código do Flappy bird
         coursea-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
             Going Places Safely:
               name: Ir a Sitios en modo Seguro
         courseb-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
             Your Digital Footprint:
               name: A túa pegada dixital
         coursec-draft:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: avión de papel'
             Binary Bracelets:
@@ -907,7 +971,7 @@ gl:
             Building a Foundation:
               name: Construíndo unha base
         coursed-draft:
-          stages:
+          lessons:
             Conditionals with Cards:
               name: Condicionais con cartas
             Digital Citizenship:
@@ -921,7 +985,7 @@ gl:
             Introduction:
               name: Introdución
         coursee-draft:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Cidadanía dixital
             Internet:
@@ -933,7 +997,7 @@ gl:
             Conditionals:
               name: Condicionais
         coursef-draft:
-          stages:
+          lessons:
             Digital Citizenship:
               name: Cidadanía dixital
             Envelope Variables:
@@ -949,51 +1013,63 @@ gl:
         classic-hoc-impact-study:
           description_short: Proba os fundamentos da informática con moitos personaxes
             divertidos!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         hoc-impact-study:
           description_short: Proba os fundamentos da informática con moitos personaxes
             divertidos!
-          stages:
+          lessons:
             Hour of Code 2013:
               name: Hora de Código 2013
         2016_sciencePD-phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
         2016_sciencePD_phase2b:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         sciencepd4:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
         science-pd-ol-pt-5:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
         csf2harvey:
-          stages:
+          lessons:
             Binary:
               name: Binario
         sciencepd5:
-          stages:
+          lessons:
             Welcome!:
               name: Benvido!
             Wrap-Up:
               name: Resumo
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Listas
             For Loops:
@@ -1001,15 +1077,15 @@ gl:
             Functions with Parameters:
               name: Funcións con parámetros
         workshop-gamelab:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
         coursed-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
         coursee-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
             Conditionals:
@@ -1017,7 +1093,7 @@ gl:
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmos da vía real: xogo de dados'
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Listas
             For Loops:
@@ -1027,7 +1103,7 @@ gl:
             Functions with Parameters_:
               name: Funcións con parámetros
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1035,15 +1111,15 @@ gl:
             Functions:
               name: Funcións
         csd3-old:
-          stages:
+          lessons:
             Functions:
               name: Funcións
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Listas
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1053,35 +1129,35 @@ gl:
             'null':
               name: nulo
         coursef-ramp:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
         artist-and-bb8:
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
             Bounce:
               name: Rebote
         coursea-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
         courseb-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
         coursec-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: avión de papel'
         coursed-2017:
-          stages:
+          lessons:
             Nested Loops:
               name: Bucles aniñados
         coursee-2017:
-          stages:
+          lessons:
             Ice Age Play Lab:
               name: O xogo de laboratorio da Idade de xeo
             Envelope Variables:
@@ -1095,11 +1171,59 @@ gl:
             Nested Loops:
               name: Bucles aniñados
         coursef-2017:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         express-2017:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
             Internet:
@@ -1119,21 +1243,21 @@ gl:
             Nested Loops:
               name: Bucles aniñados
         pre-express-2017:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
             Spelling Bee:
               name: Abella que Soletrea
         subgoal-labels-opt-in:
-          stages:
+          lessons:
             Thanks:
               name: Graciñas
         csp3-research-mxghyt:
-          stages:
+          lessons:
             Creating Functions:
               name: Creando funcións
         e-f-ramp:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Nested Loops:
@@ -1145,7 +1269,7 @@ gl:
             Crowdsourcing:
               name: Colaboración Aberta
         new-d:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
             Nested Loops:
@@ -1161,7 +1285,7 @@ gl:
             Building a Foundation:
               name: Construíndo unha base
         new-express:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
             Building a Foundation:
@@ -1169,7 +1293,7 @@ gl:
             Nested Loops:
               name: Bucles aniñados
         new-e:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Conditionals:
@@ -1179,7 +1303,7 @@ gl:
             Crowdsourcing:
               name: Colaboración Aberta
         new-f:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Ice Age Play Lab:
@@ -1191,15 +1315,15 @@ gl:
             Songwriting with Parameters:
               name: Composición de música con parámetros
         csp3-staging:
-          stages:
+          lessons:
             Creating Functions:
               name: Creando funcións
         hero:
-          stages:
+          lessons:
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
         course-e-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Nested Loops:
@@ -1213,7 +1337,7 @@ gl:
             Crowdsourcing:
               name: Colaboración Aberta
         course-f-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Introduction:
@@ -1227,13 +1351,13 @@ gl:
             Songwriting with Parameters:
               name: Composición de música con parámetros
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: Listas
             For Loops:
               name: Bucles "Para" (For)
         csd3-1819draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1241,7 +1365,7 @@ gl:
             Functions:
               name: Funcións
         csd3-2018:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1249,17 +1373,17 @@ gl:
             Functions:
               name: Funcións
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: Listas
         coursea-2018:
-          stages:
+          lessons:
             'Programming: Happy Maps':
               name: Mapas Felices
             Going Places Safely:
               name: Ir a Sitios en modo Seguro
         express-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programación en Papel Cadriculado
             Introduction:
@@ -1295,7 +1419,7 @@ gl:
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
         courseb-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
             Your Digital Footprint:
@@ -1303,7 +1427,7 @@ gl:
             Move It, Move It:
               name: Creando camiños
         coursed-2018:
-          stages:
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programación en Papel Cadriculado
             Introduction:
@@ -1323,7 +1447,7 @@ gl:
             Relay Programming:
               name: Programación por relevos
         coursec-2018:
-          stages:
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             'Loops: Getting Loopy':
@@ -1333,11 +1457,11 @@ gl:
             Binary Bracelets:
               name: Pulseiras Binarias
         csd6-2018:
-          stages:
+          lessons:
             Functions with Parameters:
               name: Funcións con parámetros
         coursee-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Os meus amigos robóticos
             Building a Foundation:
@@ -1355,7 +1479,7 @@ gl:
             Minecraft Hour of Code:
               name: Hora do Código Minecraft
         coursef-2018:
-          stages:
+          lessons:
             'Programming: My Robotic Friends':
               name: Os meus amigos robóticos
             Building a Foundation:
@@ -1373,19 +1497,87 @@ gl:
             Conditionals with Cards:
               name: Condicionais con cartas
         csp1-2018:
-          stages:
+          lessons:
             The Internet:
               name: A Internet
         csp3-2018:
-          stages:
+          lessons:
             Creating Functions:
               name: Creando funcións
         csp5-2018:
-          stages:
+          lessons:
             While Loops:
               name: Bucles mentres
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         pre-express-2018:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
             Spelling Bee:
@@ -1394,20 +1586,41 @@ gl:
               name: Creando camiños
             Your Digital Footprint:
               name: A túa pegada dixital
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         frozen-2018:
-          stages:
+          lessons:
             Artist:
               name: Artista
         frozen-2018-test:
-          stages:
+          lessons:
             Artist:
               name: Artista
         frozen-2018-test-b:
-          stages:
+          lessons:
             Artist:
               name: Artista
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
         coursef-2019:
-          stages:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_internet:
+              display_name: Internet
+            csf_digcit:
+              display_name: Cidadanía dixital
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Conditionals with Cards:
@@ -1423,7 +1636,18 @@ gl:
             Crowdsourcing:
               name: Colaboración Aberta
         coursed-2019:
-          stages:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+          lessons:
             'Algorithms: Graph Paper Programming':
               name: Programación en Papel Cadriculado
             Relay Programming:
@@ -1437,7 +1661,14 @@ gl:
             Artist Binary:
               name: Artista binario
         coursee-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+          lessons:
             Building a Foundation:
               name: Construíndo unha base
             Nested Loops:
@@ -1453,7 +1684,18 @@ gl:
             Songwriting:
               name: Composición
         express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+          lessons:
             Relay Programming:
               name: Programación por relevos
             Conditionals with Cards:
@@ -1473,11 +1715,23 @@ gl:
             Crowdsourcing:
               name: Colaboración Aberta
         andrea-test:
-          stages:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+          lessons:
             'null':
               name: nulo
         coursec-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmos da vida real: avión de papel'
             'Events: The Big Event':
@@ -1485,13 +1739,27 @@ gl:
             Binary Bracelets:
               name: Pulseiras Binarias
         coursea-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
             'Programming: Happy Maps':
               name: Mapas Felices
             Going Places Safely:
               name: Ir a Sitios en modo Seguro
         courseb-2019:
-          stages:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
             Move It, Move It:
               name: Creando camiños
             Your Digital Footprint:
@@ -1499,7 +1767,12 @@ gl:
             'Loops: Getting Loopy':
               name: Bucleándose
         pre-express-2019:
-          stages:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
             Move It, Move It:
               name: Creando camiños
             Your Digital Footprint:
@@ -1507,15 +1780,15 @@ gl:
             Spelling Bee:
               name: Abella que Soletrea
         removed19:
-          stages:
+          lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmos da Vida Real: Planta unha Semente'
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: Listas
         csd3-2019:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
@@ -1523,48 +1796,668 @@ gl:
             Functions:
               name: Funcións
         csd6-2019:
-          stages:
+          lessons:
             Functions with Parameters:
               name: Funcións con parámetros
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            required:
+              display_name: Visión xeral
         csp1-2019:
-          stages:
+          lessons:
             The Internet:
               name: A Internet
         csp3-2019:
-          stages:
+          lessons:
             Creating Functions:
               name: Creando funcións
         csp5-2019:
-          stages:
+          lessons:
             While Loops:
               name: Bucles mentres
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         time4csdemo:
-          stages:
+          lessons:
             Crowdsourcing:
               name: Colaboración Aberta
             Conditionals with Cards:
               name: Condicionais con cartas
             Building a Foundation:
               name: Construíndo unha base
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
         express-2018-vn:
-          stages:
+          lessons:
             Graph Paper Programming:
               name: Programación en Papel Cadriculado
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+            required:
+              display_name: Visión xeral
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Listas
         csd3-pilot:
-          stages:
+          lessons:
             Variables:
               name: Variables
             Conditionals:
               name: Condicionais
             Functions:
               name: Funcións
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+          lessons:
+            Focus Area 1:
+              name: Currículo
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         peru-2019:
-          stages:
+          lessons:
             Introduction:
               name: Introdución
             Nested Loops:
               name: Bucles aniñados
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        k5-onlinepd-2019:
+          lessons:
+            Computer Science Fundamentals:
+              name: Fundamentos de Informática
+            Loops:
+              name: Bucles
+            Conditionals:
+              name: Condicionais
+            Events:
+              name: Eventos
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        time4cs-original-unit-1:
+          lessons:
+            Conditionals:
+              name: Condicionais
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_conditionals:
+              display_name: Condicionais
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+          lessons:
+            Crowdsourcing:
+              name: Colaboración Aberta
+            Conditionals with Cards:
+              name: Condicionais con cartas
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_events:
+              display_name: Eventos
+            csf_digcit:
+              display_name: Cidadanía dixital
+          lessons:
+            Conditionals:
+              name: Condicionais
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_events:
+              display_name: Eventos
+            csf_digcit:
+              display_name: Cidadanía dixital
+          lessons:
+            Conditionals:
+              name: Condicionais
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        csd6-2020:
+          lessons:
+            Functions with Parameters:
+              name: Funcións con parámetros
+        csd3-2020:
+          lessons:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Text:
+              name: Texto
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
+            Going Places Safely:
+              name: Ir a Sitios en modo Seguro
+            'Programming: Happy Maps':
+              name: Mapas Felices
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
+            Your Digital Footprint:
+              name: A túa pegada dixital
+            Move It, Move It:
+              name: Creando camiños
+            'Loops: Getting Loopy':
+              name: Bucleándose
+        coursec-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
+            Binary Bracelets:
+              name: Pulseiras Binarias
+            'Events: The Big Event':
+              name: O Gran Evento
+        coursed-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
+            Relay Programming:
+              name: Programación por relevos
+            Conditionals with Cards:
+              name: Condicionais con cartas
+            'Unplugged: Binary':
+              name: Imaxes binárias
+            Artist Binary:
+              name: Artista binario
+            Digital Citizenship:
+              name: Cidadanía dixital
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_nested_loops:
+              display_name: Bucles aniñados
+            csf_functions:
+              display_name: Funcións
+          lessons:
+            'Functions: Songwriting':
+              name: Composición
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+          lessons:
+            Envelope Variables:
+              name: Variábeis de sobre
+            For Loop Fun:
+              name: Diversión con bucles "para" (for)
+            Internet:
+              name: A Internet
+            Crowdsourcing:
+              name: Colaboración Aberta
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+          lessons:
+            Spelling Bee:
+              name: Abella que Soletrea
+        csp3-virtual:
+          lessons:
+            Creating Functions:
+              name: Creando funcións
+        csp5-virtual:
+          lessons:
+            While Loops:
+              name: Bucles mentres
+            Variables:
+              name: Variables
+        virtual-holding-place:
+          lessons:
+            Functions:
+              name: Funcións
+        code-break:
+          lessons:
+            Algorithms:
+              name: Algoritmos
+            Events:
+              name: Eventos
+        csp5-virtual-part2:
+          lessons:
+            While Loops:
+              name: Bucles mentres
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Bucles
+            Events:
+              name: Eventos
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+            Variables:
+              name: Variables
+            For Loops:
+              name: Bucles "Para" (For)
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: Texto
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introdución
+            lessonGroup-3:
+              display_name: Variables
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: Texto
+              name: Texto
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Functions:
+              key: Funcións
+              name: Funcións
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funcións con parámetros
+              name: Funcións con parámetros
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Mapas Felices
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Creando camiños
+              name: Creando camiños
+            'Loops: Getting Loopy':
+              name: Bucleándose
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursec-2021:
+          lessons:
+            Binary Bracelets:
+              key: Pulseiras Binarias
+              name: Pulseiras Binarias
+            'Events: The Big Event':
+              name: O Gran Evento
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: Programación en Papel Cadriculado
+            Relay Programming:
+              key: Programación por relevos
+              name: Programación por relevos
+            Conditionals with Cards:
+              key: Condicionais con cartas
+              name: Condicionais con cartas
+            'Unplugged: Binary':
+              key: 'Desconectado: binario'
+              name: Imaxes binárias
+            Artist Binary:
+              key: Artista binario
+              name: Artista binario
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: Condicionais
+            'Functions: Songwriting':
+              name: Composición
+          lesson_groups:
+            ramp_up:
+              display_name: Bucles aniñados
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_nested_loops:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Variábeis de sobre
+              name: Variábeis de sobre
+            Internet:
+              key: Internet
+              name: A Internet
+            For Loop Fun:
+              key: Diversión con bucles "para" (for)
+              name: Diversión con bucles "para" (for)
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_variables:
+              display_name: Bucles "Para" (For)
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: eliminar
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionais
+            csf_functions:
+              display_name: Funcións
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Eventos
+        csf-2021-pilot:
+          lesson_groups:
+            ramp_up:
+              display_name: Introdución
+            lessonGroup-3:
+              display_name: Variables
+            variables:
+              display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introdución
+            Loops:
+              key: Bucles
+              name: Bucles
+            Events:
+              key: Eventos
+              name: Eventos
+            Conditionals:
+              key: Condicionais
+              name: Condicionais
+            Functions:
+              key: Funcións
+              name: Funcións
+            Variables:
+              key: Variables
+              name: Variables
+            For Loops:
+              key: Bucles "Para" (For)
+              name: Bucles "Para" (For)
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introdución
+            Introduction:
+              display_name: Introdución

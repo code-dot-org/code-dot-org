@@ -1,0 +1,31 @@
+is:
+  data:
+    block_categories:
+      Actions: Aðgerðir
+      Advanced: Ítarlegt
+      Behaviors: Hegðun
+      Brushes: Penslar
+      Color: Litir
+      Comment: Athugasemd
+      Comments: Athugasemdir
+      Conditionals: Skilyrði
+      Dancers: Dansarar
+      Default: Sjálfgefið
+      Events: Atvik
+      Functions: Föll
+      'Functions ': 'Föll '
+      Game/Score: Leikur/skor
+      Games/Score: Leikir/skor
+      Groups: Hópar
+      Input: Inntak
+      Locations: Staðir
+      Logic: Rökvísi
+      Loops: Lykkjur
+      Math: Reikningur
+      Numbers: Tölur
+      Properties: Eiginleikar
+      Sprites: Kvikar
+      Text: texti
+      Variables: Breytur
+      'Variables ': 'Breytur '
+      World: Heimur

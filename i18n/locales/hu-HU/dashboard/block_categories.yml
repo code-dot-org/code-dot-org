@@ -1,0 +1,31 @@
+hu:
+  data:
+    block_categories:
+      Actions: Műveletek
+      Advanced: Haladó
+      Behaviors: Viselkedések
+      Brushes: Ecsetek
+      Color: Szín
+      Comment: Megjegyzés
+      Comments: Megjegyzések
+      Conditionals: Feltételek
+      Dancers: Táncosok
+      Default: Alapértelmezett
+      Events: Események
+      Functions: funkciók
+      'Functions ': 'Függvények '
+      Game/Score: Játék/pontszám
+      Games/Score: Játékok/pontszám
+      Groups: Csoportok
+      Input: Bemenet
+      Locations: Helyek
+      Logic: Logika
+      Loops: hurkok
+      Math: Matematika
+      Numbers: Számok
+      Properties: Tulajdonságok
+      Sprites: manók
+      Text: szöveg
+      Variables: változók
+      'Variables ': 'Változók '
+      World: Világ

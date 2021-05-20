@@ -1,0 +1,14 @@
+---
+gl:
+  data:
+    parameter_names:
+      actor: actor
+      counter: contador
+      height: altura
+      honey: mel
+      left: esquerda
+      length: lonxitude
+      min: min
+      points: puntos
+      size: tamaño
+      speed: velocidade

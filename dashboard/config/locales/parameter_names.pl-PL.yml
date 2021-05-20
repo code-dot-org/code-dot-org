@@ -1,0 +1,25 @@
+---
+pl:
+  data:
+    parameter_names:
+      "???": "???"
+      actor: postać
+      color: kolor
+      counter: licznik
+      dir: dir
+      direction: kierunek
+      height: wysokość
+      honey: miód
+      left: w lewo
+      length: długość
+      min: min
+      nectar units: jednostki nektaru
+      nectars: nektary
+      numOctagons: numOctagons
+      points: punkty
+      radius: promień
+      sides: boki
+      size: rozmiar
+      speed: prędkość
+      theGuess: theGuess
+      width: szerokość

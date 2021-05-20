@@ -37,8 +37,6 @@ ta:
   next_page: அடுத்த பக்கம்
   cancel: ரத்து செய்
   or: அல்லது
-  add_teacher_form:
-    submit: ஆசிரியரை சேர்
   add_hint_form:
     placeholder: உங்கள் குறிப்பை இங்கே உள்ளிடவும்
     submit: உதவிக்குறிப்பு சேர்
@@ -63,6 +61,13 @@ ta:
     field_is_required: தேவைப்படுகிறது
     email_preference_yes: ஆம்
     email_preference_no: இல்லை
+    parent_account_checkbox: நான் எனது குழந்தையின் சார்பாக பதிவு செய்யும் பெற்றோர்
+      / பாதுகாவலர்
+    parent_account_email_progress_permission: உங்கள் குழந்தையின் முன்னேற்றம் மற்றும்
+      திட்டங்கள் குறித்த புதுப்பிப்புகள் மற்றும் அவர்களின் பாடநெறி மற்றும் கணினி அறிவியல்
+      பற்றிய புதுப்பிப்புகளுடன் நாங்கள் உங்களுக்கு மின்னஞ்சல் அனுப்பலாமா? [(See our
+      privacy policy)](%{privacy_policy_url})
+    parent_account_email_label: பெற்றோர் / பாதுகாவலர் மின்னஞ்சல்
   school_info:
     other: வேறு
   signin_form:
@@ -95,53 +100,96 @@ ta:
     destroy: அழிக்கவும்
   nav:
     header:
+      finished_hoc: நான் முடித்துவிட்டேன்!
+      course_catalog: பாடத்திட்ட கேட்டலாக்
+      project_gallery: திட்டப்பணிகள்
+      help_support: உதவி மற்றும் ஆதரவு
+      report_bug: ஒரு பிரச்னையை தெரிவிக்கவும்
       educate_hoc: நிரல்வரி நேரம்
+      about: பற்றி
+      legal_privacy: தனியுரிமை கொள்கை
+      legal_tos: சேவையின் விதிமுறைகள்
     user:
       label: வணக்கம் %{username}
       settings: எனது கணக்கு
       logout: வெளியேறு
       signin: உள்நுழை
+      signup: ஒரு அக்கவுண்டை உருவாக்குங்கள்
       create: உருவாக்கு
+      dance: நடன விருந்து
       infinity: முடிவிலி
     popup:
       close: மூடு
+      prizes_link: மேலதிக தகவல்
   teacher:
     panel:
       student: மாணவர்
+  user:
+    update_email: புதுப்பிக்கவும்
+    for_parents_and_guardians: பெற்றோர் மற்றும் பாதுகாவலர்களுக்கு
+    link_a_parent_email: உங்கள் குழந்தையின் முன்னேற்றம் மற்றும் திட்டங்கள் குறித்து
+      புதுப்பித்த நிலையில் இருக்க இந்த கணக்கில் பெற்றோர் / பாதுகாவலர் மின்னஞ்சல் முகவரியை
+      இணைக்கவும். கடவுச்சொல் மீட்புக்கு இந்த மின்னஞ்சல் முகவரியையும் நீங்கள் பயன்படுத்த
+      முடியும்.
+    none: எதுவுமில்லை
+    only_one_parent_email_supported_warning: 'குறிப்பு: இந்த நேரத்தில் ஒரு மாணவர்
+      கணக்கிற்கு ஒரு பெற்றோர் / பாதுகாவலர் மின்னஞ்சல் முகவரியை மட்டுமே நாங்கள் ஆதரிக்க
+      முடியும்.'
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
   home:
+    student_reg_link: மாணவர்
     classroom: உங்கள் வகுப்பறை
     trynow: இப்பொழுது முயற்சிக்கவும்
   user_type:
     student: மாணவர்
+  footer:
+    copyright: காப்புரிமை
+    more: அதிகம்
+    translate: எங்களது உள்ளடகத்தை மொழிமாற்றம் செய்ய தன்னார்வலர்
+    tos: சேவையின் விதிமுறைகள்
+    privacy: தனியுரிமை கொள்கை
+    report_abuse: தவறான பயன்பாட்டை தெரிவிக்கவும்
+  reference_area:
+    title: உதவி தேவையா?
+    subtitle: இந்த வீடியோக்கள் மற்றும் உதவிக்குறிப்புகளை பார்க்கவும்
+  video:
+    tab: வீடியோ.
+    notes: வீடியோ இல்லையா? குறிப்புகளைக் காட்டு.
+  upsell:
+    dance:
+      title: நடன விருந்து
+    dance-2019:
+      title: நடன விருந்து
+  landing:
+    help_support: உதவி மற்றும் ஆதரவு
   dialog:
     ok: சரி
     startover_title: உறுதியாக மீண்டும் தொடங்க வேண்டுகிறீரா?
     startover_ok: மீண்டும் துவங்கு
     startover_cancel: ரத்து செய்
   terms_interstitial:
+    tos: சேவையின் விதிமுறைகள்
+    privacy: தனியுரிமை கொள்கை
+    accept_tos: Code.org -க்காக பதிவுசெய்து கொள்வதன் மூலம், நீங்கள் எங்களின் [சேவை
+      விதிமுறைகள்](%{tos_url}) மற்றும் [தனியுரிமை கொள்கை](%{privacy_url}) ஆகியவற்றை
+      ஏற்றுக்கொள்கிறீர்கள்.
     print: அச்சிடு
   race_interstitial:
     races:
       other: வேறு
     submit: சமர்ப்பிக்க
+    decline: மூடவும்
   project:
+    projects: திட்டப்பணிகள்
+    project_gallery: திட்டப்பணிகள்
     name: பெயர்
     saved: சேமித்தது
     abuse:
       report_abuse_form:
         abuse_type:
           other: வேறு
-  flex_category:
-    csf_loops: சுழற்சிகள்
-    csf_functions: செயல்பாடுகள்
-    csf_variables: மாறிலிகள்
-    csp_variables: மாறிலிகள்
-    csp_functions: செயல்பாடுகள்
-    csp_lists: பட்டியல்கள்
-    csp_loops: சுழற்சிகள்
   pd:
     form_labels:
       email: மின்னஞ்சல்
@@ -154,5 +202,9 @@ ta:
         opt_in_no: இல்லை
   cookie_banner:
     accept: நான் ஒப்புக்கொள்கிறேன்
-  gdpr_dialog:
-    true: ஆம்
+  copy: நகலெடு
+  parent_email_banner:
+    text: "** நீங்கள் ஒரு பெற்றோர் அல்லது பாதுகாவலரா? ** உங்கள் குழந்தையின் முன்னேற்றம்
+      மற்றும் திட்டங்களைப் பற்றி புதுப்பிக்க உங்கள் கணக்கில் இந்த மின்னஞ்சலை இணைக்கவும்!"
+    link_your_email: உங்கள் மின்னஞ்சலை இணைக்கவும்
+    not_now: இப்போது இல்லை

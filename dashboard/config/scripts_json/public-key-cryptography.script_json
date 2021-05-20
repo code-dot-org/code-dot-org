@@ -1,0 +1,156 @@
+{
+  "script": {
+    "name": "public-key-cryptography",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:00 UTC",
+    "seeding_key": {
+      "script.name": "public-key-cryptography"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Public Key Crypto Widgets",
+      "name": "Public Key Crypto Widgets",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Public Key Crypto Widgets",
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Modulo Clock"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Modulo Clock"
+        ],
+        "lesson.key": "Public Key Crypto Widgets",
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      },
+      "level_keys": [
+        "The Modulo Clock"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Public Key Cryptography Widget"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Public Key Cryptography Widget"
+        ],
+        "lesson.key": "Public Key Crypto Widgets",
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      },
+      "level_keys": [
+        "Public Key Cryptography Widget"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "The Modulo Clock",
+        "script_level.level_keys": [
+          "The Modulo Clock"
+        ],
+        "lesson.key": "Public Key Crypto Widgets",
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Public Key Cryptography Widget",
+        "script_level.level_keys": [
+          "Public Key Cryptography Widget"
+        ],
+        "lesson.key": "Public Key Crypto Widgets",
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

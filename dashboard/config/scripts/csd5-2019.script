@@ -1,11 +1,9 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-19/unit5/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-19/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-19/unit5/standards/"]]
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/csd-19/unit5/{LESSON}'
 family_name 'csd5'
 version_year '2019'
@@ -13,16 +11,17 @@ is_stable true
 project_sharing true
 curriculum_umbrella 'CSD'
 
-stage 'Representation Matters', flex_category: 'csd5_1'
+lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
+lesson 'Representation Matters', display_name: 'Representation Matters', has_lesson_plan: true
 level 'CSD U5L01 autoSFLP_2019', named: true
 
-stage 'Patterns and Representation', flex_category: 'csd5_1'
+lesson 'Patterns and Representation', display_name: 'Patterns and Representation', has_lesson_plan: true
 level 'CSD U5L02 autoSFLP_2019', named: true
 
-stage 'ASCII and Binary Representation', flex_category: 'csd5_1'
+lesson 'ASCII and Binary Representation', display_name: 'ASCII and Binary Representation', has_lesson_plan: true
 level 'CSD U5L03 autoSFLP_2019', named: true
 
-stage 'Representing Images', flex_category: 'csd5_1'
+lesson 'Representing Images', display_name: 'Representing Images', has_lesson_plan: true
 level 'CSD U5L04 autoSFLP_2019', named: true
 level 'CSD U5 black white images pixelation_2019', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 2_2019', progression: 'Representing Images'
@@ -30,7 +29,7 @@ level 'CSD U5 black white images pixelation 3_2019', progression: 'Representing 
 level 'CSD U5 black white images pixelation 4_2019', progression: 'Representing Images'
 level 'CSD U5 black white images pixelation 5_2019', progression: 'Representing Images'
 
-stage 'Representing Numbers', flex_category: 'csd5_1'
+lesson 'Representing Numbers', display_name: 'Representing Numbers', has_lesson_plan: true
 level 'CSD U5L05 autoSFLP_2019', named: true
 level 'CSD U5 binary 1_2019', progression: 'Binary Numbers'
 level 'CSD U5 binary 2_2019', progression: 'Binary Numbers'
@@ -40,53 +39,56 @@ level 'CSD U5 binary 6-new_2019', progression: 'Binary Numbers'
 level 'CSD U5 binary 7-new_2019', progression: 'Binary Numbers'
 level 'CSD U5 binary video_2019', named: true
 
-stage 'Keeping Data Secret', flex_category: 'csd5_1'
+lesson 'Keeping Data Secret', display_name: 'Keeping Data Secret', has_lesson_plan: true
 level 'CSD U5L06 autoSFLP_2019', named: true
 level 'CSD U5 Encryption 2_2018_2019', progression: 'Keeping Data Secret'
 level 'CSD U5 Encryption 1_2018_2019', progression: 'Keeping Data Secret'
 
-stage 'Combining Representations', flex_category: 'csd5_1'
+lesson 'Combining Representations', display_name: 'Combining Representations', has_lesson_plan: true
 level 'CSD U5L07 autoSFLP_2019', named: true
 level 'CSD U3 combining rep_2018_2019', progression: 'Combining Representations'
 level 'CSD U5 student record_2018_2019', progression: 'Combining Representations'
 
-stage 'Project - Create a Representation', flex_category: 'csd5_1'
+lesson 'Project - Create a Representation', display_name: 'Project - Create a Representation', has_lesson_plan: true
 level 'CSD U5L08 autoSFLP_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019', progression: 'Reflection', assessment: true
 
-stage 'Problem Solving and Data', flex_category: 'csd5_2'
+lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
+lesson 'Problem Solving and Data', display_name: 'Problem Solving and Data', has_lesson_plan: true
 level 'CSD U5L09 autoSFLP_2019', named: true
 
-stage 'Problem Solving with Big Data', flex_category: 'csd5_2'
+lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data', has_lesson_plan: true
 level 'CSD U5L10 autoSFLP_2019', named: true
 level 'CSD U5 Netflix Data Video_2019', progression: 'Problem Solving'
 level 'CSD U5 Waze Data Video_2019', progression: 'Problem Solving'
 level 'CSD U5 Amazon Data Video_2019', progression: 'Problem Solving'
 
-stage 'Structuring Data', flex_category: 'csd5_2'
+lesson 'Structuring Data', display_name: 'Structuring Data', has_lesson_plan: true
 level 'CSD U5L11 autoSFLP_2019', named: true
 level 'CSD U5 data visualization_2018_2019', progression: 'Data Visualization'
 level 'CSD U5 Pizza_2019', progression: 'Data Visualization'
 level 'CSD U5 Pizza 2_2019', progression: 'Data Visualization'
 
-stage 'Making Decisions with Data', flex_category: 'csd5_2'
+lesson 'Making Decisions with Data', display_name: 'Making Decisions with Data', has_lesson_plan: true
 level 'CSD U5L12 autoSFLP_2019', named: true
 
-stage 'Interpreting Data', flex_category: 'csd5_2'
+lesson 'Interpreting Data', display_name: 'Interpreting Data', has_lesson_plan: true
 level 'CSD U5L13 autoSFLP_2019', named: true
 level 'CSD U5 crosstab warmup_2018_2019', named: true
 
-stage 'Automating Data Decisions', flex_category: 'csd5_2'
+lesson 'Automating Data Decisions', display_name: 'Automating Data Decisions', has_lesson_plan: true
 level 'CSD U5L14 autoSFLP_2019', named: true
 
-stage 'Project - Solve a Data Problem', flex_category: 'csd5_2'
+lesson 'Project - Solve a Data Problem', display_name: 'Project - Solve a Data Problem', has_lesson_plan: true
 level 'CSD U5L15 autoSFLP_2019', named: true
 level 'csd u5 recommender sample_2019', named: true
 level 'csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019', progression: 'Reflection', assessment: true
 
-stage 'Post-Project Test', lockable: true, flex_category: 'csd5_2'
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
 level 'CSD U5 test', assessment: true
 
-stage 'CS Discoveries Post Course survey', lockable: true, flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
 level 'csd-post-survey-intro-2019'
 level 'csd-post-survey-levelgroup_2019', assessment: true
+

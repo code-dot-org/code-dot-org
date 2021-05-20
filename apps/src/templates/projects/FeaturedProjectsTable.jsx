@@ -8,10 +8,10 @@ import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {
-  FEATURED_PROJECT_TYPE_MAP,
   featuredProjectDataPropType,
   featuredProjectTableTypes
 } from './projectConstants';
+import {FEATURED_PROJECT_TYPE_MAP} from './projectTypeMap';
 import QuickActionsCell from '../tables/QuickActionsCell';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
@@ -75,7 +75,12 @@ const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/`;
   thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
   return (
-    <a style={tableLayoutStyles.link} href={projectUrl} target="_blank">
+    <a
+      style={tableLayoutStyles.link}
+      href={projectUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <ImageWithStatus
         src={thumbnailUrl}
         width={THUMBNAIL_SIZE}
@@ -88,7 +93,12 @@ const thumbnailFormatter = function(thumbnailUrl, {rowData}) {
 const nameFormatter = (projectName, {rowData}) => {
   const url = `/projects/${rowData.type}/${rowData.channel}/`;
   return (
-    <a style={tableLayoutStyles.link} href={url} target="_blank">
+    <a
+      style={tableLayoutStyles.link}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {projectName}
     </a>
   );
@@ -164,6 +174,10 @@ const dateFormatter = time => {
 
 const typeFormatter = type => {
   return FEATURED_PROJECT_TYPE_MAP[type];
+};
+
+const topicFormatter = topic => {
+  return topic;
 };
 
 class FeaturedProjectsTable extends React.Component {
@@ -256,6 +270,23 @@ class FeaturedProjectsTable extends React.Component {
         },
         cell: {
           formatters: [typeFormatter],
+          props: {
+            style: {
+              ...styles.cellType,
+              ...tableLayoutStyles.cell
+            }
+          }
+        }
+      },
+      {
+        property: 'topic',
+        header: {
+          label: 'Topic',
+          props: {style: tableLayoutStyles.headerCell},
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [topicFormatter],
           props: {
             style: {
               ...styles.cellType,

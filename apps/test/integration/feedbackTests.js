@@ -1,10 +1,12 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/deprecatedChai';
 var testUtils = require('../util/testUtils');
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 var testCollectionUtils = require('./util/testCollectionUtils');
 var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
 import {TestResults} from '@cdo/apps/constants';
+import * as redux from '@cdo/apps/redux';
+import sinon from 'sinon';
 
 /**
  * Loads blocks into the workspace, then calls
@@ -828,11 +830,14 @@ describe('getCountableBlocks_', function() {
 });
 
 describe('unusedBlocks', function() {
-  var studioApp;
+  var studioApp, reduxStub;
   var blockXml = '<xml><block type="text_print"></block></xml>';
 
   // create our environment
   beforeEach(function() {
+    reduxStub = sinon.stub(redux, 'getStore').returns({
+      getState: sinon.stub().returns({pageConstants: {isBramble: false}})
+    });
     setupTestBlockly();
     var blockInstallOptions = {isK1: false};
     var blocksCommon = require('@cdo/apps/blocksCommon');
@@ -842,6 +847,7 @@ describe('unusedBlocks', function() {
   });
 
   afterEach(function() {
+    reduxStub.restore();
     Blockly.showUnusedBlocks = false;
   });
 

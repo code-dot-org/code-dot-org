@@ -368,5 +368,31 @@ module Pd::Application
         application_without_email.formatted_applicant_email
       end
     end
+
+    test 'deleting an application also deletes its unsent emails' do
+      # Create two applications, each with sent and unsent email
+      application_a = create TEACHER_APPLICATION_FACTORY
+      application_b = create TEACHER_APPLICATION_FACTORY
+      [application_a, application_b].each do |application|
+        application.stubs(:deliver_email)
+        application.queue_email :test_email
+        application.queue_email :test_email, deliver_now: true
+        assert_equal 2, application.emails.count
+        assert_equal 1, application.emails.unsent.count
+      end
+
+      # Destroy one of the applications
+      application_a.destroy
+
+      # Unsent email for that application was destroyed
+      assert_equal 0, application_a.emails.unsent.count
+      # Sent email for that application was not destroyed
+      assert_equal 1, application_a.emails.count
+      # Email for the other application was not destroyed
+      assert_equal 2, application_b.emails.count
+    ensure
+      application_a.emails.destroy_all
+      application_b.emails.destroy_all
+    end
   end
 end

@@ -1,0 +1,12 @@
+name 'CSD U3 drawing challenges_2021'
+display_name 'Drawing Challenges'
+description 'Try out some challenges!'
+
+sublevels
+level 'CSD U3 drawing challenge 2_2021'
+level 'CSD U3 drawing challenge 3_2021'
+level 'CSD U3 drawing challenge no fill_2021'
+level 'CSD U3 picture_2021'
+level 'CSD U3 challenge face_2021'
+level 'CSD U3 challenge new shape_2021'
+level 'CSD U3 L3 Freeplay_2021'

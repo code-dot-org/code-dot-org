@@ -97,18 +97,70 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
+  test "reject bad chars in custom level name" do
+    assert_does_not_create(Level) do
+      level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
+      assert_not level.valid?
+      assert level.errors.include?(:name)
+    end
+  end
+
+  test "allow whitelisted chars in custom level name" do
+    assert_creates(Level) do
+      name = '+-=_(&"\''
+      level = Level.create(@custom_maze_data.merge(name: name))
+      assert level.valid?
+      assert_equal name, level.name
+    end
+  end
+
   test "get custom levels" do
     custom_levels = Level.custom_levels
     assert custom_levels.include?(@custom_level)
     assert_not custom_levels.include?(@level)
   end
 
+  test "should not allow pairing with levelgroup type levels" do
+    level = Level.create({type: "LevelGroup"})
+    assert_equal level.should_allow_pairing?(0), false
+  end
+
+  test "should allow pairing with non levelgroup type levels" do
+    level = Level.create
+    assert_equal level.should_allow_pairing?(0), true
+  end
+
+  test "should not allow pairing when the parent is a levelgroup" do
+    parent = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
+    child = create :level
+    parent.child_levels << child
+    script = create :script
+    create :script_level, script: script, levels: [parent]
+    assert_equal [parent], child.parent_levels
+
+    assert_equal child.should_allow_pairing?(script.id), false
+  end
+
   test "summarize returns object with expected fields" do
     summary = @level.summarize
-    assert_equal(summary[:level_id], @level.id)
+    assert_equal(summary[:level_id], @level.id.to_s)
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], '__bob4')
     assert_nil(summary[:display_name])
+  end
+
+  test "summarize_for_edit returns object with expected fields" do
+    user = User.create(name: 'Best Curriculum Writer')
+    level = Level.create!(name: 'test_level', type: 'Maze', user: user, updated_at: Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
+
+    summary = level.summarize_for_edit
+
+    assert_equal(summary[:id], level.id.to_s)
+    assert_equal(summary[:type], 'Maze')
+    assert_equal(summary[:name], 'test_level')
+    assert_equal(summary[:owner], 'Best Curriculum Writer')
+    assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+    assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
   test "get_question_text returns question text for free response level" do
@@ -257,29 +309,15 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal time, level.updated_at.to_i
   end
 
-  test 'update_ideal_level_source does nothing for maze levels' do
-    level = Maze.first
-    level.update_ideal_level_source
-    assert_nil level.ideal_level_source
-  end
-
-  test 'artist levels are seeded with solutions' do
-    level = Artist.where(level_num: 'custom').first # custom levels have solutions
-    assert level.solution_blocks
-    assert level.ideal_level_source
-
-    assert_equal level.solution_blocks, level.ideal_level_source.data
-  end
-
   def update_contract_match
     name = 'contract match test'
-    dsl_text = <<EOS
-name 'Eval Contracts 1 B'
-title 'Eval Contracts 1 B'
-content1 'Write a contract for the star function'
-content2 'Eval Contracts 1 A.solution_blocks, 300'
-answer 'star|image|color:string|radius:Number|style:string'
-EOS
+    dsl_text = <<~DSL
+      name 'Eval Contracts 1 B'
+      title 'Eval Contracts 1 B'
+      content1 'Write a contract for the star function'
+      content2 'Eval Contracts 1 A.solution_blocks, 300'
+      answer 'star|image|color:string|radius:Number|style:string'
+    DSL
     cm = ContractMatch.create_from_level_builder({}, {name: name, type: 'ContractMatch', dsl_text: dsl_text})
 
     # update the same level with different dsl text
@@ -761,14 +799,14 @@ EOS
   end
 
   test 'can clone multi level and preserve encrypted flag' do
-    dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
     old_level = create :multi, name: 'old multi level'
     old_level.stubs(:dsl_text).returns(dsl_text)
@@ -822,13 +860,27 @@ EOS
   test 'clone with suffix properly escapes suffixes' do
     level_1 = create :level, name: 'your_level_1'
 
-    tricky_suffix = '[(.\\'
+    tricky_suffix = '!(."'
 
     level_2 = level_1.clone_with_suffix(tricky_suffix)
     assert_equal "your_level_1#{tricky_suffix}", level_2.name
 
     level_3 = level_2.clone_with_suffix('_3')
     assert_equal 'your_level_1_3', level_3.name
+  end
+
+  test 'clone with suffix truncates long names' do
+    # make old name long enough that we'll exceed the 70 character limit on
+    # level names if we don't truncate it before adding the suffix
+    old_name = 'x' * 67
+    suffix = '_long_suffix'
+    new_name = 'x' * 58 + suffix
+    assert_equal(70, new_name.length)
+
+    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
+    new_level = old_level.clone_with_suffix(suffix)
+    assert_equal new_name, new_level.name
+    assert_equal suffix, new_level.name_suffix
   end
 
   test 'clone with same suffix copies and shares project template level' do
@@ -896,24 +948,24 @@ EOS
   end
 
   test 'cloning multi level sets editor experiment' do
-    old_dsl_text = <<EOS
-name 'old multi level'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    old_dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
-    expected_new_dsl_text = <<EOS
-name 'old multi level copy'
-editor_experiment 'level-editors'
-title 'Multiple Choice'
-question 'What is your favorite color?'
-wrong 'Red'
-wrong 'Green'
-right 'Blue'
-EOS
+    expected_new_dsl_text = <<~DSL
+      name 'old multi level copy'
+      editor_experiment 'level-editors'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once.with do |_pathname, new_dsl_text|
@@ -928,11 +980,167 @@ EOS
     assert_equal 'level-editors', new_level.editor_experiment
   end
 
+  test 'cloning multi level overwrites existing editor experiment' do
+    old_dsl_text = <<~DSL
+      name 'old multi level'
+      title 'Multiple Choice'
+      editor_experiment 'old-level-editors'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
+
+    expected_new_dsl_text = <<~DSL
+      name 'old multi level copy'
+      editor_experiment 'new-level-editors'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      wrong 'Green'
+      right 'Blue'
+    DSL
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.expects(:write).once.with do |_pathname, new_dsl_text|
+      new_dsl_text == expected_new_dsl_text
+    end
+
+    old_level = create :multi, name: 'old multi level'
+    old_level.stubs(:dsl_text).returns(old_dsl_text)
+
+    new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'new-level-editors')
+    assert_equal 'old multi level copy', new_level.name
+    assert_equal 'new-level-editors', new_level.editor_experiment
+  end
+
   test 'contained_level_names filters blank names before validation' do
     level = build :level
+    create :level, name: 'real_name'
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
     assert_equal level.contained_level_names, ['real_name']
+  end
+
+  test 'parent levels and child levels' do
+    parent = create :level
+    child = create :level
+    parent.child_levels << child
+    assert_equal [parent], child.parent_levels
+
+    # cannot add the same child a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      parent.child_levels << child
+    end
+
+    # cannot add the same parent a second time
+    assert_raises ActiveRecord::RecordInvalid do
+      child.parent_levels << parent
+    end
+  end
+
+  test 'child levels are in order of position' do
+    parent = create :level
+    child3 = create :level
+    child2 = create :level
+    child1 = create :level
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child3,
+      position: 3
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child1,
+      position: 1
+    )
+    ParentLevelsChildLevel.find_or_create_by!(
+      parent_level: parent,
+      child_level: child2,
+      position: 2
+    )
+    assert_equal [child1, child2, child3], parent.child_levels
+  end
+
+  test 'all_descendant_levels works on self-referential project template levels' do
+    level_name = 'project-template-level'
+    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
+    assert_equal level, level.project_template_level
+
+    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
+  end
+
+  test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
+    script = create :csf_script
+    assert script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is true for levels in many scripts if at least one script is hint_prompt_enabled' do
+    hint_script = create :csf_script
+    assert hint_script.hint_prompt_enabled?
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: hint_script
+    create :script_level, levels: [level], script: no_hint_script
+    assert level.hint_prompt_enabled?
+  end
+
+  test 'hint_prompt_enabled is false for levels in scripts where hint_prompt_enabled is false' do
+    no_hint_script = create :csp_script
+    refute no_hint_script.hint_prompt_enabled?
+    level = create :level
+    create :script_level, levels: [level], script: no_hint_script
+    refute level.hint_prompt_enabled?
+  end
+
+  test 'validates game' do
+    error = assert_raises ActiveRecord::RecordInvalid do
+      create :level, game: nil
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+
+    level = create :level
+    level.game = nil
+    error = assert_raises ActiveRecord::RecordInvalid do
+      level.save!
+    end
+    assert_includes error.message, 'Game required for non-custom levels'
+  end
+
+  test 'key list' do
+    # Make sure there are no levels from test fixtures for which computing a
+    # level key raises errors.
+    Level.key_list
+  end
+
+  test "get search options" do
+    search_options = Level.search_options
+    assert_equal search_options[:levelOptions].map {|option| option[0]}, [
+      "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
+      "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
+      "Vigenere", "Weblab"
+    ]
+    scripts = [
+      "All scripts", "20-hour", "algebra", "artist", "course1", "course2",
+      "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017",
+      "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "flappy",
+      "frozen", "hourofcode", "jigsaw", "playlab", "pre-express-2017", "starwars"
+    ]
+    assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
+    assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
+  end
+
+  test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
+    summary = @custom_level.summarize_for_lesson_show(false)
+    refute summary.key?('teacherMarkdown')
   end
 end

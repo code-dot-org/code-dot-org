@@ -16,7 +16,11 @@
 #  module_assignment_lm_index                          (plc_learning_module_id)
 #
 
-class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
+# Maps a unit enrollment to all the modules that a teacher must complete in order to
+# complete the unit.
+#
+# Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
+class Plc::EnrollmentModuleAssignment < ApplicationRecord
   belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
   belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
   belongs_to :user
@@ -31,8 +35,8 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
   ].freeze
 
   def status
-    Plc::EnrollmentModuleAssignment.stages_based_status(
-      [plc_learning_module.stage],
+    Plc::EnrollmentModuleAssignment.lessons_based_status(
+      [plc_learning_module.lesson],
       user,
       plc_enrollment_unit_assignment.plc_course_unit.script
     )
@@ -40,7 +44,7 @@ class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
 
   # Legacy PD courses do not have modules. However, they have user-completion-status for different sections
   # in similar ways - look at all the levels, and see what the user progress is for them.
-  def self.stages_based_status(stages, user, script)
+  def self.lessons_based_status(stages, user, script)
     all_levels = stages.flat_map(&:script_levels).flat_map(&:levels)
     levels_tracked = all_levels.reject {|level| [External, ExternalLink].include?(level.class) || level.try(:peer_reviewable?)}
 

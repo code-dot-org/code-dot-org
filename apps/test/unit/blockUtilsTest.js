@@ -9,7 +9,7 @@ import {
   createJsWrapperBlockCreator
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import sinon from 'sinon';
 import {allowConsoleWarnings} from '../util/testUtils';
 
@@ -179,7 +179,7 @@ describe('block utils', () => {
             <arg name="this sprite" type="Sprite"/>
             <description/>
           </mutation>
-          <title name="NAME">acting</title>
+          <title name="NAME" id="acting">acting</title>
           <statement name="STACK"/>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
@@ -187,7 +187,7 @@ describe('block utils', () => {
             <arg name="this sprite" type="Sprite"/>
             <description/>
           </mutation>
-          <title name="NAME">acting2</title>
+          <title name="NAME" id="acting2">acting2</title>
           <statement name="STACK"/>
         </block>
       `;
@@ -202,7 +202,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting</title>
+            <title name="NAME" id="acting">acting</title>
             <statement name="STACK"/>
           </block>
           <block type="behavior_definition" deletable="false" movable="false" editable="false">
@@ -210,7 +210,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting2</title>
+            <title name="NAME" id="acting2">acting2</title>
             <statement name="STACK"/>
           </block>
         </xml>
@@ -227,7 +227,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting</title>
+            <title name="NAME" id="acting">acting</title>
             <statement name="STACK"/>
           </block>
           <block type="behavior_definition" deletable="false" movable="false" editable="false">
@@ -235,7 +235,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting2</title>
+            <title name="NAME" id="acting2">acting2</title>
             <statement name="STACK"/>
           </block>
         </xml>
@@ -247,7 +247,7 @@ describe('block utils', () => {
             <arg name="this sprite" type="Sprite"/>
             <description/>
           </mutation>
-          <title name="NAME">acting</title>
+          <title name="NAME" id="acting">acting</title>
           <statement name="STACK"/>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
@@ -255,7 +255,7 @@ describe('block utils', () => {
             <arg name="this sprite" type="Sprite"/>
             <description/>
           </mutation>
-          <title name="NAME">acting2</title>
+          <title name="NAME" id="acting2">acting2</title>
           <statement name="STACK">
             <block type="variables_set" inline="false">
               <title name="VAR">someVar</title>
@@ -283,7 +283,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting2</title>
+            <title name="NAME" id="acting2">acting2</title>
             <statement name="STACK"/>
           </block>
         </xml>
@@ -295,7 +295,7 @@ describe('block utils', () => {
             <arg name="this sprite" type="Sprite"/>
             <description/>
           </mutation>
-          <title name="NAME">acting</title>
+          <title name="NAME" id="acting">acting</title>
           <statement name="STACK"/>
         </block>
         <block type="behavior_definition" deletable="false" movable="false" editable="false">
@@ -303,7 +303,7 @@ describe('block utils', () => {
             <arg name="this sprite" type="Sprite"/>
             <description/>
           </mutation>
-          <title name="NAME">acting2</title>
+          <title name="NAME" id="acting2">acting2</title>
           <statement name="STACK">
             <block type="variables_set" inline="false">
               <title name="VAR">someVar</title>
@@ -327,7 +327,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting2</title>
+            <title name="NAME" id="acting2">acting2</title>
             <statement name="STACK"/>
           </block>
           <block type="behavior_definition" deletable="false" movable="false" editable="false">
@@ -335,7 +335,7 @@ describe('block utils', () => {
               <arg name="this sprite" type="Sprite"/>
               <description/>
             </mutation>
-            <title name="NAME">acting</title>
+            <title name="NAME" id="acting">acting</title>
             <statement name="STACK"/>
           </block>
         </xml>

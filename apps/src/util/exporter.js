@@ -3,6 +3,7 @@
  */
 
 import $ from 'jquery';
+import {SnackSession} from 'snack-sdk';
 import {buildAsync, cancelBuild} from 'snack-build';
 import project from '@cdo/apps/code-studio/initApp/project';
 import download from '../assetManagement/download';
@@ -11,12 +12,9 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import exportExpoAppJsonEjs from '../templates/export/expo/app.json.ejs';
 import exportExpoPackagedFilesEjs from '../templates/export/expo/packagedFiles.js.ejs';
 import exportExpoPackagedFilesEntryEjs from '../templates/export/expo/packagedFilesEntry.js.ejs';
+import {EXPO_SDK_VERSION, PLATFORM_ANDROID} from './exporterConstants';
 
-export const EXPO_SDK_VERSION = '33.0.0';
-
-export const PLATFORM_ANDROID = 'android';
-export const PLATFORM_IOS = 'ios';
-export const DEFAULT_PLATFORM = PLATFORM_ANDROID;
+const EXPO_REACT_NATIVE_WEBVIEW_VERSION = '7.4.3';
 
 export function createPackageFilesFromZip(zip, appName) {
   const moduleList = [];
@@ -46,6 +44,21 @@ export function createPackageFilesFromExpoFiles(files) {
     exportExpoPackagedFilesEntryEjs({module})
   );
   return exportExpoPackagedFilesEjs({entries});
+}
+
+export function createSnackSession(files, expoSession) {
+  return new SnackSession({
+    sessionId: `${getEnvironmentPrefix()}-${project.getCurrentId()}`,
+    files,
+    name: `project-${project.getCurrentId()}`,
+    sdkVersion: EXPO_SDK_VERSION,
+    dependencies: {
+      'react-native-webview': {version: EXPO_REACT_NATIVE_WEBVIEW_VERSION}
+    },
+    user: {
+      sessionSecret: expoSession || EXPO_SESSION_SECRET
+    }
+  });
 }
 
 async function expoBuildOrCheckApk(options, mode, sessionSecret) {
@@ -78,9 +91,13 @@ async function expoBuildOrCheckApk(options, mode, sessionSecret) {
   appJson.expo.splash.imageUrl = appJson.expo.splash.image;
 
   // Starting with SDK 33, the turtle build system requires that
-  // we specify our dependencies here (we currently depend only
-  // on the 'expo' module):
-  appJson.expo.dependencies = ['expo'];
+  // we specify our dependencies here:
+  appJson.expo.dependencies = [
+    'expo',
+    'expo-asset',
+    'expo-file-system',
+    'react-native-webview'
+  ];
 
   if (buildMode) {
     return buildApk(sessionSecret, appJson.expo);

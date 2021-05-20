@@ -1,0 +1,1775 @@
+---
+mn:
+  data:
+    blocks:
+      Dancelab_alternateMoves:
+        text: "{GROUP}-н төстэй бүр {N} арга хэмжээ \n{MOVE1} ба {MOVE2}-н хоорондох"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          MOVE1:
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Од
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+          MOVE2:
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Од
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Dancelab_atTimestamp:
+        text: "{TIMESTAMP}-н дараа {UNIT}"
+        options:
+          UNIT:
+            '"measures"': арга хэмжээ
+            '"seconds"': секундууд
+      Dancelab_changeColorBy:
+        text: "{COLOR} {METHOD}-г {AMOUNT}-р солих"
+        options:
+          METHOD:
+            '"hue"': өнгө
+            '"saturation"': ханалт
+            '"brightness"': тод байдал
+      Dancelab_changeMoveEachLR:
+        text: "{GROUP} {MOVE} {DIR}-г үүрд хийх"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          MOVE:
+            '"next"': "(Дараагийнх)"
+            '"prev"': "(Өмнөх)"
+            '"rand"': "(Санамсаргүй)"
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Од
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Dancelab_changeMoveLR:
+        text: "{SPRITE} нь {MOVE} {DIR}-г үүрд хийдэг"
+        options:
+          MOVE:
+            '"next"': "(Дараагийнх)"
+            '"prev"': "(Өмнөх)"
+            '"rand"': "(Санамсаргүй)"
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Од
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Dancelab_changePropBy:
+        text: "{SPRITE} {PROPERTY}-г {VAL}-р өөрчлөх"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+      Dancelab_changePropEachBy:
+        text: "{GROUP} {PROPERTY}-г {VAL}-р өөрчлөх"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+      Dancelab_doMoveEachLR:
+        text: "{GROUP} нь {MOVE} {DIR}-г нэг удаа хийх"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          MOVE:
+            '"rand"': "(Санамсаргүй)"
+            MOVES.XBend: Нугалах
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.XClapSide: Алга таших
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Dab: Хатгах
+            MOVES.XFever: Диско
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Clown: Гангнам
+            MOVES.XHeadHips: Толгой + Хонго
+            MOVES.XHop: Үсрэх
+            MOVES.XHighKick: Өшиглөх
+            MOVES.XKnee: Өвдөг
+            MOVES.XKneel: Өвдөглөх
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Хүрэх
+            MOVES.XSlide: Гулгах
+            MOVES.Kick: Од
+            MOVES.XArmsUp: Сунгах
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Dancelab_doMoveLR:
+        text: "{SPRITE} нь {MOVE} {DIR}-г нэг удаа хийдэг"
+        options:
+          MOVE:
+            '"rand"': "(Санамсаргүй)"
+            MOVES.XBend: Нугалах
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.XClapSide: Алга таших
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Dab: Хатгах
+            MOVES.XFever: Диско
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Clown: Гангнам
+            MOVES.XHeadHips: Толгой + Хонго
+            MOVES.XHop: Үсрэх
+            MOVES.XHighKick: Өшиглөх
+            MOVES.XKnee: Өвдөг
+            MOVES.XKneel: Өвдөглөх
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: Хүрэх
+            MOVES.XSlide: Гулгах
+            MOVES.Kick: Од
+            MOVES.XArmsUp: Сунгах
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Dancelab_everyMeasuresRange:
+        text: "{START}-н дараа {N} арга хэмжээ бүрийг давтах "
+      Dancelab_everySeconds:
+        text: "{N} {UNIT} бүрийг давтах "
+        options:
+          UNIT:
+            '"measures"': арга хэмжээ
+            '"seconds"': секундууд
+      Dancelab_everySecondsRange:
+        text: "{N} {UNIT} бүр нь {START}-с {STOP} хүртгэл байна"
+        options:
+          UNIT:
+            measures: Арга хэмжээ
+            seconds: Секунд
+      Dancelab_everyVerseChorus:
+        text: "{UNIT} бүр "
+        options:
+          UNIT:
+            '"verse"': шүлэг
+            '"chorus"': хоор
+      Dancelab_getEnergy:
+        text: "{RANGE}-г авах"
+        options:
+          RANGE:
+            '"low"': басс
+            '"mid"': дунд
+            '"high"': чирэх
+      Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"tint"': тод
+      Dancelab_getTime:
+        text: "{UNIT} дээрх одоогийн цаг"
+        options:
+          UNIT:
+            '"measures"': арга хэмжээ
+            '"seconds"': секундууд
+      Dancelab_ifDanceIs:
+        text: |-
+          {SPRITE} нь {DANCE}-г хийж байвал
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.Kick: Од
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Dancelab_ifTime:
+        text: |-
+          хэрэв {UNIT} нь {OP} {N}-г хийж байвал
+          {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': арга хэмжээ
+            '"seconds"': секундууд
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
+      Dancelab_jumpTo:
+        text: "{SPRITE} нь {LOCATION} руу үсрэх"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Dancelab_jumpToEach:
+        text: "{GROUP}-г {LOCATION} руу үсрүүлэх"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Dancelab_layoutSprites:
+        text: "{GROUP} маягт нь {FORMAT} шиг байна"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          FORMAT:
+            '"border"': хил
+            '"inner"': дотоод квадрат
+            '"diamond"': алмааз
+            '"circle"': тойрог
+            '"grid"': сүлжээ
+            '"top"': дээд эгнээ
+            '"row"': мөр
+            '"bottom"': доод эгнээ
+            '"left"': зүүн багана
+            '"column"': багана
+            '"right"': баруун багана
+            '"x"': хөндлөн загалмай
+            '"plus"': нэмэх
+      Dancelab_makeAnonymousDanceSprite:
+        text: "{LOCATION} дээр шинэ {COSTUME}-г хийх"
+        options:
+          COSTUME:
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          шинэ {COSTUME}-г бүтээх
+          {LOCATION} дээр {NAME} нэртэй
+        options:
+          COSTUME:
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Dancelab_makeNewDanceSpriteGroup:
+        text: |-
+          {N}-г шинэ {COSTUME} болгох
+          {LAYOUT} дээр
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          COSTUME:
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          LAYOUT:
+            '"border"': хил
+            '"inner"': дотоод квадрат
+            '"diamond"': алмааз
+            '"circle"': тойрог
+            '"grid"': сүлжээ
+            '"top"': дээд эгнээ
+            '"row"': мөр
+            '"bottom"': доод эгнээ
+            '"left"': зүүн багана
+            '"column"': багана
+            '"right"': баруун багана
+            '"x"': хөндлөн загалмай
+            '"plus"': нэмэх
+      Dancelab_mixColors:
+        text: холимог {COLOR1} ба {COLOR2}
+      Dancelab_nMeasures:
+        text: "{N} арга хэмжээ"
+      Dancelab_onPointerDown:
+        text: доош сум дээр
+      Dancelab_onPointerDrag:
+        text: татах сум дээр
+      Dancelab_onPointerUp:
+        text: дээш сум дээр
+      Dancelab_randomColor:
+        text: тохиолдолын өнгө
+      Dancelab_setBackground:
+        text: суурь өнгийг тохируулах {COLOR}
+      Dancelab_setBackgroundEffect:
+        text: |-
+          суурь нөлөөг тохируулах
+          {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Байхгүй
+            '"circles"': Тойргууд
+            '"color_cycle"': Өнгөнүүд
+            '"diamonds"': Алмааз
+            '"disco_ball"': Дисконы бөмбөг
+            '"fireworks"': Салют
+            '"swirl"': Гипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Бүжгийн лазер шал
+            '"splatter"': Будаг тараагч
+            '"rainbow"': Солонго
+            '"snowflakes"': Цас
+            '"text"': Дууны нэрнүүд
+            '"galaxy"': Сансар
+            '"sparkles"': Гялалзах
+            '"spiral"': Спираль
+            '"disco"': Квадратууд
+            '"stars"': Одод
+          PALETTE:
+            '"rave"': Хар ба цагаан
+            '"cool"': Гайхалтай
+            '"electronic"': Электрон
+            '"iceCream"': Зайрмаг
+            '"default"': Гэрэл
+            '"neon"': Неон
+            '"tropical"': Тропикийн
+            '"vintage"': Усан үзэм
+            '"warm"': Дулаан
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          суурь нөлөөг тохируулах
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Байхгүй
+            '"rand"': "(Санамсаргүй)"
+            '"circles"': Тойргууд
+            '"quads"': Өнцөг
+            '"color_cycle"': Өнгөнүүд
+            '"diamonds"': Алмааз
+            '"disco_ball"': Дисконы бөмбөг
+            '"fireworks"': Салют
+            '"flowers"': Цэцэг
+            '"growing_stars"': Томорч буй од
+            '"swirl"': Гипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Бүжгийн лазер шал
+            '"splatter"': Будаг тараагч
+            '"rainbow"': Солонго
+            '"ripples_random"': Санамсаргүй долгио
+            '"ripples"': Долгионууд
+            '"snowflakes"': Цас
+            '"text"': Дууны нэрнүүд
+            '"squiggles"': Жижиг долгио
+            '"galaxy"': Сансар
+            '"sparkles"': Гялалзах
+            '"spiral"': Спираль
+            '"disco"': Квадратууд
+            '"stars"': Одод
+            '"music_wave"': Давалгаа
+          PALETTE:
+            '"rave"': Хар ба цагаан
+            '"cool"': Гайхалтай
+            '"electronic"': Электрон
+            '"iceCream"': Зайрмаг
+            '"default"': Гэрэл
+            '"neon"': Неон
+            '"tropical"': Тропикийн
+            '"vintage"': Усан үзэм
+            '"warm"': Дулаан
+      Dancelab_setDanceSpeed:
+        text: "{SPRITE}-н бүжгийн хурдыг{SPEED} руу тохируулах"
+        options:
+          SPEED:
+            '1': хэвийн
+            '2': хурдан
+            '4': маш хурдан
+            '0.5': удаан
+            '0.25': маш удаан
+      Dancelab_setDanceSpeedEach:
+        text: "{GROUP}-н бүжгийн хурдыг {SPEED} рүү тохируулах"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          SPEED:
+            '1': хэвийн
+            '2': хурдан
+            '4': маш хурдан
+            '0.5': удаан
+            '0.25': маш удаан
+      Dancelab_setForegroundEffect:
+        text: урд газрын нөлөөг {EFFECT}-р тохируулах
+        options:
+          EFFECT:
+            '"none"': Байхгүй
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts_red"': Зүрхнүүд
+            '"music_notes"': Хөгжмийн тэмдэглэл
+            '"pineapples"': Ханборгоцой
+            '"pizzas"': Пицца
+            '"smiling_poop"': Мангар
+            '"rain"': Бороо
+            '"floating_rainbows"': Солонго
+            '"smile_face"': Инээмсэглэл
+            '"spotlight"': Онцгой гэрэл
+            '"color_lights"': Тайзны гэрэл
+            '"raining_tacos"': Тако
+      Dancelab_setForegroundEffectExtended:
+        text: урд газрын нөлөөг {EFFECT}-р тохируулах
+        options:
+          EFFECT:
+            '"none"': Байхгүй
+            '"rand"': "(Санамсаргүй)"
+            '"bubbles"': Хөөс
+            '"hearts_colorful"': Өнгөлөг зүрх
+            '"confetti"': Конфетти
+            '"emojis"': Инээмсэглэл
+            '"hearts_red"': Зүрхнүүд
+            '"music_notes"': Хөгжмийн тэмдэглэл
+            '"paint_drip"': Будагны дусал
+            '"pineapples"': Ханборгоцой
+            '"pizzas"': Пицца
+            '"smiling_poop"': Мангар
+            '"rain"': Бороо
+            '"floating_rainbows"': Солонго
+            '"smile_face"': Инээмсэглэл
+            '"spotlight"': Онцгой гэрэл
+            '"color_lights"': Тайзны гэрэл
+            '"exploding_stars"': Оддын тэсрэлт
+            '"raining_tacos"': Тако
+      Dancelab_setProp:
+        text: "{SPRITE} {PROPERTY}-г [VAL] [2] руу тохируулах "
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+      Dancelab_setPropEach:
+        text: "{GROUP} {PROPERTY}-г {VAL} руу тохируулах"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"tint"': тод
+      Dancelab_setPropRandom:
+        text: "{SPRITE} {PROPERTY}-г санамсаргүй болгох"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"tint"': тод
+      Dancelab_setPropRandomEach:
+        text: "{GROUP} {PROPERTY}-г санамсаргүй болгох"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"tint"': тод
+      Dancelab_setTint:
+        text: "{SPRITE}-н будгийг {VAL} руу тохируулах"
+      Dancelab_setTintEach:
+        text: "{THIS} будгийг {VAL} руу тохируулах"
+        options:
+          THIS:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+      Dancelab_setTintEachInline:
+        text: "{THIS} будгийг {VAL} руу тохируулах"
+        options:
+          THIS:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+      Dancelab_setTintInline:
+        text: "{SPRITE}-н будгийг {VAL} руу тохируулах"
+      Dancelab_setVisible:
+        text: "[SPRITE]-г {VISIBILITY}-д харагдах болгох"
+        options:
+          VISIBILITY:
+            'true': харагдах
+            'false': харагдахгүй
+      Dancelab_setVisibleEach:
+        text: "{THIS}-г {VISIBILITY}-д харагдах болгох"
+        options:
+          THIS:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          VISIBILITY:
+            'true': харагдах
+            'false': харагдахгүй
+      Dancelab_startMapping:
+        text: "{SPRITE} нь {RANGE}-г дагуулах {PROPERTY}-г эхлүүлдэг"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"tint"': тод
+          RANGE:
+            '"bass"': басс
+            '"mid"': дунд
+            '"treble"': чирэх
+      Dancelab_startMappingEach:
+        text: "{GROUP} нь {RANGE}-г дагуулан {PROPERTY}-г эхлүүлдэг"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"tint"': тод
+          RANGE:
+            '"bass"': басс
+            '"mid"': дунд
+            '"treble"': чирэх
+      Dancelab_stopMapping:
+        text: "{SPRITE} нь {RANGE}-д дагадаг {PROPERTY}-г зогсоодог"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"direction"': хөдөлгөөний чиглэл
+            '"tint"': тод
+          RANGE:
+            '"bass"': басс
+            '"mid"': дунд
+            '"treble"': чирэх
+      Dancelab_stopMappingEach:
+        text: "{GROUP} нь {RANGE}-г дагадаг {PROPERTY}-г зогсооно"
+        options:
+          GROUP:
+            sprites: бүгд
+            '"ALIEN"': харийнхан
+            '"BEAR"': баавгай
+            '"CAT"': муур
+            '"DOG"': нохой
+            '"DUCK"': нугас
+            '"FROG"': мэлхий
+            '"MOOSE"': хандгай
+            '"PINEAPPLE"': ханборгоцой
+            '"ROBOT"': робот
+            '"SHARK"': аварга загас
+            '"SLOTH"': зальхай
+            '"UNICORN"': нэг эвэрт
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+            '"rotation"': эргэлт
+            '"x"': хэвтээ байрлал
+            '"y"': босоо байрлал
+            '"direction"': хөдөлгөөний чиглэл
+            '"tint"': тод
+          RANGE:
+            '"bass"': басс
+            '"mid"': дунд
+            '"treble"': чирэх
+      Dancelab_translateStrings:
+        text: орчуулах{STRING}
+        options:
+          STRING:
+            '"music_wave"': Давалгаа
+            '"ripples"': Долгионууд
+            '"ripples_random"': Санамсаргүй долгио
+            '"quads"': Өнцөг
+            '"flowers"': Цэцэг
+            '"popsicles"': Модон чихэр
+            '"squiggles"': Жижиг долгио
+            '"growing_stars"': Томорч буй од
+            '"emojis"': Инээмсэглэл
+            '"hearts_colorful"': Зүрхнүүд
+            '"paint_drio"': Будагны дусал
+            '"exploding_stars"': Оддын тэсрэлт
+            '"row_top"': дээд эгнээ
+            '"row_bottom"': доод эгнээ
+            '"column_left"': зүүн багана
+            '"column_right"': баруун багана
+            '"diamond"': алмааз
+            '"mural"': Ханын зураг
+            '"safari"': Сафари
+            '"network"': Сүлжээ
+            '"highway"': Хурдны зам
+            '"stream"': Урсгал
+            '"tile"': Хавтан
+            '"shadow"': Сүүдэр
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenKey:
+        text: "{KEY}-г дарсан үед"
+        options:
+          KEY:
+            '"up"': дээшээ
+            '"left"': зүүн
+            '"down"': доошоо
+            '"right"': баруун
+            '"space"': зай
+            '"enter"': enter товч
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
+      Dancelab_whenPeak:
+        text: "{RANGE} оргил байх үед"
+        options:
+          RANGE:
+            '0': басс
+            '1': дунд
+            '2': чирэх
+      Dancelab_whenSetup:
+        text: тохиргоо
+      Dancelab_whenSetup2:
+        text: тохиргоо
+      gamelab_addBehaviorSimple:
+        text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': секундууд
+      gamelab_changePropBy:
+        text: "{SPRITE} {PROPERTY}-г {VAL}-р өөрчлөх"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+            '"speed"': хурд
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} нь {SPRITE2}-д хүрэх"
+        options:
+          CONDITION:
+            '"when"': хэзээ
+            '"while"': байхад
+      gamelab_clickedOn:
+        text: "{SPRITE} дээр дарах үед"
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE} дээр дарсан"
+      gamelab_comment:
+        text: 'сэтгэгдэл: {COMMENT}'
+      gamelab_createNewSprite:
+        text: "шинэ шидтэнг \n {NAME} нэртэй\n {COSTUME} хувцастай\n {LOCATION} дээр болгоорой"
+      gamelab_destroy:
+        text: "{THIS}-г устгах"
+      gamelab_draggable:
+        text: татаж болохуйц
+      gamelab_edgesDisplace:
+        text: захууд {SPRITE}-г хөдлөхөөс сэргийлж байна
+      gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+            '"tint"': тод
+            '"speed"': хурд
+      gamelab_getThisSprite:
+        text: "{CHOICE} шидтэн"
+        options:
+          CHOICE:
+            '"this"': энэ
+            '"other"': бусад
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секундууд
+      gamelab_hideTitleScreen:
+        text: гарчигны дэлгэцийг нуух
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': дээшээ
+            '"down"': доошоо
+            '"left"': зүүн
+            '"right"': баруун
+            '"space"': сансар
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} нь зах дээр хүрч байна"
+      gamelab_jumpTo:
+        text: "{SPRITE} нь {LOCATION} руу үсрэх"
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY}-г дарсан"
+        options:
+          CONDITION:
+            '"when"': хэзээ
+            '"while"': байхад
+          KEY:
+            '"up"': дээшээ
+            '"down"': доошоо
+            '"left"': зүүн
+            '"right"': баруун
+            '"space"': сансар
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_locationAt:
+        text: 'байршил х: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Хойд
+            '"East"': Дорнод
+            '"South"': Өмнөд
+            '"West"': Өрнөд
+      gamelab_locationMouse:
+        text: хулганы байршил
+      gamelab_locationOf:
+        text: "{SPRITE}-н байршил"
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeNewSpriteAnon:
+        text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_mirrorSprite:
+        text: "{SPRITE} нь {DIRECTION} руу харж байна"
+        options:
+          DIRECTION:
+            '"right"': баруун
+            '"left"': зүүн
+      gamelab_mouseLocation:
+        text: хулганы байршил
+      gamelab_moveForward:
+        text: "{SPRITE}-г {DISTANCE} пикселээр урагш хөдөлгөх"
+      gamelab_moveInDirection:
+        text: "{SPRITE}-г {DISTANCE} пикселээр {DIRECTION}-д хөдөлгөх"
+        options:
+          DIRECTION:
+            '"North"': Хойд
+            '"East"': Дорнод
+            '"South"': Өмнөд
+            '"West"': Өрнөд
+      gamelab_moveToward:
+        text: "{SPRITE}-г {DISTANCE} пикселээр {TARGET} руу хөдөлгөх"
+      gamelab_newSpritePointer:
+        text: "{SPRITE} дээр дарсан"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE} дээр дарсан"
+      gamelab_playSound:
+        text: хөгжимтоглох {SOUND}
+      gamelab_pointInDirection:
+        text: "{SPRITE} {DIRECTION}-г заах"
+        options:
+          DIRECTION:
+            '"North"': Хойд
+            '"East"': Дорнод
+            '"South"': Өмнөд
+            '"West"': Өрнөд
+      gamelab_printText:
+        text: "{TEXT}-г хэвлэх"
+      gamelab_randColor:
+        text: тохиолдолын өнгө
+      gamelab_randomColor:
+        text: тохиолдолын өнгө
+      gamelab_randomLocation:
+        text: санамсаргүй байршил
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} нь бүхнийг зогсооно"
+      gamelab_removeBehaviorSimple:
+        text: шидтэн {SPRITE} нь {BEHAVIOR}-г зогсооно
+      gamelab_removeTint:
+        text: "{THIS}-с өнгийг устгах"
+      gamelab_repeatForever:
+        text: үүрд давтах
+      gamelab_setAnimation:
+        text: "{THIS} хувцсыг {ANIMATION} руу өөрчлөх"
+      gamelab_setBackground:
+        text: суурь өнгийг тохируулах {COLOR}
+      gamelab_setBackgroundImage:
+        text: суурь өнгийг {IMG} руу тохируулах
+        options:
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': агуй
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': хот
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': хашаа
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': элсэн цөл
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': галакси
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сүлжээ
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': солонго
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': шинжлэх ухааны зөгнөлт
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': одод
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': усан доор
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': өвөл
+            undefined: байхгүй
+      gamelab_setBackgroundImageAs:
+        text: суурь өнгийг {IMG} руу тохируулах
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': дундаж
+            '100': large
+      gamelab_setProp:
+        text: "{SPRITE} {PROPERTY}-г {VAL} руу тохируулах"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+            '"speed"': хурд
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': дундаж
+            '100': large
+      gamelab_setSizes:
+        text: "{SPRITE} {PROPERTY}-г {N}% руу тохируулах"
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"width"': өргөн
+            '"height"': өндөр
+      gamelab_setTint:
+        text: "{THIS}-г {COLOR} руу өөрчлөх"
+      gamelab_setupSim:
+        text: |-
+          тохиргооны симуляци дараахтай хамт
+          {SPRITE1N}{SPRITE1COSTUME}хурд[SPRITE1SPEED]
+          {SPRITE2N}{SPRITE2COSTUME}хурд[SPRITE2SPEED]
+          цуглуулж буй
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: "{BREAK} гарчиг {TITLE} текст {SUBTITLE} бүхий гарчгийн дэлгэцийг үзүүлэх"
+      gamelab_spriteClicked:
+        text: "{CONDITION}{SPRITE} дээр дарсан"
+        options:
+          CONDITION:
+            '"when"': хэзээ
+            '"while"': байхад
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE} дээр дарсан"
+      gamelab_turn:
+        text: "{SPRITE}-г {DIRECTION} рүү {N} хэмээ эргүүлэх"
+        options:
+          DIRECTION:
+            '"right"': баруун
+            '"left"': зүүн
+      gamelab_whenDownArrow:
+        text: доошоо сум дарагдсан үед
+      gamelab_whenKey:
+        text: "{KEY}-г дарсан үед"
+        options:
+          KEY:
+            '"up"': дээшээ
+            '"down"': доошоо
+            '"left"': зүүн
+            '"right"': баруун
+            '"space"': сансар
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: зүүн сум дарагдсан үед
+      gamelab_whenRightArrow:
+        text: баруун сум дарагдсан үед
+      gamelab_whenTouching:
+        text: "{SPRITE1} нь {SPRITE2}-д хүрсэн үед"
+      gamelab_whenUpArrow:
+        text: дээшээ сум дарагдсан үед
+      gamelab_whileDownArrow:
+        text: доошоо сум дарагдсан байхад
+      gamelab_whileKey:
+        text: "{KEY} дарагдсан байхад"
+        options:
+          KEY:
+            '"up"': дээшээ
+            '"down"': доошоо
+            '"left"': зүүн
+            '"right"': баруун
+            '"space"': сансар
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: зүүн сум дарагдсан байхад
+      gamelab_whileRightArrow:
+        text: баруун сум дарагдсан байхад
+      gamelab_whileTouching:
+        text: "{SPRITE1} нь {SPRITE2}-нд хүрч байхад"
+      gamelab_whileUpArrow:
+        text: дээшээ сум дарагдсан байхад
+      gamelab_xLocationOf:
+        text: "{SPRITE}-н х тэнхлэг"
+      gamelab_yLocationOf:
+        text: "{SPRITE}-н у тэнхлэг"
+      Mikelab_addBehaviorSimple:
+        text: шидтэн {SPRITE} нь {BEHAVIOR}-г эхлүүлнэ
+      Mikelab_addTrainingData:
+        text: 'сургалтын өгөгдөл нэмэх: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": объект
+            "{x: 200, y: 100}": загас
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": загас
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": загас биш
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": миний-шошго
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": миний-шошго биш
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Mikelab_getNext:
+        text: дараагийн объектыг авах
+      Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+      Mikelab_groupChangeAnim:
+        text: "{SELECT} {COSTUME}-г {COSTUME2} болгож өөрчлөх"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+      Mikelab_groupChangePropBy:
+        text: "{SELECT} {COSTUME}-н {PROPERTY}-г {VAL}-р өөрчлөх"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+      Mikelab_groupCreateNewSprite:
+        text: "{LOCATION} дээр шинэ {COSTUME}-г хийх"
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Mikelab_groupDestroy:
+        text: "{SELECT} {COSTUME}-г устгах"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+      Mikelab_groupDisplace:
+        text: бүх {COSTUME} нь {COSTUME2} блокийг хөдөлгөхгүй байна
+      Mikelab_groupEdgesDisplace:
+        text: захууд {COSTUME}-г хөдлөхөөс сэргийлж байна
+      Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME}-н {PROPERTY}"
+        options:
+          SELECT:
+            '"average"': дундаж
+            '"this"': энэ
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+      Mikelab_groupRemoveAllBehaviors:
+        text: "{SELECT} {COSTUME}-н шинж чанарыг зогсоох"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT}{COSTUME} нь {BEHAVIOR}-г зогсоож байна"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+      Mikelab_groupRemoveTint:
+        text: "{SELECT} {COSTUME}-с өнгийг арилгах"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+      Mikelab_groupSetProp:
+        text: "{SELECT} {COSTUME}-н {PROPERTY}-г {VAL} болгож тохируулах"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+      Mikelab_groupSetTint:
+        text: "{SELECT} {COSTUME}-н өнгийг {COLOR} болгож өөрчлөх"
+        options:
+          SELECT:
+            '"all"': бүгд
+            '"this"': энэ
+      Mikelab_groupWhenClickedOn:
+        text: "{COSTUME} дээр дарах үед"
+      Mikelab_groupWhenXTouchesY:
+        text: "{COSTUME} нь {COSTUME2}-г хүрэх үед"
+      Mikelab_groupWhileClicked:
+        text: "{COSTUME} дээр дарахад"
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          {COSTUME} нь {COSTUME2}-т хүрэхэд
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} нь одоогоор {BEHAVIOR}-тай байна"
+      Mikelab_hideFish:
+        text: "{TRASH}-г устгах"
+        options:
+          TRASH:
+            object: объект
+            fish: загас
+      Mikelab_ifDanceIs:
+        text: |-
+          {SPRITE} нь {DANCE}-г хийж байвал
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.Kick: Од
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+            MOVES.Rest: Байхгүй
+      Mikelab_ifLabel:
+        text: |-
+          хэрэв {DANCE} бол
+          {DO1}-г хий, эсвэл {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: загас
+            MOVES.Clown: миний-шошго
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          объектыг {DANCE} гэж зөвшөөрвөл
+          {DO1}-г хий, эсвэл {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: загас
+            MOVES.Clown: миний-шошго
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          объектыг {DANCE} гэж зөвшөөрвөл
+          {DO1}-г хий
+        options:
+          DANCE:
+            MOVES.ClapHigh: загас
+            MOVES.Clown: миний-шошго биш
+      Mikelab_locationAt:
+        text: 'байршил х: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
+      Mikelab_randomColor:
+        text: тохиолдолын өнгө
+      Mikelab_removeBehaviorSimple:
+        text: шидтэн {SPRITE} нь {BEHAVIOR}-г зогсооно
+      Mikelab_repeatUntilComplete:
+        text: үүрд давтах
+      Mikelab_sendBad:
+        text: объектыг зүүн тийш шилжүүлэх
+      Mikelab_sendGood:
+        text: объектыг баруун тийш шилжүүлэх
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': хот
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': хэмжээ
+            '"rotation"': эргэлт
+            '"x"': х байрлал
+            '"y"': у байрлал
+            '"direction"': хөдөлгөөний чиглэл
+      Mikelab_setupSim:
+        text: |-
+          тохиргооны симуляци дараахтай хамт
+          {SPRITE1N}{SPRITE1COSTUME}хурд[SPRITE1SPEED]
+          {SPRITE2N}{SPRITE2COSTUME}хурд[SPRITE2SPEED]
+          цуглуулж буй
+          {SPRITE3N}{SPRITE3COSTUME}
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': баруун
+            '"left"': зүүн
+      Mikelab_sprite:
+        text: шинэ {COSTUME}-тай шидтэн {LOCATION} дээр байна
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": дээд
+            "{x: 200, y: 300}": доод
+            "{x: 100, y: 200}": зүүн
+            "{x: 300, y: 200}": баруун
+            "{x: 200, y: 200}": төв
+            "{x: 100, y: 100}": зүүн дээд
+            "{x: 300, y: 100}": баруун дээд
+            "{x: 100, y: 300}": зүүн доод
+            "{x: 300, y: 300}": баруун доод
+      Mikelab_whenClickedOn:
+        text: "{SPRITE} дээр дарах үед"
+      Mikelab_whenKeyPressed:
+        text: "{KEY}-г дарсан үед"
+        options:
+          KEY:
+            '"up"': дээш сум
+            '"down"': доошоо сум
+            '"left"': зүүн сум
+            '"right"': баруун сум
+            '"w"': Б
+            '"a"': A
+            '"s"': Ө
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': дээш сум
+            '"down"': доошоо сум
+            '"left"': зүүн сум
+            '"right"': баруун сум
+            '"w"': Б
+            '"a"': A
+            '"s"': Ө
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: хулгана дээр дарах үед
+      Mikelab_whenYesNoClicked:
+        text: "{KEY}-г дарсан үед"
+        options:
+          KEY:
+            '"yes"': тийм
+            '"no"': үгүй
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': дээш сум
+            '"down"': доошоо сум
+            '"left"': зүүн сум
+            '"right"': баруун сум
+      Mikelab_xLocationOf:
+        text: "{SPRITE}-н х тэнхлэг"
+      Mikelab_yLocationOf:
+        text: "{SPRITE}-н у тэнхлэг"
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': сүлжээ
+            '"border"': хил
+            '"row"': мөр
+      RyanLab_moveForward:
+        text: урагш хөдлөх
+      RyanLab_turnLeft:
+        text: зүүн эргэх
+      RyanLab_turnRight:
+        text: баруун эргэх
+      SpriteLab2Beta_spriteSay:
+        text: шидтэн {SPRITE} нь {TEXT}-г {SECONDS} секундын турш хэлсэн
+      Vector_createSpriteWith:
+        text: |-
+          шидтэн бүтээх
+          {STATEMENT}-г хийх
+      Vector_log:
+        text: бичлэгийн зурвас {MESSAGE}
+      Vector_positionCenter:
+        text: төв
+      Vector_push:
+        text: хурдыг {VECTOR} дээр тохируулах
+      Vector_randomLocation:
+        text: санамсаргүй байршил
+      Vector_setColor:
+        text: өнгийг {COLOR} руу тохируулах
+      Vector_setSize:
+        text: өргөн {WIDTH}, урт {HEIGHT}-г тохируулах
+      Vector_teleportTo:
+        text: байрлал {POSITION}-г тохируулах
+      Vector_vectorNorth:
+        text: хойд
+      Vector_where:
+        text: "{PROPERTY} шинж чанар нь {VALUE} дээр байх шидтэн бүр {STATEMENT}-г хийдэг"
+        options:
+          PROPERTY:
+            "'shapeColor'": өнгө
+      aalab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': сүлжээ
+            '"border"': хил
+            '"row"': мөр
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': бүгд
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': бүгд
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      binary_drawBin:
+        text: хоёртыг зурах {BIN}
+      binary_drawBinScreen:
+        text: |-
+          дэлгэц зурах
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: аравтын орныг зурах {DEC}
+      binary_drawPixelHere:
+        text: пикселийг тохируулах {VAL}
+        options:
+          VAL:
+            '0': унтрах
+            '1': асах
+            '"toggle"': сэлгэх
+      binary_drawString:
+        text: мөр зурах {STR}
+      binary_goTo:
+        text: "{LOC} руу үсрэх"
+      binary_goToHome:
+        text: зүүн дээш үсрэх
+      binary_gridSize:
+        text: сүлжээний хэмжээг тохируулах {SIZE}
+      binary_move:
+        text: шилжих {DIR}
+        options:
+          DIR:
+            '"up"': дээшээ
+            '"down"': доошоо
+            '"left"': зүүн
+            '"right"': баруун
+      binary_whenKey:
+        text: "{KEY}-г дарсан үед"
+        options:
+          KEY:
+            '"up"': дээшээ
+            '"down"': доошоо
+            '"left"': зүүн
+            '"right"': баруун
+            '"space"': сансар
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      craft_ifPath:
+        text: |-
+          хэрэв зам {DIR} бол
+          {STATEMENT}
+        options:
+          DIR:
+            "'ahead'": урд
+            "'right'": баруун гар руу
+            "'left'": зүүн гар руу
+      craft_ifStandingOn:
+        text: |-
+          {TYPE} дээр зогсож байвал
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": хөх шүр
+            "'redCoralBlock'": улаан шүр
+            "'sand'": элс
+            "'wool_blue'": гүн ус
+            "'planksOak'": царсны банз
+            "'seaLantern'": далайн дэнлүү
+      craft_ifStandingOnLimit:
+        text: |-
+          {TYPE} дээр зогсож байвал
+          {STATEMENT}
+        options:
+          TYPE:
+            "'sand'": элс
+            "'darkPrismarine'": хар присмарин
+            "'seaLantern'": далайн дэнлүү
+      craft_log:
+        text: бичлэгийн зурвас {MESSAGE}
+      craft_moveForward:
+        text: урагш хөдлөх
+      craft_placeBlock:
+        text: "{blockType}-г байрлуулах"
+        options:
+          blockType:
+            '"strippedOak"': хуулсан царс
+            '"strippedDarkOak"': хуулсан хар царс
+            '"stoneBricks"': чулуун тоосго
+            '"mossyStoneBricks"': хөвдтэй чулаан тоосго
+            '"crackedStoneBricks"': хагарсан чулуун тоосго
+            '"blueCoralBlock"': хөх шүрэн блок
+            '"pinkCoralBlock"': ялгаан шүрэн блок
+            '"magentaCoralBlock"': цайвар шүрэн блок
+            '"redCoralBlock"': улаан шүрэн блок
+            '"yellowCoralBlock"': шар шүрэн блок
+            '"blueDeadCoralBlock"': хөх үхмэл шүрэн блок
+            '"pinkDeadCoralBlock"': ягаан үхмэл шүрэн блок
+            '"magentaDeadCoralBlock"': цайвар үхмэл шүрэн блок
+            '"readDeadCoralBlock"': улаан үхмэл шүрэн блок
+            '"yellowDeadCoralBlock"': шар үхмэл шүрэн блок
+            '"prismarine"': присмарин
+            '"darkPrismarine"': хар присмарин
+            '"seaLantern"': далайн дэнлүү
+            '"packedIce"': боосон мөс
+            '"blueIce"': хөх мөс
+            '"blackConcrete"': хар бетон
+            '"seaGrass"': далайн өвс
+            '"kelp"': замаг
+            '"polishedGranite"': өнгөлсөн боржин чулуу
+      craft_placePrismarine:
+        text: присмариныг байрлуулах
+      craft_placeTorch:
+        text: бамбар байрлуулах
+      craft_repeatUntilConduit:
+        text: |-
+          суваг дуусах хүртэл давтах
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          зорилго хүртэл давтах
+          {STATEMENT}
+      craft_spawnEntity:
+        text: нуруу {ENTITY}
+        options:
+          ENTITY:
+            '"cod"': сагамхай
+            '"dolphin"': далайн гахай
+            '"salmon"': яргай
+            '"seaTurtle"': далайн яст мэлхий
+            '"squid"': өгөөш
+            '"tropicalFish"': тропикийн загас
+      craft_turn:
+        text: эргэлт {DIR}
+        options:
+          DIR:
+            right: баруун гар тийш ↻
+            left: зүүн гар тийш ↺

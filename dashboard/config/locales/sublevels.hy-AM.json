@@ -1,0 +1,149 @@
+{
+  "hy-AM": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Events": "Իրադարձություններ",
+              "Loops": "loops",
+              "Math": "Մաթեմատիկա",
+              "Logic": "տրամաբանություն"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Իրադարձություններ",
+              "Logic": "տրամաբանություն"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "draw a star",
+                "parameters": {
+                  "points": "կետեր",
+                  "length": "length"
+                }
+              },
+              "draw a circle": {
+                "name": "draw a circle"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "length",
+                  "repeat": "կրկնել"
+                }
+              },
+              "draw a triangle": {
+                "name": "draw a triangle",
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a house": {
+                "name": "draw a house",
+                "parameters": {
+                  "length": "length"
+                }
+              },
+              "draw a square": {
+                "name": "draw a square",
+                "parameters": {
+                  "length": "length"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Events": "Իրադարձություններ"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Իրադարձություններ",
+              "Logic": "տրամաբանություն"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Loops": "loops",
+              "Math": "Մաթեմատիկա",
+              "Logic": "տրամաբանություն",
+              "Functions": "գործառույթները",
+              "Variables": "փոփոխականների"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Events": "Իրադարձություններ",
+              "Variables": "փոփոխականների",
+              "Math": "Մաթեմատիկա",
+              "Logic": "տրամաբանություն",
+              "Functions": "գործառույթները",
+              "Text": "տեքստ"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Events": "Իրադարձություններ",
+              "Variables": "փոփոխականների",
+              "Math": "Մաթեմատիկա",
+              "Logic": "տրամաբանություն",
+              "Functions": "գործառույթները",
+              "Text": "տեքստ"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Loops": "loops",
+              "Math": "Մաթեմատիկա",
+              "Logic": "տրամաբանություն",
+              "Functions": "գործառույթները",
+              "Variables": "փոփոխականների"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Events": "Իրադարձություններ",
+              "Logic": "տրամաբանություն",
+              "Math": "Մաթեմատիկա"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "գործողություններ",
+              "Events": "Իրադարձություններ",
+              "Logic": "տրամաբանություն",
+              "Loops": "loops",
+              "Math": "Մաթեմատիկա",
+              "Variables": "փոփոխականների",
+              "Functions": "գործառույթները"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,5 @@
 ---
 title: Paano-gawin ang kaganapan ng Hour of Code
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- ** Iba pang mga ideya ng event **: 
     - Mag imbita ng isang lokal na leader ng indutriya pa ipaliwanag ang kanyang gawa na sangkot ang computer science.
     - Mag imbita ng isang lokal na pulitiko at hayaang turuan sya ng mga estudyante kung paano mag-code.
     - Magkaroong ng grupo ng mga estudyante na nagpapakita ng isang unplugged na aktibidad.

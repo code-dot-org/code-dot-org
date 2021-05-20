@@ -1,6 +1,5 @@
 ---
 title: მთელი სკოლის ჩართულობა
-layout: wide
 ---
 
 {{ signup_button }}

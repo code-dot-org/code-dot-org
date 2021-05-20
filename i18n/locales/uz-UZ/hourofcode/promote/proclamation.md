@@ -1,7 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: Namunaviy echim, kompyuter fanlari bo‘yicha ta'lim haftaligi va soat soati
 ---
 
 {{ signup_button }}

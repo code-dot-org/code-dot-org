@@ -1,0 +1,45 @@
+{
+  "te-IN": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Brushes": "కుంచెలు"
+        },
+        "CourseD_EOC_dance": {
+          "World": "ప్రపంచం",
+          "Dancers": "నాట్యకారులు",
+          "Properties": "లక్షణాలు",
+          "Events": "ఈవెంట్లు",
+          "Numbers": "అంకెలు"
+        },
+        "CourseD_EOC_starwars": {
+          "Events": "ఈవెంట్లు",
+          "Games/Score": "ఆటలు/మార్కులు"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "ప్రపంచం",
+          "Events": "ఈవెంట్లు",
+          "Behaviors": "ప్రవర్తన"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "ప్రపంచం",
+          "Locations": "స్థానాలు",
+          "Events": "ఈవెంట్లు",
+          "Behaviors": "ప్రవర్తన",
+          "Comments": "వ్యాఖ్యలు"
+        },
+        "outbreak_freeplay": {
+          "World": "ప్రపంచం",
+          "Behaviors": "ప్రవర్తన",
+          "Events": "ఈవెంట్లు",
+          "Locations": "స్థానాలు",
+          "Comments": "వ్యాఖ్యలు"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "ప్రపంచం",
+          "Events": "ఈవెంట్లు"
+        }
+      }
+    }
+  }
+}

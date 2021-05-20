@@ -1,0 +1,84 @@
+{
+  "script": {
+    "name": "K5PD",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "K5 Support",
+      "script_announcements": [
+        {
+          "notice": "This Online PD Resource is no longer available",
+          "details": "Click \"Learn More\" to find out about the new Online PD Resources.",
+          "link": "https://studio.code.org/s/k5-onlinepd-2019",
+          "type": "failure",
+          "visibility": "Teacher and student"
+        }
+      ],
+      "announcements": [
+        {
+          "notice": "This Online PD Resource is no longer available",
+          "details": "Click \"Learn More\" to find out about the new Online PD Resources.",
+          "link": "https://studio.code.org/s/k5-onlinepd-2019",
+          "type": "failure",
+          "visibility": "Teacher and student"
+        }
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:38 UTC",
+    "seeding_key": {
+      "script.name": "K5PD"
+    }
+  },
+  "lesson_groups": [
+
+  ],
+  "lessons": [
+
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

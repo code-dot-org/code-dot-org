@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 si:
   errors:
     messages:
@@ -14,10 +26,11 @@ si:
     attributes:
       user:
         name: 'ප්‍රදර්ශක නාමය'
-        name_example: 'ප්‍රදර්ශන නම<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'ප්‍රදර්ශන නම (e.g. Cool Coder or Jane S.)'
         email: 'විද්‍යුත් තැපැල'
         parent_email: 'මාපිය/භාරකරු e-තැපෑල'
         personal_email: "පෞද්ගලික e-තැපැල් ලිපිනය <a href=\"%{url}\">(ඔබට e-තැපැල් ලිපිනයක් නැති නම් මෙතන ඔබන්න)</a>"
+        personal_email_markdown: "පෞද්ගලික e-තැපැල් ලිපිනය [(ඔබට e-තැපැල් ලිපිනයක් නැති නම් මෙතන ඔබන්න)](%{url})"
         username: 'පරිශීලක නාමය'
         password: 'මුර පදය'
         password_confirmation: 'මුර පදය ස්ථිර කිරීම'
@@ -42,12 +55,9 @@ si:
   okay: "හරි"
   or: "හෝ"
   heading_x_of_y: "%{heading} (පිටුව %{y} න් %{x})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'ගුරුවරයෙක් එකතු කරන්න:'
       placeholder: "Code එකෙහි කණ්ඩය (ABCDEF)"
-      instructions: "ඔබේ ගුරුවරයා විසින් ඔබ හට ලබා දුන් අකුරු 6ක් ඇති කේතය සඳහන් කරන්න."
-    submit: 'ගුරුවරයෙක් එකතු කරන්න'
   add_hint_form:
     placeholder: 'කරුණාකර ඔබේ ඉඟිය මෙහි ඇතුලත් කරන්න'
     submit: 'ඉඟියක් එකතු කරන්න'
@@ -74,8 +84,6 @@ si:
   auth:
     sign_in_with: '%{provider} සමඟ පිවිසෙන්න'
     signed_in: 'පුරා ඇත!'
-    signed_out: 'ඔබ <a href="%{url}">Code.org</a> වෙතින් නික්මගොස් ඇත.'
-    sign_out_of: 'ඔබ පිවිසීම සඳහා %{provider} භාවිතාකර ඇත. %{provider} ගෙන් නික්මීම සඳහා <a href="%{url}"> මෙතන ක්ලික් කරන්න </a>.'
     already_signedup: 'දැනටමත් ලියාපදිංචී ඇත්ද?'
     notyet_signedup: "තවමත් ලියාපදිංචි නොමැතිද?"
     google_oauth2: 'Google ගිණුම'
@@ -92,6 +100,7 @@ si:
     student_count: 'සිසුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     teacher_count: 'ගුරුවරුන් %{count} මේ වන විටත් ලියාපදිංචිව ඇත.'
     overview: 'ගිණුමකට   අත්සන්වන්න  ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.<a href="/">ඔබට විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.</a>ගිණුමක් නොමැතිව ,නමුත්  ඔබට අත්සන්වන්න වෙනවා ගිණුමට  ඔබගේ ප්‍රගතිය  සහ  ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.'
+    overview_markdown: 'ගිණුමකට අත්සන්වන්න ඔබගේ ප්‍රගතිය බැලීමට නැතහොත් පාලනය කිරීමට.[ඔබට විවිද අවදි ප්‍රහේලිකාවේ සොයන්න හැකය.](/)ගිණුමක් නොමැතිව ,නමුත් ඔබට අත්සන්වන්න වෙනවා ගිණුමට ඔබගේ ප්‍රගතිය සහ ව්‍යාපෘති දිගුකාලීනව තබා ගැනීමට.'
     hoc_already_signed_up_heading: 'ඇතුළත් නොවී ආරම්භ කරන්න'
     hoc_already_signed_up_content: 'ඔබ Hour of Code ඉගැන්වීමට ලියාපදිංචි වී ඇත! ඔබටත් ඔබගේ සිසුන් හටත් මෙම වැඩසටහන සඳහා සහභාගී වීමට Code Studio හි ලියාපදිංචි වීමට අවශ්‍යතාවයක් නැත. ආරම්භ වීමට, ඔබගේ පන්තිය සඳහා<a href="%{learn_url}">නිබන්ධනයක් තෝරා ගැනීමට</a> ඔවුන් හා ලින්ක් එක බෙදාගන්න.<br/><br/>ඔබ Hour of Code රසවිඳ තව දුරටත් යාමට කැමති නම්, ඔබට මුරපදයක් යොදා Code Studio ගිණුමක් සාඳා ඔබගේ සිසුන් එහි ඇති <a href="%{educate_url}">දිගු පාඨමාලා</a>හි යෙඳවිය හැකිය.'
     teacher_educator_guide: 'අධ්‍යාපක මඟපෙන්වීම දකින්න'
@@ -111,8 +120,6 @@ si:
     valid_password: "මුර පදය වලංගුයි!"
     invalid_password: "Password එක අකුරු 6ට වැඩිවිය යුතුයි"
     mismatch_password: "යෙදු මුර පද දෙක සමාන වී නැත"
-    student_terms: "මම එකග වෙනවා  Code.org එකත්  සමග එහි <a href='http://code.org/tos'>නීති සහ රෙගුලාසි </a>මට  13ට  වඩා අඩුනම් වයස.මම තහවරු  කරනවා මෙම පත්‍රිකාව මගේ දෙමාපියන්ගේ  හෝ නිත්‍යානුකුල බාරකරුගේ  අනුමැතිය ගත්  බව මෙම  Code.org සේවාව ලබාගනිම <br/><br/>විද්‍යුත් තැපෑලය ශිෂ්‍ය   පිට පතෙහි දක්වා නැත.ශිෂ්වයන්  කිසිම දිනෙක  විද්‍යුත් තැපෑලයක්  Code.org  වලින් නොලැබේ මුර පදය වෙනස් කිරීමට හැර.අපේ <a href='http://code.org/privacy'>පෞද්ගලික නිතිය </a>මෙම දත වලට \n\n"
-    teacher_terms: "මම Code.org සේවා නියමයන් මගින් බැඳී සිටීමට එකඟ වෙමි. වැඩි විස්තර සඳහා, අපගේ රහස්‍ය ප්‍රතිපත්තිය බලන්න<a href='http://code.org/privacy'> රහස්‍ය ප්‍රතිපත්තිය </a>."
     additional_information: "ඔබට ඇතුලු වීමට තව තොරතුරු කිහිපයක් අවශ්‍යව ඇත."
     user_type_label: "ගිණුම් වර්ගය"
     user_type_teacher: "ගුරු වරයා"
@@ -166,6 +173,7 @@ si:
     type:
       word: 'රහස් පදය'
       email: 'විද්‍යුත් තැපැල'
+      clever: 'දක්ෂ ගිණුම'
   follower:
     invite_sent: 'ආරාධනාව යවන ලදී'
     added_teacher: '%{name} ඔබේ ගුරුවරයා ලෙස එක් කරන ලදි'
@@ -205,6 +213,8 @@ si:
       project_gallery: "ව්යාපෘති"
       educate_hoc: "Hour of Code"
       stats: "සංඛ්‍යාන"
+      legal_privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
+      legal_tos: "සේවා නියම"
     user:
       classroom: 'ගුරු මුල් පිටුව'
       district_dashboard: 'දිස්ත්‍රික්ක උපකරණ පුවරුව'
@@ -284,14 +294,13 @@ si:
     delete_text: "පහත බොත්තම ක්ලික් කිරීමෙන් ඔබගේ ගිණුම මකනු ඇත."
     delete_text_teacher_note: "සැලකිය යුතුයි: ඔබගේ ගිණුම ඉවත් කිරීමෙන් ඔබේ සිසුන්ගේ ගිණුම් ඉවත් නොවේ."
     delete_confirm: 'ඔබට ඔබේ ගිණුම ඉවත් කිරීමට අවශ්‍යද?'
+    update_email: "යාවත්කාලීන කරන්න"
+    parent_guardian_email_label: "මාපිය/භාරකරු e-තැපෑල"
   user_level:
     completed: 'සම්පූර්ණයි'
     tried: 'උත්සාහ කරනලදී'
   home:
     title: "කේත මැදිරිය"
-    description: 'කෝඩ් ස්ටුඩියෝව යනු Code.org මගින් නිර්මිත පාඨමාලා සියල්ල ඇරඹෙන ස්ථානයයි'
-    lines_of_code: "කේත පේළි %{lines_count}ක් සිසුන් විසින් ලියා ඇත"
-    lines_of_code_linebreak: "%{lines_count} කේත පේලි ගණන<br/>ලියා තිබෙන්නේ %{students_count} මිලියන ගණනක සිසුන්"
     all_courses: "පාඨමාලා 1, 2 සහ 3 දළ විශ්ලේෂණය"
     lesson_plans: "පාඩම් සැලසුම්"
     signin_message: "ඔබට දැනටමත් මෙහි ලියපදිංචි වී තිබේද?%{link}"
@@ -321,11 +330,6 @@ si:
     test_videos_help: 'අපේ නව වීඩියෝ ප්ලෙයරය ඔබේ පාසලේදි පරික්ශා කර බලන්න'
     try_beta_courses: 'අලුත්! K-5 සිසුන් සඳහා අපගේ බීටා පාඨමාලාවන් අත්හදා බලන්න'
     use_as_teacher: 'මෙම අඩවිය ගුරුවරයෙක් වශයෙන් භාවිතා කරන්න'
-    heading_hoc2014: "<h1>සියලු වයස්</h1><h2>සඳහා Hour of Code</h2>"
-    heading_elementary: "<h2>20 hour courses</h2><h1>පරිගණක විද්‍යා මූලදර්ම (සෑම වයසකම)</h1>"
-    heading_apps: "<h2>සැමට</h2><h1> විනෝදය</h1>"
-    heading_tools: "<h2>ඊළඟ පියවර සඳහා සූදානම් ද?</h2><h1> උසස් පාසලේ සඳහා JavaScript මෙවලම්</h1>"
-    heading_legacy: "<h1>සියලු වයස්</h1><h2>සඳහා අපගේ ත්වරිත පාඨමාලාව</h2>"
     your_gallery: ගැලරිය
     no_primary_course: "කේත ස්ටූඩියෝ පාඨමාලාවක් හදාරන්න"
     choose_next_course: "පහතින් එකක් තෝරා ගැනීමෙන් කේත ස්ටූඩියෝ පාඨමාලාවක් උත්සාහ කරන්න"
@@ -475,27 +479,13 @@ si:
       title: "කන්ඩිෂනලස්"
     widgets:
       cta: "කෙසේදැයි දැනගන්න"
-  gallery:
-    students_drew_these_with_code: "සිසුන් මේවා ඇන්දේ කේත මගිනි!"
-    students_made_these_with_code: "සිසුන් මේවා කේත මගින් නිර්මාණය කර ඇත!"
-    picture_count: "පසුගිය දවස් <b>%{days}</b> තුල සිසුන් ඔවුන්ගේම වැඩසටහන් කේතනය කිරීමෙන් චිත්‍ර <b>%{count}</b> ක් අඳින ලදි. වැඩසටහන ධාවනය කිරීමට චිත්‍ර මත ක්ලික් කරන්න."
-    activity_count: "අතීතයේ, <b>%{days}</b>  , සිසුන් apps සහ පින්තුර <b>%{count}</b> නිමානය කරේ ඔවුන්ගේම \nපරිගණක වැඩසටහන්, එක් එක් වැඩසටහන බැලීමට පින්තූර සහ තිරපිටපත් මත ක්ලික් කරන්න."
-    want_to_make_your_own: "ඔබේම නිර්මාණයක් හදමු ද?"
-    how_to_save: "මෙම නිබන්ධන අවසන් මට්ටම වලදී , ගැලරිය හි  ගබඩා කිරීම සදහා \"අවසානයි\" සහ \"සුරකින්න\" බොත්තම් මත ඔබන්න "
-    more: "තව &rarr;"
-    caption_by_name_age: "%{name} විසින්, වයස %{age}"
-    caption_time_ago: "%{time_ago} පෙර"
-    header: "ගැලරිය"
-    header_playlab: "කථා සහ ක්‍රීඩා"
-    header_artist: "කේත කලාව"
-    report_abuse: "අනිසි භාවිතයක් වාර්තා කරන්න"
   landing:
-    prerelease: "මෙම පාඩම <span class='betatext'>පරික්ශණ මට්ටමේ</span> පවතී. කාලයත් සමග ලැබෙන ප්‍රතිචාර අනුව මෙය සංස්කරණ වලට ලක් විය හැක. දැනට පවතින්නේ අවසන් සංස්කරණය නොවේ."
-    prerelease_hoc2014: "මෙම පාඩම <span class='betatext'>පරික්ශණ මට්ටමේ</span> පවතී. කාලයත් සමග ලැබෙන ප්‍රතිචාර අනුව මෙය සංස්කරණ වලට ලක් විය හැක."
     report_bug: "දෝෂය වාර්තා කරන්න"
     support: "උපකාර ලබාගන්න"
     support_url: "//support.code.org"
     help_resources: "උදවු සහ සම්පත්"
+  free_response:
+    placeholder: "ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න"
   multi:
     wrong_title: "පිළිතුර වැරදියි"
     wrong_body: "ඔබ ඇතුලත් කල පිළිතුර වැරදියි. කරුණාකර නැවත උත්සාහ කරන්න!"
@@ -557,19 +547,20 @@ si:
   age_interstitial:
     age: ඔබගේ වයස
     header: ගිණුම් තොරතුරු යාවත්කාලීන කිරීම
-    message: "ඔබගේ පෞද්ගලිකත්වය මෙම වෙබ් අඩවිය තුල ආරක්ශා කර ගැනීම සඳහා අප විසින් තව දුරටත් අපගේ ආරක්ශණ ක්‍රමවේද වැඩිදියුණු කරමින් පවතී. එම නිසා මෙම වෙබ් අඩවිය භාවිත කරන්නන් හට ඔවුන්ගේ වයස මෙයට ඇතුලත් කිරීමට සිදුවේ. <br/>සුපුරුදු පරිදි ඔබගේ කිසිම තොරතුරක් වෙනත් කිසිම පාර්ශවයන් වෙත ලබා නොදේ."
-    sign_out: 'ඔබට ඔබගේ වයස ඉදිරිපත් කල නොහැකි නම් <a href="%{url}">ඉවත් විය</a> හැක.'
   terms_interstitial:
     title: "යාවත්කාලීන කරන ලද සේවා කොන්දේසි සහ පෞද්ගලිකත්වය සුරැකීමේ ප්‍රතිපත්ති"
     intro_desc: "පහත සඳහන් පරිදි අප අපගේ සේවා කොන්දේසි අලුත් කර තිබේ. 2016 අගෝස්තු 24 සිට මේවා ක්‍රියාත්මක වනු ඇත. සැලකිය යුතු වෙනසක් වන්නේ අප තවදුරටත් සිසුන්ගේ ඊ මේල් ලිපින ගබඩා කරගෙන නොතබාගැනීමයි. අධ්‍යාපනයේදි සිසුන්ගේ පෞද්ගලිකත්වය ආරක්ශා කිරීමේ එක් වැදගත් පියවරක් ලෙස අප මෙය සලකනු ලබනවා. අනෙකුත් වෙනස් වීම් වල සාරාංශයක් ඔබ වෙත ඊ මේල් එකකින් එවා ඇත."
+    intro_desc_markdown: "පහත සඳහන් පරිදි අප අපගේ සේවා කොන්දේසි අලුත් කර තිබේ. 2016 අගෝස්තු 24 සිට මේවා ක්‍රියාත්මක වනු ඇත. සැලකිය යුතු වෙනසක් වන්නේ අප තවදුරටත් සිසුන්ගේ ඊ මේල් ලිපින ගබඩා කරගෙන නොතබාගැනීමයි. අධ්‍යාපනයේදි සිසුන්ගේ පෞද්ගලිකත්වය ආරක්ශා කිරීමේ එක් වැදගත් පියවරක් ලෙස අප මෙය සලකනු ලබනවා. අනෙකුත් වෙනස් වීම් වල සාරාංශයක් ඔබ වෙත ඊ මේල් එකකින් එවා ඇත."
     intro_instructions: "කෝඩ් ස්ටුඩියෝ තුල ඇති නවතම සහ සියලුම පහසුකම් ලබා ගැනීමට නම් ඔබට අවුරුදු 13න් පහල සිසුන් වෙනුවෙන් නව කොන්දේසි වෙත එකඟ වීමට සිදු වනු ඇත. අවුරුදු 13න් පහල සිසුන් ලියාපදිංචි කිරීමේදි ඔබට ඒ සඳහා ඔවුන්ගේ දෙමාපිය අනුමැතිය තිබිය යුතු අතර, සිසුන්ගේ පෞද්ගලික තොරතුරු භාවිතා කරන්නේ ඔබේ පාසලේ සුභ සිද්ධිය හා වෙනත් අධ්‍යාපන කටයුතු සඳහා පමණක් බවට ඔබ විසින් සහතික විය යුතු වේ."
     tos: "සේවා නියම"
     privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
     privacy_notice: "රහස්‍යතා නිවේදනය"
     accept_label: 'යාවත්කාලීන කරන්න එකඟයි<a href="%{tos_url}" target="_blank">සේවා නියම<a href="%{privacy_url}" target="_blank">රහස්‍යතා ප්‍රතිපත්තිය</a>'
+    accept_label_markdown: යාවත්කාලීන කරන්න එකඟයි[සේවා නියම](%{tos_url})[රහස්‍යතා ප්‍රතිපත්තිය](%{privacy_url})
     accept: "පිළිගන්න"
     print: "මුද්‍රණය කරන්න"
     reminder_desc: 'අප අපගේ <a href="%{tos_url}" target="_blank">සේවා කොන්දේසි</a>සහ<a href="%{privacy_url}" target="_blank">රහස්‍ය ප්‍රතිපත්ති</a> යාවත්කාලින කර ඇත. ඒවා පිළිගැනීමට පෙර හොදින් කියවා බලන්න. නිශ්චිතව අපගේ යාවත්කාලින කිරීමේ කොන්දේසි පිළිපදින තෙක් ඔබගේ සිසුවාට JavaScript ඉගැන්වීමේ අපගේ උපාංග නොලැබිය හැකි බව සලකන්න.'
+    reminder_desc_markdown: අප අපගේ [සේවා කොන්දේසි](%{tos_url})සහ[රහස්‍ය ප්‍රතිපත්ති](%{privacy_url}) යාවත්කාලින කර ඇත. ඒවා පිළිගැනීමට පෙර හොදින් කියවා බලන්න. නිශ්චිතව අපගේ යාවත්කාලින කිරීමේ කොන්දේසි පිළිපදින තෙක් ඔබගේ සිසුවාට JavaScript ඉගැන්වීමේ අපගේ උපාංග නොලැබිය හැකි බව සලකන්න.
     review_terms: "යාවත්කාලීන නියම සමාලෝචනය කරන්න"
   school_info_interstitial:
     save: "සුරකින්න"
@@ -588,6 +579,7 @@ si:
     submit: "යොමුකරන්න"
     decline: "වසන්න"
   zendesk_too_young_message: 'සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign in වියනොහක.සොයන්න <a href="http://support.code.org">support.code.org</a> signing in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.'
+  zendesk_too_young_message_markdown: 'සමාවෙන්න,උපකාරක වෙබ් අඩවියට වයසින් බාල සිසුන් සඳහා sign in වියනොහක.සොයන්න [support.code.org](http://support.code.org) signing in නොවී හෝ ඔබ වෙනුවෙන් දෙමාපියන් හෝ ගුරුවන් සම්බන්ද කරන්න.'
   progress:
     not_started: ආරම්භ වී නැත
     in_progress: ප්‍රගතියේ ඇත
@@ -646,10 +638,8 @@ si:
   peer_review:
     accepted:
       name: 'පිළිගත්තා'
-      description: '<strong>ඔව්</strong>, මෙම ඉදිරිපත් කිරීම එහි අවශ්‍යතා වලට <strong>අනුකූලයි</strong>'
     rejected:
       name: 'ප්රතික්දෂේපිත'
-      description: '<strong>නැ ත</strong>, මෙම ඉදිරිපත් කිරීම එහි අවශ්‍යතා වලට <strong>අනුකූල නැත</strong>'
     escalated:
       name: 'උත්සන්න වුනා'
       description: 'මම උපදේශකයෙකුට මේ ඉදිරිපත් කිරීම සමාලෝචනය කිරීමට කැමතී'
@@ -658,29 +648,7 @@ si:
     outdated: 'කලින් ඉදිරිපත් කල සංස්කරණයක් සඳහා මෙම ප්‍රතිචාරය එක් කරන ලදී'
     review_in_progress: 'සමාලෝචනයට සූදානම්'
     review_new_submission: 'අලුත් ඉදිරිපත් කිරීමක් සමාලෝචනය කරන්න'
-  flex_category:
-    required: 'දළ විශ්ලේෂණය'
-    content: 'අන්තර්ගතය'
-    practice: 'ඉගැන්වීමේ පිළිවෙත්'
     peer_review: 'සමූහ විමර්ශනය'
-    csf_digcit: 'ඩිජිටල් පුරවැසිකම'
-    csf_jigsaw: 'පින්තූර ප්‍රෙහේලිකාව'
-    csf_loops: 'ලූපයන්'
-    csf_events: 'වැඩසටහන්'
-    csf_binary: 'ද්විමය'
-    csf_data: 'දත්ත'
-    csf_conditionals: 'කන්ඩිෂනලස්'
-    csf_nested_loops: 'නැවත නැවත සිදුවන ලුප'
-    csf_functions: 'ශ්‍රිතයන්'
-    csf_variables: 'විචල්‍යන්'
-    csf_for_loops: 'ලූපයන් සඳහා'
-    csf_internet: 'අන්තර්ජාලය'
-    csp2_1_2018: '2වන ඒකකය: අංකිත තොරතුරු'
-    csp_variables: 'විචල්‍යන්'
-    csp_conditionals: 'කන්ඩිෂනලස්'
-    csp_functions: 'ශ්‍රිතයන්'
-    csp_lists: 'ලැයිස්තු'
-    csp_loops: 'ලූපයන්'
   external_links:
     disclaimer: වියාචනය
     leaving_domain: දැන් ඔබට Code.org විසින් ක්‍රියාත්මක නොවන බව අඩවියකට, යොමුකරයි.
@@ -695,10 +663,13 @@ si:
     starwars_blocks_name: 'Star Wars: කේතය සමඟින් මන්දාකිණියක් තැනීම (කොටස්)'
     starwars_javascript_name: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
     download_message: 'අන්තර්ජාලය නැතිව භාවිත කිරීමට %{app_name} ඇප් එක බාගත කරන්න (136MB)'
+    download_in_English: 'ඉංග්රීසි බසින් බාගන්න:'
+    download_in_Spanish: 'ස්පාඤ්ඤ බසින් බාගන්න:'
     windows: 'ජනේලය'
     mac: 'මැක් OS X'
   locked_stage: 'මෙම අදියර දැනට අහුරා ඇති නිසා මෙම අදියරේ අන්තර්ගතය දැකගත නොහැක. එහි වැඩ කිරමට පටන්ගත් විට හෝ ඔබගේ පිළිතුරු සමාලෝචනය කිරීමට අවශ්‍ය වූ අවස්ථාවේදී ඔබගේ ගුරුවරයාට එය අගුල් ඇරිය හැක.'
   hidden_stage: "ඔබ මෙහි සිටී යැයි ඔබගේ ගුරුවරයා බලාපොරොත්තු වුයේ නැත. කරුණාකර ඔබගේ ගුරුතුමා/ගුරුතුමිය ගෙන් අසා දැනගන්න ඔබ කුමන පාඩමටද සිටිය යුතු යන්න."
+  return_unit_overview: 'ඒකක දළ විශ්ලේෂණයට යන්න'
   return_course_overview: 'ඒකක දළ විශ්ලේෂණයට යන්න'
   pd:
     form_labels:
@@ -714,6 +685,7 @@ si:
         science: 'විද්‍යාව'
         la: 'භාෂා අධ්‍යනය'
       resources:
+        khan: 'ඛාන් ඇකඩමිය'
         kodable: 'කෝඩබල්'
         lightbot: 'Lightbot'
       robotics:
@@ -725,5 +697,4 @@ si:
         opt_in_no: 'නැහැ'
   cookie_banner:
     accept: 'මම එකඟයි'
-  gdpr_dialog:
-    yes: 'ඔව්'
+  copy: 'පිටපත් කරන්න'

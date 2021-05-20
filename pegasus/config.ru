@@ -1,6 +1,6 @@
 require_relative '../deployment'
 # Ensure all application secrets are loaded.
-CDO.cdo_secrets&.required! unless rack_env?(:development)
+CDO.cdo_secrets&.required! unless rack_env?(:development) || CDO.unit_test
 
 require File.expand_path('../router', __FILE__)
 
@@ -35,15 +35,15 @@ use VarnishEnvironment
 unless CDO.chef_managed
   # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
   # For other environments (development / CI), run the HTTP cache from Rack middleware.
-  require 'cdo/rack/whitelist'
+  require 'cdo/rack/allowlist'
   require File.expand_path('../../cookbooks/cdo-varnish/libraries/http_cache', __FILE__)
-  use Rack::Whitelist::Downstream,
+  use Rack::Allowlist::Downstream,
     HttpCache.config(rack_env)[:pegasus]
 
   require 'rack/cache'
   use Rack::Cache, ignore_headers: []
 
-  use Rack::Whitelist::Upstream,
+  use Rack::Allowlist::Upstream,
     HttpCache.config(rack_env)[:pegasus]
 end
 

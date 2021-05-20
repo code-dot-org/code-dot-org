@@ -2,6 +2,14 @@
 km:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          MOVE1:
+            MOVES.Rest: គ្មាន
+          MOVE2:
+            MOVES.Rest: គ្មាន
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -12,18 +20,19 @@ km:
             sprites: ទាំងអស់
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         options:
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
@@ -33,16 +42,10 @@ km:
             sprites: ទាំងអស់
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         options:
           MOVE:
             MOVES.Rest: គ្មាន
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -70,41 +73,51 @@ km:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ព្រាវ
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: ទាំងអស់
           FORMAT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': មនុស្សក្រៅភព
+            '"CAT"': ឆ្មា
+            '"DOG"': ឆ្កែ
+            '"DUCK"': ទា
+            '"ROBOT"': robot
+            '"UNICORN"': សេះដុះស្នែង
+          LOCATION:
+            "{x: 100, y: 200}": ឆ្វេង
+            "{x: 300, y: 200}": ស្តាំ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': មនុស្សក្រៅភព
+            '"CAT"': ឆ្មា
+            '"DOG"': ឆ្កែ
+            '"DUCK"': ទា
+            '"ROBOT"': robot
+            '"UNICORN"': សេះដុះស្នែង
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ព្រាវ
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
+            '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ
@@ -159,7 +172,18 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: ទាំងអស់
+      Dancelab_setTintEachInline:
         options:
           THIS:
             sprites: ទាំងអស់
@@ -172,11 +196,31 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: ទាំងអស់
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"height"': កម្ពស់
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': គ្រាប់ពេជ្រ
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -187,12 +231,17 @@ km:
             '"space"': លំហ​អាកាស
             '"x"': x
             '"y"': 'y'
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+            '"speed"': ល្បឿន
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -204,6 +253,21 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+            '"speed"': ល្បឿន
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': ឡើង
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"x"': x
+            '"y"': 'y'
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -226,6 +290,8 @@ km:
         text: ពណ៌​ព្រាវ
       gamelab_randomColor:
         text: ពណ៌​ព្រាវ
+      gamelab_repeatForever:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -235,12 +301,29 @@ km:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ឥន្ទធនូ
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ក្រោម​ទឹក
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': រដូវរងារ
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': មធ្យម
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+            '"speed"': ល្បឿន
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': មធ្យម
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -346,6 +429,8 @@ km:
             MOVES.Rest: គ្មាន
       Mikelab_randomColor:
         text: ពណ៌​ព្រាវ
+      Mikelab_repeatUntilComplete:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       Mikelab_setBG:
         options:
           BG:
@@ -395,63 +480,34 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': ព្រាវ
       RyanLab_moveForward:
         text: រំកិល​ទៅមុខ
       RyanLab_turnLeft:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
-      aalab_changePropByFlexible:
+      aalab_layoutSprites:
         options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      aalab_checkTouching:
+          FORMAT:
+            '"random"': ព្រាវ
+      aalab_someGraduallyStartIntervention:
         options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      aalab_clickedOn:
+          PORTION:
+            '1': ទាំងអស់
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
         options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': ពិត
-            '"false"': មិន​ពិត
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': ជារៀងរហូត
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': បង្ហាញ
-            '"hide"': លាក់
+          PORTION:
+            '1': ទាំងអស់
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

@@ -1,0 +1,25 @@
+- content_for(:head) do
+  %script{ src: webpack_asset_path('js/admin_standards/index.js')}
+
+%h2
+  Import Standards from Curriculum Builder
+
+%p
+  The associations between standards and lessons are stored in Curriculum Builder and used to show standards alignment by course. For example:
+%a{href: 'curriculum.code.org/csf-19/standards/'}
+  CSF Standards Alignment
+
+%br
+%br
+
+%p
+  Information about CSTA standards alignment is also used on the standards view of the progress tab of the Teacher Dashboard on Code Studio for CSF courses. Select a course to import standards associated with that course's lessons.
+
+%h3 Select a Course
+= form_tag url_for(action: 'import_standards'), id: 'standards-form', method: 'post', class: 'form-inline', enforce_utf8: false, remote: true do
+  = select_tag(:script, options_for_select(@scripts_with_standards), id: "select")
+  %br
+  %br
+  %button.primary.padded-button#import-standards="Import Standards"
+
+#alert-message

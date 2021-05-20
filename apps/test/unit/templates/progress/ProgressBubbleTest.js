@@ -7,11 +7,14 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   level: {
+    id: '1',
     levelNumber: 1,
     status: LevelStatus.perfect,
+    isLocked: false,
     url: '/foo/bar',
     name: 'level_name',
-    progression: 'progression_name'
+    progression: 'progression_name',
+    progressionDisplayName: 'progression_display_name'
   },
   disabled: false
 };
@@ -45,6 +48,20 @@ describe('ProgressBubble', () => {
     assert(wrapper.is('div'));
   });
 
+  it('shows letter in bubble when level has a letter', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          letter: 'a'
+        }}
+      />
+    );
+
+    expect(wrapper.find('#test-bubble-letter')).to.have.lengthOf(1);
+  });
+
   it('has a green background when we have perfect status and not assessment', () => {
     const wrapper = shallow(<ProgressBubble {...defaultProps} />);
 
@@ -68,16 +85,6 @@ describe('ProgressBubble', () => {
     const tooltipDiv = wrapper.find('div').at(1);
     const div = tooltipDiv.find('div').at(1);
     assert.equal(div.props().style.backgroundColor, color.level_submitted);
-  });
-
-  it('has a white background when we are disabled', () => {
-    const wrapper = shallow(
-      <ProgressBubble {...defaultProps} disabled={true} />
-    );
-
-    const tooltipDiv = wrapper.find('div').at(1);
-    const div = tooltipDiv.find('div').at(1);
-    assert.equal(div.props().style.backgroundColor, color.level_not_tried);
   });
 
   it('has green border and white background for in progress level', () => {
@@ -206,7 +213,7 @@ describe('ProgressBubble', () => {
     assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. level_name');
   });
 
-  it('uses progression name when no name is specified', () => {
+  it('uses progression display name when no name is specified', () => {
     const wrapper = shallow(
       <ProgressBubble
         {...defaultProps}
@@ -218,7 +225,25 @@ describe('ProgressBubble', () => {
     );
     assert.equal(
       wrapper.find('TooltipWithIcon').props().text,
-      '1. progression_name'
+      '1. progression_display_name'
+    );
+  });
+
+  it('uses display name when isSublevel is true', () => {
+    const wrapper = shallow(
+      <ProgressBubble
+        {...defaultProps}
+        level={{
+          ...defaultProps.level,
+          display_name: 'Display Name',
+          name: 'display_name',
+          isSublevel: true
+        }}
+      />
+    );
+    assert.equal(
+      wrapper.find('TooltipWithIcon').props().text,
+      '1. Display Name'
     );
   });
 
@@ -282,7 +307,9 @@ describe('ProgressBubble', () => {
 
   it('renders a progress pill for unplugged lessons', () => {
     const unpluggedLevel = {
+      id: '1',
       status: LevelStatus.perfect,
+      isLocked: false,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -294,13 +321,15 @@ describe('ProgressBubble', () => {
         smallBubble={false}
       />
     );
-    assert.equal(wrapper.find('ProgressPill').length, 1);
-    assert(!!wrapper.find('ProgressPill').props().tooltip);
+    assert.equal(wrapper.find('Connect(ProgressPill)').length, 1);
+    assert(!!wrapper.find('Connect(ProgressPill)').props().tooltip);
   });
 
   it('does not render a progress pill for unplugged when small', () => {
     const unpluggedLevel = {
+      id: '1',
       status: LevelStatus.perfect,
+      isLocked: false,
       kind: LevelKind.unplugged,
       url: '/foo/bar',
       isUnplugged: true
@@ -323,7 +352,7 @@ describe('ProgressBubble', () => {
     });
 
     it('links to the level url', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -338,7 +367,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -350,7 +379,7 @@ describe('ProgressBubble', () => {
     });
 
     it('includes the user_id in the queryparams if selectedStudentId is present', () => {
-      fakeLocation.href = 'http://studio.code.org/s/csd3/stage/3/puzzle/7';
+      fakeLocation.href = 'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -364,7 +393,7 @@ describe('ProgressBubble', () => {
 
     it('preserves the queryparams of the current location', () => {
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );
@@ -375,7 +404,7 @@ describe('ProgressBubble', () => {
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble
           {...defaultProps}
@@ -405,7 +434,7 @@ describe('ProgressBubble', () => {
     it('can be explicitly set to an anchor object', () => {
       const fakeLocation = document.createElement('a');
       fakeLocation.href =
-        'http://studio.code.org/s/csd3/stage/3/puzzle/7?section_id=212&user_id=559';
+        'http://studio.code.org/s/csd3-2019/stage/3/puzzle/7?section_id=212&user_id=559';
       const wrapper = shallow(
         <ProgressBubble {...defaultProps} currentLocation={fakeLocation} />
       );

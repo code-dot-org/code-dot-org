@@ -47,6 +47,28 @@ export const CIRCUIT_PLAYGROUND_EXPRESS_PORTS = [
   }
 ];
 
+export const MICROBIT_PORTS = [
+  {
+    comName: 'COM3',
+    manufacturer: 'Microsoft',
+    serialNumber: undefined,
+    pnpId: 'USB\\VID_0D28&PID_0204&MI_01\\7&764C891&0&0001',
+    locationId: '',
+    vendorId: '0d28',
+    productId: '0204'
+  },
+  {
+    comName: '/dev/ttyACM0',
+    manufacturer: 'ARM',
+    serialNumber: undefined,
+    pnpId:
+      'usb-ARM_BBC_micro:bit_CMSIS-DAP_9901000051774e4500437005000000700000000097969901-if01',
+    locationId: '',
+    vendorId: '0d28',
+    productId: '0204'
+  }
+];
+
 export const FLORA_PORTS = [
   {
     comName: '/dev/cu.usbmodem1411',

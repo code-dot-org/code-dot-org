@@ -1,0 +1,7 @@
+= render partial: 'levels/editors/fields/checkboxes',
+  locals: {f: f, field_name: :validation_enabled,
+  description: "Code must change for the level to be show as 'complete'"}
+%p
+  If this setting is checked, students must change code on the level,
+  run that code, and hit 'Finish' before the level can be marked as complete.
+  If this box is unchecked, hitting 'Finish' will mark the level as complete.

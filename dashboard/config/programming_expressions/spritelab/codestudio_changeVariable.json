@@ -1,0 +1,7 @@
+{
+  "category": "Variables",
+  "config": {
+    "docFunc": "codestudio_changeVariable",
+    "func": "math_change"
+  }
+}

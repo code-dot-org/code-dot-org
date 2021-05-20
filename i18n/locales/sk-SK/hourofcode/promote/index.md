@@ -1,7 +1,5 @@
 ---
 title: Informujte ostatných
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

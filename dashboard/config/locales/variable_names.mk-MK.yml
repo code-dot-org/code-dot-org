@@ -1,0 +1,9 @@
+---
+mk:
+  data:
+    variable_names:
+      birds: Птици
+      random: случајно
+      repeat: повтори
+      score: Резултат
+      variable: променлива

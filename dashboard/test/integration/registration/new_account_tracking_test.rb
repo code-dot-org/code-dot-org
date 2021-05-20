@@ -39,17 +39,19 @@ module RegistrationsControllerTests
     end
 
     test 'successful email sign up in old signup flow sends Firehose success event' do
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'load-sign-up-page' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'email-sign-up-success' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
 
       get '/users/sign_up'
@@ -64,17 +66,19 @@ module RegistrationsControllerTests
     test 'successful email sign up in new signup flow sends Firehose success event' do
       SignUpTracking.stubs(:split_test_percentage).returns(100)
       SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
           data[:event] == 'load-new-sign-up-page' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
           data[:event] == 'email-sign-up-success' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
 
       get '/users/sign_up'
@@ -87,17 +91,19 @@ module RegistrationsControllerTests
     end
 
     test 'email sign up with wrong password confirmation in old signup flow sends Firehose error event' do
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'load-sign-up-page' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::CONTROL_GROUP &&
           data[:event] == 'email-sign-up-error' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
 
       get '/users/sign_up'
@@ -112,16 +118,18 @@ module RegistrationsControllerTests
     test 'email sign up with wrong password confirmation in new signup flow sends Firehose error event' do
       SignUpTracking.stubs(:split_test_percentage).returns(100)
       SignUpTracking.stubs(:new_sign_up_experience?).returns(true)
-      FirehoseClient.instance.expects(:put_record).twice.with do |data|
+      FirehoseClient.instance.expects(:put_record).twice.with do |stream, data|
         data[:study] == STUDY &&
           data[:event] == 'load-new-sign-up-page' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
-      FirehoseClient.instance.expects(:put_record).with do |data|
+      FirehoseClient.instance.expects(:put_record).with do |stream, data|
         data[:study] == STUDY &&
           data[:study_group] == SignUpTracking::NEW_SIGN_UP_GROUP &&
           data[:event] == 'email-sign-up-error' &&
-          data[:data_string] == UUID
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
 
       get '/users/sign_up'
@@ -139,10 +147,11 @@ module RegistrationsControllerTests
       )
       create :teacher, :google_sso_provider, uid: DEFAULT_UID, email: EMAIL
       events = %w(load-sign-up-page)
-      FirehoseClient.instance.expects(:put_record).once.with do |data|
+      FirehoseClient.instance.expects(:put_record).once.with do |stream, data|
         data[:study] == STUDY &&
-            data[:event] == events.shift &&
-            data[:data_string] == UUID
+          data[:event] == events.shift &&
+          data[:data_string] == UUID &&
+          stream == :analysis
       end
 
       get '/users/sign_up'
@@ -150,7 +159,7 @@ module RegistrationsControllerTests
 
       @request.env["devise.mapping"] = Devise.mappings[:user]
       assert_does_not_create(User) do
-        get '/users/auth/google_oauth2'
+        post '/users/auth/google_oauth2'
         follow_redirect!
       end
     end

@@ -1,7 +1,5 @@
 ---
 title: Ako na udalosť Hodina hódu
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

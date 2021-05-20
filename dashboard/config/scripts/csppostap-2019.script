@@ -1,27 +1,28 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 has_verified_resources true
-has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}'
+announcements [{"notice"=>"No Lesson Plans in Chapter 2", "details"=>"Please note there are no lesson plans for Chapter 2 of this unit.", "link"=>"", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'csppostap'
 version_year '2019'
 is_stable true
 project_sharing true
+tts true
 
-stage 'Intro to Data', flex_category: 'csp_postap_1'
+lesson_group 'csp_postap_1', display_name: 'Chapter 1: Manipulating and Visualizing Data'
+lesson 'Intro to Data', display_name: 'Intro to Data', has_lesson_plan: true
 level 'CSP U2L07 SFLP_2019', named: true
 level 'csp-pulse-check-survey-3-levelgroup-U2Ch2_2018_2019', progression: 'Quick Check-In', assessment: true
 
-stage 'Good and Bad Data Visualizations', flex_category: 'csp_postap_1'
+lesson 'Good and Bad Data Visualizations', display_name: 'Good and Bad Data Visualizations', has_lesson_plan: true
 level 'CSP U2L10 SFLP_2019', named: true
 level 'Collection A: Good and Bad Visualizations_2018_2019', progression: 'Collection A: Good and Bad Visualizations', named: true
 level 'Collection B: Good and Bad Visualizations_2018_2019', progression: 'Collection B: Good and Bad Visualizations', named: true
 level 'U2L10 FR why best worst viz_2019', progression: 'Check Your Understanding', assessment: true
 
-stage 'Making Data Visualizations', flex_category: 'csp_postap_1'
+lesson 'Making Data Visualizations', display_name: 'Making Data Visualizations', has_lesson_plan: true
 level 'CSP U2L11 SFLP_2019', named: true
 level 'Downloading the Data Set_2018_2019', progression: 'Downloading the Data Set', named: true
 level 'Making a Scatter Plot_2018_2019', progression: 'Making a Scatter Plot', named: true
@@ -31,11 +32,11 @@ level 'Editing Chart Appearance_2018_2019', progression: 'Editing Chart Appearan
 level 'U4 - Making Data Visualizations - Free Play_2018_2019', progression: 'Making Data Visualizations - Free Play'
 level 'U2L10 FR describe what you made from lesson prompt_2019', progression: 'Check Your Understanding', assessment: true
 
-stage 'Discover a Data Story', flex_category: 'csp_postap_1'
+lesson 'Discover a Data Story', display_name: 'Discover a Data Story', has_lesson_plan: true
 level 'CSP U2L12 SFLP_2019', named: true
 level 'U2L12 FR reflection on collaboration_2019', progression: 'Check Your Understanding', assessment: true
 
-stage 'Cleaning Data', flex_category: 'csp_postap_1'
+lesson 'Cleaning Data', display_name: 'Cleaning Data', has_lesson_plan: true
 level 'CSP U2L13 SFLP_2019', named: true
 level 'Getting to Know Your Data_2018_2019', progression: 'Getting to Know Your Data', named: true
 level 'Cleaning Data_2018_2019', progression: 'Cleaning Data', named: true
@@ -43,18 +44,19 @@ level 'Categorizing Data_2018_2019', progression: 'Categorizing Data', named: tr
 level 'U2L13 Cleaning Data MC_2018_2019', progression: 'Check Your Understanding', assessment: true
 level 'U2L13 FR Reflection data analysis objective_2019', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating Summary Tables', flex_category: 'csp_postap_1'
+lesson 'Creating Summary Tables', display_name: 'Creating Summary Tables', has_lesson_plan: true
 level 'CSP U2L14 SFLP_2019', named: true
 level 'Making Pivot Tables Part 1 - The Basics_2018_2019', progression: 'Making Pivot Tables Part 1 - The Basics', named: true
 level 'Making Pivot Tables Part 2 - Manipulation and Visualization_2018_2019', progression: 'Making Pivot Tables Part 2 - Manipulation and Visualizations', named: true
 level 'U4L08v2 Making Pivot Tables Part 3_2018_2019', progression: 'Making Pivot Tables Part 3'
 level 'U2L14 Summary Tables MC_2018_2019', progression: 'Check Your Understanding', assessment: true
 
-stage 'Project - Tell a Data Story', flex_category: 'csp_postap_1'
+lesson 'Project - Tell a Data Story', display_name: 'Project - Tell a Data Story', has_lesson_plan: true
 level 'CSP U2L15 SFLP_2019', named: true
 
-stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
-level 'U4L02 Student Lesson Introduction_2018_2019'
+lesson_group 'csp_postap_2', display_name: 'Chapter 2: Apps and Databases'
+lesson 'Creating Javascript Objects', display_name: 'Creating Javascript Objects', has_lesson_plan: true
+level 'U4L02 Student Lesson Introduction Video_2018_2019'
 level 'U4 - Objects - eventParameter_2019'
 level 'U4 - Objects - dotNotation_2019'
 level 'U4 - Objects - createDotNotation_2019'
@@ -71,7 +73,7 @@ level 'U4 - Objects - createContactObject_2019'
 level 'U4 - Objects - resetIndexAndShow_2019'
 level 'U4 - Objects - showSampleImage_2019'
 
-stage 'Permanent Data Storage', flex_category: 'csp_postap_2'
+lesson 'Permanent Data Storage', display_name: 'Permanent Data Storage', has_lesson_plan: true
 level 'U4L03 Student Lesson Introduction_2018_2019'
 level 'U4 - CreateRecord - 1_2019'
 level 'U4 - CreateRecord - 2_2019'
@@ -86,7 +88,7 @@ level 'U4 - add createRecord to contacts App_2019'
 level 'U4 - fix contacts by hand in data table_2019'
 level 'U4 - last stage test adding contcts_2019'
 
-stage 'Reading Records', flex_category: 'csp_postap_2'
+lesson 'Reading Records', display_name: 'Reading Records', has_lesson_plan: true
 level 'U4L04 Student Lesson Introduction_2018_2019'
 level 'U4 - Read Record - 1_2019'
 level 'U4 - Read Record - 1.2_2019'
@@ -100,7 +102,7 @@ level 'U4 - Read Record - Local vs Remote Data External_2018_2019'
 level 'U4 - ReadRecords - Contacts App 2_2019'
 level 'U4 - ReadRecords - Contacts App 3_2019'
 
-stage 'Deleting Records', flex_category: 'csp_postap_2'
+lesson 'Deleting Records', display_name: 'Deleting Records', has_lesson_plan: true
 level 'U6 - deleteRecord - Student Introduction_2018_2019'
 level 'U4 - Unique Ids Explanation_2018_2019'
 level 'U4 - deleteRecords 0_2019'
@@ -109,7 +111,7 @@ level 'U4 - deleteRecords 2 delete object_2019'
 level 'U4 - ReadRecords - Contacts App 4_2019'
 level 'U4 - ReadRecords - Contacts App 5 make delete work_2019'
 
-stage 'Updating Records', flex_category: 'csp_postap_2'
+lesson 'Updating Records', display_name: 'Updating Records', has_lesson_plan: true
 level 'U6 - updateRecord - Student Introduction_2018_2019'
 level 'U6 - updateRecord - Default Block_2019'
 level 'U6 - updateRecord - Callback Success Parameter_2019'
@@ -118,14 +120,14 @@ level 'U6 - updateRecord - Contacts - Edit UI_2019'
 level 'U6 - updateRecord - Contacts - Edit event handler_2019'
 level 'U6 - updateRecord - Contacts - Save edited contact_2019'
 
-stage 'Importing and Exporting Data', flex_category: 'csp_postap_2'
+lesson 'Importing and Exporting Data', display_name: 'Importing and Exporting Data', has_lesson_plan: true
 level 'U6 - ImportExport - Student Introduction_2018_2019'
 level 'U4 - Charts - Import Data 1_2019'
 level 'U4 - Charts - Import Data 2_2019'
 level 'U4 - Charts - Remixing Apps with Data_2019'
 level 'U4 - Charts - Export Data_2019'
 
-stage 'Visualizing Data', flex_category: 'csp_postap_2'
+lesson 'Visualizing Data', display_name: 'Visualizing Data', has_lesson_plan: true
 level 'U6 - Charts - Student Introduction_2018_2019'
 level 'U4 - Charts - drawChartFromRecords 1_2019'
 level 'U4 - Charts - Scatter Chart_2019'
@@ -134,17 +136,19 @@ level 'U4 - Charts - Line Chart 2_2019'
 level 'U4 - Charts - drawChartFromRecords Options 1_2019'
 level 'U4 - Charts - drawChartFromRecords Options 2_2019'
 
-stage 'Sample Apps', flex_category: 'csp_postap_2'
+lesson 'Sample Apps', display_name: 'Sample Apps', has_lesson_plan: true
 level 'U6 - Sample Apps - Student Introduction_2018_2019'
 level 'U6 - Sample Apps - User Login_2019'
 level 'U6 - Sample Apps - Class Survey_2019'
 level 'U6 - Sample Apps - Clicker Game_2019'
 level 'U6 - Sample Apps - Flashcards_2019'
 
-stage 'Final Project', flex_category: 'csp_postap_2'
+lesson 'Final Project', display_name: 'Final Project', has_lesson_plan: true
 level 'U6 - Final Project - Student Introduction_2018_2019'
 level 'U6 - Final Project - Project Level_2019', assessment: true
 
-stage 'CS Principles Post Course survey', lockable: true, flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Principles Post Course survey', display_name: 'CS Principles Post Course survey', lockable: true, has_lesson_plan: false
 level 'csp-post-survey-intro-2019'
 level 'csp-post-survey-levelgroup-2019.2', assessment: true
+

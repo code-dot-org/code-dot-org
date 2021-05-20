@@ -15,7 +15,7 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
     @level6.update(peer_reviewable: 'true')
 
     [@level1, @level2, @level3, @level4, @level5, @level6].each do |level|
-      create(:script_level, script: @course_unit.script, stage: learning_module.stage, levels: [level])
+      create(:script_level, script: @course_unit.script, lesson: learning_module.lesson, levels: [level])
     end
 
     @user = create :teacher

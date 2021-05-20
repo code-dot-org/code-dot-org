@@ -3,256 +3,260 @@ fi-FI:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Monivalinta
-        questions:
-        - text: Valitse kuvaa vastaava algoritmi.
         answers:
         - text: Aloita neliöllä<br/>Laita kolmio neliön yläpuolelle<br/>Laita kolmio
             neliön alapuolelle
-        - {}
+        - correct: true
         - text: Aloita neliöllä<br/>Laita suunnikas neliön yläpuolelle<br/>Laita kolmio
             suunnikkaan oikealle puolelle
         - text: Aloita neliöllä<br/>Laita kolmio neliön alapuolelle<br/>Laita suunnikas
             kolmion oikealle puolelle
-      2-3 Algorithms Multi 2:
+        questions:
+        - text: Valitse kuvaa vastaava algoritmi.
         title: Monivalinta
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         content1: Aloita kolmiolla<br/>Laita neliö kolmion alapuolelle<br/>Laita toinen
           kolmio neliön alapuolelle
         questions:
         - text: Mikä kuva <em>ei</em> toteuta tätä algoritmia?
+        title: Monivalinta
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Big Event Match 1:
-        title: Yhdistely
         content2: Yhdistä painikeyhdistelmä tanssin liikkeisiin.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Yhdistely
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Yhdistely
         content2: Käytä avainta yhdistämään kukin koodi oikeaan kirjaimeen
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Yhdistely
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Monivalinta
         questions:
         - text: Mikä joukko kortteja on pisteytetty oikein pelin sääntöjen mukaan?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: Monivalinta
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Miten yksinkertaistaisit tämän komentojonon käyttäen silmukkaa?
+        title: Monivalinta
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: Yhdistely
         content1: Yhdista ruudukko ja ohje.
         questions:
         - {}
         - {}
         - {}
+        title: Yhdistely
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Monivalinta
         questions:
         - text: Mikä ohjelma piirtää tämän kuvan?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Monivalinta
       2-3 Maze Match 2:
-        title: 'Sokkelo: yhdistely'
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Yhdistä tehtävät lohkoihin
-        pre_title: Ohjeet
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 'Sokkelo: yhdistely'
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: 'Sokkelo: monivalintakysymyksiä'
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Monivalinta
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: Monivalinta
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Mikä kuvaohjelma ei sisällä virheitä?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Monivalinta
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        title: 'Taiteilija: funktiot, monivalintakysymyksiä 1'
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Valitse oikea lohko piirtämään tämä kuva käyttäen annettuja funktioita
+        title: 'Taiteilija: funktiot, monivalintakysymyksiä 1'
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: Yhdistä silmukka muotoon
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: 'Taiteilija: silmukat, monivalintakysymyksiä'
         questions:
         - text: Minkä kuvion tämä toistolohko muodostaa?
+        title: 'Taiteilija: silmukat, monivalintakysymyksiä'
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: 'Taiteilija: silmukat, monivalintakysymyksiä'
+        - correct: true
         questions:
         - text: Minkä kuvion tämä ohjelma muodostaa?
+        title: 'Taiteilija: silmukat, monivalintakysymyksiä'
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: 'Taitelija: yhdistely'
         content1: Yhdistä muotoon lohko, joka täydentää sen.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 'Taitelija: yhdistely'
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Mikä alla olevista epäyhtälöistä on tosi?
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: Valitse parhaat lohkot.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: 'Mehiläinen: silmukat, monivalintakysymyksiä 1'
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mikä lohko kerää kaiken meden?
+        title: 'Mehiläinen: silmukat, monivalintakysymyksiä 1'
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: 'Sokkelo: yhdistely 1'
         content1: Yhdistä tehtävät lohkoihin
         questions:
         - {}
         - {}
         - {}
+        title: 'Sokkelo: yhdistely 1'
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: Sokkelo Monivalintakysymyksiä Yksi
         questions:
         - text: Mikä ohjelmista vie hahmon kukan luo?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Sokkelo Monivalintakysymyksiä Yksi
       4-5 Algorithms Match 1:
-        title: Yhdistely
+        answers:
+        - text: "<h4>Nollaa pelaajan 1 pisteet</h4>"
+        - text: "<h4>Pelaaja 1 heittää noppaa</h4>"
+        - text: "<h4>Lisää pelaajan 1 noppalukema pisteisiin</h4>"
+        - text: "<h4>Vertaa pelaajien pisteitä nähdäksesi, kuka voittaa</h4>"
         content1: 'Yhdistä noppakisapelin vaiheet oikeisiin kohtiin algoritmissa. '
         questions:
         - text: "<h4>1)</h4>"
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Nollaa pelaajan 1 pisteet</h4>"
-        - text: "<h4>Pelaaja 1 heittää noppaa</h4>"
-        - text: "<h4>Lisää pelaajan 1 noppalukema pisteisiin</h4>"
-        - text: "<h4>Vertaa pelaajien pisteitä nähdäksesi, kuka voittaa</h4>"
+        title: Yhdistely
       4-5 Algorithms Multi 1:
-        title: Monivalinta
-        questions:
-        - text: Mille seuraavista asioista on vaikeinta kuvata algoritmi?
         answers:
         - text: Hampaiden harjaus
         - text: Keksien leipominen
         - text: Ostaminen kauppalistasta
         - text: Banaani
+          correct: true
+        questions:
+        - text: Mille seuraavista asioista on vaikeinta kuvata algoritmi?
+        title: Monivalinta
       4-5 Computational Thinking Match 1:
-        title: Yhdistely
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Jokainen näistä kulkuneuvoista on hajotettu pieniksi osiksi. Yhdistä
           jokainen ajoneuvo sen ositettuun listaan.
         questions:
@@ -260,77 +264,80 @@ fi-FI:
         - text: "<h3>Pyöriä/sivu: 2 <br/>Ikkunoita/sivu: 1</h3>"
         - text: "<h3>Pyöriä/sivu: 2 <br/>Ikkunoita/sivu: 6</h3>"
         - text: "<h3>Pyöriä/sivu: 3<br/>Ikkunoita/sivu: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Yhdistely
       4-5 Computational Thinking Multi 1:
-        title: Monivalinta
-        questions:
-        - text: Seattle on suuri kaupunki.<br/>Eugene on keskikokoinen kaupunki.<br/>Hillview
-            on pieni kaupunki.
         answers:
         - text: Seattle _____ _____ _____.
         - text: _____ on _____ kaupunki.
+          correct: true
         - text: _____ _____ on kaupunki.
         - text: Eugene on _____ kaupunki.
-      4-5 Crowdsourcing Multi 1:
+        questions:
+        - text: Seattle on suuri kaupunki.<br/>Eugene on keskikokoinen kaupunki.<br/>Hillview
+            on pieni kaupunki.
         title: Monivalinta
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - {}
+        - correct: true
         questions:
         - text: Mikä seuraavista kuvista parhaiten kuvaa joukkoistamista?
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: Monivalinta
-        questions:
-        - text: Mikä seuraavista tehtävistä sopisi parhaiten joukkoistamiseen?
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Huoneen siivous
+          correct: true
         - text: Jälkiruuan syöminen
         - text: Hiusten harjaaminen
         - text: Kasvopesu
-      4-5 Digital Footprint Multi 1:
-        title: Monivalinta
         questions:
-        - text: Mikä seuraavista tiedoista on turvallista jakaa internetissä?
+        - text: Mikä seuraavista tehtävistä sopisi parhaiten joukkoistamiseen?
+        title: Monivalinta
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Syntymäpäiväsi
         - text: Lempiruokasi
+          correct: true
         - text: Osoitteesi
         - text: Vanhempasi luottokortin numero
-      4-5 Internet Multi 1:
+        questions:
+        - text: Mikä seuraavista tiedoista on turvallista jakaa internetissä?
         title: Monivalinta
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Kun yrität kirjautua verkkotunnukseen code.org, mihin IP-osoitteeseen
             DNS sinut todennäköisesti vie?
+        title: Monivalinta
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: Monivalinta
         questions:
         - text: Jos DNS on lähettänyt sinut sivulle IP-osoitteessa 100.42.50.110,
             millä verkkosivustolla olet?
+        title: Monivalinta
+      4-5 Songwriting Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Songwriting Multi 1:
-        title: Monivalinta
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Monivalinta
       4-5 Suncatchers Match 1:
-        title: Yhdistely
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Yhdistä jokainen ohjelma sanaan, jonka se tuottaa. Käytä annettua
           osaamisten ryhmää.
         questions:
@@ -338,211 +345,198 @@ fi-FI:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Yhdistely
       4-5 Suncatchers Multi 1:
-        title: Monivalinta
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: Mikä allaolevista ohjelmista  <em>ei</em> mene samassa järjestyksessä
             kuin ohjelma 1?
+        title: Monivalinta
+      4-5 artist loops multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: 'Taiteilija: silmukat, monivalintakysymyksiä'
         questions:
         - text: Mitkä lohkot luovat kuvion?
+        title: 'Taiteilija: silmukat, monivalintakysymyksiä'
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: 'Taitelija: monivalinta'
         questions:
         - text: Mitkä lohkot piirtävät suorakaiteen, jonka ympärysmitta on 100?
+        title: 'Taitelija: monivalinta'
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: 'Taitelija: monivalinta'
         questions:
         - text: Mikä piirroksista on symmetrinen?
+        title: 'Taitelija: monivalinta'
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: 'Mehiläinen: ehtolausekkeet, monivalinta'
         questions:
         - text: Valitse parhaat lohkot.
+        title: 'Mehiläinen: ehtolausekkeet, monivalinta'
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: 'Mehiläinen: virheenetsintä, monivalinta'
         questions:
         - text: Mikä versio funktiosta toimii?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Mehiläinen: virheenetsintä, monivalinta'
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Mitkä lohkot ratkaisevat tehtävän?
         title: 'Mehiläinen: silmukat, monivalinta'
-        questions:
-        - text: Mitkä lohkot ratkaisevat tehtävän?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Mitkä lohkot ratkaisevat tehtävän?
         title: 'Sokkelo: ehtolauseet, monivalinta'
-        questions:
-        - text: Mitkä lohkot ratkaisevat tehtävän?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: 'Sokkelo: yhdistely'
-        content1: Yhdistä tehtävät lohkoihin
-        pre_title: Ohjeet
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Yhdistä tehtävät lohkoihin
+        questions:
+        - {}
+        - {}
+        - {}
+        title: 'Sokkelo: yhdistely'
       4-5 maze multi 1:
-        title: 'Sokkelo: monivalintakysymyksiä'
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mitkä lohkot ratkaisevat tehtävän?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Sokkelo: monivalintakysymyksiä'
       Begin planning your project:
-        title: otsikko
         content1: Kuvaus tähän
       Begin planning your project_2018:
         content1: Kuvaus tähän
       Begin planning your project_2018_2019:
         content1: Kuvaus tähän
+      Begin planning your project_2018_2019_2020:
+        content1: Kuvaus tähän
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 Design Project_2018:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 Design Project_2018_2019:
-        title: otsikko
+        content1: Kuvaus tähän
+      CSD U2 L1 Overview:
         content1: Kuvaus tähän
       CSD U2 L2 Overview:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 L3 Overview:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 L4 Overview:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 L5 Overview:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 L6 Overview:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 Lesson 6 Overview:
         content1: Kuvaus tähän
       CSD U2 expand project:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 expand project_2018:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 expand project_2018_2019:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -555,71 +549,71 @@ fi-FI:
       CSD U2 project guide_2018_2019:
         content1: Kuvaus tähän
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: otsikko
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: otsikko
       CSD U3 Boolean MC_2018:
-        title: otsikko
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: otsikko
       CSD U3 Boolean MC_2018_2019:
-        title: otsikko
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: otsikko
       CSD U3 Card Examples_2018:
         content1: Kuvaus tähän
       CSD U3 Card Examples_2018_2019:
@@ -628,122 +622,119 @@ fi-FI:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U3 combining rep_2018:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U3 combining rep_2018_2019:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -761,13 +752,10 @@ fi-FI:
       CSD U3 platform intro_2018_2019:
         content1: Kuvaus tähän
       CSD U5 Encryption 1:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 Encryption 1_2018:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 Encryption 1_2018_2019:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 Encryption 2:
         content1: Kuvaus tähän
@@ -776,7 +764,6 @@ fi-FI:
       CSD U5 Encryption 2_2018_2019:
         content1: Kuvaus tähän
       CSD U5 L13 SFLP Interpreting Data:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 crosstab warmup:
         content1: Kuvaus tähän
@@ -785,22 +772,16 @@ fi-FI:
       CSD U5 crosstab warmup_2018_2019:
         content1: Kuvaus tähän
       CSD U5 data visualization:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 data visualization_2018:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 data visualization_2018_2019:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 student record:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 student record_2018:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U5 student record_2018_2019:
-        title: otsikko
         content1: Kuvaus tähän
       CSD U6 LED create intro:
         content1: Kuvaus tähän
@@ -809,28 +790,28 @@ fi-FI:
       CSD U6 LED create intro_2018_2019:
         content1: Kuvaus tähän
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: Kuvaus tähän
@@ -839,917 +820,1288 @@ fi-FI:
       CSD U6 final intro_2018_2019:
         content1: Kuvaus tähän
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Jatka tanssimista! \n\nOsaa 2 varten luomme oman projektisi.
+          Täällä ei ole ongelmia - sen sijaan täällä on joukko projekteja, jotka näyttävät
+          erilaisia tapoja luoda monimutkaisempia tanssibileitä. \n\nVoit tehdä nämä
+          tasot _missä tahansa järjestyksessä_. Katso ympärillesi tapoja, jolla jokin
+          tehtiin edellisellä tasolla tai yhdistä käsitteitä eri projektien välillä.
+          Kokeile niitä kaikkia, valitse suosikkisi ja käytä aikaa lisäämällä projektiin
+          tehdäksesi siitä omasi. \n\n<a class=\"btn btn-large btn-primary next-stage
+          submitButton pull-right\">Jatka</a> \n\n<div class=\"clearfix\"></div> \n\n<div
+          style=\"float: left; margin: 10px\"> \n<a href=\"2\"> \n<h2> \nTaakse- ja
+          eteenpäin \n</h2>\n\n <img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"3\">
+          \n<h2> \nLisää painikkeita \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin: 10px\">\n <a href=\"4\">\n
+          <h2>\n Siirry muodostelmaan \n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"5\">\n
+          <h2>\nMinne ne menisivät?\n </h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"6\">
+          \n<h2> \nTanssiryhmät\n </h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"7\">\n
+          <h2> \nNeljäsosanuotit\n </h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\">\n <a href=\"8\">
+          \n<h2> \nBasso, keskiääni, diskantti \n</h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\">\n <a href=\"9\">\n
+          <h2> \nNopeuta sitä, hidasta sitä \n</h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: "\"# Jatka tanssimista!\n\nOsaa 2 varten luomme oman projektisi.
+          Täällä ei ole ongelmia - sen sijaan täällä on joukko projekteja, jotka näyttävät
+          erilaisia tapoja luoda monimutkaisempia tanssibileitä.\n\nVoit tehdä nämä
+          tasot _missä tahansa järjestyksessä_. Katso ympärillesi tapoja, jolla jokin
+          tehtiin edellisellä tasolla tai yhdistä käsitteitä eri projektien välillä.
+          Kokeile niitä kaikkia, valitse suosikkisi ja käytä aikaa lisäämällä projektiin
+          tehdäksesi siitä omasi.\n\n<a class=\"\"btn btn-large btn-primary next-stage
+          submitButton pull-right\"\">Jatka</a> \n\n<div class=\"\"clearfix\"\"></div>
+          \n\n\n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"2\"\">
+          \n<h2> \nTaakse- ja eteenpäin \n</h2> \n\n<img src=\"\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n <a href=\"\"3\"\">
+          \n<h2> \nLisää painikkeita \n</h2> \n\n<img src=\"\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"\"></a>
+          \n\n</div> \n<div style=\"\"float: left; margin: 10px\"\"> \n<a href=\"\"4\"\">
+          \n<h2> \nSiirry muodostelmaan \n</h2> \n\n<img src=\"\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"\"></a>
+          \n\n</div> \n\n<div style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"5\"\">\n<h2>\nMinne
+          ne menisivät?\n</h2>\n\n<img src=\"\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"6\"\">\n<h2>\nTanssiryhmät\n</h2>\n\n<img
+          src=\"\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"7\"\">\n<h2>\nNeljäsosanuotit\n</h2>\n\n<img
+          src=\"\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"8\"\">\n<h2>\nBasso,
+          keskiääni, diskantti\n</h2>\n\n<img src=\"\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"\"></a>\n\n</div>\n\n<div
+          style=\"\"float: left; margin: 10px\"\">\n<a href=\"\"9\"\">\n<h2>\nNopeuta
+          sitä, hidasta sitä\n</h2>\n\n<img src=\"\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"\"></a>\n\n</div>\"\n"
       Internet Simulator Setup:
         content1: Kuvaus tähän
       Internet Simulator Setup 2:
-        title: otsikko
         content1: Kuvaus tähän
       Internet Simulator Setup 3:
         content1: Kuvaus tähän
       K-1 Artist 1 Multi 1:
-        title: Monivalinta
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Mitkä lohkot ratkaisevat tehtävän?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Monivalinta
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mitkä lohkot piirtävät neliön?
+        title: Monivalinta
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Yhdistely
         content2: Yhdistä samanlaiset muodot.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Monivalinta
-        questions:
-        - text: Paljonko mettä yhteensä?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Monivalinta
-        questions:
-        - text: Paljonko mettä yhteensä?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Yhdistely
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Paljonko mettä yhteensä?
+        title: Monivalinta
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Paljonko mettä yhteensä?
+        title: Monivalinta
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Yhdistä oikeat lohkot
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Yhdistely
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Yhdistely
         content2: Yhdistä painikeyhdistelmä tanssin liikkeisiin.
         questions:
         - {}
         - {}
         - {}
+        title: Yhdistely
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Monivalinta
+        - correct: true
         questions:
         - text: Millä eläimellä on digitaalinen jalanjälki, joka jättää hänet <strong>eniten
             ilman turvaa</strong>?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: Monivalinta
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Miten yksinkertaistaisit tämän komentojonon käyttäen silmukkaa?
+        title: Monivalinta
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Monivalinta
         questions:
         - text: Mikä nuoli vie Flurbin aarteelle?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: Monivalinta
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Mitä tietoa sinun <strong>ei</strong> pitäisi jakaa verkossa?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: Monivalinta
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Mikä lohko kuuluu viimeiselle paikalle?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Monivalinta
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Mikä toistolohko vastaa lohkoja?
+        title: Monivalinta
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: Monivalinta
+        - correct: true
         questions:
         - text: Valitse oikea toistolohko.
+        title: Monivalinta
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Yhdistely
+        - {}
         content2: Yhdistä oikeat tehtävät ja lohkot
-        pre_title: Ohjeet
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Yhdistely
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Sokkelo
         questions:
         - text: Mikä vastaus ratkaisee tämän tason?
+        title: Sokkelo
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: Monivalinta
         questions:
         - text: Mikä algoritmi vie Flurbin kukkaselle?
+        title: Monivalinta
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Monivalinta
+        - correct: true
         questions:
         - text: Mikä askel pitäisi olla tämän algoritmin alussa?
+        title: Monivalinta
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: Monivalinta
         questions:
         - text: Mikä askel tulisi täyttää algoritmin tyhjään tilaan?
+        title: Monivalinta
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: Monivalinta
         questions:
         - text: Mitkä lohkot tavaavat sanan "MOVE"?
+        title: Monivalinta
+      K-1 Word Search Multi 3:
         answers:
         - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
-        title: Monivalinta
+        - correct: true
+        - text: ETELÄ
         questions:
         - text: Minkä sanan lohkot tavaavat?
-        answers:
-        - {}
-        - {}
-        - text: ETELÄ
+        title: Monivalinta
       Multi-Screen Apps:
-        title: otsikko
         content1: Kuvaus tähän
       New Challenge Introduction:
-        title: otsikko
+        content1: Kuvaus tähän
+      OPD-K5 Reviewing Reflections:
         content1: Kuvaus tähän
       OPD-K5 Stage3aGo:
-        title: otsikko
+        content1: Kuvaus tähän
+      OPD-K5 Stage3aGo_copy:
+        content1: Kuvaus tähän
+      OPD-K5 conditionals introduced:
+        content1: Kuvaus tähän
+      OPD-K5 debugging:
+        content1: Kuvaus tähän
+      OPD-K5 diving deeper intro:
+        content1: Kuvaus tähän
+      OPD-K5 events introduced:
+        content1: Kuvaus tähän
+      OPD-K5 for loops:
+        content1: Kuvaus tähän
+      OPD-K5 for loops intro:
+        content1: Kuvaus tähän
+      OPD-K5 for loops introduction:
+        content1: Kuvaus tähän
+      OPD-K5 functions introduced:
+        content1: Kuvaus tähän
+      OPD-K5 journaling:
+        content1: Kuvaus tähän
+      OPD-K5 lesson implementation planning:
+        content1: Kuvaus tähän
+      OPD-K5 lesson plans:
+        content1: Kuvaus tähän
+      OPD-K5 loops introduced:
+        content1: Kuvaus tähän
+      OPD-K5 project:
+        content1: Kuvaus tähän
+      OPD-K5 projects introduction:
+        content1: Kuvaus tähän
+      OPD-K5 role_of_teacher:
+        content1: Kuvaus tähän
+      OPD-K5 sequencing introduced:
+        content1: Kuvaus tähän
+      OPD-K5 sprite lab:
+        content1: Kuvaus tähän
+      OPD-K5 sprite lab introduction:
+        content1: Kuvaus tähän
+      OPD-K5 sprite lab unplugged:
+        content1: Kuvaus tähän
+      OPD-K5 sprite lab video:
+        content1: Kuvaus tähän
+      OPD-K5 types of lessons:
+        content1: Kuvaus tähän
+      OPD-K5 using lesson plans:
+        content1: Kuvaus tähän
+      OPD-K5 variables:
+        content1: Kuvaus tähän
+      OPD-K5 variables introduction:
+        content1: Kuvaus tähän
+      OPD-K5 variables unplugged:
+        content1: Kuvaus tähän
+      OPD-K5 where to next:
+        content1: Kuvaus tähän
+      OPD-K5-projects-1:
         content1: Kuvaus tähän
       Prepare for your presentation:
-        title: otsikko
         content1: Kuvaus tähän
       'Technique: Frequency Analysis':
         content1: Kuvaus tähän
       Terminology Recap:
         content1: Kuvaus tähän
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
+        - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: En tiedä
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: En tiedä
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: En tiedä
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - {}
         - {}
+        - correct: true
+        - text: En tiedä
+        questions:
         - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
+        - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
-        - {}
-        - {}
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: Kuvaus tähän
+      csf_password_power-up:
+        content1: Kuvaus tähän
+      csf_putting_a_stop_to_online_meanness:
+        content1: Kuvaus tähän
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      outbreak_story:
+        content1: Kuvaus tähän
+      outbreak_story2:
+        content1: Kuvaus tähän
+      outbreak_freeplay_choice:
+        display_name: Vapaata kokeilua

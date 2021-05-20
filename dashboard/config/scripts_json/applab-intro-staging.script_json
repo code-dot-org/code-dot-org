@@ -1,0 +1,4512 @@
+{
+  "script": {
+    "name": "applab-intro-staging",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "student_detail_progress_view": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:12 UTC",
+    "seeding_key": {
+      "script.name": "applab-intro-staging"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Intro to AppLab - Choose Your Own Adventure",
+      "name": "Intro to AppLab - Choose Your Own Adventure",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to AppLab - Choose Your Own Adventure 2",
+      "name": "Intro to AppLab - Choose Your Own Adventure 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to AppLab - Your First App",
+      "name": "Intro to AppLab - Your First App",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to AppLab - Your First App 2",
+      "name": "Intro to AppLab - Your First App 2",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to AppLab - Your First App 3",
+      "name": "Intro to AppLab - Your First App 3",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to AppLab - Your First App 4",
+      "name": "Intro to AppLab - Your First App 4",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to AppLab - Getting Started",
+      "name": "Intro to AppLab - Getting Started",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "key": "Intro to App Lab",
+      "name": "Intro to App Lab",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Welcome"
+        ],
+        "progression": "Welcome to App Lab!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Welcome"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Try App"
+        ],
+        "progression": "Skill Building - Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Try App"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Try App"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Add Screen"
+        ],
+        "progression": "Skill Building - Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Screen"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Add Screen"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Add Button"
+        ],
+        "progression": "Skill Building - Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Button"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Add Button"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Add Event"
+        ],
+        "progression": "Skill Building - Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Event"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Add Event"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Add Sound"
+        ],
+        "progression": "Skill Building - Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Sound"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Add Sound"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Building a Choose Your Own Adventure"
+        ],
+        "progression": "Build Your Adventure!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Building a Choose Your Own Adventure"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Building a Choose Your Own Adventure"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Build Your Adventure"
+        ],
+        "progression": "Build Your Adventure!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Build Your Adventure"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Build Your Adventure"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 1 - Go Further"
+        ],
+        "progression": "Go Further!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Go Further"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 1 - Go Further"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Try App"
+        ],
+        "progression": "Skill Building - Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Try App"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Try App"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "HOC Intro to App Lab Example"
+        ],
+        "progression": "Welcome to App Lab!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HOC Intro to App Lab Example"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "HOC Intro to App Lab Example"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "HOC Intro to App Lab Brainstorm"
+        ],
+        "progression": "Welcome to App Lab!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HOC Intro to App Lab Brainstorm"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "HOC Intro to App Lab Brainstorm"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Try Cat Commander"
+        ],
+        "progression": "Welcome to App Lab!"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Try Cat Commander"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Try Cat Commander"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Edit startScreen"
+        ],
+        "progression": "Design your Start Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit startScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Edit startScreen"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Edit startScreen2"
+        ],
+        "progression": "Design your Start Screen"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit startScreen2"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Edit startScreen2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Learn App Lab Video"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Learn App Lab Video"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Learn App Lab Video"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Edit place1"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit place1"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Edit place1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - Edit place1 2"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit place1 2"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - Edit place1 2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - add Button"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add Button"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - add Button"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - add onEvent"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - add onEvent"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - add more buttons"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add more buttons"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - add more buttons"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - add more buttons 2"
+        ],
+        "progression": "Screens and Buttons"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add more buttons 2"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - add more buttons 2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - add images"
+        ],
+        "progression": "Go Further - Images and Sound"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add images"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - add images"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - add sound"
+        ],
+        "progression": "Go Further - Images and Sound"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add sound"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - add sound"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 2 - finish and share"
+        ],
+        "progression": "Finish and Share"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 2 - finish and share"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 2 - finish and share"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - onEvent mouseOut"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent mouseOut"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - onEvent mouseOut"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - Change Screen Color"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - Change Screen Color"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - Change Text"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - Change Text"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - Change Text 2"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - Change Text 2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - Full Text"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - Full Text"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - Change Two Buttons"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Two Buttons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - Change Two Buttons"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - onEvent intro"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - onEvent intro"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - onEvent before"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent before"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - onEvent before"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - onEvent twoButtons"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - onEvent twoButtons"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - onEvent mouseOver"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent mouseOver"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - onEvent mouseOver"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - playSound"
+        ],
+        "progression": "Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - playSound"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - stopSound"
+        ],
+        "progression": "Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - stopSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - stopSound"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 3 - thisOrThat"
+        ],
+        "progression": "Create and Share Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 3 - thisOrThat"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 3 - thisOrThat"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video Welcome"
+        ],
+        "progression": "Welcome"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video Welcome"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video Welcome"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video setProperty"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video setProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video setProperty"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Change Screen Color"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Change Screen Color"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Change Text"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Change Text"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Full Text"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Full Text"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Change Text 2"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Change Text 2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Change Two Buttons"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Two Buttons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Change Two Buttons"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video using onEvent"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - onEvent intro"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - onEvent intro"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - onEvent before"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - onEvent before"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - onEvent before"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - onEvent twoButtons"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - onEvent twoButtons"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - playSound"
+        ],
+        "progression": "Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - playSound"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - stopSound"
+        ],
+        "progression": "Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - stopSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - stopSound"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video share thisThat"
+        ],
+        "progression": "Create and Share Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video share thisThat"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video share thisThat"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - thisOrThat"
+        ],
+        "progression": "Create and Share Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - thisOrThat"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - thisOrThat"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video sneak designMode"
+        ],
+        "progression": "Sneak Peak of What Comes Next"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video sneak designMode"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video sneak designMode"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - thisOrThat design"
+        ],
+        "progression": "Sneak Peak of What Comes Next"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - thisOrThat design"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - thisOrThat design"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Video Welcome to App Lab"
+        ],
+        "progression": "Welcome"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Welcome to App Lab"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Video Welcome to App Lab"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video setProperty"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video setProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video setProperty"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Change Screen Color"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Change Screen Color"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Change Text 2"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Change Text 2"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Full Text"
+        ],
+        "progression": "Colors and Size"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Full Text"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video using onEvent"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - onEvent intro"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - onEvent intro"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - onEvent twoButtons"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - onEvent twoButtons"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Video Videos Sound"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Videos Sound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Video Videos Sound"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - playSound"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - playSound"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - rate it app"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - rate it app"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - rate it app"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Video Intro Design Mode"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Intro Design Mode"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Video Intro Design Mode"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - addButton"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - addButton"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - addButton"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - setScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - setScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - setScreen"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - Video Share Keep Going"
+        ],
+        "progression": "Share and Keep Going"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Share Keep Going"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - Video Share Keep Going"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - share keep going"
+        ],
+        "progression": "Share and Keep Going"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - share keep going"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - share keep going"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 5 - go further"
+        ],
+        "progression": "Share and Keep Going"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 5 - go further"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 5 - go further"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Welcome SetProperty"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Welcome SetProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Welcome SetProperty"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Change Screen Color"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Change Screen Color"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Change Text 2"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Change Text 2"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Full Text"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Full Text"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video using onEvent"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - onEvent intro"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - onEvent intro"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - onEvent twoButtons"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - onEvent twoButtons"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Images and Sounds"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Images and Sounds"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Images and Sounds"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - playSound"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - playSound"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Design Mode and Screens"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Design Mode and Screens"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Design Mode and Screens"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - thisOrThatAddButton"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatAddButton"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - thisOrThatAddButton"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - thisOrThatAddScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatAddScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - thisOrThatAddScreen"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - thisOrThatSetScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatSetScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - thisOrThatSetScreen"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Keep Going"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Keep Going"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Keep Going"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - thisOrThatPersonalize"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatPersonalize"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - thisOrThatPersonalize"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - animalSoundBoard"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - animalSoundBoard"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - animalSoundBoard"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 17,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - quizApp"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - quizApp"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - quizApp"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 18,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - blankApp"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - blankApp"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - blankApp"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Welcome SetProperty"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Welcome SetProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Welcome SetProperty"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Screen Color"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Text 2"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Full Text"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 4 - Video using onEvent"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent intro"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent twoButtons"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Images and Sounds"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Images and Sounds"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Images and Sounds"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - playSound"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Design Mode and Screens"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Design Mode and Screens"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Design Mode and Screens"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddButton"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddScreen"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatSetScreen"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 6 - Video Keep Going"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Keep Going"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 6 - Video Keep Going"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
+        "progression": "Create Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatPersonalize"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Getting Started"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Screen Color"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Change Text 2"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
+        "progression": "Setting Properties"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - Full Text"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Make It Interactive"
+      ]
+    },
+    {
+      "chapter": 111,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent intro"
+      ]
+    },
+    {
+      "chapter": 112,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
+        "progression": "Make it Interactive"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - onEvent twoButtons"
+      ]
+    },
+    {
+      "chapter": 113,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Images and Sounds"
+      ]
+    },
+    {
+      "chapter": 114,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
+        "progression": "Images and Sounds"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - playSound"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Design Mode"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddButton"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatAddScreen"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
+        "progression": "Design Mode"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatSetScreen"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App"
+        ],
+        "progression": "Share Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "App Lab Intro 8 - Video Share Your App"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
+        "progression": "Share Your App"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      },
+      "level_keys": [
+        "AppLab Intro 7 - thisOrThatPersonalize"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Welcome",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Welcome"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Try App",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Try App"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Add Screen",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Screen"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Add Button",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Button"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Add Event",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Event"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Add Sound",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Add Sound"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Building a Choose Your Own Adventure",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Building a Choose Your Own Adventure"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Build Your Adventure",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Build Your Adventure"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 1 - Go Further",
+        "script_level.level_keys": [
+          "AppLab Intro 1 - Go Further"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Try App",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Try App"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HOC Intro to App Lab Example",
+        "script_level.level_keys": [
+          "HOC Intro to App Lab Example"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HOC Intro to App Lab Brainstorm",
+        "script_level.level_keys": [
+          "HOC Intro to App Lab Brainstorm"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Try Cat Commander",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Try Cat Commander"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Edit startScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit startScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Edit startScreen2",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit startScreen2"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Learn App Lab Video",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Learn App Lab Video"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Edit place1",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit place1"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - Edit place1 2",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - Edit place1 2"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - add Button",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add Button"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - add onEvent",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - add more buttons",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add more buttons"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - add more buttons 2",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add more buttons 2"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - add images",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add images"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - add sound",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - add sound"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 2 - finish and share",
+        "script_level.level_keys": [
+          "AppLab Intro 2 - finish and share"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - onEvent mouseOut",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent mouseOut"
+        ],
+        "lesson.key": "Intro to AppLab - Choose Your Own Adventure 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - Change Screen Color",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - Change Text",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - Change Text 2",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - Full Text",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - Change Two Buttons",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - Change Two Buttons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - onEvent intro",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - onEvent before",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent before"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - onEvent twoButtons",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - onEvent mouseOver",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - onEvent mouseOver"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - playSound",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - stopSound",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - stopSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 3 - thisOrThat",
+        "script_level.level_keys": [
+          "AppLab Intro 3 - thisOrThat"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video Welcome",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video Welcome"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video setProperty",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video setProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Change Screen Color",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Change Text",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Full Text",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Change Text 2",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Change Two Buttons",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Change Two Buttons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video using onEvent",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - onEvent intro",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - onEvent before",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - onEvent before"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - onEvent twoButtons",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - playSound",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - stopSound",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - stopSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video share thisThat",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video share thisThat"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - thisOrThat",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - thisOrThat"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video sneak designMode",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video sneak designMode"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - thisOrThat design",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - thisOrThat design"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 2",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Video Welcome to App Lab",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Welcome to App Lab"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video setProperty",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video setProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Change Screen Color",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Change Text 2",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Full Text",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video using onEvent",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - onEvent intro",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - onEvent twoButtons",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Video Videos Sound",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Videos Sound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - playSound",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - rate it app",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - rate it app"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Video Intro Design Mode",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Intro Design Mode"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - addButton",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - addButton"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - setScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - setScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - Video Share Keep Going",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - Video Share Keep Going"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - share keep going",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - share keep going"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 5 - go further",
+        "script_level.level_keys": [
+          "AppLab Intro 5 - go further"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 3",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Welcome SetProperty",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Welcome SetProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Change Screen Color",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Change Text 2",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Full Text",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video using onEvent",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - onEvent intro",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - onEvent twoButtons",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Images and Sounds",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Images and Sounds"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - playSound",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Design Mode and Screens",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Design Mode and Screens"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - thisOrThatAddButton",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatAddButton"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - thisOrThatAddScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatAddScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - thisOrThatSetScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatSetScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Keep Going",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Keep Going"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - thisOrThatPersonalize",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - thisOrThatPersonalize"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - animalSoundBoard",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - animalSoundBoard"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - quizApp",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - quizApp"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - blankApp",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - blankApp"
+        ],
+        "lesson.key": "Intro to AppLab - Your First App 4",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Welcome SetProperty",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Welcome SetProperty"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Screen Color",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Text 2",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Full Text",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 4 - Video using onEvent",
+        "script_level.level_keys": [
+          "AppLab Intro 4 - Video using onEvent"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent intro",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent twoButtons",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Images and Sounds",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Images and Sounds"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - playSound",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Design Mode and Screens",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Design Mode and Screens"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddButton",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatSetScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 6 - Video Keep Going",
+        "script_level.level_keys": [
+          "AppLab Intro 6 - Video Keep Going"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatPersonalize",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
+        "lesson.key": "Intro to AppLab - Getting Started",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Getting Started",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Getting Started"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Screen Color",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Screen Color"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Change Text 2",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Change Text 2"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - Full Text",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - Full Text"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Make It Interactive",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent intro",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent intro"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - onEvent twoButtons",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Images and Sounds",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - playSound",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - playSound"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Design Mode",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Design Mode"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddButton",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatAddScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatSetScreen",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Intro 8 - Video Share Your App",
+        "script_level.level_keys": [
+          "App Lab Intro 8 - Video Share Your App"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AppLab Intro 7 - thisOrThatPersonalize",
+        "script_level.level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize"
+        ],
+        "lesson.key": "Intro to App Lab",
+        "lesson_group.key": "",
+        "script.name": "applab-intro-staging"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

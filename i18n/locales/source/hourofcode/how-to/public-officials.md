@@ -1,7 +1,5 @@
 ---
 title: How-to guide for public officials
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -21,7 +19,7 @@ From left to right: *Governors from Arkansas, North Carolina, and Arizona partic
 ## Get every school participating, every student learning!
 
 ### 1. Read our one-pager
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Recruit local schools and districts
 Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.

@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../../../util/configuredChai';
+import {assert} from '../../../../../util/deprecatedChai';
 import DiscountCodeSchoolChoice from '@cdo/apps/lib/kits/maker/ui/DiscountCodeSchoolChoice';
 
 describe('DiscountCodeSchoolChoice', () => {

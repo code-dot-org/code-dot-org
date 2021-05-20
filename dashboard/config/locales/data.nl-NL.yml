@@ -35,7 +35,7 @@ nl:
         TextMatch: Tekst overeenstemming
         StudioEC: Speel Lab
         Applab: App Lab
-        NetSim: Internet Simulator
+        NetSim: Internetsimulator
         Custom: Kunstenaar
         CustomStudio: Speel Lab
         Gamelab: Game Lab
@@ -651,6 +651,8 @@ nl:
         csd_external_waze_data: Waarom Zijn Zoveel Gebruikers Geobsedeerd Door Waze?
         csd_gamelab_animation_tab: Het tabblad Animatie
         csd_gamelab_velocity: Snelheid
+        csd_weblab_intro_1: Introductie tot Web Lab - Deel 3
+        csd_weblab_intro_2: Introductie tot Web Lab - Deel 3
         csd_weblab_css_1: Introductie tot CSS - Deel 1
         csd_weblab_css_2: Introductie tot CSS - Deel 2
         csd_weblab_intro_3: Introductie tot Web Lab - Deel 3
@@ -719,10 +721,20 @@ nl:
         csd_applab_arrays: Inleiding tot Arrays
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
+        CSF_if_allskins: Het if-blok
         CSF_loops_AB: Lussen
+        hoc_dance_warmup: Dance Party - Opwarmen
+        hoc_dance_congrats: Dance Party - Party On!
+        writing_first_program: Schrijf je eerste computerprogramma!
         csd_pair_programming: Programmeren in Tweetallen
         csd_applab_parameters: Functies met Parameters
         csd_debugging: Foutopsporing
+        csp-pd-welcome: Welkom bij de Familie!
+        hoc_dance_congrats_2019: Dance Party 2019 - Party On!
+        hoc_dance_warmup_2019: Dance Party 2019 - Opwarmen
+        hoc_dance_events_2019: Dance Party 2019 - Events
+        hoc_dance_measures_2019: Dance Party 2019 - Maten
+        hoc_dance_properties_2019: Dance Party 2019 - Eigenschappen
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

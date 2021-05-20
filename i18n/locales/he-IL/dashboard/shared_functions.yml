@@ -1,0 +1,15 @@
+he:
+  data:
+    shared_functions:
+      growing: לגדול
+      jittering: לרעוד
+      moving east: לנוע מזרחה
+      moving north: לנוע צפונה
+      moving south: לנוע דרומה
+      moving west: לנוע מערבה
+      moving with arrow keys: לנוע באמצעות מקשי החצים
+      patrolling: לסייר
+      shrinking: להתכווץ
+      spinning left: להסתובב שמאלה
+      spinning right: להסתובב ימינה
+      wandering: לשוטט

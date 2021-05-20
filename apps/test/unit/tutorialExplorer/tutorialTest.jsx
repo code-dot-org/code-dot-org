@@ -1,9 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 import Image from '@cdo/apps/tutorialExplorer/image';
 import LazyLoad from 'react-lazy-load';
+import sinon from 'sinon';
 
 const CALLBACK = () => {};
 const FAKE_TUTORIAL = {
@@ -26,25 +27,33 @@ describe('Tutorial', () => {
     const wrapper = shallow(
       <Tutorial item={FAKE_TUTORIAL} tutorialClicked={CALLBACK} />
     );
-    expect(wrapper).to.containMatchingElement(
-      <div onClick={CALLBACK}>
-        <div>
-          <div />
-          <LazyLoad offset={1000}>
-            <Image
-              src="/images/fill-480x360/httyd.jpg"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%'
-              }}
-            />
-          </LazyLoad>
-        </div>
-        <div>How to train your dragon</div>
-        <div>Ages 8 and up. | FORTRAN | iOS</div>
-      </div>
+    const imageSrc = wrapper
+      .find(Image)
+      .first()
+      .props().src;
+    const titleText = wrapper.findWhere(
+      element => element.text() === 'How to train your dragon'
     );
+    const descriptionText = wrapper.findWhere(
+      element => element.text() === 'Ages 8 and up. | FORTRAN | iOS'
+    );
+    expect(wrapper.find(LazyLoad)).to.have.lengthOf(1);
+    expect(imageSrc).to.equal('/images/fill-480x360/httyd.jpg');
+    expect(titleText).to.exist;
+    expect(descriptionText).to.exist;
+  });
+
+  it('[accessibility] can be selected via keyboard', () => {
+    var clickedSpy = sinon.spy();
+    const wrapper = shallow(
+      <Tutorial item={FAKE_TUTORIAL} tutorialClicked={clickedSpy} />
+    );
+    wrapper
+      .instance()
+      .keyboardSelectTutorial({keyCode: 32, preventDefault: () => {}});
+    wrapper
+      .instance()
+      .keyboardSelectTutorial({keyCode: 13, preventDefault: () => {}});
+    expect(clickedSpy).to.have.been.calledTwice;
   });
 });

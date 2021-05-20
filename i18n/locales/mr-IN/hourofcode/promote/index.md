@@ -1,7 +1,5 @@
 ---
-title: Spread the word
-layout: wide
-nav: promote_nav
+title: याचा प्रचार करा
 ---
 
 {{ signup_button }}

@@ -1,0 +1,321 @@
+{
+  "ko-KR": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "감사합니다!",
+          "40d7755b0c04b15ca69f0f8d8c510f91": "토끼에게 먹이 주기!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!",
+          "8437002ea42b64a5fd68abfb2ab8dae0": "게임 종료",
+          "c865bfd8e0c78020ace8e1376d3cc9ad": "졌습니다."
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "안녕!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "안녕!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "파랑",
+          "f59f10539890569d3b1deb0e4352ab84": "오늘 저는 ",
+          "810f7026db2f96c4e654f4664e44be04": "저지를 입고 있어요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "빨강",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "상당히  ",
+          "c30c9d9f51c03a6d42d66cea54206abd": " 오늘, 그렇지 않아요?",
+          "b92274a5b4513e80f4bd6a8136581578": "그것은 내가 이제까지 본 그림자 중 ",
+          "f54929e86cc7510907895070d8b05979": " 가장 이상한 그림자예요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!",
+          "498cd895eb5a102c5aeb977e2b928dee": "감사합니다!",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "코인을 얻으세요. 충돌하지 마세요!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "점수: "
+        },
+        "Find the Wizard": {
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "셋 까지 세면 저는 사라집니다! 저를 찾기 위해 1부터 400까지 중 한 숫자를 추측하세요!",
+          "0b895ef4c917e50663bc2a7327cbee3d": "나 여기 있어!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "74e3efe12b17fe00c01147733fad486d": "숫자를 맞춰서 나를 찾아봐!",
+          "0464d226582401370945003bc8850990": "음하하하하하!",
+          "765366ef0f68387ed2a6ca3a8d24182d": "너무 높습니다!",
+          "0ceb38a3de45bf070e96e6657474f47d": "너무 낮습니다!",
+          "3c5a6a6bfff469fd4c779912331f1049": "하!",
+          "cd4c7f8fdf063e832de1604e34dd4531": "히 히!"
+        },
+        "Choose Your Own Adventure": {
+          "c332bf82ea63d21d1d1b701a07ab9afd": "도와주셔서 감사하지만 이제 가야 합니다.",
+          "ba57bb6df12b81e80f79eef5b1ca8fc7": "여기요, 지팡이를 찾았어요!",
+          "c7323ea29d98d5cad8e0828f3f52ef0c": "안돼요! 그건 마녀의 지팡이예요!",
+          "2cef5d66c57efe3994c85f4e1f312849": "아 하! 두 개의 지팡이를 찾았어요! 도와주셨기 때문이에요. 두 번째 것을 가지세요!\t",
+          "24a124016e7eec7a8fef5bc228541533": "아, 걱정하지 말아요! 찾을 수 있을거라 확신해요",
+          "fe724bc07d1e8b57e53ebfd03c0ec4f5": "아, 걱정하지 말아요! 찾을 수 있을거라 확신해요.",
+          "9360086c2f9d62ba563c6fcbfbd9b402": "지금 찾으러 갈께요! 안녕!",
+          "6d411b45e39818da535ba9f8a2cf58e2": "나를 마녀로 변하게 만들었어요!",
+          "73af7ec7b0065fb5eb15d6c0ca695ed3": "이 지팡이의 주인을 정말 찾았어요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables1a": {
+          "ea904c9d18bd602705f598372988aaa8": "뭐라고 외쳐야 하나요?",
+          "97a97de7add5e8dcd9f70a407d56968e": "골인!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "88789b154a4ffbbd84108b0c80f8c464": "브라이언, 몇 살이예요?",
+          "662722f1029078dad7a3683c64d8b922": "와! 나는 ",
+          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables4b": {
+          "2e1749915d40abd8f43fc2b9dd13649c": "기쁩니다,",
+          "ecb2903fb054395baf72ea1da127be32": "상당히 키가 큽니다 ",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " 세, ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "나이가 어떻게 되시나요?"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "d065635d5fffcb3739555ae93006081c": "만나서 반가워요, ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "f6429fe0f1a76611670df7e1234af936": "이름이 무엇인가요?"
+        },
+        "courseF_playlab_variables8c": {
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "축하합니다, ",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", 색상에 대해 생각하고 있었어요 ",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "미안해요, ",
+          "8622f69e8cf70458a82fc22d8e46372f": ", 색상에 대해 생각하고 있지 않았어요 ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "FoodFight": {
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "점수 ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "레벨 ",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "Guess The Number": {
+          "015c8ae47c8964d793ddc123b7ba6b81": "그렇게 어린 사람은 살고 있지 않아요.",
+          "56582da5c99c1bb46ab5dcda003f8c27": "너무 어린.",
+          "781b7711244d030e4ed6e1bfa883364e": "저는 아직 20살이 안됐어요!",
+          "01bab55de9d3319f27c5213b4661c79f": "그렇게 늙지 않았어요!",
+          "5c95950acb6c51d88cc8869eb31f2bdf": "알았어요!",
+          "214e809e9d24f40cc42fa2f04f59a1cf": "내가 이 펭귄을 먹어 치우기 전에 내가 몇 살인지 추측해 보세요!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "Virtual Pet 1_2019": {
+          "22661453237feb87f1b00dd17bc39666": "음! 에너지가 증가했어요!",
+          "4ac000226dd5bc7fc14ecde063245731": "윽! 에너지 재설정!"
+        },
+        "Virtual Pet 1_2020": {
+          "22661453237feb87f1b00dd17bc39666": "음! 에너지가 증가했어요!",
+          "4ac000226dd5bc7fc14ecde063245731": "윽! 에너지 재설정!"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "개!",
+          "336ad881e37e713ba0325500a8fa1f00": " 개들!",
+          "27944770529dd15319a983bee8951560": "고양이!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " 고양이들!",
+          "1c64ef29c853587fbe94f69f05272b79": "새!",
+          "5b402e6ea05e847a076e03ad74420c45": " 새들!",
+          "4b23c908b939eaf7918e07142b9e05e0": "용!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " 용들!",
+          "71fc859f3abd22273bad5d0d8eda2173": "모든 동물을 세세요!"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "개!",
+          "336ad881e37e713ba0325500a8fa1f00": " 개들!",
+          "27944770529dd15319a983bee8951560": "고양이!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " 고양이들!",
+          "1c64ef29c853587fbe94f69f05272b79": "새!",
+          "5b402e6ea05e847a076e03ad74420c45": " 새들!",
+          "4b23c908b939eaf7918e07142b9e05e0": "용!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " 용들!",
+          "71fc859f3abd22273bad5d0d8eda2173": "모든 동물을 세세요!"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "그게 저예요! 리키! 저는 코드를 좋아하고 튜이와 나가 놀고 아이스크림을 먹는 걸 좋아해요!  ",
+          "810896b14fc6615f0c76628b9b6a727e": "튜이는 저의 제일 친한 친구예요! 정말 스포츠를 잘 해요!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "아이스크림은 제가 좋아하는 간식이예요! 하지만 아마도 소파에 앉아서는 먹지 말아야 할 것....",
+          "a50ec512bdd98483a7cdcd88cbe11933": "제 펫 토끼 롤리팝 여사예요! 제가 왜 이런 이름을 붙여 주었는지 저도 잘 모르겠어요! ",
+          "6f97975a0bda0c9219915161149cbb26": "저것은 제 컴퓨터예요! 저는 항상 저기서 코딩을 해요! ",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "여기 비밀이 있어요: 튜이는 심하게 간지럼을 잘 타요! ",
+          "fce3b93eaa64a8869c47ba25daa8887f": "맛있어요!",
+          "41a18649f969a00ec0b2feba20db997f": "롤리팝 여사, 내 생각엔 이 색이 너에게 더 잘 어울리는 거 같아!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "이 컴퓨터는 내 미친 코딩 기술을 처리할 수 없어요!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "그게 저예요! 리키! 저는 코드를 좋아하고 튜이와 나가 놀고 아이스크림을 먹는 걸 좋아해요!  ",
+          "810896b14fc6615f0c76628b9b6a727e": "튜이는 저의 제일 친한 친구예요! 정말 스포츠를 잘 해요!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "아이스크림은 제가 좋아하는 간식이예요! 하지만 아마도 소파에 앉아서는 먹지 말아야 할 것....",
+          "a50ec512bdd98483a7cdcd88cbe11933": "제 펫 토끼 롤리팝 여사예요! 제가 왜 이런 이름을 붙여 주었는지 저도 잘 모르겠어요! ",
+          "6f97975a0bda0c9219915161149cbb26": "저것은 제 컴퓨터예요! 저는 항상 저기서 코딩을 해요! ",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "여기 비밀이 있어요: 튜이는 심하게 간지럼을 잘 타요! ",
+          "fce3b93eaa64a8869c47ba25daa8887f": "맛있어요!",
+          "41a18649f969a00ec0b2feba20db997f": "롤리팝 여사, 내 생각엔 이 색이 너에게 더 잘 어울리는 거 같아!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "이 컴퓨터는 내 미친 코딩 기술을 처리할 수 없어요!"
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "점수: "
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "66ca156974a9909af6aea88ad5cb915b": "좀비들이 외계인에게 다가가지 못하도록 하세요, 좀비들은 외계인을 슬프게 합니다!",
+          "66363f1551b4fdb85c85222c629013b2": "외계인을 지키세요!",
+          "3b3d1f8225a16aac3f372c3062d8b194": "만약 그가 슬퍼한다면, 점수를 모아 그를 다시 행복하게 만드세요!"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "다시 시도하세요.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "게임 오버!"
+        }
+      }
+    }
+  }
+}

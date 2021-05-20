@@ -1,0 +1,1917 @@
+---
+in:
+  data:
+    blocks:
+      Dancelab_alternateMoves:
+        text: crwdns2071154:0[GROUP]crwdnd2071154:0[0]crwdnd2071154:0[N]crwdnd2071154:0[1]crwdnd2071154:0[MOVE1]crwdnd2071154:0[2]crwdnd2071154:0[MOVE2]crwdnd2071154:0[3]crwdne2071154:0
+        options:
+          GROUP:
+            sprites: crwdns2071156:0crwdne2071156:0
+            '"ALIEN"': crwdns2071158:0crwdne2071158:0
+            '"BEAR"': crwdns2071160:0crwdne2071160:0
+            '"CAT"': crwdns2071162:0crwdne2071162:0
+            '"DOG"': crwdns2071164:0crwdne2071164:0
+            '"DUCK"': crwdns2071166:0crwdne2071166:0
+            '"FROG"': crwdns2071168:0crwdne2071168:0
+            '"MOOSE"': crwdns2071170:0crwdne2071170:0
+            '"PINEAPPLE"': crwdns2071172:0crwdne2071172:0
+            '"ROBOT"': crwdns2071174:0crwdne2071174:0
+            '"SHARK"': crwdns2071176:0crwdne2071176:0
+            '"SLOTH"': crwdns2071178:0crwdne2071178:0
+            '"UNICORN"': crwdns2071180:0crwdne2071180:0
+          MOVE1:
+            MOVES.Roll: crwdns2071182:0crwdne2071182:0
+            MOVES.ClapHigh: crwdns2071184:0crwdne2071184:0
+            MOVES.Dab: crwdns2071186:0crwdne2071186:0
+            MOVES.DoubleJam: crwdns2071188:0crwdne2071188:0
+            MOVES.Drop: crwdns2071190:0crwdne2071190:0
+            MOVES.Floss: crwdns2071192:0crwdne2071192:0
+            MOVES.Fresh: crwdns2071194:0crwdne2071194:0
+            MOVES.Clown: crwdns2071196:0crwdne2071196:0
+            MOVES.Kick: crwdns2071198:0crwdne2071198:0
+            MOVES.ThisOrThat: crwdns2071200:0crwdne2071200:0
+            MOVES.Thriller: crwdns2071202:0crwdne2071202:0
+            MOVES.Rest: crwdns2071204:0crwdne2071204:0
+          MOVE2:
+            MOVES.Roll: crwdns2071206:0crwdne2071206:0
+            MOVES.ClapHigh: crwdns2071208:0crwdne2071208:0
+            MOVES.Dab: crwdns2071210:0crwdne2071210:0
+            MOVES.DoubleJam: crwdns2071212:0crwdne2071212:0
+            MOVES.Drop: crwdns2071214:0crwdne2071214:0
+            MOVES.Floss: crwdns2071216:0crwdne2071216:0
+            MOVES.Fresh: crwdns2071218:0crwdne2071218:0
+            MOVES.Clown: crwdns2071220:0crwdne2071220:0
+            MOVES.Kick: crwdns2071222:0crwdne2071222:0
+            MOVES.ThisOrThat: crwdns2071224:0crwdne2071224:0
+            MOVES.Thriller: crwdns2071226:0crwdne2071226:0
+            MOVES.Rest: crwdns2071228:0crwdne2071228:0
+      Dancelab_atTimestamp:
+        text: crwdns168789:0[TIMESTAMP]crwdnd168789:0[0]crwdnd168789:0[UNIT]crwdnd168789:0[1]crwdne168789:0
+        options:
+          UNIT:
+            '"measures"': crwdns169224:0crwdne169224:0
+            '"seconds"': crwdns169225:0crwdne169225:0
+      Dancelab_changeColorBy:
+        text: crwdns168790:0[COLOR]crwdnd168790:0[0]crwdnd168790:0[METHOD]crwdnd168790:0[1]crwdnd168790:0[AMOUNT]crwdnd168790:0[2]crwdne168790:0
+        options:
+          METHOD:
+            '"hue"': crwdns168791:0crwdne168791:0
+            '"saturation"': crwdns168792:0crwdne168792:0
+            '"brightness"': crwdns168793:0crwdne168793:0
+      Dancelab_changeMoveEachLR:
+        text: crwdns194620:0[GROUP]crwdnd194620:0[0]crwdnd194620:0[MOVE]crwdnd194620:0[1]crwdnd194620:0[DIR]crwdnd194620:0[2]crwdne194620:0
+        options:
+          GROUP:
+            sprites: crwdns194621:0crwdne194621:0
+            '"ALIEN"': crwdns194865:0crwdne194865:0
+            '"BEAR"': crwdns194867:0crwdne194867:0
+            '"CAT"': crwdns194869:0crwdne194869:0
+            '"DOG"': crwdns194871:0crwdne194871:0
+            '"DUCK"': crwdns194873:0crwdne194873:0
+            '"FROG"': crwdns194875:0crwdne194875:0
+            '"MOOSE"': crwdns194877:0crwdne194877:0
+            '"PINEAPPLE"': crwdns194879:0crwdne194879:0
+            '"ROBOT"': crwdns194881:0crwdne194881:0
+            '"SHARK"': crwdns194883:0crwdne194883:0
+            '"SLOTH"': crwdns2071230:0crwdne2071230:0
+            '"UNICORN"': crwdns305128:0crwdne305128:0
+          MOVE:
+            '"next"': crwdns194639:0crwdne194639:0
+            '"prev"': crwdns194640:0crwdne194640:0
+            '"rand"': crwdns194641:0crwdne194641:0
+            MOVES.Roll: crwdns194901:0crwdne194901:0
+            MOVES.ClapHigh: crwdns194885:0crwdne194885:0
+            MOVES.Dab: crwdns194889:0crwdne194889:0
+            MOVES.DoubleJam: crwdns194891:0crwdne194891:0
+            MOVES.Drop: crwdns194893:0crwdne194893:0
+            MOVES.Floss: crwdns194895:0crwdne194895:0
+            MOVES.Fresh: crwdns194897:0crwdne194897:0
+            MOVES.Clown: crwdns194887:0crwdne194887:0
+            MOVES.Kick: crwdns194899:0crwdne194899:0
+            MOVES.ThisOrThat: crwdns194903:0crwdne194903:0
+            MOVES.Thriller: crwdns194905:0crwdne194905:0
+            MOVES.Rest: crwdns194907:0crwdne194907:0
+          DIR:
+            '1': crwdns194642:0crwdne194642:0
+            "-1": crwdns194643:0crwdne194643:0
+      Dancelab_changeMoveLR:
+        text: crwdns194644:0[SPRITE]crwdnd194644:0[0]crwdnd194644:0[MOVE]crwdnd194644:0[1]crwdnd194644:0[DIR]crwdnd194644:0[2]crwdne194644:0
+        options:
+          MOVE:
+            '"next"': crwdns194657:0crwdne194657:0
+            '"prev"': crwdns194658:0crwdne194658:0
+            '"rand"': crwdns194659:0crwdne194659:0
+            MOVES.Roll: crwdns194925:0crwdne194925:0
+            MOVES.ClapHigh: crwdns194909:0crwdne194909:0
+            MOVES.Dab: crwdns194913:0crwdne194913:0
+            MOVES.DoubleJam: crwdns194915:0crwdne194915:0
+            MOVES.Drop: crwdns194917:0crwdne194917:0
+            MOVES.Floss: crwdns194919:0crwdne194919:0
+            MOVES.Fresh: crwdns194921:0crwdne194921:0
+            MOVES.Clown: crwdns194911:0crwdne194911:0
+            MOVES.Kick: crwdns194923:0crwdne194923:0
+            MOVES.ThisOrThat: crwdns194927:0crwdne194927:0
+            MOVES.Thriller: crwdns194929:0crwdne194929:0
+            MOVES.Rest: crwdns194931:0crwdne194931:0
+          DIR:
+            '1': crwdns194660:0crwdne194660:0
+            "-1": crwdns194661:0crwdne194661:0
+      Dancelab_changePropBy:
+        text: crwdns168820:0[SPRITE]crwdnd168820:0[0]crwdnd168820:0[PROPERTY]crwdnd168820:0[1]crwdnd168820:0[VAL]crwdnd168820:0[2]crwdne168820:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns168821:0crwdne168821:0
+            '"width"': crwdns194933:0crwdne194933:0
+            '"height"': crwdns194935:0crwdne194935:0
+            '"rotation"': crwdns168822:0crwdne168822:0
+            '"x"': crwdns168823:0crwdne168823:0
+            '"y"': crwdns168824:0crwdne168824:0
+      Dancelab_changePropEachBy:
+        text: crwdns2066118:0[GROUP]crwdnd2066118:0[0]crwdnd2066118:0[PROPERTY]crwdnd2066118:0[1]crwdnd2066118:0[VAL]crwdnd2066118:0[2]crwdne2066118:0
+        options:
+          GROUP:
+            sprites: crwdns2066120:0crwdne2066120:0
+            '"ALIEN"': crwdns2066122:0crwdne2066122:0
+            '"BEAR"': crwdns2066124:0crwdne2066124:0
+            '"CAT"': crwdns2066126:0crwdne2066126:0
+            '"DOG"': crwdns2066128:0crwdne2066128:0
+            '"DUCK"': crwdns2066130:0crwdne2066130:0
+            '"FROG"': crwdns2066132:0crwdne2066132:0
+            '"MOOSE"': crwdns2066134:0crwdne2066134:0
+            '"PINEAPPLE"': crwdns2066136:0crwdne2066136:0
+            '"ROBOT"': crwdns2066138:0crwdne2066138:0
+            '"SHARK"': crwdns2066140:0crwdne2066140:0
+            '"SLOTH"': crwdns2071232:0crwdne2071232:0
+            '"UNICORN"': crwdns2066142:0crwdne2066142:0
+          PROPERTY:
+            '"scale"': crwdns2066144:0crwdne2066144:0
+            '"width"': crwdns2066146:0crwdne2066146:0
+            '"height"': crwdns2066148:0crwdne2066148:0
+            '"rotation"': crwdns2066150:0crwdne2066150:0
+            '"x"': crwdns2066152:0crwdne2066152:0
+            '"y"': crwdns2066154:0crwdne2066154:0
+      Dancelab_doMoveEachLR:
+        text: crwdns194679:0[GROUP]crwdnd194679:0[0]crwdnd194679:0[MOVE]crwdnd194679:0[1]crwdnd194679:0[DIR]crwdnd194679:0[2]crwdne194679:0
+        options:
+          GROUP:
+            sprites: crwdns194680:0crwdne194680:0
+            '"ALIEN"': crwdns194937:0crwdne194937:0
+            '"BEAR"': crwdns194939:0crwdne194939:0
+            '"CAT"': crwdns194941:0crwdne194941:0
+            '"DOG"': crwdns194943:0crwdne194943:0
+            '"DUCK"': crwdns194945:0crwdne194945:0
+            '"FROG"': crwdns194947:0crwdne194947:0
+            '"MOOSE"': crwdns194949:0crwdne194949:0
+            '"PINEAPPLE"': crwdns194951:0crwdne194951:0
+            '"ROBOT"': crwdns194953:0crwdne194953:0
+            '"SHARK"': crwdns194955:0crwdne194955:0
+            '"SLOTH"': crwdns2071234:0crwdne2071234:0
+            '"UNICORN"': crwdns305130:0crwdne305130:0
+          MOVE:
+            '"rand"': crwdns333294:0crwdne333294:0
+            MOVES.XBend: crwdns333296:0crwdne333296:0
+            MOVES.Roll: crwdns194973:0crwdne194973:0
+            MOVES.XClapSide: crwdns333298:0crwdne333298:0
+            MOVES.ClapHigh: crwdns194957:0crwdne194957:0
+            MOVES.Dab: crwdns194961:0crwdne194961:0
+            MOVES.XFever: crwdns333300:0crwdne333300:0
+            MOVES.DoubleJam: crwdns194963:0crwdne194963:0
+            MOVES.Drop: crwdns194965:0crwdne194965:0
+            MOVES.Floss: crwdns194967:0crwdne194967:0
+            MOVES.Fresh: crwdns194969:0crwdne194969:0
+            MOVES.Clown: crwdns194959:0crwdne194959:0
+            MOVES.XHeadHips: crwdns333302:0crwdne333302:0
+            MOVES.XHop: crwdns333304:0crwdne333304:0
+            MOVES.XHighKick: crwdns333306:0crwdne333306:0
+            MOVES.XKnee: crwdns333308:0crwdne333308:0
+            MOVES.XKneel: crwdns333310:0crwdne333310:0
+            MOVES.XOle: crwdns333312:0crwdne333312:0
+            MOVES.XArmsSide: crwdns333314:0crwdne333314:0
+            MOVES.XSlide: crwdns333316:0crwdne333316:0
+            MOVES.Kick: crwdns194971:0crwdne194971:0
+            MOVES.XArmsUp: crwdns333318:0crwdne333318:0
+            MOVES.ThisOrThat: crwdns194975:0crwdne194975:0
+            MOVES.Thriller: crwdns194977:0crwdne194977:0
+            MOVES.Rest: crwdns194979:0crwdne194979:0
+          DIR:
+            '1': crwdns194701:0crwdne194701:0
+            "-1": crwdns194702:0crwdne194702:0
+      Dancelab_doMoveLR:
+        text: crwdns194719:0[SPRITE]crwdnd194719:0[0]crwdnd194719:0[MOVE]crwdnd194719:0[1]crwdnd194719:0[DIR]crwdnd194719:0[2]crwdne194719:0
+        options:
+          MOVE:
+            '"rand"': crwdns333320:0crwdne333320:0
+            MOVES.XBend: crwdns333322:0crwdne333322:0
+            MOVES.Roll: crwdns194997:0crwdne194997:0
+            MOVES.XClapSide: crwdns333324:0crwdne333324:0
+            MOVES.ClapHigh: crwdns194981:0crwdne194981:0
+            MOVES.Dab: crwdns194985:0crwdne194985:0
+            MOVES.XFever: crwdns333326:0crwdne333326:0
+            MOVES.DoubleJam: crwdns194987:0crwdne194987:0
+            MOVES.Drop: crwdns194989:0crwdne194989:0
+            MOVES.Floss: crwdns194991:0crwdne194991:0
+            MOVES.Fresh: crwdns194993:0crwdne194993:0
+            MOVES.Clown: crwdns194983:0crwdne194983:0
+            MOVES.XHeadHips: crwdns333328:0crwdne333328:0
+            MOVES.XHop: crwdns333330:0crwdne333330:0
+            MOVES.XHighKick: crwdns333332:0crwdne333332:0
+            MOVES.XKnee: crwdns333334:0crwdne333334:0
+            MOVES.XKneel: crwdns333336:0crwdne333336:0
+            MOVES.XOle: crwdns333338:0crwdne333338:0
+            MOVES.XArmsSide: crwdns333340:0crwdne333340:0
+            MOVES.XSlide: crwdns333342:0crwdne333342:0
+            MOVES.Kick: crwdns194995:0crwdne194995:0
+            MOVES.XArmsUp: crwdns333344:0crwdne333344:0
+            MOVES.ThisOrThat: crwdns194999:0crwdne194999:0
+            MOVES.Thriller: crwdns195001:0crwdne195001:0
+            MOVES.Rest: crwdns195003:0crwdne195003:0
+          DIR:
+            '1': crwdns194735:0crwdne194735:0
+            "-1": crwdns194736:0crwdne194736:0
+      Dancelab_eval:
+        text: crwdns168840:0[CODE]crwdnd168840:0[0]crwdne168840:0
+      Dancelab_everyMeasuresRange:
+        text: crwdns2067356:0[N]crwdnd2067356:0[0]crwdnd2067356:0[START]crwdnd2067356:0[1]crwdne2067356:0
+      Dancelab_everySeconds:
+        text: crwdns168841:0[N]crwdnd168841:0[0]crwdnd168841:0[UNIT]crwdnd168841:0[1]crwdne168841:0
+        options:
+          UNIT:
+            '"measures"': crwdns168842:0crwdne168842:0
+            '"seconds"': crwdns168843:0crwdne168843:0
+      Dancelab_everySecondsRange:
+        text: crwdns168844:0[N]crwdnd168844:0[0]crwdnd168844:0[UNIT]crwdnd168844:0[1]crwdnd168844:0[START]crwdnd168844:0[2]crwdnd168844:0[STOP]crwdnd168844:0[3]crwdne168844:0
+        options:
+          UNIT:
+            measures: crwdns168845:0crwdne168845:0
+            seconds: crwdns168846:0crwdne168846:0
+      Dancelab_everyVerseChorus:
+        text: crwdns169258:0[UNIT]crwdnd169258:0[0]crwdne169258:0
+        options:
+          UNIT:
+            '"verse"': crwdns169259:0crwdne169259:0
+            '"chorus"': crwdns169260:0crwdne169260:0
+      Dancelab_getEnergy:
+        text: crwdns168848:0[RANGE]crwdnd168848:0[0]crwdne168848:0
+        options:
+          RANGE:
+            '"low"': crwdns168849:0crwdne168849:0
+            '"mid"': crwdns168850:0crwdne168850:0
+            '"high"': crwdns168851:0crwdne168851:0
+      Dancelab_getProp:
+        text: crwdns168852:0[SPRITE]crwdnd168852:0[0]crwdnd168852:0[PROPERTY]crwdnd168852:0[1]crwdne168852:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns168853:0crwdne168853:0
+            '"width"': crwdns195005:0crwdne195005:0
+            '"height"': crwdns195007:0crwdne195007:0
+            '"rotation"': crwdns168854:0crwdne168854:0
+            '"x"': crwdns168855:0crwdne168855:0
+            '"y"': crwdns168856:0crwdne168856:0
+            '"tint"': crwdns168858:0crwdne168858:0
+      Dancelab_getTime:
+        text: crwdns168859:0[UNIT]crwdnd168859:0[0]crwdne168859:0
+        options:
+          UNIT:
+            '"measures"': crwdns168860:0crwdne168860:0
+            '"seconds"': crwdns168861:0crwdne168861:0
+      Dancelab_ifDanceIs:
+        text: crwdns195009:0[SPRITE]crwdnd195009:0[0]crwdnd195009:0[DANCE]crwdnd195009:0[1]crwdnd195009:0[DO1]crwdnd195009:0[2]crwdnd195009:0[DO2]crwdnd195009:0[3]crwdne195009:0
+        options:
+          DANCE:
+            MOVES.ClapHigh: crwdns330976:0crwdne330976:0
+            MOVES.Clown: crwdns330978:0crwdne330978:0
+            MOVES.Dab: crwdns330980:0crwdne330980:0
+            MOVES.DoubleJam: crwdns330982:0crwdne330982:0
+            MOVES.Drop: crwdns330984:0crwdne330984:0
+            MOVES.Floss: crwdns330986:0crwdne330986:0
+            MOVES.Fresh: crwdns330988:0crwdne330988:0
+            MOVES.Roll: crwdns330990:0crwdne330990:0
+            MOVES.Kick: crwdns330992:0crwdne330992:0
+            MOVES.ThisOrThat: crwdns330994:0crwdne330994:0
+            MOVES.Thriller: crwdns330996:0crwdne330996:0
+            MOVES.Rest: crwdns330998:0crwdne330998:0
+      Dancelab_ifTime:
+        text: crwdns330860:0[UNIT]crwdnd330860:0[0]crwdnd330860:0[OP]crwdnd330860:0[1]crwdnd330860:0[N]crwdnd330860:0[2]crwdnd330860:0[DO1]crwdnd330860:0[3]crwdnd330860:0[DO2]crwdnd330860:0[4]crwdne330860:0
+        options:
+          UNIT:
+            '"measures"': crwdns330862:0crwdne330862:0
+            '"seconds"': crwdns330864:0crwdne330864:0
+          OP:
+            '">"': crwdns330866:0crwdne330866:0
+            '"<"': crwdns330868:0crwdne330868:0
+            '"="': crwdns330870:0crwdne330870:0
+      Dancelab_jumpTo:
+        text: crwdns168864:0[SPRITE]crwdnd168864:0[0]crwdnd168864:0[LOCATION]crwdnd168864:0[1]crwdne168864:0
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": crwdns195035:0crwdne195035:0
+            "{x: 200, y: 300}": crwdns195037:0crwdne195037:0
+            "{x: 100, y: 200}": crwdns195039:0crwdne195039:0
+            "{x: 300, y: 200}": crwdns195041:0crwdne195041:0
+            "{x: 200, y: 200}": crwdns195043:0crwdne195043:0
+            "{x: 100, y: 100}": crwdns195045:0crwdne195045:0
+            "{x: 300, y: 100}": crwdns195047:0crwdne195047:0
+            "{x: 100, y: 300}": crwdns195049:0crwdne195049:0
+            "{x: 300, y: 300}": crwdns195051:0crwdne195051:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns195053:0crwdne195053:0
+      Dancelab_jumpToEach:
+        text: crwdns2066156:0[GROUP]crwdnd2066156:0[0]crwdnd2066156:0[LOCATION]crwdnd2066156:0[1]crwdne2066156:0
+        options:
+          GROUP:
+            sprites: crwdns2066158:0crwdne2066158:0
+            '"ALIEN"': crwdns2066160:0crwdne2066160:0
+            '"BEAR"': crwdns2066162:0crwdne2066162:0
+            '"CAT"': crwdns2066164:0crwdne2066164:0
+            '"DOG"': crwdns2066166:0crwdne2066166:0
+            '"DUCK"': crwdns2066168:0crwdne2066168:0
+            '"FROG"': crwdns2066170:0crwdne2066170:0
+            '"MOOSE"': crwdns2066172:0crwdne2066172:0
+            '"PINEAPPLE"': crwdns2066174:0crwdne2066174:0
+            '"ROBOT"': crwdns2066176:0crwdne2066176:0
+            '"SHARK"': crwdns2066178:0crwdne2066178:0
+            '"SLOTH"': crwdns2071236:0crwdne2071236:0
+            '"UNICORN"': crwdns2066180:0crwdne2066180:0
+          LOCATION:
+            "{x: 200, y: 100}": crwdns2066182:0crwdne2066182:0
+            "{x: 200, y: 300}": crwdns2066184:0crwdne2066184:0
+            "{x: 100, y: 200}": crwdns2066186:0crwdne2066186:0
+            "{x: 300, y: 200}": crwdns2066188:0crwdne2066188:0
+            "{x: 200, y: 200}": crwdns2066190:0crwdne2066190:0
+            "{x: 100, y: 100}": crwdns2066192:0crwdne2066192:0
+            "{x: 300, y: 100}": crwdns2066194:0crwdne2066194:0
+            "{x: 100, y: 300}": crwdns2066196:0crwdne2066196:0
+            "{x: 300, y: 300}": crwdns2066198:0crwdne2066198:0
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": crwdns2066200:0crwdne2066200:0
+      Dancelab_layoutSprites:
+        text: crwdns168865:0[GROUP]crwdnd168865:0[0]crwdnd168865:0[FORMAT]crwdnd168865:0[1]crwdne168865:0
+        options:
+          GROUP:
+            sprites: crwdns168866:0crwdne168866:0
+            '"ALIEN"': crwdns195055:0crwdne195055:0
+            '"BEAR"': crwdns195057:0crwdne195057:0
+            '"CAT"': crwdns195059:0crwdne195059:0
+            '"DOG"': crwdns195061:0crwdne195061:0
+            '"DUCK"': crwdns195063:0crwdne195063:0
+            '"FROG"': crwdns195065:0crwdne195065:0
+            '"MOOSE"': crwdns195067:0crwdne195067:0
+            '"PINEAPPLE"': crwdns195069:0crwdne195069:0
+            '"ROBOT"': crwdns195071:0crwdne195071:0
+            '"SHARK"': crwdns195073:0crwdne195073:0
+            '"SLOTH"': crwdns2071238:0crwdne2071238:0
+            '"UNICORN"': crwdns331000:0crwdne331000:0
+          FORMAT:
+            '"border"': crwdns330872:0crwdne330872:0
+            '"inner"': crwdns330874:0crwdne330874:0
+            '"diamond"': crwdns2289943:0crwdne2289943:0
+            '"circle"': crwdns245468:0crwdne245468:0
+            '"grid"': crwdns168870:0crwdne168870:0
+            '"top"': crwdns2289945:0crwdne2289945:0
+            '"row"': crwdns168871:0crwdne168871:0
+            '"bottom"': crwdns2289947:0crwdne2289947:0
+            '"left"': crwdns2289949:0crwdne2289949:0
+            '"column"': crwdns168872:0crwdne168872:0
+            '"right"': crwdns2289951:0crwdne2289951:0
+            '"x"': crwdns330876:0crwdne330876:0
+            '"plus"': crwdns330878:0crwdne330878:0
+            '"random"': crwdns245470:0crwdne245470:0
+      Dancelab_makeAnonymousDanceSprite:
+        text: crwdns2063134:0[COSTUME]crwdnd2063134:0[0]crwdnd2063134:0[LOCATION]crwdnd2063134:0[1]crwdne2063134:0
+        options:
+          COSTUME:
+            '"ALIEN"': crwdns2063136:0crwdne2063136:0
+            '"BEAR"': crwdns2063138:0crwdne2063138:0
+            '"CAT"': crwdns2063140:0crwdne2063140:0
+            '"DOG"': crwdns2063142:0crwdne2063142:0
+            '"DUCK"': crwdns2063144:0crwdne2063144:0
+            '"FROG"': crwdns2063146:0crwdne2063146:0
+            '"MOOSE"': crwdns2063148:0crwdne2063148:0
+            '"PINEAPPLE"': crwdns2063150:0crwdne2063150:0
+            '"ROBOT"': crwdns2063152:0crwdne2063152:0
+            '"SHARK"': crwdns2063154:0crwdne2063154:0
+            '"SLOTH"': crwdns2068874:0crwdne2068874:0
+            '"UNICORN"': crwdns2063156:0crwdne2063156:0
+          LOCATION:
+            "{x: 200, y: 100}": crwdns2063158:0crwdne2063158:0
+            "{x: 200, y: 300}": crwdns2063160:0crwdne2063160:0
+            "{x: 100, y: 200}": crwdns2063162:0crwdne2063162:0
+            "{x: 300, y: 200}": crwdns2063164:0crwdne2063164:0
+            "{x: 200, y: 200}": crwdns2063166:0crwdne2063166:0
+            "{x: 100, y: 100}": crwdns2063168:0crwdne2063168:0
+            "{x: 300, y: 100}": crwdns2063170:0crwdne2063170:0
+            "{x: 100, y: 300}": crwdns2063172:0crwdne2063172:0
+            "{x: 300, y: 300}": crwdns2063174:0crwdne2063174:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns2063176:0crwdne2063176:0
+      Dancelab_makeNewDanceSprite:
+        text: crwdns168877:0[COSTUME]crwdnd168877:0[0]crwdnd168877:0[NAME]crwdnd168877:0[1]crwdnd168877:0[LOCATION]crwdnd168877:0[2]crwdne168877:0
+        options:
+          COSTUME:
+            '"ALIEN"': crwdns195075:0crwdne195075:0
+            '"BEAR"': crwdns195077:0crwdne195077:0
+            '"CAT"': crwdns195079:0crwdne195079:0
+            '"DOG"': crwdns195081:0crwdne195081:0
+            '"DUCK"': crwdns195083:0crwdne195083:0
+            '"FROG"': crwdns195085:0crwdne195085:0
+            '"MOOSE"': crwdns195087:0crwdne195087:0
+            '"PINEAPPLE"': crwdns195089:0crwdne195089:0
+            '"ROBOT"': crwdns195091:0crwdne195091:0
+            '"SHARK"': crwdns195093:0crwdne195093:0
+            '"SLOTH"': crwdns2071240:0crwdne2071240:0
+            '"UNICORN"': crwdns195095:0crwdne195095:0
+          LOCATION:
+            "{x: 200, y: 100}": crwdns195097:0crwdne195097:0
+            "{x: 200, y: 300}": crwdns195099:0crwdne195099:0
+            "{x: 100, y: 200}": crwdns195101:0crwdne195101:0
+            "{x: 300, y: 200}": crwdns195103:0crwdne195103:0
+            "{x: 200, y: 200}": crwdns195105:0crwdne195105:0
+            "{x: 100, y: 100}": crwdns195107:0crwdne195107:0
+            "{x: 300, y: 100}": crwdns195109:0crwdne195109:0
+            "{x: 100, y: 300}": crwdns195111:0crwdne195111:0
+            "{x: 300, y: 300}": crwdns195113:0crwdne195113:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns195115:0crwdne195115:0
+      Dancelab_makeNewDanceSpriteGroup:
+        text: crwdns245472:0[N]crwdnd245472:0[0]crwdnd245472:0[COSTUME]crwdnd245472:0[1]crwdnd245472:0[LAYOUT]crwdnd245472:0[2]crwdne245472:0
+        options:
+          N:
+            '2': crwdns245474:0crwdne245474:0
+            '3': crwdns245476:0crwdne245476:0
+            '4': crwdns245478:0crwdne245478:0
+            '5': crwdns245480:0crwdne245480:0
+            '6': crwdns245482:0crwdne245482:0
+            '7': crwdns245484:0crwdne245484:0
+            '8': crwdns245486:0crwdne245486:0
+            '9': crwdns245488:0crwdne245488:0
+            '10': crwdns245490:0crwdne245490:0
+            '11': crwdns331002:0crwdne331002:0
+            '12': crwdns331004:0crwdne331004:0
+            '13': crwdns331006:0crwdne331006:0
+            '14': crwdns331008:0crwdne331008:0
+            '15': crwdns331010:0crwdne331010:0
+            '16': crwdns331012:0crwdne331012:0
+            '17': crwdns331014:0crwdne331014:0
+            '18': crwdns331016:0crwdne331016:0
+            '19': crwdns331018:0crwdne331018:0
+            '20': crwdns331020:0crwdne331020:0
+          COSTUME:
+            '"ALIEN"': crwdns245492:0crwdne245492:0
+            '"BEAR"': crwdns245494:0crwdne245494:0
+            '"CAT"': crwdns245496:0crwdne245496:0
+            '"DOG"': crwdns245498:0crwdne245498:0
+            '"DUCK"': crwdns245500:0crwdne245500:0
+            '"FROG"': crwdns245502:0crwdne245502:0
+            '"MOOSE"': crwdns245504:0crwdne245504:0
+            '"PINEAPPLE"': crwdns245506:0crwdne245506:0
+            '"ROBOT"': crwdns245508:0crwdne245508:0
+            '"SHARK"': crwdns245510:0crwdne245510:0
+            '"SLOTH"': crwdns2071356:0crwdne2071356:0
+            '"UNICORN"': crwdns245512:0crwdne245512:0
+          LAYOUT:
+            '"border"': crwdns331022:0crwdne331022:0
+            '"inner"': crwdns331024:0crwdne331024:0
+            '"diamond"': crwdns2289835:0crwdne2289835:0
+            '"circle"': crwdns245514:0crwdne245514:0
+            '"grid"': crwdns245516:0crwdne245516:0
+            '"top"': crwdns2289837:0crwdne2289837:0
+            '"row"': crwdns245518:0crwdne245518:0
+            '"bottom"': crwdns2289839:0crwdne2289839:0
+            '"left"': crwdns2289841:0crwdne2289841:0
+            '"column"': crwdns245520:0crwdne245520:0
+            '"right"': crwdns2289843:0crwdne2289843:0
+            '"x"': crwdns331026:0crwdne331026:0
+            '"plus"': crwdns331028:0crwdne331028:0
+            '"random"': crwdns245522:0crwdne245522:0
+      Dancelab_mixColors:
+        text: crwdns168900:0[COLOR1]crwdnd168900:0[0]crwdnd168900:0[COLOR2]crwdnd168900:0[1]crwdne168900:0
+      Dancelab_nMeasures:
+        text: crwdns168906:0[N]crwdnd168906:0[0]crwdne168906:0
+      Dancelab_onPointerDown:
+        text: crwdns168907:0crwdne168907:0
+      Dancelab_onPointerDrag:
+        text: crwdns168908:0crwdne168908:0
+      Dancelab_onPointerUp:
+        text: crwdns168909:0crwdne168909:0
+      Dancelab_randomColor:
+        text: crwdns168916:0crwdne168916:0
+      Dancelab_setBackground:
+        text: crwdns168922:0[COLOR]crwdnd168922:0[0]crwdne168922:0
+      Dancelab_setBackgroundEffect:
+        text: crwdns168923:0[EFFECT]crwdnd168923:0[0]crwdnd168923:0[PALETTE]crwdnd168923:0[1]crwdne168923:0
+        options:
+          EFFECT:
+            '"none"': crwdns168924:0crwdne168924:0
+            '"circles"': crwdns391106:0crwdne391106:0
+            '"color_cycle"': crwdns331030:0crwdne331030:0
+            '"diamonds"': crwdns168927:0crwdne168927:0
+            '"disco_ball"': crwdns391108:0crwdne391108:0
+            '"fireworks"': crwdns391110:0crwdne391110:0
+            '"swirl"': crwdns305134:0crwdne305134:0
+            '"kaleidoscope"': crwdns391112:0crwdne391112:0
+            '"lasers"': crwdns391114:0crwdne391114:0
+            '"splatter"': crwdns305132:0crwdne305132:0
+            '"rainbow"': crwdns168926:0crwdne168926:0
+            '"snowflakes"': crwdns331032:0crwdne331032:0
+            '"text"': crwdns391116:0crwdne391116:0
+            '"galaxy"': crwdns391118:0crwdne391118:0
+            '"sparkles"': crwdns391120:0crwdne391120:0
+            '"spiral"': crwdns305136:0crwdne305136:0
+            '"disco"': crwdns168925:0crwdne168925:0
+            '"stars"': crwdns391122:0crwdne391122:0
+          PALETTE:
+            '"rave"': crwdns391124:0crwdne391124:0
+            '"cool"': crwdns391126:0crwdne391126:0
+            '"electronic"': crwdns391128:0crwdne391128:0
+            '"iceCream"': crwdns391130:0crwdne391130:0
+            '"default"': crwdns391132:0crwdne391132:0
+            '"neon"': crwdns391134:0crwdne391134:0
+            '"tropical"': crwdns391136:0crwdne391136:0
+            '"vintage"': crwdns391138:0crwdne391138:0
+            '"warm"': crwdns391140:0crwdne391140:0
+      Dancelab_setBackgroundEffectWithPalette:
+        text: crwdns390430:0[PALETTE]crwdnd390430:0[0]crwdnd390430:0[EFFECT]crwdnd390430:0[1]crwdne390430:0
+        options:
+          EFFECT:
+            '"none"': crwdns390432:0crwdne390432:0
+            '"rand"': crwdns390434:0crwdne390434:0
+            '"circles"': crwdns390436:0crwdne390436:0
+            '"quads"': crwdns2289484:0crwdne2289484:0
+            '"color_cycle"': crwdns390438:0crwdne390438:0
+            '"diamonds"': crwdns390440:0crwdne390440:0
+            '"disco_ball"': crwdns390442:0crwdne390442:0
+            '"fireworks"': crwdns390444:0crwdne390444:0
+            '"flowers"': crwdns2069142:0crwdne2069142:0
+            '"growing_stars"': crwdns2071242:0crwdne2071242:0
+            '"swirl"': crwdns390446:0crwdne390446:0
+            '"kaleidoscope"': crwdns390448:0crwdne390448:0
+            '"lasers"': crwdns390450:0crwdne390450:0
+            '"splatter"': crwdns390452:0crwdne390452:0
+            '"rainbow"': crwdns390454:0crwdne390454:0
+            '"ripples_random"': crwdns2071244:0crwdne2071244:0
+            '"ripples"': crwdns2071246:0crwdne2071246:0
+            '"snowflakes"': crwdns390456:0crwdne390456:0
+            '"text"': crwdns390458:0crwdne390458:0
+            '"squiggles"': crwdns2071248:0crwdne2071248:0
+            '"galaxy"': crwdns390460:0crwdne390460:0
+            '"sparkles"': crwdns390462:0crwdne390462:0
+            '"spiral"': crwdns390464:0crwdne390464:0
+            '"disco"': crwdns390466:0crwdne390466:0
+            '"stars"': crwdns390468:0crwdne390468:0
+            '"music_wave"': crwdns2069138:0crwdne2069138:0
+          PALETTE:
+            '"rave"': crwdns390470:0crwdne390470:0
+            '"cool"': crwdns390472:0crwdne390472:0
+            '"electronic"': crwdns390474:0crwdne390474:0
+            '"iceCream"': crwdns390476:0crwdne390476:0
+            '"default"': crwdns390478:0crwdne390478:0
+            '"neon"': crwdns390480:0crwdne390480:0
+            '"tropical"': crwdns390482:0crwdne390482:0
+            '"vintage"': crwdns390484:0crwdne390484:0
+            '"warm"': crwdns390486:0crwdne390486:0
+      Dancelab_setDanceSpeed:
+        text: crwdns168928:0[SPRITE]crwdnd168928:0[0]crwdnd168928:0[SPEED]crwdnd168928:0[1]crwdne168928:0
+        options:
+          SPEED:
+            '1': crwdns168929:0crwdne168929:0
+            '2': crwdns168930:0crwdne168930:0
+            '4': crwdns168931:0crwdne168931:0
+            '0.5': crwdns169240:0crwdne169240:0
+            '0.25': crwdns169241:0crwdne169241:0
+      Dancelab_setDanceSpeedEach:
+        text: crwdns330880:0[GROUP]crwdnd330880:0[0]crwdnd330880:0[SPEED]crwdnd330880:0[1]crwdne330880:0
+        options:
+          GROUP:
+            sprites: crwdns330882:0crwdne330882:0
+            '"ALIEN"': crwdns330884:0crwdne330884:0
+            '"BEAR"': crwdns330886:0crwdne330886:0
+            '"CAT"': crwdns330888:0crwdne330888:0
+            '"DOG"': crwdns330890:0crwdne330890:0
+            '"DUCK"': crwdns330892:0crwdne330892:0
+            '"FROG"': crwdns330894:0crwdne330894:0
+            '"MOOSE"': crwdns330896:0crwdne330896:0
+            '"PINEAPPLE"': crwdns330898:0crwdne330898:0
+            '"ROBOT"': crwdns330900:0crwdne330900:0
+            '"SHARK"': crwdns330902:0crwdne330902:0
+            '"SLOTH"': crwdns2071250:0crwdne2071250:0
+            '"UNICORN"': crwdns331038:0crwdne331038:0
+          SPEED:
+            '1': crwdns330904:0crwdne330904:0
+            '2': crwdns330906:0crwdne330906:0
+            '4': crwdns330908:0crwdne330908:0
+            '0.5': crwdns330910:0crwdne330910:0
+            '0.25': crwdns330912:0crwdne330912:0
+      Dancelab_setForegroundEffect:
+        text: crwdns169242:0[EFFECT]crwdnd169242:0[0]crwdne169242:0
+        options:
+          EFFECT:
+            '"none"': crwdns169243:0crwdne169243:0
+            '"bubbles"': crwdns391142:0crwdne391142:0
+            '"confetti"': crwdns391144:0crwdne391144:0
+            '"hearts_red"': crwdns391146:0crwdne391146:0
+            '"music_notes"': crwdns391148:0crwdne391148:0
+            '"pineapples"': crwdns391150:0crwdne391150:0
+            '"pizzas"': crwdns391152:0crwdne391152:0
+            '"smiling_poop"': crwdns391154:0crwdne391154:0
+            '"rain"': crwdns194799:0crwdne194799:0
+            '"floating_rainbows"': crwdns391156:0crwdne391156:0
+            '"smile_face"': crwdns391158:0crwdne391158:0
+            '"spotlight"': crwdns305140:0crwdne305140:0
+            '"color_lights"': crwdns391160:0crwdne391160:0
+            '"raining_tacos"': crwdns194800:0crwdne194800:0
+      Dancelab_setForegroundEffectExtended:
+        text: crwdns390488:0[EFFECT]crwdnd390488:0[0]crwdne390488:0
+        options:
+          EFFECT:
+            '"none"': crwdns390490:0crwdne390490:0
+            '"rand"': crwdns390492:0crwdne390492:0
+            '"bubbles"': crwdns390494:0crwdne390494:0
+            '"hearts_colorful"': crwdns2071252:0crwdne2071252:0
+            '"confetti"': crwdns390496:0crwdne390496:0
+            '"emojis"': crwdns2071254:0crwdne2071254:0
+            '"hearts_red"': crwdns390498:0crwdne390498:0
+            '"music_notes"': crwdns390500:0crwdne390500:0
+            '"paint_drip"': crwdns2071256:0crwdne2071256:0
+            '"pineapples"': crwdns390502:0crwdne390502:0
+            '"pizzas"': crwdns390504:0crwdne390504:0
+            '"smiling_poop"': crwdns390506:0crwdne390506:0
+            '"rain"': crwdns390508:0crwdne390508:0
+            '"floating_rainbows"': crwdns390510:0crwdne390510:0
+            '"smile_face"': crwdns390512:0crwdne390512:0
+            '"spotlight"': crwdns390514:0crwdne390514:0
+            '"color_lights"': crwdns390516:0crwdne390516:0
+            '"exploding_stars"': crwdns2071258:0crwdne2071258:0
+            '"raining_tacos"': crwdns390518:0crwdne390518:0
+      Dancelab_setProp:
+        text: crwdns168933:0[SPRITE]crwdnd168933:0[0]crwdnd168933:0[PROPERTY]crwdnd168933:0[1]crwdnd168933:0[VAL]crwdnd168933:0[2]crwdne168933:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns168934:0crwdne168934:0
+            '"width"': crwdns195117:0crwdne195117:0
+            '"height"': crwdns195119:0crwdne195119:0
+            '"rotation"': crwdns168935:0crwdne168935:0
+            '"x"': crwdns168936:0crwdne168936:0
+            '"y"': crwdns168937:0crwdne168937:0
+      Dancelab_setPropEach:
+        text: crwdns245524:0[GROUP]crwdnd245524:0[0]crwdnd245524:0[PROPERTY]crwdnd245524:0[1]crwdnd245524:0[VAL]crwdnd245524:0[2]crwdne245524:0
+        options:
+          GROUP:
+            sprites: crwdns245526:0crwdne245526:0
+            '"ALIEN"': crwdns245528:0crwdne245528:0
+            '"BEAR"': crwdns245530:0crwdne245530:0
+            '"CAT"': crwdns245532:0crwdne245532:0
+            '"DOG"': crwdns245534:0crwdne245534:0
+            '"DUCK"': crwdns245536:0crwdne245536:0
+            '"FROG"': crwdns245538:0crwdne245538:0
+            '"MOOSE"': crwdns245540:0crwdne245540:0
+            '"PINEAPPLE"': crwdns245542:0crwdne245542:0
+            '"ROBOT"': crwdns245544:0crwdne245544:0
+            '"SHARK"': crwdns245546:0crwdne245546:0
+            '"SLOTH"': crwdns2071260:0crwdne2071260:0
+            '"UNICORN"': crwdns331040:0crwdne331040:0
+          PROPERTY:
+            '"scale"': crwdns245548:0crwdne245548:0
+            '"width"': crwdns245550:0crwdne245550:0
+            '"height"': crwdns245552:0crwdne245552:0
+            '"rotation"': crwdns245554:0crwdne245554:0
+            '"x"': crwdns245556:0crwdne245556:0
+            '"y"': crwdns245558:0crwdne245558:0
+            '"tint"': crwdns2068916:0crwdne2068916:0
+      Dancelab_setPropRandom:
+        text: crwdns241340:0[SPRITE]crwdnd241340:0[0]crwdnd241340:0[PROPERTY]crwdnd241340:0[1]crwdne241340:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns241342:0crwdne241342:0
+            '"width"': crwdns241344:0crwdne241344:0
+            '"height"': crwdns241346:0crwdne241346:0
+            '"rotation"': crwdns241348:0crwdne241348:0
+            '"x"': crwdns241350:0crwdne241350:0
+            '"y"': crwdns241352:0crwdne241352:0
+            '"tint"': crwdns331042:0crwdne331042:0
+      Dancelab_setPropRandomEach:
+        text: crwdns2066202:0[GROUP]crwdnd2066202:0[0]crwdnd2066202:0[PROPERTY]crwdnd2066202:0[1]crwdne2066202:0
+        options:
+          GROUP:
+            sprites: crwdns2066204:0crwdne2066204:0
+            '"ALIEN"': crwdns2066206:0crwdne2066206:0
+            '"BEAR"': crwdns2066208:0crwdne2066208:0
+            '"CAT"': crwdns2066210:0crwdne2066210:0
+            '"DOG"': crwdns2066212:0crwdne2066212:0
+            '"DUCK"': crwdns2066214:0crwdne2066214:0
+            '"FROG"': crwdns2066216:0crwdne2066216:0
+            '"MOOSE"': crwdns2066218:0crwdne2066218:0
+            '"PINEAPPLE"': crwdns2066220:0crwdne2066220:0
+            '"ROBOT"': crwdns2066222:0crwdne2066222:0
+            '"SHARK"': crwdns2066224:0crwdne2066224:0
+            '"SLOTH"': crwdns2068918:0crwdne2068918:0
+            '"UNICORN"': crwdns2066226:0crwdne2066226:0
+          PROPERTY:
+            '"scale"': crwdns2066228:0crwdne2066228:0
+            '"width"': crwdns2066230:0crwdne2066230:0
+            '"height"': crwdns2066232:0crwdne2066232:0
+            '"rotation"': crwdns2066234:0crwdne2066234:0
+            '"x"': crwdns2066236:0crwdne2066236:0
+            '"y"': crwdns2066238:0crwdne2066238:0
+            '"tint"': crwdns2066240:0crwdne2066240:0
+      Dancelab_setTint:
+        text: crwdns195121:0[SPRITE]crwdnd195121:0[0]crwdnd195121:0[VAL]crwdnd195121:0[1]crwdne195121:0
+      Dancelab_setTintEach:
+        text: crwdns305144:0[THIS]crwdnd305144:0[0]crwdnd305144:0[VAL]crwdnd305144:0[1]crwdne305144:0
+        options:
+          THIS:
+            sprites: crwdns305146:0crwdne305146:0
+            '"ALIEN"': crwdns305148:0crwdne305148:0
+            '"BEAR"': crwdns305150:0crwdne305150:0
+            '"CAT"': crwdns305152:0crwdne305152:0
+            '"DOG"': crwdns305154:0crwdne305154:0
+            '"DUCK"': crwdns305156:0crwdne305156:0
+            '"FROG"': crwdns305158:0crwdne305158:0
+            '"MOOSE"': crwdns305160:0crwdne305160:0
+            '"PINEAPPLE"': crwdns305162:0crwdne305162:0
+            '"ROBOT"': crwdns305164:0crwdne305164:0
+            '"SHARK"': crwdns305166:0crwdne305166:0
+            '"SLOTH"': crwdns2071262:0crwdne2071262:0
+            '"UNICORN"': crwdns2066242:0crwdne2066242:0
+      Dancelab_setTintEachInline:
+        text: crwdns2063178:0[THIS]crwdnd2063178:0[0]crwdnd2063178:0[VAL]crwdnd2063178:0[1]crwdne2063178:0
+        options:
+          THIS:
+            sprites: crwdns2063180:0crwdne2063180:0
+            '"ALIEN"': crwdns2063182:0crwdne2063182:0
+            '"BEAR"': crwdns2063184:0crwdne2063184:0
+            '"CAT"': crwdns2063186:0crwdne2063186:0
+            '"DOG"': crwdns2063188:0crwdne2063188:0
+            '"DUCK"': crwdns2063190:0crwdne2063190:0
+            '"FROG"': crwdns2063192:0crwdne2063192:0
+            '"MOOSE"': crwdns2063194:0crwdne2063194:0
+            '"PINEAPPLE"': crwdns2063196:0crwdne2063196:0
+            '"ROBOT"': crwdns2063198:0crwdne2063198:0
+            '"SHARK"': crwdns2063200:0crwdne2063200:0
+            '"SLOTH"': crwdns2071264:0crwdne2071264:0
+            '"UNICORN"': crwdns2066244:0crwdne2066244:0
+      Dancelab_setTintInline:
+        text: crwdns362808:0[SPRITE]crwdnd362808:0[0]crwdnd362808:0[VAL]crwdnd362808:0[1]crwdne362808:0
+      Dancelab_setVisible:
+        text: crwdns305168:0[SPRITE]crwdnd305168:0[0]crwdnd305168:0[VISIBILITY]crwdnd305168:0[1]crwdne305168:0
+        options:
+          VISIBILITY:
+            'true': crwdns305170:0crwdne305170:0
+            'false': crwdns305172:0crwdne305172:0
+      Dancelab_setVisibleEach:
+        text: crwdns168941:0[THIS]crwdnd168941:0[0]crwdnd168941:0[VISIBILITY]crwdnd168941:0[1]crwdne168941:0
+        options:
+          THIS:
+            sprites: crwdns168942:0crwdne168942:0
+            '"ALIEN"': crwdns305174:0crwdne305174:0
+            '"BEAR"': crwdns305176:0crwdne305176:0
+            '"CAT"': crwdns305178:0crwdne305178:0
+            '"DOG"': crwdns305180:0crwdne305180:0
+            '"DUCK"': crwdns305182:0crwdne305182:0
+            '"FROG"': crwdns305184:0crwdne305184:0
+            '"MOOSE"': crwdns305186:0crwdne305186:0
+            '"PINEAPPLE"': crwdns305188:0crwdne305188:0
+            '"ROBOT"': crwdns305190:0crwdne305190:0
+            '"SHARK"': crwdns305192:0crwdne305192:0
+            '"SLOTH"': crwdns2071266:0crwdne2071266:0
+            '"UNICORN"': crwdns331044:0crwdne331044:0
+          VISIBILITY:
+            'true': crwdns168946:0crwdne168946:0
+            'false': crwdns168947:0crwdne168947:0
+      Dancelab_startMapping:
+        text: crwdns168960:0[SPRITE]crwdnd168960:0[0]crwdnd168960:0[PROPERTY]crwdnd168960:0[1]crwdnd168960:0[RANGE]crwdnd168960:0[2]crwdne168960:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns168961:0crwdne168961:0
+            '"width"': crwdns195123:0crwdne195123:0
+            '"height"': crwdns195125:0crwdne195125:0
+            '"rotation"': crwdns168962:0crwdne168962:0
+            '"x"': crwdns168963:0crwdne168963:0
+            '"y"': crwdns168964:0crwdne168964:0
+            '"tint"': crwdns168966:0crwdne168966:0
+          RANGE:
+            '"bass"': crwdns168967:0crwdne168967:0
+            '"mid"': crwdns168968:0crwdne168968:0
+            '"treble"': crwdns168969:0crwdne168969:0
+      Dancelab_startMappingEach:
+        text: crwdns2066246:0[GROUP]crwdnd2066246:0[0]crwdnd2066246:0[PROPERTY]crwdnd2066246:0[1]crwdnd2066246:0[RANGE]crwdnd2066246:0[2]crwdne2066246:0
+        options:
+          GROUP:
+            sprites: crwdns2066248:0crwdne2066248:0
+            '"ALIEN"': crwdns2066250:0crwdne2066250:0
+            '"BEAR"': crwdns2066252:0crwdne2066252:0
+            '"CAT"': crwdns2066254:0crwdne2066254:0
+            '"DOG"': crwdns2066256:0crwdne2066256:0
+            '"DUCK"': crwdns2066258:0crwdne2066258:0
+            '"FROG"': crwdns2066260:0crwdne2066260:0
+            '"MOOSE"': crwdns2066262:0crwdne2066262:0
+            '"PINEAPPLE"': crwdns2066264:0crwdne2066264:0
+            '"ROBOT"': crwdns2066266:0crwdne2066266:0
+            '"SHARK"': crwdns2066268:0crwdne2066268:0
+            '"SLOTH"': crwdns2071268:0crwdne2071268:0
+            '"UNICORN"': crwdns2066270:0crwdne2066270:0
+          PROPERTY:
+            '"scale"': crwdns2066272:0crwdne2066272:0
+            '"width"': crwdns2066274:0crwdne2066274:0
+            '"height"': crwdns2066276:0crwdne2066276:0
+            '"rotation"': crwdns2066278:0crwdne2066278:0
+            '"x"': crwdns2066280:0crwdne2066280:0
+            '"y"': crwdns2066282:0crwdne2066282:0
+            '"tint"': crwdns2066284:0crwdne2066284:0
+          RANGE:
+            '"bass"': crwdns2066286:0crwdne2066286:0
+            '"mid"': crwdns2066288:0crwdne2066288:0
+            '"treble"': crwdns2066290:0crwdne2066290:0
+      Dancelab_stopMapping:
+        text: crwdns168973:0[SPRITE]crwdnd168973:0[0]crwdnd168973:0[PROPERTY]crwdnd168973:0[1]crwdnd168973:0[RANGE]crwdnd168973:0[2]crwdne168973:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns168974:0crwdne168974:0
+            '"width"': crwdns195127:0crwdne195127:0
+            '"height"': crwdns195129:0crwdne195129:0
+            '"rotation"': crwdns168975:0crwdne168975:0
+            '"x"': crwdns168976:0crwdne168976:0
+            '"y"': crwdns168977:0crwdne168977:0
+            '"direction"': crwdns168978:0crwdne168978:0
+            '"tint"': crwdns168979:0crwdne168979:0
+          RANGE:
+            '"bass"': crwdns168981:0crwdne168981:0
+            '"mid"': crwdns168982:0crwdne168982:0
+            '"treble"': crwdns168983:0crwdne168983:0
+      Dancelab_stopMappingEach:
+        text: crwdns2066292:0[GROUP]crwdnd2066292:0[0]crwdnd2066292:0[PROPERTY]crwdnd2066292:0[1]crwdnd2066292:0[RANGE]crwdnd2066292:0[2]crwdne2066292:0
+        options:
+          GROUP:
+            sprites: crwdns2066294:0crwdne2066294:0
+            '"ALIEN"': crwdns2066296:0crwdne2066296:0
+            '"BEAR"': crwdns2066298:0crwdne2066298:0
+            '"CAT"': crwdns2066300:0crwdne2066300:0
+            '"DOG"': crwdns2066302:0crwdne2066302:0
+            '"DUCK"': crwdns2066304:0crwdne2066304:0
+            '"FROG"': crwdns2066306:0crwdne2066306:0
+            '"MOOSE"': crwdns2066308:0crwdne2066308:0
+            '"PINEAPPLE"': crwdns2066310:0crwdne2066310:0
+            '"ROBOT"': crwdns2066312:0crwdne2066312:0
+            '"SHARK"': crwdns2066314:0crwdne2066314:0
+            '"SLOTH"': crwdns2071270:0crwdne2071270:0
+            '"UNICORN"': crwdns2066316:0crwdne2066316:0
+          PROPERTY:
+            '"scale"': crwdns2066318:0crwdne2066318:0
+            '"width"': crwdns2066320:0crwdne2066320:0
+            '"height"': crwdns2066322:0crwdne2066322:0
+            '"rotation"': crwdns2066324:0crwdne2066324:0
+            '"x"': crwdns2066326:0crwdne2066326:0
+            '"y"': crwdns2066328:0crwdne2066328:0
+            '"direction"': crwdns2066330:0crwdne2066330:0
+            '"tint"': crwdns2066332:0crwdne2066332:0
+          RANGE:
+            '"bass"': crwdns2066334:0crwdne2066334:0
+            '"mid"': crwdns2066336:0crwdne2066336:0
+            '"treble"': crwdns2066338:0crwdne2066338:0
+      Dancelab_translateStrings:
+        text: crwdns2069144:0[STRING]crwdnd2069144:0[0]crwdne2069144:0
+        options:
+          STRING:
+            '"music_wave"': crwdns2069146:0crwdne2069146:0
+            '"ripples"': crwdns2069148:0crwdne2069148:0
+            '"ripples_random"': crwdns2069150:0crwdne2069150:0
+            '"quads"': crwdns2069152:0crwdne2069152:0
+            '"flowers"': crwdns2069154:0crwdne2069154:0
+            '"popsicles"': crwdns2069156:0crwdne2069156:0
+            '"squiggles"': crwdns2069158:0crwdne2069158:0
+            '"growing_stars"': crwdns2069160:0crwdne2069160:0
+            '"emojis"': crwdns2069162:0crwdne2069162:0
+            '"hearts_colorful"': crwdns2069164:0crwdne2069164:0
+            '"paint_drio"': crwdns2069166:0crwdne2069166:0
+            '"exploding_stars"': crwdns2069168:0crwdne2069168:0
+            '"row_top"': crwdns2069170:0crwdne2069170:0
+            '"row_bottom"': crwdns2069172:0crwdne2069172:0
+            '"column_left"': crwdns2069174:0crwdne2069174:0
+            '"column_right"': crwdns2069176:0crwdne2069176:0
+            '"diamond"': crwdns2069178:0crwdne2069178:0
+            '"mural"': crwdns2071272:0crwdne2071272:0
+            '"safari"': crwdns2071274:0crwdne2071274:0
+            '"network"': crwdns2071276:0crwdne2071276:0
+            '"highway"': crwdns2071278:0crwdne2071278:0
+            '"stream"': crwdns2071280:0crwdne2071280:0
+            '"tile"': crwdns2071282:0crwdne2071282:0
+            '"shadow"': crwdns2071284:0crwdne2071284:0
+            '"s"': crwdns2069194:0crwdne2069194:0
+            '"t"': crwdns2069196:0crwdne2069196:0
+            '"u"': crwdns2069198:0crwdne2069198:0
+            '"v"': crwdns2069200:0crwdne2069200:0
+            '"w"': crwdns2069202:0crwdne2069202:0
+            '"x"': crwdns2069204:0crwdne2069204:0
+            '"y"': crwdns2069206:0crwdne2069206:0
+            '"z"': crwdns2069208:0crwdne2069208:0
+            '"0"': crwdns2069210:0crwdne2069210:0
+            '"1"': crwdns2069212:0crwdne2069212:0
+            '"2"': crwdns2069214:0crwdne2069214:0
+            '"3"': crwdns2069216:0crwdne2069216:0
+            '"4"': crwdns2069218:0crwdne2069218:0
+            '"5"': crwdns2069220:0crwdne2069220:0
+            '"6"': crwdns2069222:0crwdne2069222:0
+            '"7"': crwdns2069224:0crwdne2069224:0
+            '"8"': crwdns2069226:0crwdne2069226:0
+            '"9"': crwdns2069228:0crwdne2069228:0
+      Dancelab_whenKey:
+        text: crwdns168985:0[KEY]crwdnd168985:0[0]crwdne168985:0
+        options:
+          KEY:
+            '"up"': crwdns168986:0crwdne168986:0
+            '"left"': crwdns168988:0crwdne168988:0
+            '"down"': crwdns168987:0crwdne168987:0
+            '"right"': crwdns168989:0crwdne168989:0
+            '"space"': crwdns168990:0crwdne168990:0
+            '"enter"': crwdns305194:0crwdne305194:0
+            '"a"': crwdns168991:0crwdne168991:0
+            '"b"': crwdns305196:0crwdne305196:0
+            '"c"': crwdns305198:0crwdne305198:0
+            '"d"': crwdns168994:0crwdne168994:0
+            '"e"': crwdns305200:0crwdne305200:0
+            '"f"': crwdns305202:0crwdne305202:0
+            '"g"': crwdns305204:0crwdne305204:0
+            '"h"': crwdns305206:0crwdne305206:0
+            '"i"': crwdns305208:0crwdne305208:0
+            '"j"': crwdns305210:0crwdne305210:0
+            '"k"': crwdns305212:0crwdne305212:0
+            '"l"': crwdns305214:0crwdne305214:0
+            '"m"': crwdns305216:0crwdne305216:0
+            '"n"': crwdns334786:0crwdne334786:0
+            '"o"': crwdns305218:0crwdne305218:0
+            '"p"': crwdns305220:0crwdne305220:0
+            '"q"': crwdns305222:0crwdne305222:0
+            '"r"': crwdns305224:0crwdne305224:0
+            '"s"': crwdns168993:0crwdne168993:0
+            '"t"': crwdns305226:0crwdne305226:0
+            '"u"': crwdns305228:0crwdne305228:0
+            '"v"': crwdns305230:0crwdne305230:0
+            '"w"': crwdns168992:0crwdne168992:0
+            '"x"': crwdns305232:0crwdne305232:0
+            '"y"': crwdns334788:0crwdne334788:0
+            '"z"': crwdns305234:0crwdne305234:0
+            '"0"': crwdns305236:0crwdne305236:0
+            '"1"': crwdns305238:0crwdne305238:0
+            '"2"': crwdns305240:0crwdne305240:0
+            '"3"': crwdns305242:0crwdne305242:0
+            '"4"': crwdns305244:0crwdne305244:0
+            '"5"': crwdns305246:0crwdne305246:0
+            '"6"': crwdns305248:0crwdne305248:0
+            '"7"': crwdns305250:0crwdne305250:0
+            '"8"': crwdns305252:0crwdne305252:0
+            '"9"': crwdns305254:0crwdne305254:0
+      Dancelab_whenPeak:
+        text: crwdns168995:0[RANGE]crwdnd168995:0[0]crwdne168995:0
+        options:
+          RANGE:
+            '0': crwdns168996:0crwdne168996:0
+            '1': crwdns168997:0crwdne168997:0
+            '2': crwdns168998:0crwdne168998:0
+      Dancelab_whenSetup:
+        text: crwdns169250:0crwdne169250:0
+      Dancelab_whenSetup2:
+        text: crwdns2068876:0crwdne2068876:0
+      Dancelab_whenSetupSong:
+        text: crwdns182419:0[SONG]crwdnd182419:0[0]crwdne182419:0
+        options:
+          SONG:
+            '"macklemore90"': crwdns194802:0crwdne194802:0
+            '"hammer"': crwdns182421:0crwdne182421:0
+            '"peas"': crwdns182422:0crwdne182422:0
+      gamelab_addBehaviorSimple:
+        text: crwdns169012:0[SPRITE]crwdnd169012:0[0]crwdnd169012:0[BEHAVIOR]crwdnd169012:0[1]crwdne169012:0
+      gamelab_addTarget:
+        text: crwdns2478908:0[SPRITE]crwdnd2478908:0[0]crwdnd2478908:0[TARGET]crwdnd2478908:0[1]crwdne2478908:0
+      gamelab_allSpritesWithAnimation:
+        text: crwdns400992:0[ANIMATION]crwdnd400992:0[0]crwdne400992:0
+      gamelab_atTime:
+        text: crwdns2463896:0[N]crwdnd2463896:0[0]crwdnd2463896:0[UNIT]crwdnd2463896:0[1]crwdne2463896:0
+        options:
+          UNIT:
+            '"seconds"': crwdns2463898:0crwdne2463898:0
+            '"frames"': crwdns2463900:0crwdne2463900:0
+      gamelab_beginCollectingData:
+        text: crwdns2478910:0[BREAK]crwdnd2478910:0[0]crwdnd2478910:0[VALUE]crwdnd2478910:0[1]crwdnd2478910:0[LABEL]crwdnd2478910:0[2]crwdne2478910:0
+      gamelab_bounceOff:
+        text: crwdns2371356:0[SPRITE]crwdnd2371356:0[0]crwdnd2371356:0[TARGET]crwdnd2371356:0[1]crwdne2371356:0
+      gamelab_changePropBy:
+        text: crwdns169023:0[SPRITE]crwdnd169023:0[0]crwdnd169023:0[PROPERTY]crwdnd169023:0[1]crwdnd169023:0[VAL]crwdnd169023:0[2]crwdne169023:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns169024:0crwdne169024:0
+            '"rotation"': crwdns169025:0crwdne169025:0
+            '"x"': crwdns169026:0crwdne169026:0
+            '"y"': crwdns169027:0crwdne169027:0
+            '"direction"': crwdns169028:0crwdne169028:0
+            '"speed"': crwdns2484866:0crwdne2484866:0
+      gamelab_checkTouching:
+        text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
+        options:
+          CONDITION:
+            '"when"': crwdns400996:0crwdne400996:0
+            '"while"': crwdns400998:0crwdne400998:0
+      gamelab_clickedOn:
+        text: crwdns169029:0[SPRITE]crwdnd169029:0[0]crwdne169029:0
+      gamelab_clickedSpritePointer:
+        text: crwdns774668:0[SPRITE]crwdnd774668:0[0]crwdne774668:0
+      gamelab_comment:
+        text: crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0
+      gamelab_costumeImage:
+        text: crwdns2471986:0[COSTUME]crwdnd2471986:0[0]crwdne2471986:0
+      gamelab_countByAnimation:
+        text: crwdns2462246:0[SPRITE]crwdnd2462246:0[0]crwdne2462246:0
+      gamelab_createNewSprite:
+        text: crwdns169032:0[NAME]crwdnd169032:0[0]crwdnd169032:0[COSTUME]crwdnd169032:0[1]crwdnd169032:0[LOCATION]crwdnd169032:0[2]crwdne169032:0
+      gamelab_destroy:
+        text: crwdns169036:0[THIS]crwdnd169036:0[0]crwdne169036:0
+      gamelab_draggable:
+        text: crwdns241354:0crwdne241354:0
+      gamelab_edgesDisplace:
+        text: crwdns169039:0[SPRITE]crwdnd169039:0[0]crwdne169039:0
+      gamelab_followingTargets:
+        text: crwdns2478912:0crwdne2478912:0
+      gamelab_getAllSprites:
+        text: crwdns2462248:0crwdne2462248:0
+      gamelab_getProp:
+        text: crwdns169044:0[SPRITE]crwdnd169044:0[0]crwdnd169044:0[PROPERTY]crwdnd169044:0[1]crwdne169044:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns169045:0crwdne169045:0
+            '"rotation"': crwdns169046:0crwdne169046:0
+            '"x"': crwdns169047:0crwdne169047:0
+            '"y"': crwdns169048:0crwdne169048:0
+            '"direction"': crwdns169049:0crwdne169049:0
+            '"tint"': crwdns169050:0crwdne169050:0
+            '"speed"': crwdns2478914:0crwdne2478914:0
+      gamelab_getThisSprite:
+        text: crwdns401002:0[CHOICE]crwdnd401002:0[0]crwdne401002:0
+        options:
+          CHOICE:
+            '"this"': crwdns401004:0crwdne401004:0
+            '"other"': crwdns401006:0crwdne401006:0
+      gamelab_getTime:
+        text: crwdns2462250:0[UNIT]crwdnd2462250:0[0]crwdne2462250:0
+        options:
+          UNIT:
+            '"seconds"': crwdns2462252:0crwdne2462252:0
+            '"frames"': crwdns2462254:0crwdne2462254:0
+      gamelab_hideHaiku:
+        text: crwdns2483930:0crwdne2483930:0
+      gamelab_hideTitleScreen:
+        text: crwdns169053:0crwdne169053:0
+      gamelab_ifVarEquals:
+        text: crwdns2471710:0[NUM]crwdnd2471710:0[0]crwdnd2471710:0[VAL]crwdnd2471710:0[1]crwdnd2471710:0[STATEMENT]crwdnd2471710:0[2]crwdne2471710:0
+      gamelab_isCostumeEqual:
+        text: crwdns2471712:0[SPRITE]crwdnd2471712:0[0]crwdnd2471712:0[COSTUME]crwdnd2471712:0[1]crwdne2471712:0
+      gamelab_isKeyPressed:
+        text: crwdns2463902:0[KEY]crwdnd2463902:0[0]crwdne2463902:0
+        options:
+          KEY:
+            '"up"': crwdns2463904:0crwdne2463904:0
+            '"down"': crwdns2463906:0crwdne2463906:0
+            '"left"': crwdns2463908:0crwdne2463908:0
+            '"right"': crwdns2463910:0crwdne2463910:0
+            '"space"': crwdns2463912:0crwdne2463912:0
+            '"a"': crwdns2463914:0crwdne2463914:0
+            '"b"': crwdns2463916:0crwdne2463916:0
+            '"c"': crwdns2463918:0crwdne2463918:0
+            '"d"': crwdns2463920:0crwdne2463920:0
+            '"e"': crwdns2463922:0crwdne2463922:0
+            '"f"': crwdns2463924:0crwdne2463924:0
+            '"g"': crwdns2463926:0crwdne2463926:0
+            '"h"': crwdns2463928:0crwdne2463928:0
+            '"i"': crwdns2463930:0crwdne2463930:0
+            '"j"': crwdns2463932:0crwdne2463932:0
+            '"k"': crwdns2463934:0crwdne2463934:0
+            '"l"': crwdns2463936:0crwdne2463936:0
+            '"m"': crwdns2463938:0crwdne2463938:0
+            '"n"': crwdns2463940:0crwdne2463940:0
+            '"o"': crwdns2463942:0crwdne2463942:0
+            '"p"': crwdns2463944:0crwdne2463944:0
+            '"q"': crwdns2463946:0crwdne2463946:0
+            '"r"': crwdns2463948:0crwdne2463948:0
+            '"s"': crwdns2463950:0crwdne2463950:0
+            '"t"': crwdns2463952:0crwdne2463952:0
+            '"u"': crwdns2463954:0crwdne2463954:0
+            '"v"': crwdns2463956:0crwdne2463956:0
+            '"w"': crwdns2463958:0crwdne2463958:0
+            '"x"': crwdns2463960:0crwdne2463960:0
+            '"y"': crwdns2463962:0crwdne2463962:0
+            '"z"': crwdns2463964:0crwdne2463964:0
+      gamelab_isTouchingEdges:
+        text: crwdns169056:0[SPRITE]crwdnd169056:0[0]crwdne169056:0
+      gamelab_isTouchingSprite:
+        text: crwdns2371358:0[SPRITE]crwdnd2371358:0[0]crwdnd2371358:0[TARGET]crwdnd2371358:0[1]crwdne2371358:0
+      gamelab_jumpTo:
+        text: crwdns169058:0[SPRITE]crwdnd169058:0[0]crwdnd169058:0[LOCATION]crwdnd169058:0[1]crwdne169058:0
+      gamelab_keyPressed:
+        text: crwdns401008:0[CONDITION]crwdnd401008:0[0]crwdnd401008:0[KEY]crwdnd401008:0[1]crwdne401008:0
+        options:
+          CONDITION:
+            '"when"': crwdns401010:0crwdne401010:0
+            '"while"': crwdns401012:0crwdne401012:0
+          KEY:
+            '"up"': crwdns401014:0crwdne401014:0
+            '"down"': crwdns401016:0crwdne401016:0
+            '"left"': crwdns401018:0crwdne401018:0
+            '"right"': crwdns401020:0crwdne401020:0
+            '"space"': crwdns401022:0crwdne401022:0
+            '"a"': crwdns401024:0crwdne401024:0
+            '"b"': crwdns401026:0crwdne401026:0
+            '"c"': crwdns401028:0crwdne401028:0
+            '"d"': crwdns401030:0crwdne401030:0
+            '"e"': crwdns401032:0crwdne401032:0
+            '"f"': crwdns401034:0crwdne401034:0
+            '"g"': crwdns401036:0crwdne401036:0
+            '"h"': crwdns401038:0crwdne401038:0
+            '"i"': crwdns401040:0crwdne401040:0
+            '"j"': crwdns401042:0crwdne401042:0
+            '"k"': crwdns401044:0crwdne401044:0
+            '"l"': crwdns401046:0crwdne401046:0
+            '"m"': crwdns401048:0crwdne401048:0
+            '"n"': crwdns401050:0crwdne401050:0
+            '"o"': crwdns401052:0crwdne401052:0
+            '"p"': crwdns401054:0crwdne401054:0
+            '"q"': crwdns401056:0crwdne401056:0
+            '"r"': crwdns401058:0crwdne401058:0
+            '"s"': crwdns401060:0crwdne401060:0
+            '"t"': crwdns401062:0crwdne401062:0
+            '"u"': crwdns401064:0crwdne401064:0
+            '"v"': crwdns401066:0crwdne401066:0
+            '"w"': crwdns401068:0crwdne401068:0
+            '"x"': crwdns401070:0crwdne401070:0
+            '"y"': crwdns401072:0crwdne401072:0
+            '"z"': crwdns401074:0crwdne401074:0
+      gamelab_locationAt:
+        text: crwdns169063:0[X]crwdnd169063:0[0]crwdnd169063:0[Y]crwdnd169063:0[1]crwdne169063:0
+      gamelab_locationModifier:
+        text: crwdns2466710:0[DISTANCE]crwdnd2466710:0[0]crwdnd2466710:0[DIRECTION]crwdnd2466710:0[1]crwdnd2466710:0[LOCATION]crwdnd2466710:0[2]crwdne2466710:0
+        options:
+          DIRECTION:
+            '"North"': crwdns2466712:0crwdne2466712:0
+            '"East"': crwdns2466714:0crwdne2466714:0
+            '"South"': crwdns2466716:0crwdne2466716:0
+            '"West"': crwdns2466718:0crwdne2466718:0
+      gamelab_locationMouse:
+        text: crwdns169076:0crwdne169076:0
+      gamelab_locationOf:
+        text: crwdns169078:0[SPRITE]crwdnd169078:0[0]crwdne169078:0
+      gamelab_location_picker:
+        text: crwdns169081:0[LOCATION]crwdnd169081:0[0]crwdne169081:0
+      gamelab_makeNewSpriteAnon:
+        text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
+      gamelab_makeNumSprites:
+        text: crwdns2463966:0[NUM]crwdnd2463966:0[0]crwdnd2463966:0[ANIMATION_NAME]crwdnd2463966:0[1]crwdne2463966:0
+      gamelab_mirrorSprite:
+        text: crwdns169085:0[SPRITE]crwdnd169085:0[0]crwdnd169085:0[DIRECTION]crwdnd169085:0[1]crwdne169085:0
+        options:
+          DIRECTION:
+            '"right"': crwdns169086:0crwdne169086:0
+            '"left"': crwdns169087:0crwdne169087:0
+      gamelab_mouseLocation:
+        text: crwdns169090:0crwdne169090:0
+      gamelab_moveBackward:
+        text: crwdns2335479:0[SPRITE]crwdnd2335479:0[0]crwdnd2335479:0[DISTANCE]crwdnd2335479:0[1]crwdne2335479:0
+      gamelab_moveForward:
+        text: crwdns169092:0[SPRITE]crwdnd169092:0[0]crwdnd169092:0[DISTANCE]crwdnd169092:0[1]crwdne169092:0
+      gamelab_moveInDirection:
+        text: crwdns169093:0[SPRITE]crwdnd169093:0[0]crwdnd169093:0[DISTANCE]crwdnd169093:0[1]crwdnd169093:0[DIRECTION]crwdnd169093:0[2]crwdne169093:0
+        options:
+          DIRECTION:
+            '"North"': crwdns169094:0crwdne169094:0
+            '"East"': crwdns169095:0crwdne169095:0
+            '"South"': crwdns169096:0crwdne169096:0
+            '"West"': crwdns169097:0crwdne169097:0
+      gamelab_moveToward:
+        text: crwdns169100:0[SPRITE]crwdnd169100:0[0]crwdnd169100:0[DISTANCE]crwdnd169100:0[1]crwdnd169100:0[TARGET]crwdnd169100:0[2]crwdne169100:0
+      gamelab_newSpritePointer:
+        text: crwdns2478916:0[SPRITE]crwdnd2478916:0[0]crwdne2478916:0
+      gamelab_objectSpritePointer:
+        text: crwdns2375478:0[SPRITE]crwdnd2375478:0[0]crwdne2375478:0
+      gamelab_patrollingUpDown:
+        text: crwdns2370034:0crwdne2370034:0
+      gamelab_playSound:
+        text: crwdns395640:0[SOUND]crwdnd395640:0[0]crwdne395640:0
+      gamelab_pointInDirection:
+        text: crwdns169102:0[SPRITE]crwdnd169102:0[0]crwdnd169102:0[DIRECTION]crwdnd169102:0[1]crwdne169102:0
+        options:
+          DIRECTION:
+            '"North"': crwdns169103:0crwdne169103:0
+            '"East"': crwdns169104:0crwdne169104:0
+            '"South"': crwdns169105:0crwdne169105:0
+            '"West"': crwdns169106:0crwdne169106:0
+      gamelab_printHaiku:
+        text: crwdns2483932:0[BREAK]crwdnd2483932:0[0]crwdnd2483932:0[TITLE]crwdnd2483932:0[1]crwdnd2483932:0[AUTHOR]crwdnd2483932:0[2]crwdnd2483932:0[LINE1]crwdnd2483932:0[3]crwdnd2483932:0[LINE2]crwdnd2483932:0[4]crwdnd2483932:0[LINE3]crwdnd2483932:0[5]crwdne2483932:0
+      gamelab_printText:
+        text: crwdns401078:0[TEXT]crwdnd401078:0[0]crwdne401078:0
+      gamelab_randColor:
+        text: crwdns169108:0crwdne169108:0
+      gamelab_randomColor:
+        text: crwdns169109:0crwdne169109:0
+      gamelab_randomLocation:
+        text: crwdns169110:0crwdne169110:0
+      gamelab_removeAllBehaviors:
+        text: crwdns169111:0[SPRITE]crwdnd169111:0[0]crwdne169111:0
+      gamelab_removeBehaviorSimple:
+        text: crwdns169112:0[SPRITE]crwdnd169112:0[0]crwdnd169112:0[BEHAVIOR]crwdnd169112:0[1]crwdne169112:0
+      gamelab_removeTint:
+        text: crwdns169113:0[THIS]crwdnd169113:0[0]crwdne169113:0
+      gamelab_repeatForever:
+        text: crwdns2471714:0crwdne2471714:0
+      gamelab_setAnimation:
+        text: crwdns169115:0[THIS]crwdnd169115:0[0]crwdnd169115:0[ANIMATION]crwdnd169115:0[1]crwdne169115:0
+      gamelab_setBackground:
+        text: crwdns169116:0[COLOR]crwdnd169116:0[0]crwdne169116:0
+      gamelab_setBackgroundImage:
+        text: crwdns401082:0[IMG]crwdnd401082:0[0]crwdne401082:0
+        options:
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': crwdns774672:0crwdne774672:0
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': crwdns401084:0crwdne401084:0
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': crwdns401086:0crwdne401086:0
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': crwdns774674:0crwdne774674:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': crwdns774676:0crwdne774676:0
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': crwdns401088:0crwdne401088:0
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns401090:0crwdne401090:0
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns401092:0crwdne401092:0
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns401094:0crwdne401094:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': crwdns774678:0crwdne774678:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': crwdns774680:0crwdne774680:0
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns401096:0crwdne401096:0
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns401098:0crwdne401098:0
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns401100:0crwdne401100:0
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns401102:0crwdne401102:0
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': crwdns401104:0crwdne401104:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': crwdns774682:0crwdne774682:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': crwdns774684:0crwdne774684:0
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': crwdns401106:0crwdne401106:0
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': crwdns401108:0crwdne401108:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': crwdns774686:0crwdne774686:0
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': crwdns401110:0crwdne401110:0
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': crwdns401112:0crwdne401112:0
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': crwdns401114:0crwdne401114:0
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': crwdns401116:0crwdne401116:0
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': crwdns401118:0crwdne401118:0
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': crwdns401120:0crwdne401120:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': crwdns774688:0crwdne774688:0
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': crwdns774690:0crwdne774690:0
+            undefined: crwdns401122:0crwdne401122:0
+      gamelab_setBackgroundImageAs:
+        text: crwdns2471988:0[IMG]crwdnd2471988:0[0]crwdne2471988:0
+      gamelab_setDefaultSpriteSize:
+        text: crwdns2478918:0[SIZE]crwdnd2478918:0[0]crwdne2478918:0
+        options:
+          SIZE:
+            '25': crwdns2478920:0crwdne2478920:0
+            '50': crwdns2478922:0crwdne2478922:0
+            '75': crwdns2478924:0crwdne2478924:0
+            '100': crwdns2478926:0crwdne2478926:0
+      gamelab_setPrompt:
+        text: crwdns2471990:0[QUESTION]crwdnd2471990:0[0]crwdnd2471990:0[VAR]crwdnd2471990:0[1]crwdne2471990:0
+      gamelab_setPromptWithChoices:
+        text: crwdns2471992:0[QUESTION]crwdnd2471992:0[0]crwdnd2471992:0[VAR]crwdnd2471992:0[1]crwdnd2471992:0[A]crwdnd2471992:0[2]crwdnd2471992:0[B]crwdnd2471992:0[3]crwdnd2471992:0[C]crwdnd2471992:0[4]crwdne2471992:0
+      gamelab_setProp:
+        text: crwdns169130:0[SPRITE]crwdnd169130:0[0]crwdnd169130:0[PROPERTY]crwdnd169130:0[1]crwdnd169130:0[VAL]crwdnd169130:0[2]crwdne169130:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns169131:0crwdne169131:0
+            '"rotation"': crwdns169132:0crwdne169132:0
+            '"x"': crwdns169133:0crwdne169133:0
+            '"y"': crwdns169134:0crwdne169134:0
+            '"direction"': crwdns169135:0crwdne169135:0
+            '"speed"': crwdns2478928:0crwdne2478928:0
+      gamelab_setSizes:
+        text: crwdns169137:0[SPRITE]crwdnd169137:0[0]crwdnd169137:0[PROPERTY]crwdnd169137:0[1]crwdnd169137:0[N]crwdnd169137:0[2]crwdne169137:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns169138:0crwdne169138:0
+            '"width"': crwdns169139:0crwdne169139:0
+            '"height"': crwdns169140:0crwdne169140:0
+      gamelab_setTint:
+        text: crwdns169141:0[THIS]crwdnd169141:0[0]crwdnd169141:0[COLOR]crwdnd169141:0[1]crwdne169141:0
+      gamelab_setupScoreboard:
+        text: crwdns2485636:0[SPRITE1COSTUME]crwdnd2485636:0[0]crwdnd2485636:0[VAR1]crwdnd2485636:0[1]crwdnd2485636:0[SPRITE2COSTUME]crwdnd2485636:0[2]crwdnd2485636:0[VAR2]crwdnd2485636:0[3]crwdnd2485636:0[SPRITE3COSTUME]crwdnd2485636:0[4]crwdne2485636:0
+      gamelab_setupSim:
+        text: crwdns401124:0[SPRITE1N]crwdnd401124:0[0]crwdnd401124:0[SPRITE1COSTUME]crwdnd401124:0[1]crwdnd401124:0[SPRITE1SPEED]crwdnd401124:0[2]crwdnd401124:0[SPRITE2N]crwdnd401124:0[3]crwdnd401124:0[SPRITE2COSTUME]crwdnd401124:0[4]crwdnd401124:0[SPRITE2SPEED]crwdnd401124:0[5]crwdnd401124:0[SPRITE3N]crwdnd401124:0[6]crwdnd401124:0[SPRITE3COSTUME]crwdnd401124:0[7]crwdne401124:0
+      gamelab_showTitleScreen:
+        text: crwdns169143:0[BREAK]crwdnd169143:0[0]crwdnd169143:0[TITLE]crwdnd169143:0[1]crwdnd169143:0[SUBTITLE]crwdnd169143:0[2]crwdne169143:0
+      gamelab_spriteClicked:
+        text: crwdns401126:0[CONDITION]crwdnd401126:0[0]crwdnd401126:0[SPRITE]crwdnd401126:0[1]crwdne401126:0
+        options:
+          CONDITION:
+            '"when"': crwdns401128:0crwdne401128:0
+            '"while"': crwdns401130:0crwdne401130:0
+      gamelab_stopCollectingData:
+        text: crwdns2478930:0crwdne2478930:0
+      gamelab_subjectSpritePointer:
+        text: crwdns2375480:0[SPRITE]crwdnd2375480:0[0]crwdne2375480:0
+      gamelab_textJoin:
+        text: crwdns2478932:0[LEFT_QUOTE]crwdnd2478932:0[0]crwdnd2478932:0[TEXT1]crwdnd2478932:0[1]crwdnd2478932:0[RIGHT_QUOTE]crwdnd2478932:0[2]crwdnd2478932:0[TEXT2]crwdnd2478932:0[3]crwdne2478932:0
+      gamelab_textVariableJoin:
+        text: crwdns2478934:0[VAR]crwdnd2478934:0[0]crwdnd2478934:0[TEXT2]crwdnd2478934:0[1]crwdne2478934:0
+      gamelab_tumbling:
+        text: crwdns2370036:0crwdne2370036:0
+      gamelab_turn:
+        text: crwdns169172:0[SPRITE]crwdnd169172:0[0]crwdnd169172:0[DIRECTION]crwdnd169172:0[1]crwdnd169172:0[N]crwdnd169172:0[2]crwdne169172:0
+        options:
+          DIRECTION:
+            '"right"': crwdns169173:0crwdne169173:0
+            '"left"': crwdns169174:0crwdne169174:0
+      gamelab_updateTitleWithColor:
+        text: crwdns2335481:0[BREAK]crwdnd2335481:0[0]crwdnd2335481:0[TITLE]crwdnd2335481:0[1]crwdnd2335481:0[COLOR]crwdnd2335481:0[2]crwdne2335481:0
+      gamelab_whenDownArrow:
+        text: crwdns169175:0crwdne169175:0
+      gamelab_whenKey:
+        text: crwdns169177:0[KEY]crwdnd169177:0[0]crwdne169177:0
+        options:
+          KEY:
+            '"up"': crwdns169178:0crwdne169178:0
+            '"down"': crwdns169179:0crwdne169179:0
+            '"left"': crwdns169180:0crwdne169180:0
+            '"right"': crwdns169181:0crwdne169181:0
+            '"space"': crwdns169182:0crwdne169182:0
+            '"a"': crwdns169183:0crwdne169183:0
+            '"w"': crwdns169184:0crwdne169184:0
+            '"s"': crwdns169185:0crwdne169185:0
+            '"d"': crwdns169186:0crwdne169186:0
+      gamelab_whenLeftArrow:
+        text: crwdns169187:0crwdne169187:0
+      gamelab_whenPromptAnswered:
+        text: crwdns2474792:0[VAR]crwdnd2474792:0[0]crwdne2474792:0
+      gamelab_whenRightArrow:
+        text: crwdns169194:0crwdne169194:0
+      gamelab_whenSpriteCreated:
+        text: crwdns2478936:0[SPRITE]crwdnd2478936:0[0]crwdne2478936:0
+      gamelab_whenTouching:
+        text: crwdns169196:0[SPRITE1]crwdnd169196:0[0]crwdnd169196:0[SPRITE2]crwdnd169196:0[1]crwdne169196:0
+      gamelab_whenUpArrow:
+        text: crwdns169199:0crwdne169199:0
+      gamelab_whileDownArrow:
+        text: crwdns169200:0crwdne169200:0
+      gamelab_whileKey:
+        text: crwdns169202:0[KEY]crwdnd169202:0[0]crwdne169202:0
+        options:
+          KEY:
+            '"up"': crwdns169203:0crwdne169203:0
+            '"down"': crwdns169204:0crwdne169204:0
+            '"left"': crwdns169205:0crwdne169205:0
+            '"right"': crwdns169206:0crwdne169206:0
+            '"space"': crwdns169207:0crwdne169207:0
+            '"a"': crwdns169208:0crwdne169208:0
+            '"w"': crwdns169209:0crwdne169209:0
+            '"s"': crwdns169210:0crwdne169210:0
+            '"d"': crwdns169211:0crwdne169211:0
+      gamelab_whileLeftArrow:
+        text: crwdns169212:0crwdne169212:0
+      gamelab_whileRightArrow:
+        text: crwdns169213:0crwdne169213:0
+      gamelab_whileTouching:
+        text: crwdns169214:0[SPRITE1]crwdnd169214:0[0]crwdnd169214:0[SPRITE2]crwdnd169214:0[1]crwdne169214:0
+      gamelab_whileUpArrow:
+        text: crwdns169215:0crwdne169215:0
+      gamelab_withPercentChance:
+        text: crwdns2471716:0[NUM]crwdnd2471716:0[0]crwdnd2471716:0[STATEMENT]crwdnd2471716:0[1]crwdne2471716:0
+      gamelab_xLocationOf:
+        text: crwdns169216:0[SPRITE]crwdnd169216:0[0]crwdne169216:0
+      gamelab_yLocationOf:
+        text: crwdns169217:0[SPRITE]crwdnd169217:0[0]crwdne169217:0
+      Mikelab_addBehaviorSimple:
+        text: crwdns170126:0[SPRITE]crwdnd170126:0[0]crwdnd170126:0[BEHAVIOR]crwdnd170126:0[1]crwdne170126:0
+      Mikelab_addTrainingData:
+        text: crwdns2066398:0[NAME]crwdnd2066398:0[0]crwdnd2066398:0[LOCATION]crwdnd2066398:0[1]crwdne2066398:0
+        options:
+          NAME:
+            "{x: 201, y: 100}": crwdns2066400:0crwdne2066400:0
+            "{x: 200, y: 100}": crwdns2066402:0crwdne2066402:0
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": crwdns2066404:0crwdne2066404:0
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": crwdns2066406:0crwdne2066406:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns2066408:0crwdne2066408:0
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": crwdns2066410:0crwdne2066410:0
+      Mikelab_allSpritesWithAnimation:
+        text: crwdns2477260:0[ANIMATION]crwdnd2477260:0[0]crwdne2477260:0
+      Mikelab_beginDataCollection:
+        text: crwdns2477262:0[QUESTION]crwdnd2477262:0[0]crwdnd2477262:0[VAR]crwdnd2477262:0[1]crwdnd2477262:0[A]crwdnd2477262:0[2]crwdnd2477262:0[B]crwdnd2477262:0[3]crwdnd2477262:0[C]crwdnd2477262:0[4]crwdne2477262:0
+      Mikelab_changeAnim:
+        text: crwdns182423:0[SPRITE]crwdnd182423:0[0]crwdnd182423:0[COSTUME]crwdnd182423:0[1]crwdne182423:0
+      Mikelab_changePropBy:
+        text: crwdns170127:0[PROPERTY]crwdnd170127:0[0]crwdnd170127:0[SPRITE]crwdnd170127:0[1]crwdnd170127:0[VAL]crwdnd170127:0[2]crwdne170127:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns170128:0crwdne170128:0
+            '"rotation"': crwdns170129:0crwdne170129:0
+            '"x"': crwdns170130:0crwdne170130:0
+            '"y"': crwdns170131:0crwdne170131:0
+            '"direction"': crwdns170132:0crwdne170132:0
+      Mikelab_checkAnim:
+        text: crwdns182424:0[SPRITE]crwdnd182424:0[0]crwdnd182424:0[COSTUME]crwdnd182424:0[1]crwdne182424:0
+      Mikelab_createNewSprite:
+        text: crwdns170133:0[COSTUME]crwdnd170133:0[0]crwdnd170133:0[NAME]crwdnd170133:0[1]crwdnd170133:0[LOCATION]crwdnd170133:0[2]crwdne170133:0
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": crwdns195434:0crwdne195434:0
+            "{x: 200, y: 300}": crwdns195436:0crwdne195436:0
+            "{x: 100, y: 200}": crwdns195438:0crwdne195438:0
+            "{x: 300, y: 200}": crwdns195440:0crwdne195440:0
+            "{x: 200, y: 200}": crwdns195442:0crwdne195442:0
+            "{x: 100, y: 100}": crwdns195444:0crwdne195444:0
+            "{x: 300, y: 100}": crwdns195446:0crwdne195446:0
+            "{x: 100, y: 300}": crwdns195448:0crwdne195448:0
+            "{x: 300, y: 300}": crwdns195450:0crwdne195450:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns195452:0crwdne195452:0
+      Mikelab_destroy:
+        text: crwdns195454:0[SPRITE]crwdnd195454:0[0]crwdne195454:0
+      Mikelab_displace:
+        text: crwdns195456:0[TARGET]crwdnd195456:0[0]crwdnd195456:0[SPRITE]crwdnd195456:0[1]crwdne195456:0
+      Mikelab_eval:
+        text: crwdns195460:0[CODE]crwdnd195460:0[0]crwdne195460:0
+      Mikelab_getAnim:
+        text: crwdns170134:0[SPRITE]crwdnd170134:0[0]crwdne170134:0
+      Mikelab_getNext:
+        text: crwdns2066412:0crwdne2066412:0
+      Mikelab_getProp:
+        text: crwdns170136:0[SPRITE]crwdnd170136:0[0]crwdnd170136:0[PROPERTY]crwdnd170136:0[1]crwdne170136:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns170137:0crwdne170137:0
+            '"rotation"': crwdns170138:0crwdne170138:0
+            '"x"': crwdns170139:0crwdne170139:0
+            '"y"': crwdns170140:0crwdne170140:0
+            '"direction"': crwdns170141:0crwdne170141:0
+      Mikelab_groupChangeAnim:
+        text: crwdns391164:0[SELECT]crwdnd391164:0[0]crwdnd391164:0[COSTUME]crwdnd391164:0[1]crwdnd391164:0[COSTUME2]crwdnd391164:0[2]crwdne391164:0
+        options:
+          SELECT:
+            '"all"': crwdns391166:0crwdne391166:0
+            '"this"': crwdns391168:0crwdne391168:0
+      Mikelab_groupChangePropBy:
+        text: crwdns391170:0[PROPERTY]crwdnd391170:0[0]crwdnd391170:0[SELECT]crwdnd391170:0[1]crwdnd391170:0[COSTUME]crwdnd391170:0[2]crwdnd391170:0[VAL]crwdnd391170:0[3]crwdne391170:0
+        options:
+          SELECT:
+            '"all"': crwdns391172:0crwdne391172:0
+            '"this"': crwdns391174:0crwdne391174:0
+          PROPERTY:
+            '"scale"': crwdns391176:0crwdne391176:0
+            '"rotation"': crwdns391178:0crwdne391178:0
+            '"x"': crwdns391180:0crwdne391180:0
+            '"y"': crwdns391182:0crwdne391182:0
+            '"direction"': crwdns391184:0crwdne391184:0
+      Mikelab_groupCreateNewSprite:
+        text: crwdns391186:0[COSTUME]crwdnd391186:0[0]crwdnd391186:0[LOCATION]crwdnd391186:0[1]crwdne391186:0
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": crwdns391188:0crwdne391188:0
+            "{x: 200, y: 300}": crwdns391190:0crwdne391190:0
+            "{x: 100, y: 200}": crwdns391192:0crwdne391192:0
+            "{x: 300, y: 200}": crwdns391194:0crwdne391194:0
+            "{x: 200, y: 200}": crwdns391196:0crwdne391196:0
+            "{x: 100, y: 100}": crwdns391198:0crwdne391198:0
+            "{x: 300, y: 100}": crwdns391200:0crwdne391200:0
+            "{x: 100, y: 300}": crwdns391202:0crwdne391202:0
+            "{x: 300, y: 300}": crwdns391204:0crwdne391204:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns391206:0crwdne391206:0
+      Mikelab_groupDestroy:
+        text: crwdns391208:0[SELECT]crwdnd391208:0[0]crwdnd391208:0[COSTUME]crwdnd391208:0[1]crwdne391208:0
+        options:
+          SELECT:
+            '"all"': crwdns391210:0crwdne391210:0
+            '"this"': crwdns391212:0crwdne391212:0
+      Mikelab_groupDisplace:
+        text: crwdns391214:0[COSTUME]crwdnd391214:0[0]crwdnd391214:0[COSTUME2]crwdnd391214:0[1]crwdne391214:0
+      Mikelab_groupEdgesDisplace:
+        text: crwdns391216:0[COSTUME]crwdnd391216:0[0]crwdne391216:0
+      Mikelab_groupGetProp:
+        text: crwdns391218:0[SELECT]crwdnd391218:0[0]crwdnd391218:0[COSTUME]crwdnd391218:0[1]crwdnd391218:0[PROPERTY]crwdnd391218:0[2]crwdne391218:0
+        options:
+          SELECT:
+            '"average"': crwdns391220:0crwdne391220:0
+            '"this"': crwdns391222:0crwdne391222:0
+          PROPERTY:
+            '"scale"': crwdns391224:0crwdne391224:0
+            '"rotation"': crwdns391226:0crwdne391226:0
+            '"x"': crwdns391228:0crwdne391228:0
+            '"y"': crwdns391230:0crwdne391230:0
+            '"direction"': crwdns391232:0crwdne391232:0
+      Mikelab_groupRemoveAllBehaviors:
+        text: crwdns391234:0[SELECT]crwdnd391234:0[0]crwdnd391234:0[COSTUME]crwdnd391234:0[1]crwdne391234:0
+        options:
+          SELECT:
+            '"all"': crwdns391236:0crwdne391236:0
+            '"this"': crwdns391238:0crwdne391238:0
+      Mikelab_groupRemoveBehaviorSimple:
+        text: crwdns391240:0[SELECT]crwdnd391240:0[0]crwdnd391240:0[COSTUME]crwdnd391240:0[1]crwdnd391240:0[BEHAVIOR]crwdnd391240:0[2]crwdne391240:0
+        options:
+          SELECT:
+            '"all"': crwdns391242:0crwdne391242:0
+            '"this"': crwdns391244:0crwdne391244:0
+      Mikelab_groupRemoveTint:
+        text: crwdns391246:0[SELECT]crwdnd391246:0[0]crwdnd391246:0[COSTUME]crwdnd391246:0[1]crwdne391246:0
+        options:
+          SELECT:
+            '"all"': crwdns391248:0crwdne391248:0
+            '"this"': crwdns391250:0crwdne391250:0
+      Mikelab_groupSetProp:
+        text: crwdns391252:0[PROPERTY]crwdnd391252:0[0]crwdnd391252:0[SELECT]crwdnd391252:0[1]crwdnd391252:0[COSTUME]crwdnd391252:0[2]crwdnd391252:0[VAL]crwdnd391252:0[3]crwdne391252:0
+        options:
+          SELECT:
+            '"all"': crwdns391254:0crwdne391254:0
+            '"this"': crwdns391256:0crwdne391256:0
+          PROPERTY:
+            '"scale"': crwdns391258:0crwdne391258:0
+            '"rotation"': crwdns391260:0crwdne391260:0
+            '"x"': crwdns391262:0crwdne391262:0
+            '"y"': crwdns391264:0crwdne391264:0
+            '"direction"': crwdns391266:0crwdne391266:0
+      Mikelab_groupSetTint:
+        text: crwdns391268:0[SELECT]crwdnd391268:0[0]crwdnd391268:0[COSTUME]crwdnd391268:0[1]crwdnd391268:0[COLOR]crwdnd391268:0[2]crwdne391268:0
+        options:
+          SELECT:
+            '"all"': crwdns391270:0crwdne391270:0
+            '"this"': crwdns391272:0crwdne391272:0
+      Mikelab_groupWhenClickedOn:
+        text: crwdns391274:0[COSTUME]crwdnd391274:0[0]crwdne391274:0
+      Mikelab_groupWhenXTouchesY:
+        text: crwdns391276:0[COSTUME]crwdnd391276:0[0]crwdnd391276:0[COSTUME2]crwdnd391276:0[1]crwdne391276:0
+      Mikelab_groupWhileClicked:
+        text: crwdns391278:0[COSTUME]crwdnd391278:0[0]crwdne391278:0
+      Mikelab_groupWhileTouchingAny:
+        text: crwdns391280:0[COSTUME]crwdnd391280:0[0]crwdnd391280:0[COSTUME2]crwdnd391280:0[1]crwdnd391280:0[STATEMENT]crwdnd391280:0[2]crwdne391280:0
+      Mikelab_hasBehavior:
+        text: crwdns170143:0[SPRITE]crwdnd170143:0[0]crwdnd170143:0[BEHAVIOR]crwdnd170143:0[1]crwdne170143:0
+      Mikelab_hideFish:
+        text: crwdns2066414:0[TRASH]crwdnd2066414:0[0]crwdne2066414:0
+        options:
+          TRASH:
+            object: crwdns2066416:0crwdne2066416:0
+            fish: crwdns2066418:0crwdne2066418:0
+      Mikelab_ifDanceIs:
+        text: crwdns391282:0[SPRITE]crwdnd391282:0[0]crwdnd391282:0[DANCE]crwdnd391282:0[1]crwdnd391282:0[DO1]crwdnd391282:0[2]crwdnd391282:0[DO2]crwdnd391282:0[3]crwdne391282:0
+        options:
+          DANCE:
+            MOVES.ClapHigh: crwdns391284:0crwdne391284:0
+            MOVES.Clown: crwdns391286:0crwdne391286:0
+            MOVES.Dab: crwdns391288:0crwdne391288:0
+            MOVES.DoubleJam: crwdns391290:0crwdne391290:0
+            MOVES.Drop: crwdns391292:0crwdne391292:0
+            MOVES.Floss: crwdns391294:0crwdne391294:0
+            MOVES.Fresh: crwdns391296:0crwdne391296:0
+            MOVES.Roll: crwdns391298:0crwdne391298:0
+            MOVES.Kick: crwdns391300:0crwdne391300:0
+            MOVES.ThisOrThat: crwdns391302:0crwdne391302:0
+            MOVES.Thriller: crwdns391304:0crwdne391304:0
+            MOVES.Rest: crwdns391306:0crwdne391306:0
+      Mikelab_ifLabel:
+        text: crwdns2066420:0[DANCE]crwdnd2066420:0[0]crwdnd2066420:0[DO1]crwdnd2066420:0[1]crwdnd2066420:0[DO2]crwdnd2066420:0[2]crwdne2066420:0
+        options:
+          DANCE:
+            MOVES.ClapHigh: crwdns2066422:0crwdne2066422:0
+            MOVES.Clown: crwdns2066424:0crwdne2066424:0
+      Mikelab_ifRecognizeLabel:
+        text: crwdns2066426:0[DANCE]crwdnd2066426:0[0]crwdnd2066426:0[DO1]crwdnd2066426:0[1]crwdnd2066426:0[DO2]crwdnd2066426:0[2]crwdne2066426:0
+        options:
+          DANCE:
+            MOVES.ClapHigh: crwdns2066428:0crwdne2066428:0
+            MOVES.Clown: crwdns2066430:0crwdne2066430:0
+      Mikelab_ifRecognizeLabelOnly:
+        text: crwdns2066432:0[DANCE]crwdnd2066432:0[0]crwdnd2066432:0[DO1]crwdnd2066432:0[1]crwdne2066432:0
+        options:
+          DANCE:
+            MOVES.ClapHigh: crwdns2066434:0crwdne2066434:0
+            MOVES.Clown: crwdns2066436:0crwdne2066436:0
+      Mikelab_isAnim:
+        text: crwdns182426:0[SPRITE]crwdnd182426:0[0]crwdnd182426:0[COSTUME]crwdnd182426:0[1]crwdne182426:0
+      Mikelab_joinText:
+        text: crwdns2474794:0[TEXT]crwdnd2474794:0[0]crwdnd2474794:0[NEXT]crwdnd2474794:0[1]crwdne2474794:0
+      Mikelab_locationAt:
+        text: crwdns195131:0[X]crwdnd195131:0[0]crwdnd195131:0[Y]crwdnd195131:0[1]crwdne195131:0
+      Mikelab_location_picker:
+        text: crwdns170144:0[LOCATION]crwdnd170144:0[0]crwdne170144:0
+      Mikelab_randomColor:
+        text: crwdns195133:0crwdne195133:0
+      Mikelab_removeAllBehaviors:
+        text: crwdns195135:0[SPRITE]crwdnd195135:0[0]crwdne195135:0
+      Mikelab_removeBehaviorSimple:
+        text: crwdns170145:0[SPRITE]crwdnd170145:0[0]crwdnd170145:0[BEHAVIOR]crwdnd170145:0[1]crwdne170145:0
+      Mikelab_removeTint:
+        text: crwdns195462:0[SPRITE]crwdnd195462:0[0]crwdne195462:0
+      Mikelab_repeatUntilComplete:
+        text: crwdns2066438:0crwdne2066438:0
+      Mikelab_sendBad:
+        text: crwdns2066440:0crwdne2066440:0
+      Mikelab_sendGood:
+        text: crwdns2066442:0crwdne2066442:0
+      Mikelab_setBG:
+        text: crwdns195137:0[BG]crwdnd195137:0[0]crwdne195137:0
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': crwdns195139:0crwdne195139:0
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': crwdns195141:0crwdne195141:0
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': crwdns195143:0crwdne195143:0
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': crwdns195145:0crwdne195145:0
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': crwdns195147:0crwdne195147:0
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': crwdns195149:0crwdne195149:0
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': crwdns195151:0crwdne195151:0
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': crwdns195153:0crwdne195153:0
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': crwdns195155:0crwdne195155:0
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': crwdns195157:0crwdne195157:0
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': crwdns195159:0crwdne195159:0
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': crwdns195161:0crwdne195161:0
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': crwdns195163:0crwdne195163:0
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': crwdns195165:0crwdne195165:0
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': crwdns195167:0crwdne195167:0
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': crwdns195169:0crwdne195169:0
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': crwdns195171:0crwdne195171:0
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': crwdns195173:0crwdne195173:0
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': crwdns195175:0crwdne195175:0
+      Mikelab_setProp:
+        text: crwdns182428:0[PROPERTY]crwdnd182428:0[0]crwdnd182428:0[SPRITE]crwdnd182428:0[1]crwdnd182428:0[VAL]crwdnd182428:0[2]crwdne182428:0
+        options:
+          PROPERTY:
+            '"scale"': crwdns182429:0crwdne182429:0
+            '"rotation"': crwdns182430:0crwdne182430:0
+            '"x"': crwdns182431:0crwdne182431:0
+            '"y"': crwdns182432:0crwdne182432:0
+            '"direction"': crwdns182433:0crwdne182433:0
+      Mikelab_setTint:
+        text: crwdns195177:0[SPRITE]crwdnd195177:0[0]crwdnd195177:0[COLOR]crwdnd195177:0[1]crwdne195177:0
+      Mikelab_showScoreboard:
+        text: crwdns195179:0[LABEL]crwdnd195179:0[0]crwdnd195179:0[TEXTCOLOR]crwdnd195179:0[1]crwdnd195179:0[COLOR]crwdnd195179:0[2]crwdnd195179:0[VALUE]crwdnd195179:0[3]crwdnd195179:0[CORNER]crwdnd195179:0[4]crwdne195179:0
+        options:
+          CORNER:
+            '"right"': crwdns195181:0crwdne195181:0
+            '"left"': crwdns195183:0crwdne195183:0
+      Mikelab_showText:
+        text: crwdns195185:0[TEXT]crwdnd195185:0[0]crwdnd195185:0[PREPOSITION]crwdnd195185:0[1]crwdnd195185:0[SPRITE]crwdnd195185:0[2]crwdne195185:0
+        options:
+          PREPOSITION:
+            '"above"': crwdns195187:0crwdne195187:0
+            '"below"': crwdns195189:0crwdne195189:0
+      Mikelab_sprite:
+        text: crwdns391308:0[COSTUME]crwdnd391308:0[0]crwdnd391308:0[LOCATION]crwdnd391308:0[1]crwdne391308:0
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": crwdns391310:0crwdne391310:0
+            "{x: 200, y: 300}": crwdns391312:0crwdne391312:0
+            "{x: 100, y: 200}": crwdns391314:0crwdne391314:0
+            "{x: 300, y: 200}": crwdns391316:0crwdne391316:0
+            "{x: 200, y: 200}": crwdns391318:0crwdne391318:0
+            "{x: 100, y: 100}": crwdns391320:0crwdne391320:0
+            "{x: 300, y: 100}": crwdns391322:0crwdne391322:0
+            "{x: 100, y: 300}": crwdns391324:0crwdne391324:0
+            "{x: 300, y: 300}": crwdns391326:0crwdne391326:0
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": crwdns391328:0crwdne391328:0
+      Mikelab_whenClickedOn:
+        text: crwdns195191:0[SPRITE]crwdnd195191:0[0]crwdne195191:0
+      Mikelab_whenKeyPressed:
+        text: crwdns195193:0[KEY]crwdnd195193:0[0]crwdne195193:0
+        options:
+          KEY:
+            '"up"': crwdns195195:0crwdne195195:0
+            '"down"': crwdns195197:0crwdne195197:0
+            '"left"': crwdns195199:0crwdne195199:0
+            '"right"': crwdns195201:0crwdne195201:0
+            '"space"': crwdns195203:0crwdne195203:0
+            '"w"': crwdns195205:0crwdne195205:0
+            '"a"': crwdns195207:0crwdne195207:0
+            '"s"': crwdns195209:0crwdne195209:0
+            '"d"': crwdns195211:0crwdne195211:0
+      Mikelab_whenKeyReleased:
+        text: crwdns195213:0[KEY]crwdnd195213:0[0]crwdne195213:0
+        options:
+          KEY:
+            '"up"': crwdns195215:0crwdne195215:0
+            '"down"': crwdns195217:0crwdne195217:0
+            '"left"': crwdns195219:0crwdne195219:0
+            '"right"': crwdns195221:0crwdne195221:0
+            '"space"': crwdns195223:0crwdne195223:0
+            '"w"': crwdns195225:0crwdne195225:0
+            '"a"': crwdns195227:0crwdne195227:0
+            '"s"': crwdns195229:0crwdne195229:0
+            '"d"': crwdns195231:0crwdne195231:0
+      Mikelab_whenMouseClicked:
+        text: crwdns195233:0crwdne195233:0
+      Mikelab_whenMouseReleased:
+        text: crwdns195235:0crwdne195235:0
+      Mikelab_whenTouchesAny:
+        text: crwdns182435:0[SPRITE]crwdnd182435:0[0]crwdne182435:0
+      Mikelab_whenYesNoClicked:
+        text: crwdns2066444:0[KEY]crwdnd2066444:0[0]crwdne2066444:0
+        options:
+          KEY:
+            '"yes"': crwdns2066446:0crwdne2066446:0
+            '"no"': crwdns2066448:0crwdne2066448:0
+      Mikelab_whileClicked:
+        text: crwdns195237:0[SPRITE]crwdnd195237:0[0]crwdne195237:0
+      Mikelab_whileKeyPressed:
+        text: crwdns195239:0[KEY]crwdnd195239:0[0]crwdne195239:0
+        options:
+          KEY:
+            '"up"': crwdns195241:0crwdne195241:0
+            '"down"': crwdns195243:0crwdne195243:0
+            '"left"': crwdns195245:0crwdne195245:0
+            '"right"': crwdns195247:0crwdne195247:0
+            '"space"': crwdns195249:0crwdne195249:0
+      Mikelab_whileTouchingAny:
+        text: crwdns182437:0[SPRITE]crwdnd182437:0[0]crwdnd182437:0[STATEMENT]crwdnd182437:0[1]crwdne182437:0
+      Mikelab_worldSeconds:
+        text: crwdns195251:0crwdne195251:0
+      Mikelab_xLocationOf:
+        text: crwdns195253:0[SPRITE]crwdnd195253:0[0]crwdne195253:0
+      Mikelab_yLocationOf:
+        text: crwdns195255:0[SPRITE]crwdnd195255:0[0]crwdne195255:0
+      RyanLab_moveForward:
+        text: crwdns241356:0crwdne241356:0
+      RyanLab_readSound:
+        text: crwdns241358:0crwdne241358:0
+      RyanLab_readToConsole:
+        text: crwdns241360:0crwdne241360:0
+      RyanLab_turnLeft:
+        text: crwdns241362:0crwdne241362:0
+      RyanLab_turnRight:
+        text: crwdns241364:0crwdne241364:0
+      SpriteLab2Beta_spriteSay:
+        text: crwdns395642:0[SPRITE]crwdnd395642:0[0]crwdnd395642:0[TEXT]crwdnd395642:0[1]crwdnd395642:0[SECONDS]crwdnd395642:0[2]crwdne395642:0
+      Vector_createSpriteWith:
+        text: crwdns169219:0[STATEMENT]crwdnd169219:0[0]crwdne169219:0
+      Vector_log:
+        text: crwdns169220:0[MESSAGE]crwdnd169220:0[0]crwdne169220:0
+      Vector_positionCenter:
+        text: crwdns169221:0crwdne169221:0
+      Vector_push:
+        text: crwdns169251:0[VECTOR]crwdnd169251:0[0]crwdne169251:0
+      Vector_randomLocation:
+        text: crwdns169252:0crwdne169252:0
+      Vector_setColor:
+        text: crwdns169253:0[COLOR]crwdnd169253:0[0]crwdne169253:0
+      Vector_setSize:
+        text: crwdns169254:0[WIDTH]crwdnd169254:0[0]crwdnd169254:0[HEIGHT]crwdnd169254:0[1]crwdne169254:0
+      Vector_teleportTo:
+        text: crwdns169222:0[POSITION]crwdnd169222:0[0]crwdne169222:0
+      Vector_vectorNorth:
+        text: crwdns169255:0crwdne169255:0
+      Vector_where:
+        text: crwdns169256:0[PROPERTY]crwdnd169256:0[0]crwdnd169256:0[VALUE]crwdnd169256:0[1]crwdnd169256:0[STATEMENT]crwdnd169256:0[2]crwdne169256:0
+        options:
+          PROPERTY:
+            "'shapeColor'": crwdns169257:0crwdne169257:0
+      aalab_addBehaviorForDuration:
+        text: crwdns391574:0[SPRITE]crwdnd391574:0[0]crwdnd391574:0[BEHAVIOR]crwdnd391574:0[1]crwdnd391574:0[SECONDS]crwdnd391574:0[2]crwdne391574:0
+      aalab_addBehaviorUntilBoolean:
+        text: crwdns391576:0[SPRITE]crwdnd391576:0[0]crwdnd391576:0[BEHAVIOR]crwdnd391576:0[1]crwdnd391576:0[CONDITION]crwdnd391576:0[2]crwdne391576:0
+      aalab_createNewSpriteAnonReturn2:
+        text: crwdns2059996:0[SPRITE_NAME]crwdnd2059996:0[0]crwdnd2059996:0[ANIMATION_NAME]crwdnd2059996:0[1]crwdnd2059996:0[LOCATION]crwdnd2059996:0[2]crwdne2059996:0
+      aalab_goToScene:
+        text: crwdns2059998:0[SCENE]crwdnd2059998:0[0]crwdne2059998:0
+        options:
+          SCENE:
+            '1': crwdns2060000:0crwdne2060000:0
+            '2': crwdns2060002:0crwdne2060002:0
+            '3': crwdns2060004:0crwdne2060004:0
+      aalab_moveInDirection:
+        text: crwdns2367518:0[SPRITE]crwdnd2367518:0[0]crwdnd2367518:0[DISTANCE]crwdnd2367518:0[1]crwdnd2367518:0[DIRECTION]crwdnd2367518:0[2]crwdne2367518:0
+        options:
+          DIRECTION:
+            '"North"': crwdns2367520:0crwdne2367520:0
+            '"East"': crwdns2367522:0crwdne2367522:0
+            '"South"': crwdns2367524:0crwdne2367524:0
+            '"West"': crwdns2367526:0crwdne2367526:0
+      aalab_prompt:
+        text: crwdns391600:0[MESSAGE]crwdnd391600:0[0]crwdne391600:0
+      aalab_scene:
+        text: crwdns2060006:0[SCENE]crwdnd2060006:0[0]crwdne2060006:0
+        options:
+          SCENE:
+            '1': crwdns2060008:0crwdne2060008:0
+            '2': crwdns2060010:0crwdne2060010:0
+            '3': crwdns2060012:0crwdne2060012:0
+      aalab_setupStory:
+        text: crwdns2060014:0crwdne2060014:0
+      aalab_starwars_playSound:
+        text: crwdns2367528:0[OPTION]crwdnd2367528:0[0]crwdne2367528:0
+        options:
+          OPTION:
+            '"random"': crwdns2367530:0crwdne2367530:0
+            '"R2-D2 random"': crwdns2367532:0crwdne2367532:0
+            '"R2-D2 1"': crwdns2367534:0crwdne2367534:0
+            '"R2-D2 2"': crwdns2367536:0crwdne2367536:0
+            '"R2-D2 3"': crwdns2367538:0crwdne2367538:0
+            '"R2-D2 4"': crwdns2367540:0crwdne2367540:0
+            '"R2-D2 5"': crwdns2367542:0crwdne2367542:0
+      binary_drawBin:
+        text: crwdns391332:0[BIN]crwdnd391332:0[0]crwdne391332:0
+      binary_drawBinScreen:
+        text: crwdns391334:0[B1]crwdnd391334:0[0]crwdnd391334:0[B2]crwdnd391334:0[1]crwdnd391334:0[B3]crwdnd391334:0[2]crwdnd391334:0[B4]crwdnd391334:0[3]crwdnd391334:0[B5]crwdnd391334:0[4]crwdnd391334:0[B6]crwdnd391334:0[5]crwdnd391334:0[B7]crwdnd391334:0[6]crwdnd391334:0[B8]crwdnd391334:0[7]crwdne391334:0
+      binary_drawDec:
+        text: crwdns391336:0[DEC]crwdnd391336:0[0]crwdne391336:0
+      binary_drawPixelHere:
+        text: crwdns391338:0[VAL]crwdnd391338:0[0]crwdne391338:0
+        options:
+          VAL:
+            '0': crwdns391340:0crwdne391340:0
+            '1': crwdns391342:0crwdne391342:0
+            '"toggle"': crwdns391344:0crwdne391344:0
+      binary_drawString:
+        text: crwdns391346:0[STR]crwdnd391346:0[0]crwdne391346:0
+      binary_goTo:
+        text: crwdns391348:0[LOC]crwdnd391348:0[0]crwdne391348:0
+      binary_goToHome:
+        text: crwdns391350:0crwdne391350:0
+      binary_gridSize:
+        text: crwdns391352:0[SIZE]crwdnd391352:0[0]crwdne391352:0
+      binary_move:
+        text: crwdns391354:0[DIR]crwdnd391354:0[0]crwdne391354:0
+        options:
+          DIR:
+            '"up"': crwdns391356:0crwdne391356:0
+            '"down"': crwdns391358:0crwdne391358:0
+            '"left"': crwdns391360:0crwdne391360:0
+            '"right"': crwdns391362:0crwdne391362:0
+      binary_whenKey:
+        text: crwdns391364:0[KEY]crwdnd391364:0[0]crwdne391364:0
+        options:
+          KEY:
+            '"up"': crwdns391366:0crwdne391366:0
+            '"down"': crwdns391368:0crwdne391368:0
+            '"left"': crwdns391370:0crwdne391370:0
+            '"right"': crwdns391372:0crwdne391372:0
+            '"space"': crwdns391374:0crwdne391374:0
+            '"a"': crwdns391376:0crwdne391376:0
+            '"w"': crwdns391378:0crwdne391378:0
+            '"s"': crwdns391380:0crwdne391380:0
+            '"d"': crwdns391382:0crwdne391382:0
+      craft_ifPath:
+        text: crwdns194807:0[DIR]crwdnd194807:0[0]crwdnd194807:0[STATEMENT]crwdnd194807:0[1]crwdne194807:0
+        options:
+          DIR:
+            "'ahead'": crwdns194808:0crwdne194808:0
+            "'right'": crwdns194809:0crwdne194809:0
+            "'left'": crwdns194810:0crwdne194810:0
+      craft_ifStandingOn:
+        text: crwdns194811:0[TYPE]crwdnd194811:0[0]crwdnd194811:0[STATEMENT]crwdnd194811:0[1]crwdne194811:0
+        options:
+          TYPE:
+            "'blueCoralBlock'": crwdns194812:0crwdne194812:0
+            "'redCoralBlock'": crwdns194813:0crwdne194813:0
+            "'sand'": crwdns194814:0crwdne194814:0
+            "'wool_blue'": crwdns194815:0crwdne194815:0
+            "'planksOak'": crwdns194816:0crwdne194816:0
+            "'seaLantern'": crwdns194817:0crwdne194817:0
+      craft_ifStandingOnLimit:
+        text: crwdns271572:0[TYPE]crwdnd271572:0[0]crwdnd271572:0[STATEMENT]crwdnd271572:0[1]crwdne271572:0
+        options:
+          TYPE:
+            "'sand'": crwdns271574:0crwdne271574:0
+            "'darkPrismarine'": crwdns271576:0crwdne271576:0
+            "'seaLantern'": crwdns271578:0crwdne271578:0
+      craft_log:
+        text: crwdns182438:0[MESSAGE]crwdnd182438:0[0]crwdne182438:0
+      craft_moveForward:
+        text: crwdns182439:0crwdne182439:0
+      craft_placeBlock:
+        text: crwdns195464:0[blockType]crwdnd195464:0[0]crwdne195464:0
+        options:
+          blockType:
+            '"strippedOak"': crwdns241366:0crwdne241366:0
+            '"strippedDarkOak"': crwdns241368:0crwdne241368:0
+            '"stoneBricks"': crwdns241370:0crwdne241370:0
+            '"mossyStoneBricks"': crwdns241372:0crwdne241372:0
+            '"crackedStoneBricks"': crwdns241374:0crwdne241374:0
+            '"chiseledStoneBricks"': crwdns2471994:0crwdne2471994:0
+            '"blueCoralBlock"': crwdns241378:0crwdne241378:0
+            '"pinkCoralBlock"': crwdns241380:0crwdne241380:0
+            '"magentaCoralBlock"': crwdns241382:0crwdne241382:0
+            '"redCoralBlock"': crwdns241384:0crwdne241384:0
+            '"yellowCoralBlock"': crwdns241386:0crwdne241386:0
+            '"blueDeadCoralBlock"': crwdns241388:0crwdne241388:0
+            '"pinkDeadCoralBlock"': crwdns241390:0crwdne241390:0
+            '"magentaDeadCoralBlock"': crwdns241392:0crwdne241392:0
+            '"readDeadCoralBlock"': crwdns241394:0crwdne241394:0
+            '"yellowDeadCoralBlock"': crwdns241396:0crwdne241396:0
+            '"prismarine"': crwdns241398:0crwdne241398:0
+            '"darkPrismarine"': crwdns241400:0crwdne241400:0
+            '"seaLantern"': crwdns241402:0crwdne241402:0
+            '"packedIce"': crwdns241404:0crwdne241404:0
+            '"blueIce"': crwdns241406:0crwdne241406:0
+            '"blackConcrete"': crwdns241408:0crwdne241408:0
+            '"seaGrass"': crwdns241420:0crwdne241420:0
+            '"kelp"': crwdns241422:0crwdne241422:0
+            '"polishedGranite"': crwdns241424:0crwdne241424:0
+      craft_placePrismarine:
+        text: crwdns271580:0crwdne271580:0
+      craft_placeTorch:
+        text: crwdns194818:0crwdne194818:0
+      craft_repeatUntilConduit:
+        text: crwdns241468:0[STATEMENT]crwdnd241468:0[0]crwdne241468:0
+      craft_repeatUntilGoal:
+        text: crwdns194819:0[STATEMENT]crwdnd194819:0[0]crwdne194819:0
+      craft_spawnEntity:
+        text: crwdns245562:0[ENTITY]crwdnd245562:0[0]crwdne245562:0
+        options:
+          ENTITY:
+            '"cod"': crwdns271582:0crwdne271582:0
+            '"dolphin"': crwdns271584:0crwdne271584:0
+            '"salmon"': crwdns271586:0crwdne271586:0
+            '"seaTurtle"': crwdns271588:0crwdne271588:0
+            '"squid"': crwdns271590:0crwdne271590:0
+            '"tropicalFish"': crwdns271592:0crwdne271592:0
+      craft_turn:
+        text: crwdns194820:0[DIR]crwdnd194820:0[0]crwdne194820:0
+        options:
+          DIR:
+            right: crwdns194821:0crwdne194821:0
+            left: crwdns194822:0crwdne194822:0

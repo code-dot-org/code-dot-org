@@ -1,0 +1,47 @@
+{
+  "vi-VN": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "đang hồi phục"
+        },
+        "outbreak2": {
+          "recovering": "đang hồi phục"
+        },
+        "outbreak3": {
+          "recovering": "đang hồi phục"
+        },
+        "outbreak4": {
+          "recovering": "đang hồi phục",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "outbreak5": {
+          "recovering": "đang hồi phục"
+        },
+        "outbreak6": {
+          "recovering": "đang hồi phục"
+        },
+        "outbreak7": {
+          "recovering": "đang hồi phục",
+          "moving left and right": "di chuyển sang trái và sang phải",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "outbreak8": {
+          "recovering": "đang hồi phục",
+          "moving left and right": "di chuyển sang trái và sang phải",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "outbreak_freeplay": {
+          "recovering": "đang hồi phục",
+          "moving left and right": "di chuyển sang trái và sang phải",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "đang hồi phục",
+          "moving left and right": "di chuyển sang trái và sang phải",
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        }
+      }
+    }
+  }
+}

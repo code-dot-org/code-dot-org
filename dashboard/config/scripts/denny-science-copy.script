@@ -1,0 +1,16 @@
+lesson 'Collision Detector: Designing Screens', display_name: 'Collision Detector: Designing Screens', has_lesson_plan: false
+level 'CSD mini design mode video_copy'
+level 'Design Mode Map_copy'
+level 'Science earthquake 1_copy'
+level 'Science earthquake text_copy'
+level 'Science earthquake images_copy'
+level 'Science earthquake reflect_copy'
+
+lesson 'Collision Detector: Processing with Events', display_name: 'Collision Detector: Processing with Events', has_lesson_plan: false
+level 'Science change screen map_copy'
+level 'Science board event map_copy'
+level 'Science Circuit Playground Test_copy'
+level 'Science event demo_copy'
+level 'Science event accel_copy'
+level 'Science event test_copy'
+

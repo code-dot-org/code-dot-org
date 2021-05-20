@@ -1,5 +1,120 @@
 %h1= @page_title = @level.new_record? ? "New #{@level.class.to_s} level" : "Editing #{@level.name}"
-= render 'form'
+
+- content_for(:head) do
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
+  = stylesheet_link_tag 'jquery.handsontable.full', media: 'all'
+  %script{src: webpack_asset_path('js/levelbuilder.js')}
+  = javascript_include_tag 'jquery.handsontable.full'
+
+= form_for [@level], method: @level.new_record? ? :post : :patch, remote: true do |f|
+  = f.hidden_field :type, value: @type_class.to_s.presence || @level.type
+
+  Find documentation for levelbuilder and its processes
+  = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Welcome-to-Levelbuilder', target: '_blank'
+
+  .field
+    / dsl-defined levels specify a name directly in the DSL text
+    - unless @level.is_a? DSLDefined
+      = f.label :name
+      = f.text_field :name, placeholder: 'Level Name', disabled: @visible || @pilot || @standalone
+      - if @visible
+        %p the level cannot be renamed because it appears in a visible script.
+      - if @pilot
+        %p the level cannot be renamed because it appears in a pilot script.
+      - if @standalone
+        %p the level cannot be renamed because it is a standalone project level.
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
+
+  / Only enter name to create new records of certain level types.
+  - unless @level.is_a?(Fish) || (@level.new_record? && @level.is_a?(Blockly))
+    -# CSF Style Puzzles
+    = render partial: 'levels/editors/artist', locals: {f: f} if @level.is_a? Artist
+    = render partial: 'levels/editors/bounce', locals: {f: f} if @level.is_a? Bounce
+    = render partial: 'levels/editors/craft', locals: {f: f} if @level.is_a? Craft
+    = render partial: 'levels/editors/flappy', locals: {f: f} if @level.is_a? Flappy
+    = render partial: 'levels/editors/maze', locals: {f: f} if @level.is_a? Maze #Karel is a special type of Maze
+    = render partial: 'levels/editors/studio', locals: {f: f} if @level.is_a? Studio
+    -# *Labs
+    = render partial: 'levels/editors/applab', locals: {f: f} if @level.is_a? Applab
+    = render partial: 'levels/editors/dance', locals: {f: f} if @level.is_a?(Dancelab)
+    = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.instance_of?(Gamelab)
+    = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.instance_of?(GamelabJr)
+    = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
+    = render partial: 'levels/editors/ailab', locals: {f: f} if @level.is_a? Ailab
+    = render partial: 'levels/editors/javalab', locals: {f: f} if @level.is_a? Javalab
+    -# Widgets
+    = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
+    = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
+    = render partial: 'levels/editors/odometer', locals: {f: f} if @level.is_a? Odometer
+    = render partial: 'levels/editors/pixelation', locals: {f: f} if @level.is_a? Pixelation
+    = render partial: 'levels/editors/public_key_cryptography', locals: {f: f} if @level.is_a? PublicKeyCryptography
+    = render partial: 'levels/editors/text_compression', locals: {f: f} if @level.is_a? TextCompression
+    = render partial: 'levels/editors/vigenere', locals: {f: f} if @level.is_a? Vigenere
+    -# Other
+    = render partial: 'levels/editors/calc', locals: {f: f} if @level.is_a? Calc
+    = render partial: 'levels/editors/curriculum_reference', locals: {f: f} if @level.is_a? CurriculumReference
+    = render partial: 'levels/editors/eval', locals: {f: f} if @level.is_a? Eval
+    = render partial: 'levels/editors/external_link', locals: {f: f} if @level.is_a? ExternalLink
+    = render partial: 'levels/editors/free_response', locals: {f: f} if @level.is_a? FreeResponse
+    = render partial: 'levels/editors/dsl', locals: {f: f} if @level.is_a? DSLDefined
+    = render partial: 'levels/editors/standalone_video', locals: {f: f} if @level.is_a? StandaloneVideo
+    = render partial: 'levels/editors/unplugged', locals: {f: f} if @level.is_a? Unplugged
+
+  .field
+    = f.hidden_field :published
+  .actions{style: "position: fixed; bottom: 0px; width: 100%; background-color: rgb(231, 232, 234); left: 0px; z-index: 900; display: flex; justify-content: flex-end; margin: 0px; align-items: center"}
+    = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px; height: 35px"}
+    %div{style: "display: flex; flex-direction: column; padding: 10px 10px 0px 10px"}
+      %p Or, save, publish, and return to:
+      %ul
+        - @level.script_levels.each do |script_level|
+          %li
+            = f.submit build_script_level_path(script_level), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
+        - BubbleChoice.parent_levels(@level.name).each do |parent_level|
+          - parent_level.script_levels.each do |script_level|
+            %li
+              - position = parent_level.sublevel_position(@level)
+              = f.submit build_script_level_path(script_level, sublevel_position: position), {:class=> 'publishLevel', :name => "redirect", :style => "font-family: monospace; margin-bottom: 10px"}
+
+%pre#validation-error.validation-error{style: 'background-color: yellow; display: none'}
+:javascript
+  window.levelbuilder.ajaxSubmit("#{@level.new_record? ? '#new_level' : '.edit_level'}");
+  var saving = false;
+  $(document).ready(function () {
+    $('#saveProgress').click(function() {
+      saving = true;
+      $('#level_published').val(false);
+    });
+
+    $('.publishLevel').click(function() {
+      saving = true;
+      $('#level_published').val(true);
+    });
+  });
+
+  var inputs = $('.edit_level *[id]:visible');
+  var form_values = {};
+  var FORM_VALUES_TO_SKIP = [
+    'level_tts_voice',
+  ];
+  for (var i = 0; i < inputs.length; i++) {
+    form_values[inputs[i].id] = inputs[i].value;
+  }
+
+  $(window).bind('beforeunload', function () {
+    if (saving) {
+      return;
+    }
+    for (var i = 0; i < inputs.length; i++) {
+      if (FORM_VALUES_TO_SKIP.indexOf(inputs[i].id) === -1 &&
+          inputs[i].value !== form_values[inputs[i].id]) {
+        // prompt before navigating away
+        return "You have unsaved changes, are you sure you want to leave?";
+      }
+    }
+  });
+
 = link_to t('crud.show'), @level
 |
 = link_to t('crud.back'), levels_path

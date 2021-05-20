@@ -66,10 +66,31 @@ FEEDBACK_MESSAGES = {
     "lengthFeedback": "You got it right except for the lengths to move.",
     "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
     "shareDrawing": "Share your drawing:"
+  },
+  "dance": {
+    "danceFeedbackNeedNewDancer": "You need to make a dancer.",
+    "danceFeedbackNoDancers": "You have no dancers.",
+    "danceFeedbackNoBackground": "You need to add a background effect.",
+    "danceFeedbackTooManyDancers": "Be careful! If you put `make a new` block inside `every 2 measures`, you will create a lot of dancers.",
+    "danceFeedbackUseSetSize": "Use the `set backup_dancer2 size` block to make that dancer smaller.",
+    "danceFeedbackUseSetTint": "Use the `set tint` block to change a dancer's tint.",
+    "danceFeedbackUseStartMapping": "Try adding the <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block to your program.",
+    "danceFeedbackStartNewMove": "Your dancer wasn't doing a new move after the fourth measure.",
+    "danceFeedbackNeedDifferentDance": "You need to use a different dance.",
+    "danceFeedbackNeedEveryTwoMeasures": "Make sure you are using the `every 2 measures` block",
+    "danceFeedbackNeedMakeANewDancer": "Use the `make a new` block to create a second dancer.",
+    "danceFeedbackKeyEvent": "Make sure you attach some code to the <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> block and press the key while your dance is running.",
+    "danceFeedbackDidntPress": "Make sure to press the arrow keys while your dance is running.",
+    "danceFeedbackPressedKey": "You pressed a key, but your dancer didn't respond.",
+    "danceFeedbackNeedTwoDancers": "You need to make two dancers.",
+    "danceFeedbackOnlyOneDancerMoved": "Only one of your dancers moved.",
+    "danceFeedbackNeedLead": "You also need to create one lead dancer with the <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">\\{x: 200, y: 200\\}</title></block></xml> block.",
+    "danceFeedbackNeedBackup": "You need to create a group of backup dancers with the <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
+    "danceFeedbackSetSize": "You need to change the size of at least one dancer after the music starts."
   }
 }.freeze
 
-VOICES.each do |lang, _voice|
+TextToSpeech::VOICES.each do |lang, _voice|
   I18n.locale = lang
   loc_voice = TextToSpeech.localized_voice
   apps_locale = lang.to_s.sub('-', '_').downcase
@@ -77,7 +98,8 @@ VOICES.each do |lang, _voice|
   puts lang
 
   FEEDBACK_MESSAGES.each do |category, keys|
-    file = File.read("../../apps/i18n/#{category}/#{apps_locale}.json")
+    file_path = File.join(File.dirname(__FILE__), "../../apps/i18n/#{category}/#{apps_locale}.json")
+    file = File.read(file_path)
     messages = JSON.parse(file)
 
     puts "\t#{category}"
@@ -88,7 +110,11 @@ VOICES.each do |lang, _voice|
 
       content_hash = Digest::MD5.hexdigest(text)
       filename = "#{loc_voice[:VOICE]}/#{loc_voice[:SPEED]}/#{loc_voice[:SHAPE]}/#{content_hash}/#{text}.mp3"
-      TextToSpeech.tts_upload_to_s3(text, filename)
+
+      # Sanitize the text after generating the filename to keep the content hash
+      # consistent with original text
+      text = TextToSpeech.sanitize(text)
+      TextToSpeech.tts_upload_to_s3(text, filename, 'update_i18n_static_messages')
     end
   end
 end

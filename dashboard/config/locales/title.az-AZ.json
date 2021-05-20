@@ -1,0 +1,30 @@
+{
+  "az-AZ": {
+    "data": {
+      "title": {
+        "BinaryImages": "İkilik təsvirlər",
+        "BinaryImages_2018": "İkilik təsvirlər",
+        "ComputationalThinking": "Hesablama təfəkkürü",
+        "Conditionals": "Şərti ifadələr",
+        "Conditionals_2018": "Şərti ifadələr",
+        "GraphPaperProgramming": "Millimetrlik kağızda proqramlaşdırma",
+        "GraphPaperProgramming_2018": "Millimetrlik kağızda proqramlaşdırma",
+        "Internet": "İnternet",
+        "RelayProgramming": "Estafet proqramlaşdırması",
+        "RelayProgramming_2018": "Estafet proqramlaşdırması",
+        "UnplugHappyMaps": "Şən xəritələr",
+        "UnplugHappyMaps_2018": "Şən xəritələr",
+        "courseB_unplugged_MRF": "Sərbəst fəaliyyət",
+        "courseB_unplugged_loopyMRF": "Sərbəst fəaliyyət",
+        "courseC_Unplugged_ScreenOutTheMean": "Sərbəst fəaliyyət",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "Sərbəst fəaliyyət",
+        "courseD_unplugged_digitalCitizenship": "Sərbəst fəaliyyət",
+        "courseD_unplugged_digitalCitizenship_2018": "Sərbəst fəaliyyət",
+        "courseF_unplugged_powerOfWords": "Sərbəst fəaliyyət",
+        "DigitalCitizenship": "Rəqəmsal vətəndaşlıq",
+        "FunctionalSuncatchers": "Funksional muncuqlar",
+        "SongwritingParameters": "Mahnı yazma"
+      }
+    }
+  }
+}

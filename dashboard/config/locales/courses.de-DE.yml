@@ -7,22 +7,109 @@ de:
           assignment_family_title: Informatik Prinzipien
           title: Informatik Prinzipien ('17-'18)
           version_title: "'17-'18"
+          description_student: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_short: Lerne grundlegende Konzepte der Informatik!
         csd-2017:
           assignment_family_title: Informatik Entdeckungen
+          title: Informatik entdecken ('17-'18)
           version_title: "'17-'18"
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
+            echte Produkte zu erzeugen.
         allthethingscourse:
-          title: allthethingskurs
-          description_short: Dies ist ein Kurs für allthethings
+          title: Allthethingskurs
+          description_short: Dies ist ein Kurs für Allthethings
           description_student: Dies ist ein Kurs für Allthethings und er hat eine
-            längere Beschreibung für Studenten
+            längere Beschreibung für Schüler
           description_teacher: Dies ist ein Kurs für Allthethings und er hat eine
             längere Beschreibung für Lehrer
         csd-2018:
           assignment_family_title: Informatik Entdeckungen
+          title: Informatik entdecken ('18-'19)
+          version_title: "'18-'19"
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
+            echte Produkte zu erzeugen.
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
         csp-2018:
-          assignment_family_title: Informatik Prinzipien
+          assignment_family_title: Informatik-Prinzipien
           title: Informatik Prinzipien ('18-'19)
+          version_title: "'18-'19"
+          description_short: Lerne grundlegende Konzepte der Informatik!
+          description_student: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
         csp-2019:
+          title: Informatik-Grundprinzipien ('19-'20)
           version_title: "'19-'20"
+          description_short: Lerne grundlegende Konzepte der Informatik!
+          description_student: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
+          description_teacher: Im Herbst 2016, startete die College-Leitung ihren
+            neusten AP®-Kurs, AP Computer Science Principles (Informatik-Grundprinzipien).
+            Der Kurs führt Schüler in die grundlegenden Konzepte der Informatik ein
+            und fordert sie heraus, herauszufinden, wie Computer und Technologie die
+            Welt beeinflussen können. Das AP-Programm gestaltete AP Informatik-Grundprinzipien
+            mit dem Ziel, Führungspersönlichkeiten im Feld der Informatik hervorzubringen
+            und die anzuziehen und zu fördern, die traditionell unterrepräsentiert
+            sind by essenziellen Computer-Werkzeugen und multi-disziplinären Möglichkeiten.
         csd-2019:
+          title: Informatik entdecken ('19-'20)
           version_title: "'19-'20"
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht,
+            echte Produkte zu erzeugen.
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein
+            einführender Informatikkurs, der die Studenten befähigt, authentische
+            Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität,
+            Kommunikation, Problemlösung und Spaß zu beschäftigen.

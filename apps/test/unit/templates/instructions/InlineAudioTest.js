@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {setExternalGlobals} from '../../../util/testUtils';
@@ -14,7 +14,14 @@ const DEFAULT_PROPS = {
   style: {
     button: {},
     buttonImg: {}
-  }
+  },
+  ttsAutoplayEnabled: false
+};
+
+// this is a helper function which is used in a test to
+// wait for all preceeding promises to resolve
+const waitForPromises = async () => {
+  return Promise.resolve();
 };
 
 describe('InlineAudio', function() {
@@ -63,6 +70,20 @@ describe('InlineAudio', function() {
     );
   });
 
+  it('does not generate src from message text if no voice is available for locale', function() {
+    const component = mount(
+      <StatelessInlineAudio
+        assetUrl={function() {}}
+        isK1={true}
+        locale="aa_aa"
+        message={'test'}
+      />
+    );
+
+    const result = component.instance().getAudioSrc();
+    assert.equal(result, undefined);
+  });
+
   it('can handle (select) non-english locales', function() {
     const component = mount(
       <StatelessInlineAudio
@@ -80,38 +101,58 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('renders controls if text-to-speech is enabled', function() {
+  it('renders controls if text-to-speech is enabled and sound is loaded', function() {
     const component = mount(
       <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
 
-    expect(component).to.containMatchingElement(
-      <div className="inline-audio">
-        <div id="volume">
-          <i className="fa fa-volume-up" />
-        </div>
-        <div className="playPause">
-          <i className="fa fa-play" />
-        </div>
-      </div>
-    );
+    expect(component.exists('.inline-audio')).to.be.false;
+    component.setState({loaded: true});
+    expect(component.exists('.inline-audio')).to.be.true;
   });
 
-  it('can toggle audio', function() {
+  it('can toggle audio', async function() {
     const component = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
     component.instance().toggleAudio();
+    await waitForPromises();
     expect(component.state().playing).to.be.true;
     component.instance().toggleAudio();
+    await waitForPromises();
     expect(component.state().playing).to.be.false;
   });
 
-  it('only gets Audio the first time it is played', function() {
-    const component = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
-    sinon.spy(window, 'Audio');
+  it('autoplays if autoplay of text-to-speech is enabled', async function() {
+    const component = mount(
+      <StatelessInlineAudio
+        assetUrl={function() {}}
+        ttsAutoplayEnabled={true}
+      />
+    );
 
-    expect(window.Audio).not.to.have.been.called;
+    await waitForPromises();
+    expect(component.state().playing).to.be.true;
+  });
+
+  it('when playAudio resolves, state.playing set to true', async () => {
+    const component = mount(
+      <StatelessInlineAudio
+        assetUrl={function() {}}
+        ttsAutoplayEnabled={false}
+      />
+    );
+
+    expect(component.state().playing).to.be.false;
+    await component.instance().playAudio();
+    expect(component.state().playing).to.be.true;
+  });
+
+  it('only initializes Audio once', function() {
+    sinon.spy(window, 'Audio');
+    const component = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
+
+    expect(window.Audio).to.have.been.calledOnce;
     component.instance().playAudio();
     expect(window.Audio).to.have.been.calledOnce;
     component.instance().pauseAudio();
@@ -141,7 +182,9 @@ describe('InlineAudio', function() {
 // Could extend this to have real EventTarget behavior,
 // then write tests for 'ended' and 'error' events.
 class FakeAudio {
-  play() {}
+  play() {
+    return Promise.resolve();
+  }
   pause() {}
   load() {}
   // EventTarget interface

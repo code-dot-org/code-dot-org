@@ -1,47 +1,59 @@
 hidden false
-hideable_stages true
-stage_extras_available true
-project_widget_visible true
-has_lesson_plan true
+hideable_lessons true
+lesson_extras_available true
 curriculum_path 'https://code.org/curriculum/course1/{LESSON}/Teacher'
+project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
 curriculum_umbrella 'CSF'
+tts true
 
-stage 'Happy Maps'
+lesson 'Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true, unplugged: true
 level 'UnplugHappyMaps'
 level 'K-1 Happy Maps Multi 1'
 
-stage 'Move it, Move it'
+lesson 'Move it, Move it', display_name: 'Move it, Move it', has_lesson_plan: true, unplugged: true
 level 'MoveIt'
 level 'K-1 Move It Multi 1'
 
-stage 'Jigsaw: Learn to drag and drop'
+lesson 'Jigsaw: Learn to drag and drop', display_name: 'Jigsaw: Learn to drag and drop', has_lesson_plan: true
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:2'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:3'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:4'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:5'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:6'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:7'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:8'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:9'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:10'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:11'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12'
 skin 'jigsaw'
+level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:13'
 
-stage 'Maze: Sequence'
+lesson 'Maze: Sequence', display_name: 'Maze: Sequence', has_lesson_plan: true
 level 'k-1 maze 1'
 level 'K-1 Maze 2'
 level 'K-1 Maze 3'
@@ -60,7 +72,7 @@ level 'K-1 Maze Match 1'
 bonus 'course1_maze_seq_challenge1'
 bonus 'course1_maze_seq_challenge2'
 
-stage 'Maze: Debugging'
+lesson 'Maze: Debugging', display_name: 'Maze: Debugging', has_lesson_plan: true
 level 'K-1 maze debug 1'
 level 'K-1 maze debug 2'
 level 'K-1 maze debug 3'
@@ -76,12 +88,12 @@ level 'K-1 Maze Debugging Multi 1'
 bonus 'course1_maze_debugging_challenge1'
 bonus 'course1_maze_debugging_challenge2'
 
-stage 'Real-life Algorithms: Plant a Seed'
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Real-life Algorithms: Plant a Seed', has_lesson_plan: true, unplugged: true
 level 'PlantASeed'
 level 'K-1 Plant a Seed Multi 1'
 level 'K-1 Plant a Seed Multi 2'
 
-stage 'Bee: Sequence'
+lesson 'Bee: Sequence', display_name: 'Bee: Sequence', has_lesson_plan: true
 level 'K-1 Bee 1'
 level 'K-1 Bee 2'
 level 'K-1 Bee 3'
@@ -98,7 +110,7 @@ level 'K-1 Bee 15'
 level 'K-1 Bee 1 Multi 1'
 level 'K-1 Bee 1 Multi 2'
 
-stage 'Artist: Sequence'
+lesson 'Artist: Sequence', display_name: 'Artist: Sequence', has_lesson_plan: true
 level 'K-1 Artist1 1'
 level 'K-1 Artist1 2'
 level 'K-1 Artist1 3'
@@ -114,11 +126,11 @@ level 'K-1 Artist 1 Multi 2'
 bonus 'course1_artist_loops_challenge1'
 bonus 'course1_artist_loops_challenge2'
 
-stage 'Building a Foundation'
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation'
 level 'K-1 Building a Foundation Assessment'
 
-stage 'Artist: Shapes'
+lesson 'Artist: Shapes', display_name: 'Artist: Shapes', has_lesson_plan: true
 level 'K-1 Artist2 1'
 level 'K-1 Artist2 2'
 level 'K-1 Artist2 3'
@@ -130,7 +142,7 @@ level 'K-1 Artist2 Assessment1'
 level 'K-1 Artist 2 Match 2'
 level 'K-1 Artist2 Free Draw'
 
-stage 'Spelling Bee'
+lesson 'Spelling Bee', display_name: 'Spelling Bee', has_lesson_plan: true
 skin 'letters'
 video_key_for_next_level 'C1_spelling_bee_intro'
 level_concept_difficulty '{"sequencing":2}'
@@ -165,11 +177,11 @@ level 'blockly:CustomMaze:wordsearch_k_20'
 level 'K-1 Word Search Multi 1'
 level 'K-1 Word Search Multi 3'
 
-stage 'Getting Loopy'
+lesson 'Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 level 'K-1 Getting Loopy Multi 1'
 
-stage 'Maze: Loops'
+lesson 'Maze: Loops', display_name: 'Maze: Loops', has_lesson_plan: true
 level 'K-1 Maze Loops 1'
 level 'K-1 Maze Loops 2'
 level 'K-1 Maze Loops 3'
@@ -187,7 +199,7 @@ level 'K-1 Maze Loops Multi 2'
 bonus 'course1_collector_loops_challenge1'
 bonus 'course1_collector_loops_challenge2'
 
-stage 'Bee: Loops'
+lesson 'Bee: Loops', display_name: 'Bee: Loops', has_lesson_plan: true
 level 'K-1 Bee Loops 1'
 level 'K-1 Bee Loops 2'
 level 'K-1 Bee Loops 3'
@@ -204,11 +216,11 @@ level 'K-1 Bee Loops Match 1'
 bonus 'course1_collector_loops_challenge3'
 bonus 'course1_collector_loops_challenge4'
 
-stage 'The Big Event'
+lesson 'The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 level 'K-1 Big Event Match 1'
 
-stage 'Studio: Create a Story'
+lesson 'Studio: Create a Story', display_name: 'Play Lab: Create a Story', has_lesson_plan: true
 skin 'studio'
 video_key_for_next_level 'C1_playlab_storytelling'
 level_concept_difficulty '{"sequencing":1}'
@@ -231,11 +243,11 @@ level 'blockly:Studio:k1_6'
 bonus 'course1_playlab_events_challenge1'
 bonus 'course1_playlab_events_challenge2'
 
-stage 'Going Places Safely'
+lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true, unplugged: true
 level 'GoingPlacesSafely'
 level 'K-1 Keep it Private Multi 1'
 
-stage 'Artist: Loops'
+lesson 'Artist: Loops', display_name: 'Artist: Loops', has_lesson_plan: true
 level 'K-1 Artist Loops 1'
 level 'K-1 Artist Loops 2'
 level 'K-1 Artist Loops 3'
@@ -248,3 +260,4 @@ level 'K-1 Artist Loops 9'
 level 'K-1 Artist Loops Free Play'
 bonus 'course1_artist_loops_challenge3'
 bonus 'course1_artist_loops_challenge4'
+

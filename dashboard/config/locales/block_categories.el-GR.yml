@@ -3,55 +3,30 @@ el:
   data:
     block_categories:
       Actions: Ενέργειες
-      Loops: Βρόχοι
-      Functions: Συναρτήσεις
-      Color: Χρώμα
-      Brushes: Πινέλα
-      Math: Μαθηματικά
-      Logic: Λογική
-      Variables: Μεταβλητές
-      Number: Αριθμός
-      String: Συμβολοσειρά
-      Image: Εικόνα
-      Boolean: Δυαδική τιμή
-      Conditionals: Συνθήκες
-      Events: Συμβάντα
-      Games/Score: Παιχνίδια/Σκορ
-      Comments: Σχόλια
-      Category: Κατηγορία
-      Prebuilt: Προκατασκευασμένα
-      Text: κείμενο
-      Picker: Επιλέκτης
-      Comment: Σχόλιο
-      World: Κόσμος
-      Behaviors: Συμπεριφορές
-      'Variables ': 'Μεταβλητές '
-      Default: Προεπιλογή
-      Locations: Τοποθεσίες
-      everythingelse: όλαταάλλα
-      Location: Τοποθεσία
-      numbers: αριθμοί
-      Numbers: Αριθμοί
-      Dancers: Χορευτές
-      Groups: Ομάδες
       Advanced: Για προχωρημένους
-      Start: Έναρξη
-      Dancing: Χορεύοντας
-      Sprite: Χαρακτήρας
-      Brush: Πινέλο
-      Make Sprite: Δημιούργησε έναν Χαρακτήρα
-      Movement: Κίνηση
-      Booleans: Δυαδικοί
-      Functional: Λειτουργικά
-      While Events: Γεγονότα Όσο
-      Sprite Properties: Ιδιότητες Χαρακτήρα
-      Predefined: Προκαθορισμένα
-      test: δοκιμή
-      test2: δοκιμή2
-      Use These Blocks: Χρησιμοποίησε αυτά τα τουβλάκια
-      Do Not Use: Μην χρησιμοποιήσεις
-      Name: Όνομα
-      NEW BLOCKS: ΝΕΑ ΤΟΥΒΛΑΚΙΑ
+      Behaviors: Συμπεριφορές
+      Brushes: Πινέλα
+      Color: Χρώμα
+      Comment: Σχόλιο
+      Comments: Σχόλια
+      Conditionals: Συνθήκες
+      Dancers: Χορευτές
+      Default: Προεπιλογή
+      Events: Συμβάντα
+      Functions: Συναρτήσεις
       'Functions ': 'Συναρτήσεις '
       Game/Score: Παιχνίδι/Σκορ
-      Function: Συνάρτηση
+      Games/Score: Παιχνίδια/Σκορ
+      Groups: Ομάδες
+      Input: Είσοδος
+      Locations: Τοποθεσίες
+      Logic: Λογική
+      Loops: Βρόχοι
+      Math: Μαθηματικά
+      Numbers: Αριθμοί
+      Properties: Ιδιότητες
+      Sprites: Χαρακτήρας
+      Text: κείμενο
+      Variables: Μεταβλητές
+      'Variables ': 'Μεταβλητές '
+      World: Κόσμος

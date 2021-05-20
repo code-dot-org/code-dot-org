@@ -1,0 +1,79 @@
+---
+mk:
+  data:
+    blocks:
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случајно
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": случајно
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': случајно
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случајно
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": случајно
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          LAYOUT:
+            '"random"': случајно
+      Dancelab_randomColor:
+        text: случајна боја
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': Кога
+            '"while"': Додека
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': Кога
+            '"while"': Додека
+      gamelab_randColor:
+        text: случајна боја
+      gamelab_randomColor:
+        text: случајна боја
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': Кога
+            '"while"': Додека
+      Mikelab_randomColor:
+        text: случајна боја
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"w"': Запад
+            '"a"': А
+            '"s"': Југ
+            '"d"': Д
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"w"': Запад
+            '"a"': А
+            '"s"': Југ
+            '"d"': Д
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': случајно
+      aalab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': случајно
+      craft_ifPath:
+        options:
+          DIR:
+            "'ahead'": напред
+      craft_placeTorch:
+        text: постави факел

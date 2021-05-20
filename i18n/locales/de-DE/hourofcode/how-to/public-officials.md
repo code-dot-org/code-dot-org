@@ -1,32 +1,30 @@
 ---
 title: Anleitung für Behördenmitglieder
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
 
-# How to involve your entire community
+# Wie Sie Ihre gesamte Community einbeziehen können
 
-### Show your state, district, or city your commitment to computer science
+### Zeigen Sie Ihrem Land, Bezirk oder Ihrer Stadt Ihr Engagement für die Informatik
 
 * * *
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## Haben Sie einen gewählten Verantwortlichen (Politiker) zu Ihrer Stunde des Codes eingeladen?
 
-[View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
+[Sehen Sie sich unser Toolkit an](/files/elected-official.pdf) mit allen Informationen an, die Sie benötigen, um Ihren Besuch und Ihre Veranstaltung großartig zu gestalten!
 
 ![](/images/fit-800/hoc_govs.png)
 
-From left to right: *Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.*
+Von links nach rechts: *Gouverneure aus Arkansas, North Carolina und Arizona, die an einer Hour of Code teilnehmen.*
 
 ## Lass jede Schule und jeden Schülerin und jeden Schüler an der "Hour of Code" teilnehmen!
 
-### 1. Read our one-pager
+### 1. Lesen Sie unsere kurze Einleitung
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Recruit local schools and districts
 

@@ -1,5 +1,5 @@
 name 'U4L1 - MC moores law'
-question 'Historically it has been observed that computer processing speeds tend to double every two years.  This is known as:'
+question 'Historically it has been observed that computer processing speeds tend to double every two years. This is known as:'
 wrong 'Boolean\’s Conjecture'
 right 'Moore\'s Law'
 wrong 'The “Big Data Effect”'

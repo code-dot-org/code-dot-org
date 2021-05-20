@@ -3,18 +3,28 @@ sr:
   data:
     block_categories:
       Actions: Акције
-      Loops: Петље
-      Functions: Функције
+      Advanced: Напредна подешавања
+      Behaviors: Понашање
+      Brushes: Четкице
       Color: Боја
-      Math: Математика
-      Logic: Логика
-      Variables: Променљиве
+      Comment: Коментариши
+      Comments: Коментари
       Conditionals: Кондиционали
+      Dancers: Плесачи
+      Default: Подразумеване вредности
       Events: Догађаји
+      Functions: Функције
+      'Functions ': 'Функције '
+      Game/Score: Игра/Резултат
+      Games/Score: Игре/Резултат
+      Groups: Групе
+      Locations: Локације
+      Logic: Логика
+      Loops: Петље
+      Math: Математика
+      Numbers: Бројеви
+      Properties: Својства
       Text: текст
-      Location: Место
-      Start: Покрени
-      Booleans: Booleans
-      test: тест
-      Name: Име
-      Function: Функција
+      Variables: Променљиве
+      'Variables ': 'Променљиве '
+      World: Свет

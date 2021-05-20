@@ -1,22 +1,22 @@
 -if ["post-hoc", false].include?(hoc_mode)
   %a#tryitbutton.ctabuttonatag{href: resolve_url('/learn')}
-    %button.ctabutton-white
+    %button.ctabutton
       = hoc_s(:front_join_us_try)
   &nbsp;
   %a#videobutton.ctabuttontag{onclick: "adjustScroll('homepage-video');", style: "text-decoration: none;"}
-    %button.ctabutton-white-inverse
+    %button.ctabutton-white
       = hoc_s(:front_watch_regular_video)
 -elsif ["pre-hoc", "soon-hoc"].include?(hoc_mode)
   %a#signupbutton.ctabuttonatag{onclick: "adjustScroll('join');", style: "text-decoration: none;"}
-    %button.ctabutton-white
+    %button.ctabutton
       = hoc_s(:front_join_us_button)
   &nbsp;
   %a#tryitbutton.ctabuttonatag{href: resolve_url('/learn')}
-    %button.ctabutton-white-inverse
+    %button.ctabutton-white
       = hoc_s(:front_join_us_try)
 -elsif ["actual-hoc"].include?(hoc_mode)
   %a#tryitbutton.ctabuttonatag{href: resolve_url('/learn')}
-    %button.ctabutton-white
+    %button.ctabutton
       = hoc_s(:front_join_us_try)
 
 :javascript

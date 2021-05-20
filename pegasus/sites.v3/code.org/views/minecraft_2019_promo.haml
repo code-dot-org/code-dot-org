@@ -1,0 +1,25 @@
+%link{href: "/css/tutorial-promo.css", rel: "stylesheet"}
+
+:ruby
+  mee_image = "/images/mc/fit-1940x620/mc_mee_wide_large_2019.jpg"
+  mee_title = I18n.t(:hoc2019_mc_mee_title)
+  mee_description1 = I18n.t(:hoc2019_mc_mee_description1)
+  mee_description2 = I18n.t(:hoc2019_mc_mee_description2)
+  mee_link = "https://education.minecraft.net/hour-of-code-2019"
+  mee_link_text = I18n.t(:hoc2018_mc_educators_box1_button)
+
+.tutorial-promo-container{style: "margin-top: 25px"}
+  .img-container
+    %img.background-img{src: mee_image}
+  .col-50.specific-tutorial.right-tutorial{style: "right: 10px; top: 10px; height: initial"}
+    .tutorial-box
+      %h2.specific-tutorial-heading= mee_title
+      .tutorial-details{style: "height: initial"}
+        %p.tutorial-description
+          = mee_description1
+        %p.tutorial-description
+          = mee_description2
+      %a{href: mee_link, target: '_blank'}
+        %button.tutorial-button{style: "color: #4d575f; background-color: white; border-color: white; font-size: 14px"}
+          = mee_link_text
+  .clear

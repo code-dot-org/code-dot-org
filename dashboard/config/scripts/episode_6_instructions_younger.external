@@ -1,0 +1,32 @@
+name 'Episode 6 Instructions younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### How the Internet Works
+Watch the [How the Internet Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7) series of eight short videos featuring Vint Cerf, the inventor of TCP/IP, David Karp the founder of Tumblr to explain HTTP and HTML, Google's "Security Princess" to explain SSL and cybersecurity, and engineers from Microsoft, Spotify, and Symantec. 
+
+* [What is the Internet](https://youtu.be/Dxcc6ycZ73M)
+* [The Internet: Wires, Cables, & Wifi](https://youtu.be/ZhEf7e4kopM)
+* [The Internet: IP Addresses & DNS](https://youtu.be/5o8CwafCxnU)
+* [The Internet: Packets, Routing, and Reliability](https://youtu.be/AYdF7b3nMto)
+* [The Internet: HTTP & HTML](https://youtu.be/kBXQZMmiA4s)
+* [The Internet: Encryption & Public Keys](https://youtu.be/ZghMPWGXexs)
+* [The Internet: Cybersecurity & Crime](https://youtu.be/AuYNXgO_f3Y)
+* [The Internet: How Search Works](https://youtu.be/LVV_93mBfSU)
+
+![](https://images.code.org/3f6d3fb5822047d891b462a17954f71f-image-1587742067684.jpg)
+
+### Protocol Practice
+Use the [Protocol Practice - Activity Guide](https://docs.google.com/document/d/18kryKcRSWSQmsjqlzbDFMm-zHMwEhQZ4fooz5dnpvl4/edit?usp=sharing) to practice sending images to your family and friends using the same protocol Sofia and Hadi used during Code Break. 
+
+![](https://images.code.org/4a0e1a7f11aea12e413e9a986339217e-image-1588086089854.png)
+
+---
+*Over 13 year old? Find your practice level [here](https://studio.code.org/s/code-break/lessons/6/levels/2).*
+MARKDOWN

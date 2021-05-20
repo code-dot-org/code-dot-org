@@ -1,0 +1,48 @@
+{
+  "sr-SP": {
+    "data": {
+      "title": {
+        "BigEvent": "Велики догађај",
+        "BigEvent_2018": "Велики догађај",
+        "BinaryBracelets": "Бинарне наруквице",
+        "BinaryBracelets_2018": "Бинарне наруквице",
+        "BinaryImages": "Binarne slike",
+        "BinaryImages_2018": "Binarne slike",
+        "BuildingAFoundation": "Изградња темеља",
+        "ComputationalThinking": "Компјутерско Размишљање",
+        "Conditionals": "Кондиционали",
+        "Conditionals_2018": "Кондиционали",
+        "Crowdsourcing": "Crowdsourcing",
+        "DigitalCitizenship": "Дигитално држављанство",
+        "DigitalFootprint": "Твој дигитални траг",
+        "DigitalFootprint_2018": "Твој дигитални траг",
+        "FunctionalSuncatchers": "Functional Suncatchers",
+        "GettingLoopy": "Запетљанције",
+        "GettingLoopy_2018": "Запетљанције",
+        "GoingPlacesSafely": "Сигурна путања",
+        "GoingPlacesSafely_2018": "Сигурна путања",
+        "GraphPaperProgramming": "Графиконско - Папирно Програмирање",
+        "GraphPaperProgramming_2018": "Графиконско - Папирно Програмирање",
+        "Internet": "Интернет",
+        "MoveIt": "Помери га, помери",
+        "MoveItMoveIt_2018": "Помери га, помери",
+        "PaperPlanes": "Стварни алгоритми: Папирни авиони",
+        "PaperPlanes_2018": "Стварни алгоритми: Папирни авиони",
+        "PlantASeed": "Прави алгоритми: Засади семе",
+        "PlantASeed_2018": "Прави алгоритми: Засади семе",
+        "RelayProgramming": "Relay programming",
+        "RelayProgramming_2018": "Relay programming",
+        "UnplugHappyMaps": "Веселе мапе",
+        "UnplugHappyMaps_2018": "Веселе мапе",
+        "courseB_unplugged_MRF": "Активност ван мреже",
+        "courseB_unplugged_MRF_2018": "Моји роботски пријатељи",
+        "courseB_unplugged_loopyMRF": "Активност ван мреже",
+        "courseC_Unplugged_ScreenOutTheMean": "Активност ван мреже",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "Активност ван мреже",
+        "courseD_unplugged_digitalCitizenship": "Активност ван мреже",
+        "courseD_unplugged_digitalCitizenship_2018": "Активност ван мреже",
+        "courseF_unplugged_powerOfWords": "Активност ван мреже"
+      }
+    }
+  }
+}

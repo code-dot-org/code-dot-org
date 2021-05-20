@@ -1,0 +1,11 @@
+---
+zh-TW:
+  data:
+    shared_functions:
+      driving with arrow keys: 用方向鍵駕駛
+      fluttering: 飄移
+      moving east and looping: 向東移動並循環
+      moving west and looping: 向西移動並循環
+      moving with arrow keys: 使用方向鍵移動
+      shrinking: 縮小
+      wobbling: 搖晃

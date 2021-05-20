@@ -1,7 +1,5 @@
 ---
 title: Klukkustund kóðunar - Fjölmiðlaefni fyrir opinbera aðila
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

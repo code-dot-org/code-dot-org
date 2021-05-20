@@ -8,9 +8,9 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(65535)
+#  properties            :text(16777215)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -25,12 +25,12 @@
 
 class EvaluationMulti < Multi
   def dsl_default
-    <<ruby
-name 'Unique question name here'
-question 'Question'
-answer 'Answer1', weight: 1, stage_name: 'stage_name'
-answer 'Answer2', weight: 1, stage_name: 'stage_name'
-ruby
+    <<~ruby
+      name 'Unique question name here'
+      question 'Question'
+      answer 'Answer1', weight: 1, stage_name: 'stage_name'
+      answer 'Answer2', weight: 1, stage_name: 'stage_name'
+    ruby
   end
 
   def answers

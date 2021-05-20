@@ -1,0 +1,40 @@
+name 'U4 L03 Variable Scope: Local vs. Global_2021'
+title 'U3L19 - variable scope explanation pt2'
+description 'description here'
+css 'unplugged'
+
+
+markdown <<MARKDOWN
+[![](https://images.code.org/b0e16c1ff38f5f5448465a7b0654bcfd-image-1571329455230.png)](https://www.youtube.com/watch?v=Vlj1_X474to)
+
+# Create Variables Once, At the Top, Outside onEvent()
+
+When you create variables you should:
+
+* **Use `var` only once.** You don't need to create variables twice and this can cause errors.
+* **Create your variables at the top of your program.** This keeps your code organized and easier to read for you and others.
+* **Create your variables outside any `onEvent` blocks.** Read on to understand why.
+
+# Global vs. Local Variables
+
+There's two types of variables, global and local, and so far we've only used global variables. Here's the main difference between global and local variables.
+
+Type of Variable| How It Works | How Created | Picture
+---|---|---|---
+**Global** | Permanent. Can be used anywhere in your code | `var` used outside an `onEvent` | ![](https://images.code.org/6f8fada462d48f58ad9d4af091634cff-image-1549944949349.png)
+**Local** | Temporary. Can be used only in the part of the code where it was created, like inside an `onEvent`. Deleted once the `onEvent` is done running. | `var` used inside an `onEvent` | ![](https://images.code.org/e8bb3cec433f3f6260312089ff197e8a-image-1549945264323.png)
+
+# Avoiding Local Variables and Debugging
+
+Local variables will eventually be useful but for now they're most likely to just be confusing. The biggest issue you'll run into right now with local variables is accidentally using `var` inside of an `onEvent`. Here's what the code usually looks like:
+
+<img src="https://images.code.org/7dc2b13d85ea17e39639d15488d07f8f-image-1549944350460.png" style="width: 400px">
+
+This code is pretty confusing. While it looks like there's only one variable being used, it actually has two variables, one local, and one global, and they're both named `count`! Changing the value of one will have no impact on the other. This can cause unexpected behavior in your code and it can get tricky to debug.
+
+The best way to avoid these issues is to **make sure for now that you're not using `var` inside of an `onEvent`.** If you run into a tricky debugging problem, check if you're accidentally creating a local variable.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

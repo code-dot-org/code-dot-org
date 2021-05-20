@@ -3,35 +3,30 @@ uk:
   data:
     block_categories:
       Actions: Дії
-      Loops: Цикли
-      Functions: функції
-      Color: Колір
-      Math: Математика
-      Logic: Логіка
-      Variables: змінні
-      Number: Число
-      String: Рядок
-      Image: Зображення
-      Boolean: Логічне
-      Conditionals: Умови
-      Events: Події
-      Comments: Коментарі
-      Category: Категорія
-      Text: Текст
-      Comment: Коментар
-      World: Світ
-      Default: Типова
-      Locations: Розташування
-      Location: Місце знаходження
-      numbers: числа
-      Numbers: Числа
-      Dancers: Виконавці
-      Groups: Групи
       Advanced: Розширені
-      Start: Початок
-      Booleans: Логічні вирази
-      Functional: Функції
-      test: тест
-      Name: Ім’я
+      Behaviors: Поведінка
+      Brushes: Кисті
+      Color: Колір
+      Comment: Коментар
+      Comments: Коментарі
+      Conditionals: Умови
+      Dancers: Виконавці
+      Default: Типова
+      Events: Події
+      Functions: Функції
       'Functions ': 'Функції '
-      Function: Функція
+      Game/Score: Гра / рахунок
+      Games/Score: Ігри / рахунок
+      Groups: Групи
+      Input: Ввід
+      Locations: Розташування
+      Logic: Логіка
+      Loops: Цикли
+      Math: Математика
+      Numbers: Числа
+      Properties: Властивості
+      Sprites: Спрайти
+      Text: Текст
+      Variables: Змінні
+      'Variables ': 'Змінні '
+      World: Світ

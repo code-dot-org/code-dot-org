@@ -1,7 +1,5 @@
 ---
 title: Guia prático para funcionários públicos
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ Da esquerda para a direita: *governadores de Arkansas, Carolina do Norte e Arizo
 
 ### 1. Leia um resumo das informações
 
-Veja [porque a educação Científica de Computação é importante](/files/hoc-one-pager.pdf), e como você pode ajudar esse esforço, apoiando a hora do código.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Recrute bairros e escolas da região
 

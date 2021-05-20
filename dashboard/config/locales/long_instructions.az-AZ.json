@@ -1,0 +1,23 @@
+{
+  "az-AZ": {
+    "data": {
+      "long_instructions": {
+        "2-3 Artist 4": "Bu pişik üçün evi tamamlamağa mənə kömək edin.",
+        "2-3 Artist 9 NEW": "Bu çərpələngi bitirin",
+        "2-3 Artist Free Play": "Sərbəst oyun! Nə istəyirsinizə çəkin.",
+        "2-3 Artist Nested Loops Free Play": "Sərbəst oyun, içiçə dövrlərlə fısqırıq bir şey çək.",
+        "course4_artist_fwp_challenge1": "Bu proqramı icra etməyə çalışın və dəyişikliklər etdikdə nə baş verdiyini müşahidə edin. Proqramın necə işlədiyini tapa bilərsiniz? (Və ya onu silin və tamamilə fərqlisi ilə əvəzləyin)",
+        "courseE_bee_functions3": "Funksiyalar hər hansı bir tapşırığı yerinə yetirən kodlardan ibarət blokdur. 5 nektar əldə etmək üçün \"get 5\" funksiyasından istifadə edin. Əlverişli blok sayı əldə etmək üçün dövrlərdən də istifadə edin.",
+        "4-5 Artist 1": "Mənə qutumu çəkib bitirməyə kömək et. (Hər xətt 300 piksel uzunluğundadır)",
+        "4-5 Maze 7": "Zombini tez günəbaxana apar!\nTapmacanı 11-dən az blok ilə tapa bilərsən?",
+        "CourseD_EOC_bounce1": "Özünün Basketbol oyununu yarat!",
+        "CourseD_EOC_starwars": "Özünün Star Wars oyununu yarat!",
+        "CourseD_EOC_artist": "Öz rəsminizi yaradın!",
+        "CourseD_EOC_dance": "Öz rəqsini yarat!",
+        "courseA_harvester_seq6": "Özünüz edin!",
+        "courseB_starWars_prog2": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Bütün metalı əldə edin.\"_",
+        "courseB_starWars_prog2_2018": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Bütün metalı əldə edin.\"_"
+      }
+    }
+  }
+}

@@ -20,6 +20,8 @@ fa-IR:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش کامپیوتر
     را ببینید</a>'
+  csedweek_banner_teachers_text: آیا شما دبیر کامپیوتر هستید؟ دیگر منابع هفته‌ی آموزش
+    کامپیوتر را ببینید
   n_have_learned_an_hoc: "<h1>یک</h1><h2>ساعت کدنویسی</h2><h3>را امتحان کنید#ارائه
     شده</h3>"
   anybody_can_learn: هر کسی می تواند یاد بگیرند.
@@ -28,8 +30,8 @@ fa-IR:
     باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
     پیوندید.'
-  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
-    #دیگران بپیوندید.'
+  petition_sign_message_num: اگر موافق هستید ، نام خود را امضا کنید و به همراه %{num}
+    نفر دیگر به لیست نامه های پست الکترونیکی ما بپیوندید.
   petition_join_others: 'به #دیگران ملحق شوید'
   name: نام
   email: ایمیل
@@ -161,6 +163,12 @@ fa-IR:
     برنامه های کامپیوتری نوشته شده است، را متوجه می شوند.
   third_party_lightbot_btn_curriculum: دانلود برنامه درسی Lightbot
   third_party_lightbot_btn_site: بازدید از Lightbot
+  third_party_khan_desc: "بیاموزید که چگونه با استفاده از JavaScript و ProcessingJS
+    نقشه ها ، انیمیشن ها و بازی ها را برنامه ریزی کنید، یا نحوه ایجاد صفحات وب با
+    HTML & CSS را بیاموزید. \nشما می توانید هر آنچه را که ایجاد کرده اید به اشتراک
+    بگذارید ، آنچه را دیگران ایجاد کرده اند کاوش کنید و از یکدیگر بیاموزید!"
+  third_party_khan_btn_learn: CS را توسط آکادمی خان بیاموزید
+  third_party_khan_btn_forum: انجمن CS آکادمی خان
   third_party_curriculum: برنامه آموزشی
   enter_valid_age: لطفا یک سن معتبر انتخاب کنید
   enter_valid_email: لطفا یک آدرس ایمیل معتبر را وارد کنید
@@ -244,6 +252,7 @@ fa-IR:
   studiobar_title_nolink: استودیوی برنامه نویسی ما را کشف کنید
   studiobar_elementary_title: دوره‌های مقدماتی
   studiobar_elementary_body: سه درس جدید ما برای کلاس K&#8209;پنجمی ها
+  studiobar_dance_title: جشن و رقص
   studiobar_hoc_title: ساعتی با کدنویسی
   studiobar_hoc_body: یادگیری  کدنویسی با پرندگان عصبانی
   studiobar_flappy_title: کدنویسی Flappy
@@ -315,6 +324,7 @@ fa-IR:
   homepage_action_text_learn: یادگیری را شروع کنید
   homepage_action_text_signpetition: درخواست را امضا کنید
   homepage_signpetition_dropdown: درخواست ما را امضا کنید  &#x25BE;
+  homepage_signpetition_dropdown_text: موافقم
   homepage_diversity_pledge: پیمان احترام و برابری نژاد ها را بپذیرید
   homepage_banner_text_main: Code.org و هیئت مدیره ی دانشگاه با هم متحد شدند تا تنوع
     علوم کامپیوتر را بهبود ببخشند.
@@ -344,6 +354,9 @@ fa-IR:
   homepage_slot_text_link_stats: آمار ها را ببینید
   homepage_slot_text_link_buy: شرکت کنید
   homepage_slot_text_link_donate: پولی اهدا کنید
+  homepage_gallery_header: 'بیش از  %{project_count} میلیون پروژه ایجاد شده در Code.org
+
+'
   homepage_header_donors: Code.org از حامیانش سپاسگزاری می کند
   homepage_donors_seall: تمامش را ببینید
   homepage_donors_donate: کمک مالی بدهید
@@ -823,6 +836,8 @@ fa-IR:
   coursee-2018_gradelevel: سنین 8-12
   coursed-2019_gradelevel: رده ی سنی 8+
   coursee-2019_gradelevel: سنین 8-12
+  coursed-2020_gradelevel: رده ی سنی 8+
+  coursee-2020_gradelevel: سنین 8-12
   accelerated_gradelevel: سنین 10 به بالا (پس از دوره 3)
   codeorg_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
   codeintl_platformtext: مرورگرهای مدرن, تلفن های هوشمند, تبلت
@@ -1387,21 +1402,37 @@ fa-IR:
   header_courses: مراحل
   header_course_catalog: سرفصل دوره‌ها
   header_project_gallery: پروژه ها
+  header_sections: بخش‌ها
   header_educate_hoc: ساعت کد نویسی
+  header_educate_tools: ابزار‌ها و فیلم‌ها
   header_about_us: درباره ما
+  header_about_partners: شرکا
+  header_about_team: کل تیم
+  header_about_jobs: مشاغل
+  header_about_contact: تماس با ما
+  header_about_faqs: سوال‌های متداول
+  header_learn: یادگیری
+  header_teach: آموزش
+  header_help_us: به ما کمک کنید
   header_about: درباره
+  header_report_bug: گزارش مشکل
+  header_legal_privacy: قوانین حفظ حریم خصوصی
+  header_legal_tos: شرایط
   user_header_label: سلام %{username}
+  user_header_team: تیم
   user_header_settings: حساب کاربری من
   user_header_logout: خروج
   user_header_signin: ورود
   user_header_gamelab: کارگاه بازی سازی
   user_header_playlab: آزمایشگاه بازی
+  user_header_dance: جشن و رقص
   user_header_minecraft: ماینکرفت
   user_header_flappy: فلاپی
   user_header_view_my_projects: پروژه های من را ببینید
   view_all_sections: مشاهده‌ی همه‌ی بخش‌ها
   hero_name: 'ماینکرافت: سفر قهرمانان'
   applab_tile_start_tutorial: شروع
+  hoc_overview_dance_title: جشن و رقص
   hoc_overview_start_tutorial: شروع
   hoc2018_creativity_create: ایجاد
   hoc2018_mc_aquatic_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت
@@ -1414,7 +1445,16 @@ fa-IR:
   hoc2018_mc_back: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
   hoc2018_mc_back_journey: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ!
     با کد زدن به دنیای ماینکرافت سفر کنید.
+  hoc2018_dance_party_main_heading: جشن و رقص
+  hoc2018_dance_party_box_title: جشن و رقص
   hoc2018_dance_party_button: شروع
   hoc2018_dance_teacher_resources_tile1_button: طرح درس
   hoc2018_dance_teacher_resources_tile2_button: فعالیت کلاسی
   hoc2018_dance_amazon_about_future_engineer_button: بیشتر بیاموزید
+  footer_powered_by_aws: قدرت گرفته شده توسط وب سرویس های آمازون
+  footer_privacy_policy: قوانین حفظ حریم خصوصی
+  footer_about: درباره
+  footer_partners: شرکا
+  footer_donate: کمک مالی بدهید
+  footer_support: پشتیبانی
+  footer_terms: شرایط

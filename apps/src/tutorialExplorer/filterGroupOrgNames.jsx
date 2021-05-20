@@ -7,15 +7,6 @@ import FilterGroupContainer from './filterGroupContainer';
 import {TutorialsOrgName} from './util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-const styles = {
-  select: {
-    width: '100%',
-    marginTop: 10,
-    height: 26,
-    fontSize: 13
-  }
-};
-
 export default class FilterGroupOrgNames extends React.Component {
   static propTypes = {
     orgName: PropTypes.string.isRequired,
@@ -40,7 +31,11 @@ export default class FilterGroupOrgNames extends React.Component {
   render() {
     return (
       <FilterGroupContainer text={i18n.filterOrgNames()}>
+        <label htmlFor="filter-org-names-dropdown" className="hidden-label">
+          {i18n.filterOrgNames()}
+        </label>
         <select
+          id="filter-org-names-dropdown"
           value={this.props.orgName}
           onChange={this.handleChangeOrgName}
           style={styles.select}
@@ -59,3 +54,12 @@ export default class FilterGroupOrgNames extends React.Component {
     );
   }
 }
+
+const styles = {
+  select: {
+    width: '100%',
+    marginTop: 10,
+    height: 26,
+    fontSize: 13
+  }
+};

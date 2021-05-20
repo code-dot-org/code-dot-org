@@ -1,0 +1,528 @@
+{
+  "uk-UA": {
+    "data": {
+      "behavior_names": {
+        "CourseE_Project_SpriteLab": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseE_hoops": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseF_Project_SpriteLab": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння"
+        },
+        "Dance Party 2": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 2_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 2_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 3_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 3_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 4_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 4_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 5_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 5_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 6": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 6_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 6_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 7_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party 7_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Dance Party Freeplay": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 2-validated_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 2-validated_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 3-validated_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 3-validated_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 4-validated_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 4-validated_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 5-validated_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 5-validated_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 6-validated_2019": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Fish Tank 6-validated_2020": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "OPD-K5-spritelab-2": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "OPD-K5-spritelab-3": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "OPD-K5-spritelab-4": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "OPD-K5-spritelab-6": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "OPD-K5-spritelab-7": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Virtual Pet 1_2019": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 1_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 2": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Virtual Pet 2_2019": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 2_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 3_2019": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 3_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 4": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Virtual Pet 4_2019": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 4_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "Virtual Pet 5": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Virtual Pet 6": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "Virtual Pet Freeplay": {
+          "shrinking": "стиснення",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння",
+          "growing": "ріст"
+        },
+        "behaviors 1": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 1_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 2_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 3": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 3_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 3a": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 3a_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 4": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 4_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 6": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 6_2020": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 7": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "patrolling": "патрулювання"
+        },
+        "behaviors 7_2020": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "wandering": "бродіння",
+          "patrolling": "патрулювання"
+        },
+        "courseE_Dogger_2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_1": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_1_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_2_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_3": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_3_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_4": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_4_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_5": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseE_aboutme_5_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "courseF_project_1": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "outbreak1": {
+          "recovering": "видужання",
+          "wandering": "бродити"
+        },
+        "outbreak2": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "outbreak3": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "outbreak4": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "outbreak5": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "outbreak6": {
+          "recovering": "видужання",
+          "wandering": "бродіння"
+        },
+        "outbreak7": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "outbreak8": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "wandering": "бродіння"
+        },
+        "outbreak_freeplay": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "видужання",
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "moving left and right": "рух ліворуч та праворуч",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками"
+        }
+      }
+    }
+  }
+}

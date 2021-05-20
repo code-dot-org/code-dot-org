@@ -1,0 +1,3927 @@
+{
+  "script": {
+    "name": "pre-express-2018",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "project_widget_visible": true,
+      "project_widget_types": [
+        "playlab_k1",
+        "artist_k1"
+      ],
+      "has_lesson_plan": true,
+      "script_announcements": [
+        {
+          "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
+          "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
+          "link": "https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses",
+          "type": "bullhorn"
+        }
+      ],
+      "version_year": "2018",
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
+      "is_stable": true,
+      "supported_locales": [
+        "it-IT",
+        "sk-SK"
+      ],
+      "curriculum_umbrella": "CSF",
+      "family_name": "pre-express",
+      "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
+      "is_course": true,
+      "announcements": [
+        {
+          "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
+          "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
+          "link": "https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses",
+          "type": "bullhorn"
+        }
+      ]
+    },
+    "new_name": null,
+    "family_name": "pre-express",
+    "serialized_at": "2021-05-03 23:55:25 UTC",
+    "seeding_key": {
+      "script.name": "pre-express-2018"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Debugging: Unspotted Bugs",
+      "name": "Unspotted Bugs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Persistence & Frustration: Stevie and the Big Project",
+      "name": "Stevie and the Big Project",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Move It, Move It",
+      "name": "Move It, Move It",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Sequencing with Scrat",
+      "name": "Sequencing with Scrat",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Your Digital Footprint",
+      "name": "Your Digital Footprint",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Programming: My Robotic Friends",
+      "name": "My Robotic Friends Jr.",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Programming in Ice Age",
+      "name": "Programming with Scrat",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Copyright and Creativity",
+      "name": "It's Great to Create and Play Fair",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Copyright and Creativity",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Programming with Rey and BB-8",
+      "name": "Programming with Rey and BB-8",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Loops: My Loopy Robotic Friends",
+      "name": "My Loopy Robotic Friends Jr.",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Loops in Ice Age",
+      "name": "Loops with Scrat",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Loops in Collector",
+      "name": "Loops with Laurel",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Loops in Artist",
+      "name": "Drawing Gardens with Loops",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Events: The Big Event",
+      "name": "The Big Event Jr.",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Events in Play Lab",
+      "name": "A Royal Battle with Events",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "key": "Spelling Bee",
+      "name": "Spelling Bee",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_Unspotted_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_Unspotted_2018"
+        ],
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_video_Unspotted_2018"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_Stevie_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_Stevie_2018"
+        ],
+        "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseA_video_Stevie_2018"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MoveItMoveIt_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MoveItMoveIt_2018"
+        ],
+        "lesson.key": "Move It, Move It",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "MoveItMoveIt_2018"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_video_NewIntro_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_video_NewIntro_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseAB_video_NewIntro_2018"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp1_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp1_2018"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp2_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp2_2018"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3a_2018"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3b_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3b_2018"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp4a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp4a_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp4a_2018"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp5a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp5a_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp5a_2018"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DigitalFootprint_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DigitalFootprint_2018"
+        ],
+        "lesson.key": "Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "DigitalFootprint_2018"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_MRF_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_MRF_2018"
+        ],
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_unplugged_MRF_2018"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "elementary_video_pairProgramming_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "elementary_video_pairProgramming_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "elementary_video_pairProgramming_2018"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq1_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq1_2018"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq4_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq4_2018"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq5_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq5_2018"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq6_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq6_2018"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_video_debugging_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_video_debugging_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseAB_video_debugging_2018"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq7_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq7_2018"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq8_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq8_2018"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_maze_seq9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq9_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq9_2018"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq10_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq10_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq10_2018"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq11_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq11_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq11_2018"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq12_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq12_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq12_2018"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge1_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge2_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_maze_seq_challenge2_2018"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_CnC_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_CnC_2018"
+        ],
+        "lesson.key": "Copyright and Creativity",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_unplugged_CnC_2018"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "bb8_skinOverview_K-1_video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bb8_skinOverview_K-1_video"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "bb8_skinOverview_K-1_video"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog1_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog1_2018"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog2_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog2_2018"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog3_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog3_2018"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog4_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog4_2018"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog5_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog5_2018"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog6_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog6_2018"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog7_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog7_2018"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_starWars_prog8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog8_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog8_2018"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog9_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog9_2018"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog10_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog10_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog10_2018"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog11_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog11_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_starWars_prog11_2018"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_loopyMRF_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_loopyMRF_2018"
+        ],
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_unplugged_loopyMRF_2018"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops1"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops1"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops2"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops2"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops_video"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops_video"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops_video"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops3"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops3"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops4"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops4"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops6"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops6"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops7"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops7"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops8"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops8"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops9"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops9"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_iceage_loops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops10"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops10"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops11"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops11"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_iceage_loops12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_iceage_loops12"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_iceage_loops12"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_video_collector_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_video_collector_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseAB_video_collector_2018"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops1_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops1_2018"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops2_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops2_2018"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_Loops_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_Loops_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseA_video_Loops_2018"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops3_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops3_2018"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops4_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops4_2018"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops5_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops5_2018"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops6_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops6_2018"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops7_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops7_2018"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_collector_loops8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops8_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops8_2018"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops9_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops9_2018"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops10_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops10_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops10_2018"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops11_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops11_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops11_2018"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge1_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge2a_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge2a_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_collector_loops_challenge2a_2018"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_ArtistIntro_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_video_ArtistIntro_2018"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops1_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops1_2018"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_artistLoops_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_video_artistLoops_2018"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops2_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops2_2018"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops3_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops3_2018"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops4_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops4_2018"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops5_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops5_2018"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops6_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops6_2018"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_artist_loops7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops7_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops7_2018"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops8_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops8_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops8_2018"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops9_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops9_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops9_2018"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops10_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops10_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops10_2018"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge1_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge2_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_artist_loops_challenge2_2018"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent_2018"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "BigEvent_2018"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_events_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_events_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseA_video_events_2018"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playLab_events1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playLab_events1_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playLab_events1_2018"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events2_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events2_2018"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events3_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events3_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events3_2018"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events4_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events4_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events4_2018"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events5_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events5_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events5_2018"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events6_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events6_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events6_2018"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events7_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events7_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events7_2018"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_eventsFP_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_eventsFP_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_eventsFP_2018"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events_challenge1_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge1_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events_challenge1_2018"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events_challenge2_2018"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge2_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "courseB_playlab_events_challenge2_2018"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_1"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_1"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_2"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_2"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_3"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_3"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_4"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_4"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_6"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_6"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_9"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_9"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_13"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_13"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_15"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_15"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_15"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_16"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_16"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      },
+      "level_keys": [
+        "blockly:CustomMaze:wordsearch_k_16"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_Unspotted_2018",
+        "script_level.level_keys": [
+          "courseB_video_Unspotted_2018"
+        ],
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_Stevie_2018",
+        "script_level.level_keys": [
+          "courseA_video_Stevie_2018"
+        ],
+        "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MoveItMoveIt_2018",
+        "script_level.level_keys": [
+          "MoveItMoveIt_2018"
+        ],
+        "lesson.key": "Move It, Move It",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_video_NewIntro_2018",
+        "script_level.level_keys": [
+          "courseAB_video_NewIntro_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp1_2018",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp1_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp2_2018",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp2_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3a_2018",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3b_2018",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp4a_2018",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp4a_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp5a_2018",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp5a_2018"
+        ],
+        "lesson.key": "Sequencing with Scrat",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DigitalFootprint_2018",
+        "script_level.level_keys": [
+          "DigitalFootprint_2018"
+        ],
+        "lesson.key": "Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_MRF_2018",
+        "script_level.level_keys": [
+          "courseB_unplugged_MRF_2018"
+        ],
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "elementary_video_pairProgramming_2018",
+        "script_level.level_keys": [
+          "elementary_video_pairProgramming_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq1_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq1_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq4_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq4_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq5_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq5_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq6_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq6_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_video_debugging_2018",
+        "script_level.level_keys": [
+          "courseAB_video_debugging_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq7_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq7_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq8_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq8_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq9_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq9_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq10_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq10_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq11_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq11_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq12_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq12_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq_challenge1_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge1_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq_challenge2_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge2_2018"
+        ],
+        "lesson.key": "Programming in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_CnC_2018",
+        "script_level.level_keys": [
+          "courseB_unplugged_CnC_2018"
+        ],
+        "lesson.key": "Copyright and Creativity",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "bb8_skinOverview_K-1_video",
+        "script_level.level_keys": [
+          "bb8_skinOverview_K-1_video"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog1_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog1_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog2_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog2_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog3_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog3_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog4_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog4_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog5_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog5_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog6_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog6_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog7_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog7_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog8_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog8_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog9_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog9_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog10_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog10_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog11_2018",
+        "script_level.level_keys": [
+          "courseB_starWars_prog11_2018"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_loopyMRF_2018",
+        "script_level.level_keys": [
+          "courseB_unplugged_loopyMRF_2018"
+        ],
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops1",
+        "script_level.level_keys": [
+          "courseB_iceage_loops1"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops2",
+        "script_level.level_keys": [
+          "courseB_iceage_loops2"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops_video",
+        "script_level.level_keys": [
+          "courseB_iceage_loops_video"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops3",
+        "script_level.level_keys": [
+          "courseB_iceage_loops3"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops4",
+        "script_level.level_keys": [
+          "courseB_iceage_loops4"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops6",
+        "script_level.level_keys": [
+          "courseB_iceage_loops6"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops7",
+        "script_level.level_keys": [
+          "courseB_iceage_loops7"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops8",
+        "script_level.level_keys": [
+          "courseB_iceage_loops8"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops9",
+        "script_level.level_keys": [
+          "courseB_iceage_loops9"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops10",
+        "script_level.level_keys": [
+          "courseB_iceage_loops10"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops11",
+        "script_level.level_keys": [
+          "courseB_iceage_loops11"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops12",
+        "script_level.level_keys": [
+          "courseB_iceage_loops12"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_video_collector_2018",
+        "script_level.level_keys": [
+          "courseAB_video_collector_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops1_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops1_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops2_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops2_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_Loops_2018",
+        "script_level.level_keys": [
+          "courseA_video_Loops_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops3_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops3_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops4_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops4_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops5_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops5_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops6_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops6_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops7_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops7_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops8_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops8_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops9_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops9_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops10_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops10_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops11_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops11_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops_challenge1_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge1_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops_challenge2a_2018",
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge2a_2018"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_ArtistIntro_2018",
+        "script_level.level_keys": [
+          "courseB_video_ArtistIntro_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops1_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops1_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_artistLoops_2018",
+        "script_level.level_keys": [
+          "courseB_video_artistLoops_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops2_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops2_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops3_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops3_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops4_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops4_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops5_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops5_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops6_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops6_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops7_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops7_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops8_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops8_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops9_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops9_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops10_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops10_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops_challenge1_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge1_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops_challenge2_2018",
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge2_2018"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BigEvent_2018",
+        "script_level.level_keys": [
+          "BigEvent_2018"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_events_2018",
+        "script_level.level_keys": [
+          "courseA_video_events_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playLab_events1_2018",
+        "script_level.level_keys": [
+          "courseB_playLab_events1_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events2_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events2_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events3_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events3_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events4_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events4_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events5_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events5_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events6_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events6_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events7_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events7_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_eventsFP_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_eventsFP_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events_challenge1_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge1_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events_challenge2_2018",
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge2_2018"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_1",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_1"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_2",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_2"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_3",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_3"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_4",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_4"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_6",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_6"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_9",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_9"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_13",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_13"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_15",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_15"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:CustomMaze:wordsearch_k_16",
+        "script_level.level_keys": [
+          "blockly:CustomMaze:wordsearch_k_16"
+        ],
+        "lesson.key": "Spelling Bee",
+        "lesson_group.key": "",
+        "script.name": "pre-express-2018"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

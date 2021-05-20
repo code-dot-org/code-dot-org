@@ -1,9 +1,12 @@
 require 'base64'
 require 'cdo/db'
+require 'cdo/form'
+require 'cdo/parse_email_address_string'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
+require 'cdo/honeybadger'
 
 module Poste
   def self.logger
@@ -103,6 +106,263 @@ module Poste
         updated_at: now,
         updated_ip: params[:ip_address],
       )
+    end
+  end
+
+  class Template
+    def initialize(path)
+      @path = path
+      @template_type = File.extname(path)[1..-1]
+      @header, @html, @text = parse_template(IO.read(path))
+    end
+
+    def render(params={})
+      if params.key?('form_id')
+        form = Form2.from_row(POSTE_DB[:forms].where(id: params['form_id']).first)
+        params.merge! form.data
+        params.merge! form.processed_data
+        params['form'] = form
+      end
+      bound = OpenStruct.new(params).instance_eval {binding}
+      locals = params.symbolize_keys
+
+      header = render_header(bound, locals)
+      html = render_html(bound, locals)
+      text = render_text(bound, locals)
+
+      [header, html, text]
+    end
+
+    private
+
+    def parse_template(content)
+      header = nil
+      html = nil
+      text = nil
+
+      if match = content.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
+        header = match[:header].strip
+        html = match[:html].strip
+        text = match[:text].strip
+      elsif match = content.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?\z)/m)
+        header = match[:header].strip
+        html = match[:html].strip
+      else
+        html = content.strip
+      end
+
+      [header, html, text]
+    end
+
+    def render_header(bound, locals={})
+      return {} unless @header.present?
+      YAML.safe_load(renderer.render(inline: @header, type: :erb, locals: locals))
+    end
+
+    def render_html(bound, locals={})
+      return nil unless @html.present?
+      # All our emails regardless of the extension they use are parsed as ERB
+      # in addition to their regular template type.
+      html = renderer.render(inline: @html, type: :erb, locals: locals)
+      html = renderer.render(inline: html, type: @template_type)
+
+      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
+      # logic in the click tracking method to clean up or canonicalize the HTML.
+      html = Nokogiri::HTML(html).to_html
+
+      html
+    end
+
+    def render_text(bound, locals={})
+      return nil unless @text.present?
+      renderer.render(inline: @text, type: :erb, locals: locals)
+    end
+
+    def renderer
+      @@renderer ||= begin
+        require 'cdo/markdown/handler'
+        Cdo::Markdown::Handler.register
+        ActionView::Base.new
+      end
+    end
+  end
+end
+
+class Deliverer
+  def initialize(params)
+    @params = params.dup
+    @smtp = reset_connection
+    @templates = {}
+  end
+
+  def reset_connection
+    @smtp.finish if @smtp
+    @smtp = smtp_connect unless rack_env?(:development)
+  end
+
+  POSTE_BASE_URL = (rack_env?(:production) ? 'https://' : 'http://') + CDO.poste_host
+  def poste_url(*parts)
+    File.join(POSTE_BASE_URL, *parts)
+  end
+
+  # lazily-populate this constant so we aren't trying to make database queries
+  # whenever this file gets required, just once it starts to get used.
+  MESSAGE_TEMPLATES = Hash.new do |h, key|
+    h[key] = POSTE_DB[:poste_messages].where(id: key).first
+  end
+
+  def send(delivery)
+    recipient = POSTE_DB[:contacts].where(id: delivery[:contact_id]).first
+    message = MESSAGE_TEMPLATES[delivery[:message_id]]
+    encrypted_id = Poste.encrypt_id(delivery[:id])
+    params = JSON.parse(delivery[:params])
+    unsubscribe_url = poste_url("/u/#{CGI.escape(encrypted_id)}")
+
+    header, html, _ = load_template(message[:name]).render(
+      params.merge(
+        {
+          recipient: OpenStruct.new(recipient),
+          unsubscribe_link: unsubscribe_url,
+          tracking_pixel: poste_url("/o/#{encrypted_id}"),
+        }
+      )
+    )
+
+    message = StringIO.new
+
+    # Merge contact_email from the delivery for code studio students whose emails we don't store in contacts.
+    to_address = parse_address(header['to'], recipient.merge({temporary_email: delivery[:contact_email]}))
+    message.puts 'To: ' + format_address(to_address)
+
+    from_address = parse_address(header['from'], {email: 'help@code.org', name: 'Code.org'})
+    message.puts 'From: ' + format_address(from_address)
+
+    # List of the email part of all destination addresses, including To, Cc, and Bcc
+    # Note if any of these are omitted it won't be delivered to them even though they still appear in the headers.
+    # See https://ruby-doc.org/stdlib-2.0.0/libdoc/net/smtp/rdoc/Net/SMTP.html#method-i-send_message
+    # and https://stackoverflow.com/questions/2530142/ruby-netsmtp-send-email-with-bcc-recipients
+    to_addresses = [to_address[:email]]
+    ['Cc', 'Bcc'].each do |field|
+      next unless address = parse_address(header[field.downcase])
+      message.puts "#{field}: #{format_address(address)}"
+      to_addresses << address[:email]
+    end
+
+    ['Reply-To', 'Sender'].each do |field|
+      next unless address = parse_address(header[field.downcase])
+      message.puts "#{field}: #{format_address(address)}"
+    end
+
+    subject = header['subject'].to_s.strip
+    message.puts 'Subject: ' + subject unless subject.empty?
+
+    message.puts "X-Unsubscribe-Web: #{unsubscribe_url}"
+    message.puts "List-Unsubscribe: <#{unsubscribe_url}>"
+
+    message.puts 'MIME-Version: 1.0'
+
+    attachments = header['attachments'] || {}
+    if params['attachments']
+      attached_files = Poste2.load_attachments(params['attachments'])
+      attachments.merge! attached_files
+    end
+
+    marker = "==_mimepart_#{SecureRandom.hex(17)}"
+    message.puts "Content-Type: multipart/mixed; boundary=\"#{marker}\""
+
+    message.puts ''
+    message.puts "--#{marker}"
+
+    message.puts 'Content-Type: text/html; charset=UTF-8'
+    message.puts 'Content-Transfer-Encoding: 8bit'
+    message.puts ''
+    message.write html
+
+    unless attachments.empty?
+      attachments.each_pair do |filename, content|
+        message.puts ''
+        message.puts "--#{marker}"
+        message.puts "Content-Type: image/jpeg; charset=UTF-8; filename=\"#{filename}\""
+        message.puts 'Content-Transfer-Encoding: base64'
+        message.puts "Content-Disposition: attachment; filename=\"#{filename}\""
+        message.puts ''
+
+        message.write content.scan(/.{1,61}/).join("\n")
+      end
+    end
+
+    message.puts ''
+    message.puts "--#{marker}--"
+
+    if !rack_env?(:development)
+      @smtp.send_message message.string, from_address[:email], *to_addresses
+    else
+      puts(message.string)
+    end
+  end
+
+  def load_template(name)
+    template = @templates[name]
+    return template if template
+
+    path = Poste.resolve_template(name)
+    raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
+
+    @templates[name] = Poste::Template.new path
+  end
+
+  private
+
+  def format_address(address)
+    email = address[:email].to_s.strip
+    raise ArgumentError, 'No :email' if email.empty?
+
+    name = address[:name].to_s.strip
+    return email if name.empty?
+
+    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if name =~ /[;,\"\'\(\)]/
+    "#{name} <#{email}>".strip
+  end
+
+  def parse_address(address, defaults={})
+    address = address.to_s.strip
+    return parse_email_address_string(address) unless address.empty?
+
+    # Student accounts don't have a stored email in contacts,
+    # so we use the temporary email here when email doesn't exist.
+    email = defaults[:email].to_s.strip
+    email = defaults[:temporary_email] if email.blank?
+    return nil if email.blank?
+
+    {email: email}.tap do |name_and_email|
+      name = defaults[:name].to_s.strip
+      name_and_email[:name] = name unless name.empty?
+    end
+  end
+
+  # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
+  CONNECTION_ATTEMPTS = 5
+  RETRYABLE_ERROR_TYPES = [
+    Net::SMTPServerBusy,
+    Net::SMTPAuthenticationError,
+    EOFError
+  ].freeze
+  RETRYABLE_ERROR_MESSAGES = [
+    'Too many connections, try again later',
+    'Temporary authentication failure',
+    'end of file reached'
+  ].map(&:freeze).freeze
+  RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
+  def smtp_connect
+    Retryable.retryable(
+      tries: CONNECTION_ATTEMPTS,
+      on: RETRYABLE_ERROR_TYPES,
+      matching: RETRYABLE_ERROR_MESSAGE_MATCH
+    ) do
+      Net::SMTP.new(@params[:address], @params[:port]).tap do |smtp|
+        smtp.enable_starttls if @params[:enable_starttls_auto]
+        smtp.start(@params[:domain], @params[:user_name], @params[:password], @params[:authentication])
+      end
     end
   end
 end

@@ -1,0 +1,10 @@
+- data = {}
+- data[:unit_summary] = @unit_summary
+
+- content_for(:head) do
+  %link{href: asset_path('css/rollups.css'), rel: 'stylesheet', type: 'text/css'}
+  %script{ src: webpack_asset_path('js/scripts/code.js'), data: {unit_rollup: data.to_json}}
+
+  = render partial: 'shared/emulate_print_media'
+
+#roll_up

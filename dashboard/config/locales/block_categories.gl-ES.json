@@ -1,0 +1,71 @@
+{
+  "gl-ES": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Accións",
+          "Brushes": "Pinceis",
+          "Loops": "Bucles",
+          "Math": "Matemáticas",
+          "Logic": "Lóxica",
+          "Functions": "Funcións",
+          "Variables": "Variables"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Mundo",
+          "Dancers": "Bailaríns",
+          "Events": "Eventos",
+          "Numbers": "Números",
+          "Logic": "Lóxica"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Accións",
+          "Events": "Eventos",
+          "Loops": "Bucles",
+          "Math": "Matemáticas",
+          "Logic": "Lóxica",
+          "Games/Score": "Xogos/Puntuación"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Actions": "Accións",
+          "Events": "Eventos",
+          "Behaviors": "Comportamentos"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Locations": "Localizacións",
+          "Actions": "Accións",
+          "Events": "Eventos",
+          "Behaviors": "Comportamentos",
+          "Variables": "Variables",
+          "Math": "Matemáticas",
+          "Logic": "Lóxica",
+          "Functions": "Funcións",
+          "Text": "Texto",
+          "Comments": "Comentarios"
+        },
+        "outbreak_freeplay": {
+          "World": "Mundo",
+          "Actions": "Accións",
+          "Behaviors": "Comportamentos",
+          "Events": "Eventos",
+          "Locations": "Localizacións",
+          "Logic": "Lóxica",
+          "Loops": "Bucles",
+          "Math": "Matemáticas",
+          "Variables": "Variables",
+          "Functions": "Funcións",
+          "Comments": "Comentarios"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Mundo",
+          "Actions": "Accións",
+          "Events": "Eventos",
+          "Logic": "Lóxica",
+          "Math": "Matemáticas"
+        }
+      }
+    }
+  }
+}

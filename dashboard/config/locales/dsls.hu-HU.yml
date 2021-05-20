@@ -3,235 +3,284 @@ hu-HU:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Feleletválasztós
-        questions:
-        - text: Válaszd ki az adott képnek megfelelő algoritmust.
         answers:
-        - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzetre<br/>Rakj
-            egy háromszöget a négyzet alá
-        - {}
+        - text: |-
+            Kezdj egy négyzettel
+            Rakj egy háromszöget a négyzetre
+            Rakj egy háromszöget a négyzet alá
+        - text: |-
+            Kezdj egy négyzettel
+            Rakj egy háromszöget a négyzet jobb oldalára
+            Rakj egy paralelogrammát a négyzet alá
+            Rakj egy háromszöget a paralelogramma jobb oldalára
+          correct: true
         - text: Kezdj egy négyzettel<br/>Rakj egy paralelogrammát a négyzet fölé<br/>Rakj
             egy háromszöget a paralelogramma jobb oldalára
-        - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzet alá<br/>Rakj
-            egy paralelogrammát a háromszög jobb oldalára
-      2-3 Algorithms Multi 2:
-        title: Feleletválasztós
-        content1: Kezdj egy háromszöggel<br/>Rakj egy négyzetet a háromszög alá<br/>Rakj
-          egy másik háromszöget a négyzet alá
+        - text: "Kezdj egy négyzettel \nRakj egy háromszöget a négyzet alá \nRakj
+            egy paralelogrammát a háromszög jobb oldalára"
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
-        - text: Melyik kép <em>nem</em> követi ezt az algoritmust?
+        - text: Válaszd ki az adott képnek megfelelő algoritmust.
+        title: Feleletválasztós
+      2-3 Algorithms Multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        content1: "Kezdj egy háromszöggel \nRakj egy négyzetet a háromszög alá \nRakj
+          egy másik háromszöget a négyzet alá"
+        questions:
+        - text: Melyik kép _nem_ követi ezt az algoritmust?
+        title: Feleletválasztós
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Big Event Match 1:
-        title: Megfelelő
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: A billentyűkombinációkat párosítása a táncmozdulatokhoz.
         questions:
         - {}
         - {}
         - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Binary Match 1:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Megfelelő
-        content2: Használja a kulcsot a kódok és a hozzá tartozó betűk párosításához
-        questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+      2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        content2: Használd a betűket és a kódokat a párosításhoz!
+        questions:
+        - text: "***N***"
+        - text: "***O***"
+        - text: "***P***"
+        - text: "***Q***"
+        title: Megfelelő
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
       2-3 Conditionals Multi 1:
-        title: Feleletválasztós
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         questions:
         - text: A játék szabályai szerint, melyik sor kártya van helyesen pontozva?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: Feleletválasztós
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        teacher_markdown: "## Tanárok:\n\nA diákok azt hihetik, hogy *nincs* helyes
+          válasz a kérdésre, és ez abból fakadhat, hogy félreértik a szabályokat.
+          \n\nItt egy videó, ami elmagyarázza, hogy mi is a lényeg ebben a feladatban:\n\nhttps://youtu.be/TbUaEnAYPjI\n"
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Hogyan egyszerűsítenéd ezeket a sorozatokat ciklusokkal?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Feleletválasztós
       2-3 Graph Paper Match 1:
-        title: Megfelelő
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Párosítsd a rácsozatot a programmal.
         questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        title: Megfelelő
       2-3 Graph Paper Multi 1:
-        title: Feleletválasztós
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Melyik program készíti ezt a képet?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Feleletválasztós
       2-3 Maze Match 2:
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
+        content1: Illeszd a blokkokhoz a feladványokat
+        questions:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: Labirintus párosítás
-        content1: Illeszd a darabokat a blokkokhoz
-        pre_title: Utasítások
-        questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
       2-3 Maze Multi 2:
-        title: Labirintus, többszörös választás
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
+        questions:
+        - text: Melyik az a kódsor, ami elvezet a malacig?
+        title: Labirintus - válaszd ki
       2-3 Relay Programming Multi 1:
-        title: Feleletválasztós
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
+        questions:
+        - text: Melyik program az, amelyik **nem ezt a mintát készíti el**?
+        title: Feleletválasztós
       2-3 Relay Programming Multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
+        questions:
+        - text: Melyik párosítás a helyes?
         title: Feleletválasztós
-        questions:
-        - text: Melyik kép-program páros nem tartalmaz hibákat?
-        answers:
-        - {}
-        - {}
-        - {}
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        questions:
+        - text: Mi az, amin változtatni kell, hogy egy teljes kör legyen a végeredmény?
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
+        title: Művész hibakeresés Többszörös választás 1
       2-3 artist functions multi 1:
-        title: Művészek Függvények Több választási lehetőség
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Válassza ki, hogy az adott függvények használata esetén mely blokkokra
             van szükség a kép megrajzolásához
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Művészek Függvények Több választási lehetőség
       2-3 artist loops match 1:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Párosítsd a ciklust az alakzattal!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: Művész ciklusok - 1. feleletválasztás
       2-3 artist loops multi 1:
-        title: Művész. Ciklusok. Feleltválasztás
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Milyen alakzatot készít ez a ciklus?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Művész - ciklusok. Feleltválasztás
       2-3 artist loops multi 2:
-        title: Művész. Ciklusok. Feleltválasztás
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Milyen alakzatot készít ez a program?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Művész - ciklusok. Feleltválasztás
       2-3 artist match 1:
-        title: 'Művész: párosítás'
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Párosítsd az alakzatokat az azokat befejező blokkokkal!
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        title: Művész - feleletválasztás
       2-3 bee conditionals multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Melyik összehasonlítás helyes az alábbiak közül?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Méh feltételek Többszörös választás 1
       2-3 bee conditionals multi 3:
-        questions:
-        - text: Válaszd ki a legmegfelelőbb blokkokat!
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        questions:
+        - text: Válaszd ki a legmegfelelőbb blokkokat! A lila virágokban 0 vagy 1
+            nektár van.
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
+        title: Méh feltételek Többszörös választás 2
       2-3 bee loops multi 1:
-        title: Méh. Ciklusok. Feleltválasztás Egy
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Melyik blokkok gyűjtik össze az összes nektárt?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: 'Méh - ciklusok: válaszd ki a helyes megoldást'
       2-3 maze match 1:
-        title: Labirintus, párosítás
-        content1: Illeszd a darabokat a blokkokhoz
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        content1: Illeszd a blokkokhoz a feladványokat
+        questions:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
+        title: Labirintus, párosítás
       2-3 maze multi 1:
-        title: Labirintus, többszörös választás
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Melyik sorozat a helyes megoldás?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirintus, többszörös választás
       4-5 Algorithms Match 1:
-        title: Megfelelő
+        answers:
+        - text: "<h4>Az 1. Játékos pontszámának beállítása 0 pontra</h4>"
+        - text: "<h4>Az 1. Játékos dobja a dobókockát</h4>"
+        - text: "<h4>Add hozzá az 1. Játékos pontszámait az összpontszámhoz</h4>"
+        - text: "<h4>Hasonlítsd össze a játékosok pontszámait, hogy megtaláld a nyertest</h4>"
         content1: Rendezd a kockázós vetélkedőjátékban szerepélő lépéseket úgy, ahogy
           annak lennie kell az algoritmusban!
         questions:
@@ -239,22 +288,23 @@ hu-HU:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Az 1. Játékos pontszámának beállítása 0 pontra</h4>"
-        - text: "<h4>Az 1. Játékos dobja a dobókockát</h4>"
-        - text: "<h4>Add hozzá az 1. Játékos pontszámait az összpontszámhoz</h4>"
-        - text: "<h4>Hasonlítsd össze a játékosok pontszámait, hogy megtaláld a nyertest</h4>"
+        title: Megfelelő
       4-5 Algorithms Multi 1:
-        title: Feleletválasztós
-        questions:
-        - text: Ezen elemek közül melyik írható le legnehezebben  egy algoritmussal?
         answers:
         - text: Fogmosás
         - text: Sütemény sütés
         - text: Vásárlás bevásárlólistával
         - text: Banán
+          correct: true
+        questions:
+        - text: Ezen elemek közül melyik írható le legnehezebben  egy algoritmussal?
+        title: Feleletválasztós
       4-5 Computational Thinking Match 1:
-        title: Megfelelő
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: E járművek mindegyike darabjaira van szétszerelve. Párosítsd mindegyik
           járműhöz a saját alkatrészeinek a listáját!
         questions:
@@ -262,79 +312,85 @@ hu-HU:
         - text: "<h3>Kerekek/oldal: 2 <br/>Ablakok/oldal: 1</h3>"
         - text: "<h3>Kerekek/oldal: 2 <br/>Ablakok/oldal: 6</h3>"
         - text: "<h3>Kerekek/oldal: 3 <br/>Ablakok/oldal: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Megfelelő
       4-5 Computational Thinking Multi 1:
-        title: Feleletválasztós
-        questions:
-        - text: Seattle egy nagy város.<br/>Eugene egy közepes város<br/>Hillview
-            egy kis város.
         answers:
         - text: Seattle _____ egy _____ _____.
         - text: _____ egy _____ város.
+          correct: true
         - text: _____ _____ egy _____.
         - text: Eugene egy _____ város.
-      4-5 Crowdsourcing Multi 1:
+        content1: Itt látsz három mondatot. Az alábbi sablonok közül melyik segítségével
+          lehetne előállítani a három példamondatot?
+        questions:
+        - text: Seattle egy nagy város. <br/>Eugene egy közepes város. <br/>Hillview
+            egy kis város.
         title: Feleletválasztós
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - {}
+        - correct: true
         questions:
         - text: Ezen képek közül melyik ábrázolja leginkább a crowdsourcing-ot?
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: Feleletválasztós
-        questions:
-        - text: Ezen tevékenységek közül melyik lenne a legjobb a crowdsourcing gyakorlására?
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: A szobád kitakarítása
+          correct: true
         - text: A desszerted megevése
         - text: Fésülködés
         - text: Az arcod megmosása
-      4-5 Digital Footprint Multi 1:
-        title: Feleletválasztós
         questions:
-        - text: Az alább felsorolt információból melyik részt szabad megosztani az
-            interneten?
+        - text: Ezen tevékenységek közül melyik lenne a legjobb a crowdsourcing gyakorlására?
+        title: Feleletválasztós
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Születésnapod
         - text: Kedvenc ételed
+          correct: true
         - text: Lakcímed
         - text: Szüleid bankkártyaszáma
-      4-5 Internet Multi 1:
+        questions:
+        - text: Az alább felsorolt információból melyik részt szabad megosztani az
+            interneten?
         title: Feleletválasztós
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Amikor megpróbál bejelentkezni a code.org-ra, a DNS szerver melyik
             IP-címre fogja legvalószínűbben elirányítani?
+        title: Feleletválasztós
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: Feleletválasztós
         questions:
         - text: Ha a DNS a 100.42.50.110 IP-címen található oldalra küldött, melyik
             weboldalon vagy?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Feleletválasztós
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, ugorj az én Lou-mhoz,
         - text: Lou, Lou, ugorj az én Lou-mhoz, <br/> Lou, Lou, ugorj az én Lou-mhoz,
             <br/>Lou, Lou, ugorj az én Lou-mhoz, <br/> Ugorj az én Lou-mhoz, drágám.
+          correct: true
         - {}
         - {}
+        questions:
+        - {}
+        title: Feleletválasztós
       4-5 Suncatchers Match 1:
-        title: Megfelelő
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Párosíts minden egyes programot az általa létrehozott szóval, felhasználva
           a megadott készségeket!
         questions:
@@ -342,112 +398,113 @@ hu-HU:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Megfelelő
       4-5 Suncatchers Multi 1:
-        title: Feleletválasztós
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: Az alábbi programok közül melyik<em>nem</em> végzi pontosan ugyanazt
             a sorrendet, amit az 1. Program?
+        title: Feleletválasztós
+      4-5 artist loops multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: Művész. Ciklusok. Feleltválasztás
         questions:
         - text: Melyik blokkok fogják elkészíteni a mintát?
+        title: Művész - ciklusok. Feleltválasztás
+      4-5 artist multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 artist multi 1:
-        title: Művész. Feleletválasztás
         questions:
         - text: Melyik blokkok rajzolnak egy 100-as kerületű téglalapot?
+        title: Művész. Feleletválasztás
+      4-5 artist multi 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Művész. Feleletválasztás
         questions:
         - text: Melyik rajz szimmetrikus?
+        title: Művész. Feleletválasztás
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      4-5 bee conditionals multi 1:
-        title: Méh Feltételes Többszörös választás
         questions:
         - text: Válaszd ki a legmegfelelőbb blokkokat!
+        title: Méh Feltételes Többszörös választás
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: Méh Hibakeresés Többszörös választás
         questions:
         - text: A függvény melyik verziója fog működni?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Méh Hibakeresés Többszörös választás
       4-5 bee loops multi 1:
-        title: Méh Ciklusok Többszörös választás
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Melyik blokkok fogják megoldani a rejtvényt?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Méh Ciklusok Többszörös választás
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Melyik blokkok oldják meg ezt a rejtvényt?
         title: Labirintus Feltételes Többszörös választás
-        questions:
-        - text: Melyik blokkok oldják meg ezt a rejtvényt?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Labirintus párosítás
-        content1: Illeszd a darabokat a blokkokhoz
-        pre_title: Utasítások
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: Illeszd a blokkokhoz a feladványokat
+        questions:
+        - {}
+        - {}
+        - {}
+        title: Labirintus párosítás
       4-5 maze multi 1:
-        title: Labirintus, többszörös választás
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Labirintus - válaszd ki
       Begin planning your project:
-        title: cím
         content1: a leírás itt található
       Begin planning your project_2018:
         content1: a leírás itt található
       Begin planning your project_2018_2019:
         content1: a leírás itt található
+      Begin planning your project_2018_2019_2020:
+        content1: a leírás itt található
       BigEvent-Unplugged:
+        markdown: |
+          # A nagy esemény
+
+          A számítástechnikában az események olyan akciók, amiket a számítógép kijelez. Ebben a leckében a gép mindenre másképp reagál, attól függően, hogy melyik gombot nyomod meg.
+      BigEvent-Unplugged_2020:
         markdown: |
           # A nagy esemény
 
@@ -455,103 +512,94 @@ hu-HU:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
-        title: cím
         content1: a leírás itt található
       CSD U2 Design Project_2018:
-        title: cím
         content1: a leírás itt található
       CSD U2 Design Project_2018_2019:
-        title: cím
+        content1: a leírás itt található
+      CSD U2 L1 Overview:
         content1: a leírás itt található
       CSD U2 L2 Overview:
-        title: cím
         content1: a leírás itt található
       CSD U2 L3 Overview:
-        title: cím
         content1: a leírás itt található
       CSD U2 L4 Overview:
-        title: cím
         content1: a leírás itt található
       CSD U2 L5 Overview:
-        title: cím
         content1: a leírás itt található
       CSD U2 L6 Overview:
-        title: cím
         content1: a leírás itt található
       CSD U2 Lesson 6 Overview:
         content1: a leírás itt található
       CSD U2 expand project:
-        title: cím
         content1: a leírás itt található
       CSD U2 expand project_2018:
-        title: cím
         content1: a leírás itt található
       CSD U2 expand project_2018_2019:
-        title: cím
         content1: a leírás itt található
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -564,71 +612,71 @@ hu-HU:
       CSD U2 project guide_2018_2019:
         content1: a leírás itt található
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: cím
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: cím
       CSD U3 Boolean MC_2018:
-        title: cím
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: cím
       CSD U3 Boolean MC_2018_2019:
-        title: cím
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: cím
       CSD U3 Card Examples_2018:
         content1: a leírás itt található
       CSD U3 Card Examples_2018_2019:
@@ -637,122 +685,119 @@ hu-HU:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: cím
         content1: a leírás itt található
       CSD U3 combining rep_2018:
-        title: cím
         content1: a leírás itt található
       CSD U3 combining rep_2018_2019:
-        title: cím
         content1: a leírás itt található
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -770,13 +815,10 @@ hu-HU:
       CSD U3 platform intro_2018_2019:
         content1: a leírás itt található
       CSD U5 Encryption 1:
-        title: cím
         content1: a leírás itt található
       CSD U5 Encryption 1_2018:
-        title: cím
         content1: a leírás itt található
       CSD U5 Encryption 1_2018_2019:
-        title: cím
         content1: a leírás itt található
       CSD U5 Encryption 2:
         content1: a leírás itt található
@@ -785,7 +827,6 @@ hu-HU:
       CSD U5 Encryption 2_2018_2019:
         content1: a leírás itt található
       CSD U5 L13 SFLP Interpreting Data:
-        title: cím
         content1: a leírás itt található
       CSD U5 crosstab warmup:
         content1: a leírás itt található
@@ -794,22 +835,16 @@ hu-HU:
       CSD U5 crosstab warmup_2018_2019:
         content1: a leírás itt található
       CSD U5 data visualization:
-        title: cím
         content1: a leírás itt található
       CSD U5 data visualization_2018:
-        title: cím
         content1: a leírás itt található
       CSD U5 data visualization_2018_2019:
-        title: cím
         content1: a leírás itt található
       CSD U5 student record:
-        title: cím
         content1: a leírás itt található
       CSD U5 student record_2018:
-        title: cím
         content1: a leírás itt található
       CSD U5 student record_2018_2019:
-        title: cím
         content1: a leírás itt található
       CSD U6 LED create intro:
         content1: a leírás itt található
@@ -818,28 +853,28 @@ hu-HU:
       CSD U6 LED create intro_2018_2019:
         content1: a leírás itt található
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: a leírás itt található
@@ -848,26 +883,161 @@ hu-HU:
       CSD U6 final intro_2018_2019:
         content1: a leírás itt található
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Táncolj tovább!\n\nA 2. részben saját projektet fogsz létrehozni.Itt
+          nincsenek feladványok, helyettük viszont van egy csomó projekt, amelyek
+          összetettebb táncos bulik létrehozásának a különböző módjait mutatják be.\n\nEzeket
+          a szinteket _bármilyen sorrendben_ teljesítheted.Ugrálj a szintek között,
+          és figyeld meg, hogyan lehetett elérni valamit az előző szinten, vagy kombináld
+          össze az elképzeléseket a projektek között.Próbáld ki mindet, válaszd ki
+          a kedvencedet, és folyamatosan bővítsd a projektedet, hogy igazán a magadénak
+          érezd.\n\n<a class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Folytatás</a>
+          \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:10px\">\n
+          <a href=\"2\"> \n<h2>\n Előre és hátra \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"3\">\n <h2>
+          \nTöbb gomb \n</h2> \n\n<img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\"> \n<a href=\"4\">\n
+          <h2> \nÁlljunk alakzatba\n </h2>\n\n <img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"5\"> \n<h2>
+          \nHová tűntek?\n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\"> \n\n<a href=\"6\">\n
+          <h2> \nTánccsapatok \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div>\n <div style=\"float: left; margin:10px\">\n <a href=\"7\"> \n<h2>
+          \nNegyedek\n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n
+          </div> \n<div style=\"float: left; margin:10px\"> \n\n<a href=\"8\">\n <h2>
+          \nBasszus, közép- és magas hangok \n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
+          \n\n</div>\n <div style=\"float: left; margin:10px\"> \n<a href=\"9\"> \n<h2>\n
+          Gyorsítsd fel, lassítsd le \n</h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
+          \n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          "# Táncolj tovább!
+
+          A 2. részben saját projektet fogsz létrehozni. Itt nincsenek feladványok, helyettük viszont van egy csomó projekt, amelyek összetettebb táncos bulik létrehozásának a különböző módjait mutatják be.
+
+          Ezeket a szinteket _bármilyen sorrendben_ teljesítheted. Ugrálj a szintek között, és figyeld meg, hogyan lehetett elérni valamit az előző szinten, vagy kombinálj össze különböző elképzeléseket a projektek között. Próbáld ki mindet, válaszd ki a kedvencedet, és folyamatosan bővítsd a projektedet, hogy igazán a magadénak érezd.
+
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right"">Folytatás</a>
+
+          <div class=""clearfix""></div>
+
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""2"">
+          <h2>
+          Előre és hátra
+          </h2>
+
+          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""3"">
+          <h2>
+          Több gomb
+          </h2>
+
+          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
+
+          </div>
+          <div style=""float: left; margin: 10px"">
+          <a href=""4"">
+          <h2>
+          Álljunk alakzatba
+          </h2>
+
+          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""5"">
+          <h2>
+          Hová tűntek?
+          </h2>
+
+          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""6"">
+          <h2>
+          Tánccsapatok
+          </h2>
+
+          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""7"">
+          <h2>
+          Negyedek
+          </h2>
+
+          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""8"">
+          <h2>
+          Basszus, közép- és magas hangok
+          </h2>
+
+          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""9"">
+          <h2>
+          Gyorsítsd fel, lassítsd le
+          </h2>
+
+          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
+
+          </div>"
       DigitalFootprint-Unplugged:
         markdown: |
           # Digitális lábnyomod
 
           Az önmagdról szóló információk online létrehozása digitális lábnyomot hoz létre.
+      EnvelopeVariables-Unplugged:
+        markdown: "# A változók nagyon sok szabadságot biztosítanak a számítástechnikában.
+          Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
+          őket különféle módokon. Használd ezt a tevékenységet, az absztrakció lecke
+          előtt (vagy együtt), hogy igazán érthető legyen.\n"
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# A változók nagyon sok szabadságot biztosítanak a számítástechnikában.
+          Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
+          őket különféle módokon. Használd ezt a tevékenységet, az absztrakció lecke
+          előtt (vagy együtt), hogy igazán érthető legyen.\n"
       GoingPlacesSafely-unplugged:
         markdown: "# Helyek biztonságos felkeresése \n\nAz internet nagyon hasznos,
           de néha veszélyes hely is tud lenni. Figyel a biztonságra az internet használata
@@ -879,7 +1049,19 @@ hu-HU:
           Ebben a leckében a ciklusokról fogunk tanulni.
 
           ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyLoops-Unplugged_2020:
+        markdown: |
+          # Boldog ciklusok
+
+          Ebben a leckében a ciklusokról fogunk tanulni.
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
       HappyMaps-Unplugged:
+        markdown: |
+          # Boldog térképek
+
+          Készíts algoritmust, hogy a karaktert kivezesd az útvesztőből.
+      HappyMaps-Unplugged_2020:
         markdown: |
           # Boldog térképek
 
@@ -887,899 +1069,1602 @@ hu-HU:
       Internet Simulator Setup:
         content1: a leírás itt található
       Internet Simulator Setup 2:
-        title: cím
         content1: a leírás itt található
       Internet Simulator Setup 3:
         content1: a leírás itt található
       K-1 Artist 1 Multi 1:
-        title: Feleletválasztós
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Melyik blokkok oldják meg ezt a rejtvényt?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Feleletválasztós
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Melyik blokkok rajzolják le a négyzetet?
+        title: Feleletválasztós
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: Megfelelő
         content2: Párosítsd az alakzatokat típusok szerint!
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Feleletválasztós
-        questions:
-        - text: Hány adag nektár ez?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Feleletválasztós
-        questions:
-        - text: Hány adag nektár ez?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: Megfelelő
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Hány adag nektár ez?
+        title: Feleletválasztós
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: Hány adag nektár ez?
+        title: Feleletválasztós
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Párosítsd a blokkokat!
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Megfelelő
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Megfelelő
         content2: A billentyűkombinációkat párosítása a táncmozdulatokhoz.
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Megfelelő
       K-1 Digital Footprint Multi 1:
-        title: Feleletválasztós
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
         questions:
         - text: Melyik állatnak van olyan digitális lábnyoma, ami a <strong>legnagyobb
-            veszélyben </strong> hagyja őt?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
+            veszélybe</strong> sodorja őt?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Hogyan egyszerűsítenéd ezeket a sorozatokat ciklusokkal?
+        title: Feleletválasztós
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: Feleletválasztós
         questions:
         - text: Melyik nyíl vezeti Flurb-ot a kincshez?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: Feleletválasztós
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Melyik információt <strong>nem</strong> kellene megosztanod online?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: Feleletválasztós
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: Melyik választás legyen az utolsó blokk?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Feleletválasztós
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Melyik ismétlő blokk, azonos?
+        title: Feleletválasztós
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: Feleletválasztós
+        - correct: true
         questions:
         - text: Válaszd ki a megfelelő ismétlő blokkot.
+        title: Feleletválasztós
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: Megfelelő
+        - {}
         content2: Párosítsd a feladványokat a blokkokkal!
-        pre_title: Utasítások
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Megfelelő
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Labirintus
         questions:
         - text: Melyik válasz oldja meg ezt a szintet?
+        title: Labirintus
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: Feleletválasztós
         questions:
         - text: Melyik algoritmus vezeti Flurb-ot a virágokhoz?
+        title: Feleletválasztós
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Feleletválasztós
+        - correct: true
         questions:
         - text: Milyen lépést kell tenni ennek az algoritmusnak az elején?
+        title: Feleletválasztós
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: Feleletválasztós
         questions:
         - text: Milyen lépést kell tenni az algoritmus üresen hagyott részén?
+        title: Feleletválasztós
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: Feleletválasztós
         questions:
         - text: Melyik blokk betűzi a "MOVE" szót?
+        title: Feleletválasztós
+      K-1 Word Search Multi 3:
         answers:
         - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
-        title: Feleletválasztós
+        - correct: true
+        - text: DÉL
         questions:
         - text: Melyik szó van betűzve?
-        answers:
-        - {}
-        - {}
-        - text: DÉL
+        title: Feleletválasztós
       Multi-Screen Apps:
-        title: cím
         content1: a leírás itt található
       New Challenge Introduction:
-        title: cím
+        content1: a leírás itt található
+      OPD-K5 Reviewing Reflections:
         content1: a leírás itt található
       OPD-K5 Stage3aGo:
-        title: cím
+        content1: a leírás itt található
+      OPD-K5 Stage3aGo_copy:
+        content1: a leírás itt található
+      OPD-K5 conditionals introduced:
+        content1: a leírás itt található
+      OPD-K5 debugging:
+        content1: a leírás itt található
+      OPD-K5 diving deeper intro:
+        content1: a leírás itt található
+      OPD-K5 events introduced:
+        content1: a leírás itt található
+      OPD-K5 for loops:
+        content1: a leírás itt található
+      OPD-K5 for loops intro:
+        content1: a leírás itt található
+      OPD-K5 for loops introduction:
+        content1: a leírás itt található
+      OPD-K5 functions introduced:
+        content1: a leírás itt található
+      OPD-K5 journaling:
+        content1: a leírás itt található
+      OPD-K5 lesson implementation planning:
+        content1: a leírás itt található
+      OPD-K5 lesson plans:
+        content1: a leírás itt található
+      OPD-K5 loops introduced:
+        content1: a leírás itt található
+      OPD-K5 project:
+        content1: a leírás itt található
+      OPD-K5 projects introduction:
+        content1: a leírás itt található
+      OPD-K5 role_of_teacher:
+        content1: a leírás itt található
+      OPD-K5 sequencing introduced:
+        content1: a leírás itt található
+      OPD-K5 sprite lab:
+        content1: a leírás itt található
+      OPD-K5 sprite lab introduction:
+        content1: a leírás itt található
+      OPD-K5 sprite lab unplugged:
+        content1: a leírás itt található
+      OPD-K5 sprite lab video:
+        content1: a leírás itt található
+      OPD-K5 types of lessons:
+        content1: a leírás itt található
+      OPD-K5 using lesson plans:
+        content1: a leírás itt található
+      OPD-K5 variables:
+        content1: a leírás itt található
+      OPD-K5 variables introduction:
+        content1: a leírás itt található
+      OPD-K5 variables unplugged:
+        content1: a leírás itt található
+      OPD-K5 where to next:
+        content1: a leírás itt található
+      OPD-K5-projects-1:
         content1: a leírás itt található
       Prepare for your presentation:
-        title: cím
         content1: a leírás itt található
       'Technique: Frequency Analysis':
         content1: a leírás itt található
       Terminology Recap:
         content1: a leírás itt található
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
+            hosszúságú.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy egyszerű vonalat rajzol.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy négyzetet rajzol.
+          correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+          feedback: A művész egy négyzetet rajzol.
+        questions:
+        - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
+            "Futtatás" gombot?
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
+            hosszúságú.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy egyszerű vonalat rajzol.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy négyzetet fog rajzolni.
+          correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+          feedback: A művész egy négyzetet rajzol.
+        questions:
+        - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
+            "Futtatás" gombot?
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
+            hosszúságú.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy egyszerű vonalat rajzol.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy négyzetet fog rajzolni.
+          correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+          feedback: A művész egy négyzetet rajzol.
+        questions:
+        - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
+            "Futtatás" gombot?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: A művész olyan háromszöget rajzol, amelyiknek mindhárom oldala egyenlő
+            hosszúságú.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy egyszerű vonalat rajzol.
+          feedback: Hibás! A művés egy négyzetet rajzol.
+        - text: A művész egy négyzetet fog rajzolni.
+          correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+          feedback: A művész egy négyzetet rajzol.
+        questions:
+        - text: Nézd meg figyelmesen az alábbi kódot! Mi történik, ha megnyomod a
+            "Futtatás" gombot?
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Helyes!
+        - text: '15'
+        - text: Nem tudom.
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Helyes!
+        - text: '15'
+        - text: Nem tudom.
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Helyes!
+        - text: '15'
+        - text: Nem tudom.
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+          feedback: Helyes!
+        - text: '15'
+        - text: Nem tudom.
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
+        - text: Nem tudom.
+        questions:
         - {}
-        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - text: A motkány eléri a makkot. Nincsenek hibák a kódban.
+          feedback: Helytelen. A motkány mindjárt rossz irányba fordul, aztán nem
+            lép eleget ahhoz, hogy elérjen a makkig.
+        - text: A motkány nem ér el a makkig, mivel rossz irányba fordul.
+          correct: true
+          feedback: Helyes! A motkány mindjárt az elején rossz irányba fordul, aztán
+            nem lép eleget ahhoz, hogy a makkig elérjen.
+        - text: A motkány nem ér el a makkig, mert nincs elég 'előrelépni' blokk a
+            kódban.
+          correct: true
+          feedback: Helyes! A motkány mindjárt az elején rossz irányba fordul, aztán
+            nem lép eleget ahhoz, hogy a makkig elérjen.
+        - text: Nem tudom.
+          feedback: Két hiba is van a kódban. Először is, a motkány rossz irányba
+            fordul, aztán nem lép eleget előre, hogy elérjen a makkig.
+        questions:
+        - text: Keress hibákat a kódban! Elér a motkány a makkig, vagy van valami
+            gond a kóddal?
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
+        questions:
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
+        questions:
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
+        questions:
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: 'A madár egy lépéssel a malac előtt megáll. '
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
+        - text: A madár beleszalad a TNT-be.
+          feedback: Nem jó! Ez a kód pontosan a malachoz visz.
+        - text: Nem tudom.
+          feedback: Ez a kód pontosan a malachoz visz.
+        questions:
+        - text: Nézd végig a kódot nagyon alaposan! Mi történik, ha megnyomod a "Futtatás"
+            gombot?
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
+          feedback: Helyes!
         - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
+        questions:
+        - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
+          feedback: Helyes!
         - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
+        questions:
+        - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
+          feedback: Helyes!
         - text: Nem tudom
-      courseC_multi_starWars_predict2:
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
         questions:
-        - {}
+        - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 nem fog megmozdulni.
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 csak egyet lép előre
+          feedback: Nem jó válasz. Az ismétlés blokk miatt BB-8 előre fog lépni 5-ször.
+        - text: BB-8 ötöt lép előre és felszedi az összes fémdarabot
+          correct: true
+          feedback: Helyes!
+        - text: Nem tudom
+          feedback: Az ismétlés blokk miatt BB-8 ötöt lép előre.
+        questions:
+        - text: Mit gondolsz, mi történik, ha ráklikkelsz a "Futtatás"-ra?
+      courseC_multi_starWars_predict2:
+        answers:
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+          feedback: Helyes!
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: Nem tudom.
+          feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+          feedback: Helyes!
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: Nem tudom.
+          feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+          feedback: Helyes!
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: Nem tudom.
+          feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: BB-8 túl messzire megy az első ciklusban.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: BB-8 nem lép eleget előre az első ciklusban ahhoz, hogy az összes
+            fémdarabot be tudja gyűjteni.
+          correct: true
+          feedback: Helyes!
+        - text: BB-8 gond nélkül összegyűjti az összes fémdarabot.
+          feedback: Nem jó a válasz. Az első ciklussal BB-8 csak 2 lépést tesz előre,
+            miközben hármat kellene előre haladnia.
+        - text: Nem tudom.
+          feedback: Az első ciklussal BB-8 csak 2 lépést tesz előre, miközben hármat
+            kellene.
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+          feedback: Helyes!
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
+          feedback: Helyes!
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
+          feedback: Helyes!
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
         - text: B
         - text: C
+        - text: D
+          correct: true
+          feedback: Helyes!
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+          feedback: Helyes!
+        - text: B
+        - text: C
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: Helyes!
         - text: B
         - text: C
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
+          feedback: Helyes!
         - text: B
         - text: C
+        - text: Nem tudom.
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: Helyes!
+        - text: B
+        - text: C
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
+        - text: Nem tudom.
+        questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - text: Nem tudom.
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        - text: Nem tudom.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Helyes!
+        - text: '12'
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Helyes!
+        - text: '12'
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Helyes!
+        - text: '12'
+        - text: Nem tudom.
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: Helyes!
+        - text: '12'
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
+        - text: Nem tudom.
+        questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        - text: Nem tudom.
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
         - {}
+        - text: Nem tudom.
+        questions:
         - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - text: A madár eljut a malacig.
+          correct: true
+          feedback: Helyes!
+        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Semmi. A motkány egyáltalán nem mozdul.
+        - text: A motkány előrelép hármat, fordul, aztán ismét előre lép hármat, és
+            már ott is van a makknál!
+          correct: true
+          feedback: Helyes!
+        - text: A motkány előre fog lépni, aztán elfordul és jön a bumm.
+        - text: Nem tudom.
+          feedback: A "lépj előre" blokk az "ismételd" blokkon belül azt jelenti,
+            hogy a motkány hármat kép előre. Aztán fordul, és újabb három lépést tesz
+            előre, így ér a makkhoz!
+        questions:
+        - text: Ez a kód egy új blokkot használ. Mit gondolsz, mi történik, amikor
+            a "Futtatás" gombra kattintasz?
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
+        - text: Nem tudom.
+        questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        - text: Nem tudom.
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
-        - {}
+        - text: Nem tudom.
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
+          feedback: Helyes!
         - {}
         - {}
+        questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Helyes!
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_be_a_super_digital_citizen:
+        content1: a leírás itt található
+        markdown: |
+          # Szuper Digitális Állampolgár
+
+          ## Hogyan szólaljunk fel, ha internetes zaklatást tapasztalunk?
+      csf_password_power-up:
+        content1: a leírás itt található
+        markdown: |
+          #  Javítsd fel a jelszavadat
+
+          ## Tippek, amikkel emlékezni tudsz a jelszavadra
+
+          * Kezdd egy **mondattal**, amire emlékezni fogsz.
+          * Csak a **szüleid** ismerjék a jelszvadat.
+          * Soha ne használj **személyes** adatot a jelszavadban.
+          * Legalább **nyolc** karakterből álló jelszót alkoss.
+          * Használj betűket, számokat és **szimbólumokat** a jelszavadban.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_putting_a_stop_to_online_meanness:
+        content1: a leírás itt található
+        markdown: |
+          # STOP szemétkedés
+
+          ## Mit tehetsz, ha valaki az interneten zaklat, szemétkedik veled?
+
+          * **S**arkon fordulni
+          * **T**alálni valakit, akiben megbízol
+          * **O**ldalak rendbetétele
+          * **P**illanatnyi szünet és online gondolkodás.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+          feedback: Helyes!
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Nem tudom.
+          feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
+        questions:
+        - text: Nézd meg alaposan ezt a kódot! Ha a kódot lefuttatnánk (figyelmen
+            kívül hagyva az esetleges hibákat), hány kincset gyűjtene összesen Laurel?
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+          feedback: Helyes!
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Nem tudom.
+          feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
+        questions:
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+          feedback: Helyes!
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Nem tudom.
+          feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
+        questions:
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+          feedback: Helyes!
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Nem tudom.
+          feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
+        questions:
+        - text: Nézd meg ezt a kódot figyelmesen! Mit gondolsz, mi történik, ha lefuttatod
+            a programot?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Az Online Szomszédságom
+
+          ## Hogyan juss el biztonságosan valahová online?
+      outbreak_story:
+        content1: a leírás itt található
+      outbreak_story2:
+        content1: a leírás itt található
+      outbreak_freeplay_choice:
+        display_name: Ingyenes Játék
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # Mozdulj, mozdulj!
+
+          Használj térképet, és adj parancsokat, hogy elérd a célt.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # A szavak ereje
+
+          ## Mit tegyél, ha valaki szemétkedik, vagy bántó kifejezéseket használ az interneten?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Privát és személyes információk
+          ## Milyen információk azok, amik online megosztása rendben van?
+      courseD_EOC_2020:
+        description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseD_project_exemplars_2020_2021:
+        markdown: |+
+          # Project Példák
+
+          Most pedig nekiláthatsz a végső projektednek. Mielőtt elkezdenéd, tölts el egy kis időt a példaprojektek megtekintésével.
+
+
+          | Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | A labda sebessége változik, amikor visszapattanik! | Óvakodi a rohamosztagosoktól, különben sokasodnak! |
+
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | A háttértáncosok folyamatosan változtatják a mozdulataikat| Próbálj meg több színt és hátteret hozzáadni ehhez a képhez! |
+
+      courseE_EOC_2020:
+        description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseE_project_exemplars_2019_2020:
+        markdown: "# Projekt példák\n\nNekiállhatsz az utolsó projektednek. Mielőtt
+          elkezded, szánj egy kis időt, hogy megnézz néhány példa projektet. \n\n##
+          Sprite Lab\n\n| Szörny Tánc (Sprite Lab) | Cupcake Játék (Sprite Lab) |\n|---|---|\n|
+          [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Adj hozzá szöveget vagy pontszámot, hogy játszhass! | Adj hozzá szöveget
+          vagy pontszámot, hogy játszhass! |\n\n## Artist\n\n| Minta (Művész) | Hópehely
+          virágok (Jégvarázs) |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Alkoss valamit beágyazott ciklusokkal! | Légy kreatív, használj függvényeket!
+          |\n"
+      courseExpress_EOC_2020:
+        description: Elértél az Express Tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseExpress_project_exemplars_2019_2020:
+        markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
+          nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
+          \n\n| Panic! a Diszkóban (Dance Party) | Tengerparti színpad (Művész) |\n|---|---|\n|
+          [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view)
+          |\n| A háttértáncosok felveszik a ritmust! | Adj több színt és hátteret
+          a színpadhoz! |\n\n| Hópehely virágok (Jégvarázs) | Repülőgép játék (Sprite
+          Lab) |\n|---|---|\n| [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png
+          \"Airplane Game (Sprite Lab )\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          \ |\n| Alkoss valamit függvényekkel! | Adj szöveget vagy pontokat a játékohoz!
+          |\n\n"
+      courseF_EOC_2020:
+        description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseF_project_exemplars_2019_2020:
+        markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
+          nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
+          \n\n## Sprite Lab\n\n| Cupcake Játék (Sprite Lab) | \tRepülőgép Játék (Sprite
+          Lab) |\n|---|---|\n| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Adj szöveget vagy pontszámot a játékhoz! | Adj szöveget vagy pontszámot
+          a játékhoz! |\n\n## Művész\n\n| Virágok (Művész) | Spirál (Művész) |\n|---|---|\n|
+          [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Alkoss valamit változókkal | Légy kreatív számláló ciklusok használatával!
+          |\n\n"
+      csf_digital_trails:
+        markdown: |-
+          # Kövesda digitális nyomot
+
+          ## Milyen információk azok, amiket biztonságosan megoszthatsz, amik részei lehetnek a digitális lábnyomodnak?
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Gonoszkodás a képernyőn
+
+          Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki gonosz veled az interneten

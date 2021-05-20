@@ -1,31 +1,31 @@
 hidden false
 login_required true
-hideable_stages true
-exclude_csf_column_in_legend true
+hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-18/unit3/"], ["teacherForum", "https://forum.code.org/c/csp3"], ["vocabulary", "https://curriculum.code.org/csp-18/unit3/vocab/"], ["codeIntroduced", "https://curriculum.code.org/csp-18/unit3/code/"], ["standardMappings", "https://curriculum.code.org/csp-18/unit3/standards/"], ["professionalLearning", "https://studio.code.org/s/csp3-support"]]
 has_verified_resources true
-has_lesson_plan true
-script_announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Student-only"}, {"notice"=>"CS Principles Post-Course Survey for Students Now Open!", "details"=>"Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!", "link"=>"https://studio.code.org/s/csp-post-survey-2018", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 family_name 'csp3'
 version_year '2018'
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
+tts true
 
-stage 'The Need For Programming Languages', flex_category: 'csp3_1_2018'
+lesson_group 'csp3_1_2018', display_name: 'Unit 3: Intro to Programming'
+lesson 'The Need For Programming Languages', display_name: 'The Need For Programming Languages', has_lesson_plan: true
 level 'CSP U3L01 SFLP', named: true
 level 'U3L01 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
 level 'U3L01 Assessment3_2018', progression: 'Check Your Understanding', assessment: true
 level 'csp-pulse-check-survey-4-levelgroup-U3Ch1_2018', progression: 'Quick Check-In', assessment: true
 
-stage 'The Need for Algorithms', flex_category: 'csp3_1_2018'
+lesson 'The Need for Algorithms', display_name: 'The Need for Algorithms', has_lesson_plan: true
 level 'CSP U3L02 SFLP', named: true
 
-stage 'Creativity in Algorithms', flex_category: 'csp3_1_2018'
+lesson 'Creativity in Algorithms', display_name: 'Creativity in Algorithms', has_lesson_plan: true
 level 'CSP U3L03 SFLP', named: true
 
-stage 'Using Simple Commands', flex_category: 'csp3_1_2018'
+lesson 'Using Simple Commands', display_name: 'Using Simple Commands', has_lesson_plan: true
 level 'CSP U3L04 SFLP', named: true
 level 'csp_applab_turtle_2018', named: true
 level 'U3L2 Using Simple Commands_2018', progression: 'Using Simple Turtle Commands'
@@ -36,7 +36,7 @@ level 'U3L02 Free Response Getting Started_2018', progression: 'Check Your Under
 level 'csp_U3_square_v_rect_FR_2018', progression: 'Check Your Understanding', assessment: true
 level 'U3L02 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating Functions', flex_category: 'csp3_1_2018'
+lesson 'Creating Functions', display_name: 'Creating Functions', has_lesson_plan: true
 level 'CSP U3L05 SFLP', named: true
 level 'csp_applab_functions_2018', progression: 'Defining and Calling Functions'
 level 'U3L03 Define and use turnAround_2018', progression: 'Using Functions With Turtle Commands'
@@ -52,7 +52,7 @@ level 'U3L03 Assessment_2018', progression: 'Check Your Understanding', assessme
 level 'U3L03 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 level 'csp_U3_plan_code_FR_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Functions and Top-Down Design', flex_category: 'csp3_1_2018'
+lesson 'Functions and Top-Down Design', display_name: 'Functions and Top-Down Design', has_lesson_plan: true
 level 'CSP U3L06 SFLP', named: true
 level 'U3L04 - snowflake_2018', progression: 'Using Functions with Turtle Commands'
 level 'U3L04 - 3 by 3 with functions_2018', progression: 'Using Functions with Turtle Commands'
@@ -61,7 +61,7 @@ level 'U3L04 Assessment1_2018', progression: 'Check Your Understanding', assessm
 level 'U3L04 Assessment2_2018', progression: 'Check Your Understanding', assessment: true
 level 'U3L04 Free Response Wrap Up_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'APIs and Function Parameters', flex_category: 'csp3_1_2018'
+lesson 'APIs and Function Parameters', display_name: 'APIs and Function Parameters', has_lesson_plan: true
 level 'CSP U3L07 SFLP', named: true
 level 'U3L06 - moveForwardwithParams_2018', progression: 'Introduction to Parameters'
 level 'U3L06 Challenge 1 triangle_2018', progression: 'Introduction to Parameters'
@@ -78,7 +78,7 @@ level 'U3L06-API-multichoice_2018', progression: 'Check Your Understanding', ass
 level 'U3L06 Assessment_2018', progression: 'Check Your Understanding', assessment: true
 level 'csp3_U3_turtle_subgoal_mc_levelgroup_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Creating functions with Parameters', flex_category: 'csp3_1_2018'
+lesson 'Creating functions with Parameters', display_name: 'Creating functions with Parameters', has_lesson_plan: true
 level 'CSP U3L08 SFLP', named: true
 level 'csp_applab_functions_parameters_2018', progression: 'Functions with Parameters'
 level 'U3L08 - drawSquareWithParam_2018', progression: 'Drawing Shapes With Parameters'
@@ -100,7 +100,7 @@ level 'U3-AP-Practice-FR-manage-complexity_2018', progression: 'AP Practice Resp
 level 'U3L08 Assessment1_2018', progression: 'Check Your Understanding', assessment: true
 level 'U3L08 Assessment2_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Looping and Random Numbers', flex_category: 'csp3_1_2018'
+lesson 'Looping and Random Numbers', display_name: 'Looping and Random Numbers', has_lesson_plan: true
 level 'CSP U3L09 SFLP', named: true
 level 'csp_applab_loops_2018', progression: 'Using Loops'
 level 'U3L07 - introSquare_2018', progression: 'Introduction to Loops'
@@ -121,17 +121,20 @@ level 'U3L07 - MC remove line of code loops_2018', progression: 'Check Your Unde
 level 'U3L07 Free Response Reflection_2018', progression: 'Check Your Understanding', assessment: true
 level 'subgoals_u3_top_down_FR_2018', progression: 'Check Your Understanding', assessment: true
 
-stage 'Practice PT - Design a Digital Scene', flex_category: 'csp3_1_2018'
+lesson 'Practice PT - Design a Digital Scene', display_name: 'Practice PT - Design a Digital Scene', has_lesson_plan: true
 level 'CSP U3L10 SFLP', named: true
 level 'U3L08 - individualCode_2018', progression: 'Design Your Components'
 level 'How To: Share Code with Teammates_2018', progression: 'How to Share Code with Teammates'
 level 'U3L08 - digitalScene_2018', progression: 'Challenge: Design Your Digital Scene'
 
-stage 'Unit 3 Chapter 1 Assessment', lockable: true, flex_category: 'cspAssessment'
+lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
+lesson 'Unit 3 Chapter 1 Assessment', display_name: 'Unit 3 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 level 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018', assessment: true
 
-stage 'Mid-Year Survey', flex_category: 'cspSurvey'
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'Mid-Year Survey', display_name: 'Mid-Year Survey', has_lesson_plan: true
 level 'csp-mid-survey-2018-markdown-with-link-to-survey', progression: 'Click here! Complete the CS Principles Mid-year survey'
 
-stage 'CS Principles Post-Course Survey', flex_category: 'cspSurvey'
+lesson 'CS Principles Post-Course Survey', display_name: 'CS Principles Post-Course Survey', has_lesson_plan: true
 level 'csp-post-survey-2018-markdown-with-link-to-survey_v2', progression: 'Post-Course Survey Instructions', assessment: true
+

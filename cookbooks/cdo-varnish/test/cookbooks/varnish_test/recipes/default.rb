@@ -1,5 +1,5 @@
 include_recipe 'cdo-varnish'
-apt_package 'openjdk-7-jre-headless'
+apt_package 'openjdk-11-jdk-headless'
 
 require 'etc'
 user = Etc.getpwuid.name

@@ -49,15 +49,9 @@ use_my_apps: true
 #stub_school_data: false
 
 
-# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
-# is set to the ID for the production site, be careful not to run
-# update_census_map as it will overwrite that table.
-#census_map_table_id: ''
-
-
 # Encryption key required for decoding certain protected level sources.
-# Code.org engineers should obtain this from cdo-secrets at:
-# https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
+# Code.org engineers should obtain this from AWS Secrets Manager at:
+# https://console.aws.amazon.com/secretsmanager/home?region=us-east-1#/secret?name=development%2Fcdo%2Fproperties_encryption_key
 # Contributors should ask a Code.org engineer for this if needed.
 #properties_encryption_key: ''
 
@@ -97,6 +91,17 @@ use_my_apps: true
 #firebase_name: 'cdo-v3-dev'
 #firebase_secret:
 
+
+# Configuration and credentials for the Geocoder gem.  Google Maps provides a
+# street address geocoding service, while freegeoip provides an IP address
+# geocoding service.  (The former is "lookup" in the Geocoder config, while the
+# latter is "ip_lookup".)  We send both street address and IP address strings
+# into Geocoder#search and the appropriate service is used.
+#google_maps_client_id:
+#google_maps_secret:
+#freegeoip_host:
+
+
 # Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
 # You should have also run this once:
 #   `gem install mailcatcher`
@@ -104,3 +109,8 @@ use_my_apps: true
 #   `mailcatcher --ip=0.0.0.0`
 #use_mailcatcher: true
 
+
+# Credentials for Twilio, used to share projects to a phone number via SMS.
+#twilio_sid:
+#twilio_auth:
+#twilio_messaging_service:

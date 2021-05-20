@@ -4,11 +4,18 @@ height 'auto'
 question ‘Which of the following is NOT a reason to include comments in programs’
 
 right ‘Comments help the computer decide whether certain components of a program are important.’
-Wrong ’Comments help programmers debug issues in their own code’
+wrong ’Comments help programmers debug issues in their own code’
 wrong ‘Comments help document how code was written for other programmers to use’
 wrong ‘Comments enable programmers to track their work throughout the development process’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** [Lesson 7 - Intro to Debugging](https://curriculum.code.org/csp-20/unit3/7/) introduced students to comments and their usefulness.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.G.2: Comments are a form of program documentation written into the program to be read by people and do not affect how a program runs. 
+:::
 
 MARKDOWN
 

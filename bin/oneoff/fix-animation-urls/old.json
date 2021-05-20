@@ -1,0 +1,696 @@
+{
+  
+  "orderedKeys": [
+    "8dfb76d9-a15b-43d0-82f2-69b069619359",
+    "18dcfb13-55b3-4156-abc1-135edf103463",
+    "9f98e76b-80d4-4593-9333-8f8d526d4dce",
+    "c41eeff9-0f23-40e8-b01a-ab14f56fa183",
+    "f301db45-48a3-45c5-a45e-fffdd8e5ee1d",
+    "55f7b08e-a9d9-4f86-b2d1-5baf1a817fe4",
+    "dfdcb6f8-a5ec-4d83-aa42-0b7d709081f4",
+    "429679de-a5f6-476b-98eb-42fb1c7a9992",
+    "4652d038-77a4-43bf-9c66-16bb79742ef9",
+    "9ad519be-f846-4578-b0aa-78686aff9368",
+    "09d90fb3-d809-4193-89e6-ea9152c1e015",
+    "64057d90-40a3-4deb-87fb-ad5e64e4fdce",
+    "10df2d40-baad-44d2-975b-c04cadbe30be",
+    "c8b2aa8f-05bb-4dbc-8a29-b8cb78958fab",
+    "650c7068-f025-43d4-8d31-5fd6d9c70701",
+    "48fd4099-7ceb-464a-8964-adad57e4e87d",
+    "b0befc88-0347-4756-8375-6a4989ffc90a",
+    "f31ce599-2e53-4d3c-8862-ccbfeb90d93a",
+    "81fd855a-9beb-4f44-b049-7d88ffe65376",
+    "ddc74a56-2033-4194-81ca-6c0f4910ba86",
+    "3fc82e56-8582-4804-ac66-68fee8a334e2",
+    "57b3783d-fe35-4562-a8e3-feb19dd74031",
+    "bc06eb81-766c-4f1a-98dc-776c12519d64",
+    "8616f1dd-9060-4e5b-9e0d-8d54e2c24b8f",
+    "23f50eb1-7564-4a33-bd52-8910ef186a6a",
+    "4b720350-9ba0-454c-bfaa-a4073e08f78d",
+    "0d07a497-717a-4e97-8fab-6e6cd4627c1b",
+    "2d00ca36-3d60-4589-b72e-2883371ae232",
+    "43cac766-4450-4001-bec6-c3856a415e82",
+    "f7a83dd6-4609-4eed-a415-0335f80cc4ff",
+    "3c806e6a-68f4-4acf-910e-7e6b3ad0f5d0",
+    "9f42dd43-0e65-460d-b868-a449181e39b8",
+    "43c5ad39-29e5-4444-9d21-3987fecc037f",
+    "d868bce1-5819-4325-95ad-e9c8424dfa5a",
+    "8093568a-2324-4645-bcac-d30caf8405bb",
+    "3b788acc-84e8-40d2-97c6-ee7933a2b262",
+    "27b2d651-8b6a-4f9d-b62e-1444333b97d4",
+    "a4320bb4-5b7d-420d-be72-db4222f94e6e",
+    "ebd02377-1e4a-4e2f-b7a5-a7fb3f9412e0",
+    "9b4b7e2e-e279-469f-84bd-e3968fbcfe70",
+    "0d269907-b1e8-494b-aeeb-a3293f093cfe",
+    "017fe36e-dc51-495f-b75b-1de52b371109",
+    "023bb8fa-bb0c-4694-bde1-c2c85fdb1369",
+    "1527c762-76b2-4a38-8d52-14bac41145cb",
+    "a32f8eb3-a9de-40b4-8c8c-0f9059ee1a34",
+    "3c5fc665-9280-4337-b3da-02adf78b58d2",
+    "de8b32e6-cd6d-4e4a-9a34-a81d150c8cb1",
+    "69f92a2e-29aa-4716-8434-1f080c282c4f",
+    "f9ac2d3d-2c0c-4279-9b6e-05bf7110dfbe",
+    "c56d37de-4fb3-448c-9fc8-f1132629700f",
+    "30ee3afa-e245-4fdd-b399-4d2570077c5d",
+    "31b7b585-9765-48d5-8135-14136a7b461c",
+    "fb21aae7-3c61-4615-99d8-60e7ac637c71"
+  ],
+  "propsByKey": {
+    "8dfb76d9-a15b-43d0-82f2-69b069619359": {
+      "name": "bear",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/8dfb76d9-a15b-43d0-82f2-69b069619359.png?version=MVSdmNEPoAE2GKk0EUSdhYqY4C3PTZuY",
+      "frameSize": {
+        "x": 76,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "MVSdmNEPoAE2GKk0EUSdhYqY4C3PTZuY"
+    },
+    "18dcfb13-55b3-4156-abc1-135edf103463": {
+      "name": "bee",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/18dcfb13-55b3-4156-abc1-135edf103463.png?version=Ky_.gpXNijZdHly3_fbIK_Hd.Ts0hSr3",
+      "frameSize": {
+        "x": 100,
+        "y": 79
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "Ky_.gpXNijZdHly3_fbIK_Hd.Ts0hSr3"
+    },
+    "9f98e76b-80d4-4593-9333-8f8d526d4dce": {
+      "name": "brown bunny",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/9f98e76b-80d4-4593-9333-8f8d526d4dce.png?version=eLdRebTFWpj.mHZXZpCqV_erPBikXw4c",
+      "frameSize": {
+        "x": 66,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "eLdRebTFWpj.mHZXZpCqV_erPBikXw4c"
+    },
+    "c41eeff9-0f23-40e8-b01a-ab14f56fa183": {
+      "name": "purple bunny",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/c41eeff9-0f23-40e8-b01a-ab14f56fa183.png?version=2KG2KIeaR01BDvNVTFnFt_sUqmIuP.sj",
+      "frameSize": {
+        "x": 63,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "2KG2KIeaR01BDvNVTFnFt_sUqmIuP.sj"
+    },
+    "f301db45-48a3-45c5-a45e-fffdd8e5ee1d": {
+      "name": "corgi",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/f301db45-48a3-45c5-a45e-fffdd8e5ee1d.png?version=LCueNJ9WF7juYDU9rt9iMZM08KQeaqy2",
+      "frameSize": {
+        "x": 542,
+        "y": 500
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "LCueNJ9WF7juYDU9rt9iMZM08KQeaqy2"
+    },
+    "55f7b08e-a9d9-4f86-b2d1-5baf1a817fe4": {
+      "name": "cow",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/55f7b08e-a9d9-4f86-b2d1-5baf1a817fe4.png?version=2r0b3E_glSNq_N8HLPSyaSzdRmXnP9.c",
+      "frameSize": {
+        "x": 88,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "2r0b3E_glSNq_N8HLPSyaSzdRmXnP9.c"
+    },
+    "dfdcb6f8-a5ec-4d83-aa42-0b7d709081f4": {
+      "name": "crab",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/dfdcb6f8-a5ec-4d83-aa42-0b7d709081f4.png?version=i3pcPjDt8PfGfwjkZRcPw7WCY9.vc9aQ",
+      "frameSize": {
+        "x": 100,
+        "y": 66
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "i3pcPjDt8PfGfwjkZRcPw7WCY9.vc9aQ"
+    },
+    "429679de-a5f6-476b-98eb-42fb1c7a9992": {
+      "name": "elephant",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/429679de-a5f6-476b-98eb-42fb1c7a9992.png?version=9aBDAUqtqVZmwe.ad.PuCAjlkfvxknET",
+      "frameSize": {
+        "x": 100,
+        "y": 95
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "9aBDAUqtqVZmwe.ad.PuCAjlkfvxknET"
+    },
+    "4652d038-77a4-43bf-9c66-16bb79742ef9": {
+      "name": "fish",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/4652d038-77a4-43bf-9c66-16bb79742ef9.png?version=2LKp7yUR8qGuPb.SsxgmhbE24XhYQYwj",
+      "frameSize": {
+        "x": 91,
+        "y": 75
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "2LKp7yUR8qGuPb.SsxgmhbE24XhYQYwj"
+    },
+    "9ad519be-f846-4578-b0aa-78686aff9368": {
+      "name": "hippo",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/9ad519be-f846-4578-b0aa-78686aff9368.png?version=k8R9uitXAsu3NJdEn5rZDxbRD9gmjnBW",
+      "frameSize": {
+        "x": 81,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "k8R9uitXAsu3NJdEn5rZDxbRD9gmjnBW"
+    },
+    "09d90fb3-d809-4193-89e6-ea9152c1e015": {
+      "name": "ladybug",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/09d90fb3-d809-4193-89e6-ea9152c1e015.png?version=3SgMnlg9xxSPVJsZdClppzFUBIE2ASYR",
+      "frameSize": {
+        "x": 100,
+        "y": 59
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "3SgMnlg9xxSPVJsZdClppzFUBIE2ASYR"
+    },
+    "64057d90-40a3-4deb-87fb-ad5e64e4fdce": {
+      "name": "mouse",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/64057d90-40a3-4deb-87fb-ad5e64e4fdce.png?version=BZ9YiI7i.sw6kxTfLG8ibZtsF17v3a7L",
+      "frameSize": {
+        "x": 59,
+        "y": 35
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "BZ9YiI7i.sw6kxTfLG8ibZtsF17v3a7L"
+    },
+    "10df2d40-baad-44d2-975b-c04cadbe30be": {
+      "name": "pig",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/10df2d40-baad-44d2-975b-c04cadbe30be.png?version=I2C5vcykhRoXL9OOCIQLJc47C7AnjtPy",
+      "frameSize": {
+        "x": 100,
+        "y": 89
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "I2C5vcykhRoXL9OOCIQLJc47C7AnjtPy"
+    },
+    "c8b2aa8f-05bb-4dbc-8a29-b8cb78958fab": {
+      "name": "bell",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/wyks_lhYmiSPwyPQy8xydYuBJPL.zvUS/category_generic_items/bell.png",
+      "frameSize": {
+        "x": 85,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "wyks_lhYmiSPwyPQy8xydYuBJPL.zvUS"
+    },
+    "650c7068-f025-43d4-8d31-5fd6d9c70701": {
+      "name": "book",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/650c7068-f025-43d4-8d31-5fd6d9c70701.png?version=QQmQmpdGufGNLIKa30MvIbw_2PcJ9y8Y",
+      "frameSize": {
+        "x": 87,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "QQmQmpdGufGNLIKa30MvIbw_2PcJ9y8Y"
+    },
+    "48fd4099-7ceb-464a-8964-adad57e4e87d": {
+      "name": "compass",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/48fd4099-7ceb-464a-8964-adad57e4e87d.png?version=aDsUn_qfYfqSAOTDgnLdJS5DQkamD120",
+      "frameSize": {
+        "x": 100,
+        "y": 75
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "aDsUn_qfYfqSAOTDgnLdJS5DQkamD120"
+    },
+    "b0befc88-0347-4756-8375-6a4989ffc90a": {
+      "name": "computer monitor",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/b0befc88-0347-4756-8375-6a4989ffc90a.png?version=mBct1WnOW1QRqU0QVrOfQhbvqDs1dZ7V",
+      "frameSize": {
+        "x": 100,
+        "y": 95
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "mBct1WnOW1QRqU0QVrOfQhbvqDs1dZ7V"
+    },
+    "f31ce599-2e53-4d3c-8862-ccbfeb90d93a": {
+      "name": "first aid kit",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/f31ce599-2e53-4d3c-8862-ccbfeb90d93a.png?version=qfXrDaOyw3yD0YhFZVaeKxgrim.uzTj0",
+      "frameSize": {
+        "x": 100,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "qfXrDaOyw3yD0YhFZVaeKxgrim.uzTj0"
+    },
+    "81fd855a-9beb-4f44-b049-7d88ffe65376": {
+      "name": "keys",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/81fd855a-9beb-4f44-b049-7d88ffe65376.png?version=Es9DGZmAx_ShmhrXFuEXFfXBjdujHj5E",
+      "frameSize": {
+        "x": 94,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "Es9DGZmAx_ShmhrXFuEXFfXBjdujHj5E"
+    },
+    "ddc74a56-2033-4194-81ca-6c0f4910ba86": {
+      "name": "money",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/ddc74a56-2033-4194-81ca-6c0f4910ba86.png?version=6JG3TE9Sj3yvKCjf3AbHwcKto.241xBI",
+      "frameSize": {
+        "x": 95,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "6JG3TE9Sj3yvKCjf3AbHwcKto.241xBI"
+    },
+    "3fc82e56-8582-4804-ac66-68fee8a334e2": {
+      "name": "paint pallette",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/3fc82e56-8582-4804-ac66-68fee8a334e2.png?version=Sp0.AKNUNK.Dym.eQwwx0xWKAIgfMMCc",
+      "frameSize": {
+        "x": 100,
+        "y": 83
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "Sp0.AKNUNK.Dym.eQwwx0xWKAIgfMMCc"
+    },
+    "57b3783d-fe35-4562-a8e3-feb19dd74031": {
+      "name": "potion",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/57b3783d-fe35-4562-a8e3-feb19dd74031.png?version=mEi4mXYjJZBqruNqS_hbHl1p8eFfWn7R",
+      "frameSize": {
+        "x": 54,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "mEi4mXYjJZBqruNqS_hbHl1p8eFfWn7R"
+    },
+    "bc06eb81-766c-4f1a-98dc-776c12519d64": {
+      "name": "tablet",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/bc06eb81-766c-4f1a-98dc-776c12519d64.png?version=ipv5bpa.5vQONR2dF8x4voPLyYYiPuO4",
+      "frameSize": {
+        "x": 84,
+        "y": 98
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "ipv5bpa.5vQONR2dF8x4voPLyYYiPuO4"
+    },
+    "8616f1dd-9060-4e5b-9e0d-8d54e2c24b8f": {
+      "name": "teapot",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/8616f1dd-9060-4e5b-9e0d-8d54e2c24b8f.png?version=9uILGNJ5w1pEz8xRIPEGea8CLA0MZfVS",
+      "frameSize": {
+        "x": 100,
+        "y": 76
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "9uILGNJ5w1pEz8xRIPEGea8CLA0MZfVS"
+    },
+    "23f50eb1-7564-4a33-bd52-8910ef186a6a": {
+      "name": "boat",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/tFAa19t579qKK_hf6Nc4mvHm2YkuF.GJ/category_vehicles/boat.png",
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "tFAa19t579qKK_hf6Nc4mvHm2YkuF.GJ"
+    },
+    "4b720350-9ba0-454c-bfaa-a4073e08f78d": {
+      "name": "black car",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/4b720350-9ba0-454c-bfaa-a4073e08f78d.png?version=aq5kOX8620ZZvvgaCnR7RauIwU9QNA3B",
+      "frameSize": {
+        "x": 54,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "aq5kOX8620ZZvvgaCnR7RauIwU9QNA3B"
+    },
+    "0d07a497-717a-4e97-8fab-6e6cd4627c1b": {
+      "name": "blue car",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/0d07a497-717a-4e97-8fab-6e6cd4627c1b.png?version=9zjXOORwE571IHwbgA4KNd8Cl75qvOB6",
+      "frameSize": {
+        "x": 61,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "9zjXOORwE571IHwbgA4KNd8Cl75qvOB6"
+    },
+    "2d00ca36-3d60-4589-b72e-2883371ae232": {
+      "name": "green car",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/2d00ca36-3d60-4589-b72e-2883371ae232.png?version=z3UQakYgm1yg4Xw8Pra9VM2sYC05Ax9P",
+      "frameSize": {
+        "x": 53,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "z3UQakYgm1yg4Xw8Pra9VM2sYC05Ax9P"
+    },
+    "43cac766-4450-4001-bec6-c3856a415e82": {
+      "name": "red car",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/43cac766-4450-4001-bec6-c3856a415e82.png?version=monJZJ.BCLeX.ym.V.BT.wZzJ5Cy.Mpu",
+      "frameSize": {
+        "x": 53,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "monJZJ.BCLeX.ym.V.BT.wZzJ5Cy.Mpu"
+    },
+    "f7a83dd6-4609-4eed-a415-0335f80cc4ff": {
+      "name": "yellow car",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/f7a83dd6-4609-4eed-a415-0335f80cc4ff.png?version=u_zEdruVMlfvVo8atWKVcabHt0sIyx1L",
+      "frameSize": {
+        "x": 58,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "u_zEdruVMlfvVo8atWKVcabHt0sIyx1L"
+    },
+    "3c806e6a-68f4-4acf-910e-7e6b3ad0f5d0": {
+      "name": "blue plane",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/.ApvGWkDQiZOglBVfOFwPSkPv.qELuPf/category_vehicles/planeBlue1.png",
+      "frameSize": {
+        "x": 88,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": ".ApvGWkDQiZOglBVfOFwPSkPv.qELuPf"
+    },
+    "9f42dd43-0e65-460d-b868-a449181e39b8": {
+      "name": "red plane",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/oO2CEHRYhRHeulN6V5OdX2JAKtk.6N0K/category_vehicles/planeRed1.png",
+      "frameSize": {
+        "x": 88,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "oO2CEHRYhRHeulN6V5OdX2JAKtk.6N0K"
+    },
+    "43c5ad39-29e5-4444-9d21-3987fecc037f": {
+      "name": "blue alien",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/zd4LEPr15yvJQrHm7yi7obo_N9RTudLE/category_characters/alienBlue.png",
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "zd4LEPr15yvJQrHm7yi7obo_N9RTudLE"
+    },
+    "d868bce1-5819-4325-95ad-e9c8424dfa5a": {
+      "name": "green alien",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/3qqVaslWPlTDDg6Po4GHWLcgIWE7qh2J/category_characters/alienGreen.png",
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "3qqVaslWPlTDDg6Po4GHWLcgIWE7qh2J"
+    },
+    "8093568a-2324-4645-bcac-d30caf8405bb": {
+      "name": "pink alien",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/ecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu/category_characters/alienPink.png",
+      "frameSize": {
+        "x": 66,
+        "y": 92
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "ecnW7rdKTB0fUrKRKrqIHbrHVvyWh5hu"
+    },
+    "3b788acc-84e8-40d2-97c6-ee7933a2b262": {
+      "name": "yellow alien",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/vX.4aiKiQ5g4hujfBaVmRlOe0M2UHiys/category_characters/alienYellow.png",
+      "frameSize": {
+        "x": 66,
+        "y": 82
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "vX.4aiKiQ5g4hujfBaVmRlOe0M2UHiys"
+    },
+    "27b2d651-8b6a-4f9d-b62e-1444333b97d4": {
+      "name": "ghost",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/27b2d651-8b6a-4f9d-b62e-1444333b97d4.png?version=0kQur.A5ACCgn86_3CAgsP7_3NC92wXx",
+      "frameSize": {
+        "x": 51,
+        "y": 73
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "0kQur.A5ACCgn86_3CAgsP7_3NC92wXx"
+    },
+    "a4320bb4-5b7d-420d-be72-db4222f94e6e": {
+      "name": "orange monster",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/a4320bb4-5b7d-420d-be72-db4222f94e6e.png?version=im5T6RcFJ55W90tCSXa76eSamZX8Zzfr",
+      "frameSize": {
+        "x": 80,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "im5T6RcFJ55W90tCSXa76eSamZX8Zzfr"
+    },
+    "ebd02377-1e4a-4e2f-b7a5-a7fb3f9412e0": {
+      "name": "green monster",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/ebd02377-1e4a-4e2f-b7a5-a7fb3f9412e0.png?version=KwPGu9hUEn0sNjJBOySlEmNEecJHZRUM",
+      "frameSize": {
+        "x": 87,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "KwPGu9hUEn0sNjJBOySlEmNEecJHZRUM"
+    },
+    "9b4b7e2e-e279-469f-84bd-e3968fbcfe70": {
+      "name": "purple monster",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/9b4b7e2e-e279-469f-84bd-e3968fbcfe70.png?version=TdB14igpQpIVizo84QukVtUNSVupVliv",
+      "frameSize": {
+        "x": 97,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "TdB14igpQpIVizo84QukVtUNSVupVliv"
+    },
+    "0d269907-b1e8-494b-aeeb-a3293f093cfe": {
+      "name": "cloud",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/0d269907-b1e8-494b-aeeb-a3293f093cfe.png?version=YzsMR.UUtHHKoeSnX8MZ_62NZOKejdBB",
+      "frameSize": {
+        "x": 100,
+        "y": 52
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "YzsMR.UUtHHKoeSnX8MZ_62NZOKejdBB"
+    },
+    "017fe36e-dc51-495f-b75b-1de52b371109": {
+      "name": "rock",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/017fe36e-dc51-495f-b75b-1de52b371109.png?version=3B92e.XM4K2QbGPZ_mEAEzBKXpAUxDNI",
+      "frameSize": {
+        "x": 92,
+        "y": 47
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "3B92e.XM4K2QbGPZ_mEAEzBKXpAUxDNI"
+    },
+    "023bb8fa-bb0c-4694-bde1-c2c85fdb1369": {
+      "name": "sun",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/023bb8fa-bb0c-4694-bde1-c2c85fdb1369.png?version=RT2gRKn3sEdodsD_pKRrLAQZdWr.RMK9",
+      "frameSize": {
+        "x": 95,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "RT2gRKn3sEdodsD_pKRrLAQZdWr.RMK9"
+    },
+    "1527c762-76b2-4a38-8d52-14bac41145cb": {
+      "name": "apple",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/1527c762-76b2-4a38-8d52-14bac41145cb.png?version=GfqQHTqf2oy8zwvQSi0nWyNCbr5bnmA0",
+      "frameSize": {
+        "x": 68,
+        "y": 74
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "GfqQHTqf2oy8zwvQSi0nWyNCbr5bnmA0"
+    },
+    "a32f8eb3-a9de-40b4-8c8c-0f9059ee1a34": {
+      "name": "carrot",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/fCiFCbsTDOoiLsbStivUZ249XH0TOxIY/category_food/carrot.png",
+      "frameSize": {
+        "x": 78,
+        "y": 70
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "fCiFCbsTDOoiLsbStivUZ249XH0TOxIY"
+    },
+    "3c5fc665-9280-4337-b3da-02adf78b58d2": {
+      "name": "cupcake",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/3c5fc665-9280-4337-b3da-02adf78b58d2.png?version=9gVv4Tp_TNKDUGYII2ti_JehGw0.jN7W",
+      "frameSize": {
+        "x": 94,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "9gVv4Tp_TNKDUGYII2ti_JehGw0.jN7W"
+    },
+    "de8b32e6-cd6d-4e4a-9a34-a81d150c8cb1": {
+      "name": "mushroom",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/FUHEI0ZIhRQ_wcJhJHwv73LP7bcSfuYa/category_food/mushroom_red.png",
+      "frameSize": {
+        "x": 81,
+        "y": 99
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "FUHEI0ZIhRQ_wcJhJHwv73LP7bcSfuYa"
+    },
+    "69f92a2e-29aa-4716-8434-1f080c282c4f": {
+      "name": "watermelon",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/69f92a2e-29aa-4716-8434-1f080c282c4f.png?version=685dTZ5vjG05FiCOT5H0mymOgi_4d2Ue",
+      "frameSize": {
+        "x": 100,
+        "y": 79
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "685dTZ5vjG05FiCOT5H0mymOgi_4d2Ue"
+    },
+    "f9ac2d3d-2c0c-4279-9b6e-05bf7110dfbe": {
+      "name": "gold coin",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/i9_exqo4EZveb7Cs3ci67bPuExMkYfuQ/category_gameplay/coin_gold.png",
+      "frameSize": {
+        "x": 61,
+        "y": 61
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "i9_exqo4EZveb7Cs3ci67bPuExMkYfuQ"
+    },
+    "c56d37de-4fb3-448c-9fc8-f1132629700f": {
+      "name": "silver coin",
+      "sourceUrl": "https://levelbuilder-studio.code.org/api/v1/animation-library/vOdajK6KZGj20TqNy7gJo9YfriC9FDfl/category_gameplay/coin_silver.png",
+      "frameSize": {
+        "x": 61,
+        "y": 61
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 2,
+      "version": "vOdajK6KZGj20TqNy7gJo9YfriC9FDfl"
+    },
+    "30ee3afa-e245-4fdd-b399-4d2570077c5d": {
+      "name": "target",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/30ee3afa-e245-4fdd-b399-4d2570077c5d.png?version=mz9HCS7y0vMOktTnjYqgCYydYD7Jnl_S",
+      "frameSize": {
+        "x": 100,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "mz9HCS7y0vMOktTnjYqgCYydYD7Jnl_S"
+    },
+    "31b7b585-9765-48d5-8135-14136a7b461c": {
+      "name": "cactus",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/31b7b585-9765-48d5-8135-14136a7b461c.png?version=gc3ZNV2l4kI73.10kx9k4Up.O_Mn59zf",
+      "frameSize": {
+        "x": 73,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "gc3ZNV2l4kI73.10kx9k4Up.O_Mn59zf"
+    },
+    "fb21aae7-3c61-4615-99d8-60e7ac637c71": {
+      "name": "wheat",
+      "sourceUrl": "https://levelbuilder-studio.code.org/v3/animations/PkH20_2tpk7B0m53R_p3pQ/fb21aae7-3c61-4615-99d8-60e7ac637c71.png?version=5L2P2T4Yi_NQDgdM8zlUNNodFU_9gUUo",
+      "frameSize": {
+        "x": 99,
+        "y": 100
+      },
+      "frameCount": 1,
+      "looping": true,
+      "frameDelay": 12,
+      "version": "5L2P2T4Yi_NQDgdM8zlUNNodFU_9gUUo"
+    }
+  }
+}

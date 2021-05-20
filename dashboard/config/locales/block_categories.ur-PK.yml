@@ -3,15 +3,27 @@ ur:
   data:
     block_categories:
       Actions: ایکشنز
-      Loops: لوپس
+      Advanced: اعلی درجے کی
+      Behaviors: رویے
+      Brushes: برش
       Color: رنگ بھریں
-      Math: ریاضی
-      Logic: منطق
-      Variables: متغیرات
+      Comment: تبصرہ
+      Comments: تبصرے
       Conditionals: شرائط
-      Events: موقعے
+      Dancers: رقص
+      Default: ڈیفالٹ
+      Events: ایونٹس/واقعات
+      'Functions ': 'افعال '
+      Game/Score: گیم/سکور
+      Games/Score: گیم/اسکور
+      Groups: گروپس
+      Locations: مقامات
+      Logic: منطق
+      Loops: لوپس
+      Math: ریاضی
+      Numbers: نمبرز
+      Properties: پراپرٹیز
       Text: متن
-      Start: شروع کریں
-      test: آزمانا
-      Name: نام
-      Function: فنکشن
+      Variables: متغیرات
+      'Variables ': 'متغیر '
+      World: دنیا

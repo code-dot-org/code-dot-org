@@ -39,6 +39,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     # Skip real Firebase operations
     FirebaseHelper.stubs(:delete_channel)
+    FirebaseHelper.stubs(:delete_channels)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -356,7 +357,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "revokes the user's admin status" do
-    user = create :teacher, admin: true
+    user = create :admin
+
     assert user.admin?
 
     purge_user user
@@ -443,7 +445,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
   # Table: dashboard.activities
   # Table: dashboard.overflow_activities
-  # Table: dashboard.gallery_activities
   # Table: dashboard.assessment_activities
   #
 
@@ -464,20 +465,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   # Note: table overflow_activities only exists on production, which makes it
   # difficult to test.
-
-  test 'disconnects gallery activities from level sources' do
-    user = create :student
-    gallery_activity = create :gallery_activity, user: user
-
-    refute_nil gallery_activity.level_source_id
-
-    purge_user user
-    gallery_activity.reload
-
-    assert_nil gallery_activity.level_source_id
-
-    assert_logged "Cleaned 1 GalleryActivity"
-  end
 
   test 'disconnects assessment activities from level sources' do
     user = create :student
@@ -584,6 +571,24 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty AuthenticationOption.with_deleted.where(id: ids)
   end
 
+  test "purges user with duplicate authentication option" do
+    # Create an user with an Google authentication option,
+    # then destroy (soft-delete) the authentication option.
+    user = create :user
+    auth_id = SecureRandom.uuid
+    google_auth = create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    google_auth.destroy
+
+    # Recreate the same Google authentication option.
+    # Now the user has duplicate authentication options, one active, one soft-deleted.
+    create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    user.reload
+
+    assert_nothing_raised do
+      purge_user user
+    end
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -670,6 +675,21 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       "Rows are actually gone, not just anonymized"
 
     assert_logged "Removed 1 CensusSubmissionFormMap"
+  end
+
+  test "deletes census_inaccuracy_investigation associated census_submissions associated with user email" do
+    census_inaccuracy_investigation = create :census_inaccuracy_investigation
+    id = census_inaccuracy_investigation.id
+    user = census_inaccuracy_investigation.user
+    refute_empty Census::CensusInaccuracyInvestigation.where(id: id),
+      "Expected at least one CensusInaccuracyInvestigation under this email"
+
+    purge_user user
+
+    assert_empty Census::CensusInaccuracyInvestigation.where(id: id),
+      "Rows are actually gone, not just anonymized"
+
+    assert_logged "Removed 1 CensusInaccuracyInvestigation"
   end
 
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
@@ -958,6 +978,23 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.pd_regional_partner_mini_contacts
+  #
+
+  test "clears form_data from pd_regional_partner_mini_contacts" do
+    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
+
+    teacher = create :teacher
+    mini_contact = create :pd_regional_partner_mini_contact, user: teacher
+    refute_equal '{}', mini_contact.form_data
+
+    purge_user mini_contact.user
+
+    mini_contact.reload
+    assert_equal '{}', mini_contact.form_data
+  end
+
+  #
   # Table: dashboard.pd_regional_partner_program_registrations
   #
 
@@ -1028,33 +1065,80 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears primary_email from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.primary_email
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
 
-    purge_user application.user
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')
+      SQL
+    )
 
-    application.reload
-    assert_empty application.primary_email
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["primary_email"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    assert_empty application["primary_email"]
   end
 
   test "clears secondary_email from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.secondary_email
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
 
-    purge_user application.user
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{}')
+      SQL
+    )
 
-    application.reload
-    assert_empty application.secondary_email
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["secondary_email"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    assert_empty application["secondary_email"]
   end
 
   test "clears application from pd_teacher_applications" do
-    application = create :pd_teacher_application
-    refute_empty application.application
+    user = create :teacher
+    secondary_email = 'secondary@email.com'
 
-    purge_user application.user
+    ActiveRecord::Base.connection.exec_query(
+      <<-SQL
+        INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{\"primaryEmail\": \"#{user.email}\"}')
+      SQL
+    )
 
-    application.reload
-    assert_empty application.application
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+
+    refute_empty application["application"]
+
+    purge_user user
+
+    application = ActiveRecord::Base.connection.exec_query(
+      "SELECT * from `pd_teacher_applications` WHERE `pd_teacher_applications`.`user_id` = #{user.id}"
+    ).first
+    assert_empty application["application"]
   end
 
   #
@@ -1381,15 +1465,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user student
   end
-
-  #
-  # Table: pegasus.contact_rollups
-  #
-  # TODO: To interact correctly with contact_rollups (a table controlled only
-  #   by a nightly batch job) we may want to update our user purge to be a
-  #   long-running operation; we'll queue a contact purge that the contact
-  #   rollups job will take care of, and when all deferred work is done we
-  #   will report that the hard-delete is completed.
 
   #
   # Table: pegasus.forms
@@ -1741,72 +1816,36 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       with_channel_for student do |storage_app_id_b, storage_id|
         storage_apps.where(id: storage_app_id_a).update(state: 'deleted')
 
+        student_channels = [storage_encrypt_channel_id(storage_id, storage_app_id_a),
+                            storage_encrypt_channel_id(storage_id, storage_app_id_b)]
         FirebaseHelper.
-          expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_a))
-        FirebaseHelper.
-          expects(:delete_channel).
-          with(storage_encrypt_channel_id(storage_id, storage_app_id_b))
+          expects(:delete_channels).
+          with(student_channels)
 
         purge_user student
+        assert_logged "Deleting Firebase contents for 2 channels"
       end
     end
   end
 
   #
-  # Pardot
-  # pegasus.contact_rollups
+  # contact rollups V2
   #
 
-  test "Pardot: Calls delete_pardot_prospects" do
+  test "account deletion stages email for removal from pardot via purge_user" do
     teacher = create :teacher
+    teacher_email = teacher.email
+    purge_user teacher
 
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([])
-      purge_user teacher
-    end
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
   end
 
-  test "Pardot: Raises if Pardot reports issues deleting prospects" do
+  test "account deletion stages email for removal from pardot via purge_all_accounts_with_email" do
     teacher = create :teacher
+    teacher_email = teacher.email
+    purge_all_accounts_with_email teacher_email
 
-    CDO.stubs(:rack_env?).with(:production).returns(true)
-
-    with_contact_rollup_for(teacher) do |_, pardot_id|
-      Pardot.expects(:delete_pardot_prospects).with([pardot_id]).returns([pardot_id])
-      assert_raises RuntimeError do
-        purge_user teacher
-      end
-    end
-  end
-
-  test "Pardot: Does not contact Pardot outside of production" do
-    teacher = create :teacher
-
-    CDO.stubs(:rack_env?).with(:production).returns(false)
-
-    with_contact_rollup_for(teacher) do
-      Pardot.expects(:delete_pardot_prospects).never
-      purge_user teacher
-    end
-  end
-
-  test "contact_rollups: Deletes user records" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    with_contact_rollup_for(teacher_a) do |contact_rollups_id_a|
-      with_contact_rollup_for(teacher_b) do |contact_rollups_id_b|
-        refute_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-
-        purge_user teacher_a
-
-        assert_empty contact_rollups.where(id: contact_rollups_id_a)
-        refute_empty contact_rollups.where(id: contact_rollups_id_b)
-      end
-    end
+    refute_nil ContactRollupsPardotMemory.find_by(email: teacher_email).marked_for_deletion_at
   end
 
   #
@@ -1978,25 +2017,45 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil program_manager.purged_at
   end
 
+  test 'does not delete email centric data if there is a live account with the same email' do
+    # This behaviour is desired so we don't accidentally delete data related to a live account.
+    # teacher created an account and has responded to one of our census surveys.
+    teacher_old = create :teacher
+    teacher_name = teacher_old.name
+    teacher_email = teacher_old.email
+
+    # create the email related data
+    create :census_your_school2017v0, submitter_email_address: teacher_email
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    create :email_preference, email: teacher_email
+    refute_empty EmailPreference.where(email: teacher_email)
+    Poste2.create_recipient(teacher_email, name: teacher_name, ip_address: '127.0.0.1')
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+    # Pardot should not be told to delete the email from its records
+    ContactRollupsPardotMemory.expects(:find_or_create_by).never
+
+    # teacher deletes their old account because they no longer teach CS
+    teacher_old.destroy!
+    # teacher creates a new account because they started teaching CS again.
+    create :teacher, email: teacher_email
+    # the old teacher account which was soft deleted is now purged by our automated systems.
+    purge_user teacher_old
+
+    # confirm that the email related data is still present
+    refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
+      "Expected at least one CensusSubmission under this email"
+    refute_empty EmailPreference.where(email: teacher_email)
+    refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
+
+    # confirm the old teacher account is purged
+    assert teacher_old.purged_at
+  end
+
   private
 
   def assert_logged(expected_message)
     assert_includes @log.string, expected_message
-  end
-
-  def with_contact_rollup_for(user)
-    pardot_id = user.id
-    contact_rollups_id = contact_rollups.insert(
-      {
-        email: user.email,
-        dashboard_user_id: user.id,
-        pardot_id: pardot_id,
-        name: user.name
-      }
-    )
-    yield contact_rollups_id, pardot_id
-  ensure
-    contact_rollups.where(id: contact_rollups_id).delete if contact_rollups_id
   end
 
   #
@@ -2137,9 +2196,5 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ensure
       PEGASUS_DB[:form_geos].where(id: form_geo_id).delete
     end
-  end
-
-  def contact_rollups
-    PEGASUS_DB[:contact_rollups]
   end
 end

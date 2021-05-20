@@ -1,0 +1,27 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-12-04T21:59:13.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Let’s see if we can take a sampling from a piece of one of the images from the previous level.  Try your best to match the colors using the widget and reproduce the gradient.  Don’t worry if it doesn’t match exactly!  Remember, you can adjust the settings of the widget using the sliders, so you can experiment with using even more bits per pixel!",
+    "long_instructions": "# Color Pixelation: Task 2\r\n**Directions:**\r\nLet’s see if we can take a sampling from a piece of one of the images from the previous level.  Try your best to match the colors using the widget and reproduce the gradient.  Don’t worry if it doesn’t match exactly!  Remember, you can adjust the settings of the widget using the sliders, so you can experiment with using even more bits per pixel!\r\n\r\n![](https://images.code.org/4997a907cebd49b0d7e406f066b00b8a-image-1564716740498.PNG)",
+    "version": "3",
+    "data": "0000 1000\r\n0000 0001\r\n0000 1001",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "parent_level_id": 18946,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "encrypted": "false",
+    "map_reference": "/docs/concepts/patterns/update-screen-pattern/"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-05 00:46:12 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-08-02 03:24:12 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-02 03:25:04 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-02 03:28:20 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\",\"video_key\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-02 03:33:22 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Pixelation>

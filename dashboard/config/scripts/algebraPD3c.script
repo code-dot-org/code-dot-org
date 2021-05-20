@@ -1,22 +1,23 @@
 professional_learning_course 'CS in Algebra Legacy'
 login_required true
 
-stage 'Getting Started'
+lesson 'Getting Started', display_name: 'Getting Started', has_lesson_plan: false
 level 'PDAlg 3CWelcome'
 level 'PDAlg 3CAbout'
 level 'OPD-K5 CS Tips'
 level 'PDAlg 3CPlanning'
 level 'PDAlg 3CGo'
 
-stage 'Sharing Student Work'
+lesson 'Sharing Student Work', display_name: 'Sharing Student Work', has_lesson_plan: false
 level 'PDAlg 3CGathering'
 level 'PDAlg 3CSharing'
 level 'PDAlg 3CShare Forum'
 
-stage 'Planning For the Future'
+lesson 'Planning For the Future', display_name: 'Planning For the Future', has_lesson_plan: false
 level 'PDAlg 3CFuture'
 level 'PDAlg 3CCourseAB'
 level 'PDAlg 3CBootstrap'
 level 'PDAlg 3CElective'
 level 'PDAlg 3CSharePlan'
 level 'PDAlg 3CCongrats'
+

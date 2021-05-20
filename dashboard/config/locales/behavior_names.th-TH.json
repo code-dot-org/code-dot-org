@@ -1,0 +1,49 @@
+{
+  "th-TH": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "การรักษาตัว",
+          "wandering": "เคลื่อนที่"
+        },
+        "outbreak2": {
+          "recovering": "การรักษาตัว"
+        },
+        "outbreak3": {
+          "recovering": "การรักษาตัว"
+        },
+        "outbreak4": {
+          "recovering": "การรักษาตัว",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "outbreak5": {
+          "recovering": "การรักษาตัว"
+        },
+        "outbreak6": {
+          "recovering": "การรักษาตัว"
+        },
+        "outbreak7": {
+          "recovering": "การรักษาตัว",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา"
+        },
+        "outbreak8": {
+          "recovering": "การรักษาตัว",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
+          "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "outbreak_freeplay": {
+          "recovering": "การรักษาตัว",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "การรักษาตัว",
+          "moving left and right": "เคลื่อนที่ไปทางซ้ายและขวา",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        }
+      }
+    }
+  }
+}

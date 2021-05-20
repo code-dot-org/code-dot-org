@@ -1,8 +1,8 @@
 login_required true
-hideable_stages true
+hideable_lessons true
 student_detail_progress_view true
 
-stage 'Computers and Problem Solving'
+lesson 'Computers and Problem Solving', display_name: 'Computers and Problem Solving', has_lesson_plan: false
 level 'CSD U1 Test define a computer'
 level 'CSD U1 Test PSP match'
 level 'CSD U1 IOSP match'
@@ -13,7 +13,7 @@ level 'CSD U1 Test Collaborate FR'
 level 'CSD U1 Test Iteration FR'
 level 'CSD U1 Test', assessment: true
 
-stage 'Web Development'
+lesson 'Web Development', display_name: 'Web Development', has_lesson_plan: false
 level 'CSD U2 Test HTML Usage'
 level 'CSD U2 Test ContentStructureStyle'
 level 'CSD U2 Test Classes'
@@ -26,7 +26,7 @@ level 'CSD U2 Test Copyright FR'
 level 'CSD U2 Test DigCit FR'
 level 'CSD Web Development Post-Project Test', assessment: true
 
-stage 'Interactive Animations and Games'
+lesson 'Interactive Animations and Games', display_name: 'Interactive Animations and Games', has_lesson_plan: false
 level 'CSD U3 Test clean code'
 level 'CSD U3 Test functions'
 level 'CSD U3 Test variables'
@@ -37,3 +37,4 @@ level 'CSD U3 Test debug FR'
 level 'CSD U3 Test parameter FR'
 level 'CSD U3 Test collaboration FR'
 level 'CSD Interactive Animations and Games Post-Project Test', assessment: true
+

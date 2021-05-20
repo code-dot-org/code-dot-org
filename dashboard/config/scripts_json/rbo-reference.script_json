@@ -1,0 +1,296 @@
+{
+  "script": {
+    "name": "rbo-reference",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:39 UTC",
+    "seeding_key": {
+      "script.name": "rbo-reference"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "reference",
+      "name": "reference",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Intro C"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Intro C"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      },
+      "level_keys": [
+        "PDK5 Intro C"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2-3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      },
+      "level_keys": [
+        "2-3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Visual Languages"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Visual Languages"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      },
+      "level_keys": [
+        "PDK5 Visual Languages"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Pair programming match"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Pair programming match"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      },
+      "level_keys": [
+        "PDK5 Pair programming match"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Strategies O"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Strategies O"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      },
+      "level_keys": [
+        "PDK5 Strategies O"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDK5 Promo Video 2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDK5 Promo Video 2"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      },
+      "level_keys": [
+        "PDK5 Promo Video 2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Intro C",
+        "script_level.level_keys": [
+          "PDK5 Intro C"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3",
+        "script_level.level_keys": [
+          "2-3"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Visual Languages",
+        "script_level.level_keys": [
+          "PDK5 Visual Languages"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Pair programming match",
+        "script_level.level_keys": [
+          "PDK5 Pair programming match"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Strategies O",
+        "script_level.level_keys": [
+          "PDK5 Strategies O"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDK5 Promo Video 2",
+        "script_level.level_keys": [
+          "PDK5 Promo Video 2"
+        ],
+        "lesson.key": "reference",
+        "lesson_group.key": "",
+        "script.name": "rbo-reference"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

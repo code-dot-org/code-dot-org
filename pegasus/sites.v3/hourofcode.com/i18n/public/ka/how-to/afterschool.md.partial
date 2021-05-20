@@ -1,5 +1,5 @@
 ---
-title: ინსტრუქციები
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,9 +8,15 @@ nav: how_to_nav
 
 # როგორ ჩავატაროთ კოდის ერთი საათი კლასგარეშე გარემოში და კლუბებში
 
-### შეუერთდით მოძრაობას და გააცანით მოსწავლეებს მათი კომპიუტერული მეცნიერების პირველი საათი შემდეგი საფეხურების მიხედვით. კოდის ერთი საათის ჩატარება მარტივია - დამწყებებისთვისაც კი! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
 
----
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+* * *
 
 ## 1. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. დაგეგმეთ, რა ტექნიკა დაგჭირდებათ - კომპიუტერი აუცილებელი არ არის
 
-კოდის ერთი საათის საუკეთესო გამოცდილების მისაღებად საჭიროა ინტერნეტთან დაკავშირებული კომპიუტერები. მაგრამ **არ** გჭირდებათ კომპიუტერი თითოეული ბავშვისთვის - და საერთოდ კომპიუტერის გარეშეც შეგიძლიათ კოდის ერთი საათის ჩატარება.
+კოდის ერთი საათის საუკეთესო გამოცდილების მისაღებად საჭიროა ინტერნეტთან დაკავშირებული კომპიუტერები. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-არ დაგავიწყდეთ გატესტოთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან მოწყობილობებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში. **ინტერნეტს დაბალი სიჩქარე აქვს?** აჩვენეთ ვიდეოები ერთ დიდ ეკრანზე - ასე ყოველ მოსწავლეს არ დასჭირდება ცალკე ჩატვირთოს ვიდეო. ან სცადეთ უსადენო / ოფლაინ ტუტორიალები.
+არ დაგავიწყდეთ გატესტოთ ტუტორიალები მოსწავლეების კომპიუტერებსა ან მოწყობილობებზე. დარწმუნდით, რომ ხმა და ვიდეო სათანადოდ მუშაობს ბრაუზერში. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 არ დაგავიწყდეთ კლასის ყურსასმენებით უზრუნველყოფა, ან სთხოვეთ მოსწავლეებს მოიტანონ თავიანთი, თუ თქვენ მიერ შერჩეული ტუტორიალის გასავლელად საჭიროა ხმა.
 
-**არ გაქვთ საკმარისი რაოდენობის მოწყობილობა?** სცადეთ[პროგრამირება წყვილებში](https://www.youtube.com/watch?v=vgkahOzFH2Q). წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და ნაკლებად არიან დამოკიდებული მასწავლებელზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და ნაკლებად არიან დამოკიდებული მასწავლებელზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
 
 ## 5. დაიწყეთ კოდის ერთი საათი შთამაგონებელი ვიდეოთი
 
@@ -81,6 +87,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## რა ხდება კოდის ერთი საათის შემდეგ?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

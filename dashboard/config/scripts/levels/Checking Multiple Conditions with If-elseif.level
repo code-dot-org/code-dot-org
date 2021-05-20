@@ -6,7 +6,7 @@
   "user_id": 106,
   "properties": {
     "instructions_important": "false",
-    "reference": "/docs/concepts/app-lab/patterns/checking-multiple-conditions-with-if-else-if/"
+    "reference": "/docs/concepts/patterns/checking-multiple-conditions-with-if-else-if/"
   },
   "published": true,
   "notes": "",

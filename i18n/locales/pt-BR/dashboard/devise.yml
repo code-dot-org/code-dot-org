@@ -1,4 +1,5 @@
-pt-BR:
+#Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+pt:
   devise:
     confirmations:
       confirmed: "Seu endereço de email foi confirmado com sucesso."

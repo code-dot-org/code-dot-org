@@ -1,7 +1,5 @@
 ---
-title: பொது அதிகாரிகளுக்கு வழிகாட்ட எப்படி
-layout: wide
-nav: how_to_nav
+title: அரசு அதிகாரிகளுக்கான எவ்வாறு செய்வது என்பதற்கான வழிகாட்டி
 ---
 
 {{signup_button}}
@@ -26,7 +24,7 @@ nav: how_to_nav
 
 ### 1. எங்கள் ஒரு பேஜர் வாசிக்கவும்
 
- கணினி விஞ்ஞான கல்வி ஏன் முக்கியம் என்பதையும் பார்க்கவும், மற்றும் கோட் ஆஃப் ஹவர் ஆதரிப்பதன் மூலம் நீங்கள் எவ்வாறு உதவ முடியும்.</p> 
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. உள்ளூர் பள்ளிகளையும் மாவட்டங்களையும் சேர்ப்பது
 

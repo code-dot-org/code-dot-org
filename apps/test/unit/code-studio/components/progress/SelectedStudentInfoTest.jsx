@@ -6,7 +6,8 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const defaultProps = {
   selectedStudent: {id: 1, name: 'Student 1'},
-  level: {
+  userLevel: {
+    id: 123,
     assessment: null,
     contained: false,
     driver: null,
@@ -35,8 +36,8 @@ describe('SelectedStudentInfo', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           submitLevel: true,
           submitted: true,
           status: LevelStatus.submitted
@@ -52,8 +53,8 @@ describe('SelectedStudentInfo', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           contained: true,
           status: LevelStatus.perfect
         }}
@@ -61,15 +62,14 @@ describe('SelectedStudentInfo', () => {
     );
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
-    expect(wrapper.find('Button')).to.have.length(1);
   });
 
   it('displays time and who they worked with as navigator if paired as driver on level', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           paired: true,
           status: LevelStatus.perfect,
           navigator: 'Student 2'
@@ -86,8 +86,8 @@ describe('SelectedStudentInfo', () => {
     const wrapper = shallow(
       <SelectedStudentInfo
         {...defaultProps}
-        level={{
-          ...defaultProps.level,
+        userLevel={{
+          ...defaultProps.userLevel,
           paired: true,
           status: LevelStatus.perfect,
           driver: 'Student 2'

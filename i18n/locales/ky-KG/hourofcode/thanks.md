@@ -1,10 +1,5 @@
 ---
 title: Код саатын кабыл алуу үчүн катталганыңызга ырахмат!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Код саатын кабыл алуу үчүн катталганыңызга ырахмат!

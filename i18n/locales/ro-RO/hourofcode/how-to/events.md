@@ -1,7 +1,5 @@
 ---
 title: Cum sa organizezi un eveniment Hour of Code
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,7 @@ nav: how_to_nav
 - Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Alte idei de eveniment**: 
     - Invitați un lider din industria locală, pentru a discuta despre felul în care informatica îl sau o ajută în munca sa.
     - Invitați un politician local şi lăsați elevii să-l sau să o înveţe cum să programeze.
     - Desemnați un grup de elevi care sa susțină demonstrativ o activitate fără calculator.

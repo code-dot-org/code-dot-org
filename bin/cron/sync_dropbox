@@ -1,0 +1,83 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../tools/hooks/hooks_utils.rb'
+
+# This syncs content changes from the shared dropbox folder to our github repo
+# on the staging machine. This is required for contents changes from dropbox to
+# be deployed.
+
+SCRIPT_START = Time.now
+
+require_relative "../../deployment"
+require "cdo/slack"
+require "cdo/high_frequency_reporter"
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
+require "open3"
+
+FOLDERS = {
+  "advocacy.code.org" => "sites.v3/advocacy.code.org",
+  "code.org" => "sites.v3/code.org",
+  "csedweek.org" => "sites.v3/csedweek.org",
+  "curriculum-6-8" => "sites/virtual/curriculum-6-8",
+  "curriculum-algebra" => "sites/virtual/curriculum-algebra",
+  "curriculum-course1" => "sites/virtual/curriculum-course1",
+  "curriculum-course2" => "sites/virtual/curriculum-course2",
+  "curriculum-course3" => "sites/virtual/curriculum-course3",
+  "curriculum-course4" => "sites/virtual/curriculum-course4",
+  "curriculum-csp" => "sites/virtual/curriculum-csp",
+  "curriculum-docs" => "sites/virtual/curriculum-docs",
+  "curriculum-misc" => "sites/virtual/curriculum-misc",
+  "curriculum-science" => "sites/virtual/curriculum-science",
+  "emails" => "emails",
+  "hourofcode.com" => "sites.v3/hourofcode.com"
+}.freeze
+
+GIT_PULL_STARTED_PATH = deploy_dir('git-pull-started').freeze
+
+INTERVAL_SECONDS = 5
+TOTAL_SECONDS = 55 - INTERVAL_SECONDS
+
+logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', '/home/ubuntu/dropbox_sync_error_log.csv')
+logger.load # load errors from most recent sync
+
+while (Time.now - SCRIPT_START) < TOTAL_SECONDS
+  attempt_start = Time.now
+  logger.reset_new_events # reset new events such that they represent one run through all FOLDERS
+  # To prevent any potential conflict between git-pull and unison on the staging
+  # environment, only run unison when git-pull is not running.
+  unless File.file?(GIT_PULL_STARTED_PATH)
+    FOLDERS.each do |key, value|
+      # 'unison' will sync the two folders. It will return true on success and false on failure.
+      # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
+      command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod -log -logfile /home/ubuntu/unison.log"
+      stdout, stderr, _ = Open3.capture3(command)
+      if stdout == "" && stderr == ""
+        HooksUtils.get_unstaged_files.each do |filename|
+          ChatClient.log("<@#{DevelopersTopic.dotd}> INVALID FILENAME: #{filename}", color: 'red') if HooksUtils.prohibited?(filename) && Time.now.sec % 59 == 0
+        end
+      else
+        error_message = <<~ERROR_MSG
+                          <!here> Error syncing Dropbox and staging
+                          Dropbox directory: #{key}
+                          pegasus directory: #{value}
+                          stdout: #{stdout}
+                          stderr: #{stderr}
+                        ERROR_MSG
+        logger.record error_message
+      end
+    end
+  end
+  current_time = Time.now
+  logger.save
+  while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
+    sleep 0.1
+    current_time = Time.now
+  end
+end
+
+# Reports to Slack if current minute is a multiple of 1
+logger.report! 1

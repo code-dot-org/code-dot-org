@@ -7,7 +7,7 @@ import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import {Button} from 'react-bootstrap';
 import _, {orderBy} from 'lodash';
-import {StatusColors, ApplicationStatuses} from './constants';
+import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import PrincipalApprovalButtons from './principal_approval_buttons';
 
@@ -150,7 +150,7 @@ export class QuickViewTable extends React.Component {
         cell: {
           formatters: [
             status =>
-              ApplicationStatuses[this.props.viewType][status] ||
+              getApplicationStatuses(this.props.viewType)[status] ||
               _.upperFirst(status)
           ],
           transforms: [
@@ -190,7 +190,7 @@ export class QuickViewTable extends React.Component {
         {
           property: 'meets_criteria',
           header: {
-            label: 'Meets Minimum Requirements',
+            label: 'Meets Guidelines',
             transforms: [sortable]
           }
         },
@@ -205,13 +205,6 @@ export class QuickViewTable extends React.Component {
           property: 'friendly_scholarship_status',
           header: {
             label: 'Scholarship Teacher?',
-            transforms: [sortable]
-          }
-        },
-        {
-          property: 'total_score',
-          header: {
-            label: 'Bonus Points',
             transforms: [sortable]
           }
         }

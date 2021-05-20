@@ -2217,6 +2217,18 @@
           som du kan dele med venner eller spille spillet ditt på telefonen. Ha det
           gøy!
     starwars_blocks_intro:
+      1:
+        text: 'Hei, jeg heter Kathleen Kennedy og jeg er produsenten av Star Wars:
+          The Force Awakens. I dag vil du arbeide med en av våre stjerner, BB-8. BB-8
+          er en rund drone. Hver eneste av hans bevegelser kontrolleres av programvare.
+          Informatikk påvirker alle bransjer, fra markedsføring til helsetjenester
+          til filmindustrien. Faktisk, hundrevis av maskiningeniører jobbet sammen
+          for å lage en filmen The Force Awakens.'
+      2:
+        text: Hei jeg heter Rachel Rose, og jeg er en senioringeniør ved ILM hvor
+          jeg leder utviklingsteamet for animasjon og skapning. I The Force Awakens
+          er jeg ansvarlig for å hjelpe kunstnere med å bygge delene til filmen slik
+          at de ser troverdige ut i en galakse langt, langt borte.
       4:
         text: Din skjerm er delt opp i tre deler. Til venstre er Star Wars spillet
           hvor koden vil bli kjørt. Instruksjonene for hvert nivå er beskrevet nedenfor
@@ -2441,6 +2453,10 @@
       6:
         text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
           opp programmet.
+      7:
+        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
+          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
+          og deretter vil de snappe sammen.
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2507,6 +2523,10 @@
       6:
         text: Det hvite området til høyre er arbeidsområdet, og det er her vi bygger
           opp programmet.
+      7:
+        text: For å starte må du koble blokkene dine til den oransje-"når kjører"-blokken.
+          Du kan knytte flere blokker sammen ved å dra dem til det vises en gul linje,
+          og deretter vil de snappe sammen.
       8:
         text: I dette første puslespillet, vil vi få skuespillerne til å si noe ved
           å koble "si" blokken til når kjøre blokk og skrive inn meldingen. Når du
@@ -2773,3 +2793,7 @@
     csd_concept_memory_cpu_input_output:
       1:
         image: notes/csd_concept_memory_cpu_input_output_1.png
+    hoc_dance_events_2019:
+      4:
+        text: Eksempler på hendelser er å lytte etter et museklikk, en piltast eller
+          trykk på skjermen.

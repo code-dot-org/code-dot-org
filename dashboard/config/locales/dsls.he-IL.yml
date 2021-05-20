@@ -3,232 +3,313 @@ he-IL:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: בחירה ממספר אפשרויות
-        questions:
-        - text: בחר את האלגוריתם המתאים לתמונה שצורפה.
         answers:
         - text: התחל עם ריבוע<br/>מקם משולש מעל הריבוע<br/>מקם משולש מתחת לריבוע
+          correct: true
         - text: התחל עם ריבוע<br/>מקם משולש מימין לריבוע<br/>מקם מקבילית מתחת לריבוע<br/>מקם
             משולש מימין למקבילית
+          correct: true
         - text: התחל עם ריבוע<br/>מקם מקבילית מעל הריבוע<br/>מקם משולש מימין למקבילית
+          correct: true
         - text: התחל עם ריבוע<br/>מקם משולש מתחת לריבוע<br/>מקם מקבילית מימין למשולש
-      2-3 Algorithms Multi 2:
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
+        questions:
+        - text: בחר את האלגוריתם המתאים לתמונה שצורפה.
         title: בחירה ממספר אפשרויות
+      2-3 Algorithms Multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+          correct: true
         content1: התחל עם משולש<br/>מקם ריבוע מתחת למשולש<br/>מקם משולש נוסף מתחת
           לריבוע
         questions:
         - text: איזו תמונה <em>אינה</em> מתארת את האלגוריתם הזה?
+        title: בחירה ממספר אפשרויות
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Big Event Match 1:
-        title: מתאם
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: התאם בין שילוב הכפתורים לבין תנועות הריקוד.
         questions:
         - {}
         - {}
         - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Binary Match 1:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: מתאם
+      2-3 Binary Match 1:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: השתמש במקש כדי להתאים כל קוד לאות שלה
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מתאם
       2-3 Conditionals Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: בהתאם לחוקי המשחק, איזו מקבוצות הקלפים מנוקדת כראוי?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: בחירה ממספר אפשרויות
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: איך תפשט את רצף הפעולות הזה עם לולאות?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       2-3 Graph Paper Match 1:
-        title: מתאם
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: התאם את הרשת לתכנית.
         questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
+        title: מתאם
       2-3 Graph Paper Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: מי מהתוכניות הבאות מייצר את התמונה הזו?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       2-3 Maze Match 2:
-        title: התאמת מבוך
-        content1: התאם את החידה לאוסף הבלוקים המתאים
-        pre_title: הוראות
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
+        content1: התאם את החידה לאוסף הבלוקים המתאים
+        questions:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        title: התאמת מבוך
       2-3 Maze Multi 2:
-        title: מבוך - אפשרויות מרובות
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - text: איזה אוסף בלוקים יוביל אותי אל החזיר?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מבוך - אפשרויות מרובות
       2-3 Relay Programming Multi 1:
-        title: בחירה ממספר אפשרויות
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-      2-3 Relay Programming Multi 2:
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
+        questions:
+        - text: איזו תוכנית **אינה** יוצרת את התמונה הזו?
         title: בחירה ממספר אפשרויות
+      2-3 Relay Programming Multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
         - text: איזו מן התמונה-תוכנית הבאות אינה כוללת טעויות?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
+        questions:
+        - text: מה אתם צריכים לתקן כדי לגרום לקוד הזה לסיים את העיגול?
+        title: אמן ניפוי שגיאות בחירה מרובה 1
       2-3 artist functions multi 1:
-        title: אמן - פונקציות אפשרויות מרובות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: בחר את הבלוקים המתאימים לצייר את התמונה הזו בהינתן הפונקציות הבאות
-        answers:
-        - {}
-        - {}
-        - {}
+        title: אמן - פונקציות אפשרויות מרובות
       2-3 artist loops match 1:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: התאם את הלולאה אל הצורה
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: התאמת לולאות אמן 1
       2-3 artist loops multi 1:
-        title: האמן - לולאות אפשרויות מרובות
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: איזה מן הצורות הבאות נוצרה ע"י הלולאה הזו?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 artist loops multi 2:
         title: האמן - לולאות אפשרויות מרובות
+      2-3 artist loops multi 2:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: איזה צורה יוצרה ע"י התוכנית הזאת?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: האמן - לולאות אפשרויות מרובות
       2-3 artist match 1:
-        title: התאמת אמן
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: התאם את הצורה עם הבלוקים המשלימים אותה.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
+        title: התאמת אמן
       2-3 bee conditionals multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
+          correct: true
         questions:
         - text: איזה מן ההתניות הבאות נכונה?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: התניות עם דבורה - אפשרויות מרובות 1
       2-3 bee conditionals multi 3:
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: בחר את הבלוקים הכי טובים.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: התניות עם דבורה - אפשרויות מרובות 2
       2-3 bee loops multi 1:
-        title: דבורה - לולאות עם מספר תשובות אפשריות אחד
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: איזה בלוק אוסף את כל הצוף?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: דבורה - לולאות עם מספר תשובות אפשריות אחד
       2-3 maze match 1:
-        title: מבוך אחד מתאים
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: התאם את החידה לאוסף הבלוקים המתאים
         questions:
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
+        title: מבוך אחד מתאים
       2-3 maze multi 1:
-        title: מבוך - אפשרויות מרובות אחד
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+          correct: true
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: איזו קבוצת בלוקים היא התשובה הנכונה?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מבוך - אפשרויות מרובות אחד
       4-5 Algorithms Match 1:
-        title: מתאם
+        answers:
+        - text: "<h4>אפס את התוצאה של שחקן מס' 1</h4>"
+        - text: "<h4>שחקן מס' 1 זורק קוביה</h4>"
+        - text: "<h4>הוסף את תוצאת הקוביה של שחקן מס' 1 לתוצאה הכוללת</h4>"
+        - text: "<h4>השווה את תוצאות השחקנים לראות מי ניצח</h4>"
         content1: התאם את השלבים במשחק מירוץ הקוביות לסדר המתאים של הפעולות כפי שהם
           אמורים להופיע באלגוריתם.
         questions:
@@ -236,22 +317,26 @@ he-IL:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>אפס את התוצאה של שחקן מס' 1</h4>"
-        - text: "<h4>שחקן מס' 1 זורק קוביה</h4>"
-        - text: "<h4>הוסף את תוצאת הקוביה של שחקן מס' 1 לתוצאה הכוללת</h4>"
-        - text: "<h4>השווה את תוצאות השחקנים לראות מי ניצח</h4>"
+        title: מתאם
       4-5 Algorithms Multi 1:
-        title: בחירה ממספר אפשרויות
-        questions:
-        - text: איזו מן האפשרויות הבאות היא הכי קשה לתיאור בעזרת אלגוריתם?
         answers:
         - text: מצחצח את השיניים שלך
+          correct: true
         - text: אפיית עוגיות
+          correct: true
         - text: קניות מרשימת המצרכים
+          correct: true
         - text: בננה
+          correct: true
+        questions:
+        - text: איזו מן האפשרויות הבאות היא הכי קשה לתיאור בעזרת אלגוריתם?
+        title: בחירה ממספר אפשרויות
       4-5 Computational Thinking Match 1:
-        title: מתאם
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: כל אחד מן הרכבים פורק למספר חלקים קטנים. התאם לכל מרכב את רשימת
           החלקים המתאימה לו.
         questions:
@@ -259,506 +344,495 @@ he-IL:
         - text: "<h3>גלגלים בכל צד: 2<br/>חלונות בכל צד: 1</h3>"
         - text: "<h3>גלגלים בכל צד: 2<br/>חלונות בכל צד: 6</h3>"
         - text: "<h3>גלגלים בכל צד: 3<br/>חלונות בכל צד: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מתאם
       4-5 Computational Thinking Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - text: ירושלים _____ _____ _____.
+          correct: true
+        - text: _____ היא עיר _____.
+          correct: true
+        - text: _____ היא _____ _____ בינונית.
+          correct: true
+        - text: יוג'ין היא עיר "____".
+          correct: true
+        content1: לפניכם שלושה משפטים. איזה מבין התבניות הבאות מתאימה לכל המשפטים?”
         questions:
         - text: ירושלים היא עיר גדולה.<br/>הרצליה היא עיר בינונית.<br/>קצרין היא עיר
             קטנה.
-        answers:
-        - text: ירושלים _____ _____ _____.
-        - text: _____ היא עיר _____.
-        - text: _____ היא _____ _____ בינונית.
-        - text: יוג'ין היא עיר "____".
-      4-5 Crowdsourcing Multi 1:
         title: בחירה ממספר אפשרויות
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מהתמונות הבאות מייצגת בצורה הכי טובה מיקור המונים?
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: בחירה ממספר אפשרויות
-        questions:
-        - text: איזה מן הפעולות הבאות הכי מתאימות ליישום בעזרת מיקור המונים?
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: ניקוי החדר שלך
+          correct: true
         - text: אכילת הקינוח שלך
+          correct: true
         - text: לסרק את השיער
+          correct: true
         - text: שטיפת הפנים שלך
-      4-5 Digital Footprint Multi 1:
-        title: בחירה ממספר אפשרויות
+          correct: true
         questions:
-        - text: איזו פיסת מידע המפורטים להלן מותר לשתף באינטרנט?
+        - text: איזה מן הפעולות הבאות הכי מתאימות ליישום בעזרת מיקור המונים?
+        title: בחירה ממספר אפשרויות
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: יום ההולדת שלך
+          correct: true
         - text: האוכל האהוב עליך
+          correct: true
         - text: הכתובת שלך
+          correct: true
         - text: מספר כרטיס האשראי של ההורים שלך
-      4-5 Internet Multi 1:
+          correct: true
+        questions:
+        - text: איזו פיסת מידע המפורטים להלן מותר לשתף באינטרנט?
         title: בחירה ממספר אפשרויות
+      4-5 Internet Multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: כאשר אתה מנסה להיכנס ל- code.org, לאיזו כתובת IP הכי סביר להניח שיוביל
             אותך ה-DNS?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Internet Multi 2:
         title: בחירה ממספר אפשרויות
+      4-5 Internet Multi 2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: אם ה-DNS שלח אותך אל כתובת הIP 100.42.50.110, באיזה אתר אינטרנט אתה
             נמצא?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: בחירה ממספר אפשרויות
+      4-5 Songwriting Multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+        title: בחירה ממספר אפשרויות
+      4-5 Suncatchers Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      4-5 Suncatchers Match 1:
-        title: מתאם
         content1: התאם את התכנית למילה שהיא מייצרת, בעזרת קבוצת ה-Skill שברשימה שלה.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מתאם
       4-5 Suncatchers Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מן התוכניות מטה <em>אינה</em> מייצרת את אותו הרצף כמו Program
             1?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       4-5 artist loops multi 1:
-        title: האמן - לולאות אפשרויות מרובות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: מי מהבלוקים ייצרו את הציור הבא?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: האמן - לולאות אפשרויות מרובות
       4-5 artist multi 1:
-        title: האמן, אפשרויות מרובות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: אילו בלוקים מציירות מלבן עם היקף באורך 100?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 artist multi 2:
         title: האמן, אפשרויות מרובות
+      4-5 artist multi 2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מן הציורים הוא סימטרי?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: האמן, אפשרויות מרובות
       4-5 bee conditionals multi 1:
-        title: דבורה - התניות עם מספר תשובות אפשריות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: בחר את הבלוקים הכי טובים.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: דבורה - התניות עם מספר תשובות אפשריות
       4-5 bee debug multi 1:
-        title: דבורה - ניפוי שגיאות עם מספר תשובות אפשריות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזו גרסה של הפונקציה תעבוד?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: דבורה - ניפוי שגיאות עם מספר תשובות אפשריות
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - text: איזה מהבלוקים יפתרו את החידה?
         title: דבורה - לולאות עם מספר תשובות אפשריות
-        questions:
-        - text: איזה מהבלוקים יפתרו את החידה?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - text: איזה מהבלוקים יפתרו את החידה?
         title: מבוך - התניות עם מספר תשובות אפשריות
-        questions:
-        - text: איזה מהבלוקים יפתרו את החידה?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: התאמת מבוך
-        content1: התאם את החידה לאוסף הבלוקים המתאים
-        pre_title: הוראות
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
+        content1: התאם את החידה לאוסף הבלוקים המתאים
+        questions:
+        - {}
+        - {}
+        - {}
+        title: התאמת מבוך
       4-5 maze multi 1:
-        title: מבוך - אפשרויות מרובות
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מהבלוקים יפתרו את החידה?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מבוך - אפשרויות מרובות
       Begin planning your project:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       Begin planning your project_2018:
-        title: התחל לתכן את הפרויקט שלך
         content1: הוסיפו תיאור כאן
       Begin planning your project_2018_2019:
-        title: התחל לתכן את הפרויקט שלך
+        content1: הוסיפו תיאור כאן
+      Begin planning your project_2018_2019_2020:
         content1: הוסיפו תיאור כאן
       CSD Header Size MC:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD U2 Design Project:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 Design Project_2018:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 Design Project_2018_2019:
-        title: כותרת
+        content1: הוסיפו תיאור כאן
+      CSD U2 L1 Overview:
         content1: הוסיפו תיאור כאן
       CSD U2 L2 Overview:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 L3 Overview:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 L4 Overview:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 L5 Overview:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 L6 Overview:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 Lesson 6 Overview:
         content1: הוסיפו תיאור כאן
       CSD U2 expand project:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 expand project_2018:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 expand project_2018_2019:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 project guide:
-        title: האתר האישי שלך
         content1: הוסיפו תיאור כאן
       CSD U2 project guide_2018:
-        title: האתר האישי שלך
         content1: הוסיפו תיאור כאן
       CSD U2 project guide_2018_2019:
-        title: האתר האישי שלך
         content1: הוסיפו תיאור כאן
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: כותרת
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: כותרת
       CSD U3 Boolean MC_2018:
-        title: כותרת
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: כותרת
       CSD U3 Boolean MC_2018_2019:
-        title: כותרת
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: כותרת
       CSD U3 Card Examples_2018:
         content1: הוסיפו תיאור כאן
       CSD U3 Card Examples_2018_2019:
         content1: הוסיפו תיאור כאן
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U3 combining rep:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U3 combining rep_2018:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U3 combining rep_2018_2019:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
-        title: צור משחק משלך
         content1: הוסיפו תיאור כאן
       CSD U3 game intro_2018:
-        title: צור משחק משלך
         content1: הוסיפו תיאור כאן
       CSD U3 game intro_2018_2019:
-        title: צור משחק משלך
         content1: הוסיפו תיאור כאן
       CSD U3 platform intro:
         content1: הוסיפו תיאור כאן
@@ -767,13 +841,10 @@ he-IL:
       CSD U3 platform intro_2018_2019:
         content1: הוסיפו תיאור כאן
       CSD U5 Encryption 1:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 Encryption 1_2018:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 Encryption 1_2018_2019:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 Encryption 2:
         content1: הוסיפו תיאור כאן
@@ -782,7 +853,6 @@ he-IL:
       CSD U5 Encryption 2_2018_2019:
         content1: הוסיפו תיאור כאן
       CSD U5 L13 SFLP Interpreting Data:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 crosstab warmup:
         content1: הוסיפו תיאור כאן
@@ -791,22 +861,16 @@ he-IL:
       CSD U5 crosstab warmup_2018_2019:
         content1: הוסיפו תיאור כאן
       CSD U5 data visualization:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 data visualization_2018:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 data visualization_2018_2019:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 student record:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 student record_2018:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U5 student record_2018_2019:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       CSD U6 LED create intro:
         content1: הוסיפו תיאור כאן
@@ -815,28 +879,28 @@ he-IL:
       CSD U6 LED create intro_2018_2019:
         content1: הוסיפו תיאור כאן
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: הוסיפו תיאור כאן
@@ -845,924 +909,1619 @@ he-IL:
       CSD U6 final intro_2018_2019:
         content1: הוסיפו תיאור כאן
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
-        - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          #המשיכו_לרקוד!
+
+          עבור חלק 2, אתם הולכים ליצור פרויקט משלכם. אין כאן שום חידות - במקום, יש המון פרויקטים שמראים דרכים שונות ליצור מסיבות ריקודים מורכבות יותר.
+
+          אתם יכולים לעשות את השלבים הללו _באיזה סדר שבא לכם_. קפצו ממקום למקום כדי לראות איך משהו נעשה בשלב קודם, או שלבו רעיונות בין הפרויקטים. נסו את כולם, בחרו את החביב עליכם, והקדישו את זמנכם כדי להוסיף לפרויקט הזה ולעשות אותו שלכם!
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">המשיכו</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          כנסו לתבנית
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          לאיפה הם נעלמו?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          צוותי ריקוד
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          רבעי תווים
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          באס, מיד וטרבל
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          מהר יותר, לאט יותר
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          #המשיכו_לרקוד!
+
+          בחלק 2 אתם עומדים ליצור פרויקט משלכם. אין פה חידות - במקומן, יש מגוון של פרויקטים המראים דרכים שונות ליצור מסיבות ריקודים מורכבות יותר.
+
+          אתם יכולים לעשות את השלבים הללו _באיזה סדר שבא לכם_. זוזו מפה לשם כדי לראות איך משהו נעשה בשלב אחר, או שלבו רעיונות בין הפרויקטים השונים. נסו את כולם, בחרו את האהוב עליכם, ובלו את זמנכם בהוספת דברים לפרויקט והפיכתו לשלכם.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">המשיכו</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          הלוך ושוב
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          עוד כפתורים
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          צרו העמדה
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          לאיפה הם נעלמו?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          צוותי ריקוד
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          רבעי תווים
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          באס, מיד וטרבל
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          מהר יותר, לאט יותר
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup:
         content1: הוסיפו תיאור כאן
       Internet Simulator Setup 2:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       Internet Simulator Setup 3:
         content1: הוסיפו תיאור כאן
       K-1 Artist 1 Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+          correct: true
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: איזה מהבלוקים יפתרו את החידה?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: בחירה ממספר אפשרויות
+      K-1 Artist 1 Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png\n"
+          correct: true
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: איזה מהבלוקים מייצרים ריבוע?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       K-1 Artist 2 Match 2:
-        title: מתאם
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: התאם את הצורה לפי סוג.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: בחירה ממספר אפשרויות
-        questions:
-        - text: כמה צופים יש כתוצאה מהתרגיל?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: בחירה ממספר אפשרויות
-        questions:
-        - text: כמה צופים יש כתוצאה מהתרגיל?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: מתאם
+      K-1 Bee 1 Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
+        questions:
+        - text: כמה צופים יש כתוצאה מהתרגיל?
+        title: בחירה ממספר אפשרויות
+      K-1 Bee 1 Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+        questions:
+        - text: כמה צופים יש כתוצאה מהתרגיל?
+        title: בחירה ממספר אפשרויות
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: התאם את הבלוקים
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: מתאם
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: מתאם
         content2: התאם בין שילוב הכפתורים לבין תנועות הריקוד.
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: מתאם
       K-1 Digital Footprint Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: מי מהחיות משאירה אחריה עקבות דיגטליים שמשאירה אותה <strong>הכי פחות
             בטוחה</strong>?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איך תפשט את רצף הפעולות הזה עם לולאות?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Happy Maps Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Happy Maps Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: איזה מן החצים לוקח את פורב (היצור) אל האוצר?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מידע <strong>אינך</strong> צריך לשתף ברשת?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+          correct: true
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: איזה מן האפשרויות צריכה להיות הבלוק הסופי?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מבלוקי החזרה הם זהים?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 2:
         title: בחירה ממספר אפשרויות
+      K-1 Maze Loops Multi 2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: בחר את בלוק החזרה הנכון לרצף הבא.
-        answers:
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       K-1 Maze Match 1:
-        title: מתאם
-        content2: התאם את הפאזלים ואת הבלוקים
-        pre_title: הוראות
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+        content2: התאם את הפאזלים ואת הבלוקים
+        questions:
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: מתאם
       K-1 Maze Multiple Choice 2:
-        title: מבוך
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+          correct: true
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: איזו תשובה פותרת את השלב?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: מבוך
       K-1 Move It Multi 1:
-        title: בחירה ממספר אפשרויות
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: איזה אלגוריתם מביא את פלורב (היצור) אל הפרחים?
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Plant a Seed Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: איזה חלק צריך לשים בתחילת האלגוריתם הזה?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
         title: בחירה ממספר אפשרויות
+      K-1 Plant a Seed Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: איזה חלק צריך להשלים לתוך החלק הריק באלגוריתם?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 1:
         title: בחירה ממספר אפשרויות
+      K-1 Word Search Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+          correct: true
         questions:
         - text: איזה מהבלוקים מאיית "MOVE"?
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
         title: בחירה ממספר אפשרויות
+      K-1 Word Search Multi 3:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - text: איזה מהמילים הבאות מאויתת ע"י הדבורה?
-        answers:
-        - {}
-        - {}
-        - {}
+        title: בחירה ממספר אפשרויות
       Multi-Screen Apps:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       New Challenge Introduction:
-        title: כותרת
+        content1: הוסיפו תיאור כאן
+      OPD-K5 Reviewing Reflections:
         content1: הוסיפו תיאור כאן
       OPD-K5 Stage3aGo:
-        title: כותרת
+        content1: הוסיפו תיאור כאן
+      OPD-K5 Stage3aGo_copy:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 conditionals introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 debugging:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 diving deeper intro:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 events introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops intro:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 for loops introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 functions introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 journaling:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 lesson implementation planning:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 lesson plans:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 loops introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 project:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 projects introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 role_of_teacher:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sequencing introduced:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab unplugged:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 sprite lab video:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 types of lessons:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 using lesson plans:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables introduction:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 variables unplugged:
+        content1: הוסיפו תיאור כאן
+      OPD-K5 where to next:
+        content1: הוסיפו תיאור כאן
+      OPD-K5-projects-1:
         content1: הוסיפו תיאור כאן
       Prepare for your presentation:
-        title: כותרת
         content1: הוסיפו תיאור כאן
       'Technique: Frequency Analysis':
         content1: הוסיפו תיאור כאן
       Terminology Recap:
-        title: זה היה קל. מה הבא בתור?
         content1: הוסיפו תיאור כאן
       behaviors 1 predict:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      behaviors 1 predict_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       behaviors 4 predict:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      behaviors 4 predict_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - text: '4'
-        - {}
-        - {}
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
-        - {}
-        - {}
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: סקראט יגיע לבלוט. הקוד נקי וללא באגים.
+          correct: true
+          feedback: טעות. תחילה, סקראט פונה לכיוון הלא נכון ואחר כך סקראט לא מתקדם
+            מספיק צעדים קדימה כדי להגיע לבלוט.
+        - text: סקראט לא יגיע לבלוט כי הוא פונה לכיוון הלא נכון
+          correct: true
+          feedback: נכון! תחילה סקראט פונה לכיוון הלא נכון, אחר כך סקראט לא מתקדם
+            קדימה מספיק צעדים כדי להגיע לבלוט.
+        - text: לסקראט עדיין חסרים עוד בלוקים של "לזוז קדימה" ולכן הוא לא יגיע לבלוט.
+          correct: true
+          feedback: נכון! תחילה סקראט פונה לכיוון הלא נכון, אחר כך סקראט לא מתקדם
+            קדימה מספיק צעדים כדי להגיע לבלוט.
+        - correct: true
+          feedback: בקוד הזה יש שני באגים. תחילה סקראט פונה לכיוון הלא נכון, אחר כך
+            סקראט לא מתקדם קדימה מספיק צעדים כדי להגיע לבלוט.
+        questions:
+        - text: האם יש באגים בקוד הזה. האם סקראט יגיע בהצלחה לבלוט, או שיש בעיה בקוד?
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_starWars_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: אינני יודע
+          correct: true
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - text: אינני יודע
       courseC_multi_starWars_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: אינני יודע
+          correct: true
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - text: אינני יודע
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
         - text: אינני יודע
-      courseC_multi_starWars_predict2:
+          correct: true
         questions:
         - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: אינני יודע
+          correct: true
+        questions:
         - {}
-        - {}
-        - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
-        - {}
-        - {}
-      courseD_external_binary1:
-        title: ציור בינארי
-      courseD_external_binary1_2018:
-        title: ציור בינארי
-      courseD_external_binary1_2018_2019:
-        title: ציור בינארי
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: א
+          correct: true
         - text: ב
+          correct: true
         - text: ג
+          correct: true
         - text: ד
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: א
+          correct: true
         - text: ב
+          correct: true
         - text: ג
+          correct: true
         - text: ד
+          correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: א
+          correct: true
         - text: ב
+          correct: true
         - text: ג
+          correct: true
         - text: ד
-      courseD_multi_artist_nestedLoops9_predict1:
+          correct: true
         questions:
         - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: א
+          correct: true
         - text: ב
+          correct: true
         - text: ג
+          correct: true
+        - text: ד
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: א
+          correct: true
+        - text: ב
+          correct: true
+        - text: ג
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: א
+          correct: true
         - text: ב
+          correct: true
         - text: ג
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: א
+          correct: true
         - text: ב
+          correct: true
         - text: ג
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: א
+          correct: true
+        - text: ב
+          correct: true
+        - text: ג
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
-        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - text: '4'
+          correct: true
         - text: '8'
-        - {}
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
+          correct: true
         - text: '8'
-        - {}
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
+          correct: true
         - text: '8'
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
-        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
-        - {}
-        - {}
+      csf_be_a_super_digital_citizen:
+        content1: הוסיפו תיאור כאן
+      csf_password_power-up:
+        content1: הוסיפו תיאור כאן
+      csf_putting_a_stop_to_online_meanness:
+        content1: הוסיפו תיאור כאן
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
         questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
         - {}
-        - {}
-        - {}
-        - {}
+      CSD U1 Lesson 8 Overview:
+        markdown: |
+          # מבט על
+
+          בשיעור זה תלמדו על דרכים בהן משתמשות האפליקציות כדי לעבד מידע מסוגים שונים, כדי לפתור בעיות.
+
+          ## מקורות מידע
+
+          * [App Exploration - Activity Guide](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+      outbreak_story:
+        content1: הוסיפו תיאור כאן
+        markdown: |-
+          # התפרצות: קודדו את הסימולציה שלכם
+
+          ## ברוכים הבאים למפלצת־טָאוּן (עיירת־המפלצות)!
+          מפלצת־טאון הייתה תמיד מקום שמח ובריא. המפלצות של מפלצת־טאון אהבו לשוטט בה ולבקר את חבריהם.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## בא לעיירה וירוס חדש
+          יום אחד, אחת המפלצות החלה לחוש ברע. מסתבר שהמפלצת חטפה **וירוס**! וירוס (או בעברית: נגיף) הוא חיידק זעיר שבכוחו לגרום לכם לחלות. אך המפלצות האחרות לא היו מודאגות מדי. הן המשיכו לבקר את חבריהם.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## הווירוס מתפשט
+          זמן קצר לאחר מכן, שתי מפלצות נוספות חלו. זה היה אותו הווירוס ממש! נראה שהן חטפו את הנגיף מחברם.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ## התפרצות!
+          הנגיף התפשט אט־אט והדביק מפלצות אחרות שהיו בקרבת מקום. המפלצות הבריאות החלו לדאוג שהן כולן עומדות לחלות. המפלצות החולות החלו לדאוג שהן הולכות להדביק גם את כל האחרות.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## עצירת ההתפשטות
+          למרבה המזל, לאחר שלמדו את הנגיף, שכנותיה של מפלצת־טאון גילו תגלית חשובה. הם הבינו שיש פחות סיכוי להפיץ את הנגיף אם הן יעטו מסכות על פיהם. אם הן יעטו מסיכות פנים, סביר פחות שהמפלצות החולות ידביקו את המפלצות הבריאות.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## מה יקרה הלאה?
+          היום אתם הולכים לכתוב קוד כדי ליצור ולהריץ **סימולציה** משלכם להתפרצות הנגיף במפלצת־טאון.  סימולציה (הדמיה) היא מודל מחשב של תהליך או מערכת. למדו לקודד וכך גם לחזות מה יעלה בגורלם של אלה הגרים בקרבתה של מפלצת־טאון.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *כמה מהר הווירוס יתפשט?*
+
+          * *האם כולם יחלו?*
+
+          * *איך יעזרו מסכות־הפנים?*
+
+
+          כשתסיימו, שתפו את הסימולציה שלכם עם אחרים. שתפו את המסר שלכם לגבי מה שאתם חושבים שנוכל לעשות בכדי לשמור על בריאותם של האחרים כאשר נגיף כלשהו מגיע לעיירה.
+      outbreak_story2:
+        content1: הוסיפו תיאור כאן
+        markdown: |-
+          # התפרצות: לחשוב כמו מדען
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          סימולציות הן דרך נהדרת ללמוד דברים שעלולים להיות קשים לחיזוי בעולם האמיתי. הם עוזרים למדענים לפתור בעיות ולבדוק רעיונות חדשים בצורה בטוחה ויעילה. הסימולציה שלכם היא דרך להראות כיצד עשויה להיראות התפרצות וירוסים במפלצת־טאון.
+
+          ## אפסו והפעילו מחדש!
+          גם כשאתם כותבים את הקוד בעצמכם, אי אפשר לדעת בדיוק מה יקרה כשתלחצו על 'הפעל'. המפלצות משוטטות באופן אקראי, כך שאין לדעת אם הנגיף יתפשט במהירות או באיטיות. בכל פעם שאתם משנים את הקוד שלכם, ודאו שאתם מפעילים את הסימולציה שלכם יותר מפעם אחת. הדברים לא יקרו באותו אופן פעמיים!
+
+          ## איסוף מידע
+          נסו לתעד את התצפיות שלכם בזמן שאתם מריצים את הסימולציה שלכם. אתם יכולים לספור את מספר המפלצות החולות, או להשתמש בטיימר, כדי לראות כמה הדברים קורים במהירות. למשל, כמה זמן לוקח לכל המפלצות לחלות אם אין לאף אחת מהן מסכה?
+
+          ## חיזוי תחזיות
+          אם אתם מבינים את המודל שלכם, אתם יכולים להשתמש בו כדי לחזות תחזיות. אתם יכולים אפילו לשנות את אופן פעולת הסימולציה שלכם ולנחש מה יקרה אחרת. לדוגמה:
+          * מה היה קורה אם היו פי שתיים מפלצות?
+          * מה היה קורה אם המפלצות היו זזות במהירות נמוכה יותר בחצי?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## האם מפלצת־טאון היא כמו העולם האמיתי?
+          יש גבול עד כמה כל מודל יכול להיות מציאותי.
+          * מה המשותף לסימולציית ההתפרצות שלכם ולהתפרצויות וירוסים בעולם האמיתי?
+          * מהם ההבדלים ביניהן?
+          כשתסיימו פעילות זו, שוחחו על שאלות אלה עם המורים שלכם או עם משפחתכם!
+
+          ## מה עוד נוכל למדל?
+          יצרתם כבר מודל עובד של ההתפרצות במפלצת־טאון. מהם הדברים שהסימולציה שלכם לא יכולה לעשות או להראות - והייתם רוצים שהיא תוכל? לחצו על 'המשך' כדי להמשיך וללמוד למדל עוד יותר:
+          * הגדלת מספר המפלצות בסימולציה
+          * סיוע למפלצות בהחלמה מהווירוס
+          * הסתברות, חסינות, חיסונים ועוד!
+
+          אתם יכולים גם לשתף את מודל הסימולציה שלכם עם אחרים, או לשתף הודעה עם מחשבותיך לגבי הדברים שאנחנו יכולים לעשות כדי לשמור על בריאותם של אחרים כאשר מגיע לעיירה נגיף חדש.
+      courseExpress_EOC_2020:
+        description: הגעתם לשיעור האחרון של הקורס המזורז! בחרו איזה פרוייקט תרצו ליצור.
+      outbreak_freeplay_choice:
+        display_name: משחק חופשי
+      courseExpress_project_exemplars_2019_2020:
+        markdown: |+
+          # דוגמאות של פרוייקטים
+
+          אתם מתחילים את פרוייקט הגמר שלכם. לפני שאתם מתחילים, תקדישו מעט מזמנכם כדי לעבור את הפרוייקטים לדוגמא.
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Get your disco on while your backup dancers switch it up! | Try adding more color and background to this scene! |
+
+          | Snowflake Flowers (Frozen) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Let's get creative with functions! | Try adding text or a score to this game! |
+
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # השכונה הוירטואלית שלי
+
+          ## איך מטיילים בבטחון ברשת?

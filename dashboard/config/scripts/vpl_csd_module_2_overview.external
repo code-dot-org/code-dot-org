@@ -1,0 +1,23 @@
+name 'VPL - CSD Module 2 Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Module 2: CS Discoveries Virtual Professional Learning 
+
+## Module 2 Overview
+
+In Module 2, we will continue to reflect on and discuss the theme of the "Role of the Teacher" in a CS Discoveries classroom while we dig deeper into the content and pedagogy of Unit 3: Interactive Animations and Games. 
+
+**During this asynchronous work you will:**
+
+* Use a draw loop to add movement to sprites in Game Lab
+* Use a counter pattern to animate sprites in Game Lab
+* Use conditionals to react to changes in variables and sprite properties
+* Acquire a high level understanding of the general content and types of activities in Unit 3: Interactive Animations and Games 
+* Reflect on the role of the teacher in supporting students during a programming lesson
+
+###Let's get started! 
+
+MARKDOWN

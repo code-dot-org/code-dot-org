@@ -10,18 +10,13 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 export const TeacherWarning = () => {
   return (
     <div>
-      <p>
-        {i18n.deleteAccount_teacherWarning1()}
-        <strong>{i18n.deleteAccount_teacherWarning2()}</strong>
-        {i18n.deleteAccount_teacherWarning3()}
-      </p>
-      <p>
-        {i18n.deleteAccount_teacherWarning4()}
-        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
-          {i18n.deleteAccount_teacherWarning5()}
-        </a>
-        {i18n.deleteAccount_teacherWarning6()}
-      </p>
+      <SafeMarkdown markdown={i18n.deleteAccount_teacherWarning()} />
+
+      <SafeMarkdown
+        markdown={i18n.deleteAccount_personalLoginInstructions({
+          explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL
+        })}
+      />
     </div>
   );
 };
@@ -53,7 +48,11 @@ const CHECKBOX_MAP = {
       <span>
         <strong>{i18n.deleteAccountDialog_checkbox1_1()}</strong>
         {i18n.deleteAccountDialog_checkbox1_2()}
-        <a href={RELEASE_OR_DELETE_RECORDS_EXPLANATION} target="_blank">
+        <a
+          href={RELEASE_OR_DELETE_RECORDS_EXPLANATION}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {i18n.learnMore()}
         </a>
       </span>
@@ -64,7 +63,11 @@ const CHECKBOX_MAP = {
     label: (
       <span>
         {i18n.deleteAccountDialog_checkbox2_1()}
-        <a href={ADD_A_PERSONAL_LOGIN_HELP_URL} target="_blank">
+        <a
+          href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {i18n.deleteAccountDialog_checkbox2_2()}
         </a>
         {i18n.deleteAccountDialog_checkbox2_3()}

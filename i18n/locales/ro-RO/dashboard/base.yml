@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 ro:
   errors:
     messages:
@@ -7,6 +19,11 @@ ro:
       pair_programmer: 'In momentul de fata realizati programarea in echipa cu un elev care nu are acces la acest continut. Pentru a accesa continutul, opreste programarea pereche si incepe din nou.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "e invalid. Fiecare link poate fi folosit o singură dată pentru resetarea parolei, și numai linkul trimis cel mai recent va funcționa."
       messages:
         blank: "este necesar"
         blank_plural: "sunt necesare"
@@ -15,10 +32,11 @@ ro:
     attributes:
       user:
         name: 'Numele afișat'
-        name_example: 'Afişează numele <br/> (de exemplu, Cool Coder sau Jane S.)'
+        name_example: 'Afişează numele (de exemplu, Cool Coder sau Jane S.)'
         email: 'E-mail'
         parent_email: 'E-mail părinte/tutore'
         personal_email: "Adresă de e-mail personală <a href=\"%{url}\"> (apasă aici dacă nu ai o adresă de e-mail)</a>"
+        personal_email_markdown: "Adresă de e-mail personală [(apasă aici dacă nu ai o adresă de e-mail)](%{url})"
         username: 'nume de utilizator'
         password: 'Parolă'
         password_confirmation: 'Confirmarea parolei'
@@ -29,7 +47,10 @@ ro:
         edit_header: 'Editează detaliile contului'
         finish_sign_up_header: 'Finalizează crearea contului tău'
         finish_sign_up_subheader: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org pentru <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org pentru **%{email}**.'
         finish_sign_up_subheader_provider: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org cu **%{provider}** pentru**%{email}**.'
+        reset_password_token: "Linkul pentru resetarea parolei pe care l-ai folosit"
         error:
           future: nu poate fi în viitor
   beta: "beta"
@@ -46,13 +67,13 @@ ro:
   okay: "Bine"
   or: "sau"
   heading_x_of_y: "%{heading} (pagina%{x} din %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Adaugă un profesor:'
+      title: 'Înscrie-te într-o clasă pe Code.ord'
       placeholder: "Secțiune Cod (ABCDEF)"
-      instructions: "Te rugăm să introduci codul atribuit ție de profesorul tău. Acesta este un cod din 6 litere ca \"ABCDEF\"."
+      instructions: "Introdu codul din 6 litere pe care profesorul tău ți l-a distribuit (exemplu: „ABCDEF”) pentru a te înscrie în clasa lui."
       instructions_short: "Introdu codul clasei tale din 6 litere"
-    submit: 'Adaugă profesor'
+      submit: 'Alătură-te'
   add_hint_form:
     placeholder: 'Te rugăm să introduci indiciul tău aici'
     submit: 'Adaugă sugestie'
@@ -81,8 +102,8 @@ ro:
     continue_with: 'Continuă cu %{provider}'
     sign_in_with: 'Loghează-te cu %{provider}'
     signed_in: 'Înregistrat!'
-    signed_out: 'Te-ai delogat de pe <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Ai folosit %{provider} pentru a te loga. <a href="%{url}">Fă clic aici</a> pentru ate deloga de pe %{provider}.'
+    signed_out_markdown: '###Te-ai delogat din [Code.org](%{url}.'
+    sign_out_of_markdown: '#### Ai folosit %{provider} pentru a te conecta. [Clic aici](%{url}) ca să te deconectezi de la %{provider}.'
     already_signedup: 'Te-ai înscris deja?'
     notyet_signedup: "Nu te-ai alăturat încă?"
     google_oauth2: 'Google'
@@ -99,17 +120,26 @@ ro:
     need_unlock: "Nu ai primit instrucţiuni de deblocare?"
     not_linked: "Ne pare rău, contul Code.org nu este conectat la furnizorul dvs. %{provider}. Va trebui să vă conectați introducând parola mai jos."
     use_clever: "Ne pare rău, contul Code.org nu este conectat la furnizorul dvs. %{provider}. Vă rugăm să vă conectați prin Portalul dvs. Inteligent."
+    invalid_provider: "Ne pare rău, conturile %{provider} nu pot fi legate de conturile Code.org."
+    migration_required: "Ne pare rău, nu putem să conectăm sau să deconectăm conturi care folosesc încă experiența contului vechi. Te rugăm sp actualizezi la experiența noului cont."
     unable_to_connect_provider: "Nu s-a reușit efectuarea conectării contului dvs. Code.org la contul dvs. %{provider}. Vă rugăm să încercați din nou."
+    disconnect_successful: "Suces! Am deconectat contul extern din contul tău Code.org."
     already_in_use: "Contul dvs %{provider} este deja conectat la alt cont de Code.org."
     already_linked: "Contul dvs %{provider} este deja folosit la alt cont de Code.org."
+    existing_account:
+      account_exists: "Vești bune! Ai deja un cont Code.org, care folosește %{email}"
+      sign_in: "Autentifică-te în contul tău existent. Apoi vei putea să conectezi profilul %{provider} tău de pagina Setărilor Contului tău."
+      sign_up: "Nu este emailul tău? Vrei să creezi un nou ont cu un email diferit? Vei pute, de asemenea, să conectezi profilul tău %{provider} de pagina Setărilor Contului tău dacă alegi să creezi un nou cont. "
   signup_form:
     email_signup: 'Înregistrează-te cu adresa ta de e-mail'
     student_count: '%{count} studenţi s-au înregistrat deja.'
     teacher_count: '%{count} profesori s-au înregistrat deja.'
     overview: 'Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona clasa dvs. <a href="/"> puteţi parcurge diverse stadii şi puzzle-uri</a> fără un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.'
+    overview_markdown: 'Înscrieţi-vă contul pentru a urmări progresul dumneavoastră sau a gestiona clasa dvs. [puteţi parcurge diverse stadii şi puzzle-uri](/) fără un cont, dar va trebui să vă înregistrați ca să salvaţi progresul şi proiectele.'
     hoc_already_signed_up_heading: 'Începe fără logare'
     hoc_already_signed_up_content: 'Esti logat pentru a preda o Oră de Programare! Nu e nevoie ca tu și elevii tăi să vă logați in Code Studio pentru a participa la acest eveniment. Pentru a incepe, <a href="https://code.org/learn">alegeți un tutorial</a>pentru clasa ta si dați-le și lor link-ul.<br/><br/>Dacă v-a plăcut Hour of Code și vreți să mergeți mai departe, puteți alege o parolă pentru a crea un cont Code Studio și pentru a vă înrola elevii pentru studiu folosind <a href="https://code.org/educate">cursuri mai lungi</a>.'
     hoc_already_signed_up_content_post_hoc: 'Vă mulțumim că ați găzduit o Oră de Cod. Pentru a vă conecta la Studio-ul Code, va trebui să setați o parolă pentru contul dvs. Acest lucru vă va permite să vă salvați progresul și să vă gestionați clasa. Veți putea repartiza cursuri elevilor, precum și urmări progresul acestora. <a href="%{studio_url}"> De asemenea, puteți continua să explorați etape și puzzle-uri diverse</a> fără a crea un cont.'
+    hoc_already_signed_up_content_post_hoc_markdown: 'Vă mulțumim că ați găzduit o Oră de Cod. Pentru a vă conecta la Studio-ul Code, va trebui să setați o parolă pentru contul dvs. Acest lucru vă va permite să vă salvați progresul și să vă gestionați clasa. Veți putea repartiza cursuri elevilor, precum și urmări progresul acestora. [De asemenea, puteți continua să explorați etape și puzzle-uri diverse](%{studio_url}) fără a crea un cont.'
     teacher_educator_guide: 'Consultă ghidul educatorului'
     title: "Înregistrați-vă pentru Code.org"
     school_name: 'Numele şcolii (opţional)'
@@ -128,13 +158,12 @@ ro:
     valid_password: "Parolă validă!"
     invalid_password: "Parola trebuie să conţină cel puțin 6 caractere"
     mismatch_password: "Cele două parole introduse nu se potrivesc"
-    agree_tos_privacy: "Sunt de acord cu <a href='http://code.org/tos'>Termenii și condițiile de utilizare</a> şi <a href='http://code.org/privacy'>Politica de confidențialitate</a>."
-    under_13_consent: "Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
     student_consent: "Confirm că am permisiunea părintelui sau tutorelui meu legal de a utiliza serviciile Code.org."
-    agree_us_website: "Sunt de acord să folosesc un site web din Statele Unite."
-    my_data_to_us: "Datele obținute în urma utilizării de către mine a acestui site pot fi trimise și stocate sau prelucrate în Statele Unite."
-    student_terms: "Sunt de acord să respect Code.org <a href='http://code.org/tos'> termenii de serviciu</a>. Dacă am sub vârsta de 13 ani, confirm prin trimiterea acestui formular că am părinte sau tutore legal și permisiunea de a utiliza serviciile Code.org. <br/> <br/> Adresele de e-mail nu sunt stocate într-o formă care permite să contactăm studenţii. Elevii nu vor primi niciodată e-mailuri de la Code.org cu excepţia de recuperare a parolei. A se vedea termenii noștrii<a href='http://code.org/privacy'> de confidentialitate</a> pentru mai multe informaţii."
-    teacher_terms: "Sunt de acord să respect termenii Code.org de serviciu. Pentru mai multe informaţii despre confidenţialitate, consultaţi <a href='http://code.org/privacy'> politica noastră de confidenţialitate</a>."
+    agree_us_data_transfer_student: '**Sunt de acord ca Code.org poate transfera date (inclusiv datele mele personale) din utilizarea de către mine a acestui site către Statele Unite** în vederea găzduirii și prelucrării acestor date.'
+    agree_us_data_transfer_teacher: '**Sunt de acord ca Code.org să poată transfera date (inclusiv datele mele personale) din utilizarea mea (și utilizarea elevilor mei) a prezentului site către SUA** în vederea găzduirii și prelucrării acestor date.'
+    data_collection_us: "Înțeleg că Code.org este un site non-profit din SUA, iar legile care guvernează colectarea datelor în SUA pot fi diferite de legile din țara mea."
+    visit_privacy: 'Vizitează [Politica de Confidențialitate](%{privacy_url}) pe Code.org  pentru mai multe informații.'
+    student_terms_markdown: "Adresele de emai nu sunt depozitate într-o formă care să ne permită să contactăm studenții. Studenții nu vor primi niciodată emailuri din partea Code.org, decât pentru recuperarea parolelor. Pentru mai multe informații, vezi [privacy policy](http://code.org/privacy)."
     additional_information: "Mai avem nevoie de câteva informaţii adiționale pentru a te putea înscrie."
     user_type_button: "Actualizaţi tipul de contul"
     user_type_label: "Tipul contului"
@@ -148,10 +177,14 @@ ro:
     email_preference_yes: "Da"
     email_preference_no: "Nu"
     email_preference_required: "Trebuie să specificaţi un email preferat."
+    parent_account_checkbox: "Sunt un părinte/tutore care se înscrie în numele copilului meu"
+    parent_account_email_progress_permission: "Putem să vă trimitem un email cu actualizări ocazionale privind progresul și proiectele copilului dv., precum și actualizări despre cursul lui și despre informatică? [(Vedeți politica noastră de confidențialitate)](%{privacy_policy_url})"
+    parent_account_email_label: "Email-ul Părintelui/Tutorelui"
   school_info:
     title: 'Informații școală (opțional)'
     school_country: 'Țara școlii'
     select_school_type: 'Tipul Școlii'
+    charter: 'Cartă'
     private: 'Privat'
     public: 'Public'
     homeschool: 'Homeschool'
@@ -187,7 +220,7 @@ ro:
     login: 'Loghează-te'
     invalid_login: 'Logare invalidă, vă rugam să reîncercați'
     pair_programming: 'Am un partener la calculatorul meu'
-    student_privacy: "Aflați mai multe despre motivul pentru care nu vă vedeți numele complet <a href='%{student_privacy_blog}' target='_blank'>aici</a>."
+    student_privacy_markdown: "Află de ce nu îți vezi numele întreg [here](%{student_privacy_blog})."
   password:
     reset_form:
       title: 'Ai uitat parola?'
@@ -214,6 +247,7 @@ ro:
       %{name}
   parent_mailer:
     student_associated_subject: 'Informații de conectare la Code.org'
+    parent_email_added_subject: 'Bine ați venit la Code.org!'
   teacher_mailer:
     new_teacher_subject: 'Bine ați venit la Code.org!'
     delete_teacher_subject: 'Notificare Code.org: Contul dvs. a fost șters'
@@ -280,11 +314,12 @@ ro:
       project_gallery: "Proiecte"
       sections: "Secțiuni"
       help_support: "Ajutor şi suport"
-      report_bug: "Raporteazã eroare"
+      report_bug: "Raportare problemă"
       teacher_community: "Comunitate profesori"
       professional_learning: "Dezvoltare profesională"
       documentation: "Documentație"
       tutorials: "Tutoriale"
+      web_lab_documentation: "Documentația Laboratorului Web"
       educate_overview: "Prezentare profesor"
       educate_elementary: "Şcoala elementară"
       educate_middle: "Gimnaziu"
@@ -310,6 +345,8 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
+      legal_privacy: "Politică de confidențialitate"
+      legal_tos: "Termeni şi condiţii de utilizare"
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
@@ -317,7 +354,7 @@ ro:
       stats: 'Studio-ul Code'
       settings: 'Contul meu'
       logout: 'Deloghează-te'
-      signin: 'Loghează-te'
+      signin: 'Autentificare'
       signup: 'Creează un cont'
       already_registered: 'Eşti deja înregistrat?'
       pair_programming: 'Programare prin împerechere'
@@ -332,7 +369,7 @@ ro:
       basketball: 'Baschet'
       bounce: 'Săritură'
       calc: 'Calculează'
-      dance: 'Petrecere cu dans'
+      dance: 'Petrecere dansantă'
       eval: 'Evaluează'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -341,14 +378,16 @@ ro:
       gumball: 'Minunata lume a lui Gumball'
       iceage: 'Epoca de gheață'
       infinity: 'Infinit'
+      makerlab: 'Creare Kit Unelte'
       minecraft_adventurer: 'Minecraft Adventurer'
       minecraft_aquatic: 'Minecraft Aquatic'
+      minecraft_codebuilder: 'Minecraft: Cod Conectare'
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Laborator de Joacă'
       playlab_k1: 'Play Lab (Pre-cititor)'
       scratch: 'Scratch'
-      sports: 'Sporturi'
+      sports: 'Sporturi (Sports)'
       spritelab: 'Laborator Sprite'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocuri)'
@@ -392,6 +431,7 @@ ro:
       worked_with: 'A lucrat cu'
       update_lock_settings: 'Actualizează setările de blocare aici.'
       clear_response: 'Răspuns clar'
+    student_code_view_diabled: 'Codul studentului nu poate fi vizualizat pentru această activitate.'
   user:
     email_confirm_needed: 'Adresa de email nu a fost confirmată:'
     email_confirm_needed_required: 'Adresa ta de e-mail %{email} nu a fost confirmată:'
@@ -415,7 +455,9 @@ ro:
     create_personal_login_info: 'Dacă doriți să continuați să vă utilizați contul Code.org chiar și după sfârșitul anului școlar, puteți crea mai jos propriul dvs. login.'
     create_personal_login_link_account: 'De asemenea, puteți alege să vă conectați la un cont personal în cadrul secțiunii "Gestionare conturi asociate".'
     create_personal_login_terms: "Prin crearea unui cont de utilizator personal, sunt de acord să respect <a href='%{terms_of_service_url}', target='_blank'>termenii și condițiile de utilizare</a> impuse de Code.org. Confirm că am primit permisiunea părintelui meu sau a tutorelui meu legal să utilizez serviciile Code.org chiar și fără profesor."
+    create_personal_login_terms_markdown: "Prin crearea unui cont de utilizator personal, sunt de acord să respect [termenii și condițiile de utilizare](%{terms_of_service_url}) impuse de Code.org. Confirm că am primit permisiunea părintelui meu sau a tutorelui meu legal să utilizez serviciile Code.org chiar și fără profesor."
     create_personal_login_email_note: "Notă: adresele de email nu sunt stocate într-o formă care să ne permită să contactăm studenții. Elevii nu vor primi niciodată e-mailuri de la Code.org, cu excepția recuperării parolei. Consultați <a href='%{privacy_policy_url}', target='_blank'>politicile noastre de confidențialitate</a> pentru mai multe informații."
+    create_personal_login_email_note_markdown: 'Notă: adresele de email nu sunt stocate într-o formă care să ne permită să contactăm studenții. Elevii nu vor primi niciodată e-mailuri de la Code.org, cu excepția recuperării parolei. Consultați [politicile noastre de confidențialitate](%{privacy_policy_url}) pentru mai multe informații.'
     enter_new_login_info: 'Introduceți noile informații ale dvs. de conectare'
     confirm_secret_words: 'Confirmați-vă identitatea prin introducerea cuvintelor dvs. secrete curente'
     parent_email_label: "Email-ul părintelui/tutorelui (opțional)"
@@ -423,14 +465,21 @@ ro:
     enter_parent_email: "Introduceți adresa de email a părintelui dvs. sau a tutorelui dvs. (pentru recuperarea parolei)"
     update: "Actualizaţi contul"
     account_successfully_updated: "Contul a fost actualizat cu succes."
+    auth_option_saved: "Ai reușit să conectezi contul tău %{provider} cu emailul%{email}."
+    auth_option_saved_no_email: "Ai reușit să conectezi contul tău %{provider}."
+    update_email: "Actualizează"
+    for_parents_and_guardians: "Pentru Părinți și Tutori"
+    link_a_parent_email: "Corelați adresa de email a unui părinte/tutore cu acest cont pentru a primi actualizări despre progresul și proiectele copilului dv. De asemenea, veți putea utiliza această adresă de email pentru recuperarea parolei."
+    parent_guardian_email_label: "E-mail părinte/tutore"
+    remove_parent_email_label: "Elimină"
+    none: "Nici unul"
+    only_one_parent_email_supported_warning: "Notă: pentru moment, putem accepta doar o adresă de email a părintelui/tutorelui pentru un cont de elev"
+    encrypted: "criptat"
   user_level:
     completed: 'Finalizat'
     tried: 'Încercat'
   home:
     title: "Studio-ul Code"
-    description: 'Studio-ul Code este gazda cursurilor online create de Code.org'
-    lines_of_code: "%{lines_count} LINII DE COD SCRISE DE ELEVI"
-    lines_of_code_linebreak: "%{lines_count} LINII DE COD<br/>SCRISE DE %{students_count} MILIOANE DE ELEVI"
     all_courses: "Prezentare generală a cursurilor 1, 2 și 3"
     lesson_plans: "Planuri de lecție"
     signin_message: "Deja înregistrat? %{link}"
@@ -460,11 +509,7 @@ ro:
     test_videos_help: 'Încearcă noul nostru video player la şcoala ta'
     try_beta_courses: 'Nou! Încearcă cursurile noastre beta pentru elevi de clasele 1-5'
     use_as_teacher: 'Foloseşte acest site în calitate de profesor'
-    heading_hoc2014: "<h2>Ora de Programare pentru</h2><h1>toate vârstele</h1>"
-    heading_elementary: "<h2>cursuri de 20 ore pentru</h2><h1>începători(toate vârstele)</h1>"
-    heading_apps: "<h2>Distracţie pentru</h2><h1>Toată lumea</h1>"
-    heading_tools: "<h2>Gata pentru următorul pas?</h2> <h1>Instrumente JavaScript pentru liceu</h1>"
-    heading_legacy: "<h2>Cursul nostru intensiv pentru</h2><h1>Toate vârstele</h1>"
+    heading_elementary_markdown: "##20 de ore de cursuri pentru # Cunoștințe Fundamentale de Cibernetică (toate vârstele)"
     your_gallery: Galerie
     no_primary_course: "Încearcă un curs cu Atelierul de programare"
     choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul de mai jos"
@@ -499,6 +544,7 @@ ro:
     art_from_html_old: 'Minecraft &#8482; &copy; %{current_year} Microsoft. Toate drepturile rezervate. Star Wars &#8482; &copy; %{current_year} Disney şi Lucasfilm. Toate drepturile rezervate. Congelate &#8482; &copy; %{current_year} Disney. Toate drepturile rezervate. Ice Age &#8482; &copy; %{current_year} 20th Century Fox. Toate drepturile rezervate. Angry birds &#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Toate drepturile rezervate. Plante vs zombi &#8482; &copy; %{current_year} Electronic Arts Inc Toate drepturile rezervate. The Amazing World of Gumball este marca înregistrată &copy; %{current_year} 2015 Cartoon Network.'
     code_from_html: 'Code.org foloseşte p5.play, care este licenţiat sub <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Susținut de Amazon Web Services'
+    google_copyright: '&copy; Google Inc. utilizat cu permisiune. Clasa Google (Google Classrom) este o marcă a Google Inc.'
     trademark: '&copy;Code.org, %{current_year}. Code.org&reg;, logo-ul CODE şi Hour of Code&reg; sunt mărci comerciale ale Code.org.'
     copyright: 'Drept de autor'
     more: 'Mai mult'
@@ -531,12 +577,14 @@ ro:
     download: 'Descarcă Video'
     show_notes: 'Arată note'
     show_video: 'Arată video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'> unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii, dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare."
       link: "Află mai mult"
       applab_unsupported_tablet: "Laboratorul de aplicații funcționează cel mai bine pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent."
       gamelab_unsupported_tablet: "Laboratorul de jocuri funcționează cel mai bine pe un calculator de birou sau laptop cu mouse și tastatură. Este posibil să întâmpinați probleme folosind acest instrument pe dispozitivul dvs. curent."
+      oceans_unsupported_browser: "Acest browser nu este suportat pentru acest tutorial. Te rugăm să vizitezi această pagină folosind Edgge, Chrome, Firefox sau alt browser modern."
       weblab_unsupported_browser: "Din păcate, în prezent, întâmpinăm probleme cu încărcarea Laboratorului de web în acest browser. Poate doriți să utilizați un browser diferit până când acest lucru este rezolvat. Ne cerem scuze pentru neplăcerile create."
       weblab_unsupported_locale_storage: "S-ar putea să întâmpinați probleme la utilizarea Laboratorului de web în modul de navigare privată. Vă rugăm, reîncărcați proiectul în modul normal. Ne pare rău pentru inconveniență."
   slow_loading: 'Aceasta durează mai mult decât de obicei...'
@@ -578,7 +626,9 @@ ro:
       audience: 'Vârste 13 +'
       cta: 'Află cum'
     dance:
-      title: 'Petrecere cu dans'
+      title: 'Petrecere dansantă'
+    dance-2019:
+      title: 'Petrecere dansantă'
     hoc:
       title: 'Labirint Clasic'
       body: 'Încearcă bazele programarii. Milioane de oameni au încercat.'
@@ -626,7 +676,7 @@ ro:
     hero:
       title: "Minecraft"
     sports:
-      title: "Sporturi"
+      title: "Sporturi (Sports)"
       body: "Creați un joc de basketball sau un \"mix and match\" din toate sporturile."
     text-compression:
       body: "În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru a comprima textul prin înlocuirea modelelor cu simboluri."
@@ -643,23 +693,8 @@ ro:
       body: "Elevii pot explora concepte la cursul nostru de Principii în Informatică, cu ajutorul acestor instrumente digitale. Utilizați widget-urile pe cont propriu sau creați o lecție cu un singur concept pentru clasa dvs."
       audience: "Vârste 14+"
       cta: "Află cum"
-  gallery:
-    students_drew_these_with_code: "Elevii au realizat aceste desene prin programare!"
-    students_made_these_with_code: "Elevii au creat acestea cu secvențe de cod!"
-    picture_count: "În ultimele <b>%{days}</b> zile, studenții au desenat <b>%{count}</b> imagini scriind propriile programe de calculator. Fă clic pe imagini pentru a vedea fiecare program în acțiune."
-    activity_count: "În ultimele <b>%{days}</b> zile, elevii au creat <b>%{count}</b> aplicații şi imagini scriindu-și propriile programe pentru calculator. Fă clic pe imagini și capturi de ecran pentru a vedea fiecare program în acţiune."
-    want_to_make_your_own: "Vrei să realizezi propriul tău program?"
-    how_to_save: "In ultimul nivel al acestor tutoriale, faceţi click pe \"Finish\" şi \"Save\" pentru a salva munca de pana acum in Galerie."
-    more: "Mai mult &rarr;"
-    caption_by_name_age: "de %{name}, vârsta %{age}"
-    caption_time_ago: "cu %{time_ago} în urmă"
-    header: "Galerie"
-    header_playlab: "Laborator de Joacă"
-    header_artist: "Artist"
-    report_abuse: "Raportează abuz"
   landing:
-    prerelease: "Acest curs este în <span class='betatext'>versiune beta</span>. Asta înseamnă că aceasta nu este versiunea finală a cursului şi el poate fi revizuit în momentul în care se primește feedback şi se fac îmbunătățiri."
-    prerelease_hoc2014: "Acest tutorial este în <span class='betatext'> versiune beta</span>.  Acesta face obiectul revizuirii pe măsură ce se primește feedback şi sunt făcute îmbunătăţiri."
+    prerelease_tutorial: "Acest tutorial este în **beta**. Se referă la revizuire în momentul primirii de feedback-uri și când se efectuează îmbunătățiri."
     report_bug: "Raporteazã eroare"
     support: "Obţine ajutor"
     support_url: "//support.code.org"
@@ -667,6 +702,8 @@ ro:
     help_support: "Ajutor şi suport"
     documentation: "Documentație"
     tutorials: "Tutoriale"
+  free_response:
+    placeholder: "Completează răspunsul tău aici"
   multi:
     wrong_title: "Răspuns incorect"
     wrong_body: "Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!"
@@ -714,11 +751,13 @@ ro:
     open_response_body: "Îți mulţumim pentru răspuns!"
     correct_title: "Corect"
     correct_body: "Acela este răspunsul corect."
+  lesson_extras:
+    bonus_level: "Nivel Bonus"
   dialog:
     ok: "OK"
     startover_title: "Ești sigur că vrei să începi din nou?"
     startover_body: "Acest lucru va reseta puzzle-ul la starea sa inițială şi va şterge tot ce ai adăugat sau modificat."
-    startover_ok: "Reîncepe"
+    startover_ok: "Începe din nou"
     startover_cancel: "Revocare"
   time:
     hour: '1 oră'
@@ -727,20 +766,33 @@ ro:
   age_interstitial:
     age: Vârsta ta
     header: Actualizare Informaţii Cont
-    message: "Suntem pe cale de a ne actualiza experienţa pentru a vă oferi o protecţie a informaţiilor private mult mai puternică. Pentru a face aceasta, avem nevoie ca utilizatorii existenţi să îşi introducă vârsta aici.<br/>Ca întotdeauna, code.org nu va închiria, vinde sau distribui aceste informaţii nici unei alte părți terțe."
-    sign_out: 'Dacă nu doreşti să îţi dezvălui vârsta, poţi să te<a href="%{url}">deloghezi</a>.'
+    warning: "Ne aflăm în proces de actualizare a experienței noastre pentru a-ți oferi protecții de confidențialitate mai puternice. Pentru aceasta, avem nevoie ca utilizatorii existenți să își introducă vârsta aici."
+    disclaimer: "Ca de obicei, code.org nu va inchiria, vinde sau distribui niciodată aceste informații cu niciun terț."
+    sign_out_markdown: 'Dacă nu dorești să dezvălui vârstata, poți [să te deconectezi] (%{url}).'
   terms_interstitial:
     title: "Actualizeaza termenii de serviciu şi politica de confidenţialitate"
     intro_desc: "Am actualizat termenii şi politica de confidenţialitate, aşa cum arată mai jos. Modificările sunt efectuate la 24 august 2016.  Cea mai mare schimbare: noi <i>nu vom mai stoca adrese de email pentru conturile de student pe Code Studio.</i> Acesta este un mare lucru pentru noi, şi sperăm că el stabileşte un nou standard pentru intimitatea studentului în educaţie si tehnologie. V-am trimis un rezumat al altor schimbări prin e-mail."
+    intro_desc_markdown: "Am actualizat termenii şi politica de confidenţialitate, aşa cum arată mai jos. Modificările sunt efectuate la 24 august 2016. Cea mai mare schimbare: noi _nu vom mai stoca adrese de email pentru conturile de student pe Code Studio._ Acesta este un mare lucru pentru noi, şi sperăm că el stabileşte un nou standard pentru intimitatea studentului în educaţie si tehnologie. V-am trimis un rezumat al altor schimbări prin e-mail."
     intro_instructions: "Trebuie să acceptaţi aceşti termeni noi pentru elevii sub vârsta de 13 ani din clasă dvs. pentru a avea acces complet la toate cele mai recente caracteristici în Code Studio.  Atunci când înregistrati un cont pentru un student sub 13 ani, vi se va solicita să confirme că şcoala are acordul părinților pentru colectarea informaţiilor personale ale elevului de utilizare şi de a beneficia de şcoală, inclusiv programe educationale, cum ar fi Code Studio."
     tos: "Termeni şi condiţii de utilizare"
     privacy: "Politică de confidențialitate"
     privacy_notice: "Confidențialitate"
     accept_label: 'Sunt de acord sa actualizez <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>'
+    accept_label_markdown: Sunt de acord sa actualizez [Termenii](%{tos_url}) şi [Politica de confidenţialitate](%{privacy_url})
+    accept_tos: Prin înregistrarea pe Code.org, îți exprimi acordul față de [Condițiile serviciului](%{tos_url}) și [Politica privind confidențialitatea](%{privacy_url}).
     accept: "Accept"
     print: "Tipărire"
     reminder_desc: 'Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>. Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.'
+    reminder_desc_markdown: Am actualizat [Termenii](%{tos_url}) şi [Politica de confidenţialitate](%{privacy_url}). Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.
     review_terms: "Revedeţi termenii actualizati"
+  donor_interstitial:
+    title: "Cursurile tale gratuite de Informatică au fost posibile de către..."
+    subtitle: "Dorim să mulțumim donatorilor generoși al căror suport a făcut posibil succesul Code.org. Ne angajăm să menținem Code.org gratuit pentru școli și studenți, în general, datorită generozității continue a [donors](%{donors_url}) noștri!"
+    local_supporters: "Suporteri Locali"
+    global_supporters: "Suporteri Globali"
+    support_codeorg_1: "Fiecare dolar donat la Code.org aduce oportunități mai multor studenți."
+    support_codeorg_2: "[Donează acum](%{donate_url}) pentru a susține Code.org."
+    get_started: "Începe pe Code.org."
   school_info_interstitial:
     title: "Dorim să prezentăm Informatica fiecărui student - ajutați-ne pentru a ne putea urmări progresul!"
     message: "Vă rugăm introduceți informațiile despre școala dumneavoastră mai jos."
@@ -761,6 +813,7 @@ ro:
     submit: "Trimite"
     decline: "Închide"
   zendesk_too_young_message: 'Ne pare rău, însă utilizatorii mai tineri nu au voie să intre pe site-ul nostru de suport. Poți naviga pe <a href="http://support.code.org">support.code.org</a> fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze în numele tău.'
+  zendesk_too_young_message_markdown: 'Ne pare rău, însă utilizatorii mai tineri nu au voie să intre pe site-ul nostru de suport. Poți naviga pe [support.code.org](http://support.code.org) fără a te loga sau solicită ajutorul unui părinte sau profesor să ne contacteze în numele tău.'
   progress:
     not_started: Neînceput
     in_progress: în curs de desfăşurare
@@ -824,59 +877,17 @@ ro:
   peer_review:
     accepted:
       name: 'Acceptat'
-      description: '<strong>Da</strong>, această prezentare <strong>îndeplineşte</strong> cerinţele'
+      description_markdown: '**Da**, această prezentare **nu îndeplinește** cerințele'
     rejected:
       name: 'Respins'
-      description: '<strong>Nu</strong>, această prezentare <strong>nu îndeplineşte</strong> cerinţele'
+      description_markdown: '**Nu**, această prezentare **nu îndeplinește** cerințele'
     escalated:
       name: 'Escaladat'
       description: 'Aş dori un instructor pentru a revizui această prezentare'
     instructor_feedback: 'Instructor de Feedback'
     peer_feedback: 'Trimiteţi o recenzie'
     outdated: 'Acest feedback a fost adaugat pentru o versiune anterior prezentata'
-  flex_category:
-    required: 'Prezentare generală'
-    content: 'Conţinut'
-    practice: 'Practicile de predare'
     peer_review: 'Împerecheaţi dispozitivele'
-    ramp_up: 'Avansare'
-    main_course: 'Curs principal'
-    extra_course_content: 'Conținut curs suplimentar'
-    csf_e_1: 'Avansare la Cursul E (Opțional)'
-    csf_e_2: 'Conținut curs E'
-    csf_f_1: 'Avansare la Cursul F (Opțional)'
-    csf_f_2: 'Conținut curs F'
-    csf_digcit: 'Cetățenia Digitală'
-    csf_jigsaw: 'Puzzle'
-    csf_loops: 'Bucle'
-    csf_events: 'Evenimente'
-    csf_binary: 'Binar'
-    csf_conditionals: 'Condiţionale'
-    csf_spritelab: 'Laborator Sprite'
-    csf_nested_loops: 'Repetiții imbricate'
-    csf_functions: 'Funcţii'
-    csf_variables: 'Variabile'
-    csf_for_loops: 'Bucle Pentru'
-    csf_internet: 'Internet'
-    csd1_1: 'Capitolul 1: Procesul de rezolvare a problemelor'
-    csd1_2: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
-    csd2_1: 'Capitolul 1: Conţinutul Web şi HTML'
-    csd2_2: 'Capitolul 2: Styling şi CSS'
-    csd3_1: 'Capitolul 1: Imagini şi animaţii'
-    csd3_2: 'Capitolul 2: Cum facem jocuri'
-    csd4_1: 'Capitolul 1: Design orientat spre utilizator'
-    csd4_2: 'Capitolul 2: Prototipare aplicații'
-    csd5_1: 'Capitolul 1: Reprezentarea informaţiilor'
-    csd5_2: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
-    csd6_1: 'Capitolul 1: Programare cu hardware'
-    cspSurvey: 'Sondaj'
-    cspAssessment: 'Evaluare capitol'
-    csp2_1_2018: 'Unitatea 2: Informaţii digitale'
-    csp_variables: 'Variabile'
-    csp_conditionals: 'Condiţionale'
-    csp_functions: 'Funcţii'
-    csp_lists: 'Liste'
-    csp_loops: 'Bucle'
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de Code.org.
@@ -937,7 +948,14 @@ ro:
     mac: 'Mac OS X'
   locked_stage: 'Conţinutul de acest stadiu nu este vizibil deoarece aceasta etapa este blocată momentan. Profesorul poate debloca acest stadiu atunci când este timpul să lucrezi la el sau de a revizui raspunsurile.'
   hidden_stage: "Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce lecție ar trebui să urmezi."
+  hidden_script: "Profesorl tău nu  se aștepta să fii aici. Te rugăm întreabă-ți profesorul la ce curs trebuia sa fii."
+  no_course_access_student: "Nu ai acces la acest curs. Te rugăm întreabă-ți profesorul la ce curs trebuia sa fii."
+  no_course_access_teacher: "Nu ai acces la acest curs. Dacă crezi că ar trebui să ai acces la acest curs, te rugăm să scrii la support@code.org, pentru a putea rezolva această situație."
+  no_script_access_student: "Nu ai acces în această unitate. Întreabă-ți profesorul în ce unitate ar trebui să fii."
+  no_script_access_teacher: "Nu ai acces în ceastă unitate. Dacă crezi că ar trebui să ai acces în această unitate, te rugăm să scrii la support@code.org ca să putem rezolva situația."
+  return_unit_overview: 'Mergi la unitatea de ansamblu'
   return_course_overview: 'Mergi la unitatea de ansamblu'
+  view_all_units: 'Vizualizează toate unitățile'
   pd:
     form_labels:
       first_name: 'Prenume'
@@ -949,6 +967,19 @@ ro:
       school_name: 'Numele școlii'
       school_city: 'Orașul în care se află școala'
       school_country: 'Țara școlii'
+      colombian_school_city: 'Orașul în care se află școala'
+      colombian_school_department: 'Departament Școlar'
+      colombian_school_municipality: 'Municipiul Școlar'
+      colombian_school_name: 'Numele școlii'
+      ages: 'Care este/sunt vârsta/vârstele pentru care predai acest an?'
+      subjects: 'Ce materii predai acest an?'
+      resources: 'Care dintre următoarele resurse de educație cibernetică folosești?'
+      robotics: 'Care dintre următoarele resurse de robotică folosești?'
+      workshop_organizer: 'Organizator de Atelier'
+      workshop_facilitator: 'Facilitator de Atelier'
+      workshop_course: 'Curs Atelier'
+      email_opt_in: 'Putem să îți trimitem email despre proramul internațional, actualizările cursurilor noastre sau alte știri de cibernetică ale Code.org?'
+      legal_opt_in: 'Prin depunerea acestui formular, ești de acord să permiți Code.org să distribuie informațiile despre modul în care folosești Code.org și resursele Profesionale de Învățare cu Partenerii Internaționali Code.org în țara ta, districtul tău școlar și cu facilitatorii. Vom distribui informațiile tale de contact, cursurile/unitățile pe care le folosești și datele globale despre clasele cu acești parteneri. Aici intră și numărul de studenți din clasele tale, defalcarea demografică a claselor tale și numele școlii și districtului tău. Nu vom divulga informații despre studenții individuali cu partenerii noști: toate informațiile studenților vor fi deidentificate și totalizate. Partenerii noștri Internaționali și facilitatorii sunt obligați în mod contractual să trateze aceste informații cu același grad de confidențialitate ca și Code.org.'
     form_entries:
       gender:
         male: 'De sex masculin'
@@ -959,37 +990,56 @@ ro:
       school_country:
         canada: 'Canada'
         chile: 'Chile'
+        colombia: 'Columbia'
         israel: 'Israel'
         malaysia: 'Malaezia'
         mexico: 'Mexic'
         thailand: 'Tailanda'
       ages:
         ages_under_6: '< 6 ani'
+        ages_7_8: '7-8 ani'
+        ages_9_10: '9-10 ani'
+        ages_11_12: '11-12 ani'
+        ages_13_14: '13-14 ani'
+        ages_15_16: '15-16 ani'
+        ages_17_18: '17-18 ani'
+        ages_19_over: '19+ ani'
       subjects:
         cs: 'Tehnologia computerului si programare'
+        ict: 'ICT'
         math: 'Matematică'
         science: 'Ştiinţă'
         history: 'Istorie / Studii sociale'
         la: 'Limbi'
+        efl: 'Engleza ca Limbă Străină'
         music: 'Muzică'
         art: 'Artă'
+        other: "Altele:"
       resources:
+        bootstrap: "\nSistem cu Buclă(Bootstrap)"
         codecademy: 'CodeCademy'
+        csfirst: 'Google CS First'
         khan: 'Khan Academy'
         kodable: 'Kodable'
         scratch: 'Scratch'
         tynker: 'Tynker'
+        other: "Altele:"
       robotics:
+        grok: 'Grok Learning'
         kodable: 'Kodable'
+        lego: 'Educația LEGO'
+        microbit: 'Microbit'
         ozobot: 'Ozobot'
         sphero: 'Sphero'
         raspberry: 'Raspberry Pi'
         wonder: 'Atelierul minune'
+        other: "Altele:"
       workshop_course:
         csf_af: 'Fundamentele informaticii (Cursuri A-F)'
         csf_express: 'Fundamentele informaticii (pre-Express sau Express)'
         csd: 'Descoperiri informatice'
         csp: 'Principle Informaticii'
+        not_applicable: "Nu se aplică"
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Nu'
@@ -997,24 +1047,39 @@ ro:
       title: 'Prezență în atelier'
       intro: "Vă mulțumim pentru timpul acordat pentru completarea trainingului în curriculumul Code.org. Misiunea noastră de a aduce oportunități de educație în informatică tuturor copiilor din toate școlile din întreaga lume nu ar fi posibilă fără tine."
       instructions: "Vă rugăm să completați formularul de mai jos pentru a indica faptul că 1) ați participat la un atelier de instruire condus de unul dintre partenerii internaționali Code.org și 2) sunteți de acord cu utilizarea informațiilor dvs. de către partenerul nostru internațional în țara dvs., pentru a ca acesta să vă poată ajuta și sprijini în călătoria dumneavoastră ca profesor de informatică."
-      thanks: "Vă mulțumim că ați trimis! Așteptăm cu nerăbdare să vă susținem pe măsură ce vă familiarizați cu curriculumul și instrumentele Code.org. Vă rugăm să continuați să ne faceți cunoscute întrebările și feedback-ul dvs. scriindu-ne la <a href='%{support_email_url}'>support@code.org</a> sau prin postarea pe <a href='%{teacher_forum_url}' target='_blank'>forumul profesorilor</a>!"
+      thanks_markdown: "Mulțumim că ai aplicat! Abia așteptăm să te susținem ca să cunoșți programa și instrumentele Code.org. Te rugăm să continui să distribui întrebările și opiniile tale cu noi, scriindu-ne la [support@code.org](%{support_email_url}) sau postând pe  [forumul profesorilor](%{teacher_forum_url})!\n"
+      facilitator_not_listed: "Facilitatorul meu nu este listat"
+      facilitator_not_applicable: "Nu se aplică"
+      organizer_not_listed: "Organizatorul meu nu este listat"
     logged_out:
       heading: 'Vă mulțumim pentru interesul acordat Programului profesional de învățare!'
       body: 'Pentru a începe, trebuie mai întâi să vă conectați la contul Code.org. Dacă doriți mai multe informații despre program înainte de a vă începe aplicația, vă rugăm consultați <a href="%{url}">Prezentarea generală a programului de învățare profesională</a>.'
     not_teacher:
-      body: 'Vă mulțumim pentru interesul acordat Programului de învățare profesională Code.org. Momentan sunteți conectat(ă) la un cont de elev. Vă rugăm să creați un cont de profesor sau <a href="%{user_settings}">accesați setările dvs de utilizator</a> pentru a vă upgrada contul de la elev la profesor.'
-      more: 'Dacă doriți mai multe informații despre program înainte de a vă începe aplicația, vă rugăm să consultați <a href="%{pl_overview}">Prezentarea generală a programului de învățare profesională</a>.'
+      body_markdown: 'Îți mulțumim pentru interesul acordat Programului de învățare Profesională Code.org! Momentan ești conectat(ă) la un cont de student. Te rugăm să creezi un cont de profesor sau [mergi la setările tale de utilizator](%{user_settings})să-ți actualizezi contul de la student la profesor.'
+      more_markdown: 'Dacă ai nevoie de mai multe informații despre program înainte de a începe aplicația ta, te rugăm să verifici [expunerea privind Programul de Învățare Profesională](%{pl_overview}).'
     no_teacher_email:
-      body: 'Contul dvs. nu are o adresă de e-mail. Vă rugăm <a href="%{user_registration}">vizitați setările contului dvs</a> pentru a vă adăuga adresa de e-mail înainte de a completa acest formular.'
+      body_markdown: 'Contul tău nu are o adresă de email. Te rugăm [să viziezi setările contului tău](%{user_registration})să adaugi adresa ta de email înainte de finalizarea acestui formular.'
   courses_category: 'Toate cursurile'
   cookie_banner:
     message: 'Dacă continuați să navigați site-ul nostru sau faceți clic pe " Sunt de acord", sunteți de acord cu stocarea cookie-urilor pe computerul sau pe dispozitivul dumneavoastră.'
     more_information: "Consultaţi Politica de confidenţialitate a Code.org."
     accept: 'Sunt de acord'
-  gdpr_dialog:
-    heading: 'Sunteţi de acord să folosiți un site web localizat în Statele Unite?'
-    message: 'Datele obținute în urma utilizării de către dumneavoastră a acestui site pot fi trimise și stocate sau prelucrate în Statele Unite.'
-    link_intro: 'Pentru detalii vedeți a noastră'
-    privacy_policy: 'politică de confidențialitate'
-    logout: 'Deconectare'
-    yes: 'Da'
+  copy: 'Copiază'
+  confirm: 'Confirmă'
+  maker:
+    google_oauth:
+      login_with_google: 'Autentifică-te la Maker App cu Google'
+      enter_code: 'Introdu codul furnizat când te-ai autentificat prin Google la browserul tău implicit.'
+      copy_code: 'Copiază și lipește acest cod în Maker App pentru a te autentifica la Code.org.'
+      error_token_expired: 'Token-ul a expirat. Te rugăm să te autentifici din nou cu un nou token.'
+      error_wrong_provider: 'Furnizor greșit. Asigură-te că te autentifici cu Google.'
+      error_invalid_user: 'ID utilizator nevalabil. Te rugăm să încerci să te autentifici din nou.'
+      error_no_code: 'Te rugăm să introduci codul tău de autentificare.'
+      confirm_login: 'Selectează „Confirm” pentru a te autentifica cu contul tău de Google.'
+  parent_email_banner:
+    text: "**Sunteți un părinte sau un tutore?** Corelați emailul dv. cu acest cont pentru a primi actualizări despre progresul și proiectele copilului dv.!"
+    link_your_email: "Corelați emailul dv."
+    not_now: "Nu acum"
+  behaviors:
+    this_sprite: "acest spirit"
+  unit_prefix: "Unitate %{n}"

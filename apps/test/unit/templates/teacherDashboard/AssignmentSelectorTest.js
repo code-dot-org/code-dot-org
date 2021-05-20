@@ -1,17 +1,18 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
-  locale: 'English',
+  localeEnglishName: 'English',
   section: {
     id: 11,
     name: 'foo',
     loginType: 'email',
     providerManaged: false,
     stageExtras: false,
+    ttsAutoplayEnabled: false,
     pairingAllowed: false,
     studentCount: 0,
     code: 'asdf',
@@ -49,7 +50,7 @@ const defaultProps = {
       courseId: null,
       scriptId: 168,
       assignId: 'null_168',
-      path: '//localhost-studio.code.org:3000/s/csd1',
+      path: '//localhost-studio.code.org:3000/s/csd1-2019',
       assignment_family_name: 'csd1',
       assignment_family_title: 'Unit 1: Problem Solving',
       version_year: '2017',
@@ -119,6 +120,7 @@ const hiddenSectionProps = {
     loginType: 'email',
     providerManaged: false,
     stageExtras: false,
+    ttsAutoplayEnabled: false,
     pairingAllowed: false,
     studentCount: 0,
     code: 'asdf',
@@ -220,14 +222,14 @@ describe('AssignmentSelector', () => {
         .find('option')
         .at(0)
         .text(),
-      ''
+      'Unit 1: Problem Solving'
     );
     assert.equal(
       secondary
         .find('option')
         .at(1)
         .text(),
-      'Unit 1: Problem Solving'
+      ''
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
@@ -316,7 +318,7 @@ describe('AssignmentSelector', () => {
       const wrapper = shallow(
         <AssignmentSelector
           {...defaultProps}
-          locale="Spanish"
+          localeEnglishName="Spanish"
           section={{
             ...defaultProps.section,
             courseId: null,
@@ -342,7 +344,7 @@ describe('AssignmentSelector', () => {
       const wrapper = shallow(
         <AssignmentSelector
           {...defaultProps}
-          locale="Slovak"
+          localeEnglishName="Slovak"
           section={{
             ...defaultProps.section,
             courseId: null,

@@ -1,7 +1,5 @@
 ---
 title: Herkese duyurun
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -10,24 +8,24 @@ nav: promote_nav
 
 ## 1. Organizasyonu yayın
 
-Tell your friends about the **#HourOfCode**!
+Arkadaşlarına **#HourOfCode**'dan bahset!
 
 {{ promote/share_buttons }}
 
-## 2. Okulunuzun Kod-Saati talep etmesini sağlayın
+## 2. Tüm okulun bir Kodlama Saati talep etmesini sağlayın
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+Müdürünüze [bu e-postayı gönderin]({{ promote/sample_emails }}) ve okulunuzdaki tüm sınıfları kaydolmaya davet edin.
 
 ## 3. İşvereninizin de katılmasını rica edin
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+Yöneticinize veya şirket CEO'nuza [bu e-postayı gönderin]({{ promote/sample_emails }}).
 
 ## 4. Kod-Saati'ni çevrenize tanıtın
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Yeni beceriler öğrenmek için okulda olmana gerek yok. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Yakın çevrenizdeki gruplara haber verin]({{ promote/sample_emails }}): öğrenci/izci kulüpleri, kiliseler, üniversiteler, sendikalar ve hatta arkadaş gruplarınız. Yeni beceriler öğrenmek için okulda olmana gerek yok. Bu [poster, afiş, çıkartma, video ve daha fazlasını](/promote/resources) etkinlik için kullanın.
 
 ## 5. Yerel yönetim idarelerinden Kod-Saatini desteklemelerini rica edin
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
+[Bu e-postayı]({{ promote/sample_emails }}) yerel temsilcilere, belediye meclisine ve okul yönetimine gönderin ve onları Hour of Code için okulunuza davet edin. Bu, bilgisayar bilimlerini bir saatlik mesafede desteklemene yardım eder.
 
 {{ signup_button }}

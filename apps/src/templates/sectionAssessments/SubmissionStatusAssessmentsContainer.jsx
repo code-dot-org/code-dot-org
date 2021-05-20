@@ -11,22 +11,13 @@ import i18n from '@cdo/locale';
 import {CSVLink} from 'react-csv';
 import Button from '../Button';
 
-const styles = {
-  buttonContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end'
-  }
-};
-
 export const studentExportableDataPropType = PropTypes.shape({
-  name: PropTypes.string.isRequired,
+  studentName: PropTypes.string.isRequired,
   numMultipleChoiceCorrect: PropTypes.number,
   numMultipleChoice: PropTypes.number,
   numMatchCorrect: PropTypes.number,
   numMatch: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired
+  submissionTimestamp: PropTypes.instanceOf(Date).isRequired
 });
 
 const CSV_SUBMISSION_STATUS_HEADERS = [
@@ -56,6 +47,7 @@ class SubmissionStatusAssessmentsContainer extends Component {
             headers={CSV_SUBMISSION_STATUS_HEADERS}
           >
             <Button
+              __useDeprecatedTag
               text={i18n.downloadCSV()}
               onClick={() => {}}
               color={Button.ButtonColor.gray}
@@ -69,6 +61,15 @@ class SubmissionStatusAssessmentsContainer extends Component {
     );
   }
 }
+
+const styles = {
+  buttonContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end'
+  }
+};
 
 export const UnconnectedSubmissionStatusAssessmentsContainer = SubmissionStatusAssessmentsContainer;
 

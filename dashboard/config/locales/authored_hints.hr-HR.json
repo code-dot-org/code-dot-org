@@ -1,0 +1,15 @@
+{
+  "hr-HR": {
+    "data": {
+      "authored_hints": {
+        "2-3 Artist 4": {
+          "2-3_Artist_4_a": "Za dovršiti kuću, sve što trebamo napraviti je nacrtati kvadrat!"
+        },
+        "2-3 Artist 6": {
+          "2-3_Artist_6_a": "Da napraviš ove male kuteve, trebaš skrenuti svaki puta _dalje_ nego što si s kvadratom.   ",
+          "2-3_Artist_6_b": "Budući da sam već usmjeren desno, najlakše je krenuti naprijed, zatim raditi skretanja ulijevo da napravimo trokut."
+        }
+      }
+    }
+  }
+}

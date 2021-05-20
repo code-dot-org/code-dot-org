@@ -3,55 +3,28 @@
   data:
     block_categories:
       Actions: Handlinger
-      Loops: Løkker
-      Functions: Funksjoner
-      Color: Farge
-      Brushes: Pensler
-      Math: Matematikk
-      Logic: Logikk
-      Variables: Variabler
-      Number: Tall
-      String: Streng
-      Image: Bilde
-      Boolean: Boolsk
-      Conditionals: Betingelser
-      Events: Hendelser
-      Games/Score: Spill/poengsum
-      Comments: Kommentarer
-      Category: Kategori
-      Prebuilt: Forhåndsbygde
-      Text: tekst
-      Picker: Velger
-      Comment: Kommentar
-      World: Verden
-      Behaviors: Oppførsler
-      'Variables ': 'Variabler '
-      Default: Standard
-      Locations: Steder
-      everythingelse: resten
-      Location: Sted
-      numbers: tall
-      Numbers: Tall
-      Dancers: Dansere
-      Groups: Grupper
       Advanced: Avansert
-      Start: Start
-      Music: Musikk
-      Dancing: Dansing
-      Sprite: Figur
-      Brush: Pensel
-      Make Sprite: Lag figur
-      Movement: Bevegelse
-      Booleans: Boolske verdier
-      Functional: Funksjonell
-      Sprite Properties: Figuregenskaper
-      Predefined: Forhåndsdefinert
-      test: test
-      test2: test2
-      Use These Blocks: Bruk disse blokkene
-      Do Not Use: Ikke bruk
-      Name: Navn
-      NEW BLOCKS: NYE BLOKKER
+      Behaviors: Oppførsler
+      Brushes: Pensler
+      Color: Farge
+      Comment: Kommentar
+      Comments: Kommentarer
+      Conditionals: Betingelser
+      Dancers: Dansere
+      Default: Standard
+      Events: Hendelser
+      Functions: Funksjoner
       'Functions ': 'Funksjoner '
       Game/Score: Spill/poengsum
-      Function: Funksjon
+      Games/Score: Spill/poengsum
+      Groups: Grupper
+      Locations: Steder
+      Logic: Logikk
+      Loops: Løkker
+      Math: Matematikk
+      Numbers: Tall
+      Properties: Egenskaper
+      Text: tekst
+      Variables: Variabler
+      'Variables ': 'Variabler '
+      World: Verden

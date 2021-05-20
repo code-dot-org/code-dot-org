@@ -1,79 +1,98 @@
 ---
-title: How-to guide for parents
-layout: wide
-nav: how_to_nav
+title: Hướng dẫn thực hiện Giờ lập trình dành cho phụ huynh
 ---
 
-{{ signup_button }}
+# Cách thực hiện Giờ lập trình với trẻ
 
-# Làm thế nào để cùng thực hiện Giờ lập trình với con của bạn
+Thử Giờ lập trình là một cách đơn giản và thú vị để giới thiệu cho trẻ về khoa học máy tính, có thể là trong lần đầu tiên. Khoa học máy tính không chỉ là nền tảng cho tất cả các lĩnh vực nghiên cứu mà [những nghiên cứu gần đây còn cho thấy](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): trẻ em học môn khoa học máy tính có thành tích tốt hơn trong các môn học khác, khả năng giải quyết vấn đề vượt trội và <font color="00adbc"><b>khả năng trúng tuyển đại học cao hơn 17%</b></font>.
 
-### Hoàn thành Giờ lập trình tại nhà hoặc các bạn tình nguyện viên sẽ đến hướng dẫn tại ngay lớp học của con bạn!
+Bạn có thể tham gia cùng hàng chục triệu học sinh trên toàn thế giới trong sự kiện toàn cầu này. Chúng ta có thể cùng nhau truyền cảm hứng cho trẻ học hỏi, phá vỡ những khuôn mẫu và giúp trẻ khám phá sở thích mới. Hơn hết, bạn đã có mọi công cụ cần thiết để mang Giờ lập trình vào ngôi nhà của mình!
+
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
+
+<h3>Tôi cần những gì để bắt đầu?</h3>
+
+Giờ lập trình rất dễ tổ chức – ngay cả đối với người mới bắt đầu. Bạn không cần có kinh nghiệm về khoa học máy tính hoặc giảng dạy để tổ chức một hoạt động thú vị cho trẻ, giúp trẻ vừa học vừa chơi.
+
+Bạn có thể thử Giờ lập trình trên máy tính, máy tính bảng, điện thoại thông minh hoặc hoàn toàn không sử dụng thiết bị điện tử! Đây là cách để bắt đầu.
+
+[<button>Xem Hướng dẫn PDF</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
-## 1) Xem video hướng dẫn này <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Khám phá các hoạt động và bài hướng dẫn.
 
-## 2) Choose a tutorial
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Có vô số [hoạt động Giờ lập trình](https://hourofcode.com/us/learn) có sẵn cho bạn nếu bạn đang sử dụng máy tính có truy cập internet. Chúng tôi khuyên bạn nên xem trước một số lựa chọn của mình để có thể giúp hướng dẫn trẻ làm các bài tập mà chúng yêu thích.
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Tất cả các hoạt động của chúng tôi đều tích hợp kỹ năng giải quyết vấn đề và tư duy phản biện cùng sự vui vẻ và sáng tạo, nhưng đây là một số hoạt động yêu thích của học sinh:
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+- Dành cho trẻ thích vui chơi: [Minecraft](https://code.org/minecraft) hoặc [Bữa tiệc khiêu vũ](https://code.org/dance)
+- Dành cho trẻ yêu thích Disney: [Chiến tranh giữa các vì sao](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Dành cho trẻ thích khám phá: [Trí tuệ nhân tạo cho đại dương](https://code.org/oceans) or [Sáng tác nhạc với Scratch](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
-## 3) Lên kế hoạch nhu cầu công nghệ của bạn
+<h3>Thiết bị yếu hoặc không có thiết bị?</h3>
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+Nếu bạn bị hạn chế hoặc không có thiết bị điện tử, bạn có thể lọc [Hoạt động Giờ lập trình](https://hourofcode.com/us/learn) bằng cách chọn “Không có máy tính hoặc thiết bị” trong phần *Thiết bị dùng trong lớp học*.
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-## 4) Start your Hour of Code with an inspiring video
+Bạn cũng có thể xem [những video ngắn](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) sau đây để lấy thêm ý tưởng về cách tổ chức hoạt động không sử dụng thiết bị điện tử tại nhà!
 
-Khởi động Một Giờ Lập Trình của bạn bằng cách truyền cảm hứng cho những trẻ tham gia và bàn luận về cách mà khoa học máy tính tác động đến mọi lĩnh vực trong cuộc sống của chúng ta.
+## 2) Chuẩn bị trước
 
-**Chiếu một video truyền cảm hứng:**
+Sau khi đã lựa chọn được một số bài hướng dẫn, bạn có thể thử các hoạt động này trên thiết bị của bạn trước khi giới thiệu với trẻ.
 
-- Video giới thiệu chính thức của Code.org, với các nhân vật là Bill Gates, Mark Zuckerberg,Ngôi sao NBA, Chris Bosh (Độ dài lần lượt [1 phút](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 phút](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 phút](https://www.youtube.com/watch?v=dU1xS07N-FA)).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [ Tổng thống Obama kêu gọi tất cả các sinh viên học khoa học máy tính](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+[![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-Chẳng sao cả nếu cả bạn và học sinh đều chưa biết gì về khoa học máy tính. Dưới đây là một số ý tưởng để bạn có thể giới thiệu hoạt động Giờ Lập Trình của mình:
+<h3>Bạn có nhiều hơn một trẻ ở nhà?</h3>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Lên danh sách những thứ sử dụng mã hóa trong đời sống hằng ngày.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+Hãy cân nhắc cho trẻ sử dụng tai nghe nếu các em sử dụng các thiết bị riêng biệt. Bằng cách đó, trẻ sẽ có thể tham gia các hoạt động có âm thanh mà không làm trẻ khác mất tập trung.
 
-Cần thêm ý tưởng? Hãy vào xem [các chương trình dạy mẫu](/files/AfterschoolEducatorLessonPlanOutline.docx) thực tiễn tốt nhất từ các giáo viên dày dạn kinh nghiệm.
+Nếu bạn chỉ sử dụng một thiết bị hoặc đơn giản là muốn làm cho tăng tính tương tác cho Giờ lập trình của mình, hãy thử hoạt động [lập trình theo cặp](https://www.youtube.com/watch?v=vgkahOzFH2Q). Lập trình theo cặp khuyến khích trẻ làm việc cùng nhau. Khi hợp tác với nhau, các em sẽ giúp nhau giải quyết vấn đề. Các em cũng sẽ thấy rằng khoa học máy tính là hoạt động xã hội và hợp tác.
 
-## 5) Mã hóa!
+<h3>Hãy truyền cảm hứng cho trẻ nhé! </h3>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+Đây là cơ hội tuyệt vời để thêm một loại hoạt động mới vào một ngày của trẻ. Ngoài bài hướng dẫn, bạn có thể tiếp tục mang lại niềm vui với các đề xuất sau:
 
-Khi bạn đã chọn bài hướng dẫn mà bạn muốn làm, bạn có thể đánh dấu bằng đường link bài hướng dẫn.
+- Cho trẻ xem [video truyền cảm hứng](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) có sự tham gia của một trong những thần tượng của trẻ
+- Truyền cảm hứng cho trẻ bằng video về một trong số [nhiều nghề nghiệp](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) có thể tận dụng kỹ năng khoa học máy tính
+- [Đặt mua một số sản phẩm quảng cáo](https://store.code.org/)! Bạn có thể chọn áo thun, sticker, hoặc thậm chí là hình xăm tạm thời. Hãy chia sẻ ngay với trẻ để khiến các em hào hứng, hoặc để dành phần thưởng đặc biệt vào cuối Giờ lập trình của bạn. 
 
-**Khi học sinh gặp phải khó khăn**
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-Bạn có thể trả lời:
+## 3) Lời khuyên để giới thiệu con bạn với KHMT
 
-- "Tôi không biết. Chúng ta sẽ cùng nhau tìm cách giải quyết nhé."
-- "Công nghệ không phải luôn luôn hoạt động theo ý chúng ta muốn."
-- "Học cách sử dụng một chương trình cũng giống như học một ngôn ngữ mới; bạn chưa thể thành thực ngay lập tức."
+Cho dù cả bạn và trẻ đều là những người mới làm quen với môn khoa học máy tính cũng không sao cả. Dưới đây là một số ý tưởng để giới thiệu hoạt động Giờ lập trình của bạn và giúp bạn tư duy về KHMT:
 
-## 6) Ăn mừng
+- Giải thích những tác động của công nghệ đến cuộc sống của chúng ta, với những ví dụ cụ thể có thể khiến trẻ thích thú. Ví dụ, bạn có thể nói về y học hoặc kết nối mọi người với nhau trên môi trường trực tuyến. Ngoài ra, hãy xem [Code.org/CSforGood](https://code.org/csforgood) để biết các câu hỏi thảo luận đề xuất.
+- Hãy cùng trẻ liệt kê những đồ vật hàng ngày sử dụng mã lệnh để hoạt động bình thường.
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-Chia sẻ hình ảnh và video lớp học Một Giờ Lập Trình của bạn lên các phương tiện truyền thông xã hội. Sử dụng #HourOfCode và @codeorg để chúng tôi cũng có thể ghi nhận thành công của bạn!
+<h3>Gia đình của bạn có phụ nữ trẻ tuổi?</h3>
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+<a href="https://code.org/girls">Dưới đây là các đề xuất của chúng tôi</a> để giúp khơi dậy sự hứng thú của các em đối với khoa học máy tính. **Lời khuyên hữu ích**: Để bắt đầu, bạn có thể chỉ cần nói rằng các em sẽ rất giỏi!
 
-## Tiếp theo Hour of Code sẽ là gì?
+<h3>Cùng nhau giải quyết vấn đề</h3>
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Cuối cùng, khi trẻ gặp khó khăn, bạn có thể trả lời rằng: - “Ba/mẹ/thầy/cô cũng không rành. Chúng ta hãy cùng nhau tìm hiểu nhé.” - “Công nghệ không phải lúc nào cũng hoạt động theo cách chúng ta muốn.” - “Học lập trình giống như học một ngôn ngữ mới; con sẽ chưa thể thành thạo ngay được.”
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+Điểm mấu chốt của khoa học máy tính là học cách “sửa lỗi” các tình huống không diễn ra theo cách chúng ta nghĩ. Bạn và trẻ có thể cùng nhau nghĩ ra những cách sáng tạo để giải quyết vấn đề!
 
-{{ signup_button }}
+## 4) Đừng quên ăn mừng!
+
+Giờ lập trình là một sự kiện toàn cầu và gia đình bạn xứng đáng tổ chức ăn mừng. Dưới đây là một số cách để làm cho Giờ lập trình của bạn trở nên đặc biệt hơn:
+
+- In [Chứng chỉ Giờ lập trình](https://staging.code.org/certificates) và trao cho trẻ khi trẻ hoàn thành hoạt động của mình 
+- [In sticker](https://staging.hourofcode.com/us/promote/resources#stickers) tại nhà hoặc [mua trực tuyến](https://store.code.org/) để tạo thêm sự bất ngờ. 
+- Chia sẻ ảnh và video về Giờ lập trình tại nhà của bạn trên mạng xã hội. Sử dụng hashtag #GiờLậpTrình và @codeorg để chúng tôi cũng có thể làm tôn vinh thành tựu của bạn!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>Tiếp theo Hour of Code sẽ là gì?</h2>
+
+Khoa học máy tính không nhất thiết phải kết thúc với Giờ lập trình! Mặc dù 90% các bậc phụ huynh muốn con mình được học khoa học máy tính nhưng hầu hết các trường học vẫn không dạy môn này. Để hỗ trợ, chương trình giảng dạy của chúng tôi trên nền tảng web và sử dụng miễn phí mãi mãi. [Tìm hiểu cách](https://code.org/yourschool) đưa KHMT đến trường học của con bạn ngay hôm nay.
+
+[<button>Xem Hướng dẫn PDF</button>]({{ localized_files/hourofcode_parent_how_to }})

@@ -1,0 +1,2660 @@
+{
+  "script": {
+    "name": "2021drafting",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
+        ]
+      ]
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-13 17:03:03 UTC",
+    "seeding_key": {
+      "script.name": "2021drafting"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "introduction",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Introduction",
+        "description": "Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!"
+      },
+      "seeding_key": {
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Variables",
+        "description": "Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "debugging",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Debugging"
+      },
+      "seeding_key": {
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "outbreak",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Outbreak Simulator"
+      },
+      "seeding_key": {
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "AB EOC",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Course A and B EOC Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Toolbox Levels",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Toolbox Levels"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Loom Levels",
+      "user_facing": true,
+      "position": 7,
+      "properties": {
+        "display_name": "Loom Levels"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Argentina",
+      "user_facing": true,
+      "position": 8,
+      "properties": {
+        "display_name": "Argentina"
+      },
+      "seeding_key": {
+        "lesson_group.key": "Argentina",
+        "script.name": "2021drafting"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Course F Introduction",
+      "name": "Introducing Sprite Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Making Sprites",
+      "name": "Making Sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Sprites in Action",
+      "name": "Sprites in Action",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "blank space stories",
+      "name": "Blank Space Stories",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Text and Prompts",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Mini-Project: User Input Programs",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Debugging Prototypes",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Virus Simulation for Code Bytes",
+      "name": "Coding a Simulation",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Outbreaklab",
+      "name": "Outbreak Standalone Lab",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "End of Course Project",
+      "name": "End of Course Project",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Sprite Lab",
+      "name": "Sprite Lab Blocks",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "video",
+      "name": "Sprite Lab Videos",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "aboutme",
+      "name": "Storytelling with Sprite Lab",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "aboutme",
+        "lesson_group.key": "Argentina",
+        "script.name": "2021drafting"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
+        "progression": "Video: Introducing Sprite Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseEF_video_IntroSpriteLab_2020"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_intro_apps"
+        ],
+        "progression": "Exploration: Sample Programs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_intro_apps"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_intro_apps"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_intro_birds_puzzle"
+        ],
+        "progression": "Exploration: Writing Code"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_intro_birds_puzzle"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_intro_birds_puzzle"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "progression": "Predict"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_predict"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "progression": "Video: How to Make a Sprite"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseEF_video_MakeSprite_2020"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_make"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_make"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_moreSprites"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_practice"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "progression": "Free Play: Make a Scene"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_sprites_freeplay"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_predict"
+        ],
+        "progression": "Predict"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_predict"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_predict"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events"
+        ],
+        "progression": "Video: Sprites in Action"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_events"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_review"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_review"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_review"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_time"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_time"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_time"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_key"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_key"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_key"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_conflict"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_conflict"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_conflict"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_practice"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_practice"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_practice"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_freeplay"
+        ],
+        "progression": "Free Play: Make an Interactive Scene"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_freeplay"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_freeplay"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "progression": "Video: Variables in Envelopes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_predict"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_predict"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "progression": "Video: Text and Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_prompts"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_review"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_review"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_print"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_print"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_events"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_events"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_prompts"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_prompts"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_answer"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_answer"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_concat"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_concat"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_practice"
+        ],
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_practice"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_samples"
+        ],
+        "progression": "Exploration: Sample Programs"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_samples"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_stop"
+        ],
+        "progression": "Prepare Your Plan"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_stop"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_projects"
+        ],
+        "progression": "Application: Create Your Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_projects"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_practice_reorder_prototype"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_practice_reorder_prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_practice_reorder_prototype"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_choice_conflict_prototype"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_choice_conflict_prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_choice_conflict_prototype"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_freeplay_aquatic_prototype"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_freeplay_aquatic_prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_freeplay_aquatic_prototype"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story"
+        ],
+        "progression": "Welcome to Monster Town"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak_story"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak_story"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak1"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak1"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak2"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak2"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak2"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak3"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak3"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak3"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak4"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "progression": "Learning from Simulations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak_story2"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak5"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak6"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak7"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak8"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseF_outbreak_freeplay"
+        ],
+        "progression": "Mini-Project: Outbreak Simulator"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_outbreak_freeplay"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "CourseF_outbreak_freeplay"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "outbreak_library"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_library"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "outbreak_library"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "outbreak_virus_v2"
+        ],
+        "progression": "New library"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_virus_v2"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "outbreak_virus_v2"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "progression": "Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseAB_EOC_2021"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_EOC_2021"
+        ],
+        "progression": "Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_EOC_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseB_EOC_2021"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sprite lab - ask and answer"
+        ],
+        "progression": "Text Input"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sprite lab - ask and answer"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "sprite lab - ask and answer"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "anjali- Math Blocks"
+        ],
+        "progression": "Math Blocks"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "anjali- Math Blocks"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "anjali- Math Blocks"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "2020 new SL stuff"
+        ],
+        "progression": "New Sprite Animations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2020 new SL stuff"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "2020 new SL stuff"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "symmetry"
+        ],
+        "progression": "Symmetry"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "symmetry"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "symmetry"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_2021_template"
+        ],
+        "progression": "Full Toolbox and/or Template"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_2021_template"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_2021_template"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "avoid_follow"
+        ],
+        "progression": "A/B Test for Following Behavior"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "avoid_follow"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "avoid_follow"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "avoid_follow_lines"
+        ],
+        "progression": "Draw Lines"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "avoid_follow_lines"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "avoid_follow_lines"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "drawshape"
+        ],
+        "progression": "Draw Shape"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "drawshape"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "drawshape"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "progression": "Events"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_events_loom_sandbox"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "progression": "Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_events_loom"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "progression": "Prompts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_concat_loom"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_loom_sandbox"
+        ],
+        "progression": "Variables"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_loom_sandbox"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "argentina_aboutme_template"
+        ],
+        "progression": "Template"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "argentina_aboutme_template"
+        ],
+        "lesson.key": "aboutme",
+        "lesson_group.key": "Argentina",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "argentina_aboutme_template"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_IntroSpriteLab_2020",
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_intro_apps",
+        "script_level.level_keys": [
+          "courseF_intro_apps"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_intro_birds_puzzle",
+        "script_level.level_keys": [
+          "courseF_intro_birds_puzzle"
+        ],
+        "lesson.key": "Course F Introduction",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_predict",
+        "script_level.level_keys": [
+          "courseF_sprites_predict"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseEF_video_MakeSprite_2020",
+        "script_level.level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_make",
+        "script_level.level_keys": [
+          "courseF_sprites_make"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_positioning",
+        "script_level.level_keys": [
+          "courseF_sprites_positioning"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_moreSprites",
+        "script_level.level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_properties",
+        "script_level.level_keys": [
+          "courseF_sprites_properties"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_behaviors",
+        "script_level.level_keys": [
+          "courseF_sprites_behaviors"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_practice",
+        "script_level.level_keys": [
+          "courseF_sprites_practice"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_sprites_freeplay",
+        "script_level.level_keys": [
+          "courseF_sprites_freeplay"
+        ],
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_predict",
+        "script_level.level_keys": [
+          "courseF_events_predict"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_events",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_events"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_review",
+        "script_level.level_keys": [
+          "courseF_events_review"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_time",
+        "script_level.level_keys": [
+          "courseF_events_time"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_key",
+        "script_level.level_keys": [
+          "courseF_events_key"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_conflict",
+        "script_level.level_keys": [
+          "courseF_events_conflict"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_practice",
+        "script_level.level_keys": [
+          "courseF_events_practice"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_freeplay",
+        "script_level.level_keys": [
+          "courseF_events_freeplay"
+        ],
+        "lesson.key": "Sprites in Action",
+        "lesson_group.key": "introduction",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "EnvelopeVariables-Unplugged_2021",
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
+        "lesson.key": "blank space stories",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_predict",
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_prompts",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_review",
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_print",
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events",
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts",
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer",
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat",
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_practice",
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_samples",
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_stop",
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_projects",
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_practice_reorder_prototype",
+        "script_level.level_keys": [
+          "courseF_events_practice_reorder_prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_choice_conflict_prototype",
+        "script_level.level_keys": [
+          "courseF_events_choice_conflict_prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_freeplay_aquatic_prototype",
+        "script_level.level_keys": [
+          "courseF_events_freeplay_aquatic_prototype"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "debugging",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak_story",
+        "script_level.level_keys": [
+          "CourseF_outbreak_story"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak1",
+        "script_level.level_keys": [
+          "CourseF_outbreak1"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak2",
+        "script_level.level_keys": [
+          "CourseF_outbreak2"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak3",
+        "script_level.level_keys": [
+          "CourseF_outbreak3"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak4",
+        "script_level.level_keys": [
+          "CourseF_outbreak4"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak_story2",
+        "script_level.level_keys": [
+          "CourseF_outbreak_story2"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak5",
+        "script_level.level_keys": [
+          "CourseF_outbreak5"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak6",
+        "script_level.level_keys": [
+          "CourseF_outbreak6"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak7",
+        "script_level.level_keys": [
+          "CourseF_outbreak7"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak8",
+        "script_level.level_keys": [
+          "CourseF_outbreak8"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_outbreak_freeplay",
+        "script_level.level_keys": [
+          "CourseF_outbreak_freeplay"
+        ],
+        "lesson.key": "Virus Simulation for Code Bytes",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "outbreak_library",
+        "script_level.level_keys": [
+          "outbreak_library"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "outbreak_virus_v2",
+        "script_level.level_keys": [
+          "outbreak_virus_v2"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_EOC_2021",
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_EOC_2021",
+        "script_level.level_keys": [
+          "courseB_EOC_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sprite lab - ask and answer",
+        "script_level.level_keys": [
+          "sprite lab - ask and answer"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "anjali- Math Blocks",
+        "script_level.level_keys": [
+          "anjali- Math Blocks"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2020 new SL stuff",
+        "script_level.level_keys": [
+          "2020 new SL stuff"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "symmetry",
+        "script_level.level_keys": [
+          "symmetry"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_2021_template",
+        "script_level.level_keys": [
+          "courseF_2021_template"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "avoid_follow",
+        "script_level.level_keys": [
+          "avoid_follow"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "avoid_follow_lines",
+        "script_level.level_keys": [
+          "avoid_follow_lines"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "drawshape",
+        "script_level.level_keys": [
+          "drawshape"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_events_loom_sandbox",
+        "script_level.level_keys": [
+          "courseF_events_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events_loom",
+        "script_level.level_keys": [
+          "courseF_text_events_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat_loom",
+        "script_level.level_keys": [
+          "courseF_text_concat_loom"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_loom_sandbox",
+        "script_level.level_keys": [
+          "courseF_variables_loom_sandbox"
+        ],
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "argentina_aboutme_template",
+        "script_level.level_keys": [
+          "argentina_aboutme_template"
+        ],
+        "lesson.key": "aboutme",
+        "lesson_group.key": "Argentina",
+        "script.name": "2021drafting"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

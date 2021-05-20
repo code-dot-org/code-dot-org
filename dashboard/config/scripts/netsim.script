@@ -1,33 +1,32 @@
-has_lesson_plan true
-
-stage 'Overview and Setup Instructions'
+lesson 'Overview and Setup Instructions', display_name: 'Overview and Setup Instructions', has_lesson_plan: false
 level 'Internet Simulator Setup'
 level 'Internet Simulator Setup 2'
 level 'Internet Simulator Setup 3'
 
-stage 'Peer to Peer - Sending Bits on a Shared Wire'
+lesson 'Peer to Peer - Sending Bits on a Shared Wire', display_name: 'Peer to Peer - Sending Bits on a Shared Wire', has_lesson_plan: false
 level 'NetSim Standalone SendAB'
 
-stage 'Peer to Peer - Sending Numbers'
+lesson 'Peer to Peer - Sending Numbers', display_name: 'Peer to Peer - Sending Numbers', has_lesson_plan: false
 level 'NetSim Standalone Sending Numbers'
 
-stage 'Peer to Peer - Sending Ascii'
+lesson 'Peer to Peer - Sending Ascii', display_name: 'Peer to Peer - Sending Ascii', has_lesson_plan: false
 level 'NetSim Standalone Sending Numbers Ascii'
 
-stage 'Broadcasting messages'
+lesson 'Broadcasting messages', display_name: 'Broadcasting messages', has_lesson_plan: false
 level 'NetSim Standalone Broadcast'
 
-stage 'Routers and addresses'
+lesson 'Routers and addresses', display_name: 'Routers and addresses', has_lesson_plan: false
 level 'NetSim Standalone Classroom Routers'
 
-stage 'Packets and Reliability'
+lesson 'Packets and Reliability', display_name: 'Packets and Reliability', has_lesson_plan: false
 level 'NetSim Standalone Packets TCP'
 
-stage 'Manual DNS'
+lesson 'Manual DNS', display_name: 'Manual DNS', has_lesson_plan: false
 level 'NetSim Standalone Manual DNS'
 
-stage 'Automatic DNS node'
+lesson 'Automatic DNS node', display_name: 'Automatic DNS node', has_lesson_plan: false
 level 'NetSim Standalone Automatic DNS'
 
-stage 'Internet Simulator Freeplay'
+lesson 'Internet Simulator Freeplay', display_name: 'Internet Simulator Freeplay', has_lesson_plan: false
 level 'NetSim Standalone Freeplay'
+

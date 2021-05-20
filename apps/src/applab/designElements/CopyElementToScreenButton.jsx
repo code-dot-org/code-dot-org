@@ -6,19 +6,6 @@ import PopUpMenu from '../../lib/ui/PopUpMenu';
 import {connect} from 'react-redux';
 import throttle from 'lodash/debounce';
 
-const styles = {
-  copyElementToScreenButton: {
-    backgroundColor: '#0aa',
-    color: 'white',
-    float: 'right'
-  },
-  screen: {},
-  menu: {
-    maxHeight: '200px',
-    overflowY: 'auto'
-  }
-};
-
 /**
  * A duplicate button that helps replicate elements
  */
@@ -121,6 +108,19 @@ class CopyElementToScreenButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  copyElementToScreenButton: {
+    backgroundColor: '#0aa',
+    color: 'white',
+    float: 'right'
+  },
+  screen: {},
+  menu: {
+    maxHeight: '200px',
+    overflowY: 'auto'
+  }
+};
 
 export default connect(function propsFromStore(state) {
   return {

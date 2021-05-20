@@ -1,10 +1,12 @@
 -# During Hour of Code season, show signup form and, unless it's pre-hoc, announcements. When it's not Hour of Code, hide signup form and announcements. Show "Sign Up is closed" message.
+-# We are hiding announcements in 2020
+- showAnnouncements = false
 %a#hocsignupform{name: 'signup'}
 #join
   %h1#join-us-header=hoc_s(:front_join_us_button)
   -if ["post-hoc", false].include?(hoc_mode)
     #signup-closed
-      =hoc_s(:signup_registration_not_required).gsub(/%{hoc_activities_url}/, resolve_url('/learn')).gsub(/%{howto_guide_url}/, resolve_url('/how-to'))
+      !=hoc_s(:signup_registration_not_required_markdown, markdown: :inline, locals: {hoc_activities_url: resolve_url('/learn'), howto_guide_url: resolve_url('/how-to')})
       =hoc_s(:signup_registration_closed)
     =view :index_video
   -else
@@ -17,6 +19,6 @@
           %br
           =view :index_video
           %br
-    %br
-    -unless hoc_mode == "pre-hoc"
-      =view :announcements
+
+          -if showAnnouncements && hoc_mode != "pre-hoc"
+            =view :announcements

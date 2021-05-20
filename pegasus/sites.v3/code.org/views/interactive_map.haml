@@ -35,12 +35,15 @@
     %strong= format_integer_with_commas(jobs_nationwide)
     Open computing jobs nationwide
 
+    %strong=number_to_percentage(47, precision: 0)
+    of public high schools teach a CS class
+
     %strong
       = format_integer_with_commas(grads_nationwide)
     Computer science students graduated into the workforce last year
 
     .summary-button
-      %a{href: 'https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit?usp=sharing', target: '_blank'}
+      %a{href: 'https://code.org/advocacy/landscape.pdf', target: '_blank'}
         %button
           See a summary of state efforts
 

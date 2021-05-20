@@ -1,6 +1,6 @@
 login_required true
 
-stage 'Room Escape'
+lesson 'Room Escape', display_name: 'Room Escape', has_lesson_plan: false
 level 'Escape Room Example', named: true
 level 'Overview: Design Mode', named: true
 level 'Overview: Images', named: true
@@ -18,3 +18,4 @@ level 'Room Escape Workshop - 9-2'
 level 'Room Escape Workshop - 10'
 level 'Room Escape Workshop - 10 - 2'
 level 'Final Room Escape App', named: true
+

@@ -1,0 +1,30 @@
+he:
+  data:
+    block_categories:
+      Actions: פעולות
+      Advanced: מתקדם
+      Behaviors: התנהגויות
+      Brushes: מברשות
+      Color: צבע
+      Comment: תגובה
+      Comments: תגובות
+      Conditionals: תנאים
+      Dancers: רקדנים
+      Default: ברירת מחדל
+      Events: אירועים
+      Functions: פונקציות
+      'Functions ': 'פונקציות '
+      Game/Score: משחק/נקודות
+      Games/Score: משחקים/נקודות
+      Groups: קבוצות
+      Locations: מיקומים
+      Logic: לוגיקה
+      Loops: חזרות
+      Math: מתמטיקה
+      Numbers: מספרים
+      Properties: מאפיינים
+      Sprites: דמויות
+      Text: טקסט
+      Variables: משתנים
+      'Variables ': 'משתנים '
+      World: עולם

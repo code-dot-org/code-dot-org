@@ -1,0 +1,576 @@
+{
+  "script": {
+    "name": "mc",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:46 UTC",
+    "seeding_key": {
+      "script.name": "mc"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Hour of Code 2015",
+      "name": "Hour of Code 2015",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Move to Sheep"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Move to Sheep"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Move to Sheep"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Chop Tree"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Chop Tree"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Chop Tree"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Shear Sheep"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Shear Sheep"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Shear Sheep"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Chop Trees"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Chop Trees"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Chop Trees"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Place Wall"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Place Wall"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Place Wall"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld House Frame Chosen"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld House Frame Chosen"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld House Frame Chosen"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Plant Crops"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Plant Crops"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Plant Crops"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Avoid Monsters"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Avoid Monsters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Avoid Monsters"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Underground Mining Coal"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground Mining Coal"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Underground Mining Coal"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Underground Iron"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground Iron"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Underground Iron"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Underground Avoiding Lava"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground Avoiding Lava"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Underground Avoiding Lava"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Underground If Statements"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Underground If Statements"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Underground If Statements"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Powered Minecart"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Powered Minecart"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Powered Minecart"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overworld Free Play 20x20"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Free Play 20x20"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      },
+      "level_keys": [
+        "Overworld Free Play 20x20"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Overworld Move to Sheep",
+        "script_level.level_keys": [
+          "Overworld Move to Sheep"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Chop Tree",
+        "script_level.level_keys": [
+          "Overworld Chop Tree"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Shear Sheep",
+        "script_level.level_keys": [
+          "Overworld Shear Sheep"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Chop Trees",
+        "script_level.level_keys": [
+          "Overworld Chop Trees"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Place Wall",
+        "script_level.level_keys": [
+          "Overworld Place Wall"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld House Frame Chosen",
+        "script_level.level_keys": [
+          "Overworld House Frame Chosen"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Plant Crops",
+        "script_level.level_keys": [
+          "Overworld Plant Crops"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Avoid Monsters",
+        "script_level.level_keys": [
+          "Overworld Avoid Monsters"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Underground Mining Coal",
+        "script_level.level_keys": [
+          "Underground Mining Coal"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Underground Iron",
+        "script_level.level_keys": [
+          "Underground Iron"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Underground Avoiding Lava",
+        "script_level.level_keys": [
+          "Underground Avoiding Lava"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Underground If Statements",
+        "script_level.level_keys": [
+          "Underground If Statements"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Powered Minecart",
+        "script_level.level_keys": [
+          "Overworld Powered Minecart"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Free Play 20x20",
+        "script_level.level_keys": [
+          "Overworld Free Play 20x20"
+        ],
+        "lesson.key": "Hour of Code 2015",
+        "lesson_group.key": "",
+        "script.name": "mc"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

@@ -1,7 +1,5 @@
 ---
 title: Guía de instrucións da Hora do Código para os concellos e territorios
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

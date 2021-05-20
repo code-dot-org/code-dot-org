@@ -1,0 +1,10 @@
+name 'CSD U6 test hardware multi2_2021'
+editor_experiment ''
+type 'multi2'
+question 'What TWO ANSWERS best describe the relationship between hardware (physical devices) and software (programs)?'
+wrong 'Hardware must be physically controlled by a person, and software can be controlled with code.'
+right 'Hardware allows software to interact with the physical world in many different ways.'
+wrong 'Hardware is the type of software used in physical prototypes.'
+right 'Hardware and software work together to make computing devices useful.'
+wrong 'In computing devices, hardware controls output and software controls input.'
+

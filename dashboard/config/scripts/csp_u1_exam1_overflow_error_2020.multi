@@ -8,7 +8,14 @@ right ‘16’
 wrong ‘17’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** The 4-bit binary number `1111` represents the decimal number 15. Counting up to the next number, 16, will cause the 4-bit binary number to overflow to `0000` just like an odometer.
 
+Overflow was covered in [Lesson 5 - Overflow and Rounding](https://curriculum.code.org/csp-20/unit1/5/) and can be explored using the [Odometer Widget](https://studio.code.org/s/odometer/lessons/1/levels/1)
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+DAT-1.B.1: In many programming languages, integers are represented by a fixed number of bits, which limits the range of integer values and mathematical operations on those values. This limitation can result in overflow or other errors.
+:::
 MARKDOWN
 
 markdown <<MARKDOWN

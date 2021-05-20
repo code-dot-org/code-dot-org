@@ -1,22 +1,10 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
+title: Hvala, ker ste se prijavili kot gostitelj Ure za kodo!
 layout: wide
 nav: how_to_nav
-
 social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+  twitter:card: player
+  twitter:site: "@codeorg"
 ---
 
 # Hvala, ker ste se prijavili kot gostitelj Ure za kodo!

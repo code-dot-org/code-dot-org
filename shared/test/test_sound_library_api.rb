@@ -17,7 +17,7 @@ class SoundLibraryTest < FilesApiTestBase
     AWS::S3.s3 = Aws::S3::Client.new(
       stub_responses: {
         list_object_versions: {
-          versions: [{key: '', version_id: 'version'}]
+          versions: [{key: 'key', version_id: 'version'}]
         },
         head_object: {delete_marker: false},
         get_object: {body: content}

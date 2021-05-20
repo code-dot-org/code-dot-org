@@ -1,7 +1,5 @@
 ---
 title: Інструкції для органів влади
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ From left to right: *Governors from Arkansas, North Carolina, and Arizona partic
 
 ### 1. Read our one-pager
 
-See [why computer science education is important](/files/hoc-one-pager.pdf), and how you can help the effort by supporting the Hour of Code.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Recruit local schools and districts
 

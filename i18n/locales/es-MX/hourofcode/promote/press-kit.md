@@ -1,7 +1,5 @@
 ---
 title: Paquete de prensa
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -17,18 +15,18 @@ nav: promote_nav
 ## Consejos clave
 
 - Ponte en contacto con los medios por correo electrónico dos semanas antes de tu evento. Si no recibes respuesta, sigue intentándolo por teléfono o correo electrónico.
-- Pide algún personal escolar o voluntario que haga fotos para compartirlas en línea o enviar a la prensa.
-- Escriba sobre la Horal de Código en la página principal de su sitio web y en el periódico de la escuela. Publique los detalles de su evento y fotos de las actividades de tus estudiantes.
-- Comparte actualizaciones sobre tus planes, anuncia tus eventos y publica fotografías durante {{ campaign_date/year }} en Facebook y Twitter. Utiliza el hashtag **#HourOfCode** para que Code.org pueda ver y promover tus eventos.
+- Pide a algún personal escolar o voluntario que tome fotos para compartirlas en línea o enviar a la prensa.
+- Escribe sobre la Hora del Código en la página principal de tu sitio web y en el periódico de tu escuela. Publica los detalles de tu evento y las fotos de las actividades de los estudiantes.
+- Comparte actualizaciones sobre tus planes, anuncia tus eventos y publica fotografías durante {{ campaign_date/year }} en Facebook y Twitter. Utiliza el hashtag **#HourOfCode** para que Code.org pueda ver y promocionar tus eventos.
 
 ## Guía paso a paso
 
-### 1. Planifique su evento
+### 1. Planifica tu evento
 
-- Haga una reunión para iniciar la Hora del Código.
+- Haz una reunión para dar inicio a la Hora del Código.
 - Envía [una carta]({{ promote/sample_emails }}) a los padres y pídeles que difundan el mensaje.
 - Envía [una carta]({{ promote/sample_emails }}) para invitar a tus autoridades locales, diputados, congresistas, gobernador o personas influyentes en el mundo de los negocios a que conversen con tus estudiantes.
-- Organice actividades grupales (como una demostración de una actividad de programación 'fuera de línea'), o muestre lo que han hecho los estudiantes y guíe las actividades.
+- Organiza actividades grupales (como una demostración de una actividad de programación ‘sin conexión’), o muestra lo que han hecho los estudiantes y guía las actividades.
 - Muestra [un video de la Hora del Código]({{ urls/home }}) de Code.org o uno de [estos videos]({{ promote/videos }}) para inspirar a los estudiantes. <br />
 
 ### 2. Identifica a los periodistas que cubren eventos escolares o locales
@@ -59,7 +57,7 @@ La tecnologia esta transformando todas las industrias en el planeta. En el ano 2
 
 **Asunto**: Escuela local se une a la misión de introducir a los estudiantes en las ciencias de la computación
 
-Las computadoras están en todas partes, cambian todas las industrias del planeta, pero menos de la mitad de las escuelas enseñan ciencias de la computación. Las niñas y las minorías no tienen presencia suficiente en las clases de ciencias de la computación y en la industria de la tecnología. La buena noticia es que estamos trabajando para cambiar esto.
+Las computadoras están en todas partes, cambian todas las industrias del planeta, pero menos de la mitad de las escuelas enseñan ciencias de la computación. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La buena noticia es que estamos trabajando para cambiar esto.
 
 Con la Hora del Código, las ciencias de la computación han estado en las páginas principales de Google, MSN, Yahoo! y Disney. Más de 100 socios se han unido para apoyar este movimiento. Todos los Apple Store del mundo han organizado una Hora del Código. Incluso el presidente Obama escribió su primera línea de código como parte de la campaña.
 

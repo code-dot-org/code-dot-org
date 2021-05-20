@@ -2,19 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  dropdown: {
-    marginLeft: 10,
-    marginBottom: 0
-  }
-};
 
 class SelectSectionDropdown extends React.Component {
   static propTypes = {
@@ -24,8 +13,10 @@ class SelectSectionDropdown extends React.Component {
   };
 
   onChange = event => {
-    const sectionId = event.target.value;
-    navigateToHref(`/teacher_dashboard/sections/${sectionId}`);
+    let toSectionId = event.target.value;
+    let fromSectionId = this.props.selectedSectionId;
+    switchToSection(toSectionId, fromSectionId);
+    recordSwitchToSection(toSectionId, fromSectionId, 'from_select');
   };
 
   render() {
@@ -49,6 +40,17 @@ class SelectSectionDropdown extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  dropdown: {
+    marginLeft: 10,
+    marginBottom: 0
+  }
+};
 
 export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 

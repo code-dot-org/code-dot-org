@@ -1,0 +1,9 @@
+name 'virtual_more_input_bubble_choice'
+editor_experiment ''
+display_name 'User Input Challenges'
+description 'Try out one of these to get more practice with user input.'
+
+sublevels
+
+level 'CSD U3 Compound Nested Challenge_virtual'
+level 'CSD U3 L13 Freeplay_virtual'

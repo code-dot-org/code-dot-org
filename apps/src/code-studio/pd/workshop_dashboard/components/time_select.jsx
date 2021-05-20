@@ -12,33 +12,6 @@ import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 
-const styles = {
-  dropdown: {
-    width: '100%'
-  },
-  toggle: {
-    padding: 0,
-    border: 0,
-    margin: 0,
-    width: '100%'
-  },
-  menu: {
-    height: 'auto',
-    maxHeight: 300,
-    overflowX: 'hidden',
-    width: '100%'
-  },
-  input: {
-    fontFamily: '"Gotham 4r"'
-  },
-  readOnlyInput: {
-    fontFamily: '"Gotham 4r"',
-    backgroundColor: 'inherit',
-    cursor: 'default',
-    border: 'none'
-  }
-};
-
 const INTERVAL = {minutes: 30};
 
 export default class TimeSelect extends React.Component {
@@ -140,3 +113,30 @@ export default class TimeSelect extends React.Component {
     );
   }
 }
+
+const styles = {
+  dropdown: {
+    width: '100%'
+  },
+  toggle: {
+    padding: 0,
+    border: 0,
+    margin: 0,
+    width: '100%'
+  },
+  menu: {
+    height: 'auto',
+    maxHeight: 300,
+    overflowX: 'hidden',
+    width: '100%'
+  },
+  input: {
+    fontFamily: '"Gotham 4r"'
+  },
+  readOnlyInput: {
+    fontFamily: '"Gotham 4r"',
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none'
+  }
+};

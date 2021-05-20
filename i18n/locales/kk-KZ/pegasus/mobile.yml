@@ -10,12 +10,12 @@
   csedweek_dates: "Желтоқсан 8-14, 2014"
   csedweek_banner_hoc: '''<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">"Код жазу Сағаты"</a> жақындап келе жатыр. Барлық оқытушылар мен ұйымдастырушыларды шақырамыз, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">өзіңіздің "Код жазу Сағатыңызды" белгілеңіз</a>'''
   csedweek_banner_teachers: '''<a href="/Информатикаteacher" style="color: white; text-decoration: none; font-weight: 400">Сіз информатика пәнінің оқытушысыз ба? ИнформатикаEdWeek-тің басқа да ресурстарын қарап көріңіз</a>'''
+  csedweek_banner_teachers_text: "Сіз информатика пәнінің оқытушысыз ба? ИнформатикаEdWeek-тің басқа да ресурстарын қарап көріңіз"
   n_have_learned_an_hoc: "<h2>\"Код жазу Сағатын\" </h2><h1>қарап көріңіз</h1><h3>#</h3>"
   anybody_can_learn: "Бұны бәрі игере алады."
   learn_now: "Оқуды бастау"
   petition_message: "Әрбір оқушы әрбір мектепте информатика пәнін оқи алатын жағдайы болуы керек"
   petition_sign_message: 'Егер сіз келіссеңіз, өзіңіздің атыңызды жазыңыз. #Жазылғандарға қосылыңыз.'
-  petition_sign_message_support: 'Егер сіз бізді қолдасаңыз, өзіңіздің атыңызды жазыңыз.  #Басқаларға қосылыңыз.'
   petition_join_others: '#Басқаларға қосылыңыз'
   name: "Атыңыз"
   email: "Электронды пошта"
@@ -219,6 +219,7 @@
   homepage_action_text_learn: "Оқуды бастау"
   homepage_action_text_signpetition: "Қолдаухатқа қол қою"
   homepage_signpetition_dropdown: "Біздің қолдаухатқа қол қою &#x25BE;"
+  homepage_signpetition_dropdown_text: "Мен келісемін"
   homepage_diversity_pledge: "Take the diversity pledge"
   homepage_banner_text_prizes: 'Кодтау сағаты қайтадан келе жатыр, 7-13 желтоқсан. '
   homepage_banner_link_prizes: 'Тарихтағы ең ірі үйрену бастамасына қосыл. '
@@ -731,6 +732,8 @@
   coursee-2018_gradelevel: Жас аралығы 8-12
   coursed-2019_gradelevel: 8-сыныптан бастап
   coursee-2019_gradelevel: Жас аралығы 8-12
+  coursed-2020_gradelevel: 8-сыныптан бастап
+  coursee-2020_gradelevel: Жас аралығы 8-12
   accelerated_gradelevel: "10-18 жастағылар үшін"
   codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
   codeintl_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
@@ -1043,6 +1046,8 @@
   header_courses: "Курстар"
   header_project_gallery: "Жобалар"
   header_educate_hoc: "Код жазу Сағаты"
+  header_legal_privacy: "Құпиялылық саясаты"
+  header_legal_tos: "Қызмет көрсету шарттары"
   user_header_label: "Сәлем %{username}"
   user_header_team: "Топ"
   user_header_settings: "Менің жеке парақшам"
@@ -1069,3 +1074,8 @@
   hoc2018_dance_teacher_resources_tile1_button: "Оқу Жоспары"
   hoc2018_dance_teacher_resources_tile2_button: "Іс-әрекеттерді өшіру"
   hoc2018_dance_amazon_about_future_engineer_button: "толығырақ білу"
+  footer_powered_by_aws: "Amazon Web Services серверінде жұмыс істейді"
+  footer_privacy_policy: "Құпиялылық саясаты"
+  footer_donate: "Қайырымдылақ жасау"
+  footer_support: "Қолдау"
+  footer_terms: "Ережелер"

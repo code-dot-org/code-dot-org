@@ -1,0 +1,76 @@
+{
+  "ar-SA": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "الإجراءات",
+          "Brushes": "فرش",
+          "Loops": "الحلقات",
+          "Math": "العمليات الحسابية",
+          "Logic": "المنطق",
+          "Functions": "دوال",
+          "Variables": "المتغيرات"
+        },
+        "CourseD_EOC_dance": {
+          "World": "العالم",
+          "Dancers": "الراقصون",
+          "Properties": "خصائص\n",
+          "Events": "الأحداث",
+          "Numbers": "أرقام",
+          "Logic": "المنطق"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "الإجراءات",
+          "Events": "الأحداث",
+          "Loops": "الحلقات",
+          "Math": "العمليات الحسابية",
+          "Logic": "المنطق",
+          "Games/Score": "ألعاب/نقطة\n"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "العالم",
+          "Sprites": "النقوش المتحركة",
+          "Actions": "الإجراءات",
+          "Events": "الأحداث",
+          "Behaviors": "السلوك"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "العالم",
+          "Sprites": "النقوش المتحركة",
+          "Locations": "مواقع",
+          "Actions": "الإجراءات",
+          "Events": "الأحداث",
+          "Behaviors": "السلوك",
+          "Variables": "المتغيرات",
+          "Math": "العمليات الحسابية",
+          "Logic": "المنطق",
+          "Functions": "دوال",
+          "Text": "النص",
+          "Comments": "تعليقات\n"
+        },
+        "outbreak_freeplay": {
+          "World": "العالم",
+          "Sprites": "النقوش المتحركة",
+          "Actions": "الإجراءات",
+          "Behaviors": "السلوك",
+          "Events": "الأحداث",
+          "Locations": "مواقع",
+          "Logic": "المنطق",
+          "Loops": "الحلقات",
+          "Math": "العمليات الحسابية",
+          "Variables": "المتغيرات",
+          "Functions": "دوال",
+          "Comments": "تعليقات\n"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "العالم",
+          "Sprites": "النقوش المتحركة",
+          "Actions": "الإجراءات",
+          "Events": "الأحداث",
+          "Logic": "المنطق",
+          "Math": "العمليات الحسابية"
+        }
+      }
+    }
+  }
+}

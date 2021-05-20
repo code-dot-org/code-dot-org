@@ -12,13 +12,22 @@
   csedweek_dates: "December 3-9, 2018"
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
+  csedweek_banner_teachers_text: "Are you a CS teacher? See other CSEdWeek resources"
   n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  try_hoc_num_served: "<h1>Try an</h1><h2>Hour of Code</h2><h3>%{num} served</h3>"
+  try_hoc_num_served_markdown: |-
+    # Try an
+
+    ## Hour of Code
+
+    ### %{num} served
   anybody_can_learn: "Anybody can learn."
   learn_now: "Learn Now"
   petition_message: "Every student in every school should have the opportunity to learn computer science"
   petition_sign_message: 'If you agree, sign your name and join our mailing list along with # others.'
-  petition_sign_message_support: 'If you support us, sign your name and join our mailing list along with # others.'
+  petition_sign_message_num: "If you agree, sign your name and join our mailing list along with %{num} others."
   petition_join_others: 'Join # others'
+  petition_join_others_num: "Join %{num} others"
   name: "Name"
   email: "Email"
   zipcode: "ZIP code or country"
@@ -43,6 +52,7 @@
   hoc2014_support: "Support it &#x25BE;"
   hoc2014_whatishoc: "What is the Hour of Code?"
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header_num: "%{num} CSEdWeek / Hour of Code events around the world"
   csedweek_map_signup: "Sign up your event"
   csedweek_map_search_placeholder: "Search for Hour of Code events"
   csedweek_map_search_search: "Search"
@@ -145,11 +155,21 @@
   enter_valid_email: "Please enter a valid email address"
   get_a_certificate_message: "We'll send you a certificate and information about how to <a href='/learn/beyond'>Learn beyond an Hour</a>"
   get_a_certificate_message_after: "Click on the certificate to download or print it. Now, keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
+  get_a_certificate_message_after_markdown: "Click on the certificate to download or print it. Now, keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   thanks_for_submitting: "Thanks for submitting!"
   if_you_enjoyed: "If you enjoyed learning, ask friends to try it too!  We want the whole world to learn."
   personalize_certificate: "Personalize your certificate"
+  print_batch_certificates: "Print a batch of certificates"
+  print_certificates: "Print certificates"
+  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
+  print_ice_art_from_frozen: "Print ice art from Frozen tutorials"
+  want_a_blank_certificate_template: "Want a blank certificate template to write in your students' names?"
+  landscape_recommended_certificates: "It is recommended that you choose **Landscape** when you print the certificates."
+  print_one_here_certificates: "Print one here."
+  enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
   share_achievement: "Share your achievement"
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
+  beyond_hour_message_markdown: "Keep going with our [other courses](http://studio.code.org), or see more options to [Learn beyond an Hour](/learn/beyond)."
   leaderboards_for_hoc: "Leaderboards for the Hour of Code."
   support_url: "http://support.code.org/"
   country: "Country"
@@ -224,6 +244,9 @@
   stats_nina: '"Every single day yielded the same results&mdash; 100% engagement." - Nina Nichols Peery, Teacher'
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Frank Martinez, Teacher'
+  stats_nina_markdown: '"Every single day yielded the same results— 100% engagement." - Nina Nichols Peery, Teacher'
+  stats_student_markdown: '"I knew this was a **once-in-a-lifetime** chance." - Mariana Alzate, 5th grader'
+  stats_michael_markdown: '"I have **never, ever** seen my students so excited about learning." - Frank Martinez, Teacher'
   studiobar_title: "Explore <a href='http://studio.code.org'>Code.org's courses</a>"
   studiobar_title_nolink: "Explore Code.org's courses"
   studiobar_elementary_title: "Elementary courses"
@@ -318,6 +341,7 @@
   homepage_action_text_signpetition: "Sign the petition"
   homepage_action_text_wincelebritychat: "Win a celebrity chat"
   homepage_signpetition_dropdown: "I agree &#x25BE;"
+  homepage_signpetition_dropdown_text: "I agree"
   homepage_diversity_pledge: "Take the diversity pledge"
   homepage_banner_text_prizes: 'The Hour of Code is coming again, December 7-13. '
   homepage_banner_link_prizes: 'Join the largest learning event in history. '
@@ -405,7 +429,9 @@
   class_submission_level_vocational: "Vocational"
   class_submission_languages_other: "Other language(s)"
   videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
+  videos_more_markdown: "More [inspirational videos](%{inspiring_videos_playlist}) featuring role models and celebrities"
   careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
+  careers_page_more_markdown: "More [inspirational videos](%{careers_url}) featuring professionals in technology fields"
   playlab_choose_theme: "Choose your Play Lab theme"
   playlab_classic_title: "Classic"
   playlab_gumball_title: "The Amazing World of Gumball"
@@ -511,9 +537,13 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: "The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13."
   volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).'
+  volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
   volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
   volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the <a href=\"/volunteer/local\">volunteer map</a>. Fields marked with a <span class=\"form-required-field\">*</span> are required."
+  volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
   volunteer_engineer_submission_intro_links: "Are you a teacher looking for volunteers? Find a local volunteer on our <a href=\"%{volunteer_local}\">volunteer map</a>."
+  volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Update your information"
   volunteer_engineer_submission_header_shared: "Information shared with teachers on volunteer map"
   volunteer_engineer_submission_field_name: "Name"
@@ -547,6 +577,7 @@
   volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
   volunteer_engineer_submission_submit: "Submit"
   volunteer_engineer_submission_thankyou: "Thank you! Your volunteer information was successfully submitted. Teachers will be using <a href=\"%{url}\">this map</a> to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
+  volunteer_engineer_submission_thankyou_markdown: "Thank you! Your volunteer information was successfully submitted. Teachers will be using [this map](%{url}) to search for and contact volunteers like you. Please allow 48 hours for your information to appear correctly on the map."
   volunteer_engineer_submission_commitment_uncertain: "Uncertain"
   volunteer_engineer_submission_commitment_one_hr_per_week: "1 hour per week"
   volunteer_engineer_submission_commitment_three_hrs_per_week: "3 hours per week"
@@ -746,6 +777,7 @@
   dashboard_pre-express: 'Pre-reader Express Course: '
   dashboard_express: 'Express Course: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_unplugged_markdown: "If you don't have computers, [try these unplugged lessons](%{unplugged_url}) in your classroom."
   dashboard_tools: 'Tools: '
   dashboard_curriculum: "Curriculum"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
@@ -951,10 +983,19 @@
   coursed-2019_name: Course D (2019)
   coursee-2019_name: Course E (2019)
   coursef-2019_name: Course F (2019)
+  coursea-2020_name: Course A (2020)
+  courseb-2020_name: Course B (2020)
+  coursec-2020_name: Course C (2020)
+  coursed-2020_name: Course D (2020)
+  coursee-2020_name: Course E (2020)
+  coursef-2020_name: Course F (2020)
   express-2018_name: Express Course (2018)
   pre-express-2018_name: Pre-reader Express Course (2018)
   express-2019_name: Express Course (2019)
   pre-express-2019_name: Pre-reader Express Course (2019)
+  express-2020_name: Express Course (2020)
+  pre-express-2020_name: Pre-reader Express Course (2020)
+  csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
@@ -1056,6 +1097,12 @@
   coursed-2019_gradelevel: Ages 7-11
   coursee-2019_gradelevel: Ages 8-12
   coursef-2019_gradelevel: Ages 9-13
+  coursea-2020_gradelevel: Ages 4-7
+  courseb-2020_gradelevel: Ages 5-8
+  coursec-2020_gradelevel: Ages 6-10
+  coursed-2020_gradelevel: Ages 7-11
+  coursee-2020_gradelevel: Ages 8-12
+  coursef-2020_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1182,6 +1229,12 @@
   coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
   coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
   coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2020_shortdescription_congrats: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+  courseb-2020_shortdescription_congrats: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+  coursec-2020_shortdescription_congrats: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+  coursed-2020_shortdescription_congrats: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+  coursee-2020_shortdescription_congrats: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+  coursef-2020_shortdescription_congrats: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1461,11 +1514,19 @@
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
   header_report_bug: "Report a problem"
+  header_report_abuse: "Report abuse"
+  header_legal: "Privacy & Legal"
+  header_legal_privacy: "Privacy Policy"
+  header_legal_tos: "Terms of Service"
   header_tutorials: "Tutorials"
+  header_screen_reader_hamburger: "Menu"
+  header_screen_reader_help: "Help Menu"
   app_lab_documentation: "App Lab Documentation"
   app_lab_tutorials: "App Lab Tutorials"
   game_lab_documentation: "Game Lab Documentation"
   game_lab_tutorials: "Game Lab Tutorials"
+  sprite_lab_documentation: "Sprite Lab Documentation"
+  sprite_lab_tutorials: "Sprite Lab Tutorials"
   header_documentation: "Documentation"
   user_header_label: "Hi %{username}"
   user_header_team: "Team"
@@ -1523,12 +1584,15 @@
   account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
   hoc_overview_dance_title: "Dance Party"
   hoc_overview_dance_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  hoc_overview_dance_2019_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!"
   hoc_overview_title: "Hour of Code Activities from Code.org"
-  hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_subtitle_markdown: "The [Hour of Code](https://hourofcode.com) is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
   hoc_overview_partner_activities_title: "More activities from partners"
-  hoc_overview_partner_activities_body: "The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners."
+  hoc_overview_partner_activities_body: "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners."
   hoc_overview_partner_activities_link: "View Activities"
   hoc_overview_start_tutorial: "Start"
+  hoc_overview_more_resources: "For more resources on how to engage with your remote classroom, see our guide for hosting a [virtual Hour of Code](https://hourofcode.com/us/how-to/virtual). For students with limited or no technology or connectivity, share this packet of [unplugged Hour of Code activities](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "View teacher guide"
   hoc2018_creativity: "creativity"
   hoc2018_creativity_create: "Create"
@@ -1546,6 +1610,7 @@
   hoc2018_mc_aquatic_announcement: "Sign up your class to try one of the over 150 NEW activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today."
   hoc2018_mc_aquatic_title: "Minecraft Voyage Aquatic"
   hoc2018_mc_aquatic_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2019_mc_aquatic_description: "Explore and build underwater worlds with code."
   hoc2018_mc_hero_title: "Minecraft Hero’s Journey"
   hoc2018_mc_hero_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   hoc2018_mc_designer_title: "Minecraft Designer"
@@ -1624,6 +1689,8 @@
   hoc2018_dance_view_creativity_video_playlist: "What is Creativity? View Full Series (5 min)"
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "In partnership with"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn more</a>"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn more](%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "If you are a student or teacher in France, visit [Amazon Future Engineer - France](%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Learn more about Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "About Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Learn about Amazon’s kindergarten to career program to increase access to computer science education. Find information on how to get involved in our summer camps, high school CS classes, scholarships, and internships."
@@ -1656,3 +1723,36 @@
   page_not_found_button: "Return home"
   hoc2018_mc_with_microsoft: "In partnership with"
   hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+  hoc2019_mc_mee_title: "Minecraft AI for Good"
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
+  hoc2019_mc_more_coding_resources: "More Coding Resources"
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) from 2018."
+  homepage_slot_text_title_at_home: "Learn at Home"
+  homepage_slot_text_blurb_at_home: "These resources make it easy"
+  homepage_slot_text_link_code_break: "Take a Code Break"
+  homepage_slot_text_link_do_hoc: "Do an Hour of Code"
+  homepage_slot_text_link_express_course: "Try an Express Course"
+  page_not_available_title: "Page Not Available"
+  page_not_available_description: "We're sorry, the page you requested is no longer available at this address. If you still need access, please email [support@code.org](%{support_email_link})."
+  page_not_available_button: "Return home"
+  ! '': 
+  hoc2020_mc_available_code_org: "Available on Code.org"
+  hoc2020_mc_available_mee: 'Available in Minecraft: Education Edition'
+  hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
+  hoc2020_mc_mee_description: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, Chromebook, and iPad. Learn the basics of coding and explore diversity and inclusion with your students! Access free resources including a lesson plan, videos, computer science curriculum, equity lessons, and teacher trainings.'
+  footer_powered_by_aws: "Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries."
+  footer_built_on_github: "Built on GitHub from Microsoft"
+  codebytes_skinny_banner_title: "Join us December 7-11 for our CodeBytes live mini-lessons!"
+  codebytes_skinny_banner_description: 'Join us each day of CS Education Week for CodeBytes, 20 minute interactive computer science lessons. Streaming live twice daily, CodeBytes is a great way for students to participate in a virtual #HourOfCode!'
+  codebytes_skinny_banner_english_only: "English-only"
+  codebytes_skinny_banner_learn: "Learn more at [code.org/codebytes](%{code_bytes_url})."
+  footer_privacy_policy: "Privacy Policy"
+  footer_privacy_policy_updated: "Privacy Policy (updated)"
+  footer_about: "About"
+  footer_partners: "Partners"
+  footer_blog: "Blog"
+  footer_donate: "Donate"
+  footer_store: "Store"
+  footer_support: "Support"
+  footer_terms: "Terms"

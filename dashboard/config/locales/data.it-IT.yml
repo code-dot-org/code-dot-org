@@ -591,7 +591,7 @@ it:
         Unplug11: Conclusione
         C1_happy_maps_unplugged: Mappe Felici
         C1_moveitmoveit_unplugged: Muovilo, muovilo
-        C1_bigevent_unplugged: Gli eventi
+        C1_bigevent_unplugged: Il grande evento
         C1_getting_loopy: Diventare ripetitivi
         C1_pair_programming: Programmazione in coppia
         C1_maze_intro_sequencing: 'Labirinto - Corso 1: Introduzione'
@@ -605,7 +605,7 @@ it:
         C1_playlab_storytelling: 'Laboratorio: crea una storia'
         C1_planting_seed: Piantare un seme
         C1_building_foundation: Costruire le fondamenta
-        C1_going_places_safely: Cittadinanza digitale - Visitare luoghi in modo sicuro
+        C1_going_places_safely: Cittadinanza digitale - Il mio quartiere digitale
         C2_maze_intro: 'Labirinto - Corso 2: Introduzione'
         C2_artist_intro: Artista - Introduzione
         C2_zuck_repeat_loop: 'Labirinto: Cicli'
@@ -620,8 +620,8 @@ it:
         C2_binary_bracelets: Braccialetti Binari
         C2_relay_programming: Programmazione a staffetta
         C2_paper_airplanes: Aeroplani di carta
-        C2_digital_footprint: La tua impronta digitale
-        C2_digital_footprint_v2: La tua impronta digitale
+        C2_digital_footprint: Segui le tracce digitali
+        C2_digital_footprint_v2: Segui le tracce digitali
         C3_maze_level_4: 'Labirinto: Cicli'
         C3_artist_intro: Artista - Introduzione
         C3_artist_functions: 'Artista: Funzioni'
@@ -641,7 +641,7 @@ it:
         C3_functional_suncatchers: Acchiappa-sole Funzionale
         C3_songwriting_with_parameters: Composizione di Canzoni - Parametri
         C4_intro: Introduzione
-        C4_loops_zombie: Ripetizioni
+        C4_loops_zombie: Cicli
         C4_bee_conditional: 'Ape: Istruzioni Condizionali'
         C4_variables_artist: 'Artista: Variabili'
         C4_variables_playlab: 'Laboratorio: Variabili'
@@ -700,7 +700,7 @@ it:
         csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti
           sui film?
         csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
-        csd_gamelab_animation_tab: La scheda dell'animazione
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
         csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
@@ -709,7 +709,7 @@ it:
         csd_weblab_intro_3: Introduzione a Sviluppo Web - Parte 3
         csp_applab_functions: Introduzione alle Funzioni
         csp_applab_functions_parameters: Funzioni con parametri
-        csp_applab_loops: Ripetizioni
+        csp_applab_loops: Cicli
         csp_concept_rgb: Un po ' sui pixel
         csp_cs_is_changing_everything: L'informatica sta cambiando ogni cosa
         csp_pixelation_color_1: Color pixelation widget - parte 1
@@ -811,7 +811,7 @@ it:
         CSF_if_allskins: Il blocco "se"
         CSF_ifelse_allskins: Uso dei blocchi se/altrimenti
         CSF_ifelseifelse_allskins: Uso dei blocchi se/altrimenti-se/altrimenti
-        CSF_loops_AB: Ripetizioni
+        CSF_loops_AB: Cicli
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
         csd_gamelab_if_else: Dichiarazioni Se/altrimenti
@@ -833,10 +833,11 @@ it:
         c_and_c_digital_sharing: Condivisione digitale
         teaching_csf_how_it_works: Introduzione ai corsi di fondamenti di informatica
         elem_pd_2: Informatica per Scuole Elementari - PD video 2/2
-        what_is_cs: Cos'é l'informatica?
+        what_is_cs: Cos'è l'informatica?
         repeat_block: Uso del blocco Ripeti
         lesson_planning: Pianificazione Lezione
-        opd_closing: 'Insegnare i Fondamenti di CS: Chiusura & Passi Successivi'
+        opd_closing: 'Fondamenti di Informatica - Corso per insegnanti: Conclusione
+          & Passi successivi'
         why_unplugged_lessons: Essere "scollegato"
         writing_first_program: Scrivi il tuo primo programma per computer
         conditionals_with_cards: Lezione Scollegata in Azione - Condizionali con Carte
@@ -852,11 +853,58 @@ it:
         csd_gamelab_functions: Chiamare e Definire Funzioni
         csd_applab_parameters: Funzioni con parametri
         csd_applab_loops: Loop in Sviluppo App
+        csd_problem_solving_process: Il Processo di Risoluzione dei Problemi
         CSF_Going_Places_Safely: Il mio quartiere digitale
-        CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
-        CSF_Spritelab_MakeSprite_v2: Come fare un Personaggio
+        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei Personaggi
+        CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)
+        csd_applab_designmode_short: Sviluppo App - Modalità Interfaccia
+        csp-pd-welcome: Benvenuto in Famiglia!
+        CSF-Teaching-Problem-Solving: Fondamenti di informatica - Insegnare a risolvere
+          i problemi (Problem Solving)
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video Pilota
+          - Blocco dei dati
+        u7-libraries-explanation: 'App Lab: Crea i Tuoi Blocchi - Come Usare le Librerie'
+        how-to-k5-workshops: 'Code.org - Fondamenti di informatica: provato dai bambini,
+          approvato dagli insegnanti'
+        why-should-teach-unplugged-activities: FAQ - Perché proporre lezioni tradizionali
+          (unplugged)?
+        cs-principles-intro-to-objects: 'Principi di Informatica: Introduzione agli
+          Oggetti'
+        oceans_machine_learning: Cos'è l'Apprendimento Automatico (Machine Learning)
+        oceans_training_data: Dati di apprendimento e distorsioni
+        oceans_societal_implications: Ripercussioni sociali
+        hoc_dance_congrats_2019: Dance Party - Via al party!
+        hoc_dance_warmup_2019: Dance Party - Warm up
+        hoc_dance_events_2019: Dance Party - Eventi
+        hoc_dance_measures_2019: Ballando col codice - Battute
+        hoc_dance_properties_2019: Dance Party - Proprietà
+        csd_what_computers_do: Cosa Fanno i Computer?
+        csf_my_online_neighborhood_2020: Il mio quartiere digitale
+        csf_follow_the_digital_trail: Segui le tue tracce digitali
+        csf_private_and_personal_information: Cittadinanza digitale - Dati personali
+          e altri dati
+        csd_what_computers_are: Cos'è un Computer?
+        codebreak_e01: 'Code Break 1.0: Algoritmi con Hill Harper'
+        codebreak_e02: 'Code Break 2.0: Prototipi con Mark Cuban e Lyndsey Scott'
+        codebreak_e03: 'Code Break 3.0: Crittografia con Ashton Kutcher e Mia Gil
+          Epner'
+        codebreak_e04: 'Code Break 4.0: Informazione Digitale con Mike Krieger e Alice
+          Keeler'
+        codebreak_e05: 'Code Break 5.0: Simulazioni e Dati con Bill Gates'
+        csd_how_teamwork_works: Come Funziona il Lavoro di Squadra
+        csd_teamwork_and_disagreement: Lavoro di Squadra - Affrontare il Disaccordo
+        codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott e Vint Cerf'
+        codebreak_e07: 'Code Break 7.0: Condizionali con Sal Khan e Flo Vaughn'
+        codebreak_e08: 'Code Break 8.0: Variabili con Yara Shahidi e Fuzzy Khosrowshahi '
+        codebreak_e09: 'Code Break 9.0: Eventi con Macklemore e Scott Forstall'
+        codebreak_e10: 'Code Break 10.0: IA con Kat Graham e Kate Park'
+        codebreak_e11: 'Code Break 11.0: Astrazione con Susan Wojcicki e China Anne
+          McClain'
+        codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor e Paula
+          Mejia'
+        csd_ml_intro_to_ai_lab: Lezione 6
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto

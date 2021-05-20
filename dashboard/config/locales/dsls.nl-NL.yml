@@ -3,235 +3,244 @@ nl-NL:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Meerkeuze
-        questions:
-        - text: Kies een algoritme voor de gegeven afbeelding.
         answers:
         - text: Start met een vierkant <br />Plaats een driehoek boven de vierkant<br/>Plaats
             een driehoek onder de vierkant
-        - correct: true
+        - text: Start met een vierkant <br/>Plaats een driehoek rechts van het vierkant
+            <br/>Plaats een parallellogram onder het vierkant <br/>Plaats een driehoek
+            rechts van de parallellogram
+          correct: true
         - text: Begin met een vierkant <br/>zet een parallellogram boven het vierkant
             <br/> zet een driehoek rechts van de parallellogram
         - text: Begin met een vierkant <br/> zet een driehoek onder het vierkant <br/>
             zet een parallellogram rechts van de driehoek
-      2-3 Algorithms Multi 2:
-        title: Meerkeuze
-        content1: Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats
-          nog een driehoek onder het vierkant
         questions:
-        - text: Welke afbeelding volgt dit algoritme <em>niet</em>?
+        - text: Kies een algoritme voor de gegeven afbeelding.
+        title: Meerkeuze
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        content1: Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats
+          nog een driehoek onder het vierkant
+        questions:
+        - text: Welke afbeelding volgt dit algoritme <em>niet</em>?
+        title: Meerkeuze
       2-3 Big Event Match 1:
-        title: Koppelen
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Verbind de knoppencombinatie aan de dansbewegingen.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Koppelen
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Koppelen
         content2: Gebruik de sleutel om elke code met zijn letter te combineren
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Koppelen
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Meerkeuze
         questions:
         - text: Welke set van kaarten is volgens de spelregels goed geturfd?
+        title: Meerkeuze
+      2-3 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
         - correct: true
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Meerkeuze
+        - {}
+        - {}
         questions:
         - text: Hoe zou je deze reeks vereenvoudigen met lussen?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Meerkeuze
       2-3 Graph Paper Match 1:
-        title: Koppelen
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Combineer het raster met het programma.
         questions:
         - {}
         - {}
         - {}
+        title: Koppelen
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Meerkeuze
         questions:
         - text: Welk programma maakt het plaatje?
-        answers:
-        - {}
-        - correct: true
-        - {}
+        title: Meerkeuze
       2-3 Maze Match 2:
-        title: Doolhof Combinatie
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Koppel de juiste puzzels aan de juiste blokken
-        pre_title: Instructies
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Doolhof Combinatie
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
         title: Doolhof Meerkeuze
-        questions:
-        - {}
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Meerkeuze
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
-      2-3 Relay Programming Multi 2:
+        questions:
+        - {}
         title: Meerkeuze
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: In welke combinatie van afbeeldingsprogramma's zitten geen vergissingen?
-        answers:
-        - {}
-        - {}
-        - correct: true
+        title: Meerkeuze
       2-3 artist debug multi 1:
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         questions:
         - {}
+      2-3 artist functions multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      2-3 artist functions multi 1:
-        title: Kunstenaar Functies Meerkeuze Eén
         questions:
         - text: Kies de juiste blokken uit om deze afbeelding met de gegeven functies
             te maken
-        answers:
-        - correct: true
-        - {}
-        - {}
+        title: Kunstenaar Functies Meerkeuze Eén
       2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Koppel de juiste lus op de juiste vorm
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: Kunstenaar lussen meerkeuze
         questions:
         - text: Welke vorm wordt door deze lus gemaakt?
+        title: Kunstenaar lussen meerkeuze
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
-        - correct: true
         - {}
-      2-3 artist loops multi 2:
-        title: Kunstenaar lussen meerkeuze
+        - correct: true
         questions:
         - text: Welke vorm is door dit programma gemaakt?
+        title: Kunstenaar lussen meerkeuze
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
-        - correct: true
-      2-3 artist match 1:
-        title: Kunstenaar koppelen
+        - {}
         content1: Combineer de vorm met het blok dat het afmaakt.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Kunstenaar koppelen
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Welke van de volgende vergelijkingen is waar?
+        title: Bij Condities Meerkeuze
+      2-3 bee conditionals multi 3:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      2-3 bee conditionals multi 3:
+        - {}
         questions:
         - text: Kies de beste blokken.
+        title: Bij Condities Meerkeuze
+      2-3 bee loops multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: Bij Lussen Meerkeuze Eén
+        - {}
         questions:
         - text: Welke blokken verzamelen alle nectar?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Bij Lussen Meerkeuze Eén
       2-3 maze match 1:
-        title: Doolhof koppelen één
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Koppel de juiste puzzels aan de juiste blokken
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: Doolhof koppelen één
       2-3 maze multi 1:
-        title: Meerkeuze doolhof één
-        questions:
-        - text: Welke blokken zijn het goede antwoord?
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Welke blokken zijn het goede antwoord?
+        title: Meerkeuze doolhof één
       4-5 Algorithms Match 1:
-        title: Koppelen
+        answers:
+        - text: "<h4>Zet de score van speler 1 naar 0</h4>"
+        - text: "<h4>Speler een gooit de dobbelsteen</h4>"
+        - text: "<h4>Voeg het ogenaantal van speler 1 toe aan de totale score</h4>"
+        - text: "<h4>Vergelijk de spelersscores om te kijken wie er wint</h4>"
         content1: Combineer de stappen in de dobbelstenen race spel in de volgorde
           dat ze moeten verschijnen in de algoritme.
         questions:
@@ -239,23 +248,23 @@ nl-NL:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Zet de score van speler 1 naar 0</h4>"
-        - text: "<h4>Speler een gooit de dobbelsteen</h4>"
-        - text: "<h4>Voeg het ogenaantal van speler 1 toe aan de totale score</h4>"
-        - text: "<h4>Vergelijk de spelersscores om te kijken wie er wint</h4>"
+        title: Koppelen
       4-5 Algorithms Multi 1:
-        title: Meerkeuze
-        questions:
-        - text: Welk van deze items is het moeilijkst in een algoritme te schrijven?
         answers:
         - text: Tandenpoetsen
         - text: Koekjes bakken
         - text: Winkelen met een boodschappenlijst
         - text: Banaan
           correct: true
+        questions:
+        - text: Welk van deze items is het moeilijkst in een algoritme te schrijven?
+        title: Meerkeuze
       4-5 Computational Thinking Match 1:
-        title: Koppelen
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Elk van de voertuigen zijn verdeeld in kleinere onderdelen. Combineer
           elk voertuig met de lijst met onderdelen.
         questions:
@@ -263,194 +272,209 @@ nl-NL:
         - text: "<h3>Wielen/kant: 2 <br/>Ramen/kant: 1</h3>"
         - text: "<h3>Wielen/kant: 2 <br/>Ramen/kant: 6</h3>"
         - text: "<h3>Wielen/kant: 3 <br/>Ramen/kant: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Koppelen
       4-5 Computational Thinking Multi 1:
-        title: Meerkeuze
-        questions:
-        - text: Seattle is een grootstad. <br/> Eugene is een middelgrote stad <br/>
-            Hillview is een kleine stad.
         answers:
         - text: Seattle _____ een _____ _____.
         - text: _____ is een _____ stad.
           correct: true
         - text: _____ is _____ een _____.
         - text: Eugene is een _____ stad.
-      4-5 Crowdsourcing Multi 1:
+        content1: "? Hier zijn drie zinnen. Welk van onderstaande sjablonen abstraheert
+          op de juiste manier zodat ze alle drie hetzelfde patroon hebben als het
+          sjabloon?"
+        questions:
+        - text: Seattle is een grootstad. <br/> Eugene is een middelgrote stad <br/>
+            Hillview is een kleine stad.
         title: Meerkeuze
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: Welk plaatje geeft crowdsourcing het best weer?
-        answers:
-        - {}
-        - correct: true
-      4-5 Crowdsourcing Multi 2:
         title: Meerkeuze
-        questions:
-        - text: Welke activiteit is de beste oefening voor crowdsourcing?
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Je kamer opruimen
           correct: true
         - text: Toetjes eten
         - text: Je haar borstelen
         - text: Je gezicht wassen
-      4-5 Digital Footprint Multi 1:
-        title: Meerkeuze
         questions:
-        - text: Welk van de hieronder genoemde stukjes informatie zijn geschikt om
-            de delen op internet?
+        - text: Welke activiteit is de beste oefening voor crowdsourcing?
+        title: Meerkeuze
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Je verjaardag
         - text: Je favoriete eten
           correct: true
         - text: Je adres
         - text: Het creditcardnummer van je ouders
-      4-5 Internet Multi 1:
+        questions:
+        - text: Welk van de hieronder genoemde stukjes informatie zijn geschikt om
+            de delen op internet?
         title: Meerkeuze
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Als je probeert in te loggen op code.org, naar welk IP-adres zal de
             DNS je dan waarschijnlijk doorsturen?
+        title: Meerkeuze
+      4-5 Internet Multi 2:
         answers:
         - {}
-        - {}
-        - {}
         - correct: true
-      4-5 Internet Multi 2:
-        title: Meerkeuze
+        - {}
+        - {}
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Als de DNS je naar de pagina met IP-adres 100.42.50.110 heeft gestuurd,
             op welke website ben je dan?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Meerkeuze
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, ga naar mijn Lou,
         - text: Lou, Lou, ga naar mijn Lou, <br/>Lou, Lou, ga naar mijn Lou, <br/>Lou,
             Lou, ga naar mijn Lou, <br/>ga naar mijn Lou, mijn schat.
           correct: true
-        - {}
-        - {}
-      4-5 Suncatchers Match 1:
-        title: Koppelen
-        content1: Combineer elk programma met het woord dat hij maakt, gebruik de
-          gegeven groep van vaardigheden.
+        - text: Lou, Lou, ga naar mijn  Lou,<br/>Lou, Lou, ga naar mijn  Lou,<br/>Lou,
+            Lou, ga naar mijn  Lou,<br/>ga naar mijn  Lou, schatje<br/><br/><p>vliegen
+            in de boter,<br/>weg vliegen, weg
+        - text: vliegen in de boter,<br/>weg vliegen, weg<br/>vliegen in de boter,<br/>weg
+            vliegen, weg<br/>vliegen in de boter,<br/>weg vliegen, weg<br/>Ga naar
+            mijn Lou, schatje.
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Wat is de grootste stuk van dit lied dat je kunt definiëren als het
+            refrein, zodat het refrein, elke keer dat het wordt aangeroepen, precies
+            herhaald wordt?
+        title: Meerkeuze
+      4-5 Suncatchers Match 1:
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
         - text: "<h4>STAR</h4>"
         - text: "<h4>RAMP</h4>"
+        content1: Combineer elk programma met het woord dat hij maakt, gebruik de
+          gegeven groep van vaardigheden.
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
+        questions:
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
+        title: Koppelen
       4-5 Suncatchers Multi 1:
-        title: Meerkeuze
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: Welke van de programma's hieronder <em>maakt</em> niet exact hetzelfde
             vervolg als programma 1?
+        title: Meerkeuze
+      4-5 artist loops multi 1:
         answers:
         - {}
         - correct: true
         - {}
-      4-5 artist loops multi 1:
-        title: Kunstenaar lussen meerkeuze
+        - {}
         questions:
         - text: Welke van de blokken maken het ontwerp?
+        title: Kunstenaar lussen meerkeuze
+      4-5 artist multi 1:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 artist multi 1:
-        title: Kunstenaar Meerkeuze
         questions:
         - text: Welk blokken tekenen een rechthoek met een omtrek van 100?
+        title: Kunstenaar Meerkeuze
+      4-5 artist multi 2:
         answers:
+        - {}
         - {}
         - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Kunstenaar Meerkeuze
         questions:
         - text: Welke tekening is symmetrisch?
+        title: Kunstenaar Meerkeuze
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - correct: true
         - {}
-      4-5 bee conditionals multi 1:
-        title: Bij Condities Meerkeuze
+        content2: "? Een paarse bloem heeft 3, 2 of 1 nectar, maar je weet niet hoeveel.
+          Welke blokken controleren dit op de juiste manier en verzamelen alle nectar
+          van een paarse bloem?"
         questions:
         - text: Kies de beste blokken.
+        title: Bij Condities Meerkeuze
+      4-5 bee debug multi 1:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      4-5 bee debug multi 1:
-        title: Bij Debug Meerkeuze
+        - {}
         questions:
         - text: Welke versie van de functie werkt?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Bij Debug Meerkeuze
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Welke blokken lossen de puzzel op?
         title: Bij Lussen Meerkeuzevraag
-        questions:
-        - text: Welke blokken lossen de puzzel op?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Welke blokken lossen de puzzel op?
         title: Doolhof Condities Meerkeuzevraag
-        questions:
-        - text: Welke blokken lossen de puzzel op?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Doolhof Combinatie
-        content1: Koppel de juiste puzzels aan de juiste blokken
-        pre_title: Instructies
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
-      4-5 maze multi 1:
-        title: Doolhof Meerkeuze
+        content1: Koppel de juiste puzzels aan de juiste blokken
         questions:
-        - text: Welke blokken lossen de puzzel op?
+        - {}
+        - {}
+        - {}
+        title: Doolhof Combinatie
+      4-5 maze multi 1:
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - text: Welke blokken lossen de puzzel op?
+        title: Doolhof Meerkeuze
       Begin planning your project:
-        title: titel
         content1: beschrijving hier
       Begin planning your project_2018:
         content1: beschrijving hier
       Begin planning your project_2018_2019:
+        content1: beschrijving hier
+      Begin planning your project_2018_2019_2020:
         content1: beschrijving hier
       CSD Header Size MC:
         answers:
@@ -471,87 +495,78 @@ nl-NL:
         - {}
         - {}
       CSD U2 Design Project:
-        title: titel
         content1: beschrijving hier
       CSD U2 Design Project_2018:
-        title: titel
         content1: beschrijving hier
       CSD U2 Design Project_2018_2019:
-        title: titel
+        content1: beschrijving hier
+      CSD U2 L1 Overview:
         content1: beschrijving hier
       CSD U2 L2 Overview:
-        title: titel
         content1: beschrijving hier
       CSD U2 L3 Overview:
-        title: titel
         content1: beschrijving hier
       CSD U2 L4 Overview:
-        title: titel
         content1: beschrijving hier
       CSD U2 L5 Overview:
-        title: titel
         content1: beschrijving hier
       CSD U2 L6 Overview:
-        title: titel
         content1: beschrijving hier
       CSD U2 Lesson 6 Overview:
         content1: beschrijving hier
       CSD U2 expand project:
-        title: titel
         content1: beschrijving hier
       CSD U2 expand project_2018:
-        title: titel
         content1: beschrijving hier
       CSD U2 expand project_2018_2019:
-        title: titel
         content1: beschrijving hier
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -564,71 +579,71 @@ nl-NL:
       CSD U2 project guide_2018_2019:
         content1: beschrijving hier
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: titel
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: titel
       CSD U3 Boolean MC_2018:
-        title: titel
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: titel
       CSD U3 Boolean MC_2018_2019:
-        title: titel
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: titel
       CSD U3 Card Examples_2018:
         content1: beschrijving hier
       CSD U3 Card Examples_2018_2019:
@@ -652,107 +667,104 @@ nl-NL:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
+        - {}
         - {}
         - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      CSD U3 combining rep:
-        title: titel
-        content1: beschrijving hier
-      CSD U3 combining rep_2018:
-        title: titel
-        content1: beschrijving hier
-      CSD U3 combining rep_2018_2019:
-        title: titel
-        content1: beschrijving hier
-      CSD U3 drawSprites placement match:
+        - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      CSD U3 combining rep:
+        content1: beschrijving hier
+      CSD U3 combining rep_2018:
+        content1: beschrijving hier
+      CSD U3 combining rep_2018_2019:
+        content1: beschrijving hier
+      CSD U3 drawSprites placement match:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -770,13 +782,10 @@ nl-NL:
       CSD U3 platform intro_2018_2019:
         content1: beschrijving hier
       CSD U5 Encryption 1:
-        title: titel
         content1: beschrijving hier
       CSD U5 Encryption 1_2018:
-        title: titel
         content1: beschrijving hier
       CSD U5 Encryption 1_2018_2019:
-        title: titel
         content1: beschrijving hier
       CSD U5 Encryption 2:
         content1: beschrijving hier
@@ -785,7 +794,6 @@ nl-NL:
       CSD U5 Encryption 2_2018_2019:
         content1: beschrijving hier
       CSD U5 L13 SFLP Interpreting Data:
-        title: titel
         content1: beschrijving hier
       CSD U5 crosstab warmup:
         content1: beschrijving hier
@@ -794,22 +802,16 @@ nl-NL:
       CSD U5 crosstab warmup_2018_2019:
         content1: beschrijving hier
       CSD U5 data visualization:
-        title: titel
         content1: beschrijving hier
       CSD U5 data visualization_2018:
-        title: titel
         content1: beschrijving hier
       CSD U5 data visualization_2018_2019:
-        title: titel
         content1: beschrijving hier
       CSD U5 student record:
-        title: titel
         content1: beschrijving hier
       CSD U5 student record_2018:
-        title: titel
         content1: beschrijving hier
       CSD U5 student record_2018_2019:
-        title: titel
         content1: beschrijving hier
       CSD U6 LED create intro:
         content1: beschrijving hier
@@ -818,29 +820,29 @@ nl-NL:
       CSD U6 LED create intro_2018_2019:
         content1: beschrijving hier
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 final intro:
         content1: beschrijving hier
       CSD U6 final intro_2018:
@@ -848,931 +850,2391 @@ nl-NL:
       CSD U6 final intro_2018_2019:
         content1: beschrijving hier
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - correct: true
         - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: "# Blijf dansen! \n\nVoor deel 2 ga je je eigen project maken. Er
+          zijn hier geen puzzels - in plaats daarvan zijn er een heleboel projecten
+          die verschillende manieren laten zien om meer complexe dansfeesten te maken.
+          \n\nJe kunt deze levels_in elke volgorde_ doen. Kijk rond om te zien hoe
+          iets in een eerder stadium is gedaan, of combineer concepten tussen de projecten.
+          Probeer ze allemaal uit, kies je favoriet, en besteed je tijd aan het toevoegen
+          aan je eigen project om dit van jezelf te maken. \n\n<a class=\"btn btn-large
+          btn-primary next-stage submitButton pull-right\">Continue</a> \n\n<div class=\"clearfix\"></div>
+          \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"2\"> \n<h2> \nHeen
+          en weer \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"3\"> \n<h2>
+          \nMeer knoppen \n</h2>\n\n <img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"4\">\n
+          <h2> \nGa in positie staan\n </h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"5\">\n
+          <h2> \nWaar zijn ze gebleven? \n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"6\">
+          \n<h2>\n Dancecrews\n </h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"7\"> \n<h2>
+          \nKwartnoten \n</h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"8\">\n
+          <h2> \nBas, Midden, Hoge tonen \n</h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"9\">
+          \n<h2> \nVersnellen, vertragen \n</h2> \n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
+          \n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Blijf dansen!
+
+          Voor deel 2 ga je je eigen project maken. Er zijn hier geen puzzels - in plaats daarvan zijn er een aantal projecten die verschillende manieren laten zien om complexere dansfeesten te maken.
+
+          U kunt deze niveaus in elke volgorde doen. Spring rond om te kijken hoe iets in een vorig niveau is gedaan, of combineer concepten tussen de projecten. Probeer ze allemaal, kies je favoriet en besteed je tijd aan het toevoegen aan dat project om het je eigen te maken.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Doorgaan</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Heen en weer
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Meer knoppen
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Kom in formatie
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Waar zijn ze naartoe?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Dansploegen
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Kwartnoten
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bas, Mid, Hoge tonen
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Versnel het, vertraag het
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       Internet Simulator Setup:
         content1: beschrijving hier
       Internet Simulator Setup 2:
-        title: titel
         content1: beschrijving hier
       Internet Simulator Setup 3:
         content1: beschrijving hier
       K-1 Artist 1 Multi 1:
-        title: Meerkeuze
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Welke blokken lossen deze puzzel op?
+        title: Meerkeuze
+      K-1 Artist 1 Multi 2:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      K-1 Artist 1 Multi 2:
-        title: Meerkeuze
+        - {}
         questions:
         - text: Welke blokken tekenen het vierkant?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Meerkeuze
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
       K-1 Artist 2 Match 2:
-        title: Koppelen
-        content2: Koppel de vormen met elkaar gebaseerd op type.
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
+        content2: Koppel de vormen met elkaar gebaseerd op het type.
+        questions:
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
+        title: Koppelen
       K-1 Bee 1 Multi 1:
-        title: Meerkeuze
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
         questions:
         - text: Hoeveel nectar is dit?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Meerkeuze
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
       K-1 Bee 1 Multi 2:
-        title: Meerkeuze
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
         questions:
         - text: Hoeveel nectar is dit?
+        title: Meerkeuze
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+      K-1 Bee Loops Match 1:
         answers:
         - {}
         - {}
         - {}
-        - correct: true
-      K-1 Bee Loops Match 1:
-        title: Koppelen
+        - {}
         content2: Koppel de blokken
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Koppelen
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: Koppelen
         content2: Verbind de knoppencombinatie aan de dansbewegingen.
         questions:
         - {}
         - {}
         - {}
+        title: Koppelen
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Meerkeuze
+        - correct: true
         questions:
         - text: Welk dier heeft de grootste digitale voetafdruk wat hem of haar de
             <strong>meest onveilige</strong> maakt?
-        answers:
-        - {}
-        - {}
-        - correct: true
-      K-1 Getting Loopy Multi 1:
         title: Meerkeuze
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Hoe zou je deze reeks vereenvoudigen met lussen?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Happy Maps Multi 1:
         title: Meerkeuze
+      K-1 Happy Maps Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
         questions:
         - text: Welke pijl brengt de Flurb bij de schat?
+        title: Meerkeuze
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+      K-1 Keep it Private Multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      K-1 Keep it Private Multi 1:
-        title: Meerkeuze
         questions:
         - text: Welke informatie kun je beter <strong>niet</strong> on-line delen
             ?
-        answers:
-        - correct: true
-        - {}
-        - {}
+        title: Meerkeuze
       K-1 Maze Debugging Multi 1:
-        title: Meerkeuze
-        questions:
-        - text: Welke keuze zou het laatste blok moeten zijn?
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      K-1 Maze Loops Multi 1:
+        questions:
+        - text: Welke optie zou het laatste blok moeten zijn?
         title: Meerkeuze
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Welk herhaal blok is hetzelfde?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Maze Loops Multi 2:
         title: Meerkeuze
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
+      K-1 Maze Loops Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Kies het juiste herhaal blok.
+        title: Meerkeuze
+      K-1 Maze Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        content2: Koppel de juiste puzzels aan de juiste blokken
+        questions:
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: Koppelen
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
         - correct: true
-      K-1 Maze Match 1:
-        title: Koppelen
-        content2: Koppel de juiste puzzels aan de juiste blokken
-        pre_title: Instructies
-        questions:
         - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: Doolhof
         questions:
         - text: Welk antwoord is de oplossing voor dit level?
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        title: Doolhof
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
-        title: Meerkeuze
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
         questions:
         - text: Welke algoritme leidt de Flurb naar de bloemen?
+        title: Meerkeuze
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
+        - {}
         - correct: true
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: Meerkeuze
         questions:
         - text: Welke stap moet aan het begin van dit algoritme staan?
+        title: Meerkeuze
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
-        - {}
         - correct: true
-      K-1 Plant a Seed Multi 2:
-        title: Meerkeuze
+        - {}
         questions:
         - text: Welke stap moet op de lege plaats in dit algoritme?
+        title: Meerkeuze
+      K-1 Word Search Multi 1:
         answers:
         - {}
         - correct: true
         - {}
-      K-1 Word Search Multi 1:
-        title: Meerkeuze
         questions:
         - text: Welke blokken spellen "MOVE" (bewegen)?
-        answers:
-        - {}
-        - correct: true
-        - {}
-      K-1 Word Search Multi 3:
         title: Meerkeuze
-        questions:
-        - text: Welk woord wordt gespeld?
+      K-1 Word Search Multi 3:
         answers:
-        - text: ZET
-        - text: VIERKANT
+        - text: SET
+        - text: SQUARE
           correct: true
-        - text: ZUID
+        - text: SOUTH
+        questions:
+        - text: Welk (engels) woord wordt gespeld?
+        title: Meerkeuze
       Multi-Screen Apps:
-        title: titel
         content1: beschrijving hier
       New Challenge Introduction:
-        title: titel
+        content1: beschrijving hier
+        markdown: "### Nieuwe uitdaging: Kraak een \"willekeurig substitutiecijfer\"...
+          met een nieuwe widget\n\nWat als we, in plaats van het hele alfabet te verschuiven,
+          elke letter in het alfabet vervangen door een willekeurige andere letter
+          van het alfabet? Dit heet een \"willekeurig substitutiecijfer\".\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNu
+          krijg je berichten die niet versleuteld zijn met een simpele alfabetische
+          verschuiving, maar met een **willekeurig substitutiecijfer**.\n\n\n\nDit
+          is veel moeilijker om te kraken en vereist een geavanceerder gereedschap,
+          dus...\n\nAls je op volgende klikt zie je een **nieuwe, geavanceerdere versie
+          van het encryptie tool** die je veel verschillende dingen laat zien.\n\nMaar
+          wat het doet is een beetje een mysterie!  \n\n### Je taak:\n\n * Zoek uit
+          wat er gebeurt in dit tool\n * Wat voor informatie wordt getoond?\n * Zoek
+          uit wat het tool je laat doen\n * Zoals gewoonlijk: je kan het niet stuk
+          maken. Dus, klik op dingen, en probeer maar wat.\n * Als je het door hebt
+          ben je misschien in staat om een boodschap te ontsleutelen die gebruik maakt
+          van willekeurige vervanging.\n \n### Tip\n\n* Wist je dat de letter **E**
+          de meest voorkomende letter is?\n\n### Kom opnieuw bijeen en bespreek\nNa
+          een tijdje er mee gespeeld te hebben, overleg met iemand - partner, keine
+          groep, hele klas - om te bespreken wat je uitgevonden hebt en controleer
+          dat je weet hoe het werkt en wat de verschillende manieren om het tool te
+          gebruiken zijn.\n\n\n"
+      OPD-K5 Participation:
+        markdown: |-
+          # Aan de slag > Je deelname plannen
+
+          Denk, voordat je begint, even na over je leerbehoeften, doelen en de unieke ervaring van leren in een online omgeving in je eigen tempo - vooral als dit je eerste online cursus is!
+
+          ## Jij bent de baas
+
+          Deze online cursus op eigen tempo is ontworpen om jou achter het stuur te plaatsen en jou controle te geven over je eigen leerproces. *** Neem de tijd en werk deze cursus in je eigen tempo door. Voor elke fase worden voorgestelde tijden gegeven. *** Als je merkt dat je meer of minder tijd nodig hebt, hoef je je geen zorgen te maken! Ons belangrijkste doel is om plezier te hebben, de basis te leren en wat je leert toe te passen in je lessen op de manier die het beste bij je past.
+
+          ## Wordt verbonden
+
+          Een manier om gemotiveerd en gefocust te blijven tijdens het leren, is door actief te worden in ons <a href="http://forum.code.org/c/plc" target="_new">Professional Learning Community (PLC) forum </a>.
+          Begin met jezelf daar voor te stellen in onze <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410" target="_new">"Introductions" thread</a>. Tijdens de cursus gebruik je het forum om je gedachten, leermomenten en vragen te delen met anderen die hier ook aan werken.
+
+          <a href="http://forum.code.org/t/welcome-please-introduce-yourself/410/1" target="blank"> <button class = "plc">Introduceer jezelf nu >></button></a><br>
+
+          ## Hulp vinden wanneer je het nodig hebt
+
+          Als je tijdens de cursus vastloopt, ga dan naar [support.code.org] (http://support.code.org) en bekijk [onze forums](https://support.code.org/hc/communities/public/topics). Daar vind je waarschijnlijk het antwoord op je vraag. Als je nog steeds vastzit, kun je een e-mail sturen naar [teacher@code.org](mailto: teacher@code.org) en een medewerker van Code.org neemt zo snel mogelijk contact met je op.
+
+          ## Maatje!
+
+          Houd er rekening mee dat we een klein team zijn en vanwege de omvang van onze inspanningen, kunnen we niet op alle verzoeken om ondersteuning reageren op dezelfde manier als een instructeur voor een persoonlijke cursus. Daarom raden we je aan om aan deze online cursus ***te werken met een partner of een groep collega's***.
+
+          Code.org erkent de kracht van samen leren en samenwerking. In feite is "Pair Programming" een geweldige praktijk die we in Stage 8 zullen onderzoeken als een best practice in de klas. Als je denkt dat je beter zult leren met een partner of in een groep, waarom zou je de cursus dan niet voltooien met een maatje of een collega? Als je in het echt niemand kent die interesse heeft om met je samen te werken, ga dan naar [het PLC-forum](http://forum.code.org/t/never-swim-alone-the-find-a-buddy-thread/411), [Twitter](https://twitter.com/teachcode) of [Facebook](https://www.facebook.com/groups/1457214714576953/) en zoek iemand van de Code.org community die wil samenwerken.
+
+          ## Zoek de leerervaring die voor jou werkt
+
+          Tenslotte is online leren niet voor iedereen. Deze cursus heeft geen instructeur of een ingebouwd mechanisme om direct met je collega's te communiceren. Als je merkt dat je meer één-op-één-aandacht nodig hebt of als je weet dat je beter leert in een klaslokaal in de echte wereld waar er meer gelegenheid is voor samenwerking en betrokkenheid, raden we je aan een van onze persoonlijke ontwikkelingstrajecten te proberen.
+
+          <a href="http://code.org/professional-development-workshops" target="blank"><button> Zoek een persoonlijke workshop bij jou in de buurt >></button></a>
+
+          * * *
+
+          ## Wat is jouw plan?
+
+          Neem even de tijd om na te denken over hoe en wanneer je deze online cursus voltooit, zodat je het meeste uit de ervaring haalt. Als je een goed plan hebt uitgetekend, duik dan in fase 1.
+      OPD-K5 Puzzles:
+        markdown: "# Vooruitblik > Over puzzels\n\nIn de volgende stappen gebruik
+          je Code.org om de basis van programmeren te leren. Je krijgt een aantal
+          puzzels om op te lossen. Om dat te doen moet je programma's schrijven met
+          verschillende karakters om veschillende doelen te bereiken. We oefenen met
+          de eerste puzzel in stap 3. Maar eerst hebben we een overzicht van de soorten
+          puzzels die jij en je studenten tegen zullen komen:\n\n## Voorbeeld doolhof
+          puzzels\n\n![](//code.org/images/mockup_birds.png)\n![](//code.org/images/pvz.png)\n\nJe
+          moet de Angry Bird bij het varken krijgen en je moet de zombie bij de zonnebloem
+          krijgen.\n\n## Voorbeeld kunstenaar puzzel\n\n![](//code.org/images/artist.png)\n\nJe
+          moet de kunstenaar over de grijze lijnen laten teken door hem over het canvas
+          te laten bewegen. Hij tekent een lijn waar hij loopt.\n\n## Voorbeeld bij
+          puzzel\n\n![](//code.org/images/bee.png)\n\nJe moet de bij zo bewegen dat
+          hij al het nectar ophaalt en alle honing maakt. Hoeveel honing en nectar
+          nodig is voor een puzzel staat rechtsonder de bloem of honingraat.\n\n##
+          Play Lab\n\n![](//code.org/images/playlab.png)\n\nIn Play Lab maak je spellen
+          en verhalen, gebaseerd op verschillende doelen.\n\n## Flappy\n\n![](//code.org/images/flappy.png)\n\nIn
+          Flappy maak je je eigen Flappy bird spel.\nDe puzzels die toewerken naar
+          het maken van het spel helpen je de verschillende stukken code te begrijpen,
+          die je nodig hebt voor het spel.\n\n## Bounce\n\n![](//code.org/images/bounce.png)\n\nIn
+          Bounce maak je je eigen spel. \nNet als bij Flappy  helpen de puzzels je
+          de stukken code te begrijpen die nodig zijn voor het spel.\n\n* * *\n\nIn
+          deze serie introduceren we je de puzzels van [CS Fundamentals] (http://code.org/educate/k5).
+          Deze puzzels zijn online tutorials en helpen studenten concepten zoals lussen,
+          gebeurtenissen, condities en functies te leren.\n\nTijdens deze les zullen
+          we verschillende soorten puzzels afwisselen, waardoor je vertrouwd kunt
+          raken met de programmeerconcepten in CS Fundamentals en de personages waar
+          je studenten verliefd op zullen worden. Tijdens deze cursus merk je dat
+          je snel tussen verschillende omgevingen beweegt; of het nu de boze vogel
+          naar het varken brengt, een tekening maakt of een bij nectar laat verzamelen.
+          Deze overgangen gaan vrij snel in deze cursus om u zo te laten zien welke
+          puzzels worden aangeboden in CS Fundamentals. Uw studenten zullen meer tijd
+          krijgen.\n\nAls je meer wilt weten over de studentenervaring, kun je altijd
+          op elk gewenst moment de cursussen [CS Fundamentals] (http://studio.code.org/)
+          volgen. Maar deze cursus geeft je een goed beeld van wat je kunt verwachten
+          door in korte tijd een aantal van de meest fundamentele puzzels en lessen
+          te tonen.\n"
+      OPD-K5 Reviewing Reflections:
         content1: beschrijving hier
       OPD-K5 Stage3aGo:
-        title: titel
+        content1: beschrijving hier
+      OPD-K5 Stage3aGo_copy:
+        content1: beschrijving hier
+      OPD-K5 conditionals introduced:
+        content1: beschrijving hier
+      OPD-K5 debugging:
+        content1: beschrijving hier
+      OPD-K5 diving deeper intro:
+        content1: beschrijving hier
+      OPD-K5 events introduced:
+        content1: beschrijving hier
+      OPD-K5 for loops:
+        content1: beschrijving hier
+      OPD-K5 for loops intro:
+        content1: beschrijving hier
+      OPD-K5 for loops introduction:
+        content1: beschrijving hier
+      OPD-K5 functions introduced:
+        content1: beschrijving hier
+      OPD-K5 journaling:
+        content1: beschrijving hier
+      OPD-K5 lesson implementation planning:
+        content1: beschrijving hier
+      OPD-K5 lesson plans:
+        content1: beschrijving hier
+      OPD-K5 loops introduced:
+        content1: beschrijving hier
+      OPD-K5 project:
+        content1: beschrijving hier
+      OPD-K5 projects introduction:
+        content1: beschrijving hier
+      OPD-K5 role_of_teacher:
+        content1: beschrijving hier
+      OPD-K5 sequencing introduced:
+        content1: beschrijving hier
+      OPD-K5 sprite lab:
+        content1: beschrijving hier
+      OPD-K5 sprite lab introduction:
+        content1: beschrijving hier
+      OPD-K5 sprite lab unplugged:
+        content1: beschrijving hier
+      OPD-K5 sprite lab video:
+        content1: beschrijving hier
+      OPD-K5 types of lessons:
+        content1: beschrijving hier
+      OPD-K5 using lesson plans:
+        content1: beschrijving hier
+      OPD-K5 variables:
+        content1: beschrijving hier
+      OPD-K5 variables introduction:
+        content1: beschrijving hier
+      OPD-K5 variables unplugged:
+        content1: beschrijving hier
+      OPD-K5 where to next:
+        content1: beschrijving hier
+      OPD-K5-projects-1:
         content1: beschrijving hier
       Prepare for your presentation:
-        title: titel
         content1: beschrijving hier
       'Technique: Frequency Analysis':
         content1: beschrijving hier
+        markdown: "# Het kraken van een versleuteling op basis van willekeurige vervanging\n\nDe
+          beste techniek voor het kraken van een sleutel op basis van willekeurige
+          vervanging heet **frequentie analyse**.\n\nGeparafraseerd van: [wikipedia](https://nl.wikipedia.org/wiki/Frequentieanalyse_(cryptoanalyse))\n\n*
+          **Frequentieanalyse** is het onderzoek naar de frequentie van letters of
+          groepen van letters van een versleutelde tekst. \n* Met \"frequentie\" wordt
+          bedoelt hoe vaak een bepaalde letter voorkomt in een tekst.\n* De methode
+          is gebaseerd op het feit dat binnen elke geschreven taal er frequentie waar
+          te nemen is van bepaalde letters of lettercombinaties. * Frequentieanalyse
+          vereist een basiskennis van de karakteristieken van een bepaalde taal, zo
+          komen in het Nederlands de e, n en a het meeste voor.\n\n\nDe widget op
+          de vorige pagina is bedoeld om je te helpen bij **het kraken van een versleuteling
+          op basis van willekeurige vervanging door middel van frequentieanalyse**.\n\nDoor
+          het analyzeren van de frequentie van de letters in de versleutelde boodschap
+          en dat te vergelijken met de frequentie van letters in een standaard stukje
+          (onversleutelde) tekst, kun je bepalen wat sommige van de letter vervangingen
+          zouden kunnen zijn. \n\nHet tool toont je wat de frequentie is van letters
+          in de versleutelde booschap (oranje) en hoe dat vergelijkt met de frequenties
+          van letters in de standaard tekst (blauw).\n\n### Tip: Hoe te starten?\n\n1.
+          Vind korte woorden en \"kraak\" die eerst.  Hoe veel een-letter woorden
+          ken je? (\"o\", \"u\").  Een veel voorkomend tweeletter woord is \"de\".\n2.
+          Dan heb je vervangingen voor sommige van de meest voorkomende letters. Gebruik
+          je intuïtie om naar andere woorden met die letters te kjiken en probeer
+          te raden wat de rest van de letters moeten zijn.\n3. Nadat je - na hard
+          werken - deze eerste groep van letters gevonden hebt, komt de rest een stuk
+          gemakkelijker..\n4. Het vergelijken van frequenties van letters geeft veel
+          hulp bij het verstandig raden van letters.\n\n### Probeer dit:\nDe animatie
+          hieronder toont iemand die net begon. Hier is wat die heeft geprobeerd\n\n*
+          Eerst sorteer je de letters op frequentie. \n* Identificeer een groep letters
+          die af te beelden is op het woord 'de' ('the' in het engels). Dat is een
+          goed begin!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Is willekeurige vervanging goed?\n* Na een tijdje oefenen, hoe lang heb
+          je nodig om een versleuteling op basis van willekeurige vervanging te kraken?\n*
+          Is dit goed of niet?\n\n"
       Terminology Recap:
         content1: beschrijving hier
+        markdown: "# Pauze en samenvatting\n\nBerichten versleuteld met de **Caesar
+          versleuteling** zijn eenvoudig te kraken, in het bijzonder met een computer.
+          Nu je een beetje ervaring hebt met een versleuteling op basis van alfabetisch
+          verschuiven zullen we eens iets moeilijkers proberen.\n\n**Samenvatting
+          van termen:**\n\n* **Encryptie** - een process waarbij berichten versleuteld
+          worden om ze geheim te houden, zodat allen \"geauthorizeerde\" partijen
+          het kunnen lezen.\n* **Decryptie** - een process dat encryptie ongedaan
+          maakt; pak een geheim - versleuteld - bericht en haal daar de oorspronkelijke
+          tekst uit.\n* **Sleutel/cijfertekst** - de generieke term voor een techniek
+          (of algorithme) die een versleuteling verzorgt.\n* **Caesar's sleutel**
+          - een techniek voor encryptie waarbij het alfabet een aantal karakters verschoven
+          wordt.\n* **Kaken van encryptie** - Wanneer je een geheim bericht probeert
+          te decoderen \"zonder\" te weten wat de sleutel is, probeer je de encryptie
+          te **kraken**. \n\n\nDruk op volgende om de **Volgende uitdaging** te zien...\n\n
+          \n"
       behaviors 1 predict:
+        answers:
+        - feedback: Fout.
+        - correct: true
+          feedback: Juist!
+        - feedback: Fout.
+        - feedback: Incorrect
         questions:
         - {}
+      behaviors 1 predict_2020:
         answers:
-        - {}
+        - feedback: Fout.
         - correct: true
-        - {}
+          feedback: Juist!
+        - feedback: Fout.
         - feedback: Incorrect
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
-        - {}
+        - feedback: Fout.
         - correct: true
+          feedback: Juist!
         - {}
         - feedback: Incorrect
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - feedback: Fout.
+        - correct: true
+          feedback: Juist!
+        - {}
+        - feedback: Incorrect
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest tekent een vierkant.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
-        - {}
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
         - correct: true
-        - {}
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+          feedback: Fout. De artiest tekent een vierkant.
+        - text: De artiest zal een enkele lijn tekenen.
+          feedback: Fout. De artiest tekent een vierkant.
+        - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De artiest tekent een vierkant.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
+          feedback: Juist!
         - text: '15'
-        - {}
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
+          feedback: Juist!
         - text: '15'
-        - {}
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
         - text: '12'
           correct: true
+          feedback: Juist!
         - text: '15'
-        - {}
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: '12'
+          correct: true
+          feedback: Juist!
+        - text: '15'
+          feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        - text: Geen idee.
+          feedback: De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Het programma zal niet mislukken. Scrat zal de eikel bereiken.
+          feedback: Fout. Scrat gaat de verkeerde kant op na zijn laatste draai.
+        - text: Scrat zal de verkeerde kant op gaan na zijn laatste draai.
+          correct: true
+          feedback: Juist!
+        - text: Scrat zet een stap te weinig, en eindigt vlak voor de eikel.
+          feedback: Fout. Die stap te weinig doet Scrat pas nadat hij al de verkeerde
+            kant op is gedraaid.
+        - text: Geen idee.
+          feedback: De eerste fout is dat Scrat de verkeerde kant op gaat na zijn
+            laatste draai.
+        questions:
+        - text: Kijk eens heel goed naar de code hieronder. Wat is de eerste fout
+            waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Het programma zal niet mislukken. Scrat zal de eikel bereiken.
+          feedback: Fout. Scrat gaat de verkeerde kant op na zijn laatste draai.
+        - text: Scrat zal de verkeerde kant op gaan na zijn laatste draai.
+          correct: true
+          feedback: Juist!
+        - text: Scrat zet een stap te weinig, en eindigt vlak voor de eikel.
+          feedback: Fout. Die stap te weinig doet Scrat pas nadat hij al de verkeerde
+            kant op is gedraaid.
+        - text: Geen idee.
+          feedback: De eerste fout is dat Scrat de verkeerde kant op gaat na zijn
+            laatste draai.
+        questions:
+        - text: Kijk eens heel goed naar de code hieronder. Wat is de eerste fout
+            waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - text: Het programma zal niet mislukken. Scrat zal de eikel bereiken.
+          feedback: Fout. Scrat gaat de verkeerde kant op na zijn laatste draai.
+        - text: Scrat zal de verkeerde kant op gaan na zijn laatste draai.
+          correct: true
+          feedback: Juist!
+        - text: Scrat zet een stap te weinig, en eindigt vlak voor de eikel.
+          feedback: Fout. Die stap te weinig doet Scrat pas nadat hij al de verkeerde
+            kant op is gedraaid.
+        - text: Geen idee.
+          feedback: De eerste fout is dat Scrat de verkeerde kant op gaat na zijn
+            laatste draai.
         questions:
-        - {}
+        - text: Kijk eens heel goed naar de code hieronder. Wat is de eerste fout
+            waardoor het programma zal mislukken?
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
+        - text: Geen idee.
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De vogel zal tegen de TNT aan lopen.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: Geen idee.
+          feedback: Dit programma brengt de vogel precies bij het biggetje.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De vogel zal tegen de TNT aan lopen.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: Geen idee.
+          feedback: Dit programma brengt de vogel precies bij het biggetje.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De vogel zal tegen de TNT aan lopen.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: Geen idee.
+          feedback: Dit programma brengt de vogel precies bij het biggetje.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De vogel zal tegen de TNT aan lopen.
+          feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+        - text: Geen idee.
+          feedback: Dit programma brengt de vogel precies bij het biggetje.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
+          feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
+          feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
+          feedback: Juist!
         - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: BB-8 zal niet bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal maar een plek vooruit bewegen.
+          feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        - text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+          correct: true
+          feedback: Juist!
+        - text: Ik weet het niet
+          feedback: Het `herhaal`-blok zorgt er voor dat de BB-8 5 keer vooruit zal
+            bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
+          feedback: Juist!
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
+          feedback: Juist!
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
+          feedback: Juist!
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 zal in de eerste lus te ver bewegen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+          correct: true
+          feedback: Juist!
+        - text: BB-8 zal probleemloos alle schroot verzamelen.
+          feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        - text: Geen idee.
+          feedback: De eerste lus laat BB-8 maar 2 plekken vooruit bewegen, terwijl
+            hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: Fout.
         - text: B
+          feedback: Fout.
         - text: C
+          feedback: Fout.
         - text: D
           correct: true
+          feedback: Juist!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: Fout.
         - text: B
+          feedback: Fout.
         - text: C
+          feedback: Fout.
         - text: D
           correct: true
+          feedback: Juist!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: Fout.
         - text: B
+          feedback: Fout.
         - text: C
+          feedback: Fout.
         - text: D
           correct: true
+          feedback: Juist!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: Fout.
+        - text: B
+          feedback: Fout.
+        - text: C
+          feedback: Fout.
+        - text: D
+          correct: true
+          feedback: Juist!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
+          feedback: Juist!
         - text: B
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
         - text: C
-        - {}
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - text: Geen idee.
+          feedback: De binnenste lus tekent een vijfhoek, en de buitenste lus herhaalt
+            dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
+          feedback: Juist!
         - text: B
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
         - text: C
-        - {}
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - text: Geen idee.
+          feedback: De binnenste lus tekent een vijfhoek, en de buitenste lus herhaalt
+            dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
+          feedback: Juist!
         - text: B
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
         - text: C
-        - {}
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - text: Geen idee.
+          feedback: De binnenste lus tekent een vijfhoek, en de buitenste lus herhaalt
+            dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: Juist!
+        - text: B
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - text: C
+          feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        - text: Geen idee.
+          feedback: De binnenste lus tekent een vijfhoek, en de buitenste lus herhaalt
+            dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - text: De wolk blokkeert ons gezichtsveld. Er zou een bloem onder de wolk
+            kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
+            als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
+            code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: De bij zal nectar halen bij elke bloem en honing maken bij elke honingraat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+          feedback: 'Fout. Het `als op bloem`-blok zorgt er voor dat de bij nectar
+            haalt bij elke bloem en honing maakt bij elke honingraat. '
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+          feedback: Fout. Het `als op bloem`-blok zorgt er voor dat de bij nectar
+            haalt bij elke bloem en honing maakt bij elke honingraat.
+        - text: Geen idee.
+          feedback: Het `als op bloem`-blok zorgt er voor dat de bij nectar haalt
+            bij elke bloem en honing maakt bij elke honingraat.
+        questions:
+        - text: 'Kijk goed naar onderstaande code.  Wat zal er gebeuren als je op
+            "Start" drukt?  Denk er aan: Er zal **bij** elke wolk slechts _een_ honingraat
+            of _een_ bloem staan.'
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: De bij zal nectar halen bij elke bloem en honing maken bij elke honingraat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+          feedback: 'Fout. Het `als op bloem`-blok zorgt er voor dat de bij nectar
+            haalt bij elke bloem en honing maakt bij elke honingraat. '
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+          feedback: Fout. Het `als op bloem`-blok zorgt er voor dat de bij nectar
+            haalt bij elke bloem en honing maakt bij elke honingraat.
+        - text: Geen idee.
+          feedback: Het `als op bloem`-blok zorgt er voor dat de bij nectar haalt
+            bij elke bloem en honing maakt bij elke honingraat.
+        questions:
+        - text: 'Kijk goed naar onderstaande code.  Wat zal er gebeuren als je op
+            "Start" drukt?  Denk er aan: Er zal **bij** elke wolk slechts _een_ honingraat
+            of _een_ bloem staan.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+        - text: Geen idee.
+        questions:
         - {}
-        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+        - text: Geen idee.
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De bij zal vooruit gaan en maar een keer nectar halen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal slechts 2 eenheden nectar krijgen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal alle nectar krijgen.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De bij zal de geluste actie van vooruit bewegen en nectar verzamelen
+            herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De bij zal vooruit gaan en maar een keer nectar halen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal slechts 2 eenheden nectar krijgen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal alle nectar krijgen.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De bij zal de geluste actie van vooruit bewegen en nectar verzamelen
+            herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De bij zal vooruit gaan en maar een keer nectar halen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal slechts 2 eenheden nectar krijgen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal alle nectar krijgen.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De bij zal de geluste actie van vooruit bewegen en nectar verzamelen
+            herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: De bij zal vooruit gaan en maar een keer nectar halen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal slechts 2 eenheden nectar krijgen.
+          feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        - text: De bij zal alle nectar krijgen.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De bij zal de geluste actie van vooruit bewegen en nectar verzamelen
+            herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - text: '4'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
         - text: '8'
           correct: true
+          feedback: Juist!
         - text: '12'
-        - {}
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: Geen idee.
+          feedback: De bij verzamelt in een lus 2 nectar terwijl hij vooruit beweegt,
+            en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles gebeurt
+            binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is 8!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
         - text: '8'
           correct: true
+          feedback: Juist!
         - text: '12'
-        - {}
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: Geen idee.
+          feedback: De bij verzamelt in een lus 2 nectar terwijl hij vooruit beweegt,
+            en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles gebeurt
+            binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is 8!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
         - text: '8'
           correct: true
+          feedback: Juist!
         - text: '12'
-        - {}
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: Geen idee.
+          feedback: De bij verzamelt in een lus 2 nectar terwijl hij vooruit beweegt,
+            en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles gebeurt
+            binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is 8!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: '8'
+          correct: true
+          feedback: Juist!
+        - text: '12'
+          feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+        - text: Geen idee.
+          feedback: De bij verzamelt in een lus 2 nectar terwijl hij vooruit beweegt,
+            en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles gebeurt
+            binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is 8!
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel zal de verkeerde kant op draaien bij het maken van het vierkant.
+          feedback: Fout. Je hebt deels gelijk, maar de lus loopt ook niet lang genoeg
+            om alle schatten te verzamelen.
+        - text: De lus loopt niet lang genoeg om alle schatten te verzamelen.
+          feedback: Fout. Je hebt deels gelijk, maar Laurel zal ook de verkeerde kant
+            op draaien bij het maken van het vierkant.
+        - text: Laurel draait de verkeerde kant op **en** de lus loopt niet lang genoeg
+            om alle schatten te verzamelen.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: Laurel draait de verkeerde kant op **en** de lus loopt niet lang
+            genoeg om alle schatten te verzamelen.
+        questions:
+        - text: 'Kijk goed naar onderstaand programma.  Waarom zal Laurel niet alle
+            schatten verzamelen als je op "Start" drukt? Pas op: Dit is een strikvraag!
+            Lees alle opties **voordat** je antwoord geeft!'
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De oogster zal alle oogst verzamelen.
+          feedback: Fout. Er staan geen instructies in om een pompoen te plukken.
+        - text: De oogster zal helemaal geen oogst verzamelen met de route die zij
+            volgt.
+          feedback: Fout. Het programma zal de oogster een trap-patroon laten volgen,
+            en alle mais en sla laten verzamelen die ze tegenkomt. Maar ze zal de
+            pompoen niet plukken.
+        - text: De oogster zal alle oogst verzamelen, behalve de pompoen.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: Het programma zal de oogster een trap-patroon laten volgen, en
+            alle mais en sla laten verzamelen die ze tegenkomt. Ze zal de pompoen
+            niet plukken.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: De oogster zal alle oogst verzamelen.
         - {}
         - correct: true
-        - {}
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: De oogster zal alle oogst verzamelen.
         - {}
         - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: De oogster zal alle oogst verzamelen.
         - {}
+        - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_ramp13:
+        answers:
+        - text: De boer zal naar het eind van het pad lopen, en de pompoen oogsten.
+          feedback: Fout. Het `pluk pompoen`-blok zit binnenin de lus, dus de boer
+            zal proberen om bij elke stap een pompoen te plukken, in plaats van alleen
+            op het eind.
+        - text: De boer zal proberen op elke plek een pompoen te plukken, maar hij
+            zal nooit bij de pompoen aankomen.
+          correct: true
+          feedback: Juist!
+        - text: De boer zal vier plekken naar voren lopen, en proberen een pompoen
+            te plukken.
+          feedback: Fout. Het `pluk pompoen`-blok zit binnenin de lus, dus de boer
+            zal proberen om bij elke stap een pompoen te plukken, in plaats van alleen
+            op het eind.
+        - text: Geen idee.
+          feedback: Het `pluk pompoen`-blok zit binnenin de lus, dus de boer zal proberen
+            om bij elke stap een pompoen te plukken, in plaats van alleen op het eind.
         questions:
         - {}
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        markdown: Hier is een nieuw type puzzle, dat blokken gebruikt die lijken op
+          wat je al eerder gezien hebt. Kun je voorspellen wat er zal gebeuren als
+          je het programma hieronder draait?
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+          feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        - text: Deze code zal de hoop zand laten staan.
+          correct: true
+          feedback: Juist!
+        - text: Deze code zal de gaten niet vullen.
+          feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+        - text: Geen idee.
+          feedback: De `herhaal`-lus zal gaten van elke grootte opvullen, maar er
+            staat geen instructie in om zand van een hoop te verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+          feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        - text: Deze code zal de hoop zand laten staan.
+          correct: true
+          feedback: Juist!
+        - text: Deze code zal de gaten niet vullen.
+          feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+        - text: Geen idee.
+          feedback: De `herhaal`-lus zal gaten van elke grootte opvullen, maar er
+            staat geen instructie in om zand van een hoop te verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+          feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        - text: Deze code zal de hoop zand laten staan.
+          correct: true
+          feedback: Juist!
+        - text: Deze code zal de gaten niet vullen.
+          feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+        - text: Geen idee.
+          feedback: De `herhaal`-lus zal gaten van elke grootte opvullen, maar er
+            staat geen instructie in om zand van een hoop te verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+          feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        - text: Deze code zal de hoop zand laten staan.
+          correct: true
+          feedback: Juist!
+        - text: Deze code zal de gaten niet vullen.
+          feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+        - text: Geen idee.
+          feedback: De `herhaal`-lus zal gaten van elke grootte opvullen, maar er
+            staat geen instructie in om zand van een hoop te verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Er zal niets gebeuren.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal nooit stoppen met zand verwijderen.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Er zal niets gebeuren.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal nooit stoppen met zand verwijderen.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Er zal niets gebeuren.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal nooit stoppen met zand verwijderen.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: Er zal niets gebeuren.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal nooit stoppen met zand verwijderen.
+          feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        - text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+          correct: true
+          feedback: Juist!
+        - text: Geen idee.
+          feedback: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: De zombie zal meteen rechtsaf slaan en vastlopen.
+          correct: true
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+          feedback: Fout. Bij dit programma zal de zombie rechtsom draaien *voordat*
+            hij kijkt of hij rechtdoor kan. Daardoor zal de puzzle mislukken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+          feedback: Fout. De zombie zoekt alleen naar paden rechtsaf of vooruit. Hij
+            zal nooit kijken of hij naar links kan, en daardoor zal hij vrijwel meteen
+            vastlopen.
+        - text: Geen idee.
+          feedback: Bij dit programma zal de zombie rechtsom draaien *voordat* hij
+            kijkt of hij rechtdoor kan. Daardoor zal de puzzle mislukken.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+        - text: Geen idee.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+        - text: Geen idee.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+        - text: Geen idee.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De angry bird zal helemaal niet bewegen.
+          feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+          feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: Geen idee.
+          feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De angry bird zal helemaal niet bewegen.
+          feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+          feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: Geen idee.
+          feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De angry bird zal helemaal niet bewegen.
+          feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+          feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: Geen idee.
+          feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: De angry bird zal helemaal niet bewegen.
+          feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: De angry bird zal het biggetje bereiken.
+          correct: true
+          feedback: Juist!
+        - text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+          feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+        - text: Geen idee.
+          feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
-        - {}
+        - feedback: Fout. Als een 'Beweeg vooruit' binnen in een 'herhaal' blok staat
+            zal Scrat drie keer vooruit bewegen.
         - correct: true
-        - {}
+          feedback: Juist!
+        - feedback: Fout. Als een 'Beweeg vooruit' binnen in een 'herhaal' blok staat
+            zal Scrat drie keer vooruit bewegen.
+        - text: Geen idee.
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Hetzelfde programma zal deze puzzle ook oplossen.
+          correct: true
+          feedback: Juist! Het maakt niet uit dat de hoeveelheid honing anders is.
+            De functie is zo geprogrammeerd dat ie dat aan kan,
+        - text: De bij zal niet genoeg honing maken.
+          feedback: Fout! De functie is zo geprogrammeerd dat hij elke hoeveelheid
+            honing aan kan.
+        - text: De bij zal proberen, te veel honing te maken.
+          feedback: Fout! De functie is zo geprogrammeerd dat hij elke hoeveelheid
+            honing aan kan.
+        - text: Geen idee.
+          feedback: Het programma zal deze puzzle ook kunnen oplossen. De functie
+            is zo geprogrammeerd dat hij elke hoeveelheid honing aan kan.
+        questions:
+        - text: Hier staat precies hetzelfde programma uit de vorige puzzle, maar
+            de hoeveelheden honing zijn in deze puzzle anders. Wat zal er gebeuren
+            als je op `Start`drukt?
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: De oogster zal twee pompoenen plukken.
+          feedback: Fout. De oogster roept `check en pluk` pas aan als ze de mais
+            heeft bereikt.
+        - text: De oogster zal alle pompoenen plukken.
+          feedback: Fout. De oogster roept `check en pluk` pas aan als ze de mais
+            heeft bereikt.
+        - text: De oogster zal de sla plukken
+          feedback: Fout. De oogster maakt maar een keer een draai, en stopt bij de
+            mais.
+        - text: De oogster zal de mais plukken.
+          correct: true
+          feedback: Juist!
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+          feedback: Juist!
+        - text: De oogster zal de mais plukken.
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+          feedback: Juist!
+        - text: De oogster zal de mais plukken.
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - text: De oogster zal de sla plukken
+          correct: true
+          feedback: Juist!
+        - text: De oogster zal de mais plukken.
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: Niets. De functie wordt niet aangeroepen in het programma.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal een enkel vierkant tekenen.
+          feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+        - text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+          feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+        - text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+          correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: Juist!
         - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: Juist!
         - {}
+        - text: Geen idee.
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: Juist!
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
+          feedback: Juist!
         - {}
         - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
+          feedback: Juist!
         - {}
         - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - correct: true
+          feedback: Juist!
         - {}
         - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
+          feedback: Juist!
         - {}
         - {}
+        - text: Geen idee.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+          correct: true
+          feedback: Juist!
+        - text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+          feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        - text: Geen idee.
+          feedback: Het `als op de bloem`-blok zorgt er voor dat de bij alleen zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
-        - {}
-        - {}
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: Juist!
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: Juist!
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: Juist!
         - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - text: Geen idee.
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - text: Geen idee.
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+          feedback: Juist!
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+          feedback: Juist!
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+          feedback: Juist!
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: De artiest zal deze functie correct oplossen.
+          feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+        - text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+          correct: true
+          feedback: Juist!
+        - text: De artiest zal slechts een rij vierkanten tekenen.
+          feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+        - text: De artiest zal vier vierkanten boven op elkaar tekenen.
+          feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
+      csf_be_a_super_digital_citizen:
+        content1: beschrijving hier
+      csf_password_power-up:
+        content1: beschrijving hier
+      csf_putting_a_stop_to_online_meanness:
+        content1: beschrijving hier
+      csf_safety_in_my_online_neighborhood:
+        markdown: |
+          # Mijn Online Woonwijk
+
+          ## Hoe beweeg je veilig online?
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
+          feedback: Juist!
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
+        questions:
+        - text: Kijk eens goed naar onderstaand programma. Als je dit programma draait,
+            hoeveel schatten zal Laurel dan verzamelen?
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
+          feedback: Juist!
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
+          feedback: Juist!
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
         questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
+        - text: Laurel zal met dit programma vier schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+          correct: true
+          feedback: Juist!
+        - text: Laurel zal alle schatten verzamelen.
+          feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        - text: Geen idee.
+          feedback: Laurel probeert een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout.
+        questions:
         - {}
-        - correct: true
-        - {}
-        - {}
+      outbreak_story:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: programmeer uw eigen simulatie\n\n## Welkom bij Monster
+          Town!\nMonster Town was altijd een gelukkig en gezond stadje. De monsters
+          van Monster Town vonden het leuk om rond te zwerven en hun vrienden te bezoeken.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nOp een dag begon een van de monsters zich ziek te
+          voelen. Het monster had een **virus** opgelopen! Een virus is een kleine
+          ziektekiem dat je ziek kan maken. De andere monsters maakten zich geen zorgen
+          en bleven hun vrienden bezoeken.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nNiet lang daarna werden nog twee monsters ziek. Het
+          was hetzelfde virus!. Het leek erop dat ze het virus van hun vriend hadden
+          gekregen.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nLangzaam verspreide het virus zich over de andere
+          monsters in de nabijheid. De gezonde monsters begonnen zich zorgen te maken
+          dat ze allemaal ziek zouden worden. De zieke monsters begonnen zich zorgen
+          te maken dat ze het virus aan iedereen zouden doorgeven.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## De verspreiding stooppen.\nNa het
+          onderzoeken van het virus deden de bewoners van de omliggende stadjes van
+          Monster Town gelukkig een belangrijke ontdekking. Ze kwamen erachter dat
+          het virus minder werd verspreidt als ze mondkapjes droegen, en dankzij mondkapjes
+          konden zieke monster het virus niet zo gauw meer doorgeven aan gezonde monsters.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Wat zal er nu gebeuren?\n\nVandaag gaat u een programma schrijven om je
+          eigen **simulatie** van de virusuitbraak in Monster Town te programmeren
+          en uit te voeren. Een simulatie is een computermodel van een proces of systeem.
+          Leer te programmeren en maak voorspellingen over wat er zal gebeuren met
+          de naburige stadjes van Monster Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Hoe snel zal het virus zich verspreiden?*\n\n*
+          *Zal iedereen ziek worden?*\n\n* *Hoe kunnen mondkapjes helpen?*\n\n\nDeel
+          u simulatie met anderen als u klaar bent. Deel uw boodschap over hoe we
+          anderen in goede gezondheid kunnen houden als een virus een stad bezoekt.
+          \n"
+      outbreak_story2:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: denken als een wetenschapper\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulaties zijn een goede manier om
+          dingen te leren die moeilijk waar te nemen zijn in de echte wereld. Ze helpen
+          wetenschapers bij het oplossen van problemen en het veilig en efficient
+          testen van nieuwe ideeën. Uw simulatie is een manier om te demonstreren
+          hoe een virusuitbraak in Monster Town eruit kan zien.\n\n## Resetten en
+          opnieuw spelen!\nZelfs als u het programma zelf schrijft, is het onmogelijk
+          om precies te weten wat er gaat gebeuren als u op uitvoeren drukt. De monster
+          zwerven willekeurig rond, en dus weet u niet of het virus snel of langzaam
+          zal verspreiden. Als u wijzigingen aanbrengt in uw programma, voer dan uw
+          simulatie meerdere keren uit. Niets zal twee keer precies hetzelfde gebeuren.\n\n##
+          Data verzamelen\nMaak notities tijdens het uitvoeren van uw simulatie. U
+          kunt het aantal monster dat ziek wordt tellen of een timer gebruiken om
+          te zien hoe snel de dingen veranderen. Hoe lang duurt het bijvoorbeeld dat
+          alle monsters ziek worden als geen van hen een mondkapje draagt? \n\n##
+          Voorspellingen doen\nAls u uw model goed begrijpt, dan kunt u het gebruiken
+          om voorspellingen te doen. U kunt zelfs het uitvoeren van uw simulatie veranderenen
+          en raden welke gebeurtenissen anders zullen verlopen. Bijvoorbeeld:\n* Wat
+          gebeurt er als er twee keer zoveel monsters zijn?\n* Wat gebeurt er als
+          de monster op slechts halve snelheid liepen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Is Monster Town net als de echte wereld?\nElk
+          model heeft een grens wat betreft het realisme. \n* Wat heeft uw uitbraaksimulatie
+          gemeen met virusuitbraken in de echte wereld?\n* Wat zijn de verschillen?\nWanneer
+          u deze activiteit hebt afgerond, den kunt u deze vragen bespreken met uw
+          leraren of uw gezin.\n\n## Waar kunnen we nog meer een model van maken?\nU
+          hebt reeds een werkend model gemaakt van de uitbraak in Monster Town. Wat
+          kan uw simulatie niet doen of laten zien dat u wenste dat het kon? Druk
+          op Doorgaan om verder te gaan en maak beter kennis met het model:\n* Het
+          aantal monsters in de simulatie te laten toenemen\n* Monsters helpen met
+          genezen van het virus\n* Waarschijnlijkheid, immuniteit, vaccins en meer.\n\nTevens
+          kunt u uw simulatiemodel delen met anderen, of een boodschap delen over
+          wat u denkt dat wij kunnen doen om anderen in goede gezondheid te houden
+          als een virus het stadje bezoekt. \n"
+      outbreak_freeplay_choice:
+        description: U hebt de tutorial doorlopen. Blijf wijzigingen of verbeteringen
+          aanbrengen aan uw project. U kunt ervoor kiezen dezelfde blokken te blijven
+          gebruiken of te gaan werken met een uitgebreide gereedschapskist.
+        display_name: Vrije Speelruimte
+      csf_digital_trails:
+        markdown: |-
+          # Volg het digitale pad
+
+          ## Welke informatie is OKE om in je digitale voetafdruk te hebben?

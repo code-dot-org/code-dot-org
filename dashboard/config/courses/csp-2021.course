@@ -1,0 +1,26 @@
+{
+  "name": "csp-2021",
+  "script_names": [
+    "csp1-2021",
+    "csp2-2021",
+    "csp3-2021",
+    "csp4-2021",
+    "csp5-2021",
+    "csp6-2021",
+    "csp7-2021",
+    "csp8-2021",
+    "csp9-2021",
+    "csp10-2021"
+  ],
+  "properties": {
+    "has_numbered_units": true,
+    "version_year": "2021",
+    "family_name": "csp"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,0 +1,31 @@
+pt:
+  data:
+    block_categories:
+      Actions: Ações
+      Advanced: Avançado
+      Behaviors: Comportamentos
+      Brushes: Pincéis
+      Color: Cor
+      Comment: Comentário
+      Comments: Comentários
+      Conditionals: Condições
+      Dancers: Bailarinos
+      Default: Padrão
+      Events: Eventos
+      Functions: funções
+      'Functions ': 'Funções '
+      Game/Score: Jogo/Pontuação
+      Games/Score: Jogos/Pontuação
+      Groups: Grupos
+      Input: Entrada
+      Locations: Localizações
+      Logic: Lógica
+      Loops: laços
+      Math: Matemática
+      Numbers: Números
+      Properties: Propriedades
+      Sprites: Sprite
+      Text: Texto
+      Variables: variáveis
+      'Variables ': 'Variáveis '
+      World: Mundo

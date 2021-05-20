@@ -71,47 +71,47 @@ sk:
     flappy_intro:
       1:
         image: poznámky/flappy01.jpg
-        text: Ahoj, ja som Katie! Jednou z najzaujímavejších vecí na počítačoch je,
-          že počítačový program môže byť interaktívny.
+        text: Ahoj, ja som Katie! Jednou z najzaujímavejších vecí na programovaní
+          je to, že dokáže byť interaktívne.
       2:
         image: poznámky/flappy02.jpg
-        text: Kedykoľvek niekto klikne poprípade niečo napíše do počítača, alebo mobilu,
-          ktorý generuje príkazy, je tam kód, ktorý rozhodne ako reagovať na daný
-          príkaz.
+        text: Vždy keď niekto na počítači či mobile na niečo klikne, niečo stlačí
+          alebo napíše, vznikne UDALOSŤ, pri ktorej je nejaký kód, ktorý rozhoduje
+          o tom, čo sa v tejto UDALOSTI stane.
       3:
         image: poznámky/flappy03.jpg
-        text: 'Napríklad môžeme mať príkaz založený na UDALOSTI, ktorý hovorí "po
+        text: 'Napríklad môžeme mať príkaz založený na UDALOSTI, ktorý hovorí: "po
           kliknutí prehraj zvuk" '
       4:
         image: poznámky/flappy04.jpg
-        text: Už si niekedy počul o hre FlappyBird? Pomocou príkazov, sa budeme učiť
-          naprogramovať našu vlastnú verziu hry FlappyBird!
+        text: Už ste niekedy počuli o hre FlappyBird? Pomocou udalostí si naprogramujeme
+          našu vlastnú verziu tejto hry.
       5:
         image: poznámky/flappy05.jpg
-        text: Budeš písať kód prostredníctvom presúvania blokov, ktoré predstavujú
+        text: Kód budeš vytvárať prostredníctvom presúvania blokov, ktoré predstavujú
           príkazy pre počítač. Každý z týchto blokov predstavuje skutočný kód.
       6:
         image: poznámky/flappy06.jpg
-        text: 'Ak sa pozrieš na pracovný priestor, sú tam zelené bloky, ktoré sú pre
-          teba vyplnené - to sú "udalosti pre obsluhu" '
+        text: 'Na pracovnej ploche nájdeš zelené bloky, ktoré sú pre teba predvyplnené.
+          Sú to "udalosti" '
       7:
         image: poznámky/flappy07.jpg
-        text: Ak chceš, aby vták mykol krídlami a posunul sa hore, môžeš to urobiť
-          pripojením "FLAP" bloku. Teraz keď v hre kedykoľvek klikneš myšou, vták
-          sa posunie hore a mávne krídlami.
+        text: Ak chceš, aby pri kliknutí myšou vták mávol krídlami, môžeš to urobiť
+          pripojením bloku "mávni" k vhodnej udalosti. Teraz vždy, keď vo svojej hre
+          klikneš myšou, vták mávne krídlami.
       8:
         image: poznámky/flappy08.jpg
-        text: V každej puzzle tejto aktivity budeme zavádzať nové typy udalostí ako
-          napríklad zelené bloky v pracovnom priestore a môžeš rozhodnúť, ktoré z
-          blokov budú v tejto udalosti.
+        text: V každej úlohe tejto aktivity si predstavíme nový druh udalosti -  nájdeš
+          ju vždy ako nový zelený blok na pracovnej ploche, ktorému následne priradíš
+          vhodnú aktivitu.
       9:
         image: poznámky/flappy09.jpg
-        text: Keď uvidíš šípku ako je táto, znamená to, že môžeš zmeniť nastavenia
-          - napríklad typ zvuku, ktorý sa prehrá keď Flappy dopadne na zem.
+        text: Keď uvidíš takúto šípku, môžeš zmeniť nastavenia - napríklad zvuk, ktorý
+          zaznie, keď vták padne na zem.
       10:
         image: poznámky/flappy10.jpg
-        text: V posledných puzzle budeš môcť vytvoriť svoju vlastnú hru a zdieľať
-          ju so svojimi priateľmi. Bav sa!
+        text: V poslednej úlohe si budeš môcť vytvoriť svoju vlastnú hru a zdieľať
+          ju s kamarátmi. Príjemnú zábavu!
     loop_times:
       1:
         text: Ahoj, ja som Mark! Poďme sa naučiť niečo o cykloch. Používaním cyklov
@@ -132,50 +132,100 @@ sk:
         text: Uži si používanie nového "repeat" bloku!
     loop_until:
       1:
-        text: Ahoj, ja som Chris. Pred nástupom do Miami Heat som šiel študovať informatiku
+        text: Ahoj, ja som Chris. Pred nástupom do Miami Heat som študoval informatiku
           na Georgia Tech. Poďme si vyskúšať nový blok "opakuj pokiaľ neplatí".
       2:
-        text: Čo keby sme nevedeli, ako ďaleko sa musel vták pohnúť, aby dostal prasiatko?
+        text: Čo keby sme nevedeli, ako ďaleko sa musel vtáčik pohnúť, aby dostal
+          ku prasiatku?
       3:
-        text: Ak vložíme blok "pohni sa dopredu" do bloku "opakuj "pokiaľ neplatí",
-          vták sa bude posúvať vpred, pokým nedosiahne prasiatko (alebo nenarazí do
-          steny).
+        text: Ak vložíme blok "posuň sa dopredu" do bloku "opakuj pokiaľ neplatí",
+          vtáčik sa bude posúvať vpred, pokiaľ nedosiahne prasiatko (alebo nenarazí
+          do steny).
       4:
         text: 'Toto je dôležité: rovnako ako predtým, aj do bloku "opakuj pokiaľ neplatí"
           môžeme vložiť viacero blokov, ktoré sa budú všetky opakovať.'
     if:
       1:
-        text: Ahoj ja som Bill! Poďme sa naučiť niečo o podmienkach "ak". Prostredníctvom
-          podmienok sa počítač vie rozhodovať.
+        text: Ahoj, ja som Bill! Poďme sa naučiť niečo o podmienkach "ak". Podmienky
+          umožňujú počítaču rozhodovať sa.
       2:
-        text: Príkaz "If" ("ak") používaš každý deň. Predtým, než ideš von každé ráno,
-          hovoríš si, "ak" vonku  prší , musím si obliecť bundu.
+        text: Príkaz "ak" používaš každý deň. Predtým, než ideš von každé ráno si
+          hovoríš, AK vonku  prší, musím si obliecť bundu.
       3:
-        text: Môžeme povedať, zombíkovi aby skontroloval, či je cesta na ľavej strane,
+        text: Môžeme povedať zombíkovi, aby skontroloval, či je cesta na ľavej strane,
           a AK cestu vľavo nájde, môžme ho týmto smerom otočiť.
       4:
-        text: Pre napísanie kódu pre toto vytiahnime von náš blok "if" a vložme doňho
-          bloky "zabočiť doľava".
+        text: Pre napísanie tohto kódu vytiahnime náš blok "ak" a vložme doň blok
+          "otoč sa vľavo".
+      5:
+        text: Teraz, keď nad neho položíme blok „posuň sa dopredu“ a okolo všetkého
+          dáme blok „opakuj“, zombie skontroluje zakaždým, keď sa pohne, či existuje
+          cesta vľavo a otočí sa. Príkaz „opakuj“ je kritický, aby sa pri každom kroku
+          skontrolovalo otočenie.
+      6:
+        text: Podmienky Ak sú v informatike skutočne dôležité. Jedným z prvých programov,
+          ktoré som napísal, bola hra typu „piškvorky“, a tam bola podmienka Ak, ​​ktorá
+          hovorila, AK sa druhá osoba chystá vyhrať, blokuj miesto, ktoré jej umožní
+          vyhrať.
       7:
-        text: Zabávaj sa používaním "if" bloku!
+        text: Zabávaj sa používaním bloku "ak"!
     if_else:
+      1:
+        text: Ahoj, volám sa Saloni. Využívam informatiku na riešenie problémov v
+          zdravotníctve a medicíne. Naučme sa niečo o bloku „ak inak“. Vyzerá to ako
+          blok „ak“, ale na konci má navyše časť, ktorá hovorí „inak“.
+      2:
+        text: Ak dám blok „posuň sa dopredu“ na miesto, kde je napísané „urob“, a
+          blok „otoč sa doľava“, kde je napísané „inak“, znamená to, že zombie si
+          vyberie medzi 2 možnosťami. Ak existuje cesta vpred, zombie sa bude pohybovať
+          dopredu a na iných miestach (tam , kde nie je cesta vpred), odbočí vľavo.
+      3:
+        text: Rovnako ako blok „ak“, aj do bloku „opakovanie“ môžeš vložiť bloky „ak
+          inak“, aby sa zombie stále hýbal a blok „ak inak“, aby neustále kontroloval,
+          či sa je kam zabočiť.
       4:
         text: Teraz pošli týchto zombie tam, kde patria!
     if_else_scrat:
+      1:
+        text: 'Výrok if-else je rozhodnutie medzi dvoma vecami. Pozrime sa, ako môžeme
+          použiť vyhlásenie ak-inak výrok s našim kamarátom Scratom. '
+      2:
+        text: Tento blok vyzerá rovnako ako blok „ak“, ale na spodku je ďalšia časť,
+          ktorá hovorí „inak“. Ak umiestnim blok „posunúť sa dopredu“ tam, kde je
+          napísané „urob“, a blok „otočiť sa doľava“, kde bude napísané „inak“, znamená
+          to, že Scrat sa posunie vpred, ak je pred nim cesta. Ak pred nim nie je
+          žiadna cesta, Scrat zabočí doľava.
+      3:
+        text: Na základe tohto sa rozhodne a urobí jednu z dvoch akcií. Rovnako ako
+          bloky typu „ak“ môžeš do blokov typu „opakovať“ vložiť bloky typu „ak-inak“.
       4:
         text: Teraz pomôž veveričke Scrat získať žaluď!
     function:
+      1:
+        text: Ahoj, volám sa Brina,  a som inžinierka spoločnosti Instagram. Funkcia
+          sú určité riadky kódu, ktoré chceš použiť znova a znova, takže namiesto
+          toho, aby si za každým tento kód vypisoval, môžeš použiť iba jeden blok.
+      2:
+        text: Naučíme sa, ako definovať funkcie. Definície funkcií majú v rohu hviezdičku.
+          Názov funkcie je napísaný v hornom riadku.
+      3:
+        text: Bloky, ktoré sa nachádzajú vo vnútri definície, nám hovoria, čo to robí.
+          Táto definícia funkcie sa teda nazýva „vyplň 5“ a je tvorená blokom „opakovať“
+          a blokom „vyplň“.
+      4:
+        text: Definícia je uvedená v pracovnom priestore, ale naša farmárka túto funkciu
+          nespustí, kým nevytiahneme náš funkčný blok „vyplň 5“ z kategórie funkcií.
       5:
         text: 'Vráťme naspäť "fun" do "FUNkcií!" '
     loop_while:
       1:
-        text: 'Ahoj, volám sa Makinde! Poďme sa naučiť niečo o bloku "zatiaľ čo." '
+        text: 'Ahoj, volám sa Makinde! Poďme sa naučiť niečo o bloku "pokiaľ." '
       2:
-        text: Blok "pokiaľ" bude robiť čokoľvek doňho dáte POKIAĽ bude výraz na jeho
+        text: Blok "pokiaľ" bude robiť čokoľvek doňho dáte, POKIAĽ bude výraz na jeho
           vrchu PRAVDIVÝ.
       3:
         text: Napríklad, ak farmárka stojí na kope, bude stále pokračovať v odstraňovaní
-          lopatou POKIAĽ bude mať pod sebou kopu.
+          lopatou, POKIAĽ bude mať pod sebou kopu.
     loop_for:
       1:
         text: Ahoj, volám sa Trina, a pracujem pre spoločnosť Pixar. Pracovala som
@@ -199,7 +249,37 @@ sk:
         text: Čo ak chceme nakresliť niekoľko trojuholníkov s rôznymi dĺžkami strán?
       3:
         text: Môžeme napísať celý kód ručne alebo môžeme použiť funkcie s parametrami.
+      4:
+        text: Dá sa to dosiahnúť kliknutím na modrú hviezdičku v definícii funckie
+          "nakresli trojuholník". Potom presuň "názov vstupu" do bloku "vstupy".
+      5:
+        text: Potom, ak napíšeš "dĺžka" do políčka, kde je teraz "x" a stlačíš "Enter",
+          vytvoríš tvojej funkcii vstup pre dĺžku.
+      6:
+        text: Opäť klikni na hviezdičku. Teraz klikni na kategóriu blokov "Premenné"
+          a presuň blok "dĺžka" do bloku "posuň dopredu", ktorý je v definícii tvojej
+          funkcie. Pôvodný blok s číslom presuň preč.
+      7:
+        text: Pre použitie tvojej funkcie s parametrami, klikni na kategóriu blokov
+          "Funkcie" a vytiahni odtiaľ tvoju funkciu "nakresli trojuholník s dĺžkou".
+      8:
+        text: Teraz môžeš použiť blok z kategórie "Matematika" na vloženie rôznych
+          číselných hodnôt pre vykreslenie trojuholníkov rôznych veľkostí.
     hoc_wrapup:
+      1:
+        text: Gratulujem! Poslednou vyriešenou úlohou, sa ti podarilo napísať kód,
+          ktorý vie AKÉMUKOĽVEK robotovi povedať, ako nájsť cestu cez nerozvetvujúce
+          sa bludisko alebo tunel akejkoľvek dĺžky, či je to zombi, vtáčik, vozidlo
+          na Marse alebo dokonca aj autonómny automobil.
+      2:
+        text: Tieto základné použité koncepty sú jadrom každého programu alebo aplikácie,
+          ktorú kedy vyskúšaš. Učili sme sa o opakujúcich sa cykloch, "repeat until"
+          (opakuj pokiaľ neplatí) príkazoch, "if" (ak) a "if-else" (ak-potom) príkazoch.
+      3:
+        text: Ak sa ti tvoja prvá hodina programovania páčila, navštív code.org pre
+          pokračovanie tvojho štúdia informatiky! Po absolvovaní nášho 20-hodinového
+          kurzu si osvojíš základy programovania a môžeš začať s učením, ako písať
+          aplikácie pre telefóny, inštrukcie pre roboty, hry a povedz ty čo ešte.
       4:
         text: 'Technológie menia všetko čo robíme, nezáleží na tom, či si mladý, alebo
           starý: programovanie je zábava, používaš svoju kreativitu a programovať
@@ -301,6 +381,20 @@ sk:
           známy ako nová funkcia, takže budeš môcť vytvárať kružnice rôznych veľkostí.
           Vieš tento blok použiť a pomôcť nakresliť Else do snehu zložité a nádherné
           vzory?
+    playlab_intro:
+      1:
+        text: Použitím Play Labu  budeme vytvárať hry. Dobré hry majú príbeh a každý
+          príbeh má postavy. Naučíme sa ako na to, aby postavy ako čarodejníci, mimozemšťania
+          a zvieratká navzájom hovorili, hýbali sa a reagovali na seba. Po prejdení
+          tohto návodu dokážeš vytvoriť hru od základu a zdieľať ju so svojimi kamarátmi.
+      2:
+        text: Tvoja obrazovka je rozdelená do troch hlavných častí. Naľavo je herný
+          priestor, kde pobeží tvoj program. Pokyny pre každú úroveň sú napísané pod
+          ním.
+      3:
+        text: Stredná časť je panel nástrojov a každý z týchto blokov je časťou kódu.
+          Biely priestor napravo sa volá pracovný priestor a tu budeš vytvárať svoj
+          program.
     playlab_events:
       2:
         text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
@@ -312,12 +406,49 @@ sk:
       2:
         text: Ak má postava niečo opakovane vykonávať bez zásahu hráča, budeme vkladať
           tieto bloky do vnútra bloku "opakuj donekonečna".
+      3:
+        text: V tejto úlohe je našim cieľom pomôcť čarodejníkovi strážiť hranice kráľovstva
+          nepretržite zľava doprava a naspäť. Tým, že sa naučíme ako fungujú príkazy
+          opakovania, si neskôr ušetríme množstvo času pri tvorení našej vlastnej
+          hry.
+    C1_artist_intro:
+      1:
+        text: S týmito blokmi kreslíš. Použi ich, aby sa umelec dostal kam potrebuje
+          na zafarbenie sivých čiar.
+      2:
+        text: "S týmito blokmi skáčeš. Keď ich použiješ, tvoj umelec sa pohne, ale
+          nekreslí, takže pomocou nich preskočíš na ďalšiu šedú čiaru. \n"
+    C1_bee_level_intro:
+      1:
+        text: 'Nie sú včely super skvelé? V nasledujúcej sérii úloh je tvojim cieľom
+          pomôcť včele dostať sa ku kvetom, získať z nich nektár a preletieť k plástu,
+          aby vyrobila med. Na toto cvičenie potrebuješ použiť bloky "získaj nektár"
+          a "vyrob med". '
+      2:
+        text: 'Každý kvet má rozdielny počet nektáru: 1, 2, 3, alebo viac. Poznáme
+          to podľa malého čísielka v rohu pri červených kvetoch. Preto sa pred pokračovaním
+          ďalej uisti, že všetkok nektár z kvetu bol získaný. Rovnako môže aj každý
+          plást uchovať len nejaké množstvo medu: 1, 2, 3, alebo viac. Vyrob preto
+          len toľko medu, koľko dokáže uchovať plást.'
+      3:
+        text: Uspeješ a postúpiš na ďalšiu úroveň, ak zvládneš získať všetok nektár
+          a vyrobiť všetok med. Inak si budeš musieť túto úlohu zopakovať. Skús tomu
+          chvíľu "v-čeliť" a získaj pocit, čo znamená byť programátorom!
     C1_bee_loops:
       1:
         text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
           skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát.
           Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane.
+      2:
+        text: Na tejto úrovni cheme, aby včela získala z kvetu tri nektáre. Namiesto
+          trojnásobného použitia "získaj nektár", použi opakovací blok na získanie
+          nektáru tri krát. Stlač "Spustiť" a zisti, či to máš správne. Výborne!
     C1_bigevent_unplugged:
+      1:
+        text: Táto lekcia sa volá veľká udalosť. Je to všetko o tom, ako dokážeme
+          ovládať náš program a dokonca meniť spôsob činnosťi programu počas jeho
+          behu použitím udalostí, akými sú napríklad stlačenie klávesy alebo kliknutie
+          myši.
       2:
         text: V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to
           niečo ako reálna-živá video hra.
@@ -357,6 +488,64 @@ sk:
           pridal klobúk a zaradil ho do svojej kolekcie nezvyčajných zvierat. Úžasné!
           Neskôr som šiel na veľmi vzdialené miesto. Navštívil som Keňu. Je to krajina
           v Afrike. Žije tu mnoho zebier.
+    C1_pair_programming:
+      1:
+        text: 'Dnes sa naučíme niečo o párovom programovaní. Pri párovom programovaní
+          pracujete ako tím. Pýtate sa, prečo by mali dvaja ľudia používať jeden počítač?
+          Pretože - viac hláv, viac rozumu. Pri párovom programovaní si ty a tvoj
+          partner sadnete za jeden počítač a budete pracovať na spoločnom projekte. '
+      2:
+        text: Párové programovanie je ako jazda v pretekárskom aute. Jeden je vodič
+          a druhý je navigátor. Vodič sedí za počítačom, používa klávesnicu, myš alebo
+          dotykovú obrazovku a ovláda hlavné činnosti počítača. Druhá osoba je navigátor.
+          Navigátor je niekto, kto pomáha vodičovi. Odpovedá na jeho otázky, všíma
+          si chyby a identifikuje potenciálne problémy.
+      3:
+        text: Komunikácia je pri párovom programovaní kľúčom k úspechu. Neurážaj svojho
+          partnera. Rešpektujte sa. Nesnaž sa byť nadriadeným navigátorom. Po celý
+          čas komunikujte so svojím partnerom o tom, čo robíte. Vodič vysvetľuje,
+          čo robí. Navigátor môže navrhovať ďalšie kroky.
+      4:
+        text: Navigátor by mal premýšľať o úlohe komplexne a vodič sa zameriava na
+          detaily. Obe úlohy sú dôležité. Párové programovanie je o tímovej spolupráci.
+    C1_playlab_storytelling:
+      1:
+        text: 'Je čas byť kreatívny a použiť tvoje kódovacie zručnosti na vyrozprávanie
+          príbehu. Tvoj príbeh bude mať aktérov a ty budeš môcť prinútiť týchto aktérov
+          rozprávať a interagovať medzi sebou. Začni rozmýšľať nad tým, aký príbeh
+          chceš rozpovedať. '
+      2:
+        text: 'Mačky sa vždy báli psov, a čo ak si mačka uvedomí, že pes sa len snažil
+          byť milý? Tlačidlo "pri spustení" všetko začína. Tlačidlo "posuň sa" posunie
+          tvoj charakter a tlačidlo "povedz" spôsobí to, že charakter povie čokoľvek,
+          čo napíšeš. '
+      3:
+        text: 'Toto je tlačidlo "keď sa aktéri zrazia", ktoré môžeš prepojiť s ďalšími
+          blokmi. '
+      4:
+        text: Ja som prikázala psovi prísť a povedať "Ahoj", ale potom sa mačka vyľakala
+          a utiekla. "Ahh". Ak by bolo viac času, príbeh by mal šťastný koniec. Koniec!
+    C2_artist_intro:
+      1:
+        text: Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní
+          v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia
+          tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými.
+      2:
+        text: 'V týchto úlohách sa staneš umelcom, ktorý kreslí rôzne tvary. Kamkoľvek
+          sa tvoj umelec pohne, nakreslí za sebou čiaru. '
+      3:
+        text: Po plátne sa hýbeš pomocou bloku "posuň sa dopredu". V tomto prípade
+          príkaz "posuň sa dopredu" znamená posun dopredu o 100 pixelov. Čo sa presne
+          stane pri stlačení tlačidla "Spustiť"? Umelec sa posunie o 100 pixelov.
+          Pixely sú veľmi malé štvorce na tvojej obrazovke.
+      4:
+        text: Iný blok v tejto úlohe hovorí "otoč sa vpravo o 90 stupňov". Použitím
+          tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým,
+          o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov.
+      5:
+        text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie
+          či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri
+          kreslení!"
     C2_artist_debugging:
       3:
         text: Och, tu je ten problém! Mačacie fúzy sú dlhé 75 pixelov, nie 25.
@@ -369,6 +558,21 @@ sk:
         text: Táto lekcia sa nazýva "Programovanie na štvorčekový papier" a je celá
           o algoritmoch. Dnes sa naučíme písať programy, v ktorých budeme kresliť
           čierno-biele obrázky len pomocou šípiek.
+    C2_artist_loops:
+      1:
+        text: V tejto časti použijeme blok "opakuj" a tým pri programovaní ušetríme
+          umelcovi kopu času. Na ploche už máme nejaké bloky, ale to len preto, aby
+          nám pomohli začať.
+      2:
+        text: Aby sme tieto bloky 4 krát zopakovali a nakreslili štvorec, stačí vytiahnuť
+          blok "opakuj" a vložiť bloky "posuň sa dopredu" a "otoč sa vpravo" do jeho
+          vnútra. Pri stlačení tlačidla "Spustiť" umelec tieto kroky 4 krát zopakuje
+          a nakreslí štvorec.
+    C2_bee_loops:
+      1:
+        text: Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a
+          skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát.
+          Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane.
     C2_relay_programming:
       1:
         text: Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom
@@ -380,10 +584,46 @@ sk:
           štvorčekový papier. Musíš skontrolovať kamarátovu prácu a v prípade, že
           v nej nádeš chybu, tak túto chybu opraviť, pridať vlastnú šípku a rýchlo
           bežať so štafetou za ďalším členom tvojho tímu.
+    C3_artist_intro:
+      1:
+        text: Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní
+          v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia
+          tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými.
+      2:
+        text: 'V týchto úlohách sa staneš umelcom, ktorý kreslí rôzne tvary. Kamkoľvek
+          sa tvoj umelec pohne, nakreslí za sebou čiaru. '
+      3:
+        text: Po plátne sa hýbeš pomocou bloku "posuň sa dopredu". V tomto prípade
+          príkaz "posuň sa dopredu" znamená posun dopredu o 100 pixelov. Čo sa presne
+          stane pri stlačení tlačidla "Spustiť"? Umelec sa posunie o 100 pixelov.
+          Pixely sú veľmi malé štvorce na tvojej obrazovke.
+      4:
+        text: Iný blok v tejto úlohe hovorí "otoč sa vpravo o 90 stupňov". Použitím
+          tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým,
+          o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov.
+      5:
+        text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie
+          či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri
+          kreslení!"
+    C3_artist_nested_loops:
+      1:
+        text: Keď vložíme (ponoríme) cyklus do iného cyklu, hovoríme tomu vnorené
+          cykly. Napríklad tu máme kód, ktorým kreslíme trojuholník so stranami 100
+          pixelov použitím opakovacieho bloku s 3 opakovaniami. Jedno opakovanie pre
+          každú stranu trojuholníka.
+      2:
+        text: Ale my chceme nakresliť 6 trojuholníkov. Preto celý teno kód vložíme
+          do vnútra ďalšieho opakovacieho bloku. Super, však?
     C3_bee_debugging:
       1:
         text: Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje.
           Keď ladíš kód, identifikuješ a odstraňuješ chyby.
+    C3_bee_nested_loops:
+      1:
+        text: Dnes sa naučíme používať vnorené cykly. Na začiatku máme pripravený
+          kód, ktorým sa včela trikrát posunie dopredu a zoberie nektár. Nakoniec
+          sa otočí doprava. Vezmime tento celý blok kódu a vložme ho do vnútra ďalšieho
+          opakovania. Počet opakovaní nastavme na 3. Hotovo!
     C3_internet:
       5:
         text: Som Amanda Camp a pracujem ako softvérový inžinier v Googli. Pracujem
@@ -409,6 +649,106 @@ sk:
           by sme použiť 5 blokov "posun sa dopredu", alebo môžeme počítaču povedať,
           nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného
           opakovacieho bloku.
+    C4_conditionals:
+      1:
+        text: Máme nový blok, ktorý sa volá blok ak / inak. Je to podmienka rovnako
+          ako blok ak, ktorý ste používali v predošlých úlohách. Ale teraz je na spodu
+          bloku nová časť, ktorá hovorí inak. Blok ak / inak umožňuje včele rozhodnúť
+          sa medzi dvoma sadami akcií. Ak je včela pri kvete, vykoná sadu akcií, ktoré
+          zadáte v prvej časti, kde sa hovorí, vykonaj ak. Ak včela nie je pri kvete,
+          vykoná sadu akcií, ktoré vložíte na miesto, kde je uvedené inak.
+      2:
+        text: Podmienky ak určujú, ako sú počítače schopné prijímať rozhodnutia. Ľudia
+          nastavujú pre počítač podmienky, ktoré hovoria, že ak sa počítač vyskytne
+          v určitej situácii, urobí jedno. Inak urobí druhé. Horná časť nášho bloku
+          ak / inak hovorí, ak je pri kvete. Horná časť nášho bloku by však mohla
+          hovoriť aj iné veci, napríklad ak sa nektár rovná 2 alebo je pred nami cesta,
+          náš blok sa bude správať rovnako. To znamená, ak je vyhlásenie v hornej
+          časti pravdivé, vykoná sa prvá sada akcií. Ale ak je vyhlásenie v hornej
+          časti nepravdivé, vykoná sa druhá sada akcií.
+    C4_for_loops:
+      1:
+        text: Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy
+          sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší
+          kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú
+          hodnotu o konkrétny prírastok.
+      2:
+        text: Napríklad, opakovanie 3 blokov počíta od 1 po 3, po jednej. Za každým,
+          keď ráta, spustí kód vo vnútri opakovania. Cyklus vie, koľkokrát už zbehol,
+          vďaka premennej "počítadlo", ktorá je nastavená na počiatočnej hodnote,
+          keď cyklus začína a pridáva si o jedno zakaždým, keď zbehne cyklus. Akonáhle
+          je premenná "počítadlo" väčšia ako konečná hodnota, cyklus sa zastaví.
+      3:
+        text: 'Výhodou použitia ozajstného rátajúceho cyklu, namiesto bloku opakuj
+          je, že vidíme premennú "počítadlo" a používame ju v cykle. Napríklad, keď
+          máme viacero kvetín a prvá z nich má jeden nektár, druhá má dva nektáre
+          a tretia má tri, môžeme použiť rátajúci cyklus, aby včela pozbierala zakaždým
+          "počítadlový počet" nektárov, jeden na prvom kvete, dva na druhom a tri
+          na treťom. '
+      4:
+        text: V rátajúcom cykle môžeme tiež zvyšovať "počítadlo" o iné číslo ako jeden.
+          Vieme napríklad počítať vždy o plus 2, 4 alebo aj hodnotu, ktorá sa zakaždým
+          mení.
+    C4_for_loops_bee:
+      1:
+        text: Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy
+          sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší
+          kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú
+          hodnotu o konkrétny prírastok.
+      2:
+        text: Napríklad, opakovanie 3 blokov počíta od 1 po 3, po jednej. Za každým,
+          keď ráta, spustí kód vo vnútri opakovania. Cyklus vie, koľkokrát už zbehol,
+          vďaka premennej "počítadlo", ktorá je nastavená na počiatočnej hodnote,
+          keď cyklus začína a pridáva si o jedno zakaždým, keď zbehne cyklus. Akonáhle
+          je premenná "počítadlo" väčšia ako konečná hodnota, cyklus sa zastaví.
+      3:
+        text: 'Výhodou použitia ozajstného rátajúceho cyklu, namiesto bloku opakuj
+          je, že vidíme premennú "počítadlo" a používame ju v cykle. Napríklad, keď
+          máme viacero kvetín a prvá z nich má jeden nektár, druhá má dva nektáre
+          a tretia má tri, môžeme použiť rátajúci cyklus, aby včela pozbierala zakaždým
+          "počítadlový počet" nektárov, jeden na prvom kvete, dva na druhom a tri
+          na treťom. '
+      4:
+        text: V rátajúcom cykle môžeme tiež zvyšovať "počítadlo" o iné číslo ako jeden.
+          Vieme napríklad počítať vždy o plus 2, 4 alebo aj hodnotu, ktorá sa zakaždým
+          mení.
+    C4_for_loops_no_bee:
+      1:
+        text: Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy
+          sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší
+          kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú
+          hodnotu o konkrétny prírastok.
+      2:
+        text: Napríklad opakovanie troch blokov sa počíta od 1 do 3 po 1. Zakaždým,
+          keď sa počíta, spustí sa kód vnútri cyklu. Cyklus pre vie, koľkokrát sa
+          má spustiť, vďaka premennej počítadlo, ktorá je nastavená na počiatočnú
+          hodnotu na začiatku cyklu, a má k nej pridaný prírastok pri každom spustení
+          cyklu. Akonáhle je premenná počítadla väčšia ako koncová hodnota, cyklus
+          sa zastaví. Výhodou použitia cyklu pre namiesto bloku opakovania je, že
+          skutočne vidíte premennú počítadlo a môžete ju použiť vo svojom cykle.
+    C4_variables_artist:
+      1:
+        text: Premenná je kontajner, do ktorého môžeš ukladať hodnotu. Keď ju použiješ
+          v algoritme, otvorí kontajner a pozrie na hodnotu vo vnútri. To ti dovolí
+          písať šikovnejšie algoritmy, ktoré sa správajú podľa hodnôt uložených v
+          premennej.
+      2:
+        text: Napríklad, ak by som chcela napísať algoritmus "Všetko najlepšie k 10.
+          narodeninám braček" o rok neskôr, spustením programu, by som chcela povedať
+          "Všetko najlepšie k 11. narodeninám"! Mohla by som vytvoriť premennú s názvom
+          vek, ktorou sa uloží bratov vek a napíšem k tomu môj algoritmus, aby som
+          miesto toho povedala "Všetko najlepšie k "vek". narodeninám ". A keďže premenná
+          sa rokom mení, môžem ju aktualizovať ako "vek" plus 1.
+      3:
+        text: V tejto úlohe použijeme premennú, ktorá nastaví dĺžku čiary, ktorú umelec
+          nakreslí. Neskôr v našom kóde bude blok "Posuň sa dopredu" overovať premennú,
+          aby zistil, aká hodnota dĺžky jej bola pridelená.
+    C4_variables_playlab:
+      1:
+        text: Premenná je kontajner, do ktorého môžeš ukladať hodnotu. Keď ju použiješ
+          v algoritme, otvorí kontajner a pozrie na hodnotu vo vnútri. To ti dovolí
+          písať šikovnejšie algoritmy, ktoré sa správajú podľa hodnôt uložených v
+          premennej.
     infinity_playlab_events:
       1:
         text: Teraz sa naučíme o niečom, čo programátori hier používajú každý deň.
@@ -506,6 +846,11 @@ sk:
         text: Ak potiahnem do nášho pracovného priestoru blok pohybVľavo(); a potom
           kliknem Spustiť, čo sa stane? BB=8 sa pohne doľava o jedno pole v mriežke.
     starwars_events:
+      2:
+        text: Gratulujem, zvládaš to! BB-8 je naprogramovaný. Myslím, že sme pripravení
+          na niečo zložitejšie. Poďme na to. Keďže sa ti práve podarilo naučiť základy
+          programovania, vráťme sa v čase a vytvorme tvoju vlastnú hru, v ktorej bude
+          účinkovať R2-D2 a C-3PO.
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -513,6 +858,43 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
+      5:
+        text: Tu urobíme to, aby sa R2-D2 pohyboval smerom hore a doručil správu pilotovi
+          rebelov, a potom smerom dole k inému pilotovi rebelov. K jeho pohybu použijeme
+          udalosti tak, že hráč použije šípky alebo tlačidlá hore/dole.
+      6:
+        text: Použijeme blok udalosti "whenUp()" (akHore()) a pripojíme k nemu blok
+          "goUp()" (choďHore()). Ak hráč stlačí šípku hore, spustí sa kód pripojený
+          k "whenUp()" bloku. Podobne sa to dá urobiť, aby sa R2-D2 hýbal smerom dole.
+      7:
+        text: Aby sme to dosiahli, použijeme príkaz, ktorý sa volá "whenUp()" (akHore).
+          Ak presunieš príkaz z panela nástrojov, uvidíš, že začína a končí zloženou
+          (kučeravou) zátvorkou, nie bodko-čiarkou. Toto nám dáva priestor, aby sme
+          dovnútra volžili ďalšie príkazy. Každý príkaz, ktorý vložíme dovnútra zátvoriek,
+          sa spustí, keď hráč stlačí šípku hore.
+    starwars_congrats:
+      1:
+        text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím a
+          pracovala som na tomto návode, ktorý si práve prechádzaš.
+      2:
+        text: Podarilo sa ti dosiahnuť záverečnú úroveň. Blahoželám! Už vieš všetko
+          potrebné na vytvorenie svojej vlastnej Star Wars hry. Už žiadne ďalšie pokyny,
+          ani hádanky. Vytvor si vlastnú hru a vyber si, ako bude fungovať. Ešte niečo,
+          odomkli sa ti nové zvuky a nové príkazy, a tak dokážeš spraviť ešte viac.
+      3:
+        text: "[študenti sa rozprávajú] Hru sme postavili na tom, že body dostaneš,
+          keď získaš \nprasiatka. Zakaždým, keď získaš prasiatko, objaví sa Storm
+          trooper. Nakoniec je obrazovka plná prasiatok a keď sa dotkneš 10 000 prasiatok,
+          vyhrávaš."
+      4:
+        text: "[študenti sa rozprávajú] Vytvorili sme hru kde neprehráš a za všetko,
+          čo zabiješ, \ndostávaš body. V mojom programe som vymenila klávesy, takže
+          keď klikneš hore,\npostava pôjde dole, a keď klikneš doprava, pôjde doľava.
+          Je to naozaj ťažké!\nNiekedy dostaneš výhodu, prirodzenú výhodu, ak vyvájaš
+          hru ty. Chápem to \nsprávne?"
+      5:
+        text: Keď je tvoja hra hotová, vyber zdieľať a odkaz zdieľaj so svojimi kamarátmi
+          alebo si hru zahraj na svojom telefóne. Veľa zábavy!
     starwars_blocks_intro:
       3:
         text: Počas najbližšej hodiny si spolu vybudujeme našu vlastnú hru Star Wars,
@@ -523,7 +905,18 @@ sk:
       5:
         text: Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je
           príkaz, ktorému BB-8 rozumie.
+      6:
+        text: Biela oblasť vpravo sa nazýva pracovný priestor, na tomto mieste budeme
+          vytvárať náš program.
+      9:
+        text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej
+          plochy a presuň ho späť do panela nástrojov.
     starwars_blocks_events:
+      2:
+        text: Gratulujem, zvládaš to! BB-8 je naprogramovaný. Myslím, že sme pripravení
+          na niečo zložitejšie. Poďme na to. Keďže sa ti práve podarilo naučiť základy
+          programovania, vráťme sa v čase a vytvorme tvoju vlastnú hru, v ktorej bude
+          účinkovať R2-D2 a C-3PO.
       3:
         text: 'Aby sme si mohli vytvoriť hru, potrebujeme sa naučiť niečo čo programátori
           hier používajú každý deň: sú to udalosti. Udalosti hovoria programu, aby
@@ -531,8 +924,35 @@ sk:
       4:
         text: Medzi príklady akcií patrí napríklad čakanie na kliknutie myšou, stlačenie
           klávesy so šípkou alebo ťuknutie na obrazovku.
+      5:
+        text: Tu urobíme to, aby sa R2-D2 pohyboval smerom hore a doručil správu pilotovi
+          rebelov, a potom smerom dole k inému pilotovi rebelov. K jeho pohybu použijeme
+          udalosti tak, že hráč použije šípky alebo tlačidlá hore/dole.
       7:
         text: Krok po kroku, sa tvoja hra stáva viac interaktívnou.
+    starwars_blocks_congrats:
+      1:
+        text: Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím a
+          pracovala som na tomto návode, ktorý si práve prechádzaš.
+      2:
+        text: Podarilo sa ti dosiahnuť záverečnú úroveň. Blahoželám! Už vieš všetko
+          potrebné na vytvorenie svojej vlastnej Star Wars hry. Už žiadne ďalšie pokyny,
+          ani hádanky. Vytvor si vlastnú hru a vyber si, ako bude fungovať. Ešte niečo,
+          odomkli sa ti nové zvuky a nové príkazy, a tak dokážeš spraviť ešte viac.
+      3:
+        text: "[študenti sa rozprávajú] Hru sme postavili na tom, že body dostaneš,
+          keď získaš \nprasiatka. Zakaždým, keď získaš prasiatko, objaví sa Storm
+          trooper. Nakoniec je obrazovka plná prasiatok a keď sa dotkneš 10 000 prasiatok,
+          vyhrávaš."
+      4:
+        text: "[študenti sa rozprávajú] Vytvorili sme hru kde neprehráš a za všetko,
+          čo zabiješ, \ndostávaš body. V mojom programe som vymenila klávesy, takže
+          keď klikneš hore,\npostava pôjde dole, a keď klikneš doprava, pôjde doľava.
+          Je to naozaj ťažké!\nNiekedy dostaneš výhodu, prirodzenú výhodu, ak vyvájaš
+          hru ty. Chápem to \nsprávne?"
+      5:
+        text: Keď je tvoja hra hotová, vyber zdieľať a odkaz zdieľaj so svojimi kamarátmi
+          alebo si hru zahraj na svojom telefóne. Veľa zábavy!
     mc_intro:
       1:
         text: Volám sa Jens Bergensten, ale som lepšie známy ako Jeb. Som vedúci vývojár
@@ -551,7 +971,7 @@ sk:
       4:
         text: Naučíš sa koncepty, ktoré počítačoví programátori používajú každý deň
           a ktoré tvoria základ informatiky. Tu v Mojangu používame tie isté koncepty
-          nato, aby sme sfunkčnili Minecraft.
+          na to, aby sme sfunkčnili Minecraft.
       5:
         text: Predtým než začneš, vyberieš si svoju postavu. Ja si vyberiem Alex.
           Poďme vytvoriť kód pre program, ktorý jej pomôže hýbať sa po obrazovke.
@@ -567,7 +987,7 @@ sk:
           budeme budovať náš program.
       9:
         text: Ak potiahneme do nášho pracovného priestoru blok PosuňSaDopredu(); a
-          potom klikneme Spustiť, čo sa stane? Alexa sa pohne vpred o jedno pole.
+          potom klikneme Spustiť, čo sa stane? Alex sa pohne vpred o jedno pole.
       10:
         text: A čo ak chceme urobiť niečo potom, čo sa pohla o jedno pole? Môžeme
           do nášho programu pridať ďalší blok. Vyberiem si blok OtočSaVpravo(); a
@@ -576,27 +996,27 @@ sk:
           "Spustiť", Alex vykoná príkazy z nášho pracovného priestoru v poradí zhora
           nadol.
       11:
-        text: Ak by si niekedy chcel odstrániť blok, tak ho iba presuň z pracovnej
+        text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba presuň z pracovnej
           plochy späť do panela nástrojov.
       12:
-        text: 'Keď chceš zrušiť svoje zmeny a vrátiť sa späť tam, kde si začal, použi
-          tlačidlo "Začať znova" v pravom hornom rohu pracovnej plochy. Ešte jedna
-          vec: vidíš malý trojuholník na bloku "otoč sa"? Kedykoľvek, keď vidíš takýto
-          trojuholník, tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!'
+        text: 'Keď chceš zrušiť svoje zmeny a vrátiť sa späť na začiatok, použi tlačidlo
+          "Začať znova" v pravom hornom rohu pracovnej plochy. Ešte jedna vec: vidíš
+          malý trojuholník na bloku "otoč sa"? Kedykoľvek, keď vidíš takýto trojuholník,
+          tak si môžeš vybrať inú možnosť. Pustime sa do kódovania!'
     mc_repeat:
       1:
         text: Som Lydia Winters, riaditeľka firmy Mojang, kde vytvárame drobnú hru
           nazývanú Minecraft.
       2:
-        text: Moja obľúbená činnosť v Minecrafte je objavovať. Zbožňujem dobrodružstvá
+        text: Moja obľúbená činnosť v Minecrafte je objavovanie. Zbožňujem dobrodružstvá
           v jaskyniach a objavovanie nových vecí. Keďže nie som programátorka, som
           nadšená, že si tiež môžem prejsť týmto Minecraft kurzom a sama sa naučím
           trocha kódovať.
       3:
-        text: Predošlý level využíval množstvo blokov PosuňSaDopredu();. Bolo by to
-          jednoduchšie, ak by sme dokázali počítaču povedať, aby vykonal príkaz PosuňSaDopredu();
-          štyri alebo päť krát. Našťastie, počítače sú veľmi dobré v opakovaní príkazov
-          pomocou opakovacích cyklov.
+        text: V predošlej úlohe sme potrebovali množstvo blokov PosuňSaDopredu();.
+          Bolo by jednoduchšie, ak by sme počítaču mohli povedať, nech príkaz PosuňSaDopredu();
+          vykoná štyri alebo päťkrát. Počítače sú našťastie veľmi dobré v opakovaní
+          príkazov pomocou opakovacích cyklov.
       4:
         text: Pri stavbe Mincraftu používame opakovacie cykly, aby sme umiestnili
           všetky začiatočné materiály na vytvorenie nového sveta. Sú to tisíce a tisíce
@@ -607,12 +1027,12 @@ sk:
         text: Prichádza noc, takže v najbližších leveloch si postavíme dom, aby sme
           zostali v bezpečí. Použijeme blok opakuj, aby sme to urobili veľmi jednoducho.
       6:
-        text: Aby sme postavili stenu nášho domu, môžeme buď povedať Alex PosuňSaDopredu();
-          a umiestni dosky štyrikrát, alebo jej môžeme povedať PosuňSaDopredu(); a
-          umiestniť jednu dosku, potom vziať tento príkaz a použiť bloky opakovania,
-          aby to vykonala viacerokrát. Teraz klikneme na blok opakovania a povieme
-          jej, koľkokrát chceme, aby vykonala túto akciu. Teraz postavme náš dom predtým,
-          než príde noc! Veľa zábavy!
+        text: Aby sme postavili stenu nášho domu, môžeme buď štyrikrát za sebou Alex
+          prikázať "PosuňSaDopredu(); a umiestni dosky", alebo jej môžeme povedať
+          "PosuňSaDopredu(); a umiestniť jednu dosku", potom vziať tento príkaz a
+          použiť blok opakovania na to, aby aktivitu vykonala viackrát. Teraz klikneme
+          na blok opakovania a povieme jej, koľkokrát má túto akciu vykonať. A teraz
+          postavme náš dom skôr, než príde noc! Veľa zábavy!
     mc_if_statements:
       1:
         text: Teraz sa naučíme o príkaze "ak". Príkazy "ak" patria k základným programovacím
@@ -622,9 +1042,9 @@ sk:
           ak odomknem môj telefón, spustí sa kód, ktorý hovorí, že ak vložím správne
           heslo, tak sa odomkne mobil. Inak mi zobrazí chybu.
       3:
-        text: Vo svojom kóde môžeš použiť príkazy "ak", aby si nechal Steva a Alice
-          reagovať na to, čo vidia vo svete. Napríklad ak je pred nimi kameň, môžu
-          sa otočiť vľavo. Alebo otočiť vpravo ak narazia do stromu.
+        text: Vo svojom kóde môžeš použiť príkazy "ak", aby Steve a Alice reagovali
+          na to, čo vidia vo svete. Napríklad ak je pred nimi kameň, môžu sa otočiť
+          vľavo. Alebo otočiť vpravo, ak narazia do stromu.
       4:
         text: V tomto prípade nechceme spadnúť do lávy. Je jednoduché pripraviť sa
           na lávu. Môžeme ju vidieť na obrazovke. Ale čo láva, ktorú nemôžeme vidieť
@@ -633,15 +1053,15 @@ sk:
         text: Potom, čo vyťažíme tento kameň, budeme potrebovať zistiť či tam je láva
           skôr, než sa posunieme dopredu. Ak tam láva je, potrebujeme umiestniť kameň
           pred našu postavu skôr, než sa posunieme dopredu. Týmto spôsobom sa môžeme
-          bezpečne posúvať dopredu. Je čas na ťaženie! A nezabudni použiť príkaz "ak",
-          aby si si dal pri pohybe pozor.
+          bezpečne posúvať dopredu. Je čas na ťaženie! Nezabudni použiť príkaz "ak"
+          a dať si pri pohybe pozor.
     mc_congrats_share:
       1:
-        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
+        text: Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!
       2:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru.
           Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš
-          vytvoriť čokoľvek chceš. Vyberieš si sám.
+          vytvoriť čokoľvek chceš. Výber je na tebe.
       3:
         text: "[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril
           L z faklí. Vytvoril som A z brezovej dosky. Fungovalo to, naozaj to fungovalo.
@@ -651,17 +1071,17 @@ sk:
           a ukázal kamarátom svoj výtvor. Zabav sa!
     mc_congrats_no_share:
       1:
-        text: Gratulujem! Práve si sa naučil základné stavebné časti počítačovej vedy.
+        text: Gratulujeme ku zvládnutiu základných stavebných prvkov informatiky!
       2:
         text: Teraz môžeš použiť tieto bloky na vytvorenie svojho vlastného výtvoru.
           Nemáš viac inštrukcií a nemáš ani žiadne rébusy, ktoré treba vyriešiť. Môžeš
-          vytvoriť čokoľvek chceš. Vyberieš si sám.
+          vytvoriť čokoľvek chceš. Výber je na tebe.
       3:
         text: "[študenti hovoria] Stáva sa to skutočným. Strihaj. Ja som vytvoril
           L z faklí. Vytvoril som A z brezovej dosky. Fungovalo to, naozaj to fungovalo.
           Postavili sme dom z vlny!"
       4:
-        text: Teraz dokážeš vytvoriť čo len chceš. Veľa zábavy!
+        text: Teraz dokážeš vytvoriť, čo len chceš. Veľa zábavy!
     gumball_intro:
       1:
         text: Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché.
@@ -718,7 +1138,7 @@ sk:
           blok pustím a oba bloky sa spoja dokopy. Ak znova stlačím tlačidlo "Spustiť",
           kurča spraví dva kroky.
       8:
-        text: Ak by si niekedy chcel odstrániť blok, tak ho iba odstráň z pracovnej
+        text: Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej
           plochy a presuň ho späť do panela nástrojov.
       9:
         text: Potom, čo stlačíš "Spustiť", môžeš vždy stlačiť tlačidlo "Obnoviť",
@@ -758,12 +1178,12 @@ sk:
           niečomu, čo sa volá udalosti. Udalosti hovoria tvojmu programu, aby počúvali
           alebo čakali na niečo, čo sa stane. A keď sa to stane, niečo spravia.
       4:
-        text: Doteraz si použil len jednu udalosť. Kód, ktorý si vložil do poľa "po
-          vytvorení" sa spustí, keď sa vytvorí postava alebo keď začne hra. V ďalších
-          leveloch budeš mať nové polia pre udalosti ako napríklad "po dotknutí sa",
-          ktorý sa spustí, keď sa dotkneš postavy, alebo "po použití", keď postavu
-          použiješ. Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu
-          do poľa "po východe slnka"
+        text: Doteraz sme použili len jednu udalosť. Kód vložený za príkaz "po vytvorení"
+          sa spustí, keď sa vytvorí postava, alebo keď začne hra. V ďalších úlohách
+          budemať nové bloky pre udalosti ako napríklad "po dotknutí sa", ktorý sa
+          spustí, keď sa dotkneš postavy, alebo "po použití", keď postavu použiješ.
+          Alebo ak chceš, aby zombík pri východe slnka zmizol, vlož akciu do poľa
+          "po východe slnka".
     mc_2016_spawn:
       1:
         text: V hrách, vytvárame postavy príkazom "vytvor postavu". V tomto leveli
@@ -780,113 +1200,224 @@ sk:
           Minecraftu. Teraz si vývojárom. Odomkol si všetky príkazy a všetky stvorenia.
           Môžeš si vybrať, čo sa stane.
       2:
-        text: Keď si hotový s tvorbou svojej hry, vyber si možnosť "Zdieľať" na vytvorenie
-          odkazu, ktorý môžeš zdieľať s kamarátmi alebo si na ňom môžeš zahrať hru
-          na svojom mobile. Veľa zábavy! Už sa teším, že si zahrám tvoju verziu Minecraftu.
+        text: Keď je tvoja hra hotová, vyber si možnosť "Zdieľať" a vytvorí sa odkaz,
+          ktorý môžeš zdieľať s kamarátmi, alebo si pomocou neho hru zahrať na svojom
+          mobile. Veľa zábavy! Už sa teším, že si zahrám tvoju verziu Minecraftu.
     applab_intro_welcome:
       1:
         image: notes/applab_intro_welcome_1.png
+        text: |-
+          Volám sa Melani. Som stážistka na code.org a som tiež študentkou informatiky. Mám rada informatiku, pretože je naozaj kreatívna. Chcem byť riešiteľom problémov. Chcem, aby všetko fungovalo podľa mojich predstáv. Potrebujem však byť aj dizajnér, umelec a
+          využiť kreatívnú stránku.
       2:
         image: notes/applab_intro_welcome_2.png
+        text: Vytvorenie vlastných aplikácií je jednoduché s App Lab! Či už si v programovaní
+          nováčik, alebo už máš skúsenosti. App Lab je skvelý na vytváranie nových
+          aplikácií a ich zdieľanie s priateľmi.
       3:
         image: notes/applab_intro_welcome_3.png
+        text: Toto je App Lab. Na ľavej strane je tvoja aplikácia. Na pravej strane
+          je kód, ktorý ju spustí. Program vytvoríš pretiahnutím blokov z panela nástrojov.
+          Pre začiatok postačí mať jeden blok s názvom "setProperty".
       4:
         image: notes/applab_intro_welcome_4.png
+        text: setProperty blok zmení vzhľad prvkov na obrazovke. Ako napríklad tlačidlá,
+          štítky alebo aj samotnú obrazovku. Najskôr sa musíš rozhodnúť, ktorý prvok
+          chceš zmeniť. Ak prejdeš myšou nad prvkom v aplikácii, môžeš vidieť jeho
+          meno alebo ID. Potom vyber toto ID z prvého rozbaľovacieho zoznamu.
       5:
         image: notes/applab_intro_welcome_5.png
+        text: Prvky majú veľa vlastností, ktoré môžeš meniť. Napríklad farbu textu,
+          farbu pozadia alebo veľkosť písma. V druhom rozbaľovacom zozname vidíš všetky
+          vlastnosti, ktoré môžeš meniť.
       6:
         image: notes/applab_intro_welcome_6.png
+        text: V poslednom rozbaľovacom zozname napíš hodnotu, ktorú chceš použiť.
+          Blok ti poskytne návrh. Vždy je však môžné napísať vlastné farby alebo čísla.
       7:
         image: notes/applab_intro_welcome_7.png
+        text: 'Po dokončení sa blok číta ako veta: ''Nastav farbu pozadia pre button1
+          na zelenú.'' Kliknutím na Spustiť zobrazíš zmeny vytvorené v kóde. Po Obnovení,
+          môžeš pretiahnuť viac blokov pre zmenu iných častí aplikácie. Ako napríklad
+          text!'
       8:
         image: notes/applab_intro_welcome_8.png
+        text: Teraz budeme pracovať v blokovom móde, ale App Lab tiež podporuje prácu
+          s textom.
       9:
         image: notes/applab_intro_welcome_9.png
+        text: V každom prípade budeš programovať v jazyku JavaScript, v jazyku webu.
+          Každá úroveň má cieľ, pokyny a obrázok toho, čo máš vytvoriť.
       10:
         image: notes/applab_intro_welcome_10.png
+        text: Ak by ti niečo nebolo jasné, klikni na tento obrázok a ukáže ti presne,
+          ako dokončiť úroveň. Ale najskôr zisti, či to dokážeš bez pomoci.
       11:
         image: notes/applab_intro_welcome_11.pngq
+        text: Po dokončení cieľa úrovne klikni na tlačidlo Dokončiť a pokračuj ďalej.
+          A to je všetko! Stlačením oranžového tlačidla "Pokračovať“ prejdeš na ďalšiu
+          úroveň a pokračuješ v dobrodružstve s App Lab!
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
+        text: |-
+          Aplikácie sú skvelé, pretože sú podobné ako začiatok podnikania. Všetko musíš navrhnúť od základov, potrebuješ všetko zorganizovať a vlastníkom práce, vytvorenej
+          pomocou kódu si ty.
       2:
         image: notes/applab_intro_events_2.png
+        text: |-
+          Keď už dokážeš zmeniť vzhľad aplikácie, sprav ju interaktívnu pomocou udalostí! Udalosti sú akcie, ako kliknutie na tlačidlo, posúvanie sa cez menu alebo posunutie kurzora nad obrázok. Interaktívne aplikácie potrebujú spôsoby, ako reagovať na udalosti, ako spustenie zvuku, keď kliknem na tlačidlo. Ak toto chceš urobiť v App Lab,
+          musíš použiť nový blok s názvom 'onEvent'.
       3:
         image: notes/applab_intro_events_3.png
+        text: |-
+          Tento program nastaví obrazovku na modrú. Ja chcem zmeniť obrazovku na zelenú, keď kliknem na toto tlačidlo. Najskôr budem musieť pretiahnuť onEvent blok. Po umiestnení kurzora viem, že ID tlačidla je "bigButton“ takže vyberiem toto ID v prvom
+          rozbaľovacom zozname.
       4:
         image: notes/applab_intro_events_4.png
+        text: Ďalej vyberiem typ udalosti. Je veľa možností, ktoré môžeš vybrať, ale
+          teraz si nechám možnosť kliknutie.
       5:
         image: notes/applab_intro_events_5.png
+        text: 'Nakoniec pridám kód do onEvent, ktorý zmení farbu pozadia obrazovky.
+          Tento blok môžeš prečítať ako vetu: "Po kliknutí na tlačidlo, spusti kód.“'
       6:
         image: notes/applab_intro_events_6.png
+        text: Poďme to skúsiť. Bloky mimo OnEvent sa tiež spustia, takže obrazovka
+          začína ako modrá.
       7:
         image: notes/applab_intro_events_7.png
+        text: A keď kliknem na veľké tlačidlo, kód v onEvent sa spustí a obrazovka
+          sa zmení na zelenú.
       8:
         image: notes/applab_intro_events_8.png
+        text: Ak chceš zmeniť viac vecí po udalosti, napríklad text na obrazovke,
+          jednoducho pridaj ďalší kód do onEvent.
       9:
         image: notes/applab_intro_events_9.png
+        text: Aby tvoj program reagoval na viac udalosti, pridaj ďalšie bloky onEvent.
+          Uisti sa však, že onEvent bloky nie sú vložené do seba. Teraz je čas to
+          vyskúšať. Zabav sa!
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
+        text: Ďalej sa naučíš pridávať obrázky a zvuky do tvojej aplikácie. Pozrime
+          sa na možnosti výberu zvukov.
       2:
         image: notes/applab_intro_sounds_2.png
+        text: V poli nástrojov vidíš nový blok s názvom "playSound“. Pretiahni ho
+          na pracovnú plochu. Zvuk si môžeš vybrať kliknutím na rozbaľovací zoznam
+          a potom kliknutím na "Vyber si".
       3:
         image: notes/applab_intro_sounds_3.png
+        text: |-
+          Odtiaľto môžeš nahrať zvukový súbor z počítača alebo vyhľadať zvuk vo zvukovej knižnici. Zvuková knižnica má veľa rôznych kategórií ako nástroje, hudba na pozadí
+          alebo zvieratá.
       4:
         image: notes/applab_intro_sounds_4.png
+        text: Keď už si našiel správny zvuk, klikni na tlačidlo "Choose". Po spustení
+          tohto bloku sa prehrá vybraný zvuk.
       5:
         image: notes/applab_intro_sounds_5.png
+        text: Ak chceš pridať obrázky do prvkov, stačí použiť blok setProperty. V
+          druhom rozbaľovacom zozname vyber možnosť "image"
       6:
         image: notes/applab_intro_sounds_6.png
-        text: Potom vyberte "Vybrať" z tretieho rozbaľovacieho menu.
+        text: Potom z tretieho rozbaľovacieho zoznamu vyber možnosť “Vyber si“.
       7:
         image: notes/applab_intro_sounds_7.png
+        text: |-
+          Odtiaľto môžeš nahrať obrázok z počítača alebo si môžeš vybrať z veľkého
+          množstva ikon v knižnici ikon.
       8:
         image: notes/applab_intro_sounds_8.png
+        text: Späť v móde kódu môžeš pomocou bloku "setProperty" zmeniť aj farbu svojej
+          ikony. Po výbere obrázka, klikni na tlačidlo "Spustiť" a uvidíš, ako vyzerá.
       9:
         image: notes/applab_intro_sounds_9.png
+        text: A to je všetko! Teraz môžeš pridávať obrázky a zvuky, aby tvoje aplikácie
+          boli ešte zábavnejšie.
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
+        text: Pre vytvorenie aplikácií, musíš začať navrhovať obrazovky a prvky od
+          základu. S App Lab je toto jednoduché vďaka Dizajn Módu.
       2:
         image: notes/applab_intro_designmode_2.png
-        text: Použite tlačidlo v hornej časti Vašej aplikácie pre vstup do Dizajnoavcieho
+        text: Pomocou tlačidla umiestneného nad appkou prepni AppLab do dizajnového
           módu.
       3:
         image: notes/applab_intro_designmode_3.png
+        text: Nové prvky môžeš pridať ich pretiahnutím na obrazovku. Môžeš ich presunúť
+          na rôzne miesta a zmeniť ich veľkosť pretiahnutím pravého dolného rohu.
       4:
         image: notes/applab_intro_designmode_4.png
+        text: Ak chceš zmeniť vlastnosti prvku, použi ovládacie prvky napravo. Napríklad
+          je veľmi ľahké zmeniť text tohto tlačidla, farbu a veľkosť písma.
       5:
         image: notes/applab_intro_designmode_5.png
+        text: Keď na obrazovku pridáš nový prvok, dostane všeobecné ID, napríklad
+          button1. Je vhodné zmeniť ID tohto tlačidla na niečo konkrétne ako "rightButton“.
+          Aby bolo možné toto tlačidlo ľahko spoznať pri programovaní.
       6:
         image: notes/applab_intro_designmode_6.png
+        text: |-
+          Keď pridáš prvok do svojej aplikácie omylom, jednoducho ho pretiahni preč alebo
+          klikni na Delete.
       7:
         image: notes/applab_intro_designmode_7.png
+        text: Do aplikácie môžeš pridať úplne nové obrazovky pretiahnutím prvku obrazovky
       8:
         image: notes/applab_intro_designmode_8.png
+        text: Z rozbaľovacieho zoznamu v hornej časti môžeš rýchlo prepínať medzi
+          vytvorenými obrazovkami.
       9:
         image: notes/applab_intro_designmode_9.png
+        text: V aplikácii budeš potrebovať spôsob, ako prepínať medzi všetkými obrazovkami,
+          preto bol do sady nástrojov pridaný blok setScreen. Použi "setScreen" vo
+          vnútri bloku "onEvent" na zmenu obrazovky pri kliknutí na tlačidlo.
       10:
         image: notes/applab_intro_designmode_10.png
+        text: V najbližších úrovniach budeš pracovať na jednom projekte. Najskôr pridáš
+          tlačidlo, potom pridáš novú obrazovku a nakoniec napíšeš kód, ktorý ťa cez
+          tlačidlo prepne na novú obrazovku.
     applab_intro_share:
       1:
         image: notes/applab_intro_share_1.png
+        text: Teraz, keď už ovládaš niektoré základy aplikácie App Lab ako je pridávanie
+          tlačidiel, zvukov, obrázkov, textu a nových obrazoviek, môžeš vytvárať najrôznejšie
+          aplikácie.
       2:
         image: notes/applab_intro_share_2.png
+        text: Na ďalšej úrovni nájdeš svoju dokončenú aplikáciu. S trochou kreativity
+          ju môžeš zmeniť na kvíz pre svojich priateľov, blahoželania pre svoju rodinu
+          alebo vytvoriť dobrodružnú hru. Všetky tieto aplikácie sú kombináciou zručností,
+          ktoré už vieš a verím, že zvládneš ešte viac.
       3:
         image: notes/applab_intro_share_3.png
+        text: Po dokončení aplikácie si ju môžeš poslať do telefónu a zistiť, ako
+          vyzerá. Stačí kliknúť na "Zdieľať“ a zadať svoje telefónne číslo.
       4:
         image: notes/applab_intro_share_4.png
+        text: Dostaneš textovú správu, ktorá ti umožní okamžite otvoriť aplikáciu.
       5:
         image: notes/applab_intro_share_5.png
+        text: Môžeš tiež zdieľať odkaz na svoju aplikáciu cez sociálne médiá alebo
+          ju uverejniť v galérii code.org, kde sa s ňou môžu ľudia hrať a zdieľať
+          ju.
       6:
         image: notes/applab_intro_share_6.png
+        text: |-
+          Zatiaľ sme preskumáli len základy toho čo App Lab dokáže. App Lab obsahuje pokročilé možnosti, nové prvky obrazovky a už aj hotové časti, takže môžes rýchlo vytvoriť interaktívne aplikácie. Na "code.org/applab“ nájdeš všetky možnosti
+          a aj nápady, ak chceš pokračovať ďalej.
       7:
         image: notes/applab_intro_share_7.png
+        text: Sme radi, že si s nami. Teraz choď vytvoriť a zdieľať svoju prvú aplikáciu
+          a pokračuj vo vytváraní aplikácií pomocou App Lab!
     mc_2017_agent_intro:
       1:
         image: notes/mc_2017_agent_intro_1.png
-        text: 'Stacy: Stampy, Lizzy, Preston = vďaka, že ste išli so mnou. Chcem vám
+        text: 'Stacy: Stampy, Lizzy, Preston - vďaka, že ste išli so mnou. Chcem vám
           ukázať niečo, čo je za touto planinou. Myslím si, že sa vám to bude páčiť!'
       2:
         image: notes/mc_2017_agent_intro_2.png
@@ -910,7 +1441,7 @@ sk:
           to. Všetci! Nie to! Stacy: Nie t... (Fňuk.) OK, pôjdem teda ja."
       5:
         image: notes/mc_2017_agent_intro_5.png
-        text: Ach, dobre, ahoj, som teda v skutočnom svete. Idem skúsiť nájst kancelárie
+        text: Ach, dobre, ahoj, som teda v skutočnom svete. Idem skúsiť nájsť kancelárie
           Minecraftu.
       6:
         image: notes/mc_2017_agent_intro_6.png
@@ -920,10 +1451,10 @@ sk:
       7:
         image: notes/mc_2017_agent_intro_7.png
         text: Na splnenie úloh z Hodiny Kódu budeš musieť napísať kód, ktorý naprogramuje
-          Agenta. Spolupracuj s Agentom, aby si odstránil všetky prekážky a zozbieraj
-          predmety, ktoré budeš potrebovať na svojej ceste. Len Agent môže umiestniť
-          a rozbíjať bloky, a len ty môžeš zbierať predmety. Obrazovka je rozdelená
-          na tri hlavné časti. Na ľavej strane je hracie pole Minecraftu.
+          Agenta. Spolupracuj s Agentom, odstráň všetky prekážky a zozbieraj predmety,
+          ktoré budeš potrebovať na svojej ceste. Len Agent môže umiestniť a rozbíjať
+          bloky a len ty môžeš zbierať predmety. Obrazovka je rozdelená na tri hlavné
+          časti. Na ľavej strane je hracie pole Minecraftu.
       8:
         image: notes/mc_2017_agent_intro_8.png
         text: Stredná oblasť je panel nástrojov s príkazmi, ktorým Agent rozumie.
@@ -982,21 +1513,20 @@ sk:
         text: V ďalšej úrovni môžeš pomocou cyklov presunúť Agenta popri ceste. Presuň
           blok "Opakuj" do pracovného priestoru a umiestni blok "Posuň sa dopredu"
           do vnútra bloku "Opakuj". Toto informuje počítač, aby opakoval ten istý
-          príkaz veľa krát za sebou, bez toho, aby si musel do pracovného priestoru
-          presunúť celé stohy blokov. Vložením čísla do bloku "Opakuj" si môžeš vybrať,
-          koľkokrát sa príkaz zopakuje.
+          príkaz veľakrát za sebou bez toho, aby boli do pracovného priestoru presunuté
+          celé stohy blokov. Vložením čísla do bloku "Opakuj" si môžeš vybrať, koľkokrát
+          sa príkaz zopakuje.
       8:
         image: notes/mc_2017_repeat_8.png
         text: Do bloku "Opakuj" môžeš pridať aj otočky a iné príkazy, teraz ale skús
-          blok "Opakuj" použiť na to, aby si Agenta posunul o niekoľko krokov dopredu.
+          blok "Opakuj" použiť tak, že posunieš Agenta o niekoľko krokov dopredu.
           Nezabúdaj, že ak sa v úlohe zasekneš, môžeš vždy stlačiť modré tlačidlo
           "Obnoviť" a skúsiť to znova.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'Ak by si chcel mať úžasnú prácu ako Katie, klikni na tlačidlo "Zobraziť
-          kód" po dokončení každej úrovne. To ti ukáže skutočný kód naprogramovaný
-          v JavaScripte, ktorý Katie používa, keď programuje Minecraft. Katie: Áno,
-          veľa šťastia!'
+        text: 'Ak chceš mať úžasnú prácu ako Katie, klikni na tlačidlo "Zobraziť kód"
+          po dokončení každej úrovne. To ti ukáže skutočný kód naprogramovaný v JavaScripte,
+          ktorý Katie používa, keď programuje Minecraft. Katie: Áno, veľa šťastia!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
@@ -1013,8 +1543,8 @@ sk:
           ktoré môžeš použiť na vyriešenie úloh.
       4:
         image: notes/mc_2017_functions_4.png
-        text: Pozri sa na kód vo vnútri funkcie, keď ju umiestniš do pracovného priestoru,
-          aby si videl, čo robí.
+        text: Pozri sa na kód vo vnútri funkcie, keď ju umiestniš do pracovného priestoru
+          a uvidíš, čo robí.
       5:
         image: notes/mc_2017_functions_5.png
         text: Potom nájdi blok s týmto názvom v paneli nástrojov a presuň ho z panelu
@@ -1203,35 +1733,35 @@ sk:
         text: Ahoj! Volám sa Miral Kotb a som tanečníčka, softvérová vývojárka a zakladateľka
           iLuminate.
       3:
-        text: Takže, informatika súvisí s kreativitou vo veľa smeroch. Nemerateľne
+        text: Takže, informatika súvisí s kreativitou v mnohých smeroch. Je ich nemerateľne
           veľa, naozaj. Mám na mysli to, že ak máš raz schopnosť písať softvér, môžeš
-          vložiť myšlienky do čohokoľvek. Ja to robím so sveteľným oblekmi. Je toho
-          tak veľa, čo môžeš vytvoriť akonáhle máš nástroje na písanie softvéru a
+          vložiť myšlienky do čohokoľvek. Ja to robím so svetelným oblečením. Je toho
+          tak veľa, čo môžeš vytvoriť, akonáhle máš nástroje na písanie softvéru a
           tvoje možnosti sú neobmedzené.
       4:
         text: Behom nadchádzajúcej hodiny začneš s informatikou programovaním svojej
           vlastnej tanečnej párty! Dali sme dokopy viacero hitov a tím výborných tanečníkov
           s ktorými sa môžeš hrať.
       5:
-        text: Budeš používať bloky kódu na to, aby si si vybral tanečníkov, zmenil
-          ich tanečné kroky, donútil ich reagovať na hudbu a spravil ich interaktívnymi.
+        text: Budeš používať bloky kódu na výber tanečníkov, zmenu ich tanečných pohybov
+          a donútiš ich tak, aby reagovali na hudbu a boli interaktívni.
       6:
         text: Uvidíš, že obrazovku máš rozdelenú na tri hlavné časti. Na ľavej strane
           je hracia plocha. Tu sa objavia tvoji tanečníci.
       7:
-        text: Stredná časť sú tvoje nástroje. V tejto časti sa ti postupne, ako budeš
-          prechádzať cez jednotlivé úrovne sprístupnia nové bloky kódu.
+        text: Stredná časť je panel s nástrojmi. V tejto časti sa ti postupne, ako
+          budeš prechádzať cez jednotlivé úrovne, sprístupnia nové bloky kódu.
       8:
-        text: Priestor vpravo je pracovná plocha. Bloky z ponuky nástrojov môžeš presunút
+        text: Priestor vpravo je pracovná plocha. Bloky z panelu nástrojov môžeš presunúť
           na pracovnú plochu, čím vytvoríš svoj program.
       9:
         text: Inštrukcie ku každej úrovni budú tu, na vrchu obrazovky. Ak potrebuješ
           poradiť, stačí kliknúť na žiarovku.
       10:
         text: Začnime tým, že vytvoríme novú tanečníčku s použitím tohto červeného
-          bloku. Ako prvé presuň blok z nástrojov a pripni ho pod tento oranžový blok
-          "nastavenie". Táto tanečníčka je mačka a volá sa "my_first_dancer". Môžeš
-          ju premenovať na čokoľvek chceš, keď klikneš sem.
+          bloku. Ako prvé presuň blok z panela nástrojov a pripni ho pod tento oranžový
+          blok "nastavenie". Táto tanečníčka je mačka a volá sa "moja_prvá_tanečníčka".
+          Ak ju chceš premenovať klikni sem.
       11:
         text: S týmto môžeš tiež zmeniť, v ktorej časti hernej plochy sa tanečník
           objaví.
@@ -1282,10 +1812,10 @@ sk:
         text: 'Hodina Kódu | Tanečná Párty: Vlastnosti'
       2:
         text: Volám sa Maria. Som študentkou tretieho ročníka na University of Washington
-          a pracujem ako Inžinier Budúcnosti v Amazone.
+          a pracujem ako Inžinierka Budúcnosti v Amazone.
       3:
         text: Zbožňujem informatiku, lebo kombinuje riešenie problémov a kritické
-          myslenie a po tom ako vložíš hodiny práce do niečoho, môžeš z toho dostať
+          myslenie a po tom, ako do niečoho vložíš hodiny práce, môžeš z toho dostať
           niečo skutočne cool a hodnotné.
       4:
         text: Zatiaľ sme sa zahrali s pár tanečníkmi a naprogramovali sme ich, aby
@@ -1293,40 +1823,252 @@ sk:
       5:
         text: Každý tanečný krok sa skladá zo série obrázkov nazývaných snímky. Každá
           snímka sa trochu líši od tej predchádzajúcej. Keď sa tvoj program spustí,
-          počítač ukazuje jednu snímku za druhou. Sú zobrazené tak rýchlo, že to vyzerá
+          počítač ukazuje jednu snímku za druhou. Sú zobrazené tak rýchlo, že to vyzerá,
           ako keby sa tanečník hýbal. Toto je tajomstvo každej animácie.
       6:
-        text: Môžeš meniť nie len to kroky tvojho tanečníka, ale môžeš zmeniť aj jeho
+        text: Môžeš meniť nie len kroky svojho tanečníka, ale môžeš zmeniť aj jeho
           vlastnosti. Vlastnosti určujú veci ako tanečníkova pozícia na obrazovke,
           jeho veľkosť, alebo farba.
       7:
         text: Pre zmenu vlastností tanečníka použiješ blok 'nastav'. Použime blok
           'nastav' na to, aby náš tanečník vyzeral menšie. Najprv presuň blok 'nastav'
-          do svojho programu. Potom vyber tanečníka, ktorého chceš zmeniť a napíš
-          veľkosť s akou sa objaví na obrazovke.
+          do svojho programu. Potom vyber tanečníka, ktorého chceš zmeniť, a napíš
+          veľkosť, s akou sa objaví na obrazovke.
       8:
         text: Plná veľkosť je 100. Ak zvolíš menšie číslo, tvoj tanečník bude menší.
           Čím menší je tvoj tanečník, tým sa zdá byť vzdialenejší. Toto je skvelý
           spôsob ako vytvoriť záložných tanečníkov (Backup dancer).
       9:
-        text: Použitím bloku nastav, môžeš tiež zmeniť tanečníkove rozmery, otočenie,
+        text: Použitím bloku nastav môžeš tiež zmeniť tanečníkove rozmery, otočenie,
           pozíciu a sfarbenie. Hraním sa s týmito parametrami môžeš vytvoriť celú
           plejádu zmien a naviazať ich na rôzne časti pesničky.
       10:
         text: Pamätaj, že môžeš nastaviť vlastnosti tanečníka, iba ak už existuje.
           Uisti sa, že blok 'nastav' nasleduje až po bloku 'vytvor'. Neváhaj experimentovať,
-          buď kreatívny a zabav sa.
+          uvoľni svoju kreativitu a zabav sa.
     hoc_dance_congrats:
       1:
         text: 'Hodina Kódu | Tanečná Párty: Párty pokračuje!'
       2:
         text: Gratulujem! Práve sa ti podarilo naučiť základy informatiky. Teraz môžeš
           použiť tieto bloky na vytvorenie svojej vlastnej tanečnej párty, ktorú môžeš
-          zdielať s kamarátmi.
+          zdieľať s kamarátmi.
       3:
-        text: Ak sa pozrieš do ponuky nástrojov, nájdeš zopár úplne nových blokov,
-          ktoré si ešte nevidel. Napríklad môžeš použiť blok 'rozmiestni' na usporiadanie
-          tanečníkov na obrazovke rôznymi spôsobmi.
+        text: Ak sa pozrieš do panela nástrojov, nájdeš zopár úplne nových blokov,
+          ktoré predtým neboli zobrazené. Napríklad môžeš použiť blok 'rozmiestni'
+          na usporiadanie tanečníkov na obrazovke rôznymi spôsobmi.
+      4:
+        text: Poobzeraj sa a experimentuj s týmito novými blokmi a vlastnosťami. Vytvoríš
+          na tvoju obľúbenú pesničku detailnú tanečnú choreografiu?
+      5:
+        text: Alebo tanečný súboj s kamarátmi?
+      6:
+        text: Alebo niečo úplne iné?
+      7:
+        text: Na konci lekcie môžeš zdieľať odkaz na svoj výtvor s kamarátmi. Potráp
+          svoju predstavivosť a hlavne si to uži!
+    mc_2018_intro:
+      1:
+        text: Ahoj! Si tu práve včas. Vitaj vo Vodnom Dobrodružstve. Chystám sa na
+          výpravu, kde budem hľadať skrytý poklad na dne mora a som veľmi rada, že
+          mi pri tom pomôžeš. Kto vie, čo nás postretne počas týchto tajuplných plavieb?
+          Niekde v tomto doku by sme mali stretnúť nášho prvého sprievodcu.
+      2:
+        text: Vitajte, dobrodruhovia! Na dokončenie okružnej plavby budeš musieť pomocou
+          kódu vyriešiť sériu úloh. Pozri, ako to funguje. Obrazovka je rozdelená
+          do troch hlavných častí.
+      3:
+        text: Naľavo sa ti zobrazuje Minecraft svet.
+      4:
+        text: Uprostred nájdeš panel nástrojov, kde sú uložené príkazy na programovanie.
+      5:
+        text: A na veľkej ploche napravo je tvoja pracovná plocha. Tam ukladáš príkazy
+          potrebné na vytvorenie programu a ovládanie pohybu.
+      6:
+        text: Pokyny pre každú úroveň nájdeš v hornej časti obrazovky. Pre výber medzi
+          krátkymi a dlhými pokynmi klikni na znamienko plus.
+      7:
+        text: Skús potiahnuť bloky z panela nástrojov na pracovnú plochu, ulož ich
+          a potom klikni na spúšťacie tlačidlo, ak chceš príkazy vykonať.
+      8:
+        text: Možno budeš potrebovať zopár pokusov, aby ti to vyšlo. Niektoré úlohy
+          majú viac riešení, tak experimentuj a zisti, ktoré funguje.
+      9:
+        text: Ak to chceš vyskúšať znova, klikni na tlačidlo "Obnoviť" pre návrat
+          na začiatok.
+      10:
+        text: Ak potrebuješ príkaz vymazať, potiahni blok z pracovnej plochy späť
+          do panela nástrojov. Nezabudni kliknúť na "Spustiť", keď chceš vidieť, ako
+          kód vyzerá priamo v akcii.
+      11:
+        text: Nezdržujme sa viac, dobrodružstvo čaká. Začnime s kódovaním, nech nájdeme
+          nejaký skrytý podmorský poklad.
+    MC_2018_loops:
+      1:
+        text: Skvelé! Chytili sme tresku! Vedeli ste, že ak delfínovi hodíte tresku,
+          ukáže vám cestu ku vraku potopenej lode, kde sa možno skrýva poklad? Určite
+          sme už blízko. Ďalšia sada úloh bude iste zložitejšia, tak by sme mali získať
+          viac programovacích zručností. Čo je to? Jaskyňa?
+      2:
+        text: Vitajte, dobrodruhovia! Som sépia. Všimla som si, že pri posledných
+          úlohách ste používali dokola rovnakú sadu príkazov. Muselo to byť dosť únavné.
+          Želali ste si niekedy spôsob, ktorým by ste niečo robili znova a znova,
+          napr. umývanie riadu, čistenie zubov bez toho, aby vás to unavilo alebo
+          k smrti unudilo? To by bolo fajn.
+      3:
+        text: Počítačom ide naozaj dobre robiť to isté znova a znova pomocou programovacích
+          cyklov. Ak chceš, aby program zopakoval rovnaké pokyny veľakrát za sebou,
+          použi cyklus!
+      4:
+        text: Cyklus obsahuje pokyny s príkazom "Opakuj pokiaľ neplatí". Keď program
+          spustí cyklus "Opakuj pokiaľ neplatí", bude pokračovať vo vykonávaní pokynov
+          vo vnútri, dokiaľ nedosiahne cieľ.
+      5:
+        text: Vyskúšaj to! Umiestni príkazy, ktoré chceš zopakovať, do vnútra bloku
+          "Opakuj pokiaľ neplatí", klikni na "Spustiť" a sleduj, čo sa stane!
+      6:
+        text: "No, bolo to trochu divné. Ako to, že sépie vedia programovať? Dokonca
+          som si myslela, že nemajú prsty. Takže teraz už vieme, čo sú cykly. Pomocou
+          nich určite natrafíme na \nďalšie poklady."
+    mc_2018_conditionals:
+      1:
+        text: Wow! Ďalšie tri úlohy vyriešené! Chytili sme...lososa. Nie tak vzrušujúce
+          ako hromada zlata, ale berieme to, čo dostaneme. A mám taký pocit, že ulita
+          lodenky sa bude hodiť neskôr. Zaujímalo by ma, čo sa skrýva v týchto ruinách.
+          Možno ďalšia nápoveda! Pozrime sa dovnútra.
+      2:
+        text: Volám sa Netty a vítam ťa v mojich ruinách. Rozhodujeme sa vždy na základe
+          podmienok. Keď to vyzerá na dážď, zoberieme si dáždnik. Ak sme hladní, dáme
+          si niečo pod zub.
+      3:
+        text: Ak zbadáme creepera, z diaľky sa mu vyhneme. Aj počítače robia takéto
+          typy rozhodnutí. Pomocou kódu môžu naozaj reagovať na podmienky.
+      4:
+        text: Ak chceš naprogramovať takúto odpoveď pomocou príkazov, vyber si blok
+          s podmienkou ak.
+      5:
+        text: Na vytvorenie príkazu vyber rozbaľovaciu ponuku.
+      6:
+        text: "Napríklad, keď napíšeš príkaz \"ak cesta doprava\" a do podmienky uvedieš
+          príkaz otoč sa vpravo, potom keď Steve dosiahne otvorenú cestu vpravo, zakaždým
+          zabočí doprava. Ak neexistuje východ vpravo, nezabočí doprava. Tieto príkazy
+          s podmienkou sú užitočné, keď spustíš kód v nepredvídateľných situáciách,
+          ako sú napr. tajuplné ruiny \npodmorských jaskýň."
+      7:
+        text: Skús použiť bloky s podmienkou ak a zopakuj si kód.
+      8:
+        text: Wow! Nettyine ruiny sú úžasné. Musím sa už odsťahovať od svojich rodičov.
+          Čo si myslíš? Sú podmienky správnou voľbou na vyriešenie záverečných úloh?
+          Dajme tomu šancu.
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Zahrej sa'
+      2:
+        text: Ahoj! Volám sa Miral Kotb a som tanečníčka, softvérová vývojárka a zakladateľka
+          iLuminate.
+      3:
+        text: Takže, informatika súvisí s kreativitou vo veľa smeroch. Nemerateľne
+          veľa, naozaj. Mám na mysli to, že ak máš raz schopnosť písať softvér, môžeš
+          vložiť myšlienky do čohokoľvek. Ja to robím so sveteľným oblekmi. Je toho
+          tak veľa, čo môžeš vytvoriť akonáhle máš nástroje na písanie softvéru a
+          tvoje možnosti sú neobmedzené.
+      4:
+        text: Behom nadchádzajúcej hodiny začneš s informatikou programovaním svojej
+          vlastnej tanečnej párty! Dali sme dokopy viacero hitov a tím výborných tanečníkov
+          s ktorými sa môžeš hrať.
+      5:
+        text: Budeš používať bloky kódu na výber tanečníkov, zmenu ich tanečných pohybov
+          a donútiš ich tak, aby reagovali na hudbu a boli interaktívni.
+      6:
+        text: Uvidíš, že obrazovku máš rozdelenú na tri hlavné časti. Na ľavej strane
+          je hracia plocha. Tu sa objavia tvoji tanečníci.
+      7:
+        text: Stredná časť je panel s nástrojmi. V tejto časti sa ti postupne, ako
+          budeš prechádzať cez jednotlivé úrovne, sprístupnia nové bloky kódu.
+      8:
+        text: Priestor vpravo je pracovná plocha. Bloky z panelu nástrojov môžeš presunúť
+          na pracovnú plochu, čím vytvoríš svoj program.
+      9:
+        text: Inštrukcie ku každej úrovni budú tu, na vrchu obrazovky. Ak potrebuješ
+          poradiť, stačí kliknúť na žiarovku.
+      11:
+        text: S týmto môžeš tiež zmeniť, v ktorej časti hernej plochy sa tanečník
+          objaví.
+      12:
+        text: Nad hernou plochou je menu pre výber hudby. Sú tu tony pesničiek z ktorých
+          môžeš vyberať. Zabav sa pri hľadaní svojich obľúbených. Pod hracou plochou
+          je tlačíidlo na spustenie programu. Keď ho stlačíš, tanečníci z tvojho programu
+          sa objavia na hracej ploche a začne hrať hudba.
+      13:
+        text: Skús to samostatne! Ak sa zasekneš, je to ok! Vstaň a začni sa hýbať
+          a skôr ako sa nazdáš, budeš mať vytvorenú svojú vlastnú tanečnú párty. Takže,
+          čo vytvoríš ty?
+    hoc_dance_events_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Udalosti'
+      3:
+        text: Aby sa rôzne tanečné kroky spúšťali v správny čas s hudbou, môžeš použiť
+          niečo, čo sa volá Udalosti. Udalosť povie tvojmu programu, aby sledoval
+          či sa niečo stane a potom na to reagoval správnym spôsobom.
+      4:
+        text: Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie
+          tlačidla šípky, alebo na dotyk na dotykovú obrazovku.
+    hoc_dance_measures_2019:
+      2:
+        text: Som Aloe Blacc. Som spevák, skladateľ a zabávač. Myslím si, že je veľmi
+          dôležité učiť sa informatiku, lebo informatika je budúcnosť a myslím si,
+          že je dôležité pre ľudí, aby ovládali technológiu, ktorá doslovne ovláda
+          naše životy.
+      5:
+        text: Aby to tvoji tanečníci roztočili, budeš potrebovať zelený blok s udalosťou.
+          Tento blok s udalosťou hovorí "po 4 taktoch".
+      6:
+        text: Ak vytiahneš fialový blok "nekonečne krát", môžeš zvoliť tanec, ktorý
+          bude tvoj tanečník tancovať. Keďže sme ho umiestnili po blok "po 4 taktoch",
+          tvoj tanečník bude čakať štyri takty pesničky pred tým, ako začne tancovať.
+      7:
+        text: Sleduj počítadlo taktov (Measure) na vrchu hracej plochy.
+      8:
+        text: Sleduj a počúvaj, aká udalosť spustí tanečný kód. Náš tanec sa tak rozbehne
+          v ten správny čas.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Vlastnosti'
+      2:
+        text: Volám sa Maria. Som študentkou tretieho ročníka na University of Washington
+          a pracujem ako Inžinierka Budúcnosti v Amazone.
+      3:
+        text: Zbožňujem informatiku, lebo kombinuje riešenie problémov a kritické
+          myslenie a po tom, ako do niečoho vložíš hodiny práce, môžeš z toho dostať
+          niečo skutočne cool a hodnotné.
+      5:
+        text: Každý tanečný krok sa skladá zo série obrázkov nazývaných snímky. Každá
+          snímka sa trochu líši od tej predchádzajúcej. Keď sa tvoj program spustí,
+          počítač ukazuje jednu snímku za druhou. Sú zobrazené tak rýchlo, že to vyzerá,
+          ako keby sa tanečník hýbal. Toto je tajomstvo každej animácie.
+      6:
+        text: Môžeš meniť nie len kroky svojho tanečníka, ale môžeš zmeniť aj jeho
+          vlastnosti. Vlastnosti určujú veci ako tanečníkova pozícia na obrazovke,
+          jeho veľkosť, alebo farba.
+      9:
+        text: Použitím bloku nastav môžeš tiež zmeniť tanečníkove rozmery, otočenie,
+          pozíciu a sfarbenie. Hraním sa s týmito parametrami môžeš vytvoriť celú
+          plejádu zmien a naviazať ich na rôzne časti pesničky.
+      10:
+        text: Pamätaj, že môžeš nastaviť vlastnosti tanečníka, iba ak už existuje.
+          Uisti sa, že blok 'nastav' nasleduje až po bloku 'vytvor'. Neváhaj experimentovať,
+          uvoľni svoju kreativitu a zabav sa.
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Hodina Kódu | Tanečná Párty: Párty pokračuje!'
+      2:
+        text: Gratulujem! Práve sa ti podarilo naučiť základy informatiky. Teraz môžeš
+          použiť tieto bloky na vytvorenie svojej vlastnej tanečnej párty, ktorú môžeš
+          zdieľať s kamarátmi.
+      3:
+        text: Ak sa pozrieš do panela nástrojov, nájdeš zopár úplne nových blokov,
+          ktoré predtým neboli zobrazené. Napríklad môžeš použiť blok 'rozmiestni'
+          na usporiadanie tanečníkov na obrazovke rôznymi spôsobmi.
       4:
         text: Poobzeraj sa a experimentuj s týmito novými blokmi a vlastnosťami. Vytvoríš
           na tvoju obľúbenú pesničku detailnú tanečnú choreografiu?

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import {
   getConfigRef,
   getProjectDatabase
@@ -57,25 +57,24 @@ module.exports = function(testCollection, testData, dataItem, done) {
   level.levelHtml = testData.levelHtml;
 
   level.hideViewDataButton = testData.hideViewDataButton;
+  var validationCallCount = 0;
 
   // Validate successful solution.
   var validateResult = function(report) {
     try {
       assert(testData.expected, 'Have expectations');
-      assert(
-        Object.keys(testData.expected).length > 0,
-        'No expected keys specified'
-      );
-      Object.keys(testData.expected).forEach(function(key) {
-        if (report[key] !== testData.expected[key]) {
-          var failureMsg =
-            'Failure for key: ' +
-            key +
-            '. Expected: ' +
-            testData.expected[key] +
-            '. Got: ' +
-            report[key] +
-            '\n';
+      var expected;
+      if (Array.isArray(testData.expected)) {
+        expected = testData.expected[validationCallCount++];
+      } else {
+        expected = testData.expected;
+      }
+      assert(Object.keys(expected).length > 0, 'No expected keys specified');
+      Object.keys(expected).forEach(function(key) {
+        if (report[key] !== expected[key]) {
+          var failureMsg = `Failure for key: ${key}. Expected: ${
+            expected[key]
+          }. Got: ${report[key]}\n`;
           assert(false, failureMsg);
         }
       });
@@ -145,6 +144,7 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     containerId: 'app',
     embed: testData.embed,
     firebaseName: 'test-firebase-name',
+    firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
     firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     onFeedback: finished,

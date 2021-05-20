@@ -1,0 +1,11 @@
+name 'HappyLoops-Unplugged_2020'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Happy Loops
+
+In this lesson, you will learn about loops!
+
+![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+MARKDOWN

@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Event How-To
-layout: wide
-nav: how_to_nav
+title: అవర్ ఆఫ్ కోడ్ ఈవెంట్ హౌ-టు
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: コンピューターサイエンス教育週間とHour of Codeを支援する論説文例
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

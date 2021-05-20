@@ -1,0 +1,348 @@
+{
+  "script": {
+    "name": "equityPD",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "Equity Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:43 UTC",
+    "seeding_key": {
+      "script.name": "equityPD"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Necessary Background",
+      "name": "Necessary Background",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "key": "Equity PD",
+      "name": "Equity PD",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity Intro"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity Intro"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity v equality"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity v equality"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity v equality"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity is more"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity is more"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity is more"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity in CS"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity in CS"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity in CS"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity lead 1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity lead 1"
+        ],
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity lead 1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity activity"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity activity"
+        ],
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity activity"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "equity vids"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "equity vids"
+        ],
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      },
+      "level_keys": [
+        "equity vids"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "equity Intro",
+        "script_level.level_keys": [
+          "equity Intro"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "equity v equality",
+        "script_level.level_keys": [
+          "equity v equality"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "equity is more",
+        "script_level.level_keys": [
+          "equity is more"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "equity in CS",
+        "script_level.level_keys": [
+          "equity in CS"
+        ],
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "equity lead 1",
+        "script_level.level_keys": [
+          "equity lead 1"
+        ],
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "equity activity",
+        "script_level.level_keys": [
+          "equity activity"
+        ],
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "equity vids",
+        "script_level.level_keys": [
+          "equity vids"
+        ],
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

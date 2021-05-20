@@ -18,7 +18,7 @@
 # also associates an intro video
 
 # Game.name also maps to localized strings, e.g. [data.en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
-class Game < ActiveRecord::Base
+class Game < ApplicationRecord
   include Seeded
   has_many :levels
   belongs_to :intro_video, foreign_key: 'intro_video_id', class_name: 'Video'
@@ -26,6 +26,7 @@ class Game < ActiveRecord::Base
   def self.by_name(name)
     (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
   end
+  mattr_accessor :game_cache # Direct access should only be used in tests
 
   def self.custom_maze
     @@game_custom_maze ||= find_by_name("CustomMaze")
@@ -51,9 +52,11 @@ class Game < ActiveRecord::Base
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
-  SCRATCH = 'scratch'.freeze
   DANCE = 'dance'.freeze
   SPRITELAB = 'spritelab'.freeze
+  FISH = 'fish'.freeze
+  AILAB = 'ailab'.freeze
+  JAVALAB = 'javalab'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -151,16 +154,24 @@ class Game < ActiveRecord::Base
     @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
-  def self.scratch
-    @@game_scratch ||= find_by_name('Scratch')
-  end
-
   def self.dance
     @@game_dance ||= find_by_name('Dance')
   end
 
   def self.spritelab
     @@game_spritelab ||= find_by_name('Spritelab')
+  end
+
+  def self.fish
+    @@game_fish ||= find_by_name('Fish')
+  end
+
+  def self.ailab
+    @@game_ailab ||= find_by_name('Ailab')
+  end
+
+  def self.javalab
+    @@game_javalab ||= find_by_name('Javalab')
   end
 
   def unplugged?
@@ -208,7 +219,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH, DANCE].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -217,19 +228,25 @@ class Game < ActiveRecord::Base
   end
 
   def has_i18n?
-    !([NETSIM, APPLAB, GAMELAB, WEBLAB, SPRITELAB].include? app)
+    !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
   end
 
   def use_firebase?
     [APPLAB, GAMELAB].include? app
   end
 
+  def use_azure_speech_service?
+    [APPLAB, GAMELAB].include? app
+  end
+
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION, SPRITELAB].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB].include? app
   end
 
   # Format: name:app:intro_video
   # Don't change the order of existing entries! Always append to the end of the list.
+  # The list contains no longer used level types in order to maintain the order
+  # including: Scratch
   GAMES_BY_INDEX = %w(
     Maze:maze:maze_intro
     Artist:turtle:artist_intro
@@ -296,10 +313,13 @@ class Game < ActiveRecord::Base
     Dance:dance
     Spritelab:spritelab
     BubbleChoice:bubble_choice
+    Fish:fish
+    Ailab:ailab
+    Javalab:javalab
   )
 
   def self.setup
-    videos_by_key = Video.all.index_by(&:key)
+    videos_by_key = Video.all.where(locale: 'en-US').index_by(&:key)
     games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
       name, app, intro_video_key = line.split ':'
       {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}

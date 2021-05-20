@@ -3,377 +3,383 @@ hi-IN:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       2-3 Algorithms Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      2-3 Big Event Match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      2-3 Big Event Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       2-3 Binary Match 1:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       2-3 Conditionals Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       2-3 Getting Loopy Multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      2-3 Graph Paper Match 1:
         questions:
         - {}
-        - {}
-        - {}
+      2-3 Graph Paper Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       2-3 Graph Paper Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
-      2-3 Maze Match 2:
-        pre_title: निर्देश
         questions:
         - {}
-        - {}
-        - {}
+      2-3 Maze Match 2:
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       2-3 Maze Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       2-3 Relay Programming Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       2-3 Relay Programming Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
-      2-3 artist loops match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      2-3 artist loops match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       2-3 artist loops multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       2-3 artist loops multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
-      2-3 artist match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      2-3 artist match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       2-3 bee conditionals multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       2-3 bee conditionals multi 3:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: सर्वश्रेष्ठ ब्लॉक का चयन करें।
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       2-3 maze match 1:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       2-3 maze multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 Algorithms Match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      4-5 Algorithms Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       4-5 Algorithms Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
-      4-5 Computational Thinking Match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      4-5 Computational Thinking Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       4-5 Computational Thinking Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       4-5 Crowdsourcing Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+        questions:
+        - {}
       4-5 Crowdsourcing Multi 2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       4-5 Digital Footprint Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       4-5 Internet Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       4-5 Internet Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       4-5 Songwriting Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 Suncatchers Match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      4-5 Suncatchers Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       4-5 Suncatchers Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       4-5 artist loops multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       4-5 artist multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       4-5 artist multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       4-5 bee conditionals multi 1:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: सर्वश्रेष्ठ ब्लॉक का चयन करें।
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
       4-5 bee debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       4-5 bee loops multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       4-5 maze conditionals multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      4-5 maze match 1:
-        pre_title: निर्देश
         questions:
         - {}
-        - {}
-        - {}
+      4-5 maze match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       4-5 maze multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      Begin planning your project:
+        content1: यहां वर्णन करें
+      Begin planning your project_2018:
+        content1: यहां वर्णन करें
+      Begin planning your project_2018_2019:
+        content1: यहां वर्णन करें
+      Begin planning your project_2018_2019_2020:
+        content1: यहां वर्णन करें
       CSD Header Size MC:
         answers:
         - {}
@@ -392,121 +398,180 @@ hi-IN:
         - correct: true
         - {}
         - {}
+      CSD U2 Design Project:
+        content1: यहां वर्णन करें
+      CSD U2 Design Project_2018:
+        content1: यहां वर्णन करें
+      CSD U2 Design Project_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U2 L1 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 L2 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 L3 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 L4 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 L5 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 L6 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 Lesson 6 Overview:
+        content1: यहां वर्णन करें
+      CSD U2 expand project:
+        content1: यहां वर्णन करें
+      CSD U2 expand project_2018:
+        content1: यहां वर्णन करें
+      CSD U2 expand project_2018_2019:
+        content1: यहां वर्णन करें
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> answers -> 0 -> text"
+        - text: "https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> answers -> 1 -> text"
+        - text: "https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4 -> dsls
+            -> उत्तर -> 2 -> टेक्स्ट"
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: |-
+          अपने बग के विवरण के साथ HTML के त्रुटियुक्त कोड का मिलान करें।
+
+          https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> content1
+        questions:
+        - text: |-
+            `src` विशेषता (एट्रिब्युट) को गलत तरीके से लिखा गया है।
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 0 -> text
+        - text: |-
+            `src` और` alt` विशेषताएँ (एट्रिब्युटस) स्विच की गयी हैं
+
+            https://studio. code. org/s/csd2-2019/stage/7/puzzle/4 -> dsls -> questions -> 1 -> text
+        - text: "फ़ाइल एक्सटेंशन (.jpg) छवि पते (इमेज एड्रेस) से गायब है\n \nhttps://studio.code.org/s/csd2-2019/stage/7/puzzle/4
+            -> dsls -> questions -> 2 -> text"
+        - text: छवि पता (इमेज एड्रेस) एक `src` विशेषता (एट्रिब्युट) के रूप में नहीं
+            दिया गया है
+        - text: फ़ाइल के नाम में एक रिक्त स्थान (स्पेस ) है
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide:
+        content1: यहां वर्णन करें
+      CSD U2 project guide_2018:
+        content1: यहां वर्णन करें
+      CSD U2 project guide_2018_2019:
+        content1: यहां वर्णन करें
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: शीर्षक
       CSD U3 Boolean MC_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: शीर्षक
       CSD U3 Boolean MC_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: शीर्षक
+      CSD U3 Card Examples_2018:
+        content1: यहां वर्णन करें
+      CSD U3 Card Examples_2018_2019:
+        content1: यहां वर्णन करें
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -526,141 +591,212 @@ hi-IN:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
+        - {}
         - {}
         - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
+        answers:
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+      CSD U3 combining rep:
+        content1: यहां वर्णन करें
+      CSD U3 combining rep_2018:
+        content1: यहां वर्णन करें
+      CSD U3 combining rep_2018_2019:
+        content1: यहां वर्णन करें
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: यहां वर्णन करें
+      CSD U3 game intro_2018:
+        content1: यहां वर्णन करें
+      CSD U3 game intro_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U3 platform intro:
+        content1: यहां वर्णन करें
+      CSD U3 platform intro_2018:
+        content1: यहां वर्णन करें
+      CSD U3 platform intro_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U5 Encryption 1:
+        content1: यहां वर्णन करें
+      CSD U5 Encryption 1_2018:
+        content1: यहां वर्णन करें
+      CSD U5 Encryption 1_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U5 Encryption 2:
+        content1: यहां वर्णन करें
+      CSD U5 Encryption 2_2018:
+        content1: यहां वर्णन करें
+      CSD U5 Encryption 2_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: यहां वर्णन करें
+      CSD U5 crosstab warmup:
+        content1: यहां वर्णन करें
+      CSD U5 crosstab warmup_2018:
+        content1: यहां वर्णन करें
+      CSD U5 crosstab warmup_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U5 data visualization:
+        content1: यहां वर्णन करें
+      CSD U5 data visualization_2018:
+        content1: यहां वर्णन करें
+      CSD U5 data visualization_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U5 student record:
+        content1: यहां वर्णन करें
+      CSD U5 student record_2018:
+        content1: यहां वर्णन करें
+      CSD U5 student record_2018_2019:
+        content1: यहां वर्णन करें
+      CSD U6 LED create intro:
+        content1: यहां वर्णन करें
+      CSD U6 LED create intro_2018:
+        content1: यहां वर्णन करें
+      CSD U6 LED create intro_2018_2019:
+        content1: यहां वर्णन करें
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
+      CSD U6 final intro:
+        content1: यहां वर्णन करें
+      CSD U6 final intro_2018:
+        content1: यहां वर्णन करें
+      CSD U6 final intro_2018_2019:
+        content1: यहां वर्णन करें
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       Dance_Party_extras_intro:
         markdown: |
@@ -732,865 +868,2273 @@ hi-IN:
           <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
 
           </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # नृत्य पर रखो!
+
+          भाग 2 के लिए, आप अपनी खुद की परियोजना बनाने जा रहे हैं। यहां कोई पहेली नहीं है - इसके बजाय परियोजनाओं का एक गुच्छा है जो अधिक जटिल नृत्य पार्टियों को बनाने के लिए विभिन्न तरीके दिखाता है।
+
+          आप किसी भी order_ _in इन स्तरों को कर सकते हैं। चारों ओर कूद कैसे कुछ पिछले स्तर में किया गया था, या परियोजनाओं के बीच अवधारणाओं गठबंधन को देखने के लिए । उन सब को आज़माएं, अपना पसंदीदा चुनें, और अपना समय उस परियोजना को जोड़ने पर काम करने में बिताएं ताकि इसे अपना बनाया जा सके।
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">जारी रखना</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          आगे और पीछे
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          अधिक बटन
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          गठन में जाओ
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          वे कहां जाना चाहते हैं?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          नृत्य कैमरों
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          तिमाही नोट्स
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          बास, मध्य, तिहरा
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          इसे गति, इसे धीमा
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Internet Simulator Setup:
+        content1: यहां वर्णन करें
+      Internet Simulator Setup 2:
+        content1: यहां वर्णन करें
+      Internet Simulator Setup 3:
+        content1: यहां वर्णन करें
       K-1 Artist 1 Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Artist 1 Multi 2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      K-1 Artist 2 Match 2:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       K-1 Bee 1 Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Bee 1 Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
-      K-1 Bee Loops Match 1:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      K-1 Bee Loops Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       K-1 Big Event Match 1:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       K-1 Digital Footprint Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       K-1 Getting Loopy Multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Happy Maps Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Keep it Private Multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Maze Debugging Multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       K-1 Maze Loops Multi 1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Maze Loops Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
-      K-1 Maze Match 1:
-        pre_title: निर्देश
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      K-1 Maze Match 1:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       K-1 Maze Multiple Choice 2:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - {}
+        questions:
+        - {}
+        title: पहेली
       K-1 Move It Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       K-1 Plant a Seed Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       K-1 Plant a Seed Multi 2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       K-1 Word Search Multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       K-1 Word Search Multi 3:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: सेट करें
         - correct: true
         - {}
+        questions:
+        - {}
+      Multi-Screen Apps:
+        content1: यहां वर्णन करें
+      New Challenge Introduction:
+        content1: यहां वर्णन करें
+      OPD-K5 Reviewing Reflections:
+        content1: यहां वर्णन करें
+      OPD-K5 Stage3aGo:
+        content1: यहां वर्णन करें
+      OPD-K5 Stage3aGo_copy:
+        content1: यहां वर्णन करें
+      OPD-K5 conditionals introduced:
+        content1: यहां वर्णन करें
+      OPD-K5 debugging:
+        content1: यहां वर्णन करें
+      OPD-K5 diving deeper intro:
+        content1: यहां वर्णन करें
+      OPD-K5 events introduced:
+        content1: यहां वर्णन करें
+      OPD-K5 for loops:
+        content1: यहां वर्णन करें
+      OPD-K5 for loops intro:
+        content1: यहां वर्णन करें
+      OPD-K5 for loops introduction:
+        content1: यहां वर्णन करें
+      OPD-K5 functions introduced:
+        content1: यहां वर्णन करें
+      OPD-K5 journaling:
+        content1: यहां वर्णन करें
+      OPD-K5 lesson implementation planning:
+        content1: यहां वर्णन करें
+      OPD-K5 lesson plans:
+        content1: यहां वर्णन करें
+      OPD-K5 loops introduced:
+        content1: यहां वर्णन करें
+      OPD-K5 project:
+        content1: यहां वर्णन करें
+      OPD-K5 projects introduction:
+        content1: यहां वर्णन करें
+      OPD-K5 role_of_teacher:
+        content1: यहां वर्णन करें
+      OPD-K5 sequencing introduced:
+        content1: यहां वर्णन करें
+      OPD-K5 sprite lab:
+        content1: यहां वर्णन करें
+      OPD-K5 sprite lab introduction:
+        content1: यहां वर्णन करें
+      OPD-K5 sprite lab unplugged:
+        content1: यहां वर्णन करें
+      OPD-K5 sprite lab video:
+        content1: यहां वर्णन करें
+      OPD-K5 types of lessons:
+        content1: यहां वर्णन करें
+      OPD-K5 using lesson plans:
+        content1: यहां वर्णन करें
+      OPD-K5 variables:
+        content1: यहां वर्णन करें
+      OPD-K5 variables introduction:
+        content1: यहां वर्णन करें
+      OPD-K5 variables unplugged:
+        content1: यहां वर्णन करें
+      OPD-K5 where to next:
+        content1: यहां वर्णन करें
+      OPD-K5-projects-1:
+        content1: यहां वर्णन करें
+      Prepare for your presentation:
+        content1: यहां वर्णन करें
+      'Technique: Frequency Analysis':
+        content1: यहां वर्णन करें
+      Terminology Recap:
+        content1: यहां वर्णन करें
       behaviors 1 predict:
+        answers:
+        - feedback: ग़लत.
+        - correct: true
+          feedback: सही!
+        - feedback: ग़लत.
+        - feedback: गलत
         questions:
         - {}
+      behaviors 1 predict_2020:
         answers:
-        - {}
+        - feedback: ग़लत.
         - correct: true
-        - {}
+          feedback: सही!
+        - feedback: ग़लत.
         - feedback: गलत
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
-        - {}
+        - feedback: ग़लत.
         - correct: true
+          feedback: सही!
         - {}
         - feedback: गलत
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - feedback: ग़लत.
+        - correct: true
+          feedback: सही!
+        - {}
+        - feedback: गलत
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कलाकार तीन समान भुजाओं वाला त्रिकोण बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
+        - text: कलाकार एक सिंगल लाइन बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
+        - text: कलाकार एक वर्ग बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: कलाकार एक वर्ग बनाएगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
+        - text: कलाकार तीन समान भुजाओं वाला त्रिकोण बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
+        - text: कलाकार एक सिंगल लाइन बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: कलाकार एक वर्ग बनाएगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
+        - text: कलाकार तीन समान भुजाओं वाला त्रिकोण बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
+        - text: कलाकार एक सिंगल लाइन बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: कलाकार एक वर्ग बनाएगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - text: कलाकार तीन समान भुजाओं वाला त्रिकोण बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
+        - text: कलाकार एक सिंगल लाइन बनाएगा।
+          feedback: गलत। कलाकार एक वर्ग बनाएगा।
+        - correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: कलाकार एक वर्ग बनाएगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
-        - text: ४
-        - text: १२
+        - text: '4'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: '12'
           correct: true
-        - text: १‍५
-        - {}
+          feedback: सही!
+        - text: '15'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: मुझे पता नहीं
+          feedback: किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार 3 मतलब
+            12!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद किसान कितने कद्दू एकत्र करेगा?
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
-        - text: ४
-        - text: १२
+        - text: '4'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: '12'
           correct: true
-        - text: १‍५
-        - {}
+          feedback: सही!
+        - text: '15'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: मुझे पता नहीं
+          feedback: किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार 3 मतलब
+            12!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद किसान कितने कद्दू एकत्र करेगा?
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - text: ४
-        - text: १२
+        - text: '4'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: '12'
           correct: true
-        - text: १‍५
-        - {}
+          feedback: सही!
+        - text: '15'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: मुझे पता नहीं
+          feedback: किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार 3 मतलब
+            12!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद किसान कितने कद्दू एकत्र करेगा?
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: '12'
+          correct: true
+          feedback: सही!
+        - text: '15'
+          feedback: गलत। किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार
+            3 मतलब 12!
+        - text: मुझे पता नहीं
+          feedback: किसान 3 लूप्स में प्रत्येक में 4 कद्दू एकत्र करेगा। 4 बार 3 मतलब
+            12!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद किसान कितने कद्दू एकत्र करेगा?
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: प्रोग्राम असफल नहीं होगा। स्क्रैट, शाहबलूत तक पहुंच जाएगा।
+          feedback: गलत। आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता है।
+        - text: आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता है।
+          correct: true
+          feedback: सही!
+        - text: स्क्रैट कुछ कदम आगे बढ़ता है और शाहबलूत के थोड़ा पास पहुंचता है।
+          feedback: गलत। जब स्क्रैट गलत रास्ते मुड़ जाता है तो वह कुछ कदम आगे बढ़ता
+            है।
+        - text: मुझे पता नहीं
+          feedback: पहली त्रुटि यह है कि आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता
+            है।
+        questions:
+        - text: 'नीचे दिए कोड ध्यान से देखें। पहला बग कौन-सा है, जो इस प्रोग्राम को
+            असफल करेगा? '
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: प्रोग्राम असफल नहीं होगा। स्क्रैट, शाहबलूत तक पहुंच जाएगा।
+          feedback: गलत। आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता है।
+        - text: आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता है।
+          correct: true
+          feedback: सही!
+        - text: स्क्रैट कुछ कदम आगे बढ़ता है और शाहबलूत के थोड़ा पास पहुंचता है।
+          feedback: गलत। जब स्क्रैट गलत रास्ते मुड़ जाता है तो वह कुछ कदम आगे बढ़ता
+            है।
+        - text: मुझे पता नहीं
+          feedback: पहली त्रुटि यह है कि आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता
+            है।
+        questions:
+        - text: 'नीचे दिए कोड ध्यान से देखें। पहला बग कौन-सा है, जो इस प्रोग्राम को
+            असफल करेगा? '
       courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - text: प्रोग्राम असफल नहीं होगा। स्क्रैट, शाहबलूत तक पहुंच जाएगा।
+          feedback: गलत। आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता है।
+        - text: आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता है।
+          correct: true
+          feedback: सही!
+        - text: स्क्रैट कुछ कदम आगे बढ़ता है और शाहबलूत के थोड़ा पास पहुंचता है।
+          feedback: गलत। जब स्क्रैट गलत रास्ते मुड़ जाता है तो वह कुछ कदम आगे बढ़ता
+            है।
+        - text: मुझे पता नहीं
+          feedback: पहली त्रुटि यह है कि आखिरी बार मुड़ने पर स्क्रैट गलत रास्ते जाता
+            है।
         questions:
-        - {}
+        - text: 'नीचे दिए कोड ध्यान से देखें। पहला बग कौन-सा है, जो इस प्रोग्राम को
+            असफल करेगा? '
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
+        - text: मुझे पता नहीं
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: पक्षी, सूअर से एक कदम पहले तक जाएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी TNT से टकराएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: मुझे पता नहीं
+          feedback: यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        questions:
+        - text: नीचे दिए कोड को बहुत ध्यानपूर्वक पढ़ें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो क्या होगा?
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: पक्षी, सूअर से एक कदम पहले तक जाएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी TNT से टकराएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: मुझे पता नहीं
+          feedback: यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        questions:
+        - text: नीचे दिए कोड को बहुत ध्यानपूर्वक पढ़ें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो क्या होगा?
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: पक्षी, सूअर से एक कदम पहले तक जाएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी TNT से टकराएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: मुझे पता नहीं
+          feedback: यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        questions:
+        - text: नीचे दिए कोड को बहुत ध्यानपूर्वक पढ़ें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो क्या होगा?
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - text: पक्षी, सूअर से एक कदम पहले तक जाएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी TNT से टकराएगा।
+          feedback: गलत। यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        - text: मुझे पता नहीं
+          feedback: यह कोड पक्षी को सूअर के बिल्कुल पास लेकर जाएगा।
+        questions:
+        - text: नीचे दिए कोड को बहुत ध्यानपूर्वक पढ़ें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो क्या होगा?
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 मूव नहीं करेगा।
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8 केवल एक स्थान पर मूव करेगा
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8, 5 बार मूव करेगा और लोहे का सारा चूरा लेगा
+          correct: true
+          feedback: सही!
         - text: मुझे पता नहीं
+          feedback: दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        questions:
+        - text: आपके विचार में जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 मूव नहीं करेगा।
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8 केवल एक स्थान पर मूव करेगा
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8, 5 बार मूव करेगा और लोहे का सारा चूरा लेगा
+          correct: true
+          feedback: सही!
         - text: मुझे पता नहीं
+          feedback: दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        questions:
+        - text: आपके विचार में जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: BB-8 मूव नहीं करेगा।
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8 केवल एक स्थान पर मूव करेगा
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8, 5 बार मूव करेगा और लोहे का सारा चूरा लेगा
+          correct: true
+          feedback: सही!
         - text: मुझे पता नहीं
+          feedback: दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        questions:
+        - text: आपके विचार में जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - text: BB-8 मूव नहीं करेगा।
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8 केवल एक स्थान पर मूव करेगा
+          feedback: गलत। दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        - text: BB-8, 5 बार मूव करेगा और लोहे का सारा चूरा लेगा
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: दोहराएं ब्लॉक से BB-8 5 बार आगे की ओर मूव करेगा।
+        questions:
+        - text: आपके विचार में जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseC_multi_starWars_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 पहले लूप में काफी दूर तक जाएगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: BB-8 सारा लोहे का चूरा एकत्र करने के लिए पहले लूप में ज्यादा दूर नहीं
+            जाएगा।
+          correct: true
+          feedback: सही!
+        - text: BB-8 बिना किसी मुश्किल के सारा लोहे का चूरा एकत्र कर लेगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: मुझे पता नहीं
+          feedback: पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे 3
+            स्थान तक आगे की ओर मूव करना होगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 पहले लूप में काफी दूर तक जाएगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: BB-8 सारा लोहे का चूरा एकत्र करने के लिए पहले लूप में ज्यादा दूर नहीं
+            जाएगा।
+          correct: true
+          feedback: सही!
+        - text: BB-8 बिना किसी मुश्किल के सारा लोहे का चूरा एकत्र कर लेगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: मुझे पता नहीं
+          feedback: पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे 3
+            स्थान तक आगे की ओर मूव करना होगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: BB-8 पहले लूप में काफी दूर तक जाएगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: BB-8 सारा लोहे का चूरा एकत्र करने के लिए पहले लूप में ज्यादा दूर नहीं
+            जाएगा।
+          correct: true
+          feedback: सही!
+        - text: BB-8 बिना किसी मुश्किल के सारा लोहे का चूरा एकत्र कर लेगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: मुझे पता नहीं
+          feedback: पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे 3
+            स्थान तक आगे की ओर मूव करना होगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - text: BB-8 पहले लूप में काफी दूर तक जाएगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: BB-8 सारा लोहे का चूरा एकत्र करने के लिए पहले लूप में ज्यादा दूर नहीं
+            जाएगा।
+          correct: true
+          feedback: सही!
+        - text: BB-8 बिना किसी मुश्किल के सारा लोहे का चूरा एकत्र कर लेगा।
+          feedback: गलत। पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे
+            3 स्थान तक आगे की ओर मूव करना होगा।
+        - text: मुझे पता नहीं
+          feedback: पहले लूप से BB-8 केवल दो स्थान आगे की ओर मूव करेगा, फिर इसे 3
+            स्थान तक आगे की ओर मूव करना होगा।
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं तो
+            क्या होगा?
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
+          feedback: सही!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद यह कौन-सा चित्र बनाएगा?
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
+          feedback: सही!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद यह कौन-सा चित्र बनाएगा?
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          feedback: ग़लत.
         - text: B
+          feedback: ग़लत.
         - text: C
+          feedback: ग़लत.
         - text: D
           correct: true
+          feedback: सही!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद यह कौन-सा चित्र बनाएगा?
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          feedback: ग़लत.
+        - text: B
+          feedback: ग़लत.
+        - text: C
+          feedback: ग़लत.
+        - text: D
+          correct: true
+          feedback: सही!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद यह कौन-सा चित्र बनाएगा?
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
+          feedback: सही!
         - text: B
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
         - text: C
-        - {}
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
+        - text: मुझे पता नहीं
+          feedback: अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4 बार
+            दोहराती है।
+        questions:
+        - text: नीचे दिए गए कोड को अच्छी तरह से देखें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो यह ड्राइंग कौन-सा प्रोग्राम बनाएगी?
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
+          feedback: सही!
         - text: B
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
         - text: C
-        - {}
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
+        - text: मुझे पता नहीं
+          feedback: अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4 बार
+            दोहराती है।
+        questions:
+        - text: नीचे दिए गए कोड को अच्छी तरह से देखें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो यह ड्राइंग कौन-सा प्रोग्राम बनाएगी?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
+          feedback: सही!
         - text: B
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
         - text: C
-        - {}
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
+        - text: मुझे पता नहीं
+          feedback: अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4 बार
+            दोहराती है।
+        questions:
+        - text: नीचे दिए गए कोड को अच्छी तरह से देखें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो यह ड्राइंग कौन-सा प्रोग्राम बनाएगी?
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+          feedback: सही!
+        - text: B
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
+        - text: C
+          feedback: गलत। अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4
+            बार दोहराती है।
+        - text: मुझे पता नहीं
+          feedback: अंदरूनी लूप पंचभुज बनाती है, और बाहरी लूप इसे चक्कर में 4 बार
+            दोहराती है।
+        questions:
+        - text: नीचे दिए गए कोड को अच्छी तरह से देखें। जब आप "चलाएं” पर क्लिक करते
+            हैं तो यह ड्राइंग कौन-सा प्रोग्राम बनाएगी?
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: मधुमक्खी बादल की ओर मूव करेगी और मधुरस लेने का प्रयास करेगी, चाहे
+            कितना भी हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल
+            तभी मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मधुमक्खी बादल की ओर मूव करेगी और केवल तभी मधुरस लेने का प्रयास करेगी,
+            यदि नीचे फूल है।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी बादल की ओर मूव करेगी और फिर कुछ नहीं करेगी, चाहे कितना भी
+            हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी तभी मधुरस
+            लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल तभी
+            मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।"
+        questions:
+        - text: बादल दृश्य को छिपा रहे हैं। इस बादल के नीचे फूल हो सकता है। यदि वहां
+            फूल है, तो मधुमक्खी को एक बार मधुरस एकत्र करने की जरूरत होगी। यदि वहां
+            फूल नहीं है तो मधुमक्खी को कुछ नहीं करेगी। नीचे दिए कोड को अच्छी तरह से
+            देखें। आपके विचार में आपके द्वारा "चलाएं” पर क्लिक करने के बाद क्या होगा?
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: मधुमक्खी बादल की ओर मूव करेगी और मधुरस लेने का प्रयास करेगी, चाहे
+            कितना भी हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल
+            तभी मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मधुमक्खी बादल की ओर मूव करेगी और केवल तभी मधुरस लेने का प्रयास करेगी,
+            यदि नीचे फूल है।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी बादल की ओर मूव करेगी और फिर कुछ नहीं करेगी, चाहे कितना भी
+            हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी तभी मधुरस
+            लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल तभी
+            मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।"
+        questions:
+        - text: बादल दृश्य को छिपा रहे हैं। इस बादल के नीचे फूल हो सकता है। यदि वहां
+            फूल है, तो मधुमक्खी को एक बार मधुरस एकत्र करने की जरूरत होगी। यदि वहां
+            फूल नहीं है तो मधुमक्खी को कुछ नहीं करेगी। नीचे दिए कोड को अच्छी तरह से
+            देखें। आपके विचार में आपके द्वारा "चलाएं” पर क्लिक करने के बाद क्या होगा?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: मधुमक्खी बादल की ओर मूव करेगी और मधुरस लेने का प्रयास करेगी, चाहे
+            कितना भी हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल
+            तभी मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मधुमक्खी बादल की ओर मूव करेगी और केवल तभी मधुरस लेने का प्रयास करेगी,
+            यदि नीचे फूल है।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी बादल की ओर मूव करेगी और फिर कुछ नहीं करेगी, चाहे कितना भी
+            हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी तभी मधुरस
+            लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल तभी
+            मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।"
+        questions:
+        - text: बादल दृश्य को छिपा रहे हैं। इस बादल के नीचे फूल हो सकता है। यदि वहां
+            फूल है, तो मधुमक्खी को एक बार मधुरस एकत्र करने की जरूरत होगी। यदि वहां
+            फूल नहीं है तो मधुमक्खी को कुछ नहीं करेगी। नीचे दिए कोड को अच्छी तरह से
+            देखें। आपके विचार में आपके द्वारा "चलाएं” पर क्लिक करने के बाद क्या होगा?
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - text: मधुमक्खी बादल की ओर मूव करेगी और मधुरस लेने का प्रयास करेगी, चाहे
+            कितना भी हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल
+            तभी मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मधुमक्खी बादल की ओर मूव करेगी और केवल तभी मधुरस लेने का प्रयास करेगी,
+            यदि नीचे फूल है।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी बादल की ओर मूव करेगी और फिर कुछ नहीं करेगी, चाहे कितना भी
+            हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी तभी मधुरस
+            लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल तभी
+            मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।"
+        questions:
+        - text: बादल दृश्य को छिपा रहे हैं। इस बादल के नीचे फूल हो सकता है। यदि वहां
+            फूल है, तो मधुमक्खी को एक बार मधुरस एकत्र करने की जरूरत होगी। यदि वहां
+            फूल नहीं है तो मधुमक्खी को कुछ नहीं करेगी। नीचे दिए कोड को अच्छी तरह से
+            देखें। आपके विचार में आपके द्वारा "चलाएं” पर क्लिक करने के बाद क्या होगा?
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - text: मधुमक्खी बादल की ओर मूव करेगी और मधुरस लेने का प्रयास करेगी, चाहे
+            कितना भी हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल
+            तभी मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मधुमक्खी बादल की ओर मूव करेगी और केवल तभी मधुरस लेने का प्रयास करेगी,
+            यदि नीचे फूल है।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी बादल की ओर मूव करेगी और फिर कुछ नहीं करेगी, चाहे कितना भी
+            हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी तभी मधुरस
+            लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल तभी
+            मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।"
+        questions:
+        - text: बादल दृश्य को छिपा रहे हैं। इस बादल के नीचे फूल हो सकता है। यदि वहां
+            फूल है, तो मधुमक्खी को एक बार मधुरस एकत्र करने की जरूरत होगी। यदि वहां
+            फूल नहीं है तो मधुमक्खी को कुछ नहीं करेगी। नीचे दिए कोड को अच्छी तरह से
+            देखें। आपके विचार में आपके द्वारा "चलाएं” पर क्लिक करने के बाद क्या होगा?
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: मधुमक्खी प्रत्येक फूल पर मधुरस और प्रत्येक मधु के छत्ते पर शहद लेगी।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से मधुरस लेने का प्रयास करेगी।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस और
+            प्रत्येक मधु के छत्ते पर शहद लेने देता है।
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से शहद लेने का प्रयास करेगी।
+          feedback: गलत। गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस
+            और प्रत्येक मधु के छत्ते पर शहद लेने देता है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस और प्रत्येक
+            मधु के छत्ते पर शहद लेने देता है।"
+        questions:
+        - text: 'नीचे दिए कोड को अच्छी तरह से देखें। आपके विचार में आपके द्वारा "चलाएं”
+            पर क्लिक करने के बाद क्या होगा? याद रखें: प्रत्येक बादल के पीछे मधुमक्खी
+            के लिए केवल *एक* मधु का छत्ता या *एक* फूल होगा।'
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: मधुमक्खी प्रत्येक फूल पर मधुरस और प्रत्येक मधु के छत्ते पर शहद लेगी।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से मधुरस लेने का प्रयास करेगी।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस और
+            प्रत्येक मधु के छत्ते पर शहद लेने देता है।
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से शहद लेने का प्रयास करेगी।
+          feedback: गलत। गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस
+            और प्रत्येक मधु के छत्ते पर शहद लेने देता है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस और प्रत्येक
+            मधु के छत्ते पर शहद लेने देता है।"
+        questions:
+        - text: 'नीचे दिए कोड को अच्छी तरह से देखें। आपके विचार में आपके द्वारा "चलाएं”
+            पर क्लिक करने के बाद क्या होगा? याद रखें: प्रत्येक बादल के पीछे मधुमक्खी
+            के लिए केवल *एक* मधु का छत्ता या *एक* फूल होगा।'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
+          feedback: सही!
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से मधुरस लेने का प्रयास करेगी।
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से शहद लेने का प्रयास करेगी।
+        - text: मुझे पता नहीं
+        questions:
         - {}
-        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: सही!
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से मधुरस लेने का प्रयास करेगी।
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से शहद लेने का प्रयास करेगी।
+        - text: मुझे पता नहीं
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: मधुमक्खी आगे की ओर मूव करेगी और केवल एक बार मधुरस प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी, मधुरस की केवल दो यूनिट प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी सारा मधुरस प्राप्त करेगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप की गई
+            क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        questions:
+        - text: नीचे दी गई नेस्टेड लूप्स को ध्यान से देखें। जब आप "चलाएं” पर क्लिक
+            करते हैं तो क्या होगा?
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: मधुमक्खी आगे की ओर मूव करेगी और केवल एक बार मधुरस प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी, मधुरस की केवल दो यूनिट प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी सारा मधुरस प्राप्त करेगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप की गई
+            क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        questions:
+        - text: नीचे दी गई नेस्टेड लूप्स को ध्यान से देखें। जब आप "चलाएं” पर क्लिक
+            करते हैं तो क्या होगा?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: मधुमक्खी आगे की ओर मूव करेगी और केवल एक बार मधुरस प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी, मधुरस की केवल दो यूनिट प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी सारा मधुरस प्राप्त करेगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप की गई
+            क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        questions:
+        - text: नीचे दी गई नेस्टेड लूप्स को ध्यान से देखें। जब आप "चलाएं” पर क्लिक
+            करते हैं तो क्या होगा?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - text: मधुमक्खी आगे की ओर मूव करेगी और केवल एक बार मधुरस प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी, मधुरस की केवल दो यूनिट प्राप्त करेगी।
+          feedback: गलत। मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप
+            की गई क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        - text: मधुमक्खी सारा मधुरस प्राप्त करेगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी आगे की ओर मूव करने और मधुरस प्राप्त करने की लूप की गई
+            क्रिया को लूप करती है, जिससे यह पहेली को हल कर सकती है।
+        questions:
+        - text: नीचे दी गई नेस्टेड लूप्स को ध्यान से देखें। जब आप "चलाएं” पर क्लिक
+            करते हैं तो क्या होगा?
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
-        - text: ४
-        - text: ८
+        - text: '4'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: '8'
           correct: true
-        - text: १२
-        - {}
+          feedback: सही!
+        - text: '12'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती है, फिर
+            लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के अंदर है,
+            जो दो बार होता है। 4 बार 2 मतलब 8!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद मधुमक्खी कितना शहद बनाएगी?
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
-        - text: ४
-        - text: ८
+        - text: '4'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: '8'
           correct: true
-        - text: १२
-        - {}
+          feedback: सही!
+        - text: '12'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती है, फिर
+            लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के अंदर है,
+            जो दो बार होता है। 4 बार 2 मतलब 8!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद मधुमक्खी कितना शहद बनाएगी?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - text: ४
-        - text: ८
+        - text: '4'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: '8'
           correct: true
-        - text: १२
-        - {}
+          feedback: सही!
+        - text: '12'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती है, फिर
+            लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के अंदर है,
+            जो दो बार होता है। 4 बार 2 मतलब 8!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद मधुमक्खी कितना शहद बनाएगी?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: '8'
+          correct: true
+          feedback: सही!
+        - text: '12'
+          feedback: गलत। मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती
+            है, फिर लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के
+            अंदर है, जो दो बार होता है। 4 बार 2 मतलब 8!
+        - text: मुझे पता नहीं
+          feedback: मधुमक्खी लूप को आगे की ओर मूव करने पर 2 मधुरस एकत्र करती है, फिर
+            लूप को नीचे करने पर 2 मधुरस एकत्र करती है।  यह सब दूसरी लूप के अंदर है,
+            जो दो बार होता है। 4 बार 2 मतलब 8!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद मधुमक्खी कितना शहद बनाएगी?
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: लॉरेल वर्ग बनाते समय गलत रास्ते मुड़ जाएगी।
+          feedback: गलत। यह आंशिक रूप से सही था, लेकिन लूप भी सारा खजाना प्राप्त करने
+            के लिए ज्यादा दूर तक नहीं चलेगी।
+        - text: लूप लॉरेल द्वारा सारा खजाना एकत्र करने के लिए ज्यादा दूर तक नहीं चलेगी।
+          feedback: गलत। यह आंशिक रूप से सही था, लेकिन मधुमक्खी भी वर्ग बनाने का प्रयास
+            करते समय गलत रास्ते मुड़ जाती है।
+        - text: लॉरेल गलत रास्ते मुड़ जाती है *और* लूप लॉरेल द्वारा सारा खजाना एकत्र
+            करने के लिए ज्यादा दूर तक नहीं चलेगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: लॉरेल गलत रास्ते मुड़ जाती है *और* लूप लॉरेल द्वारा सारा खजाना
+            एकत्र करने के लिए ज्यादा दूर तक नहीं चलेगी।
+        questions:
+        - text: 'नीचे दिए गए कोड को ध्यान से देखें। जब आप "चलाएं” पर क्लिक करते हैं
+            तो लॉरेल सारा खजाना क्यों एकत्र नहीं कर पाती? चेतावनी: यह पेचीदा सवाल
+            है, इसलिए आप जवाब देने से पहले सभी विकल्पों को पढ़ना सुनिश्चित करें!'
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कटाई मशीन सभी फसलों को एकत्र करेगी।
+          feedback: गलत। कद्दू को एकत्र करने के लिए यहां कोई कोड नहीं है।
+        - text: कटाई मशीन उस रास्ते के साथ कोई भी फसल एकत्र नहीं करेगी, जिस पर वह
+            जा रही है।
+          feedback: गलत। कोड कटाई मशीन को बार-बार सीढ़ी पैटर्न बनाने और उसे जितना
+            भी कॉर्न या लेट्स मिले, उसे एकत्र करने के लिए सक्रिय करेगा। वह कद्दू नहीं
+            लेगी।
+        - text: कटाई मशीन कद्दू को छोड़कर, सभी फसलों को एकत्र करेगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: कोड कटाई मशीन को बार-बार सीढ़ी पैटर्न बनाने और उसे जितना भी कॉर्न
+            या लेट्स मिले, उसे एकत्र करने के लिए सक्रिय करेगा। वह कद्दू नहीं लेगी।
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: कटाई मशीन सभी फसलों को एकत्र करेगी।
         - {}
         - correct: true
-        - {}
+          feedback: सही!
+        - text: मुझे पता नहीं
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
+        - text: कटाई मशीन सभी फसलों को एकत्र करेगी।
         - {}
         - correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: कटाई मशीन सभी फसलों को एकत्र करेगी।
         - {}
+        - correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: किसान रास्ते के अंत तक जाएगा और कद्दू की कटाई करेगा।
+          feedback: गलत। `कद्दू लें` ब्लॉक लूप के अंदर है, इसलिए किसान केवल अंत में
+            ही नहीं, बल्कि प्रत्येक कदम पर कद्दू लेने का प्रयास करेगा।
+        - text: किसान प्रत्येक वर्ग पर कद्दू लेने का प्रयास करेगा, लेकिन कभी कद्दू
+            के पास नहीं पहुंच पाएगा।
+          correct: true
+          feedback: सही!
+        - text: किसान चार स्थानों तक जाएगा, फिर एक कद्दू लेने का प्रयास करेगा।
+          feedback: गलत। `कद्दू लें` ब्लॉक लूप के अंदर है, इसलिए किसान केवल अंत में
+            ही नहीं, बल्कि प्रत्येक कदम पर कद्दू लेने का प्रयास करेगा।
+        - text: मुझे पता नहीं
+          feedback: "`कद्दू लें` ब्लॉक लूप के अंदर है, इसलिए किसान केवल अंत में ही
+            नहीं, बल्कि प्रत्येक कदम पर कद्दू लेने का प्रयास करेगा।"
+        markdown: यहां एक नया पहेली प्रकार है, जिसमें वैसे ब्लॉक्स का उपयोग किया जाता
+          है, जो आप पहले ही देख चुके हैं। क्या आप अनुमान लगा सकते हैं कि जब आप नीचे
+          दिया गया कोड चलाएंगे तो क्या होगा?
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कुछ नहीं। यह कोड केवल समतल ज़मीन छोड़ेगा।
+          feedback: गलत। ढेर से मिट्टी हटाने के लिए कोई कोड नहीं है।
+        - text: यह कोड ढेर को पूरी तरह से अछूता छोड़ देगा।
+          correct: true
+          feedback: सही!
+        - text: यह कोड सुराखों को पूरी तरह से अछूता छोड़ देगा।
+          feedback: गलत। `व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर
+            से मिट्टी  हटाने के लिए कोई कोड नहीं है।
+        - text: मुझे पता नहीं
+          feedback: "`व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर से
+            मिट्टी  हटाने के लिए कोई कोड नहीं है।"
+        questions:
+        - text: नीचे दिए कोड अच्छी तरह से देखें। इस पहेली के अंत में क्या बाकी रहेगा?
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कुछ नहीं। यह कोड केवल समतल ज़मीन छोड़ेगा।
+          feedback: गलत। ढेर से मिट्टी हटाने के लिए कोई कोड नहीं है।
+        - text: यह कोड ढेर को पूरी तरह से अछूता छोड़ देगा।
+          correct: true
+          feedback: सही!
+        - text: यह कोड सुराखों को पूरी तरह से अछूता छोड़ देगा।
+          feedback: गलत। `व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर
+            से मिट्टी  हटाने के लिए कोई कोड नहीं है।
+        - text: मुझे पता नहीं
+          feedback: "`व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर से
+            मिट्टी  हटाने के लिए कोई कोड नहीं है।"
+        questions:
+        - text: नीचे दिए कोड अच्छी तरह से देखें। इस पहेली के अंत में क्या बाकी रहेगा?
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कुछ नहीं। यह कोड केवल समतल ज़मीन छोड़ेगा।
+          feedback: गलत। ढेर से मिट्टी हटाने के लिए कोई कोड नहीं है।
+        - text: यह कोड ढेर को पूरी तरह से अछूता छोड़ देगा।
+          correct: true
+          feedback: सही!
+        - text: यह कोड सुराखों को पूरी तरह से अछूता छोड़ देगा।
+          feedback: गलत। `व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर
+            से मिट्टी  हटाने के लिए कोई कोड नहीं है।
+        - text: मुझे पता नहीं
+          feedback: "`व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर से
+            मिट्टी  हटाने के लिए कोई कोड नहीं है।"
+        questions:
+        - text: नीचे दिए कोड अच्छी तरह से देखें। इस पहेली के अंत में क्या बाकी रहेगा?
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - text: कुछ नहीं। यह कोड केवल समतल ज़मीन छोड़ेगा।
+          feedback: गलत। ढेर से मिट्टी हटाने के लिए कोई कोड नहीं है।
+        - text: यह कोड ढेर को पूरी तरह से अछूता छोड़ देगा।
+          correct: true
+          feedback: सही!
+        - text: यह कोड सुराखों को पूरी तरह से अछूता छोड़ देगा।
+          feedback: गलत। `व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर
+            से मिट्टी  हटाने के लिए कोई कोड नहीं है।
+        - text: मुझे पता नहीं
+          feedback: "`व्हाइल` लूप किसी भी आकार की लूप को संभाल लेगी, लेकिन ढेर से
+            मिट्टी  हटाने के लिए कोई कोड नहीं है।"
+        questions:
+        - text: नीचे दिए कोड अच्छी तरह से देखें। इस पहेली के अंत में क्या बाकी रहेगा?
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कुछ नहीं होगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान कभी भी मिट्टी हटाना बंद नहीं करेगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त होने
+            पर रुक जाएगा
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त
+            होने पर रुक जाएगा
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कुछ नहीं होगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान कभी भी मिट्टी हटाना बंद नहीं करेगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त होने
+            पर रुक जाएगा
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त
+            होने पर रुक जाएगा
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कुछ नहीं होगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान कभी भी मिट्टी हटाना बंद नहीं करेगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त होने
+            पर रुक जाएगा
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त
+            होने पर रुक जाएगा
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - text: कुछ नहीं होगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान कभी भी मिट्टी हटाना बंद नहीं करेगा।
+          feedback: गलत। किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर
+            समाप्त होने पर रुक जाएगा
+        - text: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त होने
+            पर रुक जाएगा
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: किसान तब तक मिट्टी को हटाएगा, जब तक वहां ढेर है, फिर ढेर समाप्त
+            होने पर रुक जाएगा
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: ज़ोम्बी तुरंत दाएं मुड़ेगा और फंस जाएगा।
+          correct: true
+          feedback: सही!
+        - text: ज़ोम्बी सूर्यमुखी के फूल के पास पहुंच जाएगा।
+          feedback: गलत। इस कोड में, यह ऐसा देखने से *पहले* कि क्या यह सीधा जा सकता
+            है, दायां मोड़ ढूंढेगा। इस कारण, पहेली असफल होती है।
+        - text: ज़ोम्बी पहले रास्ते पर दाएं मुड़ेगा और हमेशा चक्करों में गोल-गोल घूमेगा।
+          feedback: गलत। ज़ोम्बी केवल दायां मोड़ या सीधा रास्ता ढूंढेगा। यह कभी भी
+            बायां मोड़ नहीं देखेगा, इसलिए यह लगभग तुरंत फंस जाएगा।
+        - text: मुझे पता नहीं
+          feedback: इस कोड में, यह ऐसा देखने से *पहले* कि क्या यह सीधा जा सकता है,
+            दायां मोड़ ढूंढेगा। इस कारण, पहेली असफल होती है।
+        questions:
+        - text: नीचे दिए कोड को ध्यानपूर्वक देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          feedback: सही!
+        - text: ज़ोम्बी सूर्यमुखी के फूल के पास पहुंच जाएगा।
+        - text: ज़ोम्बी पहले रास्ते पर दाएं मुड़ेगा और हमेशा चक्करों में गोल-गोल घूमेगा।
+        - text: मुझे पता नहीं
+        questions:
+        - text: नीचे दिए कोड को ध्यानपूर्वक देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          feedback: सही!
+        - text: ज़ोम्बी सूर्यमुखी के फूल के पास पहुंच जाएगा।
+        - text: ज़ोम्बी पहले रास्ते पर दाएं मुड़ेगा और हमेशा चक्करों में गोल-गोल घूमेगा।
+        - text: मुझे पता नहीं
+        questions:
+        - text: नीचे दिए कोड को ध्यानपूर्वक देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+          feedback: सही!
+        - text: ज़ोम्बी सूर्यमुखी के फूल के पास पहुंच जाएगा।
+        - text: ज़ोम्बी पहले रास्ते पर दाएं मुड़ेगा और हमेशा चक्करों में गोल-गोल घूमेगा।
+        - text: मुझे पता नहीं
+        questions:
+        - text: नीचे दिए कोड को ध्यानपूर्वक देखें। आपके द्वारा "चलाएं” पर क्लिक करने
+            के बाद क्या होगा?
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: पक्षी बिल्कुल भी मूव नहीं करेगा।
+          feedback: गलत। जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और
+            फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक
+            कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी आगे की ओर मूव करेगा और TNT से टकराएगा।
+          feedback: गलत। जब वहां सुरक्षित रास्ता हो, तो कोड पक्षी को आगे की ओर मूव
+            करने और फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता
+            है, जब तक कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: मुझे पता नहीं
+          feedback: जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और फिर बाएं
+            मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक कि यह सूअर
+            के पास नहीं पहुंच जाता!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके विचार में जब आप "चलाएं” पर
+            क्लिक करते हैं तो क्या होगा?
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: पक्षी बिल्कुल भी मूव नहीं करेगा।
+          feedback: गलत। जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और
+            फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक
+            कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी आगे की ओर मूव करेगा और TNT से टकराएगा।
+          feedback: गलत। जब वहां सुरक्षित रास्ता हो, तो कोड पक्षी को आगे की ओर मूव
+            करने और फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता
+            है, जब तक कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: मुझे पता नहीं
+          feedback: जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और फिर बाएं
+            मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक कि यह सूअर
+            के पास नहीं पहुंच जाता!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके विचार में जब आप "चलाएं” पर
+            क्लिक करते हैं तो क्या होगा?
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: पक्षी बिल्कुल भी मूव नहीं करेगा।
+          feedback: गलत। जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और
+            फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक
+            कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी आगे की ओर मूव करेगा और TNT से टकराएगा।
+          feedback: गलत। जब वहां सुरक्षित रास्ता हो, तो कोड पक्षी को आगे की ओर मूव
+            करने और फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता
+            है, जब तक कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: मुझे पता नहीं
+          feedback: जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और फिर बाएं
+            मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक कि यह सूअर
+            के पास नहीं पहुंच जाता!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके विचार में जब आप "चलाएं” पर
+            क्लिक करते हैं तो क्या होगा?
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - text: पक्षी बिल्कुल भी मूव नहीं करेगा।
+          feedback: गलत। जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और
+            फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक
+            कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: पक्षी, सूअर के पास पहुंच जाएगा।
+          correct: true
+          feedback: सही!
+        - text: पक्षी आगे की ओर मूव करेगा और TNT से टकराएगा।
+          feedback: गलत। जब वहां सुरक्षित रास्ता हो, तो कोड पक्षी को आगे की ओर मूव
+            करने और फिर बाएं मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता
+            है, जब तक कि यह सूअर के पास नहीं पहुंच जाता!
+        - text: मुझे पता नहीं
+          feedback: जब वहां रास्ता हो, तो कोड पक्षी को आगे की ओर मूव करने और फिर बाएं
+            मुड़ने के लिए सक्रिय करता है। यह ऐसा तब तक करता रहता है, जब तक कि यह सूअर
+            के पास नहीं पहुंच जाता!
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। आपके विचार में जब आप "चलाएं” पर
+            क्लिक करते हैं तो क्या होगा?
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कुछ नहीं। स्क्रैट बिल्कुल भी मूव नहीं करेगा।
+          feedback: गलत।  आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने
+            से यह स्क्रैट को तीन बार आगे की ओर मूव करने के लिए सक्रिय करेगा।
+        - text: स्क्रैट तीन बार आगे की ओर मूव करेगा, मुड़ेगा, फिर शाहबलूत के पास जाने
+            के लिए तीन और बार आगे की और मूव करेगा!
+          correct: true
+          feedback: सही!
+        - text: स्क्रैट आगे की ओर मूव करेगा, फिर मुड़ेगा और गिर जाएगा।
+          feedback: गलत।  आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने
+            से यह स्क्रैट को तीन बार आगे की ओर मूव करने के लिए सक्रिय करेगा।
+        - text: मुझे पता नहीं
+          feedback: "'आगे की ओर मूव करें' ब्लॉक को 'दोहराएं’ ब्लॉक के अंदर रखने से
+            यह स्क्रैट को तीन बार आगे की ओर मूव करने के लिए सक्रिय करेगा। फिर वह मुड़ता
+            है और शाहबलूत के पास जाने के लिए तीन बार दुबारा आगे की ओर मूव करता है!"
+        questions:
+        - text: यह कोड नए ब्लॉक का उपयोग करता है। आपके विचार में जब आप "चलाएं” को
+            दबाते हैं तो क्या होगा?
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: वही प्रोग्राम इस पहेली को हल करने के लिए भी काम करेगा।
+          correct: true
+          feedback: सही!  इससे कोई फर्क नहीं पड़ता कि शहद की मात्रा अलग है। फंक्शन
+            को इसे संभालने के लिए प्रोग्राम किया गया है।
+        - text: मधुमक्खी पर्याप्त शहद नहीं बनाएगी।
+          feedback: गलत। फंक्शन को 0 से अधिक शहद की किसी भी मात्रा को संभालने के लिए
+            प्रोग्राम किया गया है।
+        - text: मधुमक्खी बहुत ज्यादा शहद बनाने का प्रयास नहीं करेगी।
+          feedback: गलत। फंक्शन को 0 से अधिक शहद की किसी भी मात्रा को संभालने के लिए
+            प्रोग्राम किया गया है।
+        - text: मुझे पता नहीं
+          feedback: प्रोग्राम इस पहेली को हल करने के लिए भी काम करेगा। इसे 0 से अधिक
+            शहद की किसी भी मात्रा को संभालने के लिए प्रोग्राम किया गया है।
+        questions:
+        - text: यहां पिछली पहेली के प्रोग्राम जैसा ही प्रोग्राम है, लेकिन इस पहेली
+            में एकत्र किए जाने वाले शहद की मात्रा बदल गई है। जब आप "चलाएं” पर क्लिक
+            करते हैं तो क्या होगा?
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: कटाई मशीन दो कद्दू लेगी।
+          feedback: गलत। कटाई मशीन तब तक "देखो और लो” नहीं बोलती है, जब तक वह कॉर्न
+            तक नहीं पहुंच जाती।
+        - text: कटाई मशीन सभी कद्दूओं को एकत्र करेगी।
+          feedback: गलत। कटाई मशीन तब तक "देखो और लो” नहीं बोलती है, जब तक वह कॉर्न
+            तक नहीं पहुंच जाती।
+        - text: कटाई मशीन लेट्स लेगी।
+          feedback: गलत। कटाई मशीन केवल एक बार मुड़ेगी और कॉर्न तक पहुंच जाएगी।
+        - text: कटाई मशीन कॉर्न लेगी।
+          correct: true
+          feedback: सही!
+        questions:
+        - text: नीचे परिभाषित फंक्शनों को देखें। कटाई मशीन क्या लेगी?
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कटाई मशीन दो कद्दू लेगी।
+        - text: कटाई मशीन सभी कद्दूओं को एकत्र करेगी।
+        - text: कटाई मशीन लेट्स लेगी।
+          correct: true
+          feedback: सही!
+        - text: कटाई मशीन कॉर्न लेगी।
+        questions:
+        - text: नीचे परिभाषित फंक्शनों को देखें। कटाई मशीन क्या लेगी?
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कटाई मशीन दो कद्दू लेगी।
+        - text: कटाई मशीन सभी कद्दूओं को एकत्र करेगी।
+        - text: कटाई मशीन लेट्स लेगी।
+          correct: true
+          feedback: सही!
+        - text: कटाई मशीन कॉर्न लेगी।
+        questions:
+        - text: नीचे परिभाषित फंक्शनों को देखें। कटाई मशीन क्या लेगी?
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - text: कटाई मशीन दो कद्दू लेगी।
+        - text: कटाई मशीन सभी कद्दूओं को एकत्र करेगी।
+        - text: कटाई मशीन लेट्स लेगी।
+          correct: true
+          feedback: सही!
+        - text: कटाई मशीन कॉर्न लेगी।
+        questions:
+        - text: नीचे परिभाषित फंक्शनों को देखें। कटाई मशीन क्या लेगी?
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: कुछ नहीं। फंक्शन को प्रोग्राम में नहीं बोला जाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार एक सिंगल वर्ग बनाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार दो वर्ग बनाएगा, जो परस्पर व्याप्त करेंगे।
+          feedback: गलत। वर्ग की प्रत्येक भुजा की लंबाई केवल 100 पिक्सल है, लेकिन
+            कलाकार फंक्शन्स के बीच 175 पिक्सल्स तक कूदता है।
+        - text: कलाकार बीच में छोटे अंतराल के साथ दो वर्ग बनाएगा।
+          correct: true
+          feedback: 'सही! बीच में कूदने के साथ, फंक्शन को प्रोग्राम में दो बार बोला
+            जाएगा। '
+        questions:
+        - text: जब आप `चलाएं` को दबाते हैं तो क्या होगा?
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: कुछ नहीं। फंक्शन को प्रोग्राम में नहीं बोला जाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार एक सिंगल वर्ग बनाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार दो वर्ग बनाएगा, जो परस्पर व्याप्त करेंगे।
+          feedback: गलत। वर्ग की प्रत्येक भुजा की लंबाई केवल 100 पिक्सल है, लेकिन
+            कलाकार फंक्शन्स के बीच 175 पिक्सल्स तक कूदता है।
+        - text: कलाकार बीच में छोटे अंतराल के साथ दो वर्ग बनाएगा।
+          correct: true
+          feedback: 'सही! बीच में कूदने के साथ, फंक्शन को प्रोग्राम में दो बार बोला
+            जाएगा। '
+        questions:
+        - text: जब आप `चलाएं` को दबाते हैं तो क्या होगा?
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: कुछ नहीं। फंक्शन को प्रोग्राम में नहीं बोला जाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार एक सिंगल वर्ग बनाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार दो वर्ग बनाएगा, जो परस्पर व्याप्त करेंगे।
+          feedback: गलत। वर्ग की प्रत्येक भुजा की लंबाई केवल 100 पिक्सल है, लेकिन
+            कलाकार फंक्शन्स के बीच 175 पिक्सल्स तक कूदता है।
+        - text: कलाकार बीच में छोटे अंतराल के साथ दो वर्ग बनाएगा।
+          correct: true
+          feedback: 'सही! बीच में कूदने के साथ, फंक्शन को प्रोग्राम में दो बार बोला
+            जाएगा। '
+        questions:
+        - text: जब आप `चलाएं` को दबाते हैं तो क्या होगा?
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - text: कुछ नहीं। फंक्शन को प्रोग्राम में नहीं बोला जाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार एक सिंगल वर्ग बनाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार दो वर्ग बनाएगा, जो परस्पर व्याप्त करेंगे।
+          feedback: गलत। वर्ग की प्रत्येक भुजा की लंबाई केवल 100 पिक्सल है, लेकिन
+            कलाकार फंक्शन्स के बीच 175 पिक्सल्स तक कूदता है।
+        - text: कलाकार बीच में छोटे अंतराल के साथ दो वर्ग बनाएगा।
+          correct: true
+          feedback: 'सही! बीच में कूदने के साथ, फंक्शन को प्रोग्राम में दो बार बोला
+            जाएगा। '
+        questions:
+        - text: जब आप `चलाएं` को दबाते हैं तो क्या होगा?
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - text: कुछ नहीं। फंक्शन को प्रोग्राम में नहीं बोला जाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार एक सिंगल वर्ग बनाएगा।
+          feedback: गलत। असल में फंक्शन को प्रोग्राम में दो बार बोला जाएगा।
+        - text: कलाकार दो वर्ग बनाएगा, जो परस्पर व्याप्त करेंगे।
+          feedback: गलत। वर्ग की प्रत्येक भुजा की लंबाई केवल 100 पिक्सल है, लेकिन
+            कलाकार फंक्शन्स के बीच 175 पिक्सल्स तक कूदता है।
+        - text: कलाकार बीच में छोटे अंतराल के साथ दो वर्ग बनाएगा।
+          correct: true
+          feedback: 'सही! बीच में कूदने के साथ, फंक्शन को प्रोग्राम में दो बार बोला
+            जाएगा। '
+        questions:
+        - text: जब आप `चलाएं` को दबाते हैं तो क्या होगा?
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
+        - text: मुझे पता नहीं
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
+          feedback: सही!
         - {}
+        - text: मुझे पता नहीं
+        questions:
         - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - correct: true
+          feedback: सही!
+        - {}
+        - text: मुझे पता नहीं
+        questions:
+        - {}
+      courseF_external_variableConstant:
+        markdown: "<H2>वेरिएबल्स के बारे में और</h2>\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
+          style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>अभी आपने
+          वेरिएबल को स्थिरांक के तौर पर...उपयोग करने का एक बढ़िया तरीका सीखा है!  \nजब
+          आप वेरिएबल को स्थिरांक के तौर पर उपयोग करते हैं, तो आप एक बार मूल्य सेट
+          करते हैं, फिर आपके द्वारा \"चलाएं” पर क्लिक करने के बाद आप उस *समान* मूल्य
+          को इसे बदले बिना अपने प्रोग्राम में कई बार उपयोग करते हैं।  </h3>\n<br/><hr/>\n<h3>श्रृंखला
+          में अगले भाग में, आप वेरिएबल्स के साथ वह कोड लिखेंगे, जो प्रोग्राम के अंदर
+          बदल *जाएगा*।</h3>\n\n"
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कलाकार एक सीधी लाइन खींचेगा, जो प्ले स्पेस की एक से दूसरी तरफ तक की
+            मोटाई को बढ़ा देती है।
+          feedback: गलत। कलाकार `फॉर` लूप की पुनरावृत्तियों के बीच मुड़ता है।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और पतली होती जाएगी।
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और मोटी होती जाएगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        questions:
+        - text: जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कलाकार एक सीधी लाइन खींचेगा, जो प्ले स्पेस की एक से दूसरी तरफ तक की
+            मोटाई को बढ़ा देती है।
+          feedback: गलत। कलाकार `फॉर` लूप की पुनरावृत्तियों के बीच मुड़ता है।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और पतली होती जाएगी।
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और मोटी होती जाएगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        questions:
+        - text: जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: कलाकार एक सीधी लाइन खींचेगा, जो प्ले स्पेस की एक से दूसरी तरफ तक की
+            मोटाई को बढ़ा देती है।
+          feedback: गलत। कलाकार `फॉर` लूप की पुनरावृत्तियों के बीच मुड़ता है।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और पतली होती जाएगी।
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और मोटी होती जाएगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        questions:
+        - text: जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - text: कलाकार एक सीधी लाइन खींचेगा, जो प्ले स्पेस की एक से दूसरी तरफ तक की
+            मोटाई को बढ़ा देती है।
+          feedback: गलत। कलाकार `फॉर` लूप की पुनरावृत्तियों के बीच मुड़ता है।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और पतली होती जाएगी।
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        - text: कलाकार सर्पिल रेखा खींचेगा और हर बार `फॉर` लूप के द्वारा, लाइन और
+            लंबी और मोटी होती जाएगी।
+          correct: true
+          feedback: सही!
+        - text: मुझे पता नहीं
+          feedback: गलत। हर बार `फॉर` लूप के द्वारा, कलाकार लंबी लाइन खींचेगा, जो
+            मोटी भी होगी।
+        questions:
+        - text: जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: कलाकार दो अलग-अलग आकार के खाने बनाने के लिए एक ही फंक्शन का उपयोग
+            करेगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार दो अलग-अलग आकार के खाने बनाने के लिए दो अलग-अलग फंक्शन्स का
+            उपयोग करेगा।
+          feedback: गलत। मापदंडों का उपयोग करने से आप विभिन्न परिणाम लाने के लिए एक
+            ही फंक्शन का उपयोग कर सकते हैं।
+        - text: कलाकार एक ही आकार के खाने दो बार बनाने के लिए दो अलग-अलग फंक्शन्स
+            का उपयोग करेगा।
+          feedback: गलत। मापदंडों का उपयोग करने से आप विभिन्न परिणाम लाने के लिए एक
+            ही फंक्शन का उपयोग कर सकते हैं।
+        - text: मुझे पता नहीं
+          feedback: प्रोग्राम दो अलग-अलग आकार के खाने बनाने के लिए एक ही फंक्शन को
+            अनुमति देने के लिए मापदंडों का उपयोग करता है।
+        markdown: हमने मापदंडों को  'वर्ग खींचें' फंक्शन में जोड़ दिया है। संपूर्ण
+          फंक्शन परिभाषा देखने के लिए नीले "संपादित करें" बटन पर क्लिक करें।
+        questions:
+        - text: जब आप इस प्रोग्राम को चलाते हैं तो क्या होगा?
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: कलाकार 50 पिक्सल की भुजाओं वाला त्रिकोण बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार 3 पिक्सल की भुजाओं वाली 50-भुजा बहुभुज बनाएगा।
+          feedback: गलत। ऐसा होने के लिए वेरिएबल `लंबाई` को `दोहराएं` लूप में रखने
+            की जरूरत होगी।
+        - text: कलाकार 50 डिग्री के मोड़ों वाली तीन खुली भुजाएं बनाएगा।
+          feedback: गलत। ऐसा होने के लिए `लंबाई` वेरिएबल को `मुड़ें` ब्लॉक में उपयोग
+            करने की जरूरत होगी।
+        - text: मुझे पता नहीं
+          feedback: "`लंबाई` वेरिएबल 50 पर सेट है और `तक आगे की ओर मूव करें` ब्लॉक
+            में उपयोग की जा रही है, इसलिए कलाकार 50 पिक्सल भुजाओं वाला त्रिकोण खींचेगा।"
+        questions:
+        - text: हमने वेरिएबल की "लंबाई” 50 पर सेट की है। जब आप "चलाएं" पर क्लिक करते
+            हैं तो क्या होगा?
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: कलाकार 50 पिक्सल की भुजाओं वाला त्रिकोण बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार 3 पिक्सल की भुजाओं वाली 50-भुजा बहुभुज बनाएगा।
+          feedback: गलत। ऐसा होने के लिए वेरिएबल `लंबाई` को `दोहराएं` लूप में रखने
+            की जरूरत होगी।
+        - text: कलाकार 50 डिग्री के मोड़ों वाली तीन खुली भुजाएं बनाएगा।
+          feedback: गलत। ऐसा होने के लिए `लंबाई` वेरिएबल को `मुड़ें` ब्लॉक में उपयोग
+            करने की जरूरत होगी।
+        - text: मुझे पता नहीं
+          feedback: "`लंबाई` वेरिएबल 50 पर सेट है और `तक आगे की ओर मूव करें` ब्लॉक
+            में उपयोग की जा रही है, इसलिए कलाकार 50 पिक्सल भुजाओं वाला त्रिकोण खींचेगा।"
+        questions:
+        - text: हमने वेरिएबल की "लंबाई” 50 पर सेट की है। जब आप "चलाएं" पर क्लिक करते
+            हैं तो क्या होगा?
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: कलाकार 50 पिक्सल की भुजाओं वाला त्रिकोण बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार 3 पिक्सल की भुजाओं वाली 50-भुजा बहुभुज बनाएगा।
+          feedback: गलत। ऐसा होने के लिए वेरिएबल `लंबाई` को `दोहराएं` लूप में रखने
+            की जरूरत होगी।
+        - text: कलाकार 50 डिग्री के मोड़ों वाली तीन खुली भुजाएं बनाएगा।
+          feedback: गलत। ऐसा होने के लिए `लंबाई` वेरिएबल को `मुड़ें` ब्लॉक में उपयोग
+            करने की जरूरत होगी।
+        - text: मुझे पता नहीं
+          feedback: "`लंबाई` वेरिएबल 50 पर सेट है और `तक आगे की ओर मूव करें` ब्लॉक
+            में उपयोग की जा रही है, इसलिए कलाकार 50 पिक्सल भुजाओं वाला त्रिकोण खींचेगा।"
+        questions:
+        - text: हमने वेरिएबल की "लंबाई” 50 पर सेट की है। जब आप "चलाएं" पर क्लिक करते
+            हैं तो क्या होगा?
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - text: कलाकार 50 पिक्सल की भुजाओं वाला त्रिकोण बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार 3 पिक्सल की भुजाओं वाली 50-भुजा बहुभुज बनाएगा।
+          feedback: गलत। ऐसा होने के लिए वेरिएबल `लंबाई` को `दोहराएं` लूप में रखने
+            की जरूरत होगी।
+        - text: कलाकार 50 डिग्री के मोड़ों वाली तीन खुली भुजाएं बनाएगा।
+          feedback: गलत। ऐसा होने के लिए `लंबाई` वेरिएबल को `मुड़ें` ब्लॉक में उपयोग
+            करने की जरूरत होगी।
+        - text: मुझे पता नहीं
+          feedback: "`लंबाई` वेरिएबल 50 पर सेट है और `तक आगे की ओर मूव करें` ब्लॉक
+            में उपयोग की जा रही है, इसलिए कलाकार 50 पिक्सल भुजाओं वाला त्रिकोण खींचेगा।"
+        questions:
+        - text: हमने वेरिएबल की "लंबाई” 50 पर सेट की है। जब आप "चलाएं" पर क्लिक करते
+            हैं तो क्या होगा?
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: मधुमक्खी बादल की ओर मूव करेगी और मधुरस लेने का प्रयास करेगी, चाहे
+            कितना भी हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल
+            तभी मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मधुमक्खी बादल की ओर मूव करेगी और केवल तभी मधुरस लेने का प्रयास करेगी,
+            यदि नीचे फूल है।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी बादल की ओर मूव करेगी और फिर कुछ नहीं करेगी, चाहे कितना भी
+            हो।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी तभी मधुरस
+            लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक सुनिश्चित करता है कि मधुमक्खी केवल तभी
+            मधुरस लेने का प्रयास करेगी, यदि बादल के नीचे फूल है।"
+        markdown: "बादल दृश्य को रोक रहा है। इस बादल के नीचे फूल हो सकता है। यदि वहां
+          फूल है, तो मधुमक्खी को **एक बार** मधुरस एकत्र करने की जरूरत होगी। \n"
+        questions:
+        - text: यदि वहां फूल नहीं है तो मधुमक्खी कुछ नहीं करेगी। नीचे दिए कोड को अच्छी
+            तरह से देखें। आपके विचार में आपके द्वारा "चलाएं” पर क्लिक करने के बाद
+            क्या होगा?
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: मधुमक्खी प्रत्येक फूल पर मधुरस लेगी, अन्यथा यह शहद बनाएगी।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से मधुरस लेने का प्रयास करेगी।
+          feedback: गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस लेने
+            और यदि वहां फूल नहीं है तो शहद बनाने देता है।
+        - text: मधुमक्खी दोनों फूलों और मधु के छत्ते से शहद लेने का प्रयास करेगी।
+          feedback: गलत। गलत। `यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस
+            और प्रत्येक मधु के छत्ते पर शहद लेने देता है।
+        - text: मुझे पता नहीं
+          feedback: "`यदि फूल पर है` ब्लॉक मधुमक्खी को प्रत्येक फूल पर मधुरस लेने
+            देता है, अन्यथा यह शहद बनाती है।"
+        markdown: 'कभी-कभार बादल फूल को ढक देता है, कभी-कभी यह मधु के छत्ते को ढक
+          देता है! किसी भी तरीके से, वहां प्रत्येक बादल के नीचे केवल **एक** फूल या
+          **एक** मधु का छत्ता होगा।
+
+'
+        questions:
+        - text: नीचे दिए कोड को ध्यान से देखें। आपके विचार में आपके द्वारा "चलाएं”
+            पर क्लिक करने के बाद क्या होगा?
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी,
+            एक को छोड़कर।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से एक मधुरस प्राप्त करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
+        - text: मधुमक्खी आगे की ओर मूव करेगी और फूलों में जितना मधुरस है, उससे अधिक
+            एकत्र करने का प्रयास करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
+        questions:
+        - text: नीचे दिए कोड को पढ़ें। जब आप "चलाएं” पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी,
+            एक को छोड़कर।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से एक मधुरस प्राप्त करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
         - {}
-        - correct: true
-        - {}
-        - {}
+        questions:
+        - text: नीचे दिए कोड को पढ़ें। जब आप "चलाएं” पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी,
+            एक को छोड़कर।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से एक मधुरस प्राप्त करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
         - {}
-        - correct: true
+        questions:
+        - text: नीचे दिए कोड को पढ़ें। जब आप "चलाएं” पर क्लिक करते हैं तो क्या होगा?
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से सारा मधुरस एकत्र करेगी,
+            एक को छोड़कर।
+          correct: true
+          feedback: सही!
+        - text: मधुमक्खी आगे की ओर मूव करेगी और प्रत्येक फूल से एक मधुरस प्राप्त करेगी।
+          feedback: गलत। `फॉर` लूप मधुमक्खी को सही मात्रा में मधुरस एकत्र करने देगी,
+            लेकिन इसे केवल 4 फूलों तक पहुंचने के लिए सेट किया गया है।
         - {}
-        - {}
+        questions:
+        - text: नीचे दिए कोड को पढ़ें। जब आप "चलाएं” पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: मधुमक्खी किसी भी मधुरस या शहद एकत्र नहीं करेगा।
+          feedback: गलत। फंक्शन उतना ज्यादा मधुरस या शहद एकत्र करने के लिए सेट है,
+            जितना यह मापदंड से गुजरता है।
+        - text: मधुमक्खी तीन मधुरस या शहद, फिर सीढ़ी-स्टेप पैटर्न में दो मधुरस या
+            शहद एकत्र करेगी।
+          correct: true
+          feedback: सही! फंक्शन उतना ज्यादा मधुरस या शहद एकत्र करने के लिए सेट है,
+            जितना यह मापदंड से गुजरता है।
+        - text: मधुमक्खी लूप की प्रत्येक पुनरावृत्ति में केवल एक मधुरस या शहद एकत्र
+            करेगी।
+          feedback: गलत।  फंक्शन उतना ज्यादा मधुरस या शहद एकत्र करने के लिए सेट है,
+            जितना यह मापदंड से गुजरता है।
+        - text: मुझे पता नहीं
+          feedback: फंक्शन के अंदर देखने के लिए क्लिक करने से यह दर्शाता है कि यह
+            उतना ज्यादा मधुरस या शहद एकत्र करने के लिए सेट है, जितना यह मापदंड से
+            गुजरता है।
+        markdown: |+
+          इन बादलों के नीचे, पूरे 1 मधुरस वाला फूल है या पूरे 1 शहद वाला मधु का छत्ता है। नीचे दिए सवाल का जवाब देने से पहले यह देखने के लिए नीले "संपादित करें" बटन पर क्लिक करें कि अंदर क्या है।
+
+
+        questions:
+        - text: जब आप `चलाएं` पर क्लिक करते हैं तो क्या होगा?
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: समुद्री डाकू कहता, "अली, तुमसे मिलकर खुशी हुई।" और कुछ नहीं।
+          correct: true
+          feedback: 'सही। '
+        - text: समुद्री डाकू कहता, "तुमसे मिलकर खुशी हुई।" और कुछ नहीं।
+          feedback: गलत। ध्यान दें कि `जुड़ें` ब्लॉक प्रदान किए गए नाम को समुद्री
+            डाकू के वाक्य में जोड़ता है।
+        - text: समुद्री डाकू कहता, "अली" और कुछ नहीं।
+          feedback: गलत। ध्यान दें कि `जुड़ें` ब्लॉक प्रदान किए गए नाम को समुद्री
+            डाकू के वाक्य में जोड़ता है।
+        - text: मुझे पता नहीं
+          feedback: गलत। ध्यान दें कि `जुड़ें` ब्लॉक प्रदान किए गए नाम (अली) को समुद्री
+            डाकू के वाक्य में जोड़ता है।
+        markdown: |
+          **यह पहेली `पूछें` ब्लॉक नामक एक नए ब्लॉक का उपयोग करती है।**
+
+          `पूछें` ब्लॉक प्रोग्राम को रोकता है और उपयोगकर्ता को कुछ टेक्सट दर्ज करने के लिए तत्काल सुझाव देता है।
+
+          उपयोगकर्ता जो भी टेक्सट दर्ज करता है, उसे `पूछें` ब्लॉक के अंत में दिखाए गए वेरिएबल में सुरक्षित किया जाता है। इस स्थिति में, यह वेरिएबल `नाम` होती है।
+        questions:
+        - text: यदि उपयोगकर्ता सुझाव में "अली" नाम डाल देता तो क्या होता?
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कलाकार सही ढंग से पहेली को हल करेगा।
+          feedback: गलत। लूप "बहुभुजाओं की लाइन खींचें” की बजाय "बहुभुजा चित्रित करें"
+            का उपयोग करती है।
+        - text: कलाकार विंडो पैटर्न में चार वर्ग बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार वर्गों की केवल एक लाइन बनाएगा।
+          feedback: गलत। प्रोग्राम "बहुभुजाओं की लाइन खींचें” नहीं बोलेगा।
+        - text: कलाकार एक-दूसरे के ऊपर चार वर्ग बनाएगा।
+          feedback: गलत। लूप "बहुभुजा चित्रित करें” बोलने के बीच 90 डिग्री मुड़ती
+            है।
+        questions:
+        - text: जब आप `चलाएं` बटन को दबाते हैं तो क्या होगा?
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कलाकार सही ढंग से पहेली को हल करेगा।
+          feedback: गलत। लूप "बहुभुजाओं की लाइन खींचें” की बजाय "बहुभुजा चित्रित करें"
+            का उपयोग करती है।
+        - text: कलाकार विंडो पैटर्न में चार वर्ग बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार वर्गों की केवल एक लाइन बनाएगा।
+          feedback: गलत। प्रोग्राम "बहुभुजाओं की लाइन खींचें” नहीं बोलेगा।
+        - text: कलाकार एक-दूसरे के ऊपर चार वर्ग बनाएगा।
+          feedback: गलत। लूप "बहुभुजा चित्रित करें” बोलने के बीच 90 डिग्री मुड़ती
+            है।
+        questions:
+        - text: जब आप `चलाएं` बटन को दबाते हैं तो क्या होगा?
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: कलाकार सही ढंग से पहेली को हल करेगा।
+          feedback: गलत। लूप "बहुभुजाओं की लाइन खींचें” की बजाय "बहुभुजा चित्रित करें"
+            का उपयोग करती है।
+        - text: कलाकार विंडो पैटर्न में चार वर्ग बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार वर्गों की केवल एक लाइन बनाएगा।
+          feedback: गलत। प्रोग्राम "बहुभुजाओं की लाइन खींचें” नहीं बोलेगा।
+        - text: कलाकार एक-दूसरे के ऊपर चार वर्ग बनाएगा।
+          feedback: गलत। लूप "बहुभुजा चित्रित करें” बोलने के बीच 90 डिग्री मुड़ती
+            है।
+        questions:
+        - text: जब आप `चलाएं` बटन को दबाते हैं तो क्या होगा?
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - text: कलाकार सही ढंग से पहेली को हल करेगा।
+          feedback: गलत। लूप "बहुभुजाओं की लाइन खींचें” की बजाय "बहुभुजा चित्रित करें"
+            का उपयोग करती है।
+        - text: कलाकार विंडो पैटर्न में चार वर्ग बनाएगा।
+          correct: true
+          feedback: सही!
+        - text: कलाकार वर्गों की केवल एक लाइन बनाएगा।
+          feedback: गलत। प्रोग्राम "बहुभुजाओं की लाइन खींचें” नहीं बोलेगा।
+        - text: कलाकार एक-दूसरे के ऊपर चार वर्ग बनाएगा।
+          feedback: गलत। लूप "बहुभुजा चित्रित करें” बोलने के बीच 90 डिग्री मुड़ती
+            है।
+        questions:
+        - text: जब आप `चलाएं` बटन को दबाते हैं तो क्या होगा?
+      csf_be_a_super_digital_citizen:
+        content1: यहां वर्णन करें
+      csf_password_power-up:
+        content1: यहां वर्णन करें
+      csf_putting_a_stop_to_online_meanness:
+        content1: यहां वर्णन करें
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: इस कोड का उपयोग करते हुए लॉरेल खजाने के 4 भाग एकत्र करेगी।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: लॉरेल वहां खजाना एकत्र करने का प्रयास करेगी, यहां कुछ नहीं है और इससे
+            त्रुटि होती है।
+          correct: true
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: मुझे पता नहीं
+          feedback: लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं है
+            और इससे त्रुटि होती है।
+        questions:
+        - text: नीचे दिए गए कोड को ध्यान से देखें। यदि कोड को अंत में चलाना होता (किन्हीं
+            त्रुटियों को नज़रअंदाज करते हुए) तो लॉरेल खजाने के कितने भाग एकत्र करती?
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: इस कोड का उपयोग करते हुए लॉरेल खजाने के 4 भाग एकत्र करेगी।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: लॉरेल वहां खजाना एकत्र करने का प्रयास करेगी, यहां कुछ नहीं है और इससे
+            त्रुटि होती है।
+          correct: true
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: मुझे पता नहीं
+          feedback: लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं है
+            और इससे त्रुटि होती है।
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - text: इस कोड का उपयोग करते हुए लॉरेल खजाने के 4 भाग एकत्र करेगी।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: लॉरेल वहां खजाना एकत्र करने का प्रयास करेगी, यहां कुछ नहीं है और इससे
+            त्रुटि होती है।
+          correct: true
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: मुझे पता नहीं
+          feedback: लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं है
+            और इससे त्रुटि होती है।
         questions:
         - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
+        - text: इस कोड का उपयोग करते हुए लॉरेल खजाने के 4 भाग एकत्र करेगी।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: लॉरेल वहां खजाना एकत्र करने का प्रयास करेगी, यहां कुछ नहीं है और इससे
+            त्रुटि होती है।
+          correct: true
+          feedback: सही!
+        - text: सारा खजाना एकत्र करने में लॉरेल की मदद करें।
+          feedback: गलत। लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं
+            है और इससे त्रुटि होती है।
+        - text: मुझे पता नहीं
+          feedback: लॉरेल वहां खजाना एकत्र करने का प्रयास करती है, यहां कुछ नहीं है
+            और इससे त्रुटि होती है।
+        questions:
         - {}
-        - correct: true
-        - {}
-        - {}
+      outbreak_story:
+        content1: यहां वर्णन करें
+        markdown: "# #आउटब्रेकः अपने खुद के सिम्युलेशन को कोड करें\n\n## मॉन्स्टर
+          टाउन में स्वागत है!\nमॉन्स्टर आमतौर पर एक खुशगवार और तंदुरुस्त स्थान था।
+          मॉन्स्टर टाउन के मॉन्स्टर्स को अपने दोस्तों से मिलने के लिए आसपास घूमना
+          पसंद था। \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nएक दिन, मॉन्स्टर्स में से एक ने बीमार महसूस करना
+          शुरू किया। मॉन्स्टर एक **वायरस** की चपेट में आ गया था! वायरस एक बहुत छोटा
+          जीवाणु होता है जो आपको बीमार कर सकता है। अन्य मॉन्स्टर्स बहुत अधिक चिंतित
+          नहीं थे। उन्होंने अपने दोस्तों से मिलना जारी रखा।\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nइसके बाद, दो और मॉन्स्टर बीमार हो गए। यह समान वायरस
+          था! ऐसा लग रहा था कि उनके दोस्त से उन्हें वायरस मिला है।\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nवायरस धीमी गति से उन अन्य मॉन्स्टर्स तक फैल गया जो
+          निकट थे। तंदुरुस्त मॉन्स्टर्स को यह चिंता होने लगी थी कि वे सभी बीमार होने
+          जा रहे हैं। बीमार मॉन्स्टर्स को यह चिंता होने लगी थी कि वे अन्यों को वायरस
+          देने जा रहे हैं।\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## फैलने को रोकना\nखुशकिस्मती से, वायरस
+          को स्टडी करने के बाद, मॉन्स्टर टाउन के पड़ोसियों ने एक महत्वपूर्ण खोज की।
+          उन्हें पता चला कि अगर वे अपने चेहरों पर मास्क पहनते हैं तो उनके वायरस को
+          फैलाने की आशंका कम है। चेहरे पर मास्क होने से, बीमार मॉन्स्टर्स के तंदुरुस्त
+          मॉन्स्टर्स को वायरस देने की कम आशंका थी।\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          आगे क्या होगा?\n\nअब आप मॉन्स्टर टाउन में वायरस आउटब्रेक का अपना खुद का
+          **सिम्युलेशन** बनाने और चलाने के लिए कोड लिखने जा रहे हैं।  सिम्युलेशन एक
+          प्रोसेस या सिस्टम का एक कंप्यूटर मॉडल है। कोड लिखना सीखें और मॉन्स्टर टाउन
+          के पड़ोसियों के साथ क्या होगा इसके पूर्वानुमान लगाएं।\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *वायरस कितनी तेजी से फैलेगा?*\n\n*
+          *क्या प्रत्येक व्यक्ति बीमार होगा?*\n\n* *फेस मास्क कैसे सहायता करेंगे?*\n\n\nइसे
+          पूरा करने के बाद, अपने सिम्युलेशन को अन्यों के साथ साझा करें। टाउन में एक
+          वायरस के आने पर अन्यों को तंदुरुस्त रखने के लिए हम क्या कर सकते हैं इस बारे
+          में अपनी सोच का मैसेज साझा करें। \n"
+      outbreak_story2:
+        content1: यहां वर्णन करें
+        markdown: "# आउटब्रेकः एक वैज्ञानिक की तरह सोचना\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nसिम्युलेशंस उन चीजों को सीखने का एक
+          बहुत अच्छा तरीका हैं जिन्हें वास्तविक दुनिया में ध्यान से देखना मुश्किल
+          हो सकता है। इनसे वैज्ञानिकों को समस्याओं को सुलझाने और नए आइडिया का सुरक्षित
+          और कुशल तरीके से परीक्षण करने में सहायता मिलती है। आपका सिम्युलेशन यह दिखाने
+          का एक तरीका है कि मॉन्स्टर टाउन में एक वायरस आउटब्रेक कैसा दिख सकता है।\n\n##
+          रीसेट और रीप्ले!\nआपके खुद कोड लिखने पर भी, आपके रन दबाने पर क्या होगा इसे
+          पूरी तरह जानना असंभव है। मॉन्स्टर्स अंधाधुंध तरीके से घूमते हैं, तो आपको
+          नहीं पता कि वायरस तेजी से फैलेगा या धीमी गति से। जब भी आप अपना कोड बदलते
+          हैं, अपने सिम्युलेशन को एक से अधिक बार रन करना पक्का करें। चीजें दो बार
+          समान तरीके से नहीं होंगी!\n\n## डेटा कलेक्ट करना\nआपके अपना सिम्युलेशन रन
+          करने पर अपने बिंदुओं को लिखने की कोशिश करें। आप बीमार होने वाले मॉन्स्टर्स
+          की संख्या गिन सकते हैं या चीजें कितनी तेजी से होती हैं इसे देखने के लिए
+          एक टाइमर का इस्तेमाल कर सकते हैं। उदाहरण के लिए, अगर मॉन्स्टर्स में से किसी
+          ने भी मास्क नहीं पहना तो सभी मॉन्स्टर्स के बीमार होने में आमतौर पर कितना
+          समय लगता है?\n\n## पूर्वानुमान लगाना\nअगर आप अपने मॉडल को समझते हैं, तो
+          आप इसका इस्तेमाल पूर्वानुमान लगाने के लिए कर सकते हैं। आपका सिम्युलेशन कैसे
+          रन करता है इसे भी आप बदल सकते हैं और यह अनुमान लगा सकते हैं क्या अलग तरह
+          से होगा। उदाहरण के लिएः\n* अगर मॉन्स्टर्स दोगुने होते तो क्या होगा?\n* अगर
+          मॉन्स्टर्स आधी गति से मूव करते हैं तो क्या होगा?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## क्या मॉन्स्टर टाउन वास्तविक दुनिया के जैसा
+          है?\nइसका एक दायरा है कि कोई मॉडल कितना वास्तविक हो सकता है। \n* वास्तविक
+          दुनिया में आउटब्रेक के साथ आपके आउटब्रेक सिम्युलेशन में क्या समानता है?\n*
+          अंतर क्या हैं?\nआपके इस एक्टिविटी को समाप्त करने के बाद, इन प्रश्नों पर
+          अपने शिक्षकों या परिवार के साथ बातचीत करें!\n\n## हम किस अन्य चीज का मॉडल
+          बना सकते हैं?\nआपने पहले ही मॉन्स्टर टाउन में आउटब्रेक का एक वर्किंग मॉडल
+          बनाया है। कौन सी ऐसी चीजें हैं जो आपका मॉडल नहीं कर सकता या दिखा सकता जो
+          आप चाहते हैं कि यह कर सकता? आगे बढ़ने और मॉडल के बारे में और अधिक सीखने
+          के लिए कंटीन्यू को दबाएं:\n* सिम्युलेशन में मॉन्स्टर्स की संख्या बढ़ाना\n*
+          मॉन्स्टर्स की वायरस से ठीक होने में सहायता करना\n* संभावना, इम्युनिटी, वैक्सीन्स,
+          और अधिक!\n\nआप अपने सिम्युलेशन मॉडल को अन्यों के साथ साझा भी कर सकते हैं,
+          या एक वायरस के टाउन में आने पर अन्यों को तंदुरुस्त रखने के लिए हम क्या कर
+          सकते हैं इस बारे में अपनी सोच का एक मैसेज साझा कर सकते हैं। \n"
+      outbreak_freeplay_choice:
+        description: आपने ट्यूटोरियल समाप्त कर लिया है! अपने प्रोजेक्ट में बदलाव या
+          सुधार करते रहें। आप समान टूलबॉक्स के साथ कार्य करना चुन सकते हैं या एक एक्सपेंडेड
+          टूलबॉक्स को आजमाएं।
+        display_name: फ्री प्ले

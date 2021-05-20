@@ -1,0 +1,15 @@
+th:
+  data:
+    parameter_names:
+      actor: นักแสดง
+      color: สี
+      counter: ตัวนับ
+      height: ความสูง
+      honey: น้ำผึ้ง
+      left: ซ้าย
+      length: ความยาว
+      min: min
+      points: คะแนน
+      size: ขนาด
+      speed: ความเร็ว
+      width: ความกว้าง

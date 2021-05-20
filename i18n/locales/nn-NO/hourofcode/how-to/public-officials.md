@@ -1,7 +1,5 @@
 ---
 title: Rettleiing for det offentlege
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -26,7 +24,7 @@ Frå venstre til høgre: *Guvernørar frå Arkensas, Nord-Carolina og Arizona de
 
 ### 1. Les vår info på ei side
 
-Sjå [kvifor utdanning innan datavitskap er viktig](/files/hoc-one-pager.pdf), og korleis du kan hjelpe innsatsen vår med å støtte Kodetimen.
+See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
 
 ### 2. Rekrutter lokale skular og distrikt
 

@@ -12,12 +12,12 @@
   csedweek_dates: "දෙසැම්බර් 8-14, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Hour of Code වැඩසටහන</a> සමගින් එක්වන්න. අප සියලුම ගුරුවරුන්ට හා සංවිධායකයින්ට, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold"> ඔබගේ Hour of Code වැඩසටහන </a> සැළසුම් කිරීමට ආරාධනා කරමු'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න.</a>'
+  csedweek_banner_teachers_text: "ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න."
   n_have_learned_an_hoc: "<h1>Hour of Code වැඩසටහන </h1><h2>උත්සාහ කරන්න </h2><h3>එය # දෙනෙකුට උපකාරී වී ඇත</h3>"
   anybody_can_learn: "ඕනෑම අයකුට ඉගෙනගන්න පුලුවන්."
   learn_now: "දැන් ඉගෙනගන්න"
   petition_message: "සෑම පාසලකම සිටින සෑම සිසුවෙකුටම පරිගණක විද්‍යාව ඉගෙනීමට අවස්ථාවක් තිබිය යුතුය"
   petition_sign_message: 'මීට එකඟ වේ නම්, ඔබගේ නම ඇතුලත් කරන්න. තවත් # දෙනෙකු සමග එකතුවෙන්න.'
-  petition_sign_message_support: 'අපට සහාය පළකිරීමට ඔබේ නම අත්සන් කරන්න. තවත් # ක් දෙනා සමග එක් වන්න.'
   petition_join_others: 'තවත් # ක් සමග එක්වන්න'
   name: "නම"
   email: "විද්‍යුත් තැපැල"
@@ -141,6 +141,7 @@
   thanks_for_submitting: "ඉදිරිපත් කිරීම පිළිබඳව ස්තූතියි!"
   if_you_enjoyed: "ඔබ මෙමගින් යමක්  ඉගෙනගත්තානම්, ඔබගේ අනිකුත් මිතුරන්ටද  මෙය උත්සාහ කිරීමට යොමු කරන්න. අපිට මුළු ලෝකයම ඉගෙනීමට යොමු කිරීමට සහය වන්න."
   personalize_certificate: "ඔබගේ සහතිකය පුද්ගලිකරණය කරන්න"
+  print_certificates: "සහතික මුද්‍රණය කරන්න"
   share_achievement: "ඔබගේ ජයග්‍රාහණය Share කරන්න"
   beyond_hour_message: "දිගටම අපගේ <a href='http://studio.code.org'> අනිකුත් පාඨමාලාවන්</a> සමගින් රැදී සිටින්න නැතහොත් <a href='/learn/beyond'>පැයකට සීමා නොවී දිගටම ඉගෙන ගැනීම</a> සදහා තවත් විකල්පයන් බලන්න."
   leaderboards_for_hoc: "Hour of Code නායකත්ව පුවරුව."
@@ -286,6 +287,7 @@
   homepage_action_text_learn: "ඉගෙනීම අරඹන්න"
   homepage_action_text_signpetition: "මෙම පෙත්සම අත්සන් කරන්න"
   homepage_signpetition_dropdown: "මම එකඟ වෙමි &#x25BE;"
+  homepage_signpetition_dropdown_text: "මම එකඟයි"
   homepage_diversity_pledge: "පරිගණක විද්‍යා ක්ෂේත්‍රය තුළ විවිදත්වය සඳහා ප්‍රතිඥා දෙන්න"
   homepage_banner_text_prizes: 'Hour of Code ළඟදීම පැමිණේ, දෙසැම්බර් 7-13. '
   homepage_banner_link_prizes: 'ඉතිහාසයේ දැවැන්තම ඉගෙනුම් වැඩසටහනට එක් වන්න. '
@@ -866,6 +868,8 @@
   coursee-2018_gradelevel: වයස 8-12
   coursed-2019_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
   coursee-2019_gradelevel: වයස 8-12
+  coursed-2020_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee-2020_gradelevel: වයස 8-12
   accelerated_gradelevel: "වයස අවුරුදු 10-18"
   codeorg_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   codeintl_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
@@ -1214,6 +1218,8 @@
   header_project_gallery: "ව්යාපෘති"
   header_educate_hoc: "Hour of Code"
   header_stats: "සංඛ්‍යාන"
+  header_legal_privacy: "රහස්‍යතා ප්‍රතිපත්තිය"
+  header_legal_tos: "සේවා නියම"
   user_header_label: "ආයුබෝවන් %{username}"
   user_header_team: "කණ්ඩායම"
   user_header_settings: "මගේ ගිණුම"
@@ -1241,3 +1247,8 @@
   hoc2018_dance_teacher_resources_tile1_button: "පාඩම් සැලැස්ම"
   hoc2018_dance_teacher_resources_tile2_button: "අපේනුගත ක්‍රියාකාරකම"
   hoc2018_dance_amazon_about_future_engineer_button: "වැඩිදුර ඉගෙන ගන්න"
+  footer_powered_by_aws: "ඇමේසන් වෙබ් සේවා මඟින් බලගැන්වේ"
+  footer_privacy_policy: "රහස්‍යතා ප්‍රතිපත්තිය"
+  footer_donate: "පරිත්‍යාග"
+  footer_support: "සහාය"
+  footer_terms: "නියම"

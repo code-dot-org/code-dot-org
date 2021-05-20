@@ -1,79 +1,98 @@
 ---
-title: Ebeveynler İçin Etkinlik rehberi
-layout: wide
-nav: how_to_nav
+title: Hour of Code Ebeveynler için Nasıl Yapılır? Rehberi
 ---
 
-{{ signup_button }}
+# Hour of Code'u çocuklarınızla nasıl yaparsınız?
 
-# How to do an Hour of Code with your child
+Çocuğunuzu ilk kez bilgisayar bilimi ile tanıştırmak bakımından, Kodlama Saatini denemek basit ve eğlencelidir. Bilgisayar biliminin tüm çalışma alanlarına temel teşkil etmesinin yanı sıra, [güncel çalışmalar şunu da gösteriyor](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): bilgisayar bilimi çalışan çocuklar, diğer konularda da daha iyi performans gösteriyor, üstün problem çözme becerisi sergiliyor ve <font color="00adbc">bu çocukların üniversiteye kaydolma oranı da %17 daha fazla oluyor</font>.
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+Bu küresel etkinlikte dünya çapında milyonlarca öğrenciye katılabilirsiniz. Birlikte, çocuklara öğrenmeleri, klişeleri yıkmaları ve yeni bir ilgi alanı keşfetmeleri için ilham verebiliriz. Daha da iyisi, Kodlama Saatini evinize getirmek için ihtiyacınız olan her şeye sahipsiniz.
+
+[![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
+
+<h3>Başlamak için neye ihtiyacım var?</h3>
+
+Kodlama Saati yeni başlayanlar için bile çok kolaydır! Çocuklarınızın hem öğrenmelerini hem de eğlenmelerini sağlayacak eğlenceli bir aktivite başlatmak için bilgisayar bilimi veya bunu öğretmek konusunda deneyime ihtiyacınız yok.
+
+Hour of Code'u bir bilgisayar, tablet veya akıllı telefon ile veya tamamen bağlantısız şekilde deneyebilirsiniz! Şu şekilde başlayacaksınız.
+
+[<button>PDF Rehberi görüntüleyin</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
-## 1) "Nasıl Yapılır" videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1) Aktiviteleri ve eğitimleri keşfedin.
 
-## 2) Choose a tutorial
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+İnternet erişimi olan bir bilgisayarda çalışıyorsanız, sizin için uygun olan sayısız [Hour of Code aktivitesi](https://hourofcode.com/us/learn) mevcut. Çocuğunuzu keyif alacağı egzersizler konusunda yönlendirmeye yardımcı olmak için seçeneklerinizden bazılarına önceden göz atmanızı öneririz.
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+Tüm aktivitelerimiz problem çözme ve eleştirel düşünmeyi eğlence ve yaratıcılıkla birleştirir, ancak öğrencilerin en sevdiği aktivitelerden bazıları şunlar:
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+- Oyun oynamayı seven çocuklar için:[Minecraft](https://code.org/minecraft) veya [Dans Partisi](https://code.org/dance)
+- Disney'i seven çocuklar için: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/stage/1/puzzle/1) veya [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Öğrenmeyi seven çock,uklar için: [Okyanuslar için Yapay Zeka](https://code.org/oceans) veya [Scratch ile Müzik Yap](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
-## 3) Teknolojik gereksinimlerinizi planlayın
+<h3>Düşük teknoloji mi yoksa teknolojisiz mi?</h3>
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+Sınırlı bir teknoloji kullanacaksanız veya teknolojiden faydalanmayacaksanız *Sınıf teknolojisi* bölümünden "Bilgisayar veya cihaz olmasın"ı seçerek [Hour of Code aktivitelerini](https://hourofcode.com/us/learn) filtreleyebilirsiniz.
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+[![](/images/fit-500/Marketing/filtering-activities-hoc.jpg)]({{ urls/learn }})
 
-## 4) Start your Hour of Code with an inspiring video
+Ayrıca, evde bağlantısız bir aktivite başlatmaya yönelik daha fazla fikir için bu [kısa videolara](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu) da göz atabilirsiniz.
 
-Çocuğunuza ilham vererek ve bilgisayar biliminin hayatımızın her bölümünü nasıl etkilediğini tartışarak Kod Saatinizi başlatın.
+## 2) Vaktinden önce hazırlanın
 
-**İlham verici bir video gösterin:**
+Halihazırda aklınızda bazı eğitim varken, çocuğunuza göstermeden önce bu aktiviteleri kendi cihazınızda denemek faydalı olabilir.
 
-- Bill Gates, Mark Zuckerberg ve NBA yıldızı Chris Bosh'un olduğu orjinal Code.org videoları ([1 dakika](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 dakika](https://www.youtube.com/watch?v=nKIu9yen5nc) ve [9 dakika](https://www.youtube.com/watch?v=dU1xS07N-FA) versiyonları vardır).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [ Başkan Obama tüm öğrencileri kodlama öğrenmeye çağırıyor](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+[![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-Eğer bilgisayar biliminde yeniyseniz sorun değil. işte size kodlama saati aktivitelerini tanıtmak için birkaç fikir:
+<h3>Evde birden fazla çocuk mu var?</h3>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Günlük hayatımızda kod kullanılan şeyleri listeleyin.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+Ayrı cihazlarda çalışacaklarsa çocuklarınıza kulaklık vermeyi düşünebilirsiniz. Bu şekilde, birbirlerini rahatsız etmeden aktiviteleri sesli şekilde oynatabilirler.
 
-Daha fazla fikir ister misiniz? Deneyimli eğitimcilerin en iyi uygulamaları için  şablon ders planımıza </ 0> bakın.</p> 
+Yalnızca bir cihaz kullanacaksanız veya Hour of Code aktivitenizi daha interaktif hale getirmek istiyorsanız, [çiftli programlamayı](https://www.youtube.com/watch?v=vgkahOzFH2Q) deneyin. Çift programlama çocukları birlikte çalışmak konusunda teşvik eder. İki kişilik takımlar halinde çalıştıklarında problem çözmek için birbirlerine yardım ederler. Ayrıca bu yöntemle bilgisayar biliminin oldukça sosyal olduğunu ve işbirliği gerektirdiğini görmüş olacaklardır.
 
-## 6) Kod!
+<h3>Çocukları heyecanlandırın! </h3>
 
-<img src="/images/fit-700/tutorial-short-link.png" />
+Çocuğunuzun gündelik yaşamına yeni bir aktivite türü eklemek bakımından bu harika bir fırsat. Şu öneriler ile eğlenceyi eğitimin ötesine taşıyabilirsiniz:
 
-Yapmak istediğiniz öğreticiyi seçtiğinizde, öğreticinin kısa bağlantısına yer işareti koyabilirsiniz.
+- En sevdikleri rol modellerinden birinin olduğu [ilham verici bir video](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) izletin.
+- Bilgisayar bilimi becerilerinin beraberinde getirebileceği [kariyerlerden](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) biri üzerine olan bir video ile onlara ilham verin.
+- [Promosyon ürünleri sipariş edin](https://store.code.org/)! Tişört, sticker, hatta geçici dövmelerden seçebilirsiniz. Çocukları heyecanlandırmak için bunu hemen paylaşın veya özel bir ödül olarak Kodlama Saatinin sonuna saklayın. 
 
-**Çocuğunuz zorluklarla karşılaştığında**
+<a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-Cevap vermek sorun değil:
+## 3) Çocuğunuza Bilgisayar Bilimini tanıtmaya dair ipuçları
 
-- "Bilmiyorum. Buna birlikte bakalım."
-- "Teknoloji her zaman istediğimiz gibi çalışmaz."
-- "Programlama öğrenmek yeni bir dil öğrenmek gibidir; hemen akıcı olmayacaktır."
+Hem siz hem de çocuğunuz bilgisayar biliminde yeniyseniz sorun değil. İşte size Hour of Code aktivitelerini tanıtmak ve bilgisayar bilimi hakkında düşünmeniz için birkaç fikir:
 
-## 6) Kutlama
+- Çocuğunuzun ilgisini çekebilecek belirli örneklerle, teknolojinin hayatımızı etkileme şekillerini açıklayın. Örneğin, tıp veya insanların sanal olarak birbiriyle bağlantı kurması hakkında konuşabilirsiniz. Ayrıca, önerilen tartışma soruları için [Code.org/CSforGood](https://code.org/csforgood)'yı ziyaret edin.
+- Düzgün çalışmak için kod kullanan gündelik öğeleri birlikte listeleyin.
 
-[Print certificates]({{ urls/certificates }}) for your child (and yourself!).
+[![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
-Kod Saati etkinliğinize ait fotoğrafları ve videoları sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın böylece başarılarınızı biz de vurgularız!
+<h3>Evde genç kadınlar var mı?</h3>
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+Bilgisayar bilimine olan ilgilerini artırmaya yönelik <a href="https://code.org/girls"> önerilerimiz şu şekilde</a>. **İpucu**: Sadece bunda çok başarılı olacaklarını söyleyerek de başlayabilirsiniz!
 
-## Kod Saati etkinliğinden sonra ne yapmalı?
+<h3>Birlikte problem çözme</h3>
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+Son olarak, çocuğunuz zorluklarla karşılaştığında şu yanıtları verebilirsiniz: - "Bilmiyorum. Bunu birlikte çözelim." - "Teknoloji her zaman istediğimiz gibi çalışmıyor." - “Programlamayı öğrenmek, yeni bir dil öğrenmek gibidir; hemen sular seller gibi olmayacak."
 
-- Encourage your child to continue [to learn online]({{ urls/learn_beyond }}).
-- Help [promote]({{ urls/promote }}) computer science education in your child’s school district.
+Bilgisayar bilimi, düşündüğümüz gibi sonuçlanmayan durumların "hatasını ayıklama"yı öğrenmekle ilgilidir. Çocuğunuz ve siz birlikteyken problemi çözmeye dair yaratıcı yollar düşünebilirsiniz.
 
-{{ signup_button }}
+## 4) Kutlama yapmayı unutmayın!
+
+Hour of Code küresel bir etkinlik ve aileniz de kutlama yapmayı hak ediyor. Hour of Code'unuzu ekstra özel hale getirecek bazı ipuçları:
+
+- Çocuğunuz aktivitesini tamamladığında ona vereceğiniz [Hour of Code Sertifikalarının](https://staging.code.org/certificates) çıktısını alın 
+- Evde [çıkartmaların çıktısını alın](https://staging.hourofcode.com/us/promote/resources#stickers) veya ekstra bir sürpriz olarak [bunları çevrimiçi satın alın](https://store.code.org/). 
+- Evdeki Hour of Code fotoğraflarınızı ve videolarınızı sosyal medyada paylaşın. Paylaşımlarınızda #HourOfCode ve @codeorg etiketlerini kullanın; böylece başarılarınızı biz de vurgularız!
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+<h2>Hour of Code etkinliğinden sonra ne yapmalı?</h2>
+
+Bilgisayar bilimi Hour of Code ile sona ermek zorunda değil! Ebeveynlerin %90'ı çocuklarının bilgisayar bilimi öğrenmesini istiyor ancak çoğu okul hala bu eğitimi vermiyor. Yardımcı olmak için, müfredatımız web tabanlıdır ve her zaman ücretsizdir. Bilgisayar Bilimini çocuğunuzun okuluna nasıl taşıyabileceğiniz hakkında [bilgi edinin](https://code.org/yourschool).
+
+[<button>PDF Rehberi görüntüleyin</button>]({{ localized_files/hourofcode_parent_how_to }})

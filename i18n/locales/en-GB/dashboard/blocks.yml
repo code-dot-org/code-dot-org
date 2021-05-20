@@ -2,30 +2,14 @@
 en-GB:
   data:
     blocks:
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"height"': height
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"height"': height
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -34,56 +18,32 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": random
       Dancelab_layoutSprites:
         options:
           FORMAT:
             '"random"': random
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          'N':
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
           LAYOUT:
             '"random"': random
       Dancelab_randomColor:
         text: random colour
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -96,7 +56,15 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"height"': height
@@ -104,6 +72,14 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -114,6 +90,11 @@ en-GB:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"space"': space
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -162,44 +143,30 @@ en-GB:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_checkTouching:
+      aalab_layoutSprites:
         options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
+          FORMAT:
+            '"random"': random
       binary_whenKey:
         options:
           KEY:

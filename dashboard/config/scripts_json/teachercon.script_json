@@ -1,0 +1,1481 @@
+{
+  "script": {
+    "name": "teachercon",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:50 UTC",
+    "seeding_key": {
+      "script.name": "teachercon"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Teachercon",
+      "name": "Introduction to Teachercon",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 1,4",
+      "name": "Lesson 1.4: Number Systems (Circle Triangle Square)",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 1,6",
+      "name": "Lesson 1.6: Sending Numbers",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 1,9",
+      "name": "Lesson 1.9: Internet Addressing (Battleship)",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 1,10",
+      "name": "Lesson 1.10: Routers and Redundancy",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 1,11",
+      "name": "Lesson 1.11: Packets and Making a Reliable Internet",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 2,2",
+      "name": "Lesson 2.2: Text Compression",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 2,3",
+      "name": "Lesson 2.3: Black and White Pixelation",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Lesson 2,10",
+      "name": "Lesson 2.10: Good and Bad Data Visualizations",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Group Work and Peer Learning",
+      "name": "Group Work and Peer Learning",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Balancing Teachers and Tools",
+      "name": "Balancing Teachers and Tools",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Discovery Learning",
+      "name": "Discovery Learning",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "key": "Measuring Student Learning",
+      "name": "Measuring Student Learning",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Welcome to TeacherCon!"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Welcome to TeacherCon!"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Welcome to TeacherCon!"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TeacherCon Agenda"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TeacherCon Agenda"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "TeacherCon Agenda"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TeacherCon Self-Assessment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TeacherCon Self-Assessment"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "TeacherCon Self-Assessment"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L4 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U1L4 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L6 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U1L6 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U1L9 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L10 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U1L10 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L11 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U1L11 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L2 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U2L2 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L3 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L3 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U2L3 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L10 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "U2L10 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Exploring Practices and Strategies during TeacherCon"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Overview: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Collaborative Learning and Group Work: Description and Strategies"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "The Official Peer Instruction Blog"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "the Journal of Peer Learning"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Tuesday Report: Group Work and Peer Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Tuesday Report: Group Work and Peer Learning in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Tuesday Report: Group Work and Peer Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Wednesday Report: Group Work and Peer Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Wednesday Report: Group Work and Peer Learning in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Wednesday Report: Group Work and Peer Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Exploring Practices and Strategies during TeacherCon"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Overview: Balancing Teachers and Tools"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Tuesday Report: Balancing Teachers and Tools in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Tuesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Tuesday Report: Balancing Teachers and Tools in Unit 1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Exploring Practices and Strategies during TeacherCon"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Overview: Discovery Learning"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Discovery learning definition and history"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Discovery learning techniques"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Tuesday Report: Discovery Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Tuesday Report: Discovery Learning in Unit 1"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Tuesday Report: Discovery Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Wednesday Report: Discovery Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Wednesday Report: Discovery Learning in Unit 1"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Wednesday Report: Discovery Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Exploring Practices and Strategies during TeacherCon"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Overview: Capturing Student Learning"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "What is the difference between formative and summative assessment?"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Classroom Assessment Techniques"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Tuesday Report: Measuring Student Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Tuesday Report: Measuring Student Learning in Unit 1"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Tuesday Report: Measuring Student Learning in Unit 1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Wednesday Report: Measuring Student Learning in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Wednesday Report: Measuring Student Learning in Unit 1"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      },
+      "level_keys": [
+        "Wednesday Report: Measuring Student Learning in Unit 1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Welcome to TeacherCon!",
+        "script_level.level_keys": [
+          "Welcome to TeacherCon!"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TeacherCon Agenda",
+        "script_level.level_keys": [
+          "TeacherCon Agenda"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TeacherCon Self-Assessment",
+        "script_level.level_keys": [
+          "TeacherCon Self-Assessment"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L4 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L6 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L9 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L11 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 Lesson Overview",
+        "script_level.level_keys": [
+          "U2L2 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L3 Lesson Overview",
+        "script_level.level_keys": [
+          "U2L3 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L10 Lesson Overview",
+        "script_level.level_keys": [
+          "U2L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Official Peer Instruction Blog",
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "the Journal of Peer Learning",
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Tuesday Report: Group Work and Peer Learning in Unit 1",
+        "script_level.level_keys": [
+          "Tuesday Report: Group Work and Peer Learning in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Wednesday Report: Group Work and Peer Learning in Unit 1",
+        "script_level.level_keys": [
+          "Wednesday Report: Group Work and Peer Learning in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Balancing Teachers and Tools",
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Tuesday Report: Balancing Teachers and Tools in Unit 1",
+        "script_level.level_keys": [
+          "Tuesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Wednesday Report: Balancing Teachers and Tools in Unit 1",
+        "script_level.level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Discovery Learning",
+        "script_level.level_keys": [
+          "Overview: Discovery Learning"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning definition and history",
+        "script_level.level_keys": [
+          "Discovery learning definition and history"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Discovery learning techniques",
+        "script_level.level_keys": [
+          "Discovery learning techniques"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Tuesday Report: Discovery Learning in Unit 1",
+        "script_level.level_keys": [
+          "Tuesday Report: Discovery Learning in Unit 1"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Wednesday Report: Discovery Learning in Unit 1",
+        "script_level.level_keys": [
+          "Wednesday Report: Discovery Learning in Unit 1"
+        ],
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Capturing Student Learning",
+        "script_level.level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "What is the difference between formative and summative assessment?",
+        "script_level.level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Classroom Assessment Techniques",
+        "script_level.level_keys": [
+          "Classroom Assessment Techniques"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Tuesday Report: Measuring Student Learning in Unit 1",
+        "script_level.level_keys": [
+          "Tuesday Report: Measuring Student Learning in Unit 1"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Wednesday Report: Measuring Student Learning in Unit 1",
+        "script_level.level_keys": [
+          "Wednesday Report: Measuring Student Learning in Unit 1"
+        ],
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "teachercon"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

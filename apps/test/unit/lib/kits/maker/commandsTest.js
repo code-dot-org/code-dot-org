@@ -1,5 +1,5 @@
 /** @file Test maker command behavior */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {
   analogRead,
@@ -13,7 +13,7 @@ import {
   onBoardEvent,
   pinMode
 } from '@cdo/apps/lib/kits/maker/commands';
-import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
+import FakeBoard from '@cdo/apps/lib/kits/maker/boards/FakeBoard';
 
 describe('maker/commands.js', () => {
   let stubBoardController;

@@ -1,7 +1,5 @@
 ---
 title: Примерна резолюция за подкрепа на CSEW и Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -13,6 +13,7 @@ export default class Alert extends React.Component {
     onClose: PropTypes.func.isRequired,
     closeDelayMillis: PropTypes.number,
     sideMargin: PropTypes.number,
+    bottomMargin: PropTypes.number,
     childPadding: PropTypes.string
   };
 
@@ -45,7 +46,7 @@ export default class Alert extends React.Component {
       child: {
         // from bootstrap's alert
         padding: valueOr(this.props.childPadding, '8px 35px 8px 14px'),
-        marginBottom: 20,
+        marginBottom: valueOr(this.props.bottomMargin, 20),
         textShadoow: '0 1px 0 rgba(255, 255, 255, 0.5)',
         border: '1px solid',
         borderRadius: 4

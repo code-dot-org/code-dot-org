@@ -1,0 +1,25 @@
+name 'csp-9-exam1-citizen-science-1_2020'
+editor_experiment ''
+right 'Citizen science'
+wrong 'Crowdfunding'
+wrong 'Open data'
+wrong 'Machine Learning'
+
+
+markdown <<MARKDOWN
+A researcher is interested  in learning more about the different kinds of plants growing in different areas of the state she lives in. The researcher creates an app that allows residents of the town to photograph plants in their area using a smartphone and record date, time, and location of the photograph. Afterwards the researcher will analyze the data to try to determine where different kinds of plants grow in the state.
+
+Which of the following does this situation best demonstrate?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Citizen science is research where some of the data collection is done by members of the public using own computing devices which leads to solving scientific problems.
+
+[Lesson 5 - Big, Open, and Crowdsourced Data](https://curriculum.code.org/csp-20/unit9/5/) included a synthesis of all the topics from the jigsaw activity in the wrap up.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.E: Explain how people participate in problem-solving processes at scale.
+:::
+
+MARKDOWN

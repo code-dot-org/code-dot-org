@@ -1,0 +1,10 @@
+name 'CSD U3 platform intro_2018_2019_virtual'
+display_name 'Build a Platform Jumper'
+title 'Build a Platform Jumper'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Build a Platform Jumper
+
+In the next several levels, you'll be building a platform jumper game.  Before you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher before clicking to the next level.
+MARKDOWN

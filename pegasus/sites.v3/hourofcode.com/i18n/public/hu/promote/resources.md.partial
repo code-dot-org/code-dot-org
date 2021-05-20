@@ -8,169 +8,178 @@ nav: promote_nav
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Népszerűsítsd a "Hour of Code" kezdeményezést
+# Népszerűsítsd a Kódolás órája kezdeményezést
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### Használd fel az összes rendelkezésre álló forrást a Kódolás órája népszerűsítéséhez. Nem vagy biztos benne, hogy is kezd? Nézd meg elsőként [útmutatónkat]({{ how_to_url }}), amelyből megtudhatod, hogyan is vágj neki egy Kódolás órája rendezvénynek!
 
----
+* * *
 
-{{ view :promote_handouts }} {{ view :promote_videos }}
+{{ promote_handouts }} {{ promote_videos }}
 
 <a id="posters"></a>
 
 ## Függeszd ki ezeket a posztereket az iskoládban
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+Az új posztereken Malala, Stephen Curry, Shakira és még sokan mások is szerepelnek! Az új poszter kollekció ebben az évben is 6 posztert tartalmaz, továbbá 126 "Résztvettem a Kódolás óráján" matricát. A készletek limitáltak, ezért ne habozz és [rendelt meg a posztereket](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) most. Ha szeretnéd a posztereket saját magad kinyomtatni, kattints a fenti linkre, hogy letölthesd a nyomtatható verziót.
 
-{{ view :promote_new_posters }}
+{{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Érdekelnek az előző évek poszterei? [Kattins ide]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
 ## Oszd meg ezeket a közösségi médiában
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![kép](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![kép](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![kép](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![kép](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Használd ezt az "Hour of Code" logót a népszerűsítéshez
+## Használd a Kódolás órája logóját a népszerűsítéshez
 
-[![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![kép]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![kép]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Töltsd le a nagy felbontású verziót](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**A "Kódolás Órája" és a "Hora del Código" védjegy. Nem akarjuk megakadályozni a használatukat, de szeretnénk megbizonyosodni arról, hogy a felhasználási feltételek megegyeznek a mi elképzeléseinkkel is:**
 
-1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. **Good example**: "Participate in the Hour of Code™ at ACMECorp.com." **Bad example**: "Try Hour of Code by ACME Corp."
-2. Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. A "Kódolás Órája" vagy a "Hora del Código" hivatkozásokat olyan módon kell használni, amely nem azt sugallja, hogy ez a saját márkaneved lenne, hanem inkább egy alulról szerveződő mozgalomként utal rá.
+
+<ul style="margin-top: 0px">
+  <li>
+    <strong> Jó példa erre</strong>: "Vegyen részt a Kódolás Óráján™ a TE CÉG NEVED.com címen."
+  </li>
+  <li>
+    <strong>Rossz példa erre</strong>: "Próbáld ki a Kódolás Óráját a TE CÉG NEVED-nél."
+  </li>
+</ul>
+
+1. Használd a „TM” felső indexet a legismertebb helyeken, amiket a „Kódolás Órája” megemlít, és egy „Ⓡ” felső indexet a leghíresebb helyeken, amelyeket a „Hora del Código” megemlít, mind a saját webhelyeden, mind az alkalmazásleírásokban.
+2. HIvatkozd meg az oldaladon (vagy a láblécben) az olyan weboldalakat, mint a Számítástechnikai Oktatási Hét (CSEdWeek) és a [ Code.org ]({{ codeorg_link }}), amelyek a következőket hirdetik:
     
-    *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *„A Kódolás Órája™ vagy Hora del Código®, a Számítástechnikai Oktatási Hét [csedweek.org] és a Code.org [code.org] globális kezdeményezése, amelynek célja, hogy hallgatók millióinak nyújtson lehetőséget egy órányi informatika és számítógép programozási ismeretek elsajátításához."*
 
-4. No use of "Hour of Code" in app names.
+3. Az alkalmazásnevekben nem használható a „Kódolás Órája” vagy a „Hora del Código” elnevezés.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## Nyomtasd ki ezeket a matricákat és add oda a diákjaidnak
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(A matrica átmérője 2,54 cm, laponként 63 darabot tartalmaz.)<br />
 
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![kép](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## Hívd meg közösséged képviselőit a Kódolás órája eseményre és e-mailben tájékoztasd őket a rendezvényről
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### Az alábbi [linken]({{ promote/stats_url }}) még több információt és segítséget találsz a Kódolás órája eseményhez.
 
----
+* * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### Kérd meg iskoládat, munkáltatódat és barátaidat, hogy csatlakozzanak:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**Tárgy:** Csatlakozz hozzám és több mint 100 millió diákhoz a Kódolás órájára <br />
 
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+A számítógépek mindenütt jelen vannak, megváltoztatva bolygónk minden iparágát. But only 47% of all high schools teach computer science. Jó hír, hogy hozzákezdtünk ennek megváltoztatásához! Ha korábban is hallottál már a Kódolás órájáról, akkor talán tudod, hogy történelmet csinált az általa megtestesített kezdeményezés. Már több mint 100 milló diák próbálta ki a Kódolás óráját.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. A világ összes Apple áruháza vendégül láttott egy Kódolás órája eseményt, és a kampány részeként olyan vezetők, mint az amerikai elnök, Obama vagy a kanadai miniszterelnök, Justin Trudeau is megírták első kódsoraikat a kampány részeként.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+Ebben az évben tegyük ezt még nagyobbá. Arra kérlek, hogy csatlakozz a Kódolás órájához {{ campaign_date/year }}. Vegyél részt egy Kódolás órája eseményen a Számítástechnikai Oktatási Hét keretében {{kampány_date / teljes}}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Lépj elő. Legyél te egy rendezvény házigazdája. Keress egy helyi iskolát a részvételhez, vagy próbáld ki a Kódolás óráját saját magad - mindenki csak profitálhat az alapok elsajátításából.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Kezdj neki itt: http://hourofcode.com/{{ country }} <br />
 
----
+* * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### Önkéntesként egy iskolában:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [Az alábbi linken még több információt találsz az önkénteskedésről]({{ how_to_volunteers_url }}).
 
-**Subject line:** Can we help you host an Hour of Code?
+**Tárgy:** Segíthetünk neked a Kódolás órája megszervezésében?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+A kampány {{ campaign_date/short }} ideje alatt a világ diákjainak 10%-a ünnepeli a Számítástechnikai Oktatási Hetet azzal, hogy részt vesz egy Kódolás órája eseményen az iskolájában. Ez minden gyermeknek lehetőséget kínál arra, hogy megtanulja, hogyan működik a körülötte lévő technológia.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Szervezet neve / Saját nevem] szeretne segíteni a [iskola neve] Kódolás órája esemény lebonyolításában. Szívesen segítünk a tanároknak abban, hogy is kell egy Kódolás órája eseményt megszervezni (nincs szükség még számítógépre sem!), vagy ha szeretne inkább egy iskolai előadást rendezni a témában, biztosítunk előadót is, aki megosztja a résztvevőkkel tapasztalatait és tudását a technológia működéséről, és hogy milyen is szoftvermérnöként dolgozni.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+A diákok saját alkalmazásokat vagy játékokat készíthetnek, amelyeket meg tudnak mutatni a szüleiknek, sőt kapnak kinyomtatott Kódolás órája tanúsítványt is, amelyet hazavihetnek. Az egész a jókedvről szól! Interaktív, gyakorlati jellegű tevékenységekkel a diákok sokkal közérthetőbb módon tanulhatják meg a számítógépes gondolkodást és képességeket.
 
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+A számítógépek mindenütt jelen vannak, megváltoztatva bolygónk minden iparágát. But only 47% of all high schools teach computer science. Jó hír, hogy hozzákezdtünk ennek megváltoztatásához! Ha korábban már hallottál a Kódolás órájáról, akkor talán tudod, hogy történelmet csinált az általa megtestesített kezdeményezés. Már több mint 100 milló diák próbálta ki a Kódolás óráját. Még olyan vezetők is, mint az amerikai elnök, Obama, vagy a francia miniszterelnök, Justin Trudeau is megírták első kódsoraikat a kampány részeként.
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+Az eseményről bővebben a http://hourofcode.com oldalon olvashatsz tovább. Vagy tudasd velünk, ha szeretnél beszélgetni iskolád részvételéről [iskola neve]. <br />
 
----
+* * *
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### Mesélj a szülőknek az iskolai eseményről:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**Tárgy:** Diákjaink megváltoztatják a jövőt a Kódolás órájával
 
-Dear Parents,
+Kedves Szülők,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Egy olyan világban élünk, melyet átsző a technológia. És tudjuk, hogy gyermekeink bármilyen területen is helyezkednek el felnőttként, a sikerük kulcsa egyre inkább a technológia működésének megértésén múlik.
 
-But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Éppen ezért kell az egész iskolának csatlakoznia a történelem legnagyobb oktatási eseményéhez: a Kódolás órájához, a Számítástechnika Oktatási Héten ({{kampány_date / teljes}}). Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját. A Kódolás órája büszkén jelenti, hogy készen áll arra, hogy [Iskola neve]-ban/ben megtanítsa ezeket, a 21. századi alapvető készségeket. Ahhoz, hogy a diákokat a jövőben is ösztönözzük a programozási tevékenységek folytatására, szeretnénk ezt az eseményt feledhetetlenné tenni. Ne félj jelentkezni önkéntesnek. Lépj kapcsolatba a helyi médiával, oszd meg a hírt a közösségi oldalakon, és fontold meg további Kódolás órája események szervezését a környezetedben.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+Itt a lehetőség, hogy megváltoztassuk az oktatás jövőjét [Város/falu neve]-ban/ben.
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+További részletek a http://hourofcode.com/{{ country }} weboldalon. Segíts, hogy mások is megtudják. <br />
 
----
+* * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### Hívd meg a sajtót az eseményre:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [Nézd meg sajtóanyagainkat további információkért cserébe.]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Tárgy**: Helyi iskola küldetésének teszi, hogy bemutassa a számítástechnikát diákok számára
 
-Computers are everywhere, changing every industry on the planet, but only 35% of all high schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. A jó hír az, hogy mi már dolgozunk azon hogy ez megváltozzon.
+Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. A marginalizált faji és etnikai csoportokból származó fiatal nők és diákok súlyosan alulreprezentáltak az informatika órákon és a technológiai iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. Minden Apple Store a világon tartott már egy Kódolás Órája eseményt. Még Obama elnök úr is megírta élete első kódját a kampány részeként.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Ezért van az, hogy a \[SCHOOL NAME\] \[X number\] tanulójának mindegyike csatlakozik a történelem legnagyobb oktatási rendezvényéhez: A Kódolás Órája a Computer Science Education Week alatt (december 3-9.).
 
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+Meg szeretnélek hívni, hogy részt vegyél a kick off eseményünkön és hogy lásd, ahogy a gyerekek elkezdik a munkát [DATE] napon.
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+A Kódolás Órája, amelyet a non-profit Code.org és több, mint 100 partner szervez, egy globális mozgalom, amely hiszi, hogy a mai diákok készen állnak azon kritikus készségek elsajátítására, amellyel sikeresek lehetnek a 21. században. Kérlek csatlakozz hozzánk.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Elérhetőség: [YOUR NAME], [TITLE], mobil: (212) 555-5555 Dátum: [DATE and TIME of your event] Helyszín: [ADDRESS and DIRECTIONS]
 
-I look forward to being in touch. <br />
+Érdeklődve várom válaszát. <br />
 
----
+* * *
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### Hívj meg egy helyi politikust az iskolai rendezvényre:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [Több információra van szükséged? Nézz körül itt.]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**Tárgy**: Legyen részese Ön is ennek a jövőt megváltoztató eseménynek, a Kódolás órájának
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+Tisztelt [Polgármester / képviselő / államtitkár]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Tisztában van vele, hogy a számítástechnika az első számú forrása a béreknek.? Több mint 500 000 számítástechnikához kapcsolódó munkahely nyitott országszerte, ám tavaly csak 42 969 számítástechnikai hallgató végzett az egyetemeken.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+A számítástechnika ma minden iparág alapja, ám a legtöbb iskola nem tanítja. A [Iskola neve]-ban/ben próbáljuk ezt megváltoztatni.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+Éppen ezért kell az egész iskolának csatlakoznia a történelem legnagyobb oktatási eseményéhez: a Kódolás órájához, a Számítástechnika Oktatási Héten ({{kampány_date / teljes}}). Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Levelemmel szeretném felkérni Önt, hogy vegyen részt a Kódolás órája rendezvényünkön, és tartson egy rövid beszédet a megnyitón. A rendezvény amely [dátum, idő] lesz [helyszín], egy határozott nyilatkozat arról, hogy [város neve] kész arra, hogy diákjait megtanítsa a 21. század alapvető készségeire. Biztosak szeretnénk lenni abban, hogy diákjaink ott lesznek az új technológiai fejlesztések élvonalában - és nem csak felhasználóként találkoznak majd vele.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Kérjük, lépjen kapcsolatba velünk a következő [telefonszámon vagy E-mail címen]. Várjuk szíves válaszát.
 
-{{ view :signup_button }}
+{{ signup_button }}

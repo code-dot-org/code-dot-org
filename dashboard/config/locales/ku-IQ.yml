@@ -10,102 +10,290 @@ ku:
         قبوڵ بکات تا بتوانی ئەم ناوەرۆکە بەردەست بخەی. مامۆستاکەت دەتوانێ ئەم ڕێکارە
         ئەنجام بدات بە داخڵبوون بۆ ناو كۆد ستۆدیۆ پاشان کرتە کردن لەسەر دوگمەی"پێداچوونەوە
         بە یاسا نوێکراوەکان" نزیک بەشی سەرەوەی لاپەڕەی سەرەتای كۆد ستۆدیۆ.
-      pair_programmer: تۆ ئێستاکە دووانە پرۆگرامسازی ئەنجام دەدەی لەگەڵ قووتابیێک
-        کە ڕێپێدراو نیە بۆ دەستگەیشتن بەم ناوەرۆکە. بۆ دەستگەیشتن بەم ناوەرۆکە، دووانە
-        پرۆگرامسازی بووەستێنە و دووبارە هەوڵ بدەوە.
+      pair_programmer: تۆ ئێستاکە هاوەڵ-بەرنامەسازی ئەنجام دەدەی لەگەڵ قووتابیێک کە
+        ڕێپێدراو نیە بۆ دەستگەیشتن بەم ناوەرۆکە، هاوەڵ-بەرنامەسازی بووەستێنە و دووبارە
+        هەوڵ بدەوە.
   activerecord:
     errors:
       messages:
         blank: داواکراوە
         blank_plural: داواکراوە
         invalid: ناڕاستە
-        invalid_plural: ناڕاستە
+        invalid_plural: ناڕاستن
     attributes:
       user:
         name: ناوی پیشاندراو
-        name_example: 'ناوی پیشاندراو <br/>(نمونە: پرۆگرامسازە ناوازەکە یان ئازاد
-          س.)'
-        email: ئیمەیڵ
-        parent_email: پۆستی ئەلکترۆنی باوان/بەخێوکەر
+        name_example: 'ناوی پیشاندراو (نمونە: بەرنامەسازە ناوازەکە یان ئازاد س.)'
+        email: پۆستی ئەلیكترۆنی
+        parent_email: پۆستی ئەلیكترۆنی باوان/بەخێوکەر
         personal_email: ناونیشانی پۆستی ئەلکترۆنی کەسی<a href="%{url}">(کرتە لێرە
           بکە ئەگەر خاوەن پۆستی ئەلکترۆنی نیت)</a>
+        personal_email_markdown: ناونیشانی پۆستی ئەلکترۆنی کەسی[(کرتە لێرە بکە ئەگەر
+          خاوەن پۆستی ئەلکترۆنی نیت)](%{url})
         username: ناوی بەکارهێنەر
-        password: تێپەڕەوشە
-        password_confirmation: پشتڕاستکردنەوەی تێپەڕەوشە
-        current_password: تێپەڕەوشەی ئێستا
+        password: تێپەڕووشە
+        password_confirmation: پشتڕاستکردنەوەی تێپەڕووشە
+        current_password: تێپەڕووشەی ئێستا
         locale: زمان
         age: تەمەن
         gender: ڕەگەز
         edit_header: دەستکاریکردنی وردەکارییەکانی هەژمار
+        finish_sign_up_header: كرداری درووستكردنی هەژمارەكەت تەواوبكە
+        finish_sign_up_subheader: ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری
+          (Code.org) بۆ <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی
+          هەژماری (Code.org) بۆ **%{email}**.
+        finish_sign_up_subheader_provider: ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی
+          هەژماری (Code.org) بە <strong>%{provider}</strong> بۆ <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: ئەم زانیاریانەی خوارەوە پڕبكەوە
+          بۆ درووستكردنی هەژماری (Code.org) بە **%{provider}** بۆ **%{email}**.
         error:
           future: ناکرێت لە داهاتوو بێت
   beta: تاقیکاری
-  hello: چۆنی جیهان
+  hello: سڵاو جیهان
   welcome_back: بەخێربێیەوە، %{name}
+  your_professional_learning_plan: پلانە پێشكەوتووەكەی فێربوونی تایبەت بەخۆت
+  see_your_learning_plan: پلانی فێربوونی خۆت پشانبدە
   submit: بنێرە
-  previous_page: لاپەرەی پێشوو
-  next_page: لاپەرەی دواتر
+  previous_page: لاپەڕەی پێشوو
+  next_page: لاپەڕەی دواتر
+  next_resource: سەرچاوەی دواتر
   or: یان
-  add_teacher_form:
+  heading_x_of_y: "%{heading} (لاپەڕە %{x} لە%{y})"
+  join_section:
     code:
-      label: 'زیادکردنی مامۆستایەک:'
-    submit: زیادکردنی مامۆستا
+      title: بەشداری بكە لە یەكێك لە بەشەكانی (Code.org)
+      instructions: 'تكایە ئەو كۆدە 6 پیتە داخڵ بكە كە مامۆستاكەت داویەتی بە ئێوە
+        (نموونە: "ABCDEFK") تا بتوانی بەشداری بەشەكەیان بكەیت.'
+      instructions_short: كۆدە 6 پیتیەكەی بەشەكەت داخڵ بكە
+      submit: بەشداریبكە
+  add_hint_form:
+    placeholder: تكایە سەرەداوی خۆت لێرە داخڵبكە
+    submit: سەرەداو زیادبكە
   appname: Code.org
   stage: قۆناغ
-  stage_number: قۆناغی %{number}
+  stage_number: وانەی %{number}
+  puzzle: مەتەڵ
+  trophies: خەڵاتەكان
+  courses: خولەكان
+  courses_page:
+    title_student: زانستی کۆمپیوتەر فێربە
+    title_teacher: زانستی کۆمپیوتەر فێربكە
+  unplugged_activity: خولی بێ كۆمپیوتەر
+  of: لە
   more: زیاتر
   less: کەمتر
+  try_hoc: '"كاتژمێرێك كۆدنووسین" تاقیبكەوە، كرتە لێرە بكە >> '
+  try_k8intro: خولە سەرەتاییەكانی زانستی کۆمپیوتەر بۆ قوتابیانی بنەڕەتی تاقیبكەوە
+    (15-25 كاتژمێر)
+  k8intro: خولە سەرەتاییەكانی زانستی کۆمپیوتەر بۆ قوتابیانی بنەڕەتی (15-25 كاتژمێر)
+  already_started: 'ئایا پێشتر دەستت پێكردووە؟ لێرە بەردەوام بە >> '
+  demos: 'بەڕێوەبەر: سەرجەم ڕوونكردنەوەكان'
   continue: بەردەوام بە
+  prize: خەڵات
   more_info: زانیاری زیاتر
   auth:
+    continue_with: بەردەوام بە لەگەڵ %{provider}
     sign_in_with: چوونەژوورەوە لەگەڵ %{provider}
-    google_oauth2: هەژماری گووگڵ
+    signed_in: چووی بۆ ناو هەژمارەكەت!
+    signed_out_markdown: "### لە هەژمارەكەت دەرچووی [Code.org](%{url})."
+    sign_out_of_markdown: "### %{provider} بەكارهێنرا بۆ چوونەژوورەوە. [كرتە لێرەبكە](%{url})
+      بۆ چوونەدەرەوە لە %{provider}."
+    already_signedup: پێشتر خۆت تۆماركردووە؟
+    notyet_signedup: تا ئێستا بەشداریت نەكردووە؟
+    google_oauth2: گوگڵ
     twitter: تویتەر
     facebook: فەیسبووک
-    windowslive: هەژماری مایکڕۆسۆفت
-    microsoft_v2_auth: هەژماری مایکڕۆسۆفت
-    forgot_password: تێپەڕەوشەت لەبیر کردووە؟
+    windowslive: مایکڕۆسۆفت
+    microsoft_v2_auth: مایکڕۆسۆفت
+    powerschool: Powerschool
+    forgot_password: تێپەڕووشەت لەبیرکردووە؟
+    migration_success: سەكەوتوو بوو! ئێستا هەژمارەكەت نوێكراوە بۆ شێوازە نوێكە.
+    demigration_success: شێوازی نویێ هەژمار بۆ هەژمارەكەت لەكارخراوە.
+    need_confirmation: ڕینماییەكانی پشتڕاستكردنەوی هەژمارەكەت پێنەگەیشتووە؟
+    need_unlock: ڕینماییەكانی كردنەوەی هەژمارەكەت پێنەگەیشتووە؟
+    not_linked: ببورە، هەژمارەكەت لە (Code.org) نەبەستراوەتەوە بە %{provider}. بۆ
+      چوونەژوورەوە تكایە تێپەڕووشە لە خوارەوە بنووسە.
+    use_clever: ببورە، هەژمارەكەت لە (Code.org) نەبەستراوەتەوە بە %{provider}. دەتوانی
+      چوونەژوورەوە ئەنجام بدەی لە ڕێگای (Clever Portal).
+    unable_to_connect_provider: نەتوانرا هەژمارەكەت لە (Code.org) ببەسترێتەوە بە هەژماری
+      %{provider}. تكایە دووبارە هەوڵبدە.
+    already_in_use: ئەم هەژمارەت لە %{provider} لە ئێستا بەستراوەتەوە بە هەژمارێكی
+      تری (Code.org).
+    already_linked: ئەم هەژمارەت لە %{provider} لە ئێستا بەستراوەتەوە بە هەژمارەكەت
+      لە (Code.org).
   signup_form:
+    email_signup: خۆت تۆماربكە لە ڕێگای پۆستی ئەلیكترۆنی
+    student_count: "%{count} قوتابی تا ئێستا خۆیان تۆماركردووە."
+    teacher_count: "%{count} مامۆستا تا ئێستا خۆیان تۆماركردووە."
+    overview: خۆت تۆماربكە و هەژمارێك دروستبكە تا لە پێشكەوتنەكانت ئاگاداربیت وهەڵیانبگریت
+      یان بۆ بەڕێوەبردنی پۆلەكەت. <a href="/">دەتوانی گوزەر بكەیت بە ناو قۆناغەكان
+      و مەتەڵەكان</a> بەبێ هەبوونی هەژمار، بەڵام دەبێ خۆت تۆماربكەیت تا بتوانی پێشكەوتنەكان
+      و پرۆژەكانت هەڵگری.
+    overview_markdown: خۆت تۆماربكە و هەژمارێك دروستبكە تا لە پێشكەوتنەكانت ئاگاداربیت
+      وهەڵیانبگریت یان بۆ بەڕێوەبردنی پۆلەكەت. [دەتوانی گوزەر بكەیت بە ناو قۆناغەكان
+      و مەتەڵەكان](/) بەبێ هەبوونی هەژمار، بەڵام دەبێ خۆت تۆماربكەیت تا بتوانی پێشكەوتنەكان
+      و پرۆژەكانت هەڵگری.
+    hoc_already_signed_up_heading: دەستپێبكە بەبێ چوونەژوورەوە
+    hoc_already_signed_up_content: تۆ ئێستا خۆت تۆماركردووە بۆ فێركردنی "كاتژمێرێك
+      كۆدنووسین"! ئێوە و قوتابیەكانت پێویست ناكات چوونەژوورەوە ئەنجام بدەن بۆ بەشداری
+      كردن لەم چالاكیە. بۆ دەستپێكردن، <a href="%{learn_url}">فێركاریەك هەڵبژێرە</a>
+      بۆ پۆلەكەت و لینكەكەیان پێبدە.<br/><br/>ئەگەر "كاتژمێرێك كۆدنووسین" لەلات خۆش
+      بوو و چێژت لێی وەرگرتوە و دەتەوێت بەردەوام بیت، ئەوا تێپەڕووشەیەك دابنێ و هەژمارێكی
+      كۆد ستۆدیۆ دروستبكە لە خوارەوە تا بتوانی قوتابیەكانت بەشداری پێبكەیت لەهەر یەك
+      لە <a href="%{educate_url}">خولە درێژكراوەكانمان</a>.
+    hoc_already_signed_up_content_post_hoc: زۆر سوپاس بۆ پێشكەش كردنی "كاتژمێرێك كۆدنووسین".
+      بۆ چوونەژوورەوە بۆ كۆد ستۆدیۆ، دەبێ تێپەڕووشەیەك دابنێی بۆ هەژمارەكەت. بە ئەنجامدانی
+      ئەم هەنگاوە دەتوانی پێشكەوتنەكانت هەڵبگری و پۆلەكەت بەڕێوەبەری. وە دەتوانی خول
+      دیاریبكەی بۆ قوتابیەكانت و پێشكەوتنەكانیان ببینی. <a href="%{studio_url}">وە
+      دەشتوانی بەردەوام بی لە گوزەر كردن بەناو قوناغە جیاجیاكان و مەتەڵەكان</a> بەبێ
+      درووستكردنی هیچ هەژمارێك.
+    hoc_already_signed_up_content_post_hoc_markdown: زۆر سوپاس بۆ پێشكەش كردنی "كاتژمێرێك
+      كۆدنووسین". بۆ چوونەژوورەوە بۆ كۆد ستۆدیۆ، دەبێ تێپەڕووشەیەك دابنێی بۆ هەژمارەكەت.
+      بە ئەنجامدانی ئەم هەنگاوە دەتوانی پێشكەوتنەكانت هەڵبگری و پۆلەكەت بەڕێوەبەری.
+      وە دەتوانی خول دیاریبكەی بۆ قوتابیەكانت و پێشكەوتنەكانیان ببینی. [وە دەشتوانی
+      بەردەوام بی لە گوزەر كردن بەناو قوناغە جیاجیاكان و مەتەڵەكان](%{studio_url})
+      بەبێ درووستكردنی هیچ هەژمارێك.
+    teacher_educator_guide: ڕێبەری فێركردن ببینە
+    title: هەژمارێك دروست بكە لە (Code.org)
+    school_name: ناوی قوتابخانە (ئارەزومەندانە)
+    school_address: ناونیشانی قوتابخانە (ئارەزومەندانە)
+    address_placeholder: ناونیشان، شار، ناوچە، زیپ كۆد
+    gender: ڕەگەز (ئارەزومەندانە)
+    birthday: بەرواری لەدایك بوون (ئارەزومەندانە)
     age: تەمەن
+    user_type: ئایا تۆ قوتابی یان مامۆستای؟
     submit: خۆتۆمارکردن
+    go_to_account: بڕۆ بۆ هەژمارەكەم
     teacher: ئایا تۆ مامۆستای؟
     valid_username: بەردەستە!
+    invalid_username: ناوی بەكارهێنەر دەبێت لانی كەم 5 پیت بێت
     taken_username: ئەم ناوی بەکارهێنەرە بەکارهاتووە
-    valid_password: تێپەڕەوشەی دروست!
-    invalid_password: تێپەڕەوشە پێویستە لانی کەم 6 نووسە بێت
+    valid_password: تێپەڕووشە دروستە!
+    invalid_password: تێپەڕووشە پێویستە لانی کەم 6 پیت بێت
+    mismatch_password: ئەم دوو تێپەڕووشەی كە داخڵت كردوون یەك نین
+    student_consent: دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم
+      وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم.
+    student_terms_markdown: پۆستە ئەلیكترۆنیەكان بە شێوازێك هەڵناگیرێ كە ڕێگەمان پێبدات
+      پەیوەندی بكەین بە قوتابیەكانەوە. قوتابیەكان هەرگیز نامەی پۆستی ئەلیكترۆنی لەلایەن
+      (Code.org) پێناگات تەنها لە حاڵەتی گێڕانەوەی تێپەڕووشەی بیرچوو. سەیری [سیاسەتی
+      تایبەتمەندی بەكارهێنان](http://code.org/privacy) بكە بۆ زانیاری زیاتر.
+    additional_information: زانیاری زیاترمان پێویستە بۆ بەردەوام بوون لە خۆتۆماركردن.
+    user_type_button: جۆری هەژمارەكە نوێبكەرەوە
+    user_type_label: جۆری هەژمار
     user_type_teacher: مامۆستا
     user_type_student: قوتابی
     field_is_required: داواکراوە
+    accept_terms: پێویستە ڕازیبیت تا هەژمار دروست بكەیت.
+    error: هەڵەیەك ڕوویدا.
+    email_preference_question: ئایا دەتوانین نامەی پۆستی ئەلیكترۆنیت بۆ بنێرین دەربارەی
+      نوێكاریەكانی خولەكانمان، هەلی خولی دەورووبەرت، یان هەواڵی تری تایبەت بە زانستی
+      کۆمپیوتەر؟ (نزیكەی یەك جار لە مانگێك)
+    email_preference_required: پێویستە پۆستێكی ئەلیكترۆنی خوازراو دیاریبكەی.
   school_info:
+    title: زانیاری قوتابخانە (ئارەزومەندانە)
+    school_country: وڵاتی قوتابخانە
+    select_school_type: جۆری قوتابخانە
+    charter: بێبەرامبەر
+    private: ناحكومی
+    public: حكومی
+    homeschool: خوێندنی تایبەت
+    after_school: خولی دەرەوەی قوتابخانە
     other: هی تر
+    state: پارێزگا
+    district: ناوچە یان گەڕەك
+    other_district_not_listed: ناوچەی تر كە لەسەرەوە نەهاتووە
+    district_name: ناوی ناوچە یان گەڕەك
+    school: قوتابخانە
+    other_school_not_listed: قوتابخانەی تر كە لەسەرەوە نەهاتووە
+    school_name: ناوی قوتابخانە
+    school_zip: زیپ كۆدی قوتابخانە
+    school_address: ناونیشانی قوتابخانە
+    school_organization_name: ناوی قوتابخانە/ڕێكخراو
+    school_organization_zip: زیپ كۆدی قوتابخانە/ڕێكخراو
   signin_form:
-    login: ئیمەیڵ
-    password: تێپەڕەوشە
+    title: ئایا هەژمارت هەیە؟ چوونەژوورەوە ئەنجامبدە
+    login: پۆستی ئەلیكترۆنی
+    login_username: پۆستی ئەلیكترۆنی یان ناوی بەكارهێنەر
+    password: تێپەڕووشە
+    remember: منت لەیاد بێت
     submit: چوونەژوورەوە
+  signin:
+    try_heading: ئایا دەتەوێت كۆد كردن بكەی بێ ئەوەی چوونەژوورەوە ئەنجام بدەیت؟
+    try_hoc: سەرەتا دانەیەك لە "كاتژمێرێك كۆدنووسین" تاقیبكەوە
+    try_20hours: خولی 20 كاتژمێری "پێشەکیەك بۆ ناو زانستی کۆمپیوتەر" تاقیبكەوە
   signinsection:
     welcome: بەخێربێیت بۆ %{section_name}
     name: ناوەکەت هەڵبژێرە
+    picture: ئێستا وێنە نهێنیەكەت بدۆزەوە
+    words: ئێستا ووشە نهێنیەكانت داخڵ بكە
     login: چوونەژوورەوە
+    invalid_login: چوونەژوورەوە سەركەوتوو نەبوو، تكایە دووبارە هەوڵبدە
+    pair_programming: من هاوەڵێكم لەگەڵدایە لەسەر كۆمپیوتەرەكەم
+    student_privacy_markdown: زیاتر بزانە كە بۆچی ناتوانی ناوی تەواوت ببینی، لێرە
+      [here](%{student_privacy_blog}).
   password:
     reset_form:
-      title: تێپەڕەوشەت لەبیر کردووە؟
-      email: ناونیشانی ئیمەیڵ
+      title: تێپەڕووشەت لەبیرکردووە؟
+      instructions: پۆستی ئەلیكترۆنی خۆت داخڵ بكە كە پەیوەستە بەم هەژمارەی خوارەوەت
+        ئینجا ئێمە ڕێنمایی گێڕانەوەی تێپەڕووشەت بۆ دەنێرین.
+      email: ناونیشانی پۆستی ئەلیكترۆنی
       submit: بنێرە
+    reset_errors:
+      captcha_required: تكایە CAPTCHA پڕبكەوە بۆ گێڕانەوەی تێپەڕووشەكەت.
+      invalid_email: وا دیارە كە تۆ خۆت تۆماركردووە بە پۆستێكی ئەلیكترۆنی ناڕاست.
+        تكایە نامەی پۆستی ئەلیكترۆنی بنێرە بۆ support@code.org بۆ وەرگرتنی لینكی گێڕانەوەی
+        تێپەڕووشە.
     change_form:
-      title: گۆڕینی تێپەڕەوشەکەت
-      new_password: تێپەڕەوشەی نوێ
-      confirm_password: پشتڕاستکردنەوەی تێپەڕەوشەی نوێ
-      submit: گۆڕینی تێپەڕەوشەکەم
+      title: تێپەڕووشەكەت بگۆڕە
+      new_password: تێپەڕووشەی نوێ
+      confirm_password: پشتڕاستکردنەوەی تێپەڕووشەی نوێ
+      submit: گۆڕینی تێپەڕووشەكەم
+  welcome_email:
+    subject: بەشداری پۆلەكەم بكە (لە Code.org)
+    body: |
+      ئەم لینكەی خوارەوە كرتە بكە بۆ خۆتۆماركردن لە فێركاری زانستی کۆمپیوتەر لە ماڵپەڕی Code.org (لەگەڵ من وەك "مامۆستا" بۆ ئێوە):
+
+      %{link}
+
+      فێركاریەكان زۆر چێژبەخشن، پڕ لە جوڵە و هەمەڕەنگە و بنچینە سەرەتاییەكانی زانستی کۆمپیوتەر فێردەكات بە شێوازێكی سادە و ئاسانكراو و هاوشێوەی یاریكردن وایە. كۆد كردن فێربە لەگەڵ بیڵ گەیتس، مارك زوكەربێرگ، یاری باڵندە توڕەكان، و یاری ڕووەكەكان دژی زۆمبیەكان! :-)
+
+      %{name}
+  parent_mailer:
+    student_associated_subject: زانیاری چوونەژوورەوە بۆ (Code.org)
+    parent_email_added_subject: بەخێربێیت بۆ Code.org!
+  teacher_mailer:
+    new_teacher_subject: بەخێربێیت بۆ Code.org!
+    delete_teacher_subject: 'ئاگاداری لە Code.org: هەژمارەكەت سڕاوەتەوە'
   section:
+    your_section:
+      one: 'بەشەكەی تۆ:'
+      other: 'بەشەكانی تۆ:'
+    code_with_teacher: "%{section_code} لەگەڵ %{teacher_name}"
+    confirm:
+      remove: ئایا تۆ دڵنیای كە دەتەوێ لەم بەشە دەربچیت؟
+    default_name: بەشێكی ناولێنەنراو
+    remove: "(ئەم بەشە لاببە)"
     type:
-      email: ئیمەیڵ
+      picture: تێپەڕووشەی وێنەیی
+      email: پۆستی ئەلیكترۆنی
+  follower:
+    invite_sent: داوەتنامە نێررا
+    added_teacher: "%{name} وەكو مامۆستا بۆ تۆ دانرا"
+    registered: تۆ خۆت تۆماركرد بۆ %{section_name}.
+    error:
+      signed_in: تكایە چوونەدەرەوە ئەنجامبدە پێش بەردەوام بوون
+      username_not_found: ناوی بەكارهێنەر %{username} نەدۆزرایەوە
+      username_in_use: "%{username} بۆ كەسێكی تر بەكارهاتووە، تكایە دانەیێكی تر هەڵبژێرە"
   crud:
+    edit: دەستکاری
     submit: بنێرە
     confirm: ئایا تۆ دڵنیایت؟
   nav:
     header:
       course_catalog: پێرستی کۆرس
       educate_hoc: كاژێری كۆدنووسی
+      legal_tos: بڕگەکان
     user:
       classroom: پەڕەی سەرەکی مامۆستا
       settings: هەژمارەکەم
@@ -113,9 +301,13 @@ ku:
       signin: چوونەژوورەوە
       already_registered: پێشوو تۆمارکراویت؟
       create: ez
+      applab: تاقیگەی ئاپ
+      bounce: هەڵبەزینەوە
+      gamelab: تاقیگەی یاری
     popup:
       close: داخستن
       puzzle_map: قۆناغەکان
+      prizes_link: زانیاری زیاتر
   teacher:
     title:
       one: 'مامۆستاکەت:'
@@ -125,7 +317,10 @@ ku:
       remove: ئایا تۆ دڵنیایت لە لابردنی ئەم مامۆستایە؟
     panel:
       student: قوتابی
+  user:
+    parent_guardian_email_label: پۆستی ئەلیكترۆنی باوان/بەخێوکەر
   home:
+    student_reg_link: قوتابی
     online: سەرهێڵ
     trynow: زیاتر فێرببە
   gender:
@@ -137,6 +332,7 @@ ku:
   footer:
     support: یارمەتی و کۆمەڵگا
     support_url: http://support.code.org
+    tos_short: بڕگەکان
     tos: بڕگەکان
   reference_area:
     title: یارمەتیت پێویستە؟
@@ -145,6 +341,13 @@ ku:
       link: زیاتر فێرببە
   next_stage: تەواوبوو! بەردەوامبە بۆ قۆناغی دواتر
   pdf_download: داگرتنی PDF
+  upsell:
+    applab:
+      title: تاقیگەی ئاپ
+    gamelab:
+      title: تاقیگەی یاری
+    unplugged_conditionals:
+      title: مەرجیەکان
   dialog:
     startover_title: ئایا تۆ دڵنیای دەتەوێت دووبارە دەست پێ بکەیتەوە؟
     startover_ok: دەست پێبکەوە
@@ -156,27 +359,25 @@ ku:
     races:
       other: هی تر
     submit: بنێرە
+    decline: داخستن
   project:
     name: ناو
     abuse:
       report_abuse_form:
         abuse_type:
           other: هی تر
-  flex_category:
-    csf_loops: گرێکان
-    csf_variables: گۆڕاوەکان
-    csp_variables: گۆڕاوەکان
-    csp_lists: لیستەکان
-    csp_loops: گرێکان
   pd:
     form_labels:
-      email: ئیمەیڵ
+      email: پۆستی ئەلیكترۆنی
+      school_name: ناوی قوتابخانە
+      school_country: وڵاتی قوتابخانە
+      colombian_school_name: ناوی قوتابخانە
     form_entries:
       gender:
         male: نێر
         female: مێ
       subjects:
-        cs: زانستی كۆپیتەر
+        cs: زانستی كۆمپیوتەر
         math: بیرکاری
   cookie_banner:
     accept: من ڕازیم

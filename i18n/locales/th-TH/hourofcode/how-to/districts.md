@@ -1,7 +1,5 @@
 ---
 title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: how_to_nav
 
 ## ให้ทุกโรงเรียนเข้าร่วม ให้นักเรียนทุกคนเริ่มเรียนรู้!
 
-### 1. Recruit local schools
+### 1. เปิดรับสมัครโรงเรียนในพื้นที่ 
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

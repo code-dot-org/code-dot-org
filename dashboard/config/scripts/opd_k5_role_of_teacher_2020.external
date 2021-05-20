@@ -1,0 +1,16 @@
+name 'OPD-K5 role_of_teacher_2020'
+title 'Role of the teacher'
+description 'description here'
+markdown <<MARKDOWN
+# Role of the teacher
+
+<img src="https://images.code.org/cd6529b3552a2911cb907aceb59932b1-image-1571688504066.JPG" class="level-image">
+
+We believe students learn best with the help of an empowered teacher. Computer Science Fundamentals courses A-F  are designed to work best in a classroom setting, led by an engaged teacher.
+
+We know that many teachers are new to computer science, and for that reason, we design curriculum with the idea that the instructor will act as the lead learner. As the lead learner, the role of the teacher shifts from being the source of knowledge to being a leader in seeking knowledge.
+
+The lead learner’s mantra is: **“I may not know the answer, but I know that together we can figure it out.”**
+
+You can read more about being a lead learner, as well as other pedagogical approaches to our values, in the <a href="https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview#" target="blank" rel="noopener noreferrer">curriculum guide</a>.
+MARKDOWN

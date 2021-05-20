@@ -1,0 +1,36 @@
+name 'csp-u5-exam1-robot_2020'
+editor_experiment ''
+
+
+right '![](https://images.code.org/b595526a69d8a654729ed536dd8ef2a1-image-1579904898372.png) '
+wrong '![](https://images.code.org/dee6a8ce3c56da473b8a080ce8e6ef0e-image-1579904911305.png) '
+wrong '![](https://images.code.org/cc76c2ff8cf59f8338aa0b0f0163af04-image-1579904919377.png) '
+wrong '![](https://images.code.org/5f7741580eea2bbec300437e01cf3494-image-1579904925382.png) '
+
+markdown <<MARKDOWN
+![](https://images.code.org/a2d08c5c0948e9418425c4fc8af621ef-image-1575301837741.png)
+
+The following question uses a robot in a grid of squares. The robot is represented by a triangle, which is initially
+facing up.
+
+Which of the following programs will move the robot to the gray square following the path shown on the grid?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** See the animation below for a walkthrough of the program.
+
+<img src="https://images.code.org/97286f171a203bd325aa79b300ae02f2-image-1616480872581.gif"
+style="width:300px">
+
+Students walked through examples similar to this when they controlled the robot on the grid in [Lesson 5 - Loops Explore](https://curriculum.code.org/csp-20/unit5/5/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.K: For iteration:
+
+a. Write iteration statements.
+
+b. Determine the result or side-effect of iteration statements.
+:::
+
+MARKDOWN

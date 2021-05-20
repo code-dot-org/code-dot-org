@@ -2,52 +2,29 @@
 ja:
   data:
     block_categories:
-      Actions: 操作
-      Loops: くりかえし
-      Functions: 関数(かんすう)
-      Color: 色
-      Brushes: ブラシ
-      Math: 計算(けいさん)
-      Logic: ロジック（論理）
-      Variables: 変数
-      Number: 数（かず）
-      String: 文字列（もじれつ）
-      Image: 画像（がぞう）
-      Boolean: 真偽値（しんぎち）
-      Conditionals: 条件
-      Events: イベント
-      Games/Score: ゲーム/スコア
-      Comments: コメント
-      Category: カテゴリー
-      Prebuilt: あらかじめつくられた
-      Text: テキスト
-      Picker: ピッカー
-      Comment: コメント
-      World: 世界
+      Actions: うごき
+      Advanced: 高度
       Behaviors: 行動
-      'Variables ': '変数(へんすう) '
-      Default: デフォルト
-      Locations: 場所
-      everythingelse: ほかのすべて
-      Location: ロケーション
-      numbers: 数（かず）
-      Numbers: 数（かず）
+      Brushes: ブラシ
+      Color: 色
+      Comment: コメント
+      Comments: コメント
+      Conditionals: 条件
       Dancers: ダンサー
-      Groups: グループ
-      Advanced: 詳細設定
-      Start: はじめる
-      Dancing: ダンスする
-      Sprite: スプライト
-      Brush: ブラシ
-      Make Sprite: スプライトを つくる
-      Movement: 動作
-      Functional: 関数(かんすう)の
-      While Events: イベントの間
-      Predefined: あらかじめ定義（ていぎ）された
-      test: テスト
-      test2: テスト2
-      Name: 名前
-      NEW BLOCKS: あたらしい ブロック
+      Default: デフォルト
+      Events: イベント
+      Functions: 関数(かんすう)
       'Functions ': '関数(かんすう) '
       Game/Score: ゲーム/スコア
-      Function: 関数（かんすう）
+      Games/Score: ゲーム/スコア
+      Groups: グループ
+      Locations: 場所
+      Logic: ロジック
+      Loops: くりかえし
+      Math: 計算(けいさん)
+      Numbers: 数 (かず)
+      Properties: プロパティ
+      Text: テキスト
+      Variables: 変数（へんすう）
+      'Variables ': 変数（へんすう）
+      World: 世界

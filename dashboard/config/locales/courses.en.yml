@@ -49,3 +49,54 @@ en:
           description_short: An introductory computer science course that empowers students to create authentic artifacts.
           description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+        csd-pilot:
+          title: CSD Pilot Course
+          description_short: "(Pilot Version) An introductory computer science course that empowers students to create authentic artifacts."
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: "(Pilot Version) Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun."
+        time4cs-control:
+          title: Time4CS (Control)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        time4cs-experiment:
+          title: Time4CS (Experiment)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+        csp-2020:
+          title: Computer Science Principles ('20-'21)
+          version_title: "'20-'21"
+          description_short: Learn foundational computer science concepts.
+          description_student: In 2016 the College Board launched its newest AP® course, AP Computer Science Principles. For the 2020-21 school year they made significant updates to the course framework. CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: In 2016 the College Board launched its newest AP® course, AP Computer Science Principles. For the 2020-21 school year they made significant updates to the course framework. CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+        csd-2020:
+          title: Computer Science Discoveries ('20-'21)
+          version_title: "'20-'21"
+          description_short: An introductory computer science course that empowers students to create authentic artifacts.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+        csp-2021:
+          title: Computer Science Principles
+          description_short: ''
+          description_student: ''
+          description_teacher: Ken add course description and any links you may want here
+          version_title: "'21-'22"
+        csd-2021:
+          title: Computer Science Discoveries
+          description_short: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_student: ''
+          description_teacher: "Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.\r\n\r\n**Did You Know?**\r\n\r\n- This course is modular and can be taught in different configurations based on the needs of each classroom. Check out the *CSD Implementation Guide* in the Teacher Resources menu below to learn about the different options\r\n\r\n- You can find the *Curriculum Guide*, *Getting Started Guide*, *Guide to Assessment*, and many other resources to help you implement this curriculum in the Teacher Resources menu below\r\n"
+          version_title: "'21-'22"
+        csa-pilot:
+          title: CSA Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        mike-test:
+          title: Computer Science Fundamentals
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

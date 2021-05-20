@@ -1,7 +1,5 @@
 ---
 title: שעת תכנות - הודעה לעתונות לנבחרי ציבור
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

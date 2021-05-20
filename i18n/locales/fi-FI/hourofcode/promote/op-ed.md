@@ -1,7 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
-layout: wide
-nav: promote_nav
+title: Näyte Tietojenkäsittelytietokoulutusviikosta jaHour of Codesta
 ---
 
 {{ signup_button }}

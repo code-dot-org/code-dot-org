@@ -23,7 +23,7 @@
 
 require 'cdo/activity_constants'
 
-class Activity < ActiveRecord::Base
+class Activity < ApplicationRecord
   include ActivityConstants
 
   belongs_to :level

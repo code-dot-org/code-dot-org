@@ -1,3 +1,4 @@
+---
 my:
   data:
     script:
@@ -5,154 +6,386 @@ my:
         math_category_name: သင်္ချာ
       name:
         usability:
-          stages:
+          lessons:
             Variables:
               name: Variables
         infinity:
-          stages:
+          lessons:
             Infinity:
               name: Infinity
         K5PD:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD3:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD-NexTech:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         algebraPD-iZone:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         allthethings:
-          stages:
+          lessons:
             Web Lab:
               name: Web Lab
         algebraPD2b:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         K5-OnlinePD:
-          stages:
+          lessons:
             Computer Science Fundamentals:
               name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
         algebraPD2:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         mc:
           title: Minecraft Hour of Code
           description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
+          student_description: ဤ Minecraft ကမ္ဘာကိုဖြတ်၍ Steve နှင့် Alexကို ခေါ်ကာ စွန့်စားခန်းသွားရန် ကုတ်နံပါတ် blockများကို သုံးပါ
         algebraPD1:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         algebraFacilitator:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         gradeKinder:
-          stages:
+          lessons:
             Loops:
               name: Loops
         grade1:
-          stages:
+          lessons:
             Loops:
               name: Loops
         csd3-2017:
-          stages:
+          lessons:
             Variables:
               name: Variables
         k5concepts:
-          stages:
+          lessons:
             Loops:
               name: Loops
             Variables:
               name: Variables
         algebrapdnext:
-          stages:
+          lessons:
             Teacher Dashboard:
               name: ဆရာ့ကျောက်သင်ပုန်း
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-chapters:
-          stages:
+          lessons:
             Variables:
               name: Variables
             'null':
               name: 'null'
         hero:
-          stages:
+          title: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
+          description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
+          description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
+          lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code'
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
-          title: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
-          description_short: Hour of Code အတွက် အစီအစဥ်သစ်နဲွ Minecraft ပြန်လည်​ရောက်ရှိလာပါပြီ!
-          description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
+          student_description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-1819draft:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd3-2018:
-          stages:
+          lessons:
             Variables:
               name: Variables
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         coursee-2018:
-          stages:
+          lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+        cspplayground:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        coursef-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        coursed-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
         andrea-test:
-          stages:
+          lessons:
             'null':
               name: 'null'
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-2019:
-          stages:
+          lessons:
             Variables:
               name: Variables
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: စာရင်းများ
         csd3-pilot:
-          stages:
+          lessons:
             Variables:
+              name: Variables
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        k5-onlinepd-2019:
+          lessons:
+            Computer Science Fundamentals:
+              name: ကွန်ပျူတာသိပ္ပံအခြေခံ။
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
+        csd3-2020:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2020:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csp5-virtual:
+          lessons:
+            Variables:
+              name: Variables
+        k5-onlinepd-2020:
+          lessons:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables
+        csd3-virtual:
+          lessons:
+            Variables:
+              name: Variables
+            Text:
+              name: စာ
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csd3-2021:
+          lessons:
+            Variables:
+              key: Variables
+              name: Variables
+            Text:
+              key: စာ
+              name: စာ
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: စာရင်းများ
+            csp_loops:
+              display_name: Loops
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2021:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+            variables:
+              display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Loops
+              name: Loops
+            Variables:
+              key: Variables
               name: Variables

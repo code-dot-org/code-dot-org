@@ -15,7 +15,6 @@ video_player: true
 -hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
 
 %script{:src=>"/js/jquery.placeholder.js"}
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 
 #index
@@ -29,15 +28,7 @@ video_player: true
       %div.desktop-feature{:style=>'height: 25px;'}
       #hoc2014
 
-        .count{:style=>"font-family: 'Gotham 5r', sans-serif; margin-bottom:15px" }
-          -count_string = I18n.t(:n_have_learned_an_hoc).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
-          -if request.locale == 'en-US'
-            %a{:href=>'/leaderboards', :style=>'text-decoration:none'}
-              =count_string
-            %h4
-              =I18n.t :anybody_can_learn
-          -else
-            =count_string
+        = view :try_hoc_count
 
         %div{:style=>'margin-bottom: 8px'}
           = view :csedweek_action_buttons, hoc_mode: hoc_mode

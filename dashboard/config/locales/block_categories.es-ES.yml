@@ -3,57 +3,30 @@ es:
   data:
     block_categories:
       Actions: Acciones
-      Loops: vuelta
-      Functions: funciones
-      Color: Color
-      Brushes: Pinceles
-      Math: Matemáticas
-      Logic: Lógica
-      Variables: variables
-      Number: Número
-      String: Cadena
-      Image: Imagen
-      Boolean: Booleano
-      Conditionals: Condicionales
-      Events: Eventos
-      Games/Score: Juegos/Puntaje
-      Comments: Comentario
-      Category: Categoría
-      Prebuilt: Precompilado
-      Text: Texto
-      Picker: Seleccionador
-      Comment: Comentario
-      World: Mundo
-      Behaviors: Comportamientos
-      'Variables ': Variables
-      Default: Por defecto
-      Locations: Ubicaciones
-      Bunny Game: Juego del conejo
-      everythingelse: todolodemás
-      Location: Ubicación
-      numbers: Numeros
-      Numbers: Numeros
-      Dancers: Bailarines
-      Groups: Grupos
       Advanced: Avanzado
-      Start: Inicio
-      Music: Musica
-      Dancing: Bailando
-      Sprite: Sprite
-      Brush: Pincel
-      Make Sprite: Hacer sprite
-      Movement: Movimiento
-      Booleans: Valores booleanos
-      Functional: Funcional
-      While Events: Cuando Eventos
-      Sprite Properties: Propiedades de Sprites
-      Predefined: Predefinido
-      test: prueba
-      test2: test2
-      Use These Blocks: Use estos bloques
-      Do Not Use: No use
-      Name: Nombre
-      NEW BLOCKS: NUEVOS BLOQUES
+      Behaviors: Comportamientos
+      Brushes: Pinceles
+      Color: Color
+      Comment: Comentario
+      Comments: Comentario
+      Conditionals: Condicionales
+      Dancers: Bailarines
+      Default: Por defecto
+      Events: Eventos
+      Functions: Funciones
       'Functions ': Funciones
       Game/Score: Juego/Puntaje
-      Function: Función
+      Games/Score: Juegos/Puntaje
+      Groups: Grupos
+      Input: Entrada
+      Locations: Ubicaciones
+      Logic: Lógica
+      Loops: Bucles
+      Math: Matemáticas
+      Numbers: Numeros
+      Properties: Propiedades
+      Sprites: Sprites
+      Text: Texto
+      Variables: Variables
+      'Variables ': Variables
+      World: Mundo

@@ -3,47 +3,72 @@ title: Computer Science Curriculum for Grades 6-12
 theme: responsive
 ---
 
-- js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: minifiable_asset_path('js/code.org/public/student/middle-high.js')}
+:css
+  h2 {
+    margin: 0;
+  }
 
-%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/student/middle-high.js')}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 = view 'mobilecheck.js'
 
 .solid-block-header
   Grades 6-12
 
-%h1 Courses by Code.org
+%h1 Learning at your own pace
 
-%h2 Get started with block programming
+%h2 Learn the fundamentals with our self-paced courses
 
-Learn the fundamentals of Computer Science with drag & drop blocks. Create your own drawings and games.
+%h3
+  %strong
+    Express course
 
-%br
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour
+%a{href: CDO.studio_url('/s/20-hour')} Accelerated Course.
+To see what's available in your language, visit our
+%a{href: CDO.studio_url('/courses')} course catalog.
 
 %div{style: "padding-top: 20px;"}
   %a{href: CDO.studio_url('/s/express')}
     %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%"}
-  
-%h2 Learn JavaScript, HTML, and CSS
 
-#educate-resources-grid
+= view :athome_olderstudents
 
-%div{style: "clear: both"}
-
-
-%h2 Courses designed for classrooms
-In addition to learning on your own, we have courses designed to be taught by teachers in classrooms for all grade levels.  Professional Learning options are available - no experience teaching computer science needed!
-
-%br/
-
-%a{href: CDO.studio_url("/courses?view=teacher")}
-  %button 
-    Courses and Professional Learning for classrooms
+%div{style: "clear: both;"}
 %br/
 %br/
-%hr
+%h2 Make your own apps, games, and webpages
+.hoc-tiles-container
 
+%div{style: "clear: both;"}
+%br/
+%br/
+%h2 Videos: Watch these easy 3-5 minute educational videos
+%br/
+= view :athome_videos
+%br/
+%hr/
+
+%h1 Learning in the classroom
+%h2 Computer Science Discoveries
+%br/
+= view :csd_information
+%div{style: "clear: both;"}
+%br/
+%h2 Computer Science Principles (intro and AP course)
+%br/
+= view :csp_information
+%br/
+%br/
+- @show_csa = DCDO.get('courses_show_csa', CDO.default_courses_show_csa)
+- if @show_csa
+  %h2 Computer Science A (coming in 2022)
+  %br/
+  = view :csa_information
+  %br/
+
+%hr/
 %h1 Courses from 3rd parties
-
 = view :learn_carousels, variation:'middle_high'

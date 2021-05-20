@@ -1,0 +1,34 @@
+name 'U10 SSQRP2 part 3'
+editor_experiment ''
+
+
+
+
+
+description 'Which of the following may be an unintended effect of the use of _Snappy_?'
+wrong 'Users may identify other Snappy users in their own town. '
+right 'Large towns might look "happier" than small towns.'
+wrong 'Users can rate other "Happiness Moments" with emojis. '
+wrong 'Users are prevented from leaving negative comments.'
+
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Since there are overall more people in large towns compared with small towns, they may have more “Happiness Moments” tagged. However, the overall amount of people in a place does not have any direct effect on the happiness level of a place.
+
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.A.3 - Not every effect of a computing innovation is anticipated in advance.
+
+:::
+
+
+MARKDOWN

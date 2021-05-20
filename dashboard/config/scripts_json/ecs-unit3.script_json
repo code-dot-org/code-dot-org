@@ -1,0 +1,1388 @@
+{
+  "script": {
+    "name": "ecs-unit3",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "pd": true,
+      "professional_learning_course": "ECS Support"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:51 UTC",
+    "seeding_key": {
+      "script.name": "ecs-unit3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting Started",
+      "name": "Getting Started",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "key": "Intro to Unit 3",
+      "name": "Intro to Unit 3",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Unit 3",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "key": "Teaching Strategies",
+      "name": "Teaching Strategies",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "key": "Unit 3 Day-by-Day",
+      "name": "Unit 3 Day-by-Day",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "key": "Unit 3 Challenge",
+      "name": "Unit 3 Challenge",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "key": "Close & Next Steps",
+      "name": "Close & Next Steps",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Phase 3 Unit3 Welcome"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Phase 3 Unit3 Welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECS Phase 3 Unit3 Welcome"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Phase 3 Unit 3 Overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Phase 3 Unit 3 Overview"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECS Phase 3 Unit 3 Overview"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "PDECS tour"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLC- check your progress"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLC- check your progress"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "PLC- check your progress"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Unit 3 Outline"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Outline"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Unit 3 Outline"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD P3 Plan"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD P3 Plan"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD P3 Plan"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Unit3 Connections"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Unit3 Connections"
+        ],
+        "lesson.key": "Intro to Unit 3",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Unit3 Connections"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Unit 3 Lesson Overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Lesson Overview"
+        ],
+        "lesson.key": "Intro to Unit 3",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Unit 3 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Forum-ECSPD-Unit 3-Teaching Practice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Forum-ECSPD-Unit 3-Teaching Practice"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "Forum-ECSPD-Unit 3-Teaching Practice"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Unit 3 Expertise"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Expertise"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Unit 3 Expertise"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Phase 3 - Unit 3 - Teaching Practice"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Phase 3 - Unit 3 - Teaching Practice"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Phase 3 - Unit 3 - Teaching Practice"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD jsfiddle"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD jsfiddle"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD jsfiddle"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Unit 3 Strategy Review"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Strategy Review"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Unit 3 Strategy Review"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD strategies"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD strategies"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD strategies"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Unit 3 Stage 6 Overview"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Stage 6 Overview"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Unit 3 Stage 6 Overview"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 1-2 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 1-2 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 1-2 Intro"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 3-4 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 3-4 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 3-4 Intro"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 5 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 5 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 5 Intro"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 6-7 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 6-7 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 6-7 Intro"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 8-10 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 8-10 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 8-10 Intro"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 11-13 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 11-13 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 11-13 Intro"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 14 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 14 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 14 Intro"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 15-16 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 15-16 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 15-16 Intro"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 17-19 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 17-19 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 17-19 Intro"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 20-21 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 20-21 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 20-21 Intro"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 D 22-25 Intro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 D 22-25 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 D 22-25 Intro"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD-unit2 What is the Challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD-unit2 What is the Challenge"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD-unit2 What is the Challenge"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD U3 Challenges"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD U3 Challenges"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD U3 Challenges"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Unit 3 Challenge Selection"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Unit 3 Challenge Selection"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECS Unit 3 Challenge Selection"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSD3-u5 do the challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSD3-u5 do the challenge"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSD3-u5 do the challenge"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 create your extension"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "CSPPD3-u2 create your extension"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "CSPPD3-u2 reflect on challenge"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSPPD3-u2 expectations"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "CSPPD3-u2 expectations"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECS Unit 3 Challenge Submission"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECS Unit 3 Challenge Submission"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECS Unit 3 Challenge Submission"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ECSPD Challenge Reflection"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ECSPD Challenge Reflection"
+        ],
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      },
+      "level_keys": [
+        "ECSPD Challenge Reflection"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ECS Phase 3 Unit3 Welcome",
+        "script_level.level_keys": [
+          "ECS Phase 3 Unit3 Welcome"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS Phase 3 Unit 3 Overview",
+        "script_level.level_keys": [
+          "ECS Phase 3 Unit 3 Overview"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PDECS tour",
+        "script_level.level_keys": [
+          "PDECS tour"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLC- check your progress",
+        "script_level.level_keys": [
+          "PLC- check your progress"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Unit 3 Outline",
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Outline"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD P3 Plan",
+        "script_level.level_keys": [
+          "ECSPD P3 Plan"
+        ],
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Unit3 Connections",
+        "script_level.level_keys": [
+          "ECSPD Unit3 Connections"
+        ],
+        "lesson.key": "Intro to Unit 3",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Unit 3 Lesson Overview",
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Lesson Overview"
+        ],
+        "lesson.key": "Intro to Unit 3",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Forum-ECSPD-Unit 3-Teaching Practice",
+        "script_level.level_keys": [
+          "Forum-ECSPD-Unit 3-Teaching Practice"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Unit 3 Expertise",
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Expertise"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Phase 3 - Unit 3 - Teaching Practice",
+        "script_level.level_keys": [
+          "ECSPD Phase 3 - Unit 3 - Teaching Practice"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD jsfiddle",
+        "script_level.level_keys": [
+          "ECSPD jsfiddle"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Unit 3 Strategy Review",
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Strategy Review"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD strategies",
+        "script_level.level_keys": [
+          "ECSPD strategies"
+        ],
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Unit 3 Stage 6 Overview",
+        "script_level.level_keys": [
+          "ECSPD Unit 3 Stage 6 Overview"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 1-2 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 1-2 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 3-4 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 3-4 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 5 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 5 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 6-7 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 6-7 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 8-10 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 8-10 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 11-13 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 11-13 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 14 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 14 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 15-16 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 15-16 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 17-19 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 17-19 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 20-21 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 20-21 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 D 22-25 Intro",
+        "script_level.level_keys": [
+          "ECSPD U3 D 22-25 Intro"
+        ],
+        "lesson.key": "Unit 3 Day-by-Day",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD-unit2 What is the Challenge",
+        "script_level.level_keys": [
+          "ECSPD-unit2 What is the Challenge"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD U3 Challenges",
+        "script_level.level_keys": [
+          "ECSPD U3 Challenges"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS Unit 3 Challenge Selection",
+        "script_level.level_keys": [
+          "ECS Unit 3 Challenge Selection"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSD3-u5 do the challenge",
+        "script_level.level_keys": [
+          "ECSD3-u5 do the challenge"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 create your extension",
+        "script_level.level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 reflect on challenge",
+        "script_level.level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSPPD3-u2 expectations",
+        "script_level.level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECS Unit 3 Challenge Submission",
+        "script_level.level_keys": [
+          "ECS Unit 3 Challenge Submission"
+        ],
+        "lesson.key": "Unit 3 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ECSPD Challenge Reflection",
+        "script_level.level_keys": [
+          "ECSPD Challenge Reflection"
+        ],
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit3"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

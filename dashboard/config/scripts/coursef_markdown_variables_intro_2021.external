@@ -1,0 +1,17 @@
+name 'courseF_markdown_variables_intro_2021'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **In this lesson...**
+
+### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!
+
+
+---
+
+## **Blocks to Know**
+
+![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
+
+
+MARKDOWN

@@ -19,10 +19,8 @@ FactoryGirl.define do
   # example zip: 42001
   factory :regional_partner_kentucky, parent: :regional_partner_with_summer_workshops do
     # Applications are closed.
-    apps_open_date_csp_teacher {(Date.current - 5.days).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current - 3.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "KY")]}
   end
 
@@ -31,10 +29,8 @@ FactoryGirl.define do
     # No contact details, no workshop application dates, and no workshops.
     contact_name nil
     contact_email nil
-    apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher nil
-    apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher nil
+    apps_open_date_teacher nil
+    apps_close_date_teacher nil
     mappings {[create(:pd_regional_partner_mapping, state: "NJ")]}
     pd_workshops {[]}
   end
@@ -42,20 +38,15 @@ FactoryGirl.define do
   # example zip: 97202
   factory :regional_partner_oregon, parent: :regional_partner_with_summer_workshops do
     # Opening at a specific date in the future.
-    apps_open_date_csp_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current + 14.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 5.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "OR")]}
   end
 
   # example zip: 82001
   factory :regional_partner_wyoming, parent: :regional_partner_with_summer_workshops do
-    # CSD dates but no CSP dates.
-    apps_open_date_csp_teacher nil
-    apps_open_date_csd_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher nil
-    apps_close_date_csd_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current + 6.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 15.days).strftime("%Y-%m-%d")}
     mappings {[create(:pd_regional_partner_mapping, state: "WY")]}
   end
 
@@ -75,60 +66,6 @@ FactoryGirl.define do
 
     trait :with_assigned_code do
       after :build, &:assign_code
-    end
-  end
-
-  factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
-    association :user, factory: :teacher, strategy: :create
-    transient do
-      application_hash {build :pd_teacher_application_hash, user: user}
-    end
-    application {application_hash.to_json}
-    primary_email {application_hash['primaryEmail']}
-    secondary_email {application_hash['secondaryEmail']}
-  end
-
-  # The raw attributes as returned by the teacher application form, and saved in Pd::TeacherApplication.application.
-  factory :pd_teacher_application_hash, class: 'Hash' do
-    transient do
-      user nil
-      association :school, factory: :public_school, strategy: :build
-      association :school_district, strategy: :build
-      course 'csd'
-    end
-
-    initialize_with do
-      {
-        school: school.id,
-        'school-district' => school_district.id,
-        firstName: 'Rubeus',
-        lastName: 'Hagrid',
-        primaryEmail: user ? user.email : 'rubeus@hogwarts.co.uk',
-        secondaryEmail: 'rubeus+also@hogwarts.co.uk',
-        principalPrefix: 'Mrs.',
-        principalFirstName: 'Minerva',
-        principalLastName: 'McGonagall',
-        principalEmail: 'minerva@hogwarts.co.uk',
-        selectedCourse: course,
-        phoneNumber: '555-555-5555',
-        gradesAtSchool: [10],
-        genderIdentity: 'Male',
-        grades2016: [7, 8],
-        subjects2016: ['Math', 'Care of Magical Creatures'],
-        grades2017: [10, 11],
-        subjects2017: ['Computer Science', 'Care of Magical Creatures'],
-        committedToSummer: 'Yes',
-        ableToAttendAssignedSummerWorkshop: 'Yes',
-        allStudentsShouldLearn: '4',
-        allStudentsCanLearn: '4',
-        newApproaches: '4',
-        allAboutContent: '4',
-        allAboutProgramming: '4',
-        csCreativity: '4',
-        currentCsOpportunities: ['lunch clubs'],
-        whyCsIsImportant: 'robots',
-        whatTeachingSteps: 'learn and practice'
-      }.stringify_keys
     end
   end
 
@@ -443,13 +380,6 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_accepted_program, class: 'Pd::AcceptedProgram' do
-    workshop_name '2017: workshop'
-    course 'csd'
-    association :user, factory: :teacher, strategy: :create
-    association :teacher_application, factory: :pd_teacher_application, strategy: :create
-  end
-
   factory :pd_facilitator_teachercon_attendance, class: 'Pd::FacilitatorTeacherconAttendance' do
     association :user, factory: :facilitator, strategy: :create
     tc1_arrive {Date.new(2017, 8, 23)}
@@ -460,7 +390,7 @@ FactoryGirl.define do
     association :workshop
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
-    email {"participant_#{(User.maximum(:id) || 0) + 1}@example.com.xx"}
+    email {"participant_#{SecureRandom.hex(10)}@example.com.xx"}
     association :school_info
     code {SecureRandom.hex(10)}
 
@@ -469,6 +399,20 @@ FactoryGirl.define do
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
+
+    trait :with_attendance do
+      after(:create) do |enrollment|
+        create_list(:pd_attendance, 1, enrollment: enrollment)
+      end
+    end
+  end
+
+  factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
+    association :user, factory: :teacher
+
+    course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
+    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -479,6 +423,42 @@ FactoryGirl.define do
   factory :pd_attendance_no_account, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
     association :enrollment, factory: :pd_enrollment
+  end
+
+  # Creates a teacher optionally enrolled in a workshop,
+  # or marked attended on either all (true) or a specified list of workshop sessions.
+  factory :pd_workshop_participant, parent: :teacher do
+    transient do
+      workshop nil
+      enrolled true
+      attended false
+      cdo_scholarship_recipient false
+    end
+    after(:create) do |teacher, evaluator|
+      raise 'workshop required' unless evaluator.workshop
+      create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
+      if evaluator.attended
+        attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
+        attended_sessions.each do |session|
+          create :pd_attendance, session: session, teacher: teacher
+        end
+      end
+
+      scholarship_params = {
+        user: teacher,
+        course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
+        application_year: evaluator.workshop.school_year
+      }
+
+      # We have an after_create hook on the enrollment model (see :set_default_scholarship_info)
+      # that creates a ScholarshipInfo entry in certain cases (namely, if the enrollment is in a CSF workshop).
+      # Skip creating a new ScholarshipInfo entry if one has already been created
+      # when the enrollment is created above.
+      if evaluator.cdo_scholarship_recipient && Pd::ScholarshipInfo.find_by(scholarship_params).nil?
+        create :pd_scholarship_info,
+          scholarship_params
+      end
+    end
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
@@ -532,149 +512,6 @@ FactoryGirl.define do
         )
       end
     end
-
-    # Sample data generated by submitting the actual form 2018-10-12.
-
-    trait :found_district_only do
-      initialize_with do
-        {
-          "firstName" => "Sybill",
-          "lastName" => "Trelawney",
-          "email" => "trelawney@example.com",
-          "role" => "Teacher",
-          "gradeLevels" => ["High School (9-12)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "5000000",
-          "school-district-other" => false,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "",
-          "school-name" => "",
-          "school-zipcode" => ""
-        }
-      end
-    end
-
-    trait :found_district_and_school do
-      initialize_with do
-        {
-          "firstName" => "Minerva",
-          "lastName" => "McGonigall",
-          "email" => "mcgonigall@example.com",
-          "role" => "Teacher",
-          "gradeLevels" => ["High School (9-12)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "5000000",
-          "school-district-other" => false,
-          "school" => "500000000000",
-          "school-other" => false,
-          "school-district-name" => "",
-          "school-name" => "",
-          "school-zipcode" => ""
-        }
-      end
-    end
-
-    trait :found_district_other_school do
-      initialize_with do
-        {
-          "firstName" => "Albus",
-          "lastName" => "Dumbledore",
-          "email" => "dumbledore@example.com",
-          "role" => "School Administrator",
-          "jobTitle" => "Headmaster",
-          "gradeLevels" => ["High School (9-12)", "Middle School (6-8)", "Elementary School (K-5)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "5000000",
-          "school-district-other" => false,
-          "school" => "",
-          "school-other" => true,
-          "school-district-name" => "",
-          "school-name" => "Hogwarts",
-          "school-zipcode" => "99999"
-        }
-      end
-    end
-
-    trait :other_district_only do
-      initialize_with do
-        {
-          "firstName" => "Filius",
-          "lastName" => "Flitwick",
-          "email" => "flitwick@example.com",
-          "role" => "Teacher",
-          "gradeLevels" => ["High School (9-12)"],
-          "notes" => "A question for my regional partner",
-          "optIn" => "No",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "",
-          "school-district-other" => true,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "The Wizarding Schools",
-          "school-name" => "",
-          "school-zipcode" => ""
-        }
-      end
-    end
-
-    trait :other_district_and_school do
-      initialize_with do
-        {
-          "firstName" => "Severus",
-          "lastName" => "Snape",
-          "email" => "snape@example.com",
-          "role" => "District Administrator",
-          "gradeLevels" => ["Elementary School (K-5)", "Middle School (6-8)"],
-          "jobTitle" => "Professor",
-          "optIn" => "No",
-          "notes" => "A question for my regional partner",
-          "school-type" => "public",
-          "school-state" => "OR",
-          "school-district" => "",
-          "school-district-other" => true,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "The Wizarding Schools",
-          "school-name" => "Hogwarts",
-          "school-zipcode" => "99999"
-        }
-      end
-    end
-
-    trait :private_school do
-      initialize_with do
-        {
-          "firstName" => "Igor",
-          "lastName" => "Karkaroff",
-          "email" => "karkaroff@example.com",
-          "role" => "School Administrator",
-          "jobTitle" => "Headmaster",
-          "gradeLevels" => ["High School (9-12)"],
-          "optIn" => "No",
-          "notes" => "A question for my regional partner",
-          "school-type" => "private",
-          "school-state" => "OR",
-          "school-district" => "",
-          "school-district-other" => false,
-          "school" => "",
-          "school-other" => false,
-          "school-district-name" => "",
-          "school-name" => "Durmstrang Institute",
-          "school-zipcode" => "99999"
-        }
-      end
-    end
   end
 
   factory :pd_regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact' do
@@ -686,10 +523,13 @@ FactoryGirl.define do
   factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
     initialize_with do
       {
+        mini: true,
         name: 'name',
         email: 'foo@bar.com',
         zip: '45242',
-        notes: 'Sample notes to regional partner'
+        notes: 'Sample notes to regional partner',
+        role: 'Teacher',
+        grade_levels: %w(K-5 6-8)
       }
     end
   end
@@ -713,6 +553,9 @@ FactoryGirl.define do
     initialize_with {attributes.transform_keys(&ruby_to_js_style_keys)}
   end
 
+  # ------- APPLICATIONS ------- #
+
+  # ------- Facilitator ------- #
   # default to csf
   factory :pd_facilitator1819_application_hash, parent: :pd_facilitator1819_application_hash_common do
     csf
@@ -920,25 +763,17 @@ FactoryGirl.define do
     end
   end
 
-  # default to csp
-  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
-    csp
-  end
+  # ------- Teacher ------- #
 
-  factory :pd_teacher1819_application_hash_common, class: 'Hash' do
+  factory :pd_teacher_application_hash_common, class: 'Hash' do
     country 'United States'
-    title 'Mr.'
     first_name 'Severus'
-    preferred_first_name 'Sevvy'
     last_name 'Snape'
     alternate_email 'ilovepotions@gmail.com'
     phone '5558675309'
-    address '123 Fake Street'
-    city 'Buffalo'
-    state 'Washington'
-    add_attribute :zip_code, '98101'
     gender_identity 'Male'
     race ['Other']
+    add_attribute :zip_code, '98101'
     association :school
     principal_first_name 'Albus'
     principal_last_name 'Dumbledore'
@@ -947,20 +782,7 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
-    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
-    grades_teaching ['Grade 7']
-    grades_expect_to_teach ['Grade 6', 'Grade 7']
-    does_school_require_cs_license 'Yes'
-    have_cs_license 'Yes'
-    subjects_teaching ['Computer Science']
-    subjects_expect_to_teach ['Computer Science']
-    subjects_licensed_to_teach ['Computer Science']
-    taught_in_past ['CS Fundamentals']
     previous_yearlong_cdo_pd ['CS in Science']
-    cs_offered_at_school ['AP CS A']
-    cs_opportunities_at_school ['Courses for credit']
-    plan_to_teach 'Yes, I plan to teach this course'
-    able_to_attend_single "Yes, I'm able to attend"
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'
     agree 'Yes'
@@ -971,24 +793,6 @@ FactoryGirl.define do
         # In that case, replace it with the id from the associated model
         hash[:school] = hash[:school].id if hash[:school].is_a? School
       end.transform_keys(&ruby_to_js_style_keys)
-    end
-
-    trait :csp do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
-      csp_which_grades ['11', '12']
-      csp_course_hours_per_week 'More than 5 course hours per week'
-      csp_course_hours_per_year 'At least 100 course hours'
-      csp_terms_per_year '1 quarter'
-      csp_how_offer 'As an AP course'
-      csp_ap_exam 'Yes, all students will be expected to take the AP CS Principles exam'
-    end
-
-    trait :csd do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
-      csd_which_grades ['6', '7']
-      csd_course_hours_per_week '5 or more course hours per week'
-      csd_course_hours_per_year 'At least 100 course hours'
-      csd_terms_per_year '1 quarter'
     end
 
     trait :with_custom_school do
@@ -1007,6 +811,75 @@ FactoryGirl.define do
       after(:build) do |hash|
         hash.delete 'ableToAttendSingle'
       end
+    end
+  end
+
+  # default to csp
+  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher1819_application_hash_common, parent: :pd_teacher_application_hash_common do
+    title 'Mr.'
+    preferred_first_name 'Sevvy'
+    address '123 Fake Street'
+    city 'Buffalo'
+    state 'Washington'
+    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
+    grades_teaching ['Grade 7']
+    grades_expect_to_teach ['Grade 6', 'Grade 7']
+    does_school_require_cs_license 'Yes'
+    have_cs_license 'Yes'
+    subjects_teaching ['Computer Science']
+    subjects_expect_to_teach ['Computer Science']
+    subjects_licensed_to_teach ['Computer Science']
+    taught_in_past ['CS Fundamentals']
+    cs_offered_at_school ['AP CS A']
+    cs_opportunities_at_school ['Courses for credit']
+    plan_to_teach 'Yes, I plan to teach this course'
+    able_to_attend_single "Yes, I'm able to attend"
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_course_hours_per_week 'More than 5 course hours per week'
+      csp_course_hours_per_year 'At least 100 course hours'
+      csp_terms_per_year '1 quarter'
+      csp_how_offer 'As an AP course'
+      csp_ap_exam 'Yes, all students will be expected to take the AP CS Principles exam'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_course_hours_per_week '5 or more course hours per week'
+      csd_course_hours_per_year 'At least 100 course hours'
+      csd_terms_per_year '1 quarter'
+    end
+  end
+
+  factory :pd_teacher2021_application_hash_common, parent: :pd_teacher_application_hash_common do
+    pay_fee 'Yes, my school will be able to pay the full program fee.'
+    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
     end
   end
 
@@ -1053,12 +926,62 @@ FactoryGirl.define do
     form_data {form_data_hash.to_json}
   end
 
-  # default to do_you_approve: other
-  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
-    approved_other
+  # default to csp
+  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
+    csp
   end
 
-  factory :pd_principal_approval1920_application_hash_common, parent: :form_data_hash do
+  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  factory :pd_teacher2122_application_hash_common, parent: :pd_teacher_application_hash_common do
+    pay_fee Pd::Application::Teacher2122Application.options[:pay_fee].first
+    plan_to_teach Pd::Application::Teacher2122Application.options[:plan_to_teach].first
+    interested_in_online_program 'Yes'
+    completing_on_behalf_of_someone_else 'No'
+    cs_how_many_minutes 45
+    cs_how_many_days_per_week 5
+    cs_how_many_weeks_per_year 20
+    cs_total_course_hours 75
+    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
+
+    trait :csp do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
+      csp_which_grades ['11', '12']
+      csp_which_units ['Unit 1: Digital Information', 'Unit 2: The Internet']
+      csp_how_offer 'As an AP course'
+    end
+
+    trait :csd do
+      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
+      csd_which_grades ['6', '7']
+      csd_which_units ['Unit 1: Problem Solving', 'Unit 2: Web Development']
+    end
+  end
+
+  # default to csp
+  factory :pd_teacher2122_application_hash, parent: :pd_teacher2122_application_hash_common do
+    csp
+  end
+
+  factory :pd_teacher2122_application, class: 'Pd::Application::Teacher2122Application' do
+    association :user, factory: [:teacher, :with_school_info], strategy: :create
+    course 'csp'
+    transient do
+      form_data_hash {build :pd_teacher2122_application_hash_common, course.to_sym}
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # ----- Principal ----- #
+
+  factory :pd_principal_approval_application_hash_common, parent: :form_data_hash do
     title 'Dr.'
     first_name 'Albus'
     last_name 'Dumbledore'
@@ -1069,6 +992,129 @@ FactoryGirl.define do
       do_you_approve 'No'
     end
 
+    trait :replace_course_yes_csp do
+      replace_course 'Yes'
+      replace_which_course_csp ['Beauty and Joy of Computing']
+    end
+
+    trait :replace_course_yes_csd do
+      replace_course 'Yes'
+      replace_which_course_csd ['CodeHS']
+    end
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2122_application_hash, parent: :pd_principal_approval2122_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2122_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2122Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2122Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2122Application.options[:pay_fee][0]
+    end
+  end
+
+  factory :pd_principal_approval2122_application, class: 'Pd::Application::PrincipalApproval2122Application' do
+    association :teacher_application, factory: :pd_teacher2122_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2122Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2122_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval2021_application_hash, parent: :pd_principal_approval2021_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval2021_application_hash_common, parent: :pd_principal_approval_application_hash_common do
+    trait :approved_yes do
+      do_you_approve 'Yes'
+      with_approval_fields
+    end
+
+    trait :approved_other do
+      do_you_approve 'Other:'
+      with_approval_fields
+    end
+
+    trait :with_approval_fields do
+      school 'Hogwarts Academy of Witchcraft and Wizardry'
+      total_student_enrollment 200
+      free_lunch_percent '50'
+      white '16'
+      black '15'
+      hispanic '14'
+      asian '13'
+      pacific_islander '12'
+      american_indian '11'
+      other '10'
+      committed_to_master_schedule Pd::Application::PrincipalApproval2021Application.options[:committed_to_master_schedule][0]
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      committed_to_diversity 'Yes'
+      understand_fee 'Yes'
+      pay_fee Pd::Application::PrincipalApproval2021Application.options[:pay_fee][0]
+    end
+  end
+
+  factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
+    association :teacher_application, factory: :pd_teacher2021_application
+    course 'csp'
+    transient do
+      approved 'Yes'
+      replace_course Pd::Application::PrincipalApproval2021Application.options[:replace_course][1]
+      form_data_hash do
+        build(
+          :pd_principal_approval2021_application_hash_common,
+          "approved_#{approved.downcase}".to_sym,
+          course: course,
+          replace_course: replace_course
+        )
+      end
+    end
+    form_data {form_data_hash.to_json}
+  end
+
+  # default to do_you_approve: other
+  factory :pd_principal_approval1920_application_hash, parent: :pd_principal_approval1920_application_hash_common do
+    approved_other
+  end
+
+  factory :pd_principal_approval1920_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     trait :approved_yes do
       do_you_approve 'Yes'
       with_approval_fields
@@ -1098,16 +1144,6 @@ FactoryGirl.define do
       understand_fee 'Yes'
       pay_fee Pd::Application::PrincipalApproval1920Application.options[:pay_fee][0]
     end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
   end
 
   factory :pd_principal_approval1920_application, class: 'Pd::Application::PrincipalApproval1920Application' do
@@ -1133,17 +1169,8 @@ FactoryGirl.define do
     approved_other
   end
 
-  factory :pd_principal_approval1819_application_hash_common, parent: :form_data_hash do
-    first_name 'Albus'
-    last_name 'Dumbledore'
+  factory :pd_principal_approval1819_application_hash_common, parent: :pd_principal_approval_application_hash_common do
     title 'Dr.'
-    email 'albus@hogwarts.edu'
-    confirm_principal true
-
-    trait :approved_no do
-      do_you_approve 'No'
-    end
-
     trait :approved_yes do
       do_you_approve 'Yes'
       with_approval_fields
@@ -1173,16 +1200,6 @@ FactoryGirl.define do
       understand_fee 'Yes'
       pay_fee 'Yes, my school or my teacher will be able to pay the full summer workshop program fee.'
     end
-
-    trait :replace_course_yes_csp do
-      replace_course 'Yes'
-      replace_which_course_csp ['Beauty and Joy of Computing']
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course 'Yes'
-      replace_which_course_csd ['CodeHS']
-    end
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
@@ -1202,6 +1219,9 @@ FactoryGirl.define do
     end
     form_data {form_data_hash.to_json}
   end
+
+  # ---- Teacher Con ----- #
+  # TODO: Remove all Teachercon code
 
   # default to accepted
   factory :pd_teachercon1819_registration_hash, parent: :pd_teachercon1819_registration_hash_common do
@@ -1312,6 +1332,8 @@ FactoryGirl.define do
     association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end
+
+  # ----- FiT Weekend ----- #
 
   factory :pd_fit_weekend1819_registration_hash, parent: :form_data_hash do
     email "ssnape@hogwarts.edu"

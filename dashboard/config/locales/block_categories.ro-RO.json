@@ -1,0 +1,72 @@
+{
+  "ro-RO": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Acţiuni",
+          "Brushes": "Pensule",
+          "Loops": "Bucle",
+          "Math": "Matematică",
+          "Logic": "Logică",
+          "Functions": "Funcţii",
+          "Variables": "Variabile"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Lume",
+          "Dancers": "Dansatori",
+          "Properties": "Proprietăţi",
+          "Events": "Evenimente",
+          "Numbers": "Numere",
+          "Logic": "Logică"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Acţiuni",
+          "Events": "Evenimente",
+          "Loops": "Bucle",
+          "Math": "Matematică",
+          "Logic": "Logică",
+          "Games/Score": "Jocuri/Scor"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Lume",
+          "Actions": "Acţiuni",
+          "Events": "Evenimente",
+          "Behaviors": "Comportamente"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Lume",
+          "Locations": "Locaţii",
+          "Actions": "Acţiuni",
+          "Events": "Evenimente",
+          "Behaviors": "Comportamente",
+          "Variables": "Variabile",
+          "Math": "Matematică",
+          "Logic": "Logică",
+          "Functions": "Funcţii",
+          "Text": "Text",
+          "Comments": "Comentarii"
+        },
+        "outbreak_freeplay": {
+          "World": "Lume",
+          "Actions": "Acţiuni",
+          "Behaviors": "Comportamente",
+          "Events": "Evenimente",
+          "Locations": "Locaţii",
+          "Logic": "Logică",
+          "Loops": "Bucle",
+          "Math": "Matematică",
+          "Variables": "Variabile",
+          "Functions": "Funcţii",
+          "Comments": "Comentarii"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Lume",
+          "Actions": "Acţiuni",
+          "Events": "Evenimente",
+          "Logic": "Logică",
+          "Math": "Matematică"
+        }
+      }
+    }
+  }
+}

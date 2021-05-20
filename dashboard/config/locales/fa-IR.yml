@@ -15,6 +15,7 @@ fa:
       messages:
         blank: "%s لازم است"
         blank_plural: ضروری هستند
+        invalid: نامعتبر است
         invalid_plural: معتبر نیستند
     attributes:
       user:
@@ -44,13 +45,10 @@ fa:
   okay: باشه
   or: یا
   heading_x_of_y: "%{heading} (%{x} صفحه %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'افزودن یک معلم:'
       placeholder: انتخاب کد (ABCDEF)
-      instructions: لطفا کد با شما معلم خود را به اشتراک گذاشته. 6 حرف کد مانند "ABCDEF"
-        است.
-    submit: افزودن معلم
+      submit: پیوستن
   add_hint_form:
     placeholder: لطفا پیشنهادتان را اینجا وارد کنید
     submit: افزودن پیشنهاد
@@ -77,9 +75,6 @@ fa:
   auth:
     sign_in_with: ورود از طریق %{provider}
     signed_in: وارد شدید!
-    signed_out: شما از <a href="%{url}"> Code.org</a> خارج شده اید.
-    sign_out_of: شما استفاده کردید  %{provider} برای ورود  <a href="%{url}">     اینجا
-      را کلیک کنید </a> برای خروج %{provider}.
     already_signedup: قبلا ثبت نام کرده‌اید؟
     notyet_signedup: تا به حال شرکت نکرده‌اید؟
     google_oauth2: حساب Google
@@ -125,9 +120,14 @@ fa:
     select_school_type: نوع مدرسه
     private: خصوصی
     public: عمومی
+    homeschool: مدرسه در خانه
+    after_school: بعد از مدرسه
     other: دیگر
+    state: وضعیت
+    district_name: نام منطقه
     school: مدرسه
     school_name: نام مدرسه
+    school_zip: کد پستی مدرسه
     school_address: آدرس مدرسه
   signin_form:
     title: دارای حساب کاربری در حال حاضر؟ ورود
@@ -163,6 +163,10 @@ fa:
       روی لینک زیر برای ثبت نام آموزش علوم کامپیوتر در Code.org کلیک کنید ( با من به عنوان " معلم " ):
 
       آموزشها جالب و مصور هستند و مفاهیم اساسی کامپیوتر را به سادگی تجربه یک بازی به شما یاد میدهند کد نویسی را از بیل گیتس ، مارک زاکربرگ ، angry birds و plants vs. zombies یاد بگیرید.
+  parent_mailer:
+    parent_email_added_subject: به Code.org خوش آمدید!
+  teacher_mailer:
+    new_teacher_subject: به Code.org خوش آمدید!
   section:
     your_section:
       one: 'بخش شما:'
@@ -212,9 +216,22 @@ fa:
       my_dashboard: دَشبورد من
       course_catalog: سرفصل دوره‌ها
       project_gallery: پروژه ها
+      sections: بخش‌ها
+      report_bug: گزارش مشکل
       educate_hoc: ساعت کد نویسی
+      educate_tools: ابزار‌ها و فیلم‌ها
       about_us: درباره ما
+      about_partners: شرکا
+      about_team: کل تیم
+      about_jobs: مشاغل
+      about_contact: تماس با ما
+      about_faqs: سوال‌های متداول
+      learn: یادگیری
+      help_us: به ما کمک کنید
+      teach: آموزش
       about: درباره
+      legal_privacy: قوانین حفظ حریم خصوصی
+      legal_tos: شرایط
     user:
       classroom: صفحه اصلی معلم
       district_dashboard: محدوده ی داشبورد
@@ -224,11 +241,16 @@ fa:
       logout: خروج
       signin: ورود
       already_registered: قبلا ثبت نام کرده اید؟?
+      pair_programming: برنامه نویسی دونفره
+      team: تیم
+      driver: راننده
+      navigator: شریک
       create: ایجاد
       algebra_game: جبر
       applab: آزمایشگاه نرم افزار
       artist: هنرمند
       bounce: پریدن
+      dance: جشن و رقص
       flappy: فلاپی
       frozen: منجمد
       gamelab: کارگاه بازی سازی
@@ -277,6 +299,8 @@ fa:
     email_confirm_needed_required: 'آدرس ایمیل شما ایمیل%{email} تائید نشده است:'
     email_confirm_wrong_email: "(آدرس ایمیل اشتباه است؟)"
     email_resend_confirm: ارسال مجدد دستورالعمل‌های تأیید
+    new_email_hint: "(مطمئن شوید که شما می توانید از طریق این آدرس ایمیل، ایمیل دریافت
+      کنید.)"
     new_password_hint: "(اگر نمی خواهید تغییر بدهید خالی بگذارید)"
     current_password_hint: "(کلمه عبور برای ذخیره تغییرات لازم است)"
     delete: حسابت راحذف کن
@@ -284,16 +308,13 @@ fa:
     delete_text_teacher_note: 'لطفا توجه داشته باشید: حذف کردن حساب شما حساب های دانش
       آموزهایتان را حدف نخواهدکرد.'
     delete_confirm: آیا مطمئنید که میخواهید حسابتان را حذف کنید؟
+    update_email: بروزرسانی
+    none: هیچکدام
   user_level:
     completed: انجام شد
     tried: سعی شد
   home:
     title: کد استودیو
-    description: کارگاه کد محلی برای دوره های آنلاین است که توسط Code.org ایجاد شده
-      است
-    lines_of_code: "%{lines_count} خط کد توسط دانش آموزان نوشته شده است"
-    lines_of_code_linebreak: "%{lines_count} خط کد<br/>نوشته شده توسط %{students_count}
-      میلیون دانش آموز"
     all_courses: بررسی اجمالی دوره های 1 و 2 و 3
     lesson_plans: طرح درس
     signin_message: قبلا ثبت نام کرده‌اید؟ %{link}
@@ -335,12 +356,6 @@ fa:
     try_beta_courses: جدید! درسهای در حال آماده سازی ما برای کلاس پنجمی ها را امتحان
       کنید
     use_as_teacher: استفاده از این سایت به عنوان یک معلم
-    heading_hoc2014: "<h2> ساعت کد نویسی برای </h2><h1> تمام سنین </h1>"
-    heading_elementary: "<h2> دوره 20 ساعته برای </h2><h1> مبتدیان (تمام سنین) </h1>"
-    heading_apps: "<h2>سرگرم کننده برای</h2><h1>برای همه</h1>"
-    heading_tools: "<h2>برای مرحله بعد آماده ای؟ </h2><h1> ابزارجاوا اسکریپت برای
-      دوره راهنمائی</h1>"
-    heading_legacy: "<h2> دوره عمومی ما </h2><h1>همه سنین</h1>"
     your_gallery: گالری
     no_primary_course: یک کلاس را در کد استدیو امتحان کنید
     choose_next_course: یک دوره ی استودیو ی کد را با انتخاب آن در پایین امتحان کنید
@@ -404,6 +419,7 @@ fa:
     notes_coming_soon: یادداشت ها برای این ویدیو به زودی.
     autoplay_option: پخش خودکار فیلم ها
     download: دانلود ویدیو
+    label: ویدیو
   compatibility:
     upgrade:
       link: بیشتر بیاموزید
@@ -449,6 +465,10 @@ fa:
         کند، بعد ظرف چند ثانیه نرم افزار خود را به اشتراک بگذار.
       audience: سنین سیزده به بالا
       cta: یادبگیر چگونه
+    dance:
+      title: جشن و رقص
+    dance-2019:
+      title: جشن و رقص
     hoc:
       title: هزارتوی کلاسیک
       body: مفاهیم اساسی علم کامپیوتر را امتحان کنید. میلیون‌ها نفر آن را امتحان کرده‌اند.
@@ -500,32 +520,13 @@ fa:
       title: شرطی ها
     widgets:
       cta: یادبگیر چگونه
-  gallery:
-    students_drew_these_with_code: دانش‌آموزان اینها را با کدنویسی رسم کرده‌اند!
-    students_made_these_with_code: دانش آموزان اینها را با کد ساخته اند !
-    picture_count: در <b>%{days}</b> روز گذشته، دانش‌آموزان با نوشتن برنامه‌های کامپیوتری
-      خودشان <b>%{count}</b> تصویر رسم کرده‌اند. روی تصاویر کلیک کنید تا هر برنامه
-      را در عمل ببینید.
-    activity_count: در <b>%{days}</b> روز گذشته  <b>%{count}</b> دانش آموز برنامه
-      ها و تصاویر را با نوشتن برنامه های کامپیوتری خود را ساخته اند. برای دیدن هر
-      برنامه در عمل بر روی عکس و یا نمای هربرنامه کلیک کنید.
-    want_to_make_your_own: می‌خواهی مال خودت را بسازی؟
-    more: بیشتر &rarr;
-    caption_by_name_age: توسط %{name} سن %{age}
-    caption_time_ago: "%{time_ago} پیش"
-    header: گالری
-    header_playlab: آزمایشگاه بازی
-    header_artist: هنرمند
-    report_abuse: گزارش سوء استفاده
   landing:
-    prerelease: این دوره <span class='betatext'> بتا</span> است.  یعنی نسخه نهایی
-      نبوده بر مبنای بازخورد دریافت شده مورد تجدید نظر واقع شده و بهتر می گردد.
-    prerelease_hoc2014: این آموزش <span class='betatext'> در مرحله بتا</span> است.  بر
-      اساس بازخورد دریافت شده مورد بهینه سازی قرار گرفته.
     report_bug: گزارش اشکال
     support: کمک گرفتن
     support_url: support.code.org
     help_resources: کمک و منابع
+  free_response:
+    placeholder: پاسخ خود را اینجا وارد کنید
   multi:
     wrong_title: پاسخ اشتباه
     wrong_body: پاسخی که وارد کرده‌اید صحیح نیست. لطفا دوباره امتحان کنید!
@@ -581,12 +582,6 @@ fa:
   age_interstitial:
     age: سن شما
     header: بروز رسانی اطلاعات حساب کاربری
-    message: ما در حال انجام بروزرسانی  حمایت از حریم خصوصی قویتری هستیم . برای انجام
-      این کار، ما نیاز داریم کاربران موجود سن خود را این قسمت وارد کنند. <br/>مثل
-      همیشه هرگز code.org این اطلاعات را ، اجاره،  فروخته  یا با هیچ شخص ثالثی به
-      اشتراک نمی گذارد .
-    sign_out: اگر شما نمی خواهید سن خود را اعلام کنید میتوانید <a href="%{url}"> خارج
-      شوید</a>.
   terms_interstitial:
     tos: شرایط
     privacy: قوانین حفظ حریم خصوصی
@@ -595,11 +590,17 @@ fa:
     save: ذخيره
   race_interstitial:
     races:
+      white: سفید
+      asian: آسیایی
       other: دیگر
     submit: ارسال کنید
     decline: ببند
   zendesk_too_young_message: با عرض پوزش ، کاربران کم سن ممکن است نتوانند به بخش پشتیبانی
     سایت ما وارد شوند . شما می توانید بخش <a href="http://support.code.org"> support.code.org</a>
+    را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید
+    .
+  zendesk_too_young_message_markdown: با عرض پوزش ، کاربران کم سن ممکن است نتوانند
+    به بخش پشتیبانی سایت ما وارد شوند . شما می توانید بخش [support.code.org](http://support.code.org)
     را بدون ورود به سیستم و درخواست از والدین یا معلم برای تماس با ما مشاهده کنید
     .
   progress:
@@ -621,8 +622,11 @@ fa:
     new: ایجاد مورد جدید
     exit: بازگشت به درس
     project_gallery: پروژه ها
+    publish: انتشار
+    unpublish: عدم انتشار
     share_title: پروژه خود را به اشتراک بگذارید
     share_copy_link: 'لینک را کپی کنید:'
+    advanced_share: نمایش گزینه‌های پیشرفته
     name: نام
     updated: به روز رسانی شده
     project_type: نوع پروژه
@@ -663,28 +667,25 @@ fa:
         acknowledge: با ارسال این اطلاعات، شما می پذیرید که مطابق با سیاست %{link_start_privacy}
           حفظ حریم شخصی %{link_end} و %{link_start_tos} شرایط سرویس %{link_end} با
           موضوع برخورد می شود.
-  flex_category:
-    required: بررسی اجمالی
-    csf_digcit: شهروندی دیجیتالی
-    csf_jigsaw: جورچین
-    csf_loops: حلقه‌ها
-    csf_events: رویدادها
-    csf_binary: دو دویی
-    csf_conditionals: شرطی ها
-    csf_nested_loops: حلقه های تو در تو
-    csf_functions: توابع
-    csf_variables: متغیرها
-    csf_for_loops: حلقه های "برای"
-    csf_internet: اینترنت
-    csp_variables: متغیرها
-    csp_conditionals: شرطی ها
-    csp_functions: توابع
-    csp_lists: فهرست‌ها
-    csp_loops: حلقه‌ها
+  peer_review:
+    accepted:
+      name: پذیرفته شد
+    rejected:
+      name: رد شد
   hoc_download:
     minecraft_name: ساعتی با کد ماینکرفت
+    download_in_Catalan: 'دانلود Catalan:'
+    download_in_Chinese-Taiwan: 'دانلود Chinese-Taiwan:'
+    download_in_Chinese: 'دانلود Chinese:'
+    download_in_Croatian: 'دانلود Croatian:'
+    download_in_Czech: 'دانلود Czech:'
+    download_in_Danish: 'دانلود Danish:'
+    windows: Windows (64-bit)
+    mac: Mac OS X
   pd:
     form_labels:
+      first_name: نام
+      last_name: نام خانوادگی
       email: ایمیل
       school_name: نام مدرسه
     form_entries:
@@ -707,3 +708,4 @@ fa:
     accept: موافقم
   gdpr_dialog:
     true: بله
+  copy: رونوشت‌

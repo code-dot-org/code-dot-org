@@ -13,14 +13,13 @@ import commonStyles from '../commonStyles';
 
 class CodeWorkspaceContainer extends React.Component {
   static propTypes = {
-    // redux provided
+    children: PropTypes.node,
+    style: PropTypes.object,
+
+    // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    noVisualization: PropTypes.bool.isRequired,
-
-    // not in redux
-    topMargin: PropTypes.number.isRequired,
-    children: PropTypes.node
+    noVisualization: PropTypes.bool.isRequired
   };
 
   /**
@@ -32,20 +31,20 @@ class CodeWorkspaceContainer extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.topMargin !== prevProps.topMargin) {
+    if (this.props.style?.top !== prevProps.style?.top) {
       utils.fireResizeEvent();
     }
   }
 
   render() {
-    const {hidden, isRtl, noVisualization, topMargin, children} = this.props;
+    const {hidden, isRtl, noVisualization, children, style} = this.props;
     const mainStyle = {
       ...styles.main,
-      top: topMargin,
       ...(noVisualization && styles.noVisualization),
       ...(isRtl && styles.mainRtl),
       ...(noVisualization && isRtl && styles.noVisualizationRtl),
-      ...(hidden && commonStyles.hidden)
+      ...(hidden && commonStyles.hidden),
+      ...style
     };
 
     return (
@@ -76,7 +75,7 @@ const styles = {
   main: {
     position: 'absolute',
     // left gets set externally :(
-    // top is set in render
+    top: 0,
     right: 0,
     bottom: 0,
     marginLeft: 15 // margin gives space for vertical resizer

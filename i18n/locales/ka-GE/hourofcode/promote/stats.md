@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -32,7 +30,7 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### რატომ არის ეს მნიშვნელოვანი?
 
-ტექნოლოგია პლანეტაზე ყველა ინდუსტრიას ცვლის. 2015 წელს, 7 მილიონი ვაკანსია იყო ა.შ.შ.-ში სხვადასხვა თანამდებობებზე — ხელოვნებისა და დიზაინის ჩათვლით — რომელიც პროგრამირებას მოთხოვდა. But 65 percent of schools in the U.S. don't teach computer science. დროა ფეხი ავუწყოთ 21-ე საუკუნეს. ჩვენ დარწმუნებულები ვართ, რომ იმის მიუხედავად, რა სფეროს აირჩევენ ბავშვები სამომავლოდ - იქნება ეს მედიცინა, ბიზნესი, პოლიტიკა თუ ხელოვნება - პროგრამირების ცოდნა ყოველთვის შესძენთ თავდაჯერებულობასა და უპირატესობას. <br /> <br />
+ტექნოლოგია პლანეტაზე ყველა ინდუსტრიას ცვლის. 2015 წელს, 7 მილიონი ვაკანსია იყო ა.შ.შ.-ში სხვადასხვა თანამდებობებზე — ხელოვნებისა და დიზაინის ჩათვლით — რომელიც პროგრამირებას მოთხოვდა. But 53 percent of schools in the U.S. don't teach computer science. დროა ფეხი ავუწყოთ 21-ე საუკუნეს. ჩვენ დარწმუნებულები ვართ, რომ იმის მიუხედავად, რა სფეროს აირჩევენ ბავშვები სამომავლოდ - იქნება ეს მედიცინა, ბიზნესი, პოლიტიკა თუ ხელოვნება - პროგრამირების ცოდნა ყოველთვის შესძენთ თავდაჯერებულობასა და უპირატესობას. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -40,11 +38,11 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### Code.org-ის შესახებ
 
-Code.org არის 501c3 არამომგებიანი ორგანიზაცია, რომლის მიზანიცაა ჩართოს პროგრამირების სწავლაში რაც შეიძლება მეტი მოსწავლე, მათ შორის ქალები და ეთნიკური უმცირესობები, რომლებიც დღეს განსაკუთრებით იშვიათად სწავლობენ პროგრამირებას. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო ოლქთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 2013 წელს გაშვების შემდეგ, Code.org-მა კოდის ერთი საათის კამპანია შექმნა – რომელმაც კომპიუტერული მეცნიერება 100 მილიონზე მეტ მოსწავლეს გააცნო. 70 სასკოლო ოლქთან თანამშრომლობის შედეგად კი კომპიუტერული მეცნიერების პროგრამა ქვეყნის მასშტაბით გავრცელდა. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 
-[![გამოსახულება](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![გამოსახულება](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![გამოსახულება](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![გამოსახულება](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![გამოსახულება](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![გამოსახულება](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

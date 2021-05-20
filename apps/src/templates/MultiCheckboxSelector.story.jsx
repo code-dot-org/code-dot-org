@@ -83,6 +83,19 @@ export default storybook => {
           <ItemComponent />
         </MultiCheckboxSelector>
       )
+    },
+    {
+      name: 'no header',
+      story: () => (
+        <MultiCheckboxSelector
+          noHeader={true}
+          items={['one', 'two', 'three']}
+          selected={['two']}
+          onChange={action('onChange')}
+        >
+          <ItemComponent />
+        </MultiCheckboxSelector>
+      )
     }
   ]);
 };

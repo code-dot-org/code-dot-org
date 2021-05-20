@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 fr:
   slides:
     maze_intro:
@@ -1507,54 +1512,83 @@ fr:
       7:
         text: "Dans le système décimal, nous avons dix chiffres de zéro à neuf, et c'est ainsi que nous avons tous appris à compter. Dans le système binaire, nous n'avons que deux chiffres : zéro et un. Avec ces deux chiffres, on peut compter jusqu'à n'importe quel nombre."
       8:
+        text: "Voici comment cela fonctionne. Dans un système de nombres décimaux auquel nous sommes tous habitués, chaque position dans un nombre a une valeur différente. Il y a une position 1, la position 10, la position 100, et ainsi de suite. Par exemple, un 9 dans la position 100 est un 900. En binaire, chaque position comporte aussi une valeur. Mais au lieu de multiplier par 10, à chaque fois, nous multiplions par 2. Il y a donc la position 1, la position 2, la position 4, la position 8, et ainsi de suite. Par exemple, le nombre 9 en binaire est 1001. Pour calculer la valeur, nous ajoutons 1 fois 8, plus 0 fois 4, plus 0 fois 2, plus 1 fois 1. Presque personne ne fait ce calcul parce que les ordinateurs le font pour nous. Ce qui est important, c'est que n'importe quel nombre peut être représenté avec seulement des uns et des zéros, ou par un groupe de fils qui sont allumés ou éteints. Plus tu utilises de fils, plus tu peux stocker de chiffres. Avec 8 fils, tu peux stocker des nombres entre 0 et 255. Ça fait 8. Avec seulement 32 fils, tu peux tout stocker, de 0 à plus de 4 milliards. En utilisant le système de nombres binaires, tu peux représenter n'importe quel nombre que tu aimes."
       9:
+        text: "Mais qu'en est-il des autres types d'informations? Tu aimes le texte, les images ou le son ? Il s'avère que toutes ces choses peuvent également être représentées par des nombres. Pense à toutes les lettres de l'alphabet. Tu peux attribuer un numéro à chaque lettre. A pourrait être 1, B pourrait être 2, et ainsi de suite. Tu peux alors représenter n'importe quel mot ou paragraphe comme une séquence de nombres. Et, comme nous l'avons vu, ces nombres peuvent être stockés sous forme de signaux électriques activés ou désactivés. Chaque mot que tu vois, sur chaque page Web ou ton téléphone, est représenté en utilisant un système comme celui-ci."
       10:
+        text: "Maintenant, considérons les photos, les vidéos et tous les graphiques que tu vois sur un écran."
       11:
+        text: "Toutes ces images sont faites de petits points appelés pixels, et chaque pixel a une couleur. Chacune des couleurs peut être représentée par des nombres. Quand tu consdères que l'image typique a des millions de ces pixels, et la vidéo typique montre 30 images par seconde, nous parlons, maintenant, de beaucoup de données, ici."
       12:
+        text: "Chaque son est essentiellement une série de vibrations dans l'air. Les vibrations peuvent être représentées graphiquement sous la forme d'une onde. Tout point sur cette forme d'onde peut être représenté par un nombre. Et de cette façon, tout son peut être décomposé en une série de nombres. Si tu recherches un son de meilleure qualité, tu choisiras un audio 32 bits ou un audio 8 bits. Plus de bits signifie une gamme de nombres plus élevée ."
       13:
+        text: "Lorsque tu utilises un ordinateur pour écrire du code ou créer ta propre application, tu ne traite pas directement avec des une et des zéros. Mais tu auras affaire à des images, du son ou de la vidéo. Donc, si tu veux comprendre comment les ordinateurs fonctionnent à l'intérieur, tout se résume à ces simples une et zéros et aux signaux électriques dans les circuits, derrière eux."
     csd_concept_circuits_logic:
       1:
+        text: "L'une des choses les plus cool que j'ai découvertes, à propos des circuits, est que les circuits peuvent être une forme d'art, tout comme, si j'ai une idée créative, je peux la faire sortir en utilisant des circuits. Donc, si tu as des idées, tu peux utiliser la technologie pour donner vie à ces idées."
       2:
+        text: "Chaque entrée ou sortie d'un ordinateur est effectivement un type d'information, qui peut être représentée par des signaux électriques ou des uns et des zéros."
       3:
+        text: "Afin de traiter l'information qui arrive en tant qu'entrée, et de produire des informations de sortie, un ordinateur a besoin de modifier et combiner les signaux d'entrée. Pour ce faire, un ordinateur utilise des millions de composants électroniques minuscules, qui se réunissent pour former des circuits."
       4:
+        text: "Regardons de plus près comment les circuits peuvent modifier et traiter les informations représentées dans les uns et les zéros. Il s'agit d'un circuit incroyablement simple. Il prend un signal électrique, allumé ou éteint, et le retourne. Donc, si le signal que tu lui donnes est un 1, le circuit te donne un 0, et si tu donnes au circuit un 0, il te donne un 1. Le signal qui entre n'est pas le même que le signal qui sort, et nous appelons donc ce circuit PAS."
       5:
+        text: "Des circuits plus compliqués peuvent prendre plusieurs signaux et les combiner, et te donner un résultat différent. Dans cet exemple, un circuit prendra deux signaux électriques. Chacun peut être un 1 ou un 0. Si l'un des signaux d'entrée est 0, alors le résultat est également un 0. Ce circuit ne te donnera qu'un 1, si le premier signal et le deuxième signal sont tous deux un 1, et nous l'appelons le circuit ET."
       6:
         image: 'notes/csd_concept_circuits_logic_6.png'
+        text: "Il y a beaucoup de petits circuits, comme celui-ci, qui effectuent des calculs logiques simples. En connectant ces circuits ensemble, nous pouvons faire des circuits plus complexes qui effectuent des calculs plus complexes."
       7:
         image: 'notes/csd_concept_circuits_logic_7.png'
+        text: "Par exemple, tu peux créer un circuit qui ajoute 2 bits ensemble, appelé additionneur. Ce circuit prend 2 bits individuels, chacun un 1 ou un 0, et les additionne pour calculer la somme. La somme peut être de 0 plus 0 est égal à 0, 0 plus 1 égale 1 ou 1 plus 1 est égal à 2. Tu as besoin de de deux fils qui sortent, car il peut prendre jusqu'à deux chiffres binaires pour représenter la somme. Une fois que tu as un additionneur unique pour ajouter deux bits d'information, tu peux assembler des multiples de ces circuits additionneurs côte à côte pour additionner des nombres beaucoup plus grands."
       8:
         image: 'notes/csd_concept_circuits_logic_8.png'
+        text: "Par exemple, voici comment un additionneur 8 bits additionne les nombres 25 et 50. Chaque nombre est représenté en utilisant 8 bits, résultant en 16 différents signaux électriques qui entrent dans le circuit. Le circuit d'un additionneur 8 bits a beaucoup de petits additionneurs à l'intérieur, qui, ensemble, calculent la somme."
       9:
         image: 'notes/csd_concept_circuits_logic_9.png'
+        text: "Différents circuits électriques peuvent effectuer d'autres calculs simples comme la soustraction ou la multiplication. En fait, tout le traitement de l'information que ton ordinateur effectue est juste une multitude de petites opérations simples, rassemblées. Chaque opération individuelle effectuée par un ordinateur est ainsi, et c'est si simple que cela pourrait être fait par un humain, mais ces circuits, à l'intérieur des ordinateurs, sont beaucoup plus rapides."
       10:
         image: 'notes/csd_concept_circuits_logic_10.png'
+        text: "À l'époque, ces circuits étaient gros et maladroits, et un additionneur 8 bits pouvait être aussi gros qu'un réfrigérateur, et il fallait quelques minutes pour effectuer un calcul simple. Aujourd'hui, les circuits informatiques sont de taille microscopique et beaucoup plus rapides. Pourquoi les petits ordinateurs sont-ils aussi plus rapides ? Eh bien, parce que plus le circuit est petit, moins de distance le signal électrique doit parcourir. L'électricité se déplace à la vitesse de la lumière, c'est pourquoi les circuits modernes peuvent effectuer des milliards de calculs par seconde."
       11:
         image: 'notes/csd_concept_circuits_logic_11.png'
+        text: "Donc, que tu joues à un jeu, enregistres une vidéo ou explores le cosmos, tout ce que tu peux faire avec la technologie nécessite beaucoup d'informations à traiter extrêmement rapidement. Sous toute cette complexité, il n'y a que beaucoup de petits circuits minuscules qui transforment les signaux binaires en sites Web, vidéos, musique et jeux. Ces circuits peuvent même nous aider à décoder l'ADN pour diagnostiquer et guérir des maladies. Alors qu'aimerais-tu faire avec tous ces circuits ?"
     csd_concept_memory_cpu_input_output:
       1:
         image: 'notes/csd_concept_memory_cpu_input_output_1.png'
+        text: "Bonjour, Je m'appelle Madison Maxey. J'ai une entreprise nommée Loomia, et nous nous concentrons sur la fabrication de tissus intelligents pour les vêtements intelligents et les bons produits intelligents et doux. Le ciel est la limite quand il s'agit de textiles."
       2:
         image: 'notes/csd_concept_memory_cpu_input_output_2.png'
+        text: "Je m'appelle Danielle Applestone, et je suis la PDG de Othermachine Company. Nous construisons une fraiseuse de bureau. Une fraiseuse contient un outil de coupe rotatif et le déplace à travers les matériaux pour créer des objets 3D."
       3:
         image: 'notes/csd_concept_memory_cpu_input_output_3.png'
+        text: "Sous le capot, tous les ordinateurs font les mêmes quatre choses de base. Ils saisissent des informations, stockent et traitent les informations, puis produisent des informations. Chacune de ces choses est effectuée par une partie différente de l'ordinateur."
       4:
         image: 'notes/csd_concept_memory_cpu_input_output_4.png'
+        text: "Il existe des périphériques d'entrée qui prennent les entrées du monde extérieur et les convertissent en informations binaires. Une mémoire est là pour stocker ces informations. Il y a une unité centrale de traitement ou CPU, où tous les calculs sont effectués. Et, enfin, il existe des périphériques de sortie qui prennent les informations et les convertissent en une sortie physique."
       5:
         image: 'notes/csd_concept_memory_cpu_input_output_5.png'
+        text: "Parlons d'abord de l'entrée. Les ordinateurs peuvent prendre de nombreux types d'entrée différents, comme le clavier d'un ordinateur, le pavé tactile d'un téléphone, une caméra, un microphone ou un GPS. Mais même les capteurs sur une voiture, d'un thermostat, ou un drone sont également différents périphériques d'entrée."
       6:
         image: 'notes/csd_concept_memory_cpu_input_output_6.png'
+        text: "Maintenant, regardons un exemple simple de la façon dont l'entrée se déplace à travers un ordinateur et devient sortie. Lorsque tu appuies sur une touche de ton clavier - disons la lettre « B », le clavier convertit la lettre en nombre. Ce nombre est envoyé en tant que binaire, uns et zéros, dans l'ordinateur."
       7:
         image: 'notes/csd_concept_memory_cpu_input_output_7.png'
+        text: "À partir de ce numéro, la CPU calcule comment afficher la lettre « B », pixel par pixel. Le processeur demande des instructions, pas à pas, à la mémoire, qui lui indiquent comment dessiner la lettre « B ». Le processeur exécute ces instructions et stocke les résultats, sous forme de pixels, en mémoire."
       8:
         image: 'notes/csd_concept_memory_cpu_input_output_8.png'
+        text: "Enfin, cette information de pixel est envoyée en binaire à l'écran. L'écran est un périphérique de sortie, qui convertit les signaux binaires en minuscules lumières et couleurs qui composent ce que tu vois."
       9:
         image: 'notes/csd_concept_memory_cpu_input_output_9.png'
+        text: "Tout cela se passe si vite que ça semble instantané mais, pour afficher chaque lettre, un ordinateur exécute des milliers d'instructions, à partir du moment où ton doigt appuie sur l'élément clé."
       10:
         image: 'notes/csd_concept_memory_cpu_input_output_10.png'
+        text: "Dans cet exemple, le périphérique de sortie était l'écran, mais il existe de nombreux types de sortie qui prennent un signal binaire de l'ordinateur et font quelque chose dans le monde physique. Par exemple, un haut-parleur jouera le son et une imprimante 3D imprimera un objet. Les appareils de sortie peuvent également contrôler le mouvement physique comme un bras robotisé, le moteur d'une voiture ou l'outil de coupe de la fraiseuse que mon entreprise fabrique. De nouveaux types d'entrées et de sorties permettent aux ordinateurs d'interagir avec le monde, de manière entièrement nouvelle. Cela a été facilité par les améliorations de la vitesse et des tailles de la mémoire et du processeur."
       11:
         image: 'notes/csd_concept_memory_cpu_input_output_11.png'
+        text: "Plus une tâche est compliquée et plus il y a d'informations en entrée ou en sortie, plus l'ordinateur a besoin de puissance de traitement et de mémoire. Taper des lettres sur un écran peut être facile, mais pour faire des graphiques 3D compliqués ou enregistrer un film haute définition, les ordinateurs modernes ont souvent plusieurs processeurs pour traiter toutes ces informations et de nombreux gigaoctets de mémoire pour les stocker."
       12:
         image: 'notes/csd_concept_memory_cpu_input_output_12.png'
+        text: "Peu importe ce que tu veux faire avec l'ordinateur, chaque action consiste à : entrer des informations du monde physique, stocker et traiter ces informations, et obtenir une sortie dans le monde physique."
     csd_concept_hardware_software:
       1:
         image: 'notes/csd_concept_hardware_software_1.png'
@@ -1605,56 +1639,355 @@ fr:
         text: "Les ordinateurs ont le potentiel de faire des tas de choses étonnantes. Mais ce qui rend l'ordinateur intelligent ou utile, c'est vous. Quand vous apprenez à coder, vous allez devoir définir le problème que vous voulez résoudre, et écrire le logiciel pour que cette idée devienne une réalité."
     hoc_dance_warmup:
       1:
-        text: "Heure de Code | Fête dansante : Échauffement"
+        text: "Heure de Code | Soirée Dansante : Échauffement"
       2:
+        text: "Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels et créateur d'iLuminate."
       3:
+        text: "L'informatique est liée à la créativité, de plein de manières différentes, de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel, vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je fais avec des costumes au lumière. On peut faire tellement de choses, une fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment infinies."
       4:
+        text: "Au cours de la prochaine heure, vous allez commencer avec l'informatique en programmant votre propre soirée dansante ! Nous avons sélectionné de la musique branchée et une équipe de grands danseurs avec lesquels vous pourrez jouer."
       5:
+        text: "Vous utiliserez des blocs de code pour choisir différents danseurs, modifier leurs mouvements de danse, les faire répondre à la musique et les rendre interactifs."
       6:
+        text: "Vous verrez que votre écran est divisé en 3 parties principales. Sur la gauche se trouve l'espace de jeu où vos danseurs se présenteront."
       7:
+        text: "La zone centrale est une boîte à outils. De nouveaux blocs de code seront disponibles dans cet espace au fur et à mesure des cours."
       8:
+        text: "À droite, vous avez l’espace de travail. Vous pouvez faire glisser des blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire votre programme."
       9:
+        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule."
       10:
+        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat et il s'appelle \"my_first_dancer\". Vous pouvez changer le nom en cliquant ici."
       11:
+        text: "Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de jeu, avec ça."
       12:
+        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme apparaissent dans l'espace de lecture et la musique démarre."
       13:
+        text: "Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave, vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va ?"
     hoc_dance_events:
       1:
-        text: "Heure de Code | Fête dansante : Événements"
+        text: "Heure de Code | Soirée Dansante : Événements"
       2:
+        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie, car elle contrôle littéralement nos vies."
       3:
+        text: "Pour générer différents mouvements de danse au bon moment avec la musique, vous pouvez utiliser les Évènements. Un événement demande à votre programme d’écouter quelque chose, puis d’y réagir tout de suite."
       4:
+        text: "À titre d’exemple, certains événements consistent en un clic de souris, un bouton fléché ou appuyer sur l'écran. L'événement vous utilisez écoutera en changement en la chanson. Le changement incitera votre danseur à faire une nouvelle danse."
       5:
+        text: "Les danseurs professionnels font leur chorégraphie en comptant les temps de la chanson."
       6:
+        text: "En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4 temps."
       7:
+        text: "Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement vert. Ce bloc Évènement dit « après 4 mesures »."
       8:
+        text: "Si vous faites glisser un bloc violet « Faire pour toujours », vous pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc d'événements « après 4 mesures », votre danseur attendra 4 mesures de la chanson, avant de commencer sa danse."
       9:
+        text: "Surveillez bien le compteur de mesures situé en haut de la zone d'affichage."
       10:
+        text: "Recherchez et écoutez l'événement qui déclenchera le code de danse. Et juste au bon moment, le danseur commencera."
+    hoc_dance_properties:
+      1:
+        text: "Heure de Code | Soirée Dansante : Propriétés"
+      2:
+        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Amazon Future Ingénieure."
+      3:
+        text: "J'adore l'informatique car ça allie résolution de problèmes et pensée critique, et après des heures de travail, on a quelque chose de vraiment cool et gratifiant."
+      4:
+        text: "Jusque-là, vous avez pu jouer avec différents types de danseurs, que vous avez programmés pour différents types de mouvements de danse. Mais comment fonctionnent ces mouvements ?"
+      5:
+        text: "Chaque mouvement de danse est constitué d’une série d’images appelées Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand votre programme s'exécute, votre ordinateur affiche un cadre après l'autre. Ils s'affichent tellement vite que cela donne l'impression que la danseuse bouge. C’est là le secret derrière chaque animation."
+      6:
+        text: "Non seulement vous pouvez changer les mouvements d'un danseur, mais aussi ses propriétés qui décrivent des choses comme la position du danseur à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir."
+      7:
+        text: "Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme. Choisissez ensuite le danseur que vousvoulez modifier et tapez la taille que vous voulez qu’ils aient à l’écran."
+      8:
+        text: "La taille normale est 100. Si vous choisissez un nombre inférieur, cela réduirala taille des danseurs. Plus le danseur est petit, plus il semble éloigné."
+      9:
+        text: "À l'aide du bloc Définir, vous pouvez également modifier les dimensions, la rotation, la position et la couleur d'un danseur. En jouant avec ces propriétés, vous pouvez faire plein de modifications, et les relier à différentes parties de la chanson."
+      10:
+        text: "N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur déjà existant. Veillez à ce que votre bloc Définir soit après celui Créer un nouveau danseur. N'hésitez pas à faire des expériences, à être créatif et à vous amuser."
     hoc_dance_congrats:
       1:
-        text: "Heure de Code | Fête dansante : C’est la fête !"
+        text: "Heure de Code | Soirée Dansante : C’est la fête !"
       2:
+        text: "Félicitations ! Vous venez d'apprendre les bases de l'informatique. Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante avec votre propre design à partager avec vos amis."
       3:
+        text: "Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser le bloc Disposition pour organiser les danseurs de différentes façons à l'écran."
       4:
+        text: "Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités. Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré ?"
       5:
+        text: "Ou bien une chorégraphie avec vos amis ?"
       6:
+        text: "Ou encore autre chose qui regrouperait tout ?"
       7:
+        text: "À la fin du didacticiel, vous pouvez partager un lien vers votre création avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien !"
+    mc_2018_intro:
+      1:
+        text: "Salut! Tu arrives juste à temps. Bienvenue au Voyage Aquatique. Je suis sur le point de me lancer dans une quête pour trouver un trésor sous-marin caché et je suis très heureux d'avoir ton aide. Qui sait ce que nous allons rencontrer le long de ces mystérieux cours d'eau ? Nous sommes censés rencontrer notre premier guide quelque part sur ce quai."
+      2:
+        text: "Bienvenue, aventuriers ! Pour terminer le Voyage Aquatique, vous devrez résoudre une série d'énigmes en utilisant le code. Voici comment cela fonctionne. Votre écran est divisé en trois parties principales."
+      3:
+        text: "Sur la gauche, vous verrez le monde de Minecraft."
+      4:
+        text: "La zone du milieu est ta boîte à outils où tu peux trouver des commandes de codage."
+      5:
+        text: "Et la grande surface à droite est ton espace de travail. C'est là que tu peux empiler des commandes pour construire ton programme et contrôler tes mouvements."
+      6:
+        text: "Les instructions de chaque niveau sont en haut de la page. Clique sur le signe plus pour changer entre les instructions longues et courtes."
+      7:
+        text: "Essaye de glisser des blocs de la boîte à outils dans l'espace de travail, de les empiler, puis clique sur le bouton exécuter pour exécuter tes commandes."
+      8:
+        text: "Tu devras peut-être essayer plusieurs fois pour bien faire les choses, et certaines des énigmes ont plus d'une solution. Alors expérimente pour voir ce qui fonctionne."
+      9:
+        text: "Si tu souhaites réessayer, clique sur le bouton réinitialiser pour revenir à l'endroit où tu as commencé."
+      10:
+        text: "Si tu dois supprimer une commande, glisse simplement le bloc de ton espace de travail dans la boîte à outils. Rappelle-toi de cliquer sur « Exécuter » pour voir à quoi ressemble ton code en action."
+      11:
+        text: "OK, fini les bêtises, camarade aventurier. Commençons à coder pour trouver un trésor sous-marin."
     MC_2018_loops:
       1:
+        text: "Très bien! Nous avons attrapé une morue ! Savais-tu que si tu donnes une morue à manger à un dauphin, le dauphin te guidera vers une épave où il peut y avoir un trésor ? Nous devons nous approcher. La prochaine série d'énigmes seront certainement plus délicates, donc nous ferions mieux de gagner d'avantage de compétences en codage. Qu'est-ce ? Une grotte ?"
       2:
         text: "Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous utilisiez le même ensemble de commandes à plusieurs reprises dans certains des derniers casse-tête. Ça a dû être un peu fatiguant. N’avez-vous jamais souhaité pouvoir faire encore et encore quelque chose comme, vous savez, laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous ennuyer ? Ce serait bien."
       3:
+        text: "Les ordinateurs sont vraiment bons à faire la même chose encore et encore en utilisant des boucles de codage. Lorsque tu veux que ton programme fasse les mêmes instructions plusieurs fois, tu peux utiliser une boucle !"
       4:
+        text: "Le bloc de boucle contient des instructions qui sont répétées jusqu'à ce que l'objectif soit atteint. Une fois que ton programme démarre une boucle « Répéter jusqu'à l'objectif », il continuera à répéter les instructions à l'intérieur jusqu'à ce qu'il atteigne l'objectif."
       5:
+        text: "Essaye ceci pour toi-même ! Place les commandes que tu souhaites répéter à l'intérieur du bloc « Répéter jusqu'à l'objectif », clique sur \"Exécuter\" et regarde-le partir !"
       6:
+        text: "Eh bien, c'était un peu bizarre. Qui aurait cru que les calmars pouvaient coder ? Je ne pensais même pas qu'ils avaient des doigts. Alors, maintenant, nous connaissons les boucles. Utilisons-les pour nous emparer d'un autre trésor."
+    mc_2018_conditionals:
+      1:
+        text: "Ça alors ! Trois nouvelles énigmes résolues ! Et nous avons attrapé... un saumon. Pas aussi excitant que des tas d'or, mais nous prendrons ce que nous pouvons obtenir. Et j'ai le sentiment que la coquille de nautile sera utile plus tard. Je me demande ce qui se cache dans ces ruines. Peut-être un autre indice ! Jetons un coup d'oeil à l'intérieur."
+      2:
+        text: "Je m'appelle Netty et bienvenue dans mes ruines. Nous prenons des décisions tout le temps, en fonction des conditions. Si ça ressemble à de la pluie, alors nous prendrons un parapluie. Si nous avons faim, alors nous mangerons une collation."
+      3:
+        text: "Si nous voyons une plante grimpante, alors nous courons dans la direction opposée. Les ordinateurs prennent ces types de décisions aussi. Ils peuvent réellement répondre aux conditions en utilisant du code."
+      4:
+        text: "Pour programmer une réponse comme celle-ci, à l'aide de te commandes de code, sélectionnez un bloc de chemin si."
+      5:
+        text: "Sélectionne la liste déroulante pour créer la commande."
+      6:
+        text: "Par exemple, si tu écris la commande \"si chemin vers la droite\" et places tourner à droite à l'intérieur de la condition, alors, quand Steve atteint un chemin ouvert vers la droite, il tournera toujours à droite. S'il n'y a pas d'ouverture vers la droite, il ne tournera pas à droite. Ces commandes conditionnelles si sont utiles lorsque tu exécutes du code dans des situations imprévisibles, telles que des ruines mystérieuses dans des grottes sous-marines."
+      7:
+        text: "Essaye d'utiliser les blocs if et prends ton code pour un tour."
+      8:
+        text: "Ça alors ! Les ruines de Netty étaient géniales. Je dois vraiment quitter la maison de mes parents. Alors, qu'en penses-tu ? Est-ce que les conditions sont bonnes pour que nous réalisions les énigmes finales ? Nous allons lui donner un aller."
     mc_2018_closing:
       1:
+        text: "Amy Lee33 : Félicitations ! Tu l'as fait !"
       2:
         text: "Poulpe : Félicitations !"
       3:
+        text: "Netty : Tu l'as fait ! Bravo !"
       4:
+        text: "Tomohawk : Félicitations !"
       5:
+        text: "Quelle formidable journée ! Toute la chasse au trésor nous a amenés à construire un conduit Minecraft, à trouver des coquilles de Nautile et à découvrir des coffres au trésor. J'adore la couleur de prismarine. Nous avons également appris à coder avec des boucles et des conditions."
       6:
+        text: "En parlant de codage, il y a un niveau de plus à cette quête. Êtes-vous prêts, aventuriers ?"
       7:
+        text: "C'est un niveau de jeu gratuit et tu peux mettre tes compétences de codage à profit et construire quelque chose d'incroyable."
       8:
+        text: "Hmmm... un endroit pour cacher votre trésor, un monument sous-marin, un château de corail? Ahhh... tant d'idées. Essaye d'utiliser des boucles pour créer une action répétée, et des conditions pour te préparer à tous ces scénarios imprévisibles."
       9:
+        text: "Tu as certainement déjà fait tes preuves, en tant que codeur intrépide, et je suis impatient de voir ce que tu construis. Et j'espère que tes aventures avec le code ne s'arrêtent pas là. Bon Voyage !"
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "Ce cours se décompose en étapes."
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "Les premières étapes introduiront ce qu'est l'informatique, ainsi que du vocabulaire clé."
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "Ensuite, vous apprendrez à coder de la même manière que vos élèves. Les dernières étapes du cours vous aideront à faire un plan pour enseigner l'informatique dans votre salle de classe. Tout au long du cours, vous verrez des exemples de leçons à la fois branchées -- ou en ligne -- ainsi que débranchées qui sont faites sans ordinateur."
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "La plate-forme d'apprentissage suivra tes progrès, de sorte que tu peux reprendre là où tu t'es arrêté, à tout moment."
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+        text: "Le codage est l'ensemble des instructions que tu donnes à un ordinateur. L'informatique est un domaine où les gens utilisent la puissance des ordinateurs pour résoudre les grands problèmes. L'informatique inclut le codage, mais elle inclut également d'autres choses, comme la façon dont Internet fonctionne et affecte la société, ce qu'il faut faire avec les mégadonnées et comment résoudre les gros problèmes. L'informatique traite de la résolution de problèmes, de la pensée critique et de la persistance."
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+        text: "Code.org utilise un langage de programmation visuel, glisser et déposer, appelé Blockly. Blockly utilise des instructions colorées, appelées blocs, pour créer des programmes et résoudre des énigmes."
+      2:
+        image: 'notes/writing_first_program_2.png'
+        text: "Chaque énigme a quatre parties."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "L'aire de jeu est sur la gauche, où ton programme s'exécute."
+      4:
+        image: 'notes/writing_first_program_4.png'
+        text: "Le centre a la zone de la boîte à outils, qui a tous les blocs dont tu as besoin."
+      5:
+        image: 'notes/writing_first_program_5.png'
+        text: "Sur la droite est l'espace de travail, où tu vas glisser des blocs pour construire ton programme."
+      6:
+        image: 'notes/writing_first_program_6.png'
+        text: "Au-dessus de l'espace de travail sont les instructions pour chaque énigme."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "Si tu glisse trop de blocs de la boîte à outils, glisse simplement le bloc supplémentaire dans la boîte à outils. Clique « Exécuter » pour essayer ton programme, et Réinitialiser pour essayer à nouveau."
+    repeat_block:
+      1:
+        image: 'notes/repeat_block.png'
+        text: "Un bloc de répéter te permet de boucler le code à l'intérieur autant de fois que tu lelui dis."
+    what_is_an_event:
+      1:
+        image: 'notes/what_is_an_event.png'
+        text: "Un événement indique à ton programme d'être à l'écoute de ce qui arrive. Lorsque une chose se produit, le programme effectue une action. Un ordinateur peut écouter un clic de souris, appuyer sur une flèche ou appuyer sur l'écran."
+    lesson_planning:
+      1:
+        image: 'notes/lesson_planning_1.png'
+        text: "Les leçons CS CS Fondamentaux commencent par des aperçus pour vous faire savoir ce que la leçon couvrira."
+      2:
+        image: 'notes/lesson_planning_2.png'
+        text: "Les leçons ont des échauffements, des activités et des récapitulations. Si vous souhaitez créer vos propres plans de leçon, vous voudrez peut-être garder ces conseils à l'esprit."
+      3:
+        image: 'notes/lesson_planning_3.png'
+        text: "1. Essayez d'utiliser une conception de programme en spirale. Introduisez des concepts une fois, puis revisitez-les."
+      4:
+        image: 'notes/lesson_planning_4.png'
+        text: "2. Créez une expérience d'apprentissage mixte en combinant des leçons en ligne avec des leçons débranchées."
+      5:
+        image: 'notes/lesson_planning_5.png'
+        text: "3. Scindez votre programme en petits morceaux."
+      6:
+        image: 'notes/lesson_planning_6.png'
+        text: "4. Assurez-vous de vous aligner sur les normes locales et les compétences de préparation au collège et à la carrière."
+    opd_closing:
+      1:
+        image: 'notes/opd_closing_1.png'
+        text: "Félicitations ! Vous avez suivi le cours en ligne Enseigner les Fondamentaux de l'Informatique (CSF). Vous faites maintenant partie de la communauté croissante d'enseignants qui préparent leurs élèves à l'avenir."
+      2:
+        image: 'notes/opd_closing_2.png'
+        text: "Découvrez ces ressources si vous avez besoin de plus de soutien : 1. forum.code.org 2. @ teachcode sur Twitter 3. studio.code.org "
+    hoc_dance_warmup_2019:
+      1:
+        text: "Heure de Code | Soirée Dansante : Échauffement"
+      2:
+        text: "Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels et créateur d'iLuminate."
+      3:
+        text: "L'informatique est liée à la créativité, de plein de manières différentes, de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel, vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je fais avec des costumes au lumière. On peut faire tellement de choses, une fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment infinies."
+      4:
+        text: "Au cours de la prochaine heure, vous allez commencer avec l'informatique en programmant votre propre soirée dansante ! Nous avons sélectionné de la musique branchée et une équipe de grands danseurs avec lesquels vous pourrez jouer."
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "Vous utiliserez des blocs de code pour choisir différents danseurs, modifier leurs mouvements de danse, les faire répondre à la musique et les rendre interactifs."
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "Vous verrez que votre écran est divisé en 3 parties principales. Sur la gauche se trouve l'espace de jeu où vos danseurs se présenteront."
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "La zone centrale est une boîte à outils. De nouveaux blocs de code seront disponibles dans cet espace, au fur et à mesure des cours."
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "À droite, vous avez l’espace de travail. Vous pouvez faire glisser des blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire votre programme."
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "Les instructions pour chaque niveau seront affichées en haut de l'écran. Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule."
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc de configuration orange. Ce danseur là est un chat."
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de jeu, avec ça."
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme apparaissent dans l'espace de lecture et la musique démarre."
+      13:
+        text: "Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave, vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va?"
+    hoc_dance_events_2019:
+      1:
+        text: "Heure de Code | Soirée Dansante : Événements"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "Je m’appelle Erin et je suis un ingénieur en logiciel chez code.org. J’ai contribué à l’élaboration de Dance Party !"
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "Pour générer différents mouvements de danse au bon moment avec la musique, vous pouvez utiliser les Évènements. Un événement demande à votre programme d’écouter quelque chose, puis d’y réagir tout de suite."
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "Quelques exemples d'évènements sont: l'écoute des clics de souris, l’activation d’une touche fléchée du clavier ou un tapotement de l'écran."
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "Là vous allez programmer un danseur pour faire un mouvement lorsque vous appuyez sur les boutons fléchés de votre écran, ou sur les touches de votre clavier."
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "Vous pouvez utiliser le bloc d’événements « quand flèche du haut » et le connecter à un bloc « faire une fois ». Lorsque vous appuyez sur la flèche du haut, le code associé au bloc de flèche « quand en haut » s’exécute. Quelle danse allez-vous choisir ?"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "Veillez à ce que le type de danseur que vous choisissez corresponde bien à l'un des danseurs que vous avez créés dans le bloc de configuration, sinon il ne se passera rien."
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "Pour finir, vous pouvez créer plus d'événements comme celui-ci, pour que vos danseurs effectuent des mouvements différents avec chaque touche. Essayez-le et avec les quelques lignes de code, vous pourrez créer votre propre danse interactive !"
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "Heure de Code | Soirée Dansante : Temps"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler latechnologie, car elle contrôle littéralement nos vies."
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "L’événement que nous allons utiliser maintenant va écouter les variations dans le morceau. Cette variation incitera votre danseur à faire une nouvelle danse."
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "Les danseurs professionnels font leur chorégraphie en comptant les temps de la chanson. En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4temps."
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement vert. Ce bloc Évènement dit « après 4 mesures »."
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "Si vous faites glisser un bloc violet « Faire pour toujours », vous pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc d'événements « après 4 mesures », votre danseur attendra 4 mesures de la chanson, avant de commencer sa danse."
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "Surveillez bien le compteur de mesures situé en haut de la zone d'affichage."
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "Recherchez et écoutez l'événement qui déclenchera le code de danse. Et juste au bon moment, le danseur commencera."
+    hoc_dance_properties_2019:
+      1:
+        text: "Heure de Code | Soirée Dansante : Propriétés"
+      2:
+        text: "Je m'appelle Maria, je suis étudiante à l'Université de Washington et une Amazon Future Ingénieure."
+      3:
+        text: "J'adore l'informatique car ça allie résolution de problèmes et pensée critique, et après des heures de travail, on a quelque chose de vraiment cool et gratifiant."
+      4:
+        text: "Jusque-là, vous avez pu jouer avec différents types de danseurs, que vous avez programmés pour différents types de mouvements de danse. Mais comment fonctionnent ces mouvements ?"
+      5:
+        text: "Chaque mouvement de danse est constitué d’une série d’images appelées Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand votre programme s'exécute, votre ordinateur affiche un cadre après l'autre. Ils s'affichent tellement vite que cela donne l'impression que la danseuse bouge. C’est là le secret derrière chaque animation."
+      6:
+        text: "Non seulement vous pouvez changer les mouvements d'un danseur, mais aussi ses propriétés qui décrivent des choses comme la position du danseur à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir."
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme."
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "Choisissez ensuite le danseur que vous voulez modifier et tapez la taille que vous voulez qu'ils aient à l'écran. La taille normale est 100. Si vous choisissez un nombre inférieur, cela réduira la taille des danseurs. Plus le danseur est petit, plus il semble éloigné."
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "À l'aide du bloc Définir, vous pouvez également modifier les dimensions, la rotation, la position et la couleur d'un danseur. En jouant avec ces propriétés, vous pouvez faire plein de modifications, et les relier à différentes parties de la chanson."
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur déjà existant. Veillez à ce que votre bloc Définir soit après celuiCréer un nouveau danseur. N'hésitez pas à faire des expériences, à être créatifet à vous amuser !"
+    hoc_dance_congrats_2019:
+      1:
+        text: "Heure de Code | Soirée Dansante : C’est la fête !"
+      2:
+        text: "Félicitations ! Vous venez d'apprendre les bases de l'informatique. Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante avec votre propre design à partager avec vos amis."
+      3:
+        text: "Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser le bloc Disposition pour organiser les danseurs de différentes façons à l'écran."
+      4:
+        text: "Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités. Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré ?"
+      5:
+        text: "Ou bien une chorégraphie avec vos amis ?"
+      6:
+        text: "Ou encore autre chose qui regrouperait tout ?"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "À la fin du didacticiel, vous pouvez partager un lien vers votre création avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien !"

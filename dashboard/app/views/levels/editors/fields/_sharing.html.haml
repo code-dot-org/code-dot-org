@@ -1,0 +1,11 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#sharing_area"}}
+  Sharing
+
+#sharing_area.in.collapse
+  - if @level.respond_to? :disable_sharing
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_sharing, description: "Disable sharing"}
+    %p If set, this level cannot be shared or saved to galleries even if it's free play.
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_share_and_remix, description: "Hide Share and Remix buttons in header"} if (@level.uses_droplet?) || @level.is_a?(Blockly) || @level.is_a?(Weblab) ||@level.is_a?(Javalab)
+
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :shareable, description: "Make Shareable?"}  if @level.is_a?(Flappy)

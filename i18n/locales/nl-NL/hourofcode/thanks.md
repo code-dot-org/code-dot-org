@@ -1,10 +1,5 @@
 ---
 title: Bedankt dat je je hebt opgegeven om een 'Hour of Code' te organiseren!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Bedankt dat je je hebt opgegeven om een 'Hour of Code' te organiseren!

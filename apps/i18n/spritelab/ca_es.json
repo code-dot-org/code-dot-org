@@ -1,3 +1,6 @@
 {
-  "shareGame": "Comparteix el teu joc:"
+  "reinfFeedbackMsg": "Has acabat! Clica a \"Continuar\" per avançar al següent nivell.",
+  "shareGame": "Comparteix el teu joc:",
+  "spritelabFeedbackChangeBackgroundColor": "Canvia el fons per alguna cosa diferent al color blanc.",
+  "spritelabFeedbackCreateThreeAliens": "Cal crear un extraterrestre blau, un extrarrestre rosa i un de groc."
 }

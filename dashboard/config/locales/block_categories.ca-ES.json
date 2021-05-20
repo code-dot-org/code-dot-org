@@ -1,0 +1,56 @@
+{
+  "ca-ES": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Accions",
+          "Loops": "Bucles",
+          "Math": "Matemàtiques",
+          "Logic": "Lògic",
+          "Functions": "Funcions",
+          "Variables": "Variables"
+        },
+        "CourseD_EOC_dance": {
+          "Dancers": "Dansaires",
+          "Events": "Esdeveniments",
+          "Logic": "Lògic"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Accions",
+          "Events": "Esdeveniments",
+          "Loops": "Bucles",
+          "Math": "Matemàtiques",
+          "Logic": "Lògic"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Accions",
+          "Events": "Esdeveniments"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Accions",
+          "Events": "Esdeveniments",
+          "Variables": "Variables",
+          "Math": "Matemàtiques",
+          "Logic": "Lògic",
+          "Functions": "Funcions",
+          "Text": "text"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Accions",
+          "Events": "Esdeveniments",
+          "Logic": "Lògic",
+          "Loops": "Bucles",
+          "Math": "Matemàtiques",
+          "Variables": "Variables",
+          "Functions": "Funcions"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Accions",
+          "Events": "Esdeveniments",
+          "Logic": "Lògic",
+          "Math": "Matemàtiques"
+        }
+      }
+    }
+  }
+}

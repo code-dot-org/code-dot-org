@@ -1,0 +1,87 @@
+---
+tr:
+  data:
+    variable_names:
+      "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
+      Blue: Mavi
+      Green: Yeşil
+      Red: Kırmızı
+      actor: aktör
+      age: yaş
+      animal1score: animal1score
+      animal1speed: animal1speed
+      animal2score: animal2score
+      animal2speed: animal2speed
+      answer: cevap
+      birds: kuşlar
+      bit: bit
+      blue1: blue1
+      blue2: blue2
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
+      cats: tüm kediler
+      centerToPadLeft: centerToPadLeft
+      choice: Tercih
+      circ: daire
+      codeName: 'Kod adı:'
+      color: renk
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
+      counter: sayaç
+      counter2: counter2
+      currentActor: currentActor
+      dog_score: dog_score
+      dog_speed: dog_speed
+      dogs: tüm köpekler
+      dragons: dragons
+      enemy_speed: enemy_speed
+      energy: enerji
+      firstName: firstName
+      footlength: footlength
+      gather: gather
+      green1: green1
+      green2: green2
+      guess: guess
+      height: Yükseklik
+      honey: bal
+      i: i
+      left: sol
+      legangle: legangle
+      leglength: leglength
+      length: uzunluk
+      level: seviye
+      marginX: marginX
+      marginY: marginY
+      myName: myName
+      name: adı
+      nectar: nektar
+      padYOffset: padYOffset
+      player_score: player_score
+      points: Puanlar
+      punchLine: punchLine
+      random: gelişigüzel
+      red1: red1
+      red2: red2
+      repeat: bu işlemleri
+      repetitions: Tekrarlar
+      right: sağ
+      score: puan
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: genişliği ayarla
+      sides: kenarlar
+      size: boyut
+      speed: hız
+      startX: startX
+      startY: startY
+      variable: değişken
+      width: genişlik
+      wizard: sihirbaz
+      x: x
+      your var 1: your var 1
+      your var 2: your var 2

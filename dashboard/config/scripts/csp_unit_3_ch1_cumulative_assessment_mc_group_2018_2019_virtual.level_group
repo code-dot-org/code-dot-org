@@ -1,0 +1,30 @@
+name 'CSP Unit 3 Ch1 Cumulative Assessment MC Group_2018_2019_virtual'
+title 'CS Principles Unit 3 Ch 1 Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'csp_unit_assessment_overview_2018_2019_virtual'
+level 'cspu3_assess1_naturallanguage_2018_2019_virtual'
+level 'cspu3_assess1_robotpath_2018_2019_virtual'
+level 'cspu3_assess1_removeline_2018_2019_virtual'
+level 'cspu3_assess1_functionsfalse_2018_2019_virtual'
+
+page
+level 'cspu3_assess1_namingconvention_2018_2019_virtual'
+level 'cspu3_assess1_truefunctions_2018_2019_virtual'
+level 'cspu3_assess1_filltable_virtual'
+level 'cspu3_assess1_callfunction_2018_2019_virtual'
+
+page
+level 'cspu3_assess1_loop_or_function1_2018_2019_virtual'
+level 'cspu3_assess1_loop_or_function2_2018_2019_virtual'
+level 'cspu3_assess1_loop_or_function3_2018_2019_virtual'
+level 'cspu3_assess1_loop_or_function4_2018_2019_virtual'
+
+page
+level 'cspu3_assess1_parameters_2018_2019_virtual'
+level 'cspu3_assess1_codeoutcome_2018_2019_virtual'
+level 'cspu3_assess1_collaboration_2018_2019_virtual'
+level 'cspu3_assess1_outputdrawing_2018_2019_virtual'
+level 'cspu3_assess1_freeresponse_virtual'

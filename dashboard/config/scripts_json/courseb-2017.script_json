@@ -1,0 +1,3362 @@
+{
+  "script": {
+    "name": "courseb-2017",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": false,
+    "properties": {
+      "project_widget_visible": true,
+      "project_widget_types": [
+        "playlab_k1",
+        "artist_k1"
+      ],
+      "has_lesson_plan": true,
+      "version_year": "2017",
+      "is_stable": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}",
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "mn-MN",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "ta-IN",
+        "th-TH",
+        "tr-TR",
+        "ur-PK",
+        "uz-UZ",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "curriculum_umbrella": "CSF",
+      "family_name": "courseb",
+      "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
+      "is_course": true
+    },
+    "new_name": "courseb-2017",
+    "family_name": "courseb",
+    "serialized_at": "2021-05-03 23:55:01 UTC",
+    "seeding_key": {
+      "script.name": "courseb-2017"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Debugging: Unspotted Bugs",
+      "name": "Debugging: Unspotted Bugs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Persistence & Frustration: Stevie and the Marbles",
+      "name": "Persistence: Stevie and the Big Project",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Persistence & Frustration: Stevie and the Marbles",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Real-life Algorithms: Plant a Seed",
+      "name": "Real-life Algorithms: Plant a Seed",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Learn to Drag and Drop",
+      "name": "Sequencing with Drag and Drop",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Your Digital Footprint",
+      "name": "Digital Citizenship: My Digital Footprint",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Programming: My Robotic Friends",
+      "name": "Programming: My Robotic Friends",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Programming in Maze",
+      "name": "Programming in Maze",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Programming with Rey and BB-8",
+      "name": "Programming with Rey and BB-8",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Loops: My Loopy Robotic Friends",
+      "name": "Loops: My Loopy Robotic Friends",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Loops in Collector",
+      "name": "Loops in Collector",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Loops in Artist",
+      "name": "Loops in Artist",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Events: The Big Event",
+      "name": "Events: The Big Event",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "key": "Events in Play Lab",
+      "name": "Events in Play Lab",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_Unspotted"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_Unspotted"
+        ],
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_video_Unspotted"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_Stevie"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_Stevie"
+        ],
+        "lesson.key": "Persistence & Frustration: Stevie and the Marbles",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseA_video_Stevie"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PlantASeed"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PlantASeed"
+        ],
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "PlantASeed"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "elementary_video_pairProgramming"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "elementary_video_pairProgramming"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "elementary_video_pairProgramming"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:5"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:7"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:8"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:9"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:10"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:11"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:12"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:13"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:13"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:13"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DigitalFootprint"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "DigitalFootprint"
+        ],
+        "lesson.key": "Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "DigitalFootprint"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_MRF"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_MRF"
+        ],
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_unplugged_MRF"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_video_NewIntro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_video_NewIntro"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseAB_video_NewIntro"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_debuggingOrg"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_debuggingOrg"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_video_debuggingOrg"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq3"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq4"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq4"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq5"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq5"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq6"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq6"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq7"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq7"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq8"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq8"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_maze_seq9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq9"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq9"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq10"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq10"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq11"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq11"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq12"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq12"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq12"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq_challenge1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 16,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_maze_seq_challenge2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog2"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog3"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog3"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog4"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog4"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog5"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog5"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog6"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog6"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog7"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog7"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_starWars_prog8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog8"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog8"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog9"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog9"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog10"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog10"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_starWars_prog11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_starWars_prog11"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_starWars_prog11"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_unplugged_loopyMRF"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_unplugged_loopyMRF"
+        ],
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_unplugged_loopyMRF"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_video_collector"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_video_collector"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseAB_video_collector"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops1"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops1"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops2"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops2"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_Loops"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_Loops"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseA_video_Loops"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops3"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops3"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops4"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops4"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops5"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops5"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops6"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops6"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops7"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops7"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_collector_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops8"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops8"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops9"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops9"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops10"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops10"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops11"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops11"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops11"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops_challenge1"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 15,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops_challenge2a"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge2a"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_collector_loops_challenge2a"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_ArtistIntro"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_video_ArtistIntro"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops1"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops1"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_artistLoops"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_video_artistLoops"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops2"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops2"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops3"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops3"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops4"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops4"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops5"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops5"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops6"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops6"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseB_artist_loops7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops7"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops7"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops8"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops8"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops8"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops9"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops9"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops9"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 12,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops10"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops10"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops10"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops_challenge1"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 14,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge2"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_artist_loops_challenge2"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "BigEvent"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_events"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_events"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseA_video_events"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playLab_events1"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playLab_events1"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playLab_events1"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events2"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events2"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events2"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events3"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events3"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events3"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events4"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events4"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events4"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events5"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events5"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events5"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events6"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events6"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events6"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events7"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events7"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events7"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_eventsFP"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_eventsFP"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_eventsFP"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events_challenge1"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge1"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events_challenge1"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 11,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_playlab_events_challenge2"
+        ]
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge2"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      },
+      "level_keys": [
+        "courseB_playlab_events_challenge2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_Unspotted",
+        "script_level.level_keys": [
+          "courseB_video_Unspotted"
+        ],
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_Stevie",
+        "script_level.level_keys": [
+          "courseA_video_Stevie"
+        ],
+        "lesson.key": "Persistence & Frustration: Stevie and the Marbles",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PlantASeed",
+        "script_level.level_keys": [
+          "PlantASeed"
+        ],
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "elementary_video_pairProgramming",
+        "script_level.level_keys": [
+          "elementary_video_pairProgramming"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:2",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:3",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:4",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:5",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:6",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:7",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:8",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:9",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:10",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:11",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:12",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:13",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:13"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DigitalFootprint",
+        "script_level.level_keys": [
+          "DigitalFootprint"
+        ],
+        "lesson.key": "Your Digital Footprint",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_MRF",
+        "script_level.level_keys": [
+          "courseB_unplugged_MRF"
+        ],
+        "lesson.key": "Programming: My Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_video_NewIntro",
+        "script_level.level_keys": [
+          "courseAB_video_NewIntro"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq1",
+        "script_level.level_keys": [
+          "courseB_maze_seq1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_debuggingOrg",
+        "script_level.level_keys": [
+          "courseB_video_debuggingOrg"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq2",
+        "script_level.level_keys": [
+          "courseB_maze_seq2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq3",
+        "script_level.level_keys": [
+          "courseB_maze_seq3"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq4",
+        "script_level.level_keys": [
+          "courseB_maze_seq4"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq5",
+        "script_level.level_keys": [
+          "courseB_maze_seq5"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq6",
+        "script_level.level_keys": [
+          "courseB_maze_seq6"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq7",
+        "script_level.level_keys": [
+          "courseB_maze_seq7"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq8",
+        "script_level.level_keys": [
+          "courseB_maze_seq8"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq9",
+        "script_level.level_keys": [
+          "courseB_maze_seq9"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq10",
+        "script_level.level_keys": [
+          "courseB_maze_seq10"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq11",
+        "script_level.level_keys": [
+          "courseB_maze_seq11"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq12",
+        "script_level.level_keys": [
+          "courseB_maze_seq12"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq_challenge1",
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge1"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq_challenge2",
+        "script_level.level_keys": [
+          "courseB_maze_seq_challenge2"
+        ],
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog1",
+        "script_level.level_keys": [
+          "courseB_starWars_prog1"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog2",
+        "script_level.level_keys": [
+          "courseB_starWars_prog2"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog3",
+        "script_level.level_keys": [
+          "courseB_starWars_prog3"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog4",
+        "script_level.level_keys": [
+          "courseB_starWars_prog4"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog5",
+        "script_level.level_keys": [
+          "courseB_starWars_prog5"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog6",
+        "script_level.level_keys": [
+          "courseB_starWars_prog6"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog7",
+        "script_level.level_keys": [
+          "courseB_starWars_prog7"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog8",
+        "script_level.level_keys": [
+          "courseB_starWars_prog8"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog9",
+        "script_level.level_keys": [
+          "courseB_starWars_prog9"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog10",
+        "script_level.level_keys": [
+          "courseB_starWars_prog10"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_starWars_prog11",
+        "script_level.level_keys": [
+          "courseB_starWars_prog11"
+        ],
+        "lesson.key": "Programming with Rey and BB-8",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_unplugged_loopyMRF",
+        "script_level.level_keys": [
+          "courseB_unplugged_loopyMRF"
+        ],
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_video_collector",
+        "script_level.level_keys": [
+          "courseAB_video_collector"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops1",
+        "script_level.level_keys": [
+          "courseB_collector_loops1"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops2",
+        "script_level.level_keys": [
+          "courseB_collector_loops2"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_Loops",
+        "script_level.level_keys": [
+          "courseA_video_Loops"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops3",
+        "script_level.level_keys": [
+          "courseB_collector_loops3"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops4",
+        "script_level.level_keys": [
+          "courseB_collector_loops4"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops5",
+        "script_level.level_keys": [
+          "courseB_collector_loops5"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops6",
+        "script_level.level_keys": [
+          "courseB_collector_loops6"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops7",
+        "script_level.level_keys": [
+          "courseB_collector_loops7"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops8",
+        "script_level.level_keys": [
+          "courseB_collector_loops8"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops9",
+        "script_level.level_keys": [
+          "courseB_collector_loops9"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops10",
+        "script_level.level_keys": [
+          "courseB_collector_loops10"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops11",
+        "script_level.level_keys": [
+          "courseB_collector_loops11"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops_challenge1",
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops_challenge2a",
+        "script_level.level_keys": [
+          "courseB_collector_loops_challenge2a"
+        ],
+        "lesson.key": "Loops in Collector",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_ArtistIntro",
+        "script_level.level_keys": [
+          "courseB_video_ArtistIntro"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops1",
+        "script_level.level_keys": [
+          "courseB_artist_loops1"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_artistLoops",
+        "script_level.level_keys": [
+          "courseB_video_artistLoops"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops2",
+        "script_level.level_keys": [
+          "courseB_artist_loops2"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops3",
+        "script_level.level_keys": [
+          "courseB_artist_loops3"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops4",
+        "script_level.level_keys": [
+          "courseB_artist_loops4"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops5",
+        "script_level.level_keys": [
+          "courseB_artist_loops5"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops6",
+        "script_level.level_keys": [
+          "courseB_artist_loops6"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops7",
+        "script_level.level_keys": [
+          "courseB_artist_loops7"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops8",
+        "script_level.level_keys": [
+          "courseB_artist_loops8"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops9",
+        "script_level.level_keys": [
+          "courseB_artist_loops9"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops10",
+        "script_level.level_keys": [
+          "courseB_artist_loops10"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops_challenge1",
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge1"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops_challenge2",
+        "script_level.level_keys": [
+          "courseB_artist_loops_challenge2"
+        ],
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BigEvent",
+        "script_level.level_keys": [
+          "BigEvent"
+        ],
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_events",
+        "script_level.level_keys": [
+          "courseA_video_events"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playLab_events1",
+        "script_level.level_keys": [
+          "courseB_playLab_events1"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events2",
+        "script_level.level_keys": [
+          "courseB_playlab_events2"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events3",
+        "script_level.level_keys": [
+          "courseB_playlab_events3"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events4",
+        "script_level.level_keys": [
+          "courseB_playlab_events4"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events5",
+        "script_level.level_keys": [
+          "courseB_playlab_events5"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events6",
+        "script_level.level_keys": [
+          "courseB_playlab_events6"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events7",
+        "script_level.level_keys": [
+          "courseB_playlab_events7"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_eventsFP",
+        "script_level.level_keys": [
+          "courseB_playlab_eventsFP"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events_challenge1",
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge1"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_playlab_events_challenge2",
+        "script_level.level_keys": [
+          "courseB_playlab_events_challenge2"
+        ],
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "courseb-2017"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

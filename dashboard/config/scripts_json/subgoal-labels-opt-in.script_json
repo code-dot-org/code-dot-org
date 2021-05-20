@@ -1,0 +1,122 @@
+{
+  "script": {
+    "name": "subgoal-labels-opt-in",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:05 UTC",
+    "seeding_key": {
+      "script.name": "subgoal-labels-opt-in"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "subgoal-labels-opt-in"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Subgoal Labels Study Opt-In",
+      "name": "Subgoal Labels Study Opt-In",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Subgoal Labels Study Opt-In",
+        "lesson_group.key": "",
+        "script.name": "subgoal-labels-opt-in"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp_subgoal_labels_consent_intro"
+        ],
+        "progression": "Click here to participate in the subgoal labels study"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_subgoal_labels_consent_intro"
+        ],
+        "lesson.key": "Subgoal Labels Study Opt-In",
+        "lesson_group.key": "",
+        "script.name": "subgoal-labels-opt-in"
+      },
+      "level_keys": [
+        "csp_subgoal_labels_consent_intro"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp_subgoal_labels_consent_intro",
+        "script_level.level_keys": [
+          "csp_subgoal_labels_consent_intro"
+        ],
+        "lesson.key": "Subgoal Labels Study Opt-In",
+        "lesson_group.key": "",
+        "script.name": "subgoal-labels-opt-in"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

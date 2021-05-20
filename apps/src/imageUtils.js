@@ -1,5 +1,4 @@
 import artistShareFrame from '../static/turtle/blank_sharing_drawing.png';
-import './util/svgelement-polyfill';
 
 export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
@@ -30,37 +29,15 @@ export function blobToDataURI(blob, onComplete) {
 }
 
 export function dataURIToSourceSize(dataURI) {
-  return imageFromURI(dataURI).then(image => ({
+  return toImage(dataURI).then(image => ({
     x: image.width,
     y: image.height
   }));
 }
 
-export function imageDataFromURI(uri) {
-  return imageFromURI(uri).then(image => {
-    const canvas = document.createElement('canvas');
-    canvas.width = image.width;
-    canvas.height = image.height;
-    const context = canvas.getContext('2d');
-    context.drawImage(image, 0, 0);
-    return context.getImageData(0, 0, canvas.width, canvas.height);
-  });
-}
-
-export function canvasFromImage(image) {
-  const canvas = document.createElement('canvas');
-  canvas.width = image.width;
-  canvas.height = image.height;
-  const context = canvas.getContext('2d');
-  context.drawImage(image, 0, 0, image.width, image.height);
-  return canvas;
-}
-
-export function dataURIFromURI(uri) {
-  return imageFromURI(uri).then(image => {
-    const canvas = canvasFromImage(image);
-    return canvas.toDataURL();
-  });
+export async function dataURIFromURI(uri) {
+  const canvas = await toCanvas(uri);
+  return canvas.toDataURL();
 }
 
 export function URIFromImageData(imageData) {
@@ -90,19 +67,12 @@ export function dataURIToFramedBlob(dataURI, callback) {
   frame.src = artistShareFrame;
 }
 
-export function imageFromURI(uri) {
-  return new Promise((resolve, reject) => {
-    let image = new Image();
-    image.onload = () => resolve(image);
-    image.onerror = err => reject(err);
-    image.src = uri;
-  });
-}
-
-export function svgToDataURI(svg, imageType) {
-  imageType = imageType || 'image/png';
+export function svgToDataURI(svg, imageType = 'image/png', options = {}) {
   return new Promise(resolve => {
-    svg.toDataURL(imageType, {callback: resolve});
+    // Use lazy-loading to keep canvg (60KB) out of the initial download.
+    import('./util/svgelement-polyfill').then(() => {
+      svg.toDataURL(imageType, {...options, callback: resolve});
+    });
   });
 }
 
@@ -112,8 +82,108 @@ export function canvasToBlob(canvas) {
   });
 }
 
-export function dataURIToBlob(uri) {
-  return imageFromURI(uri)
-    .then(canvasFromImage)
-    .then(canvasToBlob);
+export async function dataURIToBlob(uri) {
+  const canvas = await toCanvas(uri);
+  return await canvasToBlob(canvas);
+}
+
+/**
+ * @typedef {string} ImageURI
+ * A string in the form of an image URI or data URI; anything you might
+ * assign to an <image>'s `src` attribute.  Examples:
+ * "https://example.com/example.png"
+ * "data:image/svg+xml,<svg..."
+ * "data:image/png;base64,iVBOR..."
+ */
+
+/**
+ * Given an input of a supported type, converts it to an HTMLImageElement.
+ *
+ * @param {Blob|HTMLImageElement|ImageURI} input
+ * @returns {Promise<HTMLImageElement>}
+ */
+export async function toImage(input) {
+  if (input instanceof HTMLImageElement) {
+    return input;
+  }
+
+  let src;
+  let cleanup = () => {};
+
+  if (input instanceof Blob) {
+    src = URL.createObjectURL(input);
+    cleanup = () => URL.revokeObjectURL(input);
+  } else if (typeof input === 'string') {
+    src = input;
+  } else {
+    throw new Error('Unable to convert input to image');
+  }
+
+  return new Promise((resolve, reject) => {
+    let image = new Image();
+    image.onload = function() {
+      cleanup();
+      resolve(image);
+    };
+    image.onerror = function(err) {
+      cleanup();
+      reject(err);
+    };
+    image.src = src;
+  });
+}
+
+/**
+ * Given an input of a supported type, converts it to an HTMLCanvasElement.
+ *
+ * @param {Blob|HTMLCanvasElement|HTMLImageElement|ImageURI} input
+ * @returns {Promise<HTMLCanvasElement>}
+ */
+export async function toCanvas(input) {
+  if (input instanceof HTMLCanvasElement) {
+    return input;
+  }
+
+  try {
+    const image = await toImage(input);
+    const canvas = document.createElement('canvas');
+    canvas.width = image.width;
+    canvas.height = image.height;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0);
+    return canvas;
+  } catch (err) {
+    throw new Error('Unable to convert input to canvas: ' + err);
+  }
+}
+
+/**
+ * Given an input of a supported type, converts it to an ImageData object.
+ *
+ * @param {Blob|HTMLCanvasElement|HTMLImageElement|ImageData|ImageURI} input
+ * @returns {Promise<ImageData>}
+ */
+export async function toImageData(input) {
+  if (input instanceof ImageData) {
+    return input;
+  }
+
+  try {
+    const canvas = await toCanvas(input);
+    return canvas
+      .getContext('2d')
+      .getImageData(0, 0, canvas.width, canvas.height);
+  } catch (err) {
+    throw new Error('Unable to convert input to ImageData: ' + err);
+  }
+}
+
+/**
+ * @param {Blob}
+ */
+export function downloadBlobAsPng(blob, filename = 'image.png') {
+  const download = document.createElement('a');
+  download.href = URL.createObjectURL(blob);
+  download.download = filename;
+  download.click();
 }

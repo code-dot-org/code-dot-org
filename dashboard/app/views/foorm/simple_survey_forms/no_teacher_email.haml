@@ -1,0 +1,6 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+.teacher-application-logged-out
+  .paragraph
+    != I18n.t('pd.no_teacher_email.body_markdown', user_registration: edit_user_registration_path, markdown: true)

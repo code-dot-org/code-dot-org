@@ -1,0 +1,12 @@
+name 'U10L3 CFU Why Collect PII_2021'
+title 'Why Collect Personally Identifiable Information (PII)?'
+question 'Which of the following is NOT a reason that a company would typically collect personally identifiable information (PII)'
+wrong 'Many computing innovations rely on some PII in order to work'
+wrong 'PII collected by a computing innovation can be used to personalize the way a service works or the advertising users see'
+wrong 'PII can be sold to third parties interested in learning more about individuals'
+right 'Making PII digital improves a user\'s ability to control who has access to it or delete it'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

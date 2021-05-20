@@ -1,8 +1,15 @@
-- level ||= @level
-- last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
-- in_level_group ||= false
-- left_align = local_assigns[:left_align]
-- is_contained_level ||= false
+:ruby
+  js_data = {}
+  level ||= @level
+  last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
+  in_level_group ||= false
+  left_align = local_assigns[:left_align]
+  is_contained_level ||= false
+
+- if level.solution.present? && is_contained_level && can_view_teacher_markdown?
+  %div{id: "containedLevelAnswer0"}
+    .free-response{class: "contained"}
+      = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
 
 - if in_level_group # The LevelGroup will collect results for each level.
   :javascript
@@ -24,25 +31,30 @@
     );
 
 .free-response{:class => ('left-aligned' if left_align)}
-  - if level.title.present? && (!in_level_group || is_contained_level)
-    %h1= level.title
-  - if level.long_instructions
-    %div= render(inline: level.long_instructions, type: :md)
+  - title = level.get_property(:title)
+  - if title.present? && (!in_level_group || is_contained_level)
+    %h1= title
+  - long_instructions = level.get_property("long_instructions")
+  - if long_instructions
+    / Markdown will be rendered clientside by _free_response.js
+    .markdown-container{data: {markdown: long_instructions}}
 
   - if level.allow_user_uploads?
-    %script{src: minifiable_asset_path('js/fileupload/jquery.iframe-transport.js')}
-    %script{src: minifiable_asset_path('js/fileupload/jquery.fileupload.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.iframe-transport.js')}
+    %script{src: webpack_asset_path('js/fileupload/jquery.fileupload.js')}
     %p#free-response-upload
-    :javascript
-      dashboard.project.getCurrentId = function () {
-        return appOptions.channel;
-      };
-
-      ReactDOM.render(React.createElement(dashboard.Attachments, {showUnderageWarning: !appOptions.is13Plus, readonly: #{!!@view_options.readonly_workspace}}), document.querySelector('#free-response-upload'));
+    :ruby
+      js_data[:attachments_props] = {
+        readonly: !!@view_options.readonly_workspace
+      }
 
   - height = level.height || '80'
-  %textarea.response{id: "level_#{level.id}", placeholder: level.placeholder || 'Enter your answer here', style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
+  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
   = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group
-  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
+  = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/_free_response.js'), data: {freeresponse: js_data.to_json}}

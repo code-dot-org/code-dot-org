@@ -1,0 +1,7 @@
+name 'CSD games velocity challenge choice_virtual_2020'
+display_name 'Velocity Challenges'
+description 'Try out these new blocks and challenges with velocity.'
+
+sublevels
+level 'CSD games velocity 4 directions_virtual_2020'
+level 'CSD U3 L15 Freeplay_virtual_2020'

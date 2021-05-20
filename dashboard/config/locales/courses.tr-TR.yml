@@ -26,6 +26,14 @@ tr:
           assignment_family_title: Bilgisayar Bilimi Keşifleri
           title: Bilgisayar Bilimi Keşifleri ('17-'18)
           version_title: "'17-'18"
+          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+          description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
           description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
         allthethingscourse:
           title: tümherşeykursu
@@ -39,6 +47,14 @@ tr:
           title: Bilgisayar Bilimi Keşifleri ('18-'19)
           version_title: "' 18 - 19'"
           description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
+          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+          description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
         csp-2018:
           assignment_family_title: Bilgisayar Bilimleri Prensipleri
           title: Bilgisayar Bilimi İlkeleri ('18-'19)
@@ -80,3 +96,11 @@ tr:
           title: Bilgisayar Bilimi Keşifleri ('19-'20)
           version_title: "'19-'20"
           description_short: BB Keşifleri doğrultusunda 2018-2019 sürümü.
+          description_student: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.
+          description_teacher: Bilgisayar Bilimi Keşifleri (CS Keşifleri) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturmasını;
+            ve onların üreticilik, iletişim, problem çözme ve eğlence için bir araç
+            olarak bilgisayar bilimi ile uğraşmasını sağlar.

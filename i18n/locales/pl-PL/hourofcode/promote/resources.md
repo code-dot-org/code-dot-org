@@ -1,7 +1,5 @@
 ---
 title: Materiały
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -10,22 +8,21 @@ nav: promote_nav
 
 # Promuj Godzinę Kodowania
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### Znajdź wszystkie zasoby których potrzebujesz, aby przykuć uwagę do Twojej Godziny Kodowania. Nie jesteś pewien gdzie zacząć? Zacznij z naszym [poradnikiem jak zostać gospodarzem Godziny Kodowania]({{ how_to_url }})!
 
 * * *
 
-{{ view :promote_handouts }} {{ view :promote_videos }}
+{{ promote_handouts }} {{ promote_videos }}
 
 <a id="posters"></a>
 
-## Powieś te plakaty w twojej szkole
+## Powieś te plakaty w swojej szkole
 
-Nowy zestaw plakatów jest dostępny, gościnnie występują na nich Malala, Stephen Curry, Shakira i wielu innych! W tym roku, każdy zestaw dostarczany jest jako 6 plakatów i 126 naklejek "I did the Hour of Code". Zasoby są limitowane, więc [ zamów swoje plakaty](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) szybko. To print on your own, simply click an image below to view and save a printable version.
+Dostępny jest nowy zestaw plakatów, z gościnnie występującymi na nich Malala, Stephen Curry, Shakira i wielu innymi! W tym roku, każdy zestaw zawiera 6 plakatów i 126 naklejek "I did the Hour of Code". Zapasy są ograniczone, więc szybko [ zamów plakaty dla siebie](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH). Aby wydrukować je samodzielnie, wystarczy kliknąć poniżej zdjęcia, by wyświetlić i zapisać wersję do druku.
 
-{{ view :promote_new_posters }}
+{{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Czy szukasz naszych plakatów z ubiegłych lat? [Znajdziesz je tutaj]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
@@ -39,53 +36,63 @@ Nowy zestaw plakatów jest dostępny, gościnnie występują na nich Malala, Ste
 
 <a id="logo"></a>
 
-## Użyj logo Godziny Kodowania aby szerzyć nowinę
+## Użyj logo Godziny Kodowania, aby ją promować
 
-[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }})
+[![obraz]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![obraz]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[Pobierz logo w wysokiej rozdzielczości](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:**
+**"Hour of Code" ["Godzina Kodowania"] I "Hora del Código" są znakami towarowymi. Nie chcemy zabraniać używania tych nazw, ale chcemy mieć pewność, że odbywa się to zgodnie z kilkoma ograniczeniami:**
 
-1. Wszelkie odniesienia do "Godziny Kodowania" powinny być stosowane w sposób, który nie sugeruje, że jest to twoja własna marka, ale odnosi się do Godziny Kodowania jako inicjatywy społecznej. **Przykład dobrego użycia**: "Dołącz do Godziny Kodowania™ w ACMECorp.com." **Przykład złego użycia**: "Wypróbuj Godzinę Kodowania od ACME Corp."
-2. Używaj znaku "TM" jako indeksu górnego po frazie "Godzina Kodowania" w najbardziej znaczących miejscach, zarówno na twojej stronie internetowej jak i opisach aplikacji.
-3. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Wszelkie odniesienia do "Hour of Code" [ "Godziny Kodowania"] lub "Hora del Código" powinny być stosowane w sposób, który nie sugeruje, że jest to Twoja własna marka, ale odnosi się do "Godziny kodowania" jako inicjatywy społecznej.
+
+<ul style="margin-top: 0px">
+  <li>
+    Dobry przykład użycia: "Weź udział w "Godzinie kodowania™" na TWOJA-FIRMA.com."
+  </li>
+  <li>
+    <strong>Przykład niewłaściwego użycia</strong>: "Wypróbuj "Godzinę kodowania" TWOJEJ-FIRMY."
+  </li>
+</ul>
+
+1. Stosuj górny indeks "TM" w najbardziej widocznych miejscach, gdzie używasz zwrotu "Godzina kodowania" i górny indeks "Ⓡ" w najbardziej widocznych miejscach, gdzie używasz zwrotu "Hora del Código", zarówno na swojej stronie jak i w opisach aplikacji.
+2. Na swojej stronie internetowej (np. w stopce) umieść informację a w niej linki do stron CSEdWeek i [Code.org]({{ codeorg_link }}), która brzmi, jak poniżej:
     
-    *"Godzina Kodowania™'"jest międzynarodową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], która wprowadza jedną godzinę informatyki i programowania milionom uczniów*
+    *“The 'Hour of Code™'/'Hora del Código®' ["Godzina Kodowania™" jest krajową inicjatywą Computer Science Education Week [csedweek.org] i Code.org [code.org], której celem jest udział milionów uczniów w godzinie informatyki i programowania komputerowego."*
 
-4. Zakaz używania frazy "Godzina Kodowania" w nazwach aplikacji.
+3. Zakaz używania zwrotu "Hour of Code" ["Godzina Kodowania"] lub "Hora del Código" w nazwach aplikacji.
 
 <a id="stickers"></a>
 
-## Wydrukuj te naklejki i daj je swoim uczniom
+## Wydrukuj te naklejki i rozdaj je swoim uczniom
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(Naklejki mają średnicę jednego cala, w arkuszu jest ich 63) <br />
 
 [![obraz](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Zaproś ludzi z twojego otoczenia na twoją " Godzinę Kodowania" i promuj swoje akcje przez email
+## Zaproś osoby z Twojego otoczenia na Twoją Godzinę Kodowania i promuj swoje wydarzenie w e-mailach
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### [Tutaj]({{ promote/stats_url }}) znajdziesz więcej informacji i o sposobach, jak rozmawiać o Godzinie Kodowania.
 
 * * *
 
 <a id="email"></a>
 
-### Namów do rejestracji znajomych ze szkoły lub pracy: 
+### Namów do rejestracji szkołę, pracodawcę i znajomych:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**Temat:** Dołącz do nas i do ponad 100 milionów uczniów na Godzinę Kodowania <br />
 
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 47% of all high schools teach computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszeliście o Godzinie Kodowania wcześniej, to zapewne wiecie, że zapisała się już w historii. Ponad 100 milionów uczniów wzięło już udział w Godzinie Kodowania.
 
-Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Dzięki Godzinie Kodowania, zajęcia z informatyki pojawiły się na stronach Google, MSN, Yahoo! i Disney. Ponad 100 partnerów wspólnie wsparło tę inicjatywę. Każdy sklep Apple na świecie gościł już Godzinę Kodowania i przywódcy, jak Obama i kanadyjski premier Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+W tym roku uczyńmy tę inicjatywę jeszcze większą. Namawiam Was do przyłączenia się do Godziny Kodowania {{ campaign_date/year }}. Włączcie się w Godzinę Kodowania podczas Tygodnia Edukacji Informatycznej, {{ campaign_date/full }}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+Opowiedz o nas. Zorganizuj wydarzenie. Poproś lokalną szkołę o rejestrację. Albo sam spróbuj Godziny Kodowania — każdy może odnieść korzyści z nauki podstaw.
 
-Get started at http://hourofcode.com/{{ country }} <br />
+Zacznij na http://hourofcode.com/{{ country }} <br />
 
 * * *
 
@@ -93,84 +100,84 @@ Get started at http://hourofcode.com/{{ country }} <br />
 
 ### Wolontariusz w szkole:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [Tutaj znajdziesz więcej materiałów i informacji o wolontariacie w szkole]({{ how_to_volunteers_url }}).
 
-**Subject line:** Can we help you host an Hour of Code?
+**Temat:** Czy możemy Tobie pomóc zostać gospodarzem Godziny Kodowania?
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+Pomiędzy {{ campaign_date/short }}, dziesięć procent uczniów z całego świata będzie świętowało Computer Science Education Week uczestnicząc w Godzinie Kodowania w swoich szkołach. To jest szansa dla każdego dziecka, aby poznało, jak działa otaczająca nas technologia.
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[Nasza organizacja/Moje imię] chętnie pomoże [nazwa szkoły] zorganizować Godzinę Kodowania. Możemy pomóc nauczycielom prowadzącym Godzinę Kodowania w ich klasach (nie potrzebujemy nawet żadnych komputerów!) lub, jeśli chcielibyście zorganizować prelekcję na forum szkoły, możemy postarać się o prowadzącego, który zaprezentuje, jak działają technologie i opowie, jak to jest być programistą.
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+Uczniowie utworzą swoje własne aplikacje lub gry, które mogą zaprezentować swoim rodzicom. Wydrukujemy także certyfikaty Godziny Kodowania, które będą mogli zabrać do domu. I to jest fajne! Wraz z interaktywnymi i praktycznymi zajęciami, uczniowie w przystępny sposób nabędą umiejętności komputacyjnego myślenia.
 
-Computers are everywhere, changing every industry on the planet. But only 35% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+Komputery znajdują się wszędzie, zmieniają każdą branżę na świecie. But only 47% of all high schools teach computer science. Dobrą wiadomością jest to, że możemy to zmienić! Jeśli słyszałaś/eś wcześniej o Godzinie Kodowania, wiesz zapewne, że stała się już historią - ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nawet przywódcy, tacy jak prezydent Obama i premier Kanady Justin Trudeau napisali swoje pierwsze linie kodu w ramach tej inicjatywy.
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+Możesz przeczytać więcej o tej inicjatywie na http://hourofcode.com. Lub daj nam znać, jeśli chcesz zarezerwować czas na rozmowę o tym, w jaki sposób [nazwa szkoły] może wziąć udział. <br />
 
 * * *
 
 <a id="parents"></a>
 
-### Poinformuj rodziców o wydarzeniu w twojej szkole:
+### Powiedz rodzicom o wydarzeniu w szkole:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**Temat:** Nasi uczniowie zmieniają przyszłość wraz z Godziną Kodowania
 
-Dear Parents,
+Drodzy Rodzice,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+Żyjemy w świecie pełnym technologii. I wiemy, że niezależnie od tego, który zawód wybiorą nasi uczniowie, ich szansa na sukces będzie coraz bardziej zależeć od rozumienia, jak działają technologie.
 
-But only a tiny fraction of us are learning **how** technology works. Only 35% of all high schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+Dlatego cała nasza szkoła dołącza do największego wydarzenia edukacyjnego w historii: Godziny Kodowania, w czasie Tygodnia Edukacji Informatycznej ({{ campaign_date/full }}). Ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania. Nasza Godzina Kodowania potwierdza, że [NAZWA SZKOŁY] jest gotowa, by uczyć fundamentalnych umiejętności XXI-wieku. Aby móc kontynuować zajęcia z programowania dla waszych uczniów chcemy, aby wydarzenie naszej Godziny Kodowania było jeszcze większe. Zachęcam was do wolontariatu, kontaktu z lokalnymi mediami, dzielenia się nowinkami w mediach społecznościowych oraz do rozważenia organizacji dodatkowych Godzin Kodowania w waszej społeczności.
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+To jest szansa na zmianę przyszłości edukacji w [NAZWA MIASTA].
 
-See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
+Odwiedź http://hourofcode.com/{{ country }} po szczegółowe informacje i pomagaj promować to przedsięwzięcie. <br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Zaproś media do uczestnictwa w Twoim przedsięwzięciu:
+### Zaproś media do udziału w Twoim wydarzeniu:
 
-#### [Zobacz nasze materiały prasowe, aby uzyskać więcej informacji jak zaprosić media do Twojego przedsięwzięcia.]({{ promote/press_kit_url }})
+#### [Zobacz nasze materiały prasowe, aby uzyskać więcej informacji, jak zaprosić media na Twoje wydarzenie.]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Temat:** Lokalna szkoła włącza się w misję wprowadzania uczniów do informatyki
 
-Computers are everywhere, changing every industry on the planet, but only 35% of all high schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Dobrą wiadomością jest, że zamierzamy to zmienić.
+Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Młode kobiety i uczniowie wywodzący się z grup marginalizowanych ze względów rasowych i etnicznych są zdecydowanie niedostatecznie reprezentowani na zajęciach z informatyki oraz w branży zaawansowanych technologii. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
-Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Właśnie dlatego każdy z [LICZBA] uczniów szkoły [NAZWA SZKOŁY] zamierza wziąć udział w największym edukacyjnym wydarzeniu w historii: Godzinie Kodowania, w czasie Tygodnia Edukacji Informatycznej (3-9 Grudnia).
 
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+Pragnę zaprosić Państwa do udziału w spotkaniu inauguracyjnym, by zobaczyć, jak uczniowie zaczynają w dniu [DATE].
 
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+Godzina Kodowania, przygotowana przez non-profit organizację Code.org i ponad 100 innych organizacji, to globalna inicjatywa, która wierzy, że dzisiejsi uczniowie są gotowi zdobywać umiejętności niezbędne do sukcesu w XXI wieku. Proszę dołączyć do nas.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Kontakt: [YOUR NAME], [TITLE], Phone: (212) 555-5555, Kiedy: [DATE i TIME Twojego wydarzenia], Miejsce: [ADDRESS i DIRECTIONS]
 
-I look forward to being in touch. <br />
+Czekam na kontakt. <br />
 
 * * *
 
 <a id="politicians"></a>
 
-### Zaproś lokalne władze na swoje szkolne wydarzenie:
+### Zaproś przedstawiciela lokalnych władz do udziału w wydarzeniu w Twojej szkole:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [Czu potrzebujesz więcej informacji? Rzuć okiem na nasze materiały, jak zaprosić lokalne władze na Twoje wydarzenie]({{ how_to_public_officials_url }}).
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**Temat:** Dołącz do naszej szkoły, jak zmieniamy przyszłość z Godziną Kodowania
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+Szanowny Panie / Szanowna Pani [Burmistrz/Wójt/Radny/Poseł/Senator IMIĘ i NAZWISKO]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+Czy Pan/i wie, że informatyka jest największym źródłem dochodów w Stanach Zjednoczonych? Jest ponad 500.000 miejsc pracy dla informatyków, ale w zeszłym roku tylko 42.969 nowych absolwentów informatyki wkroczyło na rynek pracy.
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Informatyka jest dzisiaj podstawą w każdej branży, a mimo to, szkoły jej nie uczą. W [NAZWA SZKOŁY] próbujemy to zmienić.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+Dlatego cała nasza szkoła dołącza do największego wydarzenia edukacyjnego w historii: Godziny Kodowania, w czasie Tygodnia Edukacji Informatycznej ({{ campaign_date/full }}). Ponad 100 milionów uczniów na całym świecie wzięło już udział w Godzinie Kodowania.
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+Zapraszam Pana/Panią, aby przyłączyć się do naszej Godziny Kodowania i przemówić na inaugurującym spotkaniu. Odbędzie się ono w dniu [DATA, CZAS, MIEJSCE] i będzie mocnym potwierdzeniem, że [NAZWA MIEJSCOWOŚCI] jest gotowa, by uczyć umiejętności niezbędnych w XXI wieku. Chcemy mieć pewność, że nasi uczniowie są w czołówce twórców technologii przyszłości — nie tylko ich używania.
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+Proszę skontaktować się ze mną [NUMER TELEFONU lub ADRES E-MAIL]. Z niecierpliwością czekam na odpowiedź.
 
-{{ view :signup_button }}
+{{ signup_button }}

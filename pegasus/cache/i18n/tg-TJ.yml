@@ -25,6 +25,7 @@ tg-TJ:
   csedweek_map_legend_cs_tech_jam: Чорабинии махсус
   cded_sign_up: Худро ба қайд гиред
   cded_try_it: Дида бароед
+  try_now: Маълумоти бештар
   california_button: Маълумоти бештар
   view_english_site: Намоиш додан дар забони англисӣ
   all_ages: 'Синну сол: Ҳама'
@@ -66,6 +67,7 @@ tg-TJ:
   homepage_action_text_teachervideo: Видеоро тамошо кунед
   homepage_action_text_watchvideo: Видеоро тамошо кунед
   homepage_action_text_learn: Омӯзишро оғоз намоед
+  homepage_signpetition_dropdown_text: Ман розӣ ҳастам
   homepage_banner_text_link: Маълумоти бештар
   homepage_banner_privacy_link: Маълумоти бештар
   homepage_banner_20k_teachers_link: Маълумоти бештар
@@ -134,6 +136,7 @@ tg-TJ:
   dashboard_student: Донишҷӯ
   dashboard_faq: Саволҳои роиҷ
   host_an_hour: Ташкилкунандаи Соати рамз шавед
+  learn_more: Маълумоти бештар
   learn_sign_up_button: Худро ба қайд гиред
   how_to_teach_hoc: Тарзи гузаронидани дарси як Соати рамз
   previous: Қаблӣ
@@ -202,6 +205,7 @@ tg-TJ:
   coursee-2017_gradelevel: 'Синну сол: 8-12'
   coursee-2018_gradelevel: 'Синну сол: 8-12'
   coursee-2019_gradelevel: 'Синну сол: 8-12'
+  coursee-2020_gradelevel: 'Синну сол: 8-12'
   khan_platformtext: Браузерҳои веби ҳозиразамон
   khanes_platformtext: Браузерҳои веби ҳозиразамон
   khanpt_platformtext: Браузерҳои веби ҳозиразамон
@@ -297,3 +301,4 @@ tg-TJ:
   hoc2018_mc_homepage_join_us: Ба мо ҳамроҳ шавед
   hoc2018_mc_homepage_try_it: Дида бароед
   hoc2018_dance_amazon_about_future_engineer_button: Маълумоти бештар
+  footer_support: Дастгирӣ

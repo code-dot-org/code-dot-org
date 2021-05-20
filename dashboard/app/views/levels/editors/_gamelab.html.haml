@@ -1,169 +1,23 @@
 -# Gamelab-only fields for level edit page on levelbuilder
 - content_for(:head) do
-  :css
-    #level-start-animations-validation {
-      padding: 0.2em;
-      font-weight: bold;
-    }
-  %script{src: minifiable_asset_path('js/levels/editors/_gamelab.js')}
+  %script{src: webpack_asset_path('js/levels/editors/_gamelab.js')}
 
-%legend.control-legend.levelTypeHeader
-  Game Lab Options
+= render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
+= render partial: 'levels/editors/fields/teacher_only_markdown', locals: {f: f}
+= render partial: 'levels/editors/fields/code_area', locals: {f: f}
+= render partial: 'levels/editors/fields/video', locals: {f: f}
+= render partial: 'levels/editors/fields/bubble_choice_sublevel', locals: {f: f}
+= render partial: 'levels/editors/fields/special_level_types', locals: {f: f}
 
-// See gamelab_jr.html.haml for examples for Sprite Lab
-- if !@level.is_a?(GamelabJr)
-  = render partial: 'levels/editors/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: 'gamelab'}
+= render partial: 'levels/editors/fields/debugger', locals: {f: f}
+= render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
+= render partial: 'levels/editors/fields/animation', locals: {f: f}
 
-%legend.control-legend{data: {toggle: "collapse", target: "#debuggingTools"}}
-  Debugging
-
-#debuggingTools.collapse
-
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
-
-  = render partial: 'levels/editors/watchers_ui', locals: {f: f}
-
-  .field.aligned-input-group
-    = boolean_check_box f, :debugger_disabled
-    =f.label 'Disable code debugger (Console is still enabled)'
-
-.field
-  = f.label :soft_buttons, 'Controls buttons'
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple). Arrow buttons to display below the game canvas.
-  = f.collection_select :soft_buttons, soft_button_options, :value, :name, {selected: @level.soft_buttons}, {multiple: true}
-
-.field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'submittable', description: "Submittable"}
-  %p
-    If checked, students with teachers can "submit" a solution for
-    grading. Submitting a solution means that it is marked as
-    submitted and they can no longer edit it (unless a teacher returns
-    it).
-
-.field
-  = f.label 'Key-Value Data'
-  This data can be accessed via the getKeyValue and setKeyValue blocks in Game Lab.
-  %pre
-    = preserve do
-      :escaped
-        Example:
-        {
-          "click_count": 5,
-          "button_color": "blue"
-        }
-  ~ f.text_area 'data_properties', placeholder: 'Insert JSON Key-Value Data', rows: 4, value: @level.data_properties or ''
-  :javascript
-    levelbuilder.initializeCodeMirror('level_data_properties', 'javascript');
-
-.field.aligned-input-group
-  = boolean_check_box f, :hide_view_data_button
-  = f.label 'Hide View Data Button'
-
-- if @level.is_a?(GamelabJr)
-  .field
-    = f.label :block_pools
-    %p
-      Select
-      %a.select_all{href: '#'} all
-      \/
-      %a.select_none{href: '#'} none
-      (shift-click or cmd-click to select multiple).
-    = f.select :block_pools, (Block.all_pool_names + (@level.block_pools || [])).uniq.sort, {}, {multiple: true}
-
-.field
-  = f.label :helper_libraries
-  %p
-    Select
-    %a.select_all{href: '#'} all
-    \/
-    %a.select_none{href: '#'} none
-    (shift-click or cmd-click to select multiple).
-  = f.select :helper_libraries, (Library.distinct.pluck(:name) + (@level.helper_libraries || [])).uniq.sort, {}, {multiple: true}
-
-%legend.control-legend{data: {toggle: "collapse", target: "#validation"}}
-  Validation
-
-#validation.collapse
-  %p
-    This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results). There is also a `validationProps` object that you can stick arbitrary properties on to track state across draw loops.
-  = f.text_area :validation_code
-
-%legend.control-legend{data: {toggle: "collapse", target: "#animations"}}
-  Animations
-
-#animations.collapse
-
-  - if @level.is_a?(GamelabJr)
-    .field
-      = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :use_default_sprites, description: "Use default sprites as starting animation JSON"}
-
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :hide_animation_mode, description: "Hide the Animation Tab (you can still seed a level with animations)"}
-
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :start_in_animation_tab, description: "Start in the Animation Tab"}
-
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :all_animations_single_frame, description: "All animations should be a single frame. If it has multiple frames, only show the first frame as a still image."}
-
-  .field
-    = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: 'pause_animations_by_default', description: "Animations are paused by default"}
-
-    %p
-      If checked, the sprite animation will always be paused after a <tt>setAnimation</tt> call.
-      Otherwise, it will be playing after a <tt>setAnimation</tt> call.
-
-  .field
-    %p{data: {toggle: "collapse", target: "#animation_json_output"}}
-      Starting Animation JSON
-    %p
-      This should be equivalent to the animation JSON created by the animation tab.
-      <a href="#" onClick="toggleBlock('start_animations_more'); return false">Read more...</a>
-    %p
-      Learn how to preload starting animations
-      = link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Adding-Preloaded-Animations-to-a-Level-in-Game-Lab', target: '_blank'
-    #start_animations_more{style: 'display: none'}
-      %p
-        You can generate this by getting the animation tab into the desired state,
-        opening the developer console, and running <tt>viewExportableAnimationList()</tt>;
-        or, you can compose it by hand.
-        Here is an example.
-      %pre
-        :preserve
-          {
-            "orderedKeys": ["animation1"],
-            "propsByKey": {
-              "animation1": {
-                "name": "asterisk_circle",
-                "sourceUrl": "/blockly/media/gamelab/library/asterisk_circle.png",
-                "frameSize": {"x":132, "y": 126},
-                "frameCount": 9,
-                "frameDelay": 2,
-                "looping": true
-              }
-            }
-          }
-      %p
-        Some considerations:
-      %ul
-        %li <tt>orderedKeys</tt> defines the order the animations are listed in the animation tab, and each key must reference a set of props in <tt>propsByKey</tt>
-        %li <tt>name</tt>, <tt>sourceUrl</tt>, <tt>frameSize</tt>, <tt>frameCount</tt>, <tt>frameDelay</tt>, and <tt>looping</tt> are all required.
-        %li <tt>name</tt> is used to refer to the animation in code; the "animation key" is never visible to the student.
-        %li
-          <tt>sourceUrl</tt> can take absolute URLs (which will run through our media proxy, so you can refer to almost anything)
-          or domain-relative URLs for the limited set of animations in the current library,
-          <a href="https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/gamelab/animationLibrary.js">which you can find here.</a>
-          The sourceUrl should point to an image or spritesheet - not an animated gif.
-        %li <tt>frameDelay</tt> can be from slowest to fastest: 60, 45, 30, 20, 15, 10, 5, 4, 3, 2, 1.
-        %li <tt>looping</tt> is true is if the animation plays repeatedly or false if it plays once.
-    #animation_json_output.collapse.in
-      ~ f.text_area :start_animations, placeholder: 'Starting animations JSON', rows: 4, value: @level.start_animations
-      #level-start-animations-validation
+= render partial: 'levels/editors/fields/preload_assets', locals: {f: f}
+= render partial: 'levels/editors/fields/sharing', locals: {f: f}
+= render partial: 'levels/editors/fields/callouts', locals: {f: f}
+= render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 
 :javascript
   window.toggleBlock = function (elementId) {

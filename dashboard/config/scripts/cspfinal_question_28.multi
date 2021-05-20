@@ -1,8 +1,8 @@
 name 'CSPFinal_Question_28'
-wrong '<pre>n = -1</pre>'
-right '<pre>n &lt; -1</pre>'
-wrong '<pre>n = 0</pre>'
-wrong '<pre>n &gt; 5</pre>'
+wrong '`n = -1`'
+right '`n < -1`'
+wrong '`n = 0`'
+wrong '`n > 5`'
 
 markdown <<MARKDOWN
 Consider the following code segment.

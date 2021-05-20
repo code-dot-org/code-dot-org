@@ -1,0 +1,41 @@
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_validation_code.js')}
+
+%h1.control-legend{data: {toggle: "collapse", target: "#validation"}}
+  Validation
+
+#validation.in.collapse
+  -# Deprecated for Sprite Lab and Dance not used in Gamelab, Weblab or Applab
+  - if (!(@level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab)) && (@level.is_a?(Blockly)))
+    .field
+      = f.label :failure_message_override, 'Failure Message Override'
+      %p If specified this error message will be used to replace ALL error messages in the puzzle. Be certain this is what you want before using.
+      = f.text_field :failure_message_override, style: 'width: 600px;', placeholder: 'Type Override Failure Message Here'
+  -# Dance and Spritelab are special types of Gamelab levels
+  - if @level.is_a?(Gamelab)
+    %p
+      This is a snippet of javascript that is run after every draw loop. Call levelSuccess() in here to stop the level as a success. You can also pass a number into levelSuccess() to give the student a non-perfect test result (see <a href="https://github.com/code-dot-org/code-dot-org/blob/101fbfd2dcdd635d7359e991559ba782f9fd00be/apps/src/constants.js#L33-L106">TestResults</a> for the list of valid test results). There is also a `validationProps` object that you can stick arbitrary properties on to track state across draw loops.
+    = f.text_area :validation_code
+
+  = render partial: 'levels/editors/fields/applab_validations', locals: {f: f} if @level.is_a?(Applab)
+  = render partial: 'levels/editors/fields/studio_validations', locals: {f: f} if @level.is_a?(Studio) || @level.is_a?(Bounce) || @level.is_a?(Flappy)
+
+  - if @level.respond_to? :free_play
+    .field
+      = render partial: 'levels/editors/fields/checkboxes',
+        locals: {f: f, field_name: :free_play, description: "Free Play"}
+      %p
+        Free Play levels are not checked for correctness (any solution is
+        accepted), can be shared, and can be saved to the public and private
+        gallery
+  - if @level.respond_to? :validation_enabled
+    .field
+      = render partial: 'levels/editors/fields/checkboxes',
+        locals: {f: f, field_name: :validation_enabled,
+        description: "Code must change for the level to be show as 'complete"}
+      %p
+        If this setting is checked, students must change code on the level,
+        run that code, and hit 'Finish' before the level can be marked as
+        complete. If this box is unchecked, hitting 'Finish' will mark the
+        level as complete.
+

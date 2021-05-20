@@ -1,0 +1,375 @@
+---
+title: Learn about Artificial Intelligence (AI)
+video_player: true
+theme: responsive
+style_min: true
+social:
+  "og:title": "Learn about Artificial Intelligence (AI)"
+  "og:description": "Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!"
+  "og:image": "code.org/images/oceans/oceans-overview.png"
+  "og:image:width": 485
+  "og:image:height": 235
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+<link href="/css/tools.css" rel="stylesheet">
+<link href="/css/ai-videos.css" rel="stylesheet">
+
+<a id="top"></a>
+
+<div dir="<%= language_dir_class %>"> 
+
+<h1 style="margin-top:30px; margin-bottom:20px">Learn about Artificial Intelligence (AI)</h1>
+<p>AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications.</p>
+<p>Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!</p> 
+<div style="clear: both; margin-bottom: 20px"></div>
+<br>
+
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="color: dimgray; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
+        <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><button>Try activity</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a href="#ai-videos">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro-2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
+        <div class="smalltext" style="color: dimgray; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
+        <a href="#ai-videos"><button>Watch the videos</button></a>
+    </span>
+  </div>
+</div>
+</div>
+
+<div class="col-33">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a href="" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-ethics-lp.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+      <span>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px; margin-bottom: 10px"><strong>AI and Ethics</strong></h3>
+        <div class="smalltext" style="color: dimgray; margin-bottom: 10px">Students reflect on the ethical implications of AI, then work together to create an “AI Code of Ethics” resource for AI creators and legislators everywhere.</div>
+        <button>View lesson plan</button>
+    </span>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+<style>
+  .microsoft-partnership {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .microsoft-thanks {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 80px;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
+</style>
+
+<div class="microsoft-partnership">
+In partnership with
+&nbsp;
+<img src="images/fit-240/avatars/microsoft.png">
+</div>
+<div class="microsoft-thanks">
+We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century.
+</div>
+
+<a id="ethics-panel"></a>
+<div class="col-100" style="width:100%; background-color:#ebe8f1; color:#696969; padding: 10px 40px 0px 40px; border-radius:15px;">
+  <h2 style="margin-bottom: 10px">Exploring the Ethics of AI</h2>
+  <h3 style="margin-top: 0; margin-bottom: 20px">Join some of our favorite AI experts for a panel discussion on Tuesday, December 8!</h3>
+  <p>We'll discuss some of the cool ways that AI is used, and touch on important issues like algorithmic bias and the future of work. Appropriate for students in grade 8 and up. Pair it with our <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">AI for Oceans</a> tutorial and our new AI & Ethics lesson plan (coming soon!) for a great introduction to artificial intelligence!</p>
+  <p>Join us <strong>10:30 - 11:15 am PST on December 8</strong>! Tune in on <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09">Zoom</a> or stream on YouTube (link coming soon!).</p>
+  <a href="https://code.zoom.us/j/95111270450?pwd=Mk1OMFlXL0dZQ3gwYzdMdmF4d1I0QT09"><button>Tune in</button></a>
+  <h3 style="margin-bottom:10px">Featuring:</h3>
+  <ul>
+    <li><strong>Dr. Amanda Askell</strong>, Research Scientist in Policy, OpenAI</li>
+    <li><strong>Inioluwa Deborah Raji</strong>, AI Research Scientist & Mozilla Fellow</li>
+    <li><strong>Mehran Sahami</strong>, Professor and Associate Chair for Education in Computer Science, Stanford University</li>
+    <li><strong>Natasha Crampton</strong>, Chief Responsible AI Officer, Microsoft</li>
+    <li><strong>Pat Yongpradit</strong>, Chief Academic Officer, Code.org</li>
+  </ul>
+  <br>
+  <br>
+
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+<br>
+<br>
+
+<a id="ai-videos"></a>
+
+<h2>How AI Works</h2>
+<p style="margin-bottom: 25px">With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making.</p>
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_intro }}
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_mlintro }}
+
+</div>
+
+<div style="clear: both"></div>
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_trainingdata }}
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_neuralnetworks }}
+
+</div>
+
+<div style="clear: both"></div>
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_computervision }}
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_socialimpact }}
+
+</div>
+
+<div style="clear: both"></div>
+<h3>Videos about AI from other organizations:</h3>
+<ul>
+  <li><a href="https://youtu.be/DybczED-GKE" target="_blank">Seeing AI: Making the visual world more accessible</a> (3:27)</li>
+  <li><a href="https://youtu.be/UG_X_7g63rY" target="_blank">Fighting bias in algorithms</a> (8:44)</li>
+  <li><a href="https://youtu.be/59bMh59JQDo" target="_blank">Machine Learning and Human Bias</a> (2:33)</li>
+  <li><a href="https://youtu.be/GboOXAjGevA" target="_blank">The Ethics of AI</a> (8:03)</li>
+  <li><a href="https://youtu.be/_rdINNHLYaQ" target="_blank">Machine Learning: Solving Problems Big, Small, and Prickly</a> (5:19)</li>
+  <li><a href="https://youtu.be/bHvf7Tagt18" target="_blank">How does your phone know this is a dog?</a> (5:57)</li>
+  <li><a href="https://youtu.be/mJeNghZXtMo" target="_blank">What is AI?</a> (6:14)</li>
+</ul>
+<br>
+<br>
+
+<h2>More resources</h2>
+<div class="tile-container-responsive" style="padding-left: 5px">
+  <div class="col-50" style="margin-right: 20px">
+    <div class="tutorial-tile">
+      <a href="/csforgood" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x260/ai/csforgood_ai.png">
+      </a>
+    <div class="tutorial-info">
+      <h3 style="margin-top: 0px;">CS for Good</h3>
+      <div class="smalltext">Resources to inspire students to think deeply about the role computer science can play in creating a more equitable and sustainable world.</div>
+      <a href="/csforgood" target="_blank">
+        <button class="tutorial-info-start tutorial-gray">View Resources</button>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+  <div class="col-50">
+    <div class="tutorial-tile">
+      <a href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x260/ai/imagine-cup-2.png">
+      </a>
+    <div class="tutorial-info">
+      <h3 style="margin-top: 0px;">Imagine Cup Junior</h3>
+      <div class="smalltext">This global AI for Good challenge introduces students to Microsoft’s AI for Good initiatives, empowering them to solve a problem in the world with the power of AI.
+
+</div>
+      <a href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+        <button class="tutorial-info-start tutorial-gray">View Resources</button>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<br>
+
+<h2>Activities Powered by AI and ML</h2>
+<table style="border: 1; width: 100%">
+<tbody>
+  <tr style="font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal">
+    <td>Activity</td>
+    <td>Description</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.microsoft.com/en-us/ai/seeing-ai" target="_blank">Seeing AI</a></td>
+    <td>A free app that narrates the world around you in a variety of languages.</td>
+  </tr>
+  <tr>
+    <td><a href="https://quickdraw.withgoogle.com/" target="_blank">Quick, Draw!</a></td>
+    <td>Can a neural network learn to recognize doodling?</td>
+  </tr>
+  <tr>
+    <td><a href="https://teachablemachine.withgoogle.com/" target="_blank">Teachable Machine</a></td>
+    <td>Train a computer to recognize your own images, sounds, and poses.</td>
+  </tr>
+  <tr>
+    <td><a href="https://experiments.withgoogle.com/collection/ai" target="_blank">AI Experiments with Google</a></td>
+    <td>Start exploring machine learning through pictures, drawings, language, music, and more.</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.zooniverse.org/projects/meredithspalmer/snapshot-mountain-zebra/classify?reload=0&amp;workflow=11445" target="_blank">Zooniverse - Snapshot Mountain Zebra</a></td>
+    <td>Help protect the endangered Cape Mountain Zebra by identifying the different animals in the images.</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+
+<h2>Teach and Learn about AI</h2>
+<table style="border: 1; width: 100%">
+<tbody>
+  <tr style="font-size: 16px; font-weight: bold; background: #ececec; color: dark-charcoal">
+    <td>Name</td>
+    <td>Description</td>
+    <td>Audience</td>
+  </tr>
+  <tr>
+    <td><a href="https://aka.ms/minecrafthourofcode" target="_blank">Minecraft AI for Good</a></td>
+    <td>Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings. (Requires Minecraft: Education Edition)</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.microsoft.com/en-us/store/workshops-training-and-events/students#page=1&pageSize=24&program=201&topic=20042049" target="_blank">Free virtual workshops from Microsoft</a></td>
+    <td>Spark curiosity with free  STEM and coding workshops.</td>
+    <td>K-12</td>
+  </tr>
+  <tr>
+    <td><a href="https://machinelearningforkids.co.uk/" target="_blank">Machine Learning for Kids</a></td>
+    <td>Train a machine learning model with text, numbers, or images, and use it to make games in Scratch.</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.ibm.com/ibm/responsibility/initiatives/activitykits/machine-learning-for-kids/" target="_blank">IBM: Machine Learning for Kids</a></td>
+    <td>IBM: Machine Learning for Kids</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.exploringcs.org/for-teachers-districts/artificial-intelligence" target="_blank">ECS: Artificial Intelligence (AI)</a></td>
+    <td>A new alternate curriculum unit for the Exploring Computer Science (ECS) curriculum.</td>
+    <td>High school</td>
+  </tr>
+  <tr>
+    <td><a href="https://course.elementsofai.com/" target="_blank">Elements of AI</a></td>
+    <td>A series of free online courses created by Reaktor and the University of Helsinki.</td>
+    <td>High school</td>
+  </tr>
+  <tr>
+    <td>
+    <a href="http://cognimates.me/home/" target="_blank">Cognimates</a></td>
+    <td>An AI education platform for building games, programming robots and training.</td>
+    <td>K-12 (Reading required)</td>
+  </tr>
+</tbody>
+</table>
+
+<br>
+<br>
+
+<h3>AI for Oceans: Behind the Scenes</h3>
+<p>Levels 2-4 use a pretrained model provided by the <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md" target="_blank">MobileNet</a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks" target="_blank">convolutional neural network</a> that has been trained on <a href="http://www.image-net.org/" target="_blank">ImageNet</a>, a dataset of over 14 million images hand-annotated with words such as "balloon" or "strawberry". In order to customize this model with the labeled training data the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning" target="_blank">Transfer Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels, to obtain a list of annotations that are most likely to apply to it. Then, for a new image, we feed it to MobileNet and compare its resulting list of annotations to those from the training dataset. We classify the new image with the same label (such as "fish" or "not fish") as the images from the training set with the most similar results.</p>
+<p>Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine" target="_blank">Support-Vector Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").</p>
+<p><a href="#top">[Back to top]</a></p>
+</div>
+<!--
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_ethics1 }}
+
+</div>
+
+<div style="clear: both"></div>
+<div class="col-50" style="float: left; padding: 10px; margin-bottom: 40px">
+
+{{ ai_vid_ethics2 }}
+
+</div>
+
+
+<div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/amanda-askell.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Dr. Amanda Askell</strong>
+    <br>
+    Research Scientist in Policy, OpenAI
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Inioluwa Deborah Raji</strong>
+    <br>
+    AI researcher & Mozilla Fellow
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/mehran-sahami.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Mehran Sahami</strong>
+    <br>
+    Professor and Associate Chair for Education in Computer Science, Stanford University
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/natasha-crampton.jpg" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Panelist:</i>
+    <br>
+    <strong>Natasha Crampton</strong>
+    <br>
+    Chief Responsible AI Officer, Microsoft
+    </p>
+  </div>
+  <div class="col-20" style="padding-right:20px; margin-bottom:20px; text-align:center">
+    <img src="/images/avatars/pat-panel.png" style="width:90%; border-radius:50%; border: 7px solid #a69bc1">
+    <p style="text-align:center">
+    <i>Moderator:</i>
+    <br>
+    <strong>Pat Yongpradit</strong>
+    <br>
+    Chief Academic Officer, Code.org
+    </p>
+  </div>
+  <div style="clear: both; margin-bottom: 20px"></div>
+
+
+-->

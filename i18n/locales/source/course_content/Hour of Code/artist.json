@@ -1,50 +1,56 @@
 {
-  "https://studio.code.org/s/artist/stage/1/puzzle/1": {
+  "https://studio.code.org/s/artist/lessons/1/levels/1": {
     "short_instructions": "Welcome to Artist! First off, let's try to make a simple square using the turn right block and move forward block. Each side should be 100 pixels long."
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/2": {
+  "https://studio.code.org/s/artist/lessons/1/levels/2": {
     "short_instructions": "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides.",
     "long_instructions": "Draw this diamond with 120 and 60 degree angles and 150 pixel long sides."
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/3": {
+  "https://studio.code.org/s/artist/lessons/1/levels/3": {
     "short_instructions": "Can you draw this hexagon with 100 pixel sides and 60 degree turns?",
     "long_instructions": "Can you draw this hexagon with 100 pixel sides and 60 degree turns?"
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/4": {
+  "https://studio.code.org/s/artist/lessons/1/levels/4": {
     "short_instructions": "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?",
     "long_instructions": "Now you've got a new block to play with, the loop. This will repeat a set of commands. What happens if you loop these commands 6 times?"
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/5": {
+  "https://studio.code.org/s/artist/lessons/1/levels/5": {
     "short_instructions": "How many times do you need to loop this diamond to draw the flower?",
     "long_instructions": "How many times do you need to loop this diamond to draw the flower?"
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/6": {
+  "https://studio.code.org/s/artist/lessons/1/levels/6": {
     "short_instructions": "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond.",
     "long_instructions": "Notice how we simplified the diamond code by turning it into a loop. You can loop that whole sequence 12 times to draw the flower. Hint: You'll need to turn 30 degrees after your diamond loop so you don't keep drawing over the same diamond."
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/7": {
+  "https://studio.code.org/s/artist/lessons/1/levels/7": {
     "short_instructions": "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping.",
     "long_instructions": "Loop this hexagon code 6 times to create the design. How many degrees will you need to turn each time? Hint: divide the number of degrees in a circle by the number of times you are looping."
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/8": {
+  "https://studio.code.org/s/artist/lessons/1/levels/8": {
     "short_instructions": "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart",
     "long_instructions": "A function is another programming tool to help you avoid repeating yourself. This function draws a flower, so you can use it any time you want to draw a flower. Use this and the new jump block to draw these flowers. Hint: The flowers are 150 pixels apart",
-    "function_names": {
-      "draw a flower": "draw a flower"
+    "function_definitions": {
+      "draw a flower": {
+        "name": "draw a flower"
+      }
     }
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/9": {
+  "https://studio.code.org/s/artist/lessons/1/levels/9": {
     "short_instructions": "Here's a function called \"Draw a shape\" that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?",
     "long_instructions": "Here's a function called `Draw a shape` that we've programmed to draw hexagons. Run the code to see what it does and then experiment with the function to see what happens. Can you make it draw a pattern of squares, triangles, or octagons?",
-    "function_names": {
-      "draw a shape": "draw a shape"
+    "function_definitions": {
+      "draw a shape": {
+        "name": "draw a shape"
+      }
     }
   },
-  "https://studio.code.org/s/artist/stage/1/puzzle/10": {
+  "https://studio.code.org/s/artist/lessons/1/levels/10": {
     "short_instructions": "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!",
-    "long_instructions": "Now go ahead and make whatever picture you'd like! You've even got an empty function that you can make do whatever you want!",
-    "function_names": {
-      "my function": "my function"
+    "long_instructions": "Now go ahead and make whatever picture you'd like! You've even got some new blocks and an empty function that you can make do whatever you want!",
+    "function_definitions": {
+      "my function": {
+        "name": "my function"
+      }
     }
   }
 }

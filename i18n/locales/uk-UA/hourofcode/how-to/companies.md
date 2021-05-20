@@ -1,100 +1,185 @@
 ---
-title: Як провести Годину коду - компанії
-layout: wide
-nav: how_to_nav
+title: Година коду "Посібник для компаній"
 ---
 
 {{ signup_button }}
 
-# Як принести Годину коду до своєї компанії
+# Як ваша компанія може взаємодіяти з Годиною коду
 
-### Find out how you and your employees can inspire students to try computer science!
+### Дізнайтеся, як ви та ваші співробітники можете надихнути студентів спробувати себе в інформатиці!
 
 * * *
 
-## Connect with local classrooms and volunteer for the Hour of Code
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Під час кампанії "Година коду" ваша компанія може допомогти підвищити обізнаність про рух інформатики. Незалежно від того, чи є ви добровольцем як приватна особа чи плануєте захід для своєї компанії, усі ваші зусилля можуть мати величезний вплив на спосіб, яким молоді жінки та студенти з маргіналізованих расових та етнічних груп бачать інформатику та власний потенціал.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }}) <br /> <br />
+- [Заохочуйте співробітників волонтерити в класі](#encourage-employees)
+- [Пов’яжіть свою компанію зі школою](#connect-with-a-school)
+- [Проведіть власну подію "Година коду"](#host-hour-of-code)
+- [Рекламуйте Годину коду](#promote-hour-of-code)
+- [Більше способів підтримати Годину коду](#support-hour-of-code)
 
-For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+* * *
 
-## Additional ways companies can support the Hour of Code
+<a id="encourage-employees"></a>
 
-- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
-- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+## Заохочуйте співробітників волонтерити в класі
 
-# How to host an Hour of Code event with students
+[![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-## 1. Promote your Hour of Code
+Одним із найефективніших способів взяти участь у «Годині коду» є волонтерська робота в місцевому класі, особисто або фактично. Найкраще те, що вам не потрібно бути інженером, щоб стати волонтером. Ви все ще можете надати значущий досвід студентам, поділившись власним досвідом кар’єри та тим, як CS або технології вплинули на вашу роль.
 
-- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
-- Encourage software engineers at your company to visit a local classroom to help lead an Hour of Code and inspire students to study computer science. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+[<button>Зареєструйтесь на волонтерство</button>]({{ urls/volunteer }})
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+Щойно волонтер реєструється, викладач може переглянути свій профіль на нашій [ карті волонтерів ](https://code.org/volunteer/local) - тому профілі слід подавати якомога повніше. Якщо ви добре підходить для їхнього класу, викладач зв’яжеться з вами через платформу (ми ніколи не передамо вашу адресу електронної пошти вчителю). Потім ви можете узгодити деталі безпосередньо з викладачем навколо [, як найкраще волонтерити у своєму класі ](https://hourofcode.com/us/how-to/volunteers).
 
-## 3. Вибрати діяльність
+Щоб отримати додаткові вказівки щодо волонтерської діяльності та зразків обміну повідомленнями, щоб зацікавити вашу компанію Годою коду, перегляньте наш [ посібник для корпоративних партнерів ]({{ localized_files/hoc_corporate_toolkit }}).
 
-We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+* * *
 
-**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a id="connect-with-a-school"></a>
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+## Пов’яжіть свою компанію зі школою
 
-## 4. Plan your technology needs - computers are optional
+Вам не потрібно використовувати нашу карту волонтерів, щоб зв’язатись із класом чи школою. Часто, ми рекомендуємо починати на місцевому рівні. Подумайте, чи є школи, до яких ви або ваші співробітники мають тісний зв’язок, наприклад, альма-матер, дитяча школа чи організація чи школа, орієнтована на обслуговування населення, яке в історичному плані мало представлене в галузі інформатики.
 
-Найкращий варіант Години коду включає підключені до Інтернету комп'ютери. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-**Plan Ahead!** Do the following before your event starts:
+Звідти ви можете відвідати веб-сайт школи, щоб знайти відповідні контакти, щоб зв’язатися з такими адміністраторами, як директор чи заступник директора, викладачі технологій або інформатики, або навіть з PTSA школи. Ви також можете співпрацювати з такими організаціями, як Code Club, ІТ філіями університетів та багато іншого для проведення спільних заходів.
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
-- Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Не маєте достатньо пристроїв?** Застосовуйте [парне програмування](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+Якщо вам не вдається встановити зв’язок зі школою, [ зв’яжіться з нами ](https://support.code.org/hc/en-us/requests/new), і ми зв’яжемо вас із один з наших місцевих партнерів, якщо це можливо.
 
-## 5. Start your Hour of Code off with an inspiring video
+* * *
 
-Запустіть свою Годину коду, надихнувши учасників та обговоривши, як інформатика впливає на всі сторони нашого життя. Share more about what inspired you to pursue computer science and your role at your company.
+<h4><font color="00adbc"><i>«Я ЛЮБИВ бачити, наскільки схвильованими були діти. Дивовижно було те, що вчителі помітили, що деякі студенти, які не так добре навчались, перевершувались тим, що думали як розробник, і допомагали іншим - даючи їм можливість почуватися впевнено ".</i></font></h4>
 
-**Покажіть надихальні відео:**
+-Година коду волонтер
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Знайди більше мотиваційних відео [тут](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+* * *
 
-**Ideas to introduce your Hour of Code activity to students:**
+<a id="host-hour-of-code"></a>
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on.
-- If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+## Проведіть власну подію "Година коду"
+
+Якщо ви хочете пройти зайву милю, ваша компанія також може провести подію "Година коду". Не існує конкретної формули для проведення заходу, тож ми закликаємо вас до творчості! З огляду на, що у нас невеликий (але потужний!) штат, У Code.org немає команди, яка займається координацією подій "Години Кодексу". Однак ось кілька порад, щоб розпочати.
+
+### 1. Перегляньте це відео <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+### 2. Визначте дату, формат та місце проведення вашої події
+
+Ми бачили події, які [ віртуальні ](https://hourofcode.com/us/how-to/virtual) або особисто, в офісі компанії або проводяться в спільноті, і для студентів різного віку! Ви також можете подивитися, що ще <a href = "https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code -to-students-worldwide-4641325542cf "> корпоративні партнери </a> та [ донори ](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love -for-2019-s-hour-of-code-73a3c088f10f) робили раніше для деяких надихаючих ідей.
+
+<br />
+
+#### Зразок порядку денного:
+
+| Час | Пункт порядку денного | | \---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | | 1-5 хвилин | Показати [ надихаюче відео ](https://hourofcode.com/us/promote/resources#videos) |   
+| 5-10 хвилин | Представтесь і дізнайтеся більше про студентів: де ви працюєте, чим займаєтесь і що найбільше любите у своїй роботі? Що чи хто вас надихнув? Як ти зацікавився інформатикою? Чи був у вас наставник? Задайте студентам запитання та залиште час на запитання та відповіді. |   
+| 30-60 хвилин | Код! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | | 1-3 хвилини | Подякуйте всім та поділіться натхненними напутніми словами. Роздайте будь-який із вашої компанії ([ наклейки ](#celebrate) - це чудово)! | | <br />
+
+#### Інші ідеї, які потрібно додати до своєї події
+
+- Поясніть, як технологія впливає на наше життя, на прикладах, про які піклуватимуться студенти різного походження - розповідайте про технології, які рятують життя, допомагають людям, пов’язують людей. 
+- Якщо ви технічна компанія, демонструйте веселі та інноваційні продукти, над якими працює ваша компанія. Якщо ви не технічна компанія, обговоріть, як ваша компанія використовує технологію для вирішення проблем та досягнення цілей.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Якщо у вас є група співробітників, яка буде проводити ваші заходи або волонтерити у місцевій школі, подумайте замовити <a href = "http://blog.code.org/post/132608499493/hour-of-code-shirts-and -докладніше "> спеціальні футболки </a> для ваших співробітників.
 
-## 6. Code!
+### 3. Сплануйте свої технологічні потреби
 
-**Скеруйте учасників до заняття**
+[![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
-- For younger students, load the activity page ahead of time or save it as a bookmark.
+#### Пристрої:
 
-**When participants come across difficulties it's okay to respond:**
+Найкращий варіант Години коду включає підключені до Інтернету комп'ютери. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Для від’єднаних дій просто відфільтруйте розділ «Технологія Класу», щоб показати параметри «Немає комп’ютерів та пристроїв».
 
-- «Я не знаю. З'ясуймо це разом.»
-- «Вчитися програмування — це як вчитися нової мови: ви не будете володіти цим вільно одразу.»
+- **Тестуйте діяльність** на комп’ютерах або пристроях. Переконайтесь, що вони працюють належним чином у браузерах зі звуком та відео.
+- **Не вистачає пристроїв?** Використовуйте парне програмування. Коли учні працюють спільно, вони допомагають один одному і менше покладаються на вчителя. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
+- **Надайте навушники** учасникам або попросіть їх взяти їх із собою, якщо вони намагатимуться підручників, які найкраще працюють зі звуками.
+- **Маєте низьку пропускну здатність**? Плануйте показувати відео напередодні заходу, щоб кожен учасник не завантажував власне відео. Або спробуйте відключені / офлайн-дії.
 
-**Що робити, якщо хтось впорався швидше?**
+#### Віртуальні події:
 
-- They can try another Hour of Code activity at hourofcode.com/learn.
-- Or, ask them to help a friend who are having trouble with the activity.
+Якщо ваша подія буде віртуальною, вам потрібно буде визначитися з платформою конференції (і протестувати її) перед подією. Це може вплинути на кількість студентів, яких ви почуваєте комфортно, тому краще визначити це перед тим, як запросити в клас або рекламувати вашу подію. Щоб отримати ідеї щодо запуску віддаленої Години коду, прочитайте наші [ поради щодо віртуальної події Години коду](https://hourofcode.com/us/how-to/virtual).
 
-## 7) Урочисто відзначте
+### 4. Виберіть вид діяльності
+
+Ми пропонуємо різноманітні цікаві навчальні посібники для всіх вікових груп та рівнів досвіду під керівництвом студентів. Студенти популярно пробувати самостійні підручники, хоча, можливо, ви захочете розпочати подію з [ надихаючого відео](https://hourofcode.com/us/promote/resources#videos) для всіх щоб переглянути разом.
+
+<a href="https://hourofcode.com/us/learn"> Дослідіть діяльність </a> і заздалегідь вирішіть, чи хочете ви вибрати єдиний підручник для всіх своїх гостей , або дозвольте кожній дитині вибрати свій. <strong>Усі заходи Години коду</strong> вимагають мінімального часу для підготовки та проводяться самостійно - дозволяючи учасникам працювати у своєму власному темпі та на рівні кваліфікації.</p>
+
+<p><a href="{{ urls/learn }}"><img src="/images/fit-700/tutorials.png"></a></p>
+
+<p>Отримавши надійну дорожню карту для своєї події, ви можете почати запрошувати учнів, школу чи більшу громаду. Ми рекомендуємо починати з місцевої школи, з якою ви маєте стосунки, або <a href="https://hourofcode.com/us/map"> переглядати нашу карту </a> подій Hour of Code.
+
+<a id="celebrate"></a>
+
+### 5. Святкувати
+
+[![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
+
+Після того, як студенти чи гості закінчили свою «Годину кодексу», пора відсвяткувати їх успіх. Ось кілька ідей, щоб зробити вашу подію ще цікавішою:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
+- [ Роздрукуйте наклейку "Я зробив годину коду!" ]({{ promo/resources stickers }}) або знайдіть інші призи та обмін на <a href = "https://code.org/shop">Code.org Amazon Store </a>. 
 - Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
+
+* * *
+
+<a id="promote-hour-of-code"></a>
+
+## Рекламуйте Годину коду
+
+Одним з найкращих способів допомогти є поширення інформації та просування Години коду.
+
+[![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
+
+### 1. Зареєструйте свою подію
+
+Підписавшись на подію "Година коду", ви отримаєте корисне повідомлення електронною поштою з новинами та порадами щодо проведення успішної Години коду. Це також те, як ви можете повідомити місцеві школи чи батьків, що ви проводите захід поблизу них.
+
+### 2. Публікація в соціальних мережах
+
+Допоможіть підвищити обізнаність про рух інформатики за допомогою цього зразка вмісту, який можна розмістити в соціальних мережах та поділитися зі своїми працівниками.
+
+#### Година коду загальне оголошення
+
+- Інформатика змінить наш світ. Допоможіть студентам бути частиною цієї зміни, починаючи з #HourOfCode. https://hourofcode.com/ 
+- Не просто використовуйте технологію - навчіться будувати її. Допоможіть комусь розпочати з #HourOfCode. https://hourofcode.com/ 
+
+#### Статистика
+
+- Чи знали ви, що лише 45% шкіл США викладають інформатику? Дайте кожному студентові можливість вивчити один #HourOfCode https://hourofcode.com/ 
+- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- 67% обчислювальних робіт у США перебувають не в технічному секторі. Допоможіть включити інформатику до стандартної навчальної програми за допомогою #HourOfCode https://hourofcode.com/ 
+
+#### Створення власний
+
+- Один #HourOfCode може призвести до [заповнити свою історію]. https://hourofcode.com/ 
+- Я підтримую #HourOfCode, бо [вкажіть свої думки]. Приєднуйтесь до нас https://hourofcode.com 
+
+#### Спеціально для інженера
+
+- Якщо ваш перший рядок коду змінив ваше життя, допоможіть студентам поруч із вами написати свій перший #HourOfCode https://code.org/volunteer 
+- Якщо ви навчилися кодувати - яка ваша історія? Надихніть студента поруч із вами через перший #HourOfCode https://code.org/volunteer
+
+<a href="https://hourofcode.com/promote/resources#posters">Докладніше</a> про плакати, відео, наклейки та інші способи просування вашої події до своєї спільноти.
+
+* * *
+
+<a id="support-hour-of-code"></a>
+
+## Більше способів підтримати Годину коду
+
+[![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
+
+- Поширюйте обізнаність, одягаючи [ сувенірну продукцію Code.org ](https://store.code.org/) (усі виручені кошти спрямовані на підтримку більшої кількості студентів, які отримують доступ до інформатики).
+- Вибирайте переваги Code.org, коли робите покупки на [ AmazonSmile ](https://code.org/donate/amazonsmile). 
+- Попросіть свого генерального директора надіслати електронний лист по всій компанії, в якому підкреслюється важливість інформатики та заохочується співробітники до поширення інформації.
+- Побавтесь з колегами в [кампанія дарування](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [Підпишіть цю петицію](https://code.org/promote), щоб переконатися, що кожен студент має можливість вивчати інформатику. 
+- [Пожертвуйте](https://code.org/donate) на Code.org, щоб ми могли зробити наші освітні ресурси безкоштовними та доступними для всіх. 
+
+Щоб отримати додаткові пропозиції щодо підтримки Code.org та Години коду, відвідайте сторінку [ Code.org/Help ](https://code.org/help)
 
 {{ signup_button }}

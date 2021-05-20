@@ -1,0 +1,20 @@
+name 'courseF_intro_apps'
+editor_experiment ''
+display_name 'Sprite Lab Apps'
+description 'Welcome to CS Fundamentals! These projects were all created with Sprite Lab. Try them out now to see what is possible. By the end of this course, you will be able to make your own projects like these... and more!'
+
+sublevels
+level 'courseF_apps_pet'
+level 'courseF_apps_card'
+level 'courseF_apps_chatbot'
+level 'courseF_apps_madlib'
+level 'courseF_apps_aquarium'
+level 'courseF_apps_collector'
+level 'CourseF_app_computer'
+
+teacher_markdown <<MARKDOWN
+# Choice Level Overview
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but may work through as many as they (or you) like.
+
+The choices here take students to sample apps that they can explore. This activity is intended to coordinate with the Exploring Apps worksheet, found in the [lesson plan](.././).
+MARKDOWN

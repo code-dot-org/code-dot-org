@@ -10,6 +10,12 @@
   "danceFeedbackNeedDifferentDance": "Sinun täytyy käyttää eri tanssia.",
   "danceFeedbackNeedEveryTwoMeasures": "Varmista, että käytät `joka toisella tahdilla`-blokkia.",
   "danceFeedbackNeedMakeANewDancer": "Käytä `tee uusi`-blokkia luodaksesi toisen tanssijan.",
-  "danceFeedbackKeyEvent": "",
-  "measure": ""
+  "danceFeedbackKeyEvent": "Varmista, että liität jonkun koodin <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> blokkiin ja paina näppäintä, kun tanssisi on käynnissä.",
+  "danceFeedbackDidntPress": "Varmista, että painat nuolinäppäimiä, kun tanssisi on käynnissä.",
+  "danceFeedbackPressedKey": "Painoit näppäintä, mutta tanssijasi ei vastannut.",
+  "danceFeedbackNeedTwoDancers": "Sinun täytyy tehdä kaksi tanssijaa.",
+  "danceFeedbackOnlyOneDancerMoved": "Vain yksi tanssijoistasi liikkui.",
+  "danceFeedbackNeedLead": "Sinun täytyy myös luoda yksi päätanssija blokilla <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "Sinun täytyy myös luoda taustatanssijoiden ryhmä blokilla <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
+  "danceFeedbackSetSize": "Sinun täytyy muuttaa ainakin yhden tanssijan kokoa sen jälkeen, kun musiikki alkaa."
 }

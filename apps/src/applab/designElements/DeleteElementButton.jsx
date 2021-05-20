@@ -4,19 +4,6 @@ import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
-const styles = {
-  right: {
-    float: 'right'
-  },
-  confirming: {
-    marginLeft: 20
-  },
-  red: {
-    backgroundColor: color.red,
-    color: color.white
-  }
-};
-
 /**
  * A delete button that will also ask for confirmation when shouldConfirm is
  * true.
@@ -78,5 +65,18 @@ class DeleteElementButton extends React.Component {
     );
   }
 }
+
+const styles = {
+  right: {
+    float: 'right'
+  },
+  confirming: {
+    marginLeft: 20
+  },
+  red: {
+    backgroundColor: color.red,
+    color: color.white
+  }
+};
 
 export default Radium(DeleteElementButton);

@@ -20,6 +20,7 @@ mt-MT:
     fil-Blog ta l'Edukaturi
   dashboard_landing_video_player: Ittestja il-Video Plyer il-gdid taghna flis-skola
     tieghek
+  dashboard_progress_completed_perfect: Komplut, perfett
   dashboard_sections_table_section: It-Taqsima
   dashboard_sections_table_grade: Grad
   dashboard_sections_table_course: Kors
@@ -40,9 +41,13 @@ mt-MT:
   20-hour_name: Kors Aċċellerat
   header_courses: Korsijiet
   header_project_gallery: Il-Proġetti
+  header_legal_privacy: Poliza dwar il-Privatezza
+  header_legal_tos: It-Termini tas-Servizz
   user_header_label: Insellmulek %{username}
   user_header_settings: Il-kont tiegħi
   user_header_logout: Oħroġ il-barra
   user_header_signin: Idħol fis-sistema
   hoc2018_dance_teacher_resources_tile1_button: Pjan tal-Lezzjoni
   hoc2018_dance_teacher_resources_tile2_button: Attivita bla kompjuter
+  footer_privacy_policy: Poliza dwar il-Privatezza
+  footer_terms: It-Termini

@@ -1,0 +1,18 @@
+{
+  "func": "setChecked",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "checked"
+  ],
+  "params": [
+    "\"id\"",
+    "true"
+  ],
+  "dropdown": {
+    "1": [
+      "true",
+      "false"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:13:48.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Reflection\r\n\r\nThink about examples of Machine Learning you may have encountered in the past such as a website that recommends what video you may be interested in watching next. Are the recommendations ever wrong or unfair? Give an example and explain how this could be addressed. ",
+    "encrypted_solution": "owrXiF8VHupV8tMrXRvycEfJAF9YaXo5RdhaXFGwy8XubHc9flb39P4S3H6+\nuM7kFZmMZNDSxDYYsQu7+TJnnqG97FH09stW6WX8md5uuz+5YHHCXCSQ2Kp6\nTk0xrPAnSVSwv2qvCIzQKhvxrSxhL5JUXe+LrPwJpUTUlQKcfjNqqmE2tDcS\n9nbnawTymQUFaNC5ERMp3DsnJFHGfWUIWK59HgkDKMHcR4/8u+mDxOLY5qIV\nP5sSAUW40HkRwnaxg7qIG/isCPkEMKykyErVwQ==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21694,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-14 18:56:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-13 21:07:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-17 16:43:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-02-26 16:45:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

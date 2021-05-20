@@ -4,6 +4,6 @@
     <arg name="this sprite" type="Sprite"/>
     <description/>
   </mutation>
-  <title name="NAME">acting goofy</title>
+  <title name="NAME" id="acting goofy">acting goofy</title>
   <statement name="STACK"/>
 </block>

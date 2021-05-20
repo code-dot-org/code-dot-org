@@ -1,0 +1,2753 @@
+{
+  "script": {
+    "name": "csd2-virtual",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "has_verified_resources": true,
+      "project_sharing": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:52 UTC",
+    "seeding_key": {
+      "script.name": "csd2-virtual"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd2_1",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: Web Content and HTML"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "csd2_2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Styling and CSS"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Exploring Web Pages",
+      "name": "Exploring Web Pages",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Intro to HTML",
+      "name": "Intro to HTML",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Headings",
+      "name": "Headings",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Styling Text with CSS",
+      "name": "Styling Text with CSS",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Images",
+      "name": "Images",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Websites for Expression ",
+      "name": "Websites for Expression ",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Styling Elements with CSS",
+      "name": "Styling Elements with CSS",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Project - Building a Webpage",
+      "name": "Project - Building a Webpage",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Purpose of a Websites",
+      "name": "Purpose of a Websites",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Purpose of a Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "CSS Classes",
+      "name": "CSS Classes",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Linking and Navigation",
+      "name": "Linking and Navigation",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Project - Website for a Purpose",
+      "name": "Project - Website for a Purpose",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "key": "Peer Review and Final Touches",
+      "name": "Peer Review and Final Touches",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Web Sample Pages_2020_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Sample Pages_2020_virtual"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Web Sample Pages_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything_virtual"
+        ],
+        "progression": "Experiment with Web Lab"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU2 - Type Anything_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSDU2 - Type Anything_virtual"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 1_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 1_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "Intro to Web Lab - Part 1_virtual"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Inspector Warm Up_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Inspector Warm Up_virtual"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 2_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 2_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "Intro to Web Lab - Part 2_virtual"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs_virtual"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 HTML Adding Paragraphs_virtual"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_virtual"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 HTML Adding Paragraphs pt 2_virtual"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Web Debugging_virtual"
+        ],
+        "progression": "Video: Debugging"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Debugging_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Web Debugging_virtual"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs_virtual"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 HTML Debug Paragraphs_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 HTML Debug Paragraphs_virtual"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading debug_virtual"
+        ],
+        "progression": "Using HTML Tags"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading debug_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Heading debug_virtual"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading Demo_virtual"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Demo_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Heading Demo_virtual"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading Sizes_virtual"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Sizes_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Heading Sizes_virtual"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Web Headings practice_2020_virtual"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Headings practice_2020_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Web Headings practice_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2020_virtual"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Header Size MC_2018_2019_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Heading Test_virtual"
+        ],
+        "progression": "Headings"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Heading Test_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Heading Test_virtual"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Web Headings challenge_2020_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Headings challenge_2020_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Web Headings challenge_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS explore CSS_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 CSS explore CSS_virtual"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video: Intro to CSS_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video: Intro to CSS_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "Video: Intro to CSS_virtual"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_virtual"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style h1_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 text style h1_virtual"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_virtual"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style h3_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 text style h3_virtual"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style size_virtual"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style size_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 text style size_virtual"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Video: Intro to CSS Part 2_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Video: Intro to CSS Part 2_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "Video: Intro to CSS Part 2_virtual"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 add file_virtual"
+        ],
+        "progression": "Styling your Website"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add file_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 add file_virtual"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_2020_virtual"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS practice_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 CSS practice_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_virtual"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web CSS Assessment_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Web CSS Assessment_virtual"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_2020_virtual"
+        ],
+        "progression": "Styling Text"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS challenge_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 CSS challenge_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 1_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag 1_virtual"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Credit_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image Credit_virtual"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Debug_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag Debug_virtual"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image choose name_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image choose name_virtual"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 2_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image Tag 2_virtual"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_2020_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image practice_pilot_2020_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image practice_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_virtual"
+        ],
+        "progression": "Adding Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image assessment_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image assessment_virtual"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_2020_virtual"
+        ],
+        "progression": "Adding Images Challenges"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Image challenge_pilot_2020_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Image challenge_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style sample_virtual"
+        ],
+        "progression": "Exploring more CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style sample_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style sample_virtual"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style bgcolor_virtual"
+        ],
+        "progression": "Exploring more CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style bgcolor_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style bgcolor_virtual"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style body_virtual"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style body_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style body_virtual"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style float_virtual"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style float_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style float_virtual"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style width_virtual"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style width_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style width_virtual"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style practice_pilot_2020_virtual"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style practice_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style practice_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2 add style_virtual"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add style_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 add style_virtual"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 layout style challenge_pilot_2020_virtual"
+        ],
+        "progression": "Layout with CSS"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 layout style challenge_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 layout style challenge_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 project guide_2018_2019_pilot_2020_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project guide_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 project guide_2018_2019_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 upload images_virtual"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 upload images_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 upload images_virtual"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 add content_virtual"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add content_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 add content_virtual"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS_virtual"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 CSS_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 CSS_virtual"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 project review_virtual"
+        ],
+        "progression": "Website Project"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project review_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 project review_virtual"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 publish video_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 publish video_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 publish video_virtual"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 project share_virtual"
+        ],
+        "progression": "Publishing Your Website"
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 project share_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 project share_virtual"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Purpose of a Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes sample_virtual"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes sample_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 classes sample_virtual"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes modify_virtual"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes modify_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 classes modify_virtual"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes spring_virtual"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes spring_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 classes spring_virtual"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2 classes summer_virtual"
+        ],
+        "progression": "Styling with Classes"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 classes summer_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 classes summer_virtual"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 RGB intro_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 RGB intro_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 RGB intro_virtual"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 link demo_virtual"
+        ],
+        "progression": "Exploring Links"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 link demo_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 link demo_virtual"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 making links_virtual"
+        ],
+        "progression": "Links and Navigation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 making links_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 making links_virtual"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 naming links_virtual"
+        ],
+        "progression": "Links and Navigation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 naming links_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 naming links_virtual"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 nav bar_virtual"
+        ],
+        "progression": "Links and Navigation"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 nav bar_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 nav bar_virtual"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U2 adding pages_virtual"
+        ],
+        "progression": "Adding Pages"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 adding pages_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 adding pages_virtual"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 naming pages_virtual"
+        ],
+        "progression": "Adding Pages"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 naming pages_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 naming pages_virtual"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 external links_virtual"
+        ],
+        "progression": "Challenge: External Links"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 external links_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 external links_virtual"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web upload images multi_virtual"
+        ],
+        "progression": "Upload Your Images"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web upload images multi_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD web upload images multi_virtual"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 create page_virtual"
+        ],
+        "progression": "Create Your Pages"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 create page_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD U2 create page_virtual"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web add html_virtual"
+        ],
+        "progression": "Add Content"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web add html_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD web add html_virtual"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web add CSS_virtual"
+        ],
+        "progression": "Add Style"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web add CSS_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD web add CSS_virtual"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD web check_virtual"
+        ],
+        "progression": "Check Your Work"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web check_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD web check_virtual"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD Web incorporate feedback_virtual"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web incorporate feedback_virtual"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      },
+      "level_keys": [
+        "CSD Web incorporate feedback_virtual"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Sample Pages_2020_virtual",
+        "script_level.level_keys": [
+          "CSD Web Sample Pages_2020_virtual"
+        ],
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU2 - Type Anything_virtual",
+        "script_level.level_keys": [
+          "CSDU2 - Type Anything_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Web Lab - Part 1_virtual",
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 1_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Inspector Warm Up_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Inspector Warm Up_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Intro to Web Lab - Part 2_virtual",
+        "script_level.level_keys": [
+          "Intro to Web Lab - Part 2_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Adding Paragraphs_virtual",
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Adding Paragraphs pt 2_virtual",
+        "script_level.level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Debugging_virtual",
+        "script_level.level_keys": [
+          "CSD Web Debugging_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 HTML Debug Paragraphs_virtual",
+        "script_level.level_keys": [
+          "CSD U2 HTML Debug Paragraphs_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading debug_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Heading debug_virtual"
+        ],
+        "lesson.key": "Intro to HTML",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Demo_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Heading Demo_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Sizes_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Heading Sizes_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Headings practice_2020_virtual",
+        "script_level.level_keys": [
+          "CSD Web Headings practice_2020_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Header Size MC_2018_2019_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Heading Test_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Heading Test_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Headings challenge_2020_virtual",
+        "script_level.level_keys": [
+          "CSD Web Headings challenge_2020_virtual"
+        ],
+        "lesson.key": "Headings",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS explore CSS_virtual",
+        "script_level.level_keys": [
+          "CSD U2 CSS explore CSS_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video: Intro to CSS_virtual",
+        "script_level.level_keys": [
+          "Video: Intro to CSS_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style h1_virtual",
+        "script_level.level_keys": [
+          "CSD U2 text style h1_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style h3_virtual",
+        "script_level.level_keys": [
+          "CSD U2 text style h3_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 text style size_virtual",
+        "script_level.level_keys": [
+          "CSD U2 text style size_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Video: Intro to CSS Part 2_virtual",
+        "script_level.level_keys": [
+          "Video: Intro to CSS Part 2_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add file_virtual",
+        "script_level.level_keys": [
+          "CSD U2 add file_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS practice_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 CSS practice_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web CSS Assessment_virtual",
+        "script_level.level_keys": [
+          "CSD Web CSS Assessment_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS challenge_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 CSS challenge_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag 1_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 1_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Credit_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image Credit_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag Debug_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag Debug_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image choose name_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image choose name_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image Tag 2_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image Tag 2_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image practice_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image practice_pilot_2020_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image assessment_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image assessment_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Image challenge_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Image challenge_pilot_2020_virtual"
+        ],
+        "lesson.key": "Images",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Websites for Expression ",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style sample_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style sample_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style bgcolor_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style bgcolor_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style body_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style body_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style float_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style float_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style width_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style width_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style practice_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style practice_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add style_virtual",
+        "script_level.level_keys": [
+          "CSD U2 add style_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 layout style challenge_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 layout style challenge_pilot_2020_virtual"
+        ],
+        "lesson.key": "Styling Elements with CSS",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project guide_2018_2019_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 project guide_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 upload images_virtual",
+        "script_level.level_keys": [
+          "CSD U2 upload images_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 add content_virtual",
+        "script_level.level_keys": [
+          "CSD U2 add content_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS_virtual",
+        "script_level.level_keys": [
+          "CSD U2 CSS_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project review_virtual",
+        "script_level.level_keys": [
+          "CSD U2 project review_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 publish video_virtual",
+        "script_level.level_keys": [
+          "CSD U2 publish video_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 project share_virtual",
+        "script_level.level_keys": [
+          "CSD U2 project share_virtual"
+        ],
+        "lesson.key": "Project - Building a Webpage",
+        "lesson_group.key": "csd2_1",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Top Websites_2018_2019_pilot_2020_virtual",
+        "script_level.level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
+        ],
+        "lesson.key": "Purpose of a Websites",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes sample_virtual",
+        "script_level.level_keys": [
+          "CSD U2 classes sample_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes modify_virtual",
+        "script_level.level_keys": [
+          "CSD U2 classes modify_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes spring_virtual",
+        "script_level.level_keys": [
+          "CSD U2 classes spring_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 classes summer_virtual",
+        "script_level.level_keys": [
+          "CSD U2 classes summer_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 RGB intro_virtual",
+        "script_level.level_keys": [
+          "CSD U2 RGB intro_virtual"
+        ],
+        "lesson.key": "CSS Classes",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 link demo_virtual",
+        "script_level.level_keys": [
+          "CSD U2 link demo_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 making links_virtual",
+        "script_level.level_keys": [
+          "CSD U2 making links_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 naming links_virtual",
+        "script_level.level_keys": [
+          "CSD U2 naming links_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 nav bar_virtual",
+        "script_level.level_keys": [
+          "CSD U2 nav bar_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 adding pages_virtual",
+        "script_level.level_keys": [
+          "CSD U2 adding pages_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 naming pages_virtual",
+        "script_level.level_keys": [
+          "CSD U2 naming pages_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 external links_virtual",
+        "script_level.level_keys": [
+          "CSD U2 external links_virtual"
+        ],
+        "lesson.key": "Linking and Navigation",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web upload images multi_virtual",
+        "script_level.level_keys": [
+          "CSD web upload images multi_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 create page_virtual",
+        "script_level.level_keys": [
+          "CSD U2 create page_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web add html_virtual",
+        "script_level.level_keys": [
+          "CSD web add html_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web add CSS_virtual",
+        "script_level.level_keys": [
+          "CSD web add CSS_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web check_virtual",
+        "script_level.level_keys": [
+          "CSD web check_virtual"
+        ],
+        "lesson.key": "Project - Website for a Purpose",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web incorporate feedback_virtual",
+        "script_level.level_keys": [
+          "CSD Web incorporate feedback_virtual"
+        ],
+        "lesson.key": "Peer Review and Final Touches",
+        "lesson_group.key": "csd2_2",
+        "script.name": "csd2-virtual"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

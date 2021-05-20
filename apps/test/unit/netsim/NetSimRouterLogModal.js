@@ -1,6 +1,6 @@
 /** @file Tests for NetSimRouterLogModal */
 import $ from 'jquery';
-import {assert, expect} from '../../util/configuredChai';
+import {assert, expect} from '../../util/deprecatedChai';
 var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');

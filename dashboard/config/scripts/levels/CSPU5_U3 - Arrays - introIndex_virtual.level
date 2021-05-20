@@ -1,0 +1,64 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-03-17T21:25:40.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "appendItem": null,
+      "console.log": null,
+      "declareAssign_x_array_1_4": {
+        "block": "var list = [1,2,3];"
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "short_instructions": "Display the first and last element in the array. Display the number 5 from the array. (Click to see full instructions)",
+    "long_instructions": "# Accessing Items in an Array\r\n\r\nAn array is comprised of many locations. You can individually set or reference the information at each location of your array just like a variable. To tell your locations apart each has a separate number, or **index**, that identifies it.\r\n\r\nArrays in JavaScript are **zero-indexed** which means the first index is 0. This is similar to binary number systems which begin counting at 0. For example an array of 10 items would have indexes 0-9. As a result **the last index is always one less than the length of the array**.\r\n\r\n**Accessing Array Items by Index:** If you know the index of the item you wish to access you can reference it using square brackets `list[index]` . The example below prints the value of the 4th element in the array.  \r\n\r\n![](https://images.code.org/8b2da597fccaeeafb30b04991074cd8b-image-1447365422277.56.45 PM.png)\r\n\r\n# Do This:\r\n\r\n**Starter code** has been provided which creates an array of the numbers 1 through 10\r\n\r\n* Use `console.log` to display the first item in your array.\r\n* Use `console.log` to display the last item  in your array.\r\n* Use `console.log` to display the number 5 from the array.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "slider_speed": "1",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "true",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "debugger_disabled": "false",
+    "start_blocks": "var myArray = [1,2,3,4,5,6,7,8,9,10];\r\n\r\n// Use console.log to display the \r\n// first item, last item, and the \r\n// number 5 from this array",
+    "encrypted_examples": "gXMZh6WpC9OfwewBjxmCHWcqyKCONrkHV8vu1EhUCWi8ZC5Jt57arGN2RP3M\nl4Rv\n",
+    "video_key": "csp_applab_lists_2",
+    "instructions_important": "false",
+    "show_debug_watch": "true",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17335,
+    "name_suffix": "_virtual",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+  <blocks/>
+</Applab>

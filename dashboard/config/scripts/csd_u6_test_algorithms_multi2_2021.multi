@@ -1,0 +1,10 @@
+name 'CSD U6 test algorithms multi2_2021'
+editor_experiment ''
+type 'multi2'
+question 'A class wants to create a program that will display good morning to everyone.  For example, the program will display “Good morning, Dwayne!”, “Good morning, Mari!” for each student.  What TWO programming tools will be the most useful when writing this program?'
+wrong 'event handlers'
+right 'for loops and arrays'
+wrong 'functions with parameters'
+right 'getters/getProperty'
+wrong 'analog to digital conversion'
+

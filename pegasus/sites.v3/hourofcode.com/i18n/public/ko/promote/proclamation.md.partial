@@ -6,55 +6,55 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# 컴퓨터 과학 교육 주간 결의문 샘플
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### 아래는 컴퓨터 과학 교육주간과 그 목표를 지지하는 결의문 샘플로 주의원이나 지역 국회의원들에 의해 활용될 수 있습니다.
 
----
+* * *
 
-#### **RESOLUTION**  
+#### **결의문**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### "컴퓨터 과학 교육 주간"의 목표와 아이디어를 지지
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+컴퓨터 과학 교육주간은 컴퓨터 과학이 우리 사회의 변혁에 매우 중요한 핵심적인 역할을 하고 있으며 컴퓨터 과학이 혁신과 경제적 기회 창출을 가능하게 하고 있음을 강조합니다.
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+컴퓨팅 기술은 현대 문화의 통합적 부분이며 사람이 서로 또한 세상과 상호작용하는 방식을 변화시키고 있습니다.
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+컴퓨터 과학은 산업을 변화시키고, 새로운 상업분야를 만들어 내고, 모든 과학분야에 혁신을 추진하며, 기존의 경제 영역에서 생산성을 강화하고 있습니다.
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+컴퓨터 과학 분야는 미국의 경제 총생산에 크게 기여하는 정보기술 부문을 뒷받침하고 있습니다.
 
-Whereas the field of computer science is a foundational science for the digital age;
+컴퓨터 과학 분야는 디지털 세대를 위한 기초 과학 입니다.
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+정보기술 부문은 새로운 혁신을 연구 개발하여 경제 회복에 도움을 주는 독보적 위치에 있습니다. 
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+컴퓨터 과학 일자리에 대한 전망은 밝으며 전국적으로 500,000개 이상의 컴퓨팅 일자리가 열려 있습니다.
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+학생들에게 고품질 컴퓨터 과학 활동에 참여할 기회를 주는 것은 그들에게 이 분야가 제시하는 풍부한 기회를 접하게 하고 그들의 전 생애 동안 도움이 될 비판적 사고 능력을 키워주는 것입니다.
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+모든 학생들이 초등 학교와 중고등학교에서 컴퓨터 과학을 배우는 데 필요한 수준 높은 선생님과 기술, 나이에 적합한 교육 과정 등을 포함하여 컴퓨터 과학 교육은 철저한 준비가 되어 있어야 합니다.
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+컴퓨터 과학 수업 이수를 졸업 요건으로 포함시키는 것과 컴퓨터 과학 교사를 위한 전문성 개발 등 컴퓨터 과학 교육에는 몇 가지 논의하여야 할 문제가 있습니다.
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+컴퓨터 과학 교육주간 동안 아워오브코드 참여는 컴퓨터 과학 분야를 보다 이해하기 쉽게 배우게 하고 더 많은 학생들에게 컴퓨터 과학을 더 많이 배우도록 북돋아 주는 데 기여할 수 있습니다. 
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+컴퓨터 과학 분야는 여성과 소외된 소수자들에 의한 더 많은 참여를 유도하는 등 매우 큰 공정성 장벽을 다뤄야 합니다. 
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+컴퓨터 과학 분야의 최초의 여성 중 한 명인 그레이스 머레이 호퍼(Grace Murray Hopper)는 새로운 프로그래밍 언어를 만들어 내는데 공헌하였으며, 컴퓨터 과학 분야의 수 많은 성과들을 만들어내는 기초가 된 컴퓨터 시스템의 기초 표준을 만들어내는 선구자 역할을 하였습니다.
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+{{ campaign_date/start_long }} 주간은 그레이스 호퍼의 생일을 기리기 위해 '컴퓨터 과학 교육주간'으로 지정되었습니다. : 이제, 그러므로, 다시 말해 <br />
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+다음과 같이 결의합니다. [하원 또는 상원 의원, 주, 카운티, 시, 학교 위원회]는 --
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) 컴퓨터 과학 교육주간({{ campaign_date/full }}) 지정을 지원합니다.
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) 학교와 교육자, 학부모, 정책 입안자들이 그들 학생들을 아워오브코드에 참여하게 함으로써 컴퓨터 과학 교육주간에 참여할 것을 장려합니다.
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) 교사가 학생들에게 모든 교육 레벨에서 컴퓨터 과학에서의 지속적인 학습 경험을 제공하고 또한 학생들에게 컴퓨터 과학의 개념에 노출되게 하기 위해 첨단 전문성 개발을 받을 수 있는 메커니즘을 학교와 교사, 연구원, 대학, 비즈니스 리더, 정책입안자는 파악해야 합니다.
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) 정책입안자는 졸업 요건을 위해 컴퓨터 과학 수업을 수학 또는 과학 학점으로 계산하는 것을 막는 장벽을 제거해야 합니다.
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) 기존 프로그램을 통하는 방법을 포함하여, 여성과 소수자가 컴퓨터 과학 분야에 참여할 기회를 갖도록 장려합니다.
 
 {{ signup_button }}

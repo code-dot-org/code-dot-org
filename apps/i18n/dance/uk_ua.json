@@ -11,5 +11,12 @@
   "danceFeedbackNeedEveryTwoMeasures": "Переконайся, що використовується блок `every two measures`",
   "danceFeedbackNeedMakeANewDancer": "Використай блок `make new` для створення другого танцюриста.",
   "danceFeedbackKeyEvent": "Переконайтеся, що ви прикріпили код до блоку \"коли ключ\" і натискайте цей \"ключ\" доки ваш танець триває.",
+  "danceFeedbackDidntPress": "Обов’язково натискайте клавіші зі стрілками під час виконання танцю.",
+  "danceFeedbackPressedKey": "Ви натиснули клавішу, але танцівник не зреагував.",
+  "danceFeedbackNeedTwoDancers": "Ви маєте створити двох танцівників.",
+  "danceFeedbackOnlyOneDancerMoved": "Рухався лише один з ваших танцівників.",
+  "danceFeedbackNeedLead": "Ви також маєте створити одного головного танцівника за допомогою блока <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>.",
+  "danceFeedbackNeedBackup": "Ви маєте створити групу другорядних танцівників за допомогою блока <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
+  "danceFeedbackSetSize": "Ви маєте змінити розмір принаймні одного танцівника після початку музики.",
   "measure": "Крок:"
 }

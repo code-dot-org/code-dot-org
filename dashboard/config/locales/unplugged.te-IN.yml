@@ -1,1 +1,22 @@
---- {}
+---
+te:
+  data:
+    unplugged:
+      courseB_unplugged_MRF:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseB_unplugged_loopyMRF:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseC_Unplugged_ScreenOutTheMean:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseD_unplugged_digitalCitizenship:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseF_unplugged_powerOfWords:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseD_unplugged_digitalCitizenship_2018:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseD_unplugged_digitalCitizenship_2019:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: అన్‌ప్లగ్డ్ కార్యాచరణ

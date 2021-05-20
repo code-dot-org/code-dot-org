@@ -1,0 +1,47 @@
+{
+  "ro-RO": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "recuperare"
+        },
+        "outbreak2": {
+          "recovering": "recuperare"
+        },
+        "outbreak3": {
+          "recovering": "recuperare"
+        },
+        "outbreak4": {
+          "recovering": "recuperare",
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "outbreak5": {
+          "recovering": "recuperare"
+        },
+        "outbreak6": {
+          "recovering": "recuperare"
+        },
+        "outbreak7": {
+          "recovering": "recuperare",
+          "moving left and right": "mișcare de la stânga la dreapta",
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "outbreak8": {
+          "recovering": "recuperare",
+          "moving left and right": "mișcare de la stânga la dreapta",
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "outbreak_freeplay": {
+          "recovering": "recuperare",
+          "moving left and right": "mișcare de la stânga la dreapta",
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "recuperare",
+          "moving left and right": "mișcare de la stânga la dreapta",
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        }
+      }
+    }
+  }
+}

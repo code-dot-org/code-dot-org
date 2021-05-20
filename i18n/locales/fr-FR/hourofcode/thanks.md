@@ -1,10 +1,5 @@
 ---
 title: Merci de vous être inscrit(e) pour organiser une Heure de Code !
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Merci de vous être inscrit(e) pour organiser une Heure de Code !

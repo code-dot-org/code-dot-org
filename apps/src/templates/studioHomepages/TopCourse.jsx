@@ -7,6 +7,59 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
 
+// While this is named TopCourse, it really refers to the most recent course
+// or script in which the student or teacher has progress.
+
+class TopCourse extends Component {
+  static propTypes = {
+    isRtl: PropTypes.bool.isRequired,
+    assignableName: PropTypes.string.isRequired,
+    lessonName: PropTypes.string.isRequired,
+    linkToOverview: PropTypes.string.isRequired,
+    linkToLesson: PropTypes.string.isRequired
+  };
+
+  render() {
+    const {
+      assignableName,
+      lessonName,
+      linkToOverview,
+      linkToLesson,
+      isRtl
+    } = this.props;
+    const localeStyle = isRtl ? styles.ltr : styles.rtl;
+
+    return (
+      <div style={styles.card}>
+        <img
+          src={require('@cdo/static/small_purple_icons_fullwidth.png')}
+          style={styles.image}
+        />
+        <div style={styles.name}>{assignableName}</div>
+        <div style={styles.description}>
+          <div>{i18n.topCourseLessonIntro({lessonName})}</div>
+          <div style={{marginTop: 10}}>{i18n.topCourseExplanation()}</div>
+        </div>
+        <div style={[styles.buttonBox, localeStyle]}>
+          <Button
+            __useDeprecatedTag
+            href={linkToOverview}
+            color={Button.ButtonColor.gray}
+            text={i18n.viewCourse()}
+          />
+          <Button
+            __useDeprecatedTag
+            href={linkToLesson}
+            color={Button.ButtonColor.orange}
+            text={i18n.continueLesson()}
+            style={styles.lessonButton}
+          />
+        </div>
+      </div>
+    );
+  }
+}
+
 const styles = {
   card: {
     overflow: 'hidden',
@@ -72,57 +125,6 @@ const styles = {
     float: 'right'
   }
 };
-
-// While this is named TopCourse, it really refers to the most recent course
-// or script in which the student or teacher has progress.
-
-class TopCourse extends Component {
-  static propTypes = {
-    isRtl: PropTypes.bool.isRequired,
-    assignableName: PropTypes.string.isRequired,
-    lessonName: PropTypes.string.isRequired,
-    linkToOverview: PropTypes.string.isRequired,
-    linkToLesson: PropTypes.string.isRequired
-  };
-
-  render() {
-    const {
-      assignableName,
-      lessonName,
-      linkToOverview,
-      linkToLesson,
-      isRtl
-    } = this.props;
-    const localeStyle = isRtl ? styles.ltr : styles.rtl;
-
-    return (
-      <div style={styles.card}>
-        <img
-          src={require('@cdo/static/small_purple_icons_fullwidth.png')}
-          style={styles.image}
-        />
-        <div style={styles.name}>{assignableName}</div>
-        <div style={styles.description}>
-          <div>{i18n.topCourseLessonIntro({lessonName})}</div>
-          <div style={{marginTop: 10}}>{i18n.topCourseExplanation()}</div>
-        </div>
-        <div style={[styles.buttonBox, localeStyle]}>
-          <Button
-            href={linkToOverview}
-            color={Button.ButtonColor.gray}
-            text={i18n.viewCourse()}
-          />
-          <Button
-            href={linkToLesson}
-            color={Button.ButtonColor.orange}
-            text={i18n.continueLesson()}
-            style={styles.lessonButton}
-          />
-        </div>
-      </div>
-    );
-  }
-}
 
 export default connect(state => ({
   isRtl: state.isRtl

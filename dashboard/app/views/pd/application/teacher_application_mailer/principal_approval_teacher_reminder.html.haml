@@ -1,0 +1,42 @@
+%p
+  Dear
+  = @application.first_name + ','
+
+%p
+  Thank you for submitting an application to participate in
+  = "#{@application.regional_partner&.name || 'Code.org'}'s"
+  Professional Learning Program. In order for us to consider your application,
+  %strong we need your principal's approval.
+
+%p
+  Please take five minutes to forward this email to your principal and encourage them to complete
+  = link_to @application.principal_approval_url do
+    this form
+  as soon as possible. Please note that your application is not considered complete until we receive this form.
+
+%p
+  Participating teachers are asked to commit to Code.org’s year-long Professional Learning Program
+  starting in the summer and concluding in the spring. Workshops can either be held in-person,
+  virtually, or as a combination of both throughout the year.
+
+%p
+  = link_to('Six different studies show', 'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536')
+  that students who study computer science perform better in other subjects,
+  excel at problem solving,
+  and are 17% more likely to attend college.
+  For more information about
+  = link_to('Code.org', 'https://code.org') + "'s"
+  professional development programs, please visit
+  = link_to('https://code.org/educate', 'https://code.org/educate')
+  and refer to this
+  = link_to('brochure', 'https://code.org/files/programs/codeorg-program-brochure.pdf')
+  that highlights how to bring computer science to your school.
+
+%p
+  Thank you very much for your support of computer science for all
+  and let us know if you have any further questions!
+
+= render partial: 'questions_concerns'
+
+%p
+  = render partial: 'partner_signature'

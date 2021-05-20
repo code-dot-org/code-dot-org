@@ -1,0 +1,100 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+
+# This script fixes invalid rows in the user table that were added to the database
+# as a result of a bug in https://github.com/code-dot-org/code-dot-org/pull/38026.
+# Briefly, there was a bug in that PR that caused user accounts created using the
+# join section endpoint (FollowersController#student_register) to be incomplete
+# or invalid (i.e. does not pass rails User model validation). The bug was present
+# only in v2020-12-02.0 which was in production from about 12/2/20 2:00pm PST to
+# 12/3/20 noon PST.
+#
+# The rows added to the user table were invalid in one of two ways:
+# 1. If the user passed valid data to the join section endpoint, the inserted row
+#    was valid except that the username field was missing. We fix these by
+#    calling generate_username to generate the username.
+# 2. If the user passed invalid data to the join section endpoint, a row with the
+#    invalid data was inserted but then failed in complete migrate_to_multi_auth,
+#    leaving the provider field null. We fix these rows by (soft) deleting them.
+#    Note: in many cases, students were not able to access these accounts. For a
+#    small number of cases (n=25), students have accessed these accounts. For the
+#    students who successfully joined a section (n=9), we will reach out to the
+#    teacher to explain the situation.
+#
+# The version of this script in commit 73fa1624bd6fe7b5c0b6904342adba12fffdfe12 was
+# the one that was run in production on 12/4/2020 starting just before 3:45 PM PST.
+# Please note that we _did_ see some impact to database performance while running
+# this script, even on the upgraded HoC db instance.
+
+CDO.log = Logger.new(STDOUT)
+ActiveRecord::Base.record_timestamps = false
+
+options = {actually_update: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-u', '--actually-update', 'Actually perform the update.') do
+    options[:actually_update] = true
+  end
+  opts.on('-h', '--help', 'Add -u to perform the update.') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Called with options: #{options}"
+
+# To speed up the queries, we limit the query to an id range that we know covers
+# all possible affected users
+START_USER_ID = 71_826_397
+END_USER_ID = 71_929_059
+BATCH_SIZE = 200
+
+changes_committed = 0
+changes_rolled_back = 0
+User.after_commit {changes_committed += 1}
+User.after_rollback {changes_rolled_back += 1}
+
+# Address case 1 - generate username
+usernames_generated = 0
+generate_username_errors = 0
+User.where(username: nil).
+  where.not(provider: nil).
+  find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
+  user_batch.each do |user|
+    ActiveRecord::Base.transaction do
+      usernames_generated += 1
+      user.username = UserHelpers.generate_username(User.with_deleted, user.name)
+      CDO.log.info "Generated username: id=#{user.id}, username=#{user.username}"
+      user.save!
+
+      raise ActiveRecord::Rollback unless options[:actually_update]
+    end
+  rescue => ex
+    generate_username_errors += 1
+    CDO.log.error ex
+  end
+end
+
+# Address case 2 - delete invalid rows
+users_destroyed = 0
+destroy_user_errors = 0
+User.where(provider: nil).
+  find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
+  user_batch.each do |user|
+    ActiveRecord::Base.transaction do
+      users_destroyed += 1
+      CDO.log.info "Destroying user: id=#{user.id}"
+      user.destroy
+
+      raise ActiveRecord::Rollback unless options[:actually_update]
+    end
+  rescue => ex
+    destroy_user_errors += 1
+    CDO.log.error ex
+  end
+end
+
+CDO.log.info "Script completed"
+CDO.log.info "Generated #{usernames_generated} usernames with #{generate_username_errors} errors"
+CDO.log.info "Destroyed #{users_destroyed} users with #{destroy_user_errors} errors"
+CDO.log.info "#{changes_committed} changes committed, #{changes_rolled_back} changes rolled back"

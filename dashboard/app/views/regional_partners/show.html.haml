@@ -5,6 +5,9 @@
 
 #application-container
   = show_flashes.html_safe
+  - if flash[:upload_error]
+    = content_tag(:div, flash[:upload_error], {class: 'alert alert-danger'}, false)
+    - flash[:upload_error] = nil
 %p
   %strong ID:
   = @regional_partner.id
@@ -18,29 +21,14 @@
   %strong Urban:
   = @regional_partner.urban? ? 'Yes' : 'No'
 %p
-  %strong CSD Cohort Capacity:
-  = @regional_partner.cohort_capacity_csd
+  %strong Apps open date for teachers
+  = @regional_partner.apps_open_date_teacher
 %p
-  %strong CSP Cohort Capacity:
-  = @regional_partner.cohort_capacity_csp
-- %w(csd csp).each do |course|
-  - %w(teacher facilitator).each do |role|
-    - %w(open close).each do |state|
-      %p
-        %strong
-          = "Apps #{state} date for #{course.upcase} #{role.pluralize}"
-        = @regional_partner.send("apps_#{state}_date_#{course}_#{role}".to_sym)
-%p
-  %strong Apps Priority Deadline Date
-  = @regional_partner.apps_priority_deadline_date
-- %w(csd csp).each do |course|
-  %p
-    %strong
-      ="#{course.upcase} Cost"
-    = @regional_partner.send("#{course}_cost".to_sym)
+  %strong Apps close date for teachers
+  = @regional_partner.apps_close_date_teacher
 %p
   %strong
-    ="Cost/Scholarship Description"
+    ="Program information"
   = @regional_partner.cost_scholarship_information
 %p
   %strong Additional Partner information
@@ -55,29 +43,8 @@
   %strong Contact Name:
   = @regional_partner.contact_name
 %p
-  %strong Ship Attention:
-  = @regional_partner.attention
-%p
-  %strong Street:
-  = @regional_partner.street
-%p
-  %strong Apartment/Suite:
-  = @regional_partner.apartment_or_suite
-%p
-  %strong City:
-  = @regional_partner.city
-%p
-  %strong State:
-  = @regional_partner.state
-%p
-  %strong Zip Code:
-  = @regional_partner.zip_code
-%p
   %strong Ship Phone Number:
   = @regional_partner.phone_number
-%p
-  %strong Notes:
-  = @regional_partner.notes
 %p
   %strong Created At:
   = @regional_partner.created_at.strftime('%F')
@@ -90,6 +57,22 @@
 = link_to 'Back', regional_partners_path
 %br
 %h2 Regions
+%p
+  Region mapping for this partner can be replaced by uploading a CSV file that includes the header
+  %b Region,
+  where a region is a zip code or 2 letter state abbreviation. Example file text:
+  %br
+  Region
+  %br
+  12345
+  %br
+  WA
+= form_tag({action: 'replace_mappings'}, multipart: true) do
+  = file_field_tag('regions', accept: 'text/csv', style: 'line-height: initial;', onchange: 'validateRegionFile(this);')
+  = submit_tag('Replace Region Mapping',
+   data: {confirm: 'This will delete the current mapping and replace it with the contents of the CSV file. Are you sure you want to continue?'},
+   id: "submitReplaceMappings",
+   disabled: true)
 = form_tag(action: 'add_mapping') do
   %table.table.table-hover.table-condensed.table-auto-width{:id => 'mappings-table'}
     %thead
@@ -136,3 +119,25 @@
   = text_field_tag :email, nil, class: 'form-control'
   %button.btn{type: 'submit'}
     %i.fa.fa-search
+
+:javascript
+  function validateRegionFile(inputFile) {
+    if (inputFile.files && inputFile.files.length === 1) {
+      const file = inputFile.files[0];
+      // limit csv to 500 kb
+      const limit = 500000;
+      if (file.size > limit) {
+        window.alert('File must be less than 500 kb.')
+        updateReplaceMappingSubmitButton(true);
+      } else {
+        updateReplaceMappingSubmitButton(false);
+      }
+    } else {
+      updateReplaceMappingSubmitButton(true);
+    }
+  }
+
+  function updateReplaceMappingSubmitButton(isDisabled) {
+    $("#submitReplaceMappings").prop("disabled", isDisabled);
+  }
+

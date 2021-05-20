@@ -1,0 +1,28 @@
+name 'VPL - CSD U3 game intro_2018_2019_pilot_2020'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 3 Chapter 2 Project: Design a Game
+
+Chapter 2 of Unit 3 ends with a project. In this project, students plan and build their own game using the project guide from previous lessons. This project is an opportunity for students to showcase technical skills, allow them to collaborate with a partner, provide constructive feedback, and repeatedly use the problem solving process. 
+
+## Sample Projects
+
+Check out some sample projects to get an idea of what students will create at the conclusion of Unit 3: Interactive Animations and Games. 
+
+[<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+[<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+[<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+[<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+## Project Resources 
+
+**Optional:** If you would like to dig deeper into the project resources, check out the project lesson plan. Additional resources such as a rubric, project guide, peer review document, etc. are linked in the lesson plan. 
+
+><a href="https://curriculum.code.org/csd-20/unit3/27/" target="blank" rel="noopener noreferrer">Unit 3 Lesson 27: Design a Game Project - Lesson Plan</a>
+MARKDOWN

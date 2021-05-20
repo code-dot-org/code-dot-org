@@ -3,11 +3,14 @@ require 'test_helper'
 class RegionalPartnersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @regional_partner = create :regional_partner
     @workshop_admin = create :workshop_admin
   end
 
-  def self.test_workshop_admin_only(method, action, params = nil)
+  setup do
+    @regional_partner = create :regional_partner
+  end
+
+  def self.test_workshop_admin_only(method, action, params = {})
     %i(student teacher facilitator workshop_organizer).each do |user_type|
       test_user_gets_response_for action, user: user_type, method: method, params: params, response: :forbidden
     end
@@ -84,5 +87,83 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     end
     assert @regional_partner.program_managers.exists?(teacher.id)
     assert teacher.program_manager?
+  end
+
+  test 'add mapping updates regional partner mapping' do
+    sign_in @workshop_admin
+    post :add_mapping, params: {id: @regional_partner.id, region: '12345'}
+    assert @regional_partner.mappings.length == 1
+  end
+
+  test 'replace mappings fails on non-csv file' do
+    sign_in @workshop_admin
+    mapping = fixture_file_upload('regional_partners.tsv', 'text/tsv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      'Replace mappings failed. File is not a CSV.',
+      flash[:alert]
+    )
+    assert @regional_partner.reload.mappings.empty?
+  end
+
+  test 'replace mappings on invalid mapping fails and does not delete old mapping' do
+    regional_partner_with_mapping = create(:regional_partner)
+    regional_partner_with_mapping.mappings << Pd::RegionalPartnerMapping.new(zip_code: 98143, regional_partner: regional_partner_with_mapping)
+    regional_partner_with_mapping.save!
+
+    sign_in @workshop_admin
+    mapping = fixture_file_upload('regional_partner_mappings_invalid.csv', 'text/csv')
+    post :replace_mappings, params: {id: regional_partner_with_mapping.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      '<b>Replace mappings failed with 2 error(s):</b><br>ABC: Invalid region<br>123456: Invalid region',
+      flash[:upload_error]
+    )
+    refute regional_partner_with_mapping.mappings.empty?
+    assert_equal '98143', regional_partner_with_mapping.mappings.first.zip_code
+  end
+
+  test 'replace mappings fails on invalid non-unique zip-code mapping' do
+    build(:regional_partner_with_mappings).save(validate: false)
+    sign_in @workshop_admin
+    mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      '<b>Replace mappings failed with 1 error(s):</b><br>98143: This region belongs to another partner',
+      flash[:upload_error]
+    )
+    assert @regional_partner.reload.mappings.empty?
+  end
+
+  test 'replace mappings fails on invalid non-unique state mapping' do
+    build(:regional_partner_with_mappings, mappings:
+          [
+            create(
+              :pd_regional_partner_mapping,
+              zip_code: nil,
+              state: 'WA'
+            )
+          ]
+    ).save(validate: false)
+
+    sign_in @workshop_admin
+    mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      '<b>Replace mappings failed with 1 error(s):</b><br>WA: This region belongs to another partner',
+      flash[:upload_error]
+    )
+    assert @regional_partner.reload.mappings.empty?
+  end
+
+  test 'replace mappings succeeds on valid mapping' do
+    sign_in @workshop_admin
+    mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_equal 'Successfully replaced mappings', flash[:notice]
+    assert_equal 5, @regional_partner.reload.mappings.length
   end
 end

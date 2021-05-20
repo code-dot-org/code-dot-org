@@ -6,31 +6,16 @@ ne:
         options:
           UNIT:
             '"seconds"': seconds
-      Dancelab_changeMoveEachLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_changeMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
-      Dancelab_doMoveEachLR:
+      Dancelab_changePropEachBy:
         options:
-          DIR:
-            '1': "→"
-            "-1": "←"
-      Dancelab_doMoveLR:
-        options:
-          DIR:
-            '1': "→"
-            "-1": "←"
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -53,51 +38,45 @@ ne:
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"diamond"': diamond
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
+          LOCATION:
+            "{x: 100, y: 200}": बाँया
+            "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': alien
+            '"CAT"': cat
+            '"DOG"': dog
+            '"DUCK"': duck
+            '"ROBOT"': robot
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
+          LAYOUT:
+            '"diamond"': diamond
       Dancelab_randomColor:
         text: कुनै एक  रङ
-      Dancelab_setDanceSpeed:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
-      Dancelab_setDanceSpeedEach:
-        options:
-          SPEED:
-            '1': normal
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -113,7 +92,17 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': size
@@ -123,6 +112,16 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': size
+            '"height"': height
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamond
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -132,10 +131,15 @@ ne:
             '"right"': दाँया
             '"space"': space
             '"x"': x
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -145,6 +149,20 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"up"': माथि
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"x"': x
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -166,6 +184,8 @@ ne:
         text: कुनै एक  रङ
       gamelab_randomColor:
         text: कुनै एक  रङ
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setBackgroundImage:
         options:
           IMG:
@@ -176,10 +196,18 @@ ne:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पनि
               मुनि
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': चिसो
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
             '"scale"': size
+            '"speed"': speed
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -243,6 +271,8 @@ ne:
             '"scale"': size
       Mikelab_randomColor:
         text: कुनै एक  रङ
+      Mikelab_repeatUntilComplete:
+        text: repeat forever
       Mikelab_setBG:
         options:
           BG:
@@ -269,7 +299,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -278,7 +310,9 @@ ne:
             '"left"': left arrow
             '"right"': right arrow
             '"w"': प
+            '"a"': क
             '"s"': द
+            '"d"': 'घ '
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -292,53 +326,6 @@ ne:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      aalab_changePropByFlexible:
-        options:
-          PROPERTY:
-            '"scale"': size
-      aalab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_clickedOn:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      aalab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      aalab_setBG:
-        options:
-          BG:
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
-      aalab_setCollidable:
-        options:
-          VAL:
-            '"true"': 'true'
-            '"false"': 'false'
-      aalab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-      aalab_showCustomText:
-        options:
-          DURATION:
-            '"0"': forever
-      aalab_toggleHideCustomText:
-        options:
-          OPTION:
-            '"show"': देखाउ
-            '"hide"': लुकेको
       binary_move:
         options:
           DIR:

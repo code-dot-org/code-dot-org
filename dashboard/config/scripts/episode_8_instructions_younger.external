@@ -1,0 +1,26 @@
+name 'Episode 8 Instructions younger'
+editor_experiment ''
+title 'Episode 1 Practice Instructions'
+description 'description here'
+
+markdown <<MARKDOWN
+# Practice
+
+## Instructions
+
+### Unplugged
+
+**Do This:** Complete the [Envelope Variables Worksheet](https://docs.google.com/document/d/1_-usPDj-uEZtd2SWnSTWT-MmgzfVmcQPfYBfjhUBX8Q/edit?usp=sharing).
+
+### Variables with Bee
+
+**Do This:** On the following practice levels, complete the Variables with Bee progression. Practice changing the variables to solve the puzzles. 
+
+![](https://images.code.org/2d079f2f2ae7d158af8f77c68a600f05-image-1589204338784.gif)
+
+---
+
+Looking for more practice? Check out the [Variables Concept Chunk](https://curriculum.code.org/csf-19/express/) in the Computer Science Fundamentals Express course. 
+
+*Over 13 year old? Find your practice level [here](https://studio.code.org/s/code-break/lessons/8/levels/2).*
+MARKDOWN

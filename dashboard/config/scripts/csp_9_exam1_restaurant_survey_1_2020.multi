@@ -1,0 +1,24 @@
+name 'csp-9-exam1-restaurant-survey-1_2020'
+editor_experiment ''
+right 'Cleaning a data visualization to remove unwanted patterns'
+wrong 'Iteratively creating visualizations to ask and answer new questions'
+wrong 'Cleaning data to remove inconsistencies'
+wrong 'Filtering the data to look at the responses from only certain groups'
+
+
+markdown <<MARKDOWN
+A restaurant is interested in learning about the food preferences of people living nearby to the restaurant and intends to use survey data to help decide which new items to add to the menu. Which of the following is LEAST likely to be part of the process used to analyze the data?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** While cleaning data in its raw format can be an important part of the Data Analysis Process, the visualizations are not cleaned and/or altered but rather they are interpreted to discover what patterns exist in the data.
+
+The Data Analysis Process was used throughout this unit and [Lesson 3 - Cleaning and Filtering Data](https://curriculum.code.org/csp-20/unit9/3/) discussed the appropriate way to clean data.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-2.E.2 - Programmers can use programs to filter and clean digital data, thereby gaining insight and knowledge.
+* DAT-2.E.4 - Insight and knowledge can be obtained from translating and transforming digitally represented information.
+:::
+
+MARKDOWN

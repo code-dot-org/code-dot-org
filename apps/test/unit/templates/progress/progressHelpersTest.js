@@ -2,17 +2,19 @@ import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
 import {
   fakeLesson,
-  fakeLevels
+  fakeLevels,
+  fakeProgressForLevels
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
   lessonIsVisible,
+  lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
-  summarizeProgressInStage,
+  lessonProgressForSection,
   isLevelAssessment,
-  stageIsAllAssessment
+  lessonIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -61,20 +63,7 @@ describe('progressHelpers', () => {
       );
     });
 
-    it('returns false for a lockable stage when not authorized', () => {
-      const localState = {
-        ...state,
-        stageLock: {
-          lockableAuthorized: false
-        }
-      };
-      assert.strictEqual(
-        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
-        false
-      );
-    });
-
-    it('returns true for a lockable stage when authorized', () => {
+    it('returns true for a lockable stage as teacher', () => {
       const localState = {
         ...state,
         stageLock: {
@@ -83,6 +72,85 @@ describe('progressHelpers', () => {
       };
       assert.strictEqual(
         lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
+        true
+      );
+    });
+  });
+
+  describe('lessonIsLockedForUser', () => {
+    const nonLockableLesson = fakeLesson('non-lockable lesson', '3', false);
+    const lockableLesson = fakeLesson('lockable lesson', '4', true);
+    const unlockedLevels = fakeLevels(3);
+    const lockedLevels = fakeLevels(3).map((level, index) => ({
+      ...level,
+      isLocked: index === 2 // lock last level in level group
+    }));
+
+    const state = {
+      currentUser: {
+        userId: 1
+      },
+      stageLock: {
+        lockableAuthorized: true
+      }
+    };
+
+    it('returns false for non-lockable lesson', () => {
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          nonLockableLesson,
+          unlockedLevels,
+          state,
+          ViewType.Student
+        ),
+        false
+      );
+    });
+
+    it('returns true for lockable lesson for signed out user', () => {
+      const localState = {
+        ...state,
+        currentUser: {
+          userId: null
+        }
+      };
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          lockableLesson,
+          unlockedLevels,
+          localState,
+          ViewType.Student
+        ),
+        true
+      );
+    });
+
+    it('returns true for lockable lesson for non-verified teacher', () => {
+      const localState = {
+        ...state,
+        stageLock: {
+          lockableAuthorized: false
+        }
+      };
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          lockableLesson,
+          unlockedLevels,
+          localState,
+          ViewType.Teacher
+        ),
+        true
+      );
+    });
+
+    it('returns true for lockable lesson for stageLocked', () => {
+      assert.strictEqual(
+        lessonIsLockedForUser(
+          lockableLesson,
+          lockedLevels,
+          state,
+          ViewType.Student
+        ),
         true
       );
     });
@@ -155,10 +223,9 @@ describe('progressHelpers', () => {
 
   describe('stageLocked', () => {
     it('returns true when we only have a level group and it is locked', () => {
-      const levels = fakeLevels(3).map(level => ({
+      const levels = fakeLevels(3).map((level, index) => ({
         ...level,
-        kind: LevelKind.assessment,
-        status: LevelStatus.locked
+        isLocked: index === 2 // lock last level in level group
       }));
       assert.strictEqual(true, stageLocked(levels));
     });
@@ -171,14 +238,12 @@ describe('progressHelpers', () => {
       }));
 
       it('returns true when level group is locked', () => {
-        const levels = baseLevels.map(level => ({
+        // lock last level in level group
+        const levels = baseLevels.map((level, index) => ({
           ...level,
-          // lock assessment levels/pages
-          status:
-            level.kind === LevelKind.assessment
-              ? LevelStatus.locked
-              : level.status
+          isLocked: index === 3 // lock last level in level group
         }));
+
         assert.strictEqual(true, stageLocked(levels));
       });
 
@@ -237,85 +302,184 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('stageIsAllAssessment', () => {
+  describe('lessonIsAllAssessment', () => {
     it('returns true if all the levels are of kind assessment', () => {
       const levels = fakeLevels(3);
       levels[0].kind = LevelKind.assessment;
       levels[1].kind = LevelKind.assessment;
       levels[2].kind = LevelKind.assessment;
-      assert.equal(stageIsAllAssessment(levels), true);
+      assert.equal(lessonIsAllAssessment(levels), true);
     });
     it('returns false if not all the levels are of kind assessment', () => {
       const levels = fakeLevels(3);
       levels[0].kind = LevelKind.unplugged;
       levels[1].kind = LevelKind.puzzle;
       levels[2].kind = LevelKind.assessment;
-      assert.equal(stageIsAllAssessment(levels), false);
+      assert.equal(lessonIsAllAssessment(levels), false);
     });
   });
 
-  describe('summarizeProgressInStage', () => {
-    it('summarizes all untried levels', () => {
+  describe('lessonProgressForSection', () => {
+    /**
+     * Note: this function is only used by section progress tables, which have
+     * been refactored to expect the `status` value to be in a sepaparate
+     * `studentLevelProgressType` object rather than the `levelType` object.
+     */
+    const STUDENT_ID = 11;
+    const LESSON_ID = 111;
+
+    // helper function to get lesson progress for a single student
+    const getStudentLessonProgress = (studentLevelProgress, levels) => {
+      const lesson = {id: LESSON_ID, levels: levels};
+      const sectionLevelProgress = {[STUDENT_ID]: studentLevelProgress};
+      const sectionLessonProgress = lessonProgressForSection(
+        sectionLevelProgress,
+        [lesson]
+      );
+      return sectionLessonProgress[STUDENT_ID][LESSON_ID];
+    };
+
+    it('returns null if all levels are untried', () => {
       const levels = fakeLevels(3);
-      const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 3);
-      assert.equal(summarizedStage.incomplete, 3);
-      assert.equal(summarizedStage.completed, 0);
+      const studentProgress = fakeProgressForLevels(levels);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.equal(studentLessonProgress, null);
+    });
+
+    it('returns null if all levels are bonus', () => {
+      const levels = fakeLevels(2);
+      levels[0].bonus = true;
+      levels[1].bonus = true;
+      const studentProgress = fakeProgressForLevels(levels);
+
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.equal(studentLessonProgress, null);
+    });
+
+    it('returns null if some levels are bonus and the rest are untried', () => {
+      const levels = fakeLevels(2);
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[1].status = LevelStatus.perfect;
+      levels[0].bonus = true;
+
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.equal(studentLessonProgress, null);
     });
 
     it('summarizes all completed levels', () => {
       const levels = fakeLevels(3);
-      levels[0].status = LevelStatus.perfect;
-      levels[1].status = LevelStatus.submitted;
-      levels[2].status = LevelStatus.readonly;
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[1].status = LevelStatus.perfect;
+      studentProgress[2].status = LevelStatus.submitted;
+      studentProgress[3].status = LevelStatus.free_play_complete;
 
-      const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 3);
-      assert.equal(summarizedStage.incomplete, 0);
-      assert.equal(summarizedStage.completed, 3);
-      assert.equal(summarizedStage.attempted, 0);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.deepEqual(studentLessonProgress, {
+        incompletePercent: 0,
+        imperfectPercent: 0,
+        completedPercent: 100,
+        timeSpent: 0,
+        lastTimestamp: 0
+      });
     });
 
     it('summarizes all attempted levels', () => {
-      const levels = fakeLevels(2).map(level => ({
-        ...level,
-        status: LevelStatus.attempted
-      }));
-      const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 2);
-      assert.equal(summarizedStage.incomplete, 2);
-      assert.equal(summarizedStage.completed, 0);
-      assert.equal(summarizedStage.attempted, 2);
+      const levels = fakeLevels(2);
+      const studentProgress = fakeProgressForLevels(
+        levels,
+        LevelStatus.attempted
+      );
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.deepEqual(studentLessonProgress, {
+        incompletePercent: 100,
+        imperfectPercent: 0,
+        completedPercent: 0,
+        timeSpent: 0,
+        lastTimestamp: 0
+      });
     });
 
     it('summarizes a mix of levels', () => {
-      const levels = fakeLevels(7);
-      levels[0].status = LevelStatus.submitted;
-      levels[1].status = LevelStatus.perfect;
-      levels[2].status = LevelStatus.attempted;
-      levels[3].status = LevelStatus.passed;
-      levels[4].status = LevelStatus.free_play_complete;
-      levels[5].status = 'other';
+      const levels = fakeLevels(8);
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[1].status = LevelStatus.submitted;
+      studentProgress[2].status = LevelStatus.perfect;
+      studentProgress[3].status = LevelStatus.attempted;
+      studentProgress[4].status = LevelStatus.passed;
+      studentProgress[5].status = LevelStatus.free_play_complete;
+      studentProgress[6].isLocked = true;
+      studentProgress[7].status = 'other';
 
-      const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 7);
-      assert.equal(summarizedStage.incomplete, 3);
-      assert.equal(summarizedStage.completed, 3);
-      assert.equal(summarizedStage.imperfect, 1);
-      assert.equal(summarizedStage.attempted, 1);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.deepEqual(studentLessonProgress, {
+        incompletePercent: 50,
+        imperfectPercent: 12.5,
+        completedPercent: 37.5,
+        timeSpent: 0,
+        lastTimestamp: 0
+      });
     });
 
-    it('does not summarize bonus levels', () => {
-      const levels = fakeLevels(1);
-      levels[0].status = LevelStatus.submitted;
-      levels[0].bonus = true;
+    it('computes correct timeSpent', () => {
+      const levels = fakeLevels(2);
+      const studentProgress = fakeProgressForLevels(
+        levels,
+        LevelStatus.attempted
+      );
+      studentProgress[1].timeSpent = 1;
+      studentProgress[2].timeSpent = 2;
 
-      const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 0);
-      assert.equal(summarizedStage.incomplete, 0);
-      assert.equal(summarizedStage.completed, 0);
-      assert.equal(summarizedStage.imperfect, 0);
-      assert.equal(summarizedStage.attempted, 0);
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.deepEqual(studentLessonProgress, {
+        incompletePercent: 100,
+        imperfectPercent: 0,
+        completedPercent: 0,
+        timeSpent: 3,
+        lastTimestamp: 0
+      });
+    });
+
+    it('computes correct lastTimestamp', () => {
+      const levels = fakeLevels(2);
+      const studentProgress = fakeProgressForLevels(
+        levels,
+        LevelStatus.attempted
+      );
+      studentProgress[1].lastTimestamp = 2;
+      studentProgress[2].lastTimestamp = 1;
+
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.deepEqual(studentLessonProgress, {
+        incompletePercent: 100,
+        imperfectPercent: 0,
+        completedPercent: 0,
+        timeSpent: 0,
+        lastTimestamp: 2
+      });
     });
   });
 });

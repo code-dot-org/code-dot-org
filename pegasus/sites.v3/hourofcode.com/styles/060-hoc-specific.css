@@ -109,7 +109,7 @@
   line-height: 2.2em;
 }
 .front-header-banner h4 {
-  color: white;
+  color: #0096a3;
   margin: 0px;
   margin-bottom: 15px;
   font-size: 26px;
@@ -215,4 +215,43 @@ iframe {
   #language-dropdown {
     margin-left: 1em;
   }
+}
+.hidden-label {
+  position: fixed;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#hoc-event-location-selector .mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+  z-index: 2;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#hoc-event-location-selector .mapboxgl-ctrl ul li {
+  padding-left: 0;
+  text-indent: 0;
+  font-weight: normal;
+}
+
+#hoc-event-location-selector .mapboxgl-ctrl ul li:before {
+  content: none;
+  color: #00a1e6;
+}
+
+#hoc-event-location-selector .mapboxgl-ctrl ul li a {
+  font-family: "Gotham 4r", sans-serif;
+}
+
+#hoc-event-location-selector .mapboxgl-ctrl-geocoder--button {
+  top: 1px !important;
+}
+
+#hoc-event-location-selector .mapboxgl-ctrl-geocoder--icon-close {
+  margin-top: 0;
 }

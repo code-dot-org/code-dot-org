@@ -1,6 +1,7 @@
 {
   "startButton": "Start",
   "filterOrgNames": "Lavet af",
+  "filterOrgNamesAll": "Alle",
   "filterSortBy": "Sorter efter",
   "filterSortByDisplayWeight": "Anbefalet",
   "filterSortByPopularityRank": "Mest populær",
@@ -47,6 +48,7 @@
   "roboticsButtonText": "Robotteknologi og kredsløb",
   "roboticsText": "Fik robotter? Brug disse aktiviteter og lav \"Hour of Code\" for studerende i alle aldre!",
   "tutorialSetNoTutorials": "Din søgning gav ingen resultater.\nPrøv at ændre nogle filtre for at se flere aktiviteter.",
+  "tutorialDetailsMoreResources": "Flere opgaver",
   "tutorialDetailsTeacherNotes": "Lærernotater",
   "tutorialDetailsShortLink": "Kort link",
   "tutorialDetailInternationalLanguages": "Sprog",

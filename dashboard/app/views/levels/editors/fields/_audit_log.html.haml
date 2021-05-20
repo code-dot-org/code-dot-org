@@ -1,0 +1,19 @@
+%h1.control-legend.collapsed{data: {toggle: "collapse", target: "#audit_log_info"}}
+  Audit Log
+%p A log of the people who most recently edited this level (up to the last 10 people)
+#audit_log_info.collapse
+  %table.audit_log
+    %tr
+      %th Date
+      %th What Was Changed
+      %th Who Changed It
+    - if(@level.audit_log != nil)
+      - aud_log = JSON.parse(@level.audit_log)
+      - aud_log.last(10).reverse_each do |log|
+        %tr
+          %td.aud_date= DateTime.parse(log["changed_at"]).strftime("%v at: %r")
+          %td.aud_changes
+            %ul
+              -log["changed"].each_with_index do |change, i|
+                %li= change
+          %td.aud_person= log["changed_by_email"]

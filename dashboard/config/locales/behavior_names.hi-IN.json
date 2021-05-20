@@ -1,0 +1,47 @@
+{
+  "hi-IN": {
+    "data": {
+      "behavior_names": {
+        "outbreak1": {
+          "recovering": "रिकवरिंग"
+        },
+        "outbreak2": {
+          "recovering": "रिकवरिंग"
+        },
+        "outbreak3": {
+          "recovering": "रिकवरिंग"
+        },
+        "outbreak4": {
+          "recovering": "रिकवरिंग",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "outbreak5": {
+          "recovering": "रिकवरिंग"
+        },
+        "outbreak6": {
+          "recovering": "रिकवरिंग"
+        },
+        "outbreak7": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "outbreak8": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "outbreak_freeplay": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "रिकवरिंग",
+          "moving left and right": "बाएं और दाएं मूव करना",
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "script": {
+    "name": "csd-post-survey-2018",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "exclude_csf_column_in_legend": true,
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:36 UTC",
+    "seeding_key": {
+      "script.name": "csd-post-survey-2018"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "cspSurvey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd-post-survey-2018"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CSD post-course survey",
+      "name": "CSD post-course survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd-post-survey-2018"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup-2018"
+        ],
+        "progression": "CS Discoveries Post-Course Survey"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup-2018"
+        ],
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd-post-survey-2018"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup-2018"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup-2018",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup-2018"
+        ],
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd-post-survey-2018"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

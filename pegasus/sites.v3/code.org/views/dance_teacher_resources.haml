@@ -1,29 +1,20 @@
 %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/dance-landing/dance-teacher-resources.css'}
 
 :ruby
-  locale = I18n.locale.to_s.downcase
-  translated_languages = ["es-es", "es-mx", "et-ee", "fr-fr", "ko-kr", "pl-pl", "tr-tr", "zh-tw"]
-  lesson_link = translated_languages.include?(locale) ?
-  "https://curriculum.code.org/#{locale}/hoc/plugged/8" :
-  "https://curriculum.code.org/hoc/plugged/8"
-  unplugged_link = translated_languages.include?(locale) ?
-  "https://curriculum.code.org/#{locale}/hoc/unplugged/4" :
-  "https://curriculum.code.org/hoc/unplugged/4"
-
   resources = [
     {
       title: I18n.t(:hoc2018_dance_teacher_resources_title),
       description: I18n.t(:hoc2018_dance_teacher_resources_tile1_description),
       image: "/images/dance-hoc/dance_party_dance.gif",
       button_text: I18n.t(:hoc2018_dance_teacher_resources_tile1_button),
-      link: lesson_link
+      link: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8")
     },
     {
       title: I18n.t(:hoc2018_dance_teacher_resources_tile2_title),
       description: I18n.t(:hoc2018_dance_teacher_resources_tile2_description),
-      image: "/images/dance-hoc/dance_party_unplugged_portrait.png",
+      image: "/images/dance-hoc/dance_party_2019_unplugged_portrait.png",
       button_text: I18n.t(:hoc2018_dance_teacher_resources_tile2_button),
-      link: unplugged_link
+      link: CDO.curriculum_url(I18n.locale, "/hoc/unplugged/4")
     },
   ]
 
@@ -33,7 +24,7 @@
       .resource-card
         .resource-gif
           %img{src: resource[:image]}
-        .resource-text-box
+        .resource-text-box{dir: language_dir_class}
           .resource-title
             = resource[:title]
           .resource-description

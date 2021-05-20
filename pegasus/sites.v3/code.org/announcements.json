@@ -1,0 +1,77 @@
+{
+  "pages": {
+    "/projects": "home-learning-2020",
+    "/home": "teacher-apps-closing-2021",
+    "/courses": "teacher-apps-closing-2021"
+  },
+
+  "banners": {
+    "teacher-apps-open-2021": {
+      "image": "/images/fill-970x562/professional-learning-2021-1.jpg",
+      "title": "Sign up for Professional Learning",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning",
+      "buttonId": "teacher-apps-open-2021-sign-up"
+    },
+    "teacher-apps-closing-2021": {
+      "image": "/images/professional-learning-2019-closing-soon.png",
+      "title": "Don’t miss out. Apply today!",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
+      "buttonText": "Join us",
+      "buttonUrl": "http://bit.ly/PLsignup-teacherdash",
+      "buttonId": "teacher-apps-closing-2021-sign-up"
+    },
+    "teacher-apps-nominate-2020": {
+      "image": "/images/fill-970x562/professional-learning-2019-trophy.png",
+      "title": "Know an Awesome Teacher?",
+      "body": "Let them know how amazing they are by nominating them for a Professional Learning Scholarship today!",
+      "buttonText": "Nominate a Teacher",
+      "buttonUrl": "https://code.org/nominate",
+      "buttonId": "teacher-apps-nominate-2020-button",
+      "backgroundColor": "#59b9dc"
+    },
+    "teacher-apps-stillon-2020": {
+      "image": "/images/fill-970x562/professional-learning-2019-3.png",
+      "title": "Professional Learning is still on!",
+      "body": "Workshops are now virtual in most states! 98% of teachers recommend our engaging professional learning programs to teach computer science. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-stillon-2020-button",
+      "backgroundColor": "#59b9dc"
+    },
+    "home-learning-2020": {
+      "image": "/images/athome/fill-970x562/app-lab.png",
+      "title": "Project Ideas for Home Learning",
+      "body": "Parents and teachers — take a look at our Project Ideas page for starter projects in Game Lab, App Lab, and Web Lab. These include project descriptions, tips, and demo projects students can remix to make their own! ",
+      "buttonText": "View Project Ideas",
+      "buttonUrl": "https://code.org/athome/project-ideas",
+      "buttonId": "view-project-ideas-2020-button",
+      "backgroundColor": "#59b9dc"
+    },
+    "soonhoc-2020": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "The Hour of Code is Coming",
+      "body": "Sign up your class to try one of the over 115 new activities for the Hour of Code (Dec. 7-13). This year, we’ll explore how we can harness computer science and technologies like AI to help build the society we want to live in. Sign up today!",
+      "buttonText": "Join Us",
+      "buttonUrl": "https://hourofcode.com/us#join",
+      "buttonId": "2020-soonhoc"
+    },
+    "codebytes-2020": {
+      "image": "/images/marketing/CodeBytes_TeacherDashboard_540X289_CandyBag.png",
+      "title": "CodeBytes: Live interactive mini-lessons during CSEdWeek!",
+      "body": "Planning for the Hour of Code with your virtual classroom? Join us for CodeBytes, a series of 20 minute lessons that will livestream December 7-11. Episodes are designed for all grade bands and students with varying technology access.",
+      "buttonText": "Learn more",
+      "buttonUrl": "http://code.org/codebytes",
+      "buttonId": "codebytes"
+    },
+    "ai-2020": {
+      "image": "/images/marketing/AI-2020-540X289.png",
+      "title": "Explore Artificial Intelligence and Machine Learning",
+      "body": "Join us to explore how AI impacts our entire world in a brand new video series, train AI for Oceans in 25+ languages, and hear from a panel of experts during the Ethics of AI livestream on Tuesday, December 8th.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/ai",
+      "buttonId": "2020-ai"
+    }
+  }
+}

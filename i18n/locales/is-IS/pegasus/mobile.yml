@@ -12,13 +12,26 @@
   csedweek_dates: "3.-9. desember 2018"
   csedweek_banner_hoc: 'Nú styttist í <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Klukkustund kóðunar</a>. Kennarar og stjórnendur: <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">byrjið að undirbúa ykkar Klukkustund kóðunar</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í boði í tilefni CSEdWeek</a>'
+  csedweek_banner_teachers_text: "Ertu tölvunarfræðikennari? Kannaðu annað efni sem er í boði í tilefni CSEdWeek"
   n_have_learned_an_hoc: "<h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2><h3># hafa gert það</h3>"
+  try_hoc_num_served: "<h1>Prófaðu</h1><h2>Klukkustund kóðunar</h2>, <h3>það hafa %{num} gert</h3>"
+  try_hoc_num_served_markdown: |-
+    # Prófaðu
+
+    ## Klukkustund kóðunar
+
+    ### það hafa %{num} gert #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Allir geta lært."
   learn_now: "Læra núna"
   petition_message: "Allir nemendur í öllum skólum ættu að fá tækifæri til að læra tölvunarfræði"
   petition_sign_message: 'Skráðu nafn þitt ef þú ert sammála. Slástu í hóp með # öðrum.'
-  petition_sign_message_support: 'Styddu okkur með því að skrá nafn þitt. Slástu í hóp með # öðrum.'
+  petition_sign_message_num: "Skráðu nafn þitt ef þú ert sammála til að fara á póstlistann okkar ásamt %{num} öðrum."
   petition_join_others: 'Slástu í hóp með # öðrum'
+  petition_join_others_num: "Taktu þátt með %{num} öðrum"
   name: "Nafn"
   email: "Netfang"
   zipcode: "Póstnúmer eða land"
@@ -43,6 +56,7 @@
   hoc2014_support: "Styðjið þetta &#x25BE;"
   hoc2014_whatishoc: "Hvað er Klukkustund kóðunar?"
   csedweek_map_header: "# CSEdWeek / Klukkustundir kóðunar um allan heim"
+  csedweek_map_header_num: "# CSEdWeek / Klukkustundir kóðunar um allan heim: %{num}"
   csedweek_map_signup: "Skráðu þinn viðburð"
   csedweek_map_search_placeholder: "Leita að Klukkustundum kóðunar"
   csedweek_map_search_search: "Leit"
@@ -145,11 +159,21 @@
   enter_valid_email: "Vinsamlega sláðu inn gilt netfang"
   get_a_certificate_message: "Við sendum þér viðurkenningarskjal og upplýsingar um hvernig þú getur haldið áfram að <a href='/learn'>Læra umfram klukkustund</a>"
   get_a_certificate_message_after: "Smelltu á skírteinið til að hala það niður eða prenta það. Haltu svo áfram með <a href='http://studio.code.org'>önnur námskeið okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram klukkustund</a>."
+  get_a_certificate_message_after_markdown: "Smelltu á skírteinið til að hlaða því niður eða prenta það. Haltu svo áfram á [öðrum námskeiðum okkar](http://studio.code.org) eða sjáðu aðra valkosti með [Nám eftir Klukkustund kóðunar](/learn/beyond)."
   thanks_for_submitting: "Takk fyrir þátttökuna!"
   if_you_enjoyed: "Ef þér fannst gaman að læra þetta, hvernig væri að fá vini þína til að prófa líka! Við viljum að allur heimurinn læri."
   personalize_certificate: "Gerðu viðurkenningarskjalið persónulegra"
+  print_batch_certificates: "Prenta bunka af skírteinum"
+  print_certificates: "Prenta skírteini"
+  certificate_sponsor_message: "%{sponsor_name} studdi við nám þitt með rausnarlegri gjöf."
+  print_ice_art_from_frozen: "Prenta íslistaverk úr Frozen kennsluefninu"
+  want_a_blank_certificate_template: "Viltu fá autt skírteinisform til að skrifa á nöfn nemenda?"
+  landscape_recommended_certificates: "Gættu þess að velja **Langsnið** (landscape) þegar þú prentar skírteinin."
+  print_one_here_certificates: "Prenta eitt hér."
+  enter_certificate_names: "Færðu inn allt að 30 nöfn, **eitt á hverja línu**. Prentanleg síða með sérsniðnum skírteinum fyrir %{script_name} verður útbúin."
   share_achievement: "Deildu árangrinum þínum"
   beyond_hour_message: "Haltu áfram með <a href='http://studio.code.org'>önnur námskeið okkar</a> eða skoðaðu fleiri valkosti með að <a href='/learn/beyond'>Læra umfram klukkustund</a>."
+  beyond_hour_message_markdown: "Haltu svo áfram á [öðrum námskeiðum okkar](http://studio.code.org) eða sjáðu aðra valkosti með [Nám eftir Klukkustund kóðunar](/learn/beyond)."
   leaderboards_for_hoc: "Topplisti fyrir Klukkustund kóðunar."
   support_url: "http://support.code.org/"
   country: "Land"
@@ -224,6 +248,9 @@
   stats_nina: '"Á hverjum einasta degi var niðurstaðan sú sama &mdash; 100% virkni." - Nina Nichols Peery, kennari'
   stats_student: '"Ég vissi að þetta væri <b>einstakt tækifæri</b> á ævinni." - Mariana Alzate, 5. bekk'
   stats_michael: '"Ég hef <b>aldrei, aldrei</b> séð nemendur mína svona æsta í að læra." - Frank Martinez, kennari'
+  stats_nina_markdown: '"Á hverjum einasta degi var niðurstaðan sú sama - 100% virkni." - Nina Nichols Peery, kennari'
+  stats_student_markdown: '"Ég vissi að þetta væri **einstakt tækifæri á ævinni**." - Mariana Alzate, 5. bekk'
+  stats_michael_markdown: '"Ég hef **aldrei, aldrei** séð nemendur mína svona æsta í að læra." - Frank Martinez, kennari'
   studiobar_title: "Prófa <a href='http://studio.code.org'>námskeið Code.org</a>"
   studiobar_title_nolink: "Kanna námskeið Code.org"
   studiobar_elementary_title: "Grunnskólanámskeið"
@@ -308,7 +335,9 @@
   homepage_action_text_girlvideo: "Hvettu stúlku"
   homepage_action_text_learn: "Byrjaðu að læra"
   homepage_action_text_signpetition: "Skrifa undir áskorunina"
+  homepage_action_text_wincelebritychat: "Fáðu spjall við fræga persónu"
   homepage_signpetition_dropdown: "Ég samþykki &#x25BE;"
+  homepage_signpetition_dropdown_text: "Sammála"
   homepage_diversity_pledge: "Vinna fjölbreytniheitið"
   homepage_banner_text_prizes: 'Klukkustund kóðunar kemur aftur 7. - 13. desember. '
   homepage_banner_link_prizes: 'Taktu þátt í stærsta námsviðburði í sögunni. '
@@ -355,6 +384,7 @@
   homepage_header_donors: "Code.org þakkar stuðningsaðilum"
   homepage_donors_seall: "Sjá allt"
   homepage_donors_donate: "Styrkja"
+  homepage_below_hero_announcement_text: "Verndun persónuupplýsinga þinna skiptir okkur máli og við erum að uppfæra persónuverndarstefnu okkar, frá og með 25. maí."
   homepage_below_hero_announcement_link_text: "Nánar"
   contact_form_topic_student: "Ég er nemandi"
   contact_form_topic_parent: "Ég er foreldri"
@@ -394,7 +424,9 @@
   class_submission_level_vocational: "Starfsmenntun"
   class_submission_languages_other: "Önnur tungumál"
   videos_more: "Fleiri <a href='%{inspiring_videos_playlist}'>hvetjandi myndbönd</a> með góðum fyrirmyndum og frægu fólki"
+  videos_more_markdown: "Fleiri [hvetjandi myndbönd](%{inspiring_videos_playlist}) með fyrirmyndum og frægu fólki"
   careers_page_more: "Fleiri <a href='%{careers_url}' target='_blank'>hvetjandi myndbönd</a> með starfsmönnum úr tæknigeiranum"
+  careers_page_more_markdown: "Fleiri [hvetjandi myndbönd](%{careers_url}) með fagfólki í tæknigeiranum"
   playlab_choose_theme: "Veldu þema fyrir Leikjasmiðjuna"
   playlab_classic_title: "Klassískt"
   playlab_gumball_title: "The Amazing World of Gumball"
@@ -419,6 +451,7 @@
   minecraft_adventurer: "Minecraft Könnuður"
   minecraft_tutorials: "Klukkustund kóðunar með Minecraft"
   minecraft_specs: "Mörg tungumál | Fyrir nýlega vafra og spjaldtölvur | 2. bekkur+"
+  minecraft_start_tutorial: "Byrja að læra"
   minecraft_agent_description: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
   minecraft_agent_button: "Byrja"
   minecraft_designer_description: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
@@ -428,9 +461,12 @@
   minecraft_no_internet: "Ekki með nettengingu?"
   minecraft_download_adventurer: "Sæktu ónettengdu útgáfuna af Minecraft Könnuði."
   minecraft_subtitle: "Klukkustund kóðunar með Minecraft"
+  minecraft_store_camps: "Ókeypis Minecraft Hour of Code kennsla í Microsoft verslunum"
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Skráning</a> á ókeypis Minecraft Hour of Code kennslu í Microsoft verslunum í Ástralíu, Kanada, Puerto Rico eða USA. Uppgötvaðu hvernig forritun er fyrir alla og sameinar sköpun, verkefnalausnir og helling af skemmtun."
   minecraft_host_event: "Skipuleggðu Klukkustund kóðunar í Minecraft"
   minecraft_teach_resources: "Tilföng kennara og kennsluáætlun."
   minecraft_leader_guide: "Hlaða niður tilföngum til að hjálpa þér að skipuleggja og stjórna viðburði."
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Sækja núna</a> Quick Start leiðarvísi fyrir umsjónaraðila og PowerPoint kynningar fyrir yngri og eldri nemendur."
   sports_page_title: "Klukkustund kóðunar - íþróttir"
   sports_og_title: "Láttu reyna á þig. Það geta allir lært."
   sports_og_description: "Meistarar og gullverðlaunarhafar hvetja þig til að prófa Klukkustund kóðunar. Forritaðu þinn eigin íþróttaleik."
@@ -721,6 +757,8 @@
   dashboard_coursef: 'Námskeið F: '
   dashboard_express: 'Hraðnámskeið: '
   dashboard_unplugged: "Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum."
+  dashboard_unplugged_markdown: "Þó þú hafir ekki tölvur, [getur þú prófað þessi verkefni án tölvu](%{unplugged_url}) í skólastofunni."
+  dashboard_tools: 'Verkfæri: '
   dashboard_curriculum: "Námskrá"
   dashboard_curriculum_overview: "Yfirlit 5 - 10 ára (K-5) námsefnis"
   dashboard_overview: "Yfirlit"
@@ -816,6 +854,7 @@
   carousel_heading_beyond_languages: "Kennsluefni í öðrum forritunarmálum"
   carousel_heading_apps_games: "Búðu til eigin forrit eða leiki"
   carousel_heading_university: "Háskólakúrsar á netinu"
+  carousel_heading_online_university: "Tiltæk netnámskeið á háskólastigi"
   carousel_heading_webpages: "Lærðu að búa til vefsíður"
   carousel_heading_robots: "Lærðu að forrita með vélmennum"
   carousel_heading_ide: "Tækni vinsæl meðal kennara"
@@ -918,11 +957,15 @@
   coursed-2019_name: Námskeið D (2019)
   coursee-2019_name: Námskeið E (2019)
   coursef-2019_name: Námskeið F (2019)
+  coursea-2020_name: Námskeið A (2019)
   express-2018_name: Hraðnámskeið (2018)
   pre-express-2018_name: Hraðnámskeið fyrir forlæsa (2018)
   express-2019_name: Hraðnámskeið (2019)
+  pre-express-2019_name: Hraðnámskeið fyrir forlæsa (2019)
+  pre-express-2020_name: Hraðnámskeið fyrir forlæsa (2020)
+  csd2_name: 'Eining 2: Vefsíðugerð'
+  csd3_name: 'Eining 3: Hreyfing og leikir'
   accelerated_name: "Hraðnámskeiðið"
-  express_name: "Hraðnámskeið"
   pre-express_name: Hraðnámskeið fyrir forlæsa
   20-hour_name: Hraðnámskeiðið
   algebra_name: "TF í algebru"
@@ -1019,6 +1062,12 @@
   coursed-2019_gradelevel: 14 ára og eldri
   coursee-2019_gradelevel: 8 - 12 ára
   coursef-2019_gradelevel: Bekkur 10+
+  coursea-2020_gradelevel: Bekkur 5+
+  courseb-2020_gradelevel: Bekkur 6+
+  coursec-2020_gradelevel: Bekkur 7+
+  coursed-2020_gradelevel: 14 ára og eldri
+  coursee-2020_gradelevel: 8 - 12 ára
+  coursef-2020_gradelevel: Bekkur 10+
   accelerated_gradelevel: "Fyrir 10-18 ára"
   codeorg_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
   codeintl_platformtext: "Fyrir nýjustu vafra, snjallsíma, spjaldtölvur"
@@ -1143,6 +1192,8 @@
   coursed-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiði C og svo haldið lengra með algrímum, földuðum lykkjum, skilyrðingum og fleiru.
   coursee-2019_shortdescription_congrats: Hér er farið fljótt yfir hugtök frá Námskeiðum C og D og síðan haldið lengra með föllum.
   coursef-2019_shortdescription_congrats: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+  coursea-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+  courseb-2020_shortdescription_congrats: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
   codeorg_longdescription: "Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum."
   codeintl_longdescription: "Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies. Lærðu á lykkjur, skilyrði og grunnalgrím. Tiltækt á 34 tungumálum."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1399,10 +1450,19 @@
   header_teacher_community: "Kennarasamfélag"
   header_help_support: 'Hjálp og stuðningur '
   header_report_bug: "Tilkynna galla"
+  header_legal_privacy: "Persónuverndarstefna"
+  header_legal_tos: "Skilmálar"
   header_tutorials: "Kennslutímar"
+  app_lab_documentation: "Upplýsingar um Appsmiðju"
+  app_lab_tutorials: "Kennsluefni Appsmiðju"
+  game_lab_documentation: "Upplýsingar um Leikjasmiðju"
+  game_lab_tutorials: "Kennsluefni Leikjasmiðju"
+  sprite_lab_documentation: "Upplýsingar um Kvikasmiðju"
+  sprite_lab_tutorials: "Kennsluefni Kvikasmiðju"
   header_documentation: "Skjölun"
   user_header_label: "Hæ %{username}"
   user_header_team: "Félagar"
+  user_header_my_projects: "Verkefni mín"
   user_header_settings: "Reikningurinn minn"
   user_header_logout: "Skrá út"
   user_header_signin: "Innskráning"
@@ -1454,8 +1514,10 @@
   account_sign_up_child_accept_terms: "Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustur Code.org."
   hoc_overview_dance_title: "Danspartý"
   hoc_overview_dance_subtitle: "Kóðaðu Danspartý til að deila með vinum þínum. Með Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara og 25 öðrum!"
+  hoc_overview_dance_2019_subtitle: "Kóðaðu Danspartý til að deila með vinunum. Lög með Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj og 34 öðrum!"
   hoc_overview_title: "Klukkustundir kóðunar frá Code.org"
   hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Klukkustund kóðunar (Hour of Code)</a> er alþjóðleg hreyfing sem nær til tugmiljóna nemenda í yfir 180 löndum. Hver og einn, hvar sem er getur skipulagt Hour of Code viðburð eða prófað yfir 200 klukkutíma kennslustundir, sem eru tiltækar á yfir 45 tungumálum."
+  hoc_overview_subtitle_markdown: "[Klukkustund kóðunar (Hour of Code)](https://hourofcode.com) er alþjóðleg hreyfing sem nær til tugmiljóna nemenda í yfir 180 löndum. Hver og einn, hvar sem er getur skipulagt Hour of Code viðburð eða prófað yfir 500 klukkutíma kennslustundir, sem eru tiltækar á yfir 45 tungumálum."
   hoc_overview_partner_activities_title: "Fleiri verkefni frá samstarfsaðilum"
   hoc_overview_partner_activities_body: "Á vef Klukkustundar kóðunar (Hour of Code) má finna yfir 100 verkefni í tölvunarfræði fyrir alla aldurshópa og reynslustig, þróuð af Code.org og samstarfsaðilum."
   hoc_overview_partner_activities_link: "Verkefnin"
@@ -1465,10 +1527,12 @@
   hoc2018_creativity_create: "Búa til"
   hoc2018_creativity_hoc_coming: "Klukkustund kóðunar er á næsta leiti…"
   hoc2018_creativity_what_will_you_create: "Hvað ætlar þú að búa til?"
+  hoc2018_creativity_homepage: "Gefðu ímyndunaraflinu lausan tauminn og leyfðu hugmyndum að fæðast. Byrjaðu með Klukkustund kóðunar og þína gerð af sköpunargáfu. Kíktu á myndbandið."
   hoc2018_creativity_hoc_about: 'Þetta árið snýst Klukkustund kóðunar um sköpunargleði. '
   hoc2018_creativity_social_media: 'Þetta árið snýst er #HourOfCode um sköpunargleði. Ég er með! En þú?'
   hoc2018_creativity_social_media_2: 'Þetta árið er #HourOfCode um sköpunargleði. Hvað ætlar þú að skapa?'
   hoc2018_creativity_courses: "Náðu lengra með Code.org námskeiðum"
+  hoc2018_creativity_courses_link: "Náðu lengra með <a href=\"https://studio.code.org/courses\">Code.org námskeiðum</a>"
   hoc2018_mc_page_title: "Klukkustund kóðunar með Minecraft"
   hoc2018_mc_details: "Mörg tungumál | Fyrir nýlega vafra og spjaldtölvur | 2. bekkur+"
   hoc2018_mc_aquatic_title: "Minecraft Neðansjávarferð"
@@ -1552,6 +1616,10 @@
   hoc2018_dance_amazon_try_coding_this_summer_title: "Prófaðu að kóða í sumar"
   hoc2018_dance_amazon_scholarship_programs_button: "Sækja um nú"
   hoc2018_dance_amazon_future_engineer_footer: "* Listamennirnir sem eiga tónlistina sem er notuð í þessu kennsluefni eru ekki að styðja við eða mæla með Amazon þó þeir veiti Code.org leyfi til að nota tónlist sína.\n\n"
+  hoc2018_dance_measure: "Taktur"
+  hoc2018_dance_measure_colon: 'Taktur:'
+  hoc2018_aquatic_video1: "Minecraft: Neðansjávarferð - Kynning"
+  hoc2018_aquatic_video2: "Minecraft: Neðansjávarferð - Lykkjur"
   hoc2018_aquatic_video3: "Minecraft Neðansjávarferð - Skilyrði"
   hoc2018_aquatic_video4: "Minecraft Neðansjávarferð - Til hamingju"
   hoc2018_dance_video1: "Danspartý - Kynning"
@@ -1564,3 +1632,21 @@
   page_not_found_button: "Aftur á heimasíðu"
   hoc2018_mc_with_microsoft: "Í samstarfi við"
   hoc2018_mc_thank_microsoft: "Við þökkum Microsoft fyrir að styðja við hugsjón og stefnumið okkar sem er að tryggja að hvert barn hafi tækifæri til að læra tölvunarfræði og öðlast þá færni sem þarf til að ná árangri á 21. öldinni."
+  hoc2019_mc_mee_title: "Minecraft Gervigreind til góðs"
+  hoc2019_mc_mee_description1: 'Hið nýja kennsluefni fyrir Klukkustund kóðunar í Minecraft er nú tiltækt fyrir Minecraft Education útgáfu fyrir Windows, Mac og iPad. Lærðu undirstöðu forritunar og kannaðu gervigreind með nemendum þínum!'
+  hoc2019_mc_mee_description2: "Sæktu ókeypis efni þ.á m. kennsluáætlun, myndbönd, námsáætlun í tölvunarfræði og þjálfun kennara."
+  hoc2019_mc_more_coding_resources: "Fleiri tilföng fyrir forritun"
+  hoc2019_dance_previous_versions: "Ertu að leita að eldri útgáfu af Danspartýi?  \nSmelltu hér til að sækja [1. hluta](%{dance_2018_link}) og [2. hluta](%{dance_extras_2018_link}) frá síðasta ári."
+  homepage_slot_text_title_at_home: "Læra heima"
+  homepage_slot_text_blurb_at_home: "Þetta efni gerir það auðvelt"
+  homepage_slot_text_link_code_break: "Taktu kóðapásu"
+  homepage_slot_text_link_do_hoc: "Gerðu Klukkustund kóðunar"
+  homepage_slot_text_link_express_course: "Prófaðu hraðnámskeið"
+  page_not_available_button: "Aftur á heimasíðu"
+  footer_powered_by_aws: "Knúið af Amazon Web Services"
+  footer_privacy_policy: "Persónuverndarstefna"
+  footer_about: "Um okkur"
+  footer_partners: "Samstarfsaðilar"
+  footer_donate: "Styrkja"
+  footer_support: "Stuðningur"
+  footer_terms: "Skilmálar"

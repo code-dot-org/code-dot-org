@@ -17,7 +17,9 @@ class DialogInstructions extends React.Component {
     longInstructions: PropTypes.string,
     imgURL: PropTypes.string,
     imgOnly: PropTypes.bool,
-    hintsOnly: PropTypes.bool
+    hintsOnly: PropTypes.bool,
+    isBlockly: PropTypes.bool,
+    noInstructionsWhenCollapsed: PropTypes.bool
   };
 
   render() {
@@ -39,6 +41,8 @@ class DialogInstructions extends React.Component {
           showInstructions ? this.props.longInstructions : undefined
         }
         imgURL={showImg ? this.props.imgURL : undefined}
+        isBlockly={this.props.isBlockly}
+        noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
       />
     );
   }
@@ -53,5 +57,7 @@ export default connect(state => ({
   longInstructions: state.instructions.longInstructions,
   imgURL: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
   imgOnly: state.instructionsDialog.imgOnly,
-  hintsOnly: state.instructionsDialog.hintsOnly
+  hintsOnly: state.instructionsDialog.hintsOnly,
+  isBlockly: state.pageConstants.isBlockly,
+  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
 }))(DialogInstructions);

@@ -6,10 +6,8 @@ video_player: true
 
 # About Us
 
-<div class="col-60", style="padding-right:20px;">
-
-Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by women and underrepresented minorities. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
-
+<div class="col-60">
+  Code.org® یک غیر انتفاعی است که به گسترش دسترسی به علوم کامپیوتر در مدارس و افزایش مشارکت زنان و اقلیت های کم نماینده اختصاص داده شده است. هدف نهایی ما این است که هر دانش آموزی در تمامی مدارس از این فرصت بهره مند شوند تا مانند زیست شناسی،جبر و شیمی علم کامپیوتر را یاد بگیرند  ما بیشترین برنامه درسی را برای تدریس علوم کامپیوتر در مقطع ابتدایی و متوسطه ارائه می دهیم و همچنین برنامه سالانه <a href="https://hourofcode.com">> ساعت کد </a> را برگزار می کنیم ، که 10٪ برنامه همه دانشجویان جهان Code.org توسط اهدا کنندگان سخاوتمندانه از جمله آمازون(Amazon) ، فیس بوک(Facebook) ، گوگل(Google) ، بنیاد اینفویز(Infosys) ، مایکروسافت(Microsift) و <a href="/about/donors"> بسیاری دیگر پشتیبانی می شود </a>.
 </div>
 
 [col-40]
@@ -24,31 +22,30 @@ Code.org® is a nonprofit dedicated to expanding access to computer science in s
 
 <div style="clear:both"></div>
 
-## History 
+## History
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
-<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). این ویدیو تبدیل به پربازدید ترین ویدیو در یوتوب به مدت یک روز شد همچنین 15,000 در این باره به ما کمک کردند از آن زمان ، ما برای ایجاد یک سازمان کامل برای حمایت از یک جنبش در سراسر جهان، از  کارمندان داوطلبانه در خواست کرده ایم شده ایم. ما معتقدیم که آموزش علوم کامپیوتر باید در اختیار همه کودکان قرار گیرد ، نه فقط برخی افراد خوش شانس.
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## What We Do
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. کار ما توسط سازمانها و افراد بیشماری که به ایجاد، تأمین اعتبار و گسترش آموزش علوم رایانه کمک کرده، و چندین دهه تلاش می کرده اند. ما از کار خستگی ناپذیر جامعه گسترده آموزش علوم کامپیوتر سپاسگزاریم و از همه همکاران و افرادی که تأثیرگذاری خود را در طول سالها گسترش داده اند تشکر می کنیم.
 
-## Code.org's International Reach 
+## Code.org's International Reach
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+40% درصد از ترافیک ما خارج از امریکا است و همچنین این درصد در حال افزایش است In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. ما با همکاری با وزارتخانه های آموزشی  از سراسر جهان و همکاری با سازمان های بین المللی مانند سازمان همکاری اقتصادی و توسعه اقتصادی و سازمان آموزشی ، علمی و فرهنگی ملل متحد ، بخشی از گفتمان آموزش بین المللی را بخشی از گفتمان آموزش بین المللی می دانیم.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%">
+<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation 
+## Translation
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information. 
+ایا می خواهید که تاثثیر مستقیم روی دانشجویان کشور شما داسته باشد به ما کمک کنید تا Code.org را به عنوان زبان اصلی یا مادری در دسترس قرار دهیم اگر شما داوطلب هستید که به ما کمک کنید و بخش های آموزشی و درس های ما را ترجمه کنید، شما به جمع بیش از 7000 نفر مترجم که سعی بر  ارائه دادن علوم کامپیوتر به سرتاسر جهان دارند می پیوندید. Take a look at our [translation guide](/translate) for more information.
 
 ## Our commitment to free curriculum and open source technology
 
 All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%">
+<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
 
 ## Follow us
 

@@ -1,7 +1,5 @@
 ---
 title: Näidis arvamusartikkel Arvutiteaduse hariduse nädala ja KoodiTund kohta
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

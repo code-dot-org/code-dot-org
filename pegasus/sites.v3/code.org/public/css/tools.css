@@ -78,12 +78,16 @@ h3.tutorial-info-h {
 .tutorial-info-start {
   margin-top: 20px;
 }
-
+.tutorial-info-start[dir='rtl']{
+  float:right;
+}
 .tutorial-info-guide {
   float: right;
   margin-top: 25px;
 }
-
+div[dir='rtl'] .tutorial-info-guide{
+  float:left;
+}
 b.purple {
   font-size: 14px;
   color: #7665a0;
@@ -93,18 +97,6 @@ button.tutorial-gray {
   background-color: #e7e8ea;
   border-color: #e7e8ea;
   color: #5b6770;
-}
-
-.bold-text {
-  font-family: 'Gotham 7r', sans-serif;
-}
-
-.set-margin {
-  margin-top: 0px;
-}
-
-.set-container-padding {
-  padding: 5px;
 }
 
 .pl-callout {

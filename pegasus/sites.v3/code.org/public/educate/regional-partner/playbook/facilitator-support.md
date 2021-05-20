@@ -25,19 +25,8 @@ ________________
 ## Announcements
 - [New Process to secure substitute CS Discoveries and CS Principles Facilitators](#subfac)
 - [Updated CS Discoveries/Principles Facilitator Travel Policy](#6-12docs)
-- [Preparing for Facilitator Interviews](#interviews)
 
-________________
 
-<a id="interviews"></a>
-### Interviewing Facilitators
-
-Keep these three important things on your radar as you prepare for upcoming facilitator interviews. Watch this [very quick recording](https://code.zoom.us/recording/play/_kbC3EU3s8sHFBPeessecWvewQcZLofgK0dFZXzOFL2BU8SYM-gorH_WBj6vuXQ-?startTime=1548267193000) for more details, and read below for the highlights.
-
-1.  **Interview Scheduling:**
-All Group 1 - 3 Regional Partners are responsible for scheduling interviews with their candidates during the interview period of Feb. 11 - March 1. Interviews should be booked for 30 minutes, and should include a video chat (e.g., Google hangout, Zoom, etc.) if they’re not hosted in-person. However, we recommend you block an hour on your calendar for prepare and review. Remember that many candidates are teachers who have limited availability during the school day, so please be prepared to host interviews in the late-afternoon or early evening.
-2.  **Interview Support:** All Group 1 - 3 Regional Partners are responsible for hosting interviews on their own, without the support of a Code.org-contracted co-interviewer. This means that Regional Partners will need to plan ahead to make sure they are able to conduct the interview while taking notes in the application dashboard.
-3.  **Interview Questions and Process:** We will cover the interview process and required interview questions in detail during the February Regional Partner Summit.
 
 ________________
 
@@ -58,7 +47,7 @@ Use <a href="https://docs.google.com/document/d/1FobsNOHi91ioe5ZoCeiWNgDslQkTPF4
 ________________
 <a id="contract"></a>
 ### Example contract
-[This is an example](/files/example-facilitation-agreement.pdf) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
+[This is an example](https://docs.google.com/document/d/12xtLUisQB0VJHQAxtNBVUcFYJzT9uXXuMKPrJ5ChLsw/view) of an agreement that facilitators sign when facilitating for Code.org. You should develop your own agreement for use with facilitators that meets your organization's particular needs, and which ensures that the terms of the Regional Partner agreement you have signed with Code.org, particularly Section 3 (Indemnification), Section 6.1 (Description of Duties) and Section 7 (Confidential Information), are met.
 
 We have created these example Scope of Work documents that you can use as a planning resource when establishing a relationship with a K-5 or 6-12 facilitators. These document lives in our shared Google Drive folder.
 
@@ -73,13 +62,7 @@ ________________
 <a id="recruitment"></a>
 ## Facilitator Recruitment Resources
 
-- [2019-20 Facilitator Selection Process Doc] (https://docs.google.com/document/d/1c6wXrVZ0u4yjV1eJg2INzqacvZV71hwfIxWIQHCM9_I/edit)
-- [2019-20 Facilitator Application Questions & Rubric](https://docs.google.com/document/d/1r7Cmn9j7BibblU979dDHKg_5yRtbrEJeMLThMsbbSMo/edit?usp=sharing)
 - [Facilitator Program Landing Page](https://code.org/facilitator) on the Code.org website
-- [Facilitator Development Program Overview](https://code.org/files/facilitator/overview-2019-20.pdf)
-- [CS Fundamentals Facilitator Commitments](https://code.org/files/facilitator/csf-commitments.pdf)
-- [CS Discoveries Facilitator Commitments](https://code.org/files/facilitator/csd-commitments.pdf)
-- [CS Principles Facilitator Commitments](https://code.org/files/facilitator/csp-commitments.pdf)
 
 [**Back to the top**](#top)
 ________________
@@ -87,7 +70,7 @@ ________________
 ## CS Fundamentals Facilitator Support Documents
 
 - [CS Fundamentals Facilitator Playbook](https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5) - Toolkit for CS Fundamentals Facilitators
-- [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1oRjTXIu12XF2dR9G6qfo7VfBeNn0GPrUPF_s4Pk3Ckg/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
+- [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1eMA0RT-id5dsVZS0p_UUt4FKMnjzf-uUBUY1y_Z7hr0/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
 - [CS Fundamentals Facilitator Landing Page](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators
 - <a href="/educate/regional-partner/playbook/payments#csftravel">CS Fundamentals Facilitator Travel Policy</a>
 
@@ -96,10 +79,10 @@ ________________
 
 ## CS Discoveries and CS Principles Facilitator Support Documents
 
-- [6-12 Facilitator Handbook](https://docs.google.com/document/d/1DBP4mPMlW2b5dWjnkDZdGtX5hgLW3L1uREvi_JrNNoI/edit?usp=sharing) - Toolkit for CS Discoveries and CS Principles facilitators
+- [6-12 Facilitator Handbook](https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview) - Toolkit for CS Discoveries and CS Principles facilitators
 - [CS Discoveries Facilitator Landing Page](https://curriculum.code.org/plcsd/) - See full list of important resources and agendas for CS Discoveries Facilitators
 - [CS Principles Facilitator Landing Page](https://curriculum.code.org/plcsp/) - See full list of important resources and agendas for CS Principles Facilitators
-- <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated August 2018]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
+- <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated September 2019]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
 
 [**Back to the top**](#top)
 

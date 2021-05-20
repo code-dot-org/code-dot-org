@@ -1,0 +1,1223 @@
+{
+  "script": {
+    "name": "alltheplcthings",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "professional_learning_course": "All The PLC Things",
+      "peer_reviews_to_complete": 5
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:54:52 UTC",
+    "seeding_key": {
+      "script.name": "alltheplcthings"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "content",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "practice",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Teaching Practices"
+      },
+      "seeding_key": {
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Teachercon",
+      "name": "Introduction to Teachercon",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 1,4",
+      "name": "Lesson 1,4",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 1,6",
+      "name": "Lesson 1,6",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 1,9",
+      "name": "Lesson 1,9",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 1,10",
+      "name": "Lesson 1,10",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 1,11",
+      "name": "Lesson 1,11",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 2,2",
+      "name": "Lesson 2,2",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 2,3",
+      "name": "Lesson 2,3",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Lesson 2,10",
+      "name": "Lesson 2,10",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Test stage with bubbles",
+      "name": "Test stage with bubbles",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Group Work and Peer Learning",
+      "name": "Group Work and Peer Learning",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "key": "Balancing Teachers and Tools",
+      "name": "Balancing Teachers and Tools",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Welcome to TeacherCon!"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Welcome to TeacherCon!"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Welcome to TeacherCon!"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TeacherCon Agenda"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TeacherCon Agenda"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "TeacherCon Agenda"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "TeacherCon Self-Assessment"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "TeacherCon Self-Assessment"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "TeacherCon Self-Assessment"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L4 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L4 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U1L4 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L6 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L6 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U1L6 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L9 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L9 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U1L9 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L10 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U1L10 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U1L11 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1L11 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U1L11 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L2 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L2 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U2L2 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L3 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L3 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U2L3 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L10 Lesson Overview"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "U2L10 Lesson Overview"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cspu5_assess1_eventprograms"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cspu5_assess1_eventprograms"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "cspu5_assess1_eventprograms"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cspu5_assess1_elementid"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cspu5_assess1_elementid"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "cspu5_assess1_elementid"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cspu5_assess1_debugging"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cspu5_assess1_debugging"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "cspu5_assess1_debugging"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cspu5_assess1_codevalues"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cspu5_assess1_codevalues"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "cspu5_assess1_codevalues"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Exploring Practices and Strategies during TeacherCon"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Overview: Group Work and Peer Learning"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Collaborative Learning and Group Work: Description and Strategies"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "The Official Peer Instruction Blog"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "the Journal of Peer Learning"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Peer Review Level 1 - Tuesday Report"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Peer Review Level 1 - Tuesday Report"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Peer Review Level 1 - Tuesday Report"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Peer Review Level 2 - Wednesday Report"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Peer Review Level 2 - Wednesday Report"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Peer Review Level 2 - Wednesday Report"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Exploring Practices and Strategies during TeacherCon"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Overview: Balancing Teachers and Tools"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Peer Review Level 1 - Tuesday Report"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Peer Review Level 1 - Tuesday Report"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Peer Review Level 1 - Tuesday Report"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Peer Review Level 2 - Wednesday Report"
+        ]
+      },
+      "named_level": true,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Peer Review Level 2 - Wednesday Report"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      },
+      "level_keys": [
+        "Peer Review Level 2 - Wednesday Report"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Welcome to TeacherCon!",
+        "script_level.level_keys": [
+          "Welcome to TeacherCon!"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TeacherCon Agenda",
+        "script_level.level_keys": [
+          "TeacherCon Agenda"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TeacherCon Self-Assessment",
+        "script_level.level_keys": [
+          "TeacherCon Self-Assessment"
+        ],
+        "lesson.key": "Introduction to Teachercon",
+        "lesson_group.key": "required",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L4 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L4 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,4",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L6 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L6 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,6",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L9 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L9 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,9",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L10 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,10",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1L11 Lesson Overview",
+        "script_level.level_keys": [
+          "U1L11 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 1,11",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L2 Lesson Overview",
+        "script_level.level_keys": [
+          "U2L2 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,2",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L3 Lesson Overview",
+        "script_level.level_keys": [
+          "U2L3 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,3",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L10 Lesson Overview",
+        "script_level.level_keys": [
+          "U2L10 Lesson Overview"
+        ],
+        "lesson.key": "Lesson 2,10",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cspu5_assess1_eventprograms",
+        "script_level.level_keys": [
+          "cspu5_assess1_eventprograms"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cspu5_assess1_elementid",
+        "script_level.level_keys": [
+          "cspu5_assess1_elementid"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cspu5_assess1_debugging",
+        "script_level.level_keys": [
+          "cspu5_assess1_debugging"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cspu5_assess1_codevalues",
+        "script_level.level_keys": [
+          "cspu5_assess1_codevalues"
+        ],
+        "lesson.key": "Test stage with bubbles",
+        "lesson_group.key": "content",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Group Work and Peer Learning",
+        "script_level.level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Collaborative Learning and Group Work: Description and Strategies",
+        "script_level.level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "The Official Peer Instruction Blog",
+        "script_level.level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "the Journal of Peer Learning",
+        "script_level.level_keys": [
+          "the Journal of Peer Learning"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Wednesday Report: Balancing Teachers and Tools in Unit 1",
+        "script_level.level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Peer Review Level 1 - Tuesday Report",
+        "script_level.level_keys": [
+          "Peer Review Level 1 - Tuesday Report"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Peer Review Level 2 - Wednesday Report",
+        "script_level.level_keys": [
+          "Peer Review Level 2 - Wednesday Report"
+        ],
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Exploring Practices and Strategies during TeacherCon",
+        "script_level.level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overview: Balancing Teachers and Tools",
+        "script_level.level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Peer Review Level 1 - Tuesday Report",
+        "script_level.level_keys": [
+          "Peer Review Level 1 - Tuesday Report"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Peer Review Level 2 - Wednesday Report",
+        "script_level.level_keys": [
+          "Peer Review Level 2 - Wednesday Report"
+        ],
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "alltheplcthings"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

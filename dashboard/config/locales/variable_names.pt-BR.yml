@@ -1,0 +1,31 @@
+---
+pt:
+  data:
+    variable_names:
+      Blue: Azul
+      Green: Verde
+      Red: Vermelho
+      actor: personagem
+      birds: aves
+      cats: gatos
+      color: cor
+      counter: contador
+      dogs: cachorros
+      height: altura
+      honey: mel
+      i: i
+      left: para esquerda
+      length: comprimento
+      name: nome
+      nectar: néctar
+      points: pontos
+      random: aleatório
+      repeat: repita
+      right: para direita
+      score: pontuação
+      size: tamanho
+      speed: velocidade
+      variable: variável
+      width: largura
+      wizard: mago
+      x: x

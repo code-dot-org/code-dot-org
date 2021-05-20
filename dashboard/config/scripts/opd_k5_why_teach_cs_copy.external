@@ -1,0 +1,30 @@
+name 'OPD-K5 Why teach CS_copy'
+skip_dialog true
+markdown <<MARKDOWN
+# Why teach computer science?
+
+<img src="https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG" class="level-image">
+
+### **Develop important skills**
+Research shows that computer science promotes critical thinking, creativity, problem-solving, and engagement in real-world skills. 
+
+### **Improve performance in other subjects**
+You don't need to be a STEM teacher to see the benefit of CS in your classroom. A <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e" target="blank" rel="noopener noreferrer">recent research study</a> found that classrooms with resourceful teachers see higher scores on English, math, and science standardized tests after teaching CS Fundamentals lessons.
+
+### **Build confidence and interest early on**
+If we wait until high school or college to introduce students to computer science, some students will already have decided that computer science is not for them or they will feel that they are already too far behind compared to students who study it outside of school.
+
+Exposing students to computer science in grades K-5, when they don't have to opt-in to a class like they might in high school, allows all students to see how accessible the subject is, and decide if they enjoy it.
+
+### **It's fun!**
+Computer science gives students an opportunity to collaborate, be creative, and express themselves! 
+
+### **Need more convincing?**
+Code.org has a lot of resources to help you – as well as students, your administration, parents, and your community – understand why CS is important in the classroom. Check out our inspirational video series, as well as some of the of the statistics and evidence around CS education, below.
+
+> <a href="http://code.org/educate/inspire" target="blank" rel="noopener noreferrer"><button class="default">Explore inspirational videos >></button></a>
+
+> <a href="http://code.org/promote" target="blank" rel="noopener noreferrer"><button class="default">Explore research >></button></a>
+
+<img src="https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg">
+MARKDOWN

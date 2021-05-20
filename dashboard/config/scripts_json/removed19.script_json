@@ -1,0 +1,222 @@
+{
+  "script": {
+    "name": "removed19",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-05-03 23:55:31 UTC",
+    "seeding_key": {
+      "script.name": "removed19"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Debugging: Unspotted Bugs",
+      "name": "Debugging: Unspotted Bugs",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    },
+    {
+      "key": "Persistence & Frustration: Stevie and the Big Project",
+      "name": "Persistence & Frustration: Stevie and the Big Project",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    },
+    {
+      "key": "Real-life Algorithms: Plant a Seed",
+      "name": "Real-life Algorithms: Plant a Seed",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseB_video_Unspotted_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_video_Unspotted_2019"
+        ],
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      },
+      "level_keys": [
+        "courseB_video_Unspotted_2019"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_Stevie_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_Stevie_2019"
+        ],
+        "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      },
+      "level_keys": [
+        "courseA_video_Stevie_2019"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PlantASeed_2019"
+        ]
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PlantASeed_2019"
+        ],
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      },
+      "level_keys": [
+        "PlantASeed_2019"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseB_video_Unspotted_2019",
+        "script_level.level_keys": [
+          "courseB_video_Unspotted_2019"
+        ],
+        "lesson.key": "Debugging: Unspotted Bugs",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_video_Stevie_2019",
+        "script_level.level_keys": [
+          "courseA_video_Stevie_2019"
+        ],
+        "lesson.key": "Persistence & Frustration: Stevie and the Big Project",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PlantASeed_2019",
+        "script_level.level_keys": [
+          "PlantASeed_2019"
+        ],
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "removed19"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

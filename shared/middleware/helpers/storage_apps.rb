@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative './storage_id'
+require_relative './profanity_privacy_helper'
 
 #
 # StorageApps
@@ -68,9 +69,18 @@ class StorageApps
     StorageApps.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
   end
 
-  def update(channel_id, value, ip_address, project_type: nil)
+  def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
     owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+
+    new_name = value['name']
+    project = @table.where(id: storage_app_id).first
+    old_name = JSON.parse(project[:value])['name']
+    if new_name != old_name
+      share_failure = title_profanity_privacy_violation(new_name, locale)
+
+      raise ProfanityPrivacyError.new(share_failure.content) if share_failure
+    end
 
     row = {
       value: value.to_json,

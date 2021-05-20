@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTopInstructions as TopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -10,7 +11,7 @@ const DEFAULT_PROPS = {
   expandedHeight: 300,
   maxHeight: 300,
   longInstructions: 'Some instructions for the level',
-  collapsed: false,
+  isCollapsed: false,
   noVisualization: false,
   toggleInstructionsCollapsed: () => {},
   setInstructionsHeight: () => {},
@@ -25,10 +26,23 @@ const DEFAULT_PROPS = {
   shortInstructions: '',
   hidden: false,
   isMinecraft: false,
+  isBlockly: false,
   isRtl: false
 };
 
 describe('TopInstructions', () => {
+  it('uses the editor-column class if not in standalone mode', () => {
+    const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
+    expect(wrapper.hasClass('editor-column')).to.be.true;
+  });
+
+  it('does not use the editor-column class if in standalone mode', () => {
+    const wrapper = shallow(
+      <TopInstructions {...DEFAULT_PROPS} standalone={true} />
+    );
+    expect(wrapper.hasClass('editor-column')).to.be.false;
+  });
+
   it('is an empty div if passed the "hidden" property', () => {
     const wrapper = shallow(
       <TopInstructions {...DEFAULT_PROPS} hidden={true} />
@@ -50,7 +64,7 @@ describe('TopInstructions', () => {
 
   describe('viewing the Feedback Tab', () => {
     describe('as a teacher', () => {
-      it('does not show the feedback tab on a level with no rubric where the teacher is not giving feedback', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the teacher is not giving feedback', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -63,10 +77,11 @@ describe('TopInstructions', () => {
           token: null
         });
 
-        expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
       });
 
-      it('shows the feedback tab on a level with a rubric where the teacher is not giving feedback', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level with a rubric where the teacher is not giving feedback', () => {
         const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
 
         wrapper.setState({
@@ -85,12 +100,13 @@ describe('TopInstructions', () => {
           token: null
         });
 
-        expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(1);
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.true;
       });
     });
 
     describe('as a student', () => {
-      it('shows the feedback tab on a level where the teacher has given feedback', () => {
+      it('passes displayFeedback = true to TopInstructionsHeader on a level where the teacher has given feedback', () => {
         const wrapper = shallow(
           <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
         );
@@ -121,10 +137,11 @@ describe('TopInstructions', () => {
           token: null
         });
 
-        expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(1);
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.true;
       });
 
-      it('does not show the feedback tab on a level where the teacher has not given feedback and there is no rubric', () => {
+      it('passes displayFeedback = false to TopInstructionsHeader on a level where the teacher has not given feedback and there is no rubric', () => {
         const wrapper = shallow(
           <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
         );
@@ -139,89 +156,8 @@ describe('TopInstructions', () => {
           token: null
         });
 
-        expect(wrapper.find('.uitest-feedback')).to.have.lengthOf(0);
-      });
-    });
-  });
-  describe('viewing the Teacher Instructions Tab', () => {
-    describe('as a teacher', () => {
-      it('does not show the Teacher Instructions tab on a level with no markdown', () => {
-        const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} teacherMarkdown={null} />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
-      });
-
-      it('shows the Teacher Instructions on a level with markdown for CSF', () => {
-        const wrapper = shallow(
-          <TopInstructions
-            {...DEFAULT_PROPS}
-            noInstructionsWhenCollapsed={false}
-          />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(1);
-      });
-
-      it('does not show the Teacher Instructions on a level with markdown for CSP and CSD', () => {
-        const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: null,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
-      });
-    });
-
-    describe('as a student', () => {
-      it('does not show the Teacher Instructions tab', () => {
-        const wrapper = shallow(
-          <TopInstructions
-            {...DEFAULT_PROPS}
-            viewAs={'Student'}
-            teacherMarkdown={null}
-          />
-        );
-
-        wrapper.setState({
-          tabSelected: 'instructions',
-          feedbacks: [],
-          rubric: null,
-          teacherViewingStudentWork: false,
-          studentId: 1,
-          fetchingData: false,
-          token: null
-        });
-
-        expect(wrapper.find('.uitest-teacherOnlyTab')).to.have.lengthOf(0);
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
+          .be.false;
       });
     });
   });

@@ -96,21 +96,22 @@ export function removeIdPrefix(element) {
   element.setAttribute('id', getId(element));
 }
 
-// TODO(dave): remove blacklist once element ids inside divApplab
+// TODO(dave): remove denylist once element ids inside divApplab
 // are namespaced: https://www.pivotaltracker.com/story/show/113011395
-var ELEMENT_ID_BLACKLIST = [
+var ELEMENT_ID_DENYLIST = [
   'finishButton',
   'submitButton',
   'unsubmitButton',
   'turtleImage',
-  'prompt-icon'
+  'prompt-icon',
+  'bubble'
 ];
 
 var TURTLE_CANVAS_ID = 'turtleCanvas';
 
 /**
  * Returns true if newId is available and won't collide with other elements.
- * Always reject element ids which are blacklisted or already exist outside divApplab.
+ * Always reject element ids which are denylisted or already exist outside divApplab.
  * Allow or reject other element types based on the options specified.
  * @param {string} newId The id to evaluate.
  * @param {Object.<string, boolean>} options Optional map of options
@@ -131,8 +132,8 @@ export function isIdAvailable(newId, options) {
     return false;
   }
 
-  // Don't allow blacklisted elements.
-  if (ELEMENT_ID_BLACKLIST.indexOf(newId) !== -1) {
+  // Don't allow denylisted elements.
+  if (ELEMENT_ID_DENYLIST.indexOf(newId) !== -1) {
     return false;
   }
 

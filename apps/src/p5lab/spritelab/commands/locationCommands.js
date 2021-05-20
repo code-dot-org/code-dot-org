@@ -5,12 +5,30 @@ export const commands = {
     return {x: x, y: 400 - y};
   },
 
+  locationModifier(distance, direction, location) {
+    let dirs = {
+      North: location => ({x: location.x, y: location.y - distance}),
+      East: location => ({x: location.x + distance, y: location.y}),
+      South: location => ({x: location.x, y: location.y + distance}),
+      West: location => ({x: location.x - distance, y: location.y})
+    };
+    if (
+      location === undefined ||
+      location.x === undefined ||
+      location.y === undefined ||
+      !dirs[direction]
+    ) {
+      return;
+    }
+    return dirs[direction](location);
+  },
+
   locationMouse() {
     return {x: this.World.mouseX, y: this.World.mouseY};
   },
 
-  locationOf(spriteId) {
-    let sprite = coreLibrary.getSpriteArray(spriteId)[0];
+  locationOf(spriteArg) {
+    let sprite = coreLibrary.getSpriteArray(spriteArg)[0];
     if (sprite) {
       return {x: sprite.x, y: sprite.y};
     }

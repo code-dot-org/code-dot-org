@@ -1,0 +1,40 @@
+zh-CN:
+  data:
+    variable_names:
+      "???": "？？？"
+      Blue: 蓝色
+      Green: 绿色
+      Red: 红色
+      actor: 角色
+      age: 年龄
+      armlength: 臂长
+      binary: 二进制
+      birds: 鸟
+      bodylength: 身长
+      cats: 猫
+      color: 颜色
+      counter: counter
+      direction: 方向
+      dogs: 狗
+      height: 高度
+      honey: 蜂蜜
+      i: i
+      left: 向左
+      length: 长度
+      name: 名称
+      nectar: 花蜜
+      nectars: 花蜜
+      points: 分数
+      random: 随机
+      red1: 红色1
+      red2: 红色2
+      repeat: 重复
+      right: 向右
+      score: 得分
+      sides: 边
+      size: 大小
+      speed: 速度
+      variable: 变量
+      width: 宽度
+      wizard: 男巫
+      x: x

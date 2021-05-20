@@ -439,6 +439,14 @@ bs:
           je način na koji računar donosi odluku. Recimo, ako pogodiš metu, dobivaš
           deset poena. Ako ne, gubiš tri poena. Kada znaš kako funkcionišu uslovi,
           možeš kreirati sve vrste uzbudljivi igrica.
+    starwars_events:
+      4:
+        text: Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa
+          strelicom ili dodir ekrana.
+    starwars_blocks_events:
+      4:
+        text: Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa
+          strelicom ili dodir ekrana.
     mc_if_statements:
       4:
         text: U ovo slučaju, ne želimo da padnemo u lavu. Lako je izbjeći lavu. Možemo
@@ -466,10 +474,26 @@ bs:
       1:
         text: Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš
           je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio.
+      4:
+        text: Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor
+          u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah
+          ispod njega.
+      7:
+        text: Za početak trebaš prikačiti svoje blokove za narandžast "pri pokretanju"
+          blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se
+          ne pokaže žuta linija, a tada će se oni zakačiti.
     iceage_intro:
       1:
         text: Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš
           je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio.
+      4:
+        text: Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor
+          u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah
+          ispod njega.
+      7:
+        text: Za početak trebaš prikačiti svoje blokove za narandžast "pri pokretanju"
+          blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se
+          ne pokaže žuta linija, a tada će se oni zakačiti.
     mc_2016_intro:
       6:
         text: Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu.
@@ -481,3 +505,7 @@ bs:
     mc_2017_congratulations:
       3:
         text: 'Stampi: Čestitam, uspio si!'
+    hoc_dance_events_2019:
+      4:
+        text: Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa
+          strelicom ili dodir ekrana.

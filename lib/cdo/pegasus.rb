@@ -8,5 +8,4 @@ require_relative './pegasus/hash'
 require_relative './pegasus/object'
 require_relative './pegasus/string'
 
-require_relative './pegasus/text_render'
 require_relative './pegasus/screencap'

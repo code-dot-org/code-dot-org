@@ -1,3 +1,4 @@
+---
 zu:
   data:
     script:
@@ -5,38 +6,67 @@ zu:
         math_category_name: Izibalo
       name:
         infinity:
-          stages:
+          lessons:
             Infinity:
               name: Akugcini noma utalagu
         csd2-2017:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd6-draft:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd6-2017:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd2-draft:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd6-old:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd2-2018:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
         csd2-2019:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
         csd2-pilot:
-          stages:
+          lessons:
             Lists:
               name: Umbhalo olandelanayo
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
+        csd3-2020:
+          lessons:
+            Text:
+              name: Umbhalo
+        csd3-virtual:
+          lessons:
+            Text:
+              name: Umbhalo
+        csd3-2021:
+          lessons:
+            Text:
+              key: Umbhalo
+              name: Umbhalo
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo

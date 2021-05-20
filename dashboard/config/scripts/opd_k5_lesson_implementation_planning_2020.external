@@ -1,0 +1,35 @@
+name 'OPD-K5 lesson implementation planning_2020'
+title 'lesson implementation planning guide'
+description 'description here'
+markdown <<MARKDOWN
+# Lesson Implementation Planning Guides
+
+The goal of these questions is to help you think about and make a detailed plan for how you might teach lessons in a way that leverages best teaching practices and supports students. Think about these questions as you continue to learn basic coding concepts and teaching practices throughout this online professional development course.
+
+## Unplugged Lessons
+You can find a printable version of this resource on page 44 of the <a href="https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview#heading=h.jhv35ofi4hkz" target="blank" rel="noopener noreferrer">curriculum guide</a>.
+
+| What's happening | Where can this happen in the lesson? | 
+| ------------ | ----------------- |
+| **Instructional approaches to use in this lesson** <br/>What instructional techniques do you want to be sure to use in this lesson? Where do you want to use them?  |    |
+| **Role as the teacher** <br/>When/where in the lesson do you want the whole class to discuss a topic? What role do you plan to take and when? |  |
+| **Classroom environment and student interaction** <br/>When do you want students to interact during this lesson? What should that look like?|  |
+| **Assessing student learning in the lesson** <br/>How can you assess if students have learned what they need to learn during this lesson? |  |
+| **Connecting to computer science** <br/>Where do you think students might need a push to see the connection between this unplugged activity and computer science? How do  you plan to support that? |  |
+| **Making connections** <br/>Where is there space in this lesson to make connections to the real world/other things students are learning in school? |  |
+
+## Plugged Lessons
+You can find a printable version of this resource on page 46 of the <a href="https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview#heading=h.jhv35ofi4hkz" target="blank" rel="noopener noreferrer">curriculum guide</a>.
+
+| What's happening | Where can this happen in the lesson? | 
+| ------------ | ----------------- |
+| **Connecting to Unplugged lesson** <br/>How will you scaffold and support students in seeing the connection between the previous unplugged lesson and this plugged lesson?  |    |
+| **Instructional approaches to use in this lesson** <br/>What instructional techniques do you want to be sure to use in this lesson? Where do you want to use them?  |    |
+| **Role as the teacher** <br/>When/where in the lesson do you want the whole class to discuss a topic? What role do you plan to take and when? |  |
+| **Classroom environment and student interaction** <br/>When do you want students to interact during this lesson? What should that look like?|  |
+| **Assessing student learning in the lesson** <br/>How can you assess if students have learned what they need to learn during this lesson? |  |
+| **Supporting debugging** <br/>Where do you think students might need to engage in debugging during this lesson (which levels/activities)? How can you support them with that debugging? |  |
+| **Making connections** <br/>Where is there space in this lesson to make connections to the real world/other things students are learning in school? |  |
+
+
+MARKDOWN

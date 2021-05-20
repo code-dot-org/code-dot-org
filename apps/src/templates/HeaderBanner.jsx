@@ -7,89 +7,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../util/color';
 import {connect} from 'react-redux';
-
-const styles = {
-  headerBanner: {
-    height: 260,
-    maxWidth: '60%',
-    marginTop: 25
-  },
-  headerBannerResponsive: {
-    marginBottom: 61,
-    maxWidth: '60%',
-    marginTop: 25
-  },
-  headerBannerShort: {
-    height: 140,
-    maxWidth: '60%',
-    marginTop: 25
-  },
-  headerBannerShortResponsive: {
-    marginBottom: 61,
-    maxWidth: '60%',
-    marginTop: 25
-  },
-  bannerHeading: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    fontSize: 32,
-    marginBottom: 10,
-    lineHeight: '40px'
-  },
-  bannerHeadingResponsive: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    fontSize: 32,
-    marginBottom: 10,
-    lineHeight: '40px',
-    height: 240
-  },
-  bannerHeadingShort: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    fontSize: 32,
-    marginBottom: 10,
-    lineHeight: '40px',
-    marginTop: -20
-  },
-  bannerHeadingShortResponsive: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    fontSize: 32,
-    marginBottom: 10,
-    lineHeight: '40px',
-    marginTop: -20,
-    height: 120
-  },
-  bannerSubHeading: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginBottom: 10
-  },
-  bannerSubHeadingResponsive: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginBottom: 10
-  },
-  bannerDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginBottom: 20
-  },
-  bannerDescriptionResponsive: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.dark_charcoal,
-    fontSize: 16,
-    lineHeight: '21px',
-    marginBottom: 20
-  }
-};
+import styleConstants from '@cdo/apps/styleConstants';
 
 class HeaderBanner extends React.Component {
   static propTypes = {
@@ -98,7 +16,8 @@ class HeaderBanner extends React.Component {
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool,
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+    backgroundUrl: PropTypes.string
   };
 
   render() {
@@ -107,38 +26,132 @@ class HeaderBanner extends React.Component {
       headingText,
       subHeadingText,
       description,
-      responsiveSize
+      responsiveSize,
+      backgroundUrl
     } = this.props;
 
-    let headerStyle, headingStyle, subHeadingStyle, descriptionStyle;
-    if (responsiveSize === 'xs') {
-      headerStyle = short
-        ? styles.headerBannerShortResponsive
-        : styles.headerBannerResponsive;
-      headingStyle = short
-        ? styles.bannerHeadingShortResponsive
-        : styles.bannerHeadingResponsive;
+    let headerBannerContainerStyle,
+      headingStyle,
+      subHeadingStyle,
+      descriptionStyle;
+
+    const isSmallScreen = responsiveSize === 'xs';
+    headerBannerContainerStyle = short
+      ? styles.headerBannerContainerShort
+      : styles.headerBannerContainer;
+    headingStyle = short ? styles.bannerHeadingShort : styles.bannerHeading;
+    if (isSmallScreen) {
       subHeadingStyle = styles.bannerSubHeadingResponsive;
       descriptionStyle = styles.bannerDescriptionResponsive;
     } else {
-      headerStyle = short ? styles.headerBannerShort : styles.headerBanner;
-      headingStyle = short ? styles.bannerHeadingShort : styles.bannerHeading;
       subHeadingStyle = styles.bannerSubHeading;
       descriptionStyle = styles.bannerDescription;
     }
 
-    return (
-      <div style={headerStyle}>
-        <div style={headingStyle}>{headingText || <span>&nbsp;</span>}</div>
-        <div style={subHeadingStyle}>
-          {subHeadingText || <span>&nbsp;</span>}
+    const headerBannerStyle = {
+      backgroundImage: `url(${backgroundUrl})`
+    };
+
+    if (isSmallScreen) {
+      return (
+        <div>
+          <div id={'header-banner'} style={headerBannerStyle}>
+            <div
+              className={'bannerContentContainer'}
+              style={headerBannerContainerStyle}
+            >
+              <div className={'bannerContent'}>
+                <div style={headingStyle}>{headingText}</div>
+              </div>
+            </div>
+          </div>
+          <div id={'header-banner-overflow'}>
+            <div className={'bannerContent'}>
+              {subHeadingText && (
+                <div style={subHeadingStyle}>{subHeadingText}</div>
+              )}
+              {description && <div style={descriptionStyle}>{description}</div>}
+              {this.props.children && (
+                <div className={'children'}>{this.props.children}</div>
+              )}
+            </div>
+          </div>
         </div>
-        {description && <div style={descriptionStyle}>{description}</div>}
-        {this.props.children}
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div id={'header-banner'} style={headerBannerStyle}>
+          <div
+            className={'bannerContentContainer'}
+            style={headerBannerContainerStyle}
+          >
+            <div className={'bannerContent'}>
+              <div style={headingStyle}>{headingText}</div>
+              {subHeadingText && (
+                <div style={subHeadingStyle}>{subHeadingText}</div>
+              )}
+              {description && <div style={descriptionStyle}>{description}</div>}
+              {this.props.children && (
+                <div className={'children'}>{this.props.children}</div>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
+
+const styles = {
+  headerBannerContainer: {
+    minHeight: 260,
+    maxWidth: styleConstants['content-width']
+  },
+  headerBannerContainerShort: {
+    minHeight: 140,
+    maxWidth: styleConstants['content-width']
+  },
+  bannerHeading: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    fontSize: 32,
+    lineHeight: '40px'
+  },
+  bannerHeadingShort: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    fontSize: 32,
+    lineHeight: '40px'
+  },
+  bannerSubHeading: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.white,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  },
+  bannerSubHeadingResponsive: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  },
+  bannerDescription: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.white,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  },
+  bannerDescriptionResponsive: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal,
+    fontSize: 16,
+    lineHeight: '21px',
+    marginTop: 16
+  }
+};
 
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize

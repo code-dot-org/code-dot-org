@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-07-08T02:27:11.000Z",
+  "level_num": "custom",
+  "user_id": 566,
+  "properties": {
+    "video_key": "csd_gamelab_variables_1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20663,
+    "name_suffix": "_2020",
+    "display_name": "Introduction to Variables",
+    "long_instructions": "## Questions to Consider\r\n\r\n* What key information do you want to make sure your students get from this video?\r\n* How might this video help students solve problems later in the lesson or unit? \r\n\r\n## Important Takeaways \r\n\r\n* Variables hold information and can be accessed using their labels\r\n* Numbers, text, and colors can all go into variables\r\n\r\n",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 22:35:44 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-01-10 20:51:34 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-15 05:47:22 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-08 02:27:52 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-09 23:27:49 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

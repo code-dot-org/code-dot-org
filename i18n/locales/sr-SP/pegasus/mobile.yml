@@ -12,12 +12,12 @@
   csedweek_dates: "8-14 Децембар, 2014"
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">Сат програмирања </a>долази. Позивамо све учитеље и организаторе, <a href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">да испланирају свој Сат програмирања</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Да ли сте ви учитељ компјутерских наука? Погледајте друге на недељи едукације о компјутерској науци.</a>'
+  csedweek_banner_teachers_text: "Да ли сте ви учитељ компјутерских наука? Погледајте друге на недељи едукације о компјутерској науци."
   n_have_learned_an_hoc: "<h1>Испробај</h1><h2>Сат Програмирања</h2><h3># посећено</h3>"
   anybody_can_learn: "Сви могу да науче."
   learn_now: "Учите сада"
   petition_message: "Сваки ученик у свакој школи треба да има прилику да учи информатику"
   petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
-  petition_sign_message_support: 'Ако нас подржаваш, упиши своје име. Придружи се # осталима.'
   petition_join_others: 'Придружи се осталима'
   name: "Име"
   email: "Електронска пошта"
@@ -217,6 +217,7 @@
   homepage_action_text_learn: "Почни"
   homepage_action_text_signpetition: "Потпишите петицију"
   homepage_signpetition_dropdown: "Потпишите нашу петицију &#x25BE;"
+  homepage_signpetition_dropdown_text: "Слажем се"
   homepage_banner_text_prizes: 'Sat programiranja je opet tu od 7. do 13. decembra. '
   homepage_banner_link_prizes: 'Pridruži se najvećem događaju za učenje u istoriji. '
   homepage_banner_text_link: "Сазнајте више"
@@ -436,6 +437,7 @@
   dashboard_sections_secret_none: "Ако бисте желели да ваши ученици управљају сопственим налозима, укључујући бирање сопствених лозинки, изаберите тајни тип<b>none</b>."
   dashboard_sections_print_secrets: "Затим, можете отштампати листу са картицама на којима су подаци о налозима. Картице поделите  појединачно сваком ученику."
   dashboard_sections_switch_section: 'Промените групу:'
+  dashboard_sections_close: "Затвори"
   dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком реду по једног:'
   dashboard_students_new_section: "Направили сте нову групу! Сада додајте ваше ученике користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад."
   dashboard_students_name: 'Име'
@@ -768,14 +770,30 @@
   lightbot_beyond_longdescription: "Научите основну логику програмирања, почевши од врло основног програмирања, за децу од 4 године, на iOS-у или Androidu (или у веб читачима). Научите да распоредите команде, уочите шаблоне, као и да искористите процедуре и петље!"
   flappy_shortcode: "маши крилима"
   header_courses: "курсеви"
+  header_sections: "Секције"
   header_educate_hoc: "Час кода"
+  header_about_us: "О нама"
+  header_about_donors: "Донатори"
+  header_about_partners: "Партнери"
+  header_about_team: "Цео тим"
+  header_about_jobs: "Послови"
+  header_about_contact: "Контактирајте нас"
+  header_about_faqs: "Често постављана питања"
+  header_learn: "Научи"
+  header_help_us: "Помози нам"
+  header_teacher_community: "Заједница учитеља"
+  header_report_bug: "Пријави проблем"
+  header_legal_privacy: "Политика приватности"
+  header_legal_tos: "Услови коришћења"
   user_header_label: "Здраво %{username}"
+  user_header_team: "Тим"
   user_header_settings: "Мој налог"
   user_header_logout: "Одјави се"
   user_header_signin: "Пријави се"
   user_header_playlab: "Играоница"
   user_header_flappy: "Флапи"
   applab_tile_start_tutorial: "Покрени"
+  account_sign_up_email_opt_in: "Да ли можемо да вам шаљемо електронску пошту о нашим курсевима, локалним могућностима или другим вестима из информатике (отприлике једном месечно)?"
   hoc_overview_start_tutorial: "Покрени"
   hoc2018_creativity: "креативност"
   hoc2018_creativity_create: "Креирај"
@@ -801,3 +819,8 @@
   hoc2018_dance_party_button: "Покрени"
   hoc2018_dance_teacher_resources_tile2_button: "Активност ван мреже"
   hoc2018_dance_amazon_about_future_engineer_button: "Сазнајте више"
+  footer_privacy_policy: "Политика приватности"
+  footer_partners: "Партнери"
+  footer_donate: "Донирај"
+  footer_support: "Помоћ и заједница"
+  footer_terms: "Услови"

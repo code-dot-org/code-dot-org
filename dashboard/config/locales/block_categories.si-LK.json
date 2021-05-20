@@ -1,0 +1,55 @@
+{
+  "si-LK": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "ක්‍රියාවන්",
+          "Loops": "ලූපයන්",
+          "Math": "ගණිත",
+          "Logic": "තර්කය",
+          "Functions": "ශ්‍රිතයන්",
+          "Variables": "විචල්‍යන්"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "වැඩසටහන්",
+          "Logic": "තර්කය"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "ක්‍රියාවන්",
+          "Events": "වැඩසටහන්",
+          "Loops": "ලූපයන්",
+          "Math": "ගණිත",
+          "Logic": "තර්කය"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "ක්‍රියාවන්",
+          "Events": "වැඩසටහන්"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "ක්‍රියාවන්",
+          "Events": "වැඩසටහන්",
+          "Variables": "විචල්‍යන්",
+          "Math": "ගණිත",
+          "Logic": "තර්කය",
+          "Functions": "ශ්‍රිතයන්",
+          "Text": "පෙළ"
+        },
+        "outbreak_freeplay": {
+          "Actions": "ක්‍රියාවන්",
+          "Events": "වැඩසටහන්",
+          "Logic": "තර්කය",
+          "Loops": "ලූපයන්",
+          "Math": "ගණිත",
+          "Variables": "විචල්‍යන්",
+          "Functions": "ශ්‍රිතයන්"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "ක්‍රියාවන්",
+          "Events": "වැඩසටහන්",
+          "Logic": "තර්කය",
+          "Math": "ගණිත"
+        }
+      }
+    }
+  }
+}

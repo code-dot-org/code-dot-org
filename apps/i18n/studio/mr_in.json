@@ -1,4 +1,19 @@
 {
+  "backgroundSpace": "स्पेस",
+  "catEvents": "ईव्हेंट्स",
+  "continue": "सुरू ठेवा",
+  "elseCode": "किंवा",
   "for": "या साठी",
-  "to": "पर्यंत"
+  "moveDirectionDown": "खाली",
+  "moveDirectionLeft": "डावा",
+  "moveDirectionRight": "उजवा",
+  "moveDirectionUp": "वर",
+  "to": "पर्यंत",
+  "no": "नाही",
+  "robot": "रोबॉट",
+  "saySpriteChoices_16": "होय",
+  "saySpriteChoices_17": "नाही",
+  "size": "आकार",
+  "waitSeconds": "सेकंद",
+  "yes": "होय"
 }

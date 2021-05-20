@@ -86,7 +86,7 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 150px;
+    height: 255px;
   }
 
   .language-dropdown {
@@ -105,6 +105,11 @@
     padding-bottom: 3px;
     margin-top: 10px;
   }
+
+ .powered-by-aws{
+   width: 100%;
+   text-align: center;
+ }
 
   #footer-links {
     float: none;
@@ -127,7 +132,7 @@
   #pagefooter {
     overflow: visible;
     padding: 0;
-    height: 200px;
+    height: 340px;
   }
 
   #footer-links {
@@ -189,4 +194,9 @@
      display: block;
      padding-right: 0px;
    }
+
+  .powered-by-aws{
+    width: 100%;
+    text-align: center;
+  }
 }

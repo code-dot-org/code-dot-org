@@ -28,8 +28,6 @@ module SharedConstants
     {
       not_tried: "not_tried",
       submitted: "submitted",
-      locked: "locked",
-      readonly: "readonly",
       perfect: "perfect",
       passed: "passed",
       attempted: "attempted",
@@ -55,7 +53,6 @@ module SharedConstants
   # The set of artist autorun options
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
-      limited_auto_run: 'LIMITED_AUTO_RUN',
       full_auto_run: 'FULL_AUTO_RUN',
     }
   ).freeze
@@ -110,7 +107,6 @@ module SharedConstants
     calc
     eval
     minecraft_codebuilder
-    scratch
     spritelab
     weblab
   )
@@ -144,6 +140,7 @@ module SharedConstants
       "setImageURL": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "showElement": null,
       "hideElement": null,
       "deleteElement": null,
@@ -182,6 +179,7 @@ module SharedConstants
       "setRGB": null,
 
       // Data
+      "getColumn": null,
       "startWebRequest": null,
       "setKeyValue": null,
       "getKeyValue": null,
@@ -193,6 +191,7 @@ module SharedConstants
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
+      "getPrediction": null,
 
       // Turtle
       "moveForward": null,
@@ -233,6 +232,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -248,6 +248,8 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
+      "mathSqrt": null,
 
       // Variables
       "declareAssign_x": null,
@@ -270,6 +272,10 @@ module SharedConstants
       "insertItem": null,
       "appendItem": null,
       "removeItem": null,
+      "join": null,
+      "declareAssign_object": null,
+      "getValue": null,
+      "addPair": null,
 
       // Functions
       "functionParams_none": null,
@@ -288,6 +294,7 @@ module SharedConstants
       "boardConnected": null,
       "var myLed = createLed": null,
       "var myButton = createButton": null,
+      "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
       "on": null,
@@ -323,7 +330,26 @@ module SharedConstants
       "tempSensor.F": null,
       "tempSensor.C": null,
       "toggleSwitch.isOpen": null,
-      "onBoardEvent": null
+      "onBoardEvent": null,
+
+      // micro:bit
+      "on": null,
+      "off": null,
+      "toggle": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.display": null,
+      "ledScreen.clear": null,
+      "ledScreen.scrollNumber": null,
+      "ledScreen.scrollString": null,
+      "onBoardEvent": null,
+      "isPressed": null,
+      "lightSensor.value": null,
+      "lightSensor.getAveragedValue": null,
+      "lightSensor.setScale": null,
+      "lightSensor.threshold": null,
+      "compass.getHeading": null
     }
   JSON
 
@@ -365,6 +391,7 @@ module SharedConstants
       "drawSprites": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "keyDown": null,
       "keyWentDown": null,
       "keyWentUp": null,
@@ -419,6 +446,7 @@ module SharedConstants
       "createEdgeSprites": null,
       "shapeColor": null,
       "tint": null,
+      "alpha": null,
       "setVelocity": null,
       "getDirection": null,
       "getSpeed": null,
@@ -508,6 +536,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -523,6 +552,8 @@ module SharedConstants
       "mathMax": null,
       "mathMin": null,
       "mathRandom": null,
+      "mathPow": null,
+      "mathSqrt": null,
       "comment_Math": null,
 
       // Variables
@@ -550,8 +581,6 @@ module SharedConstants
       "comment": null
     }
   JSON
-
-  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 
   # Subset of Ruby Logger::Severity constants.
   # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb
