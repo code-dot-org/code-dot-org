@@ -2052,6 +2052,26 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert teacher_old.purged_at
   end
 
+  test 'deletes contact rollups final data' do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    create :contact_rollups_final, email: teacher_email
+
+    assert ContactRollupsFinal.find_by_email(teacher_email)
+    purge_user teacher
+    assert_nil ContactRollupsFinal.find_by_email(teacher_email)
+  end
+
+  test 'marks contact rollups pardot memory for deletion' do
+    teacher = create :teacher
+    teacher_email = teacher.email
+    create :contact_rollups_pardot_memory, email: teacher_email
+
+    assert_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
+    purge_user teacher
+    refute_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
+  end
+
   private
 
   def assert_logged(expected_message)

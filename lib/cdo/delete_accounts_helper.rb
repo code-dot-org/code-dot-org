@@ -295,8 +295,8 @@ class DeleteAccountsHelper
     # are dropped, records marked for deletion in ContactRollupsPardotMemory are
     # also purged. In addition, records in Pardot server are also deleted.
     # Thus, only need to delete ContactRollupsFinal record here.
-    ContactRollupsFinal.find_by_email(email).delete
-    set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
+    ContactRollupsFinal.find_by_email(email)&.delete
+    set_pardot_deletion_via_contact_rollups(email)
   end
 
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
