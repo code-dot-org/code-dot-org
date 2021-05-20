@@ -5,9 +5,9 @@
 import $ from 'jquery';
 import Immutable from 'immutable';
 
-const SET_HIDDEN_LESSONS = 'hiddenStage/SET_HIDDEN_LESSONS';
-const UPDATE_HIDDEN_LESSON = 'hiddenStage/UPDATE_HIDDEN_LESSON';
-const UPDATE_HIDDEN_SCRIPT = 'hiddenStage/UPDATE_HIDDEN_SCRIPT';
+const SET_HIDDEN_LESSONS = 'hiddenLesson/SET_HIDDEN_LESSONS';
+const UPDATE_HIDDEN_LESSON = 'hiddenLesson/UPDATE_HIDDEN_LESSON';
+const UPDATE_HIDDEN_SCRIPT = 'hiddenLesson/UPDATE_HIDDEN_SCRIPT';
 
 export const STUDENT_SECTION_ID = 'STUDENT';
 

@@ -7,7 +7,7 @@ import stageLock from './stageLockRedux';
 import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
 import exportDialog from './components/exportDialogRedux';
-import hiddenStage from './hiddenStageRedux';
+import hiddenLesson from './hiddenLessonRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
@@ -24,7 +24,7 @@ registerReducers({
   viewAs,
   shareDialog,
   exportDialog,
-  hiddenStage,
+  hiddenLesson,
   isRtl,
   responsive,
   publishDialog,
