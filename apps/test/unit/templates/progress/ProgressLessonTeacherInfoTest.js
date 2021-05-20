@@ -34,7 +34,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
           scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
           scriptName="My Script"
@@ -68,7 +68,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
           scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
           scriptName="My Script"
@@ -101,7 +101,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
           scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
           scriptName="My Script"
@@ -130,7 +130,7 @@ describe('ProgressLessonTeacherInfo', () => {
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
           scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
           scriptName="My Script"
@@ -154,7 +154,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
         scriptAllowsHiddenStages={false}
-        hiddenStageState={Immutable.fromJS({
+        hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
         scriptName="My Script"
@@ -176,7 +176,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
         scriptAllowsHiddenStages={false}
-        hiddenStageState={Immutable.fromJS({
+        hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
         scriptName="My Script"
@@ -198,7 +198,7 @@ describe('ProgressLessonTeacherInfo', () => {
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
         scriptAllowsHiddenStages={false}
-        hiddenStageState={Immutable.fromJS({
+        hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
         scriptName="My Script"
@@ -220,7 +220,7 @@ describe('ProgressLessonTeacherInfo', () => {
             section={section}
             lessonUrl={'code.org'}
             scriptAllowsHiddenStages={true}
-            hiddenStageState={Immutable.fromJS({
+            hiddenLessonState={Immutable.fromJS({
               lessonsBySection: {11: {}}
             })}
             scriptName="My Script"

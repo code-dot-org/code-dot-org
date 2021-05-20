@@ -68,7 +68,7 @@ class ScriptOverview extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     currentCourseId: PropTypes.number,
-    hiddenStageState: PropTypes.object,
+    hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
     userId: PropTypes.number
   };
@@ -111,7 +111,7 @@ class ScriptOverview extends React.Component {
       showRedirectWarning,
       redirectScriptUrl,
       versions,
-      hiddenStageState,
+      hiddenLessonState,
       selectedSectionId,
       courseName,
       showAssignButton,
@@ -139,7 +139,7 @@ class ScriptOverview extends React.Component {
     const isHiddenUnit =
       !!selectedSectionId &&
       !!scriptId &&
-      isScriptHiddenForSection(hiddenStageState, selectedSectionId, scriptId);
+      isScriptHiddenForSection(hiddenLessonState, selectedSectionId, scriptId);
 
     return (
       <div>
@@ -218,7 +218,7 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isRtl: state.isRtl,
   currentCourseId: state.progress.courseId,
-  hiddenStageState: state.hiddenLesson,
+  hiddenLessonState: state.hiddenLesson,
   selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,

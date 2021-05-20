@@ -30,7 +30,7 @@ class CourseScript extends Component {
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
-    hiddenStageState: PropTypes.object.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
@@ -62,7 +62,7 @@ class CourseScript extends Component {
       description,
       viewAs,
       selectedSectionId,
-      hiddenStageState,
+      hiddenLessonState,
       hasNoSections,
       assignedSectionId,
       courseId,
@@ -71,7 +71,7 @@ class CourseScript extends Component {
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
-      hiddenStageState,
+      hiddenLessonState,
       selectedSectionId,
       id
     );
@@ -190,7 +190,7 @@ export default connect(
       ownProps.courseId,
       true
     ),
-    hiddenStageState: state.hiddenLesson,
+    hiddenLessonState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
