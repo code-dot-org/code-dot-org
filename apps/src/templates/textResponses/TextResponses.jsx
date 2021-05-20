@@ -18,7 +18,7 @@ import {
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
-  {label: i18n.stage(), key: 'stage'},
+  {label: i18n.lesson(), key: 'stage'},
   {label: i18n.puzzle(), key: 'puzzle'},
   {label: i18n.question(), key: 'question'},
   {label: i18n.response(), key: 'response'}

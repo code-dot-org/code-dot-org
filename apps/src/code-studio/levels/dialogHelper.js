@@ -153,7 +153,7 @@ export function processResults(onComplete, beforeHook) {
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
           const lessonInfo = lastServerResponse.previousStageInfo;
-          const lessonName = `${i18n.stage()} ${lessonInfo.position}: ${
+          const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
             lessonInfo.name
           }`;
           ReactDOM.render(

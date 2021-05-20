@@ -127,7 +127,7 @@ export function setupApp(appOptions) {
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
         const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${msg.stage()} ${stageInfo.position}: ${
+        const stageName = `${msg.lesson()} ${stageInfo.position}: ${
           stageInfo.name
         }`;
         ReactDOM.render(
