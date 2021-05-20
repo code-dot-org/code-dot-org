@@ -730,7 +730,7 @@ class Lesson < ApplicationRecord
   # - be migrated
   # - be in a course version
   # - be in course versions from the same version year
-  def self.copy_to_script(original_lesson, destination_script)
+  def self.copy_to_script(original_lesson, destination_script, new_level_suffix = nil)
     return if original_lesson.script == destination_script
     raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
     raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
@@ -765,7 +765,11 @@ class Lesson < ApplicationRecord
           copied_activity_section.key = SecureRandom.uuid
           copied_activity_section.lesson_activity_id = copied_lesson_activity.id
           copied_activity_section.save!
-          sl_data = original_activity_section.script_levels.map.with_index(1) {|l, pos| JSON.parse({assessment: l.assessment, bonus: l.bonus, challenge: l.challenge, levels: l.levels, activitySectionPosition: pos}.to_json)}
+          sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
+            original_active_level = original_script_level.oldest_active_level
+            copied_level = new_level_suffix.blank? ? original_active_level : original_active_level.clone_with_suffix(new_level_suffix)
+            JSON.parse({assessment: original_script_level.assessment, bonus: original_script_level.bonus, challenge: original_script_level.challenge, levels: [copied_level], activitySectionPosition: pos}.to_json)
+          end
           copied_activity_section.update_script_levels(sl_data) unless sl_data.blank?
           copied_activity_section
         end

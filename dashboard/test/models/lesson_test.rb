@@ -987,6 +987,34 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @original_lesson.programming_expressions, copied_lesson.programming_expressions
     end
 
+    test "variants are removed when cloning lesson into another script" do
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      level2 = create :maze, name: 'level 2', level_num: 'custom'
+      sl = create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
+        activity_section: activity_section, activity_section_position: 1
+      sl.add_variant(level2)
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script)
+      assert_equal 1, copied_lesson.script_levels.length
+      assert_equal level2, copied_lesson.script_levels[0].oldest_active_level
+    end
+
+    test "levels are cloned when new_level_suffix is passed in" do
+      lesson_activity = create :lesson_activity, lesson: @original_lesson
+      activity_section = create :activity_section, lesson_activity: lesson_activity
+      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
+        activity_section: activity_section, activity_section_position: 1
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = Lesson.copy_to_script(@original_lesson, @destination_script, '_2000')
+      assert_equal 1, copied_lesson.script_levels.length
+      refute_equal level1, copied_lesson.script_levels[0].oldest_active_level
+    end
+
     test "can clone lesson with duplicated resources and vocab into another script" do
       create :resource, name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
       create :vocabulary, word: 'word one', course_version: @original_course_version, lessons: [@original_lesson]
