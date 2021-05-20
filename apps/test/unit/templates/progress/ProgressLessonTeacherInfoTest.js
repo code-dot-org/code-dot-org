@@ -33,7 +33,7 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
@@ -67,7 +67,7 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
@@ -100,7 +100,7 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
@@ -129,7 +129,7 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
+          scriptAllowsHiddenLessons={false}
           hiddenLessonState={Immutable.fromJS({
             lessonsBySection: {11: {}}
           })}
@@ -153,7 +153,7 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lockableLesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenStages={false}
+        scriptAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
@@ -175,7 +175,7 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenStages={false}
+        scriptAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
@@ -197,7 +197,7 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lockableLesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenStages={false}
+        scriptAllowsHiddenLessons={false}
         hiddenLessonState={Immutable.fromJS({
           lessonsBySection: {11: {}}
         })}
@@ -219,7 +219,7 @@ describe('ProgressLessonTeacherInfo', () => {
             lesson={fakeLesson('Maze', 1)}
             section={section}
             lessonUrl={'code.org'}
-            scriptAllowsHiddenStages={true}
+            scriptAllowsHiddenLessons={true}
             hiddenLessonState={Immutable.fromJS({
               lessonsBySection: {11: {}}
             })}
