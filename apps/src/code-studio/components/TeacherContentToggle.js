@@ -22,7 +22,7 @@ class TeacherContentToggle extends React.Component {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
-    hiddenStagesInitialized: PropTypes.bool.isRequired,
+    hiddenLessonsInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     isHiddenStage: PropTypes.bool.isRequired,
     isLockedStage: PropTypes.bool.isRequired
@@ -51,7 +51,7 @@ class TeacherContentToggle extends React.Component {
   render() {
     const {
       viewAs,
-      hiddenStagesInitialized,
+      hiddenLessonsInitialized,
       sectionsAreLoaded,
       isLockedStage,
       isHiddenStage,
@@ -73,7 +73,7 @@ class TeacherContentToggle extends React.Component {
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
       // locked stages, so that we don't flash content before hiding it
-      if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
+      if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
     }
@@ -146,7 +146,7 @@ export const mapStateToProps = state => {
   return {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
+    hiddenLessonsInitialized: state.hiddenStage.hiddenLessonsInitialized,
     isHiddenStage,
     isLockedStage
   };
