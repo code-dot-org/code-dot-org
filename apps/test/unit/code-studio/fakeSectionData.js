@@ -8,7 +8,7 @@ const fakeSectionData = {
   [section1Id]: {
     section_id: section1Id,
     section_name: 'My Section',
-    lessons: {
+    stages: {
       [lesson1Id]: [
         // locked
         {
@@ -49,7 +49,7 @@ const fakeSectionData = {
   [section2Id]: {
     section_id: section2Id,
     section_name: 'My Other Section',
-    lessons: {
+    stages: {
       [lesson1Id]: [
         {
           locked: true,
