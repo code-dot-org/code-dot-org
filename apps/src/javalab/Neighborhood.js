@@ -100,6 +100,7 @@ export default class Neighborhood {
   }
 
   reset() {
+    timeoutList.clearTimeouts();
     this.controller.reset(false, false);
     this.lastSignalEndTime = null;
   }
