@@ -16,7 +16,7 @@ Scenario: Stage Locking Dialog
   And I see no difference for "stage lock dialog"
   Then I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
-  And I scroll our lockable stage into view
+  And I scroll our lockable lesson into view
   And I see no difference for "course overview for authorized teacher"
   And I close my eyes
 
@@ -75,7 +75,7 @@ Scenario: Lock settings for students
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
-  And I show stage answers for students
+  And I show lesson answers for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/submitted for student
@@ -138,7 +138,7 @@ Scenario: Lock settings for students who never submit
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
-  And I show stage answers for students
+  And I show lesson answers for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not submitted for student
@@ -194,7 +194,7 @@ Scenario: Lock settings for retake not submit scenario
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
-  And I lock the stage for students
+  And
   And I wait until element ".modal-backdrop" is gone
 
   # now locked/not submitted for student

@@ -47,5 +47,5 @@ Feature: Script overview page
 
     And I am on "http://studio.code.org/s/mc"
     And I wait until element "td:contains(Minecraft)" is visible
-    # verify script name overrides stage name when there is only one stage
+    # verify script name overrides lesson name when there is only one lesson
     And element "td:contains(1. Minecraft Hour of Code)" is visible
