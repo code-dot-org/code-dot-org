@@ -131,17 +131,14 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_user_new errors when joing a section already at capacity' do
     sign_in @student
-    # get Capacity Section dependant on running
-    # RAILS_ENV=test bundle exec rake seed:restricted_section
-    section = Section.where(name: 'Section Capacity Test').take
-
-    # If the `RAILS_ENV=test bundle exec rake seed:restricted_section`
-    # seeder script has not run:
-
-    section ||= create(:section, login_type: 'email')
+    section = create(:section, login_type: 'email')
 
     500.times do
       create(:follower, section: section)
+    end
+
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: section.code}
     end
 
     assert_redirected_to '/join'
