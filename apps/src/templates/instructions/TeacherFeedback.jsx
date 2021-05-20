@@ -228,7 +228,7 @@ export class TeacherFeedback extends Component {
               {!!latestFeedback && (
                 <TeacherFeedbackStatus
                   viewAs={viewAs}
-                  latestFeedback={this.state.latestFeedback[0]}
+                  latestFeedback={latestFeedback}
                 />
               )}
             </div>

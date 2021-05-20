@@ -4,6 +4,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import RubricField from './RubricField';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {rubricShape} from '@cdo/apps/templates/types';
 
 const rubricLevels = [
   'performanceLevel1',
@@ -14,13 +15,7 @@ const rubricLevels = [
 
 class TeacherFeedbackRubric extends Component {
   static propTypes = {
-    rubric: PropTypes.shape({
-      keyConcept: PropTypes.string,
-      performanceLevel1: PropTypes.string,
-      performanceLevel2: PropTypes.string,
-      performanceLevel3: PropTypes.string,
-      performanceLevel4: PropTypes.string
-    }),
+    rubric: rubricShape,
     performance: PropTypes.string,
     displayKeyConcept: PropTypes.bool,
     disabledMode: PropTypes.bool.isRequired,

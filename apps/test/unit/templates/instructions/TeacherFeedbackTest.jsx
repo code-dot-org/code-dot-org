@@ -15,7 +15,7 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   displayKeyConcept: false,
-  latestFeedback: []
+  latestFeedback: null
 };
 const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   user: 5,
@@ -32,7 +32,7 @@ const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   displayKeyConcept: true,
-  latestFeedback: []
+  latestFeedback: null
 };
 
 const TEACHER_FEEDBACK_RUBRIC_PROPS = {
@@ -50,7 +50,7 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   displayKeyConcept: false,
-  latestFeedback: []
+  latestFeedback: null
 };
 
 const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
@@ -79,7 +79,7 @@ const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   displayKeyConcept: true,
-  latestFeedback: []
+  latestFeedback: null
 };
 
 const STUDENT_FEEDBACK_RUBRIC_PROPS = {
@@ -97,7 +97,7 @@ const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   displayKeyConcept: false,
-  latestFeedback: []
+  latestFeedback: null
 };
 
 describe('TeacherFeedback', () => {
@@ -117,9 +117,10 @@ describe('TeacherFeedback', () => {
     it('displays correct message with checkmark if student has viewed their feedback', () => {
       const props = {
         ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
-        latestFeedback: [
-          {feedback_provider_id: 5, student_seen_feedback: new Date()}
-        ]
+        latestFeedback: {
+          feedback_provider_id: 5,
+          student_seen_feedback: new Date()
+        }
       };
       const seenByStudentSpy = sinon.spy(i18n, 'seenByStudent');
       const wrapper = shallow(<TeacherFeedback {...props} />);
@@ -133,9 +134,7 @@ describe('TeacherFeedback', () => {
       const today = new Date();
       const props = {
         ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
-        latestFeedback: [
-          {feedback_provider_id: 5, student_seen_feedback: today}
-        ]
+        latestFeedback: {feedback_provider_id: 5, student_seen_feedback: today}
       };
       const lastSeenTodaySpy = sinon.spy(i18n, 'today');
       const wrapper = shallow(<TeacherFeedback {...props} />);
@@ -143,12 +142,12 @@ describe('TeacherFeedback', () => {
       const lastSeenYesterdaySpy = sinon.spy(i18n, 'yesterday');
       let yesterday = new Date(today);
       yesterday.setDate(yesterday.getDate() - 1);
-      wrapper.setState({latestFeedback: [{student_seen_feedback: yesterday}]});
+      wrapper.setState({latestFeedback: {student_seen_feedback: yesterday}});
       expect(lastSeenYesterdaySpy).to.have.been.calledOnce;
       let twoDaysAgo = new Date(yesterday);
       twoDaysAgo.setDate(twoDaysAgo.getDate() - 1);
       wrapper.setState({
-        latestFeedback: [{student_seen_feedback: twoDaysAgo}]
+        latestFeedback: {student_seen_feedback: twoDaysAgo}
       });
       const formattedDate = moment(twoDaysAgo).format('l');
       expect(wrapper.contains(formattedDate)).to.be.true;
@@ -159,7 +158,7 @@ describe('TeacherFeedback', () => {
     it('displays correct message if student has not viewed their feedback', () => {
       const props = {
         ...TEACHER_FEEDBACK_NO_RUBRIC_PROPS,
-        latestFeedback: [{feedback_provider_id: 5}]
+        latestFeedback: {feedback_provider_id: 5}
       };
       const lastUpdatedCurrentTeacherSpy = sinon.spy(
         i18n,
@@ -220,17 +219,15 @@ describe('TeacherFeedback', () => {
       const wrapper = shallow(
         <TeacherFeedback
           {...TEACHER_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={[
-            {
-              comment: 'Good work!',
-              created_at: '2019-03-26T19:56:53.000Z',
-              id: 5,
-              level_id: 123,
-              performance: 'performanceLevel2',
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
-            }
-          ]}
+          latestFeedback={{
+            comment: 'Good work!',
+            created_at: '2019-03-26T19:56:53.000Z',
+            id: 5,
+            level_id: 123,
+            performance: 'performanceLevel2',
+            student_id: 1,
+            teacher_name: 'Tim The Teacher'
+          }}
         />
       );
 
@@ -345,7 +342,7 @@ describe('TeacherFeedback', () => {
     it('with feedback displays lastUpdated message', () => {
       const props = {
         ...STUDENT_FEEDBACK_RUBRIC_PROPS,
-        latestFeedback: [{student_seen_feedback: new Date(), comment: 'Great!'}]
+        latestFeedback: {student_seen_feedback: new Date(), comment: 'Great!'}
       };
       const lastUpdatedSpy = sinon.spy(i18n, 'lastUpdated');
       shallow(<TeacherFeedback {...props} />);
@@ -392,17 +389,15 @@ describe('TeacherFeedback', () => {
       const wrapper = shallow(
         <TeacherFeedback
           {...STUDENT_FEEDBACK_NO_RUBRIC_PROPS}
-          latestFeedback={[
-            {
-              comment: 'Good work!',
-              created_at: '2019-03-26T19:56:53.000Z',
-              id: 5,
-              level_id: 123,
-              performance: null,
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
-            }
-          ]}
+          latestFeedback={{
+            comment: 'Good work!',
+            created_at: '2019-03-26T19:56:53.000Z',
+            id: 5,
+            level_id: 123,
+            performance: null,
+            student_id: 1,
+            teacher_name: 'Tim The Teacher'
+          }}
         />
       );
 
@@ -432,17 +427,15 @@ describe('TeacherFeedback', () => {
       const wrapper = shallow(
         <TeacherFeedback
           {...STUDENT_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={[
-            {
-              comment: 'Good work!',
-              created_at: '2019-03-26T19:56:53.000Z',
-              id: 5,
-              level_id: 123,
-              performance: null,
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
-            }
-          ]}
+          latestFeedback={{
+            comment: 'Good work!',
+            created_at: '2019-03-26T19:56:53.000Z',
+            id: 5,
+            level_id: 123,
+            performance: null,
+            student_id: 1,
+            teacher_name: 'Tim The Teacher'
+          }}
         />
       );
 
@@ -486,17 +479,15 @@ describe('TeacherFeedback', () => {
       const wrapper = shallow(
         <TeacherFeedback
           {...STUDENT_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={[
-            {
-              comment: 'Good work!',
-              created_at: '2019-03-26T19:56:53.000Z',
-              id: 5,
-              level_id: 123,
-              performance: 'performanceLevel2',
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
-            }
-          ]}
+          latestFeedback={{
+            comment: 'Good work!',
+            created_at: '2019-03-26T19:56:53.000Z',
+            id: 5,
+            level_id: 123,
+            performance: 'performanceLevel2',
+            student_id: 1,
+            teacher_name: 'Tim The Teacher'
+          }}
         />
       );
 
@@ -551,17 +542,15 @@ describe('TeacherFeedback', () => {
       const wrapper = shallow(
         <TeacherFeedback
           {...STUDENT_FEEDBACK_RUBRIC_PROPS}
-          latestFeedback={[
-            {
-              comment: '',
-              created_at: '2019-03-26T19:56:53.000Z',
-              id: 5,
-              level_id: 123,
-              performance: 'performanceLevel2',
-              student_id: 1,
-              teacher_name: 'Tim The Teacher'
-            }
-          ]}
+          latestFeedback={{
+            comment: '',
+            created_at: '2019-03-26T19:56:53.000Z',
+            id: 5,
+            level_id: 123,
+            performance: 'performanceLevel2',
+            student_id: 1,
+            teacher_name: 'Tim The Teacher'
+          }}
         />
       );
 

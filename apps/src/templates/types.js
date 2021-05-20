@@ -13,8 +13,9 @@ export const videoDataShape = PropTypes.shape({
 export const teacherFeedbackShape = PropTypes.shape({
   comment: PropTypes.string,
   performance: PropTypes.string,
-  student_seen_feedback: PropTypes.string,
-  created_at: PropTypes.string
+  student_seen_feedback: PropTypes.date,
+  created_at: PropTypes.date,
+  feedback_provider_id: PropTypes.number
 });
 
 export const rubricShape = PropTypes.shape({
