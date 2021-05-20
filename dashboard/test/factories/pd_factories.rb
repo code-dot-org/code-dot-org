@@ -812,137 +812,9 @@ FactoryGirl.define do
         hash.delete 'ableToAttendSingle'
       end
     end
-  end
 
-  # default to csp
-  factory :pd_teacher1819_application_hash, parent: :pd_teacher1819_application_hash_common do
-    csp
-  end
-
-  factory :pd_teacher1819_application_hash_common, parent: :pd_teacher_application_hash_common do
-    title 'Mr.'
-    preferred_first_name 'Sevvy'
-    address '123 Fake Street'
-    city 'Buffalo'
-    state 'Washington'
-    grades_at_school ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7']
-    grades_teaching ['Grade 7']
-    grades_expect_to_teach ['Grade 6', 'Grade 7']
-    does_school_require_cs_license 'Yes'
-    have_cs_license 'Yes'
-    subjects_teaching ['Computer Science']
-    subjects_expect_to_teach ['Computer Science']
-    subjects_licensed_to_teach ['Computer Science']
-    taught_in_past ['CS Fundamentals']
-    cs_offered_at_school ['AP CS A']
-    cs_opportunities_at_school ['Courses for credit']
-    plan_to_teach 'Yes, I plan to teach this course'
-    able_to_attend_single "Yes, I'm able to attend"
-
-    trait :csp do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
-      csp_which_grades ['11', '12']
-      csp_course_hours_per_week 'More than 5 course hours per week'
-      csp_course_hours_per_year 'At least 100 course hours'
-      csp_terms_per_year '1 quarter'
-      csp_how_offer 'As an AP course'
-      csp_ap_exam 'Yes, all students will be expected to take the AP CS Principles exam'
-    end
-
-    trait :csd do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
-      csd_which_grades ['6', '7']
-      csd_course_hours_per_week '5 or more course hours per week'
-      csd_course_hours_per_year 'At least 100 course hours'
-      csd_terms_per_year '1 quarter'
-    end
-  end
-
-  factory :pd_teacher2021_application_hash_common, parent: :pd_teacher_application_hash_common do
-    pay_fee 'Yes, my school will be able to pay the full program fee.'
-    plan_to_teach Pd::Application::Teacher2021Application.options[:plan_to_teach].first
-    interested_in_online_program 'Yes'
-    completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes 45
-    cs_how_many_days_per_week 5
-    cs_how_many_weeks_per_year 20
-    cs_total_course_hours 75
-    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-
-    trait :csp do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csp]
-      csp_which_grades ['11', '12']
-      csp_which_units ['Unit 1: Digital Information', 'Unit 2: Internet']
-      csp_how_offer 'As an AP course'
-    end
-
-    trait :csd do
-      program Pd::Application::TeacherApplicationBase::PROGRAMS[:csd]
-      csd_which_grades ['6', '7']
-      csd_which_units ['Unit 0: Problem Solving', 'Unit 1: Web Development']
-    end
-  end
-
-  factory :pd_teacher1819_application, class: 'Pd::Application::Teacher1819Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_teacher1819_application_hash_common, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-
-    trait :locked do
-      after(:create) do |application|
-        application.update!(status: 'accepted')
-        application.lock!
-      end
-    end
-  end
-
-  # default to csp
-  factory :pd_teacher1920_application_hash, parent: :pd_teacher1920_application_hash_common do
-    csp
-  end
-
-  factory :pd_teacher1920_application_hash_common, parent: :pd_teacher1819_application_hash_common do
-    completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes 45
-    cs_how_many_days_per_week 5
-    cs_how_many_weeks_per_year 20
-    cs_total_course_hours 75
-    cs_terms '1 quarter'
-    replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
-    pay_fee 'Yes, my school will be able to pay the full program fee.'
-    plan_to_teach 'Yes, I plan to teach this course this year (2019-20)'
-    interested_in_online_program 'Yes'
-  end
-
-  factory :pd_teacher1920_application, class: 'Pd::Application::Teacher1920Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_teacher1920_application_hash_common, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-  end
-
-  # default to csp
-  factory :pd_teacher2021_application_hash, parent: :pd_teacher2021_application_hash_common do
-    csp
-  end
-
-  factory :pd_teacher2021_application, class: 'Pd::Application::Teacher2021Application' do
-    association :user, factory: [:teacher, :with_school_info], strategy: :create
-    course 'csp'
-    transient do
-      form_data_hash {build :pd_teacher2021_application_hash_common, course.to_sym}
-    end
-    form_data {form_data_hash.to_json}
-  end
-
-  factory :pd_teacher2122_application_hash_common, parent: :pd_teacher_application_hash_common do
-    pay_fee Pd::Application::Teacher2122Application.options[:pay_fee].first
-    plan_to_teach Pd::Application::Teacher2122Application.options[:plan_to_teach].first
+    pay_fee Pd::Application::TeacherApplication.options[:pay_fee].first
+    plan_to_teach Pd::Application::TeacherApplication.options[:plan_to_teach].first
     interested_in_online_program 'Yes'
     completing_on_behalf_of_someone_else 'No'
     cs_how_many_minutes 45
@@ -966,15 +838,15 @@ FactoryGirl.define do
   end
 
   # default to csp
-  factory :pd_teacher2122_application_hash, parent: :pd_teacher2122_application_hash_common do
+  factory :pd_teacher_application_hash, parent: :pd_teacher_application_hash_common do
     csp
   end
 
-  factory :pd_teacher2122_application, class: 'Pd::Application::Teacher2122Application' do
+  factory :pd_teacher_application, class: 'Pd::Application::TeacherApplication' do
     association :user, factory: [:teacher, :with_school_info], strategy: :create
     course 'csp'
     transient do
-      form_data_hash {build :pd_teacher2122_application_hash_common, course.to_sym}
+      form_data_hash {build :pd_teacher_application_hash_common, course.to_sym}
     end
     form_data {form_data_hash.to_json}
   end
@@ -1092,7 +964,7 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval2021_application, class: 'Pd::Application::PrincipalApproval2021Application' do
-    association :teacher_application, factory: :pd_teacher2021_application
+    association :teacher_application, factory: :pd_teacher_application
     course 'csp'
     transient do
       approved 'Yes'
@@ -1147,7 +1019,7 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval1920_application, class: 'Pd::Application::PrincipalApproval1920Application' do
-    association :teacher_application, factory: :pd_teacher1920_application
+    association :teacher_application, factory: :pd_teacher_application
     course 'csp'
     transient do
       approved 'Yes'
@@ -1452,7 +1324,7 @@ FactoryGirl.define do
   end
 
   factory :pd_application_email, class: 'Pd::Application::Email' do
-    association :application, factory: :pd_teacher1920_application
+    association :application, factory: :pd_teacher_application
     email_type 'confirmation'
     application_status 'confirmation'
     to {application.user.email}
