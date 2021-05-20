@@ -4,8 +4,7 @@ import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
   uploadSpriteToAnimationLibrary,
-  uploadMetadataToAnimationLibrary,
-  UploadType
+  uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
@@ -21,7 +20,7 @@ export default class SpriteUpload extends React.Component {
     currentCategories: [],
     aliases: [],
     metadata: '',
-    imageUploadStatus: {
+    spriteUploadStatus: {
       success: null,
       message: ''
     },
@@ -58,7 +57,8 @@ export default class SpriteUpload extends React.Component {
         break;
     }
 
-    let JSONDestination = destination.replace('.png', '.json');
+    // The sprite and metadata JSON should have the same name, but different file extensions
+    let jsonDestination = destination.replace('.png', '.json');
 
     return uploadSpriteToAnimationLibrary(
       destination,
@@ -67,7 +67,7 @@ export default class SpriteUpload extends React.Component {
       this.onError
     ).then(() =>
       uploadMetadataToAnimationLibrary(
-        JSONDestination,
+        jsonDestination,
         metadata,
         this.onSuccess,
         this.onError
@@ -82,28 +82,24 @@ export default class SpriteUpload extends React.Component {
       : `${uploadType} Upload Error(${response.status}: ${
           response.statusText
         })`;
-    if (uploadType === UploadType.SPRITE) {
-      this.setState({
-        imageUploadStatus: {success: response.ok, message: responseMessage}
-      });
-    } else if (uploadType === UploadType.METADATA) {
-      this.setState({
-        metadataUploadStatus: {success: response.ok, message: responseMessage}
-      });
-    }
+    let styledUploadType = uploadType.toLowerCase();
+    this.setState({
+      [`${styledUploadType}UploadStatus`]: {
+        success: response.ok,
+        message: responseMessage
+      }
+    });
   };
 
   // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
   onError = (uploadType, error) => {
-    if (uploadType === UploadType.SPRITE) {
-      this.setState({
-        imageUploadStatus: {success: false, message: error.toString()}
-      });
-    } else if (uploadType === UploadType.METADATA) {
-      this.setState({
-        metadataUploadStatus: {success: false, message: error.toString()}
-      });
-    }
+    let styledUploadType = uploadType.toLowerCase();
+    this.setState({
+      [`${styledUploadType}UploadStatus`]: {
+        success: false,
+        message: error.toString()
+      }
+    });
     console.error(error);
   };
 
@@ -128,40 +124,43 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleAliasChange = event => {
-    let aliases = event.target.value;
-    aliases = aliases.split(',');
+    const aliases = event.target.value?.split(',') || [];
     let processedAliases = aliases.map(alias => alias.trim());
     this.setState({aliases: processedAliases});
   };
 
   generateMetadata = () => {
     const {filename, aliases} = this.state;
-    let image = document.getElementById('sprite-image-preview');
-    let metadata = {};
-    metadata['name'] = filename;
-    metadata['aliases'] = aliases;
-    metadata['frameCount'] = 1;
-    metadata['frameSize'] = {x: image.width, y: image.height};
-    metadata['looping'] = true;
-    metadata['frameDelay'] = 2;
+    let image = this.refs.spritePreview;
+    let metadata = {
+      name: filename,
+      aliases: aliases,
+      frameCount: 1,
+      frameSize: {x: image.clientWidth, y: image.clientHeight},
+      looping: true,
+      frameDelay: 2
+    };
     this.setState({metadata: JSON.stringify(metadata)});
   };
 
   render() {
     const {
-      imageUploadStatus,
+      spriteUploadStatus,
       metadataUploadStatus,
       filePreviewURL,
       currentCategories,
       spriteAvailability,
       category,
-      filename
+      filename,
+      metadata
     } = this.state;
 
+    // Only display the upload button when the user has uploaded an image and generated metadata
     const uploadButtonDisabled =
       spriteAvailability === '' ||
       (spriteAvailability === SpriteLocation.library && category === '') ||
-      filename === '';
+      filename === '' ||
+      metadata === '';
 
     return (
       <div>
@@ -226,7 +225,7 @@ export default class SpriteUpload extends React.Component {
           <br />
           <label>
             <h3>Image Preview:</h3>
-            <img id="sprite-image-preview" src={filePreviewURL} />
+            <img ref="spritePreview" src={filePreviewURL} />
           </label>
           <br />
 
@@ -263,10 +262,10 @@ export default class SpriteUpload extends React.Component {
           <p
             style={{
               ...styles.uploadStatusMessage,
-              ...(!imageUploadStatus.success && styles.uploadFailure)
+              ...(!spriteUploadStatus.success && styles.uploadFailure)
             }}
           >
-            {imageUploadStatus.message}
+            {spriteUploadStatus.message}
           </p>
           <p
             style={{
