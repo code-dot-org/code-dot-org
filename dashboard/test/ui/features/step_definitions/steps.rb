@@ -1723,7 +1723,7 @@ Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
   wait_short_until {jquery_is_element_visible('.modal')}
 end
 
-Then /^I unlock the stage for students$/ do
+Then /^I unlock the lesson for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
