@@ -12,7 +12,7 @@ Scenario: Stage Locking Dialog
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"
   And I see no difference for "selected section"
-  Then I open the stage lock dialog
+  Then I open the lesson lock dialog
   And I see no difference for "stage lock dialog"
   Then I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
@@ -37,7 +37,7 @@ Scenario: Lock settings for students
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -74,7 +74,7 @@ Scenario: Lock settings for students
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I show stage answers for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -115,7 +115,7 @@ Scenario: Lock settings for students who never submit
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -137,7 +137,7 @@ Scenario: Lock settings for students who never submit
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I show stage answers for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -171,7 +171,7 @@ Scenario: Lock settings for retake not submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -193,7 +193,7 @@ Scenario: Lock settings for retake not submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I lock the stage for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -211,7 +211,7 @@ Scenario: Lock settings for retake not submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -253,7 +253,7 @@ Scenario: Lock settings for retake after submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
@@ -287,7 +287,7 @@ Scenario: Lock settings for retake after submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
+  And I open the lesson lock dialog
   And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
