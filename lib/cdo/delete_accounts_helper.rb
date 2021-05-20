@@ -93,7 +93,7 @@ class DeleteAccountsHelper
   # Remove all user generated content associated with any PD the user has been through, as well as
   # all PII associated with any PD records.
   # @param [Integer] The ID of the user to clean the PD content.
-  def clean_and_destroy_pd_content(user_id)
+  def clean_and_destroy_pd_content(user_id, user_email)
     @log.puts "Cleaning PD content"
     application_ids = Pd::Application::ApplicationBase.with_deleted.where(user_id: user_id).pluck(:id)
     pd_enrollment_ids = Pd::Enrollment.with_deleted.where(user_id: user_id).pluck(:id)
@@ -122,7 +122,16 @@ class DeleteAccountsHelper
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
 
+    # Delete survey submissions
     SurveyResult.where(user_id: user_id).destroy_all
+    Pd::MiscSurvey.where(user_id: user_id).destroy_all
+    Foorm::SimpleSurveySubmission.where(user_id: user_id).each do |simple_submission|
+      simple_submission.foorm_submission.destroy
+      simple_submission.destroy
+    end
+
+    # Delete email history
+    Pd::Application::Email.where(to: user_email).destroy
 
     unless application_ids.empty?
       # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
@@ -340,7 +349,7 @@ class DeleteAccountsHelper
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
-    clean_and_destroy_pd_content(user.id)
+    clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
