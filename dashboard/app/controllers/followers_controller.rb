@@ -122,6 +122,7 @@ class FollowersController < ApplicationController
 
       redirect_url = "#{root_url}join" # Keeps user on the join page.
       redirect_to redirect_url, inline_alert: I18n.t('follower.error.full_section', section_code: params[:section_code], section_capacity: @section.capacity)
+      return
     end
 
     # Redirect and provide an error for restricted sections if the user is not already enrolled in this section.
