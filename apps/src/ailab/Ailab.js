@@ -31,6 +31,7 @@ function getInstructionsDefaults() {
     dataDisplayFeatures:
       'Choose one or more columns as inputs to help make the prediction.',
     trainModel: 'Your model is being trained.',
+    generateResults: 'Your model is being tested.',
     results: 'Review the results.',
     saveModel: 'Save the trained model for use in App Lab.',
     modelSummary:
