@@ -2,6 +2,9 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;
 import {NeighborhoodSignalType} from './constants';
+const timeoutList = require('@cdo/apps/lib/util/timeoutList');
+
+const BASE_STEP_SPEED = 500;
 
 export default class Neighborhood {
   constructor() {
@@ -28,32 +31,52 @@ export default class Neighborhood {
 
     const slider = document.getElementById('slider');
     this.speedSlider = new Slider(10, 35, 130, slider);
+    this.lastActionTime = null;
   }
 
   handleSignal(signal) {
-    const type = signal.value;
-    switch (type) {
+    // Calculate time to wait until executing this signal. Time to wait will
+    // be milliseconds of (last action enqueued + time per action) - current time,
+    // or 0 if that number is negative or this is the first signal received.
+    let timeout = 0;
+    const timeForAction = BASE_STEP_SPEED * this.getPegmanSpeedMultiplier();
+    if (this.lastActionTime) {
+      const nextActionTime = this.lastActionTime + timeForAction;
+      timeout = nextActionTime - Date.now();
+      if (timeout < 0) {
+        timeout = 0;
+      }
+      this.lastActionTime = nextActionTime;
+    } else {
+      this.lastActionTime = Date.now();
+    }
+    timeoutList.setTimeout(
+      () => this.getMazeCommand(signal, timeForAction),
+      timeout
+    );
+  }
+
+  getMazeCommand(signal, timeForAction) {
+    switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail;
-        this.controller.animatedMove(
+        return this.controller.animatedMove(
           Direction[direction.toUpperCase()],
-          2000,
+          timeForAction,
           id
         );
-        break;
       }
       case NeighborhoodSignalType.INITIALIZE_PAINTER: {
         const {direction, x, y, id} = signal.detail;
-        this.controller.addPegman(
+        return this.controller.addPegman(
           id,
           parseInt(x),
           parseInt(y),
           Direction[direction.toUpperCase()]
         );
-        break;
       }
       default:
-        console.log(type);
+        console.log(signal.value);
         break;
     }
   }
@@ -64,9 +87,10 @@ export default class Neighborhood {
 
   reset() {
     this.controller.reset();
+    this.lastActionTime = null;
   }
 
-  // TODO: use this as a multiplier on the time per action or step at execution time.
+  // Multiplier on the time per action or step at execution time.
   getPegmanSpeedMultiplier() {
     // The slider goes from 0 to 1. We scale the speed slider value to be between -1 and 1 and
     // return 2 to the power of that scaled value to get a multiplier between 0.5 and 2.

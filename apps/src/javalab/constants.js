@@ -35,5 +35,11 @@ export const NeighborhoodSignalType = {
   // Hide the painter on the screen
   HIDE_PAINTER: 'HIDE_PAINTER',
   // Show the painter on the screen
-  SHOW_PAINTER: 'SHOW_PAINTER'
+  SHOW_PAINTER: 'SHOW_PAINTER',
+  // Turn the painter left
+  TURN_LEFT: 'TURN_LEFT',
+  // Hide all paint buckets
+  HIDE_BUCKETS: 'HIDE_BUCKETS',
+  // Show all paint buckets
+  SHOW_BUCKETS: 'SHOW_BUCKETS'
 };
