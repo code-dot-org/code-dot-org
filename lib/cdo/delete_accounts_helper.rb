@@ -285,6 +285,20 @@ class DeleteAccountsHelper
     user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
   end
 
+  def purge_contact_rollups(email)
+    @log.puts "Deleting ContactRollups records for email #{email}"
+    return unless email
+
+    # Contact rollups data are in 4 tables: ContactRollupsRaw, ContactRollupsProcessed,
+    # ContactRollupsPardotMemory, and ContactRollupsFinal.
+    # During daily contact rollups runs, ContactRollupsRaw and ContactRollupsProcessed
+    # are dropped, records marked for deletion in ContactRollupsPardotMemory are
+    # also purged. In addition, records in Pardot server are also deleted.
+    # Thus, only need to delete ContactRollupsFinal record here.
+    ContactRollupsFinal.find_by_email(email).delete
+    set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
+  end
+
   # Purges (deletes and cleans) various pieces of information owned by the user in our system.
   # Noops if the user is already marked as purged.
   # @param [User] user The user to purge.
@@ -330,7 +344,7 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
-    set_pardot_deletion_via_contact_rollups(user_email) if user_email&.present?
+    purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
 
