@@ -36,7 +36,7 @@ const Vector2 = PropTypes.shape({
  *  We serialize a smaller set of information {SerializedAnimationProps}.
  *
  *  We migrate if the old style gets loaded. See setInitialAnimationList() in
- *  animationListModule.js for how this works.
+ *  animationList.js for how this works.
  */
 
 /**

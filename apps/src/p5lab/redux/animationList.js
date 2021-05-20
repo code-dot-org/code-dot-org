@@ -12,16 +12,16 @@ import {
 } from '@cdo/apps/imageUtils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {selectAnimation} from './AnimationTab/animationTabModule';
-import {reportError} from './errorDialogStackModule';
-import {throwIfSerializedAnimationListIsInvalid} from './shapes';
+import {selectAnimation} from './animationTab';
+import {reportError} from './errorDialogStack';
+import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
 import {
   projectChanged,
   isOwner,
   getCurrentId
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import defaultSprites from './spritelab/defaultSprites.json';
+import defaultSprites from '../spritelab/defaultSprites.json';
 import trackEvent from '@cdo/apps/util/trackEvent';
 
 // TODO: Overwrite version ID within session

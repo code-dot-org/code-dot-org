@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-17 15:57:22 UTC",
+    "serialized_at": "2021-05-18 02:54:31 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -4566,6 +4566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 L8 Video: Binary and Data"
+        ],
         "progression": "How Computers Work: Binary and Data"
       },
       "named_level": false,
@@ -5797,6 +5800,18 @@
       "seeding_key": {
         "resource.key": "u1l7_black_and_white_images"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -6039,6 +6054,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp1-2021"
       }
     }

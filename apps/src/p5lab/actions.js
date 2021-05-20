@@ -1,11 +1,7 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
-import {
-  pickNewAnimation,
-  show,
-  Goal
-} from './AnimationPicker/animationPickerModule';
+import {pickNewAnimation, show, Goal} from './redux/animationPicker';
 import {setAllowInstructionsResize} from '../redux/instructions';
 import {P5LabInterfaceMode} from './constants';
 
