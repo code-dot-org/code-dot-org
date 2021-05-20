@@ -132,6 +132,7 @@ class LessonsController < ApplicationController
   def clone
     destination_script = Script.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
+    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == @lesson.script.get_course_version.version_year
     copied_lesson = Lesson.copy_to_script(@lesson, destination_script)
     render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})
   rescue => err
