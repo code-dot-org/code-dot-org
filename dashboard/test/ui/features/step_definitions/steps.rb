@@ -1709,7 +1709,7 @@ Then /^I scroll our lockable stage into view$/ do
   @browser.execute_script('$(".fa-lock:visible")[0].scrollIntoView(true)')
 end
 
-Then /^I open the stage lock dialog$/ do
+Then /^I open the lesson lock dialog$/ do
   wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")

@@ -67,7 +67,7 @@ Scenario: Toggle on Lockable Level
   And element ".level-group" is not visible
 
   Then I am on "http://studio.code.org/s/allthethings"
-  Then I open the stage lock dialog
+  Then I open the lesson lock dialog
   Then I unlock the lesson for students
 
   Then I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1?noautoplay=true"

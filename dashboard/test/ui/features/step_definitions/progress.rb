@@ -71,7 +71,7 @@ Then /^I open the progress drop down of the current page$/ do
   }
 end
 
-Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
+Then /^I verify progress in the drop down of the current page is "([^"]*)" for lesson (\d+) level (\d+)/ do |test_result, stage, level|
   selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) .uitest-bubble"
   verify_progress(selector, test_result)
 end
