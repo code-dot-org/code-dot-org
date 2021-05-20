@@ -54,13 +54,13 @@ module Pd::Application
       refute principal_application.valid?
 
       # real teacher application guid is required
-      teacher_application = create :pd_teacher2021_application
+      teacher_application = create :pd_teacher_application
       principal_application.application_guid = teacher_application.application_guid
       assert principal_application.valid?
     end
 
     test 'create placeholder and send mail creates a placeholder and sends principal approval' do
-      teacher_application = create :pd_teacher2021_application
+      teacher_application = create :pd_teacher_application
       Pd::Application::TeacherApplicationMailer.expects(:principal_approval).
         with(instance_of(Pd::Application::TeacherApplication)).
         returns(mock {|mail| mail.expects(:deliver_now)})

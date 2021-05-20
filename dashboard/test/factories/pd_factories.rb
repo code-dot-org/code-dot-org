@@ -911,7 +911,7 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval2122_application, class: 'Pd::Application::PrincipalApproval2122Application' do
-    association :teacher_application, factory: :pd_teacher2122_application
+    association :teacher_application, factory: :pd_teacher_application
     course 'csp'
     transient do
       approved 'Yes'
@@ -1075,7 +1075,7 @@ FactoryGirl.define do
   end
 
   factory :pd_principal_approval1819_application, class: 'Pd::Application::PrincipalApproval1819Application' do
-    association :teacher_application, factory: :pd_teacher1819_application
+    association :teacher_application, factory: :pd_teacher_application
     course 'csp'
     transient do
       approved 'Yes'
@@ -1200,7 +1200,7 @@ FactoryGirl.define do
       form_data_hash {build(:pd_teachercon1819_registration_hash_common, hash_trait)}
     end
 
-    association :pd_application, factory: :pd_teacher1819_application
+    association :pd_application, factory: :pd_teacher_application
     association :user, factory: :teacher
     form_data {form_data_hash.to_json}
   end

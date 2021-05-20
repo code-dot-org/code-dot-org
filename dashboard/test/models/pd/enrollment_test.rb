@@ -642,7 +642,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop = create :workshop
     teacher = create :teacher
     enrollment = create :pd_enrollment, user: teacher, workshop: workshop
-    application = create :pd_teacher2021_application, user: teacher
+    application = create :pd_teacher_application, user: teacher
 
     assert_nil enrollment.application_id
 
