@@ -619,13 +619,13 @@ const levelWithProgress = (
  * Get level data for all lessons/lessons
  */
 export const levelsByLesson = ({
-  lessons,
+  stages,
   levelResults,
   scriptProgress,
   levelPairing,
   currentLevelId
 }) =>
-  lessons.map(lesson =>
+  stages.map(lesson =>
     lesson.levels.map(level => {
       let statusLevel = levelWithProgress(
         {levelResults, scriptProgress, levelPairing, currentLevelId},
