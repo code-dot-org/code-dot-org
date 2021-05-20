@@ -11,8 +11,8 @@ import {lessonType} from './progressTypes';
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import StageLock from './StageLock';
 import {
-  toggleHiddenStage,
-  isStageHiddenForSection
+  toggleHiddenLesson,
+  isLessonHiddenForSection
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
@@ -32,7 +32,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     hiddenStageState: PropTypes.object.isRequired,
     scriptName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
-    toggleHiddenStage: PropTypes.func.isRequired,
+    toggleHiddenLesson: PropTypes.func.isRequired,
     lockableAuthorized: PropTypes.bool.isRequired
   };
 
@@ -43,9 +43,9 @@ class ProgressLessonTeacherInfo extends React.Component {
   }
 
   onClickHiddenToggle(value) {
-    const {scriptName, section, lesson, toggleHiddenStage} = this.props;
+    const {scriptName, section, lesson, toggleHiddenLesson} = this.props;
     const sectionId = (section && section.id.toString()) || '';
-    toggleHiddenStage(scriptName, sectionId, lesson.id, value === 'hidden');
+    toggleHiddenLesson(scriptName, sectionId, lesson.id, value === 'hidden');
     firehoseClient.putRecord(
       {
         study: 'hidden-lessons',
@@ -83,7 +83,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       section && scriptAllowsHiddenStages && !hasNoSections;
     const isHidden =
       scriptAllowsHiddenStages &&
-      isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+      isLessonHiddenForSection(hiddenStageState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
     const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
@@ -177,5 +177,5 @@ export default connect(
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0
   }),
-  {toggleHiddenStage}
+  {toggleHiddenLesson}
 )(ProgressLessonTeacherInfo);
