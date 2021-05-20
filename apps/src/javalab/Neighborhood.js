@@ -86,7 +86,7 @@ export default class Neighborhood {
   }
 
   reset() {
-    this.controller.reset();
+    this.controller.reset(false, false);
     this.lastActionTime = null;
   }
 
