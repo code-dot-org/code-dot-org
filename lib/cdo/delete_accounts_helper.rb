@@ -131,7 +131,7 @@ class DeleteAccountsHelper
     end
 
     # Delete email history
-    Pd::Application::Email.where(to: user_email).destroy_all
+    Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
 
     unless application_ids.empty?
       # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
