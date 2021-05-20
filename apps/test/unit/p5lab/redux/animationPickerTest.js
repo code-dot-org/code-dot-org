@@ -1,8 +1,8 @@
-import reducer, * as animationPickerModule from '@cdo/apps/p5lab/AnimationPicker/animationPickerModule';
+import reducer, * as animationPicker from '@cdo/apps/p5lab/redux/animationPicker';
 import {expect} from '../../../util/deprecatedChai';
-var Goal = animationPickerModule.Goal;
+var Goal = animationPicker.Goal;
 
-describe('animationPickerModule', function() {
+describe('animationPicker', function() {
   describe('reducer', function() {
     var initialState = {
       visible: false,
@@ -24,7 +24,7 @@ describe('animationPickerModule', function() {
     });
 
     describe('action: show', function() {
-      var show = animationPickerModule.show;
+      var show = animationPicker.show;
 
       it('sets state to visible if state was not visible', function() {
         var state = {};
@@ -66,7 +66,7 @@ describe('animationPickerModule', function() {
     });
 
     describe('action: showBackground', function() {
-      var showBackground = animationPickerModule.showBackground;
+      var showBackground = animationPicker.showBackground;
 
       it('sets state to isBackground', function() {
         var state = {};
@@ -76,7 +76,7 @@ describe('animationPickerModule', function() {
     });
 
     describe('action: hide', function() {
-      var hide = animationPickerModule.hide;
+      var hide = animationPicker.hide;
 
       it('sets state to not visible if state was visible', function() {
         var state = {visible: true};
@@ -94,7 +94,7 @@ describe('animationPickerModule', function() {
     });
 
     describe('action: beginUpload', function() {
-      var beginUpload = animationPickerModule.beginUpload;
+      var beginUpload = animationPicker.beginUpload;
 
       it('sets uploadInProgress', function() {
         var newState = reducer(initialState, beginUpload('filename.png'));
@@ -111,7 +111,7 @@ describe('animationPickerModule', function() {
     });
 
     describe('action: handleUploadError', function() {
-      var handleUploadError = animationPickerModule.handleUploadError;
+      var handleUploadError = animationPicker.handleUploadError;
 
       it('unsets uploadInProgress', function() {
         var state = {uploadInProgress: true};

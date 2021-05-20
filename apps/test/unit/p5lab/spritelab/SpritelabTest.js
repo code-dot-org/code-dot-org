@@ -6,7 +6,7 @@ import {
   addAnimation,
   editAnimation,
   setInitialAnimationList
-} from '@cdo/apps/p5lab/animationListModule';
+} from '@cdo/apps/p5lab/redux/animationList';
 import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,

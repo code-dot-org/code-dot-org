@@ -8,9 +8,9 @@ import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
-import animationListModule, {
+import animationList, {
   setInitialAnimationList
-} from '@cdo/apps/p5lab/animationListModule';
+} from '@cdo/apps/p5lab/redux/animationList';
 import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 
@@ -20,7 +20,7 @@ const INVALID_COLOR = '#d00';
 let poolField, nameField, helperEditor, configEditor, validationDiv;
 
 $(document).ready(() => {
-  registerReducers({animationList: animationListModule});
+  registerReducers({animationList: animationList});
   getStore().dispatch(setInitialAnimationList(defaultSprites));
 
   poolField = document.getElementById('block_pool');
