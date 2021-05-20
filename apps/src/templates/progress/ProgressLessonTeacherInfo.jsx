@@ -13,7 +13,7 @@ import StageLock from './StageLock';
 import {
   toggleHiddenStage,
   isStageHiddenForSection
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import TeacherInfoBox from './TeacherInfoBox';
@@ -169,8 +169,8 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    scriptAllowsHiddenStages: state.hiddenStage.hideableLessonsAllowed,
-    hiddenStageState: state.hiddenStage,
+    scriptAllowsHiddenStages: state.hiddenLesson.hideableLessonsAllowed,
+    hiddenStageState: state.hiddenLesson,
     scriptName: state.progress.scriptName,
     lockableAuthorized: state.stageLock.lockableAuthorized,
     hasNoSections:
