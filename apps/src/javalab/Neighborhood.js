@@ -4,7 +4,14 @@ const Direction = tiles.Direction;
 import {NeighborhoodSignalType} from './constants';
 const timeoutList = require('@cdo/apps/lib/util/timeoutList');
 
-const BASE_STEP_SPEED = 500;
+const PAUSE_BETWEEN_SIGNALS = 200;
+const ANIMATED_STEP_SPEED = 500;
+const ANIMATED_STEPS = [
+  NeighborhoodSignalType.MOVE,
+  NeighborhoodSignalType.PAINT,
+  NeighborhoodSignalType.REMOVE_PAINT,
+  NeighborhoodSignalType.TURN_LEFT
+];
 
 export default class Neighborhood {
   constructor() {
@@ -31,38 +38,41 @@ export default class Neighborhood {
 
     const slider = document.getElementById('slider');
     this.speedSlider = new Slider(10, 35, 130, slider);
-    this.lastActionTime = null;
+    this.lastSignalEndTime = null;
   }
 
   handleSignal(signal) {
-    // Calculate time to wait until executing this signal. Time to wait will
-    // be milliseconds of (last action enqueued + time per action) - current time,
-    // or 0 if that number is negative or this is the first signal received.
+    // Calculate time to wait until executing this signal. Animated steps such as move
+    // have an additional timeForSignal that is used by maze to animate the sprite. All
+    // signals have a pause between signals. The timing is multiplied by the pegmanSpeedMultiplier
+    // to speed up or slow down the overall animation.
     let timeout = 0;
-    const timeForAction = BASE_STEP_SPEED * this.getPegmanSpeedMultiplier();
-    if (this.lastActionTime) {
-      const nextActionTime = this.lastActionTime + timeForAction;
-      timeout = nextActionTime - Date.now();
+    const timeForSignal =
+      this.getAnimationTime(signal) * this.getPegmanSpeedMultiplier();
+    const totalSignalTime =
+      timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
+    if (this.lastSignalEndTime) {
+      timeout = this.lastSignalEndTime - Date.now();
       if (timeout < 0) {
         timeout = 0;
       }
-      this.lastActionTime = nextActionTime;
+      this.lastSignalEndTime = this.lastSignalEndTime + totalSignalTime;
     } else {
-      this.lastActionTime = Date.now();
+      this.lastSignalEndTime = Date.now() + totalSignalTime;
     }
     timeoutList.setTimeout(
-      () => this.getMazeCommand(signal, timeForAction),
+      () => this.getMazeCommand(signal, timeForSignal),
       timeout
     );
   }
 
-  getMazeCommand(signal, timeForAction) {
+  getMazeCommand(signal, timeForSignal) {
     switch (signal.value) {
       case NeighborhoodSignalType.MOVE: {
         const {direction, id} = signal.detail;
         return this.controller.animatedMove(
           Direction[direction.toUpperCase()],
-          timeForAction,
+          timeForSignal,
           id
         );
       }
@@ -81,13 +91,17 @@ export default class Neighborhood {
     }
   }
 
+  getAnimationTime(signal) {
+    return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
+  }
+
   onCompile() {
     this.controller.hideDefaultPegman();
   }
 
   reset() {
     this.controller.reset(false, false);
-    this.lastActionTime = null;
+    this.lastSignalEndTime = null;
   }
 
   // Multiplier on the time per action or step at execution time.
