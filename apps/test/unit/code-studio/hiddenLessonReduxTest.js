@@ -19,7 +19,7 @@ import {
   getStore
 } from '@cdo/apps/redux';
 
-function fakeStageLockReducer(state, action) {
+function fakeLessonLockReducer(state, action) {
   return {
     selectedSection: 1
   };
@@ -44,7 +44,7 @@ describe('hiddenLessonRedux', () => {
       stubRedux();
       registerReducers({
         hiddenLesson: reducerSpy,
-        stageLock: fakeStageLockReducer
+        stageLock: fakeLessonLockReducer
       });
       store = getStore();
     });
@@ -125,7 +125,7 @@ describe('hiddenLessonRedux', () => {
       });
     });
 
-    it('sets hiddenLessonsInitialized to true if even we have no hidden stages', () => {
+    it('sets hiddenLessonsInitialized to true if even we have no hidden lessons', () => {
       const state = store.getState().hiddenLesson;
       assert.deepEqual(state.toJS(), {
         hiddenLessonsInitialized: false,
@@ -163,7 +163,7 @@ describe('hiddenLessonRedux', () => {
 
       let action, nextState;
 
-      // hide a stage
+      // hide a lesson
       action = toggleHiddenLesson('scriptName', 10, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
@@ -178,7 +178,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      // hide the same stage in a different section
+      // hide the same lesson in a different section
       action = toggleHiddenLesson('scriptName', 11, 123, true);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
@@ -196,7 +196,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      // unhide the stage in one section
+      // unhide the lesson in one section
       action = toggleHiddenLesson('scriptName', 10, 123, false);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
@@ -214,7 +214,7 @@ describe('hiddenLessonRedux', () => {
         scriptsBySection: {}
       });
 
-      // hide another stage
+      // hide another lesson
       action = toggleHiddenLesson('scriptName', 10, 345, true);
       store.dispatch(action);
       nextState = store.getState().hiddenLesson;
@@ -255,23 +255,23 @@ describe('hiddenLessonRedux', () => {
 
     it('updateHiddenLesson', () => {
       const sectionId = '123';
-      const stageId = '45';
+      const lessonId = '45';
 
       const state = reducer(
         initialState,
-        updateHiddenLesson(sectionId, stageId, true)
+        updateHiddenLesson(sectionId, lessonId, true)
       );
       assert.strictEqual(
-        state.getIn(['lessonsBySection', sectionId, stageId]),
+        state.getIn(['lessonsBySection', sectionId, lessonId]),
         true
       );
 
       const nexstate = reducer(
         state,
-        updateHiddenLesson(sectionId, stageId, false)
+        updateHiddenLesson(sectionId, lessonId, false)
       );
       assert.strictEqual(
-        nexstate.getIn(['lessonsBySection', sectionId, stageId]),
+        nexstate.getIn(['lessonsBySection', sectionId, lessonId]),
         false
       );
     });
@@ -348,46 +348,46 @@ describe('hiddenLessonRedux', () => {
 
   describe('isLessonHiddenForSection', () => {
     const sectionId = '123';
-    const hiddenStageId = '45';
-    const unhiddenStageId = '67';
+    const hiddenLessonId = '45';
+    const unhiddenLessonId = '67';
     const state = reducer(
       initialState,
-      updateHiddenLesson(sectionId, hiddenStageId, true)
+      updateHiddenLesson(sectionId, hiddenLessonId, true)
     );
 
-    it('returns false if not given a stageId', () => {
+    it('returns false if not given a lessonId', () => {
       assert.strictEqual(
         isLessonHiddenForSection(state, sectionId, null),
         false
       );
     });
 
-    it('returns false if given an stageId not hidden for the given sectionId', () => {
+    it('returns false if given an lessonId not hidden for the given sectionId', () => {
       assert.strictEqual(
-        isLessonHiddenForSection(state, sectionId, unhiddenStageId),
+        isLessonHiddenForSection(state, sectionId, unhiddenLessonId),
         false
       );
     });
 
-    it('returns true if given an stageId that is hidden for the given sectionId', () => {
+    it('returns true if given an lessonId that is hidden for the given sectionId', () => {
       assert.strictEqual(
-        isLessonHiddenForSection(state, sectionId, hiddenStageId),
+        isLessonHiddenForSection(state, sectionId, hiddenLessonId),
         true
       );
     });
 
     it('uses STUDENT_SECTION_ID if none is provided', () => {
-      const studentHiddenStage = '35';
+      const studentHiddenLesson = '35';
       const state = reducer(
         initialState,
-        updateHiddenLesson(STUDENT_SECTION_ID, studentHiddenStage, true)
+        updateHiddenLesson(STUDENT_SECTION_ID, studentHiddenLesson, true)
       );
       assert.strictEqual(
-        isLessonHiddenForSection(state, null, studentHiddenStage),
+        isLessonHiddenForSection(state, null, studentHiddenLesson),
         true
       );
       assert.strictEqual(
-        isLessonHiddenForSection(state, null, unhiddenStageId),
+        isLessonHiddenForSection(state, null, unhiddenLessonId),
         false
       );
     });
@@ -403,21 +403,21 @@ describe('hiddenLessonRedux', () => {
       updateHiddenScript(sectionId, hiddenScriptId, true)
     );
 
-    it('returns false if not given a stageId', () => {
+    it('returns false if not given a lessonId', () => {
       assert.strictEqual(
         isScriptHiddenForSection(state, sectionId, null),
         false
       );
     });
 
-    it('returns false if given an stageId not hidden for the given sectionId', () => {
+    it('returns false if given an lessonId not hidden for the given sectionId', () => {
       assert.strictEqual(
         isScriptHiddenForSection(state, sectionId, unhiddenScriptId),
         false
       );
     });
 
-    it('returns true if given an stageId that is hidden for the given sectionId', () => {
+    it('returns true if given an lessonId that is hidden for the given sectionId', () => {
       assert.strictEqual(
         isScriptHiddenForSection(state, sectionId, hiddenScriptId),
         true
