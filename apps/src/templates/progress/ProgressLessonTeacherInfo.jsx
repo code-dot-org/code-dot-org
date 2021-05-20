@@ -172,7 +172,7 @@ export default connect(
     scriptAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
     hiddenLessonState: state.hiddenLesson,
     scriptName: state.progress.scriptName,
-    lockableAuthorized: state.stageLock.lockableAuthorized,
+    lockableAuthorized: state.lessonLock.lockableAuthorized,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
       state.teacherSections.sectionIds.length === 0

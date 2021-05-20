@@ -1327,7 +1327,7 @@ describe('progressReduxTest', () => {
         'progress/SET_IS_SUMMARY_VIEW',
         'progress/SHOW_TEACHER_INFO',
         'progress/UPDATE_FOCUS_AREAS',
-        'stageLock/AUTHORIZE_LOCKABLE',
+        'lessonLock/AUTHORIZE_LOCKABLE',
         'progress/SET_SCRIPT_COMPLETED',
         'progress/SET_SCRIPT_PROGRESS',
         'progress/MERGE_RESULTS',

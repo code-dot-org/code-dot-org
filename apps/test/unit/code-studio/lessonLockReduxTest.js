@@ -19,28 +19,28 @@ import reducer, {
   openLockDialog,
   closeLockDialog,
   saveLockDialog,
-  lockStage,
+  lockLesson,
   BEGIN_SAVE,
   FINISH_SAVE,
   CLOSE_LOCK_DIALOG,
-  fullyLockedStageMapping,
+  fullyLockedLessonMapping,
   setSectionLockStatus
-} from '@cdo/apps/code-studio/stageLockRedux';
+} from '@cdo/apps/code-studio/lessonLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
 // We get this from our call to /api/lock_status
 const [section1Id, section2Id] = Object.keys(fakeSectionData);
-const stage1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
+const lesson1Id = Object.keys(fakeSectionData[section1Id].lessons)[0];
 
-describe('stageLockRedux reducer tests', () => {
+describe('lessonLockRedux reducer tests', () => {
   describe('setSectionLockStatus', () => {
     it('sets section data we receive from the server', () => {
       const action = setSectionLockStatus(fakeSectionData);
       const nextState = reducer({}, action);
 
-      assert.deepEqual(nextState.stagesBySectionId, {
-        [section1Id]: fakeSectionData[section1Id].stages,
-        [section2Id]: fakeSectionData[section2Id].stages
+      assert.deepEqual(nextState.lessonsBySectionId, {
+        [section1Id]: fakeSectionData[section1Id].lessons,
+        [section2Id]: fakeSectionData[section2Id].lessons
       });
     });
   });
@@ -54,7 +54,7 @@ describe('stageLockRedux reducer tests', () => {
       );
 
       // Open dialog, such that lockStatus represents section1
-      action = openLockDialog(section1Id, stage1Id);
+      action = openLockDialog(section1Id, lesson1Id);
       nextState = reducer(sectionState, action);
       assert.equal(nextState.lockStatus.length, 3);
 
@@ -66,7 +66,7 @@ describe('stageLockRedux reducer tests', () => {
           name: 'student4',
           lockStatus: LockStatus.Locked,
           userLevelData:
-            fakeSectionData[section2Id].stages[stage1Id][0].user_level_data
+            fakeSectionData[section2Id].lessons[lesson1Id][0].user_level_data
         }
       ]);
     });
@@ -79,7 +79,7 @@ describe('stageLockRedux reducer tests', () => {
       );
 
       // Open dialog, such that lockStatus represents section1
-      action = openLockDialog(section1Id, stage1Id);
+      action = openLockDialog(section1Id, lesson1Id);
       nextState = reducer(sectionState, action);
       assert.equal(nextState.lockStatus.length, 3);
 
@@ -91,18 +91,18 @@ describe('stageLockRedux reducer tests', () => {
   });
 
   describe('openLockDialog', () => {
-    it('updates lock status and lockDialogStageId', () => {
+    it('updates lock status and lockDialogLessonId', () => {
       const state = reducer(undefined, setSectionLockStatus(fakeSectionData));
       assert.deepEqual(state.lockStatus, []);
-      assert.equal(state.lockDialogStageId, null);
+      assert.equal(state.lockDialogLessonId, null);
 
-      const action = openLockDialog(section1Id, stage1Id);
+      const action = openLockDialog(section1Id, lesson1Id);
       const nextState = reducer(state, action);
-      assert.equal(nextState.lockDialogStageId, stage1Id);
+      assert.equal(nextState.lockDialogLessonId, lesson1Id);
 
-      const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
-      const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
-      const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
+      const student1 = fakeSectionData[section1Id].lessons[lesson1Id][0];
+      const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
+      const student3 = fakeSectionData[section1Id].lessons[lesson1Id][2];
       const expected = [
         {
           userLevelData: student1.user_level_data,
@@ -125,14 +125,14 @@ describe('stageLockRedux reducer tests', () => {
   });
 
   describe('closeLockDialog', () => {
-    it('resets saving/lockStatus/lockDialogStageId', () => {
+    it('resets saving/lockStatus/lockDialogLessonId', () => {
       let state = reducer({}, setSectionLockStatus(fakeSectionData));
-      state = reducer(state, openLockDialog(section1Id, stage1Id));
+      state = reducer(state, openLockDialog(section1Id, lesson1Id));
       state = reducer(state, beginSave());
 
       const action = closeLockDialog();
       const nextState = reducer(state, action);
-      assert.equal(nextState.lockDialogStageId, null);
+      assert.equal(nextState.lockDialogLessonId, null);
       assert.deepEqual(nextState.lockStatus, []);
     });
   });
@@ -151,7 +151,7 @@ describe('stageLockRedux reducer tests', () => {
   describe('finishSave', () => {
     it('updates both lockStatus, and the appropriate part of the info in sections', () => {
       let state = reducer(undefined, setSectionLockStatus(fakeSectionData));
-      state = reducer(state, openLockDialog(section1Id, stage1Id));
+      state = reducer(state, openLockDialog(section1Id, lesson1Id));
       state = reducer(state, beginSave());
 
       const student1LockStatus = state.lockStatus[0].lockStatus;
@@ -160,9 +160,9 @@ describe('stageLockRedux reducer tests', () => {
       assert.equal(student1LockStatus, LockStatus.Locked);
       assert.equal(student2LockStatus, LockStatus.Editable);
       assert.equal(student3LockStatus, LockStatus.ReadonlyAnswers);
-      const student1 = state.stagesBySectionId[section1Id][stage1Id][0];
-      const student2 = state.stagesBySectionId[section1Id][stage1Id][1];
-      const student3 = state.stagesBySectionId[section1Id][stage1Id][2];
+      const student1 = state.lessonsBySectionId[section1Id][lesson1Id][0];
+      const student2 = state.lessonsBySectionId[section1Id][lesson1Id][1];
+      const student3 = state.lessonsBySectionId[section1Id][lesson1Id][2];
       assert.equal(student1.locked, true);
       assert.equal(student1.readonly_answers, false);
       assert.equal(student2.locked, false);
@@ -174,7 +174,7 @@ describe('stageLockRedux reducer tests', () => {
       // swap students two and three in terms of lock status
       newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
       newLockStatus[2].lockStatus = LockStatus.Editable;
-      const action = finishSave(section1Id, stage1Id, newLockStatus);
+      const action = finishSave(section1Id, lesson1Id, newLockStatus);
       const nextState = reducer(state, action);
 
       const nextStudent1LockStatus = nextState.lockStatus[0].lockStatus;
@@ -183,9 +183,12 @@ describe('stageLockRedux reducer tests', () => {
       assert.equal(nextStudent1LockStatus, LockStatus.Locked);
       assert.equal(nextStudent2LockStatus, LockStatus.ReadonlyAnswers);
       assert.equal(nextStudent3LockStatus, LockStatus.Editable);
-      const nextStudent1 = nextState.stagesBySectionId[section1Id][stage1Id][0];
-      const nextStudent2 = nextState.stagesBySectionId[section1Id][stage1Id][1];
-      const nextStudent3 = nextState.stagesBySectionId[section1Id][stage1Id][2];
+      const nextStudent1 =
+        nextState.lessonsBySectionId[section1Id][lesson1Id][0];
+      const nextStudent2 =
+        nextState.lessonsBySectionId[section1Id][lesson1Id][1];
+      const nextStudent3 =
+        nextState.lessonsBySectionId[section1Id][lesson1Id][2];
       assert.equal(nextStudent1.locked, true);
       assert.equal(nextStudent1.readonly_answers, false);
       assert.equal(nextStudent3.locked, false);
@@ -210,7 +213,7 @@ describe('saveLockDialog', () => {
     };
     reducerSpy = sinon.spy(reducer);
     stubRedux();
-    registerReducers({stageLock: reducerSpy});
+    registerReducers({lessonLock: reducerSpy});
     store = getStore();
   });
 
@@ -222,9 +225,9 @@ describe('saveLockDialog', () => {
 
   it('successfully saves via dialog', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
-    store.dispatch(openLockDialog(section1Id, stage1Id));
+    store.dispatch(openLockDialog(section1Id, lesson1Id));
 
-    let newLockStatus = _.cloneDeep(store.getState().stageLock.lockStatus);
+    let newLockStatus = _.cloneDeep(store.getState().lessonLock.lockStatus);
     // swap students two and three in terms of lock status
     newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
     newLockStatus[2].lockStatus = LockStatus.Editable;
@@ -233,8 +236,8 @@ describe('saveLockDialog', () => {
 
     store.dispatch(saveLockDialog(section1Id, newLockStatus));
 
-    const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
-    const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
+    const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
+    const student3 = fakeSectionData[section1Id].lessons[lesson1Id][2];
 
     const updates = JSON.parse(lastRequest.requestBody).updates;
 
@@ -270,16 +273,16 @@ describe('saveLockDialog', () => {
     assert.equal(thirdAction.type, CLOSE_LOCK_DIALOG);
   });
 
-  it('successfully lockStage without dialog', () => {
+  it('successfully lockLesson without dialog', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
 
     reducerSpy.resetHistory();
 
-    store.dispatch(lockStage(section1Id, stage1Id));
+    store.dispatch(lockLesson(section1Id, lesson1Id));
 
-    const student1 = fakeSectionData[section1Id].stages[stage1Id][0];
-    const student2 = fakeSectionData[section1Id].stages[stage1Id][1];
-    const student3 = fakeSectionData[section1Id].stages[stage1Id][2];
+    const student1 = fakeSectionData[section1Id].lessons[lesson1Id][0];
+    const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
+    const student3 = fakeSectionData[section1Id].lessons[lesson1Id][2];
 
     const updates = JSON.parse(lastRequest.requestBody).updates;
 
@@ -317,9 +320,9 @@ describe('saveLockDialog', () => {
   });
 });
 
-describe('fullyLockedStageMapping', () => {
+describe('fullyLockedLessonMapping', () => {
   const sections = {
-    // all stages fully locked
+    // all lessons fully locked
     '11': {
       '1360': [
         {
@@ -344,7 +347,7 @@ describe('fullyLockedStageMapping', () => {
         }
       ]
     },
-    // no stages fully locked
+    // no lessons fully locked
     '12': {
       // some students are locked, others arent
       '1360': [
@@ -369,7 +372,7 @@ describe('fullyLockedStageMapping', () => {
         }
       ]
     },
-    // mix of fully locked stages and not
+    // mix of fully locked lessons and not
     '13': {
       '1360': [
         {
@@ -395,28 +398,28 @@ describe('fullyLockedStageMapping', () => {
     }
   };
 
-  it('maps to true for fully locked stages', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['11']), {
+  it('maps to true for fully locked lessons', () => {
+    assert.deepEqual(fullyLockedLessonMapping(sections['11']), {
       '1360': true,
       '1361': true
     });
   });
 
-  it('maps to false for non-fully locked stages', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['12']), {
+  it('maps to false for non-fully locked lessons', () => {
+    assert.deepEqual(fullyLockedLessonMapping(sections['12']), {
       '1360': false,
       '1361': false
     });
   });
 
-  it('works when some of our stages are locked and others arent', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['13']), {
+  it('works when some of our lessons are locked and others arent', () => {
+    assert.deepEqual(fullyLockedLessonMapping(sections['13']), {
       '1360': true,
       '1361': false
     });
   });
 
   it('returns an empty object if no selectedSection', () => {
-    assert.deepEqual(fullyLockedStageMapping(sections['9999']), {});
+    assert.deepEqual(fullyLockedLessonMapping(sections['9999']), {});
   });
 });
