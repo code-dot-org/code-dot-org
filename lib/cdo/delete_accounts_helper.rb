@@ -131,7 +131,7 @@ class DeleteAccountsHelper
     end
 
     # Delete email history
-    Pd::Application::Email.where(to: user_email).destroy
+    Pd::Application::Email.where(to: user_email).destroy_all
 
     unless application_ids.empty?
       # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
@@ -290,6 +290,7 @@ class DeleteAccountsHelper
   end
 
   def purge_user_authentications(user)
+    @log.puts "Deleting user authentication options"
     # Delete most recently destroyed (soft-deleted) record first
     user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
   end
@@ -304,7 +305,7 @@ class DeleteAccountsHelper
     # are dropped, records marked for deletion in ContactRollupsPardotMemory are
     # also purged. In addition, records in Pardot server are also deleted.
     # Thus, only need to delete ContactRollupsFinal record here.
-    ContactRollupsFinal.find_by_email(email)&.delete
+    ContactRollupsFinal.find_by_email(email)&.destroy
     set_pardot_deletion_via_contact_rollups(email)
   end
 
