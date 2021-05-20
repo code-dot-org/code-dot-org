@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 00:19:23 UTC",
+    "serialized_at": "2021-05-20 22:14:03 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1923,6 +1923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
         "progression": "Making Bar Charts and Histograms"
       },
       "named_level": false,
@@ -2076,6 +2079,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
         "progression": "Crosstab and Scatter Charts"
       },
       "named_level": false,
@@ -3146,7 +3152,7 @@
     {
       "key": "2fd17c05-a211-4dc4-af2b-6f615c74e59b",
       "properties": {
-        "description": "Train and test a machine learning model."
+        "description": "Explain how algorithms can be used"
       },
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
@@ -3590,6 +3596,13 @@
         "lesson.key": "Machine Learning and Bias",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.3"
       }
     },
     {
