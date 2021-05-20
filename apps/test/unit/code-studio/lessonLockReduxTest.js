@@ -30,7 +30,7 @@ import reducer, {
 // some arbitrary data in a form we expect to receive from the server
 // We get this from our call to /api/lock_status
 const [section1Id, section2Id] = Object.keys(fakeSectionData);
-const lesson1Id = Object.keys(fakeSectionData[section1Id].lessons)[0];
+const lesson1Id = Object.keys(fakeSectionData[section1Id].stages)[0];
 
 describe('lessonLockRedux reducer tests', () => {
   describe('setSectionLockStatus', () => {
@@ -39,8 +39,8 @@ describe('lessonLockRedux reducer tests', () => {
       const nextState = reducer({}, action);
 
       assert.deepEqual(nextState.lessonsBySectionId, {
-        [section1Id]: fakeSectionData[section1Id].lessons,
-        [section2Id]: fakeSectionData[section2Id].lessons
+        [section1Id]: fakeSectionData[section1Id].stages,
+        [section2Id]: fakeSectionData[section2Id].stages
       });
     });
   });
@@ -66,7 +66,7 @@ describe('lessonLockRedux reducer tests', () => {
           name: 'student4',
           lockStatus: LockStatus.Locked,
           userLevelData:
-            fakeSectionData[section2Id].lessons[lesson1Id][0].user_level_data
+            fakeSectionData[section2Id].stages[lesson1Id][0].user_level_data
         }
       ]);
     });
@@ -100,9 +100,9 @@ describe('lessonLockRedux reducer tests', () => {
       const nextState = reducer(state, action);
       assert.equal(nextState.lockDialogLessonId, lesson1Id);
 
-      const student1 = fakeSectionData[section1Id].lessons[lesson1Id][0];
-      const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
-      const student3 = fakeSectionData[section1Id].lessons[lesson1Id][2];
+      const student1 = fakeSectionData[section1Id].stages[lesson1Id][0];
+      const student2 = fakeSectionData[section1Id].stages[lesson1Id][1];
+      const student3 = fakeSectionData[section1Id].stages[lesson1Id][2];
       const expected = [
         {
           userLevelData: student1.user_level_data,
@@ -236,8 +236,8 @@ describe('saveLockDialog', () => {
 
     store.dispatch(saveLockDialog(section1Id, newLockStatus));
 
-    const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
-    const student3 = fakeSectionData[section1Id].lessons[lesson1Id][2];
+    const student2 = fakeSectionData[section1Id].stages[lesson1Id][1];
+    const student3 = fakeSectionData[section1Id].stages[lesson1Id][2];
 
     const updates = JSON.parse(lastRequest.requestBody).updates;
 
@@ -280,9 +280,9 @@ describe('saveLockDialog', () => {
 
     store.dispatch(lockLesson(section1Id, lesson1Id));
 
-    const student1 = fakeSectionData[section1Id].lessons[lesson1Id][0];
-    const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
-    const student3 = fakeSectionData[section1Id].lessons[lesson1Id][2];
+    const student1 = fakeSectionData[section1Id].stages[lesson1Id][0];
+    const student2 = fakeSectionData[section1Id].stages[lesson1Id][1];
+    const student3 = fakeSectionData[section1Id].stages[lesson1Id][2];
 
     const updates = JSON.parse(lastRequest.requestBody).updates;
 
