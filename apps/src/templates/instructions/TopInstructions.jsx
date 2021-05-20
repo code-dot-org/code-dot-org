@@ -677,7 +677,7 @@ class TopInstructions extends Component {
                 }
                 rubric={rubric}
                 ref={ref => (this.commentTab = ref)}
-                latestFeedback={feedbacks}
+                latestFeedback={feedbacks.length ? feedbacks[0] : null}
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
