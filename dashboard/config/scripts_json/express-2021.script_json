@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-21 18:57:05 UTC",
+    "serialized_at": "2021-05-21 20:18:09 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -4020,7 +4020,7 @@
       "key": "c75f92ab-cfc1-481f-b93a-c6496cd99709",
       "position": 1,
       "properties": {
-        "description": "Use \"while\" in a sentence in front of the students. Ask the students what the word \"while\" means. If you were to say *\"while there is a hole, fill it with dirt\"* what would they do? How long would they do that?\n\nWhen you use a word like “while”, you are relying on a condition to tell the computer how long the loop should run. A condition is a statement that is tested and found to be true or false. In the case above, the condition is if there is a hole. It’s only possible for there to be a hole or for there not to be a hole, thus the statement is only ever true or false.\n\nTell the students they will be learning about a new kind of loop. Previously, students only used loops to repeat a command a certain number of times. Here, they won't always know how many times to repeat the command, however, they will know when to stop or when to keep going. While loops allow the programmer to repeat a command as long as a condition is still true. In the previous example, the condition is the existence of a hole.\n\nPull up a puzzle from today's online Code Studio puzzles. We recommend Puzzle 6.\n\n - Ask the class what the farmer should do when she gets to the pile of dirt.\n    - She should use a while loop to start removing the dirt.\n - Use the `while there is a pile / do` block. Ask the class what the farmer should do within the while loop. \n    - The farmer should `remove 1`. The farmer will keep \"removing 1 dirt\" while there is dirt. In other words, when there is no dirt, `remove 1` will no longer execute!\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.\n\nIf there's time, have the students discuss other times using a while loop would be useful. Examples include:\n\n - Running toward a ball while it is in front of you.\n - Filling a glass while it has space for more liquid.\n - Walk forward while there is a path ahead.",
+        "description": "Use \"while\" in a sentence in front of the students. Ask the students what the word \"while\" means. If you were to say *\"while there is a hole, fill it with dirt\"* what would they do? How long would they do that?\n\nWhen you use a word like “while”, you are relying on a condition to tell the computer how long the loop should run. A condition is a statement that is tested and found to be true or false. In the case above, the condition is if there is a hole. It’s only possible for there to be a hole or for there not to be a hole, thus the statement is only ever true or false.\n\nTell the students they will be learning about a new kind of loop. Previously, students only used loops to repeat a command a certain number of times. Here, they won't always know how many times to repeat the command, however, they will know when to stop or when to keep going. While loops allow the programmer to repeat a command as long as a condition is still true. In the previous example, the condition is the existence of a hole.\n\nIf there's time, have the students discuss other times using a while loop would be useful. Examples include:\n\n - Running toward a ball while it is in front of you.\n - Filling a glass while it has space for more liquid.\n - Walk forward while there is a path ahead.\n\n###Preview of Online Puzzles\n\nPull up a puzzle from today's online Code Studio puzzles. We recommend Puzzle 6.\n\n - Ask the class what the farmer should do when she gets to the pile of dirt.\n    - She should use a while loop to start removing the dirt.\n - Use the `while there is a pile / do` block. Ask the class what the farmer should do within the while loop. \n    - The farmer should `remove 1`. The farmer will keep \"removing 1 dirt\" while there is dirt. In other words, when there is no dirt, `remove 1` will no longer execute!\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4032,7 +4032,7 @@
       "key": "b6676ce5-2f4a-4761-a053-792853904bd5",
       "position": 1,
       "properties": {
-        "description": "while loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas of each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops.",
+        "description": "While loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas off each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops.",
         "name": "While Loops in Farmer"
       },
       "seeding_key": {
@@ -4121,7 +4121,7 @@
       "key": "c103e631-9559-4d34-9ff9-4227c8fb8baa",
       "position": 9,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "c103e631-9559-4d34-9ff9-4227c8fb8baa",
@@ -4153,11 +4153,66 @@
       }
     },
     {
-      "key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4",
+      "key": "59ec2b50-dbdf-4df1-9593-1bb961c5edd8",
       "position": 1,
       "properties": {
-        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as _Alex_ or _Steve_ as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
+        "description": "\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as _Alex_ or _Steve_ as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class. Once all questions have been addressed, transition students to computers and let them start pair programming.",
         "name": "Conditionals in Minecraft: Voyage Aquatic",
+        "progression_name": "Video: Minecraft: Voyage Aquatic Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "59ec2b50-dbdf-4df1-9593-1bb961c5edd8",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
+      "key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
+      "key": "662c896c-c495-45ba-9fdd-2b0f1f575804",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Minecraft: Voyage Aquatic Repeat Until"
+      },
+      "seeding_key": {
+        "activity_section.key": "662c896c-c495-45ba-9fdd-2b0f1f575804",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
+      "key": "ebbb5af1-a268-4256-a63b-a179d5813d8d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
+      "key": "95865f7b-83c4-47e1-af6f-af1800541434",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: Minecraft: Voyage Aquatic Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "95865f7b-83c4-47e1-af6f-af1800541434",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
+      "key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4",
+      "position": 6,
+      "properties": {
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4166,8 +4221,19 @@
       }
     },
     {
+      "key": "8b0a5467-42bc-4347-a75e-e9047751ce56",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video: Minecraft: Voyage Aquatic Congratulations"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b0a5467-42bc-4347-a75e-e9047751ce56",
+        "lesson_activity.key": "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673"
+      }
+    },
+    {
       "key": "7064cb92-5320-4d9f-9de2-6de2ca05c5d1",
-      "position": 2,
+      "position": 8,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -4180,7 +4246,7 @@
       "key": "59d6d7fb-e5be-4534-b78a-c3899159474b",
       "position": 1,
       "properties": {
-        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this Minecraft world.\n - Can you draw a scene where someone is using a conditional?",
+        "description": "\n**Prompts:**\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this Minecraft world.\n - Can you draw a scene where someone is using a conditional?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4420,7 +4486,7 @@
       "key": "88c1c297-1627-45ec-9eb7-f6fffbe45240",
       "position": 1,
       "properties": {
-        "description": "Help the class understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.\n\nPull up a puzzle from the lesson. We recommend puzzle 9. \n\nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. \n\n**Ask:** _Why can't you just use a loop?_\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops.",
+        "description": "Help the class understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.\n\nPull up a puzzle from the lesson. We recommend puzzle 9. As a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. \n\n**Ask:** _Why can't you just use a loop?_\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops.",
         "name": "Introduction\r",
         "tips": [
           {
@@ -4435,15 +4501,86 @@
       }
     },
     {
-      "key": "c48994a2-bb70-4437-9acd-516bfbb61d80",
+      "key": "b7677a87-c560-4886-98e4-716353785af2",
       "position": 1,
       "properties": {
-        "description": "####Online Puzzles\n\nWe recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles.",
         "name": "Functions in Minecraft",
+        "progression_name": "Video:  Minecraft - The Agent",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "We recommend providing paper and pencils for students to write (or draw) out ideas. Also, if students are having trouble recognizing patterns, have them work with a partner on the harder puzzles."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7677a87-c560-4886-98e4-716353785af2",
+        "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
+      }
+    },
+    {
+      "key": "b891b55a-2a7e-486c-ba28-957df49ac0e6",
+      "position": 2,
+      "properties": {
         "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80",
+        "activity_section.key": "b891b55a-2a7e-486c-ba28-957df49ac0e6",
+        "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
+      }
+    },
+    {
+      "key": "d6f5eb3b-e998-4865-88d4-35c8381a7739",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Minecraft - Repeat Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6f5eb3b-e998-4865-88d4-35c8381a7739",
+        "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
+      }
+    },
+    {
+      "key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f",
+        "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
+      }
+    },
+    {
+      "key": "d76b4004-1ad8-425d-9748-b84512b06b9d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: Minecraft - Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d76b4004-1ad8-425d-9748-b84512b06b9d",
+        "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
+      }
+    },
+    {
+      "key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d",
+        "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
+      }
+    },
+    {
+      "key": "467dc80b-fcf1-48ff-8b74-74aa00c9ed26",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video: Minecraft - Congratulations"
+      },
+      "seeding_key": {
+        "activity_section.key": "467dc80b-fcf1-48ff-8b74-74aa00c9ed26",
         "lesson_activity.key": "f058e007-0df3-419f-ac78-81469311034f"
       }
     },
@@ -4462,7 +4599,7 @@
       "key": "18f44055-e1bd-4cc4-9291-26a997c32a45",
       "position": 1,
       "properties": {
-        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
+        "description": "\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What did your functions do in the programs you wrote today? How did that help you?\n - When should you use a function instead of a loop?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -5099,7 +5236,7 @@
       "key": "48c60679-9f25-4ade-9a34-7a52627fc8f2",
       "position": 1,
       "properties": {
-        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final projects from the lesson as a preview. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply, _with `for` loops of course!_\n\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
+        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final designs from the Code Studio puzzles associated with this lesson. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply *with `for` loops of course!*\n\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -5111,7 +5248,14 @@
       "key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
       "position": 1,
       "properties": {
-        "progression_name": "Video: For Loops with Artist"
+        "name": "Flor Loops with Artist",
+        "progression_name": "Video: For Loops",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These puzzles are super fun, but it may be helpful for students to have protractors, pencils and scratch paper to see how these designs were made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
@@ -5119,26 +5263,24 @@
       }
     },
     {
-      "key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
+      "key": "7d78c293-a385-49ee-a08a-1e0a02b185aa",
       "position": 2,
       "properties": {
-        "description": "These puzzles are super fun, but it may be helpful for students to have protractors and scratch paper to see these designs made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers.",
-        "name": "For Loops with Artist",
-        "progression_name": "Skill Building"
+        "progression_name": "Exploration"
       },
       "seeding_key": {
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
+        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa",
         "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
       }
     },
     {
-      "key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed",
+      "key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
       "position": 3,
       "properties": {
-        "progression_name": "Prediction"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
         "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
       }
     },
@@ -5157,7 +5299,7 @@
       "key": "ad447053-20d4-49cb-a771-7fd893973f54",
       "position": 5,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54",
@@ -5168,7 +5310,7 @@
       "key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
       "position": 1,
       "properties": {
-        "description": "\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
+        "description": "\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -10461,7 +10603,7 @@
         "level_keys": [
           "courseD_farmer_while_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -10484,9 +10626,29 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_1_2021"
+        "progression": "Video: Minecraft: Voyage Aquatic Introduction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid1"
         ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "59ec2b50-dbdf-4df1-9593-1bb961c5edd8"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid1"
+      ]
+    },
+    {
+      "chapter": 203,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -10498,21 +10660,18 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_1_2021"
       ]
     },
     {
-      "chapter": 203,
-      "position": 2,
+      "chapter": 204,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_2_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -10524,21 +10683,18 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_2_2021"
       ]
     },
     {
-      "chapter": 204,
-      "position": 3,
+      "chapter": 205,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_3_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -10550,21 +10706,41 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_3_2021"
       ]
     },
     {
-      "chapter": 205,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 206,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_4_2021"
+        "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid2"
         ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "662c896c-c495-45ba-9fdd-2b0f1f575804"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid2"
+      ]
+    },
+    {
+      "chapter": 207,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -10576,21 +10752,18 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_4_2021"
       ]
     },
     {
-      "chapter": 206,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 208,
+      "position": 7,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_5_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -10602,21 +10775,18 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_5_2021"
       ]
     },
     {
-      "chapter": 207,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 209,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_HOC 2018 Level_6_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -10628,16 +10798,39 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_6_2021"
       ]
     },
     {
-      "chapter": 208,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 210,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid3"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "95865f7b-83c4-47e1-af6f-af1800541434"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid3"
+      ]
+    },
+    {
+      "chapter": 211,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10661,9 +10854,9 @@
       ]
     },
     {
-      "chapter": 209,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 212,
+      "position": 11,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10687,9 +10880,9 @@
       ]
     },
     {
-      "chapter": 210,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 213,
+      "position": 12,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10713,9 +10906,9 @@
       ]
     },
     {
-      "chapter": 211,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 214,
+      "position": 13,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -10739,9 +10932,9 @@
       ]
     },
     {
-      "chapter": 212,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 215,
+      "position": 14,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Skill Building"
@@ -10762,8 +10955,31 @@
       ]
     },
     {
-      "chapter": 213,
-      "position": 12,
+      "chapter": 216,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_aquatic_vid4"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "8b0a5467-42bc-4347-a75e-e9047751ce56"
+      },
+      "level_keys": [
+        "courseE_aquatic_vid4"
+      ]
+    },
+    {
+      "chapter": 217,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -10785,7 +11001,7 @@
       ]
     },
     {
-      "chapter": 214,
+      "chapter": 218,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -10811,7 +11027,7 @@
       ]
     },
     {
-      "chapter": 215,
+      "chapter": 219,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10837,7 +11053,7 @@
       ]
     },
     {
-      "chapter": 216,
+      "chapter": 220,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -10863,7 +11079,7 @@
       ]
     },
     {
-      "chapter": 217,
+      "chapter": 221,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -10889,7 +11105,7 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 222,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -10915,7 +11131,7 @@
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 223,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -10941,7 +11157,7 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 224,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -10967,7 +11183,7 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 225,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -10993,7 +11209,7 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 226,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -11020,7 +11236,7 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 227,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -11046,7 +11262,7 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 228,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11072,7 +11288,7 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 229,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11098,7 +11314,7 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 230,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -11124,7 +11340,7 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 231,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -11150,7 +11366,7 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 232,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -11176,7 +11392,7 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 233,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -11202,7 +11418,7 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 234,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -11228,7 +11444,7 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 235,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -11254,7 +11470,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 236,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11281,7 +11497,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 237,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -11307,7 +11523,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 238,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -11333,7 +11549,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 239,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11359,7 +11575,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 240,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11385,7 +11601,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 241,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -11411,14 +11627,34 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 242,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_01_RETRY_2021"
+        "progression": "Video:  Minecraft - The Agent"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_hero_vid1"
         ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "b7677a87-c560-4886-98e4-716353785af2"
+      },
+      "level_keys": [
+        "courseE_hero_vid1"
+      ]
+    },
+    {
+      "chapter": 243,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11430,21 +11666,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "b891b55a-2a7e-486c-ba28-957df49ac0e6"
       },
       "level_keys": [
         "MC_HOC_2017_01_RETRY_2021"
       ]
     },
     {
-      "chapter": 239,
-      "position": 2,
+      "chapter": 244,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_02_Cole_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11456,21 +11689,41 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "b891b55a-2a7e-486c-ba28-957df49ac0e6"
       },
       "level_keys": [
         "MC_HOC_2017_02_Cole_2021"
       ]
     },
     {
-      "chapter": 240,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 245,
+      "position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_03_Cole_2021"
+        "progression": "Video: Minecraft - Repeat Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_hero_vid2"
         ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "d6f5eb3b-e998-4865-88d4-35c8381a7739"
+      },
+      "level_keys": [
+        "courseE_hero_vid2"
+      ]
+    },
+    {
+      "chapter": 246,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11482,21 +11735,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       },
       "level_keys": [
         "MC_HOC_2017_03_Cole_2021"
       ]
     },
     {
-      "chapter": 241,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 247,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_04_Cole_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11508,21 +11758,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       },
       "level_keys": [
         "MC_HOC_2017_04_Cole_2021"
       ]
     },
     {
-      "chapter": 242,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 248,
+      "position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_04POINT5_RYAN_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11534,21 +11781,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       },
       "level_keys": [
         "MC_HOC_2017_04POINT5_RYAN_2021"
       ]
     },
     {
-      "chapter": 243,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 249,
+      "position": 8,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_05_Cole_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11560,21 +11804,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       },
       "level_keys": [
         "MC_HOC_2017_05_Cole_2021"
       ]
     },
     {
-      "chapter": 244,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 250,
+      "position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_06_Cole_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11586,21 +11827,41 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       },
       "level_keys": [
         "MC_HOC_2017_06_Cole_2021"
       ]
     },
     {
-      "chapter": 245,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 251,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Function intro Ryan_2021"
+        "progression": "Video: Minecraft - Functions"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_hero_vid3"
         ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "d76b4004-1ad8-425d-9748-b84512b06b9d"
+      },
+      "level_keys": [
+        "courseE_hero_vid3"
+      ]
+    },
+    {
+      "chapter": 252,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11612,21 +11873,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       },
       "level_keys": [
         "Function intro Ryan_2021"
       ]
     },
     {
-      "chapter": 246,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 253,
+      "position": 12,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_07_Cole_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11638,21 +11896,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       },
       "level_keys": [
         "MC_HOC_2017_07_Cole_2021"
       ]
     },
     {
-      "chapter": 247,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 254,
+      "position": 13,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_10_RETRY_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11664,21 +11919,18 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       },
       "level_keys": [
         "MC_HOC_2017_10_RETRY_2021"
       ]
     },
     {
-      "chapter": 248,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 255,
+      "position": 14,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_Ali_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -11690,15 +11942,38 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       },
       "level_keys": [
         "MC_HOC_2017_Ali_2021"
       ]
     },
     {
-      "chapter": 249,
-      "position": 12,
+      "chapter": 256,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Minecraft - Congratulations"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_hero_vid4"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "467dc80b-fcf1-48ff-8b74-74aa00c9ed26"
+      },
+      "level_keys": [
+        "courseE_hero_vid4"
+      ]
+    },
+    {
+      "chapter": 257,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -11723,7 +11998,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 258,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11749,7 +12024,7 @@
       ]
     },
     {
-      "chapter": 251,
+      "chapter": 259,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11775,7 +12050,7 @@
       ]
     },
     {
-      "chapter": 252,
+      "chapter": 260,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11801,7 +12076,7 @@
       ]
     },
     {
-      "chapter": 253,
+      "chapter": 261,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11827,7 +12102,7 @@
       ]
     },
     {
-      "chapter": 254,
+      "chapter": 262,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -11853,7 +12128,7 @@
       ]
     },
     {
-      "chapter": 255,
+      "chapter": 263,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -11879,7 +12154,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 264,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11905,7 +12180,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 265,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11931,7 +12206,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 266,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11957,7 +12232,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 267,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11983,7 +12258,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 268,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12010,7 +12285,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 269,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -12036,7 +12311,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 270,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12062,7 +12337,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 271,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12088,7 +12363,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 272,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12114,7 +12389,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 273,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12140,7 +12415,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 274,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12166,7 +12441,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 275,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12192,7 +12467,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 276,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -12218,7 +12493,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 277,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -12244,7 +12519,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 278,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -12270,7 +12545,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 279,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -12296,7 +12571,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 280,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12323,7 +12598,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 281,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12349,7 +12624,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 282,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -12375,7 +12650,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 283,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12401,7 +12676,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 284,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -12427,7 +12702,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 285,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -12453,7 +12728,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 286,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12476,7 +12751,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 287,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12499,7 +12774,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 288,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12522,7 +12797,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 289,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12545,7 +12820,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 290,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12568,7 +12843,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 291,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12591,7 +12866,7 @@
       ]
     },
     {
-      "chapter": 284,
+      "chapter": 292,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -12614,7 +12889,7 @@
       ]
     },
     {
-      "chapter": 285,
+      "chapter": 293,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -12637,7 +12912,7 @@
       ]
     },
     {
-      "chapter": 286,
+      "chapter": 294,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -12660,7 +12935,7 @@
       ]
     },
     {
-      "chapter": 287,
+      "chapter": 295,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -12683,7 +12958,7 @@
       ]
     },
     {
-      "chapter": 288,
+      "chapter": 296,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -12706,7 +12981,7 @@
       ]
     },
     {
-      "chapter": 289,
+      "chapter": 297,
       "position": 12,
       "activity_section_position": 4,
       "assessment": false,
@@ -12729,7 +13004,7 @@
       ]
     },
     {
-      "chapter": 290,
+      "chapter": 298,
       "position": 13,
       "activity_section_position": 5,
       "assessment": false,
@@ -12752,7 +13027,7 @@
       ]
     },
     {
-      "chapter": 291,
+      "chapter": 299,
       "position": 14,
       "activity_section_position": 6,
       "assessment": false,
@@ -12775,7 +13050,7 @@
       ]
     },
     {
-      "chapter": 292,
+      "chapter": 300,
       "position": 15,
       "activity_section_position": 7,
       "assessment": false,
@@ -12798,7 +13073,7 @@
       ]
     },
     {
-      "chapter": 293,
+      "chapter": 301,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12824,7 +13099,7 @@
       ]
     },
     {
-      "chapter": 294,
+      "chapter": 302,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12850,7 +13125,7 @@
       ]
     },
     {
-      "chapter": 295,
+      "chapter": 303,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12876,7 +13151,7 @@
       ]
     },
     {
-      "chapter": 296,
+      "chapter": 304,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12902,7 +13177,7 @@
       ]
     },
     {
-      "chapter": 297,
+      "chapter": 305,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12928,7 +13203,7 @@
       ]
     },
     {
-      "chapter": 298,
+      "chapter": 306,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12954,7 +13229,7 @@
       ]
     },
     {
-      "chapter": 299,
+      "chapter": 307,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -12980,7 +13255,7 @@
       ]
     },
     {
-      "chapter": 300,
+      "chapter": 308,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13006,7 +13281,7 @@
       ]
     },
     {
-      "chapter": 301,
+      "chapter": 309,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -13032,7 +13307,7 @@
       ]
     },
     {
-      "chapter": 302,
+      "chapter": 310,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -13058,7 +13333,7 @@
       ]
     },
     {
-      "chapter": 303,
+      "chapter": 311,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -13084,7 +13359,7 @@
       ]
     },
     {
-      "chapter": 304,
+      "chapter": 312,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -13110,7 +13385,7 @@
       ]
     },
     {
-      "chapter": 305,
+      "chapter": 313,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13137,7 +13412,7 @@
       ]
     },
     {
-      "chapter": 306,
+      "chapter": 314,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -13163,7 +13438,7 @@
       ]
     },
     {
-      "chapter": 307,
+      "chapter": 315,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13189,7 +13464,7 @@
       ]
     },
     {
-      "chapter": 308,
+      "chapter": 316,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -13215,7 +13490,7 @@
       ]
     },
     {
-      "chapter": 309,
+      "chapter": 317,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -13241,7 +13516,7 @@
       ]
     },
     {
-      "chapter": 310,
+      "chapter": 318,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -13267,7 +13542,7 @@
       ]
     },
     {
-      "chapter": 311,
+      "chapter": 319,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -13293,7 +13568,7 @@
       ]
     },
     {
-      "chapter": 312,
+      "chapter": 320,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13319,7 +13594,7 @@
       ]
     },
     {
-      "chapter": 313,
+      "chapter": 321,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -13345,7 +13620,7 @@
       ]
     },
     {
-      "chapter": 314,
+      "chapter": 322,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13371,7 +13646,7 @@
       ]
     },
     {
-      "chapter": 315,
+      "chapter": 323,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -13397,7 +13672,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 324,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -13423,7 +13698,7 @@
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 325,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -13449,7 +13724,7 @@
       ]
     },
     {
-      "chapter": 318,
+      "chapter": 326,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -13475,7 +13750,7 @@
       ]
     },
     {
-      "chapter": 319,
+      "chapter": 327,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13501,7 +13776,7 @@
       ]
     },
     {
-      "chapter": 320,
+      "chapter": 328,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -13527,7 +13802,7 @@
       ]
     },
     {
-      "chapter": 321,
+      "chapter": 329,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -13553,7 +13828,7 @@
       ]
     },
     {
-      "chapter": 322,
+      "chapter": 330,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -13576,7 +13851,7 @@
       ]
     },
     {
-      "chapter": 323,
+      "chapter": 331,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -13599,7 +13874,7 @@
       ]
     },
     {
-      "chapter": 324,
+      "chapter": 332,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -13622,7 +13897,7 @@
       ]
     },
     {
-      "chapter": 325,
+      "chapter": 333,
       "position": 12,
       "activity_section_position": 4,
       "assessment": false,
@@ -13645,7 +13920,7 @@
       ]
     },
     {
-      "chapter": 326,
+      "chapter": 334,
       "position": 13,
       "activity_section_position": 5,
       "assessment": false,
@@ -13668,7 +13943,7 @@
       ]
     },
     {
-      "chapter": 327,
+      "chapter": 335,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -13694,7 +13969,7 @@
       ]
     },
     {
-      "chapter": 328,
+      "chapter": 336,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -13720,7 +13995,7 @@
       ]
     },
     {
-      "chapter": 329,
+      "chapter": 337,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13728,7 +14003,7 @@
         "level_keys": [
           "courseF_video_forArtist_2021"
         ],
-        "progression": "Video: For Loops with Artist"
+        "progression": "Video: For Loops"
       },
       "named_level": false,
       "bonus": false,
@@ -13746,15 +14021,12 @@
       ]
     },
     {
-      "chapter": 330,
+      "chapter": 338,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for1_2021"
-        ],
-        "progression": "Skill Building"
+        "progression": "Exploration"
       },
       "named_level": false,
       "bonus": false,
@@ -13765,28 +14037,25 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa"
       },
       "level_keys": [
         "courseF_artist_for1_2021"
       ]
     },
     {
-      "chapter": 331,
+      "chapter": 339,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for2_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_artist_for2_2021"
+          "courseF_artist_for5a_2021"
         ],
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
@@ -13794,91 +14063,13 @@
         "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
-        "courseF_artist_for2_2021"
+        "courseF_artist_for5a_2021"
       ]
     },
     {
-      "chapter": 332,
+      "chapter": 340,
       "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for3_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for3_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for3_2021"
-      ]
-    },
-    {
-      "chapter": 333,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for4_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for4_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for4_2021"
-      ]
-    },
-    {
-      "chapter": 334,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for5_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for5_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for5_2021"
-      ]
-    },
-    {
-      "chapter": 335,
-      "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -13902,9 +14093,9 @@
       ]
     },
     {
-      "chapter": 336,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 341,
+      "position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -13928,9 +14119,9 @@
       ]
     },
     {
-      "chapter": 337,
-      "position": 9,
-      "activity_section_position": 8,
+      "chapter": 342,
+      "position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -13954,9 +14145,9 @@
       ]
     },
     {
-      "chapter": 338,
-      "position": 10,
-      "activity_section_position": 9,
+      "chapter": 343,
+      "position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -13980,34 +14171,8 @@
       ]
     },
     {
-      "chapter": 339,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ],
-        "progression": "Prediction"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed"
-      },
-      "level_keys": [
-        "courseF_artist_for10_predict1_2021"
-      ]
-    },
-    {
-      "chapter": 340,
-      "position": 12,
+      "chapter": 344,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -14032,15 +14197,15 @@
       ]
     },
     {
-      "chapter": 341,
-      "position": 13,
+      "chapter": 345,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_artist_for_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -14058,15 +14223,15 @@
       ]
     },
     {
-      "chapter": 342,
-      "position": 14,
+      "chapter": 346,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseF_artist_for_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -14084,21 +14249,18 @@
       ]
     },
     {
-      "chapter": 343,
+      "chapter": 347,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_EOC_examples_2021"
-        ],
         "progression": "Example Projects"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_EOC_examples_2021"
+          "CourseF_Project_SpriteLab_cupcake_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -14106,12 +14268,81 @@
         "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
       },
       "level_keys": [
-        "courseF_EOC_examples_2021"
+        "CourseF_Project_SpriteLab_cupcake_examples_2021"
       ]
     },
     {
-      "chapter": 344,
+      "chapter": 348,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseF_Project_SpriteLab_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "express-2021",
+        "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
+      },
+      "level_keys": [
+        "CourseF_Project_SpriteLab_examples_2021"
+      ]
+    },
+    {
+      "chapter": 349,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course F: Artist Project_Flowers_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "express-2021",
+        "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
+      },
+      "level_keys": [
+        "Course F: Artist Project_Flowers_examples_2021"
+      ]
+    },
+    {
+      "chapter": 350,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Example Projects"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Course F: Artist Project_spiral_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "express-2021",
+        "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
+      },
+      "level_keys": [
+        "Course F: Artist Project_spiral_examples_2021"
+      ]
+    },
+    {
+      "chapter": 351,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -16551,6 +16782,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseE_aquatic_vid1",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid1"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "59ec2b50-dbdf-4df1-9593-1bb961c5edd8"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CourseE_HOC 2018 Level_1_2021",
         "script_level.level_keys": [
           "CourseE_HOC 2018 Level_1_2021"
@@ -16558,7 +16801,7 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc"
       }
     },
     {
@@ -16570,7 +16813,7 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc"
       }
     },
     {
@@ -16582,7 +16825,19 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "0c1c356b-b51e-49e9-902a-9bb743c4acbc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid2",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid2"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "662c896c-c495-45ba-9fdd-2b0f1f575804"
       }
     },
     {
@@ -16594,7 +16849,7 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d"
       }
     },
     {
@@ -16606,7 +16861,7 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d"
       }
     },
     {
@@ -16618,7 +16873,19 @@
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+        "activity_section.key": "ebbb5af1-a268-4256-a63b-a179d5813d8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid3",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid3"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "95865f7b-83c4-47e1-af6f-af1800541434"
       }
     },
     {
@@ -16679,6 +16946,18 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
         "activity_section.key": "e7ee7550-aa29-42ad-8be2-a126b7919fb4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_aquatic_vid4",
+        "script_level.level_keys": [
+          "courseE_aquatic_vid4"
+        ],
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "express-2021",
+        "activity_section.key": "8b0a5467-42bc-4347-a75e-e9047751ce56"
       }
     },
     {
@@ -16983,6 +17262,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseE_hero_vid1",
+        "script_level.level_keys": [
+          "courseE_hero_vid1"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "b7677a87-c560-4886-98e4-716353785af2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "MC_HOC_2017_01_RETRY_2021",
         "script_level.level_keys": [
           "MC_HOC_2017_01_RETRY_2021"
@@ -16990,7 +17281,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "b891b55a-2a7e-486c-ba28-957df49ac0e6"
       }
     },
     {
@@ -17002,7 +17293,19 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "b891b55a-2a7e-486c-ba28-957df49ac0e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_hero_vid2",
+        "script_level.level_keys": [
+          "courseE_hero_vid2"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "d6f5eb3b-e998-4865-88d4-35c8381a7739"
       }
     },
     {
@@ -17014,7 +17317,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       }
     },
     {
@@ -17026,7 +17329,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       }
     },
     {
@@ -17038,7 +17341,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       }
     },
     {
@@ -17050,7 +17353,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
       }
     },
     {
@@ -17062,7 +17365,19 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "08364a41-ef59-40a4-b3ec-e55ca40c2e6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_hero_vid3",
+        "script_level.level_keys": [
+          "courseE_hero_vid3"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "d76b4004-1ad8-425d-9748-b84512b06b9d"
       }
     },
     {
@@ -17074,7 +17389,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       }
     },
     {
@@ -17086,7 +17401,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       }
     },
     {
@@ -17098,7 +17413,7 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
       }
     },
     {
@@ -17110,7 +17425,19 @@
         "lesson.key": "Functions in Minecraft",
         "lesson_group.key": "csf_functions",
         "script.name": "express-2021",
-        "activity_section.key": "c48994a2-bb70-4437-9acd-516bfbb61d80"
+        "activity_section.key": "f05f4ec1-71a1-4e00-8d93-935c6f47e01d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_hero_vid4",
+        "script_level.level_keys": [
+          "courseE_hero_vid4"
+        ],
+        "lesson.key": "Functions in Minecraft",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2021",
+        "activity_section.key": "467dc80b-fcf1-48ff-8b74-74aa00c9ed26"
       }
     },
     {
@@ -18094,50 +18421,14 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseF_artist_for2_2021",
+        "level.key": "courseF_artist_for5a_2021",
         "script_level.level_keys": [
-          "courseF_artist_for2_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for3_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for3_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for4_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for4_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for5_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for5_2021"
+          "courseF_artist_for5a_2021"
         ],
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
@@ -18195,18 +18486,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_artist_for10_predict1_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseF_artist_for10_2021",
         "script_level.level_keys": [
           "courseF_artist_for10_2021"
@@ -18243,9 +18522,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_EOC_examples_2021",
+        "level.key": "CourseF_Project_SpriteLab_cupcake_examples_2021",
         "script_level.level_keys": [
-          "courseF_EOC_examples_2021"
+          "CourseF_Project_SpriteLab_cupcake_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "express-2021",
+        "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseF_Project_SpriteLab_examples_2021",
+        "script_level.level_keys": [
+          "CourseF_Project_SpriteLab_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "express-2021",
+        "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course F: Artist Project_Flowers_examples_2021",
+        "script_level.level_keys": [
+          "Course F: Artist Project_Flowers_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "express-2021",
+        "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Course F: Artist Project_spiral_examples_2021",
+        "script_level.level_keys": [
+          "Course F: Artist Project_spiral_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
