@@ -56,6 +56,19 @@ describe('TeacherFeedbackStatusText', () => {
       );
     });
 
+    it('displays nicely formatted date if student updated their progress since feedback was left', () => {
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+
+      const latestFeedback = {
+        created_at: yesterday,
+        student_last_updated: new Date()
+      };
+
+      const wrapper = setUp(latestFeedback);
+      expect(wrapper.text()).to.equal('Last updated by student today');
+    });
+
     it('displays correct message if student has not viewed their feedback', () => {
       const today = new Date();
       const latestFeedback = {student_seen_feedback: null, updated_at: today};
