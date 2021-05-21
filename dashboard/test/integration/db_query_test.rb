@@ -11,8 +11,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     sign_in student
 
     script = Script.get_from_cache('allthethings')
-    stage = script.lessons.first
-    level = stage.script_levels.first.levels.first
+    lesson = script.lessons.first
+    level = lesson.script_levels.first.levels.first
 
     create :user_level,
       user: student,
@@ -34,9 +34,9 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
+    lesson = script.lessons.first
     script = Script.hoc_2014_script
-    stage = script.lessons.first
-    level = stage.script_levels.first.levels.first
+    level = lesson.script_levels.first.levels.first
 
     create :user_level,
       user: student,
