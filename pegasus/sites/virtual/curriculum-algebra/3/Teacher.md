@@ -61,7 +61,7 @@ Students are not expected to know all the answers here - the goal is for them to
 ## Activity: Strings and Images
 ### <a name="Activity1"></a> 3) Online Puzzles
 
-In this activity you'll use the new data types String and Image to compose art with Blocks of Evaluation - head to [CS in Algebra Stage 3](http://studio.code.org/s/algebra/stage/3/puzzle/1) in Code Studio to get started programming.
+In this activity you'll use the new data types String and Image to compose art with Blocks of Evaluation - head to [CS in Algebra Stage 3](http://studio.code.org/s/algebra/lessons/3/levels/1) in Code Studio to get started programming.
 
 [/together]
 

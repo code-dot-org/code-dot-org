@@ -81,10 +81,10 @@ class CourseEditor extends Component {
       publishedState: this.props.initialVisible
         ? this.props.initialIsStable
           ? 'Recommended'
-          : 'Assignable'
+          : 'Preview'
         : this.props.initialPilotExperiment
         ? 'Pilot'
-        : 'Preview'
+        : 'Beta'
     };
   }
 

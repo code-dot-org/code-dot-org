@@ -19,7 +19,7 @@ When designing programs, you will often discover new pieces of functionality you
 * Improve the "My Favorite Things" app to store and display images.
 * Refactor code in order to incorporate new functionality.
   
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

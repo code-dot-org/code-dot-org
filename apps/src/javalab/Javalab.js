@@ -17,7 +17,7 @@ import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import Neighborhood from './Neighborhood';
-import MazeVisualization from '@cdo/apps/maze/Visualization';
+import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import DefaultVisualization from './DefaultVisualization';
 import {CsaViewMode} from './constants';
 
@@ -90,7 +90,10 @@ Javalab.prototype.init = function(config) {
     this.miniApp = new Neighborhood();
     config.afterInject = () =>
       this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
-    visualization = <MazeVisualization />;
+    const iconPath = '/blockly/media/turtle/';
+    visualization = (
+      <NeighborhoodVisualizationColumn iconPath={iconPath} showSpeedSlider />
+    );
   } else {
     visualization = <DefaultVisualization />;
   }
@@ -206,7 +209,7 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
-  this.miniApp.reset();
+  this.miniApp?.reset?.();
   this.javabuilderConnection = new JavabuilderConnection(
     this.channelId,
     this.level.javabuilderUrl,

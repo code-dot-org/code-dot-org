@@ -3398,27 +3398,15 @@ StudioApp.prototype.isResponsiveFromConfig = function(config) {
 /**
  * Checks if the level a teacher is viewing of a students has
  * not been started.
- * For contained levels don't show the banner ever.
- * Otherwise if its a channel backed level check for the channel. Lastly
- * if its not a channel backed level and its not free play we know it has
- * not been started if no progress has been made.
+ * For contained levels and project levels don't show the banner ever.
+ * Otherwise check if the teacher is viewing (readonlyWorkspace) and if
+ * the level has been started.
  */
-StudioApp.prototype.isNotStartedLevel = function(config) {
-  const progress = getStore().getState().progress;
-
+StudioApp.prototype.displayNotStartedBanner = function(config) {
   if (config.hasContainedLevels || config.level.isProjectLevel) {
     return false;
-  } else if (
-    ['Gamelab', 'Applab', 'Weblab', 'Spritelab', 'Dance'].includes(
-      config.levelGameName
-    )
-  ) {
-    return config.readonlyWorkspace && !config.channel;
   } else {
-    return (
-      config.readonlyWorkspace &&
-      progress.levelResults[progress.currentLevelId] === undefined
-    );
+    return config.readonlyWorkspace && !config.level.isStarted;
   }
 };
 
@@ -3447,7 +3435,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,
       isResponsive: this.isResponsiveFromConfig(config),
-      isNotStartedLevel: this.isNotStartedLevel(config),
+      displayNotStartedBanner: this.displayNotStartedBanner(config),
       isShareView: !!config.share,
       pinWorkspaceToBottom: !!config.pinWorkspaceToBottom,
       noInstructionsWhenCollapsed: !!config.noInstructionsWhenCollapsed,

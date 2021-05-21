@@ -3,7 +3,6 @@ css 'unplugged'
 skip_dialog true
 
 markdown <<MARKDOWN
-<a class="btn btn-large btn-primary next-stage submitButton">TL;DR!</a>
 # Announcing the Hour of Code and new partners
 
 On Monday, October 14, 2013, Code.org announced the "Hour of Code," a campaign to introduce 10 million students to one hour of Computer Science.
@@ -47,5 +46,4 @@ Code.org is a non-profit dedicated to growing computer science education by maki
 #### About Computer Science Education Week
 Computer Science Education Week is an annual celebration in recognition of the birthday of computing pioneer Admiral Grace Hopper (December 9, 1906). It was established by ACM and CSTA, along with founding partners Anita Borg Institute, ACM, College Board, CRA, IEEE-CS, CSTA, Google, Microsoft, NCTM, NCWIT, NSTA, and SAS. For more information, please visit: [http://csedweek.org/](http://csedweek.org).
  
-<a class="btn btn-large btn-primary next-stage submitButton">Continue!</a>
 MARKDOWN

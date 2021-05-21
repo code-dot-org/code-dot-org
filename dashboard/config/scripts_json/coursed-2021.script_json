@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-13 19:57:13 UTC",
+    "serialized_at": "2021-05-18 18:12:57 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -9400,6 +9400,18 @@
       }
     },
     {
+      "name": "Build a Star Wars Game Puzzles",
+      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/preview",
+      "key": "build_a_star_wars_game_puzzles",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "build_a_star_wars_game_puzzles"
+      }
+    },
+    {
       "name": "Common Core and NGSS Guidance",
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
       "key": "common_core_and_ngss_guidance",
@@ -10056,6 +10068,12 @@
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "resource.key": "build_a_star_wars_game_puzzles"
       }
     },
     {

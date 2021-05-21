@@ -21,5 +21,5 @@ Version control is a great way to undo little changes you make along the way, bu
 
 Each time you click Remix you'll get a new copy of your game in your projects folder <a href="studio.code.org/projects" target="_blank">studio.code.org/projects</a>, each of which can be iterated on independently of the Big Game levels. This is a great way for students to experiment with adding big new features to their game safely before integrating those features into their actual Big Game.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
