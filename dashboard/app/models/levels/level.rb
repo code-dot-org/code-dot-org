@@ -692,7 +692,14 @@ class Level < ApplicationRecord
     level_params = {name: new_name, parent_level_id: id, published: true}
     level_params[:editor_experiment] = editor_experiment if editor_experiment
     level.update!(level_params)
+    copy_lcd_from_parent(level)
     level
+  end
+
+  def copy_lcd_from_parent(level)
+    new_lcd = level_concept_difficulty.dup
+    level.level_concept_difficulty = new_lcd
+    level.save! if level.changed?
   end
 
   # Create a copy of this level by appending new_suffix to the name, removing
@@ -733,6 +740,7 @@ class Level < ApplicationRecord
     end
 
     level.update!(update_params)
+    copy_lcd_from_parent(level)
     level
   end
 
