@@ -2,7 +2,7 @@ import React from 'react';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import LessonProgress from './LessonProgress';
-import stageLock from '../../stageLockRedux';
+import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
@@ -96,7 +96,7 @@ export default storybook => {
     onStageExtras,
     bonusCompleted
   ) => {
-    const store = createStore(combineReducers({progress, stageLock}));
+    const store = createStore(combineReducers({progress, lessonLock}));
     store.dispatch(
       initProgress({
         currentLevelId: currentLevelIndex
