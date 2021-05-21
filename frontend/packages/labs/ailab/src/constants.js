@@ -169,7 +169,8 @@ export const styles = {
   scrollingContents: {
     overflow: "auto",
     height: "100%",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
+    overflowWrap: "break-word"
   },
 
   contents: {
