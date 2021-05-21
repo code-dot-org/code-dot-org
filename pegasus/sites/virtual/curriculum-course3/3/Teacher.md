@@ -60,7 +60,7 @@ Review with students the basic maze navigation, particularly:
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist](http://learn.code.org/s/course3/stage/3/puzzle/1)
+### <a name="Activity"></a> [Artist](http://learn.code.org/s/course3/lessons/3/levels/1)
 
 In the Artist levels students are not constrained to 90 degree angles. Having protractors available can be help students better visualize the angles they need.
 

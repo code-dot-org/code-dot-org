@@ -52,7 +52,7 @@ If your class has made it this far, their skills are probably already on point. 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Extreme Challenge - Comprehensive](http://learn.code.org/s/course4/stage/22/puzzle/1)
+### <a name="Activity"></a> [Extreme Challenge - Comprehensive](http://learn.code.org/s/course4/lessons/22/levels/1)
 
 [/together]
 

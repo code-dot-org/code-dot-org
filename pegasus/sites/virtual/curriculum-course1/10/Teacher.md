@@ -57,7 +57,7 @@ Before beginning this lesson, students should have a basic understanding of squa
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist: Shapes](http://learn.code.org/s/course1/stage/10/puzzle/1)
+### <a name="Activity"></a> [Artist: Shapes](http://learn.code.org/s/course1/lessons/10/levels/1)
 
 If students struggle to use the correct number of blocks to draw a line, point out that each line segment has a dot on both ends.
 
