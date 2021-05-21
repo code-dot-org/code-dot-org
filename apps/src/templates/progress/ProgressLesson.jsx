@@ -49,7 +49,7 @@ class ProgressLesson extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // If we're assigned a stageId, and it is for this lesson, uncollapse
+    // If we're assigned a lessonId, and it is for this lesson, uncollapse
     if (nextProps.currentLessonId !== this.props.currentLessonId) {
       this.setState({
         collapsed:
