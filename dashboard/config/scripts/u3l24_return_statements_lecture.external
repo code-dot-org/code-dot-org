@@ -51,7 +51,7 @@ When you use the keyword `return`, the computer knows that it is in a "return va
 Notice that "string" was declared within the function, but never used. That isn't a problem. When the function, "foo" returns, "string" will simply go out of scope.
 
 <br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 
 MARKDOWN

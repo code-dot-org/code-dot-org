@@ -22,5 +22,5 @@ You can even use the internet simulator by yourself if you open two browser wind
 >- If we wanted to test out the first version of the internet simulator, that's found in unit 1, lesson 4. In Code Studio that level is at the URL: https://studio.code.org/s/cspunit1/lessons/4/levels/2
 - In order to join a specific section to try out the tool, we should add ?s=testSection to the end of that URL, giving us: https://studio.code.org/s/cspunit1/lessons/4/levels/2?s=testSection
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

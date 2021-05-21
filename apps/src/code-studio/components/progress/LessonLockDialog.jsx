@@ -10,7 +10,7 @@ import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-class StageLockDialog extends React.Component {
+class LessonLockDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
@@ -54,7 +54,7 @@ class StageLockDialog extends React.Component {
 
   allowEditing = () => this.setAllLockStatus(LockStatus.Editable);
 
-  lockStage = () => this.setAllLockStatus(LockStatus.Locked);
+  lockLesson = () => this.setAllLockStatus(LockStatus.Locked);
 
   showAnswers = () => this.setAllLockStatus(LockStatus.ReadonlyAnswers);
 
@@ -129,7 +129,7 @@ class StageLockDialog extends React.Component {
                   <button
                     type="button"
                     style={progressStyles.orangeButton}
-                    onClick={this.lockStage}
+                    onClick={this.lockLesson}
                   >
                     {commonMsg.lockStage()}
                   </button>
@@ -153,7 +153,7 @@ class StageLockDialog extends React.Component {
                   <button
                     type="button"
                     style={progressStyles.orangeButton}
-                    onClick={this.lockStage}
+                    onClick={this.lockLesson}
                   >
                     {commonMsg.relockStage()}
                   </button>
@@ -325,7 +325,7 @@ const styles = {
   }
 };
 
-export const UnconnectedStageLockDialog = Radium(StageLockDialog);
+export const UnconnectedLessonLockDialog = Radium(LessonLockDialog);
 export default connect(
   state => ({
     initialLockStatus: state.lessonLock.lockStatus,
@@ -338,4 +338,4 @@ export default connect(
       dispatch(saveLockDialog(sectionId, lockStatus));
     }
   })
-)(UnconnectedStageLockDialog);
+)(UnconnectedLessonLockDialog);
