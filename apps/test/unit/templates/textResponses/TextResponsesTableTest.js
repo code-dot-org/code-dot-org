@@ -8,7 +8,7 @@ const responses = [
     puzzle: 2,
     question: 'Free Response',
     response: 'Lorem ipsum dolor sit amet, postea pericula',
-    lesson: 'Lesson 1',
+    stage: 'Lesson 1',
     studentId: 1,
     studentName: 'Student A',
     url: 'http://fake.url'
@@ -17,7 +17,7 @@ const responses = [
     puzzle: 3,
     question: 'Free Response',
     response: 'Lorem ipsum dolor sit amet, postea pericula',
-    lesson: 'Lesson 1',
+    stage: 'Lesson 1',
     studentId: 3,
     studentName: 'Student C',
     url: 'http://fake.url'
@@ -26,7 +26,7 @@ const responses = [
     puzzle: 1,
     question: 'Free Response',
     response: 'Lorem ipsum dolor sit amet, postea pericula',
-    lesson: 'Lesson 1',
+    stage: 'Lesson 1',
     studentId: 2,
     studentName: 'Student B',
     url: 'http://fake.url'

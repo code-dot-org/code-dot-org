@@ -6,7 +6,7 @@ export const textResponsePropType = PropTypes.shape({
   puzzle: PropTypes.number.isRequired,
   question: PropTypes.string,
   response: PropTypes.string.isRequired,
-  lesson: PropTypes.string.isRequired,
+  stage: PropTypes.string.isRequired,
   studentId: PropTypes.number.isRequired,
   studentName: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
