@@ -12,11 +12,11 @@ Scenario: Stage Locking Dialog
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/s/allthethings"
   And I see no difference for "selected section"
-  Then I open the stage lock dialog
+  Then I open the lesson lock dialog
   And I see no difference for "stage lock dialog"
-  Then I unlock the stage for students
+  Then I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
-  And I scroll our lockable stage into view
+  And I scroll our lockable lesson into view
   And I see no difference for "course overview for authorized teacher"
   And I close my eyes
 
@@ -37,8 +37,8 @@ Scenario: Lock settings for students
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I unlock the stage for students
+  And I open the lesson lock dialog
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not tried for student
@@ -48,10 +48,10 @@ Scenario: Lock settings for students
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "not_tried"
-  Then I verify progress for stage 31 level 2 is "not_tried"
-  Then I verify progress for stage 31 level 3 is "not_tried"
-  Then I verify progress for stage 31 level 4 is "not_tried"
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
   # student submits
 
@@ -74,8 +74,8 @@ Scenario: Lock settings for students
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I show stage answers for students
+  And I open the lesson lock dialog
+  And I show lesson answers for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/submitted for student
@@ -85,10 +85,10 @@ Scenario: Lock settings for students
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "not_tried"
-  Then I verify progress for stage 31 level 2 is "not_tried"
-  Then I verify progress for stage 31 level 3 is "not_tried"
-  Then I verify progress for stage 31 level 4 is "not_tried"
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   And I wait until element "h2:contains(Pre-survey)" is visible
@@ -115,8 +115,8 @@ Scenario: Lock settings for students who never submit
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I unlock the stage for students
+  And I open the lesson lock dialog
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not tried for student
@@ -126,10 +126,10 @@ Scenario: Lock settings for students who never submit
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "not_tried"
-  Then I verify progress for stage 31 level 2 is "not_tried"
-  Then I verify progress for stage 31 level 3 is "not_tried"
-  Then I verify progress for stage 31 level 4 is "not_tried"
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
   # student does not submit assessment before teacher switches to readonly 
 
@@ -137,8 +137,8 @@ Scenario: Lock settings for students who never submit
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I show stage answers for students
+  And I open the lesson lock dialog
+  And I show lesson answers for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not submitted for student
@@ -148,10 +148,10 @@ Scenario: Lock settings for students who never submit
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "not_tried"
-  Then I verify progress for stage 31 level 2 is "not_tried"
-  Then I verify progress for stage 31 level 3 is "not_tried"
-  Then I verify progress for stage 31 level 4 is "not_tried"
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
 Scenario: Lock settings for retake not submit scenario
   # initially locked for student in summary view
@@ -171,8 +171,8 @@ Scenario: Lock settings for retake not submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I unlock the stage for students
+  And I open the lesson lock dialog
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now unlocked/not tried for student
@@ -182,10 +182,10 @@ Scenario: Lock settings for retake not submit scenario
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "not_tried"
-  Then I verify progress for stage 31 level 2 is "not_tried"
-  Then I verify progress for stage 31 level 3 is "not_tried"
-  Then I verify progress for stage 31 level 4 is "not_tried"
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
 
   # student does not submit assessment before teacher switches to locked 
 
@@ -193,8 +193,8 @@ Scenario: Lock settings for retake not submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I lock the stage for students
+  And I open the lesson lock dialog
+  And I lock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now locked/not submitted for student
@@ -211,8 +211,8 @@ Scenario: Lock settings for retake not submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I unlock the stage for students
+  And I open the lesson lock dialog
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now editable, and student can submit
@@ -253,8 +253,8 @@ Scenario: Lock settings for retake after submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I unlock the stage for students
+  And I open the lesson lock dialog
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # student submits
@@ -264,10 +264,10 @@ Scenario: Lock settings for retake after submit scenario
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   And I wait until jQuery Ajax requests are finished
   Then element "td:contains(Anonymous student survey 2) .fa-unlock" is visible
-  Then I verify progress for stage 31 level 1 is "not_tried"
-  Then I verify progress for stage 31 level 2 is "not_tried"
-  Then I verify progress for stage 31 level 3 is "not_tried"
-  Then I verify progress for stage 31 level 4 is "not_tried"
+  Then I verify progress for lesson 31 level 1 is "not_tried"
+  Then I verify progress for lesson 31 level 2 is "not_tried"
+  Then I verify progress for lesson 31 level 3 is "not_tried"
+  Then I verify progress for lesson 31 level 4 is "not_tried"
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
@@ -287,8 +287,8 @@ Scenario: Lock settings for retake after submit scenario
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
-  And I open the stage lock dialog
-  And I unlock the stage for students
+  And I open the lesson lock dialog
+  And I unlock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now editable, and student can see unsubmit button
