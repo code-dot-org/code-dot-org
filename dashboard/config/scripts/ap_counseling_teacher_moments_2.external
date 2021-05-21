@@ -10,7 +10,7 @@ As a follow up to our previous work with counseling students for the AP exam, we
 ## How it Works
 When interacting with the Teacher Moments scenario, you will be guided through a simulated conversation. Please respond to the statements made by the student as best as you can. This simulation will use your phone’s or computer’s microphone to record your voice. We recommend using the Chrome browser for the best experience. You’ll have a chance to review your own responses at the end of the simulation. During the session, we will discuss your thoughts on counseling the student as a group.
 
-<span style="display:none">submitButton next-stage</span>
+<span style="display:none">submitButton next-lesson</span>
 
 <a class="btn btn-large btn-primary submitButton" href="https://threeflows.herokuapp.com/teachermoments/aptest-two?cuid=<user_id/>"> Click here to play!</a>
 
