@@ -81,7 +81,10 @@ export const getSources = state => {
   let sources = {};
   for (let key in state.javalab.sources) {
     if (!state.javalab.sources[key].isValidation) {
-      sources[key] = state.javalab.sources[key];
+      sources[key] = {
+        text: state.javalab.sources[key].text,
+        isVisible: state.javalab.sources[key].isVisible
+      };
     }
   }
   return sources;
@@ -91,7 +94,7 @@ export const getValidation = state => {
   let validation = {};
   for (let key in state.javalab.sources) {
     if (state.javalab.sources[key].isValidation) {
-      validation[key] = state.javalab.sources[key];
+      validation[key] = {text: state.javalab.sources[key].text};
     }
   }
   return validation;
