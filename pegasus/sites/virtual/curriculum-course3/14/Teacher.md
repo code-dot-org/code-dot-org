@@ -59,7 +59,7 @@ Ask students about problems they solve in everyday life.
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Debugging](http://learn.code.org/s/course3/stage/14/puzzle/1)
+### <a name="Activity"></a> [Bee: Debugging](http://learn.code.org/s/course3/lessons/14/levels/1)
 
 As your students work through the puzzles, observe how they search for bugs. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
 Have students follow the path described by the code with their fingers to find potential bugs.

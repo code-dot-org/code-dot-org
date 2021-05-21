@@ -25,5 +25,5 @@ When you want agents to change their behavior if a certain condition is true, us
 
 In the block to the left, the program will check to see if the agent, in this case a rabbit, has energy that is less than or equal to zero.  If it does, it will delete the rabbit.  Otherwise, it does nothing.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

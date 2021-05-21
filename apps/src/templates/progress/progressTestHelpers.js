@@ -78,8 +78,8 @@ export const fakeProgressForLevels = (
  */
 export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
   return createStore(state => state, {
-    stageLock: {
-      stagesBySectionId: {
+    lessonLock: {
+      lessonsBySectionId: {
         '11': {}
       },
       lockableAuthorized: false
@@ -112,8 +112,8 @@ export const createStoreWithLockedLesson = (
   lockableAuthorized = false
 ) => {
   return createStore(state => state, {
-    stageLock: {
-      stagesBySectionId: {
+    lessonLock: {
+      lessonsBySectionId: {
         '11': {}
       },
       lockableAuthorized: lockableAuthorized
