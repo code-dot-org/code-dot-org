@@ -6,7 +6,7 @@ import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
-  setStageExtrasEnabled
+  setLessonExtrasEnabled
 } from '../../progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -119,7 +119,7 @@ export default storybook => {
       results[100] = TestResults.ALL_PASS;
     }
     store.dispatch(mergeResults(results));
-    store.dispatch(setStageExtrasEnabled(showStageExtras));
+    store.dispatch(setLessonExtrasEnabled(showStageExtras));
     return store;
   };
 
