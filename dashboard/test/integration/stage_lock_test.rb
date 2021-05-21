@@ -26,10 +26,10 @@ class StageLockTest < ActionDispatch::IntegrationTest
     get build_script_level_path(@lockable_external_sl)
     assert_response :success
     assert_includes response.body, 'lorem ipsum'
-    assert_select "#locked-stage", 1
+    assert_select "#locked-lesson", 1
     # data-hidden indicates that the client will decide whether the teacher
     # will see the locked-stage message via the ViewAsToggle.
-    assert_select "#locked-stage[data-hidden]", 1
+    assert_select "#locked-lesson[data-hidden]", 1
 
     # This needs to be an integration test rather than a controller test in
     # order to follow the redirect which adds the /page/1 suffix.
@@ -37,8 +37,8 @@ class StageLockTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1
-    assert_select "#locked-stage", 1
-    assert_select "#locked-stage[data-hidden]", 1
+    assert_select "#locked-lesson", 1
+    assert_select "#locked-lesson[data-hidden]", 1
   end
 
   test 'student viewing lockable stage contents' do
@@ -49,17 +49,17 @@ class StageLockTest < ActionDispatch::IntegrationTest
     get build_script_level_path(@lockable_external_sl)
     assert_response :success
     refute_includes response.body, 'lorem ipsum'
-    assert_select "#locked-stage", 1
-    assert_select "#locked-stage[data-hidden]", 0
+    assert_select "#locked-lesson", 1
+    assert_select "#locked-lesson[data-hidden]", 0
 
     get build_script_level_path(@lockable_level_group_sl)
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 0
-    assert_select "#locked-stage", 1
-    assert_select "#locked-stage[data-hidden]", 0
+    assert_select "#locked-lesson", 1
+    assert_select "#locked-lesson[data-hidden]", 0
 
-    # Unlock the stage.
+    # Unlock the lesson.
     UserLevel.update_lockable_state(
       @student.id, @level_group.id, @script.id, false, false
     )
@@ -69,12 +69,12 @@ class StageLockTest < ActionDispatch::IntegrationTest
     get build_script_level_path(@lockable_external_sl)
     assert_response :success
     assert_includes response.body, 'lorem ipsum'
-    assert_select "#locked-stage", 0
+    assert_select "#locked-lesson", 0
 
     get build_script_level_path(@lockable_level_group_sl)
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1
-    assert_select "#locked-stage", 0
+    assert_select "#locked-lesson", 0
   end
 end
