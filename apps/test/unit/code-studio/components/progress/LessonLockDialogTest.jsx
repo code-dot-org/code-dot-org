@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
-import {LockStatus} from '@cdo/apps/code-studio/stageLockRedux';
+import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 
 const MINIMUM_PROPS = {
   isOpen: false,
@@ -58,17 +58,17 @@ describe('LessonLockDialog', () => {
         ]}
       />
     );
-    wrapper.state().lockStatus.forEach(stage => {
-      expect(stage).to.have.property('lockStatus', LockStatus.Locked);
+    wrapper.state().lockStatus.forEach(lesson => {
+      expect(lesson).to.have.property('lockStatus', LockStatus.Locked);
     });
 
     wrapper.instance().allowEditing();
-    wrapper.state().lockStatus.forEach(stage => {
-      expect(stage).to.have.property('lockStatus', LockStatus.Editable);
+    wrapper.state().lockStatus.forEach(lesson => {
+      expect(lesson).to.have.property('lockStatus', LockStatus.Editable);
     });
   });
 
-  it('lockStage callback sets all statuses to Locked', () => {
+  it('lockLesson callback sets all statuses to Locked', () => {
     const wrapper = shallow(
       <LessonLockDialog
         {...MINIMUM_PROPS}
@@ -78,13 +78,13 @@ describe('LessonLockDialog', () => {
         ]}
       />
     );
-    wrapper.state().lockStatus.forEach(stage => {
-      expect(stage).to.have.property('lockStatus', LockStatus.Editable);
+    wrapper.state().lockStatus.forEach(lesson => {
+      expect(lesson).to.have.property('lockStatus', LockStatus.Editable);
     });
 
-    wrapper.instance().lockStage();
-    wrapper.state().lockStatus.forEach(stage => {
-      expect(stage).to.have.property('lockStatus', LockStatus.Locked);
+    wrapper.instance().lockLesson();
+    wrapper.state().lockStatus.forEach(lesson => {
+      expect(lesson).to.have.property('lockStatus', LockStatus.Locked);
     });
   });
 
@@ -98,13 +98,13 @@ describe('LessonLockDialog', () => {
         ]}
       />
     );
-    wrapper.state().lockStatus.forEach(stage => {
-      expect(stage).to.have.property('lockStatus', LockStatus.Editable);
+    wrapper.state().lockStatus.forEach(lesson => {
+      expect(lesson).to.have.property('lockStatus', LockStatus.Editable);
     });
 
     wrapper.instance().showAnswers();
-    wrapper.state().lockStatus.forEach(stage => {
-      expect(stage).to.have.property('lockStatus', LockStatus.ReadonlyAnswers);
+    wrapper.state().lockStatus.forEach(lesson => {
+      expect(lesson).to.have.property('lockStatus', LockStatus.ReadonlyAnswers);
     });
   });
 
@@ -135,8 +135,8 @@ describe('LessonLockDialog', () => {
         {...MINIMUM_PROPS}
         selectedSectionId="fakeSectionId"
         initialLockStatus={[
-          {name: 'fakeStage1', lockStatus: LockStatus.Editable},
-          {name: 'fakeStage2', lockStatus: LockStatus.Editable}
+          {name: 'fakeLesson1', lockStatus: LockStatus.Editable},
+          {name: 'fakeLesson2', lockStatus: LockStatus.Editable}
         ]}
         saveDialog={saveDialog}
       />
