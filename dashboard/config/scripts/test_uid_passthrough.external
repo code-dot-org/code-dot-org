@@ -12,7 +12,7 @@ When interacting with the Teacher Moments scenario, you will be guided through a
 
 
 
-<span style="display:none">submitButton next-stage</span>
+<span style="display:none">submitButton next-lesson</span>
 
 <a class="btn btn-large btn-primary submitButton" href="https://threeflows.herokuapp.com/teachermoments/aptest?cuid=<user_id/>"> Click here to play!</a>
 

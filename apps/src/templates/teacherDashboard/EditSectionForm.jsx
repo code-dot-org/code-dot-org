@@ -71,8 +71,8 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    stageExtrasAvailable: PropTypes.func.isRequired,
-    hiddenStageState: PropTypes.object.isRequired,
+    lessonExtrasAvailable: PropTypes.func.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
     localeEnglishName: PropTypes.string,
@@ -85,14 +85,14 @@ class EditSectionForm extends Component {
   };
 
   onSaveClick = () => {
-    const {section, hiddenStageState} = this.props;
+    const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.scriptId;
 
     const isScriptHidden =
       sectionId &&
       scriptId &&
-      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+      isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
 
     if (isScriptHidden) {
       this.setState({showHiddenUnitWarning: true});
@@ -164,7 +164,7 @@ class EditSectionForm extends Component {
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      stageExtrasAvailable,
+      lessonExtrasAvailable,
       textToSpeechScriptIds,
       assignedScriptName,
       localeEnglishName,
@@ -242,10 +242,10 @@ class EditSectionForm extends Component {
             localeEnglishName={localeEnglishName}
             isNewSection={isNewSection}
           />
-          {stageExtrasAvailable(section.scriptId) && (
+          {lessonExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
               value={section.stageExtras}
-              onChange={stageExtras => editSectionProperties({stageExtras})}
+              onChange={lessonExtras => editSectionProperties({lessonExtras})}
               disabled={isSaveInProgress}
             />
           )}
@@ -446,7 +446,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
     </FieldDescription>
     <YesNoDropdown
       value={value}
-      onChange={stageExtras => onChange(stageExtras)}
+      onChange={lessonExtras => onChange(lessonExtras)}
       disabled={disabled}
     />
   </div>
@@ -569,8 +569,8 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
-  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-  hiddenStageState: state.hiddenStage,
+  lessonExtrasAvailable: id => stageExtrasAvailable(state, id),
+  hiddenLessonState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
   localeCode: state.locales.localeCode,

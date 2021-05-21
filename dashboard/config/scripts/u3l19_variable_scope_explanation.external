@@ -76,8 +76,6 @@ onEvent("myButton", "click", function(){
 
 The error might not jump out at you.  But when you run the program on the next page you'll immediately se the problem.  Your job is to find and fix the error.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue to try this out.</a>
-
 
 
 
