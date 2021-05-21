@@ -1730,7 +1730,7 @@ Then /^I unlock the lesson for students$/ do
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
-Then /^$/ do
+Then /^I lock the lesson for students$/ do
   # lock assessment
   @browser.execute_script('$(".modal-body button:contains(Lock)").click()')
   # save
