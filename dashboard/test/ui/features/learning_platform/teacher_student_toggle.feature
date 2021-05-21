@@ -48,14 +48,14 @@ Scenario: Toggle on Lockable Level
 
   Then I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1?noautoplay=true"
   And I wait until element ".level-group" is visible
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
-  And I wait until element "#locked-stage" is visible
+  And I wait until element "#locked-lesson" is visible
   And I see no difference for "view as student while locked"
   Then I click selector ".uitest-viewAsTeacher"
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
   And element ".level-group" is visible
   And I see no difference for "view as teacher while locked"
 
@@ -63,7 +63,7 @@ Scenario: Toggle on Lockable Level
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait until element "#level-body" is visible
   And element "#level-body" contains text "This survey is anonymous"
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
   And element ".level-group" is not visible
 
   Then I am on "http://studio.code.org/s/allthethings"
@@ -72,20 +72,20 @@ Scenario: Toggle on Lockable Level
 
   Then I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1?noautoplay=true"
   And I wait until element ".level-group" is visible
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
   And I see no difference for "view as student while unlocked"
 
   Then I click selector ".uitest-viewAsTeacher"
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
 
   # Click the first student
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
   And I wait until element "#level-body" is visible
   And element "#level-body" contains text "This survey is anonymous"
-  And element "#locked-stage" is not visible
+  And element "#locked-lesson" is not visible
   And element ".level-group" is not visible
 
   And I close my eyes
