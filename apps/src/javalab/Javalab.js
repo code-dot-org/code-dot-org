@@ -153,13 +153,24 @@ Javalab.prototype.init = function(config) {
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
-    getStore().dispatch(
-      setAllSources({
-        ...startSources,
-        // If we're editing start sources, validation is part of the source
-        ...(config.level.editBlocks && validation)
-      })
-    );
+    if (config.level.editBlocks) {
+      Object.keys(startSources).forEach(key => {
+        startSources[key].isValidation = false;
+      });
+      Object.keys(validation).forEach(key => {
+        validation[key].isValidation = true;
+        validation[key].isVisible = false;
+      });
+      getStore().dispatch(
+        setAllSources({
+          ...startSources,
+          // If we're editing start sources, validation is part of the source
+          ...(config.level.editBlocks && validation)
+        })
+      );
+    } else {
+      getStore().dispatch(setAllSources(startSources));
+    }
   }
 
   // If we aren't editing start sources but we have validation code, we need to

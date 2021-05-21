@@ -27,6 +27,7 @@ import JavalabFileExplorer from './JavalabFileExplorer';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import msg from '@cdo/locale';
+import javalabMsg from '@cdo/javalab/locale';
 
 const style = {
   editor: {
@@ -296,12 +297,14 @@ class JavalabEditor extends React.Component {
     // check for duplicate filename
     if (Object.keys(this.props.sources).includes(newFilename)) {
       this.setState({
-        renameFileError: this.duplicateFileError(newFilename)
+        renameFileError: this.props.sources[newFilename].isVisible
+          ? this.duplicateFileError(newFilename)
+          : this.duplicateSupportFileError(newFilename)
       });
       return;
     } else if (Object.keys(this.props.validation).includes(newFilename)) {
       this.setState({
-        renameFileError: this.duplicateValidationFileError(newFilename)
+        renameFileError: this.duplicateSupportFileError(newFilename)
       });
       return;
     }
@@ -402,11 +405,11 @@ class JavalabEditor extends React.Component {
   }
 
   duplicateFileError(filename) {
-    return `Filename ${filename} is already in use in this project. Please choose a different name`;
+    return javalabMsg.duplicateProjectFilenameError({filename: filename}); //`Filename ${filename} is already in use in this project. Please choose a different name`;
   }
 
-  duplicateValidationFileError(filename) {
-    return `Filename ${filename} is already in use in this level's support code. Please choose a different name`;
+  duplicateSupportFileError(filename) {
+    return javalabMsg.duplicateSupportFilenameError({filename: filename}); //`Filename ${filename} is already in use in this level's support code. Please choose a different name`;
   }
 
   // This is called from the file explorer when we want to jump to a file
