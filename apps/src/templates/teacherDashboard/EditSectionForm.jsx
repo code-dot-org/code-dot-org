@@ -19,7 +19,7 @@ import {
 import {
   isScriptHiddenForSection,
   updateHiddenScript
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -86,8 +86,8 @@ class EditSectionForm extends Component {
 
   onSaveClick = () => {
     const {section, hiddenLessonState} = this.props;
-    const sectionId = section.id;
     const scriptId = section.scriptId;
+    const sectionId = section.id;
 
     const isScriptHidden =
       sectionId &&
@@ -570,7 +570,7 @@ let defaultPropsFromState = state => ({
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
   lessonExtrasAvailable: id => stageExtrasAvailable(state, id),
-  hiddenLessonState: state.hiddenStage,
+  hiddenLessonState: state.hiddenLesson,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
   localeCode: state.locales.localeCode,
