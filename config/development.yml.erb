@@ -5,8 +5,8 @@ dashboard_enable_pegasus: true
 
 firebase_name: cdo-v3-dev
 # provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
-firebase_secret: !Secret
-firebase_shared_secret: !Secret
+#firebase_secret: !Secret
+#firebase_shared_secret: !Secret
 firebase_channel_id_suffix: -DEVELOPMENT-<%=ENV['USER']%>
 
 lint: true
@@ -21,7 +21,7 @@ disable_s3_image_uploads: true
 
 chef_local_mode: true
 
-devinternal_db_writer: !Secret
+#devinternal_db_writer: !Secret
 dashboard_honeybadger_api_key: '00000000'
 pegasus_honeybadger_api_key:   '00000000'
 google_safe_browsing_key: fake_api_key
