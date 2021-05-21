@@ -58,7 +58,7 @@ In the last stage students used loops to repeat simple movements. Now they're go
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Loops](http://learn.code.org/s/course1/stage/14/puzzle/1)
+### <a name="Activity"></a> [Bee: Loops](http://learn.code.org/s/course1/lessons/14/levels/1)
 
 
 [/together]

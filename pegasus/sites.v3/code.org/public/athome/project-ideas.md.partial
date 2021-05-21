@@ -39,7 +39,7 @@ Programming in a brand new environment can be challenging and intimidating. We r
 </div>
 <div class="col-66">
     <h3 style="margin-top:10px"><a href="https://code.org/educate/applab"><strong>App Lab</strong></a></h3>
-    <p>App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.  If you have no experience with App Lab you could get up to speed by trying out: <a href="https://studio.code.org/s/applab-intro/stage/1/puzzle/1">Hour of Code - Intro to App Lab</a>.  Alternatively, the projects are suitable for students who have completed the 2nd chapter of CS Discoveries  <a href="https://curriculum.code.org/csd/unit4/">Unit 4 - The Design Process</a> or the first chapter of CS Principles <a href="https://curriculum.code.org/csp-19/unit5/">Unit 5 - Building Apps</a>.</p>
+    <p>App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.  If you have no experience with App Lab you could get up to speed by trying out: <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1">Hour of Code - Intro to App Lab</a>.  Alternatively, the projects are suitable for students who have completed the 2nd chapter of CS Discoveries  <a href="https://curriculum.code.org/csd/unit4/">Unit 4 - The Design Process</a> or the first chapter of CS Principles <a href="https://curriculum.code.org/csp-19/unit5/">Unit 5 - Building Apps</a>.</p>
     <br>
     <p><a href="https://studio.code.org/docs/applab/">App Lab Documentation</a></p>
 </div>
