@@ -295,7 +295,11 @@ Dashboard::Application.routes.draw do
   get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-  resources :lessons, only: [:edit, :update]
+  resources :lessons, only: [:edit, :update] do
+    member do
+      post :clone
+    end
+  end
 
   resources :resources, only: [:create, :update] do
     collection do
