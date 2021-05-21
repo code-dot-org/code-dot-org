@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 03:05:09 UTC",
+    "serialized_at": "2021-05-21 18:05:34 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -143,7 +143,7 @@
     },
     {
       "key": "Machine Learning and Bias",
-      "name": "Machine Learning and Bias",
+      "name": "Machine Learning",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -162,12 +162,27 @@
       }
     },
     {
-      "key": "Project - Tell a Data Story - Part 1",
-      "name": "Project   Tell a Data Story Part 1",
+      "key": "lesson-10",
+      "name": "Algorithmic Bias",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "Project - Tell a Data Story - Part 1",
+      "name": "Project   Tell a Data Story Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -185,10 +200,10 @@
     {
       "key": "Project - Tell a Data Story - Part 2",
       "name": "Project   Tell a Data Story Part 2",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -206,10 +221,10 @@
     {
       "key": "Lesson 9: Assessment Day",
       "name": "Assessment Day",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -533,6 +548,48 @@
       "seeding_key": {
         "lesson_activity.key": "4a3a3a9c-a651-4c5c-bd6a-f3c2a8ee5a41",
         "lesson.key": "Machine Learning and Bias",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "e6f736cd-954c-422a-83a5-310441497fc2",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021"
+      }
+    },
+    {
+      "key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021"
       }
@@ -1750,6 +1807,37 @@
       }
     },
     {
+      "key": "200309df-e5c8-410f-8eb4-9732bf012fde",
+      "position": 1,
+      "properties": {
+        "description": "This lesson is In-Development"
+      },
+      "seeding_key": {
+        "activity_section.key": "200309df-e5c8-410f-8eb4-9732bf012fde",
+        "lesson_activity.key": "e6f736cd-954c-422a-83a5-310441497fc2"
+      }
+    },
+    {
+      "key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "29eb1506-f5cc-480f-b289-c4b09bf3fecb",
+        "lesson_activity.key": "9ae5f6e2-fcc7-4860-a49b-9702b48162db"
+      }
+    },
+    {
+      "key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "afe0db45-8027-437b-96d7-fb438dd6c70b",
+        "lesson_activity.key": "bbb65e7f-2cff-4b5b-8ae6-4490e1fe4471"
+      }
+    },
+    {
       "key": "31f847fb-4f05-49bb-92c9-baf527d2110e",
       "position": 1,
       "properties": {
@@ -1924,6 +2012,32 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "progression": "Making Bar Charts and Histograms"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 1_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms_2021"
         ],
         "progression": "Making Bar Charts and Histograms"
@@ -1944,8 +2058,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 2,
+      "chapter": 5,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -1970,7 +2084,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1996,7 +2110,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2022,7 +2136,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2048,9 +2162,35 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "progression": "Crosstab and Scatter Charts"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
+      },
+      "level_keys": [
+        "App Lab Data Viz Tool 2_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2074,8 +2214,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 2,
+      "chapter": 11,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2100,8 +2240,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 3,
+      "chapter": 12,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -2126,7 +2266,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2152,7 +2292,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2178,7 +2318,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2204,7 +2344,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2230,7 +2370,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2256,7 +2396,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2282,7 +2422,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2308,7 +2448,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -2334,7 +2474,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2360,7 +2500,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2386,7 +2526,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2434,6 +2574,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "0d0f2b60-cb65-44f8-9d2b-bcf27d68d86d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 1_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 1_2021"
+        ],
+        "lesson.key": "Exploring One Column",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "6e279210-ae72-46e2-b9ab-81866203550d"
       }
     },
     {
@@ -2494,6 +2646,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2021",
         "activity_section.key": "5c45128e-4ab3-4f67-8a0a-4392fc26a5b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "App Lab Data Viz Tool 2_2021",
+        "script_level.level_keys": [
+          "App Lab Data Viz Tool 2_2021"
+        ],
+        "lesson.key": "Exploring Two Columns",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2021",
+        "activity_section.key": "a70e7635-ab8c-4670-b577-5dfe72bdb555"
       }
     },
     {
@@ -3076,7 +3240,7 @@
     {
       "key": "2fd17c05-a211-4dc4-af2b-6f615c74e59b",
       "properties": {
-        "description": "Train and test a machine learning model."
+        "description": "Explain ways that designers and developers can consider the potential effects of their programs"
       },
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
@@ -3520,6 +3684,55 @@
         "lesson.key": "Machine Learning and Bias",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.11"
       }
     },
     {
