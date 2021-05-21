@@ -8,6 +8,35 @@ import _ from 'lodash';
 
 let codeMirror;
 
+// this regex is designed to match strings like '"name": "some_question_name"'
+// we want to match keys named "name" and "value" because "value" keys are used for matrix questions
+// we capture the value associated with the matched key to validate it with the next regex
+const nameKeyRegex = new RegExp(/"(?:name|value)"\:\s*"(.+)",?/gi);
+
+// this regex is used to ensure the strings contain only alphanumeric (case insensitive) and underscore characters
+const nameKeyValidator = new RegExp(/^[a-z0-9_]+$/i);
+
+// performs additional key validation
+// (non-basic characters can get stripped when being transferred to the server)
+export const lintFoormKeys = (text, options, cm) => {
+  const annotations = [];
+
+  let match;
+  while ((match = nameKeyRegex.exec(text)) !== null) {
+    const nameValue = match[1];
+    if (!nameKeyValidator.test(nameValue)) {
+      annotations.push({
+        message: 'Question names should only contain letters and underscores.',
+        severity: 'error',
+        from: cm.posFromIndex(match.index),
+        to: cm.posFromIndex(match.index + match[0].length)
+      });
+    }
+  }
+
+  return annotations;
+};
+
 export function populateCodeMirror() {
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
 
@@ -28,7 +57,8 @@ export function populateCodeMirror() {
   }
 
   codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
-    callback: _.debounce(onCodeMirrorChange, 250)
+    callback: _.debounce(onCodeMirrorChange, 250),
+    additionalAnnotations: lintFoormKeys
   });
 }
 
