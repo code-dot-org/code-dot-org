@@ -37,15 +37,6 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     render json: user_ml_model_data.to_json
   end
 
-  # GET api/v1/ml_models/:id/metadata
-  # Retrieve a trained ML model's metadata
-  def metadata
-    metadata = UserMlModel.where(model_id: params[:id])&.first&.metadata
-    puts metadata
-    return render_404 unless metadata
-    render json: JSON.parse(metadata, quirks_mode: true)
-  end
-
   # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def show
