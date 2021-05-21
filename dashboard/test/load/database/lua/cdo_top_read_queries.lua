@@ -20,17 +20,16 @@ function thread_done()
   con:disconnect()
 end
 
-MAX_USER_LEVEL_ID = 2098563437
-MAX_USER_ID = 50826205
-MAX_LEVEL_ID = 17741
-MAX_SCRIPT_ID = 405
-MAX_LEVEL_SOURCE_ID = 861968845
-MAX_USER_LEVEL_ID = 2378176527
-MAX_USER_SCRIPT_ID = 99495037
-MAX_STORAGE_APPS_ID = 183149199
-MAX_USER_STORAGE_ID = 101520617
-MAX_HOC_ACTIVITY_ID = 807070088
-MAX_AUTH_OPTION_ID = 11806501
+MAX_USER_LEVEL_ID = 3344711209
+MAX_USER_ID = 79248804
+MAX_LEVEL_ID = 27369
+MAX_SCRIPT_ID = 3192
+MAX_LEVEL_SOURCE_ID = 1388006336
+MAX_USER_SCRIPT_ID = 139640482
+MAX_STORAGE_APPS_ID = 444183673
+MAX_USER_STORAGE_ID = 296919242
+MAX_HOC_ACTIVITY_ID = 1211366424
+MAX_AUTH_OPTION_ID = 26118801
 LEVEL_SOURCE_DATA = [[<xml><block type="craft_whenNight" deletable="false"><statement name="DO"><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></statement></block><block type="craft_zombieSpawnedTouchedClickedDay" deletable="false"><statement name="WHEN_SPAWNED"><block type="craft_wait"><title name="TYPE">0.4</title><next><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></next></block></statement><statement name="WHEN_TOUCHED"><block type="craft_wait"><title name="TYPE">2.0</title><next><block type="craft_attack"><next><block type="craft_moveToward"><title name="TYPE">Player</title></block></next></block></next></block></statement><statement name="WHEN_USED"><block type="craft_flashEntity"><next><block type="craft_destroyEntity"></block></next></block></statement><statement name="WHEN_DAY"><block type="craft_destroyEntity"></block></statement></block></xml>]]
 STORAGE_APPS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+00:00\",\"updatedAt\":\"2019-09-22T04:05:08.511+00:00\"}]]
 
