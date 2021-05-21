@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 03:01:41 UTC",
+    "serialized_at": "2021-05-18 23:02:04 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -1312,8 +1312,9 @@
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
-        "name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
-        "progression_name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "duration": "10",
+        "name": "Investigation #1: Thermostat App v.1",
+        "progression_name": "Investigation #1: Thermostat App v.1 "
       },
       "seeding_key": {
         "activity_section.key": "c032d228-77cb-4be6-b527-13c756a145df",
@@ -1324,7 +1325,7 @@
       "key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
       "position": 3,
       "properties": {
-        "description": "*  Class Discussion: Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
+        "description": "**Discuss:** Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
       },
       "seeding_key": {
         "activity_section.key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
@@ -1347,8 +1348,9 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
-        "name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
-        "progression_name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
+        "duration": "10",
+        "name": "Investigation #2: Thermostat App v.2",
+        "progression_name": "Investigation #2: Thermostat App v.2"
       },
       "seeding_key": {
         "activity_section.key": "ac5c4280-580d-43e9-9210-675bf64c19c4",
@@ -1371,8 +1373,9 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
-        "name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
-        "progression_name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "duration": "8",
+        "name": "Investigation #3: Thermostat App v.3",
+        "progression_name": "Investigation #3: Thermostat App v.3"
       },
       "seeding_key": {
         "activity_section.key": "99f96442-f5ae-4fa9-a1a7-04157d63e578",
@@ -1380,19 +1383,8 @@
       }
     },
     {
-      "key": "f8370707-3e61-46e3-a6b8-094afbe34e32",
-      "position": 8,
-      "properties": {
-        "name": "Thermostat App v3"
-      },
-      "seeding_key": {
-        "activity_section.key": "f8370707-3e61-46e3-a6b8-094afbe34e32",
-        "lesson_activity.key": "c4eb36e1-32dc-4590-8ad2-5121bb841814"
-      }
-    },
-    {
       "key": "1fb1a060-1dac-4532-9f75-5164cb18de16",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "*  Class Discussion: Look at line 40. How does [`getText()`(#fff176)](/docs/applab/getText/) work? What is it doing?\n* Modify the Code: Add an explanation point `\"!\"` to the end of the string stored in `userName`.\n\n**Discussion Goal:**[`getText`(#fff176)](/docs/applab/getText/) gets the string of text that is found in the element with the given id. In this case, the id is `\"nameInput\"`. In our app, the name written in the `\"nameInput\"` element is concatenated with \"Hi\" and then stored in the variable `myName`. \n"
       },
@@ -1403,10 +1395,11 @@
     },
     {
       "key": "cc54e7e2-9570-4288-984f-531927ddd29b",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "We are learning two patterns here:\r\n\r\n* Counter Pattern with Event\r\n* Variables with String Concatenation Pattern\r\n\r\nThe Counter Pattern with Event is a common pattern for updating variables that you will use in making many different apps. We call it the **Counter Pattern with Event**.",
-        "name": "Patterns - 7 mins\r",
+        "duration": "7",
+        "name": "Patterns",
         "remarks": true
       },
       "seeding_key": {
@@ -1416,7 +1409,7 @@
     },
     {
       "key": "cef2237e-cdb6-4432-b9a0-8561ff2257a4",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Talk through the pattern with students."
       },
@@ -1427,7 +1420,7 @@
     },
     {
       "key": "283921b8-736a-4710-a00d-f8dca0f42cca",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "**Discuss:** *With a partner, discuss the following:*\n\n**Discussion Goal:** Students should step through each line of the pattern, explaining what's happening. \n\nCounter Pattern with Event:\n\n* myVar gets the value 0\n* When the event is triggered, myVar is updated getting the current value of myVar and adding 1.\n\nThe **Counter Pattern with Event** might be used to update a score in a game when an item is clicked.\n"
       },
@@ -1438,7 +1431,7 @@
     },
     {
       "key": "d416764e-ce8f-4e9a-856c-76357300ee93",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "* The \"Counter Pattern with Event\" should look familiar! How would you explain this pattern to another person? \r\n* When might you want to use the \"Counter Pattern with Event\"?"
       },
@@ -1449,7 +1442,7 @@
     },
     {
       "key": "71b90d08-9788-4c3c-8904-b5c030620ccc",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "Variables can store many different types of information including numbers and Strings. Anything placed inside of the quotation marks becomes a String. \r\n\r\nGuess what! There's a pattern for working with Strings. When we want to combine Strings with other Strings, numbers, or even with another variable we call that concatenation.",
         "remarks": true
@@ -1461,7 +1454,7 @@
     },
     {
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
       },
@@ -1486,7 +1479,7 @@
       "key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Goal Answers:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Discussion Goal:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
       },
       "seeding_key": {
         "activity_section.key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
@@ -3573,7 +3566,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v1_2021"
         ],
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "progression": "Investigation #1: Thermostat App v.1 "
       },
       "named_level": false,
       "bonus": false,
@@ -3599,7 +3592,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
         ],
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
+        "progression": "Investigation #1: Thermostat App v.1 "
       },
       "named_level": false,
       "bonus": false,
@@ -3625,7 +3618,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v2_2021"
         ],
-        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
+        "progression": "Investigation #2: Thermostat App v.2"
       },
       "named_level": false,
       "bonus": false,
@@ -3651,7 +3644,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v3_2021"
         ],
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "progression": "Investigation #3: Thermostat App v.3"
       },
       "named_level": false,
       "bonus": false,
@@ -3677,7 +3670,7 @@
         "level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
         ],
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
+        "progression": "Investigation #3: Thermostat App v.3"
       },
       "named_level": false,
       "bonus": false,
