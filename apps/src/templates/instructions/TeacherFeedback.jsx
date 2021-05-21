@@ -8,13 +8,11 @@ import queryString from 'query-string';
 import color from '@cdo/apps/util/color';
 import $ from 'jquery';
 import {CommentArea} from './CommentArea';
-import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
-import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
-import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
-import experiments from '@cdo/apps/util/experiments';
 import TeacherFeedbackKeepWorking from '@cdo/apps/templates/instructions/TeacherFeedbackKeepWorking';
 import TeacherFeedbackStatus from '@cdo/apps/templates/instructions/TeacherFeedbackStatus';
 import TeacherFeedbackRubric from '@cdo/apps/templates/instructions/TeacherFeedbackRubric';
+import {teacherFeedbackShape, rubricShape} from '@cdo/apps/templates/types';
+import experiments from '@cdo/apps/util/experiments';
 
 const ErrorType = {
   NoError: 'NoError',
