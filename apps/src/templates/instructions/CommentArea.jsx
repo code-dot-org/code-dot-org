@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+
 export class CommentArea extends Component {
   static propTypes = {
     disabledMode: PropTypes.bool,
@@ -17,6 +18,7 @@ export class CommentArea extends Component {
     const textInputStyle = this.props.disabledMode
       ? styles.textInputStudent
       : styles.textInput;
+
     return (
       <textarea
         id="ui-test-feedback-input"

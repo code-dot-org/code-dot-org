@@ -87,6 +87,10 @@ export class TeacherFeedback extends Component {
       reviewState: reviewState
     });
 
+  // Review state changes are tracked differently than comment or performance
+  // because the teacher could repeatedly leave feedback for the student to
+  // keep working, which would have the same review_state value, but should be treated
+  // as independent feedbacks.
   onReviewStateUpdated = isChanged =>
     this.setState({reviewStateUpdated: isChanged});
 
@@ -136,26 +140,19 @@ export class TeacherFeedback extends Component {
   };
 
   feedbackChanged = () => {
-    const latestFeedback = this.state.latestFeedback;
+    const {
+      latestFeedback,
+      comment,
+      performance,
+      reviewStateUpdated
+    } = this.state;
 
     if (latestFeedback) {
-      const commentChanged = this.state.comment !== latestFeedback.comment;
-      const performanceChanged =
-        this.state.performance !== latestFeedback.performance;
-
-      // Review state changes are tracked differently than comment or performance
-      // because the teacher could repeatedly leave feedback for the student to
-      // keep working, which would have the same review_state value, but should be treated
-      // as independent feedbacks.
-      const reviewStateChange = this.state.reviewStateUpdated;
-
-      return commentChanged || performanceChanged || reviewStateChange;
+      const commentChanged = comment !== latestFeedback.comment;
+      const performanceChanged = performance !== latestFeedback.performance;
+      return commentChanged || performanceChanged || reviewStateUpdated;
     } else {
-      return (
-        !!this.state.comment.length ||
-        !!this.state.performance ||
-        this.state.reviewStateUpdated
-      );
+      return !!comment.length || !!performance || reviewStateUpdated;
     }
   };
 

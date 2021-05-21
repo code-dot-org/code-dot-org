@@ -93,7 +93,6 @@ class TeacherFeedbackKeepWorking extends Component {
           onChange={this.handleCheckboxChange}
         />
         <div data-tip data-place="bottom" data-for="keep-working-tooltip">
-          {/* maureen check rtl*/}
           <label htmlFor="keep-working" style={styles.label}>
             <span style={styles.keepWorkingText}>{i18n.keepWorking()}</span>
             {this.awaitingTeacherReview() && (
