@@ -3,15 +3,16 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: 'Amazon Aurora Benchmark'
 Parameters:
   DBClusterIdentifier:
-    Description: The DB Cluster Identifier of the aurora cluster that will be used in the load test
+    Description: The DB Cluster Identifier of the Aurora cluster that will be used in the load test.
     Type: String
   KeyName:
-    Description: 'The name of the EC2 key pair used to SSH to the bastion host'
+    Description: 'The name of the EC2 key pair used to SSH to the sysbench host'
     Type: 'AWS::EC2::KeyPair::KeyName'
-  BastionAmi:
-    Description: 'The AMI used to create the bastion host'
+    Default: 'server_access_key'
+  SysbenchAmi:
+    Description: 'The AMI used to create the sysbench host'
     Type: 'String'
-    Default: 'ami-0f873d4d3a8b11b74'
+    Default: 'ami-0f873d4d3a8b11b74' # Amazon Aurora Benchmark AMI published to us-east-1 in February 2019.
 Resources:
   ## Create VPC
   LabVpc:
@@ -151,7 +152,7 @@ Resources:
           FromPort: '3306'
           ToPort: '3306'
           SourceSecurityGroupId: !Ref SshSecurityGroup
-          Description: Allows MySQL Access from bastion host
+          Description: Allows MySQL Access from sysbench host
   ## Create IAM Role for EC2
   RootRole:
     Type: "AWS::IAM::Role"
@@ -181,9 +182,9 @@ Resources:
       Path: "/"
       Roles:
         - Ref: "RootRole"
-  ## Create the bastion host
+  ## Create the sysbench host
   # TODO:(suresh) Configure with a larger Volume so that code-dot-org project fits on local storage.
-  BastionHost:
+  SysbenchHost:
     Type: 'AWS::EC2::Instance'
     Properties:
       SubnetId: !Ref PublicSubnet01
@@ -193,8 +194,8 @@ Resources:
       KeyName: !Ref KeyName
       Tags:
         - Key: Name
-          Value: !Join ['-', [!Ref 'AWS::StackName', Bastion Host]]
-      ImageId: !Ref BastionAmi
+          Value: !Join ['-', [!Ref 'AWS::StackName', Sysbench Host]]
+      ImageId: !Ref SysbenchAmi
       IamInstanceProfile: !Ref RootInstanceProfile
       BlockDeviceMappings:
         -
@@ -211,30 +212,11 @@ Resources:
         - '{"widgets":[{"type":"metric","x":0,"y":0,"width":9,"height":6,"properties":{"metrics":[["AWS/RDS","Queries","DBClusterIdentifier","${loadtest}"],["AWS/RDS","SelectThroughput","DBClusterIdentifier","${loadtest}",{"color":"#2ca02c"}],["AWS/RDS","InsertThroughput","DBClusterIdentifier","${loadtest}",{"color":"#9467bd"}],["AWS/RDS","DatabaseConnections","DBClusterIdentifier","${loadtest}",{"yAxis":"right","color":"#ff7f0e"}],["AWS/RDS","UpdateThroughput","DBClusterIdentifier","${loadtest}",{"color":"#c7c7c7"}],["AWS/RDS","DeleteThroughput","DBClusterIdentifier","${loadtest}",{"color":"#d62728"}]],"view":"singleValue","stacked":false,"region":"us-east-1","stat":"Average","period":60,"legend":{"position":"bottom"},"title":"Connections & Throughput","yAxis":{"left":{"showUnits":true},"right":{"showUnits":true}}}},{"type":"metric","x":0,"y":6,"width":9,"height":6,"properties":{"metrics":[["AWS/RDS","Queries","DBClusterIdentifier","${loadtest}"],["AWS/RDS","SelectThroughput","DBClusterIdentifier","${loadtest}",{"color":"#2ca02c"}],["AWS/RDS","InsertThroughput","DBClusterIdentifier","${loadtest}",{"color":"#9467bd"}],["AWS/RDS","DatabaseConnections","DBClusterIdentifier","${loadtest}",{"yAxis":"right","color":"#ff7f0e"}],["AWS/RDS","UpdateThroughput","DBClusterIdentifier","${loadtest}",{"color":"#c7c7c7"}],["AWS/RDS","DeleteThroughput","DBClusterIdentifier","${loadtest}",{"color":"#d62728"}]],"view":"timeSeries","stacked":false,"region":"us-east-1","stat":"Average","period":60,"legend":{"position":"bottom"},"title":"Connections & Throughput","yAxis":{"left":{"showUnits":true},"right":{"showUnits":true}}}}]}'
         - { loadtest: !Sub '${DBClusterIdentifier}' }
 Outputs:
-  BastionHostEndpoint:
-    Description: Bastion Host Endpoint
-    Value: !GetAtt BastionHost.PublicDnsName
-#  ClusterEndpoint:
-#    Description: Aurora Cluster Endpoint
-#    Value: !GetAtt AuroraDestinationDBCluster.Endpoint.Address
+  SysbenchHostEndpoint:
+    Description: Sysbench Host Endpoint
+    Value: !GetAtt SysbenchHost.PublicDnsName
   DashboardUrl:
     Description: URL to dashboard
     Value: !Sub
       - 'https://console.aws.amazon.com/cloudwatch/home?region=${region}#dashboards:name=${dashboard}'
       - { region: { "Ref": "AWS::Region" }, dashboard: !Ref LabDashboard}
-  ## Copy the runload.sh bash file from AWS to local S3 bucket - the source may be modified for a different workload
-#  StageWorkload:
-#    Description: Execute First - Stage Workload
-#    Value: !Sub
-#      - 'aws s3 cp s3://aurorabenchmark/runload.sh s3://${bucket}/runload.sh'
-#      - { bucket: { "Ref": "LabBucket" }}
-#  WorkloadCommandReader:
-#    Description: Execute Reader Workload
-#    Value: !Sub
-#      - 'aws ssm send-command --document-name "AWS-RunShellScript" --region us-east-1 --output text --instance-ids "${instance}" --parameters commands=["sudo aws s3 mv s3://${bucket}/runload.sh /home/ec2-user/runload.sh","bash /home/ec2-user/runload.sh ${endpoint} oltp_read_only.lua"],executionTimeout=172800'
-#      - { instance: { "Ref": "BastionHost" }, bucket: { "Ref": "LabBucket" }, endpoint: !GetAtt AuroraDestinationDBCluster.Endpoint.Address}
-#  WorkloadCommandWriter:
-#    Description: Execute Writer Workload
-#    Value: !Sub
-#      - 'aws ssm send-command --document-name "AWS-RunShellScript" --region us-east-1 --output text --instance-ids "${instance}" --parameters commands=["sudo aws s3 mv s3://${bucket}/runload.sh /home/ec2-user/runload.sh","bash /home/ec2-user/runload.sh ${endpoint} oltp_insert.lua"],executionTimeout=172800'
-#      - { instance: { "Ref": "BastionHost" }, bucket: { "Ref": "LabBucket" }, endpoint: !GetAtt AuroraDestinationDBCluster.Endpoint.Address}
