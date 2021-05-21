@@ -368,7 +368,7 @@ Dashboard::Application.routes.draw do
     end
 
     # /s/xxx/lockable/yyy/levels/zzz
-    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
+    resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
