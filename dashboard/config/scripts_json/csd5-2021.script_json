@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 18:50:07 UTC",
+    "serialized_at": "2021-05-21 15:35:55 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -2124,7 +2124,8 @@
       "key": "b4133437-14b2-4221-8202-c411f147e13c",
       "position": 6,
       "properties": {
-        "description": "**Display:** Have students flip to the back of their worksheet. In the top section, students will create a Binary Profile by answering a few questions and encoding their answers as binary numbers. Once completed, they will trade with a partner and use the widget to decode their binary profile to reveal the answers so humans can understand them.\n\n**Code Studio:** Send students to the Binary Number widget.\n\n"
+        "description": "**Display:** Have students flip to the back of their worksheet. In the top section, students will create a Binary Profile by answering a few questions and encoding their answers as binary numbers. Once completed, they will trade with a partner and use the widget to decode their binary profile to reveal the answers so humans can understand them.\n\n**Code Studio:** Send students to the Binary Number widget.\n\n",
+        "progression_name": "Binary Number Widget"
       },
       "seeding_key": {
         "activity_section.key": "b4133437-14b2-4221-8202-c411f147e13c",
@@ -4813,7 +4814,8 @@
       "properties": {
         "level_keys": [
           "CSD U5 binary widget_2021"
-        ]
+        ],
+        "progression": "Binary Number Widget"
       },
       "named_level": false,
       "bonus": false,
@@ -5799,18 +5801,6 @@
       }
     },
     {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "bug_report"
-      }
-    },
-    {
       "name": "Computer Science Practices",
       "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
       "key": "computer-science-practices",
@@ -5934,24 +5924,12 @@
       }
     },
     {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources"
-      }
-    },
-    {
       "name": "Amazon and Data",
       "url": "https://youtu.be/S4RL6prqtGQ",
       "key": "how-big-data-is-used-in-amazon-recommendation-systems",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/amazon_data.mp4"
       },
       "seeding_key": {
@@ -5959,7 +5937,7 @@
       }
     },
     {
-      "name": "How Computers Work - Data and Binary",
+      "name": "Binary and Data",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "how-computers-work-data-and-binary",
       "properties": {
@@ -5969,19 +5947,6 @@
       },
       "seeding_key": {
         "resource.key": "how-computers-work-data-and-binary"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
       }
     },
     {
@@ -6116,7 +6081,7 @@
       "key": "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/netflix_data.mp4"
       },
       "seeding_key": {
@@ -6486,7 +6451,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_impact_on_society"
@@ -6499,7 +6464,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_machine_learning"
@@ -6512,7 +6477,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_training_data_and_bias"
@@ -6524,7 +6489,7 @@
       "key": "why-are-so-many-drivers-obsessed-with-waze",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/waze_data.mp4"
       },
       "seeding_key": {
@@ -7017,24 +6982,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "bug_report",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "how_to_debug",
-        "script.name": "csd5-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {

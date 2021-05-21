@@ -19011,7 +19011,7 @@ en:
           student_description: ''
         csd1-2021:
           title: Problem Solving and Computing ('21-'22)
-          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n**Implementation Guidance for Unit 1**\n- Unit 1 Chapter 1 should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in Unit 1, depending on your classroom context\n- You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below\n"
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n**Implementation Guidance for Unit 1**\n- Unit 1 Chapter 1 should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in Unit 1, depending on your classroom context\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
           lessons:
@@ -19155,7 +19155,7 @@ en:
           student_description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
         csd2-2021:
           title: Web Development ('21-'22)
-          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   \n\n**Implementation Guidance for Unit 2**\n- Complete Unit 1 Chapter 1 before starting this unit\n- Guidance for how to differentiate tasks is available in the *Differentiation Guide* in the Teacher Resources menu below\n- You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below"
+          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   \n\n**Implementation Guidance for Unit 2**\n- Complete Unit 1 Chapter 1 before starting this unit\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit"
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
           lessons:
@@ -19322,8 +19322,8 @@ en:
             **Implementation Guidance for Unit 3**
             - Complete Unit 1 Chapter 1 before starting this unit
             - Chapter 1 of this unit is a pre-requisite for Unit 6
-            - Guidance for how to differentiate tasks is available in the *Differentiation Guide* in the Teacher Resources menu below
-            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
           lessons:
@@ -19534,7 +19534,7 @@ en:
             **Implementation Guidance for Unit 4**
             - Complete Unit 1 Chapter 1 before starting this unit
             - This unit is a pre-requisite for Unit 6 and Unit 7
-            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
           lessons:
@@ -19711,8 +19711,8 @@ en:
 
             **Implementation Guidance for Unit 5**
             - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit could be swapped out with Unit 7 - see the *Implementation Guide* for more information on this option
-            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
+            - This unit could be swapped out with Unit 7 - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information on this option
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
           lessons:
@@ -19866,10 +19866,11 @@ en:
 
             **Implementation Guidance for Unit 6**
             - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit assumes students have completed Unit 3 Chapter 1 and Unit 4. Students without this background may struggle in this unit.
+            - This unit assumes students have completed Unit 3 Chapter 1 and all of Unit 4. Students without this background may struggle in this unit.
             - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
-            - This unit could be swapped out with Unit 7 - see the *Implementation Guide* for more information on this option
-            - You can view the full *Curriculum Guide* and *Implementation Guide* in the Teacher Resources menu below
+            - This unit could be swapped out with Unit 7 - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information on this option
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
           description_short: Learn to program with physical devices.
           description_audience: ''
           lessons:
@@ -20712,7 +20713,7 @@ en:
               description_teacher: Students will complete a jigsaw of three different topics at the intersection of data, computing, and global impacts. These are topics, big data, crowdsourcing, and open data. Students will watch videos or listen to audio recordings about the different topics. Groups will each complete an activity guide about their topic before having individuals from each group share out their findings. The lesson concludes with a review of key points.
             Machine Learning and Bias:
               key: Machine Learning and Bias
-              name: Machine Learning and Bias
+              name: Machine Learning
               description_student: In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
               description_teacher: In this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
             Project - Tell a Data Story - Part 1:
@@ -20730,6 +20731,10 @@ en:
               name: Assessment Day
               description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            lesson-10:
+              name: Algorithmic Bias
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
@@ -21644,7 +21649,7 @@ en:
               description_teacher: In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             While Loops with the Farmer:
               key: While Loops with the Farmer
-              name: While Loops with the Farmer
+              name: While Loops in Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
               description_teacher: In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -21679,8 +21684,8 @@ en:
               description_teacher: In this **skill-building** lesson, students will use functions with the Artist.
             Variables with Artist:
               key: Variables with Artist
-              name: Using Variables with Artist
-              description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.
+              name: Using Variables with the Artist
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
               description_teacher: In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.
             Changing Variables with Bee:
               key: Changing Variables with Bee
@@ -21695,8 +21700,8 @@ en:
             For Loops with Bee:
               key: For Loops with Bee
               name: For Loops with Bee
-              description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
-              description_teacher: 'This **skill-building** lesson focuses on “for” loops and using an incrementing variable to solve more complicated puzzles. '
+              description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for loops`!
+              description_teacher: 'This **skill-building** lesson focuses on `for loops` and using an incrementing variable to solve more complicated puzzles. '
             For Loops with Artist:
               key: For Loops with Artist
               name: For Loops with Artist
@@ -21741,6 +21746,8 @@ en:
               description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
             lesson-4:
               name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
           lesson_groups:
             csf_warmup:
               display_name: Warm Up
@@ -22415,8 +22422,12 @@ en:
               description_teacher: In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.
             lesson-2:
               name: Using Variables
+              description_student: 'One way that software engineers can store information in a computer’s memory is by using variables. In this lesson, you use variables to store information used to create `Painter` objects and also to store information input by a user. '
+              description_teacher: In this lesson, students define variables to represent attributes for an object and use these variables to store values. Students use the `Scanner` class to obtain input from the user and define variables to store values provided by the user. These values are used to construct `Painter` objects in The Neighborhood.
             lesson-3:
               name: Writing Constructors
+              description_student: The Project Mercury Pastries food truck needs your help! The owner wants to sell desserts in The Neighborhood but needs to be able to input and store their desserts in a program. You have been asked to use your software engineering skills to create a program that can create dessert objects so the owner can keep track of their inventory. You start by creating a `Dessert` class so the owner can enter the flavor, available quantity, and price of each dessert they sell.
+              description_teacher: Students are introduced to the Project Mercury Pastries food truck and the owner's need for a program to input and store dessert items. As software engineers, students utilize object-oriented design strategies to identify necessary attributes and appropriate data types for a `Dessert` class. Students write a constructor and use a `Scanner` object to obtain values for the instance variables to initialize a `Dessert` object.
             lesson-4:
               name: Adding Multiple Constructors
             lesson-5:
@@ -22450,10 +22461,8 @@ en:
           title: Giving Objects State
           description_audience: ''
           description_short: ''
-          description: 'Students access the Java Lab to explore The Neighborhood and are introduced to the Painter class. Using starter code, students make simple modifications to achieve different outcomes with a Painter object and practice creating a Painter object to identify the relationship between a class and an object.
-
-'
-          student_description: ''
+          description: In this unit, students create objects and define instance variables to represent attributes. Students explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. Students implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with objects, students use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
+          student_description: In this unit, you create objects and define instance variables to represent attributes. You explore creating and using constructors to establish values for these attributes and learn how to work with the data stored in objects. You implement accessor and mutator methods to access and modify the values stored in the instance variables as well as write `toString` methods to output information about the state of the object. While creating and working with your objects, you use the `Scanner` class to obtain user input to use as program data, learn about data types, operators, and expressions to store and manipulate data in variables, and develop an understanding of data encapsulation and object-oriented design decisions.
         csa3-pilot:
           lessons: {}
           lesson_groups: {}
@@ -22882,7 +22891,7 @@ en:
               description_teacher: "To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.\r\n\r\n**Question of the Day:** How can I use the Problem Solving Process to build an \"AI for Social Good\" App?"
             lesson_groups: {}
           name: aiml-2021
-          title: AI ML Standalone
+          title: AI and Machine Learning Module
           description_audience: ''
           description_short: ''
           description: ''
@@ -22895,5 +22904,17 @@ en:
           title: AI and Machine Learning
           description_audience: ''
           description_short: ''
-          description: Coming soon!
-          student_description: Coming soon!
+          description: |-
+            Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+
+            **Coming Soon! This unit will be available in July 2021!**
+
+            **Implementation guidance for Unit 7**
+
+            - Complete Unit 1 Chapter 1 and Unit 4 before starting this unit
+            - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
+          student_description: |-
+            Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+
+            **Coming Soon! This unit will be available in July 2021!**

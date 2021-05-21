@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-13 18:43:12 UTC",
+    "serialized_at": "2021-05-21 16:57:29 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -1718,24 +1718,24 @@
       }
     },
     {
-      "key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
-      "position": 3,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
-        "lesson_activity.key": "7007138d-bc16-4bc0-8d30-252440672814"
-      }
-    },
-    {
       "key": "331e6451-5472-4491-bf96-d630d7f902a4",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Video: Introducing Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "331e6451-5472-4491-bf96-d630d7f902a4",
+        "lesson_activity.key": "7007138d-bc16-4bc0-8d30-252440672814"
+      }
+    },
+    {
+      "key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d",
         "lesson_activity.key": "7007138d-bc16-4bc0-8d30-252440672814"
       }
     },
@@ -1787,8 +1787,7 @@
       "key": "4a6ce720-3271-41a8-8f69-23473046c28a",
       "position": 9,
       "properties": {
-        "name": "Lesson Extras",
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "4a6ce720-3271-41a8-8f69-23473046c28a",
@@ -3700,32 +3699,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Fish Tank 1-validated_2021"
-        ],
-        "progression": "Prediction"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Fish Tank 1-validated_2021"
-        ],
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2021",
-        "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d"
-      },
-      "level_keys": [
-        "Fish Tank 1-validated_2021"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "CourseEF_video_IntroSpriteLab_2021"
         ],
         "progression": "Video: Introducing Sprite Lab"
@@ -3743,6 +3716,32 @@
       },
       "level_keys": [
         "CourseEF_video_IntroSpriteLab_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated_2021"
+        ],
+        "progression": "Prediction"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Fish Tank 1-validated_2021"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2021",
+        "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d"
+      },
+      "level_keys": [
+        "Fish Tank 1-validated_2021"
       ]
     },
     {
@@ -3936,7 +3935,7 @@
         "level_keys": [
           "spritelab_extras_repeat_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -7458,18 +7457,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Fish Tank 1-validated_2021",
-        "script_level.level_keys": [
-          "Fish Tank 1-validated_2021"
-        ],
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "coursee-2021",
-        "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CourseEF_video_IntroSpriteLab_2021",
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_2021"
@@ -7478,6 +7465,18 @@
         "lesson_group.key": "csf_sprites",
         "script.name": "coursee-2021",
         "activity_section.key": "331e6451-5472-4491-bf96-d630d7f902a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Fish Tank 1-validated_2021",
+        "script_level.level_keys": [
+          "Fish Tank 1-validated_2021"
+        ],
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "coursee-2021",
+        "activity_section.key": "75de5d52-becb-4805-82d8-5be30d0dca7d"
       }
     },
     {
