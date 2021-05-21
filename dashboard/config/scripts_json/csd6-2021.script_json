@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-18 15:36:02 UTC",
+    "serialized_at": "2021-05-21 15:31:37 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -10009,6 +10009,18 @@
   ],
   "resources": [
     {
+      "name": "Accelerometer Events",
+      "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
+      "key": "accelerometer_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "accelerometer_events"
+      }
+    },
+    {
       "name": "All Code",
       "url": "/s/csd6-2021/code",
       "key": "all_code_4",
@@ -10065,6 +10077,78 @@
       }
     },
     {
+      "name": "Analog Sensors",
+      "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
+      "key": "analog_sensors",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "analog_sensors"
+      }
+    },
+    {
+      "name": "Arrays",
+      "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
+      "key": "arrays",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "name": "Board Events",
+      "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
+      "key": "board_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1HUDl6xDoxNWJUptqMA1B9DXE0XFTeD3a/view?usp=sharing",
+      "key": "booleans_and_comparison_operators_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "booleans_and_comparison_operators_1"
+      }
+    },
+    {
+      "name": "Changing Sensor Scale",
+      "url": "https://drive.google.com/file/d/1jGo7RH3_BiZwBBXNaOCVco-okqRRkSdC/view?usp=sharing",
+      "key": "changing_sensor_scale",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "name": "Circuit Playground",
+      "url": "https://drive.google.com/file/d/1OpB8lF3MQJIpiRm7hFo9ARx346-NpfNf/view?usp=sharing",
+      "key": "circuit_playground",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuit_playground"
+      }
+    },
+    {
       "name": "How Computers Work: Circuits & Logic",
       "url": "https://youtu.be/ZoqMiFKspAA",
       "key": "circuits-logic-video",
@@ -10075,6 +10159,42 @@
       },
       "seeding_key": {
         "resource.key": "circuits-logic-video"
+      }
+    },
+    {
+      "name": "Circuits and Buttons",
+      "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
+      "key": "circuits_and_buttons",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_buttons"
+      }
+    },
+    {
+      "name": "Circuits and LEDs",
+      "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
+      "key": "circuits_and_leds",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "name": "Color Lights",
+      "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
+      "key": "color_lights",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "color_lights"
       }
     },
     {
@@ -10148,6 +10268,30 @@
       }
     },
     {
+      "name": "Date and Change Events",
+      "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
+      "key": "date_and_change_events",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "date_and_change_events"
+      }
+    },
+    {
+      "name": "Designing Screens with Code",
+      "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
+      "key": "designing_screens_with_code",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
       "name": "Emoji Race",
       "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
       "key": "emoji-race-guide",
@@ -10161,6 +10305,30 @@
       }
     },
     {
+      "name": "For Loops",
+      "url": "https://drive.google.com/file/d/1m96-bXSMQwkgpJ0MBgagEBRhJ8NYvDcN/view?usp=sharing",
+      "key": "for_loops",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "name": "Functions",
+      "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
+      "key": "functions_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "functions_2"
+      }
+    },
+    {
       "name": "How Computers Word: Hardware & Software",
       "url": "https://www.youtube.com/watch?v=xnyFYiK2rSY",
       "key": "how_computers_word_hardware_software",
@@ -10171,6 +10339,18 @@
       },
       "seeding_key": {
         "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
+      "key": "if_statements_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements_1"
       }
     },
     {
@@ -10225,7 +10405,7 @@
       }
     },
     {
-      "name": "Loops in App Lab",
+      "name": "For Loops",
       "url": "https://youtu.be/WqmyVZnMWHY",
       "key": "loops_in_app_lab",
       "properties": {
@@ -10259,6 +10439,18 @@
       },
       "seeding_key": {
         "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "name": "Modifying Arrays",
+      "url": "https://drive.google.com/file/d/1OkCLdXlEIVm62RoucKyw8JhOpWtQENgH/view?usp=sharing",
+      "key": "modifying_arrays",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "modifying_arrays"
       }
     },
     {
@@ -10299,6 +10491,30 @@
       }
     },
     {
+      "name": "Physical Input",
+      "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
+      "key": "physical_input",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "name": "Physical Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "physical_output",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "physical_output"
+      }
+    },
+    {
       "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
       "key": "planning-your-innovation",
@@ -10312,6 +10528,30 @@
       }
     },
     {
+      "name": "Playing Notes",
+      "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
+      "key": "playing_notes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "name": "Producing Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "producing_output",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "producing_output"
+      }
+    },
+    {
       "name": "Prototype an Innovation",
       "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
       "key": "prototype-an-innovation-1",
@@ -10322,6 +10562,30 @@
       },
       "seeding_key": {
         "resource.key": "prototype-an-innovation-1"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input_1"
       }
     },
     {
@@ -10361,6 +10625,18 @@
       }
     },
     {
+      "name": "Taking Input with getProperty",
+      "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
+      "key": "taking_input_with_getproperty",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd",
       "key": "teacher_forum",
@@ -10369,6 +10645,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Accelerometer",
+      "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
+      "key": "the_accelerometer",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_accelerometer"
       }
     }
   ],
@@ -10393,8 +10681,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "responding_to_user_input_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "resource.key": "how_computers_word_hardware_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "circuit_playground"
       }
     },
     {
@@ -10405,14 +10717,74 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Analog Input",
         "resource.key": "analog-digital-video"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "analog_sensors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "date_and_change_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "resource.key": "changing_sensor_scale"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Program Design Process",
         "resource.key": "emoji-race-guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "functions_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "if_statements_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "resource.key": "booleans_and_comparison_operators_1"
       }
     },
     {
@@ -10447,8 +10819,62 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "producing_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "playing_notes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Arrays and For Loops",
         "resource.key": "loops_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "modifying_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "resource.key": "for_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "resource.key": "the_accelerometer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "resource.key": "accelerometer_events"
       }
     },
     {
@@ -10461,6 +10887,12 @@
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
         "resource.key": "physical-prototyping-project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "resource.key": "circuits_and_buttons"
       }
     },
     {
