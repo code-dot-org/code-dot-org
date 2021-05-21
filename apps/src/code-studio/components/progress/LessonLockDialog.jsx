@@ -4,7 +4,7 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
-import {LockStatus, saveLockDialog} from '../../stageLockRedux';
+import {LockStatus, saveLockDialog} from '../../lessonLockRedux';
 import color from '../../../util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
@@ -54,7 +54,7 @@ class LessonLockDialog extends React.Component {
 
   allowEditing = () => this.setAllLockStatus(LockStatus.Editable);
 
-  lockStage = () => this.setAllLockStatus(LockStatus.Locked);
+  lockLesson = () => this.setAllLockStatus(LockStatus.Locked);
 
   showAnswers = () => this.setAllLockStatus(LockStatus.ReadonlyAnswers);
 
@@ -129,7 +129,7 @@ class LessonLockDialog extends React.Component {
                   <button
                     type="button"
                     style={progressStyles.orangeButton}
-                    onClick={this.lockStage}
+                    onClick={this.lockLesson}
                   >
                     {commonMsg.lockStage()}
                   </button>
@@ -153,7 +153,7 @@ class LessonLockDialog extends React.Component {
                   <button
                     type="button"
                     style={progressStyles.orangeButton}
-                    onClick={this.lockStage}
+                    onClick={this.lockLesson}
                   >
                     {commonMsg.relockStage()}
                   </button>
@@ -328,9 +328,9 @@ const styles = {
 export const UnconnectedLessonLockDialog = Radium(LessonLockDialog);
 export default connect(
   state => ({
-    initialLockStatus: state.stageLock.lockStatus,
-    isOpen: !!state.stageLock.lockDialogStageId,
-    saving: state.stageLock.saving,
+    initialLockStatus: state.lessonLock.lockStatus,
+    isOpen: !!state.lessonLock.lockDialogLessonId,
+    saving: state.lessonLock.saving,
     selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
   dispatch => ({

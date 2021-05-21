@@ -11,7 +11,7 @@ import {
 import {
   authorizeLockable,
   setSectionLockStatus
-} from '@cdo/apps/code-studio/stageLockRedux';
+} from '@cdo/apps/code-studio/lessonLockRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {setHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
 import teacherSections, {
