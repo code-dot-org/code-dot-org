@@ -33,13 +33,13 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          scriptAllowsHiddenLessons={false}
+          hiddenLessonState={Immutable.fromJS({
             stagesBySection: {11: {}}
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
         />
       )
@@ -67,13 +67,13 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          scriptAllowsHiddenLessons={false}
+          hiddenLessonState={Immutable.fromJS({
             stagesBySection: {11: {}}
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
         />
       )
@@ -100,13 +100,13 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          scriptAllowsHiddenLessons={false}
+          hiddenLessonState={Immutable.fromJS({
             stagesBySection: {11: {}}
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={true}
         />
       )
@@ -129,13 +129,13 @@ describe('ProgressLessonTeacherInfo', () => {
           lesson={lesson}
           section={MOCK_SECTION}
           lessonUrl={'code.org'}
-          scriptAllowsHiddenStages={false}
-          hiddenStageState={Immutable.fromJS({
+          scriptAllowsHiddenLessons={false}
+          hiddenLessonState={Immutable.fromJS({
             stagesBySection: {11: {}}
           })}
           scriptName="My Script"
           hasNoSections={false}
-          toggleHiddenStage={() => {}}
+          toggleHiddenLesson={() => {}}
           lockableAuthorized={false}
         />
       )
@@ -153,13 +153,13 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lockableLesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenStages={false}
-        hiddenStageState={Immutable.fromJS({
+        scriptAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
           stagesBySection: {11: {}}
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHiddenStage={() => {}}
+        toggleHiddenLesson={() => {}}
         lockableAuthorized={true}
       />
     );
@@ -175,13 +175,13 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenStages={false}
-        hiddenStageState={Immutable.fromJS({
+        scriptAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
           stagesBySection: {11: {}}
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHiddenStage={() => {}}
+        toggleHiddenLesson={() => {}}
         lockableAuthorized={true}
       />
     );
@@ -197,13 +197,13 @@ describe('ProgressLessonTeacherInfo', () => {
         lesson={lockableLesson}
         section={MOCK_SECTION}
         lessonUrl={'code.org'}
-        scriptAllowsHiddenStages={false}
-        hiddenStageState={Immutable.fromJS({
+        scriptAllowsHiddenLessons={false}
+        hiddenLessonState={Immutable.fromJS({
           stagesBySection: {11: {}}
         })}
         scriptName="My Script"
         hasNoSections={true}
-        toggleHiddenStage={() => {}}
+        toggleHiddenLesson={() => {}}
         lockableAuthorized={false}
       />
     );
@@ -219,13 +219,13 @@ describe('ProgressLessonTeacherInfo', () => {
             lesson={fakeLesson('Maze', 1)}
             section={section}
             lessonUrl={'code.org'}
-            scriptAllowsHiddenStages={true}
-            hiddenStageState={Immutable.fromJS({
+            scriptAllowsHiddenLessons={true}
+            hiddenLessonState={Immutable.fromJS({
               stagesBySection: {11: {}}
             })}
             scriptName="My Script"
             hasNoSections={false}
-            toggleHiddenStage={() => {}}
+            toggleHiddenLesson={() => {}}
             lockableAuthorized={false}
           />
         )
