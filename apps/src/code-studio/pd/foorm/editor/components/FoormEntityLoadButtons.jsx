@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
+import SingleCheckbox from '../../../form_components/SingleCheckbox';
 import {
   setLastSaved,
   setSaveError,
@@ -28,14 +29,33 @@ class FoormEntityLoadButtons extends React.Component {
     setLastSavedQuestions: PropTypes.func
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      latestVersionsOnly: false
+    };
+  }
+
   getDropdownOptions() {
-    return this.props.foormEntities.map((entity, i) => {
-      return this.renderMenuItem(
-        () => this.props.onSelect(entity['metadata']),
-        entity['text'],
-        i
-      );
-    });
+    return (
+      this.props.foormEntities
+        // sort entities alphabetically by name and version
+        .sort((a, b) => a['text'].localeCompare(b['text']))
+        // optionally filter out entities so that only the last unique version of a name remains
+        .filter((entity, i, array) =>
+          this.state.latestVersionsOnly && array[i + 1]
+            ? array[i + 1]['metadata']['name'] !== entity['metadata']['name']
+            : true
+        )
+        .map((entity, i) => {
+          return this.renderMenuItem(
+            () => this.props.onSelect(entity['metadata']),
+            entity['text'],
+            i
+          );
+        })
+    );
   }
 
   renderMenuItem(clickHandler, textToDisplay, key) {
@@ -77,6 +97,16 @@ class FoormEntityLoadButtons extends React.Component {
         >
           {`New ${this.props.foormEntityName}`}
         </Button>
+        <SingleCheckbox
+          name="latestVersionsOnly"
+          label="Only show latest version"
+          onChange={() =>
+            this.setState({
+              latestVersionsOnly: !this.state.latestVersionsOnly
+            })
+          }
+          value={this.state.latestVersionsOnly}
+        />
       </div>
     );
   }
