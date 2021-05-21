@@ -26,7 +26,7 @@ class TeacherFeedbackStatus extends Component {
         ...styles.timeTeacher,
         ...styles.timeTeacherStudentSeen
       },
-      message: 'Last updated by student',
+      message: i18n.lastUpdatedByStudent(),
       time: this.getFriendlyDate(latestFeedback.student_last_updated)
     };
   }
