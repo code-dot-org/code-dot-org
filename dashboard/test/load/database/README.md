@@ -9,7 +9,7 @@ Here are steps to using sysbench to carry out benchmark testing of the Code.org 
 1. **Create Stack** - Provision a load test CloudFormation Stack using dashboard/test/load/database/aurora-loadtest.yml setting the DBClusterIdentifier Parameter to the identifier that you plan to use for the load test database cluster that you will provision in the next step. Beware that AWS automatically adds `-cluster` to the end of the identifier you specify when creating the Database cluster in step 2, so include that suffix here.
 1. **Create Database Cluster**
     1. Restore a recent Snapshot of the production Aurora cluster into the VPC created by the load test Stack, configuring it to use the VPC, DB Subnet Group and MySQL Security Group created by the load test Stack and using the production Cluster Parameter Group and Writer Instance Parameter Group. Enable Performance Insights on the cluster and enable all log types (Slow Query, Error, General, etc.).
-    1. After the restore is complete, change the password of the admin user via the AWS web console using the Modify Database Instance page.
+    1. After the restore is complete, change the password of the admin SQL login via the AWS web console using the Modify Database Instance page.
 1. **Install git** - Install git on the sysbench server: `sudo yum -y -q install git`
 1. **Clone code-dot-org Repository** - Clone the code-dot-org repository to the EC2 Instance provisioned by the load test Stack so we can invoke load test scripts committed to the repository: `git clone https://github.com/code-dot-org/code-dot-org.git`
 1. **Setup sysbench** - Build and install sysbench by executing the setup script on the sysbench EC2 Instance: `dashboard/test/load/database/setup.sh` 
