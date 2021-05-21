@@ -126,20 +126,20 @@ export const mapStateToProps = state => {
 
   let isLockedLesson = false;
   let isHiddenLesson = false;
-  const {currentStageId} = state.progress;
+  const {currentLessonId} = state.progress;
   if (viewAs === ViewType.Student) {
     const {selectedSectionId} = state.teacherSections;
 
-    isLockedLesson = lessonIsLockedForAllStudents(currentStageId, state);
+    isLockedLesson = lessonIsLockedForAllStudents(currentLessonId, state);
     isHiddenLesson = isLessonHiddenForSection(
       state.hiddenLesson,
       selectedSectionId,
-      currentStageId
+      currentLessonId
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
     isLockedLesson = state.progress.stages.some(
-      lesson => lesson.id === currentStageId && lesson.lockable
+      lesson => lesson.id === currentLessonId && lesson.lockable
     );
   }
 
