@@ -36,6 +36,8 @@ class FoormFormSaveBar extends Component {
     hasLintError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
+    formName: PropTypes.string,
+    formVersion: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
@@ -64,10 +66,12 @@ class FoormFormSaveBar extends Component {
 
   publishUrl = () => `/foorm/forms/${this.props.formId}/publish`;
 
-  handleSave = () => {
+  handleSave = (saveAsNewVersion = false) => {
     this.setState({isSaving: true});
     this.props.setSaveError(null);
-    if (this.props.isFormPublished) {
+    if (saveAsNewVersion) {
+      this.saveNewForm(true);
+    } else if (this.props.isFormPublished) {
       // show a warning if in published mode
       this.setState({
         confirmationDialogBeingShownName: confirmationDialogNames.save
@@ -124,7 +128,7 @@ class FoormFormSaveBar extends Component {
     return this.state.formName && this.state.formName.match('^[a-z0-9_]+$');
   };
 
-  saveNewForm = () => {
+  saveNewForm = (saveAsNewVersion = false) => {
     const newFormName = `${this.state.formCategory}/${this.state.formName}`;
     $.ajax({
       url: `/foorm/forms`,
@@ -132,7 +136,8 @@ class FoormFormSaveBar extends Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        name: newFormName,
+        name: saveAsNewVersion ? this.props.formName : newFormName,
+        version: saveAsNewVersion ? this.props.formVersion + 1 : undefined,
         questions: this.props.formQuestions
       })
     })
@@ -243,7 +248,7 @@ class FoormFormSaveBar extends Component {
         <Modal.Footer>
           <Button
             bsStyle="primary"
-            onClick={this.saveNewForm}
+            onClick={() => this.saveNewForm(false)}
             disabled={
               !(this.state.formName && this.state.formCategory) ||
               showFormNameError
@@ -297,11 +302,22 @@ class FoormFormSaveBar extends Component {
               Publish
             </button>
           )}
+          {this.props.isFormPublished && (
+            <button
+              className="btn btn-primary"
+              type="button"
+              style={styles.button}
+              onClick={() => this.handleSave(true)}
+              disabled={this.state.isSaving || this.props.hasJSONError}
+            >
+              Save as New Version
+            </button>
+          )}
           <button
             className="btn btn-primary"
             type="button"
             style={styles.button}
-            onClick={this.handleSave}
+            onClick={() => this.handleSave(false)}
             disabled={this.state.isSaving || this.hasCodeMirrorError()}
           >
             Save
@@ -421,6 +437,8 @@ export default connect(
     hasLintError: state.foorm.hasLintError,
     hasJSONError: state.foorm.hasJSONError,
     formId: state.foorm.formId,
+    formName: state.foorm.formName,
+    formVersion: state.foorm.formVersion,
     lastSaved: state.foorm.lastSaved,
     saveError: state.foorm.saveError
   }),
