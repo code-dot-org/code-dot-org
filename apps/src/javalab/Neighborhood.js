@@ -1,4 +1,5 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
+const Slider = require('@cdo/apps/slider');
 const Direction = tiles.Direction;
 import {NeighborhoodSignalType} from './constants';
 
@@ -37,6 +38,9 @@ export default class Neighborhood {
     this.controller.subtype.createDrawer(svg);
     this.controller.subtype.initWallMap();
     this.controller.initWithSvg(svg);
+
+    const slider = document.getElementById('slider');
+    this.speedSlider = new Slider(10, 35, 130, slider);
   }
 
   handleSignal(signal) {
@@ -59,5 +63,12 @@ export default class Neighborhood {
 
   reset() {
     this.controller.reset();
+  }
+
+  // TODO: use this as a multiplier on the time per action or step at execution time.
+  getPegmanSpeedMultiplier() {
+    // The slider goes from 0 to 1. We scale the speed slider value to be between -1 and 1 and
+    // return 2 to the power of that scaled value to get a multiplier between 0.5 and 2.
+    return Math.pow(2, -2 * this.speedSlider.getValue() + 1);
   }
 }

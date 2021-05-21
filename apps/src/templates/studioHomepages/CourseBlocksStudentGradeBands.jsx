@@ -24,7 +24,7 @@ class CourseBlocksStudentGradeBands extends Component {
     {
       heading: i18n.courseBlocksGradeBandsUniversity(),
       description: i18n.courseBlocksGradeBandsUniversityDescription(),
-      path: '/student/university'
+      path: '/beyond'
     }
   ];
 

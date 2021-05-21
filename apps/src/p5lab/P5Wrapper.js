@@ -1,5 +1,5 @@
 import {getStore} from '@cdo/apps/redux';
-import {allAnimationsSingleFrameSelector} from './animationListModule';
+import {allAnimationsSingleFrameSelector} from './redux/animationList';
 import p5 from '@code-dot-org/p5';
 window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';

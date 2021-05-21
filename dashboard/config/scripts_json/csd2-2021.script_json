@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-16 01:33:06 UTC",
+    "serialized_at": "2021-05-18 14:15:50 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -9474,6 +9474,32 @@
       }
     },
     {
+      "name": "Intro to CSS - Part 1",
+      "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE",
+      "key": "intro_to_css_-_part_1",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/weblab_introtocss-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_css_-_part_1"
+      }
+    },
+    {
+      "name": "Intro to CSS - Part 2",
+      "url": "https://youtu.be/VgBVKlpLqsE",
+      "key": "intro_to_css_-_part_2",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/weblab_usingastylesheet-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_css_-_part_2"
+      }
+    },
+    {
       "name": "Intro to Web Lab Part 2",
       "url": "https://youtu.be/Hjl6gbg9kmk",
       "key": "intro_to_web_lab_part_2",
@@ -9770,6 +9796,19 @@
       }
     },
     {
+      "name": "Publishing Your Website",
+      "url": "https://youtu.be/2qcIlRtdpgE",
+      "key": "publishing_your_website",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/weblab_publishingyourwebsite-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "publishing_your_website"
+      }
+    },
+    {
       "name": "Social Sleuth",
       "url": "https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/",
       "key": "social-sleuth",
@@ -9829,6 +9868,19 @@
       },
       "seeding_key": {
         "resource.key": "video_intro_to_web_lab_part_1"
+      }
+    },
+    {
+      "name": "Video: Pair Programming",
+      "url": "https://youtu.be/q7d_JtyCq1A",
+      "key": "video_pair_programming",
+      "properties": {
+        "download_url": "http://videos.code.org/2014/C1-pair-programming.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "video_pair_programming"
       }
     },
     {
@@ -10017,6 +10069,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Headings",
+        "resource.key": "video_pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "project-guide-html-project-2020"
       }
@@ -10073,6 +10131,18 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "intro_to_css_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "intro_to_css_-_part_2"
       }
     },
     {
@@ -10241,6 +10311,12 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "csd_unit_2_-_web_development"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "resource.key": "publishing_your_website"
       }
     },
     {

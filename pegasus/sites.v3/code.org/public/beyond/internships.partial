@@ -80,16 +80,6 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Internships for students entering or in college</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png" alt="Amazon Future Engineer logo">
-</a>
-<div style="width: 85%; float: left">
-  <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Amazon Future Engineer</strong></h3></a>
-  <p>Paid summer internships at Amazon plus $40,000 for college for high school seniors from underserved communities planning to major in CS</p>
-  <p><i>Application period: November-February</i></p>
-</div>
-<div style="clear:both"></div>
-<br>
 
 <a class="linktag" id="code2040" href="https://www.code2040.org/fellows-program" target="_blank">
   <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/code2040.png" alt="Code2040 logo">
