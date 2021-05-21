@@ -14,18 +14,18 @@ import reducer, {
   appendLibraryFrames,
   appendCustomFrames,
   saveAnimation
-} from '@cdo/apps/p5lab/animationListModule';
-import animationTab from '@cdo/apps/p5lab/AnimationTab/animationTabModule';
+} from '@cdo/apps/p5lab/redux/animationList';
+import animationTab from '@cdo/apps/p5lab/redux/animationTab';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
-import {createStore} from '../../util/redux';
-import {expect} from '../../util/deprecatedChai';
-import {setExternalGlobals} from '../../util/testUtils';
+import {createStore} from '../../../util/redux';
+import {expect} from '../../../util/deprecatedChai';
+import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 const project = require('@cdo/apps/code-studio/initApp/project');
 import _ from 'lodash';
 
-describe('animationListModule', function() {
+describe('animationList', function() {
   setExternalGlobals(beforeEach, afterEach);
   describe('animationSourceUrl', function() {
     const key = 'foo';

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-13 20:31:10 UTC",
+    "serialized_at": "2021-05-18 18:12:11 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -5655,6 +5655,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7_2021"
+        ],
         "progression": "Challenge"
       },
       "named_level": false,
@@ -6746,6 +6749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_predict"
+        ],
         "progression": "Prediction"
       },
       "named_level": false,
@@ -6769,6 +6775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2021-2"
+        ],
         "progression": "Video: How to Make a Sprite"
       },
       "named_level": false,
@@ -6792,6 +6801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_make"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6815,6 +6827,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_positioning"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6838,6 +6853,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6861,6 +6879,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_properties"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6884,6 +6905,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_behaviors"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -6907,6 +6931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_practice"
+        ],
         "progression": "Practice"
       },
       "named_level": false,
@@ -6930,6 +6957,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_freeplay"
+        ],
         "progression": "Free Play: Make a Scene"
       },
       "named_level": false,
@@ -6953,6 +6983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_predict"
+        ],
         "progression": "Prediction"
       },
       "named_level": false,
@@ -6976,6 +7009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events"
+        ],
         "progression": "Video: Sprites in Action"
       },
       "named_level": false,
@@ -6999,6 +7035,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_review"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -7022,6 +7061,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_time"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -7045,6 +7087,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_key"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -7068,6 +7113,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_stops"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -7091,6 +7139,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_conflict"
+        ],
         "progression": "Skill Building"
       },
       "named_level": false,
@@ -7114,6 +7165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_practice"
+        ],
         "progression": "Practice"
       },
       "named_level": false,
@@ -7137,6 +7191,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
       "named_level": false,
@@ -7316,6 +7373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 8_2021"
+        ],
         "progression": "Free Play"
       },
       "named_level": false,
@@ -9293,6 +9353,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Underground Iron_2021"
+        ],
         "progression": "Challenge"
       },
       "named_level": false,
@@ -17165,6 +17228,17 @@
       }
     },
     {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview",
+      "key": "debugging_guide",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
       "name": "Making Sprites",
       "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview\t",
       "key": "making_sprites",
@@ -17598,6 +17672,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "express-2021"
       }
     }

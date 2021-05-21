@@ -90,7 +90,7 @@ Scenario: Versions warning announcement on script overview page
 
   # Generate progress in course 2
   When I am on "http://studio.code.org/s/course2/lessons/1/levels/1"
-  And I click selector ".next-stage" once I see it
+  And I click selector ".next-lesson" once I see it
   And I wait until current URL contains "/s/course2/lessons/1/levels/2"
 
   When I am on "http://studio.code.org/s/course1"
