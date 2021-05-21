@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-21 16:57:29 UTC",
+    "serialized_at": "2021-05-21 20:01:55 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -2873,7 +2873,7 @@
       "key": "b249be1c-ef47-4ad8-87dd-2bcfb8d17530",
       "position": 4,
       "properties": {
-        "description": "\n\nPull up a puzzle from the lesson. We recommend puzzle 9. \nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops.",
+        "description": "\n\nPull up a puzzle from the lesson. We recommend puzzle 9. \nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. \n\n**Ask:** _Why can't you just use a loop?_\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops.",
         "name": "Preview of Online Puzzles"
       },
       "seeding_key": {
