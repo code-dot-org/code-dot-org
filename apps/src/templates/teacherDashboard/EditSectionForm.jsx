@@ -71,7 +71,7 @@ class EditSectionForm extends Component {
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
     textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    stageExtrasAvailable: PropTypes.func.isRequired,
+    lessonExtrasAvailable: PropTypes.func.isRequired,
     hiddenLessonState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
@@ -86,8 +86,8 @@ class EditSectionForm extends Component {
 
   onSaveClick = () => {
     const {section, hiddenLessonState} = this.props;
-    const sectionId = section.id;
     const scriptId = section.scriptId;
+    const sectionId = section.id;
 
     const isScriptHidden =
       sectionId &&
@@ -164,7 +164,7 @@ class EditSectionForm extends Component {
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      stageExtrasAvailable,
+      lessonExtrasAvailable,
       textToSpeechScriptIds,
       assignedScriptName,
       localeEnglishName,
@@ -242,10 +242,10 @@ class EditSectionForm extends Component {
             localeEnglishName={localeEnglishName}
             isNewSection={isNewSection}
           />
-          {stageExtrasAvailable(section.scriptId) && (
+          {lessonExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
               value={section.stageExtras}
-              onChange={stageExtras => editSectionProperties({stageExtras})}
+              onChange={lessonExtras => editSectionProperties({lessonExtras})}
               disabled={isSaveInProgress}
             />
           )}
@@ -446,7 +446,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
     </FieldDescription>
     <YesNoDropdown
       value={value}
-      onChange={stageExtras => onChange(stageExtras)}
+      onChange={lessonExtras => onChange(lessonExtras)}
       disabled={disabled}
     />
   </div>
@@ -569,7 +569,7 @@ let defaultPropsFromState = state => ({
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
   textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
-  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  lessonExtrasAvailable: id => stageExtrasAvailable(state, id),
   hiddenLessonState: state.hiddenLesson,
   assignedScriptName: assignedScriptName(state),
   localeEnglishName: state.locales.localeEnglishName,
