@@ -56,7 +56,7 @@ Once these last functions are put into place, scoring will automatically update 
 ## Activity: The Big Game - Collision Detection
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Return to your Big Game to use collision detection logic so that you know when your player is touching the target or the danger. Head to [CS in Algebra stage 20](http://studio.code.org/s/algebra/stage/20/puzzle/1) in Code Studio to get started programming.
+Return to your Big Game to use collision detection logic so that you know when your player is touching the target or the danger. Head to [CS in Algebra stage 20](http://studio.code.org/s/algebra/lessons/20/levels/1) in Code Studio to get started programming.
 
 [/together]
 

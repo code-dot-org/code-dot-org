@@ -19,7 +19,7 @@
       - if @script.try(:professional_learning_course?) && @script_level
         = link_to @script_level.end_of_lesson? ? t('done_with_module') : t('next_resource'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large pull-right btn-primary submitButton'
       - elsif !(video && use_large_video_player)
-        %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+        %a.btn.btn-large.btn-primary.next-lesson.submitButton.pull-right= t('continue')
 
   = render partial: 'levels/content', locals: {app: 'external', data: level.properties, content_class: level.properties['options'].try(:[], 'css'), postcontent: postcontent, source_level: level}
   = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
@@ -33,7 +33,7 @@
   .clear
   .video-container.external-video-container{{style: 'max-width: 970px; margin: auto'}}
   .button-box{{style: 'width: 970px; margin: auto'}}
-    %a.btn.btn-large.btn-primary.next-stage.submitButton.pull-right= t('continue')
+    %a.btn.btn-large.btn-primary.next-lesson.submitButton.pull-right= t('continue')
     - if video.download
       %a.video-download.btn.btn-large.pull-left{href: video.download}
         = t('video.download')
