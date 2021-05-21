@@ -39,7 +39,7 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
   end
 
   # Tests for the Destroy controller action.
-  test 'user can not delete non-existant models' do
+  test 'user can not delete nonexistant models' do
     sign_in @owner
     delete :destroy, params: {id: "fakeId"}
     assert_response :not_found
@@ -96,41 +96,87 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
   end
 
   # Tests for the Names controller action.
-  test 'user can retrieve names, ids, and metadata of trained ML models' do
+  test 'user can retrieve the names of trained ML models' do
     database_model_names = []
     api_model_names = []
     sign_in @owner
     create_list(:user_ml_model, 2)
 
-    # call DB directly
     expected_user_ml_model_data = UserMlModel.where(user_id: @owner&.id).
-      map {|user_ml_model| { id: user_ml_model.model_id, name: user_ml_model.name, metadata: JSON.parse(user_ml_model.metadata)}}
+      map {|user_ml_model| {name: user_ml_model.name}}
 
     JSON.parse(expected_user_ml_model_data.to_json).each do |model|
       database_model_names << model["name"]
     end
+
     get :names
-    # response from API
+
     JSON.parse(@response.body).each do |model|
       api_model_names << model["name"]
     end
 
-    assert_equal api_model_names, database_model_names
+    assert_equal database_model_names, api_model_names
     assert_response :success
   end
 
-  test 'retrieve the metadata of a trained ML model' do
+  test 'user can retrieve the ids of trained ML models' do
+    database_model_ids = []
+    api_model_ids = []
     sign_in @owner
-    get :metadata, params: {id: @model.model_id}
-    metadata = UserMlModel.where(model_id: @model.model_id)&.first&.metadata
+    create_list(:user_ml_model, 3)
+
+    expected_user_ml_model_data = UserMlModel.where(user_id: @owner&.id).
+        map {|user_ml_model| {id: user_ml_model.model_id}}
+
+    JSON.parse(expected_user_ml_model_data.to_json).each do |model|
+      database_model_ids << model["model_id"]
+    end
+
+    get :names
+
+    JSON.parse(@response.body).each do |model|
+      api_model_ids << model["model_id"]
+    end
+
+    assert_equal database_model_ids, api_model_ids
     assert_response :success
   end
 
-  # test 'renders 404 if model does not exist' do
-  #   sign_in @owner
-  #   AWS::S3.stubs(:download_from_bucket).returns(nil)
-  #   get :show, params: {id: nil}
-  #   puts @response
-  #   assert_response :not_found
-  # end
+  test 'user can retrieve the metadata of trained ML models' do
+    database_model_metadata = []
+    api_model_metadata = []
+    sign_in @owner
+    create_list(:user_ml_model, 2)
+
+    expected_user_ml_model_data = UserMlModel.where(user_id: @owner&.id).
+        map {|user_ml_model| {metadata: JSON.parse(user_ml_model.metadata)}}
+
+    JSON.parse(expected_user_ml_model_data.to_json).each do |model|
+      database_model_metadata << model["metadata"]
+    end
+
+    get :names
+
+    JSON.parse(@response.body).each do |model|
+      api_model_metadata << model["metadata"]
+    end
+
+    assert_equal database_model_metadata, api_model_metadata
+    assert_response :success
+  end
+
+  # Tests for the Show controller action.
+  test 'retrieves a trained model from S3' do
+    sign_in @owner
+    test = AWS::S3.stubs(:download_from_bucket).returns(true)
+    get :show, params: {id: @model.model_id}
+    assert_response :success
+  end
+
+  test 'renders 404 if model does not exist' do
+    sign_in @owner
+    test = AWS::S3.stubs(:download_from_bucket).returns(nil)
+    get :show, params: {id: "fakeId"}
+    assert_response :not_found
+  end
 end
