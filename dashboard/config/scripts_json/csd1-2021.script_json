@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-20 16:41:17 UTC",
+    "serialized_at": "2021-05-21 16:22:37 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -799,21 +799,8 @@
       }
     },
     {
-      "key": "0639ae27-38a4-444c-9865-1f60125470cd",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0639ae27-38a4-444c-9865-1f60125470cd",
-        "lesson.key": "Project - Propose an App",
-        "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
       "key": "73080877-a97f-4bdc-a8b7-4210cf0f40c7",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "Extended Learning"
       },
@@ -826,7 +813,7 @@
     },
     {
       "key": "cd19519f-0869-4d79-a3ee-639ee1ed92c1",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Post-Project Test"
       },
@@ -3019,7 +3006,7 @@
       "key": "a5bc259a-2779-4488-b754-f6485a212933",
       "position": 1,
       "properties": {
-        "description": "**Distribute**: Give one project guide and one rubric to each student. As a class, review the information provided on the first sheet of the project guide which explains the project, lists the steps, and shows what students will need to produce. Then provide a brief overview of each of the more detailed steps.",
+        "description": "**Distribute**: Give one project guide and one rubric or student checklist to each student. As a class, review the information provided on the first sheet of the project guide which explains the project, lists the steps, and shows what students will need to produce. Then provide a brief overview of each of the more detailed steps.",
         "name": "Project Guide\r"
       },
       "seeding_key": {
@@ -3110,7 +3097,7 @@
       "key": "fe619886-9d11-4f22-9a63-fd59c89246d3",
       "position": 7,
       "properties": {
-        "description": "**Step 6: Input, Output, Store, Process**: In this step students design the way their app will actually work to process data. \n\nFirst students will draw and then describe the outputs of their apps. On the left side they can make a rough sketch of what their app would look like. This does not need to be a final draft and is just there to help them brainstorm ideas and communicate to another group how their app would look. On the right side they have space to label each individual piece of information on the screen.\n\nUsing the outputs that students selected as a guide, students should pick the inputs they'll need to create them. Only 6 spaces are provided though students could opt to choose more. This is somewhat intentional to help students scope the functionality of their app.\n\nStudents will describe the way their app processes data using as a model the way they would process it themselves. The goal here is primarily just to ensure students have selected inputs that could be processed to produce the outputs. For example, if they're finding a list of friends with birthdays this month then both a computer and human would need to know a list of friends' birthdays and the current month.\n\nLastly students are asked to decide what information, if any, it makes sense to store long term.\n\n**Distribute:** [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/edit), one copy to each pair of students\n\n**Step 7: Peer Review**: Each group should trade their project guides with another. They should fill out the first line of the peer review which asks what specific part of their project they'd like feedback on. Afterward, there are a number of directed questions as well as a chance to provide more open-ended feedback on the idea.\n\nStudents should be given their project guides back as well as their peer feedback. On the back, there are questions where they can indicate what changes or improvements to their projects they intend to make on their apps based on the feedback.\n\n**Step 8: Finalize App and Make Poster**: Students should incorporate the ideas of their peers in finalizing their app idea. They should then make a poster presenting their app following the guidance provided in the activity guide."
+        "description": "**Step 6: Input, Output, Store, Process**: In this step students design the way their app will actually work to process data. \n\nFirst students will draw and then describe the outputs of their apps. On the left side they can make a rough sketch of what their app would look like. This does not need to be a final draft and is just there to help them brainstorm ideas and communicate to another group how their app would look. On the right side they have space to label each individual piece of information on the screen.\n\nUsing the outputs that students selected as a guide, students should pick the inputs they'll need to create them. Only 6 spaces are provided though students could opt to choose more. This is somewhat intentional to help students scope the functionality of their app.\n\nStudents will describe the way their app processes data using as a model the way they would process it themselves. The goal here is primarily just to ensure students have selected inputs that could be processed to produce the outputs. For example, if they're finding a list of friends with birthdays this month then both a computer and human would need to know a list of friends' birthdays and the current month.\n\nLastly students are asked to decide what information, if any, it makes sense to store long term.\n\n**Distribute:** Apps and Problem Solving - Peer Review, one copy to each pair of students\n\n**Step 7: Peer Review**: Each group should trade their project guides with another. They should fill out the first line of the peer review which asks what specific part of their project they'd like feedback on. Afterward, there are a number of directed questions as well as a chance to provide more open-ended feedback on the idea.\n\nStudents should be given their project guides back as well as their peer feedback. On the back, there are questions where they can indicate what changes or improvements to their projects they intend to make on their apps based on the feedback."
       },
       "seeding_key": {
         "activity_section.key": "fe619886-9d11-4f22-9a63-fd59c89246d3",
@@ -3118,8 +3105,25 @@
       }
     },
     {
-      "key": "cabc123a-f4bd-41d6-87f7-f85807b42c97",
+      "key": "06fa61d8-63d0-49d0-b9d1-77ec59c88d72",
       "position": 8,
+      "properties": {
+        "description": "**Step 8: Finalize App and Make Poster**: Students should incorporate the ideas of their peers in finalizing their app idea. They should then make a poster presenting their app following the guidance provided in the activity guide.\n\nStudents should revisit the rubric for this project to see how their project aligns. You may also decide to distribute the [r apps_and_problem_solving_-_student_checklist/csd/2021] so students can self-assess how well their project meets the requirements for this project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the *Sample Marked Rubrics* resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "06fa61d8-63d0-49d0-b9d1-77ec59c88d72",
+        "lesson_activity.key": "faf4b5ae-838a-4a44-bfe5-9450699ab59f"
+      }
+    },
+    {
+      "key": "cabc123a-f4bd-41d6-87f7-f85807b42c97",
+      "position": 9,
       "properties": {
         "description": "**Share**: Decide if and how students will share their posters with one another. If students will be doing more formal presentations then use the guidelines provided in Step 9 of the project guide to structure the presentations.\r\n\r\n**Collect:** At the end of the presentation collect the completed project guides, peer feedback forms, and posters from each group.",
         "name": "Presenting Apps\r"
@@ -3134,22 +3138,12 @@
       "position": 1,
       "properties": {
         "description": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\n\n\n\n**Reflect:** Students reflect on the following question in their journals:\n\n* What are you most proud of in your project?\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Reflection\r"
+        "name": "Reflection\r",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "03ad2f47-6f62-4854-b398-3075d952d71e",
         "lesson_activity.key": "19e9e29c-06ec-4f99-bee1-b8ef9c72758f"
-      }
-    },
-    {
-      "key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4",
-      "position": 1,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4",
-        "lesson_activity.key": "0639ae27-38a4-444c-9865-1f60125470cd"
       }
     },
     {
@@ -5085,9 +5079,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
-        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -5099,7 +5090,7 @@
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2021",
-        "activity_section.key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4"
+        "activity_section.key": "03ad2f47-6f62-4854-b398-3075d952d71e"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U1Ch2_2021"
@@ -5357,7 +5348,7 @@
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2021",
-        "activity_section.key": "fc812e5a-38cf-4bea-9942-dd9bf8f1b2b4"
+        "activity_section.key": "03ad2f47-6f62-4854-b398-3075d952d71e"
       }
     },
     {
@@ -5447,11 +5438,11 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1oZ67Hh9ITbADuabNgrEqE249KBOnp8uGsSaMLWr7c-I/edit",
+      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
       "key": "apps-and-problem-solving-marked-rubrics",
       "properties": {
         "audience": "Verified Teacher",
-        "type": "Rubric"
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "apps-and-problem-solving-marked-rubrics"
@@ -5471,19 +5462,6 @@
       }
     },
     {
-      "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1ttmw1WEWHweCDTqRMK0TL-J_gIiZ4rwt9Fdade5-f2o/",
-      "key": "apps-and-problem-solving-rubric-2019",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "apps-and-problem-solving-rubric-2019"
-      }
-    },
-    {
       "name": "Apps with Processing",
       "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
       "key": "apps-with-processing",
@@ -5497,15 +5475,29 @@
       }
     },
     {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
+      "name": "Apps and Problem Solving",
+      "url": "https://docs.google.com/document/d/1lkmNph6eIP1ERFbn7PTbUagWaVnPOiFGgESMKuECTuE/edit",
+      "key": "apps_and_problem_solving",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "bug_report"
+        "resource.key": "apps_and_problem_solving"
+      }
+    },
+    {
+      "name": "Apps and Problem Solving - Student Checklist",
+      "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
+      "key": "apps_and_problem_solving_-_student_checklist",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "apps_and_problem_solving_-_student_checklist"
       }
     },
     {
@@ -5603,19 +5595,6 @@
       },
       "seeding_key": {
         "resource.key": "how-to-videos"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
       }
     },
     {
@@ -6144,12 +6123,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Propose an App",
-        "resource.key": "apps-and-problem-solving-rubric-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
         "resource.key": "apps-and-problem-solving-peer-review-2019"
       }
     },
@@ -6175,6 +6148,18 @@
       "seeding_key": {
         "lesson.key": "Project - Propose an App",
         "resource.key": "csd_unit_1_-_problem_solving_and_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "apps_and_problem_solving"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Propose an App",
+        "resource.key": "apps_and_problem_solving_-_student_checklist"
       }
     },
     {
@@ -6331,18 +6316,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "bug_report",
-        "script.name": "csd1-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "how_to_debug",
-        "script.name": "csd1-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {
