@@ -2,7 +2,7 @@ var actions = require('@cdo/apps/p5lab/actions');
 var {
   clearConsole,
   addConsoleMessage
-} = require('@cdo/apps/p5lab/spritelab/textConsoleModule');
+} = require('@cdo/apps/p5lab/redux/textConsole');
 var createStore = require('../../util/redux').createStore;
 var combineReducers = require('redux').combineReducers;
 import {expect} from '../../util/deprecatedChai';

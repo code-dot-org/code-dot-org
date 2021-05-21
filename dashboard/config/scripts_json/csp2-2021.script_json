@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:59 UTC",
+    "serialized_at": "2021-05-18 02:55:18 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -2919,6 +2919,18 @@
       }
     },
     {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
+    },
+    {
       "name": "What is the Internet?",
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what-is-the-internet",
@@ -3070,6 +3082,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp2-2021"
       }
     }

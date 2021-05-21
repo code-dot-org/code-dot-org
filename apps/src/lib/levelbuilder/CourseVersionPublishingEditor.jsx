@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 
-const publishedStates = ['Pilot', 'Preview', 'Assignable', 'Recommended'];
+const publishedStates = ['Pilot', 'Beta', 'Preview', 'Recommended'];
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {
@@ -32,7 +32,7 @@ export default class CourseVersionPublishingEditor extends Component {
         this.props.updateVisible(false);
         this.props.updateIsStable(false);
         break;
-      case 'Assignable':
+      case 'Preview':
         this.props.updatePilotExperiment('');
         this.props.updateVisible(true);
         this.props.updateIsStable(false);
@@ -42,7 +42,7 @@ export default class CourseVersionPublishingEditor extends Component {
         this.props.updateVisible(true);
         this.props.updateIsStable(true);
         break;
-      case 'Preview':
+      case 'Beta':
       default:
         this.props.updatePilotExperiment('');
         this.props.updateVisible(false);
@@ -122,14 +122,14 @@ export default class CourseVersionPublishingEditor extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td style={styles.tableBorder}>Preview</td>
+                  <td style={styles.tableBorder}>Beta</td>
                   <td style={styles.tableBorder}>
                     Anyone who has the link can view the course and make
                     progress on it. It is not assignable by teachers yet.
                   </td>
                 </tr>
                 <tr>
-                  <td style={styles.tableBorder}>Assignable</td>
+                  <td style={styles.tableBorder}>Preview</td>
                   <td style={styles.tableBorder}>
                     The course is now a choice in the dropdown that is
                     assignable but is not the recommended course.

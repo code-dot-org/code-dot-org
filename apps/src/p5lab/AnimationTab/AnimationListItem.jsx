@@ -12,8 +12,8 @@ import {
   setAnimationFrameDelay,
   setAnimationLooping,
   isNameUnique
-} from '../animationListModule';
-import {selectAnimation} from './animationTabModule';
+} from '../redux/animationList';
+import {selectAnimation} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-16 16:02:19 UTC",
+    "serialized_at": "2021-05-18 15:00:19 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -15826,6 +15826,19 @@
       }
     },
     {
+      "name": "Boolean Expressions",
+      "url": "https://youtu.be/_j9nvYKaOVE",
+      "key": "boolean_expressions",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
       "name": "Bug Report",
       "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
       "key": "bug_report",
@@ -15835,6 +15848,19 @@
       },
       "seeding_key": {
         "resource.key": "bug_report"
+      }
+    },
+    {
+      "name": "Calling and Defining Functions",
+      "url": "https://youtu.be/3ZfqwCuDZaQ",
+      "key": "calling_and_defining_functions",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "calling_and_defining_functions"
       }
     },
     {
@@ -15911,6 +15937,19 @@
       },
       "seeding_key": {
         "resource.key": "computer-science-practices"
+      }
+    },
+    {
+      "name": "Conditional Statements",
+      "url": "https://youtu.be/TuLIK7DcPWs",
+      "key": "conditional_statements",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "conditional_statements"
       }
     },
     {
@@ -16004,6 +16043,32 @@
       },
       "seeding_key": {
         "resource.key": "drawing-shapes-exemplar-2020"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 1",
+      "url": "https://youtu.be/PXn9gKiKKFo",
+      "key": "drawing_in_game_lab_-_part_1",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 2",
+      "url": "https://youtu.be/QLabeWhw_O0",
+      "key": "drawing_in_game_lab_-_part_2",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_2"
       }
     },
     {
@@ -16108,6 +16173,19 @@
       }
     },
     {
+      "name": "If/Else Statements",
+      "url": "https://youtu.be/6m6FFUJsOzo",
+      "key": "if_else_statements",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "if_else_statements"
+      }
+    },
+    {
       "name": "Interactive Card",
       "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
       "key": "interactive-card-1-2-3-4",
@@ -16181,6 +16259,32 @@
       },
       "seeding_key": {
         "resource.key": "introduction-to-variables"
+      }
+    },
+    {
+      "name": "Introduction to Sprites",
+      "url": "https://youtu.be/aUHzpGt9nso",
+      "key": "introduction_to_sprites",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "name": "Introduction to the Draw Loop",
+      "url": "https://youtu.be/G6QJeuHhqCM",
+      "key": "introduction_to_the_draw_loop",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_the_draw_loop"
       }
     },
     {
@@ -16396,6 +16500,32 @@
       }
     },
     {
+      "name": "The Animation Tab",
+      "url": "https://youtu.be/DQPruYTJ0Fk",
+      "key": "the_animation_tab",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "name": "Velocity",
+      "url": "https://youtu.be/zcP94yMYqrI",
+      "key": "velocity_1",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_1"
+      }
+    },
+    {
       "name": "Velocity and the Counter Pattern - Map Level (PDF)",
       "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view",
       "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
@@ -16477,6 +16607,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "resource.key": "shapes_and_parameters_-_map_level"
       }
@@ -16509,6 +16651,18 @@
       "seeding_key": {
         "lesson.key": "Sprites",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "the_animation_tab"
       }
     },
     {
@@ -16573,6 +16727,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "animating-sprites"
       }
@@ -16615,6 +16775,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Keyboard Input",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
@@ -16629,6 +16801,12 @@
       "seeding_key": {
         "lesson.key": "Mouse Input",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "if_else_statements"
       }
     },
     {
@@ -16677,6 +16855,12 @@
       "seeding_key": {
         "lesson.key": "Velocity",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "resource.key": "velocity_1"
       }
     },
     {
@@ -16773,6 +16957,12 @@
       "seeding_key": {
         "lesson.key": "Functions",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "calling_and_defining_functions"
       }
     },
     {

@@ -9,7 +9,7 @@ import {
 import reducer, {
   setInitialAnimationList,
   animationSourceUrl
-} from '@cdo/apps/p5lab/animationListModule';
+} from '@cdo/apps/p5lab/redux/animationList';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 

@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 import * as shapes from '../shapes';
-import {show, Goal} from '../AnimationPicker/animationPickerModule';
+import {show, Goal} from '../redux/animationPicker';
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
