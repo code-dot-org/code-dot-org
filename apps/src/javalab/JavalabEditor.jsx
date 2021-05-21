@@ -405,11 +405,11 @@ class JavalabEditor extends React.Component {
   }
 
   duplicateFileError(filename) {
-    return javalabMsg.duplicateProjectFilenameError({filename: filename}); //`Filename ${filename} is already in use in this project. Please choose a different name`;
+    return javalabMsg.duplicateProjectFilenameError({filename: filename});
   }
 
   duplicateSupportFileError(filename) {
-    return javalabMsg.duplicateSupportFilenameError({filename: filename}); //`Filename ${filename} is already in use in this level's support code. Please choose a different name`;
+    return javalabMsg.duplicateSupportFilenameError({filename: filename});
   }
 
   // This is called from the file explorer when we want to jump to a file
