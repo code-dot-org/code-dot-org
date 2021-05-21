@@ -194,7 +194,7 @@ Scenario: Lock settings for retake not submit scenario
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the lesson lock dialog
-  And
+  And I lock the lesson for students
   And I wait until element ".modal-backdrop" is gone
 
   # now locked/not submitted for student
