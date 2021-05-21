@@ -134,6 +134,15 @@ export class TeacherFeedback extends Component {
     return feedbackUnchanged;
   };
 
+  renderError(errorText) {
+    return (
+      <span>
+        <i className="fa fa-warning" style={styles.errorIcon} />
+        {errorText}
+      </span>
+    );
+  }
+
   render() {
     const {
       verifiedTeacher,
@@ -179,12 +188,8 @@ export class TeacherFeedback extends Component {
 
     return (
       <div style={tabVisible}>
-        {errorState === ErrorType.Load && (
-          <span>
-            <i className="fa fa-warning" style={styles.errorIcon} />
-            {i18n.feedbackLoadError()}
-          </span>
-        )}
+        {errorState === ErrorType.Load &&
+          this.renderError(i18n.feedbackLoadError())}
         {rubric && (
           <TeacherFeedbackRubric
             rubric={rubric}
@@ -217,12 +222,8 @@ export class TeacherFeedback extends Component {
                     color={Button.ButtonColor.blue}
                     disabled={buttonDisabled}
                   />
-                  {errorState === ErrorType.Save && (
-                    <span>
-                      <i className="fa fa-warning" style={styles.errorIcon} />
-                      {i18n.feedbackSaveError()}
-                    </span>
-                  )}
+                  {errorState === ErrorType.Save &&
+                    this.renderError(i18n.feedbackSaveError())}
                 </div>
               )}
               {!!latestFeedback && (

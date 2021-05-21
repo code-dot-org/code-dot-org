@@ -34,18 +34,16 @@ class TeacherFeedbackRubric extends Component {
     } = this.props;
 
     const showFeedbackInputAreas =
-      !displayKeyConcept && !(!performance && viewAs === ViewType.Student);
+      !displayKeyConcept && (!!performance || viewAs === ViewType.Teacher);
 
     // If a student has rubric feedback we want to expand that field
     const expandPerformanceLevelForStudent =
-      viewAs === ViewType.Student &&
-      showFeedbackInputAreas &&
-      performance !== null;
+      viewAs === ViewType.Student && showFeedbackInputAreas && !!performance;
 
     return (
       <div style={styles.performanceArea}>
         <div style={styles.keyConceptArea}>
-          <h1 style={styles.h1}> {i18n.rubricKeyConceptHeader()} </h1>
+          <h1 style={styles.h1}>{i18n.rubricKeyConceptHeader()}</h1>
           <p style={styles.keyConcepts}>{rubric.keyConcept}</p>
         </div>
         <div style={styles.rubricArea}>
