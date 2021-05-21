@@ -1263,4 +1263,29 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal [1, 2], section.script_levels.map(&:chapter)
     assert_equal [1, 2], section.script_levels.map(&:position)
   end
+
+  test 'lesson clone fails if script cannot be found' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    lesson = create :lesson
+    put :clone, params: {id: lesson.id, 'destinationUnitName': 'fake-script'}
+    assert_response :not_acceptable
+    assert @response.body.include?('error')
+  end
+
+  test 'lesson clone returns script and lesson urls if successful' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script
+    lesson = create :lesson
+    cloned_lesson = create :lesson, script: script
+    Lesson.stubs(:copy_to_script).returns(cloned_lesson)
+    put :clone, params: {id: lesson.id, 'destinationUnitName': script.name}
+
+    assert_response 200
+    assert @response.body.include?('editLessonUrl')
+    assert @response.body.include?('editScriptUrl')
+  end
 end
