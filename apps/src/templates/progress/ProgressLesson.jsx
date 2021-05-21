@@ -49,8 +49,8 @@ class ProgressLesson extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // If we're assigned a stageId, and it is for this lesson, uncollapse
-    if (nextProps.currentStageId !== this.props.currentStageId) {
+    // If we're assigned a lessonId, and it is for this lesson, uncollapse
+    if (nextProps.currentLessonId !== this.props.currentLessonId) {
       this.setState({
         collapsed:
           this.state.collapsed &&
@@ -294,7 +294,7 @@ const styles = {
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentStageId: state.progress.currentStageId,
+  currentLessonId: state.progress.currentLessonId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.stageLock.lockableAuthorized,
