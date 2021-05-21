@@ -166,7 +166,7 @@ Once we had the matrix, we set about tagging each of the ~500 puzzles across all
 
 <p align="center"><img src="/images/proficiency/puzzle-screenshot.png" width="80%"/>
 <br/>
-<a href="https://studio.code.org/s/course3/stage/8/puzzle/3" target="_blank">https://studio.code.org/s/course3/stage/8/puzzle/3</a>
+<a href="https://studio.code.org/s/course3/lessons/8/levels/3" target="_blank">https://studio.code.org/s/course3/lessons/8/levels/3</a>
 </p>
 
 

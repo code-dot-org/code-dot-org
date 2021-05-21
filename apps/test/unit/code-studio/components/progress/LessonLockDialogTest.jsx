@@ -2,8 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {UnconnectedStageLockDialog as StageLockDialog} from '@cdo/apps/code-studio/components/progress/StageLockDialog';
-import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
+import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
+import {LockStatus} from '@cdo/apps/code-studio/stageLockRedux';
 
 const MINIMUM_PROPS = {
   isOpen: false,
@@ -14,16 +14,16 @@ const MINIMUM_PROPS = {
   saveDialog: () => {}
 };
 
-describe('StageLockDialog', () => {
+describe('LessonLockDialog', () => {
   it('renders with a selected section', () => {
     const wrapper = shallow(
-      <StageLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
+      <LessonLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
     );
     expect(wrapper).not.to.be.null;
   });
 
   it('updates lock status from new props if not saving', () => {
-    const wrapper = shallow(<StageLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper.state().lockStatus).to.deep.equal([]);
 
     wrapper.setProps({
@@ -37,7 +37,7 @@ describe('StageLockDialog', () => {
   });
 
   it('does not update lock status from new props while saving', () => {
-    const wrapper = shallow(<StageLockDialog {...MINIMUM_PROPS} />);
+    const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
     expect(wrapper.state().lockStatus).to.deep.equal([]);
 
     wrapper.setProps({
@@ -50,7 +50,7 @@ describe('StageLockDialog', () => {
 
   it('allowEditing callback sets all statuses to Editable', () => {
     const wrapper = shallow(
-      <StageLockDialog
+      <LessonLockDialog
         {...MINIMUM_PROPS}
         initialLockStatus={[
           {name: 'fakeName', lockStatus: LockStatus.Locked},
@@ -70,7 +70,7 @@ describe('StageLockDialog', () => {
 
   it('lockStage callback sets all statuses to Locked', () => {
     const wrapper = shallow(
-      <StageLockDialog
+      <LessonLockDialog
         {...MINIMUM_PROPS}
         initialLockStatus={[
           {name: 'fakeName', lockStatus: LockStatus.Editable},
@@ -90,7 +90,7 @@ describe('StageLockDialog', () => {
 
   it('showAnswers callback sets all statuses to ReadonlyAnswers', () => {
     const wrapper = shallow(
-      <StageLockDialog
+      <LessonLockDialog
         {...MINIMUM_PROPS}
         initialLockStatus={[
           {name: 'fakeName', lockStatus: LockStatus.Editable},
@@ -114,7 +114,10 @@ describe('StageLockDialog', () => {
 
     it('opens a window to the section assessments page', () => {
       const wrapper = shallow(
-        <StageLockDialog {...MINIMUM_PROPS} selectedSectionId="fakeSectionId" />
+        <LessonLockDialog
+          {...MINIMUM_PROPS}
+          selectedSectionId="fakeSectionId"
+        />
       );
       expect(window.open).not.to.have.been.called;
 
@@ -128,7 +131,7 @@ describe('StageLockDialog', () => {
   it('handleSave passes selected section id and statuses to the saveDialog callback', () => {
     const saveDialog = sinon.spy();
     const wrapper = shallow(
-      <StageLockDialog
+      <LessonLockDialog
         {...MINIMUM_PROPS}
         selectedSectionId="fakeSectionId"
         initialLockStatus={[

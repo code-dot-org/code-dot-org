@@ -56,7 +56,7 @@ Remind your students of the lessons that they have done with variables previousl
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Super Challenge - Variables](http://learn.code.org/s/course4/stage/19/puzzle/1)
+### <a name="Activity"></a> [Super Challenge - Variables](http://learn.code.org/s/course4/lessons/19/levels/1)
 
 This lesson explores the use of variables as a way to quickly change many values at one time. Not only will the students be dealing with the looping of designs and repetition of angles, they'll also be doing math on variables.  It can be helpful for them to have paper and pencil to figure out values as they go. Also, let them know ahead of time that there will likely be some puzzles that confuse or frustrate them. This is normal, and expected.  Students should prepare themselves for persistence and perseverance.
 

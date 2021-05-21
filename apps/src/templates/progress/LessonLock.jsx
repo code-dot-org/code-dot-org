@@ -1,5 +1,5 @@
 /**
- * A button that opens our StageLockDialog component, using our redesigned button.
+ * A button that opens our LessonLockDialog component, using our redesigned button.
  */
 
 import PropTypes from 'prop-types';
@@ -7,14 +7,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLockDialog';
+import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
 import {
   openLockDialog,
   closeLockDialog
-} from '@cdo/apps/code-studio/lessonLockRedux';
+} from '@cdo/apps/code-studio/stageLockRedux';
 import {lessonType} from './progressTypes';
 
-class StageLock extends React.Component {
+class LessonLock extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
 
@@ -50,7 +50,7 @@ class StageLock extends React.Component {
             style={styles.button}
           />
         </div>
-        <StageLockDialog handleClose={closeLockDialog} />
+        <LessonLockDialog handleClose={closeLockDialog} />
       </div>
     );
   }
@@ -71,12 +71,12 @@ const styles = {
   }
 };
 
-export const UnconnectedStageLock = StageLock;
+export const UnconnectedLessonLock = LessonLock;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId.toString(),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    saving: state.lessonLock.saving
+    saving: state.stageLock.saving
   }),
   {openLockDialog, closeLockDialog}
-)(StageLock);
+)(LessonLock);

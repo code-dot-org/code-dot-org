@@ -4,13 +4,13 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import progressStyles from './progressStyles';
-import {LockStatus, saveLockDialog} from '../../lessonLockRedux';
+import {LockStatus, saveLockDialog} from '../../stageLockRedux';
 import color from '../../../util/color';
 import commonMsg from '@cdo/locale';
 import SectionSelector from './SectionSelector';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
-class StageLockDialog extends React.Component {
+class LessonLockDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
@@ -325,12 +325,12 @@ const styles = {
   }
 };
 
-export const UnconnectedStageLockDialog = Radium(StageLockDialog);
+export const UnconnectedLessonLockDialog = Radium(LessonLockDialog);
 export default connect(
   state => ({
-    initialLockStatus: state.lessonLock.lockStatus,
-    isOpen: !!state.lessonLock.lockDialogLessonId,
-    saving: state.lessonLock.saving,
+    initialLockStatus: state.stageLock.lockStatus,
+    isOpen: !!state.stageLock.lockDialogStageId,
+    saving: state.stageLock.saving,
     selectedSectionId: state.teacherSections.selectedSectionId.toString()
   }),
   dispatch => ({
@@ -338,4 +338,4 @@ export default connect(
       dispatch(saveLockDialog(sectionId, lockStatus));
     }
   })
-)(UnconnectedStageLockDialog);
+)(UnconnectedLessonLockDialog);
