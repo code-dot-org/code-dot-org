@@ -8,7 +8,7 @@ import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmH
 import {
   isScriptHiddenForSection,
   updateHiddenScript
-} from '@cdo/apps/code-studio/hiddenLessonRedux';
+} from '@cdo/apps/code-studio/hiddenStageRedux';
 
 class AssignButton extends React.Component {
   static propTypes = {
@@ -19,7 +19,7 @@ class AssignButton extends React.Component {
     assignmentName: PropTypes.string,
     // Redux
     assignToSection: PropTypes.func.isRequired,
-    hiddenLessonState: PropTypes.object,
+    hiddenStageState: PropTypes.object,
     updateHiddenScript: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -51,14 +51,14 @@ class AssignButton extends React.Component {
       scriptId,
       courseId,
       sectionId,
-      hiddenLessonState,
+      hiddenStageState,
       assignToSection
     } = this.props;
     const isHiddenFromSection =
       sectionId &&
       scriptId &&
-      hiddenLessonState &&
-      isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
+      hiddenStageState &&
+      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
     if (isHiddenFromSection) {
       this.setState({
         confirmationDialogOpen: true
@@ -115,7 +115,7 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    hiddenLessonState: state.hiddenLesson,
+    hiddenStageState: state.hiddenStage,
     isRtl: state.isRtl
   }),
   {

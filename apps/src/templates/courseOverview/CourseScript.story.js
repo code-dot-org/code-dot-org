@@ -7,12 +7,12 @@ const sectionId = 11;
 const courseId = 123;
 const unhiddenState = Immutable.fromJS({
   initialized: false,
-  hideableLessonsAllowed: false,
-  lessonsBySection: {},
+  hideableStagesAllowed: false,
+  stagesBySection: {},
   scriptsBySection: {}
 });
 const hiddenState = unhiddenState.setIn(
-  ['lessonsBySection', sectionId.toString(), courseId.toString()],
+  ['stagesBySection', sectionId.toString(), courseId.toString()],
   true
 );
 
@@ -28,7 +28,7 @@ const defaultProps = {
     'those design decisions.',
   viewAs: ViewType.Teacher,
   selectedSectionId: 11,
-  hiddenLessonState: unhiddenState,
+  hiddenStageState: unhiddenState,
   hasNoSections: true,
   toggleHiddenScript: () => {},
   sectionsForDropdown: [
@@ -66,7 +66,7 @@ export default storybook => {
             {...defaultProps}
             selectedSectionId={sectionId}
             hasNoSections={false}
-            hiddenLessonState={hiddenState}
+            hiddenStageState={hiddenState}
           />
         )
       },
@@ -76,7 +76,7 @@ export default storybook => {
           <CourseScript
             {...defaultProps}
             hasNoSections={false}
-            hiddenLessonState={hiddenState}
+            hiddenStageState={hiddenState}
           />
         )
       }

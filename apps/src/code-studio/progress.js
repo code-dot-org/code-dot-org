@@ -12,7 +12,7 @@ import DisabledBubblesAlert from './DisabledBubblesAlert';
 import {getStore} from './redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from './viewAsRedux';
-import {getHiddenLessons, initializeHiddenScripts} from './hiddenLessonRedux';
+import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
@@ -22,7 +22,7 @@ import {
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
-  setLessonExtrasEnabled,
+  setStageExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress
 } from './progressRedux';
@@ -124,7 +124,7 @@ progress.generateStageProgress = function(
   store.dispatch(setIsHocScript(isHocScript));
 
   if (lessonExtrasEnabled) {
-    store.dispatch(setLessonExtrasEnabled(true));
+    store.dispatch(setStageExtrasEnabled(true));
   }
 
   return populateProgress(store, signedIn, progressData, name);
@@ -435,7 +435,7 @@ function initializeStoreWithProgress(
 
   if (scriptData.hideable_lessons) {
     // Note: This call is async
-    store.dispatch(getHiddenLessons(scriptData.name, true));
+    store.dispatch(getHiddenStages(scriptData.name, true));
   }
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));

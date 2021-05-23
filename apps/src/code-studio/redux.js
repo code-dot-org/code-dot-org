@@ -7,7 +7,7 @@ import lessonLock from './lessonLockRedux';
 import viewAs from './viewAsRedux';
 import shareDialog from './components/shareDialogRedux';
 import exportDialog from './components/exportDialogRedux';
-import hiddenLesson from './hiddenLessonRedux';
+import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
 import responsive from './responsiveRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
@@ -24,7 +24,7 @@ registerReducers({
   viewAs,
   shareDialog,
   exportDialog,
-  hiddenLesson,
+  hiddenStage,
   isRtl,
   responsive,
   publishDialog,

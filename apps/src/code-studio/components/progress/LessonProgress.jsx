@@ -246,10 +246,10 @@ const styles = {
 export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(state => ({
-  levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+  levels: levelsForLessonId(state.progress, state.progress.currentStageId),
   lessonExtrasUrl: lessonExtrasUrl(
     state.progress,
-    state.progress.currentLessonId
+    state.progress.currentStageId
   ),
   isLessonExtras: state.progress.isLessonExtras,
   currentPageNumber: state.progress.currentPageNumber,
