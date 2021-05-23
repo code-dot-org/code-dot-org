@@ -88,8 +88,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     teacherSections: {
       selectedSectionId: '11'
     },
-    hiddenLesson: Immutable.fromJS({
-      lessonsBySection: {
+    hiddenStage: Immutable.fromJS({
+      stagesBySection: {
         '11': {[lessonId]: true}
       }
     }),
@@ -122,8 +122,8 @@ export const createStoreWithLockedLesson = (
     teacherSections: {
       selectedSectionId: '11'
     },
-    hiddenLesson: Immutable.fromJS({
-      lessonsBySection: {
+    hiddenStage: Immutable.fromJS({
+      stagesBySection: {
         '11': {[lessonId]: true}
       }
     }),
@@ -234,7 +234,7 @@ export const fakeProgressTableReduxInitialState = (
     progress: {
       lessonGroups: [],
       stages: stages,
-      focusAreaLessonIds: [],
+      focusAreaStageIds: [],
       professionalLearningCourse: false
     },
     sectionData: {

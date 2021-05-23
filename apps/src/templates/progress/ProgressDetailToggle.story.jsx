@@ -12,7 +12,7 @@ export default storybook => {
           levels: []
         }
       ],
-      focusAreaLessonIds: [],
+      focusAreaStageIds: [],
       professionalLearningCourse: false
     }
   };
@@ -43,7 +43,7 @@ export default storybook => {
           levels: []
         }
       ],
-      focusAreaLessonIds: [],
+      focusAreaStageIds: [],
       professionalLearningCourse: false
     }
   };
