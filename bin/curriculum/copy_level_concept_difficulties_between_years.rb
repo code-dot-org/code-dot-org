@@ -1,3 +1,7 @@
+# Note parent level ids are specific to the place the level was copied
+# Since the majority of copying happens on levelbuilder this script should be
+# run on the levelbuilder environment.
+
 #!/usr/bin/env ruby
 require_relative '../../dashboard/config/environment'
 
