@@ -1,5 +1,5 @@
 import {
-  getExtremums,
+  getExtrema,
   getAccuracyRegression,
   getAccuracyClassification
 } from '../../src/redux.js';
@@ -148,7 +148,7 @@ describe('redux functions', () => {
   });
 
   test("getAccuracyRegression", async () => {
-    const range = getExtremums(resultsState, resultsState.labelColumn).range;
+    const range = getExtrema(resultsState, resultsState.labelColumn).range;
     expect(range).toBe(3);
     const accuracy = getAccuracyRegression(resultsState);
     expect(accuracy.grades).toEqual([

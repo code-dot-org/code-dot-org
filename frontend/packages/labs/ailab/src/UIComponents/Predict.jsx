@@ -10,7 +10,7 @@ import {
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
   getPredictAvailable,
-  getExtremumsByColumn
+  getExtremaByColumn
 } from "../redux";
 import { styles } from "../constants";
 
@@ -25,7 +25,7 @@ class Predict extends Component {
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     confidence: PropTypes.number,
     getPredictAvailable: PropTypes.bool,
-    extremumsByColumn: PropTypes.object
+    extremaByColumn: PropTypes.object
   };
 
   handleChange = (event, feature) => {
@@ -46,8 +46,8 @@ class Predict extends Component {
           <div style={styles.scrollingContents}>
             <form>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
-                let min = this.props.extremumsByColumn[feature].min.toFixed(2);
-                let max = this.props.extremumsByColumn[feature].max.toFixed(2);
+                let min = this.props.extremaByColumn[feature].min.toFixed(2);
+                let max = this.props.extremaByColumn[feature].max.toFixed(2);
 
                 return (
                   <div style={styles.cardRow} key={index}>
@@ -136,7 +136,7 @@ export default connect(
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state),
-    extremumsByColumn: getExtremumsByColumn(state)
+    extremaByColumn: getExtremaByColumn(state)
   }),
   dispatch => ({
     setTestData(testData) {

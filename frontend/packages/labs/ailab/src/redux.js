@@ -643,7 +643,7 @@ export function getCurrentColumnData(state) {
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    range: getExtremums(state, state.currentColumn),
+    range: getExtrema(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
@@ -733,12 +733,12 @@ export function getUniqueOptionsByColumn(state) {
   return uniqueOptionsByColumn;
 }
 
-export function getExtremumsByColumn(state) {
-  let extremumsByColumn = {};
+export function getExtremaByColumn(state) {
+  let extremaByColumn = {};
   getNumericalColumns(state).map(
-    column => (extremumsByColumn[column] = getExtremums(state, column))
+    column => (extremaByColumn[column] = getExtrema(state, column))
   );
-  return extremumsByColumn;
+  return extremaByColumn;
 }
 
 function getMaximumValue(state, column) {
@@ -753,13 +753,13 @@ function getRange(maximumValue, minimumValue) {
   return Math.abs(maximumValue - minimumValue);
 }
 
-export function getExtremums(state, column) {
-  let extremums = {};
-  extremums.max = getMaximumValue(state, column);
-  extremums.min = getMinimumValue(state, column)
-  extremums.range = getRange(extremums.max, extremums.min);
+export function getExtrema(state, column) {
+  let extrema = {};
+  extrema.max = getMaximumValue(state, column);
+  extrema.min = getMinimumValue(state, column)
+  extrema.range = getRange(extrema.max, extrema.min);
 
-  return extremums;
+  return extrema;
 }
 
 export function getSelectedColumnDescriptions(state) {
@@ -868,7 +868,7 @@ export function getAccuracyRegression(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const range = getExtremums(state, state.labelColumn).range;
+  const range = getExtrema(state, state.labelColumn).range;
   const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
@@ -1011,7 +1011,7 @@ export function getColumnDataToSave(state, column) {
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
     columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
-    const maxMin = getExtremums(state, column);
+    const maxMin = getExtrema(state, column);
     columnData.max = maxMin.max;
     columnData.min = maxMin.min;
   }
