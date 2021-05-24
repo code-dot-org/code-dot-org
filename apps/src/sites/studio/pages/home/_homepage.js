@@ -21,7 +21,7 @@ import {
 import currentUser, {
   setCurrentUserId
 } from '@cdo/apps/templates/currentUserRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {
   setLocaleCode,

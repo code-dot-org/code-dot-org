@@ -7,7 +7,7 @@ import ViewAsToggle from './ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fullyLockedLessonMapping} from '../../lessonLockRedux';
 import {ViewType} from '../../viewAsRedux';
-import {hasLockableLessons} from '../../progressRedux';
+import {hasLockableStages} from '../../progressRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable, {studentShape} from './StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
@@ -267,7 +267,7 @@ export default connect(state => {
 
   // Pretend we don't have lockable lessons if we're not authorized to see them
   const scriptHasLockableStages =
-    lockableAuthorized && hasLockableLessons(state.progress);
+    lockableAuthorized && hasLockableStages(state.progress);
 
   return {
     viewAs: state.viewAs,
