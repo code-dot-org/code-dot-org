@@ -643,7 +643,7 @@ export function getCurrentColumnData(state) {
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    range: getExtrema(state, state.currentColumn),
+    extrema: getExtrema(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
@@ -1011,9 +1011,9 @@ export function getColumnDataToSave(state, column) {
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
     columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
-    const maxMin = getExtrema(state, column);
-    columnData.max = maxMin.max;
-    columnData.min = maxMin.min;
+    const {max, min} = getExtrema(state, column);
+    columnData.max = max;
+    columnData.min = min;
   }
   return columnData;
 }
