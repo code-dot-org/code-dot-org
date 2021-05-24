@@ -65,42 +65,42 @@ export default class SpriteUpload extends React.Component {
       fileData,
       this.onSuccess,
       this.onError
-    ).then(() =>
-      uploadMetadataToAnimationLibrary(
-        jsonDestination,
-        metadata,
-        this.onSuccess,
-        this.onError
+    )
+      .then(() =>
+        uploadMetadataToAnimationLibrary(
+          jsonDestination,
+          metadata,
+          this.onSuccess,
+          this.onError
+        )
       )
-    );
+      .catch(error => {
+        if (error) {
+          console.log(error);
+        }
+      });
   };
 
   // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
-  onSuccess = (uploadType, response) => {
-    let responseMessage = response.ok
-      ? `${uploadType} Successfully Uploaded`
-      : `${uploadType} Upload Error(${response.status}: ${
-          response.statusText
-        })`;
+  onSuccess = uploadType => {
     let styledUploadType = uploadType.toLowerCase();
     this.setState({
       [`${styledUploadType}UploadStatus`]: {
-        success: response.ok,
-        message: responseMessage
+        success: true,
+        message: `${uploadType} Successfully Uploaded`
       }
     });
   };
 
   // 'uploadType' indicates whether the response comes from uploading the sprite file or the metadata file
-  onError = (uploadType, error) => {
+  onError = (uploadType, message) => {
     let styledUploadType = uploadType.toLowerCase();
     this.setState({
       [`${styledUploadType}UploadStatus`]: {
         success: false,
-        message: error.toString()
+        message: message
       }
     });
-    console.error(error);
   };
 
   handleImageChange = event => {

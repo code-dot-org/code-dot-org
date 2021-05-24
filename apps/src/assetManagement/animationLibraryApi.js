@@ -19,6 +19,7 @@ export function getManifest(appType, locale = 'en_us') {
  * @param imageData {Blob} sprite image data to upload
  * @param onSuccess {function} callback function for success upload
  * @param onError {function} callback function for upload error
+ * @returns {Promise} resolves if successful upload, rejects otherwise
  */
 export function uploadSpriteToAnimationLibrary(
   destination,
@@ -34,10 +35,17 @@ export function uploadSpriteToAnimationLibrary(
     body: imageData
   })
     .then(response => {
-      onSuccess(UploadType.SPRITE, response);
+      if (!response.ok) {
+        throw new Error(
+          `Sprite Upload Error(${response.status}: ${response.statusText})`
+        );
+      }
+      onSuccess(UploadType.SPRITE);
+      return Promise.resolve();
     })
     .catch(err => {
-      onError(UploadType.SPRITE, err);
+      onError(UploadType.SPRITE, err.toString());
+      return Promise.reject();
     });
 }
 
@@ -47,6 +55,7 @@ export function uploadSpriteToAnimationLibrary(
  * @param jsonData {String} JSON object of metadata to upload
  * @param onSuccess {function} callback function for success upload
  * @param onError {function} callback function for upload error
+ * @returns {Promise} resolves if successful upload, rejects otherwise
  */
 export function uploadMetadataToAnimationLibrary(
   destination,
@@ -62,9 +71,16 @@ export function uploadMetadataToAnimationLibrary(
     body: jsonData
   })
     .then(response => {
-      onSuccess(UploadType.METADATA, response);
+      if (!response.ok) {
+        throw new Error(
+          `Metadata Upload Error(${response.status}: ${response.statusText})`
+        );
+      }
+      onSuccess(UploadType.METADATA);
+      return Promise.resolve();
     })
     .catch(err => {
-      onError(UploadType.METADATA, err);
+      onError(UploadType.METADATA, err.toString());
+      return Promise.reject();
     });
 }
