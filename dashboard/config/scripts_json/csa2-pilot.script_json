@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 23:46:52 UTC",
+    "serialized_at": "2021-05-24 15:02:30 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -52,7 +52,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this unplugged lesson, students create objects and represent relevant attributes using instance variables. Students learn the difference between `public` and `private` and the purpose of encapsulation to hide the internal implementation of an object.",
-        "preparation": "* Print copies of Defining Attributes - Classes Foldables for each student. These foldables should be printed two-sided, flip on short-edge.\n* Print copies of Defining Attributes - Main Method. Cut in half so each student receives a half sheet.\n* Print copies of the Defining Attributes handout for each student\n* Print and cut out a class set of Quiz, Quiz, Trade cards\n* Prepare 20-25 sticky notes per student\n* Designate an area in the classroom (on the board or a wall) for students to place their warm-up sticky notes\n",
+        "preparation": "* Print copies of Defining Attributes - Classes Foldables for each student. These foldables should be printed two-sided, flip on short-edge.\n* Print copies of Defining Attributes - Main Method. Cut in half so each student receives a half sheet.\n* Print copies of the Defining Attributes handout for each student\n* Print and cut out a class set of Quiz, Quiz, Trade cards\n* Prepare 20-25 sticky notes per student\n* Designate an area in the classroom (on the board or a wall) for students to place their sticky notes during the warm up activity\n",
         "student_overview": "Through our experiences in The Neighborhood, we know that classes and objects are key components of the Java programming language. But just how exactly do classes create objects? In this lesson, you explore how an object is created and learn about a process called data encapsulation. \n"
       },
       "seeding_key": {
@@ -987,12 +987,144 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Defining Attributes",
+      "url": "https://docs.google.com/document/d/11kEvOxuygD9By8YSP9kezKkaDbUXuJ7PnIrBE0vLo4I/edit?usp=sharing",
+      "key": "_key_defining_attributes",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "name": "[KEY] Trace Tables",
+      "url": "https://docs.google.com/document/d/1C_8bkgUokmSHg4uQ6jT4zN0UVH60_Zk6t8DqooxlbPQ/edit?usp=sharing",
+      "key": "_key_trace_tables",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_trace_tables"
+      }
+    },
+    {
+      "name": "[KEY] U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1uS6LHb6YUgAPII0wW8PWjT7fRkd1LrgHVG5YunSPqMs/edit?usp=sharing",
+      "key": "_key_u2l1_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L2 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1hfTBO8HGWv25LCdXUp8KGVP6sV_yASXg3j69STJHkZ4/edit",
+      "key": "_key_u2l2_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "name": "Defining Attributes",
+      "url": "https://docs.google.com/document/d/1O6ScN52Cdi70Hz4vifCAcIcySoB2Wpw0z3DivFOi9ug/edit?usp=sharing",
+      "key": "defining_attributes",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "defining_attributes"
+      }
+    },
+    {
+      "name": "Defining Attributes - Classes Foldables",
+      "url": "https://drive.google.com/file/d/1DjctdSw-oAtpSKFKj9uz4oyqEduORhIk/view?usp=sharing",
+      "key": "defining_attributes_-_classes_foldables",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "defining_attributes_-_classes_foldables"
+      }
+    },
+    {
+      "name": "Defining Attributes - Main Method",
+      "url": "https://drive.google.com/file/d/1aD0rS9pTNyxJ_ymN4fNboZsAuus5PQ_c/view?usp=sharing",
+      "key": "defining_attributes_-_main_method",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "name": "Quiz, Quiz, Trade",
+      "url": "https://docs.google.com/document/d/1OZltNkaoYF7gkHsaEUnYovjg6MceYGFan__UMCjOJeM/edit?usp=sharing",
+      "key": "quiz_quiz_trade",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "quiz_quiz_trade"
+      }
+    },
+    {
+      "name": "Trace Tables",
+      "url": "https://docs.google.com/document/d/1qgrWNxTL_Sxrvp4YMNBsQOjNyjgQ_9ww988OK8DRUbs/edit?usp=sharing",
+      "key": "trace_tables",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "trace_tables"
+      }
+    },
+    {
+      "name": "U2L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1tDn_h4BVavcFY-_YFUsxV6W4OUHk0OgRZKTNrHRI8NA/edit?usp=sharing",
+      "key": "u2l1_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "U2L2 Extra Practice",
+      "url": "https://docs.google.com/document/u/2/d/1kQFOmOfKMGpbBp68XCRgsFmG_h_tWxJaLGONpKADdwQ/edit",
+      "key": "u2l2_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l2_extra_practice"
+      }
+    },
+    {
       "name": "Unit 2 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1kfzkThzPNV9xM1IJca8ySP7T2spBvzw03kze9k46H4I/edit?usp=sharing",
       "key": "unit_2_presentation_slides",
       "properties": {
         "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "unit_2_presentation_slides"
@@ -1008,8 +1140,74 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes_-_classes_foldables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "quiz_quiz_trade"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "_key_u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "defining_attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_trace_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_key_u2l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "trace_tables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u2l2_extra_practice"
       }
     },
     {
@@ -1026,10 +1224,296 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "public",
+      "word": "public",
+      "definition": "Indicates that an instance variable or method is accessible from outside of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "public"
+      }
+    },
+    {
+      "key": "private",
+      "word": "private",
+      "definition": "Indicates that an instance variable or method is accessible only from within the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "private"
+      }
+    },
+    {
+      "key": "instance_variable",
+      "word": "Instance Variable",
+      "definition": "A variable defined in a class which represents an attribute of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "key": "attribute",
+      "word": "Attribute",
+      "definition": "A characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "has_a_relationship",
+      "word": "Has-A Relationship",
+      "definition": "The relationship between an object and its instance variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "has_a_relationship"
+      }
+    },
+    {
+      "key": "data_encapsulation",
+      "word": "Data Encapsulation",
+      "definition": "An object-oriented programming concept where the details of a class are hidden from the user; also referred to as information hiding",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_encapsulation"
+      }
+    },
+    {
+      "key": "boolean",
+      "word": "Boolean",
+      "definition": "A data type that can either be true or false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A container that stores a value in memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "declaration",
+      "word": "Declaration",
+      "definition": "Giving a name and data type to a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "key": "initialization",
+      "word": "Initialization",
+      "definition": "Giving a starting value to a variable using the assignment operator (=)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "key": "data_type",
+      "word": "Data Type",
+      "definition": "The format of the data that can be stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "primitive_type",
+      "word": "Primitive Type",
+      "definition": "A basic data type that is predefined by Java",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "key": "reference_type",
+      "word": "Reference Type",
+      "definition": "A data type that contains a pointer to the memory location of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "key": "assignment",
+      "word": "Assignment",
+      "definition": "Using the assignment operator (=) to initialize or change the value stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "key": "literal",
+      "word": "Literal",
+      "definition": "A source code representation of a value, such as a number or text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "key": "int",
+      "word": "int",
+      "definition": "A data type that can store integers, or whole numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "int"
+      }
+    },
+    {
+      "key": "double",
+      "word": "double",
+      "definition": "A data type that can store a decimal number",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double"
+      }
+    },
+    {
+      "key": "string",
+      "word": "String",
+      "definition": "A data type that contains a sequence of characters enclosed in double quotations (\" \")",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "string"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "public"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "private"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "has_a_relationship"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "data_encapsulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "int"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "double"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "string"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -1282,6 +1766,83 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.3"
       }
     }
   ],
