@@ -86,7 +86,7 @@ describe('TextResponses', () => {
       );
 
       expect(wrapper.find('#uitest-response-actions').exists()).to.be.false;
-      expect(wrapper.find('#uitest-stage-filter').exists()).to.be.false;
+      expect(wrapper.find('#uitest-lesson-filter').exists()).to.be.false;
       expect(wrapper.find('CSVLink').exists()).to.be.false;
     });
 
@@ -108,7 +108,7 @@ describe('TextResponses', () => {
       expect(csvLink.find('Button').exists()).to.be.true;
     });
 
-    it('renders a filter if there are 2+ stages to filter by', () => {
+    it('renders a filter if there are 2+ lessons to filter by', () => {
       const wrapper = shallow(
         <TextResponses
           sectionId={2}
@@ -121,7 +121,7 @@ describe('TextResponses', () => {
         />
       );
 
-      const filterDropdown = wrapper.find('#uitest-stage-filter');
+      const filterDropdown = wrapper.find('#uitest-lesson-filter');
       const filterOptions = filterDropdown.find('option');
       expect(filterDropdown.exists()).to.be.true;
       expect(filterOptions).to.have.length(3);

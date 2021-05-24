@@ -1,0 +1,16 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2020-02-25T15:42:55.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "display_as_unplugged": "true",
+    "use_large_video_player": "true",
+    "hide_reference_area": "true",
+    "markdown": "# Happy Loops\n\nIn this lesson, you will learn about loops!\n\n![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)\n"
+  },
+  "published": false
+}]]></config>
+</External>

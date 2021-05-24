@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-18 13:52:14 UTC",
+    "serialized_at": "2021-05-21 19:09:58 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -2448,7 +2448,7 @@
       "key": "d9171886-0618-4e77-a38b-4543fd46893e",
       "position": 3,
       "properties": {
-        "description": "Pick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n\n**Prompts:**- \n- How is a variable like a box? How is it different?\n\n- Why do programmers need variables?",
+        "description": "Pick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n\n**Prompts:**\n- How is a variable like a box? How is it different?\n\n- Why do programmers need variables?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2771,7 +2771,7 @@
       "key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
       "position": 1,
       "properties": {
-        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  What patterns do you notice in this puzzle? What are the differences between the flower honeycomb patches at the beginning, middle, and end of the bee's path?\n\n**Share:** Let students share their ideas.\n\n**Discuss:**\nWhat are the ways we could program a solution to this puzzle?  How could we use a variable to have a loop do this for us?\n\n",
+        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  *What patterns do you notice in this puzzle? What are the differences between the flower honeycomb patches at the beginning, middle, and end of the bee's path?*\n\n**Share:** Let students share their ideas.\n\n**Discuss:**\n*What are the ways we could program a solution to this puzzle?  How could we use a variable to have a loop do this for us?*\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -10625,6 +10625,13 @@
         "lesson.key": "Virtual Pet",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {
