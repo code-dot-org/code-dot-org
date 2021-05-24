@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 18:50:07 UTC",
+    "serialized_at": "2021-05-21 20:30:49 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -2124,7 +2124,8 @@
       "key": "b4133437-14b2-4221-8202-c411f147e13c",
       "position": 6,
       "properties": {
-        "description": "**Display:** Have students flip to the back of their worksheet. In the top section, students will create a Binary Profile by answering a few questions and encoding their answers as binary numbers. Once completed, they will trade with a partner and use the widget to decode their binary profile to reveal the answers so humans can understand them.\n\n**Code Studio:** Send students to the Binary Number widget.\n\n"
+        "description": "**Display:** Have students flip to the back of their worksheet. In the top section, students will create a Binary Profile by answering a few questions and encoding their answers as binary numbers. Once completed, they will trade with a partner and use the widget to decode their binary profile to reveal the answers so humans can understand them.\n\n**Code Studio:** Send students to the Binary Number widget.\n\n",
+        "progression_name": "Binary Number Widget"
       },
       "seeding_key": {
         "activity_section.key": "b4133437-14b2-4221-8202-c411f147e13c",
@@ -4439,8 +4440,14 @@
       "key": "24a8f1ab-d8eb-4738-b114-0534be713085",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide",
-        "name": "Day 1 Activity (40 mins)"
+        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide. Also give students either a copy of the rubric or the student checklist.",
+        "name": "Day 1 Activity (40 mins)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "24a8f1ab-d8eb-4738-b114-0534be713085",
@@ -4813,7 +4820,8 @@
       "properties": {
         "level_keys": [
           "CSD U5 binary widget_2021"
-        ]
+        ],
+        "progression": "Binary Number Widget"
       },
       "named_level": false,
       "bonus": false,
@@ -5799,18 +5807,6 @@
       }
     },
     {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "bug_report"
-      }
-    },
-    {
       "name": "Computer Science Practices",
       "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
       "key": "computer-science-practices",
@@ -5934,24 +5930,12 @@
       }
     },
     {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources"
-      }
-    },
-    {
       "name": "Amazon and Data",
       "url": "https://youtu.be/S4RL6prqtGQ",
       "key": "how-big-data-is-used-in-amazon-recommendation-systems",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/amazon_data.mp4"
       },
       "seeding_key": {
@@ -5959,7 +5943,7 @@
       }
     },
     {
-      "name": "How Computers Work - Data and Binary",
+      "name": "Binary and Data",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "how-computers-work-data-and-binary",
       "properties": {
@@ -5969,19 +5953,6 @@
       },
       "seeding_key": {
         "resource.key": "how-computers-work-data-and-binary"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
       }
     },
     {
@@ -6049,7 +6020,7 @@
     },
     {
       "name": "Make a Recommendation",
-      "url": "https://docs.google.com/document/d/1yih9WqI-kXSZTf-1NNZY6X6LJv7aFHITId742OrjPik/edit",
+      "url": "https://docs.google.com/document/d/1cx4byvEDUduu9iPdtpRLzrPAvMBwPVRdgKxVeptvJCs/edit",
       "key": "make-a-recommendation-1",
       "properties": {
         "type": "Rubric",
@@ -6071,6 +6042,18 @@
       },
       "seeding_key": {
         "resource.key": "make-a-recommendation-peer-review-2019"
+      }
+    },
+    {
+      "name": "Make a Recommendation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit",
+      "key": "make_a_recommendation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_recommendation_-_student_checklist"
       }
     },
     {
@@ -6116,7 +6099,7 @@
       "key": "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/netflix_data.mp4"
       },
       "seeding_key": {
@@ -6346,27 +6329,16 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1MSb8Ue9fccQO674JoEkLTvDpqantz1BBBpdEy1zTrgo/edit",
-      "key": "sample_marked_rubrics_1",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
+      "key": "sample_marked_rubrics_3",
       "properties": {
         "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_1"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1eDjhOW0uL8W8bRokTkfbw5R43ficUTZjhZYx_GTUxsY/edit",
-      "key": "sample_marked_rubrics_2",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2"
+        "resource.key": "sample_marked_rubrics_3"
       }
     },
     {
@@ -6486,7 +6458,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_impact_on_society"
@@ -6499,7 +6471,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_machine_learning"
@@ -6512,7 +6484,7 @@
       "properties": {
         "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
         "type": "Video",
-        "audience": "Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "video_training_data_and_bias"
@@ -6524,7 +6496,7 @@
       "key": "why-are-so-many-drivers-obsessed-with-waze",
       "properties": {
         "type": "Video",
-        "audience": "Teacher",
+        "audience": "Student",
         "download_url": "https://videos.code.org/cs-discoveries/concept/waze_data.mp4"
       },
       "seeding_key": {
@@ -6944,19 +6916,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "sample_marked_rubrics_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Recommendation",
         "resource.key": "peer_review_exemplar_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "sample_marked_rubrics_2"
       }
     },
     {
@@ -6969,6 +6929,18 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
         "resource.key": "unit_5_data_society_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "sample_marked_rubrics_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "make_a_recommendation_-_student_checklist"
       }
     }
   ],
@@ -7017,24 +6989,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "bug_report",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "how_to_debug",
-        "script.name": "csd5-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {
