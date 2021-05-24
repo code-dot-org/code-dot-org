@@ -1,4 +1,4 @@
-# Note parent level ids are specific to the place the level was copied
+# Note: parent_level_id are specific to the environment the level was copied in
 # Since the majority of copying happens on levelbuilder this script should be
 # run on the levelbuilder environment.
 
