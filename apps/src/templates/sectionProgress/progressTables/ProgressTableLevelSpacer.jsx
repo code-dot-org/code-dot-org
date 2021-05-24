@@ -1,5 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  BubbleSize,
+  bubbleContainerWidths
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 const styles = {
@@ -9,8 +13,7 @@ const styles = {
   },
   node: {
     ...progressStyles.inlineBlock,
-    minWidth:
-      progressStyles.bubbleContainerWidths[progressStyles.BubbleSize.full],
+    minWidth: bubbleContainerWidths[BubbleSize.full],
     textAlign: 'center'
   }
 };
@@ -25,9 +28,7 @@ function SublevelSpacer({sublevelCount}) {
   return (
     <span
       style={{
-        width:
-          sublevelCount *
-          progressStyles.bubbleContainerWidths[progressStyles.BubbleSize.letter]
+        width: sublevelCount * bubbleContainerWidths[BubbleSize.letter]
       }}
     />
   );

@@ -2,12 +2,14 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {
   BasicBubble,
+  BubbleShape,
+  BubbleSize,
   BubbleTooltip,
   getBubbleContent,
   getBubbleShape,
-  getBubbleUrl
+  getBubbleUrl,
+  unitTestExports
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {fakeLevel} from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import sinon from 'sinon';
@@ -17,8 +19,8 @@ import i18n from '@cdo/locale';
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {
     const DEFAULT_PROPS = {
-      shape: progressStyles.BubbleShape.circle,
-      size: progressStyles.BubbleSize.dot,
+      shape: BubbleShape.circle,
+      size: BubbleSize.dot,
       progressStyle: {},
       classNames: '',
       children: <div />
@@ -29,28 +31,22 @@ describe('BubbleFactory', () => {
       return shallow(<BasicBubble {...props} />);
     };
 
-    it('calls mainBubbleStyle', () => {
-      const mainBubbleStyleSpy = sinon.spy(progressStyles, 'mainBubbleStyle');
-      setUp();
-      expect(mainBubbleStyleSpy).to.have.been.called;
-    });
-
     it('renders a DiamondContainer with size if the bubble shape is diamond', () => {
-      const bubbleSize = progressStyles.BubbleSize.full;
+      const bubbleSize = BubbleSize.full;
       const wrapper = setUp({
         size: bubbleSize,
-        shape: progressStyles.BubbleShape.diamond
+        shape: BubbleShape.diamond
       });
-      expect(wrapper.find('DiamondContainer')).to.have.length(1);
-      expect(wrapper.find('DiamondContainer').props().size).to.equal(
-        bubbleSize
-      );
+      expect(wrapper.find(unitTestExports.DiamondContainer)).to.have.length(1);
+      expect(
+        wrapper.find(unitTestExports.DiamondContainer).props().size
+      ).to.equal(bubbleSize);
     });
 
     it('renders children if it is a diamond', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({
-        shape: progressStyles.BubbleShape.diamond,
+        shape: BubbleShape.diamond,
         children: child
       });
       expect(wrapper.contains(child)).to.be.true;
@@ -59,7 +55,7 @@ describe('BubbleFactory', () => {
     it('renders a div with children if it is a circle', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({
-        shape: progressStyles.BubbleShape.circle,
+        shape: BubbleShape.circle,
         children: child
       });
       expect(wrapper.contains(child)).to.be.true;
@@ -164,7 +160,7 @@ describe('BubbleFactory', () => {
         false,
         false,
         'title',
-        progressStyles.BubbleSize.dot
+        BubbleSize.dot
       );
       expect(bubbleContent).to.be.null;
     });
@@ -172,12 +168,11 @@ describe('BubbleFactory', () => {
     it('returns unplugged text in span if it is unplugged', () => {
       const bubbleContent = setUp({isUnplugged: true});
       expect(bubbleContent.type()).to.equal('span');
-      expect(bubbleContent).to.contain(i18n.unpluggedActivity());
+      expect(bubbleContent.text()).to.equal(i18n.unpluggedActivity());
     });
 
     it('returns lock icon if locked', () => {
       const bubbleContent = setUp({isLocked: true});
-      console.log(bubbleContent.debug());
       expect(bubbleContent.find('FontAwesome').props().icon).to.equal('lock');
     });
 
@@ -197,27 +192,21 @@ describe('BubbleFactory', () => {
       const testTitle = 'A title';
       const bubbleContent = setUp({title: testTitle});
       expect(bubbleContent.type()).to.equal('span');
-      expect(bubbleContent).to.contain(testTitle);
+      expect(bubbleContent.text()).to.equal(testTitle);
     });
   });
 
   describe('getBubbleShape', () => {
     it('returns pill if isUnplugged', () => {
-      expect(getBubbleShape(true, false)).to.equal(
-        progressStyles.BubbleShape.pill
-      );
+      expect(getBubbleShape(true, false)).to.equal(BubbleShape.pill);
     });
 
     it('returns diamond for isConcept', () => {
-      expect(getBubbleShape(false, true)).to.equal(
-        progressStyles.BubbleShape.diamond
-      );
+      expect(getBubbleShape(false, true)).to.equal(BubbleShape.diamond);
     });
 
     it('returns circle if not isUnplugged or isConcept', () => {
-      expect(getBubbleShape(false, false)).to.equal(
-        progressStyles.BubbleShape.circle
-      );
+      expect(getBubbleShape(false, false)).to.equal(BubbleShape.circle);
     });
   });
 
@@ -241,6 +230,104 @@ describe('BubbleFactory', () => {
     it('if there is a sectionId append the section_id to the url', () => {
       const bubbleUrl = getBubbleUrl('a-url', 1, 2);
       expect(bubbleUrl).to.equal('a-url?section_id=2&user_id=1');
+    });
+  });
+
+  describe('mainBubbleStyle', () => {
+    it('when shape is a pill style includes bubbleStyles.pill', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.pill,
+        BubbleSize.full,
+        {}
+      );
+
+      expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.pill);
+    });
+
+    it('when shape is a diamond style includes bubbleStyles.diamond', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.diamond,
+        BubbleSize.full,
+        {}
+      );
+
+      expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.diamond);
+    });
+
+    it('when shape is a diamond and size is dot has expected border radius, min/max widths and font size', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.diamond,
+        BubbleSize.dot,
+        {}
+      );
+
+      expect(bubbleStyle.borderRadius).to.equal(2);
+      expect(bubbleStyle.minWidth).to.equal(10);
+      expect(bubbleStyle.maxWidth).to.equal(10);
+    });
+
+    it('when shape is a diamond and size is full has expected border radius, min/max widths and font size', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.diamond,
+        BubbleSize.full,
+        {}
+      );
+
+      expect(bubbleStyle.borderRadius).to.equal(4);
+      expect(bubbleStyle.fontSize).to.equal(16);
+      expect(bubbleStyle.minWidth).to.equal(26);
+      expect(bubbleStyle.maxWidth).to.equal(26);
+    });
+
+    it('when shape is a circle and size is dot has expected border radius, min/max widths and font size', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.circle,
+        BubbleSize.dot,
+        {}
+      );
+
+      expect(bubbleStyle.borderRadius).to.equal(13);
+      expect(bubbleStyle.minWidth).to.equal(13);
+      expect(bubbleStyle.maxWidth).to.equal(13);
+    });
+
+    it('when shape is a circle and size is letter has expected border radius, min/max widths and font size', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.circle,
+        BubbleSize.letter,
+        {}
+      );
+
+      expect(bubbleStyle.borderRadius).to.equal(20);
+      expect(bubbleStyle.fontSize).to.equal(12);
+      expect(bubbleStyle.minWidth).to.equal(20);
+      expect(bubbleStyle.maxWidth).to.equal(20);
+    });
+
+    it('when shape is a circle and size is full has expected border radius, min/max widths and font size', () => {
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.circle,
+        BubbleSize.full,
+        {}
+      );
+
+      expect(bubbleStyle.borderRadius).to.equal(34);
+      expect(bubbleStyle.fontSize).to.equal(16);
+      expect(bubbleStyle.minWidth).to.equal(34);
+      expect(bubbleStyle.maxWidth).to.equal(34);
+    });
+
+    it('includes bubbleStyles.main and progressStyle', () => {
+      const progressStyle = {color: 'blue', backgroundColor: 'purple'};
+
+      const bubbleStyle = unitTestExports.mainBubbleStyle(
+        BubbleShape.circle,
+        BubbleSize.full,
+        progressStyle
+      );
+
+      expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.main);
+      expect(bubbleStyle).to.include(progressStyle);
     });
   });
 });

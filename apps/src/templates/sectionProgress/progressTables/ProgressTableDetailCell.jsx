@@ -4,7 +4,10 @@ import {
   levelType,
   studentLevelProgressType
 } from '@cdo/apps/templates/progress/progressTypes';
-import {getBubbleUrl} from '@cdo/apps/templates/progress/BubbleFactory';
+import {
+  BubbleSize,
+  getBubbleUrl
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
@@ -62,7 +65,7 @@ export default class ProgressTableDetailCell extends React.Component {
             >
               <ProgressTableLevelBubble
                 levelStatus={subStatus}
-                bubbleSize={progressStyles.BubbleSize.letter}
+                bubbleSize={BubbleSize.letter}
                 isBonus={sublevel.bonus}
                 isConcept={sublevel.isConceptLevel}
                 title={sublevel.bubbleText}

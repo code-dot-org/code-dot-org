@@ -9,12 +9,10 @@ import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
 import {
+  BasicBubble,
+  BubbleLink,
   BubbleSize,
   BubbleShape
-} from '@cdo/apps/templates/progress/progressStyles';
-import {
-  BasicBubble,
-  BubbleLink
 } from '@cdo/apps/templates/progress/BubbleFactory';
 
 const TITLE = '1';

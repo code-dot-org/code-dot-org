@@ -7,12 +7,10 @@ import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {
   BasicBubble,
-  BubbleLink
-} from '@cdo/apps/templates/progress/BubbleFactory';
-import {
+  BubbleLink,
   BubbleSize,
   BubbleShape
-} from '@cdo/apps/templates/progress/progressStyles';
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import * as utils from '@cdo/apps/utils';
 
 const defaultProps = {
