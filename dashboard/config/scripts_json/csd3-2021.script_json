@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-21 18:54:14 UTC",
+    "serialized_at": "2021-05-21 19:05:51 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -6747,7 +6747,7 @@
       "key": "c579d4e4-c215-4c83-9db5-55fb3853a960",
       "position": 1,
       "properties": {
-        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\r\n\r\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide. Direct students towards the rubric so that they know from the beginning what components of the project you will be looking for.",
+        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\n\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
         "name": "Review Project Guide\r"
       },
       "seeding_key": {
@@ -6841,8 +6841,14 @@
       "key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.",
-        "name": "Iterate - Update Code\r"
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
@@ -16379,21 +16385,8 @@
       }
     },
     {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1HB8T-6XyUiGLgeyYuG43zovAKrO2tyJ4l0NRJXzgdvY/",
-      "key": "make-your-own-game-rubric-2019",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game-rubric-2019"
-      }
-    },
-    {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/edit",
+      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
       "key": "make-your-own-game-sample-marked-rubrics",
       "properties": {
         "type": "Exemplar",
@@ -16401,6 +16394,31 @@
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-sample-marked-rubrics"
+      }
+    },
+    {
+      "name": "Make Your Own Game",
+      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
+      "key": "make_your_own_game",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "name": "Make Your Own Game - Student Checklist",
+      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
+      "key": "make_your_own_game_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_-_student_checklist"
       }
     },
     {
@@ -17279,12 +17297,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-rubric-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game-1-2-3"
       }
     },
@@ -17292,6 +17304,18 @@
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_-_student_checklist"
       }
     }
   ],

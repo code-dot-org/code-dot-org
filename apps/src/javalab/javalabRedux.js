@@ -78,7 +78,26 @@ export const removeFile = filename => ({
 
 // Selectors
 export const getSources = state => {
-  return state.javalab.sources;
+  let sources = {};
+  for (let key in state.javalab.sources) {
+    if (!state.javalab.sources[key].isValidation) {
+      sources[key] = {
+        text: state.javalab.sources[key].text,
+        isVisible: state.javalab.sources[key].isVisible
+      };
+    }
+  }
+  return sources;
+};
+
+export const getValidation = state => {
+  let validation = {};
+  for (let key in state.javalab.sources) {
+    if (state.javalab.sources[key].isValidation) {
+      validation[key] = {text: state.javalab.sources[key].text};
+    }
+  }
+  return validation;
 };
 
 // Reducer
