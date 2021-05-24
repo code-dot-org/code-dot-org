@@ -51,4 +51,22 @@ class LessonGroupTest < ActiveSupport::TestCase
       assert_equal expected, lesson_group.seeding_key(seed_context)
     end
   end
+
+  test 'can copy to script' do
+    destination_script = create :script, is_migrated: true
+    create :course_version, content_root: destination_script
+    original_script = create :script, is_migrated: true
+    create :course_version, content_root: original_script
+    lesson_group = create :lesson_group, script: original_script
+    create :lesson, lesson_group: lesson_group, script: original_script
+
+    copied_lesson_group = LessonGroup.copy_to_script(lesson_group, destination_script)
+    destination_script.reload
+    original_script.reload
+
+    assert_equal 1, destination_script.lesson_groups.count
+    assert_equal 1, original_script.lesson_groups.count
+    assert_equal destination_script, copied_lesson_group.script
+    assert_equal 1, copied_lesson_group.lessons.count
+  end
 end
