@@ -18,7 +18,7 @@ export const ResultsGrades = {
   INCORRECT: "incorrect"
 };
 
-export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
+export const PERCENT_OF_DATASET_FOR_TESTING = 0.10;
 
 export const TestDataLocations = {
   END: "end",
