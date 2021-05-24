@@ -7,7 +7,7 @@ import {
   appendBlankFrame,
   appendCustomFrames,
   appendLibraryFrames
-} from '../animationListModule';
+} from './animationList';
 import {makeEnum} from '@cdo/apps/utils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
 var msg = require('@cdo/locale');

@@ -41,7 +41,6 @@ class ProgressBubble extends React.Component {
     lessonTrophyEnabled: PropTypes.bool,
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
-    stageExtrasEnabled: PropTypes.bool,
     hideAssessmentIcon: PropTypes.bool,
     onClick: PropTypes.func
   };
@@ -123,8 +122,9 @@ class ProgressBubble extends React.Component {
     }
 
     const tooltipId = _.uniqueId();
-    let tooltipText =
-      levelName || (level.isUnplugged && i18n.unpluggedActivity()) || '';
+    let tooltipText = level.isSublevel
+      ? level.display_name
+      : levelName || (level.isUnplugged && i18n.unpluggedActivity()) || '';
     if (number) {
       tooltipText = `${number}. ${tooltipText}`;
     }

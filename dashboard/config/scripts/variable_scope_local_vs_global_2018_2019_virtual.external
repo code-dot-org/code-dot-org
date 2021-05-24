@@ -44,7 +44,7 @@ markdown <<MARKDOWN
 
 For more advanced programs, it can actually be useful to declare variables <em>inside</em> an event function, but we won't need to do that for a while. <strong>For now, make sure to only use `var` once for each variable - preferably at the very top of your program so it's easy to keep track.</strong>
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

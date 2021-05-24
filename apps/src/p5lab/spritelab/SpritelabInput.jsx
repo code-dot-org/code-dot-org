@@ -5,7 +5,7 @@ import memoize from 'memoize-one';
 import * as shapes from '../shapes';
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {PromptType, popPrompt} from './spritelabInputModule';
+import {PromptType, popPrompt} from '../redux/spritelabInput';
 import * as coreLibrary from './coreLibrary';
 
 class SpritelabInput extends React.Component {

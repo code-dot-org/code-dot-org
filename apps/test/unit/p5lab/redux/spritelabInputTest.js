@@ -1,9 +1,9 @@
-import spritelabInputList, * as spritelabInputModule from '@cdo/apps/p5lab/spritelab/spritelabInputModule';
+import spritelabInputList, * as spritelabInput from '@cdo/apps/p5lab/redux/spritelabInput';
 import {expect} from '../../../util/reconfiguredChai';
 
-const PromptType = spritelabInputModule.PromptType;
+const PromptType = spritelabInput.PromptType;
 
-describe('spritelabInputModule', () => {
+describe('spritelabInput', () => {
   const initialState = [];
   it('has expected default state', () => {
     expect(spritelabInputList(undefined, {})).to.deep.equal(initialState);
@@ -15,7 +15,7 @@ describe('spritelabInputModule', () => {
   });
 
   describe('addTextPrompt', () => {
-    const addTextPrompt = spritelabInputModule.addTextPrompt;
+    const addTextPrompt = spritelabInput.addTextPrompt;
     it('adds a text prompt to an empty list', () => {
       const state = [];
       const newState = spritelabInputList(
@@ -52,8 +52,7 @@ describe('spritelabInputModule', () => {
   });
 
   describe('addMultipleChoicePrompt', () => {
-    const addMultipleChoicePrompt =
-      spritelabInputModule.addMultipleChoicePrompt;
+    const addMultipleChoicePrompt = spritelabInput.addMultipleChoicePrompt;
     it('adds a multiple choice prompt to an empty list', () => {
       const state = [];
       const newState = spritelabInputList(
@@ -99,7 +98,7 @@ describe('spritelabInputModule', () => {
   });
 
   describe('popPrompt', () => {
-    const popPrompt = spritelabInputModule.popPrompt;
+    const popPrompt = spritelabInput.popPrompt;
     it('gracefully handles empty list', () => {
       const state = [];
       const newState = spritelabInputList(state, popPrompt());
@@ -118,7 +117,7 @@ describe('spritelabInputModule', () => {
   });
 
   describe('clearPrompts', () => {
-    const clearPrompts = spritelabInputModule.clearPrompts;
+    const clearPrompts = spritelabInput.clearPrompts;
     it('returns []', () => {
       const state = [
         {promptType: PromptType.TEXT, promptText: 'first'},

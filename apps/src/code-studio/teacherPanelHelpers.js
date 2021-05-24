@@ -1,5 +1,5 @@
 import queryString from 'query-string';
-import {setSectionLockStatus} from './stageLockRedux';
+import {setSectionLockStatus} from './lessonLockRedux';
 import {
   setSections,
   selectSection

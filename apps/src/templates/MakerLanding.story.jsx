@@ -5,7 +5,8 @@ const topCourse = {
   assignableName: 'CSD Unit 6 - Physical Computing',
   lessonName: 'Lesson 1: Computing innovations',
   linkToOverview: 'http://localhost-studio.code.org:3000/s/csd6',
-  linkToLesson: 'http://localhost-studio.code.org:3000/s/csd6/stage/1/puzzle/1'
+  linkToLesson:
+    'http://localhost-studio.code.org:3000/s/csd6/lessons/1/levels/1'
 };
 
 export default storybook => {

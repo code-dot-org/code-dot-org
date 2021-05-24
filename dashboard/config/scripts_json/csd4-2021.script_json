@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-14 16:47:44 UTC",
+    "serialized_at": "2021-05-21 15:26:23 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -7226,15 +7226,15 @@
       }
     },
     {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
+      "name": "App Design Kickoff",
+      "url": "https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit",
+      "key": "app_design_kickoff",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "type": "Exemplar",
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "bug_report"
+        "resource.key": "app_design_kickoff"
       }
     },
     {
@@ -7248,6 +7248,18 @@
       },
       "seeding_key": {
         "resource.key": "bugs-and-features-planning"
+      }
+    },
+    {
+      "name": "Changing Screens",
+      "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
+      "key": "changing_screens",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "changing_screens"
       }
     },
     {
@@ -7295,6 +7307,54 @@
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_1"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements_1"
       }
     },
     {
@@ -7362,28 +7422,15 @@
       }
     },
     {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
+      "name": "Importing Screens",
+      "url": "https://drive.google.com/file/d/1eMuKUTAUEPx26x6S7NgldhZ7GMv1DJ-D/view?usp=sharing",
+      "key": "importing_screens",
       "properties": {
         "type": "Resource",
-        "audience": "Student"
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "guide_to_using_resources"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -7412,6 +7459,19 @@
       }
     },
     {
+      "name": "Intro to Design Mode",
+      "url": "https://youtu.be/tAtvWkYBUoU",
+      "key": "intro_to_design_mode",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/design.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
       "name": "Market Research",
       "url": "https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/edit",
       "key": "market-research",
@@ -7425,6 +7485,18 @@
       }
     },
     {
+      "name": "Market Research",
+      "url": "https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/edit",
+      "key": "market_research",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "market_research"
+      }
+    },
+    {
       "name": "Model Screen Design",
       "url": "https://docs.google.com/document/d/1kqlYoJneCvbWYPbt5tCt5z9dFOZrP1GVBIV91S_mWyw/edit?pli=1",
       "key": "model-screen-design",
@@ -7435,6 +7507,18 @@
       },
       "seeding_key": {
         "resource.key": "model-screen-design"
+      }
+    },
+    {
+      "name": "Multi-Screen Apps",
+      "url": "https://drive.google.com/file/d/1CZ0No5Wxy7QyRddR-3eddfKasGsh6xFg/view?usp=sharing",
+      "key": "multi-screen_apps",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "multi-screen_apps"
       }
     },
     {
@@ -7661,6 +7745,18 @@
       },
       "seeding_key": {
         "resource.key": "reacting_as_your_user_profile_4"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input"
       }
     },
     {
@@ -8169,6 +8265,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "app_design_kickoff"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "unit-4-the-design-process"
       }
@@ -8177,6 +8279,12 @@
       "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "market-research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research"
       }
     },
     {
@@ -8207,6 +8315,18 @@
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
         "resource.key": "phone-paper-prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode_elements"
       }
     },
     {
@@ -8259,6 +8379,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "design_mode_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "design_mode_elements_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Digital Prototype",
         "resource.key": "unit-4-the-design-process"
       }
@@ -8279,6 +8417,30 @@
       "seeding_key": {
         "lesson.key": "Linking Screens",
         "resource.key": "unit-4-the-design-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "multi-screen_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "changing_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -8429,24 +8591,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "bug_report",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "how_to_debug",
-        "script.name": "csd4-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {

@@ -1,4 +1,4 @@
-export default function initializeBlocklyXml(blocklyWrapper) {
+export default function initializeTouch(blocklyWrapper) {
   // Aliasing Google's setClientFromTouch() so that we can override it, but still be able
   // to call Google's setClientFromTouch() in the override function.
   blocklyWrapper.Touch.originalSetClientFromTouch =

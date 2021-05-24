@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-05-13 17:48:12 UTC",
+    "serialized_at": "2021-05-18 18:04:53 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -7279,6 +7279,17 @@
       }
     },
     {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview",
+      "key": "debugging_guide",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling-faces-image",
@@ -7484,6 +7495,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "pre-express-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "debugging_guide",
         "script.name": "pre-express-2021"
       }
     }
