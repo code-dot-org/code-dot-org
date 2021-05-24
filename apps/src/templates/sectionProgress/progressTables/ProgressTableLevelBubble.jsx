@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
-import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
 import {
   BasicBubble,
   BubbleLink,
+  BubbleSize,
   getBubbleContent,
   getBubbleClassNames,
   getBubbleShape

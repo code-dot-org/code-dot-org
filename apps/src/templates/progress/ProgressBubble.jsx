@@ -5,13 +5,14 @@ import {levelWithProgressType} from './progressTypes';
 import {
   BasicBubble,
   BubbleLink,
+  BubbleSize,
   BubbleTooltip,
   getBubbleClassNames,
   getBubbleContent,
   getBubbleShape,
   getBubbleUrl
 } from './BubbleFactory';
-import {BubbleSize, levelProgressStyle} from './progressStyles';
+import {levelProgressStyle} from './progressStyles';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
 
 /**
@@ -34,7 +35,6 @@ export default class ProgressBubble extends React.Component {
       PropTypes.number
     ]),
     hideToolTips: PropTypes.bool,
-    stageExtrasEnabled: PropTypes.bool,
     onClick: PropTypes.func
   };
 
