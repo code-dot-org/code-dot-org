@@ -295,7 +295,11 @@ Dashboard::Application.routes.draw do
   get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-  resources :lessons, only: [:edit, :update]
+  resources :lessons, only: [:edit, :update] do
+    member do
+      post :clone
+    end
+  end
 
   resources :resources, only: [:create, :update] do
     collection do
@@ -815,7 +819,7 @@ Dashboard::Application.routes.draw do
   post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
 
   # Routes used by teacher scores
-  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_stages_for_section'
+  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_lessons_for_section'
   get '/dashboardapi/v1/teacher_scores/:section_id/:script_id', to: 'api/v1/teacher_scores#get_teacher_scores_for_script', defaults: {format: 'json'}
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify

@@ -1622,10 +1622,10 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
-"@code-dot-org/maze@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.0.0.tgz#5280fffa4dd31d149bcdc144d6a5c0670e4232a0"
-  integrity sha512-ramVIVblbgGbLetYv5qlgs0qPGWZwjo2AdcDAF6t9Qpeu/HHElXOM/Y475rebwk8Mei5RYjnz5MbpCWMU3JX0g==
+"@code-dot-org/maze@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.1.0.tgz#5cbec9d7c1c96f919e598927ac47f724e5c6f03f"
+  integrity sha512-583c52yGtYDjd7LS733xdzcGpubL2McrLSOJF12CXn3NCPOxnPV/IlXd5u2W4Fmg8/Xx7Z/z0q+apCnbgf/BCg==
 
 "@code-dot-org/ml-activities@0.0.26":
   version "0.0.26"
@@ -1638,10 +1638,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.28":
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.28.tgz#a3d7bea56835fcd1331cd5d4606c8e095be82352"
-  integrity sha512-p7+21R/bnVx3Q50qVC2k5ktIr/Fk6bVYT/q3leME26Bc9NfuTLElVGgOzuw3oCA2kK1XvNjBuslsAYyqiuQRag==
+"@code-dot-org/ml-playground@0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.29.tgz#0509be87d5e8b8931bb8a50c8a2f756f350be474"
+  integrity sha512-Ae4UgWDK8lUUyBO0auLT1DP/lIlbk7f7MI3qHD5LMtl3W66QKT7ZyqEz4fCLH9bPKZS/kfaKbu4V0GcejjNupg==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-regular-svg-icons" "^5.11.2"

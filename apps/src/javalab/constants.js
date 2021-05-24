@@ -22,3 +22,7 @@ export const JavabuilderExceptionType = {
   RUNTIME_ERROR: 'RUNTIME_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS'
 };
+
+export const NeighborhoodSignalType = {
+  MOVE: 'MOVE'
+};

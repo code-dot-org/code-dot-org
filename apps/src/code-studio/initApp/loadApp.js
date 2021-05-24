@@ -132,7 +132,7 @@ export function setupApp(appOptions) {
         }`;
         ReactDOM.render(
           <PlayZone
-            stageName={stageName}
+            lessonName={stageName}
             onContinue={() => {
               dialog.hide();
             }}
