@@ -35,7 +35,6 @@ const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
-const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
 const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
@@ -121,10 +120,6 @@ export function setLabelColumn(labelColumn) {
 */
 export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
-}
-
-export function setPercentDataToReserve(percentDataToReserve) {
-  return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
 }
 
 export function setReserveLocation(reserveLocation) {
@@ -236,8 +231,6 @@ const initialState = {
   labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
-  trainingLabels: [],
-  percentDataToReserve: 10,
   reserveLocation: TestDataLocations.END,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
@@ -358,12 +351,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       trainingLabels: action.trainingLabels
-    };
-  }
-  if (action.type === SET_PERCENT_DATA_TO_RESERVE) {
-    return {
-      ...state,
-      percentDataToReserve: action.percentDataToReserve
     };
   }
   if (action.type === SET_RESERVE_LOCATION) {
@@ -1118,7 +1105,6 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "results") {
     if (
-      state.percentDataToReserve === 0 ||
       state.accuracyCheckExamples.length === 0 ||
       ["success", "started"].includes(state.saveStatus)
     ) {
