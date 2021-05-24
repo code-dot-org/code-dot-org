@@ -24,7 +24,9 @@ export const JavabuilderExceptionType = {
 };
 
 export const NeighborhoodSignalType = {
+  // Move the painter
   MOVE: 'MOVE',
+  // Initialize the painter
   INITIALIZE_PAINTER: 'INITIALIZE_PAINTER',
   // Add paint to the current location
   PAINT: 'PAINT',
