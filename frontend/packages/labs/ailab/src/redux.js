@@ -236,7 +236,7 @@ const initialState = {
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
   testData: {},
-  prediction: {},
+  prediction: undefined,
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
@@ -381,7 +381,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       testData: action.testData,
-      prediction: {}
+      prediction: undefined
     };
   }
   if (action.type === SET_PREDICTION) {
@@ -475,7 +475,7 @@ export default function rootReducer(state = initialState, action) {
         currentPanel: action.currentPanel,
         instructionsOverlayActive: showedOverlay,
         testData: {},
-        prediction: {},
+        prediction: undefined,
         resultsTab: ResultsGrades.CORRECT
       };
     }
@@ -808,7 +808,7 @@ export function getConvertedLabel(state, rawLabel) {
 }
 
 export function getConvertedPredictedLabel(state) {
-  return getConvertedLabel(state, state.prediction.predictedLabel);
+  return getConvertedLabel(state, state.prediction);
 }
 
 export function getConvertedLabels(state, rawLabels = []) {
@@ -1028,7 +1028,9 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel = state.trainedModel;
+  dataToSave.trainedModel = state.trainedModel
+    ? state.trainedModel.toJSON()
+    : null;
   dataToSave.kValue = state.kValue;
 
   return dataToSave;
