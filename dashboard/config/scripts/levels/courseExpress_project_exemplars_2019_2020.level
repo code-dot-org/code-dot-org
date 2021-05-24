@@ -1,0 +1,15 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2020-06-18T20:30:51.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "Test Markdown Textbook Page",
+    "content1": "Test Markdown Textbook Page",
+    "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n| Panic! at the Disco (Dance Party) | Beach Scene (Artist) |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png \"Pattern (Artist)\")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |\n| Get your disco on while your backup dancers switch it up! | Try adding more color and background to this scene! |\n\n| Snowflake Flowers (Frozen) | Airplane Game (Sprite Lab) |\n|---|---|\n| [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png \"Airplane Game (Sprite Lab )\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |\n| Let's get creative with functions! | Try adding text or a score to this game! |\n\n"
+  },
+  "published": false
+}]]></config>
+</External>

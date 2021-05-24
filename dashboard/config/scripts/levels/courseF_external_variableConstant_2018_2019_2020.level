@@ -1,0 +1,13 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2020-02-25T15:58:30.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "markdown": "<h2>More on Variables</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
+  },
+  "published": false
+}]]></config>
+</External>
