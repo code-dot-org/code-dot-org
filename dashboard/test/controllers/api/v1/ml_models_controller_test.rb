@@ -168,15 +168,17 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
   # Tests for the Show controller action.
   test 'retrieves a trained model from S3' do
     sign_in @owner
-    AWS::S3.stubs(:download_from_bucket).returns(true)
+    AWS::S3.stubs(:download_from_bucket).returns(@model)
     get :show, params: {id: @model.model_id}
     assert_response :success
   end
 
   test 'renders 404 if model does not exist' do
     sign_in @owner
-    AWS::S3.stubs(:download_from_bucket).returns(nil)
-    get :show, params: {id: "fakeId"}
+    # @model.destroy
+    AWS::S3.stubs(:download_from_bucket).raises(Aws::S3::Errors::NoSuchKey.new(nil, nil))
+    # AWS::S3.stubs(:download_from_bucket).returns(true)
+    get :show, params: {id: @model.model_id}
     assert_response :not_found
   end
 end
