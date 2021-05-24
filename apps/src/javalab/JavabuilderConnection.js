@@ -4,12 +4,20 @@ import {handleException} from './javabuilderExceptionHandler';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
-  constructor(channelId, javabuilderUrl, onMessage, miniApp, serverLevelId) {
+  constructor(
+    channelId,
+    javabuilderUrl,
+    onMessage,
+    miniApp,
+    serverLevelId,
+    options
+  ) {
     this.channelId = channelId;
     this.javabuilderUrl = javabuilderUrl;
     this.onOutputMessage = onMessage;
     this.miniApp = miniApp;
     this.levelId = serverLevelId;
+    this.options = options;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -22,7 +30,8 @@ export default class JavabuilderConnection {
         projectUrl: dashboard.project.getProjectSourcesUrl(),
         channelId: this.channelId,
         projectVersion: dashboard.project.getCurrentSourceVersionId(),
-        levelId: this.levelId
+        levelId: this.levelId,
+        options: this.options
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
