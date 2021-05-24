@@ -232,9 +232,8 @@ class LessonGroup < ApplicationRecord
     return if original_lesson_group.script == destination_script
     raise 'Both lesson group and script must be migrated' unless original_lesson_group.script.is_migrated? && destination_script.is_migrated?
     raise 'Destination script and lesson group must be in a course version' if destination_script.get_course_version.nil? || original_lesson_group.script.get_course_version.nil?
-    raise 'Destination script must have the same version year as the lesson group' unless destination_script.get_course_version.version_year == original_lesson_group.script.get_course_version.version_year
 
-    ActiveRecord::Base.transaction do
+    ActiveRecord::Base.transaction(requires_new: true, joinable: false) do
       copied_lesson_group = original_lesson_group.dup
       copied_lesson_group.script = destination_script
       copied_lesson_group.lessons = []

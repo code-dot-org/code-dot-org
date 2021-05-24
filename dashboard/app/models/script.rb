@@ -1152,6 +1152,57 @@ class Script < ApplicationRecord
     end
   end
 
+  def clone_migrated_with_suffix(new_suffix, options = {})
+    destination_unit_group = options[:destination_unit_group_name] ?
+      UnitGroup.find_by_name(options[:destination_unit_group_name]) :
+      nil
+    raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
+
+    previous_suffix = options[:previous_suffix]
+    new_name =
+      if options[:new_name]
+        options[:new_name]
+      elsif previous_suffix
+        "#{name.chomp(previous_suffix)}-#{new_suffix}"
+      else
+        "#{base_name}-#{new_suffix}"
+      end
+    ActiveRecord::Base.transaction do
+      copied_script = dup
+      copied_script.is_stable = false
+      copied_script.tts = false
+      copied_script.announcements = nil
+      copied_script.is_course = destination_unit_group.nil?
+      copied_script.name = new_name
+
+      if /^[0-9]{4}$/ =~ (new_suffix)
+        copied_script.version_year = new_suffix
+      end
+
+      copied_script.save!
+
+      if destination_unit_group
+        UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_script, position: destination_unit_group.default_scripts.length + 1)
+        copied_script.reload
+      else
+        CourseOffering.add_course_offering(copied_script)
+      end
+
+      lesson_groups.each do |original_lesson_group|
+        LessonGroup.copy_to_script(original_lesson_group, copied_script, new_suffix)
+      end
+
+      # Make sure we don't modify any files in unit tests.
+      if Rails.application.config.levelbuilder_mode
+        copy_and_write_i18n(new_name)
+        copied_script.write_script_json
+        copied_script.write_script_dsl
+      end
+
+      copied_script
+    end
+  end
+
   # Clone this script, appending a dash and the suffix to the name of this
   # script. Also clone all the levels in the script, appending an underscore and
   # the suffix to the name of each level. Mark the new script as hidden, and
