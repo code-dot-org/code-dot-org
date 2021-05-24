@@ -156,7 +156,7 @@
   "spinBeforeClick": "Your sprite was spinning before you clicked on it. Make sure that your spin behavior is connected to this event. \n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"blue alien\"</title></block></value></block></xml>",
   "createAtLeastTwoSprites": "You need to have two sprites. Make two sprites under the `when run` block.",
   "createAtLeastThreeSprites": "You need to have three sprites. Make three sprites under the `when run` block.",
-  "spriteNotClicked": "Make sure that you click on each sprite and that you have the right events in your workspace.",
+  "spriteNotClicked": "Make sure that you click on each sprite and that you have the right events in your workspace. <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title></block></xml>",
   "startBehaviorWhenClicked": "Your new sprite needs to start a behavior when it is clicked.",
   "clickNewSprite": "Make sure you click on your new sprite and that it also has a `when clicked` event in your workspace.",
   "colorChangedBeforeKeyPress": "Your sprite changed color at the wrong time. Move the `change color` block under a `when key pressed` block.",
