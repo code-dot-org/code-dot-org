@@ -1026,16 +1026,14 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
-  dataToSave.selectedTrainer =
-    isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer;
+  dataToSave.selectedTrainer = isRegression(state)
+    ? RegressionTrainer
+    : ClassificationTrainer;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel =
-    state.trainedModel
+  dataToSave.trainedModel = state.trainedModel
     ? state.trainedModel.toJSON()
     : null;
   dataToSave.kValue = state.kValue;
