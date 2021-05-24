@@ -12,11 +12,11 @@
     }
   }
 
-- stages = local_assigns[:stages]
+- lessons = local_assigns[:lessons]
 .instructions_summary
-  - stages.each_with_index do |stage, index|
-    %h1= stage.localized_title
-    - stage.script_levels.each do |script_level|
+  - lessons.each_with_index do |lesson|
+    %h1= lesson.localized_title
+    - lesson.script_levels.each do |script_level|
       - level = script_level.level
       .script_level
         = link_to "Level #{script_level.position}: #{script_level.level.name}", build_script_level_path(script_level)
