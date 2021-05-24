@@ -58,7 +58,8 @@
       "downButton",
       "upButton"
     ],
-    "tts_long_instructions_override": "Every dancer has a set of properties that controls what it looks like.\r\n\r\nUse a set size block under a green event block to make dancers appear closer or farther away."
+    "tts_long_instructions_override": "Every dancer has a set of properties that controls what it looks like.\r\n\r\nUse a set size block under a green event block to make dancers appear closer or farther away.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

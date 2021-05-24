@@ -63,7 +63,8 @@
     "mini_rubric": "false",
     "video_key": "hoc_dance_events_2019",
     "tts_short_instructions_override": "Make the cat do a dance move when you press a key.",
-    "tts_long_instructions_override": "The when pressed block lets you run code when you press the arrow buttons. \r\nUse the do once block to make the cat clap!\r\n\r\nMake sure to press your up arrow key or the up button after clicking the Run button!\r\n"
+    "tts_long_instructions_override": "The when pressed block lets you run code when you press the arrow buttons. \r\nUse the do once block to make the cat clap!\r\n\r\nMake sure to press your up arrow key or the up button after clicking the Run button!\r\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
