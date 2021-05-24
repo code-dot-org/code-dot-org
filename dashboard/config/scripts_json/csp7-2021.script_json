@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-19 00:12:28 UTC",
+    "serialized_at": "2021-05-21 21:45:33 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -968,48 +968,8 @@
       }
     },
     {
-      "key": "6ed20688-69da-427b-936d-37244bae495f",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 30-36. Students discuss with a partner how they think the MOD operator works.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students need to know how the MOD operator works for the AP CSP exam. The explanations here are enough to help them answer those questions. \r\n\r\nThere are many wonderful and interesting uses of MOD in apps, but students are not expected or required to use the operator themselves when programming apps for this course. \r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6ed20688-69da-427b-936d-37244bae495f",
-        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
-      }
-    },
-    {
-      "key": "99dea69f-df64-4782-8c16-50ae7bc56cbe",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \r\n    \r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
-      },
-      "seeding_key": {
-        "activity_section.key": "99dea69f-df64-4782-8c16-50ae7bc56cbe",
-        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
-      }
-    },
-    {
-      "key": "f041d05e-7a8a-40aa-befa-ad805d4613b7",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\r\n\r\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\r\n\r\nNow let's get back to another app investigation with functions with parameters and return values.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "f041d05e-7a8a-40aa-befa-ad805d4613b7",
-        "lesson_activity.key": "f9b86f60-f067-483c-84f0-4b954e71c58a"
-      }
-    },
-    {
       "key": "f7719909-f1dd-48e5-ac25-e979636ba00f",
-      "position": 7,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2, read likes 1-14 and discuss with their partner what's happening in these lines.\n\n**Discuss:** *Read through the lines together as a class, and clear up any misconceptions.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students carefully read the function on lines 15-34 before explaining to their partners how it works. If students have extra time, they can try the modify activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Talk through the app together as a class. Make sure students understand all the parts of the function and understand where to look in the comments for information."
       },
@@ -1020,7 +980,7 @@
     },
     {
       "key": "e09ae6e9-707c-4478-b050-e13cbb282c61",
-      "position": 8,
+      "position": 5,
       "properties": {
         "progression_name": "App Investigation"
       },
@@ -2516,6 +2476,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 3_2021"
+        ],
         "progression": "App Practice"
       },
       "named_level": false,
@@ -2643,6 +2606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Libraries in App Lab_2021"
+        ]
       },
       "named_level": false,
       "bonus": false,
@@ -2743,6 +2709,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L6 CSP CFU Libraries_2021"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
