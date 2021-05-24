@@ -735,7 +735,7 @@ class Lesson < ApplicationRecord
     raise 'Both lesson and script must be migrated' unless original_lesson.script.is_migrated? && destination_script.is_migrated?
     raise 'Destination script and lesson must be in a course version' if destination_script.get_course_version.nil? || original_lesson.script.get_course_version.nil?
 
-    ActiveRecord::Base.transaction do
+    ActiveRecord::Base.transaction(requires_new: true, joinable: false) do
       copied_lesson = original_lesson.dup
       copied_lesson.key = copied_lesson.name
       copied_lesson.script_id = destination_script.id
