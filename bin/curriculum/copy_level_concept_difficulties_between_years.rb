@@ -12,6 +12,10 @@ def main(year_to_copy_to)
       puts "Level: " + sl.level.name
       next if sl.level.level_concept_difficulty
       copy_lcd_from_parent(sl.level)
+
+      # Write changes to file
+      file_path = Level.level_file_path(sl.level.name)
+      File.write(file_path, sl.level.to_xml)
     end
   end
 end
