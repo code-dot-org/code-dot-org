@@ -1338,12 +1338,12 @@ class Script < ApplicationRecord
       metadata_i18n['lessons'] = {}
       unless lesson_descriptions.nil?
         JSON.parse(lesson_descriptions).each do |lesson|
-          stage_name = lesson['name']
-          stage_data = {
+          lesson_name = lesson['name']
+          lesson_data = {
             'description_student' => lesson['descriptionStudent'],
             'description_teacher' => lesson['descriptionTeacher']
           }
-          metadata_i18n['lessons'][stage_name] = stage_data
+          metadata_i18n['lessons'][lesson_name] = lesson_data
         end
       end
       metadata_i18n = {'en' => {'data' => {'script' => {'name' => {script_name => metadata_i18n.to_h}}}}}
