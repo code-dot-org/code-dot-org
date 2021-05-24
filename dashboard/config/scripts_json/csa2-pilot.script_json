@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-24 15:02:30 UTC",
+    "serialized_at": "2021-05-24 18:43:00 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -1035,6 +1035,30 @@
       }
     },
     {
+      "name": "[KEY] U2L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1_T4D2W3Erk80Az9auTymxzlUPEU863ARrH9fqthXbfs/edit?usp=sharing",
+      "key": "_key_u2l3_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Writing Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/15a8LPjxmhUUFkSrHb89ZEzRV2UI5WP9ZF9Z4MSaxuTs/edit?usp=sharing",
+      "key": "_key_writing_constructors_guided_notes",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_writing_constructors_guided_notes"
+      }
+    },
+    {
       "name": "Defining Attributes",
       "url": "https://docs.google.com/document/d/1O6ScN52Cdi70Hz4vifCAcIcySoB2Wpw0z3DivFOi9ug/edit?usp=sharing",
       "key": "defining_attributes",
@@ -1119,6 +1143,18 @@
       }
     },
     {
+      "name": "U2L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1b8J0XpAotSxPPK2AvnBPOZIA1GhKgwaio5Hswj6GRuY/edit?usp=sharing",
+      "key": "u2l3_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
       "name": "Unit 2 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1kfzkThzPNV9xM1IJca8ySP7T2spBvzw03kze9k46H4I/edit?usp=sharing",
       "key": "unit_2_presentation_slides",
@@ -1128,6 +1164,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "name": "Writing Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ffi0kn764VV99v_6jFKOdh_anzc8wmLIJnL59EN_KZQ/edit?usp=sharing",
+      "key": "writing_constructors_guided_notes",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "writing_constructors_guided_notes"
       }
     }
   ],
@@ -1214,6 +1262,30 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_writing_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "writing_constructors_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u2l3_extra_practice"
       }
     }
   ],
@@ -1403,6 +1475,86 @@
       "seeding_key": {
         "vocabulary.key": "string"
       }
+    },
+    {
+      "key": "constructor",
+      "word": "Constructor",
+      "definition": "A block of code in the class that tells the computer how to create a new object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "key": "initialize",
+      "word": "Initialize",
+      "definition": "Create a new object with a specific name and set of starting characteristics",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "key": "constructor_signature",
+      "word": "Constructor Signature",
+      "definition": "The first line of the constructor which includes the constructor name and lists the object's characteristics that can be specified when it is initialized",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "key": "formal_parameter",
+      "word": "Formal Parameter",
+      "definition": "The name of the characteristics in the constructor signature",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "key": "actual_parameter",
+      "word": "Actual Parameter",
+      "definition": "The value given to a characteristic when initializing an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "key": "call_by_value",
+      "word": "Call By Value",
+      "definition": "Copying the value of the actual parameter to the constructor's formal parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "key": "instantiate",
+      "word": "Instantiate",
+      "definition": "Calling the constructor to create an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "key": "local_variable",
+      "word": "Local Variable",
+      "definition": "A variable declared and accessible within a specific block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "local_variable"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -1512,6 +1664,54 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "vocabulary.key": "string"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "local_variable"
       }
     }
   ],
