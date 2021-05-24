@@ -17,7 +17,7 @@ class TeacherFeedbackRubric extends Component {
   static propTypes = {
     rubric: rubricShape,
     performance: PropTypes.string,
-    displayKeyConcept: PropTypes.bool,
+    isReadonly: PropTypes.bool,
     disabledMode: PropTypes.bool.isRequired,
     onRubricChange: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired
@@ -27,18 +27,14 @@ class TeacherFeedbackRubric extends Component {
     const {
       rubric,
       performance,
-      displayKeyConcept,
+      isReadonly,
       disabledMode,
       onRubricChange,
       viewAs
     } = this.props;
 
     const showFeedbackInputAreas =
-      !displayKeyConcept && (!!performance || viewAs === ViewType.Teacher);
-
-    // If a student has rubric feedback we want to expand that field
-    const expandPerformanceLevelForStudent =
-      viewAs === ViewType.Student && showFeedbackInputAreas && !!performance;
+      !isReadonly && (!!performance || viewAs === ViewType.Teacher);
 
     return (
       <div style={styles.performanceArea}>
@@ -54,8 +50,8 @@ class TeacherFeedbackRubric extends Component {
                 key={level}
                 showFeedbackInputAreas={showFeedbackInputAreas}
                 expandByDefault={
-                  displayKeyConcept ||
-                  (expandPerformanceLevelForStudent && performance === level)
+                  isReadonly ||
+                  (viewAs === ViewType.Student && performance === level)
                 }
                 rubricLevel={level}
                 rubricValue={rubric[level]}

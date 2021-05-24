@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
     performanceLevel4: 'no evidence of trying'
   },
   performance: null,
-  displayKeyConcept: false,
+  isReadonly: false,
   disabledMode: false,
   onRubricChange: () => {},
   viewAs: ViewType.Teacher
@@ -74,40 +74,40 @@ describe('TeacherFeedbackRubric', () => {
   });
 
   describe('view as teacher', () => {
-    it('RubricField prop showFeedbackInputAreas is true if displayKeyConcept = false', () => {
+    it('RubricField prop showFeedbackInputAreas is true if isReadonly = false', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        displayKeyConcept: false
+        isReadonly: false
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
       expect(firstRubricField.props().showFeedbackInputAreas).to.be.true;
     });
 
-    it('RubricField prop showFeedbackInputAreas is false if displayKeyConcept = true', () => {
+    it('RubricField prop showFeedbackInputAreas is false if isReadonly = true', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        displayKeyConcept: true
+        isReadonly: true
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
       expect(firstRubricField.props().showFeedbackInputAreas).to.be.false;
     });
 
-    it('RubricField prop expandByDefault is false displayKeyConcept = false', () => {
+    it('RubricField prop expandByDefault is false isReadonly = false', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        displayKeyConcept: false
+        isReadonly: false
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
       expect(firstRubricField.props().expandByDefault).to.be.false;
     });
 
-    it('RubricField prop expandByDefault is true displayKeyConcept = true', () => {
+    it('RubricField prop expandByDefault is true isReadonly = true', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
-        displayKeyConcept: true
+        isReadonly: true
       });
 
       const firstRubricField = wrapper.find('RubricField').first();
@@ -119,7 +119,7 @@ describe('TeacherFeedbackRubric', () => {
     it('expands rubric value with feedback', () => {
       const wrapper = setUp({
         viewAs: ViewType.Student,
-        displayKeyConcept: false,
+        isReadonly: false,
         performance: 'performanceLevel2'
       });
 

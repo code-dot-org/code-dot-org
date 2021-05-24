@@ -12,7 +12,7 @@ const TEACHER_FEEDBACK_NO_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false,
+  displayReadonlyRubric: false,
   latestFeedback: null
 };
 const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
@@ -29,7 +29,7 @@ const TEACHER_NOT_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: true,
+  displayReadonlyRubric: true,
   latestFeedback: null
 };
 
@@ -47,7 +47,7 @@ const TEACHER_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Teacher',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false,
+  displayReadonlyRubric: false,
   latestFeedback: null
 };
 
@@ -59,7 +59,7 @@ const STUDENT_FEEDBACK_NO_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false,
+  displayReadonlyRubric: false,
   latestFeedback: []
 };
 const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
@@ -76,7 +76,7 @@ const STUDENT_NO_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: true,
+  displayReadonlyRubric: true,
   latestFeedback: null
 };
 
@@ -94,7 +94,7 @@ const STUDENT_FEEDBACK_RUBRIC_PROPS = {
   viewAs: 'Student',
   serverLevelId: 123,
   teacher: 5,
-  displayKeyConcept: false,
+  displayReadonlyRubric: false,
   latestFeedback: null
 };
 
@@ -157,7 +157,7 @@ describe('TeacherFeedback', () => {
       expect(rubric.props().rubric).to.equal(
         TEACHER_FEEDBACK_RUBRIC_PROPS.rubric
       );
-      expect(rubric.props().displayKeyConcept).to.equal(false);
+      expect(rubric.props().isReadonly).to.equal(false);
       expect(rubric.props().disabledMode).to.equal(false);
       expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
 
@@ -226,7 +226,7 @@ describe('TeacherFeedback', () => {
       expect(rubric.props().rubric).to.equal(
         TEACHER_NOT_FEEDBACK_RUBRIC_PROPS.rubric
       );
-      expect(rubric.props().displayKeyConcept).to.equal(true);
+      expect(rubric.props().isReadonly).to.equal(true);
       expect(rubric.props().disabledMode).to.equal(true);
 
       // Comment
@@ -308,7 +308,7 @@ describe('TeacherFeedback', () => {
       expect(rubric.props().rubric).to.equal(
         STUDENT_NO_FEEDBACK_RUBRIC_PROPS.rubric
       );
-      expect(rubric.props().displayKeyConcept).to.equal(true);
+      expect(rubric.props().isReadonly).to.equal(true);
       expect(rubric.props().disabledMode).to.equal(true);
       expect(rubric.props().viewAs).to.equal(ViewType.Student);
 
@@ -380,7 +380,7 @@ describe('TeacherFeedback', () => {
       expect(rubric.props().rubric).to.equal(
         STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
       );
-      expect(rubric.props().displayKeyConcept).to.equal(false);
+      expect(rubric.props().isReadonly).to.equal(false);
       expect(rubric.props().disabledMode).to.equal(true);
       expect(rubric.props().viewAs).to.equal(ViewType.Student);
 
@@ -422,7 +422,7 @@ describe('TeacherFeedback', () => {
         STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
       );
       expect(rubric.props().performance).to.equal('performanceLevel2');
-      expect(rubric.props().displayKeyConcept).to.equal(false);
+      expect(rubric.props().isReadonly).to.equal(false);
       expect(rubric.props().disabledMode).to.equal(true);
       expect(rubric.props().viewAs).to.equal(ViewType.Student);
 
@@ -464,7 +464,7 @@ describe('TeacherFeedback', () => {
         STUDENT_FEEDBACK_RUBRIC_PROPS.rubric
       );
       expect(rubric.props().performance).to.equal('performanceLevel2');
-      expect(rubric.props().displayKeyConcept).to.equal(false);
+      expect(rubric.props().isReadonly).to.equal(false);
       expect(rubric.props().disabledMode).to.equal(true);
       expect(rubric.props().viewAs).to.equal(ViewType.Student);
 

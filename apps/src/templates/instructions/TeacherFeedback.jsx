@@ -30,7 +30,7 @@ export class TeacherFeedback extends Component {
     serverLevelId: PropTypes.number,
     teacher: PropTypes.number,
     verifiedTeacher: PropTypes.bool,
-    displayKeyConcept: PropTypes.bool,
+    displayReadonlyRubric: PropTypes.bool,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     selectedSectionId: PropTypes.string
@@ -46,12 +46,8 @@ export class TeacherFeedback extends Component {
     const {latestFeedback} = this.props;
 
     this.state = {
-      comment:
-        latestFeedback && latestFeedback.comment ? latestFeedback.comment : '',
-      performance:
-        latestFeedback && latestFeedback.performance
-          ? latestFeedback.performance
-          : null,
+      comment: latestFeedback?.comment || '',
+      performance: latestFeedback?.performance,
       studentId: studentId,
       latestFeedback: latestFeedback,
       submitting: false,
@@ -149,7 +145,7 @@ export class TeacherFeedback extends Component {
       viewAs,
       rubric,
       visible,
-      displayKeyConcept,
+      displayReadonlyRubric,
       disabledMode
     } = this.props;
 
@@ -175,12 +171,12 @@ export class TeacherFeedback extends Component {
       ? i18n.feedbackPlaceholder()
       : i18n.feedbackPlaceholderNonVerified();
 
-    const placeholderText =
-      latestFeedback && latestFeedback.comment
-        ? latestFeedback.comment
-        : placeholderWarning;
+    const placeholderText = latestFeedback?.comment
+      ? latestFeedback.comment
+      : placeholderWarning;
 
-    const dontShowStudentComment = !comment && viewAs === ViewType.Student;
+    const displayComment =
+      !displayReadonlyRubric && (!!comment || viewAs === ViewType.Teacher);
 
     // Instead of unmounting the component when switching tabs, hide and show it
     // so a teacher does not lose the feedback they are giving if they switch tabs
@@ -194,13 +190,13 @@ export class TeacherFeedback extends Component {
           <TeacherFeedbackRubric
             rubric={rubric}
             performance={performance}
-            displayKeyConcept={displayKeyConcept}
+            isReadonly={displayReadonlyRubric}
             disabledMode={disabledMode}
             onRubricChange={this.onRubricChange}
             viewAs={viewAs}
           />
         )}
-        {!displayKeyConcept && !dontShowStudentComment && (
+        {displayComment && (
           <div style={styles.commentAndFooter}>
             <CommentArea
               disabledMode={disabledMode}
@@ -215,7 +211,6 @@ export class TeacherFeedback extends Component {
               {viewAs === ViewType.Teacher && (
                 <div style={styles.button}>
                   <Button
-                    __useDeprecatedTag
                     id="ui-test-submit-feedback"
                     text={buttonText}
                     onClick={this.onSubmitFeedback}
