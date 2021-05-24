@@ -18,7 +18,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'can decode jwt token' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url"}
+    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: "url", levelId: 261}
 
     response = JSON.parse(@response.body)
     token = response['token']

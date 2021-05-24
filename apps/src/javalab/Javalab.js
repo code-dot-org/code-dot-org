@@ -195,7 +195,8 @@ Javalab.prototype.onRun = function() {
     this.channelId,
     this.level.javabuilderUrl,
     message => getStore().dispatch(appendOutputLog(message)),
-    this.miniApp
+    this.miniApp,
+    getStore().getState().pageConstants.serverLevelId
   );
   this.javabuilderConnection.connectJavabuilder();
 };
