@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 15:04:22 UTC",
+    "serialized_at": "2021-05-21 20:03:23 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -889,8 +889,21 @@
       }
     },
     {
-      "key": "5aa1b4d5-0d87-4e15-87db-51011f0a8751",
+      "key": "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b",
       "position": 1,
+      "properties": {
+        "name": "Project Preparation"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b",
+        "lesson.key": "Designing Apps for Good",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2021"
+      }
+    },
+    {
+      "key": "5aa1b4d5-0d87-4e15-87db-51011f0a8751",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -904,7 +917,7 @@
     },
     {
       "key": "c50c799f-b401-406a-b4c2-6a01e8f1c548",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -918,7 +931,7 @@
     },
     {
       "key": "ce07a190-9e9b-4c4d-9e46-07f59f07449b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -3009,7 +3022,7 @@
       "key": "0b2efd87-9305-4f69-b54f-ad720a636f39",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed.",
+        "description": "**Distribute:** Give each student a copy of the Paper Prototype Project Guide. If you collected the User Interview Activity guide from yesterday, re-distribute this to students as well so they can use it as a reference for today’s activity.\n\nAlso distribute a copy of the rubric or the student checklist.\n\n\n\n#### Paper Prototype Project\n\n**Overview:** As a class read through the overview of the project reviewing what they will need to produce and how it will be assessed. Students can use the rubric or student checklist to self-assess and reflect as they progress through the project.",
         "name": "Getting Started\r"
       },
       "seeding_key": {
@@ -3190,7 +3203,13 @@
       "key": "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400",
       "position": 8,
       "properties": {
-        "description": "**Display:** Have students read the Create a Poster section of the activity guide. This step requires students to cut out pieces of their activity guide and paste them on a poster. Additionally, they will write a small summary of their app based on the questions on the bottom of the activity guide.\n\n**Display:** Show students a copy of the rubric for this project, which will be distributed to students in a moment. All the criteria from this rubric can be found in the activity guide and on the poster when it is finished."
+        "description": "**Display:** Have students read the Create a Poster section of the activity guide. This step requires students to cut out pieces of their activity guide and paste them on a poster. Additionally, they will write a small summary of their app based on the questions on the bottom of the activity guide.\n\n**Display:** Show students a copy of the rubric for this project. All the criteria from this rubric can be found in the activity guide and on the poster when it is finished. Students can also use the student checklist to self-assess how well they are meeting the criteria for this project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400",
@@ -3201,7 +3220,7 @@
       "key": "7e32f943-ba51-43d2-ab04-dc850e9ead5c",
       "position": 9,
       "properties": {
-        "description": "**Distribute:** Each student needs a piece of poster paper and a copy of the rubric. Groups of students can share tape or glue-sticks, scissors, and markers or colored pencils."
+        "description": "**Distribute:** Each student needs a piece of poster paper. Groups of students can share tape or glue-sticks, scissors, and markers or colored pencils."
       },
       "seeding_key": {
         "activity_section.key": "7e32f943-ba51-43d2-ab04-dc850e9ead5c",
@@ -3264,6 +3283,18 @@
       "seeding_key": {
         "activity_section.key": "3c6018f8-0048-4c97-9970-72884de4c736",
         "lesson_activity.key": "0de0afb2-3b1f-420a-aaf6-557b0726539b"
+      }
+    },
+    {
+      "key": "b13161da-36da-4c66-a533-ee18c77cc807",
+      "position": 1,
+      "properties": {
+        "description": "This lesson sets up a larger project that students will work on for the remainder of this unt. Throughout the remaining lessons, students will:\n- develop an app idea\n- make a paper prototype\n- make a digital prototype\n- perform user testing\n- create a presentation about their app.\n\nTo prepare for this, you may want to skim through the remaining lessons in this unit to see how this project builds across multiple lessons. You may also want to look at the resources in the [final lesson of this unit](/s/csd4-2021/lessons/21/), especially the **rubric** and **student checklist**, to see how each lesson builds on each other towards the final presentation.",
+        "name": "Looking Ahead"
+      },
+      "seeding_key": {
+        "activity_section.key": "b13161da-36da-4c66-a533-ee18c77cc807",
+        "lesson_activity.key": "13d72af9-3b54-4ff3-b3f5-bcbb29212d1b"
       }
     },
     {
@@ -7190,7 +7221,7 @@
     },
     {
       "name": "App Presentation",
-      "url": "https://docs.google.com/document/d/1j3L47nIHsN3D4qCfuXgz3i9E-rAcf9flvnodiGMYSnQ/edit",
+      "url": "https://docs.google.com/document/d/1-2z9HtHPEMui9aavjRkYs4vlp5l0ujgXI8XW8KFCcf4/edit",
       "key": "app-presentation",
       "properties": {
         "type": "Rubric",
@@ -7226,15 +7257,27 @@
       }
     },
     {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
+      "name": "App Design Kickoff",
+      "url": "https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit",
+      "key": "app_design_kickoff",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "type": "Exemplar",
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "bug_report"
+        "resource.key": "app_design_kickoff"
+      }
+    },
+    {
+      "name": "App Presentation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1d1Dq6t-90ZbseWX5JW7JrZLP3CSHzR1rXk8rzZKzFOo/edit",
+      "key": "app_presentation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "app_presentation_-_student_checklist"
       }
     },
     {
@@ -7248,6 +7291,18 @@
       },
       "seeding_key": {
         "resource.key": "bugs-and-features-planning"
+      }
+    },
+    {
+      "name": "Changing Screens",
+      "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
+      "key": "changing_screens",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "changing_screens"
       }
     },
     {
@@ -7295,6 +7350,54 @@
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "name": "Design Mode",
+      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
+      "key": "design_mode_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_1"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "name": "Design Mode Elements",
+      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
+      "key": "design_mode_elements_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_elements_1"
       }
     },
     {
@@ -7362,28 +7465,15 @@
       }
     },
     {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
+      "name": "Importing Screens",
+      "url": "https://drive.google.com/file/d/1eMuKUTAUEPx26x6S7NgldhZ7GMv1DJ-D/view?usp=sharing",
+      "key": "importing_screens",
       "properties": {
         "type": "Resource",
-        "audience": "Student"
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "guide_to_using_resources"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -7438,6 +7528,18 @@
       }
     },
     {
+      "name": "Market Research",
+      "url": "https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/edit",
+      "key": "market_research",
+      "properties": {
+        "type": "Exemplar",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "market_research"
+      }
+    },
+    {
       "name": "Model Screen Design",
       "url": "https://docs.google.com/document/d/1kqlYoJneCvbWYPbt5tCt5z9dFOZrP1GVBIV91S_mWyw/edit?pli=1",
       "key": "model-screen-design",
@@ -7451,11 +7553,22 @@
       }
     },
     {
-      "name": "Paper Prototype 2021",
+      "name": "Multi-Screen Apps",
+      "url": "https://drive.google.com/file/d/1CZ0No5Wxy7QyRddR-3eddfKasGsh6xFg/view?usp=sharing",
+      "key": "multi-screen_apps",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "multi-screen_apps"
+      }
+    },
+    {
+      "name": "Paper Prototype Project Guide",
       "url": "https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/view",
       "key": "paper-prototype-2021",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
         "include_in_pdf": true
       },
@@ -7504,7 +7617,7 @@
     },
     {
       "name": "Paper Prototypes",
-      "url": "https://docs.google.com/document/d/1-ncbYhgkXHXs4aRBxzJu9ue4r8CLZyGsIpFTIYBADt4/edit",
+      "url": "https://docs.google.com/document/d/1azVKaOq9wrtcbROSjrBr10xsuiBQA_rvODOO7RYbrbU/edit",
       "key": "paper-prototypes",
       "properties": {
         "type": "Rubric",
@@ -7513,6 +7626,18 @@
       },
       "seeding_key": {
         "resource.key": "paper-prototypes"
+      }
+    },
+    {
+      "name": "Paper Prototype - Student Checklist",
+      "url": "https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit",
+      "key": "paper_prototype_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "paper_prototype_-_student_checklist"
       }
     },
     {
@@ -7677,32 +7802,32 @@
       }
     },
     {
-      "name": "Sample Marked Rubric 1",
-      "url": "https://docs.google.com/document/d/118GHsZn4Lam2CfBURxO4cF0ZMBCIsl7cB0tH-jF108s",
-      "key": "sample_marked_rubric_1",
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1TK80IOPnC3Z3Oz5BnGu4JELZ9ewnOzWshu9dZH90iX8/view",
+      "key": "sample_marked_rubrics",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubric_1"
+        "resource.key": "sample_marked_rubrics"
       }
     },
     {
-      "name": "Sample Marked Rubric 2",
-      "url": "https://docs.google.com/document/d/1xhNHoP0uS2-2MT0zqsgAmYAEQz-j7GCcf9eUi45uh9E/edit#heading=h.x6qf06pz94i6",
-      "key": "sample_marked_rubric_2_1",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubric_2_1"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1Y9WTc_RRT333k_Sc21S-JANvZHpAZiv_jWC0lPEeSw8",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1jpcg90ImVQKQoWMCsHQwFcnNCFwbx_kTxxVwuYjR3bQ/edit",
       "key": "sample_marked_rubrics_1_1",
       "properties": {
         "type": "Exemplar",
@@ -7710,18 +7835,6 @@
       },
       "seeding_key": {
         "resource.key": "sample_marked_rubrics_1_1"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1xCbTX6f65JLRC2s52PSfmOYFjcntKbZb_El0dK-yF8A",
-      "key": "sample_marked_rubrics_2_1",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_1"
       }
     },
     {
@@ -8153,13 +8266,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubric_1"
+        "resource.key": "sample_marked_rubrics"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubric_2_1"
+        "resource.key": "paper_prototype_-_student_checklist"
       }
     },
     {
@@ -8182,6 +8295,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "resource.key": "app_design_kickoff"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "unit-4-the-design-process"
       }
@@ -8190,6 +8309,12 @@
       "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "market-research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research"
       }
     },
     {
@@ -8220,6 +8345,18 @@
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
         "resource.key": "phone-paper-prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "resource.key": "design_mode_elements"
       }
     },
     {
@@ -8278,6 +8415,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "design_mode_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "resource.key": "design_mode_elements_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Digital Prototype",
         "resource.key": "unit-4-the-design-process"
       }
@@ -8298,6 +8447,30 @@
       "seeding_key": {
         "lesson.key": "Linking Screens",
         "resource.key": "unit-4-the-design-process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "multi-screen_apps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "changing_screens"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -8387,13 +8560,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "sample_marked_rubrics_2_1"
+        "resource.key": "peer_review_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "peer_review_2"
+        "resource.key": "app_presentation_-_student_checklist"
       }
     }
   ],
@@ -8448,24 +8621,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "bug_report",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "how_to_debug",
-        "script.name": "csd4-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {

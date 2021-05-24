@@ -58,7 +58,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "tts_short_instructions_override": "Drag the make a new block into the workspace, and connect it inside the setup block.",
-    "tts_long_instructions_override": "Drag the make a new block into the workspace, and connect it inside the setup block. Choose cat or sloth to create your first dancer.\r\nYou can also click the lightbulb to the left if you want more information or extra challenges."
+    "tts_long_instructions_override": "Drag the make a new block into the workspace, and connect it inside the setup block. Choose cat or sloth to create your first dancer.\r\nYou can also click the lightbulb to the left if you want more information or extra challenges.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
