@@ -116,6 +116,31 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal(feedbacks[1], TeacherFeedback.where(student: students[1]).latest)
   end
 
+  test 'student_last_updated returns nil if there was no attempt by student' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    assert_nil(feedback.student_last_updated)
+  end
+
+  test 'student_last_updated returns updated_at if there was an attempt on the level' do
+    teacher = create :teacher
+    student = create :student
+    level = create :level
+    script = create :script
+    create :script_level, script: script, levels: [level]
+
+    feedback = create :teacher_feedback, teacher: teacher, student: student, level: level, script: script
+    user_level = create :user_level, user: student, level: level, script: script
+    user_level.reload # get actual updated_at
+
+    assert_equal(feedback.student_last_updated, user_level.updated_at)
+  end
+
   test 'destroys when teacher is destroyed' do
     teacher = create :teacher
     first_feedback = create :teacher_feedback, teacher: teacher
