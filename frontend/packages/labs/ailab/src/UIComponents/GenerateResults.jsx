@@ -40,20 +40,13 @@ class GenerateResults extends Component {
   }
 
   componentDidMount() {
-    this.onClickTrainModel();
-  }
-
-  onClickTrainModel = () => {
-    train.init();
-    train.onClickTrain();
-
     const animationTimer = setInterval(
       this.updateAnimation.bind(this),
       1000 / 30
     );
 
     this.setState({ animationTimer });
-  };
+  }
 
   getAnimationSubstep = () => {
     return this.state.frame % framesPerCycle;

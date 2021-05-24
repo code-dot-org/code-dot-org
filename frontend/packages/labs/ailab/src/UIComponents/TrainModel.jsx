@@ -35,10 +35,6 @@ class TrainModel extends Component {
   }
 
   componentDidMount() {
-    this.onClickTrainModel();
-  }
-
-  onClickTrainModel = () => {
     train.init();
     train.onClickTrain();
 
