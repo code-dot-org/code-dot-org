@@ -90,7 +90,13 @@ export default class NameFileDialog extends Component {
             </button>
           </div>
         </div>
-        {errorMessage && <div style={styles.errorMessage}>{errorMessage}</div>}
+        {errorMessage && (
+          <div
+            style={isDarkMode ? styles.darkErrorMessage : styles.errorMessage}
+          >
+            {errorMessage}
+          </div>
+        )}
       </BaseDialog>
     );
   }
@@ -137,5 +143,9 @@ const styles = {
   },
   errorMessage: {
     color: color.red
+  },
+  darkErrorMessage: {
+    backgroundColor: color.dark_slate_gray,
+    color: color.lightest_red
   }
 };
