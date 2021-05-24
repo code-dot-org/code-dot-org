@@ -142,7 +142,9 @@ const prepareTrainingData = () => {
     while (numReserved < numToReserve) {
       let randomIndex = getRandomInt(trainingExamples.length - 1);
       accuracyCheckExamples.push(trainingExamples[randomIndex]);
+      trainingExamples.splice(randomIndex, 1);
       accuracyCheckLabels.push(trainingLabels[randomIndex]);
+      trainingLabels.splice(randomIndex, 1);
       numReserved++;
     }
   }
