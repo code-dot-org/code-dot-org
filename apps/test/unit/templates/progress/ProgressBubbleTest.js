@@ -197,7 +197,7 @@ describe('ProgressBubble', () => {
   });
 
   it('uses display name when isSublevel is true', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <ProgressBubble
         {...defaultProps}
         level={{
@@ -269,6 +269,7 @@ describe('ProgressBubble', () => {
 
   describe('href', () => {
     it('links to the level url', () => {
+      sinon.stub(utils, 'currentLocation').returns({search: ''});
       const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
@@ -279,6 +280,7 @@ describe('ProgressBubble', () => {
         />
       );
       assert.equal(wrapper.find('a').prop('href'), '/my/test/url');
+      utils.currentLocation.restore();
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
