@@ -70,9 +70,7 @@ export default class KNNTrainer {
     store.dispatch(setTrainedModel(bestModel));
     const size = Buffer.byteLength(JSON.stringify(bestModel));
     const kiloBytes = size / 1024;
-    setTimeout(() => {
-      store.dispatch(setModelSize(kiloBytes));
-    }, 3000);
+    store.dispatch(setModelSize(kiloBytes));
 
     const state2 = store.getState();
 

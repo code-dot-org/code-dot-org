@@ -5,6 +5,7 @@ import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import DataCard from "./UIComponents/DataCard";
 import TrainModel from "./UIComponents/TrainModel";
+import GenerateResults from "./UIComponents/GenerateResults";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
@@ -195,6 +196,14 @@ class App extends Component {
           <BodyContainer>
             <ContainerFullWidth>
               <TrainModel />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "generateResults" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <GenerateResults />
             </ContainerFullWidth>
           </BodyContainer>
         )}

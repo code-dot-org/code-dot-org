@@ -208,7 +208,7 @@ export function setHistoricResult(label, features, accuracy) {
 }
 
 export function setShowResultsDetails(show) {
-  return {type: SET_SHOW_RESULTS_DETAILS, show};
+  return { type: SET_SHOW_RESULTS_DETAILS, show };
 }
 
 export function setKValue(kValue) {
@@ -793,7 +793,7 @@ function isEmpty(object) {
 export function getConvertedValue(state, rawValue, column) {
   const convertedValue =
     getCategoricalColumns(state).includes(column) &&
-      !isEmpty(state.featureNumberKey)
+    !isEmpty(state.featureNumberKey)
       ? getKeyByValue(state.featureNumberKey[column], rawValue)
       : rawValue;
   return convertedValue;
@@ -1034,10 +1034,9 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
-  dataToSave.selectedTrainer =
-    isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer;
+  dataToSave.selectedTrainer = isRegression(state)
+    ? RegressionTrainer
+    : ClassificationTrainer;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
@@ -1121,7 +1120,8 @@ function isPanelEnabled(state, panelId) {
     if (
       state.percentDataToReserve === 0 ||
       state.accuracyCheckExamples.length === 0 ||
-      ["success", "started"].includes(state.saveStatus)) {
+      ["success", "started"].includes(state.saveStatus)
+    ) {
       return false;
     }
   }
@@ -1153,7 +1153,7 @@ function isPanelAvailable(state, panelId) {
   }
 
   if (panelId === "saveModel") {
-    if (mode && mode.hideSave || state.saveStatus === "success") {
+    if ((mode && mode.hideSave) || state.saveStatus === "success") {
       return false;
     }
   }
@@ -1207,6 +1207,11 @@ export function getPanelButtons(state) {
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
+    if (state.modelSize) {
+      prev = null;
+      next = { panel: "generateResults", text: "Continue" };
+    }
+  } else if (state.currentPanel === "generateResults") {
     if (state.modelSize) {
       prev = null;
       next = { panel: "results", text: "Continue" };

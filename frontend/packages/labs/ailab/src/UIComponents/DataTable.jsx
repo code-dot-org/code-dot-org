@@ -17,7 +17,9 @@ class DataTable extends Component {
     highlightColumn: PropTypes.string,
     reducedColumns: PropTypes.bool,
     singleRow: PropTypes.number,
-    startingRow: PropTypes.number
+    startingRow: PropTypes.number,
+    noLabel: PropTypes.bool,
+    hideLabel: PropTypes.bool
   };
 
   getColumnHeaderStyle = key => {
@@ -35,7 +37,9 @@ class DataTable extends Component {
   getColumnCellStyle = key => {
     let style;
 
-    if (key === this.props.currentColumn) {
+    if (this.props.hideLabel && this.props.labelColumn === key) {
+      style = styles.dataDisplayCellHidden;
+    } else if (key === this.props.currentColumn) {
       if (this.props.currentPanel === "dataDisplayLabel") {
         style = styles.dataDisplayCellSelectedLabel;
       } else {
@@ -54,12 +58,16 @@ class DataTable extends Component {
 
   getColumns = () => {
     if (this.props.reducedColumns) {
-      return Object.keys(this.props.data[0]).filter(key => {
-        return (
-          this.props.labelColumn === key ||
-          this.props.selectedFeatures.includes(key)
-        );
-      });
+      return Object.keys(this.props.data[0])
+        .filter(key => {
+          return (
+            (!this.props.noLabel && this.props.labelColumn === key) ||
+            this.props.selectedFeatures.includes(key)
+          );
+        })
+        .sort((key1, key2) => {
+          return this.props.labelColumn === key1 ? 1 : -1;
+        });
     }
 
     return Object.keys(this.props.data[0]);
@@ -72,24 +80,18 @@ class DataTable extends Component {
           Math.min(this.props.singleRow, this.props.data.length - 1)
         ]
       ];
-    } else if (this.props.startingRow !== undefined) {
-      const subsetRowCount = 30;
-      const actualStartingRow = Math.min(
-        this.props.startingRow,
-        Math.max(this.props.data.length - subsetRowCount, 0)
-      );
-      const returnRows = this.props.data.slice(
-        actualStartingRow,
-        actualStartingRow + subsetRowCount
-      );
-      return returnRows;
     } else {
-      return this.props.data;
+      return this.props.data.slice(0, 100);
     }
   };
 
   render() {
-    const { data, setCurrentColumn, setHighlightColumn } = this.props;
+    const {
+      data,
+      setCurrentColumn,
+      setHighlightColumn,
+      startingRow
+    } = this.props;
 
     if (data.length === 0) {
       return null;
@@ -127,7 +129,11 @@ class DataTable extends Component {
                       onMouseEnter={() => setHighlightColumn(key)}
                       onMouseLeave={() => setHighlightColumn(undefined)}
                     >
-                      {row[key]}
+                      {startingRow !== undefined && index <= startingRow ? (
+                        <span>&nbsp;</span>
+                      ) : (
+                        row[key]
+                      )}
                     </td>
                   );
                 })}

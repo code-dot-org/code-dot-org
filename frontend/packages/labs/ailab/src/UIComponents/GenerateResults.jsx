@@ -5,15 +5,15 @@ import { connect } from "react-redux";
 import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
-import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
-import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
+import aiBotClosed from "@public/images/ai-bot/ai-bot-closed.png";
+import blueScanner from "@public/images/ai-bot/blue-scanner.png";
 import background from "@public/images/results-background-light.png";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 80;
 const numItems = 7;
 
-class TrainModel extends Component {
+class GenerateResults extends Component {
   static propTypes = {
     data: PropTypes.array,
     readyToTrain: PropTypes.bool,
@@ -23,36 +23,38 @@ class TrainModel extends Component {
     instructionsOverlayActive: PropTypes.bool
   };
 
+  state = {
+    frame: 0,
+    animationTimer: undefined,
+    headOpen: false
+  };
+
   constructor(props) {
     super(props);
 
     this.state = {
       frame: 0,
-      animationtimer: undefined,
-      headOpen: false,
+      animationTimer: undefined,
       finished: false
     };
   }
 
   componentDidMount() {
-    train.init();
-    train.onClickTrain();
-
     const animationTimer = setInterval(
       this.updateAnimation.bind(this),
       1000 / 30
     );
 
     this.setState({ animationTimer });
+  }
+
+  getAnimationSubstep = () => {
+    return this.state.frame % framesPerCycle;
   };
 
   updateAnimation = () => {
-    if (this.state.frame === 15) {
-      this.setState({ headOpen: true });
-    }
-
     if (this.getAnimationStep() >= numItems) {
-      this.setState({ headOpen: false, finished: true });
+      this.setState({ finished: true });
     }
 
     if (!this.props.instructionsOverlayActive) {
@@ -68,9 +70,9 @@ class TrainModel extends Component {
   };
 
   getAnimationProgess = () => {
-    let amount = (this.state.frame % framesPerCycle) / framesPerCycle;
+    let amount = (2 * (this.state.frame % framesPerCycle)) / framesPerCycle;
     amount -= Math.sin(amount * 2 * Math.PI) / (2 * Math.PI);
-    return amount;
+    return amount / 2;
   };
 
   getAnimationStep = () => {
@@ -79,13 +81,14 @@ class TrainModel extends Component {
 
   render() {
     const animationProgress = this.getAnimationProgess();
-    const translateX = 15 + animationProgress * (100 - 15);
-    const translateY = 80 - Math.sin(animationProgress * Math.PI) * 30;
-    const rotateZ = animationProgress * 60;
+    const translateX = 30 + animationProgress * 40;
+    const translateY = 15;
+    const rotateZ = 5 + animationProgress * -10;
     const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
     const opacity = getFadeOpacity(animationProgress);
+    const hideLabel = this.getAnimationSubstep() < framesPerCycle / 2;
     const showAnimation = this.getAnimationStep() < numItems;
-
+    const botImage = aiBotClosed;
     const maxFrames = framesPerCycle * (numItems - 1.5);
     const tableOpacity =
       this.state.frame < framesPerCycle
@@ -112,48 +115,55 @@ class TrainModel extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statement}>Training</div>
+        <div style={styles.statement}>Testing accuracy</div>
 
-        <div
-          style={{
-            ...styles.trainModelDataTable,
-            opacity: tableOpacity
-          }}
-        >
-          <DataTable reducedColumns={true} startingRow={startingRow} />
-        </div>
+        <div style={styles.generateResultsContainer}>
+          <div
+            style={{
+              ...styles.generateResultsDataTable,
+              opacity: tableOpacity
+            }}
+          >
+            <DataTable
+              reducedColumns={true}
+              startingRow={startingRow}
+              noLabel={true}
+            />
+          </div>
 
-        <div style={styles.trainModelContainer}>
           {showAnimation && (
             <div
               style={{
                 position: "absolute",
                 transformOrigin: "center center",
-                top: translateY + "%",
+                bottom: translateY + "%",
                 left: translateX + "%",
                 transform: transform,
-                opacity: opacity * tableOpacity
+                opacity: opacity * tableOpacity,
+                zIndex: 1
               }}
             >
               <DataTable
                 reducedColumns={true}
                 singleRow={this.getAnimationStep()}
+                hideLabel={hideLabel}
               />
             </div>
           )}
         </div>
 
         {this.props.readyToTrain && (
-          <div style={styles.trainModelBotContainer}>
+          <div style={styles.generateResultsBotContainer}>
             <div style={{ ...styles.trainBot, margin: "0 auto" }}>
-              <img
-                src={aiBotHead}
-                style={{
-                  ...styles.trainBotHead,
-                  ...(this.state.headOpen && styles.trainBotOpen)
-                }}
-              />
-              <img src={aiBotBody} style={styles.trainBotBody} />
+              <div>
+                <img src={botImage} style={styles.trainBotBody} />
+              </div>
+              <div style={{ width: 150 }}>
+                <img
+                  src={blueScanner}
+                  style={{ width: "100%", opacity: tableOpacity }}
+                />
+              </div>
             </div>
           </div>
         )}
@@ -168,4 +178,4 @@ export default connect(state => ({
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
   instructionsOverlayActive: state.instructionsOverlayActive
-}))(TrainModel);
+}))(GenerateResults);
