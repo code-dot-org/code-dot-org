@@ -5,12 +5,12 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import {ViewType} from '../viewAsRedux';
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
-import {isStageHiddenForSection} from '../hiddenStageRedux';
+import {isLessonHiddenForSection} from '../hiddenLessonRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the
  * student would see and what they see as a teacher. In some cases (such as
- * locked stages and hidden stages) this means hiding the main content, and
+ * locked lessons and hidden lessons) this means hiding the main content, and
  * replacing it with something else.
  * We accomplish this by having the server render that other content to a known
  * dom element (#locked-stage, #hidden-stage). This component then creates
@@ -22,10 +22,10 @@ class TeacherContentToggle extends React.Component {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided
     viewAs: PropTypes.string.isRequired,
-    hiddenStagesInitialized: PropTypes.bool.isRequired,
+    hiddenLessonsInitialized: PropTypes.bool.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
-    isHiddenStage: PropTypes.bool.isRequired,
-    isLockedStage: PropTypes.bool.isRequired
+    isHiddenLesson: PropTypes.bool.isRequired,
+    isLockedLesson: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -51,10 +51,10 @@ class TeacherContentToggle extends React.Component {
   render() {
     const {
       viewAs,
-      hiddenStagesInitialized,
+      hiddenLessonsInitialized,
       sectionsAreLoaded,
-      isLockedStage,
-      isHiddenStage,
+      isLockedLesson,
+      isHiddenLesson,
       isBlocklyOrDroplet
     } = this.props;
 
@@ -68,12 +68,12 @@ class TeacherContentToggle extends React.Component {
     let contentStyle = {
       height: '100%'
     };
-    let hasOverlayFrame = isLockedStage || isHiddenStage;
+    let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
     if (viewAs === ViewType.Student) {
       // Keep this hidden until we've made our async calls for hidden_stages and
-      // locked stages, so that we don't flash content before hiding it
-      if (!hiddenStagesInitialized || !sectionsAreLoaded || hasOverlayFrame) {
+      // locked lessons, so that we don't flash content before hiding it
+      if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
         contentStyle.visibility = 'hidden';
       }
     }
@@ -88,8 +88,8 @@ class TeacherContentToggle extends React.Component {
       contentStyle.display = 'none';
     }
 
-    const showLockedStageMessage = isLockedStage && !isHiddenStage;
-    const showHiddenStageMessage = isHiddenStage;
+    const showLockedLessonMessage = isLockedLesson && !isHiddenLesson;
+    const showHiddenLessonMessage = isHiddenLesson;
 
     // Note: This component depends on the fact that the only thing we change about
     // our children as we rerender is their style.
@@ -97,11 +97,11 @@ class TeacherContentToggle extends React.Component {
       <div style={styles.container}>
         <div style={contentStyle} ref="content" />
         <div
-          style={[frameStyle, !showLockedStageMessage && styles.hidden]}
+          style={[frameStyle, !showLockedLessonMessage && styles.hidden]}
           ref="lockMessage"
         />
         <div
-          style={[frameStyle, !showHiddenStageMessage && styles.hidden]}
+          style={[frameStyle, !showHiddenLessonMessage && styles.hidden]}
           ref="hiddenMessage"
         />
       </div>
@@ -124,31 +124,31 @@ export const UnconnectedTeacherContentToggle = Radium(TeacherContentToggle);
 export const mapStateToProps = state => {
   const viewAs = state.viewAs;
 
-  let isLockedStage = false;
-  let isHiddenStage = false;
-  const {currentStageId} = state.progress;
+  let isLockedLesson = false;
+  let isHiddenLesson = false;
+  const {currentLessonId} = state.progress;
   if (viewAs === ViewType.Student) {
     const {selectedSectionId} = state.teacherSections;
 
-    isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
-    isHiddenStage = isStageHiddenForSection(
-      state.hiddenStage,
+    isLockedLesson = lessonIsLockedForAllStudents(currentLessonId, state);
+    isHiddenLesson = isLessonHiddenForSection(
+      state.hiddenLesson,
       selectedSectionId,
-      currentStageId
+      currentLessonId
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
-    isLockedStage = state.progress.stages.some(
-      stage => stage.id === currentStageId && stage.lockable
+    isLockedLesson = state.progress.stages.some(
+      lesson => lesson.id === currentLessonId && lesson.lockable
     );
   }
 
   return {
     viewAs,
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    hiddenStagesInitialized: state.hiddenStage.hiddenStagesInitialized,
-    isHiddenStage,
-    isLockedStage
+    hiddenLessonsInitialized: state.hiddenLesson.hiddenLessonsInitialized,
+    isHiddenLesson,
+    isLockedLesson
   };
 };
 
