@@ -235,11 +235,11 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
-    # stage data
-    stages = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |stage, levels|
+    # lesson data
+    lessons = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |lesson, levels|
       {
         length: levels.length,
-        title: ActionController::Base.helpers.strip_tags(stage.localized_title)
+        title: ActionController::Base.helpers.strip_tags(lesson.localized_title)
       }
     end
 
@@ -298,7 +298,7 @@ class ApiController < ApplicationController
         id: script.id,
         name: data_t_suffix('script.name', script.name, 'title'),
         levels_count: script_levels.length,
-        stages: stages,
+        stages: lessons,
       }
     }
 
@@ -387,8 +387,8 @@ class ApiController < ApplicationController
     response[:signedIn] = !current_user.nil?
 
     script = Script.get_from_cache(params[:script])
-    stage = script.lessons[params[:lesson_position].to_i - 1]
-    script_level = stage.cached_script_levels[params[:level_position].to_i - 1]
+    lesson = script.lessons[params[:lesson_position].to_i - 1]
+    script_level = lesson.cached_script_levels[params[:level_position].to_i - 1]
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
