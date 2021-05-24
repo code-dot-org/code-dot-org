@@ -97,9 +97,8 @@ export default class KNNTrainer {
   }
 
   predict(testValues) {
-    let prediction = {};
     const state = store.getState();
-    prediction.predictedLabel = state.trainedModel.predict(testValues);
+    const prediction = state.trainedModel.predict(testValues);
     store.dispatch(setPrediction(prediction));
   }
 }
