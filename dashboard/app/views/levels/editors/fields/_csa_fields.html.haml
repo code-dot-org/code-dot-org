@@ -5,3 +5,6 @@
   .field
     Select the desired CSA view:
     = f.select :csa_view_mode, options_for_select([['Console', 'console'], ['Neighborhood', 'neighborhood'], ['Theater', 'theater']])
+  .field
+    Select the grid width/height in tiles
+    = f.select :grid_dimensions, options_for_select([[8, 8], [10, 10], [12, 12], [14, 14], [16, 16], [24, 24], [32, 32]])
