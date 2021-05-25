@@ -20676,7 +20676,7 @@ en:
             lesson-4:
               name: Create PT Deep Dive
               description_student: 
-              description_teacher: 
+              description_teacher: This lesson will be updated in Fall 2021 to reflect updates to the Create PT.
           lesson_groups: {}
           name: csp8-2021
           student_description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
@@ -20733,8 +20733,8 @@ en:
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
             lesson-10:
               name: Algorithmic Bias
-              description_student: 
-              description_teacher: 
+              description_student: In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image.
+              description_teacher: In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
@@ -20979,7 +20979,7 @@ en:
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
-              name: A Royal Battle with Events
+              name: 'Mini-Project: A Royal Battle with Events'
               description_student: Use events to create a story or make an interactive game.
               description_teacher: 'In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they''ve learned to create an animated game. '
             lesson-1:
@@ -22430,8 +22430,12 @@ en:
               description_teacher: Students are introduced to the Project Mercury Pastries food truck and the owner's need for a program to input and store dessert items. As software engineers, students utilize object-oriented design strategies to identify necessary attributes and appropriate data types for a `Dessert` class. Students write a constructor and use a `Scanner` object to obtain values for the instance variables to initialize a `Dessert` object.
             lesson-4:
               name: Adding Multiple Constructors
+              description_student: The Project Mercury Pastries food truck has grown in popularity! To help the owner fill orders, you improve the `Dessert` class to create `Dessert` objects more efficiently. To solve this problem, you implement overloaded constructors to simplify your code and add flexibility for creating `Dessert` objects. To fill standard orders, you create a default constructor to use default values for `Dessert`s.
+              description_teacher: 'Students continue to work on the Project Mercury Pastries food truck program. Students write overloaded constructors for the `Dessert` class to provide multiple ways to instantiate `Dessert` objects. Students determine when it is appropriate to establish default values for one or more instance variables and use no-argument constructors. '
             lesson-5:
               name: Manipulating Variables and Object Data
+              description_student: You explore the rules that a computer uses to determine the resulting value and type of an expression, similar to the ones you see in math class. You create expressions to get the computer to do the math for you.
+              description_teacher: In this lesson, students write and evaluate expressions using variables and object data. Students use arithmetic operators (+, -, *, /, %) and compound assignment (+=, -=, *=, /=, %=) operators to perform calculations involving variables and object data.
             lesson-6:
               name: Minimizing Errors in Initialization
             lesson-7:
