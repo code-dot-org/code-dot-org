@@ -2,7 +2,7 @@
   "script": {
     "name": "coursed-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-20 17:48:38 UTC",
+    "serialized_at": "2021-05-25 17:15:01 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -3242,7 +3242,7 @@
       "key": "0a565c10-633a-486e-9d62-f62933373bf7",
       "position": 1,
       "properties": {
-        "description": "While loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas of each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops.",
+        "description": "While loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas off each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops.",
         "name": "While Loops in Farmer"
       },
       "seeding_key": {

@@ -1,0 +1,17 @@
+<BubbleChoice>
+  <config><![CDATA[{
+  "game_id": 65,
+  "created_at": "2020-06-18T19:28:31.000Z",
+  "properties": {
+    "display_name": "End of Course Project",
+    "description": "You have reached the last lesson of the Express Course! Choose a project to create.",
+    "sublevels": [
+      "CourseD_EOC_dance",
+      "Course F: Artist Project_2020",
+      "Course E: Frozen Project_2020",
+      "CourseF_Project_SpriteLab_2020"
+    ]
+  },
+  "published": false
+}]]></config>
+</BubbleChoice>

@@ -2,7 +2,7 @@
   "script": {
     "name": "csd2-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-21 18:06:35 UTC",
+    "serialized_at": "2021-05-25 17:10:37 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -1055,7 +1055,7 @@
       "key": "50301e64-0051-4071-ab27-c0f0eb834ca5",
       "position": 2,
       "properties": {
-        "duration": 165,
+        "duration": 210,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1278,7 +1278,7 @@
       "key": "71440e94-c031-42dd-a79d-3f8cb5056b9f",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1320,7 +1320,7 @@
       "key": "12d9a87a-588e-43d1-b12d-ad4b83414276",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1362,7 +1362,7 @@
       "key": "9c7bec47-be70-4024-a4f2-21f687434008",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -7294,6 +7294,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021"
+        ],
         "progression": "Reflection"
       },
       "named_level": false,
@@ -10120,7 +10123,6 @@
       "url": "https://docs.google.com/document/d/1HA8nG3-qIb57id98VJfpYgVTx83vsri9C5ACLtvk8wA/edit",
       "key": "website_for_a_purpose_-_student_checklist",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
         "include_in_pdf": true
       },

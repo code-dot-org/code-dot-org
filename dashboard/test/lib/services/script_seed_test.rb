@@ -82,14 +82,13 @@ module Services
       #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
       #   1 query to get all the programming environments
       #   1 query to get all the standards frameworks
-      #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
       # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(102) do
+      assert_queries(85) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -287,6 +286,23 @@ module Services
 
       assert_script_trees_equal script_with_changes, script
       assert_equal 'foo', script.script_levels.first.challenge
+    end
+
+    test 'seed updates levels_script_levels' do
+      script = create_script_tree
+      new_level = create :level
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        updated_script_level = script.script_levels.first
+        updated_script_level.add_variant(new_level)
+        assert_equal 2, script.script_levels.first.levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal 2, script.script_levels.first.levels.count
     end
 
     test 'seed updates lesson resources' do
@@ -600,7 +616,6 @@ module Services
     test 'seed deletes script_levels' do
       script = create_script_tree
       original_counts = get_counts
-      original_script_level_ids = script.script_levels.map(&:id)
 
       script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
         script.script_levels.first.destroy!
@@ -619,8 +634,33 @@ module Services
       expected_counts['ScriptLevel'] -= 1
       expected_counts['LevelsScriptLevel'] -= 1
       assert_equal expected_counts, get_counts
-      # We need to preserve the script level ids of the remaining script levels, since teacher feedbacks reference them.
-      assert_equal original_script_level_ids.slice(1, original_script_level_ids.length), script.script_levels.map(&:id)
+    end
+
+    test 'seed deletes levels_script_levels' do
+      script = create_script_tree
+      old_level = script.script_levels.first.levels.first
+      new_level = create :level, level_num: 'custom'
+      script.script_levels.first.add_variant(new_level)
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script_level = script.script_levels.first
+        script_level.update!(
+          levels: [old_level],
+          level_keys: [old_level.key],
+          variants: nil
+        )
+        assert_equal 1, script_level.levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      assert_equal 1, script.script_levels.first.levels.count
+      expected_counts = original_counts.clone
+      expected_counts['LevelsScriptLevel'] -= 1
+      assert_equal expected_counts, get_counts
     end
 
     # Resources are owned by the course version. We need to make sure all the
@@ -984,9 +1024,9 @@ module Services
     def assert_script_levels_equal(script_levels1, script_levels2)
       script_levels1.zip(script_levels2).each do |sl1, sl2|
         assert_attributes_equal(sl1, sl2, ['script_id', 'stage_id', 'activity_section_id', 'properties'])
-        # level_names is generated during seeding
+        # level_keys is generated during seeding
         # TODO: should we use a callback or validation to verify that level_keys is always populated correctly?
-        assert_equal sl1.properties, sl2.properties.except('level_keys')
+        assert_equal sl1.properties.except('level_keys'), sl2.properties.except('level_keys')
         assert_equal sl1.levels, sl2.levels
       end
     end
@@ -1108,7 +1148,7 @@ module Services
             )
             (1..num_script_levels_per_section).each do |sl_pos|
               game = create :game, name: "#{name_prefix}_game#{sl_num}"
-              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "1_2_#{sl_num}", game: game
+              level = create :level, name: "#{name_prefix}_blockly_#{sl_num}", level_num: "custom", game: game
               create :script_level, activity_section: section, activity_section_position: sl_pos,
                      lesson: lesson, script: script, levels: [level], challenge: sl_num.even?,
                      assessment: false, bonus: false, named_level: false

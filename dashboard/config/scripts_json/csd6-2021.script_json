@@ -2,7 +2,7 @@
   "script": {
     "name": "csd6-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-05-21 15:31:37 UTC",
+    "serialized_at": "2021-05-25 17:10:41 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -506,7 +506,7 @@
       "key": "2fff60de-5366-470f-ad77-577397a87071",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -758,7 +758,7 @@
       "key": "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -800,7 +800,7 @@
       "key": "fe4547e7-73f8-4c7b-a67f-a61b4a10332c",
       "position": 2,
       "properties": {
-        "duration": 215,
+        "duration": 125,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1010,7 +1010,7 @@
       "key": "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1066,7 +1066,7 @@
       "key": "ca01af5b-36a3-461d-b6b0-9802dc211193",
       "position": 3,
       "properties": {
-        "duration": 30,
+        "duration": 75,
         "name": "Activity 2"
       },
       "seeding_key": {
@@ -3206,8 +3206,14 @@
       "key": "0516be14-10b2-4124-af7c-3d76c5177d95",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\r\n\r\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. Direct students towards the the rubric so that they know from the beginning what components of the project you will be looking for.",
-        "name": "Review Project Guide\r"
+        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\n\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. \n\nDistribute the rubric or student checklist to each student. Have them look over this resource so that they know from the beginning what components of the project you will be looking for.",
+        "name": "Review Project Guide\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0516be14-10b2-4124-af7c-3d76c5177d95",
@@ -10435,10 +10441,24 @@
       "key": "make-game-guide",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "make-game-guide"
+      }
+    },
+    {
+      "name": "Make a Game",
+      "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY/edit",
+      "key": "make_a_game",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_a_game"
       }
     },
     {
@@ -10553,7 +10573,7 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1iCIp2USouJwLmQcc-VhoBPKMyvnEXDBq28ojLVbTJ90/edit",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
       "key": "prototype-an-innovation-1",
       "properties": {
         "type": "Rubric",
@@ -10562,6 +10582,18 @@
       },
       "seeding_key": {
         "resource.key": "prototype-an-innovation-1"
+      }
+    },
+    {
+      "name": "Prototype an Innovation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "key": "prototype_an_innovation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_-_student_checklist"
       }
     },
     {
@@ -10589,18 +10621,6 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 1",
-      "url": "https://docs.google.com/document/d/1S-R6ks2fKTlKChpWWFpufdu5W50I6NHM1J1QmQEES90",
-      "key": "sample_marked_rubrics_1_2",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_1_2"
-      }
-    },
-    {
       "name": "Sample Marked Rubrics 2",
       "url": "https://docs.google.com/document/d/1BGvFeAfcmTI_egJG8lBqtOcvx8xkS8iJyzBp0N6RdKY",
       "key": "sample_marked_rubrics_2_2",
@@ -10613,15 +10633,15 @@
       }
     },
     {
-      "name": "Sample Marked Rubrics 2",
-      "url": "https://docs.google.com/document/d/1gGSlo9tq3KywGsbbfWQLLBq_ImejliLD6mvw7ICHklc",
-      "key": "sample_marked_rubrics_2_3",
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
+      "key": "sample_marked_rubrics_4",
       "properties": {
         "type": "Exemplar",
         "audience": "Verified Teacher"
       },
       "seeding_key": {
-        "resource.key": "sample_marked_rubrics_2_3"
+        "resource.key": "sample_marked_rubrics_4"
       }
     },
     {
@@ -10813,6 +10833,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "resource.key": "make_a_game"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
         "resource.key": "introduction_to_arrays"
       }
@@ -10916,25 +10942,25 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_1_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Prototype an Innovation",
         "resource.key": "peer_review_1_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics_2_3"
+        "resource.key": "peer_review_2_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
-        "resource.key": "peer_review_2_1"
+        "resource.key": "sample_marked_rubrics_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_-_student_checklist"
       }
     }
   ],
