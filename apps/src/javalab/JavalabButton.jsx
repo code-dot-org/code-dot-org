@@ -10,7 +10,7 @@ export default function JavalabButton({icon, text, style, onClick}) {
       onClick={onClick}
     >
       {icon}
-      {text && <div style={styles.text}>{text}</div>}
+      {text && <div style={icon && styles.padding}>{text}</div>}
     </button>
   );
 }
@@ -28,7 +28,7 @@ const styles = {
     alignItems: 'center',
     color: color.white
   },
-  text: {
+  padding: {
     paddingTop: 5
   }
 };
