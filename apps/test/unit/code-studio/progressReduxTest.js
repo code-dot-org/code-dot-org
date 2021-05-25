@@ -1378,7 +1378,7 @@ describe('progressReduxTest', () => {
         'progress/SET_SCRIPT_PROGRESS',
         'progress/MERGE_RESULTS',
         'progress/MERGE_PEER_REVIEW_PROGRESS',
-        'progress/SET_CURRENT_STAGE_ID'
+        'progress/SET_CURRENT_LESSON_ID'
       ];
       return promise.then(serverResponseData => {
         assert.deepEqual(expectedDispatchActions, getDispatchActions());
