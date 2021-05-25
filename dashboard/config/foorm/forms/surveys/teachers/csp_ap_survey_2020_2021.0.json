@@ -1,0 +1,369 @@
+{
+  "title": "Code.org CSP AP survey 2020-2021 school year",
+  "description": "Here's my description",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "students_took_exam",
+          "title": "Did any of your students take the AP CSP exam (or a portion of the exam) this school year (2020-2021)?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Yes"
+            },
+            {
+              "value": "item3",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "exam_mandatory",
+          "visibleIf": "{students_took_exam} = 'item1'",
+          "title": "For your students this year (2020-2021), was the AP exam...",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "Mandatory for all of your students?"
+            },
+            {
+              "value": "item2",
+              "text": "Highly recommended for all of your students?"
+            },
+            {
+              "value": "item3",
+              "text": "Optional for all of your students?"
+            },
+            {
+              "value": "item4",
+              "text": "Recommended for some of your students and not for others?"
+            },
+            {
+              "value": "item5",
+              "text": "Not recommended for any of your students?"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "who_decides_mandatory",
+          "visibleIf": "{exam_mandatory} = 'item1'",
+          "title": "Who decides whether or not the AP CSP exam is mandatory for your students?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "A district administrator or other district official"
+            },
+            {
+              "value": "item2",
+              "text": "My principal"
+            },
+            {
+              "value": "item3",
+              "text": "The head of my department"
+            },
+            {
+              "value": "item4",
+              "text": "Me / the teacher of the class"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "took_multiple_choice",
+          "visibleIf": "{students_took_exam} = 'item1'",
+          "title": "What percentage of your students took the **multiple choice** portion of the CSP AP exam?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "All (100%)"
+            },
+            {
+              "value": "item2",
+              "text": "Almost all (90-99%)"
+            },
+            {
+              "value": "item3",
+              "text": "Majority of my students (60%-90%)"
+            },
+            {
+              "value": "item4",
+              "text": "About half my students (40-60%)"
+            },
+            {
+              "value": "item5",
+              "text": "About a third of my students (20-40%)"
+            },
+            {
+              "value": "item6",
+              "text": "Only a few of my students (<20%)"
+            },
+            {
+              "value": "item7",
+              "text": "None of my students"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "took_create_task",
+          "visibleIf": "{students_took_exam} = 'item1'",
+          "title": "What percentage of your students took the **Create Task** portion of the CSP AP exam?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "item1",
+              "text": "All (100%)"
+            },
+            {
+              "value": "item2",
+              "text": "Almost all (90-99%)"
+            },
+            {
+              "value": "item3",
+              "text": "Majority of my students (60%-90%)"
+            },
+            {
+              "value": "item4",
+              "text": "About half my students (40-60%)"
+            },
+            {
+              "value": "item5",
+              "text": "About a third of my students (20-40%)"
+            },
+            {
+              "value": "item6",
+              "text": "Only a few of my students (<20%)"
+            },
+            {
+              "value": "item7",
+              "text": "None of my students"
+            }
+          ]
+        },
+        {
+          "type": "matrixdropdown",
+          "name": "factors_students_took_exam",
+          "visibleIf": "{students_took_exam} = 'item1' and {exam_mandatory} anyof ['item2', 'item3', 'item4', 'item5']",
+          "title": "For the students in your class who took the exam, how important do you think the following factors were to their decision?",
+          "columns": [
+            {
+              "name": "how_important",
+              "title": "How important?"
+            }
+          ],
+          "choices": [
+            {
+              "value": "not_a_factor",
+              "text": "Not a factor"
+            },
+            {
+              "value": "not_very_important",
+              "text": "Not very important"
+            },
+            {
+              "value": "moderately_important",
+              "text": "Moderately important"
+            },
+            {
+              "value": "very_important",
+              "text": "Very important"
+            },
+            {
+              "value": "most_important",
+              "text": "Most important"
+            },
+            {
+              "value": "unsure",
+              "text": "Unsure"
+            }
+          ],
+          "rows": [
+            {
+              "value": "well_prepared",
+              "text": "They felt well-prepared to take the exam"
+            },
+            {
+              "value": "college_credit",
+              "text": "They wanted college credit"
+            },
+            {
+              "value": "college_app",
+              "text": "They wanted an AP class on their college application"
+            },
+            {
+              "value": "edu_encourage",
+              "text": "I or another educator encouraged them to take the exam"
+            },
+            {
+              "value": "parent_encourage",
+              "text": "Their parent(s) / guardian(s) encouraged them to take the exam"
+            },
+            {
+              "value": "exam_fee_paid",
+              "text": "The exam fee was waived or paid for by the school / another group"
+            },
+            {
+              "value": "cs_future",
+              "text": "They intend to pursue computer science after high school"
+            },
+            {
+              "value": "friends_took",
+              "text": "Their friends also took the exam"
+            },
+            {
+              "value": "other_pos_factor",
+              "text": "Other (please specify below)"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "other_factors_took_exam",
+          "visibleIf": "{factors_students_took_exam.other_pos_factor.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
+          "title": "What other factor(s) contributed to your students' decision to take the exam?"
+        },
+        {
+          "type": "comment",
+          "name": "how_teacher_encourage",
+          "visibleIf": "{exam_mandatory} anyof ['item4', 'item2', 'item3'] or {factors_students_took_exam.edu_encourage.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
+          "title": "What (if anything) do you do today to encourage your students to take the AP CS Principles exam? How effective is it in getting students to take the exam?"
+        },
+        {
+          "type": "matrixdropdown",
+          "name": "factors_why_not_take_exam",
+          "visibleIf": "{students_took_exam} = 'item1' and {exam_mandatory} anyof ['item2', 'item3', 'item4', 'item5']",
+          "title": "For the students in your class that did NOT take the exam, how important do you think the following factors were to their decision?",
+          "columns": [
+            {
+              "name": "how_important",
+              "title": "How Important?"
+            }
+          ],
+          "choices": [
+            {
+              "value": "not_a_factor",
+              "text": "Not a factor"
+            },
+            {
+              "value": "not_very_important",
+              "text": "Not very important"
+            },
+            {
+              "value": "moderately_important",
+              "text": "Moderately important"
+            },
+            {
+              "value": "very_important",
+              "text": "Very important"
+            },
+            {
+              "value": "most_important",
+              "text": "Most important"
+            },
+            {
+              "value": "unsure",
+              "text": "Unsure"
+            }
+          ],
+          "rows": [
+            {
+              "value": "not_prepared",
+              "text": "They were not academically prepared to take the exam "
+            },
+            {
+              "value": "not_confident",
+              "text": "They did not feel confident enough to take the exam"
+            },
+            {
+              "value": "worried_pass",
+              "text": "They were worried not passing the exam might hurt their college prospects"
+            },
+            {
+              "value": "optional_exam",
+              "text": "It was optional"
+            },
+            {
+              "value": "no_college",
+              "text": "They do not intend to attend college"
+            },
+            {
+              "value": "no_cs_future",
+              "text": "They do not intend to pursue computer science after high school"
+            },
+            {
+              "value": "edu_discourage",
+              "text": "I (or another educator) advised them not to take the exam"
+            },
+            {
+              "value": "parent_discourage",
+              "text": "Their parent(s) / guardian(s) advised them not to take the exam"
+            },
+            {
+              "value": "friends_not_take_exam",
+              "text": "Their friends were not taking the exam"
+            },
+            {
+              "value": "exam_fee_cost",
+              "text": "Having to pay the exam fee"
+            },
+            {
+              "value": "pandemic",
+              "text": "The pandemic affected their decision"
+            },
+            {
+              "value": "other_factor",
+              "text": "Other (please describe)"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "other_factors_not_take",
+          "visibleIf": "{factors_why_not_take_exam.other_factor.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
+          "title": "What other factor(s) contributed to your students' decision to NOT take the exam?"
+        },
+        {
+          "type": "comment",
+          "name": "why_discourage_students",
+          "visibleIf": "{exam_mandatory} anyof ['item4', 'item5', 'item3'] or {factors_why_not_take_exam.edu_discourage.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
+          "title": "What circumstances or factors cause you to encourage or discourage your students from taking the AP CSP exam?"
+        },
+        {
+          "type": "comment",
+          "name": "additional_ideas",
+          "visibleIf": "{exam_mandatory} anyof ['item2', 'item3', 'item4', 'item5']",
+          "title": "What additional ideas do you have for increasing the number of students that take the AP CS Principles exam? This could be something you could do or something someone else (the school, Code.org, the college board, parents, etc.) could do."
+        },
+        {
+          "type": "comment",
+          "name": "why_exam_not_offered",
+          "visibleIf": "{students_took_exam} = 'item3' or {exam_mandatory} = 'item5'",
+          "title": "What are the reasons for the AP exam *not* being offered to your students this year?"
+        },
+        {
+          "type": "comment",
+          "name": "changes_needed",
+          "visibleIf": "{students_took_exam} = 'item3' or {exam_mandatory} = 'item5'",
+          "title": "What would need to change to enable your students to take the CS Principles AP exam? How could Code.org help?"
+        },
+        {
+          "type": "comment",
+          "name": "any_other_comments",
+          "visibleIf": "{students_took_exam} anyof ['item1', 'item3']",
+          "title": "Is there anything else you’d like to tell us about the AP CS Principles exam and your CS Principles classroom?"
+        }
+      ]
+    }
+  ],
+  "published": false
+}
