@@ -2,7 +2,7 @@
   "script": {
     "name": "csp8-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:56:02 UTC",
+    "serialized_at": "2021-05-25 17:11:31 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -66,6 +66,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "This lesson will be updated in Fall 2021 to reflect updates to the Create PT."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",

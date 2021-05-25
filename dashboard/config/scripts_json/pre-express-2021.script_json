@@ -2,7 +2,7 @@
   "script": {
     "name": "pre-express-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-05-18 18:04:53 UTC",
+    "serialized_at": "2021-05-25 17:13:58 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -2111,7 +2111,7 @@
       "key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae",
       "position": 2,
       "properties": {
-        "progression_name": "Video:  Create a Story"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "dbb4fe5e-fe4d-40d4-8509-c11f826128ae",
@@ -5169,7 +5169,7 @@
         "level_keys": [
           "courseA_video_events_2021"
         ],
-        "progression": "Video:  Create a Story"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,

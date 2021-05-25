@@ -1,0 +1,10 @@
+name 'express_EOC_examples_2021'
+display_name 'Project Examples'
+description 'You are about to start your final project. Before you begin, spend some time looking at the example projects.'
+
+sublevels
+level 'CourseE_Project_SpriteLab_cupcake_examples_2021'
+level 'CourseD_EOC_dance_examples_2021'
+level 'CourseD_EOC_artist_example2021'
+level 'Course E: Frozen Project_examples_2021'
+
