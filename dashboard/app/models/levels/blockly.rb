@@ -282,7 +282,7 @@ class Blockly < Level
       set_unless_nil(level_options, 'shortInstructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
-      set_unless_nil(level_options, 'validationStrings', validation_strings)
+      set_unless_nil(level_options, 'validationStrings', localized_validation_strings)
 
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
@@ -463,6 +463,16 @@ class Blockly < Level
       end
       JSON.generate(hints)
     end
+  end
+
+  def localized_validation_strings
+    return unless validation_strings
+
+    localized_validation_strings = {}
+    JSON.parse(validation_strings).each do |key, str|
+      localized_validation_strings[key] = I18n.t(key, scope: [:data, :validation_strings, name], default: str, smart: true)
+    end
+    localized_validation_strings
   end
 
   def localized_short_instructions

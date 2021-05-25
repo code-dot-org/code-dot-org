@@ -232,11 +232,6 @@ P5Lab.prototype.init = function(config) {
     );
   }
   this.level = config.level;
-  if (this.level.validationStrings) {
-    this.level.validationStrings = JSON.parse(this.level.validationStrings);
-    console.log(this.level);
-  }
-
   this.level.helperLibraries = this.level.helperLibraries || [];
 
   this.level.softButtons = this.level.softButtons || [];

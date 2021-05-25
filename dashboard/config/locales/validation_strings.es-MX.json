@@ -1,0 +1,13 @@
+{
+  "es-MX": {
+    "data": {
+      "validation_strings": {
+        "Fish Tank 3-validated_2021-bethany": {
+          "noSprites": "Translated noSprites",
+          "spritelabFeedbackMoveFishLeftRight": "Translated spritelabFeedbackMoveFishLeftRight",
+          "spritelabFeedbackUseFishCostume": "Translated spritelabFeedbackUseFishCostume"
+        }
+      }
+    }
+  }
+} 
