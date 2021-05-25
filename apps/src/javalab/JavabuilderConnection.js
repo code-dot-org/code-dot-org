@@ -64,6 +64,7 @@ export default class JavabuilderConnection {
 
   onOpen() {
     this.onOutputMessage('Compiling...');
+    this.miniApp?.onCompile?.();
   }
 
   onMessage(event) {
