@@ -63,7 +63,7 @@ function generateCodeDesignElements(modelId, modelData) {
       input.className = modelClass;
       y = y + SPACER_PIXELS;
     }
-    var addFeature = `data.${alphaNumFeature} = getText("${fieldId}");`;
+    var addFeature = `addPair(data, "${alphaNumFeature}", getText("${fieldId}"));`;
     inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
