@@ -2,7 +2,7 @@
   "script": {
     "name": "coursee-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-05-24 15:07:47 UTC",
+    "serialized_at": "2021-05-25 17:13:47 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -9563,17 +9563,6 @@
       }
     },
     {
-      "name": "Sprite Lab Documentation",
-      "url": "https://studio.code.org/docs/spritelab/",
-      "key": "sprite_lab_documentation_2",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_lab_documentation_2"
-      }
-    },
-    {
       "name": "Swimming Fish Teacher Sandbox",
       "url": "https://studio.code.org/levels/18623",
       "key": "swimming-fish-teacher-sandbox",
@@ -9892,12 +9881,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "sprite_lab_documentation_2",
-        "script.name": "coursee-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {
