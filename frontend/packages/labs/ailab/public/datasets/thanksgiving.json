@@ -173,7 +173,7 @@
     },
     {
       "type": "categorical",
-      "id": "Cheese cake?",
+      "id": "Cheesecake?",
       "description": "Whether or not cheese cake was served as a dessert."
     },
     {
