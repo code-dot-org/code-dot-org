@@ -16,8 +16,8 @@ Feature: Level Progress
     When I am on "http://studio.code.org/s/allthethings"
     And I wait until element "td:contains(Maze)" is visible
     And I wait for 2 seconds
-    Then I verify progress for stage 2 level 1 is "perfect"
-    And I verify progress for stage 2 level 2 is "not_tried"
+    Then I verify progress for lesson 2 level 1 is "perfect"
+    And I verify progress for lesson 2 level 2 is "not_tried"
 
   Scenario: Progress is saved for signed-out student
     Given I am not signed in
@@ -35,5 +35,5 @@ Feature: Level Progress
     When I am on "http://studio.code.org/s/allthethings"
     And I wait until element "td:contains(Maze)" is visible
     And I wait for 2 seconds
-    Then I verify progress for stage 2 level 1 is "perfect"
-    And I verify progress for stage 2 level 2 is "not_tried"
+    Then I verify progress for lesson 2 level 1 is "perfect"
+    And I verify progress for lesson 2 level 2 is "not_tried"
