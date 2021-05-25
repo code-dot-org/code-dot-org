@@ -1622,10 +1622,10 @@
   version "0.1.0-cdo.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/js-numbers/-/js-numbers-0.1.0-cdo.0.tgz#810092a993c3c75441f2e5a3282f1257d9670715"
 
-"@code-dot-org/maze@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.1.0.tgz#5cbec9d7c1c96f919e598927ac47f724e5c6f03f"
-  integrity sha512-583c52yGtYDjd7LS733xdzcGpubL2McrLSOJF12CXn3NCPOxnPV/IlXd5u2W4Fmg8/Xx7Z/z0q+apCnbgf/BCg==
+"@code-dot-org/maze@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-2.2.0.tgz#9bb81237cca1f4580b0b3f2c1303529279069f71"
+  integrity sha512-D/Yw7Tygnh7FrjEQmaSt2qMH5eqQrNTsChEKK31S3qCsDEjg2t9dMEI5EFUziobEu/e8S9xEOojLvxruyYUPZA==
 
 "@code-dot-org/ml-activities@0.0.26":
   version "0.0.26"
@@ -1638,13 +1638,12 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.29":
-  version "0.0.29"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.29.tgz#0509be87d5e8b8931bb8a50c8a2f756f350be474"
-  integrity sha512-Ae4UgWDK8lUUyBO0auLT1DP/lIlbk7f7MI3qHD5LMtl3W66QKT7ZyqEz4fCLH9bPKZS/kfaKbu4V0GcejjNupg==
+"@code-dot-org/ml-playground@0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.30.tgz#23ce1220ccc94dff1ecf69ac3fc5de22b42528b9"
+  integrity sha512-G6rC5FxKvxd/NX5lxGZVQBK69efCXO6MgdlfhCFQgR2QczJxS5BWuAxRr5d9psPo6c1btMlKbHGKGBwlRSmpfw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
-    "@fortawesome/free-regular-svg-icons" "^5.11.2"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"
     "@fortawesome/react-fontawesome" "^0.1.7"
     chart.js "^2.9.4"
@@ -1948,24 +1947,12 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.25.tgz#6df015905081f2762e5cfddeb7a20d2e9b16c786"
   integrity sha512-3RuZPDuuPELd7RXtUqTCfed14fcny9UiPOkdr2i+cYxBoTOfQgxcDoq77fHiiHcgWuo1LoBUpvGxFF1H/y7s3Q==
 
-"@fortawesome/fontawesome-common-types@^0.2.34":
-  version "0.2.34"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.34.tgz#0a8c348bb23b7b760030f5b1d912e582be4ec915"
-  integrity sha512-XcIn3iYbTEzGIxD0/dY5+4f019jIcEIWBiHc3KrmK/ROahwxmZ/s+tdj97p/5K0klz4zZUiMfUlYP0ajhSJjmA==
-
 "@fortawesome/fontawesome-svg-core@^1.2.25":
   version "1.2.25"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.25.tgz#24b03391d14f0c6171e8cad7057c687b74049790"
   integrity sha512-MotKnn53JKqbkLQiwcZSBJVYtTgIKFbh7B8+kd05TSnfKYPFmjKKI59o2fpz5t0Hzl35vVGU6+N4twoOpZUrqA==
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.25"
-
-"@fortawesome/free-regular-svg-icons@^5.11.2":
-  version "5.15.2"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.15.2.tgz#61eeb8c206e792c530eaa58279cc32c55332fe8f"
-  integrity sha512-Uv5NQCYjyisNVTu/1Xjs+z8vwQjbfT6hiqYvQNfF0n8qdgfWLM581bAfVMQ3BCs1SPy+eEUKNcGkK4n0FihFHg==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.34"
 
 "@fortawesome/free-solid-svg-icons@^5.11.2":
   version "5.11.2"

@@ -26,8 +26,8 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1
-    assert_select "#locked-stage", 1
-    assert_select "#locked-stage[data-hidden]", 1
+    assert_select "#locked-lesson", 1
+    assert_select "#locked-lesson[data-hidden]", 1
   end
 
   test 'authorized teacher viewing csp2-2020' do
@@ -44,7 +44,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1
-    assert_select "#locked-stage", 1
-    assert_select "#locked-stage[data-hidden]", 1
+    assert_select "#locked-lesson", 1
+    assert_select "#locked-lesson[data-hidden]", 1
   end
 end
