@@ -57,7 +57,9 @@ const style = {
   },
   tabs: {
     backgroundColor: color.background_gray,
-    marginBottom: 0
+    marginBottom: 0,
+    display: 'flex',
+    alignItems: 'center'
   }
 };
 

@@ -39,20 +39,15 @@
 // Selected tab
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
   margin-right: 0px;
+  color: black;
 }
 
 // Unselected tabs
-.nav-tabs > ul > li > a {
+.nav-tabs > li > a {
   color: $charcoal;
   border: 0px;
   border-radius: 0px;
   margin-right: 0px;
-}
-
-// On hover over a tab
-.nav-tabs > ul > li > a:hover {
-  color: $charcoal;
-  background-color: black;
 }
 
 // This class is used in the editor tabs when we're in dark mode
@@ -67,16 +62,10 @@
 
   // Tabs
   ul > li > a {
-    color: rgb(40, 44, 52);
+    color: $dark_charcoal;
     border: 0px;
     border-radius: 0px;
     margin-right: 0px;
-  }
-
-  // On hover over a tab
-  ul > li > a:hover {
-    background-color: #949ca2;
-    color: rgb(40, 44, 52);
   }
 }
 

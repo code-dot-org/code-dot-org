@@ -96,7 +96,7 @@ const styles = {
     float: 'left',
     height: 33,
     width: 33,
-    margin: 2
+    margin: 6
   },
   dropdown: {
     border: `1px solid ${color.charcoal}`,
@@ -126,11 +126,12 @@ const styles = {
     height: '100%',
     width: '100%',
     padding: 5,
-    margin: 0
+    margin: 0,
+    borderRadius: 2,
+    backgroundColor: color.background_gray
   },
   darkButton: {
-    backgroundColor: color.darkest_gray,
-    color: color.white
+    color: color.dark_charcoal
   }
 };
 
