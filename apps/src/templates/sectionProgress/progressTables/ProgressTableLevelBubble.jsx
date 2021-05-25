@@ -1,22 +1,32 @@
 import React from 'react';
-import Radium from 'radium';
 import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import i18n from '@cdo/locale';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
 import {
-  bubbleStyles,
-  BubbleSize,
-  BubbleShape,
-  mainBubbleStyle,
-  diamondContainerStyle,
-  levelProgressStyle
-} from '@cdo/apps/templates/progress/progressStyles';
+  BasicBubble,
+  LinkWrapper,
+  getBubbleContent,
+  getBubbleClassNames,
+  getBubbleShape
+} from '@cdo/apps/templates/progress/BubbleFactory';
+import CachedElement from '@cdo/apps/util/CachedElement';
+import {levelProgressStyle} from '../../progress/progressStyles';
 
 /**
- * Top-level bubble component responsible for configuring BasicBubble based on
- * properties of a level and student progress.
+ * Bubble component designed specifically for use in our section progress
+ * table, responsible for configuring `BasicBubble` based on properties of a
+ * level and student progress, and generating cache keys from same.
+ *
+ * Our progress table displays thousands of these bubbles. However, the vast
+ * majority of them are duplicated in all aspects except the url they link to.
+ * Thus we are able to improve rendering performance by caching the HTML for
+ * the underlying `BasicBubble` to avoid recreating ones we already have.
  */
-class ProgressTableLevelBubble extends React.PureComponent {
+export default class ProgressTableLevelBubble extends React.PureComponent {
+  /**
+   * Note: if adding or removing props in this component, be sure to read the
+   * comment for `getCacheKey` and update accordingly if necessary.
+   */
   static propTypes = {
     levelStatus: PropTypes.string,
     levelKind: PropTypes.string,
@@ -34,129 +44,130 @@ class ProgressTableLevelBubble extends React.PureComponent {
     bubbleSize: BubbleSize.full
   };
 
-  renderContent() {
+  constructor(props) {
+    super(props);
+    this.createBubbleElement = this.createBubbleElement.bind(this);
+  }
+
+  render() {
+    return (
+      <LinkWrapper url={this.props.url}>
+        <CachedElement
+          elementType={'BasicBubble'}
+          cacheKey={this.getCacheKey()}
+          createElement={this.createBubbleElement}
+        />
+      </LinkWrapper>
+    );
+  }
+
+  createBubbleElement() {
     const {
+      levelStatus,
+      levelKind,
+      isLocked,
+      isUnplugged,
+      isConcept,
+      isBonus,
+      isPaired,
+      title,
+      bubbleSize
+    } = this.props;
+    const content = getBubbleContent(
       isLocked,
       isUnplugged,
       isBonus,
       isPaired,
       title,
       bubbleSize
-    } = this.props;
-    if (bubbleSize === BubbleSize.dot) {
-      // dot-sized bubbles are too small for content
-      return null;
-    }
-    return isUnplugged ? (
-      <span>{i18n.unpluggedActivity()}</span>
-    ) : isLocked ? (
-      <FontAwesome icon="lock" />
-    ) : isPaired ? (
-      <FontAwesome icon="users" />
-    ) : isBonus ? (
-      <FontAwesome icon="flag-checkered" />
-    ) : title ? (
-      <span>{title}</span>
-    ) : null;
+    );
+    return this.renderBasicBubble(
+      getBubbleShape(isUnplugged, isConcept),
+      bubbleSize,
+      levelProgressStyle(levelStatus, levelKind),
+      content
+    );
   }
 
-  render() {
-    const {
-      isUnplugged,
-      isConcept,
-      bubbleSize,
-      levelStatus,
-      levelKind
-    } = this.props;
-    const bubbleShape = isUnplugged
-      ? BubbleShape.pill
-      : isConcept
-      ? BubbleShape.diamond
-      : BubbleShape.circle;
-
-    const bubble = (
+  /**
+   * We use this helper as a testing hook to intercept the explicit props used
+   * to render the `BasicBubble`.
+   */
+  renderBasicBubble(shape, size, progressStyle, content) {
+    return (
       <BasicBubble
-        shape={bubbleShape}
-        size={bubbleSize}
-        progressStyle={levelProgressStyle(levelStatus, levelKind)}
+        shape={shape}
+        size={size}
+        progressStyle={progressStyle}
+        classNames={getBubbleClassNames(true)}
       >
-        {this.renderContent()}
+        {content}
       </BasicBubble>
     );
+  }
 
-    return <LinkWrapper {...this.props}>{bubble}</LinkWrapper>;
+  /**
+   * Determines the simplest key to use for this bubble configuration.
+   *
+   * Note: a more general approach to cache key generation was considered, but
+   * we found that taking advantage of our contextual knowledge of what makes a
+   * key/bubble pair unique enables us to to optimize key length, which results
+   * in a noticeable-enough performance improvement to warrant the additional
+   * complexity here.
+   *
+   * However, that means future maintainers of this component will need to
+   * think carefully about whether the addition or removal of props in this
+   * component will require an update to this function.
+   *
+   * The general requirement is that if a property affects how the rendered
+   * bubble will appear, it should be included in the key. That includes
+   * properties related to shape and size, as well as anything passed into
+   * `getProgressStyle` and `getBubbleContent`.
+   */
+  getCacheKey() {
+    const {
+      isLocked,
+      levelStatus,
+      levelKind,
+      isUnplugged,
+      isConcept,
+      isBonus,
+      isPaired,
+      title,
+      bubbleSize
+    } = this.props;
+
+    // sacrificing key readability for every little performance boost ("sts")
+    let statusString = `sts=${levelStatus}`;
+
+    // we need to explicitly specify if the level is an assessment, since
+    // assessment bubbles are a different color than regular bubbles.
+    if (levelKind === LevelKind.assessment) {
+      statusString = `asmt:${statusString}`;
+    }
+
+    // letter bubbles and unplugged bubbles are all of the same shape and
+    // content, so for those we can return a shorter key.
+    if (bubbleSize === BubbleSize.letter) {
+      return `ltr:ttl=${title}&${statusString}`;
+    } else if (isUnplugged) {
+      return `unp:${statusString}`;
+    }
+
+    // in the general case, we need to include all the properties that affect
+    // the bubble's appearance in the cache key, which include the shape,
+    // status, and all the props used to determine the content
+    const shapeString = `shp=${getBubbleShape(isUnplugged, isConcept)}`;
+    const contentString = isLocked
+      ? `lkd:`
+      : isPaired
+      ? `prd:`
+      : isBonus
+      ? `bns:`
+      : title
+      ? `ttl=${title}`
+      : null;
+
+    return `${contentString}&${shapeString}&${statusString}`;
   }
 }
-
-/**
- * Base bubble component defined in terms of shape, size, and style, as opposed
- * to level-related properties. This component is itself only an empty styled
- * container, and expects the bubble content (e.g. level number, icon, text) to
- * be passed in as its children.
- * @param {BubbleShape} shape
- * @param {BubbleSize} size
- * @param {object} progressStyle contains border and background colors
- * @param {node} children the content to render inside the bubble
- */
-function BasicBubble({shape, size, progressStyle, children}) {
-  const bubbleStyle = mainBubbleStyle(shape, size, progressStyle);
-  if (shape === BubbleShape.diamond) {
-    return (
-      <DiamondContainer size={size} bubbleStyle={bubbleStyle}>
-        {children}
-      </DiamondContainer>
-    );
-  }
-  return <div style={bubbleStyle}>{children}</div>;
-}
-BasicBubble.propTypes = {
-  shape: PropTypes.oneOf(Object.values(BubbleShape)).isRequired,
-  size: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
-  progressStyle: PropTypes.object,
-  children: PropTypes.node
-};
-
-/**
- * Container applying rotation transforms and forcing diamond bubbles to have
- * the same size as circles.
- * @param {BubbleSize} size
- * @param {object} bubbleStyle contains rotation transform and progress style
- * @param {node} children
- */
-function DiamondContainer({size, bubbleStyle, children}) {
-  return (
-    /* Constrain size */
-    <div style={diamondContainerStyle(size)}>
-      {/* Apply rotation transform and progress style */}
-      <div style={bubbleStyle}>
-        {/* Undo the rotation from the parent */}
-        <div style={bubbleStyles.diamondContentTransform}>{children}</div>
-      </div>
-    </div>
-  );
-}
-DiamondContainer.propTypes = {
-  size: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
-  bubbleStyle: PropTypes.object,
-  children: PropTypes.node
-};
-
-function LinkWrapper(props) {
-  return (
-    <a href={props.url} style={bubbleStyles.link}>
-      {props.children}
-    </a>
-  );
-}
-LinkWrapper.propTypes = {
-  url: PropTypes.string.isRequired,
-  children: PropTypes.element.isRequired
-};
-
-export default Radium(ProgressTableLevelBubble);
-
-export const unitTestExports = {
-  DiamondContainer,
-  BasicBubble,
-  LinkWrapper
-};

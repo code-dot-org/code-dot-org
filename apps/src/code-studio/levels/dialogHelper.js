@@ -152,13 +152,13 @@ export function processResults(onComplete, beforeHook) {
           window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
         } else if (lastServerResponse.endOfStageExperience) {
           const body = document.createElement('div');
-          const stageInfo = lastServerResponse.previousStageInfo;
-          const stageName = `${i18n.stage()} ${stageInfo.position}: ${
-            stageInfo.name
+          const lessonInfo = lastServerResponse.previousStageInfo;
+          const lessonName = `${i18n.stage()} ${lessonInfo.position}: ${
+            lessonInfo.name
           }`;
           ReactDOM.render(
             <PlayZone
-              stageName={stageName}
+              lessonName={lessonName}
               onContinue={() => {
                 dialog.hide();
               }}

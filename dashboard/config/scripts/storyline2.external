@@ -7,6 +7,6 @@ markdown <<MARKDOWN
 "All of my potions have been stolen and it will take many coins to replace them!"
 
 <br/><br/>
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 </div>
 MARKDOWN

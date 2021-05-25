@@ -15,7 +15,8 @@ import {
   setStageExtrasScriptIds,
   setTextToSpeechScriptIds,
   setPreReaderScriptIds,
-  setValidGrades
+  setValidGrades,
+  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser, {
   setCurrentUserId
@@ -50,6 +51,10 @@ function showHomepage() {
   store.dispatch(setLocaleCode(homepageData.localeCode));
   store.dispatch(setLocaleEnglishName(homepageData.locale));
   store.dispatch(setCurrentUserId(homepageData.currentUserId));
+
+  // DCDO Flag - show/hide Lock Section field
+  store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
+
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
   }

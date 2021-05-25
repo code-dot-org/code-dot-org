@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-11 16:54:02 UTC",
+    "serialized_at": "2021-05-21 19:09:58 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -1998,7 +1998,7 @@
       "key": "47bca048-39fb-4014-a480-e21d163469db",
       "position": 1,
       "properties": {
-        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - An action that causes something to happen.",
+        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - *An action that causes something to happen.*",
         "name": "Reflection",
         "remarks": true
       },
@@ -2448,7 +2448,7 @@
       "key": "d9171886-0618-4e77-a38b-4543fd46893e",
       "position": 3,
       "properties": {
-        "description": "Pick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n\n**Prompts:**- \n- How is a variable like a box? How is it different?\n\n- Why do programmers need variables?",
+        "description": "Pick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n\n**Prompts:**\n- How is a variable like a box? How is it different?\n\n- Why do programmers need variables?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2518,7 +2518,7 @@
       "position": 2,
       "properties": {
         "description": "###Mini-Project (20 mins)\n\nEquipped with their completed planning guides, students are now ready to bring their projects to life. Transition students to their computers and ask them to start “Part 1” of their chosen project.",
-        "progression_name": "Application - Create Your Project",
+        "progression_name": "Mini-Project: User Input Programs",
         "tips": [
           {
             "type": "teachingTip",
@@ -2771,7 +2771,7 @@
       "key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
       "position": 1,
       "properties": {
-        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  What patterns do you notice in this puzzle? What are the differences between the flower honeycomb patches at the beginning, middle, and end of the bee's path?\n\n**Share:** Let students share their ideas.\n\n**Discuss:**\nWhat are the ways we could program a solution to this puzzle?  How could we use a variable to have a loop do this for us?\n\n",
+        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  *What patterns do you notice in this puzzle? What are the differences between the flower honeycomb patches at the beginning, middle, and end of the bee's path?*\n\n**Share:** Let students share their ideas.\n\n**Discuss:**\n*What are the ways we could program a solution to this puzzle?  How could we use a variable to have a loop do this for us?*\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3357,6 +3357,7 @@
       "position": 5,
       "properties": {
         "description": "**Do This:** Show the “Lots of Sprites” video and discuss how the special blocks inside the event blocks work.",
+        "progression_name": "Video: Lots of Sprites",
         "tips": [
           {
             "type": "teachingTip",
@@ -5084,7 +5085,7 @@
         "level_keys": [
           "courseF_variables_projects"
         ],
-        "progression": "Application - Create Your Project"
+        "progression": "Mini-Project: User Input Programs"
       },
       "named_level": false,
       "bonus": false,
@@ -6486,6 +6487,32 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "courseF_lotsofsprites_video"
+        ],
+        "progression": "Video: Lots of Sprites"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_lotsofsprites_video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "76fe757f-0aa5-4dc0-9864-861f6023828e"
+      },
+      "level_keys": [
+        "courseF_lotsofsprites_video"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CourseF_outbreak1"
         ],
         "progression": "Skill Building"
@@ -6506,8 +6533,8 @@
       ]
     },
     {
-      "chapter": 97,
-      "position": 3,
+      "chapter": 98,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6532,8 +6559,8 @@
       ]
     },
     {
-      "chapter": 98,
-      "position": 4,
+      "chapter": 99,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6558,8 +6585,8 @@
       ]
     },
     {
-      "chapter": 99,
-      "position": 5,
+      "chapter": 100,
+      "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -6584,8 +6611,8 @@
       ]
     },
     {
-      "chapter": 100,
-      "position": 6,
+      "chapter": 101,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6610,8 +6637,8 @@
       ]
     },
     {
-      "chapter": 101,
-      "position": 7,
+      "chapter": 102,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6636,8 +6663,8 @@
       ]
     },
     {
-      "chapter": 102,
-      "position": 8,
+      "chapter": 103,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6662,8 +6689,8 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 9,
+      "chapter": 104,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -6688,8 +6715,8 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 10,
+      "chapter": 105,
+      "position": 11,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -6714,7 +6741,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6740,7 +6767,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6766,7 +6793,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6792,7 +6819,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6818,7 +6845,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6844,7 +6871,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6870,7 +6897,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6896,7 +6923,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6922,7 +6949,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6948,7 +6975,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6974,7 +7001,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8143,6 +8170,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_lotsofsprites_video",
+        "script_level.level_keys": [
+          "courseF_lotsofsprites_video"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021",
+        "activity_section.key": "76fe757f-0aa5-4dc0-9864-861f6023828e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CourseF_outbreak1",
         "script_level.level_keys": [
           "CourseF_outbreak1"
@@ -8461,11 +8500,24 @@
       }
     },
     {
-      "name": "Blank Space Stories - Worksheet",
+      "name": "Blank Space Stories",
+      "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
+      "key": "blank_space_stories",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "blank_space_stories"
+      }
+    },
+    {
+      "name": "Blank Space Stories",
       "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
       "key": "blank_space_stories_-_worksheet",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "blank_space_stories_-_worksheet"
@@ -8633,6 +8685,18 @@
       }
     },
     {
+      "name": "Exploring Apps",
+      "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+      "key": "exploring_apps_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_apps_1"
+      }
+    },
+    {
       "name": "Final Project Design",
       "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/",
       "key": "final-project-design-worksheet",
@@ -8752,6 +8816,18 @@
       },
       "seeding_key": {
         "resource.key": "mini_project_user_input_programs"
+      }
+    },
+    {
+      "name": "Mini Project: User Input Programs",
+      "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+      "key": "mini_project_user_input_programs_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_user_input_programs_1"
       }
     },
     {
@@ -8995,6 +9071,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "exploring_apps_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "making_sprites"
       }
@@ -9061,6 +9143,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "blank_space_stories"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "text_and_prompts"
       }
@@ -9087,6 +9175,12 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "teacher_sandbox_level"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "mini_project_user_input_programs_1"
       }
     },
     {
@@ -10531,6 +10625,13 @@
         "lesson.key": "Virtual Pet",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     },
     {

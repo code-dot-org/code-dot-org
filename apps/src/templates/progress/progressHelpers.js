@@ -1,4 +1,4 @@
-import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
+import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
@@ -55,7 +55,7 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
     // Signed out user
     return true;
   } else if (viewAs === ViewType.Teacher) {
-    return !state.stageLock.lockableAuthorized;
+    return !state.lessonLock.lockableAuthorized;
   } else if (viewAs === ViewType.Student) {
     return stageLocked(levels);
   }
@@ -73,8 +73,8 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
  */
 export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSectionId = state.teacherSections.selectedSectionId;
-  const currentSection = state.stageLock.stagesBySectionId[currentSectionId];
-  const fullyLockedStages = fullyLockedStageMapping(currentSection);
+  const currentSection = state.lessonLock.lessonsBySectionId[currentSectionId];
+  const fullyLockedStages = fullyLockedLessonMapping(currentSection);
   return !!fullyLockedStages[lessonId];
 }
 
@@ -143,6 +143,15 @@ export function isLevelAssessment(level) {
  */
 export function lessonIsAllAssessment(levels) {
   return levels.every(level => level.kind === LevelKind.assessment);
+}
+
+/**
+ * Checks if there are any levels in a lesson.
+ * @param {object} lesson the lesson to check
+ * @returns {bool} If the lesson has any levels
+ */
+export function lessonHasLevels(lesson) {
+  return !!lesson.levels?.length;
 }
 
 /**

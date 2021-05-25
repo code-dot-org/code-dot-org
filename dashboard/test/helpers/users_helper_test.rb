@@ -16,7 +16,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
         progress: {},
-        # second stage because first is unplugged
+        # second lesson because first is unplugged
         current_stage: script.lessons[1].id,
         completed: false,
       },
@@ -113,7 +113,7 @@ class UsersHelperTest < ActionView::TestCase
             pages_completed: [ActivityConstants::FREE_PLAY_RESULT, nil]
           }
         },
-        # second stage because first is unplugged
+        # second lesson because first is unplugged
         current_stage: script_level.lesson.id,
         completed: false
       },
@@ -171,10 +171,10 @@ class UsersHelperTest < ActionView::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    stage = create :lesson, name: 'Stage1', script: script, lockable: true, lesson_group: lesson_group
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
 
     # No user level exists, show locked progress
     assert UserLevel.find_by(user: user, level: level).nil?
@@ -264,11 +264,11 @@ class UsersHelperTest < ActionView::TestCase
     level.properties['submittable'] = true
     level.save!
 
-    # create a stage that is NOT lockable
-    stage = create :lesson, name: 'Stage1', script: script, lockable: false, lesson_group: lesson_group
+    # create a lesson that is NOT lockable
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: false, lesson_group: lesson_group
 
     # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: stage
+    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?

@@ -27,7 +27,7 @@ import {
   selectLocation,
   updateLocation,
   isPickingLocation
-} from './spritelab/locationPickerModule';
+} from './redux/locationPicker';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 

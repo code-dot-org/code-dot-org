@@ -27,14 +27,16 @@ class Javalab < Level
   serialized_attrs %w(
     project_template_level_name
     start_sources
+    validation
     hide_share_and_remix
     is_project_level
     submittable
     encrypted_examples
     csa_view_mode
+    serialized_maze
   )
 
-  before_save :fix_examples
+  before_save :fix_examples, :parse_maze
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -45,6 +47,25 @@ class Javalab < Level
         properties: {}
       )
     )
+  end
+
+  def parse_maze
+    if serialized_maze.nil? && csa_view_mode == 'neighborhood'
+      raise ArgumentError.new('neighborhood must have a serialized_maze')
+    end
+    return if serialized_maze.nil?
+    # convert maze into json object and validate each cell has a tileType
+    maze_json = serialized_maze.is_a?(Array) ? serialized_maze.to_json : serialized_maze
+    maze = JSON.parse(maze_json)
+    maze.each_with_index do |row, x|
+      row.each_with_index do |cell, y|
+        unless cell.is_a?(Hash) && cell.key?('tileType')
+          raise ArgumentError.new("Cell (#{x},#{y}) has no defined tileType")
+        end
+      end
+    end
+
+    self.serialized_maze = maze
   end
 
   def fix_examples

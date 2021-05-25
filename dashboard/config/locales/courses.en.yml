@@ -81,13 +81,13 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: Ken add course description and any links you may want here
-          version_title: "'20-'21"
+          version_title: "'21-'22"
         csd-2021:
           title: Computer Science Discoveries
           description_short: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_student: ''
-          description_teacher: "Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.\r\n\r\n**Want to learn more about teaching CS Discoveries in your classroom?** We've created several guides to help with implementing this course with your students:\r\n\r\n- [Getting Started with CS Discoveries](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview)\r\n- [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)\r\n- [CSD Guide for Implementation](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)\r\n- [CSD Guide for Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)\r\n- [CSD Guide for Differentiation](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\r\n- [CSD Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview)\r\n- [CSD Guide to Using Resources](https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview)"
-          version_title: ''
+          description_teacher: "Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.\r\n\r\n**Did You Know?**\r\n\r\n- This course is modular and can be taught in different configurations based on the needs of each classroom. Check out the *CSD Implementation Guide* in the Teacher Resources menu below to learn about the different options\r\n\r\n- You can find the *Curriculum Guide*, *Getting Started Guide*, *Guide to Assessment*, and many other resources to help you implement this curriculum in the Teacher Resources menu below\r\n"
+          version_title: "'21-'22"
         csa-pilot:
           title: CSA Pilot
           description_short: ''

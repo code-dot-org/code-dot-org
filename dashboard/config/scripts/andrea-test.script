@@ -1,5 +1,5 @@
 professional_learning_course 'Andrea Test'
-peer_reviews_to_complete 1
+only_instructor_review_required true
 login_required true
 student_detail_progress_view true
 announcements [{"notice"=>"Announcing", "details"=>"the announcement", "link"=>"", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]

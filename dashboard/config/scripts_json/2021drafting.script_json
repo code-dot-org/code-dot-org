@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:53 UTC",
+    "serialized_at": "2021-05-13 17:03:03 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -1522,6 +1522,31 @@
     },
     {
       "chapter": 49,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "outbreak_virus_v2"
+        ],
+        "progression": "New library"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "outbreak_virus_v2"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "outbreak_virus_v2"
+      ]
+    },
+    {
+      "chapter": 50,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1546,7 +1571,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1571,7 +1596,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1596,7 +1621,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1621,7 +1646,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1646,7 +1671,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1671,7 +1696,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -1696,7 +1721,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -1721,7 +1746,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -1746,7 +1771,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -1771,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1796,7 +1821,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1821,7 +1846,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1846,7 +1871,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1871,7 +1896,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2419,6 +2444,17 @@
         "level.key": "outbreak_library",
         "script_level.level_keys": [
           "outbreak_library"
+        ],
+        "lesson.key": "Outbreaklab",
+        "lesson_group.key": "outbreak",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "outbreak_virus_v2",
+        "script_level.level_keys": [
+          "outbreak_virus_v2"
         ],
         "lesson.key": "Outbreaklab",
         "lesson_group.key": "outbreak",

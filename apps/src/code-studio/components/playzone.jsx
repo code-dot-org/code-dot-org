@@ -1,10 +1,10 @@
 /**
- * @overview React for the End-of-Stage Experience
+ * @overview React for the End-of-Lesson Experience
  */
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '../../util/color';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import CreateSomething from './lessonExtras/CreateSomething';
 
 export default class PlayZone extends React.Component {
@@ -16,9 +16,9 @@ export default class PlayZone extends React.Component {
     return (
       <div style={styles.container}>
         <h1 style={styles.primaryHeader}>
-          {msg.playzonePrimaryHeader({stageName: this.props.stageName})}
+          {i18n.playzonePrimaryHeader({stageName: this.props.lessonName})}
         </h1>
-        <h4 style={styles.secondaryHeader}>{msg.playzoneSecondaryHeader()}</h4>
+        <h4 style={styles.secondaryHeader}>{i18n.playzoneSecondaryHeader()}</h4>
         <CreateSomething />
         <div className="farSide">
           <button
@@ -27,7 +27,7 @@ export default class PlayZone extends React.Component {
             onClick={this.props.onContinue}
             style={styles.continueButton}
           >
-            {msg.playzoneContinueButton()}
+            {i18n.playzoneContinueButton()}
           </button>
         </div>
       </div>
@@ -56,6 +56,6 @@ const styles = {
 };
 
 PlayZone.propTypes = {
-  stageName: PropTypes.string.isRequired,
+  lessonName: PropTypes.string.isRequired,
   onContinue: PropTypes.func.isRequired
 };

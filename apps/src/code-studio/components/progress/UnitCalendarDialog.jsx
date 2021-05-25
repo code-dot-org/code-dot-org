@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import UnitCalendar from './UnitCalendar';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
-const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [45, 90, 135, 180, 225];
+const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [45, 90, 135, 180, 225, 450];
 export const WEEK_WIDTH = 585;
 
 export default class UnitCalendarDialog extends Component {

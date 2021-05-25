@@ -37,7 +37,7 @@ describe('UnitCalendarDialog', () => {
         weeklyInstructionalMinutes={45}
       />
     );
-    expect(wrapper.find('option').length).to.equal(5);
+    expect(wrapper.find('option').length).to.equal(6);
     expect(
       wrapper.containsMatchingElement(
         <option value={45} key={`minutes-45`}>
@@ -65,7 +65,7 @@ describe('UnitCalendarDialog', () => {
         weeklyInstructionalMinutes={20}
       />
     );
-    expect(wrapper.find('option').length).to.equal(6);
+    expect(wrapper.find('option').length).to.equal(7);
     expect(
       wrapper.containsMatchingElement(
         <option value={20} key={`minutes-20`}>

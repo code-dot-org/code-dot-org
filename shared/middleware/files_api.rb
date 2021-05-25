@@ -54,11 +54,16 @@ class FilesApi < Sinatra::Base
 
   def codeprojects_can_view?(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+
+    # Attempt to find active project in database. This will raise StorageApps::NotFound if
+    # no active project exists, which is handled below.
+    StorageApps.new(owner_storage_id).get(encrypted_channel_id)
+
     owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
     !get_user_sharing_disabled(owner_user_id)
 
   # Default to cannot view if there is an error
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue StorageApps::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
   end
 

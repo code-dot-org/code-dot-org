@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:59 UTC",
+    "serialized_at": "2021-05-21 16:45:24 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -1835,7 +1835,7 @@
       "key": "4ffb5c13-ec43-4ec8-80ab-13d601a46e39",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss** Have students discuss their responses with a partner before sharing out with the class to make sure students understand the key takeaways about HTTP.\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss** Have students discuss their responses with a partner before sharing out with the class to make sure students understand the key takeaways about HTTP.\n\n**Discussion Goal:** Here are the most important points for students to take away about HTTP and the way it works\n\n* When you visit a website you're actually getting sent a file by a server. HTTP is solving the problem of how to ask for that file.\n* Your computer and that server communicate using a protocol called HTTP. \n* HTTP is plain-text, so it literally includes the ASCII word \"GET ...\" and the file name requested.\n* All of your communications are being sent over the Internet so these requests are being sent inside TCP/IP packets and over the physical wires of the Internet.\n* There are other secure ways of sending information online because using HTTP, all our information would otherwise be sent as plain text.\n* Certificate authorities ensure that when you start a secure connection you're talking to the website you think you're talking to.\n* \n"
       },
       "seeding_key": {
         "activity_section.key": "4ffb5c13-ec43-4ec8-80ab-13d601a46e39",
@@ -1857,7 +1857,13 @@
       "key": "e1910615-a244-4ed8-9a26-210ad5517985",
       "position": 2,
       "properties": {
-        "description": "Use this final prompt as a review of everything covered in both today's lesson and those that came before. You'll actually probably want to start with the bottom of your review guide.\n\n**Discussion Goal:** Use this final discussion to review not just this lesson but every protocol / layer of the Internet students have learned so far. You'd aim to see responses like the following \n\n* When you type in code.org, your browser will contact the DNS to find Code.org's IP address\n* When you receive the address you'll send an HTTP GET request to code.org to send you its homepage\n* Code.org's server will respond with the HTML code that makes up its web page\n* All of the communications above happen on the Internet which means TCP or UDP will break the message into packets and then send them. If TCP is used, error checking will occur.\n* IP will route the packets back and forth between your computer and the server\n* All of this information is sent over the physical wires, cable, wifi networks, and routers that make up the physical network of the internet.\n\n"
+        "description": "Use this final prompt as a review of everything covered in both today's lesson and those that came before. You'll actually probably want to start with the bottom of your review guide.\n\n**Discussion Goal:** Use this final discussion to review not just this lesson but every protocol / layer of the Internet students have learned so far. You'd aim to see responses like the following \n\n* When you type in code.org, your browser will contact the DNS to find Code.org's IP address\n* When you receive the address you'll send an HTTP GET request to code.org to send you its homepage\n* Code.org's server will respond with the HTML code that makes up its web page\n* All of the communications above happen on the Internet which means TCP or UDP will break the message into packets and then send them. If TCP is used, error checking will occur.\n* IP will route the packets back and forth between your computer and the server\n* All of this information is sent over the physical wires, cable, wifi networks, and routers that make up the physical network of the internet.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to bring up [Tim Berners-Lee](https://en.wikipedia.org/wiki/Tim_Berners-Lee), the inventor of the World Wide Web and the first person to implement HTTP in 1989, who describes creating the web like this: \"Most of the technology involved in the web, like the hypertext, like the Internet, ... had all been designed already. I just had to put them together. It was a step of generalizing, going to a higher level of abstraction.\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e1910615-a244-4ed8-9a26-210ad5517985",
@@ -2919,6 +2925,18 @@
       }
     },
     {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
+    },
+    {
       "name": "What is the Internet?",
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what-is-the-internet",
@@ -3070,6 +3088,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp2-2021"
       }
     }

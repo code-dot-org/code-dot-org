@@ -94,13 +94,23 @@ class CoursesController < ApplicationController
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
     if unit_group.has_migrated_script? && unit_group.course_version
-      unit_group.resources = params[:resourceIds].split(',').reject(&:empty?).map {|id| Resource.find(id.to_i)} if params.key?(:resourceIds)
-      unit_group.student_resources = params[:studentResourceIds].split(',').reject(&:empty?).map {|id| Resource.find(id.to_i)} if params.key?(:studentResourceIds)
+      unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
+      unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
     # Convert checkbox values from a string ("on") to a boolean.
-    [:has_verified_resources, :has_numbered_units, :visible, :is_stable].each {|key| params[key] = !!params[key]}
+    [:has_verified_resources, :has_numbered_units].each {|key| params[key] = !!params[key]}
     unit_group.update(course_params)
-    redirect_to course_path(unit_group)
+
+    # Update the published state of all the units in the course to be same as the course
+    unit_group.default_scripts.each do |script|
+      script.assign_attributes(hidden: !course_params[:visible], properties: {is_stable: course_params[:is_stable], pilot_experiment: course_params[:pilot_experiment]})
+      next unless script.changed?
+      script.save!
+      script.write_script_dsl
+      script.write_script_json
+    end
+    unit_group.reload
+    render json: unit_group.summarize
   end
 
   def edit

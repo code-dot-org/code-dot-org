@@ -6,43 +6,27 @@ export default class CourseScriptsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
-    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired
+    scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    updateScriptsInCourse: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.handleChange = this.handleChange.bind(this);
-
-    this.state = {
-      // want provided script names, plus one empty one
-      scriptsInCourse: props.scriptsInCourse.concat('')
-    };
-  }
-
-  handleChange(event) {
+  handleChange = () => {
     const root = ReactDOM.findDOMNode(this);
 
     let selected = Array.prototype.map.call(
       root.children,
       child => child.value
     );
-    // If the last script has a value, add a new script without one
-    if (selected[selected.length - 1] !== '') {
-      selected.push('');
-    }
-    this.setState({
-      scriptsInCourse: selected
-    });
-  }
+
+    this.props.updateScriptsInCourse(selected);
+  };
 
   render() {
     const {scriptNames} = this.props;
     return (
       <div>
-        {this.state.scriptsInCourse.map((selectedScript, index) => (
+        {this.props.scriptsInCourse.concat('').map((selectedScript, index) => (
           <select
-            name="scripts[]"
             style={{
               ...this.props.inputStyle,
               opacity: selectedScript === '' ? 0.4 : 1

@@ -25,7 +25,7 @@ See below for the list of challenge lessons. Feel free to click through to the l
 **Lesson Plan:** <a href=”https://docs.google.com/document/d/1dv8ZPYHyP0nqq8YRTu4EfVyX_YuRwBkOJxmk9Gy1TDM” target =_blank>Lesson 7: Cleaning Data >></a>
 
 >* **You will learn:** How to clean a dataset to prepare it for analysis including filtering, sorting, and standardizing data.
->* **You will produce:** A cleaned and standardized version of the <a href="https://docs.google.com/spreadsheets/d/1wczPIqCku1U0jpJgyaK0vPW6CufnbxPIxYR6ckSRRwk/edit?usp=sharing" target=_blank>Twitter dataset provided here</a>. Follow the instructions provided in Code Studio starting at <a href="https://studio.code.org/s/cspunit4/stage/7/puzzle/2" target=_blank>Stage 7, level 2</a>. When following the directions on  <a href="https://studio.code.org/s/cspunit4/stage/7/puzzle/4" target=_blank>Stage 7, level 4</a> you only should standardize the "tweetText" column.
+>* **You will produce:** A cleaned and standardized version of the <a href="https://docs.google.com/spreadsheets/d/1wczPIqCku1U0jpJgyaK0vPW6CufnbxPIxYR6ckSRRwk/edit?usp=sharing" target=_blank>Twitter dataset provided here</a>. Follow the instructions provided in Code Studio starting at <a href="https://studio.code.org/s/cspunit4/lessons/7/levels/2" target=_blank>Stage 7, level 2</a>. When following the directions on  <a href="https://studio.code.org/s/cspunit4/lessons/7/levels/4" target=_blank>Stage 7, level 4</a> you only should standardize the "tweetText" column.
 >* **You will share:** A link to your cleaned dataset
 
 ### Lessons 8: Creating Summary Tables
@@ -35,7 +35,7 @@ See below for the list of challenge lessons. Feel free to click through to the l
 
 >* **You will learn:** How to create pivot tables in order to summarize and aggregate information in a dataset. 
 >* **You will produce:** A spreadsheet that includes a pivot table of the <a href="https://docs.google.com/spreadsheets/d/1wczPIqCku1U0jpJgyaK0vPW6CufnbxPIxYR6ckSRRwk/edit?usp=sharing" target=_blank>Twitter dataset provided here</a>
->* **You will share:** A link to a spreadsheet that includes your pivot table, as described in <a href="https://studio.code.org/s/cspunit4/stage/8/puzzle/4" target=_blank>Stage 8, level 4.</a>
+>* **You will share:** A link to a spreadsheet that includes your pivot table, as described in <a href="https://studio.code.org/s/cspunit4/lessons/8/levels/4" target=_blank>Stage 8, level 4.</a>
 
 ## Feeling comfortable with spreadsheets and want to know how the curriculum addresses data innovations? Check out this challenge.
 

@@ -11,7 +11,7 @@ For this session we'll use a tool called "Swipe Right for CS", which has been de
 When playing the Swipe Right for CS game you will see a series of quotes that you might say to each student. You will swipe right on quotes that you think would be effective in convincing that particular student to enroll in the course and swipe left on statements that you think will not be effective. During the session we will discuss as a group your thoughts on the types of statements that are most effective in getting a student to enroll in CS, and you will have a chance to see how other people in your workshop swiped on each of the arguments.
 <br><br><br><br>
 
-<span style="display:none">submitButton next-stage</span>
+<span style="display:none">submitButton next-lesson</span>
 
 <a class="btn btn-large btn-primary submitButton" href="https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>"> Click here to play Swipe Right for CS!</a>
 

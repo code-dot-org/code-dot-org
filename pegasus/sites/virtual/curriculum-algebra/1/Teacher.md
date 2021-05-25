@@ -45,7 +45,7 @@ lesson = DB[:cdo_lessons].where(id_s:lesson_id).first
 
 ### For the Teacher
 - [Lesson slide deck](https://docs.google.com/a/code.org/presentation/d/1DF3XNkI4yellzRJL8ItqZU546UT9BaXWeKY7AmI0gsc/)
-- [Example Game](http://studio.code.org/s/algebra/stage/1/puzzle/2/)
+- [Example Game](http://studio.code.org/s/algebra/lessons/1/levels/2/)
 - Printed cutouts of the [Ninja](ninja.png), [Dragon](dragon.png), and [Unicorn](unicorn.png)
 
 [/together]
@@ -85,7 +85,7 @@ A mathematical expression is like a sentence: it’s an instruction for doing so
 ## Activities:
 ### <a name="Activity1"></a> 3) Reverse Engineer a Demo
 
-Let’s begin by exploring a simple video game, and then figuring out how it works. Open [this link](http://studio.code.org/s/algebra/stage/1/puzzle/2/) to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the up and down - try to catch the unicorn and avoid the dragon!
+Let’s begin by exploring a simple video game, and then figuring out how it works. Open [this link](http://studio.code.org/s/algebra/lessons/1/levels/2/) to play the game, and spend a minute or two exploring it. You can use the arrow keys to move the up and down - try to catch the unicorn and avoid the dragon!
 
 This game is made up of characters, each of which has its own behavior. The unicorn moves from the left to the right, while the dragon moves in the opposite direction. The ninja only moves when you hit the arrow keys, and can move up and down. We can figure out how the game works by first understanding how each character works.
 
@@ -161,7 +161,7 @@ The structure of your students' games will very closely resemble the demo they'v
 ## Assessment
 ### <a name="Assessment"></a>6) Video Games and Coordinate Planes Assessment
 
-Visit [CS in Algebra Stage 1](http://studio.code.org/s/algebra/stage/1/puzzle/1) in Code Studio to complete the assessments.
+Visit [CS in Algebra Stage 1](http://studio.code.org/s/algebra/lessons/1/levels/1) in Code Studio to complete the assessments.
 -->
 
 [/together]

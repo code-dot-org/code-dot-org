@@ -26,7 +26,7 @@ class ProgressLesson extends React.Component {
 
     // redux provided
     scriptId: PropTypes.number,
-    currentStageId: PropTypes.number,
+    currentLessonId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
@@ -41,20 +41,20 @@ class ProgressLesson extends React.Component {
     super(props);
     this.state = {
       // We want teachers to start with everything uncollapsed. For students we
-      // collapse everything except current stage
+      // collapse everything except current lesson
       collapsed:
         props.viewAs !== ViewType.Teacher &&
-        props.currentStageId !== props.lesson.id
+        props.currentLessonId !== props.lesson.id
     };
   }
 
   componentWillReceiveProps(nextProps) {
-    // If we're assigned a stageId, and it is for this lesson, uncollapse
-    if (nextProps.currentStageId !== this.props.currentStageId) {
+    // If we're assigned a lesson id, and it is for this lesson, uncollapse
+    if (nextProps.currentLessonId !== this.props.currentLessonId) {
       this.setState({
         collapsed:
           this.state.collapsed &&
-          nextProps.currentStageId !== this.props.lesson.id
+          nextProps.currentLessonId !== this.props.lesson.id
       });
     }
   }
@@ -96,7 +96,7 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
-    // Is this a hidden stage that we still render because we're a teacher
+    // Is this a hidden lesson that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
@@ -294,10 +294,10 @@ const styles = {
 export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
-  currentStageId: state.progress.currentStageId,
+  currentLessonId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
-  lockableAuthorized: state.stageLock.lockableAuthorized,
+  lockableAuthorized: state.lessonLock.lockableAuthorized,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),

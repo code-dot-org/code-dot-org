@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-03 23:55:59 UTC",
+    "serialized_at": "2021-05-18 03:00:52 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -306,18 +306,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a04fa0df-3746-420e-ba6e-f18831286901",
-        "lesson.key": "Introduction to Apps",
-        "lesson_group.key": "csp_unit3_2020",
-        "script.name": "csp3-2021"
-      }
-    },
-    {
-      "key": "55036830-1321-4a8e-a37e-8928c23f1914",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914",
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021"
@@ -808,7 +796,7 @@
       "key": "d3ff1f3d-0b24-485b-b251-977501995fd2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n \tApps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n Apps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
       },
       "seeding_key": {
         "activity_section.key": "d3ff1f3d-0b24-485b-b251-977501995fd2",
@@ -987,22 +975,12 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Match term with the example.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ca0a7a2a-2d45-4a44-8fba-fc90661c0caf",
         "lesson_activity.key": "a04fa0df-3746-420e-ba6e-f18831286901"
-      }
-    },
-    {
-      "key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417",
-        "lesson_activity.key": "55036830-1321-4a8e-a37e-8928c23f1914"
       }
     },
     {
@@ -2547,7 +2525,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417"
+        "activity_section.key": "ca0a7a2a-2d45-4a44-8fba-fc90661c0caf"
       },
       "level_keys": [
         "CSP U3 L1 Input Output Matching_2021"
@@ -3475,7 +3453,7 @@
         "lesson.key": "Introduction to Apps",
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2021",
-        "activity_section.key": "2205e89c-4fca-46c1-95e4-ad99bdffa417"
+        "activity_section.key": "ca0a7a2a-2d45-4a44-8fba-fc90661c0caf"
       }
     },
     {
@@ -3924,6 +3902,18 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
+    },
+    {
+      "name": "Virtual Modification Resources",
+      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "key": "virtual_modification_resources",
+      "properties": {
+        "type": "Resource",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources"
+      }
     }
   ],
   "lessons_resources": [
@@ -4058,6 +4048,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csp3-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_modification_resources",
         "script.name": "csp3-2021"
       }
     }

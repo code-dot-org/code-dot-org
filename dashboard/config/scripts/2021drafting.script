@@ -71,6 +71,7 @@ level 'CourseF_outbreak_freeplay', progression: 'Mini-Project: Outbreak Simulato
 
 lesson 'Outbreaklab', display_name: 'Outbreak Standalone Lab', has_lesson_plan: false
 level 'outbreak_library'
+level 'outbreak_virus_v2', progression: 'New library'
 
 lesson_group 'AB EOC', display_name: 'Course A and B EOC Project'
 lesson 'End of Course Project', display_name: 'End of Course Project', has_lesson_plan: false
