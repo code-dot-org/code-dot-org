@@ -127,6 +127,7 @@ export class TeacherFeedback extends Component {
       .done(data => {
         this.setState({
           latestFeedback: data,
+          reviewStateUpdated: false,
           submitting: false,
           errorState: ErrorType.NoError
         });
