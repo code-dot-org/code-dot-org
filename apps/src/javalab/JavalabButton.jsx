@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
+// TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).
+// In order for that to work, we will need to refactor <Button/> to allow a button's icon and
+// text to be vertically stacked.
 export default function JavalabButton({icon, text, style, onClick}) {
   return (
     <button
