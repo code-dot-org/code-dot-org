@@ -151,3 +151,40 @@ generating PDFs for csp4-2021
     at process._tickCallback (internal/process/next_tick.js:189:7)
 (node:22745) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
 (node:22745) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+GetSecretValue: staging/cdo/slack_token
+GetSecretValue: staging/cdo/mapbox_access_token
+rake aborted!
+Don't know how to build task 'lesson_plan_pdfs:generate_all_pdfs' (see --tasks)
+/var/lib/gems/2.5.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+(See full trace by running task with --trace)
+GetSecretValue: staging/cdo/slack_token
+GetSecretValue: staging/cdo/mapbox_access_token
+rake aborted!
+Errno::EBADF: Bad file descriptor @ io_fillbuf - fd:0 <STDIN>
+/home/ubuntu/staging/dashboard/lib/tasks/curriculum_pdfs.rake:76:in `gets'
+/home/ubuntu/staging/dashboard/lib/tasks/curriculum_pdfs.rake:76:in `block (2 levels) in <top (required)>'
+/var/lib/gems/2.5.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+Tasks: TOP => curriculum_pdfs:generate_all_pdfs
+(See full trace by running task with --trace)
+GetSecretValue: staging/cdo/dashboard_devise_secret
+GetSecretValue: staging/cdo/dashboard_devise_pepper
+GetSecretValue: staging/cdo/dashboard_facebook_key
+GetSecretValue: staging/cdo/dashboard_facebook_secret
+GetSecretValue: staging/cdo/dashboard_google_key
+GetSecretValue: staging/cdo/dashboard_google_secret
+GetSecretValue: staging/cdo/dashboard_windowslive_key
+GetSecretValue: staging/cdo/dashboard_windowslive_secret
+GetSecretValue: staging/cdo/dashboard_microsoft_key
+GetSecretValue: staging/cdo/dashboard_microsoft_secret
+GetSecretValue: staging/cdo/dashboard_clever_key
+GetSecretValue: staging/cdo/dashboard_clever_secret
+GetSecretValue: staging/cdo/dashboard_schoolproject_key
+GetSecretValue: staging/cdo/dashboard_schoolproject_secret
+GetSecretValue: staging/cdo/recaptcha_site_key
+GetSecretValue: staging/cdo/recaptcha_secret_key
+GetSecretValue: staging/cdo/dashboard_secret_key_base
+GetSecretValue: staging/cdo/zendesk_dev_token
+GetSecretValue: staging/cdo/dashboard_honeybadger_api_key
+About to (re)generate all PDFs for all scripts.
+As of Feb 2021, we expect this operation to take about half an hour. We expect it to take longer the more content we've added since that date.
+Are you sure you want to proceed? (y/N)

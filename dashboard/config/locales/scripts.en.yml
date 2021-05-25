@@ -21491,17 +21491,17 @@ en:
             For Loop Fun:
               key: For Loop Fun
               name: For Loop Fun
-              description_student: You're going to have loads of fun learning about `for` loops!
+              description_student: You're going to have loads of fun learning about for loops!
               description_teacher: In this **skill-building** lesson, students will use loops with a powerful, new structure.
             For Loops in Bee:
               key: For Loops in Bee
               name: For Loops with Bee
-              description_student: In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
-              description_teacher: 'This **skill-building** lesson focuses on “for” loops and using an incrementing variable to solve more complicated puzzles. '
+              description_student: In these puzzles you will be guiding a bee to nectar and honey using for loops!
+              description_teacher: 'This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. '
             For Loops in Artist:
               key: For Loops in Artist
               name: For Loops with Artist
-              description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
+              description_student: Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures.
               description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
             Editing Behaviors:
               key: Editing Behaviors
@@ -21700,12 +21700,12 @@ en:
             For Loops with Bee:
               key: For Loops with Bee
               name: For Loops with Bee
-              description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for loops`!
-              description_teacher: 'This **skill-building** lesson focuses on `for loops` and using an incrementing variable to solve more complicated puzzles. '
+              description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using for loops!
+              description_teacher: 'This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. '
             For Loops with Artist:
               key: For Loops with Artist
               name: For Loops with Artist
-              description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
+              description_student: Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures.
               description_teacher: In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.
             Swimming Fish in Sprite Lab:
               key: Swimming Fish in Sprite Lab
