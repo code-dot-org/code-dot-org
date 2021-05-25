@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-05-25 17:14:17 UTC",
+    "serialized_at": "2021-05-25 19:47:57 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -8761,6 +8761,30 @@
       }
     },
     {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
+      "key": "open-ended_programming_levels",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
+      "key": "open-ended_programming_levels_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
@@ -9107,6 +9131,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -9115,6 +9145,12 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "resource.key": "open-ended_programming_levels_1"
       }
     },
     {
