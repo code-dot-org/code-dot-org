@@ -18,6 +18,23 @@ module CurriculumSyncUtils
     sync_out_reorganize
   end
 
+  # Helper method to get the desired destination subdirectory of the given
+  # script for the sync in. Note this may be a nested directory like "2021/csf"
+  def self.get_script_subdirectory(script)
+    # special-case Hour of Code scripts.
+    return "Hour of Code" if ScriptConstants.script_in_category?(:hoc, script.name)
+
+    # catchall for scripts without courses
+    return 'other' unless script.get_course_version.present?
+
+    # special-case CSF; we want to group all CSF courses together, even though
+    # they all have different course offerings.
+    return File.join(script.get_course_version.key, 'csf') if script.csf?
+
+    # base case
+    return File.join(script.get_course_version.key, script.get_course_version.course_offering.key)
+  end
+
   # Serialize all curriculum data to the I18N source directory.
   #
   # Relies heavily on the custom serializer logic defined in
@@ -28,11 +45,6 @@ module CurriculumSyncUtils
     Script.all.each do |script|
       # TODO: what else do we want to consider when deciding what to sync?
       next unless script.is_migrated?
-      # TODO: include the "other directory already exists" logic from localize_level_content
-      # prepare path
-      script_category = script.get_course_version&.key || 'other'
-      script_content_dir = File.join(I18N_SOURCE_DIR, 'curriculum_content', script_category)
-      path = File.join(script_content_dir, "#{script.name}.json")
 
       # prepare data
       data = ScriptCrowdinSerializer.new(script).as_json.compact
@@ -41,7 +53,9 @@ module CurriculumSyncUtils
       next unless data.present?
 
       # write data to path
-      FileUtils.mkdir_p(script_content_dir)
+      # TODO: include the "other directory already exists" logic from localize_level_content
+      path = File.join(I18N_SOURCE_DIR, 'curriculum_content', get_script_subdirectory(script), "#{script.name}.json")
+      FileUtils.mkdir_p(File.dirname(path))
       File.write(path, JSON.pretty_generate(data))
     end
   end
