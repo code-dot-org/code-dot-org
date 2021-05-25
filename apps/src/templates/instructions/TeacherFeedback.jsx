@@ -125,7 +125,7 @@ export class TeacherFeedback extends Component {
         (this.state.comment === latestFeedback.comment &&
           this.state.performance === latestFeedback.performance)) ||
       (!latestFeedback &&
-        (this.state.comment.length === 0 && this.state.performance === null));
+        (this.state.comment.length === 0 && !this.state.performance));
 
     return feedbackUnchanged;
   };
