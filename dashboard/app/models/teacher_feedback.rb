@@ -34,6 +34,13 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
 
+  REVIEW_STATES = [
+    "keepWorking",
+    "completed"
+  ]
+
+  validates_inclusion_of :review_state, in: REVIEW_STATES, allow_nil: true
+
   # Finds the script level associated with this object, using script id and
   # level id.
   def get_script_level
