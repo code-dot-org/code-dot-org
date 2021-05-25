@@ -1,5 +1,7 @@
 {
   "compilerError": "We couldn't compile your program. Look for bugs in your program and try again.",
+  "duplicateProjectFilenameError": "Filename {filename} is already in use in this project. Please choose a different name",
+  "duplicateSupportFilenameError": "Filename {filename} is already in use in this level's support code. Please choose a different name",
   "illegalMethodAccess": "You tried to access a method that is blocked by our security policy.\n{cause}",
   "internalCompilerException": "Oops. We hit an error on our side while compiling your program. Try running it again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
   "internalException": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.",
