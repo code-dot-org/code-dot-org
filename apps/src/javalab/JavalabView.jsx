@@ -54,6 +54,13 @@ class JavalabView extends React.Component {
     ];
   };
 
+  getButtonStyles = () => {
+    return {
+      ...styles.button.all,
+      ...(this.props.isDarkMode ? styles.button.dark : styles.button.light)
+    };
+  };
+
   render() {
     const {
       isDarkMode,
@@ -65,13 +72,10 @@ class JavalabView extends React.Component {
       visualization
     } = this.props;
 
-    let btnStyle = styles.button.all;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
-      btnStyle = {...btnStyle, ...styles.button.dark};
     } else {
       document.body.style.backgroundColor = color.background_gray;
-      btnStyle = {...btnStyle, ...styles.button.light};
     }
 
     return (
@@ -103,13 +107,13 @@ class JavalabView extends React.Component {
                 <JavalabButton
                   icon={<FontAwesome icon="stop" className="fa-2x" />}
                   text="Stop"
-                  style={btnStyle}
+                  style={this.getButtonStyles()}
                   onClick={() => {}}
                 />
                 <JavalabButton
                   icon={<FontAwesome icon="check" className="fa-2x" />}
                   text="Continue"
-                  style={btnStyle}
+                  style={this.getButtonStyles()}
                   onClick={onContinue}
                 />
               </div>
@@ -117,7 +121,7 @@ class JavalabView extends React.Component {
                 <JavalabButton
                   icon={<FontAwesome icon="play" className="fa-2x" />}
                   text="Run"
-                  style={btnStyle}
+                  style={this.getButtonStyles()}
                   onClick={onRun}
                 />
               </div>
