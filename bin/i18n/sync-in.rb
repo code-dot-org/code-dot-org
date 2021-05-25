@@ -466,6 +466,7 @@ def localize_markdown_content
   markdown_files_to_localize = %w[
     international/about.md.partial
     educate/curriculum/csf-transition-guide.md
+    ai.md.partial
     athome.md.partial
     break.md.partial
     csforgood.md

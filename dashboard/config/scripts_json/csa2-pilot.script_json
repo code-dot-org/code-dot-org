@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 13:52:37 UTC",
+    "serialized_at": "2021-05-25 18:20:00 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -1275,6 +1275,13 @@
       "key": "b9e47abb-a65f-4f68-8064-00e1472d3d8b",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Give each student a Vocabulary Crossword as they enter the classroom. Encourage students to begin working on the crossword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Give students 5-6 minutes to complete the crossword.\n* Discuss the answers for the sections highlighted in green as a class. If necessary, review the order of operations using PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Vocabulary Crossword helps students review vocabulary they have learned so far, but it can take some time to complete. Some scaffolding options include:\n* Keeping or removing the word bank\n* Focusing on the sections highlighted in green first\n\nIt is not necessary for students to complete the entire crossword during the warm up. If students move quickly through the lesson activity, they can continue to work on the crossword as they wait for their peers."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b9e47abb-a65f-4f68-8064-00e1472d3d8b",
@@ -1282,9 +1289,24 @@
       }
     },
     {
+      "key": "b95ab8f8-048e-439b-ad63-ca0f67e1232e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What theme do you notice about the words that are highlighted in green?*\n\n**Discussion Goal:** Students identify themes related to evaluating expressions, such as doing math, values, or types associated with values."
+      },
+      "seeding_key": {
+        "activity_section.key": "b95ab8f8-048e-439b-ad63-ca0f67e1232e",
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397"
+      }
+    },
+    {
       "key": "7150ad58-3683-4227-977a-94a6700e0147",
       "position": 1,
       "properties": {
+        "description": "So far, we have developed a `Dessert` class to create `Dessert` objects to represent the Project Mercury Pastries inventory. We would also like to process some of that information for the bakery. Today we are going to explore how we can perform operations on the data we store in Java.",
+        "duration": "15",
+        "name": "Arithmetic Operations",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "7150ad58-3683-4227-977a-94a6700e0147",
@@ -1292,12 +1314,112 @@
       }
     },
     {
+      "key": "f3ac0d01-2f17-447a-a11e-db09bb0fee61",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to introduce expressions:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> An expression is a combination of operands and operators that evaluates to a single value.\n* When evaluating an expression, it is important to pay attention to both the value of the operand and the type. This will determine the type of the resulting value.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair an Exploring Expressions handout. One student in the pair should receive Version A and the other student in the pair should receive Version B.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The two versions of the worksheet address the same skills. Each version gives students different examples of expressions so they can identify patterns and rules of operators."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f3ac0d01-2f17-447a-a11e-db09bb0fee61",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Arithmetic Operations section of the Exploring Expressions handout (pages 1-3). As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the expressions widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the + operator to identify the first blank as addition and the second blank as concatenation. Explain that this means the operator is overloaded (similar to the constructors they wrote earlier in this unit).\n* Answer the free-response questions for the / operator.\n* Clarify how to use the % operator. You may choose to walk through the process of dividing two numbers and identifying the remainder.\n* Support students with misconceptions involving mathematical concepts.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Catch and Release is a technique to allow students to explore a concept with intermittent support while preventing students from struggling for too long or disengaging. Give students about two minutes to work on each arithmetic operator. As students work, circulate and make note of any misconceptions. After the two minutes, briefly clarify issues or pose a question to the class that students have been struggling with, then send them back to their work.\n\nIt is not necessary to bring the class back together after every operator. If questions have been addressed individually or students do not need the answer to continue working you may choose to address these questions after the Arithmetic Operators video.\n\nOptional differentiation: Use a public timer to differentiate between independent work and discussion, addressing all student questions after a given amount of time has elapsed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* Click through the animated slide to review the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.\n\n**Discussion Goal:** Students demonstrate confidence working with all arithmetic operators before moving on. Students might feel a little uncomfortable with the modulus (mod) operator, but they will practice using it more in later lessons.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel students could use a movement break, ask students to move to a different corner of the room corresponding to their answer, where corner one corresponds to answer A, corner two corresponds to answer B, etc. Other options for polling for answers include asking students to raise one finger for answer A, two fingers for answer B, etc."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "4106dcf1-554d-4496-816a-015d638acaa5",
+      "position": 5,
+      "properties": {
+        "description": "The food truck owner can use expressions to calculate information, such as the total number of desserts in the truck. We need to be able to store that information somewhere in our program so we can use it again later. To do this, we are going to assign the value of our evaluated expression to a variable.",
+        "duration": "15",
+        "name": "Expressions with Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4106dcf1-554d-4496-816a-015d638acaa5",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "f7990e9f-e076-400b-95f4-9047b1caa1e1",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate evaluating expressions and storing the value in a variable.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When processing assignment expressions, evaluate the statement on the right then store the value in the variable on the left.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When evaluating multiple expression statements in a row, the updated value that has been stored in the variable is the value that is used in future expression."
+      },
+      "seeding_key": {
+        "activity_section.key": "f7990e9f-e076-400b-95f4-9047b1caa1e1",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "32ca1625-681d-4f90-9b49-0034c0a08437",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Expressions with Variables section of the Exploring Expressions handout (pages 4-5). As students are working, use Catch and Release as appropriate to maintain engagement. When students have finished this section, direct them to Code Studio to practice writing expressions for the Project Mercury Food Truck."
+      },
+      "seeding_key": {
+        "activity_section.key": "32ca1625-681d-4f90-9b49-0034c0a08437",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
       "key": "32afd1a1-380b-48eb-a721-1feca830a1b4",
       "position": 1,
       "properties": {
+        "description": "**Display:** Show the Evaluating Expressions video.\n\n**Do This:** Lead a Quiz-Quiz-Trade activity.\n* Give each student a sticky note.\n* Students each write a short code segment including at least one variable, three arithmetic operators, and one compound assignment operator. They evaluate the code segment and write the answer on the back.\n* Use a pairing technique to get students to find a partner.\n* Students evaluate their partner’s expression and check their answer by turning over the sticky note.\n* Repeat with 2-3 partner pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "32afd1a1-380b-48eb-a721-1feca830a1b4",
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
+      }
+    },
+    {
+      "key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
         "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
       }
     }
