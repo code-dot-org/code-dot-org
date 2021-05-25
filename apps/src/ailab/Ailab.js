@@ -15,14 +15,12 @@ import {
 } from '../redux/instructions';
 
 /**
- * On small mobile devices, when in portrait orientation, we show an overlay
- * image telling the user to rotate their device to landscape mode.  Because
- * the ailab app is able to render at a minimum width of 480px, we set this
- * width to be somewhat larger.  We will use this width to set the viewport
- * on the mobile device, and correspondingly to scale up the overlay image to
- * properly fit on the mobile device for that viewport.
+ * This is used to set the viewport width in portrait mode, and will become
+ * the viewport height in landscape mode.  On a 1024x768 screen in landscape
+ * it will set the same viewport scale as Applab (which does it by requesting
+ * 1200 pixels' width), which is roughly 0.85, since 1200 / 1024 * 768 = 900.
  */
-const MOBILE_PORTRAIT_WIDTH = 600;
+const MOBILE_PORTRAIT_WIDTH = 900;
 
 function getInstructionsDefaults() {
   var instructions = {
