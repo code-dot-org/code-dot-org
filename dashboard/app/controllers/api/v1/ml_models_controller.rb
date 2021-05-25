@@ -40,16 +40,8 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def show
-    # begin
-    #   model = download_from_s3(params[:id])
-    #   puts model
-    #   return render_404 unless model
-    # rescue Aws::S3::Errors::NoSuchKey
-    #   return render_404
-    # end
-    # render json: model
     model = download_from_s3(params[:id])
-    return render_404 unless model
+    return head :not_found unless model
     render json: model
   end
 

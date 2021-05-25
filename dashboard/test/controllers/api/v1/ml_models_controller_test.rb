@@ -38,25 +38,6 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     }
   end
 
-  # Tests for the Destroy controller action.
-  test 'user can not delete nonexistant models' do
-    sign_in @owner
-    delete :destroy, params: {id: "fakeId"}
-    assert_response :not_found
-  end
-
-  test 'user can delete own model' do
-    sign_in @owner
-    delete :destroy, params: {id: @model.model_id}
-    assert_response :success
-  end
-
-  test 'user can not delete models they do not own' do
-    sign_in @not_owner
-    delete :destroy, params: {id: @model.model_id}
-    assert_response :forbidden
-  end
-
   # Tests for the Save controller action.
   test 'user can successfully save an ML model' do
     sign_in @owner
@@ -68,14 +49,12 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
 
   test 'returns a failure when saving a nonexistent model' do
     sign_in @owner
-    # nil => {}
     post :save, params: nil
     assert_response :bad_request
   end
 
   test 'returns a failure when saving a model with invalid data' do
     sign_in @owner
-    # {"ml_model" => nil} => {"ml_model" => ""}
     post :save, params: {"ml_model" => nil}
     assert_response :bad_request
   end
@@ -88,7 +67,7 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
 
   test 'returns failure when model saves to database but not S3' do
     sign_in @owner
-    AWS::S3.stubs(:upload_to_bucket).returns(nil)
+    AWS::S3.stubs(:upload_to_bucket).returns(false)
     assert_difference('UserMlModel.count', 1) do
       post :save, params: {"ml_model" => @params_ml_model}
     end
@@ -102,10 +81,10 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     sign_in @owner
     create_list(:user_ml_model, 2)
 
-    expected_user_ml_model_data = UserMlModel.where(user_id: @owner&.id).
+    expected_ml_model_names = UserMlModel.where(user_id: @owner&.id).
       map {|user_ml_model| {name: user_ml_model.name}}
 
-    JSON.parse(expected_user_ml_model_data.to_json).each do |model|
+    JSON.parse(expected_ml_model_names.to_json).each do |model|
       database_model_names << model["name"]
     end
 
@@ -125,10 +104,10 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     sign_in @owner
     create_list(:user_ml_model, 3)
 
-    expected_user_ml_model_data = UserMlModel.where(user_id: @owner&.id).
+    expected_ml_model_ids = UserMlModel.where(user_id: @owner&.id).
         map {|user_ml_model| {id: user_ml_model.model_id}}
 
-    JSON.parse(expected_user_ml_model_data.to_json).each do |model|
+    JSON.parse(expected_ml_model_ids.to_json).each do |model|
       database_model_ids << model["model_id"]
     end
 
@@ -148,10 +127,10 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
     sign_in @owner
     create_list(:user_ml_model, 2)
 
-    expected_user_ml_model_data = UserMlModel.where(user_id: @owner&.id).
+    expected_ml_model_metadata = UserMlModel.where(user_id: @owner&.id).
         map {|user_ml_model| {metadata: JSON.parse(user_ml_model.metadata)}}
 
-    JSON.parse(expected_user_ml_model_data.to_json).each do |model|
+    JSON.parse(expected_ml_model_metadata.to_json).each do |model|
       database_model_metadata << model["metadata"]
     end
 
@@ -168,17 +147,34 @@ class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
   # Tests for the Show controller action.
   test 'retrieves a trained model from S3' do
     sign_in @owner
-    AWS::S3.stubs(:download_from_bucket).returns(@model)
+    AWS::S3.stubs(:download_from_bucket).returns(true)
     get :show, params: {id: @model.model_id}
     assert_response :success
   end
 
   test 'renders 404 if model does not exist' do
     sign_in @owner
-    # @model.destroy
-    AWS::S3.stubs(:download_from_bucket).raises(Aws::S3::Errors::NoSuchKey.new(nil, nil))
-    # AWS::S3.stubs(:download_from_bucket).returns(true)
-    get :show, params: {id: @model.model_id}
+    AWS::S3.stubs(:download_from_bucket).returns(false)
+    get :show, params: {id: "fake_id"}
     assert_response :not_found
+  end
+
+  # Tests for the Destroy controller action.
+  test 'user can not delete nonexistant models' do
+    sign_in @owner
+    delete :destroy, params: {id: "fakeId"}
+    assert_response :not_found
+  end
+
+  test 'user can delete own model' do
+    sign_in @owner
+    delete :destroy, params: {id: @model.model_id}
+    assert_response :success
+  end
+
+  test 'user can not delete models they do not own' do
+    sign_in @not_owner
+    delete :destroy, params: {id: @model.model_id}
+    assert_response :forbidden
   end
 end
