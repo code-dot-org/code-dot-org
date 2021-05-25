@@ -134,7 +134,7 @@ describe('TeacherFeedbackKeepWorking', () => {
   });
 
   describe('starting with an indeterminate box', () => {
-    it('displays awaiting teacher review text', () => {
+    it('displays waiting for teacher review text', () => {
       const latestFeedback = feedbackForIndeterminateState();
       const wrapper = setUp({latestFeedback});
       expect(wrapper.contains(i18n.awaitingTeacherReview())).to.be.true;
