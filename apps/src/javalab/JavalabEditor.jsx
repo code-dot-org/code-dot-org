@@ -448,29 +448,29 @@ class JavalabEditor extends React.Component {
     };
     return (
       <div style={this.props.style}>
-        <PaneHeader hasFocus={true}>
+        <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
             iconClass="fa fa-plus-circle"
             onClick={() => this.setState({openDialog: CREATE_FILE})}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
             label="New File"
-            leftJustified={true}
+            leftJustified
           />
           <PaneButton
             id="javalab-editor-backpack"
             iconClass="fa fa-briefcase"
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
             label="Backpack"
-            leftJustified={true}
+            leftJustified
           />
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
             label={msg.showVersionsHeader()}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
             onClick={this.props.handleVersionHistory}
           />
@@ -478,7 +478,7 @@ class JavalabEditor extends React.Component {
             id="javalab-editor-save"
             iconClass="fa fa-check-circle"
             onClick={onCommitCode}
-            headerHasFocus={true}
+            headerHasFocus
             isRtl={false}
             label="Commit Code"
           />
