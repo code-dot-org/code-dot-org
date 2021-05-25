@@ -44,7 +44,7 @@ class TrainModel extends Component {
     );
 
     this.setState({ animationTimer });
-  };
+  }
 
   updateAnimation = () => {
     if (this.state.frame === 15) {

@@ -2,7 +2,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
 import aiBotClosed from "@public/images/ai-bot/ai-bot-closed.png";
