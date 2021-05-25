@@ -44,7 +44,7 @@ class Statement extends Component {
       >
         Predict{" "}
         <div style={styles.statementLabel}>
-          {labelColumn || "..."}
+          {labelColumn || "____"}
           {currentPanel === "dataDisplayLabel" && labelColumn && (
             <div
               onClick={() => this.removeLabel()}
@@ -57,35 +57,37 @@ class Statement extends Component {
             </div>
           )}
         </div>
-        <span>
-          {" "}
-          based on{" "}
-          {selectedFeatures.map((selectedFeature, index) => {
-            return (
-              <span key={index}>
-                <div style={styles.statementFeature}>
-                  {selectedFeature}
-                  {currentPanel === "dataDisplayFeatures" && (
-                    <div
-                      onClick={() => this.removeFeature(selectedFeature)}
-                      style={styles.statementDeleteIcon}
-                    >
-                      <div style={styles.statementDeleteCircle} />
-                      <div style={styles.statementDeleteX}>
-                        <FontAwesomeIcon icon={faTimesCircle} />
+        {currentPanel !== "dataDisplayLabel" && (
+          <span>
+            {" "}
+            based on{" "}
+            {selectedFeatures.map((selectedFeature, index) => {
+              return (
+                <span key={index}>
+                  <div style={styles.statementFeature}>
+                    {selectedFeature}
+                    {currentPanel === "dataDisplayFeatures" && (
+                      <div
+                        onClick={() => this.removeFeature(selectedFeature)}
+                        style={styles.statementDeleteIcon}
+                      >
+                        <div style={styles.statementDeleteCircle} />
+                        <div style={styles.statementDeleteX}>
+                          <FontAwesomeIcon icon={faTimesCircle} />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-                {index < selectedFeatures.length - 1 && ", "}
-              </span>
-            );
-          })}
-          {selectedFeatures.length === 0 && (
-            <span style={styles.statementFeature}>...</span>
-          )}
-          {selectedFeatures.length !== 0 && "."}
-        </span>
+                    )}
+                  </div>
+                  {index < selectedFeatures.length - 1 && ", "}
+                </span>
+              );
+            })}
+            {selectedFeatures.length === 0 && (
+              <span style={styles.statementFeature}>____</span>
+            )}
+            {selectedFeatures.length !== 0 && "."}
+          </span>
+        )}
       </div>
     );
   }

@@ -83,15 +83,8 @@ class ScatterPlot extends Component {
     return (
       scatterPlotData && (
         <div id="scatter-plot">
-          <div style={styles.largeText}>Relationship Information</div>
-          <div style={styles.scrollableContents}>
-            <div style={{ ...styles.scrollingContents, height: 300 }}>
-              <Scatter
-                data={scatterDataCombined}
-                options={chartOptionsCombined}
-              />
-            </div>
-          </div>
+          <div style={styles.bold}>Relationship information:</div>
+          <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
         </div>
       )
     );

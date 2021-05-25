@@ -107,8 +107,9 @@ export const styles = {
   },
 
   largeText: {
+    lineHeight: "38px",
     fontSize: 24,
-    marginBottom: 10,
+    marginBottom: 20,
     borderBottom: "solid 1px black",
     paddingBottom: 10
   },
@@ -116,6 +117,10 @@ export const styles = {
   mediumText: {
     fontSize: 14,
     marginBottom: 8
+  },
+
+  regularText: {
+    fontSize: 14
   },
 
   smallText: {
@@ -140,7 +145,8 @@ export const styles = {
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column",
-    position: "relative"
+    position: "relative",
+    fontSize: 14
   },
 
   panelPopupContainer: {
@@ -161,7 +167,7 @@ export const styles = {
     display: "flex",
     flexDirection: "column",
     border: "solid 1px black",
-    boxShadow: "-5px 5px 10px black"
+    boxShadow: "-5px 5px 10px rgba(0, 0, 0, 0.5)"
   },
 
   scrollableContents: {
@@ -298,7 +304,8 @@ export const styles = {
     borderWidth: 1,
     borderColor: "white",
     padding: 7,
-    fontSize: 14
+    fontSize: 14,
+    cursor: "pointer"
   },
 
   dataDisplayHeaderLabelHidden: {
@@ -398,7 +405,7 @@ export const styles = {
     width: "80%"
   },
 
-  resultsAccuracy: { float: "left", fontSize: 18, width: "10%" },
+  resultsAccuracy: { float: "left", fontSize: 14, width: "10%" },
 
   resultsDetailsButtonContainer: {
     float: "left",
@@ -454,11 +461,12 @@ export const styles = {
     backgroundColor: "white",
     color: "rgb(30, 30, 30)",
     verticalAlign: "top",
-    height: 45
+    height: 42,
+    fontSize: 24
   },
 
   resultsTableSecondHeader: {
-    top: "47px",
+    top: "42px",
     color: "white"
   },
 
@@ -491,13 +499,15 @@ export const styles = {
   },
 
   statement: {
-    fontSize: 32,
-    paddingBottom: 15,
-    lineHeight: "50px"
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
+    borderBottom: "solid 1px black",
+    paddingBottom: 10
   },
 
   statementSmall: {
-    fontSize: 18,
+    fontSize: 14,
     paddingBottom: 6
   },
 
@@ -565,7 +575,7 @@ export const styles = {
     padding: 10,
     cursor: "pointer",
     border: "none",
-    fontSize: 18
+    fontSize: 14
   },
 
   selectFeaturesButton: {
@@ -574,7 +584,7 @@ export const styles = {
     padding: 10,
     cursor: "pointer",
     border: "none",
-    fontSize: 18
+    fontSize: 14
   },
 
   trainModelContainer: {
@@ -714,6 +724,14 @@ export const styles = {
     width: "95%"
   },
 
+  saveModelToggle: {
+    cursor: "pointer"
+  },
+
+  saveModelToggleContents: {
+    marginLeft: 20
+  },
+
   modelCardContainer: {
     backgroundColor: "rgb(198, 202, 205)",
     borderRadius: 5,
@@ -727,7 +745,7 @@ export const styles = {
   modelCardHeader: {
     marginBottom: 10,
     marginTop: 0,
-    fontSize: 18,
+    fontSize: 24,
     fontFamily: '"Gotham 7r", sans-serif'
   },
 

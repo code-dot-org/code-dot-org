@@ -48,7 +48,7 @@ class Results extends Component {
                         selectedFeatures={historicResult.features}
                       />
                     </div>
-                    <div style={styles.resultsAccuracy}>
+                    <div style={{ ...styles.resultsAccuracy, ...styles.bold }}>
                       {historicResult.accuracy}%
                     </div>
                     {index === 0 && (

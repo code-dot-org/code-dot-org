@@ -29,7 +29,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>Features</span>
+                  Features
                 </th>
                 <th
                   style={{
@@ -37,12 +37,14 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>{"Actual"}</span>
+                  Actual
+                  {/*
                   {this.props.isRegression && (
                     <div style={styles.smallTextNoMargin}>
                       {`+/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
                     </div>
                   )}
+                  */}
                 </th>
                 <th
                   style={{
@@ -50,7 +52,7 @@ class ResultsTable extends Component {
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  <span style={styles.largeText}>{"A.I. Prediction"}</span>
+                  A.I. Prediction
                 </th>
                 <th
                   colSpan={featureCount}

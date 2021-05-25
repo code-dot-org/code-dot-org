@@ -56,7 +56,7 @@ class Predict extends Component {
                       <input
                         type="number"
                         onChange={event => this.handleChange(event, feature)}
-                        value={this.props.testData[feature]}
+                        value={this.props.testData[feature] || ""}
                       />
                     </label>
 
