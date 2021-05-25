@@ -1,4 +1,5 @@
 function spriteSay(mySprite,speech){
+
   fill(rgb(50,50,50,0.5));
   stroke("gray");
   var textScaler=16;
@@ -9,8 +10,11 @@ function spriteSay(mySprite,speech){
 
   var boxWidth=minWidth+5;
   var boxHeight=textScaler+5;
-  var rectX=mySprite.x-boxWidth/2;
-  var rectY=mySprite.y;
+
+  var rectX=getProp(mySprite, "x")-boxWidth/2;
+
+  var rectY=400-getProp(mySprite, "y");
+
   if(rectX<0){
     rectX=0;
   }
@@ -24,12 +28,13 @@ function spriteSay(mySprite,speech){
   if(rectY+boxHeight>400){
     rectY=400-boxHeight;
   }
+
   //rectY=0;rectX=200-boxWidth/2;
   rect(rectX, rectY, boxWidth, boxHeight);
 
   noStroke();
   fill("white");
-  text(speech,rectX+(boxWidth)/2,rectY+textScaler+2.5);
+  text(speech,rectX+(boxWidth)/2,(rectY+2.5));
 }
 
 //other.push(spriteSay);
