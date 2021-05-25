@@ -2,7 +2,7 @@
   "script": {
     "name": "coursec-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-05-13 18:31:26 UTC",
+    "serialized_at": "2021-05-25 17:14:17 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -3040,7 +3040,7 @@
       "position": 2,
       "properties": {
         "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.",
-        "progression_name": "Video: Play Lab"
+        "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0",
@@ -6259,15 +6259,15 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseA_video_events_2021"
+          "courseC_video_events_2021"
         ],
-        "progression": "Video: Play Lab"
+        "progression": "Video: Introduction to Play Lab"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseA_video_events_2021"
+          "courseC_video_events_2021"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
@@ -6275,7 +6275,7 @@
         "activity_section.key": "e8c36f82-146f-40bd-a83c-0f0d9fac33d0"
       },
       "level_keys": [
-        "courseA_video_events_2021"
+        "courseC_video_events_2021"
       ]
     },
     {
@@ -8138,9 +8138,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseA_video_events_2021",
+        "level.key": "courseC_video_events_2021",
         "script_level.level_keys": [
-          "courseA_video_events_2021"
+          "courseC_video_events_2021"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
