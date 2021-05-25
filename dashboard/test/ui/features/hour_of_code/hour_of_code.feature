@@ -14,14 +14,17 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   Then I close the dialog
   And I wait until I am on "http://studio.code.org/hoc/2"
   And I wait for the page to fully load
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
   And I wait for 2 seconds
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for lesson 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/lessons/2/levels/2?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/s/20-hour/lessons/2/levels/2?noautoplay=true"
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "not_tried" for level 1
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
@@ -44,9 +47,11 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Then I reload the page
   And I wait for the page to fully load
   When element "#runButton" is visible
+  And I wait until jQuery Ajax requests are finished
   And I verify progress in the header of the current page is "attempted" for level 1
   And I navigate to the course page for "hourofcode"
   And I wait for 2 seconds
+  And I wait until jQuery Ajax requests are finished
   And I verify progress for lesson 1 level 1 is "attempted"
 
 @no_mobile
