@@ -6,14 +6,15 @@ require_relative '../../../lib/cdo/redshift'
 require_relative '../../../dashboard/config/environment'
 require_relative './translation_service'
 
-# Queries the analysis.i18n_string_tracking_events for all the unique string_keys we have logged.
-# Then check
-# Updating the translation status in the Redshift table first requires deleting the existing records and then
-# inserting them. We do this because Redshift doesn't have unique keys, so if we inserted data for a string_key which
-# already exists, then there would be two rows in the database for the string_key.
+# Queries the analysis.i18n_string_tracking_events for all the unique string_keys we have logged in the past day_count
+# days, checks their translation status in every language we support, and then uploads the statuses to the
+# analysis.i18n_string_translation_status Redshift table.
 # @param [Integer] day_count The number of days in the past to look for unique string_key's
 def update_translation_status(day_count = 90)
   redshift_client = RedshiftClient.instance
+  # Updating the translation status in the Redshift table first requires deleting the existing records and then
+  # inserting them. We do this because Redshift doesn't have unique keys, so if we inserted data for a string_key which
+  # already exists, then there would be two rows in the database for the string_key.
   delete_translation_status(redshift_client, day_count)
   insert_translation_status(redshift_client, day_count)
 end
