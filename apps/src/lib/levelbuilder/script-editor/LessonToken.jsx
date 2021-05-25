@@ -16,7 +16,8 @@ export default class LessonToken extends Component {
     draggedLessonPos: PropTypes.bool,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func,
-    removeLesson: PropTypes.func.isRequired
+    removeLesson: PropTypes.func.isRequired,
+    cloneLesson: PropTypes.func.isRequired
   };
 
   handleDragStart = e => {
@@ -25,6 +26,10 @@ export default class LessonToken extends Component {
 
   handleRemove = () => {
     this.props.removeLesson(this.props.lesson.position);
+  };
+
+  handleClone = () => {
+    this.props.cloneLesson(this.props.lesson.position);
   };
 
   render() {
@@ -96,6 +101,11 @@ export default class LessonToken extends Component {
                 <i className="fa fa-pencil" />
               </div>
             )}
+            {this.props.lesson.id && (
+              <div style={styles.clone} onMouseDown={this.handleClone}>
+                <i className="fa fa-clone" />
+              </div>
+            )}
             <div style={styles.remove} onMouseDown={this.handleRemove}>
               <i className="fa fa-times" />
             </div>
@@ -152,6 +162,18 @@ const styles = {
     padding: '7px 13px',
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
+    cursor: 'pointer'
+  },
+  clone: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: 'white',
+    background: color.dark_charcoal,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.dark_charcoal,
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
     cursor: 'pointer'
   },
   edit: {

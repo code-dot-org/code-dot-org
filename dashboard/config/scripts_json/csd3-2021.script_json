@@ -2,7 +2,7 @@
   "script": {
     "name": "csd3-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-18 15:00:19 UTC",
+    "serialized_at": "2021-05-25 17:10:38 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -4836,7 +4836,7 @@
       "key": "49b539a4-1d94-4fa2-9538-dc413331f866",
       "position": 3,
       "properties": {
-        "description": "**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.\r\n\r\n**Distribute:** Hand out the project guide to students. This is the tool students will use to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \r\n\r\n#### Steps\r\n\r\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\r\n\r\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\r\n\r\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
+        "description": "**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.\n\n**Distribute:** Hand out the project guide to students. Students will use this to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the Student Checklist to each student. Students can use this to self-assess and reflect as they develop their project.\n\n#### Steps\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
         "name": "Unplugged: Interactive Card Planning\r"
       },
       "seeding_key": {
@@ -4894,8 +4894,14 @@
       "key": "4bfb9e2c-557b-464a-9a07-7190bc4dce87",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their cards.",
-        "name": "Iterate - Update Code\r"
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their cards.\n\nStudents should use the rubric and student checklist to self-assess and make sure their project matches with the rubric.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4bfb9e2c-557b-464a-9a07-7190bc4dce87",
@@ -6741,7 +6747,7 @@
       "key": "c579d4e4-c215-4c83-9db5-55fb3853a960",
       "position": 1,
       "properties": {
-        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\r\n\r\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide. Direct students towards the rubric so that they know from the beginning what components of the project you will be looking for.",
+        "description": "**Group:** This project can be completed individually or in pairs. At your discretion, you may choose to have students form larger groups as well.\n\n**Distribute:** Each student or group of students should be given a copy of the project guide. As a class, review the different steps of the project and where they appear in the project guide.\n\n**Distribute:** Give each student a copy of the rubric or student checklist so that they know from the beginning what components of the project you will be looking for.",
         "name": "Review Project Guide\r"
       },
       "seeding_key": {
@@ -6835,8 +6841,14 @@
       "key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.",
-        "name": "Iterate - Update Code\r"
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their game.\n\nStudents should refer to the rubric or student checklist to ensure they meet the requirements of the project.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "59ca85ff-b7b0-450d-b354-1c9938c4a615",
@@ -15813,16 +15825,28 @@
       }
     },
     {
-      "name": "Animating Sprites",
+      "name": "Sprite Movement",
       "url": "https://youtu.be/G666sFzAg5g",
       "key": "animating-sprites",
       "properties": {
         "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/cs-discoveries/gamelab/gamelab_animating_sprites.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4"
       },
       "seeding_key": {
         "resource.key": "animating-sprites"
+      }
+    },
+    {
+      "name": "Animation Tab",
+      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+      "key": "animation_tab",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "animation_tab"
       }
     },
     {
@@ -15839,19 +15863,19 @@
       }
     },
     {
-      "name": "Bug Report",
-      "url": "https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/view",
-      "key": "bug_report",
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
+      "key": "booleans_and_comparison_operators",
       "properties": {
         "type": "Resource",
-        "audience": "Student"
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "bug_report"
+        "resource.key": "booleans_and_comparison_operators"
       }
     },
     {
-      "name": "Calling and Defining Functions",
+      "name": "Functions",
       "url": "https://youtu.be/3ZfqwCuDZaQ",
       "key": "calling_and_defining_functions",
       "properties": {
@@ -15886,6 +15910,18 @@
       },
       "seeding_key": {
         "resource.key": "collision-detection-exemplar-2020"
+      }
+    },
+    {
+      "name": "Collision Detection",
+      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
+      "key": "collision_detection",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection"
       }
     },
     {
@@ -16072,6 +16108,18 @@
       }
     },
     {
+      "name": "Drawing Shapes",
+      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+      "key": "drawing_shapes",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
       "name": "Drawing Shapes (Version A)",
       "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
       "key": "drawing_shapes_version_a_",
@@ -16136,33 +16184,20 @@
       }
     },
     {
-      "name": "Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1iJPVkbYqRuAqFCloFGHChQpTUoL67Lilrl2n73oKVpc/view",
-      "key": "guide_to_using_resources",
+      "name": "Functions",
+      "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
+      "key": "functions_1",
       "properties": {
         "type": "Resource",
-        "audience": "Student"
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "guide_to_using_resources"
+        "resource.key": "functions_1"
       }
     },
     {
-      "name": "How To Debug",
-      "url": "https://www.youtube.com/watch?v=auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
-      }
-    },
-    {
-      "name": "If-Else Statements - Map Level (PDF)",
-      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view",
+      "name": "If-Else Statements",
+      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
       "key": "if-else_statements_-_map_level_pdf_",
       "properties": {
         "type": "Resource",
@@ -16183,6 +16218,18 @@
       },
       "seeding_key": {
         "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
+      "key": "if_statements",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements"
       }
     },
     {
@@ -16212,7 +16259,7 @@
     },
     {
       "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1k1jRoyOzMgaUIKTgGP3mE6CbQEkEbaGStxhIMNmLF3A",
+      "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
       "key": "interactive-card-marked-rubrics",
       "properties": {
         "type": "Exemplar",
@@ -16237,15 +16284,27 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/18QYy5KmIgtv3Wbsknl7wmRpPzeVzKw6OjQ5dztdb01Y/",
-      "key": "interactive-card-rubric-2019",
+      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "key": "interactive_card",
       "properties": {
         "type": "Rubric",
         "audience": "Student",
         "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "interactive-card-rubric-2019"
+        "resource.key": "interactive_card"
+      }
+    },
+    {
+      "name": "Interactive Card - Student Checklist",
+      "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view",
+      "key": "interactive_card_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_-_student_checklist"
       }
     },
     {
@@ -16326,21 +16385,8 @@
       }
     },
     {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1HB8T-6XyUiGLgeyYuG43zovAKrO2tyJ4l0NRJXzgdvY/",
-      "key": "make-your-own-game-rubric-2019",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game-rubric-2019"
-      }
-    },
-    {
       "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1QfufVwYLGjaWqR-7Fh-w0dJH2xWI5jxwM5QJTf-cTxE/edit",
+      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
       "key": "make-your-own-game-sample-marked-rubrics",
       "properties": {
         "type": "Exemplar",
@@ -16348,6 +16394,31 @@
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-sample-marked-rubrics"
+      }
+    },
+    {
+      "name": "Make Your Own Game",
+      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
+      "key": "make_your_own_game",
+      "properties": {
+        "type": "Rubric",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "name": "Make Your Own Game - Student Checklist",
+      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
+      "key": "make_your_own_game_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "make_your_own_game_-_student_checklist"
       }
     },
     {
@@ -16372,6 +16443,18 @@
       },
       "seeding_key": {
         "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
+      }
+    },
+    {
+      "name": "Naming Variables",
+      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+      "key": "naming_variables",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "naming_variables"
       }
     },
     {
@@ -16437,6 +16520,30 @@
       }
     },
     {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
+      "key": "random_numbers",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Shapes and Parameters",
+      "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
+      "key": "shapes_and_parameters",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "shapes_and_parameters"
+      }
+    },
+    {
       "name": "Shapes and Parameters - (Map Level)",
       "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
       "key": "shapes_and_parameters_-_map_level",
@@ -16489,6 +16596,30 @@
       }
     },
     {
+      "name": "Sprite Properties",
+      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
+      "key": "sprite_properties",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_properties"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+      "key": "sprites_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_1"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd3",
       "key": "teacher_forum_1",
@@ -16513,6 +16644,42 @@
       }
     },
     {
+      "name": "The Counter Pattern",
+      "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
+      "key": "the_counter_pattern",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "name": "The Draw Loop",
+      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+      "key": "the_draw_loop",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
+      "key": "variables_1",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "variables_1"
+      }
+    },
+    {
       "name": "Velocity",
       "url": "https://youtu.be/zcP94yMYqrI",
       "key": "velocity_1",
@@ -16526,8 +16693,20 @@
       }
     },
     {
-      "name": "Velocity and the Counter Pattern - Map Level (PDF)",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view",
+      "name": "Velocity",
+      "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
+      "key": "velocity_2",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_2"
+      }
+    },
+    {
+      "name": "Velocity and the Counter Pattern",
+      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
       "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
       "properties": {
         "type": "Resource",
@@ -16619,6 +16798,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "resource.key": "shapes_and_parameters_-_map_level"
       }
@@ -16627,6 +16812,12 @@
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters"
       }
     },
     {
@@ -16643,8 +16834,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Random Numbers",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "resource.key": "random_numbers"
       }
     },
     {
@@ -16667,8 +16876,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprite Properties",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties"
       }
     },
     {
@@ -16733,6 +16960,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "animating-sprites"
       }
@@ -16741,6 +16974,12 @@
       "seeding_key": {
         "lesson.key": "Sprite Movement",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "the_counter_pattern"
       }
     },
     {
@@ -16783,6 +17022,18 @@
       "seeding_key": {
         "lesson.key": "Conditionals",
         "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "if_statements"
       }
     },
     {
@@ -16836,12 +17087,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-rubric-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
         "resource.key": "interactive-card-1-2-3-4"
       }
     },
@@ -16849,6 +17094,18 @@
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_-_student_checklist"
       }
     },
     {
@@ -16861,6 +17118,12 @@
       "seeding_key": {
         "lesson.key": "Velocity",
         "resource.key": "velocity_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "resource.key": "velocity_2"
       }
     },
     {
@@ -16885,6 +17148,12 @@
       "seeding_key": {
         "lesson.key": "Collision Detection",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection"
       }
     },
     {
@@ -16967,6 +17236,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "functions_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "The Game Design Process",
         "resource.key": "project-guide-defender-game"
       }
@@ -17022,12 +17297,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-rubric-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
         "resource.key": "make-your-own-game-1-2-3"
       }
     },
@@ -17035,6 +17304,18 @@
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "make_your_own_game_-_student_checklist"
       }
     }
   ],
@@ -17095,24 +17376,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "bug_report",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_using_resources",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "how_to_debug",
-        "script.name": "csd3-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {

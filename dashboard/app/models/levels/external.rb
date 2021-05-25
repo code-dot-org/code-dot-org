@@ -33,7 +33,7 @@ class External < DSLDefined
 
   # Check if the level has a hand-written submit button. Once all submit buttons are removed from markdown, this can go away.
   def has_submit_button?
-    properties['markdown'].try(:include?, 'next-stage') && properties['markdown'].try(:include?, 'submitButton')
+    (properties['markdown'].try(:include?, 'next-stage') || properties['markdown'].try(:include?, 'next-lesson')) && properties['markdown'].try(:include?, 'submitButton')
   end
 
   def supports_markdown?

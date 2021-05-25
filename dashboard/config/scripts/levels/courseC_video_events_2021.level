@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "playlab_2021",
+    "short_instructions": "Need a better playlab/events combo",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 26459,
+    "name_suffix": "_2021",
+    "encrypted": "false"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-05-25T12:22:11.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-05-25 12:18:01 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-05-25 12:22:16 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

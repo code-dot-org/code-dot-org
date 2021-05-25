@@ -59,14 +59,12 @@
     "show_type_hints": "false",
     "remove_items_when_actor_collides": "false",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/684a9a43963d23cf3986caf8688b7149=levelbuilder/45309.png",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "tts_short_instructions_override": "Now, add another event block to get Jorge to move right when the right arrow button is clicked. Use the arrow keys or press the arrow buttons to move Jorge to both flags and finish the level!",
     "mini_rubric": "false",
-    "default_num_example_blocks": "false"
+    "default_num_example_blocks": "false",
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

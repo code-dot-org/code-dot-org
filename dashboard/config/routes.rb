@@ -255,6 +255,7 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
@@ -295,7 +296,11 @@ Dashboard::Application.routes.draw do
   get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
-  resources :lessons, only: [:edit, :update]
+  resources :lessons, only: [:edit, :update] do
+    member do
+      post :clone
+    end
+  end
 
   resources :resources, only: [:create, :update] do
     collection do

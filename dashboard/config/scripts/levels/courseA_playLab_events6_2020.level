@@ -60,12 +60,10 @@
     "long_instructions": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
     "mini_rubric": "false",
     "default_num_example_blocks": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "tts_short_instructions_override": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
-    "tts_long_instructions_override": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!"
+    "tts_long_instructions_override": "Make this more interesting by changing the background and playing a random sound when Jorge is clicked. When your code is ready, click on Jorge to try it out!",
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

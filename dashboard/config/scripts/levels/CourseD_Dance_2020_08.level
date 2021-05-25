@@ -59,7 +59,8 @@
       "rightButton",
       "downButton",
       "upButton"
-    ]
+    ],
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

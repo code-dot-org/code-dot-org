@@ -2,7 +2,7 @@
   "script": {
     "name": "coursed-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-18 18:12:57 UTC",
+    "serialized_at": "2021-05-25 17:15:01 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -3242,7 +3242,7 @@
       "key": "0a565c10-633a-486e-9d62-f62933373bf7",
       "position": 1,
       "properties": {
-        "description": "While loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas of each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops.",
+        "description": "While loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas off each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops.",
         "name": "While Loops in Farmer"
       },
       "seeding_key": {
@@ -3254,7 +3254,7 @@
       "key": "05e52524-87c5-4ce3-92ce-5d351618bc3f",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "05e52524-87c5-4ce3-92ce-5d351618bc3f",
@@ -3287,7 +3287,7 @@
       "key": "60c8c247-570f-4f82-92a1-dddff86de3eb",
       "position": 5,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "60c8c247-570f-4f82-92a1-dddff86de3eb",
@@ -3342,7 +3342,7 @@
       "key": "6751c001-d379-4682-8c2e-3eead4acba66",
       "position": 1,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is the difference between a while loop and a normal repeat loop?\n - Give an example of a puzzle where you would use a while loop, but not use a repeat loop. Can you give an example of a puzzle where you would use a repeat loop, but not a while loop?",
+        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is the difference between a while loop and a normal repeat loop?\n - Give an example of a puzzle where you would use a while loop, but not use a repeat loop. Can you give an example of a puzzle where you would use a repeat loop, but not a while loop?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -6825,7 +6825,7 @@
         "level_keys": [
           "courseD_farmer_while1_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6851,7 +6851,7 @@
         "level_keys": [
           "courseD_farmer_while2_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6877,7 +6877,7 @@
         "level_keys": [
           "courseD_farmer_while3_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6955,7 +6955,7 @@
         "level_keys": [
           "courseD_farmer_while4_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -6981,7 +6981,7 @@
         "level_keys": [
           "courseD_farmer_while5_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -7007,7 +7007,7 @@
         "level_keys": [
           "courseD_farmer_while6_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -7033,7 +7033,7 @@
         "level_keys": [
           "courseD_farmer_while7_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,

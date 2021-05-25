@@ -61,7 +61,8 @@
       "downButton",
       "upButton"
     ],
-    "tts_long_instructions_override": "This new block is a special kind of event that is triggered over and over.\r\n\r\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\r\n\r\nWhen you are done press the Finish button."
+    "tts_long_instructions_override": "This new block is a special kind of event that is triggered over and over.\r\n\r\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\r\n\r\nWhen you are done press the Finish button.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

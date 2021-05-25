@@ -55,7 +55,7 @@ export default storybook => {
           <ProgressLesson
             {...defaultProps}
             viewAs={ViewType.Student}
-            currentStageId={-1}
+            currentLessonId={-1}
             lesson={{
               id: -1,
               isFocusArea: false,
