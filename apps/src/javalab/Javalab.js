@@ -5,6 +5,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
 import javalab, {
   getSources,
+  getValidation,
   setAllSources,
   setIsDarkMode,
   appendOutputLog
@@ -138,7 +139,8 @@ Javalab.prototype.init = function(config) {
   if (config.level.editBlocks) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
-      start_sources: getSources(getStore().getState())
+      start_sources: getSources(getStore().getState()),
+      validation: getValidation(getStore().getState())
     }));
   }
 

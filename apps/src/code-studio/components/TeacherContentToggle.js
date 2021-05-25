@@ -13,7 +13,7 @@ import {isLessonHiddenForSection} from '../hiddenLessonRedux';
  * locked lessons and hidden lessons) this means hiding the main content, and
  * replacing it with something else.
  * We accomplish this by having the server render that other content to a known
- * dom element (#locked-stage, #hidden-stage). This component then creates
+ * dom element (#locked-lesson, #hidden-lesson). This component then creates
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
@@ -33,10 +33,10 @@ class TeacherContentToggle extends React.Component {
       throw new Error('Expected level-body');
     }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
-    $('#locked-stage')
+    $('#locked-lesson')
       .appendTo(this.refs.lockMessage)
       .show();
-    $('#hidden-stage')
+    $('#hidden-lesson')
       .appendTo(this.refs.hiddenMessage)
       .show();
     // Server initially sets level-body visibility to hidden when viewAs=Student

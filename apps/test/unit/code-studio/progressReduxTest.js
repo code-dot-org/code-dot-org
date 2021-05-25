@@ -160,6 +160,36 @@ const lessonData = [
   }
 ];
 
+const lockableStageData = [
+  {
+    script_id: 36,
+    script_name: 'course3',
+    script_stages: 21,
+    id: 264,
+    position: 1,
+    name: 'Computational Thinking',
+    title: 'Stage 1: Computational Thinking',
+    lesson_group_display_name: null,
+    lockable: true,
+    levels: [
+      {
+        ids: ['2106'],
+        activeId: '2106',
+        position: 1,
+        kind: LevelKind.unplugged,
+        icon: null,
+        title: 'Unplugged Activity',
+        url: 'http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1',
+        previous: false,
+        is_concept_level: false,
+        bonus: false,
+        display_as_unplugged: true,
+        sublevels: []
+      }
+    ]
+  }
+];
+
 // In the app, this is passed to the client as part of the initial page load. We
 // get this data by running Script::summarize
 const initialScriptOverviewProgress = {
@@ -727,6 +757,15 @@ describe('progressReduxTest', () => {
       assert.equal(results[0][0].levelNumber, null);
       assert.equal(results[0][1].isUnplugged, false);
       assert.equal(results[0][1].levelNumber, 1);
+    });
+
+    it('sets isLocked to true if lesson is lockabe', () => {
+      const results = levelsByLesson({
+        stages: lockableStageData,
+        scriptProgress: {},
+        levelResults: {}
+      });
+      assert.equal(results[0][0].isLocked, true);
     });
   });
 
