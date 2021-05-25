@@ -72,6 +72,15 @@ def get_i18n_strings(level)
       end
     end
 
+    # validation_strings
+    if level.validation_strings
+      validation_strings = JSON.parse(level.validation_strings)
+      i18n_strings['validation_strings'] = Hash.new unless validation_strings.empty?
+      validation_strings.each do |key, str|
+        i18n_strings['validation_strings'][key] = str
+      end
+    end
+
     # callouts
     if level.callout_json
       callouts = JSON.parse(level.callout_json)
