@@ -910,7 +910,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           var reinfFeedbackMsg =
             (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
 
-          if (options.level.disableFinalStageMessage) {
+          if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
