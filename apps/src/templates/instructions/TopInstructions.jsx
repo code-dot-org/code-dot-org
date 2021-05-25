@@ -595,13 +595,13 @@ class TopInstructions extends Component {
      * The Key Concept tab shows the Key Concept and Rubric for the level in a view
      * only form
      */
-    const displayKeyConcept =
+    const displayReadonlyRubric =
       rubric &&
       ((this.isViewingAsStudent && !studentHasFeedback) ||
         (this.isViewingAsTeacher && !teacherViewingStudentWork));
 
     const displayFeedback =
-      displayKeyConcept || teacherViewingStudentWork || studentHasFeedback;
+      displayReadonlyRubric || teacherViewingStudentWork || studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -643,7 +643,7 @@ class TopInstructions extends Component {
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedback}
-          displayKeyConcept={displayKeyConcept}
+          displayKeyConcept={displayReadonlyRubric} // Key Concept tab displays a readonly rubric
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
@@ -680,13 +680,13 @@ class TopInstructions extends Component {
               <TeacherFeedback
                 user={user}
                 visible={tabSelected === TabType.COMMENTS}
-                displayKeyConcept={displayKeyConcept}
+                displayReadonlyRubric={displayReadonlyRubric}
                 disabledMode={
                   this.isViewingAsStudent || !teacherViewingStudentWork
                 }
                 rubric={rubric}
                 ref={ref => (this.commentTab = ref)}
-                latestFeedback={feedbacks}
+                latestFeedback={feedbacks.length ? feedbacks[0] : null}
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
