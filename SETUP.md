@@ -269,7 +269,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
-## Piskel Setup
+## Piskel
 ### Local Development Between code-dot-org and forked piskel repo
 If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build. 
 
@@ -283,22 +283,6 @@ If you want the Code.org repo to point to the local version of the Piskel you ar
 5. `cd <code-dot-org apps directory>`
 6. `npm link @code-dot-org/piskel`
 7. rerun your previous command	
-
-### Contributing
-**More on contributing can be found in the [main Piskel repo](https://github.com/piskelapp/piskel/wiki#contributing)**
-
-#### Prerequisite
-To build Piskel, you need to :
-- install node and grunt-cli `npm install grunt-cli -g`.
-- run `npm install`
-
-#### Grunt build targets
-##### serve
-`grunt serve` will:
-- build the application
-- start a server on port 9001 (serving `dest` folder)
-- open a browser on `http://localhost:9001`
-- watch for changes, and rebuild the application if needed
 
 #### Note: Using `grunt serve --force`
 - If you try grunt serve and it is aborted due to warnings do `grunt serve --force`
