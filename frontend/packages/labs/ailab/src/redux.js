@@ -988,6 +988,7 @@ export function getDatasetDetails(state) {
   const datasetDetails = {};
   datasetDetails.description = getDataDescription(state);
   datasetDetails.numRows = state.data.length;
+  datasetDetails.isUserUploaded = isUserUploadedDataset(state);
   return datasetDetails;
 }
 
@@ -1014,13 +1015,10 @@ export function getFeaturesToSave(state) {
 
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
-
   dataToSave.name = state.trainedModelDetails.name;
-
   dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-
   dataToSave.selectedTrainer = isRegression(state)
     ? RegressionTrainer
     : ClassificationTrainer;
