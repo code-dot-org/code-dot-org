@@ -282,7 +282,7 @@ If you want the Code.org repo to point to the local version of the Piskel you ar
 4. `npm link`
 5. `cd <code-dot-org apps directory>`
 6. `npm link @code-dot-org/piskel`
-7. rerun your previous command	
+7. rerun `yarn start` in the `<code-dot-org apps directory>`
 
 #### Note: Using `grunt serve --force`
 - If you try grunt serve and it is aborted due to warnings do `grunt serve --force`
