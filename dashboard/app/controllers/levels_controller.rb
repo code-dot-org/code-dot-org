@@ -7,8 +7,8 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric]
+  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -156,6 +156,13 @@ class LevelsController < ApplicationController
       performanceLevel3: @level.rubric_performance_level_3,
       performanceLevel4: @level.rubric_performance_level_4
     }
+  end
+
+  # GET /levels/:id/get_serialized_maze
+  # Get the serialized_maze for the level, if it exists.
+  def get_serialized_maze
+    return head :no_content unless @level.properties['serialized_maze'].presence && @level.serialized_maze
+    render json: @level.serialized_maze
   end
 
   # GET /levels/:id/edit_blocks/:type

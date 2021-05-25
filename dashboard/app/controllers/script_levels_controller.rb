@@ -116,7 +116,7 @@ class ScriptLevelsController < ApplicationController
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
-      render 'levels/_hidden_stage'
+      render 'levels/_hidden_lesson'
       return
     end
 
