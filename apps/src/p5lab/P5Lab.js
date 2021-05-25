@@ -232,6 +232,10 @@ P5Lab.prototype.init = function(config) {
     );
   }
   this.level = config.level;
+  if (this.level.validationStrings) {
+    this.level.validationStrings = JSON.parse(this.level.validationStrings);
+    console.log(this.level);
+  }
 
   this.level.helperLibraries = this.level.helperLibraries || [];
 
@@ -466,7 +470,10 @@ P5Lab.prototype.init = function(config) {
   // animations specified by the level definition for embed and contained
   // levels.
   const useConfig =
-    config.initialAnimationList && !config.embed && !config.hasContainedLevels;
+    false &&
+    config.initialAnimationList &&
+    !config.embed &&
+    !config.hasContainedLevels;
   let initialAnimationList = useConfig
     ? config.initialAnimationList
     : this.startAnimations;
@@ -530,6 +537,9 @@ P5Lab.prototype.loadAnyMissingDefaultAnimations = function(
   initialAnimationList
 ) {
   if (!this.isSpritelab) {
+    return initialAnimationList;
+  }
+  if (!initialAnimationList || !initialAnimationList.orderedKeys) {
     return initialAnimationList;
   }
   let configDictionary = {};
@@ -873,8 +883,9 @@ P5Lab.prototype.reset = function() {
 
 P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
-  if (message && msg[message]) {
-    this.message = msg[message]();
+  if (message && this.level.validationStrings[message]) {
+    //this.message = msg[message]();
+    this.message = this.level.validationStrings[message];
   }
   const sourcesUnchanged = !this.studioApp_.validateCodeChanged();
   if (this.executionError) {

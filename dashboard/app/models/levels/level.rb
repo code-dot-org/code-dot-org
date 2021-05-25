@@ -91,6 +91,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
+    validation_strings
   )
 
   def self.add_levels(raw_levels, script, new_suffix, editor_experiment)

@@ -282,6 +282,8 @@ class Blockly < Level
       set_unless_nil(level_options, 'shortInstructions', localized_short_instructions)
       set_unless_nil(level_options, 'authoredHints', localized_authored_hints)
 
+      set_unless_nil(level_options, 'validationStrings', validation_strings)
+
       if should_localize?
         set_unless_nil(level_options, 'sharedBlocks', localized_shared_blocks(level_options['sharedBlocks']))
         set_unless_nil(level_options, 'sharedFunctions', localized_shared_functions(level_options['sharedFunctions']))
