@@ -57,17 +57,15 @@
     "parent_level_id": 15682,
     "name_suffix": "_2020",
     "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/ce222213d37908eaf27b969bdbfc2fd0=levelbuilder/45310.png",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "tts_short_instructions_override": "Add events to have Jorge move up and down when the `up` and `down` buttons are pressed. Make Jorge get the flags to finish the level!",
     "mini_rubric": "false",
     "top_level_procedure_autopopulate": "false",
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
-    "remove_items_when_actor_collides": "false"
+    "remove_items_when_actor_collides": "false",
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
