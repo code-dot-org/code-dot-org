@@ -221,7 +221,8 @@ const styles = {
     // ensure we have height when we only have our toggle (which is floated)
     minHeight: 50,
     position: 'relative',
-    display: 'flex'
+    display: 'flex',
+    flexDirection: 'column'
   },
   buttonsInRow: {
     display: 'flex',
