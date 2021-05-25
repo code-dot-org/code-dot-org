@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-24 18:43:00 UTC",
+    "serialized_at": "2021-05-25 18:20:00 UTC",
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -105,6 +105,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "Students continue to work on the Project Mercury Pastries food truck program. Students write overloaded constructors for the `Dessert` class to provide multiple ways to instantiate `Dessert` objects. Students determine when it is appropriate to establish default values for one or more instance variables and use no-argument constructors. ",
+        "preparation": "* Print copies of the Construct an Object Cards (one set of cards for each pair of students)\n* (Optional) Cut out the pieces of the object for each group of students",
+        "student_overview": "The Project Mercury Pastries food truck has grown in popularity! To help the owner fill orders, you improve the `Dessert` class to create `Dessert` objects more efficiently. To solve this problem, you implement overloaded constructors to simplify your code and add flexibility for creating `Dessert` objects. To fill standard orders, you create a default constructor to use default values for `Dessert`s."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -120,6 +123,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "In this lesson, students write and evaluate expressions using variables and object data. Students use arithmetic operators (+, -, *, /, %) and compound assignment (+=, -=, *=, /=, %=) operators to perform calculations involving variables and object data.",
+        "preparation": "* Print copies of the Vocabulary Crossword warmup (one per student)\n* Print copies of the Exploring Expressions handouts (one version per pair of students)\n* Gather sticky notes (one per student)",
+        "student_overview": "You explore the rules that a computer uses to determine the resulting value and type of an expression, similar to the ones you see in math class. You create expressions to get the computer to do the math for you."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -401,6 +407,90 @@
       "seeding_key": {
         "lesson_activity.key": "66e2687b-ec16-4a09-8e01-cad520c2a537",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "e87051a0-17fd-469d-bfc8-af1f09db394d",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "289e6b67-1bbd-431d-b025-59aba8027919",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "289e6b67-1bbd-431d-b025-59aba8027919",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "c53cc0be-8a11-4944-96b3-354d7b70a397",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "34b62241-cdc8-49c1-8f76-2e9816094034",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot"
       }
@@ -977,6 +1067,361 @@
         "activity_section.key": "c209709f-7efc-438c-98ac-9c2c00ffc00f",
         "lesson_activity.key": "66e2687b-ec16-4a09-8e01-cad520c2a537"
       }
+    },
+    {
+      "key": "985dc512-441a-498c-bd57-da798160b022",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, we created a constructor for the `Dessert` class and used it to initialize the instance variables of a `Dessert` object. Let’s review how to call the constructor for the `Dessert` class. Arrange the given cards in the correct order to create the Java statement needed to initialize a `Dessert` object. ",
+        "name": "Construct an Object",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "985dc512-441a-498c-bd57-da798160b022",
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d"
+      }
+    },
+    {
+      "key": "bb571ca2-27c1-448c-92d4-9170e499f4fe",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a stack of the Construct an Object cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students look at the constructor on the slide and construct an object with their cards.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Alternative ways to prepare the Construct an Object Cards:\n1. Pass out the card sheets and scissors to each group and have the students cut their own set of cards.\n2. Make several laminated sets of cards that to share between different sections."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb571ca2-27c1-448c-92d4-9170e499f4fe",
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d"
+      }
+    },
+    {
+      "key": "ca146b4e-f55a-48b8-bcda-5c91f68bc7c3",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Instruct students to discuss the following prompt with their partner.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What would happen if we called the constructor without passing arguments? What could you do to solve this problem?*\n\n**Discussion Goal:** Students reflect on the parameters in a constructor and the purpose of the values for constructing an object. Students may recall from Unit 1, Lesson 5 that parameterized constructors allow you to specify unique starting values to set the initial values for an object."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca146b4e-f55a-48b8-bcda-5c91f68bc7c3",
+        "lesson_activity.key": "e87051a0-17fd-469d-bfc8-af1f09db394d"
+      }
+    },
+    {
+      "key": "c0314280-f2d1-4d16-bf80-47f34c2e0b6a",
+      "position": 1,
+      "properties": {
+        "description": "The Project Mercury Pastries food truck has grown in popularity! Now, orders can vary. Some customers want to order just a standard dessert, while other customers want to customize their dessert. \n\nTo help the owner fill orders more quickly, we need to improve the `Dessert` class to create `Dessert` objects more efficiently. To solve this problem, we will add additional constructors to the `Dessert` class.",
+        "duration": "10",
+        "name": "Introduction to Constructor Overloading",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0314280-f2d1-4d16-bf80-47f34c2e0b6a",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "bbaee682-fd1c-421f-a680-fb218cbad5ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce constructor overloading:\n* For example, donuts can have frosting and sprinkles, or donuts can be plain. The challenge is to improve the `Dessert` class to create these different donuts more efficiently.\n* Constructor overloading can be used to solve this problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the definition of overloading and constructor overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we identify if a class contains an overloaded constructor?*\n\n**Discussion Goal:** Based on the example, students identify that a class with more than one constructor has overloaded constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce no-argument constructors for default values and constructors that take parameters to initialize the instance variables to specified values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a no-argument constructor in the `Dessert` class."
+      },
+      "seeding_key": {
+        "activity_section.key": "bbaee682-fd1c-421f-a680-fb218cbad5ce",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "078d659f-4ee0-49a1-9873-35bc89672999",
+      "position": 3,
+      "properties": {
+        "description": "We are going to continue to develop the `Dessert` class that we wrote in the previous lesson.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "078d659f-4ee0-49a1-9873-35bc89672999",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "ca67fc3a-e5d6-433f-b225-01a71362a754",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Level 1 on Code Studio. Students expand the `Dessert class` by adding a no-argument constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca67fc3a-e5d6-433f-b225-01a71362a754",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "5581959f-1764-42af-961a-0eea419b6681",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think would happen if we did not include any constructors in the `Dessert` class and tried to execute the following code?*\n\n**Discussion Goal:** Students think about how Java executes code without a constructor and uses default values in a program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the solution to the discussion prompt, which explains that Java provides a no-argument constructor that sets the instance variables to default values and the default values that Java uses for each data type.",
+        "duration": "2",
+        "name": "Default Constructor"
+      },
+      "seeding_key": {
+        "activity_section.key": "5581959f-1764-42af-961a-0eea419b6681",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "696d27fa-5320-494e-ba19-4dfda3eec9a1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the importance of default values in the user experience and software design?*\n\n**Discussion Goal:** Students identify various uses and purposes for default values in a program, such as reducing the amount of work users have to do, saving the user from having to select all choices, and reducing errors.",
+        "duration": "8",
+        "name": "Multiple Constructors",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students also consider potential negative effects of using default values. Prompt students to share ideas and examples of when default values might not be ideal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "696d27fa-5320-494e-ba19-4dfda3eec9a1",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "2c96e560-af9c-4491-8592-1f128e6975dd",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a constructor with parameters and a default value. You should identify:\n*  The `Dessert` constructor has two parameters, `newFlavor` and `newPrice`.\n* The `quantity` is set to a default value of 2."
+      },
+      "seeding_key": {
+        "activity_section.key": "2c96e560-af9c-4491-8592-1f128e6975dd",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "0caac888-0ba7-4323-b10b-da6a7cd4e402",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 2 and 3 on Code Studio. "
+      },
+      "seeding_key": {
+        "activity_section.key": "0caac888-0ba7-4323-b10b-da6a7cd4e402",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "36920bde-5226-4195-bb5f-b9c302f4bf16",
+      "position": 9,
+      "properties": {
+        "description": "The owner just called and has decided to add cupcakes to the inventory. The owner wants the cupcakes to cost $1.50, but she wants to let customers choose their flavor and quantity.",
+        "duration": "10",
+        "name": "Constructor Overloading with Scanner",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "36920bde-5226-4195-bb5f-b9c302f4bf16",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "370435a1-8e5b-42ad-a2d3-a090bc4aa9a1",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What type of constructor would you create?*\n\n**Discussion Goal:** Based on the scenario, students talk about using a constructor with a default value and parameters. Students might state the need for a `Scanner` object to create an object with user input."
+      },
+      "seeding_key": {
+        "activity_section.key": "370435a1-8e5b-42ad-a2d3-a090bc4aa9a1",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "dff9e28d-4d6d-4f89-83d4-b83dbb200a55",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 4 and 5 on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "dff9e28d-4d6d-4f89-83d4-b83dbb200a55",
+        "lesson_activity.key": "3d65aa71-6d85-4faa-a509-0a95d2c9aa01"
+      }
+    },
+    {
+      "key": "12244609-18cc-49f1-91db-e24861d3504c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students through the process of Closing the Loop:\n* *Which parts of this lesson built off of previous lesson content?*\n* *What is completely new?*\n* *What is the purpose of overloading a constructor?*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Overloading allows the user to choose instance variables that are custom when creating the object. Consider asking students to share strategies they used from previous lessons that they implemented in this lesson. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "12244609-18cc-49f1-91db-e24861d3504c",
+        "lesson_activity.key": "289e6b67-1bbd-431d-b025-59aba8027919"
+      }
+    },
+    {
+      "key": "c580dab3-5180-44d3-b8bb-6867e30d2ba1",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c580dab3-5180-44d3-b8bb-6867e30d2ba1",
+        "lesson_activity.key": "289e6b67-1bbd-431d-b025-59aba8027919"
+      }
+    },
+    {
+      "key": "b9e47abb-a65f-4f68-8064-00e1472d3d8b",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a Vocabulary Crossword as they enter the classroom. Encourage students to begin working on the crossword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Give students 5-6 minutes to complete the crossword.\n* Discuss the answers for the sections highlighted in green as a class. If necessary, review the order of operations using PEMDAS: parentheses, exponents, multiplication and division, addition and subtraction.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Vocabulary Crossword helps students review vocabulary they have learned so far, but it can take some time to complete. Some scaffolding options include:\n* Keeping or removing the word bank\n* Focusing on the sections highlighted in green first\n\nIt is not necessary for students to complete the entire crossword during the warm up. If students move quickly through the lesson activity, they can continue to work on the crossword as they wait for their peers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b9e47abb-a65f-4f68-8064-00e1472d3d8b",
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397"
+      }
+    },
+    {
+      "key": "b95ab8f8-048e-439b-ad63-ca0f67e1232e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What theme do you notice about the words that are highlighted in green?*\n\n**Discussion Goal:** Students identify themes related to evaluating expressions, such as doing math, values, or types associated with values."
+      },
+      "seeding_key": {
+        "activity_section.key": "b95ab8f8-048e-439b-ad63-ca0f67e1232e",
+        "lesson_activity.key": "c53cc0be-8a11-4944-96b3-354d7b70a397"
+      }
+    },
+    {
+      "key": "7150ad58-3683-4227-977a-94a6700e0147",
+      "position": 1,
+      "properties": {
+        "description": "So far, we have developed a `Dessert` class to create `Dessert` objects to represent the Project Mercury Pastries inventory. We would also like to process some of that information for the bakery. Today we are going to explore how we can perform operations on the data we store in Java.",
+        "duration": "15",
+        "name": "Arithmetic Operations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7150ad58-3683-4227-977a-94a6700e0147",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "f3ac0d01-2f17-447a-a11e-db09bb0fee61",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to introduce expressions:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> An expression is a combination of operands and operators that evaluates to a single value.\n* When evaluating an expression, it is important to pay attention to both the value of the operand and the type. This will determine the type of the resulting value.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair an Exploring Expressions handout. One student in the pair should receive Version A and the other student in the pair should receive Version B.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The two versions of the worksheet address the same skills. Each version gives students different examples of expressions so they can identify patterns and rules of operators."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f3ac0d01-2f17-447a-a11e-db09bb0fee61",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 10 minutes to complete the Arithmetic Operations section of the Exploring Expressions handout (pages 1-3). As students are working, use Catch and Release as appropriate to maintain engagement. You may choose to catch to:\n* Ask a student to demonstrate how to use the expressions widget when they have started the plugged section of the activity.\n* Answer the fill-in-the-blank questions for the + operator to identify the first blank as addition and the second blank as concatenation. Explain that this means the operator is overloaded (similar to the constructors they wrote earlier in this unit).\n* Answer the free-response questions for the / operator.\n* Clarify how to use the % operator. You may choose to walk through the process of dividing two numbers and identifying the remainder.\n* Support students with misconceptions involving mathematical concepts.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Catch and Release is a technique to allow students to explore a concept with intermittent support while preventing students from struggling for too long or disengaging. Give students about two minutes to work on each arithmetic operator. As students work, circulate and make note of any misconceptions. After the two minutes, briefly clarify issues or pose a question to the class that students have been struggling with, then send them back to their work.\n\nIt is not necessary to bring the class back together after every operator. If questions have been addressed individually or students do not need the answer to continue working you may choose to address these questions after the Arithmetic Operators video.\n\nOptional differentiation: Use a public timer to differentiate between independent work and discussion, addressing all student questions after a given amount of time has elapsed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3aea3fd8-5e6c-42d7-8450-ddaf5b0580c3",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Arithmetic Operators video.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the self check question. Give students one minute to think to themselves before asking students to respond out loud.\n* Click through the animated slide to review the correct answer. Give students two minutes to go back and complete the Modulus section of the activity guide if needed.\n\n**Discussion Goal:** Students demonstrate confidence working with all arithmetic operators before moving on. Students might feel a little uncomfortable with the modulus (mod) operator, but they will practice using it more in later lessons.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel students could use a movement break, ask students to move to a different corner of the room corresponding to their answer, where corner one corresponds to answer A, corner two corresponds to answer B, etc. Other options for polling for answers include asking students to raise one finger for answer A, two fingers for answer B, etc."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a71cbaa4-d364-49c0-8e14-ace4e8bdb5a3",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "4106dcf1-554d-4496-816a-015d638acaa5",
+      "position": 5,
+      "properties": {
+        "description": "The food truck owner can use expressions to calculate information, such as the total number of desserts in the truck. We need to be able to store that information somewhere in our program so we can use it again later. To do this, we are going to assign the value of our evaluated expression to a variable.",
+        "duration": "15",
+        "name": "Expressions with Variables",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4106dcf1-554d-4496-816a-015d638acaa5",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "f7990e9f-e076-400b-95f4-9047b1caa1e1",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate evaluating expressions and storing the value in a variable.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When processing assignment expressions, evaluate the statement on the right then store the value in the variable on the left.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When evaluating multiple expression statements in a row, the updated value that has been stored in the variable is the value that is used in future expression."
+      },
+      "seeding_key": {
+        "activity_section.key": "f7990e9f-e076-400b-95f4-9047b1caa1e1",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "32ca1625-681d-4f90-9b49-0034c0a08437",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Expressions with Variables section of the Exploring Expressions handout (pages 4-5). As students are working, use Catch and Release as appropriate to maintain engagement. When students have finished this section, direct them to Code Studio to practice writing expressions for the Project Mercury Food Truck."
+      },
+      "seeding_key": {
+        "activity_section.key": "32ca1625-681d-4f90-9b49-0034c0a08437",
+        "lesson_activity.key": "34b62241-cdc8-49c1-8f76-2e9816094034"
+      }
+    },
+    {
+      "key": "32afd1a1-380b-48eb-a721-1feca830a1b4",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show the Evaluating Expressions video.\n\n**Do This:** Lead a Quiz-Quiz-Trade activity.\n* Give each student a sticky note.\n* Students each write a short code segment including at least one variable, three arithmetic operators, and one compound assignment operator. They evaluate the code segment and write the answer on the back.\n* Use a pairing technique to get students to find a partner.\n* Students evaluate their partner’s expression and check their answer by turning over the sticky note.\n* Repeat with 2-3 partner pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "32afd1a1-380b-48eb-a721-1feca830a1b4",
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
+      }
+    },
+    {
+      "key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad085f55-9443-4332-aca4-66c95fd4c6cd",
+        "lesson_activity.key": "b8b2474a-ff76-4970-b6d1-49c8a4a55611"
+      }
     }
   ],
   "script_levels": [
@@ -987,6 +1432,18 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Construct an Object Cards",
+      "url": "https://docs.google.com/document/d/1kMfDP6rlD1NB_T8MaF33Iq_bkfba0Uo55eGzpzMqtpM/edit?usp=sharing",
+      "key": "_key_construct_an_object_cards",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
       "name": "[KEY] Defining Attributes",
       "url": "https://docs.google.com/document/d/11kEvOxuygD9By8YSP9kezKkaDbUXuJ7PnIrBE0vLo4I/edit?usp=sharing",
       "key": "_key_defining_attributes",
@@ -996,6 +1453,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_defining_attributes"
+      }
+    },
+    {
+      "name": "[KEY] Exploring Expressions Version A",
+      "url": "https://docs.google.com/document/d/1aBxSZLeaH3r60ceyj7yFkj4skVi6hDAAeP8wYMhrnSI/edit?usp=sharing",
+      "key": "_key_exploring_expressions_version_a",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_expressions_version_a"
+      }
+    },
+    {
+      "name": "[KEY] Exploring Expressions Version B",
+      "url": "https://docs.google.com/document/d/19ymYGh-7Q6SdpKf1T1HAPdA7FqtapSPNoI5q0tKMhTc/edit",
+      "key": "_key_exploring_expressions_version_b",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_exploring_expressions_version_b"
       }
     },
     {
@@ -1047,6 +1528,30 @@
       }
     },
     {
+      "name": "[KEY] U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1y7s4q-hAw37m155j7AZAhU0_M7_RE4EZx-yxcKLYW0Q/edit#",
+      "key": "_key_u2l5_extra_practice",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] Vocabulary Crossword",
+      "url": "https://docs.google.com/presentation/d/1Op_DvPrHFjFi-0h1mrTnontH9WgBOBxO48_TJ0uwVG0/edit#slide=id.p",
+      "key": "_key_vocabulary_crossword",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_vocabulary_crossword"
+      }
+    },
+    {
       "name": "[KEY] Writing Constructors Guided Notes",
       "url": "https://docs.google.com/document/d/15a8LPjxmhUUFkSrHb89ZEzRV2UI5WP9ZF9Z4MSaxuTs/edit?usp=sharing",
       "key": "_key_writing_constructors_guided_notes",
@@ -1092,6 +1597,30 @@
       },
       "seeding_key": {
         "resource.key": "defining_attributes_-_main_method"
+      }
+    },
+    {
+      "name": "Exploring Expressions Version A",
+      "url": "https://docs.google.com/document/d/10AmwHOT2NA5JujTKj41EvzbmRfrKJbkSFyC8Veic274/view",
+      "key": "exploring_expressions_version_a",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_expressions_version_a"
+      }
+    },
+    {
+      "name": "Exploring Expressions Version B",
+      "url": "https://docs.google.com/document/d/1VvJKwMk2L-QQcdDskj9eSpw9mIKvZNJk946FBfoD5Rc/edit?usp=sharing",
+      "key": "exploring_expressions_version_b",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_expressions_version_b"
       }
     },
     {
@@ -1155,6 +1684,18 @@
       }
     },
     {
+      "name": "U2L5 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Sng7ML-9DYoPyqF64de2aI1wCii5Tai0mtaEn4bidZA/edit#",
+      "key": "u2l5_extra_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "u2l5_extra_practice"
+      }
+    },
+    {
       "name": "Unit 2 Presentation Slides",
       "url": "https://docs.google.com/presentation/d/1kfzkThzPNV9xM1IJca8ySP7T2spBvzw03kze9k46H4I/edit?usp=sharing",
       "key": "unit_2_presentation_slides",
@@ -1164,6 +1705,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "name": "Vocabulary Crossword",
+      "url": "https://docs.google.com/presentation/d/1ZJceJ7K_tj-Yszt81_uM1gY3oD0XprkTtdG5r5hDql8/edit#slide=id.p",
+      "key": "vocabulary_practice",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_practice"
       }
     },
     {
@@ -1286,6 +1839,72 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_construct_an_object_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_2_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_vocabulary_crossword"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_expressions_version_a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_exploring_expressions_version_b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u2l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "vocabulary_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_expressions_version_a"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "exploring_expressions_version_b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u2l5_extra_practice"
       }
     }
   ],
@@ -1555,6 +2174,106 @@
       "seeding_key": {
         "vocabulary.key": "local_variable"
       }
+    },
+    {
+      "key": "default_value",
+      "word": "Default Value",
+      "definition": "A predefined value that is used by a program when the user does not provide a value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "key": "overloading",
+      "word": "Overloading",
+      "definition": "Defining two or more methods with the same name but different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "key": "constructor_overloading",
+      "word": "Constructor Overloading",
+      "definition": "Defining more than one constructor in a class with different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_overloading"
+      }
+    },
+    {
+      "key": "no_argument_constructor",
+      "word": "No-Argument Constructor",
+      "definition": "A constructor with no parameters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "key": "evaluate",
+      "word": "Evaluate",
+      "definition": "Determining the value of an expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "evaluate"
+      }
+    },
+    {
+      "key": "expression",
+      "word": "Expression",
+      "definition": "A combination of data and operators that evaluates to a single value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "key": "concatenation",
+      "word": "Concatenation",
+      "definition": "Merging two strings into one",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "concatenation"
+      }
+    },
+    {
+      "key": "compound_assignment_operator",
+      "word": "Compound Assignment Operator",
+      "definition": "Shortcut syntax (+=, -=, *=, /=, %=) to perform an operation (+, -, *, /, or %) on both operands and store the result into the operand on the left",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compound_assignment_operator"
+      }
+    },
+    {
+      "key": "arithmeticexception",
+      "word": "ArithmeticException",
+      "definition": "An error caused by dividing by zero",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "arithmeticexception"
+      }
+    },
+    {
+      "key": "operand",
+      "word": "Operand",
+      "definition": "The data that is operated on",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "operand"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -1713,6 +2432,66 @@
         "lesson.key": "lesson-3",
         "vocabulary.key": "local_variable"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "constructor_overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "evaluate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "concatenation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "compound_assignment_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "arithmeticexception"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "operand"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -1817,6 +2596,76 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "92ab3fd9-0b7e-484e-bd1c-34387987d6a4"
+      }
+    },
+    {
+      "key": "108ff9ae-99ba-43ef-97ea-a91860ff4152",
+      "properties": {
+        "description": "Identify, using its signature, the correct constructor being called"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "108ff9ae-99ba-43ef-97ea-a91860ff4152"
+      }
+    },
+    {
+      "key": "a8aa0775-57c1-4f14-b817-27d401574b47",
+      "properties": {
+        "description": "Create overloaded constructors"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "a8aa0775-57c1-4f14-b817-27d401574b47"
+      }
+    },
+    {
+      "key": "bec1c0d6-fc2c-4d59-9216-47a6edef4cdb",
+      "properties": {
+        "description": "Construct a no-argument constructor to assign default values to the instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "bec1c0d6-fc2c-4d59-9216-47a6edef4cdb"
+      }
+    },
+    {
+      "key": "0543139d-057a-490c-8a29-3ce2fc7fbb7b",
+      "properties": {
+        "description": "Analyze an expression to determine the resulting value and type"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "0543139d-057a-490c-8a29-3ce2fc7fbb7b"
+      }
+    },
+    {
+      "key": "e362a4a6-3a67-456a-b8df-9409d3a12d2f",
+      "properties": {
+        "description": "Describe and apply Java’s operator precedence"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "e362a4a6-3a67-456a-b8df-9409d3a12d2f"
+      }
+    },
+    {
+      "key": "3e1ea340-5cd5-4d44-9de7-2e6df90f1ede",
+      "properties": {
+        "description": "Use arithmetic operators to write and evaluate Java expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "3e1ea340-5cd5-4d44-9de7-2e6df90f1ede"
+      }
+    },
+    {
+      "key": "d71ed25c-e0df-47e8-afb6-170e9546eda3",
+      "properties": {
+        "description": "Identify cases that result in an ArithmeticException"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "d71ed25c-e0df-47e8-afb6-170e9546eda3"
       }
     }
   ],
@@ -2043,6 +2892,104 @@
         "lesson.key": "lesson-3",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.3"
       }
     }
   ],
