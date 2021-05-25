@@ -35,6 +35,7 @@ class Javalab < Level
     csa_view_mode
     serialized_maze
     grid_dimensions
+    start_direction
   )
 
   before_save :fix_examples, :parse_maze
