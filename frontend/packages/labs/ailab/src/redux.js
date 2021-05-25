@@ -394,7 +394,8 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...initialState,
       instructionsKeyCallback: state.instructionsKeyCallback,
-      mode: state.mode
+      mode: state.mode,
+      reserveLocation: state.reserveLocation
     };
   }
   if (action.type === SET_MODEL_SIZE) {
