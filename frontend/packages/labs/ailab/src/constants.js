@@ -169,7 +169,7 @@ export const styles = {
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: "#f2f2f2",
     padding: 10
   },
 
@@ -182,7 +182,7 @@ export const styles = {
 
   contents: {
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)",
+    backgroundColor: "#f2f2f2",
     padding: 15
   },
 
@@ -225,17 +225,19 @@ export const styles = {
     padding: 20,
     float: "left",
     boxSizing: "border-box",
-    border: "solid 4px rgba(0,0,0,0)",
+    border: "solid 4px #f2f2f2",
     borderRadius: 0,
-    cursor: "pointer"
+    cursor: "pointer",
+    backgroundColor: "white",
+    margin: 4
   },
 
   selectDatasetItemHighlighted: {
-    backgroundColor: "#d6f2fa"
+    border: "solid 4px rgba(85, 217, 255, 0.6)"
   },
 
   selectDatasetItemSelected: {
-    backgroundColor: "#94e3fa"
+    border: "solid 4px rgb(85, 217, 255)"
   },
 
   selectDatasetImage: {
@@ -244,7 +246,7 @@ export const styles = {
 
   selectDatasetText: {
     fontSize: 14,
-    marginTop: 10
+    marginTop: 5
   },
 
   uploadButton: {
