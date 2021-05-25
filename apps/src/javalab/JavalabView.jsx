@@ -87,7 +87,12 @@ class JavalabView extends React.Component {
             className="responsive"
             style={styles.instructionsAndPreview}
           >
-            <TopInstructions mainStyle={styles.instructions} standalone />
+            <TopInstructions
+              mainStyle={styles.instructions}
+              standalone
+              displayDocumentationTab
+              displayReviewTab
+            />
             <div style={styles.preview}>{visualization}</div>
           </div>
           <VisualizationResizeBar />
