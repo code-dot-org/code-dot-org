@@ -1,0 +1,17 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2020-02-25T15:56:20.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "video_key": "C4_unplugged_variables",
+    "display_as_unplugged": "true",
+    "use_large_video_player": "true",
+    "hide_reference_area": "true",
+    "markdown": "# Envelope Variables\n\nVariables allow for a lot of freedom in computer science. This lesson helps to explain what variables are and how we can use them in many different ways.\n"
+  },
+  "published": false
+}]]></config>
+</External>

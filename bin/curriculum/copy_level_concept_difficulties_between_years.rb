@@ -1,3 +1,7 @@
+# Note: parent_level_id are specific to the environment the level was copied in
+# Since the majority of copying happens on levelbuilder this script should be
+# run on the levelbuilder environment.
+
 #!/usr/bin/env ruby
 require_relative '../../dashboard/config/environment'
 
@@ -12,6 +16,10 @@ def main(year_to_copy_to)
       puts "Level: " + sl.level.name
       next if sl.level.level_concept_difficulty
       copy_lcd_from_parent(sl.level)
+
+      # Write changes to file
+      file_path = Level.level_file_path(sl.level.name)
+      File.write(file_path, sl.level.to_xml)
     end
   end
 end

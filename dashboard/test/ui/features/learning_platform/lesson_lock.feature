@@ -29,7 +29,7 @@ Scenario: Lock settings for students
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
-  Then element "#locked-stage:contains(stage is currently locked)" is visible
+  Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
@@ -107,7 +107,7 @@ Scenario: Lock settings for students who never submit
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
-  Then element "#locked-stage:contains(stage is currently locked)" is visible
+  Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
@@ -163,7 +163,7 @@ Scenario: Lock settings for retake not submit scenario
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
-  Then element "#locked-stage:contains(stage is currently locked)" is visible
+  Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
@@ -245,7 +245,7 @@ Scenario: Lock settings for retake after submit scenario
 
   When I am on "http://studio.code.org/s/allthethings/lockable/1/levels/1/page/1"
   And I wait until element "#level-body" is visible
-  Then element "#locked-stage:contains(stage is currently locked)" is visible
+  Then element "#locked-lesson:contains(lesson is currently locked)" is visible
 
   # teacher unlocks
 
