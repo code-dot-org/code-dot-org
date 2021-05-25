@@ -21,7 +21,6 @@ class ResultsDetails extends Component {
     resultsTab: PropTypes.string,
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    percentDataToReserve: PropTypes.number,
     summaryStat: PropTypes.object,
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
@@ -67,7 +66,6 @@ export default connect(
       state,
       state.accuracyCheckPredictedLabels
     ),
-    percentDataToReserve: state.percentDataToReserve,
     correctResults: getCorrectResults(state),
     incorrectResults: getIncorrectResults(state)
   }),

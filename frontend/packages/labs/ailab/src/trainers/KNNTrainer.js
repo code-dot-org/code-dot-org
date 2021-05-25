@@ -44,7 +44,7 @@ export default class KNNTrainer {
           state.trainingLabels,
           {k: kValue}
         );
-        var model = this.knn.toJSON();
+        var model = this.knn;
         const predictedLabels = this.batchPredict(state.accuracyCheckExamples);
         const accuracy = this.getAccuracyPercent();
         if (accuracy > bestAccuracy) {
@@ -62,7 +62,7 @@ export default class KNNTrainer {
         state.trainingLabels,
         {k: defaultK}
       );
-      bestModel = this.knn.toJSON();
+      bestModel = this.knn
       bestK = defaultK;
     }
     store.dispatch(setKValue(bestK));
@@ -70,9 +70,7 @@ export default class KNNTrainer {
     store.dispatch(setTrainedModel(bestModel));
     const size = Buffer.byteLength(JSON.stringify(bestModel));
     const kiloBytes = size / 1024;
-    setTimeout(() => {
-      store.dispatch(setModelSize(kiloBytes));
-    }, 3000);
+    store.dispatch(setModelSize(kiloBytes));
 
     const state2 = store.getState();
 
@@ -97,8 +95,8 @@ export default class KNNTrainer {
   }
 
   predict(testValues) {
-    let prediction = {};
-    prediction.predictedLabel = this.knn.predict([testValues])[0];
+    const state = store.getState();
+    const prediction = state.trainedModel.predict(testValues);
     store.dispatch(setPrediction(prediction));
   }
 }

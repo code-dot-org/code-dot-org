@@ -35,7 +35,6 @@ const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
-const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
 const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
 const SET_ACCURACY_CHECK_LABELS = "SET_ACCURACY_CHECK_LABELS";
@@ -123,10 +122,6 @@ export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
 }
 
-export function setPercentDataToReserve(percentDataToReserve) {
-  return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
-}
-
 export function setReserveLocation(reserveLocation) {
   return { type: SET_RESERVE_LOCATION, reserveLocation };
 }
@@ -208,7 +203,7 @@ export function setHistoricResult(label, features, accuracy) {
 }
 
 export function setShowResultsDetails(show) {
-  return {type: SET_SHOW_RESULTS_DETAILS, show};
+  return { type: SET_SHOW_RESULTS_DETAILS, show };
 }
 
 export function setKValue(kValue) {
@@ -236,14 +231,12 @@ const initialState = {
   labelColumn: undefined,
   featureNumberKey: {},
   trainingExamples: [],
-  trainingLabels: [],
-  percentDataToReserve: 10,
   reserveLocation: TestDataLocations.END,
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
   testData: {},
-  prediction: {},
+  prediction: undefined,
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
@@ -360,12 +353,6 @@ export default function rootReducer(state = initialState, action) {
       trainingLabels: action.trainingLabels
     };
   }
-  if (action.type === SET_PERCENT_DATA_TO_RESERVE) {
-    return {
-      ...state,
-      percentDataToReserve: action.percentDataToReserve
-    };
-  }
   if (action.type === SET_RESERVE_LOCATION) {
     return {
       ...state,
@@ -394,7 +381,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       testData: action.testData,
-      prediction: {}
+      prediction: undefined
     };
   }
   if (action.type === SET_PREDICTION) {
@@ -488,7 +475,7 @@ export default function rootReducer(state = initialState, action) {
         currentPanel: action.currentPanel,
         instructionsOverlayActive: showedOverlay,
         testData: {},
-        prediction: {},
+        prediction: undefined,
         resultsTab: ResultsGrades.CORRECT
       };
     }
@@ -643,7 +630,7 @@ export function getCurrentColumnData(state) {
     readOnly: isColumnReadOnly(state, state.currentColumn),
     dataType: state.columnsByDataType[state.currentColumn],
     uniqueOptions: getUniqueOptions(state, state.currentColumn),
-    range: getRange(state, state.currentColumn),
+    extrema: getExtrema(state, state.currentColumn),
     frequencies: getOptionFrequencies(state, state.currentColumn),
     description: getColumnDescription(state, state.currentColumn),
     hasTooManyUniqueOptions: hasTooManyUniqueOptions(state, state.currentColumn)
@@ -733,24 +720,33 @@ export function getUniqueOptionsByColumn(state) {
   return uniqueOptionsByColumn;
 }
 
-export function getRangesByColumn(state) {
-  let rangesByColumn = {};
+export function getExtremaByColumn(state) {
+  let extremaByColumn = {};
   getNumericalColumns(state).map(
-    column => (rangesByColumn[column] = getRange(state, column))
+    column => (extremaByColumn[column] = getExtrema(state, column))
   );
-  return rangesByColumn;
+  return extremaByColumn;
 }
 
-export function getRange(state, column, shouldReturnRange = true) {
-  let range = {};
-  range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
-  range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
+function getMaximumValue(state, column) {
+  return Math.max(...state.data.map(row => parseFloat(row[column])));
+}
 
-  if (shouldReturnRange) {
-    range.range = range.max - range.min;
-  }
+function getMinimumValue(state, column) {
+  return Math.min(...state.data.map(row => parseFloat(row[column])));
+}
 
-  return range;
+function getRange(maximumValue, minimumValue) {
+  return Math.abs(maximumValue - minimumValue);
+}
+
+export function getExtrema(state, column) {
+  let extrema = {};
+  extrema.max = getMaximumValue(state, column);
+  extrema.min = getMinimumValue(state, column)
+  extrema.range = getRange(extrema.max, extrema.min);
+
+  return extrema;
 }
 
 export function getSelectedColumnDescriptions(state) {
@@ -784,7 +780,7 @@ function isEmpty(object) {
 export function getConvertedValue(state, rawValue, column) {
   const convertedValue =
     getCategoricalColumns(state).includes(column) &&
-      !isEmpty(state.featureNumberKey)
+    !isEmpty(state.featureNumberKey)
       ? getKeyByValue(state.featureNumberKey[column], rawValue)
       : rawValue;
   return convertedValue;
@@ -812,7 +808,7 @@ export function getConvertedLabel(state, rawLabel) {
 }
 
 export function getConvertedPredictedLabel(state) {
-  return getConvertedLabel(state, state.prediction.predictedLabel);
+  return getConvertedLabel(state, state.prediction);
 }
 
 export function getConvertedLabels(state, rawLabels = []) {
@@ -859,8 +855,7 @@ export function getAccuracyRegression(state) {
   let accuracy = {};
   let numCorrect = 0;
   let grades = [];
-  const maxMin = getRange(state, state.labelColumn);
-  const range = Math.abs(maxMin.max - maxMin.min);
+  const range = getExtrema(state, state.labelColumn).range;
   const errorTolerance = (range * REGRESSION_ERROR_TOLERANCE) / 100;
   const numPredictedLabels = state.accuracyCheckPredictedLabels.length;
   for (let i = 0; i < numPredictedLabels; i++) {
@@ -1003,9 +998,9 @@ export function getColumnDataToSave(state, column) {
   if (state.columnsByDataType[column] === ColumnTypes.CATEGORICAL) {
     columnData.values = getUniqueOptions(state, column);
   } else if (state.columnsByDataType[column] === ColumnTypes.NUMERICAL) {
-    const maxMin = getRange(state, column, false);
-    columnData.max = maxMin.max;
-    columnData.min = maxMin.min;
+    const {max, min} = getExtrema(state, column);
+    columnData.max = max;
+    columnData.min = min;
   }
   return columnData;
 }
@@ -1026,15 +1021,16 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 
-  dataToSave.selectedTrainer =
-    isRegression(state)
-      ? RegressionTrainer
-      : ClassificationTrainer;
+  dataToSave.selectedTrainer = isRegression(state)
+    ? RegressionTrainer
+    : ClassificationTrainer;
   dataToSave.featureNumberKey = state.featureNumberKey;
   dataToSave.label = getColumnDataToSave(state, state.labelColumn);
   dataToSave.features = getFeaturesToSave(state);
   dataToSave.summaryStat = getSummaryStat(state);
-  dataToSave.trainedModel = state.trainedModel;
+  dataToSave.trainedModel = state.trainedModel
+    ? state.trainedModel.toJSON()
+    : null;
   dataToSave.kValue = state.kValue;
 
   return dataToSave;
@@ -1111,9 +1107,9 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "results") {
     if (
-      state.percentDataToReserve === 0 ||
       state.accuracyCheckExamples.length === 0 ||
-      ["success", "started"].includes(state.saveStatus)) {
+      ["success", "started"].includes(state.saveStatus)
+    ) {
       return false;
     }
   }
@@ -1145,7 +1141,7 @@ function isPanelAvailable(state, panelId) {
   }
 
   if (panelId === "saveModel") {
-    if (mode && mode.hideSave || state.saveStatus === "success") {
+    if ((mode && mode.hideSave) || state.saveStatus === "success") {
       return false;
     }
   }
@@ -1199,6 +1195,11 @@ export function getPanelButtons(state) {
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
+    if (state.modelSize) {
+      prev = null;
+      next = { panel: "generateResults", text: "Continue" };
+    }
+  } else if (state.currentPanel === "generateResults") {
     if (state.modelSize) {
       prev = null;
       next = { panel: "results", text: "Continue" };

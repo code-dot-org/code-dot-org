@@ -18,7 +18,7 @@ export const ResultsGrades = {
   INCORRECT: "incorrect"
 };
 
-export const TEST_DATA_PERCENTS = [0, 5, 10, 15, 20];
+export const PERCENT_OF_DATASET_FOR_TESTING = 0.10;
 
 export const TestDataLocations = {
   END: "end",
@@ -33,6 +33,14 @@ export const saveMessages = {
   success: "Your model was saved!",
   failure: "There was an error. Your model did not save. Please try again."
 };
+
+export function getFadeOpacity(animationProgress) {
+  return animationProgress > 0.95
+    ? 1 - (animationProgress - 0.95) / 0.05
+    : animationProgress < 0.05
+    ? animationProgress / 0.05
+    : 1;
+}
 
 const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
@@ -150,7 +158,6 @@ export const styles = {
     boxSizing: "border-box",
     display: "flex",
     flexDirection: "column",
-    //opacity: 0.7,
     border: "solid 1px black",
     boxShadow: "-5px 5px 10px black"
   },
@@ -290,6 +297,10 @@ export const styles = {
     fontSize: 14
   },
 
+  dataDisplayHeaderLabelHidden: {
+    opacity: 0
+  },
+
   dataDisplayHeaderLabel: {
     backgroundColor: labelColor,
     color: "white"
@@ -297,6 +308,10 @@ export const styles = {
   dataDisplayHeaderFeature: {
     backgroundColor: featureColor,
     color: "white"
+  },
+
+  dataDisplayCellHidden: {
+    opacity: 0
   },
 
   dataDisplayCell: {
@@ -569,7 +584,7 @@ export const styles = {
   trainModelDataTable: {
     width: "30%",
     overflow: "hidden",
-    opacity: 0.3,
+    opacity: 1,
     paddingTop: 20
   },
   trainModelBotContainer: {
@@ -577,7 +592,6 @@ export const styles = {
     left: "50%",
     transform: "translateX(-25%)"
   },
-
   trainBot: {
     position: "relative",
     width: 300
@@ -588,17 +602,30 @@ export const styles = {
     width: "43%",
     top: "0%",
     position: "absolute",
-    direction: "ltr"
+    direction: "ltr",
+    transformOrigin: "bottom right",
   },
   trainBotOpen: {
     transform: "rotate(90deg)",
-    transformOrigin: "bottom right",
     direction: "ltr"
   },
   trainBotBody: {
     width: "49%",
     marginTop: "30%",
     direction: "ltr"
+  },
+
+  generateResultsContainer: { overflow: "hidden", paddingTop: 20 },
+  generateResultsDataTable: {
+    width: "30%",
+    overflow: "hidden",
+    opacity: 1,
+    paddingTop: 20
+  },
+  generateResultsBotContainer: {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-25%)"
   },
 
   cardRow: {

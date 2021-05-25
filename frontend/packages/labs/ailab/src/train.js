@@ -13,7 +13,10 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels
 } from "./redux";
-import { TestDataLocations } from "./constants.js";
+import {
+  TestDataLocations,
+  PERCENT_OF_DATASET_FOR_TESTING
+} from "./constants.js";
 
 /* Builds a hash that maps a feature's categorical options to numbers because
   the ML algorithms only accept numerical inputs.
@@ -122,16 +125,11 @@ const prepareTrainingData = () => {
     .map(row => extractLabel(updatedState, row))
     .filter(label => label !== undefined && label !== "" && !isNaN(label));
   /*
-  KNN uses the entire training dataset to build the model, thus we're setting
-  the training examples and labels prior to reserving test data.
-  */
-  store.dispatch(setTrainingExamples(trainingExamples));
-  store.dispatch(setTrainingLabels(trainingLabels));
-  /*
   Select X% of examples and corresponding labels from the training set to use for a post-training accuracy calculation.
   */
-  const percent = updatedState.percentDataToReserve / 100;
-  const numToReserve = parseInt(trainingExamples.length * percent);
+  const numToReserve = parseInt(
+    trainingExamples.length * PERCENT_OF_DATASET_FOR_TESTING
+  );
   let accuracyCheckExamples = [];
   let accuracyCheckLabels = [];
   if (updatedState.reserveLocation === TestDataLocations.END) {
@@ -144,10 +142,14 @@ const prepareTrainingData = () => {
     while (numReserved < numToReserve) {
       let randomIndex = getRandomInt(trainingExamples.length - 1);
       accuracyCheckExamples.push(trainingExamples[randomIndex]);
+      trainingExamples.splice(randomIndex, 1);
       accuracyCheckLabels.push(trainingLabels[randomIndex]);
+      trainingLabels.splice(randomIndex, 1);
       numReserved++;
     }
   }
+  store.dispatch(setTrainingExamples(trainingExamples));
+  store.dispatch(setTrainingLabels(trainingLabels));
   store.dispatch(setAccuracyCheckExamples(accuracyCheckExamples));
   store.dispatch(setAccuracyCheckLabels(accuracyCheckLabels));
 };

@@ -7,13 +7,12 @@ import { styles } from "../constants.js";
 class DataCard extends Component {
   static propTypes = {
     name: PropTypes.string,
-    data: PropTypes.array,
     metadata: PropTypes.object,
     dataLength: PropTypes.number
   };
 
   render() {
-    const { name, metadata, data, dataLength } = this.props;
+    const { name, metadata, dataLength } = this.props;
 
     const card = metadata && metadata.card;
 
@@ -70,36 +69,14 @@ class DataCard extends Component {
                       </div>
                     </div>
                   )}
-
-                  <div style={styles.bold}>Columns:</div>
-                  <div style={styles.contents}>
-                    {metadata.fields.map(field => {
-                      return (
-                        <div key={field.id} style={styles.cardRow}>
-                          <div style={styles.bold}>{field.id}:</div>
-                          {field.description}
-                        </div>
-                      );
-                    })}
-                  </div>
                 </div>
               )}
               {!card && dataLength > 0 && (
                 <div>
                   <br />
-                  <div style={styles.bold}>Columns:</div>
                   <div style={styles.cardRow}>
                     <div style={styles.bold}>Rows of data:</div>
                     {dataLength}
-                  </div>
-                  <div style={styles.contents}>
-                    {Object.keys(data[0]).map(key => {
-                      return (
-                        <div key={key} style={styles.cardRow}>
-                          <div style={styles.bold}>{key}</div>
-                        </div>
-                      );
-                    })}
                   </div>
                 </div>
               )}
@@ -114,6 +91,5 @@ class DataCard extends Component {
 export default connect(state => ({
   name: state.name,
   metadata: state.metadata,
-  data: state.data,
   dataLength: state.data.length
 }))(DataCard);

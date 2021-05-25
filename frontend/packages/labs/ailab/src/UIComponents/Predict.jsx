@@ -10,7 +10,7 @@ import {
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
   getPredictAvailable,
-  getRangesByColumn
+  getExtremaByColumn
 } from "../redux";
 import { styles } from "../constants";
 
@@ -23,9 +23,8 @@ class Predict extends Component {
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    confidence: PropTypes.number,
     getPredictAvailable: PropTypes.bool,
-    rangesByColumn: PropTypes.object
+    extremaByColumn: PropTypes.object
   };
 
   handleChange = (event, feature) => {
@@ -41,13 +40,13 @@ class Predict extends Component {
   render() {
     return (
       <div id="predict" style={{ ...styles.panel, ...styles.rightPanel }}>
-        <div style={styles.largeText}>Test The Model</div>
+        <div style={styles.largeText}>Try it out!</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <form>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
-                let min = this.props.rangesByColumn[feature].min.toFixed(2);
-                let max = this.props.rangesByColumn[feature].max.toFixed(2);
+                let min = this.props.extremaByColumn[feature].min.toFixed(2);
+                let max = this.props.extremaByColumn[feature].max.toFixed(2);
 
                 return (
                   <div style={styles.cardRow} key={index}>
@@ -115,9 +114,6 @@ class Predict extends Component {
             <div>A.I. predicts:</div>
             <div style={styles.contents}>
               {this.props.labelColumn}: {this.props.predictedLabel}
-              {this.props.confidence && (
-                <p>Confidence: {this.props.confidence}</p>
-              )}
             </div>
           </div>
         )}
@@ -130,13 +126,12 @@ export default connect(
   state => ({
     testData: state.testData,
     predictedLabel: getConvertedPredictedLabel(state),
-    confidence: state.prediction.confidence,
     labelColumn: state.labelColumn,
     selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state),
-    rangesByColumn: getRangesByColumn(state)
+    extremaByColumn: getExtremaByColumn(state)
   }),
   dispatch => ({
     setTestData(testData) {

@@ -1,0 +1,981 @@
+Main dish,Main dish cooking method,Stuffing base,Cranberry Sauce,Gravy?,Brussel sprouts?,Carrots?,Cauliflower?,Corn?,Cornbread?,Fruit salad?,Green beans/green bean casserole?,Mac and cheese?,Mashed potatoes?,Rolls/biscuits?,Squash?,Vegetable salad?,Yams/sweet potato casserole?,Apple pie?,Buttermilk pie?,Cherry pie?,Chocolate pie?,Coconut cream pie?,Key lime pie?,Peach pie?,Pecan pie?,Pumpkin pie?,Sweet Potato pie?,Apple cobbler?,Blondies?,Brownies?,Carrot cake?,Cheesecake?,Cookies?,Fudge?,Ice cream?,Peach cobbler?,US region
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Other,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,East South Central
+Turkey,Roasted,Rice-based,Homemade,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Tofurkey,Baked,Bread-based,Canned,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Rice-based,Homemade,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
+Turkey,Baked,Rice-based,Homemade,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Other,Baked,Bread-based,Other,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Ham/Pork,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,East North Central
+Turkey,Baked,Rice-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Rice-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,Pacific
+Turducken,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Fried,None,Homemade,Yes,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,Pacific
+Turkey,Baked,Rice-based,Homemade,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Other,Baked,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Other,Other,None,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,None,Homemade,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,Yes,Pacific
+Tofurkey,Baked,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,I don't know,Bread-based,Homemade,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,New England
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Pacific
+Ham/Pork,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,West South Central
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,Yes,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,None,Homemade,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,Yes,No,South Atlantic
+Turkey,Fried,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,East South Central
+Turkey,Fried,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,West North Central
+Other,Roasted,None,None,No,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,New England
+Other,Baked,None,None,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,None,None,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Tofurkey,Baked,Bread-based,Canned,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Middle Atlantic
+Tofurkey,I don't know,Bread-based,None,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Ham/Pork,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,East North Central
+Tofurkey,Roasted,None,None,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,I don't know,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,Yes,No,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Rice-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,No,Yes,Pacific
+Turkey,Roasted,Other,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,West North Central
+Roast beef,Baked,Bread-based,None,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,East South Central
+Turkey,Roasted,Other,Homemade,Yes,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,West South Central
+Ham/Pork,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Other,Roasted,Bread-based,Homemade,Yes,No,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,Yes,No,No,No,Pacific
+Turkey,Fried,Bread-based,None,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,West South Central
+Turkey,Baked,None,None,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,No,Yes,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,South Atlantic
+Other,Other,None,None,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,None,Homemade,Yes,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Fried,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,None,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,East North Central
+Ham/Pork,Baked,Bread-based,None,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,West North Central
+Turkey,Baked,None,None,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,West South Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Rice-based,Homemade,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,Middle Atlantic
+Turkey,Fried,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Tofurkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Baked,Rice-based,None,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,West South Central
+Other,Other,None,None,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,None,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Other,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Fried,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,New England
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,West South Central
+Tofurkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Fried,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,East North Central
+Turkey,Fried,None,Canned,No,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,West South Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Other,Canned,Yes,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Fried,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,I don't know,Bread-based,Canned,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Rice-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,East North Central
+Turducken,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Tofurkey,Baked,Bread-based,Canned,No,Yes,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Mountain
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Other,Other,Other,Other,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,None,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Other,Other,None,None,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,East South Central
+Turkey,Baked,None,Homemade,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Other,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Mountain
+Turkey,Fried,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,I don't know,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Other,Baked,Other,Homemade,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,West North Central
+Tofurkey,Other,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,Yes,No,No,Pacific
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,East South Central
+Ham/Pork,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,South Atlantic
+Other,Baked,None,Other,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Other,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
+Turkey,Roasted,None,Canned,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,New England
+Turkey,Other,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Fried,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,No,No,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,No,East South Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,West North Central
+Tofurkey,Baked,Bread-based,None,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,New England
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,South Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,Homemade,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Other,Homemade,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,Yes,Middle Atlantic
+Turkey,Other,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Other,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Other,Homemade,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,East South Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Mountain
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Rice-based,Homemade,Yes,Yes,No,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Ham/Pork,Baked,Bread-based,Canned,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Ham/Pork,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Fried,Other,Homemade,Yes,Yes,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,Yes,No,No,Yes,No,No,Yes,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,None,None,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Other,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,East North Central
+Turkey,Other,Bread-based,None,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Rice-based,Homemade,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,South Atlantic
+Turkey,Fried,Rice-based,Homemade,No,No,Yes,No,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Other,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Ham/Pork,Other,None,None,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,East North Central
+Ham/Pork,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Other,Other,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,West South Central
+,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Other,Fried,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,Yes,Middle Atlantic
+Turkey,Roasted,Rice-based,None,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Fried,None,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,West South Central
+Ham/Pork,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,Yes,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Fried,Bread-based,Canned,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,Yes,No,East North Central
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Fried,Bread-based,Other,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Other,Bread-based,Homemade,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,I don't know,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Tofurkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,New England
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Chicken,Other,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Tofurkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Other,Canned,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Rice-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Rice-based,Homemade,Yes,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,New England
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,No,Yes,No,No,No,East North Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Other,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Other,Homemade,No,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Other,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,Yes,No,No,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,East North Central
+Turkey,Baked,Bread-based,Other,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Middle Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,Yes,No,No,No,No,Yes,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,South Atlantic
+Chicken,Roasted,Rice-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Ham/Pork,Baked,None,Canned,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,South Atlantic
+Turkey,Roasted,None,Other,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Other,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Rice-based,Homemade,Yes,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Other,Baked,Other,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Other,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East South Central
+Ham/Pork,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,Yes,No,No,No,New England
+Turkey,Baked,Rice-based,Canned,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,Yes,No,East South Central
+Chicken,Roasted,Bread-based,Homemade,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Other,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Other,Baked,None,None,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,East South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Other,Other,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Roasted,Other,Canned,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,Mountain
+Turkey,Fried,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,
+Turkey,Fried,Rice-based,Homemade,Yes,No,No,Yes,No,No,Yes,Yes,Yes,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,South Atlantic
+Other,Other,Bread-based,None,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,No,West South Central
+Turkey,Roasted,Bread-based,None,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Rice-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Other,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Roasted,Other,Other,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,Middle Atlantic
+Ham/Pork,Baked,Bread-based,Canned,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,New England
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,None,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,East North Central
+Turkey,Other,Bread-based,Homemade,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,East North Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,New England
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Homemade,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Other,None,Homemade,No,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Other,Baked,Bread-based,None,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,None,None,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Rice-based,Canned,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,Middle Atlantic
+Turkey,Baked,Other,Canned,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Other,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Other,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Ham/Pork,Baked,Bread-based,None,Yes,No,No,No,No,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,South Atlantic
+Turkey,Roasted,Bread-based,None,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,No,No,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Fried,Bread-based,None,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,Yes,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Homemade,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Pacific
+Ham/Pork,Baked,None,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Pacific
+Turkey,Other,Other,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Middle Atlantic
+Turkey,Other,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,New England
+Tofurkey,Roasted,Bread-based,None,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,East North Central
+Ham/Pork,Baked,Bread-based,None,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Rice-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Ham/Pork,Baked,Bread-based,None,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,West North Central
+Other,Other,None,Canned,No,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Rice-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,
+Turkey,Roasted,Bread-based,Canned,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,None,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turducken,Roasted,None,None,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,Yes,South Atlantic
+,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Tofurkey,Baked,Bread-based,None,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Ham/Pork,I don't know,Bread-based,Canned,No,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Baked,Other,None,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,None,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Other,Other,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,South Atlantic
+Ham/Pork,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,No,No,New England
+Turkey,I don't know,Bread-based,None,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,New England
+Tofurkey,Baked,None,Homemade,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,New England
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+I don't know,I don't know,None,None,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,West South Central
+Chicken,Other,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,East South Central
+Roast beef,Roasted,Rice-based,Canned,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,None,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,West South Central
+Turkey,Baked,None,Canned,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Other,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Roasted,Rice-based,Canned,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Yes,No,Middle Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,West South Central
+Turkey,Other,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Fried,Other,None,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Fried,Bread-based,None,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,I don't know,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,East North Central
+Ham/Pork,Baked,None,Canned,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Other,Homemade,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,New England
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,New England
+Turkey,Baked,Other,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,None,Canned,Yes,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Fried,Bread-based,Homemade,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Middle Atlantic
+Turkey,Roasted,Other,None,Yes,No,No,Yes,Yes,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Fried,Other,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,Yes,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Other,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Rice-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,South Atlantic
+Other,Baked,Bread-based,None,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,None,None,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,Yes,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,New England
+Turkey,Other,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Other,I don't know,None,None,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,East North Central
+Roast beef,Roasted,None,Canned,Yes,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,None,Homemade,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,Yes,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Other,Canned,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Other,Other,Homemade,No,Yes,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Other,Other,Homemade,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,New England
+Other,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,South Atlantic
+Other,Other,None,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Ham/Pork,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,East North Central
+Turkey,I don't know,Bread-based,None,No,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Other,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Ham/Pork,Baked,Bread-based,Other,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,South Atlantic
+Other,Roasted,Bread-based,Homemade,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Middle Atlantic
+Ham/Pork,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,West North Central
+Turkey,Roasted,None,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,No,Yes,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Other,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,New England
+Tofurkey,Baked,Bread-based,Canned,No,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,Pacific
+Turkey,Roasted,Bread-based,None,No,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Chicken,Baked,Rice-based,Homemade,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Other,Other,Canned,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Chicken,Fried,Rice-based,Canned,Yes,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,East South Central
+Turkey,Other,Bread-based,Canned,Yes,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,East North Central
+Turkey,Roasted,Other,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,East South Central
+Turkey,Other,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Fried,Rice-based,Homemade,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,Yes,New England
+Turkey,Roasted,Bread-based,None,No,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Other,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Mountain
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,Yes,No,Yes,West South Central
+Ham/Pork,Roasted,Bread-based,Canned,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Roast beef,Roasted,Rice-based,Canned,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,South Atlantic
+Other,Baked,Bread-based,Homemade,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,No,West North Central
+Roast beef,Roasted,Rice-based,Homemade,Yes,No,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,
+Tofurkey,Baked,Bread-based,Homemade,No,Yes,Yes,No,No,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,None,None,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Roast beef,Fried,Rice-based,Canned,No,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Chicken,Roasted,Bread-based,None,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,Yes,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,Pacific
+Turkey,Fried,Bread-based,Canned,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Roast beef,Other,Bread-based,Canned,No,No,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,No,Pacific
+Turkey,I don't know,None,None,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Tofurkey,Baked,None,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,West South Central
+Turkey,Baked,Bread-based,Homemade,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Middle Atlantic
+I don't know,Roasted,Other,None,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Other,Other,None,Canned,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Roast beef,Roasted,None,Homemade,No,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Rice-based,Canned,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Pacific
+Other,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Other,Roasted,None,None,No,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Mountain
+Roast beef,Baked,Rice-based,Homemade,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,Other,Homemade,Yes,No,No,No,No,No,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Mountain
+Tofurkey,Baked,Rice-based,Other,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Fried,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Ham/Pork,Baked,Bread-based,None,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,None,Homemade,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Pacific
+Turkey,Roasted,Other,Homemade,Yes,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,No,No,Pacific
+Chicken,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Other,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Baked,Bread-based,None,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,West North Central
+Chicken,Baked,None,None,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Chicken,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,South Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,None,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Chicken,Fried,Rice-based,Homemade,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,
+I don't know,I don't know,None,Homemade,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,Yes,No,Yes,No,No,Pacific
+Turkey,Fried,Bread-based,Canned,No,No,No,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,None,No,No,No,No,Yes,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,No,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,Yes,No,No,No,No,East North Central
+Turkey,Other,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Other,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Fried,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,Yes,South Atlantic
+Turkey,Baked,None,Homemade,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,No,No,Yes,Yes,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+,,,,,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,West South Central
+Other,Roasted,Bread-based,None,Yes,Yes,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Rice-based,Canned,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,East South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Chicken,Baked,Bread-based,Canned,Yes,No,Yes,No,No,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Mountain
+I don't know,Fried,Bread-based,Canned,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,None,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,West North Central
+Tofurkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,West North Central
+Roast beef,Fried,Bread-based,Canned,Yes,No,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,Middle Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Other,Other,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Other,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,None,None,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,No,No,Yes,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,Yes,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Pacific
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,None,None,Yes,No,Yes,No,Yes,No,No,No,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,None,None,No,Yes,No,Yes,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Pacific
+Turkey,Baked,Other,Canned,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,I don't know,None,None,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,
+Ham/Pork,Roasted,None,None,Yes,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,Yes,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,Pacific
+Turkey,Baked,Bread-based,None,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,Yes,No,No,Yes,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Baked,Bread-based,None,Yes,No,No,Yes,No,No,No,No,No,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,Yes,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,No,New England
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,Yes,No,Yes,No,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,No,No,Yes,Yes,No,Yes,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Other,Bread-based,Canned,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,None,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,Yes,East South Central
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,No,No,No,No,Yes,No,Yes,No,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Other,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Rice-based,Canned,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,Yes,Yes,No,No,Yes,No,Yes,No,No,No,Yes,No,Yes,No,Yes,Yes,Yes,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,No,Yes,No,No,No,No,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,
+Turkey,Other,Bread-based,Other,Yes,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,Yes,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,West South Central
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,Yes,No,Yes,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,Yes,No,East South Central
+Ham/Pork,Baked,Bread-based,Canned,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Other,Bread-based,Homemade,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,
+Other,Other,Bread-based,None,No,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Homemade,Yes,No,No,No,No,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,No,No,Pacific
+Turkey,Other,Rice-based,None,Yes,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,No,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,Pacific
+Turkey,Baked,Other,Canned,Yes,No,No,No,No,No,Yes,No,Yes,No,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,Yes,Yes,No,No,No,No,South Atlantic
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,Yes,No,Yes,No,Pacific
+Roast beef,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,Pacific
+I don't know,I don't know,Bread-based,Canned,No,No,No,No,No,No,Yes,No,Yes,Yes,No,Yes,No,No,No,No,No,Yes,No,No,No,No,Yes,Yes,No,No,Yes,No,No,Yes,No,Yes,No,
+Turkey,Baked,Bread-based,Canned,No,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,Yes,Yes,West South Central
+Turkey,Roasted,Bread-based,Homemade,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Canned,Yes,No,Yes,No,Yes,No,No,No,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Middle Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Homemade,Yes,No,Yes,No,Yes,No,No,Yes,No,Yes,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Pacific
+Ham/Pork,Baked,Rice-based,None,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,Yes,No,No,Yes,West North Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,East South Central
+Turkey,Other,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,Yes,No,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,East North Central
+Other,Baked,None,None,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,Yes,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,Yes,Yes,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,Yes,Yes,Yes,Yes,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,Yes,Yes,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,East South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,Yes,No,No,No,No,New England
+Turkey,Roasted,Other,Canned,Yes,No,No,No,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,No,No,No,No,Yes,West South Central
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,No,Yes,No,Yes,No,Yes,No,No,No,Yes,Yes,No,Yes,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Mountain
+Turkey,Roasted,Bread-based,None,Yes,No,Yes,Yes,Yes,No,No,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,Yes,No,East North Central
+Turkey,Roasted,None,Canned,Yes,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,Yes,No,No,Yes,No,No,No,No,No,West North Central
+Turkey,I don't know,Bread-based,Canned,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,Yes,No,No,Yes,No,Pacific
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,No,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,Yes,Yes,No,Yes,No,No,Yes,No,Yes,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Baked,Bread-based,Homemade,No,No,No,No,Yes,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,West North Central
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,Yes,No,Yes,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,Yes,Yes,
+Turkey,Roasted,Bread-based,None,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,South Atlantic
+Turkey,Roasted,Bread-based,Canned,Yes,No,No,No,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,Pacific
+Turkey,Roasted,Bread-based,Homemade,Yes,No,No,No,No,No,No,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No,No,No,No,Yes,Yes,Yes,No,No,No,No,Yes,No,No,No,No,Mountain
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,Yes,No,Yes,Yes,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,Yes,No,No,Yes,No,No,No,Pacific
+Other,Baked,Rice-based,None,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,Yes,No,No,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,Pacific
+Turkey,Baked,None,Homemade,Yes,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,No,No,Yes,No,No,No,
+Turkey,Baked,Bread-based,Canned,Yes,No,No,No,Yes,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,No,No,Yes,No,No,No,No,No,No,
