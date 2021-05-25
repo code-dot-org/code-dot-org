@@ -45,12 +45,16 @@ export default class JavabuilderConnection {
 
   establishWebsocketConnection(token) {
     let url = this.javabuilderUrl;
+    const optionsStr = $.param({options: this.options});
     if (window.location.hostname.includes('localhost')) {
       // We're hitting the local javabuilder server. Just pass the projectUrl and levelId.
       // TODO: Enable token decryption on local javabuilder server.
-      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}?levelId=${
+      url += `?projectUrl=${dashboard.project.getProjectSourcesUrl()}&levelId=${
         this.levelId
       }`;
+      if (optionsStr) {
+        url += `&${optionsStr}`;
+      }
     } else {
       url += `?Authorization=${token}`;
     }
