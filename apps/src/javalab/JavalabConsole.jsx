@@ -5,7 +5,10 @@ import {appendInputLog} from './javalabRedux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {KeyCodes} from '@cdo/apps/constants';
 import color from '@cdo/apps/util/color';
-import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
+import PaneHeader, {
+  PaneSection,
+  PaneButton
+} from '@cdo/apps/templates/PaneHeader';
 
 const style = {
   darkMode: {
@@ -137,6 +140,12 @@ class JavalabConsole extends React.Component {
     return (
       <div>
         <PaneHeader hasFocus={true}>
+          <PaneButton
+            id="javalab-console-clear"
+            headerHasFocus={true}
+            isRtl={false}
+            label="Clear Console"
+          />
           <PaneSection>Console</PaneSection>
         </PaneHeader>
         <div

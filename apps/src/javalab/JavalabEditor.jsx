@@ -54,6 +54,10 @@ const style = {
   },
   fileTypeIcon: {
     margin: 5
+  },
+  tabs: {
+    backgroundColor: color.background_gray,
+    marginBottom: 0
   }
 };
 
@@ -449,16 +453,16 @@ class JavalabEditor extends React.Component {
             onClick={() => this.setState({openDialog: CREATE_FILE})}
             headerHasFocus={true}
             isRtl={false}
-            label="Create File"
+            label="New File"
             leftJustified={true}
           />
           <PaneButton
-            id="javalab-editor-save"
-            iconClass="fa fa-check-circle"
-            onClick={onCommitCode}
+            id="javalab-editor-backpack"
+            iconClass="fa fa-briefcase"
             headerHasFocus={true}
             isRtl={false}
-            label="Commit Code"
+            label="Backpack"
+            leftJustified={true}
           />
           <PaneButton
             id="data-mode-versions-header"
@@ -468,17 +472,24 @@ class JavalabEditor extends React.Component {
             isRtl={false}
             onClick={this.props.handleVersionHistory}
           />
+          <PaneButton
+            id="javalab-editor-save"
+            iconClass="fa fa-check-circle"
+            onClick={onCommitCode}
+            headerHasFocus={true}
+            isRtl={false}
+            label="Commit Code"
+          />
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
         <Tab.Container
           activeKey={activeTabKey}
           onSelect={key => this.onChangeTabs(key)}
-          style={{marginTop: 10}}
           id="javalab-editor-tabs"
           className={isDarkMode ? 'darkmode' : ''}
         >
           <div>
-            <Nav bsStyle="tabs" style={{marginBottom: 0}}>
+            <Nav bsStyle="tabs" style={style.tabs}>
               <JavalabFileExplorer
                 fileMetadata={fileMetadata}
                 onSelectFile={this.onOpenFile}
@@ -499,25 +510,32 @@ class JavalabEditor extends React.Component {
                         }
                       />
                     )}
-                    <span>{fileMetadata[tabKey]}</span>
-                    {activeTabKey === tabKey && (
-                      <button
-                        type="button"
-                        style={{
-                          ...style.fileMenuToggleButton,
-                          ...(this.props.isDarkMode &&
-                            style.darkFileMenuToggleButton)
-                        }}
-                        onClick={e => this.toggleTabMenu(tabKey, e)}
-                        className="no-focus-outline"
-                      >
-                        <FontAwesome
-                          icon={
-                            contextTarget === tabKey ? 'caret-up' : 'caret-down'
-                          }
-                        />
-                      </button>
+                    {!isEditingStartSources && (
+                      <FontAwesome
+                        style={style.fileTypeIcon}
+                        icon={'file-text'}
+                      />
                     )}
+                    <span>{fileMetadata[tabKey]}</span>
+
+                    <button
+                      type="button"
+                      style={{
+                        ...style.fileMenuToggleButton,
+                        ...(this.props.isDarkMode &&
+                          style.darkFileMenuToggleButton),
+                        ...(activeTabKey !== tabKey && {visibility: 'hidden'})
+                      }}
+                      onClick={e => this.toggleTabMenu(tabKey, e)}
+                      className="no-focus-outline"
+                      disabled={activeTabKey === tabKey}
+                    >
+                      <FontAwesome
+                        icon={
+                          contextTarget === tabKey ? 'caret-up' : 'caret-down'
+                        }
+                      />
+                    </button>
                   </NavItem>
                 );
               })}
