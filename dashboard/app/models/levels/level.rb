@@ -692,7 +692,6 @@ class Level < ApplicationRecord
     level_params = {name: new_name, parent_level_id: id, published: true}
     level_params[:editor_experiment] = editor_experiment if editor_experiment
     level.update!(level_params)
-
     level
   end
 
