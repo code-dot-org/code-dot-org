@@ -48,11 +48,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="http://studio.code.org/s/code-break-younger/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="http://studio.code.org/s/code-break-younger/lessons/1/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="http://studio.code.org/s/code-break/stage/1/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="http://studio.code.org/s/code-break/lessons/1/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -68,11 +68,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/2/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/2/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/2/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -89,11 +89,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/3/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/3/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/3/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -113,11 +113,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/4/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/4/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/4/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -136,11 +136,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/5/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/5/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/5/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -159,11 +159,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/6/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/6/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/6/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -182,11 +182,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/7/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/7/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/7/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -203,11 +203,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/8/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/8/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/8/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -224,11 +224,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/9/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/9/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/9/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -245,11 +245,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/10/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/10/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/10/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -266,11 +266,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/11/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/11/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/11/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
@@ -287,11 +287,11 @@ title: Take a Code Break
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> No sign-in needed</p>
-<a href="https://studio.code.org/s/code-break-younger/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
+<a href="https://studio.code.org/s/code-break-younger/lessons/12/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 6-12)</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Older students:</span> Requires sign-in</p>
-<a href="https://studio.code.org/s/code-break/stage/12/puzzle/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
+<a href="https://studio.code.org/s/code-break/lessons/12/levels/1"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Go (ages 13+)</button></a>
 </div>
 
 </div>
