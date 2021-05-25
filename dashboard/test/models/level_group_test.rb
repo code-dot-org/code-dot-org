@@ -22,8 +22,8 @@ class LevelGroupTest < ActiveSupport::TestCase
     name 'evaluation_multi_#{id}'
     title 'evaluation multi #{id}'
     question 'Some Question'
-    answer 'Answer 1', weight: #{rand(5)}, stage_name: '#{stage1.name}'
-    answer 'Answer 2', weight: #{rand(5)}, stage_name: '#{stage2.name}'
+    answer 'Answer 1', weight: #{rand(5)}, lesson_name: '#{stage1.name}'
+    answer 'Answer 2', weight: #{rand(5)}, lesson_name: '#{stage2.name}'
     answer 'Answer 3'
     "
   end
