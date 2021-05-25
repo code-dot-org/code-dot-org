@@ -2,7 +2,7 @@
   "script": {
     "name": "express-2021",
     "wrapup_video_id": null,
-    "hidden": false,
+    "hidden": true,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-05-25 17:13:24 UTC",
+    "serialized_at": "2021-05-25 18:49:35 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -633,41 +633,41 @@
       }
     },
     {
-      "key": "For Loops with Artist",
-      "name": "For Loops with Artist",
+      "key": "For Loops with Bee",
+      "name": "For Loops with Bee",
       "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 26,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
-        "preparation": " - Play through the lesson to find and potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
-        "purpose": "Creativity and critical thinking come together beautifully in this lesson. Students will continue their practice with `for` loops and variables while they create jaw-dropping images. This lesson inspires a creative mind while teaching core concepts to computer science.",
-        "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures."
+        "overview": "This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
+        "purpose": "Today's concept, for loops are a very important topic in computer science. Not only are they widely used, the process of learning for loops enhances the learning of other important concepts (such as variables and parameters.) Students will have plenty of practice critically thinking through problems by determining the starting, ending, and stepping values for each for loop. This concept uses plenty of math as well, so feel free to pair it with a math lesson for an even deeper learning experience.",
+        "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using for loops!"
       },
       "seeding_key": {
-        "lesson.key": "For Loops with Artist",
+        "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021"
       }
     },
     {
-      "key": "For Loops with Bee",
-      "name": "For Loops with Bee",
+      "key": "For Loops with Artist",
+      "name": "For Loops with Artist",
       "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 27,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This **skill-building** lesson focuses on `for loops` and using an incrementing variable to solve more complicated puzzles. ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
-        "purpose": "Today's concept, `for loops` are a very important topic in computer science. Not only are they widely used, the process of learning `for loops` enhances the learning of other important concepts (such as variables and parameters.) Students will have plenty of practice critically thinking through problems by determining the starting, ending, and stepping values for each `for loop`. This concept uses plenty of math as well, so feel free to pair it with a math lesson for an even deeper learning experience.",
-        "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for loops`!"
+        "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
+        "preparation": " - Play through the lesson to find and potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
+        "purpose": "Creativity and critical thinking come together beautifully in this lesson. Students will continue their practice with for loops and variables while they create jaw-dropping images. This lesson inspires a creative mind while teaching core concepts to computer science.",
+        "student_overview": "Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures."
       },
       "seeding_key": {
-        "lesson.key": "For Loops with Bee",
+        "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021"
       }
@@ -1949,48 +1949,6 @@
       }
     },
     {
-      "key": "24f48744-cb50-4dd5-8a1f-95571f2ff1ba",
-      "position": 1,
-      "properties": {
-        "duration": 15,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "24f48744-cb50-4dd5-8a1f-95571f2ff1ba",
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021"
-      }
-    },
-    {
-      "key": "cfadb05d-8467-41a8-9b69-9ce179c53375",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375",
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021"
-      }
-    },
-    {
-      "key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799",
-      "position": 3,
-      "properties": {
-        "duration": 15,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799",
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021"
-      }
-    },
-    {
       "key": "414b4e57-110f-441f-a5ca-cbdc9f741a4c",
       "position": 1,
       "properties": {
@@ -2028,6 +1986,48 @@
       "seeding_key": {
         "lesson_activity.key": "f43312b4-a6ca-47a5-be92-1e6f77b43ff8",
         "lesson.key": "For Loops with Bee",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "24f48744-cb50-4dd5-8a1f-95571f2ff1ba",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24f48744-cb50-4dd5-8a1f-95571f2ff1ba",
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "cfadb05d-8467-41a8-9b69-9ce179c53375",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375",
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021"
+      }
+    },
+    {
+      "key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799",
+        "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021"
       }
@@ -4968,21 +4968,10 @@
       "key": "66e1664f-4e5a-4df9-a902-d0eb19537997",
       "position": 2,
       "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997",
-        "lesson_activity.key": "8cf2e681-004c-4624-90f3-80c1e22ec90f"
-      }
-    },
-    {
-      "key": "34bc5f15-2f3c-4ace-9c06-9e8d05ce5c72",
-      "position": 3,
-      "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
-        "activity_section.key": "34bc5f15-2f3c-4ace-9c06-9e8d05ce5c72",
+        "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997",
         "lesson_activity.key": "8cf2e681-004c-4624-90f3-80c1e22ec90f"
       }
     },
@@ -4999,96 +4988,10 @@
       }
     },
     {
-      "key": "48c60679-9f25-4ade-9a34-7a52627fc8f2",
-      "position": 1,
-      "properties": {
-        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final designs from the Code Studio puzzles associated with this lesson. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply *with `for` loops of course!*\n\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
-        "name": "Introduction\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "48c60679-9f25-4ade-9a34-7a52627fc8f2",
-        "lesson_activity.key": "24f48744-cb50-4dd5-8a1f-95571f2ff1ba"
-      }
-    },
-    {
-      "key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
-      "position": 1,
-      "properties": {
-        "name": "Flor Loops with Artist",
-        "progression_name": "Video: For Loops",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "These puzzles are super fun, but it may be helpful for students to have protractors, pencils and scratch paper to see how these designs were made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
-        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
-      }
-    },
-    {
-      "key": "7d78c293-a385-49ee-a08a-1e0a02b185aa",
-      "position": 2,
-      "properties": {
-        "progression_name": "Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa",
-        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
-      }
-    },
-    {
-      "key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
-        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
-      }
-    },
-    {
-      "key": "1582774d-bc37-4642-8f63-dccb08adea1c",
-      "position": 4,
-      "properties": {
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c",
-        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
-      }
-    },
-    {
-      "key": "ad447053-20d4-49cb-a771-7fd893973f54",
-      "position": 5,
-      "properties": {
-        "progression_name": "Lesson Extras"
-      },
-      "seeding_key": {
-        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54",
-        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
-      }
-    },
-    {
-      "key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
-      "position": 1,
-      "properties": {
-        "description": "\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
-        "lesson_activity.key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799"
-      }
-    },
-    {
       "key": "b3ac68a6-7600-49ad-bfb3-88d318e25658",
       "position": 1,
       "properties": {
-        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line (example pictured below), mark the start and ending values of the given `for loop` (if you aren't using puzzle #5, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for loop` will touch. If you are working on puzzle #5, ask the class what they think the answer is to the question, given what they found with the number line.\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- `For loops` give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">",
+        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -5100,8 +5003,8 @@
       "key": "eac3c96a-98e8-4d3f-95de-b60f44c66df2",
       "position": 1,
       "properties": {
-        "description": "\n####Online Puzzles\n\nSome students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students.",
-        "name": "For Loops With Bees"
+        "description": "\n####Online Puzzles\n\nSome students may have a hard time differentiating between repeat loops and for loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students.",
+        "name": "For Loops With Bee"
       },
       "seeding_key": {
         "activity_section.key": "eac3c96a-98e8-4d3f-95de-b60f44c66df2",
@@ -5189,12 +5092,98 @@
       "key": "3dde779a-f373-47b8-b892-013f3898d438",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for loop` different from a `repeat` loop?\n - Why do you think `for loops` could be useful?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a for loop different from a repeat loop?\n - Why do you think for loops could be useful?",
         "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "3dde779a-f373-47b8-b892-013f3898d438",
         "lesson_activity.key": "f43312b4-a6ca-47a5-be92-1e6f77b43ff8"
+      }
+    },
+    {
+      "key": "48c60679-9f25-4ade-9a34-7a52627fc8f2",
+      "position": 1,
+      "properties": {
+        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final designs from the Code Studio puzzles associated with this lesson. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply *with for loops of course!*\n\nTell the students they will soon be learning how to create these fine drawings using for loops and variables.",
+        "name": "Introduction\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "48c60679-9f25-4ade-9a34-7a52627fc8f2",
+        "lesson_activity.key": "24f48744-cb50-4dd5-8a1f-95571f2ff1ba"
+      }
+    },
+    {
+      "key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
+      "position": 1,
+      "properties": {
+        "name": "Flor Loops with Artist",
+        "progression_name": "Video: For Loops",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These puzzles are super fun, but it may be helpful for students to have protractors, pencils and scratch paper to see how these designs were made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "7d78c293-a385-49ee-a08a-1e0a02b185aa",
+      "position": 2,
+      "properties": {
+        "progression_name": "Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "1582774d-bc37-4642-8f63-dccb08adea1c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "ad447053-20d4-49cb-a771-7fd893973f54",
+      "position": 5,
+      "properties": {
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
+      "position": 1,
+      "properties": {
+        "description": "\n**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think for loops or variables could help create those?",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
+        "lesson_activity.key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799"
       }
     },
     {
@@ -13269,16 +13258,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_variables_1_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_1_2021"
+          "courseF_bee_variables_0a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -13286,7 +13272,7 @@
         "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
       },
       "level_keys": [
-        "courseF_bee_variables_1_2021"
+        "courseF_bee_variables_0a_2021"
       ]
     },
     {
@@ -13295,16 +13281,13 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_variables_2_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_2_2021"
+          "courseF_bee_variables_1a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -13312,7 +13295,7 @@
         "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
       },
       "level_keys": [
-        "courseF_bee_variables_2_2021"
+        "courseF_bee_variables_1a_2021"
       ]
     },
     {
@@ -13321,16 +13304,13 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_variables_3_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_3_2021"
+          "courseF_bee_variables_2a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -13338,7 +13318,7 @@
         "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
       },
       "level_keys": [
-        "courseF_bee_variables_3_2021"
+        "courseF_bee_variables_2a_2021"
       ]
     },
     {
@@ -13347,16 +13327,13 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_variables_4_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_4_2021"
+          "courseF_bee_variables_3aa_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -13364,7 +13341,7 @@
         "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
       },
       "level_keys": [
-        "courseF_bee_variables_4_2021"
+        "courseF_bee_variables_3aa_2021"
       ]
     },
     {
@@ -13373,16 +13350,13 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_variables_5_2021"
-        ],
         "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_5_2021"
+          "courseF_bee_variables_3a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -13390,26 +13364,68 @@
         "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
       },
       "level_keys": [
-        "courseF_bee_variables_5_2021"
+        "courseF_bee_variables_3a_2021"
       ]
     },
     {
       "chapter": 312,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseF_bee_variables_6_2021"
-        ],
-        "progression": "Challenge"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_6_2021"
+          "courseF_bee_variables_4a_2021"
+        ],
+        "lesson.key": "Changing Variables with Bee",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2021",
+        "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
+      },
+      "level_keys": [
+        "courseF_bee_variables_4a_2021"
+      ]
+    },
+    {
+      "chapter": 313,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_variables_5a_2021"
+        ],
+        "lesson.key": "Changing Variables with Bee",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2021",
+        "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
+      },
+      "level_keys": [
+        "courseF_bee_variables_5a_2021"
+      ]
+    },
+    {
+      "chapter": 314,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_variables_5b_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -13417,297 +13433,57 @@
         "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997"
       },
       "level_keys": [
-        "courseF_bee_variables_6_2021"
+        "courseF_bee_variables_5b_2021"
       ]
     },
     {
-      "chapter": 313,
-      "position": 7,
-      "activity_section_position": 1,
+      "chapter": 315,
+      "position": 9,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_variables_7_2021"
-        ],
         "progression": "Practice"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_7_2021"
+          "courseF_bee_variables_6c_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "34bc5f15-2f3c-4ace-9c06-9e8d05ce5c72"
+        "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997"
       },
       "level_keys": [
-        "courseF_bee_variables_7_2021"
-      ]
-    },
-    {
-      "chapter": 314,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_video_forArtist_2021"
-        ],
-        "progression": "Video: For Loops"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_video_forArtist_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26"
-      },
-      "level_keys": [
-        "courseF_video_forArtist_2021"
-      ]
-    },
-    {
-      "chapter": 315,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for1_2021"
-        ],
-        "progression": "Exploration"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for1_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa"
-      },
-      "level_keys": [
-        "courseF_artist_for1_2021"
+        "courseF_bee_variables_6c_2021"
       ]
     },
     {
       "chapter": 316,
-      "position": 3,
-      "activity_section_position": 1,
+      "position": 10,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for5a_2021"
-        ],
-        "progression": "Skill Building"
+        "progression": "Practice"
       },
       "named_level": false,
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_artist_for5a_2021"
+          "courseF_bee_variables_7a_2021"
         ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
+        "lesson.key": "Changing Variables with Bee",
+        "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+        "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997"
       },
       "level_keys": [
-        "courseF_artist_for5a_2021"
+        "courseF_bee_variables_7a_2021"
       ]
     },
     {
       "chapter": 317,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for6_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for6_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for6_2021"
-      ]
-    },
-    {
-      "chapter": 318,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for7_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for7_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for7_2021"
-      ]
-    },
-    {
-      "chapter": 319,
-      "position": 6,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for8_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for8_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for8_2021"
-      ]
-    },
-    {
-      "chapter": 320,
-      "position": 7,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for9_2021"
-        ],
-        "progression": "Skill Building"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for9_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      },
-      "level_keys": [
-        "courseF_artist_for9_2021"
-      ]
-    },
-    {
-      "chapter": 321,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for10_2021"
-        ],
-        "progression": "Free Play"
-      },
-      "named_level": false,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for10_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c"
-      },
-      "level_keys": [
-        "courseF_artist_for10_2021"
-      ]
-    },
-    {
-      "chapter": 322,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for_challenge1_2021"
-        ],
-        "progression": "Lesson Extras"
-      },
-      "named_level": false,
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for_challenge1_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
-      },
-      "level_keys": [
-        "courseF_artist_for_challenge1_2021"
-      ]
-    },
-    {
-      "chapter": 323,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_artist_for_challenge2_2021"
-        ],
-        "progression": "Lesson Extras"
-      },
-      "named_level": false,
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for_challenge2_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
-      },
-      "level_keys": [
-        "courseF_artist_for_challenge2_2021"
-      ]
-    },
-    {
-      "chapter": 324,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13733,7 +13509,7 @@
       ]
     },
     {
-      "chapter": 325,
+      "chapter": 318,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -13759,7 +13535,7 @@
       ]
     },
     {
-      "chapter": 326,
+      "chapter": 319,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -13785,7 +13561,7 @@
       ]
     },
     {
-      "chapter": 327,
+      "chapter": 320,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -13811,7 +13587,7 @@
       ]
     },
     {
-      "chapter": 328,
+      "chapter": 321,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -13837,7 +13613,7 @@
       ]
     },
     {
-      "chapter": 329,
+      "chapter": 322,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13863,7 +13639,7 @@
       ]
     },
     {
-      "chapter": 330,
+      "chapter": 323,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -13889,7 +13665,7 @@
       ]
     },
     {
-      "chapter": 331,
+      "chapter": 324,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -13915,7 +13691,7 @@
       ]
     },
     {
-      "chapter": 332,
+      "chapter": 325,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -13941,7 +13717,7 @@
       ]
     },
     {
-      "chapter": 333,
+      "chapter": 326,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -13967,7 +13743,7 @@
       ]
     },
     {
-      "chapter": 334,
+      "chapter": 327,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -13993,7 +13769,7 @@
       ]
     },
     {
-      "chapter": 335,
+      "chapter": 328,
       "position": 12,
       "activity_section_position": 4,
       "assessment": false,
@@ -14019,7 +13795,7 @@
       ]
     },
     {
-      "chapter": 336,
+      "chapter": 329,
       "position": 13,
       "activity_section_position": 5,
       "assessment": false,
@@ -14045,7 +13821,7 @@
       ]
     },
     {
-      "chapter": 337,
+      "chapter": 330,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -14071,7 +13847,7 @@
       ]
     },
     {
-      "chapter": 338,
+      "chapter": 331,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -14097,7 +13873,267 @@
       ]
     },
     {
+      "chapter": 332,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_video_forArtist_2021"
+        ],
+        "progression": "Video: For Loops"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_video_forArtist_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26"
+      },
+      "level_keys": [
+        "courseF_video_forArtist_2021"
+      ]
+    },
+    {
+      "chapter": 333,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for1_2021"
+        ],
+        "progression": "Exploration"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for1_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa"
+      },
+      "level_keys": [
+        "courseF_artist_for1_2021"
+      ]
+    },
+    {
+      "chapter": 334,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for5a_2021"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for5a_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      },
+      "level_keys": [
+        "courseF_artist_for5a_2021"
+      ]
+    },
+    {
+      "chapter": 335,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for6_2021"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for6_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      },
+      "level_keys": [
+        "courseF_artist_for6_2021"
+      ]
+    },
+    {
+      "chapter": 336,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for7_2021"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for7_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      },
+      "level_keys": [
+        "courseF_artist_for7_2021"
+      ]
+    },
+    {
+      "chapter": 337,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for8_2021"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for8_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      },
+      "level_keys": [
+        "courseF_artist_for8_2021"
+      ]
+    },
+    {
+      "chapter": 338,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for9_2021"
+        ],
+        "progression": "Skill Building"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for9_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      },
+      "level_keys": [
+        "courseF_artist_for9_2021"
+      ]
+    },
+    {
       "chapter": 339,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for10_2021"
+        ],
+        "progression": "Free Play"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for10_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c"
+      },
+      "level_keys": [
+        "courseF_artist_for10_2021"
+      ]
+    },
+    {
+      "chapter": 340,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for_challenge1_2021"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for_challenge1_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
+      },
+      "level_keys": [
+        "courseF_artist_for_challenge1_2021"
+      ]
+    },
+    {
+      "chapter": 341,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_artist_for_challenge2_2021"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "named_level": false,
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_for_challenge2_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
+      },
+      "level_keys": [
+        "courseF_artist_for_challenge2_2021"
+      ]
+    },
+    {
+      "chapter": 342,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -14123,7 +14159,7 @@
       ]
     },
     {
-      "chapter": 340,
+      "chapter": 343,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -17824,9 +17860,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_1_2021",
+        "level.key": "courseF_bee_variables_0a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_1_2021"
+          "courseF_bee_variables_0a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -17836,9 +17872,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_2_2021",
+        "level.key": "courseF_bee_variables_1a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_2_2021"
+          "courseF_bee_variables_1a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -17848,9 +17884,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_3_2021",
+        "level.key": "courseF_bee_variables_2a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_3_2021"
+          "courseF_bee_variables_2a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -17860,9 +17896,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_4_2021",
+        "level.key": "courseF_bee_variables_3aa_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_4_2021"
+          "courseF_bee_variables_3aa_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -17872,9 +17908,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_5_2021",
+        "level.key": "courseF_bee_variables_3a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_5_2021"
+          "courseF_bee_variables_3a_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -17884,9 +17920,33 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_6_2021",
+        "level.key": "courseF_bee_variables_4a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_6_2021"
+          "courseF_bee_variables_4a_2021"
+        ],
+        "lesson.key": "Changing Variables with Bee",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2021",
+        "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_variables_5a_2021",
+        "script_level.level_keys": [
+          "courseF_bee_variables_5a_2021"
+        ],
+        "lesson.key": "Changing Variables with Bee",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2021",
+        "activity_section.key": "60fb6e02-bbf3-49df-ab58-79496259ada1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_variables_5b_2021",
+        "script_level.level_keys": [
+          "courseF_bee_variables_5b_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
@@ -17896,134 +17956,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_7_2021",
+        "level.key": "courseF_bee_variables_6c_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_7_2021"
+          "courseF_bee_variables_6c_2021"
         ],
         "lesson.key": "Changing Variables with Bee",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "34bc5f15-2f3c-4ace-9c06-9e8d05ce5c72"
+        "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseF_video_forArtist_2021",
+        "level.key": "courseF_bee_variables_7a_2021",
         "script_level.level_keys": [
-          "courseF_video_forArtist_2021"
+          "courseF_bee_variables_7a_2021"
         ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
+        "lesson.key": "Changing Variables with Bee",
+        "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for1_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for1_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for5a_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for5a_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for6_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for6_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for7_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for7_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for8_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for8_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for9_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for9_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for10_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for10_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for_challenge1_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for_challenge1_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for_challenge2_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for_challenge2_2021"
-        ],
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
+        "activity_section.key": "66e1664f-4e5a-4df9-a902-d0eb19537997"
       }
     },
     {
@@ -18204,6 +18156,126 @@
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
         "activity_section.key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_video_forArtist_2021",
+        "script_level.level_keys": [
+          "courseF_video_forArtist_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for1_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for1_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "7d78c293-a385-49ee-a08a-1e0a02b185aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for5a_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for5a_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for6_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for6_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for7_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for7_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for8_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for8_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for9_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for9_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for10_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for10_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for_challenge1_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for_challenge1_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_for_challenge2_2021",
+        "script_level.level_keys": [
+          "courseF_artist_for_challenge2_2021"
+        ],
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "csf_for_loops",
+        "script.name": "express-2021",
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
       }
     },
     {
@@ -19739,13 +19811,13 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops with Artist",
+        "lesson.key": "For Loops with Bee",
         "vocabulary.key": "for_loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops with Bee",
+        "lesson.key": "For Loops with Artist",
         "vocabulary.key": "for_loop"
       }
     },
@@ -20359,29 +20431,9 @@
       }
     },
     {
-      "key": "1b705c64-cbba-4dfe-8d47-549eb6754326",
-      "properties": {
-        "description": "Use `for` loops to change loop several times with different values."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops with Artist",
-        "objective.key": "1b705c64-cbba-4dfe-8d47-549eb6754326"
-      }
-    },
-    {
-      "key": "a5169230-8faf-4492-bc49-ca11dca864fa",
-      "properties": {
-        "description": "Recognize when to use a `for` loop and when to use other loops such as `repeat` and `while` loops."
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops with Artist",
-        "objective.key": "a5169230-8faf-4492-bc49-ca11dca864fa"
-      }
-    },
-    {
       "key": "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2",
       "properties": {
-        "description": "Determine starting value, stopping value, and stepping value for a `for loop`."
+        "description": "Determine starting value, stopping value, and stepping value for a for loop."
       },
       "seeding_key": {
         "lesson.key": "For Loops with Bee",
@@ -20391,11 +20443,31 @@
     {
       "key": "3abab07c-e404-45d4-ab89-f92a34c68356",
       "properties": {
-        "description": "Recognize when to use a `for loop` and when to use other loops such as `repeat` and `while` loops."
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
       },
       "seeding_key": {
         "lesson.key": "For Loops with Bee",
         "objective.key": "3abab07c-e404-45d4-ab89-f92a34c68356"
+      }
+    },
+    {
+      "key": "1b705c64-cbba-4dfe-8d47-549eb6754326",
+      "properties": {
+        "description": "Use for loops to change loop several times with different values."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "objective.key": "1b705c64-cbba-4dfe-8d47-549eb6754326"
+      }
+    },
+    {
+      "key": "a5169230-8faf-4492-bc49-ca11dca864fa",
+      "properties": {
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "objective.key": "a5169230-8faf-4492-bc49-ca11dca864fa"
       }
     },
     {
@@ -20790,28 +20862,28 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops with Artist",
+        "lesson.key": "For Loops with Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops with Artist",
+        "lesson.key": "For Loops with Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops with Bee",
+        "lesson.key": "For Loops with Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "For Loops with Bee",
+        "lesson.key": "For Loops with Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
