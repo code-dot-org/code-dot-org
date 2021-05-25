@@ -5,176 +5,146 @@
     "lastUpdated": "2016",
     "context": {
       "createdBy": "P. Cortez and A. Silva",
-      "potentialUses": "",
+      "potentialUses": "Predicting how various factors affect a students grades or perception of their health.",
       "potentialMisuses": ""
     }
   },
-  "defaultLabelColumn": "health",
   "fields": [
     {
+      "id": "Sex",
       "type": "categorical",
-      "id": "school",
-      "description": "Their school's acronym, GP or MS."
-    },
-    {
-      "type": "categorical",
-      "id": "sex",
       "description": "The student's sex (binary)."
     },
     {
+      "id": "Age",
       "type": "numerical",
-      "id": "age",
       "description": "The student's age."
     },
     {
+      "id": "Address",
       "type": "categorical",
-      "id": "address",
       "description": "Student's home address type: U (urban) or R (rural)."
     },
     {
+      "id": "Family size",
       "type": "categorical",
-      "id": "family size",
-      "description": "Family size: LE3(less than or equal to 3) and GT3 (greater than 3)"
+      "description": "Family size: LE3 (less than or equal to 3) and GT3 (greater than 3)"
     },
     {
+      "id": "Parental status",
       "type": "categorical",
-      "id": "parent cohabitation status",
       "description": "Whether their parents live together (T) or apart (A)"
     },
     {
+      "id": "Mother's education",
       "type": "categorical",
-      "id": "mother's education",
       "description": "Mother's education from 0 (none) to 4 (higher education)."
     },
     {
+      "id": "Father's education",
       "type": "categorical",
-      "id": "father's education",
       "description": "Father's education from 0 (none) to 4 (higher education)"
     },
     {
+      "id": "Mother's job",
       "type": "categorical",
-      "id": "mother's job",
       "description": "Mother's job type."
     },
     {
+      "id": "Father's job",
       "type": "categorical",
-      "id": "father's job",
       "description": "Father's job type."
     },
     {
-      "type": "categorical",
-      "id": "reason",
-      "description": "Reason for choosing this school."
-    },
-    {
-      "type": "categorical",
-      "id": "guardian",
-      "description": "Student's guardian."
-    },
-    {
+      "id": "Travel time",
       "type": "numerical",
-      "id": "traveltime",
       "description": "Student's travel time to school, in hours."
     },
     {
+      "id": "Study time",
       "type": "numerical",
-      "id": "studytime",
       "description": "Student's weekly study time, 1 to 10 hours."
     },
     {
+      "id": "Failures",
       "type": "numerical",
-      "id": "failures",
       "description": "Number of past class failures (0 to 4)."
     },
     {
+      "id": "School support",
       "type": "categorical",
-      "id": "school support",
       "description": "Extra educational support from school."
     },
     {
+      "id": "Family support",
       "type": "categorical",
-      "id": "family support",
       "description": "Extra educational support from family."
     },
     {
-      "type": "categorical",
-      "id": "paid",
-      "description": "Extra paid classes."
+      "id": "Paid",
+      "type": "numerical",
+      "description": "Number of extra paid courses the student took."
     },
     {
+      "id": "Activities",
       "type": "categorical",
-      "id": "activities",
       "description": "Extra-curricular activities."
     },
     {
+      "id": "Internet",
       "type": "categorical",
-      "id": "nursery",
-      "description": "Attended nursery school."
-    },
-    {
-      "type": "categorical",
-      "id": "higher",
-      "description": "Wants to pursue higher education."
-    },
-    {
-      "type": "categorical",
-      "id": "internet",
       "description": "Internet access at home."
     },
     {
+      "id": "Romantic",
       "type": "categorical",
-      "id": "romantic",
       "description": "In a romantic relationship."
     },
     {
-      "type": "categorical",
-      "id": "family relationships",
+      "id": "Family relationships",
+      "type": "numerical",
       "description": "Quality of family relationships: 1 (very bad) to 5 (excellent)."
     },
     {
-      "type": "categorical",
-      "id": "freetime",
+      "id": "Free time",
+      "type": "numerical",
       "description": "Free time after school: 1 (very low) to 5(very high)."
     },
     {
-      "type": "categorical",
-      "id": "go out",
-      "description": "How often students go out with friends: 1(very rarely) to 5(very often)."
-    },
-    {
-      "type": "categorical",
-      "id": "daily alcohol",
+      "id": "Daily alcohol",
+      "type": "numerical",
       "description": "Weekday alcohol consumption: 1 (very low) to 5 (very high)."
     },
     {
-      "type": "categorical",
-      "id": "weekend alcohol",
+      "id": "Weekend alcohol",
+      "type": "numerical",
       "description": "Weekend alcohol consumption: 1 (very low) to 5 (very high)"
     },
     {
-      "type": "categorical",
-      "id": "health",
-      "description": "Health status: 1 (very bad) to 5 (very good)"
+      "id": "Health",
+      "type": "numerical",
+      "description": "Health status: 1 (very bad) to 5 (very good)."
     },
     {
+      "id": "Absences",
       "type": "numerical",
-      "id": "absences",
       "description": "Number of school absences."
     },
     {
+      "id": "First semester grade",
       "type": "numerical",
-      "id": "G1",
       "description": "Grade for the first semester."
     },
     {
+      "id": "Second semester grade",
       "type": "numerical",
-      "id": "G2",
       "description": "Grade for the second semester."
     },
     {
+      "id": "Third semester grade",
       "type": "numerical",
-      "id": "G3",
-      "description": "Final grade"
+      "description": "Grade for the third semester."
     }
-  ]
+  ],
+  "defaultLabelColumn": "Health"
 }
