@@ -19,6 +19,8 @@ import {RESIZE_VISUALIZATION_EVENT} from '@cdo/apps/lib/ui/VisualizationResizeBa
 import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import DefaultVisualization from './DefaultVisualization';
+import TheaterVisualization from './TheaterVisualization';
+import Theater from './Theater';
 import {CsaViewMode} from './constants';
 
 /**
@@ -41,6 +43,7 @@ const Javalab = function() {
   /** @type {StudioApp} */
   this.studioApp_ = null;
   this.miniApp = null;
+  this.visualization = null;
 };
 
 /**
@@ -91,6 +94,11 @@ Javalab.prototype.init = function(config) {
     this.miniApp = new Neighborhood();
     config.afterInject = () =>
       this.miniApp.afterInject(this.level, this.skin, config, this.studioApp_);
+    this.visualization = <NeighborhoodVisualizationColumn iconPath={ICON_PATH} showSpeedSlider />
+  } else if (this.level.csaViewMode === CsaViewMode.THEATER) {
+    this.miniApp = new Theater();
+    config.afterInject = () => this.miniApp.afterInject();
+    this.visualization = <TheaterVisualization />;
   }
 
   const onMount = () => {
@@ -191,27 +199,13 @@ Javalab.prototype.init = function(config) {
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
         handleVersionHistory={handleVersionHistory}
-        visualization={this.getVisualization(this.level.csaViewMode)}
+        visualization={this.visualization}
       />
     </Provider>,
     document.getElementById(config.containerId)
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
-};
-
-Javalab.prototype.getVisualization = function(csaViewMode) {
-  if (!csaViewMode || csaViewMode === CsaViewMode.CONSOLE) {
-    return null;
-  }
-
-  if (csaViewMode === CsaViewMode.NEIGHBORHOOD) {
-    return (
-      <NeighborhoodVisualizationColumn iconPath={ICON_PATH} showSpeedSlider />
-    );
-  }
-
-  return <DefaultVisualization />;
 };
 
 // Ensure project is saved before exiting
