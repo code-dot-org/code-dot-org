@@ -71,7 +71,7 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
-  stageExtrasEnabled: false,
+  lessonExtrasEnabled: false,
   // Note: usingDbProgress === "user is logged in". However, it is
   // possible that we can get the user progress back from the DB
   // prior to having information about the user login state.
@@ -256,7 +256,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_LESSON_EXTRAS_ENABLED) {
     return {
       ...state,
-      stageExtrasEnabled: action.lessonExtrasEnabled
+      lessonExtrasEnabled: action.lessonExtrasEnabled
     };
   }
 
@@ -514,7 +514,7 @@ export const hasLockableLessons = state =>
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
 /**
- * Extract the relevant portions of a particular lesson/lesson from the store.
+ * Extract the relevant portions of a particular lesson from the store.
  * Note, that this does not include levels
  * @param {object} state - The progress state in our redux store
  * @param {number} lessonIndex - The index into our lessons we care about
@@ -616,7 +616,7 @@ const levelWithProgress = (
 };
 
 /**
- * Get level data for all lessons/lessons
+ * Get level data for all lessons
  */
 export const levelsByLesson = ({
   stages,
@@ -646,7 +646,7 @@ export const levelsByLesson = ({
   );
 
 /**
- * Get data for a particular lesson/lesson
+ * Get data for a particular lesson
  */
 export const levelsForLessonId = (state, lessonId) => {
   const lesson = state.stages.find(lesson => lesson.id === lessonId);
@@ -656,7 +656,7 @@ export const levelsForLessonId = (state, lessonId) => {
 };
 
 export const lessonExtrasUrl = (state, lessonId) =>
-  state.stageExtrasEnabled
+  state.lessonExtrasEnabled
     ? state.stages.find(lesson => lesson.id === lessonId)
         .lesson_extras_level_url
     : '';
