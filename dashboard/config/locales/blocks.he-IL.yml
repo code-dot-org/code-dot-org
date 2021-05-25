@@ -1214,6 +1214,15 @@ he:
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
             '"speed"': מהירות
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': גודל
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': בינוני
+            '100': large
       gamelab_setSizes:
         text: הגדר  {PROPERTY} של  {SPRITE}  ל {N}%
         options:
@@ -1515,6 +1524,13 @@ he:
             '"x"': מיקום בציר x
             '"y"': מיקום בציר y
             '"direction"': כיוון תנועה
+      Mikelab_setupSim:
+        text: |-
+          הדמיית התקנה עם
+          {SPRITE1N}{SPRITE1COSTUME}הירות{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}הירות{SPRITE2SPEED}
+          איסוף
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1579,6 +1595,13 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': רשת
+            '"border"': גבול
+            '"row"': שורה
+            '"random"': אקראי
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:
@@ -1612,42 +1635,27 @@ he:
         options:
           PROPERTY:
             "'shapeColor'": צבע
-      aalab_addBehaviorForDuration:
-        text: מיכל שלמה {SPRITE} מתחיל {BEHAVIOR} עבור {SECONDS} שניות
-      aalab_addBehaviorUntilBoolean:
-        text: ספרייט {SPRITE} מתחיל {BEHAVIOR} עד {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: ספרייט חדש בשם{SPRITE_NAME} עם תחפושת{ANIMATION_NAME} במיקום{LOCATION}
-      aalab_goToScene:
-        text: ללכת לסצנה {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: הזז את {SPRITE} {DISTANCE} פיקסלים קדימה  {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': צפונה
-            '"East"': מזרחה
-            '"South"': דרומה
-            '"West"': מערבה
-      aalab_prompt:
-        text: לשאול את השאלה {MESSAGE}
-      aalab_scene:
-        text: סצנה {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: סיפור ההתקנה
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': רשת
+            '"border"': גבול
+            '"row"': שורה
             '"random"': אקראי
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': כולם
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': כולם
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: לצייר בינארי {BIN}
       binary_drawBinScreen:

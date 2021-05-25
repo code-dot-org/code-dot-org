@@ -207,6 +207,15 @@ ne:
           PROPERTY:
             '"scale"': size
             '"speed"': speed
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': medium
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:

@@ -6,6 +6,7 @@ az:
       actor: personaj
       age: yaş
       answer: cavab
+      binary: ikilik
       birds: quşlar
       bit: bit
       blue1: mavi1

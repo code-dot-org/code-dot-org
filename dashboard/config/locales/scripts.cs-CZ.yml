@@ -685,12 +685,6 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -742,12 +736,6 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -757,12 +745,6 @@ cs:
           description: 'Fáze 2 Online: Promíchané letní studium'
           description_short: 'Fáze 2 Online: Promíchané letní studium'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -1143,12 +1125,6 @@ cs:
               name: 'Nezapojené: Psaní písniček s parametry'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Vítejte!
             Wrap-up:
@@ -4202,6 +4178,12 @@ cs:
               name: Kurz B
             CS Discoveries:
               name: Objevujeme informatiku
+            Course E:
+              name: Kurz E
+            Course F:
+              name: Kurz F
+            csf:
+              name: Základy informatiky
         virustest:
           title: Simulace šíření
           description_short: 'Vytvořte ve Sprite Labu simulaci šíření viru. '
@@ -4209,6 +4191,8 @@ cs:
           lessons:
             AI for Oceans:
               name: AI pomáhá oceánům
+            lesson14:
+              name: Lekce 14
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -4231,7 +4215,9 @@ cs:
             lessonGroup-3:
               display_name: Proměnné
             outbreak:
-              display_name: Simulace šíření
+              display_name: Simulátor šíření
+            debugging:
+              display_name: Ladění
         csd1-2021:
           lesson_groups:
             csd1_1:
@@ -4593,6 +4579,8 @@ cs:
               display_name: Funkce
             csf_impacts:
               display_name: Dopady počítačů
+            lessonGroup-7:
+              display_name: Dopady počítačů
         coursef-2021:
           title: Kurz F (2019)
           lessons:
@@ -4652,7 +4640,7 @@ cs:
               name: Programujeme s Angry Birds
             Debugging with Scrat:
               key: Ladění se Scratem
-              name: Ladění se Scratem
+              name: Odstraňujeme chyby v bludišti
             Collecting Treasure with Laurel:
               key: Sbíráme poklady s Laurel
               name: Sbíráme poklady s Laurel
@@ -4783,6 +4771,10 @@ cs:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Obsah
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Obsah
         k5-onlinepd-2021:
           lessons:

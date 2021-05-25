@@ -1,0 +1,18 @@
+<External>
+  <config><![CDATA[{
+  "game_id": 43,
+  "created_at": "2020-03-20T23:15:10.000Z",
+  "properties": {
+    "options": {
+      "skip_dialog": true
+    },
+    "title": "title",
+    "content1": "description here",
+    "display_as_unplugged": "true",
+    "use_large_video_player": "true",
+    "hide_reference_area": "true",
+    "markdown": "# Super Digital Citizen\n\n## How can we be upstanders when we see cyberbullying?\n"
+  },
+  "published": false
+}]]></config>
+</External>

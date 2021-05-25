@@ -16,6 +16,7 @@
 
 - if @script_level
   - level_data = { redirect_script_url: @redirect_script_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, tts_autoplay_enabled: @tts_autoplay_enabled}
+  %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
   %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog

@@ -409,7 +409,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :forbidden
     script.reload
@@ -430,7 +430,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :success
     script.reload
@@ -449,7 +449,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :success
     script.reload
@@ -467,7 +467,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: script.id,
       script: {name: script.name},
       script_text: '',
-      visible_to_teachers: true
+      hidden: false
     }
     assert_response :forbidden
     script.reload
@@ -659,7 +659,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: 'pilot-experiment',
-      visible_to_teachers: true,
+      hidden: false
     }
 
     assert_response :success
@@ -681,7 +681,7 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: script.name},
       script_text: '',
       pilot_experiment: '',
-      visible_to_teachers: true,
+      hidden: false
     }
 
     assert_response :success

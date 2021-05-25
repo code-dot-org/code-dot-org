@@ -1220,8 +1220,6 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
-            0: Eining 1, dagar 1-2 Hvað er tölva?
-            1: Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1341,8 +1339,6 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
-            0: Eining 1, dagar 1-2 Hvað er tölva?
-            1: Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1366,8 +1362,6 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
-            0: Eining 1, dagar 1-2 Hvað er tölva?
-            1: Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2410,8 +2404,6 @@ is:
               name: Eining 1, dagar 15-16 Tölvuforrit og að fylgja leiðbeiningum
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Eining 1, dagar 17-19 Hvað er greind?
-            0: Eining 1, dagar 1-2 Hvað er tölva?
-            1: Eining 1, dagar 1-2 Hvað er tölva?
             Unit 1, Days 3-4 Buying a Computer:
               name: Eining 1, dagar 3-4 Að kaupa tölvu
             Unit 1, Days 5-7 Searching and Web 2:
@@ -6762,6 +6754,8 @@ is:
               display_name: Föll
             csp_project:
               display_name: Verkefni
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -6772,12 +6766,16 @@ is:
               display_name: Yfirferðir
             csp_project:
               display_name: Verkefni
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Stikar og skilagildi
             csp_libraries:
               display_name: Söfn
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
         csp9-pilot:
           lessons:
             new stage:
@@ -7359,12 +7357,17 @@ is:
               display_name: Kafli 1 - Stafrænar upplýsingar
             cspSurvey:
               display_name: Könnun
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
           lessons:
             new stage:
               name: nýr áfangi
             Binary Numbers:
               name: Tvíundartölur
         csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
           lessons:
             new stage:
               name: nýr áfangi
@@ -7376,12 +7379,17 @@ is:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Eining 3: Kynning á gerð appa'
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
           lessons:
             new stage:
               name: nýr áfangi
             Debugging:
               name: Villuleit
         csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
           lessons:
             new stage:
               name: nýr áfangi
@@ -7390,6 +7398,9 @@ is:
             new stage:
               name: nýr áfangi
         csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
           lessons:
             new stage:
               name: nýr áfangi
@@ -7397,6 +7408,8 @@ is:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Eining 10: Netöryggi og mikilvægi þess'
+            cspSurvey2020:
+              display_name: Könnun eftir námskeið
           lessons:
             new stage:
               name: nýr áfangi
@@ -7759,10 +7772,20 @@ is:
               name: Námskeið B
             CS Discoveries:
               name: Uppgötvanir tölvunarfræði
+            Course E:
+              name: Námskeið E
+            Course F:
+              name: Námskeið F
+            csf:
+              name: TF Grunnur
         ml-playground:
           lessons:
             visualizing:
               name: Sjóngerving gagna
+            lesson14:
+              name: Kennslustund 14
+            lesson15:
+              name: Kennslustund 15
         2021drafting:
           lessons:
             Course F Introduction:
@@ -7774,6 +7797,8 @@ is:
               display_name: Kynning
             lessonGroup-3:
               display_name: Breytur
+            debugging:
+              display_name: Villuleit
         csd1-2021:
           description_short: "  Lærðu hvernig fólk notar tölvur til að leysa vandamál."
           lessons:
@@ -8412,6 +8437,10 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Innihald
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -8455,3 +8484,7 @@ is:
               display_name: Næstu skref
             Introduction:
               display_name: Kynning
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Könnun

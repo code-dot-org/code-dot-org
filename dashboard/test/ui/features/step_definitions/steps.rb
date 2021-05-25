@@ -898,13 +898,13 @@ Then(/^I slow down execution speed$/) do
 end
 
 # Note: only works for levels other than the current one
-Then(/^check that level (\d+) on this stage is done$/) do |level|
+Then(/^check that level (\d+) on this lesson is done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   !undone
 end
 
 # Note: only works for levels other than the current one
-Then(/^check that level (\d+) on this stage is not done$/) do |level|
+Then(/^check that level (\d+) on this lesson is not done$/) do |level|
   undone = @browser.execute_script("return $('a[href$=\"level/#{level}\"].other_level').hasClass('level_undone')")
   undone
 end
@@ -1703,13 +1703,15 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   end
 end
 
-Then /^I scroll our lockable stage into view$/ do
+Then /^I scroll our lockable lesson into view$/ do
   # use visible pseudo selector as we also have lock icons in (hidden) summary view
-  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").length') > 0}
-  @browser.execute_script('$(".fa-lock:visible")[0].scrollIntoView(true)')
+  # and filter out lock icons in the header
+
+  wait_short_until {@browser.execute_script('return $(".fa-lock:visible").not($(".full_progress_inner .fa-lock")).length') > 0}
+  @browser.execute_script('$(".fa-lock:visible").not($(".full_progress_inner .fa-lock"))[0].scrollIntoView(true)')
 end
 
-Then /^I open the stage lock dialog$/ do
+Then /^I open the lesson lock dialog$/ do
   wait_for_jquery
   wait_short_until {@browser.execute_script("return $('.uitest-locksettings').length") > 0}
   @browser.execute_script("$('.uitest-locksettings').children().first().click()")
@@ -1723,21 +1725,21 @@ Then /^I open the send lesson dialog for lesson (\d+)$/ do |lesson_num|
   wait_short_until {jquery_is_element_visible('.modal')}
 end
 
-Then /^I unlock the stage for students$/ do
+Then /^I unlock the lesson for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
-Then /^I lock the stage for students$/ do
+Then /^I lock the lesson for students$/ do
   # lock assessment
   @browser.execute_script('$(".modal-body button:contains(Lock)").click()')
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end
 
-Then /^I show stage answers for students$/ do
+Then /^I show lesson answers for students$/ do
   @browser.execute_script("$('.modal-body button:contains(Show answers)').click()")
   @browser.execute_script('$(".modal-body button:contains(Save)").click()')
 end
@@ -1883,10 +1885,10 @@ Then /^I navigate to teacher dashboard for the section I saved with experiment "
   }
 end
 
-Then /^I navigate to the script "([^"]*)" stage (\d+) lesson extras page for the section I saved$/ do |script_name, stage_num|
+Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for the section I saved$/ do |script_name, lesson_num|
   expect(@section_id).to be > 0
   steps %{
-    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{stage_num}/extras?section_id=#{@section_id}"
+    Then I am on "http://studio.code.org/s/#{script_name}/lessons/#{lesson_num}/extras?section_id=#{@section_id}"
   }
 end
 

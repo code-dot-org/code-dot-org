@@ -604,7 +604,7 @@ level 'Level 3'
     assert_equal expected, output
   end
 
-  test 'Script DSL with blank stage visible after date will set visible after to next wednesday at 8 am PST' do
+  test 'Script DSL with blank lesson visible after date will set visible after to next wednesday at 8 am PST' do
     Timecop.freeze(Time.new(2020, 3, 27))
 
     input_dsl = <<~DSL
@@ -637,7 +637,7 @@ level 'Level 3'
     Timecop.return
   end
 
-  test 'Script DSL with stage visible after date' do
+  test 'Script DSL with lesson visible after date' do
     input_dsl = <<~DSL
       lesson 'Lesson1', display_name: 'Lesson1', visible_after: '2020-04-01 10:00:00 -0700'
       level 'Level 1'
@@ -943,7 +943,7 @@ level 'Level 3'
 
   test 'Script DSL with named: true' do
     input_dsl = <<~DSL
-      lesson 'stage 1', display_name: 'stage 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level 'maze 1', named: true
     DSL
     expected = DEFAULT_PROPS.merge(
@@ -953,8 +953,8 @@ level 'Level 3'
           display_name: nil,
           lessons: [
             {
-              key: "stage 1",
-              name: "stage 1",
+              key: "lesson 1",
+              name: "lesson 1",
               script_levels: [{levels: [{name: "maze 1"}], named_level: true},]
             }
           ]
@@ -990,7 +990,7 @@ level 'Level 3'
 
   test 'Script DSL with assessment: true' do
     input_dsl = <<~DSL
-      lesson 'stage 1', display_name: 'stage 1'
+      lesson 'lesson 1', display_name: 'lesson 1'
       level 'maze 1', assessment: true
     DSL
     expected = DEFAULT_PROPS.merge(
@@ -1000,8 +1000,8 @@ level 'Level 3'
           display_name: nil,
           lessons: [
             {
-              key: "stage 1",
-              name: "stage 1",
+              key: "lesson 1",
+              name: "lesson 1",
               script_levels: [
                 {
                   levels: [{name: "maze 1"}],
@@ -1023,11 +1023,11 @@ level 'Level 3'
       lesson_group 'my_group', display_name: 'Display Name'
       lesson_group_description 'This is a description'
       lesson_group_big_questions 'Who? What? Where?'
-      lesson 'Bob\\'s stage', display_name: 'Bob\\'s stage'
+      lesson 'Bob\\'s lesson', display_name: 'Bob\\'s lesson'
       level 'Level 1', progression: 'Bob\\'s progression'
       level 'Level 2'
     DSL
-    assert_includes(input_dsl, "Bob\\'s stage")
+    assert_includes(input_dsl, "Bob\\'s lesson")
     assert_includes(input_dsl, "Bob\\'s progression")
     output, i18n = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     expected = DEFAULT_PROPS.merge(
@@ -1039,8 +1039,8 @@ level 'Level 3'
           big_questions: 'Who? What? Where?',
           lessons: [
             {
-              key: "Bob's stage",
-              name: "Bob's stage",
+              key: "Bob's lesson",
+              name: "Bob's lesson",
               script_levels: [
                 {levels: [{name: 'Level 1'}], properties: {progression: "Bob's progression"}},
                 {levels: [{name: 'Level 2'}]},
@@ -1054,7 +1054,7 @@ level 'Level 3'
     i18n_expected = {
       'test' => {
         'lessons' => {
-          "Bob's stage" => {'name' => "Bob's stage"}
+          "Bob's lesson" => {'name' => "Bob's lesson"}
         },
         "lesson_groups" => {
           "my_group" => {

@@ -4579,7 +4579,7 @@ de-DE:
         - text: Der Bauer geht vier Felder vorwärts und versucht dann, einen Kürbis
             einzusammeln.
           correct: true
-          feedback: Falsch. Der "Pflücke Kürbis"-Block ist innerhalb der Schleife,
+          feedback: Falsch. Der "Pflücke Kürbis" Block ist innerhalb der Schleife,
             das heißt, der Bauer versucht, bei jedem Schritt einen Kürbis zu pflücken
             und nicht nur am Ende.
         - text: Ich weiß es nicht.
@@ -5046,7 +5046,7 @@ de-DE:
             auf, wenn sie zum Mais kommt.
         - text: Die Erntearbeiterin wird alle Kürbisse ernten.
           correct: true
-          feedback: Falsch.  Die Erntemaschine ruft erst dann "prüfen und ernten"
+          feedback: Falsch.  Die Erntearbeiterin ruft erst dann "prüfen und ernten"
             auf, wenn sie zum Mais kommt.
         - text: Die Erntearbeiterin wird den Salat ernten.
           correct: true
@@ -6465,10 +6465,6 @@ de-DE:
           class=\"btn btn-large btn-primary next-stage submitButton\">Weiter</a>"
       csd-post-survey-intro-2019:
         markdown: "# Diese Umfrage befindet sich noch in der Entwicklung\n"
-      CSD U1 Test:
-        title: Projektbezogener Test zum Thema Computer und Problemlösung
-      CSD U5 test:
-        title: Daten und Gesellschaft Test nach Ende des Projekts
       Unit 1 Lesson 1 Overview:
         markdown: |
           # Übersicht

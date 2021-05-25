@@ -29,8 +29,6 @@ import {
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import classnames from 'classnames';
 
-const SUMMARY_VIEW_COLUMN_WIDTH = 40;
-
 /**
  * Since our progress tables are built out of standard HTML table elements,
  * we can leverage CSS classes for laying out and styling those elements.
@@ -256,7 +254,7 @@ class ProgressTableView extends React.Component {
   summaryContentViewProps() {
     return {
       columnWidths: new Array(this.props.scriptData.stages.length).fill(
-        SUMMARY_VIEW_COLUMN_WIDTH
+        parseInt(progressTableStyles.MIN_COLUMN_WIDTH)
       ),
       lessonCellFormatters: this.summaryCellFormatters,
       includeHeaderArrows: false

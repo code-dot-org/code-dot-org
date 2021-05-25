@@ -212,6 +212,10 @@ hr:
             '"x"': x pozicija
             '"y"': y pozicija
             '"speed"': brzina
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': veličina
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -336,15 +340,19 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': slučajno odabran
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
         text: okreni ulijevo
       RyanLab_turnRight:
         text: okreni udesno
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': slučajno odabran
       binary_move:
         options:

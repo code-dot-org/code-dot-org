@@ -315,6 +315,15 @@ ky:
             '"x"': x позиция
             '"y"': у позиция
             '"speed"': ылдамдык
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': өлчөмү
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': орто
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -471,16 +480,34 @@ ky:
             '"down"': жебе төмөн
             '"left"': жебе солго
             '"right"': жебе оңго
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': туш келди
       RyanLab_moveForward:
         text: алдыга жылдыр
       RyanLab_turnLeft:
         text: солго бурул
       RyanLab_turnRight:
         text: оңго бурул
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': туш келди
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': баары
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': баары
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

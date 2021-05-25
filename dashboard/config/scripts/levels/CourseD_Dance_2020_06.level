@@ -65,7 +65,8 @@
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_code": "var foundLead = false;\r\nvar foundBackup = false;\r\n\r\nsprites.forEach(function(sprite) {\r\n  if (sprite.scale == 1) {\r\n    foundLead = true;\r\n  } else {\r\n    foundBackup = true;\r\n  }\r\n});\r\nif (nativeAPI.getTime(\"measures\") > 5.5) {\r\n  if (sprites.length == 0) {\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  } else if (!foundLead) {\r\n    nativeAPI.fail(\"danceFeedbackNeedLead\");\r\n  } else if (!foundBackup) {\r\n    nativeAPI.fail(\"danceFeedbackNeedBackup\");\r\n  }\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 8){\r\n  nativeAPI.pass();\r\n}\r\n",
-    "tts_long_instructions_override": "Use the new block to set up a group of smaller backup dancers around a lead dancer in the middle. Now you can create a bunch of dancers all at once!"
+    "tts_long_instructions_override": "Use the new block to set up a group of smaller backup dancers around a lead dancer in the middle. Now you can create a bunch of dancers all at once!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

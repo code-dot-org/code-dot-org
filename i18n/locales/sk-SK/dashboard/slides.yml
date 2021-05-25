@@ -251,14 +251,20 @@ sk:
       3:
         text: "Stredná časť je panel nástrojov a každý z týchto blokov je časťou kódu. Biely priestor napravo sa volá pracovný priestor a tu budeš vytvárať svoj program."
       4:
+        text: "Na začiatok budeš musieť spojiť tvoje bloky s oranžovým blokom \"pri spustení\". Môžeš spojiť dokopy viacero blokov tým, že ich vytiahneš a keď uvidíš žltú čiaru, potom sa do seba zacvaknú."
       5:
+        text: "V tejto prvej úlohe je našou postavičkou tučniak a urobíme to, aby povedal \"Ahoj!\" tak, že vytiahneme von blok \"povedz\", spojíme ho s blokom \"pri spustení\" a napíšeme do ňho \"Ahoj.\" Pomocou blokov \"posuň postavu\" vpravo a vľavo môžeme dosiahnuť, aby sa tučniak hýbal. Akonáhle budú bloky na mieste, stlač tlačidlo \"Spustiť\", aby sa zobrazilo, čo sa ti podarilo naprogramovať."
       6:
+        text: "Začni a na konci budeš vedieť  vytvoriť svoju vlastnú hru s rôznymi hráčmi, ktorí budú reagovať na podnety, môžu byť šťastní, alebo zosmutnieť, získavať body, alebo hádzať ohnivé gule, či dokonca jeden druhého vymazať. Je to všetko na tebe akú hru chceš vytvoriť."
     playlab_events:
       1:
+        text: "Teraz sa naučíme o niečom, čo programátori hier používajú každý deň. Sú to Udalosti. Udalosť hovorí tvojmu programu, aby čakal na to, keď sa niečo stane. A potom, keď sa to stane, program vykoná nejakú aktivitu. "
       2:
         text: "Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie tlačidla šípky, alebo na dotyk na dotykovú obrazovku."
       3:
+        text: "Tu urobíme, aby vesmírny robot Spacebot pozdravil pozemšťanov, keď na ňho klikneme. Použijeme blok \"po kliknutí na postavu\" a pripojíme k nemu blok \"povedz\". Keď hráč klikne na robota, vykoná sa všetko, čo je pripojené k udalosti \"po kliknutí na postavu\". Čo hovorí tvoj mimozemšťan?"
       4:
+        text: "Sú tam aj bloky \"keď šípka\". Ak k nim pripojíš bloky \"posuň\", môžeš začať s pohybom postavičiek hore, dole, vľavo či vpravo. Krok po kroku sa tvoja hra stáva viac interaktívnou."
     playlab_repeat_forever:
       1:
         text: "Toto je blok \"opakuj donekonečna\". Čokoľvek vložíme do tohoto bloku, to sa bude v hre opakovať navždy."
@@ -289,9 +295,19 @@ sk:
       2:
         text: "V tejto lekcii budeš ovládaný papierovým diaľkovým ovládačom. Je to niečo ako reálna-živá video hra."
       3:
+        text: "Udalosť je akcia, ktorá spôsobí, že sa niečo udeje. Je to ako keď klikneš na tlačidlo myši a načíta sa webstránka. To je udalosť. Keď sa dotkneš obrazovky na svojom tablete kvôli posúvaniu obrazu, to je tiež udalosť. Udalosti sú skvelým spôsobom ako nechať užívateľa riadiť tvoj program, kedykoľvek to potrebuje alebo chce."
+      4:
+        text: "Často sa dejú veci, na ktoré všetci odpovedáme určitým spôsobom. Ak sme hladní, ideme do chladničky. Ak počujeme, že prišiel poštár a vhodil list do schránky, ideme si vybrať túto poštu. To sú rovnaké udalosti ako stlačenie tlačidla alebo pohnutie joystickom. Udalosti, ktoré sú pre nás spúšťačom pre vykonanie určitej aktivity."
+      5:
+        text: "Vo videohrách sa nachádza udalosť nazývaná \"Update\" (obnov) a opakuje sa 30 alebo 60 krát za sekundu. Pre programátorov videohier je možno dôležitejšia ako udalosť gombíka či joysticku."
+      6:
+    C1_building_foundation:
+      1:
+      2:
+        text: "Táto lekcia sa volá budovanie základov. V tejto lekcii budeme pracovať na úlohe, ktorá má byť skutočne zložitá. Musíte prísť na to, ako postaviť štruktúru vysokú aspoň ako jeden z týchto pohárov, a musí byť dosť silná nato, aby udržala váhu knihy."
+      3:
       4:
       5:
-      6:
     C1_happy_maps_unplugged:
       1:
         text: "Táto lekcia sa volá Veselé mapy. Dnes budeme pomáhať našej malej chlpatej kamarátke Flurb na ceste ku jej ovociu."
@@ -378,6 +394,10 @@ sk:
       1:
         text: "Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát. Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane."
       2:
+    C2_playlab_createstory:
+      1:
+        text: "Doteraz sa ti podarilo vytvoriť animáciu alebo príbeh, ktorý keď je spustený, vykoná stále to isté. Teraz môžeš vytvoriť interaktívnu hru, ktorá sa dá v skutočnosti aj hrať."
+      2:
     C2_relay_programming:
       1:
         text: "Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom a o hľadaní a opravovaní chýb, ktoré sa stávajú, keď pracujete v tíme a naozaj rýchlo. Využijeme programovanie na štvorčekový papier, aby sme nasimulovali skutočné programovanie a štafetové preteky, aby sme cítili aj časový tlak."
@@ -426,6 +446,10 @@ sk:
     C3_maze_level_4:
       1:
         text: "V tomto príklade je tvojou úlohou dostať zombíka k slnečnici. Mohli by sme použiť 5 blokov \"posun sa dopredu\", alebo môžeme počítaču povedať, nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného opakovacieho bloku."
+      2:
+    C3_playlab_create_game:
+      1:
+        text: "Doteraz sa ti podarilo vytvoriť animáciu alebo príbeh, ktorý keď je spustený, vykoná stále to isté. Teraz môžeš vytvoriť interaktívnu hru, ktorá sa dá v skutočnosti aj hrať."
       2:
     C4_conditionals:
       1:
@@ -492,6 +516,12 @@ sk:
         text: "Vieš si predstaviť, že by si mal niečo opakovať donekonečna? Stále znova a znova... Dúfajme, že to nikdy nebudeš musieť robiť, lebo v opakovaní sú fakt dobré počítače. Tento blok sa volá \"opakuj donekonečna\". Čokoľvek vo vnútri toho bloku sa bude v hre neustále opakovať."
       2:
         text: "Ak chceme, aby postava opakovala niečo bez toho, aby sa o to staral hráč, tak tie bloky umiestnime do vnútra bloku \"opakuj donekonečna\". V nasledujúcej úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času."
+    unplug1:
+      1:
+      2:
+      3:
+        text: "Keď som sa konečne naučil trochu programovať, tá biela plocha sa premenila na množstvo dverí a po ich otvorení sa za nimi nachádzala, samozrejme, ďalšia chodba s množstvom dverí. Programovanie je jednoduché a zábavné. Môžeš urobiť čokoľvek, čo chce tvoja myseľ. Nakoniec otvoríš dostatok dverí, aby vošlo svetlo. Pre mňa je hotový program ako stavba naplnená svetlom. Všetky kúty sú osvetlené. Počet ľudí, ktorých môžeš ovplyvniť a komunikovať s nimi, je niečo, čo svet predtým nevidel."
+      4:
     unplug3:
       1:
         text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
@@ -534,6 +564,7 @@ sk:
         text: "Aby sme to dosiahli, použijeme príkaz, ktorý sa volá \"whenUp()\" (akHore). Ak presunieš príkaz z panela nástrojov, uvidíš, že začína a končí zloženou (kučeravou) zátvorkou, nie bodko-čiarkou. Toto nám dáva priestor, aby sme dovnútra volžili ďalšie príkazy. Každý príkaz, ktorý vložíme dovnútra zátvoriek, sa spustí, keď hráč stlačí šípku hore."
       8:
       9:
+        text: "Teraz namiesto toho, aby sme  písali celý kód na ovládanie droida vopred, môžeme nechať R2-D2 reagovať na stlačenie kláves, aby sa pohyoval po obrazovke. Krok po kroku sa tvoja hra stáva viac interaktívnou."
     starwars_congrats:
       1:
         text: "Ahoj, volám sa Alice. V Code.org vediem produktový a technický tím a pracovala som na tomto návode, ktorý si práve prechádzaš."
@@ -655,6 +686,7 @@ sk:
       1:
         text: "Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché. Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš hrať hru ktorú si si sám vytvoril."
       2:
+        text: "Máš obľúbenú videohru? Teraz urobíme krok bližšie k vytváraniu takých hier, ako v Play Labe. Dobré hry majú príbeh a každý príbeh má postavy. Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na základe pravidiel hry aj získavajú body. Dnes sa budeme učiť, ako spraviť všetky tieto veci jednu za druhou so zábavnými postavičkami, a potom vytvoríme hru od základu, ktorá sa dá zdieľať a hrať na mobile."
       3:
       4:
       5:
@@ -672,6 +704,7 @@ sk:
       1:
         text: "Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché. Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš hrať hru ktorú si si sám vytvoril."
       2:
+        text: "Máš obľúbenú videohru? Teraz urobíme krok bližšie k vytváraniu takých hier, ako v Play Labe. Dobré hry majú príbeh a každý príbeh má postavy. Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na základe pravidiel hry aj získavajú body. Dnes sa budeme učiť, ako spraviť všetky tieto veci jednu za druhou so zábavnými postavičkami, a potom vytvoríme hru od základu, ktorá sa dá zdieľať a hrať na mobile."
       3:
       4:
       5:

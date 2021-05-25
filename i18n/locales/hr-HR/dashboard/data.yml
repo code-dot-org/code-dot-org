@@ -38,6 +38,7 @@ hr:
         NetSim: Internetski Simulator
         Custom: Umjetnik
         CustomStudio: Laboratorij igara
+        Gamelab: Game Lab
     trophy:
       name:
         Bronze: Bronca
@@ -332,6 +333,8 @@ hr:
         C4_unplugged_forloops: Petlja brojača
         C4_unplugged_parameters: Pisanje pjesama s parametrima
         C4_unplugged_binary: Binarno
+        CSF_collector_k1_blocks: 'Osnove RZ: Sakupljač'
+        CSF_collector_text_blocks: 'Osnove RZ: Sakupljač'
         CSF_my_robotic_friends: Moji robotski prijatelji
         frozen_intro: Uvod u Sat Kodiranja
         frozen_loops: Uvod u petlje
@@ -377,8 +380,32 @@ hr:
         mc_congrats_share: Minecraft - Čestitamo
         mc_congrats_no_share: Minecraft - Čestitamo
         CSF_loops_AB: Petlje
+        hoc_dance_warmup: Plesna zabava - zagrijavanje
+        hoc_dance_events: Plesna zabava - događaji
+        hoc_dance_properties: Plesna zabava - svojstva
+        hoc_dance_congrats: Plesna zabava - zabavljaj se!
+        teaching_csf_how_it_works: 'Učenje osnova RZ: Kako tečaj funkcionira'
+        opd_closing: 'Učenje osnova RZ: Zaključak i idući koraci'
+        what_is_an_event: Što je događaj?
+        teaching_cs_pair_programming: 'Učenje osnova RZ: Programiranje u paru'
+        teaching_problem_solving: 'Učenje osnova RZ: Učenje rješavanje problema'
         csd_pair_programming: Programiranje u paru
         csd_applab_parameters: Funkcije s parametrima
+        csp-pd-welcome: Dobrodošao u obitelj!
+        how-to-k5-workshops: 'Učenje osnova RZ: Djeca testirala, učitelji odobrili'
+        oceans_machine_learning: Strojno učenje
+        oceans_training_data: Podaci za treniranje
+        oceans_societal_implications: Društvene implikacije
+        hoc_dance_congrats_2019: Plesna zabava - zabavljaj se!
+        hoc_dance_warmup_2019: Plesna zabava - zagrijavanje
+        hoc_dance_events_2019: Plesna zabava - događaji
+        hoc_dance_measures_2019: Plesna zabava - mjere
+        hoc_dance_properties_2019: Plesna zabava - svojstva
+        csd_what_computers_do: Što računala rade?
+        csf_follow_the_digital_trail: Slijedi digitalni trag
+        csd_what_computers_are: Što je računalo?
+        csd_how_teamwork_works: Kako funkcionira timski rad
+        csd_teamwork_and_disagreement: Timski rad - rješavanje neslaganja
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka

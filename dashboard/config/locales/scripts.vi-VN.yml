@@ -32,9 +32,7 @@ vi:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự
-
-'
+              name: 'Nghệ sĩ: trình tự'
             'Artist: Shapes':
               name: 'Nghệ sĩ: hình dạng'
             'Bee: Loops':
@@ -88,9 +86,7 @@ vi:
             'Artist: Nested Loops':
               name: 'Nghệ sĩ: các vòng lồng vào nhau'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự
-
-'
+              name: 'Nghệ sĩ: trình tự'
             'Bee: Conditionals':
               name: 'Ong: Các điều kiện'
             'Bee: Debugging':
@@ -307,9 +303,7 @@ vi:
             'Artist: Nested Loops':
               name: 'Nghệ sĩ: các vòng lồng vào nhau'
             'Artist: Sequence':
-              name: 'Nghệ sĩ: trình tự
-
-'
+              name: 'Nghệ sĩ: trình tự'
             'Bee: Conditionals':
               name: 'Ong: Các điều kiện'
             'Bee: Debugging':
@@ -1182,8 +1176,6 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
-            0: Phần 1, ngày 1-2 máy tính là gì?
-            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1301,8 +1293,6 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
-            0: Phần 1, ngày 1-2 máy tính là gì?
-            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1326,8 +1316,6 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
-            0: Phần 1, ngày 1-2 máy tính là gì?
-            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1686,27 +1674,27 @@ vi:
           student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với
             Ice Age Play Lab!
         starwars:
-          title: 'Chiến Tranh Các Vì Sao: Xây Thiên Hà bằng lâp trình'
-          description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của
-            riêng bạn trong một thiên hà xa xôi.
-          description_short: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
-            của riêng bạn trong một thiên hà xa xôi.
+          title: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Javascript)'
+          description: Học cách lập trình droid và làm game Chiến tranh giữa các vì
+            sao của riêng bạn ở một thiên hà xa rất xa.
+          description_short: Học cách lập trình droid và làm game Chiến tranh giữa
+            các vì sao của riêng bạn ở một thiên hà xa rất xa.
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
-          student_description: Tìm hiểu để lập trình droids, và tạo trò chơi Star
-            Wars của riêng bạn trong một thiên hà xa xôi.
+          student_description: Học cách lập trình droid và làm game Chiến tranh giữa
+            các vì sao của riêng bạn ở một thiên hà xa rất xa.
         starwarsblocks:
-          title: 'Chiến Tranh Các Vì Sao: Xây Thiên Hà bằng lâp trình'
-          description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của
-            riêng bạn trong một thiên hà xa xôi.
-          description_short: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
-            của riêng bạn trong một thiên hà xa xôi.
+          title: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)'
+          description: Học cách lập trình droid và làm game Chiến tranh giữa các vì
+            sao của riêng bạn ở một thiên hà xa rất xa.
+          description_short: Học cách lập trình droid và làm game Chiến tranh giữa
+            các vì sao của riêng bạn ở một thiên hà xa rất xa.
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
-          student_description: Tìm hiểu để lập trình droids, và tạo trò chơi Star
-            Wars của riêng bạn trong một thiên hà xa xôi.
+          student_description: Học cách lập trình droid và làm game Chiến tranh giữa
+            các vì sao của riêng bạn ở một thiên hà xa rất xa.
         mc:
           title: Minecraft Hour of Code
           description: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu
@@ -2685,8 +2673,6 @@ vi:
               name: Phần 1, ngày 15-16 Chương trình máy tính và Các chỉ dẫn phải theo
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Phần 1, ngày 17-19 Trí thông minh là gì?
-            0: Phần 1, ngày 1-2 máy tính là gì?
-            1: Phần 1, ngày 1-2 máy tính là gì?
             Unit 1, Days 3-4 Buying a Computer:
               name: Phần 1, ngày 3-4, mua một máy tính
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3145,13 +3131,13 @@ vi:
             AP Preparation and Support:
               name: AP chuẩn bị và hỗ trợ
         basketball:
-          title: Chọn đội của bạn và chơi một trò chơi bóng rổ
+          title: Chọn đội của bạn và làm game bóng rổ
           description_short: Chọn đội của bạn và chơi một trò chơi bóng rổ
           description: Chọn đội của bạn và chơi một trò chơi bóng rổ
           lessons:
             Bounce:
               name: Bật lại
-          student_description: Chọn đội của bạn và chơi một trò chơi bóng rổ
+          student_description: Chọn đội của bạn và làm game bóng rổ
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3207,7 +3193,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -3416,6 +3402,7 @@ vi:
             Hour of Code 2013:
               name: Giờ Lập trình 2013
         sports:
+          title: Tự lập trình game thể thao của riêng bạn
           lessons:
             Sports:
               name: Thể thao
@@ -4904,7 +4891,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -6069,7 +6056,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -6638,7 +6625,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Styling Elements with CSS:
               name: Tạo phong cách cho các thành phần với CSS
               description_student: Bài học này tiếp tục giới thiệu với các thuộc tính
@@ -7063,12 +7050,20 @@ vi:
               display_name: Điều kiện
             csp_functions:
               display_name: Các hàm
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Danh sách
             csp_loops:
               display_name: Vòng lặp
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
+        csp7-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
         csp9-pilot:
           lessons:
             new stage:
@@ -7096,7 +7091,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Intellectual Property:
               name: Sở hữu trí tuệ
             Styling Elements with CSS:
@@ -7466,6 +7461,8 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
@@ -7478,6 +7475,9 @@ vi:
             CS Principles Pre-survey:
               name: Nguyên lý KHMT trước khi khảo sát
         csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
@@ -7486,10 +7486,16 @@ vi:
             Routers and Redundancy:
               name: Bộ định tuyến và dự phòng
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
         csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
@@ -7500,10 +7506,16 @@ vi:
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
         csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
         csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát sau khoá học
           lessons:
             new stage:
               name: giai đoạn mới
@@ -7558,7 +7570,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Intellectual Property:
               name: Sở hữu trí tuệ
             Styling Elements with CSS:
@@ -7829,6 +7841,10 @@ vi:
               name: Khóa học A
             Course B:
               name: Khóa học B
+            Course E:
+              name: Khóa học E
+            Course F:
+              name: Khóa học F
         virustest:
           title: Mô phỏng dịch bệnh bùng phát
           description_short: Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh
@@ -7839,6 +7855,10 @@ vi:
               name: Trí Tuệ Nhân Tạo cho Đại Dương
             visualizing:
               name: Làm dự liệu hiển thị được
+            lesson14:
+              name: Bài học 14
+            lesson15:
+              name: Bài học 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -7864,7 +7884,7 @@ vi:
             lessonGroup-3:
               display_name: Các biến
             outbreak:
-              display_name: Mô phỏng dịch bệnh bùng phát
+              display_name: Trình mô phỏng dịch bệnh bùng phát
         csd1-2021:
           lessons:
             CS Discoveries Pre-survey:
@@ -7902,7 +7922,7 @@ vi:
                 lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
                 được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
                 về phong cách cho các thành phần văn bản để thêm vào các trang web
-                cá nhân của họ. \r \r \n"
+                cá nhân của họ. \r \r "
             Intellectual Property:
               key: Sở hữu trí tuệ
               name: Sở hữu trí tuệ
@@ -8244,7 +8264,6 @@ vi:
               name: Bữa Tiệc Khiêu Vũ
             Debugging with Scrat:
               key: Gỡ lỗi với Scrat
-              name: Gỡ lỗi với Scrat
             'Looking Ahead with Minecraft ':
               name: Nhìn về phía trước
             Functions with Artist:
@@ -8279,6 +8298,7 @@ vi:
             Sequencing with Scrat:
               key: Học về chuỗi tuần tự cùng sóc Scrat
               name: Học về chuỗi tuần tự cùng sóc Scrat
+              description_student: Viết chương trình để Scrat tìm đến hạt sồi.
             Programming with Rey and BB-8:
               key: Lập trình cùng Rey và robot BB-8
               name: Lập trình cùng Rey và robot BB-8
@@ -8361,6 +8381,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Nội dung
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -8395,3 +8419,7 @@ vi:
               display_name: Bước tiếp theo
             Introduction:
               display_name: Giới thiệu
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Khảo sát

@@ -1010,6 +1010,10 @@ ta:
             '"scale"': அளவு
             '"rotation"': சுழற்சி
             '"direction"': நகர்வு திசை
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': அளவு
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1166,6 +1170,13 @@ ta:
             '"a"': அ
             '"s"': தெற்கு
             '"d"': ஈ
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': கிரிட்
+            '"border"': பார்டர்
+            '"row"': வரிசை
+            '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       RyanLab_moveForward:
         text: முன்னோக்கி நகர்த்த
       RyanLab_turnLeft:
@@ -1174,21 +1185,12 @@ ta:
         text: வலதுபுறம் திரும்பவும்
       Vector_positionCenter:
         text: மையம்
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': கிரிட்
+            '"border"': பார்டர்
+            '"row"': வரிசை
             '"random"': தொடர்பின்றி எடுக்கப்பட்ட
       binary_move:
         options:

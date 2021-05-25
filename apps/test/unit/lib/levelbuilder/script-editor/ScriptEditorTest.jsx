@@ -19,6 +19,7 @@ import createResourcesReducer, {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import $ from 'jquery';
 
 describe('ScriptEditor', () => {
   let defaultProps, store;
@@ -73,6 +74,9 @@ describe('ScriptEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
+      initialIsStable: false,
+      initialHidden: true,
+      hasCourse: false,
       initialLessonLevelData:
         "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
     };
@@ -93,13 +97,23 @@ describe('ScriptEditor', () => {
   };
 
   describe('Script Editor', () => {
+    it('does not show publishing editor if hasCourse is true', () => {
+      const wrapper = createWrapper({initialHidden: false, hasCourse: true});
+      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 0);
+    });
+
+    it('shows publishing editor if hasCourse is false', () => {
+      const wrapper = createWrapper({initialHidden: false, hasCourse: false});
+      assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    });
+
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(24);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
+      expect(wrapper.find('input').length).to.equal(21);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(3);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(6);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -114,10 +128,10 @@ describe('ScriptEditor', () => {
         initialCourseVersionId: 1
       });
 
-      expect(wrapper.find('input').length).to.equal(28);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(14);
+      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(4);
+      expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -207,21 +221,11 @@ describe('ScriptEditor', () => {
 
     it('must set family name in order to check standalone course', () => {
       const wrapper = createWrapper({
-        initialHidden: false
+        initialHidden: false,
+        initialFamilyName: 'family1'
       });
       let courseCheckbox = wrapper.find('.isCourseCheckbox');
-      let familyNameSelect = wrapper.find('.familyNameSelector');
 
-      expect(courseCheckbox.props().disabled).to.be.true;
-      expect(familyNameSelect.props().value).to.equal('');
-
-      familyNameSelect.simulate('change', {target: {value: 'Family'}});
-
-      // have to re-find the items inorder to see updates
-      courseCheckbox = wrapper.find('.isCourseCheckbox');
-      familyNameSelect = wrapper.find('.familyNameSelector');
-
-      expect(familyNameSelect.props().value).to.equal('Family');
       expect(courseCheckbox.props().disabled).to.be.false;
     });
   });
@@ -248,6 +252,35 @@ describe('ScriptEditor', () => {
 
     expect(peerReviewCountInput.props().disabled).to.be.true;
     expect(peerReviewCountInput.props().value).to.equal(0);
+  });
+
+  describe('Publish State', () => {
+    it('published state is beta when visible and isStable are false and there is no pilot experiment', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Beta');
+    });
+
+    it('published state is pilot if there is a pilot experiment', () => {
+      const wrapper = createWrapper({initialPilotExperiment: 'my-pilot'});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Pilot');
+    });
+
+    it('published state is preview if visible is true but isStable is false', () => {
+      const wrapper = createWrapper({initialHidden: false});
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Preview');
+    });
+
+    it('published state is recommended if visible and isStable are true', () => {
+      const wrapper = createWrapper({
+        initialHidden: false,
+        initialIsStable: true
+      });
+      const scriptEditor = wrapper.find('ScriptEditor');
+      expect(scriptEditor.state().publishedState).to.equal('Recommended');
+    });
   });
 
   describe('Saving Script Editor', () => {
@@ -336,16 +369,9 @@ describe('ScriptEditor', () => {
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialShowCalendar: true});
       const scriptEditor = wrapper.find('ScriptEditor');
-
-      let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/s/1`, [
-        404,
-        {'Content-Type': 'application/json'},
-        returnData
-      ]);
 
       const saveBar = wrapper.find('SaveBar');
 
@@ -353,6 +379,8 @@ describe('ScriptEditor', () => {
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
 
       expect(scriptEditor.state().isSaving).to.equal(false);
       expect(scriptEditor.state().error).to.equal(
@@ -366,24 +394,16 @@ describe('ScriptEditor', () => {
             'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
-
-      server.restore();
+      $.ajax.restore();
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({
         initialShowCalendar: true,
         initialWeeklyInstructionalMinutes: -100
       });
       const scriptEditor = wrapper.find('ScriptEditor');
-
-      let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
-      server.respondWith('PUT', `/s/1`, [
-        404,
-        {'Content-Type': 'application/json'},
-        returnData
-      ]);
 
       const saveBar = wrapper.find('SaveBar');
 
@@ -391,6 +411,8 @@ describe('ScriptEditor', () => {
       expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
         .true;
       saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
 
       expect(scriptEditor.state().isSaving).to.equal(false);
       expect(scriptEditor.state().error).to.equal(
@@ -404,8 +426,39 @@ describe('ScriptEditor', () => {
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
+      $.ajax.restore();
+    });
 
-      server.restore();
+    it('shows error when published state is pilot but no pilot experiment given', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({});
+
+      const scriptEditor = wrapper.find('ScriptEditor');
+      scriptEditor.setState({publishedState: 'Pilot', pilotExperiment: ''});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide a pilot experiment in order to save with published state as pilot.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
     });
 
     it('can save and close', () => {
@@ -476,24 +529,6 @@ describe('ScriptEditor', () => {
       ).to.be.true;
 
       server.restore();
-    });
-  });
-
-  describe('VisibleInTeacherDashboard', () => {
-    it('is checked when hidden is false', () => {
-      const wrapper = createWrapper({
-        initialHidden: false
-      });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('checked')).to.be.true;
-    });
-
-    it('is unchecked when hidden is true', () => {
-      const wrapper = createWrapper({
-        initialHidden: true
-      });
-      const checkbox = wrapper.find('input[name="visible_to_teachers"]');
-      expect(checkbox.prop('checked')).to.be.false;
     });
   });
 });

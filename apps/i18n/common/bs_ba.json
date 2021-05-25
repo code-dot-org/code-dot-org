@@ -221,6 +221,7 @@
   "errorUnusedParam": "Dodao si blok parametara, ali ga nisi koristio u definiciji. Pobrini se da koristiš svoj parametar tako da klikneš na \"uredi\" i staviš blok parametara unutar zelenog bloka.",
   "exampleErrorMessage": "Funkcija {functionName} ima jedan ili više primjera kojima treba podešavanje. Pobrinite se da se podudaraju sa vašom definicijom i odgovorite na pitanje.",
   "examplesFailedOnClose": "Jedan ili više primjera se ne slaže sa vašom definicijom. Provjerite svoje primjere prije nego zatvorite",
+  "explainRestrictedSectionLearnMore": "Nauči još ",
   "extraTopBlocks": "Imaš neprivezane blokove.",
   "extraTopBlocksWhenRun": "Imaš neprivezane blokove. Da li si mislio/la da ih prikačiš za \"pri pokretanju\" blok?",
   "fallbackVideoClosedCaptioningDialogClose": "Zatvori",

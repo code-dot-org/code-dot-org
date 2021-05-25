@@ -111,9 +111,9 @@
         "Dance_Party_extras_speed_2019": "Tăng tốc, Chậm nó Down (Nhấp vào “Thêm” để biết chi tiết)",
         "Dance_Party_extras_visible": "Họ đâu rồi? (Nhấp vào “Thêm” để biết chi tiết)",
         "Dance_Party_extras_visible_2019": "Họ đâu rồi? (Nhấp vào “Thêm” để biết chi tiết)",
-        "Function intro Ryan": "Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra con đường đi tới với ngọn đuốc.",
-        "Function intro Ryan_2019": "Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra con đường đi tới với ngọn đuốc.",
-        "Function intro Ryan_2020": "Sử dụng nhóm lệnh chức năng 'xây cầu' hai lần để tạo ra con đường đi tới với ngọn đuốc.",
+        "Function intro Ryan": "Hãy sử dụng hàm `xây cầu` hai lần để tạo đường đi đến Ngọn đuốc đá đỏ.",
+        "Function intro Ryan_2019": "Hãy sử dụng hàm `xây cầu` hai lần để tạo đường đi đến Ngọn đuốc đá đỏ.",
+        "Function intro Ryan_2020": "Hãy sử dụng hàm `xây cầu` hai lần để tạo đường đi đến Ngọn đuốc đá đỏ.",
         "HOC 2018 Level_1": "Lấy chiếc thuyền ở trong chiếc rương.",
         "HOC 2018 Level_10": "Đến lối vào của Tòa nhà Đại dương này.",
         "HOC 2018 Level_11": "Xây dựng một đường dẫn bằng Prismarine bên trong Tượng đài Đại Dương.",
@@ -490,7 +490,8 @@
         "courseC_flappy_events10": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
         "courseC_flappy_events10_2018": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
         "courseC_flappy_events10_2019": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
-        "courseC_flappy_events10_2020": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!"
+        "courseC_flappy_events10_2020": "Tự tạo trò chơi dạng Flappy Bird của riêng bạn!",
+        "CourseD_EOC_starwars": "Làm game Chiến tranh giữa các vì sao của riêng bạn!"
       }
     }
   }

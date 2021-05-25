@@ -1232,6 +1232,15 @@ uz:
             '"y"': y pozitsiyasi
             '"direction"': harakatlanish yo‘nalishi
             '"speed"': tezlik
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': kattalik
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': o‘rta
+            '100': large
       gamelab_setSizes:
         text: " {SPRITE} {PROPERTY} qiymatini {N}% ga o'rnatish"
         options:
@@ -1540,6 +1549,8 @@ uz:
             '"x"': x holati
             '"y"': y pozitsiyasi
             '"direction"': harakatlanish yo‘nalishi
+      Mikelab_setupSim:
+        text: "{SPRITE3N}{SPRITE3COSTUME} yig'ishda\n{SPRITE1N}{SPRITE1COSTUME} tezligi {SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME} tezligi {SPRITE2SPEED} \nbilan simulyatsiya o'rnatish"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1602,6 +1613,13 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': panjara
+            '"border"': chegara
+            '"row"': satr
+            '"random"': tasodifiy
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:
@@ -1635,49 +1653,27 @@ uz:
         options:
           PROPERTY:
             "'shapeColor'": rang
-      aalab_addBehaviorForDuration:
-        text: " {SPRITE} sprayt {BEHAVIOR} harakati {SECONDS} sekund davomida bo'ladi"
-      aalab_addBehaviorUntilBoolean:
-        text: " {SPRITE} sprayt {BEHAVIOR} xatti-harakatini {CONDITION} gacha boshlaydi"
-      aalab_createNewSpriteAnonReturn2:
-        text: yangi {SPRITE_NAME} sprayt {ANIMATION_NAME} kostyum bilan {LOCATION} da
-      aalab_goToScene:
-        text: " {SCENE} sahnasiga o‘tish"
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: "{SPRITE} piksel masofaga {DISTANCE} ga siljitish"
-        options:
-          DIRECTION:
-            '"North"': Shimol
-            '"East"': Sharq
-            '"South"': Janub
-            '"West"': G'arb
-      aalab_prompt:
-        text: savol berish {MESSAGE}
-      aalab_scene:
-        text: "{SCENE} sahnasi"
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: hikoyani o'rnatish
-      aalab_starwars_playSound:
-        text: "{OPTION} ovozni ijro etish"
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': panjara
+            '"border"': chegara
+            '"row"': satr
             '"random"': tasodifiy
-            '"R2-D2 random"': R2-D2 tasodifiy
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': hamma
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': hamma
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: "{BIN} binar chizma qilish"
       binary_drawBinScreen:

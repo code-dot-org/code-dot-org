@@ -11,24 +11,24 @@ az:
   campaign_date_full: 7-13 dekabr
   campaign_date_year: '2017'
   campaign_date_full_year: 7-13 dekabr 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_short: 1 Okt.
+  latam_campaign_date_start_long: 1 Oktyabr
+  latam_campaign_date_short: 1 Okt. - 18 Dek.
+  latam_campaign_date_full: 1 Oktyabr - 18 Dekabr
   latam_campaign_date_year: '2017'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: 1 Oktyabr, 2020 - 18 Dekabr, 2020
+  europe_campaign_date_start_short: 10 Okt.
+  europe_campaign_date_start_long: 10 Oktyabr
+  europe_campaign_date_short: 10-25 Okt.
+  europe_campaign_date_full: 10-25 Oktyabr
   europe_campaign_date_year: '2017'
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 10-25 Oktyabr, 2020
+  africa_campaign_date_start_short: 1 Okt.
+  africa_campaign_date_start_long: 1 Oktyabr
+  africa_campaign_date_short: 1-31 Okt.
+  africa_campaign_date_full: 1-31 Oktyabr
   africa_campaign_date_year: '2017'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: 1-31 Oktyabr, 2020
   hoc2020_header: Bu gün öyrənin, sabah daha parlaq gələcək qurun.
   hoc2020_header_with_line_break_markdown: |-
     Bu gün öyrənin,
@@ -401,7 +401,7 @@ az:
   whats_next_promote: "<a href='/promote'>Promote the Hour of Code</a>"
   whats_next_how_to_promote: "<a href='/promote/resources'>How to promote the Hour
     of Code</a>"
-  whats_next_how_to_promote_link: "<a href='/promote'>How to promote the Hour of Code</a>"
+  whats_next_how_to_promote_link: "<a href='/promote'>Kod saatını necə tanıtım etməli</a>"
   whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
   whats_next_try_button: Dərslikləri sınaqdan keçirin
   n_have_learned_an_hoc: "<h1>Bir Kod Saatı</h1><h2>ilə özünüzü sınayın</h2><h3>#
@@ -522,10 +522,10 @@ az:
   signup_send_posters_address_placeholder: Bu ünvan bizim xəritədə paylaşdırılmayacaq
   signup_event_type_in_school: Məktəbdə
   signup_event_type_out_of_school: Məktəbdən kənar
-  signup_event_type_at_home: Home
+  signup_event_type_at_home: Ana Səhifə
   signup_submit_census_label: Göndər
-  signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
-    the form again.
+  signup_submit_census_error_message: Üzr istəyirik. Səhv baş verdi. Zəhmət olmasa
+    formanı yenidən göndərməyə cəhd edin.
   signup_submit_label: Qeydiyyatdan keçin
   signup_submit_error_message: Səhv baş verdi. Bütün vacib sahələrin düzgün doldurulduğunuzu
     yoxlayın.
@@ -546,7 +546,7 @@ az:
     to express their creativity with computer science. Try your hand at the new tutorials.
     What will you create?
   social_hoc2018_hoc_coming_create: The Hour of Code is coming. What will you create?
-  social_hoc2018_hoc_here: The Hour of Code is here!
+  social_hoc2018_hoc_here: Kod Saatı buradadır!
   social_hoc2018_join: Kod Saatı gəlir
   social_hoc2018_mc: Minecraft is back for the Hour of Code, and you’re the hero!
     Write code to journey through Minecraft biomes.

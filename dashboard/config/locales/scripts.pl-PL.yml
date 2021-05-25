@@ -1217,8 +1217,6 @@ pl:
               name: Jednostka 1, Dni 15-16 Programy komputerowe i przestrzeganie wskazówek
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Jednostka 1, Dni 17-19 Czym jest inteligencja?
-            0: Jednostka 1, Dni 1-2 Co to jest komputer?
-            1: Jednostka 1, Dni 1-2 Co to jest komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Jednostka 1, Dni 3-4 Zakup komputera
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1340,8 +1338,6 @@ pl:
               name: Jednostka 1, Dni 15-16 Programy komputerowe i przestrzeganie wskazówek
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Jednostka 1, Dni 17-19 Czym jest inteligencja?
-            0: Jednostka 1, Dni 1-2 Co to jest komputer?
-            1: Jednostka 1, Dni 1-2 Co to jest komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Jednostka 1, Dni 3-4 Zakup komputera
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1367,8 +1363,6 @@ pl:
               name: Jednostka 1, Dni 15-16 Programy komputerowe i przestrzeganie wskazówek
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Jednostka 1, Dni 17-19 Czym jest inteligencja?
-            0: Jednostka 1, Dni 1-2 Co to jest komputer?
-            1: Jednostka 1, Dni 1-2 Co to jest komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Jednostka 1, Dni 3-4 Zakup komputera
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1449,11 +1443,9 @@ pl:
             Welcome Back!:
               name: Witaj ponownie!
         frequency_analysis:
-          description_short: 'Użyj widżetu analizy częstotliwości, aby przeanalizować
+          description_short: Użyj widżetu analizy częstotliwości, aby przeanalizować
             częstość liter w tekście w porównaniu z częstościami oczekiwanymi. Crack
             Shift i Szyfry Zastępcze.
-
-'
           lessons:
             Frequency Analysis:
               name: Analiza częstotliwości
@@ -2136,10 +2128,8 @@ pl:
             lekcji łączą wszystkie języki i narzędzia programowania. .\r\n\r\nTa jednostka
             została zaktualizowana po raz ostatni 30 października 2017 roku. Czytaj
             więcej o aktualizacjach curriculum na stronie forum.code.org/c/csp/updates."
-          description_short: 'Naucz się podstaw programowania w JavaScript, korzystając
+          description_short: Naucz się podstaw programowania w JavaScript, korzystając
             z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.
-
-'
           lesson_groups:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
@@ -2991,8 +2981,6 @@ pl:
               name: Jednostka 1, Dni 15-16 Programy komputerowe i przestrzeganie wskazówek
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Jednostka 1, Dni 17-19 Czym jest inteligencja?
-            0: Jednostka 1, Dni 1-2 Co to jest komputer?
-            1: Jednostka 1, Dni 1-2 Co to jest komputer?
             Unit 1, Days 3-4 Buying a Computer:
               name: Jednostka 1, Dni 3-4 Zakup komputera
             Unit 1, Days 5-7 Searching and Web 2:
@@ -4147,14 +4135,13 @@ pl:
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
                 na elementy tekstu HTML. W końcu wszyscy stosują style tekstu do swoich
                 stron internetowych.
-              description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
-                sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
-                składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
-                zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
-                Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
-                \r\n\r"
+              description_teacher: "Na tej lekcji wprowadza się pojęcie CSS jako sposobu
+                stylizowania elementów na stronie. Uczniowie poznają podstawową składnię
+                dla zestawów reguł CSS, a następnie eksplorują cechy, które mają wpływ
+                na elementy tekstu HTML. Pracują nad stroną HTML poświęconą zdobywcom
+                rekordu Guinnessa, dodając swój własny styl do podanej strony. Na
+                ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o stylach
+                do elementów tekstu na swojej prywatnej stronie internetotej. \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
               description_student: Ta lekcja stanowi kontynuację wprowadzenia do cech
@@ -4172,13 +4159,11 @@ pl:
                 stron internetowych w szerszym zakresie.
             Exploring Websites:
               name: Odkrywanie stron
-              description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
+              description_student: Ta lekcja obejmuje cele, które może spełniać witryna
                 internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
                 witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
                 w jaki sposób każda z tych witryn jest przydatna dla użytkowników
                 i jak może służyć również jej twórcom.
-
-'
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
@@ -4248,16 +4233,15 @@ pl:
             Lists:
               name: Listy
               description_student: Na tej lekcji wprowadza się zamówione i niezamówione
-                listy oraz związane z nimi tagi HTML &lt;ul&gt;, &lt;ol&gt;, i &lt;li&gt;.  Klasa
-                ćwiczy używanie tagów, a następnie wraca do projektu prywatnej strony
-                internetowej, aby dodać nową stronę HTML, która uwzględnia nowe tagi.
+                listy oraz związane z nimi tagi HTML <ul>, <ol>, i <li>.  Klasa ćwiczy
+                używanie tagów, a następnie wraca do projektu prywatnej strony internetowej,
+                aby dodać nową stronę HTML, która uwzględnia nowe tagi.
               description_teacher: Uczniom wprowadza się zamówione i niezamówione
                 listy w HTML i pracują oni przez kilka poziomów, w których używają
-                tagów HTML &lt;ul&gt;, &lt;ol&gt; i &lt;li&gt;.  Potem wracają do
-                swojego projektu, do którego dodają nową stronę HTML. Wewnątrz tej
-                nowej strony piszą HTML, aby wyeksponować przepis, listę dziesięciu
-                najlepszych oraz wszelką inną treść, w której używa się nowych tagów,
-                których się nauczyli.
+                tagów HTML <ul>, <ol> i <li>.  Potem wracają do swojego projektu,
+                do którego dodają nową stronę HTML. Wewnątrz tej nowej strony piszą
+                HTML, aby wyeksponować przepis, listę dziesięciu najlepszych oraz
+                wszelką inną treść, w której używa się nowych tagów, których się nauczyli.
             Intellectual Property and Images:
               name: Własność intelektualna i obrazki
               description_student: Ta lekcja poświęcona jest sposobom użycia mediów
@@ -4265,7 +4249,7 @@ pl:
                 przy tym praw twórcy tych mediów. Po pierwszym zbadaniu licencji Creative
                 Commons, klasa uczy się jak dodawać obrazki do stron internetowych
                 oraz jak dawać przy tym odpowiedni atrybut.
-              description_teacher: "\nWychodząc od dyskusji na temat prywatnych opinii
+              description_teacher: "Wychodząc od dyskusji na temat prywatnych opinii
                 klasy na temat tego, w jaki sposób należy pozwalać innym korzystać
                 ze swojej pracy, bada ona cel i rolę prawa autorskiego w kontekście
                 zarówno twórców, jak i użytkowników autorskich treści. Następnie przechodzi
@@ -4273,7 +4257,7 @@ pl:
                 jako rozwiązania trudności związanych z obowiązywaniem praw autorskich.
                 \r\n\r\nW końcu, po osiągnięciu wspólnego zrozumienia ograniczeń wynikających
                 z różnych licencji Creative Commons uczniowie uczą się, jak dodawać
-                obrazki do swoich stron internetowych z użyciem tagów &lt;img&gt;."
+                obrazki do swoich stron internetowych z użyciem tagów <img>."
             Project - Multi-Page Websites:
               name: Projekt -  Wielostronicowe witryny internetowe
               description_student: Ta lekcja dotyczy hiperłączy, które pozwalają projektantom
@@ -4319,7 +4303,7 @@ pl:
                 internetowe, weryfikują rubryki i przedstawiają stosowany proces.
                 W celu zakończenia działu, będą udostępniać swoje projekty i również
                 omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu.
-                \r\n"
+                \r"
             Headings:
               name: Nagłówki
               description_student: Ta lekcja stanowi kontynuację wprowadzenia do zagadnienia
@@ -7194,15 +7178,14 @@ pl:
               name: '"jeśli/w przeciwnym razie": Instrukcje warunkowe z kartami'
               description_student: Czas rozegrać grę, w której zbierasz punkty tylko
                 w określonych warunkach!
-              description_teacher: "Ta lekcja pokazuje, w jaki sposób można użyć wyrażeń
+              description_teacher: 'Ta lekcja pokazuje, w jaki sposób można użyć wyrażeń
                 warunkowych, aby dostosować program do konkretnych informacji. Nie
                 zawsze mamy wszystkie informacje, które są potrzebne do napisania
                 programu. Czasem będziesz chcieć czego innego w jednej sytuacji, niż
                 chciałeś w innej nawet, jeśli nie wiesz, jaka sytuacja będzie prawdziwa
                 po uruchomieniu kodu. I wówczas do głosu dochodzą wyrażenia warunkowe.
                 Wyrażenia warunkowe pozwalają komputerowi podejmować decyzje na podstawie
-                informacji, które są prawdziwe zawsze, gdy jest uruchomiony Twój kod.
-                \n\n"
+                informacji, które są prawdziwe zawsze, gdy jest uruchomiony Twój kod. '
             Conditionals in Bee:
               name: Wyrażenie warunkowe z Pszczółką
               description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować
@@ -7377,23 +7360,26 @@ pl:
               description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
                 czasu i planowania. Tutaj poznasz proces projektowania, którego będziesz
                 używać do budowania swojego własnego dzieła.
-              description_teacher: "W ciągu czterech lekcji uczniowie będą budować
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
                 projekt według własnej koncepcji używając interfejsu Play Lab lub
                 Artist jako środowiska programowania. W tej części projektu uczniowie
                 będą się uczyć o procesie projektowania oraz sposobach wdrażania go
                 swoich własnych projektów. Na pierwszym etapie procesu projektowania,
                 [tutaj](https://curriculum.code.org/csf/coursee/12/) można znaleźć
                 przewodnik po lekcji, w którym znajduje się omówienie wszystkich czterech
-                etapów procesu.\n\n"
+                etapów procesu.
             Build Your Project:
               name: Zbuduj swój projekt
               description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć
                 budowanie swojego projektu.
-              description_teacher: |+
-                W ciągu czterech lekcji uczniowie będą budować projekt według własnej koncepcji używając interfejsu Play Lab lub Artist jako środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play Lab. To najprawdopodobniej będzie najdłuższy etap projektu. Na pierwszym etapie procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/) można znaleźć przewodnik po lekcji, w którym znajduje się omówienie wszystkich czterech etapów procesu.
-
-
-
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
+                projekt według własnej koncepcji używając interfejsu Play Lab lub
+                Artist jako środowiska programowania. Teraz uczniowie będą mieli czas
+                na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play
+                Lab. To najprawdopodobniej będzie najdłuższy etap projektu. Na pierwszym
+                etapie procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/)
+                można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
+                wszystkich czterech etapów procesu.
             Revise Your Project:
               name: Zweryfikuj swój projekt
             Presentation Your Project:
@@ -7506,14 +7492,14 @@ pl:
               name: Zaprezentuj swój projekt
               description_student: Przygotuj się na chwalenie się! To czas przedstawienia
                 projektu gotowego swoim rówieśnikom.
-              description_teacher: "W ciągu czterech lekcji uczniowie będą budować
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
                 projekt według własnej koncepcji używając interfejsu Play Lab lub
                 Artist jako środowiska programowania. Na końcu uczniowie będą mogli
                 przedstawić gotową pracę rówieśnikom i udostępnić ją tym, których
                 kochają, przy pomocy specjalnego linku. Na pierwszym etapie tego procesu
                 projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich czterech etapów procesu.\n\n"
+                wszystkich czterech etapów procesu.
             Internet:
               name: 'Poza programowaniem: Internet'
               description_student: Czy kiedykolwiek zastanawiałeś się nad tym, jak
@@ -7581,8 +7567,8 @@ pl:
           lessons:
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
-              description_student: "Teraz będziesz się uczyć o algorytmach używając
-                łamigłówek zwanych tangramami!\n\n"
+              description_student: Teraz będziesz się uczyć o algorytmach używając
+                łamigłówek zwanych tangramami!
               description_teacher: Na tej lekcji przedstawia się ważną informację
                 o algorytmach. O le zachowujesz prostotę swojego algorytmu, istnieje
                 wiele sposobów jego wykorzystania. Jeśli chcesz mieć pewność, że każdy
@@ -7747,46 +7733,49 @@ pl:
               description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
                 czasu i planowania. Tutaj poznasz proces projektowania, którego będziesz
                 używać do budowania swojego własnego dzieła.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. W tej części projektu uczniowie będą się
                 uczyć o procesie projektowania oraz sposobach wdrażania go w swoich
                 własnych projektach. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Build Your Project:
               name: Zbuduj swój projekt
               description_student: Nareszcie możesz zacząć budować swój projekt!
-              description_teacher: |+
-                W ciągu pięciu lekcji uczniowie będą budować projekt według własnej koncepcji używając interfejsu Play Lab lub Artist jako środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play Lab. Ta część realizacji projektu będzie najdłuższa. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/) można znaleźć przewodnik po lekcji, w którym znajduje się omówienie wszystkich pięciu etapów procesu.
-
-
-
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
+                według własnej koncepcji używając interfejsu Play Lab lub Artist jako
+                środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie
+                swojego projektu przy pomocy interfejsu Artist lub Play Lab. Ta część
+                realizacji projektu będzie najdłuższa. Na początku procesu projektowania,
+                [tutaj](https://curriculum.code.org/csf/coursef/15/) można znaleźć
+                przewodnik po lekcji, w którym znajduje się omówienie wszystkich pięciu
+                etapów procesu.
             Revise Your Project:
               name: Zweryfikuj swój projekt
               description_student: Nie od razu Kraków zbudowano, zatem podobnie będzie
                 z Twoim projektem. Nie spiesz się z edycją i sprawdzaniem swojego
                 projektu. Postaraj się, by był najlepszy, jak się da.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. Teraz, gdy już projekty są wybudowane, uczniowie
                 mają okazję uzyskania informacji zwrotnej od rówieśników i sprawdzić
                 swoje projekty. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Presentation Your Project:
               name: Prezentacja Twojego projektu
             Present Your Project:
               name: Zaprezentuj swój projekt
               description_student: Czas pochwalić się swoją pracą! Tutaj będziesz
                 przedstawiać swój fantastyczny projekt rówieśnikom.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. Na końcu uczniowie będą mogli przedstawić
                 gotową pracę rówieśnikom i udostępnić ją tym, których kochają, przy
                 pomocy specjalnego linku. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Conditionals in Minecraft:
               name: Wyrażenia warunkowe w Minecrafcie
               description_student: Unikaj lawy! Teraz będziesz się uczyć o wyrażeniach
@@ -8468,10 +8457,8 @@ pl:
               name: CSD Ankieta badania pulsu
         csp3-research-mxghyt:
           title: CSP Jednostka 3 - Wprowadzenie do programowania (podcele)
-          description_short: 'Naucz się podstaw programowania w JavaScript, korzystając
+          description_short: Naucz się podstaw programowania w JavaScript, korzystając
             z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.
-
-'
           lesson_groups:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
@@ -9091,7 +9078,7 @@ pl:
           description_short: Podstawa dzielenia na etapy tymczasowe na potrzeby zmian
             Oct. w csp3
           description: "To jest replika poziomów na żywo w /s/csp3-2017 przy pomocy
-            nowych i zmodyfikowanych etapów dodanych. NIE EDYTUJ POZIOMÓW NA ŻYWO.\r\n"
+            nowych i zmodyfikowanych etapów dodanych. NIE EDYTUJ POZIOMÓW NA ŻYWO.\r"
           lesson_groups:
             csp3_1:
               display_name: 'Rozdział 1: Języki Programowania i Algorytmy'
@@ -9122,7 +9109,7 @@ pl:
               name: Jednostka 3 Rozdział 1 - Sprawdzian
           student_description: "To jest replika poziomów na żywo w /s/csp3-2017 przy
             pomocy nowych i zmodyfikowanych etapów dodanych. NIE EDYTUJ POZIOMÓW NA
-            ŻYWO.\r\n"
+            ŻYWO.\r"
         pwc:
           title: Twoje potencjalne curriculum dostępu PwC
           description: W PwC żywimy przekonanie, że wszyscy uczniowie mają potencjał,
@@ -10039,13 +10026,11 @@ pl:
           lessons:
             Exploring Websites:
               name: Odkrywanie stron
-              description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
+              description_student: Ta lekcja obejmuje cele, które może spełniać witryna
                 internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
                 witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
                 w jaki sposób każda z tych witryn jest przydatna dla użytkowników
                 i jak może służyć również jej twórcom.
-
-'
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
@@ -10145,16 +10130,15 @@ pl:
             Lists:
               name: Listy
               description_student: Na tej lekcji wprowadza się zamówione i niezamówione
-                listy oraz związane z nimi tagi HTML &lt;ul&gt;, &lt;ol&gt;, i &lt;li&gt;.  Klasa
-                ćwiczy używanie tagów, a następnie wraca do projektu prywatnej strony
-                internetowej, aby dodać nową stronę HTML, która uwzględnia nowe tagi.
+                listy oraz związane z nimi tagi HTML <ul>, <ol>, i <li>.  Klasa ćwiczy
+                używanie tagów, a następnie wraca do projektu prywatnej strony internetowej,
+                aby dodać nową stronę HTML, która uwzględnia nowe tagi.
               description_teacher: Uczniom wprowadza się zamówione i niezamówione
                 listy w HTML i pracują oni przez kilka poziomów, w których używają
-                tagów HTML &lt;ul&gt;, &lt;ol&gt; i &lt;li&gt;.  Potem wracają do
-                swojego projektu, do którego dodają nową stronę HTML. Wewnątrz tej
-                nowej strony piszą HTML, aby wyeksponować przepis, listę dziesięciu
-                najlepszych oraz wszelką inną treść, w której używa się nowych tagów,
-                których się nauczyli.
+                tagów HTML <ul>, <ol> i <li>.  Potem wracają do swojego projektu,
+                do którego dodają nową stronę HTML. Wewnątrz tej nowej strony piszą
+                HTML, aby wyeksponować przepis, listę dziesięciu najlepszych oraz
+                wszelką inną treść, w której używa się nowych tagów, których się nauczyli.
             Intellectual Property and Images:
               name: Własność intelektualna i obrazki
               description_student: Ta lekcja poświęcona jest sposobom użycia mediów
@@ -10162,7 +10146,7 @@ pl:
                 przy tym praw twórcy tych mediów. Po pierwszym zbadaniu licencji Creative
                 Commons, klasa uczy się jak dodawać obrazki do stron internetowych
                 oraz jak dawać przy tym odpowiedni atrybut.
-              description_teacher: "\nWychodząc od dyskusji na temat prywatnych opinii
+              description_teacher: "Wychodząc od dyskusji na temat prywatnych opinii
                 klasy na temat tego, w jaki sposób należy pozwalać innym korzystać
                 ze swojej pracy, bada ona cel i rolę prawa autorskiego w kontekście
                 zarówno twórców, jak i użytkowników autorskich treści. Następnie przechodzi
@@ -10170,7 +10154,7 @@ pl:
                 jako rozwiązania trudności związanych z obowiązywaniem praw autorskich.
                 \nW końcu, po osiągnięciu wspólnego zrozumienia ograniczeń wynikających
                 z różnych licencji Creative Commons uczniowie uczą się, jak dodawać
-                obrazki do swoich stron internetowych z użyciem tagów &lt;img&gt;."
+                obrazki do swoich stron internetowych z użyciem tagów <img>."
             Clean Code and Debugging:
               name: Czysty kod i debugowanie
               description_student: Ta lekcja poświęcona jest typowym problemom, które
@@ -10207,14 +10191,13 @@ pl:
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
                 na elementy tekstu HTML. W końcu wszyscy stosują style tekstu do swoich
                 stron internetowych.
-              description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
-                sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
-                składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
-                zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
-                Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
-                \r\n\r"
+              description_teacher: "Na tej lekcji wprowadza się pojęcie CSS jako sposobu
+                stylizowania elementów na stronie. Uczniowie poznają podstawową składnię
+                dla zestawów reguł CSS, a następnie eksplorują cechy, które mają wpływ
+                na elementy tekstu HTML. Pracują nad stroną HTML poświęconą zdobywcom
+                rekordu Guinnessa, dodając swój własny styl do podanej strony. Na
+                ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o stylach
+                do elementów tekstu na swojej prywatnej stronie internetotej. \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
               description_student: Ta lekcja stanowi kontynuację wprowadzenia do cech
@@ -10275,7 +10258,7 @@ pl:
                 internetowe, weryfikują rubryki i przedstawiają stosowany proces.
                 W celu zakończenia działu, będą udostępniać swoje projekty i również
                 omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu.
-                \r\n"
+                \r"
             CS Discoveries Post-Course Survey:
               name: Ankieta po kursie Odkrycia Informatyki
           student_description: W dziale 2 nauczysz się, jak tworzyć i udostępniać
@@ -11083,35 +11066,38 @@ pl:
               description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
                 czasu i planowania. Tutaj poznasz proces projektowania, którego będziesz
                 używać do budowania swojego własnego dzieła.
-              description_teacher: "W ciągu czterech lekcji uczniowie będą budować
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
                 projekt według własnej koncepcji używając interfejsu Play Lab lub
                 Artist jako środowiska programowania. W tej części projektu uczniowie
                 będą się uczyć o procesie projektowania oraz sposobach wdrażania go
                 swoich własnych projektów. Na pierwszym etapie procesu projektowania,
                 [tutaj](https://curriculum.code.org/csf/coursee/12/) można znaleźć
                 przewodnik po lekcji, w którym znajduje się omówienie wszystkich czterech
-                etapów procesu.\n\n"
+                etapów procesu.
             Build Your Project:
               name: Zbuduj swój projekt
               description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć
                 budowanie swojego projektu.
-              description_teacher: |+
-                W ciągu czterech lekcji uczniowie będą budować projekt według własnej koncepcji używając interfejsu Play Lab lub Artist jako środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play Lab. To najprawdopodobniej będzie najdłuższy etap projektu. Na pierwszym etapie procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/) można znaleźć przewodnik po lekcji, w którym znajduje się omówienie wszystkich czterech etapów procesu.
-
-
-
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
+                projekt według własnej koncepcji używając interfejsu Play Lab lub
+                Artist jako środowiska programowania. Teraz uczniowie będą mieli czas
+                na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play
+                Lab. To najprawdopodobniej będzie najdłuższy etap projektu. Na pierwszym
+                etapie procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/)
+                można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
+                wszystkich czterech etapów procesu.
             Present Your Project:
               name: Zaprezentuj swój projekt
               description_student: Przygotuj się na chwalenie się! To czas przedstawienia
                 projektu gotowego swoim rówieśnikom.
-              description_teacher: "W ciągu czterech lekcji uczniowie będą budować
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
                 projekt według własnej koncepcji używając interfejsu Play Lab lub
                 Artist jako środowiska programowania. Na końcu uczniowie będą mogli
                 przedstawić gotową pracę rówieśnikom i udostępnić ją tym, których
                 kochają, przy pomocy specjalnego linku. Na pierwszym etapie tego procesu
                 projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich czterech etapów procesu.\n\n"
+                wszystkich czterech etapów procesu.
             Internet:
               name: Internet
               description_student: Czy kiedykolwiek zastanawiałeś się nad tym, jak
@@ -11188,8 +11174,8 @@ pl:
               name: Zagnieżdżone pętle w Krainie Lodu
             'Algorithms: Tangrams':
               name: 'Algorytmy: Tangramy'
-              description_student: "Teraz będziesz się uczyć o algorytmach używając
-                łamigłówek zwanych tangramami!\n\n"
+              description_student: Teraz będziesz się uczyć o algorytmach używając
+                łamigłówek zwanych tangramami!
               description_teacher: Na tej lekcji przedstawia się ważną informację
                 o algorytmach. O le zachowujesz prostotę swojego algorytmu, istnieje
                 wiele sposobów jego wykorzystania. Jeśli chcesz mieć pewność, że każdy
@@ -11356,44 +11342,47 @@ pl:
               description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
                 czasu i planowania. Tutaj poznasz proces projektowania, którego będziesz
                 używać do budowania swojego własnego dzieła.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. W tej części projektu uczniowie będą się
                 uczyć o procesie projektowania oraz sposobach wdrażania go w swoich
                 własnych projektach. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Build Your Project:
               name: Zbuduj swój projekt
               description_student: Nareszcie możesz zacząć budować swój projekt!
-              description_teacher: |+
-                W ciągu pięciu lekcji uczniowie będą budować projekt według własnej koncepcji używając interfejsu Play Lab lub Artist jako środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play Lab. Ta część realizacji projektu będzie najdłuższa. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/) można znaleźć przewodnik po lekcji, w którym znajduje się omówienie wszystkich pięciu etapów procesu.
-
-
-
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
+                według własnej koncepcji używając interfejsu Play Lab lub Artist jako
+                środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie
+                swojego projektu przy pomocy interfejsu Artist lub Play Lab. Ta część
+                realizacji projektu będzie najdłuższa. Na początku procesu projektowania,
+                [tutaj](https://curriculum.code.org/csf/coursef/15/) można znaleźć
+                przewodnik po lekcji, w którym znajduje się omówienie wszystkich pięciu
+                etapów procesu.
             Revise Your Project:
               name: Zweryfikuj swój projekt
               description_student: Nie od razu Kraków zbudowano, zatem podobnie będzie
                 z Twoim projektem. Nie spiesz się z edycją i sprawdzaniem swojego
                 projektu. Postaraj się, by był najlepszy, jak się da.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. Teraz, gdy już projekty są wybudowane, uczniowie
                 mają okazję uzyskania informacji zwrotnej od rówieśników i sprawdzić
                 swoje projekty. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Present Your Project:
               name: Zaprezentuj swój projekt
               description_student: Czas pochwalić się swoją pracą! Tutaj będziesz
                 przedstawiać swój fantastyczny projekt rówieśnikom.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. Na końcu uczniowie będą mogli przedstawić
                 gotową pracę rówieśnikom i udostępnić ją tym, których kochają, przy
                 pomocy specjalnego linku. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Conditionals with Cards:
               name: Warunkowe z kartami
             Conditionals:
@@ -12416,10 +12405,8 @@ pl:
             o której mowa w tym dziale.
         csp3-2018:
           title: Jednostka 3 CSD - Wprowadzenie do programowania ('18- '19)
-          description_short: 'Naucz się podstaw programowania w JavaScript, korzystając
+          description_short: Naucz się podstaw programowania w JavaScript, korzystając
             z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.
-
-'
           lesson_groups:
             csp3_1_2018:
               display_name: 'Jednostka 3: Wprowadzenie do programowania'
@@ -12458,6 +12445,7 @@ pl:
               name: Ankieta w trakcie roku
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
+          name: csp3-2018
         csp-explore-2018:
           title: Eksploruj - Przygotowanie zadania wydajnościowego AP ('18-'19)
           description: 'Te lekcje mają Ci pomóc zrozumieć, przygotować się oraz wykonać
@@ -13799,44 +13787,47 @@ pl:
               description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
                 czasu i planowania. Tutaj poznasz proces projektowania, którego będziesz
                 używać do budowania swojego własnego dzieła.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. W tej części projektu uczniowie będą się
                 uczyć o procesie projektowania oraz sposobach wdrażania go w swoich
                 własnych projektach. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Build Your Project:
               name: Zbuduj swój projekt
               description_student: Nareszcie możesz zacząć budować swój projekt!
-              description_teacher: |+
-                W ciągu pięciu lekcji uczniowie będą budować projekt według własnej koncepcji używając interfejsu Play Lab lub Artist jako środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play Lab. Ta część realizacji projektu będzie najdłuższa. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/) można znaleźć przewodnik po lekcji, w którym znajduje się omówienie wszystkich pięciu etapów procesu.
-
-
-
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
+                według własnej koncepcji używając interfejsu Play Lab lub Artist jako
+                środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie
+                swojego projektu przy pomocy interfejsu Artist lub Play Lab. Ta część
+                realizacji projektu będzie najdłuższa. Na początku procesu projektowania,
+                [tutaj](https://curriculum.code.org/csf/coursef/15/) można znaleźć
+                przewodnik po lekcji, w którym znajduje się omówienie wszystkich pięciu
+                etapów procesu.
             Revise Your Project:
               name: Zweryfikuj swój projekt
               description_student: Nie od razu Kraków zbudowano, zatem podobnie będzie
                 z Twoim projektem. Nie spiesz się z edycją i sprawdzaniem swojego
                 projektu. Postaraj się, by był najlepszy, jak się da.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. Teraz, gdy już projekty są wybudowane, uczniowie
                 mają okazję uzyskania informacji zwrotnej od rówieśników i sprawdzić
                 swoje projekty. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             Present Your Project:
               name: Zaprezentuj swój projekt
               description_student: Czas pochwalić się swoją pracą! Tutaj będziesz
                 przedstawiać swój fantastyczny projekt rówieśnikom.
-              description_teacher: "W ciągu pięciu lekcji uczniowie będą budować projekt
+              description_teacher: W ciągu pięciu lekcji uczniowie będą budować projekt
                 według własnej koncepcji używając interfejsu Play Lab lub Artist jako
                 środowiska programowania. Na końcu uczniowie będą mogli przedstawić
                 gotową pracę rówieśnikom i udostępnić ją tym, których kochają, przy
                 pomocy specjalnego linku. Na początku procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursef/15/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich pięciu etapów procesu.\n\n"
+                wszystkich pięciu etapów procesu.
             The Artist:
               name: Artysta/Postać
             Nested Loops in the Maze:
@@ -14120,7 +14111,7 @@ pl:
                 po uruchomieniu kodu. I wówczas do głosu dochodzą wyrażenia warunkowe.
                 Wyrażenia warunkowe pozwalają komputerowi podejmować decyzje na podstawie
                 informacji, które są prawdziwe zawsze, gdy jest uruchomiony Twój kod.
-                \r\n\r\n"
+                \r\n\r"
             Conditionals in Bee:
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
               description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować
@@ -14365,35 +14356,38 @@ pl:
               description_student: Projekty tak dużych rozmiarów wymagają sporej ilości
                 czasu i planowania. Tutaj poznasz proces projektowania, którego będziesz
                 używać do budowania swojego własnego dzieła.
-              description_teacher: "W ciągu czterech lekcji uczniowie będą budować
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
                 projekt według własnej koncepcji używając interfejsu Play Lab lub
                 Artist jako środowiska programowania. W tej części projektu uczniowie
                 będą się uczyć o procesie projektowania oraz sposobach wdrażania go
                 swoich własnych projektów. Na pierwszym etapie procesu projektowania,
                 [tutaj](https://curriculum.code.org/csf/coursee/12/) można znaleźć
                 przewodnik po lekcji, w którym znajduje się omówienie wszystkich czterech
-                etapów procesu.\n\n"
+                etapów procesu.
             Build Your Project:
               name: Zbuduj swój projekt
               description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć
                 budowanie swojego projektu.
-              description_teacher: |+
-                W ciągu czterech lekcji uczniowie będą budować projekt według własnej koncepcji używając interfejsu Play Lab lub Artist jako środowiska programowania. Teraz uczniowie będą mieli czas na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play Lab. To najprawdopodobniej będzie najdłuższy etap projektu. Na pierwszym etapie procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/) można znaleźć przewodnik po lekcji, w którym znajduje się omówienie wszystkich czterech etapów procesu.
-
-
-
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
+                projekt według własnej koncepcji używając interfejsu Play Lab lub
+                Artist jako środowiska programowania. Teraz uczniowie będą mieli czas
+                na utworzenie swojego projektu przy pomocy interfejsu Artist lub Play
+                Lab. To najprawdopodobniej będzie najdłuższy etap projektu. Na pierwszym
+                etapie procesu projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/)
+                można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
+                wszystkich czterech etapów procesu.
             Present Your Project:
               name: Zaprezentuj swój projekt
               description_student: Przygotuj się na chwalenie się! To czas przedstawienia
                 projektu gotowego swoim rówieśnikom.
-              description_teacher: "W ciągu czterech lekcji uczniowie będą budować
+              description_teacher: W ciągu czterech lekcji uczniowie będą budować
                 projekt według własnej koncepcji używając interfejsu Play Lab lub
                 Artist jako środowiska programowania. Na końcu uczniowie będą mogli
                 przedstawić gotową pracę rówieśnikom i udostępnić ją tym, których
                 kochają, przy pomocy specjalnego linku. Na pierwszym etapie tego procesu
                 projektowania, [tutaj](https://curriculum.code.org/csf/coursee/12/)
                 można znaleźć przewodnik po lekcji, w którym znajduje się omówienie
-                wszystkich czterech etapów procesu.\n\n"
+                wszystkich czterech etapów procesu.
             Internet:
               name: Internet
               description_student: Czy kiedykolwiek zastanawiałeś się nad tym, jak
@@ -15052,7 +15046,7 @@ pl:
                 czym jest cybernękanie, jakie uczucia może wywoływać u różnych osób
                 oraz jak na nie reagować. W końcu używają oni z nabytej wiedzy do
                 utworzenia prostej strony ze wskazówkami na temat cybernękania w trakcie
-                swojej podróży.\r\n"
+                swojej podróży.\r"
             Events in Play Lab:
               name: Gra w berka ze zdarzeniami
               description_student: Czas na twórcze działanie lub utworzenie gry w
@@ -15124,7 +15118,7 @@ pl:
                 tworzenia i utrzymywania mocnych, bezpiecznych haseł.\r\n\r\nUczniowie
                 poznają wskazówki dotyczące haseł, testują swoje obecne hasła w interaktywnej
                 grze oraz tworzą nowe hasła z wykorzystaniem wytycznych dla skutecznych
-                haseł.\r\n"
+                haseł.\r"
             Sticker Art with Loops:
               name: Grafika naklejek przy pomocy pętli
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom
@@ -15554,13 +15548,11 @@ pl:
           lessons:
             Exploring Websites:
               name: Odkrywanie stron
-              description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
+              description_student: Ta lekcja obejmuje cele, które może spełniać witryna
                 internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
                 witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
                 w jaki sposób każda z tych witryn jest przydatna dla użytkowników
                 i jak może służyć również jej twórcom.
-
-'
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
@@ -15660,16 +15652,15 @@ pl:
             Lists:
               name: Listy
               description_student: Na tej lekcji wprowadza się zamówione i niezamówione
-                listy oraz związane z nimi tagi HTML &lt;ul&gt;, &lt;ol&gt;, i &lt;li&gt;.  Klasa
-                ćwiczy używanie tagów, a następnie wraca do projektu prywatnej strony
-                internetowej, aby dodać nową stronę HTML, która uwzględnia nowe tagi.
+                listy oraz związane z nimi tagi HTML <ul>, <ol>, i <li>.  Klasa ćwiczy
+                używanie tagów, a następnie wraca do projektu prywatnej strony internetowej,
+                aby dodać nową stronę HTML, która uwzględnia nowe tagi.
               description_teacher: Uczniom wprowadza się zamówione i niezamówione
                 listy w HTML i pracują oni przez kilka poziomów, w których używają
-                tagów HTML &lt;ul&gt;, &lt;ol&gt; i &lt;li&gt;.  Potem wracają do
-                swojego projektu, do którego dodają nową stronę HTML. Wewnątrz tej
-                nowej strony piszą HTML, aby wyeksponować przepis, listę dziesięciu
-                najlepszych oraz wszelką inną treść, w której używa się nowych tagów,
-                których się nauczyli.
+                tagów HTML <ul>, <ol> i <li>.  Potem wracają do swojego projektu,
+                do którego dodają nową stronę HTML. Wewnątrz tej nowej strony piszą
+                HTML, aby wyeksponować przepis, listę dziesięciu najlepszych oraz
+                wszelką inną treść, w której używa się nowych tagów, których się nauczyli.
             Intellectual Property and Images:
               name: Własność intelektualna i obrazki
               description_student: Ta lekcja poświęcona jest sposobom użycia mediów
@@ -15677,7 +15668,7 @@ pl:
                 przy tym praw twórcy tych mediów. Po pierwszym zbadaniu licencji Creative
                 Commons, klasa uczy się jak dodawać obrazki do stron internetowych
                 oraz jak dawać przy tym odpowiedni atrybut.
-              description_teacher: "\nWychodząc od dyskusji na temat prywatnych opinii
+              description_teacher: "Wychodząc od dyskusji na temat prywatnych opinii
                 klasy na temat tego, w jaki sposób należy pozwalać innym korzystać
                 ze swojej pracy, bada ona cel i rolę prawa autorskiego w kontekście
                 zarówno twórców, jak i użytkowników autorskich treści. Następnie przechodzi
@@ -15685,7 +15676,7 @@ pl:
                 jako rozwiązania trudności związanych z obowiązywaniem praw autorskich.
                 \nW końcu, po osiągnięciu wspólnego zrozumienia ograniczeń wynikających
                 z różnych licencji Creative Commons uczniowie uczą się, jak dodawać
-                obrazki do swoich stron internetowych z użyciem tagów &lt;img&gt;."
+                obrazki do swoich stron internetowych z użyciem tagów <img>."
             Clean Code and Debugging:
               name: Czysty kod i debugowanie
               description_student: Ta lekcja poświęcona jest typowym problemom, które
@@ -15722,14 +15713,13 @@ pl:
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
                 na elementy tekstu HTML. W końcu wszyscy stosują style tekstu do swoich
                 stron internetowych.
-              description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
-                sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
-                składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
-                zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
-                Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
-                \r\n\r"
+              description_teacher: "Na tej lekcji wprowadza się pojęcie CSS jako sposobu
+                stylizowania elementów na stronie. Uczniowie poznają podstawową składnię
+                dla zestawów reguł CSS, a następnie eksplorują cechy, które mają wpływ
+                na elementy tekstu HTML. Pracują nad stroną HTML poświęconą zdobywcom
+                rekordu Guinnessa, dodając swój własny styl do podanej strony. Na
+                ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o stylach
+                do elementów tekstu na swojej prywatnej stronie internetotej. \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
               description_student: Ta lekcja stanowi kontynuację wprowadzenia do cech
@@ -15790,7 +15780,7 @@ pl:
                 internetowe, weryfikują rubryki i przedstawiają stosowany proces.
                 W celu zakończenia działu, będą udostępniać swoje projekty i również
                 omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu.
-                \r\n"
+                \r"
             Post-Project Test:
               name: Testy po realizacji projektu
             CS Discoveries Post Course survey:
@@ -17069,10 +17059,8 @@ pl:
             o której mowa w tym dziale.
         csp3-2019:
           title: CSP Jednostka 3 - Wprowadzenie do programowania ('19-'20)
-          description_short: 'Naucz się podstaw programowania w JavaScript, korzystając
+          description_short: Naucz się podstaw programowania w JavaScript, korzystając
             z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.
-
-'
           lesson_groups:
             csp3_1_2018:
               display_name: 'Jednostka 3: Wprowadzenie do programowania'
@@ -18678,13 +18666,11 @@ pl:
           lessons:
             Exploring Websites:
               name: Odkrywanie stron
-              description_student: 'Ta lekcja obejmuje cele, które może spełniać witryna
+              description_student: Ta lekcja obejmuje cele, które może spełniać witryna
                 internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada wiele
                 witryn najczęściej wykorzystywanych w Stanach Zjednoczonych i omawia,
                 w jaki sposób każda z tych witryn jest przydatna dla użytkowników
                 i jak może służyć również jej twórcom.
-
-'
               description_teacher: Każda strona internetowa ma swój cel, powód, dla
                 którego ktoś ją utworzył oraz dla którego inni jej używają. Na tej
                 lekcji uczniowie zaczną się zastanawiać nad celami, którym strona
@@ -18784,16 +18770,15 @@ pl:
             Lists:
               name: Listy
               description_student: Na tej lekcji wprowadza się zamówione i niezamówione
-                listy oraz związane z nimi tagi HTML &lt;ul&gt;, &lt;ol&gt;, i &lt;li&gt;.  Klasa
-                ćwiczy używanie tagów, a następnie wraca do projektu prywatnej strony
-                internetowej, aby dodać nową stronę HTML, która uwzględnia nowe tagi.
+                listy oraz związane z nimi tagi HTML <ul>, <ol>, i <li>.  Klasa ćwiczy
+                używanie tagów, a następnie wraca do projektu prywatnej strony internetowej,
+                aby dodać nową stronę HTML, która uwzględnia nowe tagi.
               description_teacher: Uczniom wprowadza się zamówione i niezamówione
                 listy w HTML i pracują oni przez kilka poziomów, w których używają
-                tagów HTML &lt;ul&gt;, &lt;ol&gt; i &lt;li&gt;.  Potem wracają do
-                swojego projektu, do którego dodają nową stronę HTML. Wewnątrz tej
-                nowej strony piszą HTML, aby wyeksponować przepis, listę dziesięciu
-                najlepszych oraz wszelką inną treść, w której używa się nowych tagów,
-                których się nauczyli.
+                tagów HTML <ul>, <ol> i <li>.  Potem wracają do swojego projektu,
+                do którego dodają nową stronę HTML. Wewnątrz tej nowej strony piszą
+                HTML, aby wyeksponować przepis, listę dziesięciu najlepszych oraz
+                wszelką inną treść, w której używa się nowych tagów, których się nauczyli.
             Intellectual Property and Images:
               name: Własność intelektualna i obrazki
               description_student: Ta lekcja poświęcona jest sposobom użycia mediów
@@ -18801,7 +18786,7 @@ pl:
                 przy tym praw twórcy tych mediów. Po pierwszym zbadaniu licencji Creative
                 Commons, klasa uczy się jak dodawać obrazki do stron internetowych
                 oraz jak dawać przy tym odpowiedni atrybut.
-              description_teacher: "\nWychodząc od dyskusji na temat prywatnych opinii
+              description_teacher: "Wychodząc od dyskusji na temat prywatnych opinii
                 klasy na temat tego, w jaki sposób należy pozwalać innym korzystać
                 ze swojej pracy, bada ona cel i rolę prawa autorskiego w kontekście
                 zarówno twórców, jak i użytkowników autorskich treści. Następnie przechodzi
@@ -18809,7 +18794,7 @@ pl:
                 jako rozwiązania trudności związanych z obowiązywaniem praw autorskich.
                 \nW końcu, po osiągnięciu wspólnego zrozumienia ograniczeń wynikających
                 z różnych licencji Creative Commons uczniowie uczą się, jak dodawać
-                obrazki do swoich stron internetowych z użyciem tagów &lt;img&gt;."
+                obrazki do swoich stron internetowych z użyciem tagów <img>."
             Clean Code and Debugging:
               name: Czysty kod i debugowanie
               description_student: Ta lekcja poświęcona jest typowym problemom, które
@@ -18846,14 +18831,13 @@ pl:
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
                 na elementy tekstu HTML. W końcu wszyscy stosują style tekstu do swoich
                 stron internetowych.
-              description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
-                sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
-                składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
-                zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
-                Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
-                \r\n\r"
+              description_teacher: "Na tej lekcji wprowadza się pojęcie CSS jako sposobu
+                stylizowania elementów na stronie. Uczniowie poznają podstawową składnię
+                dla zestawów reguł CSS, a następnie eksplorują cechy, które mają wpływ
+                na elementy tekstu HTML. Pracują nad stroną HTML poświęconą zdobywcom
+                rekordu Guinnessa, dodając swój własny styl do podanej strony. Na
+                ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o stylach
+                do elementów tekstu na swojej prywatnej stronie internetotej. \r\n\r"
             Styling Elements with CSS:
               name: Stylizowanie elementów przy pomocy CSS
               description_student: Ta lekcja stanowi kontynuację wprowadzenia do cech
@@ -18914,7 +18898,7 @@ pl:
                 internetowe, weryfikują rubryki i przedstawiają stosowany proces.
                 W celu zakończenia działu, będą udostępniać swoje projekty i również
                 omówienie ogólne procesu, który przyjęli do uzyskania końcowego układu.
-                \r\n"
+                \r"
             Post-Project Test:
               name: Testy po realizacji projektu
             CS Discoveries Post Course survey:
@@ -19709,13 +19693,9 @@ pl:
             The Growing Internet:
               name: Rozrastający się Internet
             Internet Dilemmas pt 1:
-              name: 'Dylematy z Internetem Część 1
-
-'
+              name: Dylematy z Internetem Część 1
             Internet Dilemmas, pt 2:
-              name: 'Dylematy z Internetem Część 2
-
-'
+              name: Dylematy z Internetem Część 2
             Unit 2 Assessment:
               name: Jednostka 2 Sprawdzian
             Unit Assessment:
@@ -20322,6 +20302,8 @@ pl:
               display_name: Funkcje
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             Variables Explore:
               name: Exploruj zmienne
@@ -20353,6 +20335,8 @@ pl:
               name: Projekt - Aplikacja dla decydenta - Część 3
             'Lesson 15: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp4-2020
         csp5-2020:
           title: CSP Jednostka 5 - Listy, pętle i połączenia ('20-'21)
@@ -20365,6 +20349,8 @@ pl:
               display_name: Przejścia
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             Lists Explore:
               name: Eksploruj listy
@@ -20406,6 +20392,8 @@ pl:
               name: Jednostka  5 Ankieta dla UCZNIA
             Unit 5 TEACHER Survey:
               name: Jednostka  5 Ankieta dla NAUCZYCIELA
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp5-2020
         csp7-2020:
           lesson_groups:
@@ -20413,6 +20401,8 @@ pl:
               display_name: Parametry i wartości zwracane
             csp_libraries:
               display_name: Biblioteki
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             Parameters and Return Explore:
               name: Odkrywaj parametry i zwracanie wartości
@@ -20444,6 +20434,8 @@ pl:
               name: Pokaz tworzenia zmiennych
             'Lesson 11: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp7-2020
         csd2-projects-temp:
           title: CSD Projekty internetowe - TYMCZASOWE
@@ -20514,7 +20506,7 @@ pl:
                 witryna internetowa, zarówno dla użytkowników, jak i twórców. Klasa
                 bada kilka najczęściej odwiedzanych witryn i omawia, w jaki sposób
                 każda z tych witryn jest przydatna użytkownikom i jak może służyć
-                również jej twórcom.\n"
+                również jej twórcom."
               description_teacher: "**Pytanie dnia: Dlaczego ludzie tworzą strony
                 internetowe?**\r\n\r\nKażda strona internetowa ma swój cel, powód,
                 dla którego ktoś ją utworzył oraz dla którego inni jej używają. Na
@@ -20634,14 +20626,14 @@ pl:
                 nad etycznymi konsekwencjami używania obrazów na stronach internetowych,
                 w szczególności w kontekście własności intelektualnej. Potem uczy
                 się, jak dodawać obrazy do swoich stron internetowych używając taga
-                &lt;img&gt; oraz jak poprawnie podawać źródła obrazków."
+                <img> oraz jak poprawnie podawać źródła obrazków."
               description_teacher: "**Pytanie dnia: W jaki sposób dodawać obrazy do
                 naszych stron internetowych mając przy tym pewność, że respektujemy
                 prawa innych osób?**\r\n\r\nUczniowie zaczynają zajęcia od zastanowienia
                 się nad etycznymi konsekwencjami używania obrazów na stronach internetowych,
                 w szczególności w kontekście własności intelektualnej. Potem uczą
                 się, jak dodawać obrazy do swoich stron internetowych używając taga
-                &lt;img&gt; oraz jak poprawnie podawać źródła obrazów."
+                <img> oraz jak poprawnie podawać źródła obrazów."
             'Websites for Expression ':
               name: Strony internetowe służące wyrażeniu się
               description_student: "**Pytanie dnia: Jak możemy używać stron internetowych
@@ -20694,7 +20686,7 @@ pl:
                 strony, które zaplanowała na poprzednich lekcjach korzystając z przewodników
                 po projektach jako odniesienia. Następnie przystępują do przeprowadzenia
                 procesu uporządkowanego przemyślenia i przekazania informacji zwrotnej
-                przed wykonaniem jakichkolwiek ostatecznych aktualizacji.\r\n\r\n"
+                przed wykonaniem jakichkolwiek ostatecznych aktualizacji.\r\n\r"
               description_teacher: "**Pytanie dnia: Jakie umiejętności i praktyki
                 pomagają przy kodowaniu stron internetowych?**\r\n\r\nPo szybkiej
                 powtórce procesu debugowania, uczniowie wchodzą do Internetu, aby
@@ -20704,7 +20696,7 @@ pl:
                 dumni oraz nad tym, w zakresie czego chcieliby uzyskać informację
                 zwrotną. Następnie przystępują do przeprowadzenia procesu uporządkowanego
                 przemyślenia i przekazania informacji zwrotnej przed wykonaniem jakichkolwiek
-                ostatecznych aktualizacji.\r\n\r\n"
+                ostatecznych aktualizacji.\r\n\r"
             Purpose of a  Websites:
               name: Przeznaczenie stron internetowych
               description_student: "**Pytanie dnia: Jakie są różne powody, dla których
@@ -20982,8 +20974,8 @@ pl:
                 Pod koniec lekcji grupy zastanowią się nad doświadczeniami zebranymi
                 w trakcie zajęć oraz dokonają powiązań z rodzajami rozwiązań problemów,
                 którymi będą się zajmować do końca kursu.\n\n\r\n\r\n**Dostępne są
-                również alternatywne wersje tej lekcji.** \r\n\r\n* [Stół prasowy](./4/)\r\n*
-                [Most z makaronu](./5/)\r\n* [Wieża z papieru](./6/)\n"
+                również alternatywne wersje tej lekcji.** \r\n\r\n\n* [Stół prasowy](./4/)\r\n\n*
+                [Most z makaronu](./5/)\r\n\n* [Wieża z papieru](./6/)"
             The Problem Solving Process:
               name: Proces rozwiązywania problemów
               description_student: "**Pytanie dnia: jakie są pewne wspólne kroki,
@@ -21169,9 +21161,6 @@ pl:
               name: 'Lekcja 3: Badanie rozwiązywania problemów - Tematyka gier'
             'Lesson 3: Exploring Problem Solving - Animals Theme':
               name: 'Lekcja 3: Badanie rozwiązywania problemów - Tematyka zwierząt'
-            0:
-              name: \"Alternatywna Lekcja 1:\" Wprowadzenie do rozwiązywania problemów
-                - Stolik prasowy
             'Alt Lesson 1: Intro to Problem Solving - Spaghetti Bridge':
               name: 'Alternatywna Lekcja 1: Wprowadzenie do rozwiązywania problemów
                 - Spaghetti Most'
@@ -21232,7 +21221,7 @@ pl:
                 w grupach projektując stoły prasowe tak, aby utrzymały jak najwięcej
                 książek. Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące
                 doświadczeń zebranych w trakcie zajęć oraz dokona powiązań z rodzajami
-                rozwiązania problemów, którymi będą się zajmować do końca kursu.\n\n"
+                rozwiązania problemów, którymi będą się zajmować do końca kursu."
               description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
                 pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
                 w grupach projektując stoły prasowe tak, aby utrzymały jak najwięcej
@@ -21255,7 +21244,7 @@ pl:
                 w grupach projektując mosty z makaronu  tak, aby utrzymały jak najwięcej
                 książek. Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące
                 doświadczeń zebranych w trakcie zajęć oraz dokona powiązań z rodzajami
-                rozwiązania problemów, którymi będą się zajmować do końca kursu.\n\n"
+                rozwiązania problemów, którymi będą się zajmować do końca kursu."
               description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
                 pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
                 w grupach projektując mosty z makaronu tak, aby utrzymały jak najwięcej
@@ -21276,7 +21265,7 @@ pl:
                 w grupach projektując wieże z papieru tak, aby były jak najwyższe.
                 Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące doświadczeń
                 zebranych w trakcie zajęć oraz dokona powiązań z rodzajami rozwiązania
-                problemów, którymi będą się zajmować do końca kursu.\n\n"
+                problemów, którymi będą się zajmować do końca kursu."
               description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
                 pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nNa tej lekcji
                 uczniowie pracują w grupach projektując wieże z papieru tak, aby były
@@ -22941,7 +22930,7 @@ pl:
                 czym jest cybernękanie, jakie uczucia może wywoływać u różnych osób
                 oraz jak na nie reagować. W końcu używają oni z nabytej wiedzy do
                 utworzenia prostej strony ze wskazówkami na temat cybernękania w trakcie
-                swojej podróży.\r\n"
+                swojej podróży.\r"
             Powerful Passwords:
               name: Bardzo skuteczne hasła
               description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje
@@ -22951,7 +22940,7 @@ pl:
                 strategie tworzenia i utrzymywania mocnych, bezpiecznych haseł.\r\n\r\nUczniowie
                 poznają wskazówki dotyczące haseł, testują swoje obecne hasła w interaktywnej
                 grze oraz tworzą nowe hasła z wykorzystaniem wytycznych dla skutecznych
-                haseł.\r\n"
+                haseł.\r"
             'Programming: My Robotic Friends':
               name: Moi robotyczni przyjaciele Jr.
               description_student: Na tej lekcji będziesz udawać, że koledzy z klasy
@@ -23248,7 +23237,7 @@ pl:
                 po uruchomieniu kodu. I wówczas do głosu dochodzą wyrażenia warunkowe.
                 Wyrażenia warunkowe pozwalają komputerowi podejmować decyzje na podstawie
                 informacji, które są prawdziwe zawsze, gdy jest uruchomiony Twój kod.
-                \r\n\r\n"
+                \r\n\r"
             Conditionals in Bee:
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
               description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować
@@ -24088,6 +24077,8 @@ pl:
               display_name: 'Jednostka 1: Informacje cyfrowe'
             cspSurvey:
               display_name: Ankieta
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24121,12 +24112,16 @@ pl:
               name: 'Lekcja 15: Dzień sprawdzianu'
             CS Principles Pre-survey:
               name: Ankieta wstępna dotyczące zasad informatyki
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp1-2020
         csp2-2020:
           title: CSP Jednostka 2 - Internet ('20-'21)
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24148,12 +24143,16 @@ pl:
               name: Projekt - Dylematy z Internetem Część 2
             'Lesson 9: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp2-2020
         csp3-2020:
           title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24177,12 +24176,16 @@ pl:
               name: Projekt - Projektowanie aplikacji Część 5
             'Lesson 11: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp3-2020
         csp6-2020:
           title: CSP Jednostka 6 - Algorytmy ('20-'21)
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Jednistka 6: Algorytmy'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24198,6 +24201,8 @@ pl:
               name: Algorytmy równoległe i rozproszone
             'Lesson 6: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp6-2020
         csp8-2020:
           title: CSP Jednostka 8 - Utwórz przygotowanie PT ('20-'21)
@@ -24216,6 +24221,8 @@ pl:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24237,12 +24244,16 @@ pl:
               name: Projekt - Opowiedz historię o danych - Część 2
             'Lesson 9: Assessment Day':
               name: 'Lekcja 15: Dzień sprawdzianu'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp9-2020
         csp10-2020:
           title: CSP Jednostka 10 - Cyberbezpieczeństwo i oddziaływanie globalne ('20-'21)
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
+            cspSurvey2020:
+              display_name: Ankieta po odbyciu kursu
           lessons:
             new stage:
               name: nowy etap
@@ -24280,6 +24291,8 @@ pl:
               name: 'Projekt: Symulacja innowacji Część 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Lekcja 14: Dzień sprawdzianu Jednostki'
+            CS Principles Post-Course Survey:
+              name: Zasady informatyki Ankieta po kursie
           name: csp10-2020
         csp-march-virtual:
           title: Zasady informatyki 20-21 Szkolenie dotyczące programu nauczania dla
@@ -24313,10 +24326,8 @@ pl:
               name: Zasoby na sobotnią sesję
         csp3-virtual:
           title: Wprowadzenie we własnym tempie do Programowania żółwia w App Lab
-          description_short: 'Naucz się podstaw programowania w JavaScript, korzystając
+          description_short: Naucz się podstaw programowania w JavaScript, korzystając
             z podejścia top-down do projektowania przy użyciu klasycznej grafiki żółwia.
-
-'
           lesson_groups:
             csp3_1_2018:
               display_name: 'Jednostka 3: Wprowadzenie do programowania'
@@ -24481,14 +24492,13 @@ pl:
                 dla zestawów reguł CSS, następnie eksploruje cechy, które mają wpływ
                 na elementy tekstu HTML. W końcu wszyscy stosują style tekstu do swoich
                 stron internetowych.
-              description_teacher: "\nNa tej lekcji wprowadza się pojęcie CSS jako
-                sposobu stylizowania elementów na stronie. Uczniowie poznają podstawową
-                składnię dla zestawów reguł CSS, a następnie eksplorują cechy, które
-                mają wpływ na elementy tekstu HTML. Pracują nad stroną HTML poświęconą
-                zdobywcom rekordu Guinnessa, dodając swój własny styl do podanej strony.
-                Na ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o
-                stylach do elementów tekstu na swojej prywatnej stronie internetotej.
-                \r\n\r"
+              description_teacher: "Na tej lekcji wprowadza się pojęcie CSS jako sposobu
+                stylizowania elementów na stronie. Uczniowie poznają podstawową składnię
+                dla zestawów reguł CSS, a następnie eksplorują cechy, które mają wpływ
+                na elementy tekstu HTML. Pracują nad stroną HTML poświęconą zdobywcom
+                rekordu Guinnessa, dodając swój własny styl do podanej strony. Na
+                ostatnim poziomie uczniowie stosują to, czego się dowiedzieli o stylach
+                do elementów tekstu na swojej prywatnej stronie internetotej. \r\n\r"
             Intellectual Property:
               name: Własność intelektualna
             Images:
@@ -25540,9 +25550,14 @@ pl:
               name: Moduł 7
             Module 8:
               name: Moduł 8
+            'CS Principles: Functions':
+              name: 'Zasady informatyki: funkcje'
+            'CS Principles: Variables Practice - Choice Test':
+              name: Zmienne, praktyka - test wyboru
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
+          name: kaitie-test-script
         vpl-csd-2020:
           lessons:
             Module 1:
@@ -25568,18 +25583,14 @@ pl:
           lessons:
             Module 1:
               name: 'Moduł 1: Przedstawiamy Jenostkę 4 i nową pedagogikę nauczania
-                programowania
-
-'
+                programowania'
             Module 2:
               name: 'Moduł 2: Zmienne w Jednostce 4 i rola współpracy'
             Module 3:
               name: 'Moduł 3: Jednostka 5, używanie list w aplikacjach i rozpoznawanie
                 umiejętności CS w klasie'
             Module 4:
-              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach
-
-'
+              name: 'Moduł 4: Jednostka 5 i używanie zestawów danych w aplikacjach'
             Module 5:
               name: 'Moduł 5: Jednostka 7 i zrozumienie funkcji z parametrami i zwracaniem
                 wartości'
@@ -25603,9 +25614,36 @@ pl:
               name: Odkrycia informatyki
             contagions:
               name: 'Integracja treści: Zarażenia '
+            Course E:
+              name: Kurs E
+            Course F:
+              name: Kurs F
+            csf:
+              name: Podstawy Informatyki
+            sprites_in_action_2021:
+              name: 'Sprite Lab: Duszki w akcji'
+            text_and_prompts_2021:
+              name: 'Sprite Lab: Tekst i monity'
+            csp_functions_2021:
+              name: 'Zasady informatyki: funkcje'
+            minitoolbox_2021:
+              name: 'Sprite Lab: Wiele duszków'
+            csf_slides:
+              name: Slajdy Podstaw informatyki
+            playlab_2021:
+              name: Wprowadzenie do Play Lab
           lesson_groups:
             lesson group:
               display_name: wyświetl nazwisko
+              description: Są to poziomy nauczana, które są powiązane z planami lekcji.
+                Poziomy nie pojawiają się w innych skryptach.
+            slides:
+              display_name: Poziomy translatora
+              description: Te poziomy zawierają edytowalny kod początkowy, który jest
+                dopasowany do prezentacji slajdów z programem nauczania.
+            video:
+              display_name: Poziomy przechwytywania wideo
+              description: Te poziomy są przeznaczone dla twórców filmów.
           title: Poziomy nauczania w piaskownicy
           description_audience: Wewnętrzne
           description_short: Poziomy, które są bezpośrednio powiązane z planami lekcji,
@@ -25710,6 +25748,40 @@ pl:
               name: Wzory przypadkowo wykonane w LB
             temp:
               name: Lekcja 20
+            lesson1:
+              name: Wprowadzenie do uczenia maszynowego
+            lesson2:
+              name: Lekcja 2
+            lesson3:
+              name: Lekcja 3
+            lesson4:
+              name: Lekcja 4
+            lesson5:
+              name: Lekcja 5
+            lesson6:
+              name: Lekcja 6
+            lesson7:
+              name: Lekcja 7
+            lesson8:
+              name: Lekcja 8
+            lesson9:
+              name: Lekcja 9
+            lesson10:
+              name: Lekcja 10
+            lesson11:
+              name: Lekcja 11
+            lesson12:
+              name: Lekcja 12
+            lesson13:
+              name: Lekcja 13
+            lesson14:
+              name: Lekcja 14
+            lesson15:
+              name: Lekcja 15
+            lesson16:
+              name: Lekcja 16
+            ailab-explore:
+              name: Poznaj AI Lab
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25793,6 +25865,8 @@ pl:
               name: Bot Haiku
             End of Course Project:
               name: Koniec projektu kursu
+            Outbreaklab:
+              name: Samodzielne laboratorium pandemii
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -25806,7 +25880,7 @@ pl:
                 programie. Modyfikuj wartości przechowywane w zmiennych, aby tworzyć
                 ekscytujące interaktywne projekty!
             outbreak:
-              display_name: Symulowanie przerwania
+              display_name: Symulator pandemii
             Loom Levels:
               display_name: Poziomy krosna
             contagion:
@@ -25817,6 +25891,8 @@ pl:
               display_name: Bot Haiku
             AB EOC:
               display_name: Kurs A i B Projekt EOC
+            debugging:
+              display_name: Debugowanie
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -25859,8 +25935,8 @@ pl:
                 się nad swoimi doświadczeniami zebranymi w trakcie zajęć i dokonają
                 powiązań z rodzajami rozwiązywanych problemów, którymi będą się zajmować
                 do końca kursu.\n\n\r\n\r\n**Dostępne są również alternatywne wersje
-                tej lekcji.** \r\n\r\n* [Stolik prasowy](./4/)\r\n* [Makaronowy most](./5/)\r\n*
-                [Papierowa wieża](./6/)\n"
+                tej lekcji.** \r\n\r\n\n* [Stolik prasowy](./4/)\r\n\n* [Makaronowy
+                most](./5/)\r\n\n* [Papierowa wieża](./6/)"
             The Problem Solving Process:
               key: Proces rozwiązywania problemów
               name: Proces rozwiązywania problemów
@@ -25970,7 +26046,7 @@ pl:
                 w grupach projektując stoły prasowe tak, aby utrzymały jak najwięcej
                 książek. Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące
                 doświadczeń zebranych w trakcie zajęć oraz dokona powiązań z rodzajami
-                rozwiązania problemów, którymi będą się zajmować do końca kursu.\n\n"
+                rozwiązania problemów, którymi będą się zajmować do końca kursu."
               description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
                 pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nKlasa pracuje
                 w grupach projektując stoły prasowe tak, aby utrzymały jak najwięcej
@@ -26010,7 +26086,7 @@ pl:
                 w grupach projektując wieże z papieru tak, aby były jak najwyższe.
                 Pod koniec lekcji grupa przedstawi swoje przemyślenia dotyczące doświadczeń
                 zebranych w trakcie zajęć oraz dokona powiązań z rodzajami rozwiązania
-                problemów, którymi będą się zajmować do końca kursu.\n\n"
+                problemów, którymi będą się zajmować do końca kursu."
               description_teacher: "**Pytanie dnia: Co może nam pomóc we wspólnej
                 pracy i rozwiązywaniu problemów jako zespół?**\r\n\r\nNa tej lekcji
                 uczniowie pracują w grupach projektując wieże z papieru tak, aby były
@@ -26085,16 +26161,16 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
               big_questions: |-
                 * W jaki sposób komputery pomagają ludziom rozwiązywać problemy?
+
                 * W jaki sposób ludzie i komputery inaczej podchodzą do problemów?
+
                 * Czego komputer potrzebuje od ludzi, aby skutecznie rozwiązywać problemy?
-              description: 'Ten rozdział przedstawia komputery jako maszyny rozwiązujące
+              description: Ten rozdział przedstawia komputery jako maszyny rozwiązujące
                 problemy związane z informacją. Uczniowie rozpoczynają od utworzenia
                 definicji komputera, która koncentruje się na funkcjonalności zamiast
                 na określonym sprzęcie. Następnie badają sposoby, w jakie komputery
                 podchodzą do problemów. W końcowym projekcie uczniowie proponują aplikację,
                 której można użyć do rozwiązania wybranego przez siebie problemu.
-
-'
             csd1_3:
               display_name: Lekcje alternatywne
               description: Ten rozdział zawiera alternatywne lekcje dla tego rozdziału.
@@ -26228,8 +26304,11 @@ pl:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
               big_questions: |-
                 * Dlaczego ludzie tworzą strony internetowe?
+
                 * W jaki sposób tekst może przekazywać treść, strukturę i styl na stronie internetowej?
+
                 * W jaki sposób mogę bezpiecznie i właściwie wykorzystać treści publikowane w Internecie?
+
                 * Jakich strategii mogę przyjąć podczas kodowania, aby znaleźć i naprawić ewentualne problemy?
               description: Uczniowie używają komputerów jako formy wyrażania siebie
                 podczas projektowania i tworzenia podstawowych stron internetowych.
@@ -26242,7 +26321,9 @@ pl:
               display_name: 'Rozdział 2: Wielostronicowe witryny'
               big_questions: |-
                 * W jaki sposób strony internetowe mogą być wykorzystywane do rozwiązywania problemów na świecie?
+
                 * Jakie strategie mogą stosować zespoły, aby lepiej współpracować?
+
                 * Skąd mam wiedzieć, jakim informacjom można zaufać online?
               description: Uczniowie poszerzają swoje pomysły dotyczące stron internetowych
                 poza osobiste wyrażanie się i zaczynają postrzegać je jako sposób
@@ -26428,10 +26509,13 @@ pl:
           lesson_groups:
             csd3_1:
               display_name: 'Rozdział 1: Obrazy i animacje'
-              big_questions: |
+              big_questions: |-
                 * Co to jest program komputerowy?
+
                 * Jakie są podstawowe cechy większości języków programowania?
+
                 * W jaki sposób programowanie umożliwia kreatywność i indywidualną ekspresję?
+
                 * Jakie praktyki i strategie pomogą mi podczas pisania programów?
               description: Uczniowie przygotowują się do programowania interaktywnych
                 animacji w środowisku Game Lab. Rozpoczynają od prostych kształtów
@@ -26444,7 +26528,9 @@ pl:
               display_name: 'Rozdział 2: Budowanie gier'
               big_questions: |-
                 * W jaki sposób programiści zarządzają złożonością i skalą?
+
                 * Jak można zorganizować programy, aby typowe problemy były rozwiązywane tylko raz?
+
                 * Jak mogę wykorzystać poprzednie rozwiązania, aby utworzyć jeszcze bardziej złożone zachowanie?
               description: W tym rozdziale uczniowie łączą konstrukcje, które poznali
                 w pierwszym rozdziale, aby zaprogramować bardziej złożone ruchy i
@@ -26620,7 +26706,9 @@ pl:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
               big_questions: |-
                 * W jaki sposób projektanci identyfikują potrzeby swoich użytkowników?
+
                 * W jaki sposób możemy zapewnić, że nasze projekty zaspokajają potrzeby użytkownika?
+
                 * Jakie procesy najlepiej pozwolą nam efektywnie tworzyć, testować i powtarzać nasze projekty?
               description: Ten rozdział przedstawia proces projektowania jako specyficzną
                 wersję procesu rozwiązywania problemów, w której empatia dla potrzeb
@@ -26634,7 +26722,9 @@ pl:
               display_name: 'Rozdział 2: Prototypowanie aplikacji'
               big_questions: |-
                 * W jaki sposób zespoły skutecznie współpracują przy tworzeniu oprogramowania?
+
                 * Jakie role poza programowaniem są niezbędne do projektowania i tworzenia oprogramowania?
+
                 * W jaki sposób projektanci uwzględniają opinie w kolejnych wersjach produktu?
               description: W tym rozdziale skupiono się na długotrwałym projekcie
                 grupowym, który pozwala uczniom zastosować wszystko, czego nauczyli
@@ -26747,10 +26837,13 @@ pl:
           lesson_groups:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
-              big_questions: |
+              big_questions: |-
                 * Dlaczego reprezentacja jest ważna w rozwiązywaniu problemów?
+
                 * Jakie funkcje powinien mieć system reprezentacji, aby był użyteczny?
+
                 * Co jest potrzebne do utworzenia użytecznych binarnych systemów reprezentacji?
+
                 * W jaki sposób możemy połączyć systemy, aby uzyskać bardziej złożone informacje?
               description: Ten rozdział koncentruje się na reprezentacji danych i
                 ich roli w rozwiązywaniu problemów informacyjnych. Uczniowie dowiadują
@@ -26763,8 +26856,11 @@ pl:
               display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
               big_questions: |-
                 * W jaki sposób dane pomagają nam rozwiązywać problemy?
+
                 * W jaki sposób komputery i ludzie inaczej wykorzystują dane?
+
                 * Jakie części procesu rozwiązywania problemów z danymi można zautomatyzować?
+
                 * W jakich rodzajach problemów komputery wykorzystuj dane do ich rozwiązywania w rzeczywistym świecie?
               description: Uczniowie badają, jak można wykorzystać dane do odpowiedzi
                 na interesujące pytania i rozwiązywania problemów. Korzystając ze
@@ -26981,7 +27077,9 @@ pl:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
               big_questions: |-
                 * Jak oprogramowanie współdziała ze sprzętem?
+
                 * W jaki sposób komputery mogą wykrywać i reagować na swoje środowisko?
+
                 * Jakie informacje można przesyłać za pomocą prostych wyjść sprzętowych?
               description: Ten rozdział rozpoczyna się od ćwiczenia, które zachęca
                 uczniów do zbadania szerokiej gamy nietradycyjnych platform komputerowych,
@@ -26998,7 +27096,9 @@ pl:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
               big_questions: |-
                 * Jak programiści pracują z większą ilością podobnych wartości?
+
                 * Jak można przedstawić w kodzie złożone informacje ze świata rzeczywistego?
+
                 * W jaki sposób można wykorzystać prosty sprzęt do tworzenia innowacyjnych nowych produktów?
               description: Wiedząc, jak używać sprzętu do pobierania i generowania
                 danych wyjściowych, uczniowie zaczynają myśleć o bardziej złożonych
@@ -27081,6 +27181,48 @@ pl:
               display_name: Ankieta
             csp_unit1_2020:
               display_name: 'Jednostka 1: Informacje cyfrowe'
+              description: "### Jednostka Filozofia i Pedagogika\n\n* **Budowanie
+                silnej kultury klasowej:** Ta jednostka została zaprojektowana tak,
+                aby była praktyczna, oparta na współpracy i odkrywcza. Głównym celem
+                jednostki jest budowanie pozytywnej kultury w klasie, w której uczniowie
+                pracują razem, badają problemy i komunikują się o swoim myśleniu.
+                Większość lekcji dotyczy fizycznych manipulacji lub widżetów cyfrowych,
+                a większość czasu zajęć należy poświęcić uczniom na wspólne badanie
+                tych narzędzi, aby zrozumieć pojęcia, które odzwierciedlają. Kurs
+                celowo nie rozpoczyna się od programowania, ponieważ w niektórych
+                salach niektórzy uczniowie mają doświadczenie w programowaniu, a inni
+                nie. Decydując się na rozpoczęcie od informacji cyfrowych i Internetu,
+                możesz budować społeczność w sali, zajmując się tematem, który może
+                być przystępny dla wszystkich uczniów. Wspierające i integrujące środowisko
+                klasowe budowane w tej jednostce powinno pomóc w nadaniu pozytywnego
+                nastawienia, które będzie można utrzymywać przez cały rok szkolny.\n\n*
+                **Wzmocnienie „Decydentów”:** Ważnym celem kursu jest nie tylko przekazanie
+                uczniom wiedzy technicznej, ale także wykorzystanie tych umiejętności
+                w znaczący sposób. Jednostka ta jest ukierunkowana na projekt, który
+                daje uczniom możliwość „decydowania” o wpływie informatyki na współczesne
+                życie. Inne jednostki będą podkreślać wzmacnianie osób jako „twórców”.\n\n###
+                Główne oceny i projekty\n\nProjekt jednostki zwraca się do uczniów
+                o rozważenie i przedyskutowanie problemów, które pojawiają się we
+                współczesnym społeczeństwie w związku z digitalizacją informacji.
+                Uczniowie przeanalizują artykuł, który dotyczy powiązań digitalizacji
+                informacji z bieżącymi wydarzeniami. Ocenią, jakie dane są digitalizowane
+                oraz korzyści i szkody spowodowane przetwarzaniem tych informacji
+                na postać cyfrową. Wykonają również ocenę końcową jednostki zgodną
+                z celami ramowymi Zasad Informatyki, którym jest poświęcona ta jednostka.\n\n###
+                Powiązania z AP\n\nTa jednostka i związany z nią projekt pomagają
+                budować trwałe zrozumienie wymienione poniżej. Aby uzyskać szczegółowe
+                odniesienie jednostek do celów nauczania i EK, zobacz stronę „Standardy”
+                dla tej jednostki.\n\n* DAT-1: Sposób, w jaki komputer reprezentuje
+                dane wewnętrznie, różni się od sposobu, w jaki dane są interpretowane
+                i wyświetlane użytkownikowi. Programy służą do tłumaczenia danych
+                na reprezentacje łatwiejsze do zrozumienia dla ludzi.\n\n* IOC-1:
+                podczas gdy innowacje komputerowe są zwykle zaprojektowane do osiągnięcia
+                określonego celu, mogą mieć niezamierzone konsekwencje\n\nTa jednostka
+                zawiera treści z następujących zagadnień ram AP w Zasadach Informatyki.
+                Bardziej szczegółowe informacje na temat zakresu tematycznego można
+                znaleźć w przeglądzie kursu [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n*
+                2.1 Liczby binarne\n\n* 2.2 Kompresja danych\n\n* 5.5 Kwestie prawne
+                i etyczne. "
           name: csp1-2021
         csp2-2021:
           title: CSP Jednostka 2 - Internet ('20-'21)
@@ -27112,9 +27254,15 @@ pl:
             'Lesson 9: Assessment Day':
               key: 'Lekcja 9: Dzień sprawdzianu'
               name: 'Lekcja 15: Dzień sprawdzianu'
+            lesson-1:
+              name: test tessa
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
+            lessonGroup-2:
+              display_name: Test tessa
+              big_questions: Wielkie pytanie
+              description: halllo
           name: csp2-2021
         csp3-2021:
           title: Część 3 CSP - Wprowadzenie do projektowania aplikacji ('20-'21)
@@ -27711,10 +27859,7 @@ pl:
               display_name: Zdarzenia
             lessonGroup-6:
               display_name: Koniec projektu kursu
-              description: |2-
-
-
-                ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)
+              description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
           name: courseb-2021
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie.
             Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz
@@ -28036,7 +28181,7 @@ pl:
                 po uruchomieniu kodu. I wówczas do głosu dochodzą wyrażenia warunkowe.
                 Wyrażenia warunkowe pozwalają komputerowi podejmować decyzje na podstawie
                 informacji, które są prawdziwe zawsze, gdy jest uruchomiony Twój kod.
-                \r\n\r\n"
+                \r\n\r"
             Conditionals in Bee:
               key: Wyrażenie warunkowe z Pszczółką
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
@@ -28222,11 +28367,11 @@ pl:
               name: Wydarzenia z Sprite Lab
               description_student: Twórz projekt interaktywny, który możesz udostępnić
                 kolegom z klasy.
-              description_teacher: 'Na tej lekcji wykorzystuje się interfejs Sprite
+              description_teacher: Na tej lekcji wykorzystuje się interfejs Sprite
                 Lab, platformy, na której uczniowie mogą tworzyć swoje własne interaktywne
                 animacje i gry. W uzupełnieniu do zachowań, obecni uczniowie mogą
                 wbudowywać dane użytkownika jako wydarzenia do utworzenia "potańcówki
-                ufoludków". '
+                ufoludków".
             Private and Personal Information:
               key: Informacje prywatne i osobowe
               name: Informacje prywatne i osobowe
@@ -28350,6 +28495,14 @@ pl:
               name: Lekcja kontekstowa
               description_student: Dowiesz się, jak możesz się przeciwstawiać, gdy
                 jesteś świadkiem cybernękania.
+            lesson-1:
+              name: Projektowanie pod kątem dostępności
+              description_student: 'Dowiedz się o dostępności i wartości empatii dzięki
+                burzy mózgów i projektowaniu dostępnych rozwiązań dla hipotetycznych
+                aplikacji. '
+              description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dostępności
+                i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
+                rozwiązań na aplikacje hipotetyczne. '
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -28367,6 +28520,8 @@ pl:
               display_name: Koniec projektu kursu
             lessonGroup-8:
               display_name: Usunięto
+            lessonGroup-7:
+              display_name: Wplywy informatyki
           name: coursee-2021
           student_description: Zacznij kodować przy pomocy algorytmów, pętli, wyrażeń
             warunkowych oraz zdarzeń, a następnie przejdziesz do funkcji. W drugiej
@@ -28618,11 +28773,11 @@ pl:
               description_student: Omówisz rolę komputerów i technologii w Twoim życiu,
                 koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom
                 możliwość wyboru sposobu ich używania.
-              description_teacher: Uczniowie omówią rolę komputerów i technologii
+              description_teacher: 'Uczniowie omówią rolę komputerów i technologii
                 w ich życiu, koncentrując się na tym, jak aplikacje i narzędzia dają
                 użytkownikom możliwość wyboru sposobu ich używania. Uczniowie będą
                 logować się na swoje konta Code.org i przeglądać przykładowe projekty
-                podobne do tych, które będą tworzyć samodzielnie podczas kursu.
+                podobne do tych, które będą tworzyć samodzielnie podczas kursu. '
             lesson-7:
               name: Tworzenie duszków
               description_student: 'Na tej lekcji będziesz pisał programy i dowiesz
@@ -28637,11 +28792,10 @@ pl:
               description_student: Będziesz pracować przez poziomy programowania i
                 zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować,
                 co tylko zechcesz.
-              description_teacher: "Podczas tej lekcji uczniowie będą pracować nad
+              description_teacher: 'Podczas tej lekcji uczniowie będą pracować nad
                 serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
                 „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą
-                pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika.
-                \n"
+                pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika. '
             lesson-9:
               name: Historie pustej przestrzeni
               description_student: 'W tym ćwiczeniu użyjesz historii do wypełnienia
@@ -28656,9 +28810,9 @@ pl:
               name: Przechowywanie i przetwarzanie tekstu
               description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite
                 Lab.
-              description_teacher: Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
+              description_teacher: 'Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
                 pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać
-                wartości, a następnie wydrukują te wartości wraz z innym tekstem.
+                wartości, a następnie wydrukują te wartości wraz z innym tekstem. '
             lesson-5:
               name: Epidemia
               description_student: W Mieście Potworów pojawił się wirus! Naucz się
@@ -28672,6 +28826,14 @@ pl:
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma
                 Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy,
                 które mówi się w Internecie.
+            lesson-11:
+              name: Utwórz Chat-Bot
+              description_student: Zastosuj swoje nowe umiejętności ze zmiennymi do
+                jednego z trzech otwartych projektów.
+              description_teacher: Uczniowie zastosują swoje nowe umiejętności ze
+                zmiennymi w jednym z trzech otwartych **mini-projektów**. Zapoznają
+                się z przykładowymi programami, utworzą plan własnego projektu i zaprogramują
+                go od podstaw.
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -28727,7 +28889,7 @@ pl:
                 bloki kodu w porządku liniowym.
             Debugging with Scrat:
               key: Debugwanie ze Scratem
-              name: Debugwanie ze Scratem
+              name: Debugowanie w labiryncie
               description_student: Znajdź problemy w łamigłówkach i ćwicz umiejętność
                 debugowania.
               description_teacher: Debugowanie jest  podstawowym elementem nauki programowania.
@@ -28883,7 +29045,9 @@ pl:
               description_teacher: Na tej lekcji uczniowie będą zgłębiać tworzenie
                 powtarzalnych projektów z użyciem zmiennych w środowisku Artist. Uczniowie
                 dowiedzą się, jak można używać zmiennych, aby ułatwić pisanie kodu
-                i czytanie, nawet, gdy wartości nie zmieniają się w czasie uruchomienia.
+                i czytanie. Po przejściu łamigłówek w trybie "z przewodnikiem" uczniowie
+                zakończą na poziomie czasu na zabawę, aby wykazać się tym, czego się
+                nauczyli i tworzyć własne wzory.
             Changing Variables with Bee:
               key: Zmienianie zmiennych z Pszczółką
               name: Zmienianie zmiennych z Pszczółką
@@ -29018,6 +29182,7 @@ pl:
             Learn to Drag and Drop:
               key: Nauka metody przeciągać i upuszczać
               name: Nauka metody przeciągać i upuszczać
+              description_student: Kliknij i przeciągnij, by ukończyć łamigłówki.
               description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać
                 po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej
                 dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym,
@@ -29026,6 +29191,7 @@ pl:
             Sequencing with Scrat:
               key: Tworzenie sekwencji ze Scratem
               name: Tworzenie sekwencji ze Scratem
+              description_student: Zaprogramuj Scrata tak, aby doszedł do żołędzia.
               description_teacher: Przy pomocy Scrata z franszyzy "Epoka lodowcowa"
                 [Ice Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić
                 wiewiórkę z jednej strony labiryntu do żołędzia po drugiej stronie.
@@ -29033,10 +29199,11 @@ pl:
             Programming in with Angry Birds:
               key: Programowanie z Angry Birds
               name: Programowanie z Angry Birds
-              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
-                opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
-                strony labiryntu do świnki po drugiej stronie. W tym celu układają
-                bloki kodu w porządku liniowym.
+              description_teacher: Przy pomocy postaci z gry "Epoki lodowcotej" [Ice
+                Age] uczniowie opracują algorytmy sekwencyjne, aby przeprowadzić ptaka
+                z jednej strony labiryntu do świnki po drugiej stronie. W tym celu
+                układają bloki kodu w porządku liniowym, przez co postaci poruszają
+                się prosto, skręcają w lewo lub w prawo.
             Programming with Rey and BB-8:
               key: Programowanie z Reyem i BB-8
               name: Programowanie z Reyem i BB-8
@@ -29046,6 +29213,7 @@ pl:
             Programming in Harvester:
               key: Programowanie ze żniwiarką
               name: Programowanie przy pomocy interfejsu Harvester
+              description_student: Pomóż żniwiarce zebrać po drodze warzywa.
               description_teacher: Uczniowie będą stosować poznane koncepcje programowania
                 do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci
                 do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie
@@ -29054,6 +29222,7 @@ pl:
             Loops with Scrat:
               key: Pętle ze Scratem
               name: Pętle ze Scratem
+              description_student: Pomóż Scratowi objąć więcej terenu używając pętli.
             Loops with Laurel:
               key: Pętle z Laurel
               name: Pętle z Laurel
@@ -29064,6 +29233,7 @@ pl:
             Ocean Scene with Loops:
               key: Scena oceanu z pętlami
               name: Scena oceanu z pętlami
+              description_student: Używaj pętli i wzorców, aby ukończyć ilustracje.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
                 powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
                 pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
@@ -29072,6 +29242,7 @@ pl:
             Drawing Gardens with Loops:
               key: Rysowanie ogrodów z pętlami
               name: Rysowanie ogrodów z pętlami
+              description_student: Używaj wzorców i pętli, aby ukończyć obrazki.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez
                 powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji
                 pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj,
@@ -29081,6 +29252,7 @@ pl:
             On the Move with Events:
               key: W drodze ze zdarzeniami
               name: W drodze ze zdarzeniami
+              description_student: Twórz swoją własną grę lub historyjkę.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną
@@ -29088,6 +29260,8 @@ pl:
             A Royal Battle with Events:
               key: Królewska bitwa ze zdarzeniami
               name: Królewska bitwa ze zdarzeniami
+              description_student: Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną
+                grę.
               description_teacher: W ramach tych zajęć online uczniowie będą mieli
                 okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować
                 wszystkie umiejętności kodowania, które nabyli, aby utworzyć animowaną
@@ -29854,6 +30028,13 @@ pl:
             w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
             jak proces rozwiązywania problemu z danym może być stosowany w wybranym
             przez siebie obszarze.
+        testtess:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
         contagion-pilot:
           lessons:
             new lesson:
@@ -30069,10 +30250,34 @@ pl:
                 w trakcie kursu.
             lesson-9:
               name: Dziedziczenie i metody
+              description_student: Do tej pory zauważyłeś, że twój „Malarz” ma ograniczone
+                polecenia poruszania się po Sąsiedztwie. Na tej lekcji utworzysz nowy
+                typ „Malarza”, który może zrobić wszystko, co „Malarz”, a także coś,
+                czego „Malarz” nie może!
+              description_teacher: Uczniowie są wprowadzani do dziedziczenia poprzez
+                wyprowadzenie podklasy „Painter” z większą liczbą poleceń. Używają
+                słowa kluczowego `super` w konstruktorach i uczą się, jak pisać własne
+                metody w klasie `PainterPlus`. Odkrywają, że wywoływane metody muszą
+                być zdefiniowane w ich własnej klasie lub nadklasie. Na przyszłych
+                lekcjach uczniowie dodają dodatkowe metody i podklasy „Paiter”.
             lesson-10:
               name: Więcej metod, więcej właściwości
+              description_student: Na tej lekcji dasz swojej klasie `PainterPlus`
+                nowe sposoby poruszania się i interakcji z Sąsiedztwem, Podczas implementacji
+                nowych metod bierzesz pod uwagę przypadki skrajne.
+              description_teacher: 'Na tej lekcji uczniowie nadal stosują zasadę dziedziczenia
+                w swoim kodzie, rozszerzając klasę `PainterPlus` o trzy dodatkowe
+                metody: `turnAround()`, `takeAllPaint()` i `moveFast()`. Aby przećwiczyć
+                składnię języka Java i myślenie algorytmiczne, uczniowie konstruują
+                krok po kroku proces ręcznego wdrażania każdej z metod przed zakodowaniem
+                jej w języku Java. Kontynuując pisanie i używanie nowych metod, uczniowie
+                doświadczają korzyści wynikających z ponownego wykorzystania. '
             lesson-11:
               name: Metody malowania
+              description_student: 'Na tej lekcji kontynuujesz rozwijanie swojej klasy
+                ''PainterPlus'', tym razem dodając metody do przesuwania się i malowania
+                linii poziomych, pionowych i ukośnych. Przeglądasz również kod, aby
+                przekazywać i otrzymywać informacje zwrotne dotyczące jego ulepszania. '
             lesson-12:
               name: Malarz natryskowy
             lesson-13:
@@ -30089,6 +30294,21 @@ pl:
               name: 'Projekt: Osobisty Symbol - Dzień 3'
             lesson-19:
               name: Dzień FRQ
+              description_student: Dzisiaj wypełnij swoje pierwsze pytanie z wolną
+                odpowiedzią (FRQ)! Oznacza to, że ręcznie piszesz kod, aby wykonać
+                duże zadanie. Robisz to z partnerem, poruszając się po pokoju i wykonując
+                części zadania w każdej lokalizacji, sprawdzając swoją pracę w trakcie.
+              description_teacher: "Na tej lekcji uczniowie rozwiązują swoje pierwsze
+                zadanie w stylu pytania o wolną odpowiedź (FRQ). Zaznaczają pytanie
+                jako klasę, a następnie implementują pełną klasę `SpiralPainter` w
+                parach poprzez działanie w stylu „Dookoła świata”.\n\nCele tej lekcji
+                są trojakie:\n\n* Stworzenie poczucia ekscytacji i spełnienia podczas
+                wypełniania FRQ\n\n* Przećwiczenie pytania w stylu FRQ (napisane odręcznie)\n\n*
+                Podsumowujące ocenienie treści z Jednostki 1\n\nChociaż format tej
+                FRQ nie jest taki sam jak FRQ na egzaminie AP, jest to element składowy
+                pomagający uczniom przygotować się do rozwiązywania tego typu pytań.
+                W miarę postępów uczniów podczas kursu, napotykane przez nich pytania
+                FRQ powoli zbliżają się do rzeczywistych rzeczy. "
             lesson-20:
               name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
@@ -30101,9 +30321,47 @@ pl:
           lessons:
             new lesson:
               name: wyświetlana nazwa lekcji
+              description_student: Dzięki naszym doświadczeniom w The Neighborhood
+                wiemy, że klasy i obiekty są kluczowymi komponentami języka programowania
+                Java. Ale jak dokładnie klasy tworzą obiekty? Na tej lekcji poznasz
+                sposób tworzenia obiektu i poznasz proces zwany hermetyzacją danych.
+              description_teacher: Podczas tej lekcji bez komputerów uczniowie tworzą
+                obiekty i reprezentują odpowiednie atrybuty za pomocą zmiennych instancji.
+                Poznają różnicę między „publicznym” i „prywatnym” oraz cel hermetyzacji,
+                aby ukryć wewnętrzną implementację obiektu.
+            lesson-2:
+              name: Stosowanie zmiennych
+            lesson-3:
+              name: Pisząc konstruktory
+            lesson-4:
+              name: Dodawanie wielu konstruktorów
+            lesson-5:
+              name: Manipulowanie zmiennymi i danymi obiektów
+            lesson-6:
+              name: Minimalizowanie błędów w inicjalizacji
+            lesson-7:
+              name: Pisanie konstruktorów dla hierarchii
+            lesson-8:
+              name: Udostępnianie danych obiektu
+            lesson-9:
+              name: Modyfikowanie danych obiektu
+            lesson-10:
+              name: Wyświetlanie informacji o obiekcie
+            lesson-11:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+            lesson-12:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+            lesson-13:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
+            lesson-14:
+              name: Dzień FRQ
+            lesson-15:
+              name: 'Lekcja 15: Dzień sprawdzianu'
           lesson_groups:
             lesson group:
-              display_name: wyświetlana nazwa grupy lekcji
+              display_name: Treści
+            lessonGroup-2:
+              display_name: Pokaż, co wiesz
           name: csa2-pilotaż
         csa3-pilot:
           name: csa3-pilotaż
@@ -30249,6 +30507,7 @@ pl:
               display_name: Bot Haiku
           name: haikubot-pilot
           title: Bot Haiku
+          description_audience: Klasa 4, klasa 5
           description_short: 'W tym module uczniowie utworzą generator haiku w stylu
             Mad Libs, wykorzystując to, co wiedzą o poezji, dykcji i kodowaniu ze
             zmiennymi. '
@@ -30275,7 +30534,9 @@ pl:
               display_name: Grupa lekcji 1
               big_questions: |-
                 * Kto?
+
                 * Co?
+
                 * Gdzie?
               description: Grupa lekcji 1 opis
             lessonGroup-3:
@@ -30319,3 +30580,65 @@ pl:
           description_short: Przetestujmy narzędzia AI!
           description: Przetestujmy narzędzia AI!
           student_description: Przetestujmy narzędzia AI!
+        poembot-springforum21:
+          lessons:
+            Programming Poem Bot:
+              name: Bot Haiku
+          lesson_groups:
+            lesson group:
+              display_name: Bot poematu - Wiosenne Forum 2021
+          name: poembot-springforum21
+          title: Bot poematu dla  Wiosennego Forum 2021
+        pl-playground:
+          lessons:
+            new lesson:
+              name: wyświetlana nazwa lekcji
+            Module 1:
+              name: Moduł 1
+          lesson_groups:
+            lesson group:
+              display_name: wyświetlana nazwa grupy lekcji
+          name: pl-playground
+          title: PL Plac zabaw
+        outbreakmodule:
+          lessons:
+            how things spread:
+              name: Jak się rozprzestrzeniają
+            contagion simulator setup:
+              name: Konfiguracja symulatora zakażeń
+            sometimes but not always:
+              name: Czasem, ale nie zawsze
+            modifying your model:
+              name: Modyfikujc Twój model
+            telling a data story:
+              name: Opowiadanie historii o danych
+            intro monster town:
+              name: Epidemia w Mieście Potworów
+          lesson_groups:
+            Outbreak Module:
+              display_name: Moduł epidemii
+          name: outbreakmodule
+          title: Moduł_V2 epidemii
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: CSP Ankieta po zakończeniu kursu
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Ankieta
+          title: Ankieta dla uczniów po odbyciu kursu CSP ('20-'21)
+          description_audience: Uczniowie CSP
+          description_short: Ankieta dla uczniów po odbyciu kursu CSP
+          description: Witamy w ankiecie po ukończeniu kursu poświęconego "Zasadom
+            informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi
+            mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki
+            w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie
+            kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie
+            kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
+          student_description: Witamy w ankiecie po ukończeniu kursu poświęconego
+            "Zasadom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut.
+            Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel
+            zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie
+            wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org,
+            umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i
+            zaangażowanie.

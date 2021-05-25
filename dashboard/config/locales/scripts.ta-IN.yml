@@ -640,7 +640,7 @@ ta:
             lessonGroup-3:
               display_name: மாறிலிகள்
             outbreak:
-              display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
+              display_name: " தீவிர நோய் பரவலை உருவகப்படுத்துபவர் "
         csd3-2021:
           lessons:
             Variables:

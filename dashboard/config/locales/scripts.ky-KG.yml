@@ -275,12 +275,6 @@ ky:
               name: Интернет симулятор
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Жыйынтыктоо
         algebraPD2:
@@ -289,22 +283,10 @@ ky:
               name: Мугалимдин тактасы
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Жыйынтыктоо
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Жыйынтыктоо
         asUnplugged:
@@ -370,12 +352,6 @@ ky:
               name: 'Сүрөтчү: өзгөрмөлөр'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Жыйынтыктоо
         grade3:
@@ -1957,6 +1933,12 @@ ky:
               name: Сүрөтчү менен өзгөрмөлөр
               description_student: Класска чыгармачылык киргизгенди унутпагыла! Бул
                 тапшырмаларда өзгөрмөлөр менен фантастикалык сүрөттөрдү тартасыңар.
+              description_teacher: Бул сабакта окуучулар Сүрөтчү чөйрөсүндө өзгөрмөлөрдү
+                колдонуп кайталанма дизайн түзгөндү үйрөнүшөт. Окуучулар код жеңил
+                жазылып жана окулушу үчүн өзгөрмөлөрдү кантип колдонуу керектигин
+                көрүшөт. Жетектемелери бар тапшырмалардан кийин окуучулар эркин оюн
+                деңгээлиндеги өз чыгармасын жаратып, эмнелерди үйрөнгөнүн көрсөтүү
+                мүмкүнчүлүгүн алышат.
             Changing Variables with Artist:
               key: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү
               name: Сүрөтчү менен өзгөрмөлөрдү өзгөртүү

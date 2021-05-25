@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # How to teach one Hour of Code in after-school classes and clubs
 
-### Join the movement and introduce your students to computer science with these steps.
+### Bashkohuni me lëvizjen dhe prezantojini studentët tuaj në shkencat kompjuterike me këto hapa.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Të menduarit llogaritës ndihmon në rritjen e aftësive për zgjidhjen e problemeve, logjikës dhe krijimtarisë Teknologjia po transformon çdo industri në planet. Studentët sot duhet të mësojnë se si të krijojnë teknologji, jo vetëm ta përdorin atë. Duke filluar herët, ata do të kenë një themel për sukses në çdo rrugë karriere të shekullit 21.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Një orë kod mund të organizohet gjithashtu në distancë! Për të filluar, shikoni këshillat tona [ për mbajtjen e një ngjarjeje Hour of Code ](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 

@@ -617,7 +617,7 @@ ur:
             lessonGroup-3:
               display_name: متغیرات
             outbreak:
-              display_name: وباء کی سیمولیشن
+              display_name: وباء کا سیمیولیٹر
         csd3-2021:
           lessons:
             Variables:

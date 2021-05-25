@@ -1199,6 +1199,15 @@ ro:
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
             '"speed"': viteză
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': dimensiune
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': mediu
+            '100': large
       gamelab_setSizes:
         text: setează {SPRITE} {PROPERTY} la {N}%
         options:
@@ -1502,6 +1511,13 @@ ro:
             '"x"': poziţia x
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
+      Mikelab_setupSim:
+        text: |-
+          configurează simularea cu
+          {SPRITE1N}{SPRITE1COSTUME}viteză{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}viteză{SPRITE2SPEED}
+          strângând
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1565,6 +1581,13 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': rețea
+            '"border"': margine
+            '"row"': rând
+            '"random"': aleator
       RyanLab_moveForward:
         text: mută înainte
       RyanLab_turnLeft:
@@ -1598,42 +1621,27 @@ ro:
         options:
           PROPERTY:
             "'shapeColor'": culoare
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} începe {BEHAVIOR} pentru {SECONDS} secunde
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} începe {BEHAVIOR} până la {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nou sprite numit{SPRITE_NAME} cu costum{ANIMATION_NAME} la locul{LOCATION}
-      aalab_goToScene:
-        text: du-te la scena {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: mută {SPRITE} {DISTANCE} pixeli {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Nord
-            '"East"': Est
-            '"South"': Sud
-            '"West"': Vest
-      aalab_prompt:
-        text: întreabă {MESSAGE}
-      aalab_scene:
-        text: scena {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: poveste de configurare
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': rețea
+            '"border"': margine
+            '"row"': rând
             '"random"': aleator
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': toate
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': toate
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: trage binar {BIN}
       binary_drawDec:

@@ -1156,6 +1156,10 @@ ur:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': سائز
       gamelab_setSizes:
         text: مقرر کریں {SPRITE} {PROPERTY} {N}%
         options:
@@ -1435,6 +1439,13 @@ ur:
             '"scale"': سائز
             '"rotation"': گردش
             '"direction"': حرکت کی سمت
+      Mikelab_setupSim:
+        text: |-
+          کے ساتھ سیٹ اپ تخروپن
+          {SPRITE1N}{SPRITE1COSTUME}رفتار{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}رفتار{SPRITE2SPEED}
+          جمع کرنے
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1482,6 +1493,13 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': گرڈ
+            '"border"': بارڈر
+            '"row"': قطار
+            '"random"': بےترتیب
       RyanLab_moveForward:
         text: آگے چلیں
       RyanLab_turnLeft:
@@ -1515,41 +1533,12 @@ ur:
         options:
           PROPERTY:
             "'shapeColor'": رنگ
-      aalab_addBehaviorForDuration:
-        text: آلب سرین {SPRITE} شروع ہوتا ہے {BEHAVIOR} کے لئے {SECONDS} سیکنڈ کے لئے
-      aalab_addBehaviorUntilBoolean:
-        text: پریت {SPRITE} شروع {BEHAVIOR} تک {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: نیا سپرٹ نام{SPRITE_NAME} کے ساتھ کاسٹیوم{ANIMATION_NAME} مقام پر{LOCATION}
-      aalab_goToScene:
-        text: منظر پر جائیں {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: بڑھائیں {SPRITE} {DISTANCE} پکسلز {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': شمال
-            '"East"': مشرق
-            '"South"': جنوب
-            '"West"': مغرب
-      aalab_prompt:
-        text: سوال پوچھیں {MESSAGE}
-      aalab_scene:
-        text: منظر {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: سیٹ اپ کہانی
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': گرڈ
+            '"border"': بارڈر
+            '"row"': قطار
             '"random"': بےترتیب
       binary_drawBin:
         text: بائنری ڈراؤ {BIN}

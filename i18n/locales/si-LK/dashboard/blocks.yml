@@ -210,6 +210,15 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"speed"': වේගය
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': විශාලත්වය
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': මධ්‍යස්ත
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -318,15 +327,19 @@ si:
             '"down"': පහල ඊතලය
             '"left"': වම් ඊතලය
             '"right"': දකුණු ඊතලය
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': අහඹු
       RyanLab_moveForward:
         text: ඉදිරියට යන්න
       RyanLab_turnLeft:
         text: වමට හැරෙන්න
       RyanLab_turnRight:
         text: දකුණට හැරෙන්න
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
             '"random"': අහඹු
       binary_move:
         options:

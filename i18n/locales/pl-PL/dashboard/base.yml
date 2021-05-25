@@ -271,6 +271,7 @@ pl:
     added_teacher: '%{name} dodany jako Twój nauczyciel'
     registered: "Zarejestrowałeś się do %{section_name}."
     captcha_required: 'Wypełnij CAPTCHA, aby dołączyć do sesji.'
+    already_exists: 'Dołączyłeś już do tej sekcji %{section_name}.'
     error:
       signed_in: 'Wyloguj się, zanim będziesz kontynuować'
       username_not_found: 'Nie znaleziono nazwy użytkownika %{username}'
@@ -280,6 +281,7 @@ pl:
       blank_code: "Wprowadź kod sekcji"
       cant_join_own_section: "Przepraszamy, ale nie możesz przyłączyć się do swojej własnej sekcji."
       provider_managed_section: "Ta sekcja jest zarządzana przez innego dostawcę i nie można do niej dołączyć. Poproś swojego nauczyciela o dodanie Ciebie poprzez %{provider} i ponowną synchronizację sekcji."
+      restricted_section: "Nie mogliśmy dodać Cię do sekcji %{section_code}, ponieważ jest zablokowana. Skontaktuj się ze swoim nauczycielem, aby uzyskać pomoc. "
     mail:
       student_disassociated:
         subject: "Powiadomienie Code.org: %{student_name} nie jest już powiązany z Tobą jako Twój uczeń."
@@ -1012,6 +1014,7 @@ pl:
         malaysia: 'Malezja'
         mexico: 'Meksyk'
         thailand: 'Tajlandia'
+        uzbekistan: 'Uzbekistan'
       ages:
         ages_under_6: 'w wieku ponżej 6 lat'
         ages_7_8: 'w wieku 7-8 lat'

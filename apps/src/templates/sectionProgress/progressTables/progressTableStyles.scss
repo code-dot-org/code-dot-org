@@ -92,10 +92,24 @@ $content-view-width: $content-width - $student-list-width;
   }
 }
 
+.progress-bubble {
+  &.enabled {
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
+      color 0.2s ease-out;
+    &:hover {
+      text-decoration: none;
+      color: $white !important;
+      border-color: $level_current !important;
+      background-color: $level_current !important;
+    }
+  }
+}
+
 :export {
   MAX_BODY_HEIGHT: $max-height / 1px;
   STUDENT_LIST_WIDTH: $student-list-width / 1px;
   CONTENT_VIEW_WIDTH: $content-view-width / 1px;
   ROW_HEIGHT: $row-height / 1px;
   MAX_ROWS: $max-rows;
+  MIN_COLUMN_WIDTH: 40;
 }

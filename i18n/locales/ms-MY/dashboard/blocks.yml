@@ -1149,6 +1149,10 @@ ms:
             '"rotation"': putaran
             '"direction"': arah pergerakan
             '"speed"': kelajuan
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': saiz
       gamelab_setSizes:
         text: Set {SPRITE} {PROPERTY} Untuk {N}%
         options:
@@ -1428,6 +1432,13 @@ ms:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
+      Mikelab_setupSim:
+        text: |-
+          Persediaan simulasi dengan
+          {SPRITE1N}{SPRITE1COSTUME}Kelajuan{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Kelajuan{SPRITE2SPEED}
+          Mengumpul
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1471,6 +1482,13 @@ ms:
         text: koordinat x dari {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat dari {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': grid
+            '"border"': sempadan
+            '"row"': baris
+            '"random"': rawak
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:
@@ -1504,41 +1522,12 @@ ms:
         options:
           PROPERTY:
             "'shapeColor'": warna
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} Bermula {BEHAVIOR} Bagi {SECONDS} Saat
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} Bermula {BEHAVIOR} Sehingga {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: bidadari baru bernama{SPRITE_NAME} dengan kostum{ANIMATION_NAME} di lokasi{LOCATION}
-      aalab_goToScene:
-        text: pergi ke tempat kejadian {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION} 12321
-        options:
-          DIRECTION:
-            '"North"': Utara
-            '"East"': Timur
-            '"South"': Selatan
-            '"West"': Barat
-      aalab_prompt:
-        text: bertanya soalan {MESSAGE}
-      aalab_scene:
-        text: adegan {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: cerita persediaan
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grid
+            '"border"': sempadan
+            '"row"': baris
             '"random"': rawak
       binary_drawBin:
         text: menarik binari {BIN}

@@ -76,8 +76,6 @@ The technique is to insert write and console.log statements into the code to ins
 This is a **major debugging technique** -- printing out information *for yourself* to make your program tell things about it while it's running.  Then once you're satisfied it works right, you might remove (or comment out) the statements that display all that extra information.
 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue to see this debugging technique in action</a>
-
 
 
 MARKDOWN

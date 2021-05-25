@@ -1204,6 +1204,15 @@ fr:
             '"y"': position y
             '"direction"': direction du mouvement
             '"speed"': vitesse
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': taille
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': intermédiaire
+            '100': large
       gamelab_setSizes:
         text: établir {PROPERTY} de {SPRITE}  à {N} %
         options:
@@ -1503,6 +1512,8 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+      Mikelab_setupSim:
+        text: configure la simulation avec {SPRITE1N}{SPRITE1COSTUME}vitesse{SPRITE1SPEED}{SPRITE2N}{SPRITE2COSTUME}vitesse{SPRITE2SPEED}ramassant{SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1565,6 +1576,13 @@ fr:
         text: coordonnées x de {SPRITE}
       Mikelab_yLocationOf:
         text: coordonnées y de {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': grille
+            '"border"': frontière
+            '"row"': ligne
+            '"random"': aléatoire
       RyanLab_moveForward:
         text: avancer
       RyanLab_turnLeft:
@@ -1596,48 +1614,27 @@ fr:
         options:
           PROPERTY:
             "'shapeColor'": couleur
-      aalab_addBehaviorForDuration:
-        text: lutin aalab {SPRITE} commence {BEHAVIOR} pendant {SECONDS} secondes
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} commence {BEHAVIOR} jusqu'à {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: nouveau sprite nommé{SPRITE_NAME} avec costume{ANIMATION_NAME} à l'emplacement{LOCATION}
-      aalab_goToScene:
-        text: aller à la scène {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: déplacer {SPRITE} de {DISTANCE} pixels vers {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': le Nord
-            '"East"': L’Est
-            '"South"': Le Sud
-            '"West"': L’Ouest
-      aalab_prompt:
-        text: poser la question {MESSAGE}
-      aalab_scene:
-        text: scène {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: histoire de configuration
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': grille
+            '"border"': frontière
+            '"row"': ligne
             '"random"': aléatoire
-            '"R2-D2 random"': R2-D2 aléatoire
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': tout
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': tout
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:

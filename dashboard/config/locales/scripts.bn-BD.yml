@@ -285,12 +285,6 @@ bn:
               name: স্বাগতম!
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: স্বাগতম!
             Wrap-up:
@@ -321,24 +315,12 @@ bn:
               name: গুটিয়ে ফেলা
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: স্বাগতম!
             Wrap-up:
               name: গুটিয়ে নেয়া
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: স্বাগতম!
             Wrap-up:
@@ -465,12 +447,6 @@ bn:
               name: প্রোগ্রামিং
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: স্বাগতম!
             Wrap-up:
@@ -1637,6 +1613,10 @@ bn:
               name: কোর্স A
             Course B:
               name: কোর্স B
+            Course E:
+              name: কোর্স E
+            Course F:
+              name: কোর্স F
         2021drafting:
           lesson_groups:
             introduction:

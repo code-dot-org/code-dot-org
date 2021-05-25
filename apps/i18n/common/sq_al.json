@@ -309,6 +309,7 @@
   "errorUnusedParam": "Shtove një bllok parametër, por nuk e përdore atë në përcaktim. Sigurohu që të përdorësh parametrin tënd duke klikuar \"modifiko\" dhe duke vendosur këtë parametër bllok brenda bllokut të gjelbër.",
   "exampleErrorMessage": "Funksioni {functionName} ka një ose më shumë shembuj që kanë nevojë të korigjohen. Sigurohu që i përshtaten përkufizimit dhe i përgjigjen pyetjes.",
   "examplesFailedOnClose": "Një ose më shumë shembuj nuk përputhen me përkufizimin. Kontrolloni shembujt tuaj para se ta mbyllni.",
+  "explainRestrictedSectionLearnMore": "Mëso më shumë",
   "extraTopBlocks": "Ke blloqe te pa bashkuara.",
   "extraTopBlocksWhenRun": "Ti ke blloqe që nuk janë të bashkuar. Dëshiron t'i bashkosh ato me bllokun \"kur ekzekuton\"?",
   "fallbackVideoClosedCaptioningDialogClose": "Mbyll",

@@ -1248,6 +1248,15 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"speed"': 速度
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': 大小
+          SIZE:
+            '25': 特小
+            '50': 小
+            '75': 中
+            '100': 大
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -1585,6 +1594,13 @@ zh-CN:
             '"direction"': 移动方向
       Mikelab_setTint:
         text: 将 {SPRITE} 的颜色改为 {COLOR}
+      Mikelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          收集
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1659,6 +1675,13 @@ zh-CN:
         text: "{SPRITE} 的x轴坐标"
       Mikelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': 网格
+            '"border"': 边框
+            '"row"': 行
+            '"random"': 随机
       RyanLab_moveForward:
         text: 向前移动
       RyanLab_turnLeft:
@@ -1692,49 +1715,27 @@ zh-CN:
         options:
           PROPERTY:
             "'shapeColor'": 颜色
-      aalab_addBehaviorForDuration:
-        text: aalab 精灵图 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
-      aalab_addBehaviorUntilBoolean:
-        text: 精灵图{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: 新精灵图在位置 {LOCATION}，名为 {SPRITE_NAME}，并穿着 {ANIMATION_NAME}
-      aalab_goToScene:
-        text: 前往场景 {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 东
-            '"South"': 南
-            '"West"': 西
-      aalab_prompt:
-        text: 提问 {MESSAGE}
-      aalab_scene:
-        text: 场景 {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: 设置故事
-      aalab_starwars_playSound:
-        text: 播放{OPTION}音轨
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': 网格
+            '"border"': 边框
+            '"row"': 行
             '"random"': 随机
-            '"R2-D2 random"': R2-D2随机
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': 所有
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': 所有
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: 绘制二进制 {BIN}
       binary_drawBinScreen:

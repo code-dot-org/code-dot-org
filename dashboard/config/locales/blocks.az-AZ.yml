@@ -190,11 +190,6 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
-            ? '? "[''circles'',''color_cycle'', ''diamonds'', ''disco_ball'', ''fireworks'',
-              ''swirl'', ''kaleidoscope'', ''lasers'', ''splatter'', ''rainbow'',
-              ''snowflakes'', ''text'', ''galaxy'', ''sparkles'', ''spiral'', ''disco'',
-              ''stars''][randomInt(0,16)]"'
-            : "(İxtiyari)"
             '"circles"': Çevrələr
             '"color_cycle"': Rənglər
             '"diamonds"': Almazlar
@@ -235,10 +230,6 @@ az:
         options:
           EFFECT:
             '"none"': Heç biri
-            ? '? "[''bubbles'', ''confetti'', ''hearts_red'', ''music_notes'', ''pineapples'',
-              ''pizzas'', ''smiling_poop'', ''rain'', ''floating_rainbows'', ''smile_face'',
-              ''spotlight'', ''color_lights'', ''raining_tacos''][randomInt(0,12)]"'
-            : "(İxtiyari)"
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -488,6 +479,10 @@ az:
           PROPERTY:
             '"scale"': ölçü
             '"speed"': sürət
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ölçü
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -659,28 +654,36 @@ az:
             '"down"': aşağıya ox
             '"left"': sola ox
             '"right"': sağa ox
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': kənar
+            '"random"': təsadüfi
       RyanLab_moveForward:
         text: irəli get
       RyanLab_turnLeft:
         text: sola dön
       RyanLab_turnRight:
         text: sağa dön
-      aalab_goToScene:
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_starwars_playSound:
-        options:
-          OPTION:
+          FORMAT:
+            '"border"': kənar
             '"random"': təsadüfi
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': bütün
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': bütün
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

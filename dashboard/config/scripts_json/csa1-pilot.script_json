@@ -8,11 +8,14 @@
       "is_migrated": true,
       "curriculum_umbrella": "CSA",
       "weekly_instructional_minutes": 225,
-      "show_calendar": true
+      "show_calendar": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "pilot_experiment": "csa-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-11 15:50:30 UTC",
+    "serialized_at": "2021-05-19 17:29:54 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -23,8 +26,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Content",
-        "description": "Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity."
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -40,6 +42,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Test"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -406,6 +420,21 @@
       "seeding_key": {
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Test Lesson #1",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-pilot"
       }
     }
@@ -1817,8 +1846,9 @@
       "key": "78af1614-1425-4640-a087-1c3aa1abaab8",
       "position": 6,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n\n**Question:** Look at the underlined code snippet below. Which of the following correctly identifies the code? \n* class  \n* object\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8",
@@ -1972,8 +2002,9 @@
       "key": "aed67282-2415-4401-9c3e-c62c39d534b1",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The `Painter` started with five units of paint on their paint tray. How many units of paint will the `Painter` have left on their paint tray after painting a straight line that connects the origin, (0, 0) to (3, 3)?\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1",
@@ -2233,8 +2264,9 @@
       "key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Look at the code snippet below. Would the code inside the `if`-statement run? Why or why not?\n\n```\n    Painter jes = new Painter();\n    if(canMove()){\n        jes.Move();\n    }\n```\n",
-        "name": "Assessment: Check For Understanding"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n",
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
@@ -4846,10 +4878,122 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8"
+      },
+      "level_keys": [
+        "CSA U1L2 CFU1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L3 CFU1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
+      },
+      "level_keys": [
+        "CSA U1L3 CFU1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "progression": "Check For Understanding"
+      },
+      "named_level": false,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7"
+      },
+      "level_keys": [
+        "CSA U1L4 CFU1"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L2 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L2 CFU1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L3 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L3 CFU1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4 CFU1",
+        "script_level.level_keys": [
+          "CSA U1L4 CFU1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot",
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7"
+      }
+    }
   ],
   "resources": [
     {
@@ -5009,6 +5153,18 @@
       }
     },
     {
+      "name": "[KEY] U1L19 FRQ Day",
+      "url": "https://docs.google.com/document/d/1ylcTjDVeQwpazU1lZr2KW4Ys-PRChO8u7EqBEwGuG1E/edit",
+      "key": "_key_u1l19_frq_day",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u1l19_frq_day"
+      }
+    },
+    {
       "name": "[KEY] U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1pqowVJKdE8w5cNinhTOsVBv_Z6YyFMlDhJ8TlfK4cRg/edit?usp=sharing",
       "key": "_key_u1l2_extra_practice",
@@ -5105,6 +5261,32 @@
       }
     },
     {
+      "name": "Asphalt Art Project Peer Interview Cards",
+      "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
+      "key": "asphalt_art_project_peer_interview_cards",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_peer_interview_cards"
+      }
+    },
+    {
+      "name": "Asphalt Art Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1oBMegm8198TYGgKOF9uWy7sMXyOZ3Myam2fp-AR-AXI/edit?usp=sharing",
+      "key": "asphalt_art_project_planning_guide",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
       "name": "Code Review Practice",
       "url": "https://docs.google.com/document/d/1SgyD1rkzI9nPdudVXyem2qjlRwLlmKvfgTOBxXNbHWw/edit#heading=h.q0rmwxki59ku",
       "key": "code_review_practice",
@@ -5175,7 +5357,7 @@
       "key": "java_syntax_and_painterplus_methods_cards",
       "properties": {
         "type": "Handout",
-        "audience": "Verified Teacher"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "java_syntax_and_painterplus_methods_cards"
@@ -5217,19 +5399,6 @@
       },
       "seeding_key": {
         "resource.key": "painter_says"
-      }
-    },
-    {
-      "name": "Painter Toolbox",
-      "url": "https://docs.google.com/document/d/1QhdyuZoMEA6XaBaslBerzbArw-IEkyYQ1TsPpkT7W5k/edit?usp=sharing",
-      "key": "painter_toolbox",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "painter_toolbox"
       }
     },
     {
@@ -5363,6 +5532,31 @@
       }
     },
     {
+      "name": "U1L19 FRQ Day",
+      "url": "https://docs.google.com/document/d/1PFdjUsVR1s7HYnZ7-d2OELm-kc-yDEmI33erPmSRk1E/edit?usp=sharing",
+      "key": "u1l19_frq_day",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "u1l19_frq_day"
+      }
+    },
+    {
+      "name": "U1L19 Print Outs",
+      "url": "https://docs.google.com/document/d/1Kt72Vuy3AjsiY5zlQ_4ckpqIuPLJnrOjgCA-4eymnMM/edit?usp=sharing",
+      "key": "u1l19_print_outs",
+      "properties": {
+        "type": "Handout",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "u1l19_print_outs"
+      }
+    },
+    {
       "name": "U1L2 Extra Practice",
       "url": "https://docs.google.com/document/d/1hwWUDiz17B67eERZm5XpPLVObx5_zOvx5taqGxtL3rE/edit?usp=sharing",
       "key": "u1l2_extra_practice",
@@ -5492,6 +5686,18 @@
       }
     },
     {
+      "name": "Unity and Safety Through Street Art in Norfolk, VA",
+      "url": "https://youtu.be/-gnXVMcg0yk",
+      "key": "unity_and_safety_through_street_art_in_norfolk_va",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
+      }
+    },
+    {
       "name": "Vocabulary Draw",
       "url": "https://docs.google.com/document/d/1yN3BgqWDCxdbWFY0mHOkDQQCr4kRTdiwNjnZtuOioZg/edit?usp=sharing",
       "key": "vocabulary_draw",
@@ -5509,317 +5715,11 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l11_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l12_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l13_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l14_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "u1l15_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l2_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l3_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l4_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l5_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l6_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l7_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l8_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l9_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l10_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l11_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l12_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l13_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l14_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_u1l15_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
         "resource.key": "unit_1_presentation_slides"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "unit_1_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "parameterized_constructors_guided_notes_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "vocabulary_draw"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "painter_toolbox"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "painter_says"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "code_review_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "java_syntax_and_painterplus_methods_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_implementing_painterplus_methods"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "pseudocode_warm_up"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_pseudocode_warm_up"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "spraypainter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_spraypainter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "pixel_picture_puzzle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_pixel_picture_puzzle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "create_your_stamp"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "design_the_neighborhood"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_design_the_neighborhood"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "harmonica_app_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "notes_app_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "minecraft_brigadier_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "java_2d_api_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "_key_open_source_code"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "u1l2_extra_practice"
       }
@@ -5833,6 +5733,450 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_u1l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_u1l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_u1l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u1l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "vocabulary_draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u1l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "painter_says"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u1l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "code_review_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u1l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u1l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "java_syntax_and_painterplus_methods_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_implementing_painterplus_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_u1l11_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "pseudocode_warm_up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "_key_pseudocode_warm_up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_u1l12_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "spraypainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "_key_spraypainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_u1l13_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "pixel_picture_puzzle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_key_pixel_picture_puzzle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "create_your_stamp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_u1l14_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "design_the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_design_the_neighborhood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_u1l15_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_1_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "harmonica_app_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "notes_app_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "minecraft_brigadier_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "java_2d_api_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_open_source_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "asphalt_art_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "asphalt_art_project_peer_interview_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "unit_1_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "_key_u1l19_frq_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "u1l19_frq_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "u1l19_print_outs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-20",
         "resource.key": "unit_1_presentation_slides"
       }
     }

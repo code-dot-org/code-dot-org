@@ -8,7 +8,10 @@ import {
   studentTableRowType,
   scrollbarWidth
 } from '../sectionProgressConstants';
-import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  lessonIsAllAssessment,
+  lessonHasLevels
+} from '@cdo/apps/templates/progress/progressHelpers';
 import progressTableStyles from './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
 
@@ -68,7 +71,8 @@ export default class ProgressTableContentView extends React.Component {
     const lesson = this.props.scriptData.stages[columnIndex];
     const includeArrow =
       this.props.includeHeaderArrows &&
-      (lesson.levels.length > 1 || lesson.levels[0].isUnplugged);
+      (lessonHasLevels(lesson) &&
+        (lesson.levels.length > 1 || lesson.levels[0].isUnplugged));
     return (
       <div
         style={styles.headerContainer}
@@ -100,19 +104,24 @@ export default class ProgressTableContentView extends React.Component {
    * constrain column widths to the provided values. When it's absent, the
    * columns will size themselves based on their content.
    *
-   * Note: Due to the nuances of reactabular's implementation, header cells
+   * One exception is that we provide a fixed width for empty columns when a
+   * lesson has no levels.
+   *
+   * Note: due to the nuances of reactabular's implementation, header cells
    * are unable to base their width on the content of body cells, nor
    * vice versa. Consequently, for headers to properly align with their body
    * columns when explicit column widths are not provided, the max content
    * width of header cells must match the max content width of body cells.
    */
   columnWidthStyle(index) {
-    const {columnWidths} = this.props;
-    return columnWidths
-      ? {
-          style: {minWidth: columnWidths[index], maxWidth: columnWidths[index]}
-        }
-      : {};
+    const {columnWidths, scriptData} = this.props;
+    let width = null;
+    if (columnWidths) {
+      width = columnWidths[index];
+    } else if (!lessonHasLevels(scriptData.stages[index])) {
+      width = parseInt(progressTableStyles.MIN_COLUMN_WIDTH);
+    }
+    return width ? {style: {minWidth: width, maxWidth: width}} : {};
   }
 
   render() {

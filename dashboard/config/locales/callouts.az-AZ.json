@@ -83,6 +83,15 @@
         },
         "frozen line": {
           "move_elsa_forward": "Elzanı irəli aparmaq üçün \"irəli get\" blokunu sürükləyib şıqqıltı ilə \"icra etdikdə\" blokunun aşağısına yapışdırın"
+        },
+        "CourseD_Dance_2020_02": {
+          "dance_callout_11_a": "Bu bloku proqramına əlavə et"
+        },
+        "CourseD_Dance_2020_05": {
+          "dance_callout_05": "Proqramına yeni hadisə əlavə et"
+        },
+        "outbreak2": {
+          "pointerlocation": "Mövzu blokunu bura çəkin."
         }
       }
     }

@@ -1318,6 +1318,13 @@ se:
           PROPERTY:
             '"rotation"': jorrat
             '"direction"': lihkadanguovlu
+      Mikelab_setupSim:
+        text: |-
+          setup simulašuvdnii
+          {SPRITE1N}{SPRITE1COSTUME}leahtu{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}leahtu{SPRITE2SPEED}
+          čoaggimiin
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_sprite:
         text: ođđa {COSTUME} sprite {LOCATION}:s
         options:
@@ -1345,6 +1352,12 @@ se:
         text: x koordináhta {SPRITE}
       Mikelab_yLocationOf:
         text: y koordináhta {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ruhtu
+            '"border"': ravda
+            '"row"': ráidu
       SpriteLab2Beta_spriteSay:
         text: sprite {SPRITE} dadjá {TEXT} {SECONDS} sekunddaid
       Vector_createSpriteWith:
@@ -1372,48 +1385,12 @@ se:
         options:
           PROPERTY:
             "'shapeColor'": ivdni
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} álgá  {BEHAVIOR} {SECONDS} sekunddas
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} álgá {BEHAVIOR} ovdalgo {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: ođđa sprite man namma lea{SPRITE_NAME} mas lea bivttas{ANIMATION_NAME}{LOCATION}:s
-      aalab_goToScene:
-        text: mana scenii {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: sirdde  {SPRITE} {DISTANCE} pixeliid {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Davvi
-            '"East"': Nuorta
-            '"South"': Lulli
-            '"West"': Oarji
-      aalab_prompt:
-        text: jeara jearaldaga {MESSAGE}
-      aalab_scene:
-        text: scena {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: setup muitalusa
-      aalab_starwars_playSound:
-        text: čuojat{OPTION}jiena
-        options:
-          OPTION:
-            '"R2-D2 random"': R2-D2 sahtedohko
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+          FORMAT:
+            '"grid"': ruhtu
+            '"border"': ravda
+            '"row"': ráidu
       binary_drawBin:
         text: tevdne binára {BIN}
       binary_drawBinScreen:

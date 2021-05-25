@@ -5700,7 +5700,7 @@ zh-CN:
         - text: 我不知道。
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - text: 仔细看看下面的代码。 第一个造成错误的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
@@ -5713,7 +5713,7 @@ zh-CN:
         - text: 我不知道。
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - text: 仔细看看下面的代码。 第一个造成错误的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: 斯奎特会被橡子吸引，这说明了这个程序没有缺陷。
@@ -6467,7 +6467,7 @@ zh-CN:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - text: 没东西了。代码只会剩下平地。
+        - text: 没东西了。只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -6480,7 +6480,7 @@ zh-CN:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - text: 没东西了。代码只会剩下平地。
+        - text: 没东西了。只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -6493,7 +6493,7 @@ zh-CN:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
-        - text: 没东西了。代码只会剩下平地。
+        - text: 没东西了。只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -7357,7 +7357,7 @@ zh-CN:
 
 
         questions:
-        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
+        - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
@@ -7374,7 +7374,7 @@ zh-CN:
 
 
         questions:
-        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
+        - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
@@ -7391,7 +7391,7 @@ zh-CN:
 
 
         questions:
-        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
+        - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: 蜜蜂不会采集任何花蜜或蜂蜜。
@@ -7763,14 +7763,6 @@ zh-CN:
       courseExpress_EOC_2020:
         display_name: 课程结束项目
         description: 你已经完成了本课程！点击以创建项目。
-      CSD Interactive Animations and Games Post-Project Test:
-        title: 互动动画和游戏 项目后测试
-      CSD Physical Computing Post-Project Test:
-        title: 物理计算 项目后测试
-      CSD User Centered Design Post-Project Test:
-        title: 以用户为中心的设计：项目后测试
-      CSD Web Development Post-Project Test:
-        title: 网页开发 项目后测试
       csd-post-survey-2017-levelgroup:
         title: 计算机科学发现期末学生调查
       csd-post-survey-2017-levelgroup_2018:
@@ -7846,10 +7838,6 @@ zh-CN:
           <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
 
           <br/>
-      CSD U1 Test:
-        title: 计算机和解决问题 项目后测试
-      CSD U5 test:
-        title: 数据和社会 项目后测试
       Unit 1 Lesson 1 Overview:
         markdown: |
           #概述

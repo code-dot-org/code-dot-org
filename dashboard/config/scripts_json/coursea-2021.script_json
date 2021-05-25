@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-05-11 17:52:04 UTC",
+    "serialized_at": "2021-05-12 20:08:51 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -6818,7 +6818,7 @@
     },
     {
       "name": "Artist Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1q0StbJdY6FXbkobhtTdr8wvbhD28iuKgPdUwZaObdqs/template/preview",
+      "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
       "key": "artist_project_planning_guide_1",
       "properties": {
         "type": "Answer Key",

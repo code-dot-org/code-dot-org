@@ -67,7 +67,10 @@
         "CourseD_EOC_starwars": "Stvori igru Star Wars",
         "CourseE_Project_SpriteLab_2020": "Stvori projekt Sprite Lab",
         "CourseF_Project_SpriteLab_2020": "Stvori projekt Sprite Lab",
-        "courseF_extras_sim": "Osobna simulacija!"
+        "courseF_extras_sim": "Osobna simulacija!",
+        "CourseF_Oceans_Video_Machine_Learning": "Video: Strojno učenje",
+        "CourseF_Oceans_Video_Societal_Implications": "Video: Društvene implikacije",
+        "CourseF_Oceans_Video_Training_Data": "Video: Treniranje AI sustava"
       }
     }
   }

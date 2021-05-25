@@ -930,6 +930,10 @@ te:
             '"scale"': సైజు
             '"rotation"': రొటేషన్
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': సైజు
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -1047,18 +1051,18 @@ te:
             "{x: 300, y: 200}": కుడి
       Mikelab_whenKeyPressed:
         text: నొక్కినప్పుడు {KEY} కీ
-      aalab_goToScene:
+      Outbreak_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_scene:
+          FORMAT:
+            '"grid"': గ్రిడ్
+            '"border"': బార్డర్
+            '"row"': రో
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
+          FORMAT:
+            '"grid"': గ్రిడ్
+            '"border"': బార్డర్
+            '"row"': రో
       binary_move:
         options:
           DIR:

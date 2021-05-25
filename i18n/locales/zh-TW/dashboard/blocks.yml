@@ -1255,6 +1255,15 @@ zh-TW:
             '"y"': y 座標
             '"direction"': 移動方向
             '"speed"': 速度
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': 尺寸
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': 中
+            '100': large
       gamelab_setSizes:
         text: 角色 {SPRITE} {PROPERTY} 設為 {N}%
         options:
@@ -1603,6 +1612,13 @@ zh-TW:
             '"direction"': 移動方向
       Mikelab_setTint:
         text: 角色 {SPRITE} 顏色設為 {COLOR}
+      Mikelab_setupSim:
+        text: |-
+          設置類比
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          收集
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1674,6 +1690,13 @@ zh-TW:
         text: x 座標 {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': 格狀
+            '"border"': 邊框
+            '"row"': 橫列
+            '"random"': 隨機
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:
@@ -1707,49 +1730,27 @@ zh-TW:
         options:
           PROPERTY:
             "'shapeColor'": 顏色
-      aalab_addBehaviorForDuration:
-        text: aalab 角色 {SPRITE} 開始 {BEHAVIOR} 持續 {SECONDS} 秒
-      aalab_addBehaviorUntilBoolean:
-        text: 角色 {SPRITE} 開始 {BEHAVIOR} 直到 {CONDITION}
-      aalab_createNewSpriteAnonReturn2:
-        text: 角色 創建一個新的 命名為{SPRITE_NAME} 造型設為{ANIMATION_NAME} 定位到{LOCATION}
-      aalab_goToScene:
-        text: 前往現場 {SCENE}
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: 角色 {SPRITE} {DIRECTION} 移動 {DISTANCE} 像素
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 東
-            '"South"': 南
-            '"West"': 西
-      aalab_prompt:
-        text: 提問 {MESSAGE}
-      aalab_scene:
-        text: 現場 {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: 設定故事
-      aalab_starwars_playSound:
-        text: 播放{OPTION}聲音
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': 格狀
+            '"border"': 邊框
+            '"row"': 橫列
             '"random"': 隨機
-            '"R2-D2 random"': R2-D2 隨機
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': 全部
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': 全部
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:

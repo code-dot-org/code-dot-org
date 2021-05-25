@@ -3,4 +3,4 @@
 #locked-stage{style: hidden ? 'display: none;' : '', 'data-hidden': hidden}
   %div{style: "font-size: 14px; margin-top: 10px; margin-bottom: 10px;"}
     =t('locked_stage')
-  = link_to t('continue'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large btn-primary next-stage submitButton'
+  = link_to t('continue'), @script_level.next_level_or_redirect_path_for_user(current_user), class: 'btn btn-large btn-primary next-lesson submitButton'

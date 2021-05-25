@@ -416,7 +416,9 @@ vi:
       playlab_k1: Kho trò chơi (dành cho trẻ chưa biết đọc)
       scratch: Scratch
       sports: Thể thao
-      starwars: Cuộc Chiến Giữa Các Vì Sao
+      starwars: Chiến tranh giữa các vì sao
+      starwarsblocks: Chiến tranh giữa các vì sao (Khối)
+      starwarsblocks_hour: Chiến tranh giữa các vì sao (Khối)
       weblab: Kho Web
       view_all: Xem tất cả các dự án ...
     popup:
@@ -764,7 +766,7 @@ vi:
     frozen:
       title: Frozen
     starwars:
-      title: Cuộc Chiến Giữa Các Vì Sao
+      title: Chiến tranh giữa các vì sao
     infinity:
       title: Phòng thí nghiệm Vui Chơi Bất Tận
       body: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với

@@ -788,6 +788,10 @@ ca:
             '"rotation"': rotació
             '"direction"': direcció del moviment
             '"speed"': velocitat
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': mida
       gamelab_setSizes:
         text: configurar {SPRITE} {PROPERTY} a {N}%
         options:
@@ -950,6 +954,13 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': quadrícula
+            '"border"': frontera
+            '"row"': filera
+            '"random"': atzar
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:
@@ -958,9 +969,12 @@ ca:
         text: gira a la dreta
       Vector_positionCenter:
         text: centre
-      aalab_starwars_playSound:
+      aalab_layoutSprites:
         options:
-          OPTION:
+          FORMAT:
+            '"grid"': quadrícula
+            '"border"': frontera
+            '"row"': filera
             '"random"': atzar
       binary_move:
         options:

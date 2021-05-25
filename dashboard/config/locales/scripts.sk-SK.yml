@@ -1004,8 +1004,6 @@ sk:
               name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
-            0: Kapitola , Deň 1-2 Čo je to počítač?
-            1: Kapitola , Deň 1-2 Čo je to počítač?
             Unit 1, Days 3-4 Buying a Computer:
               name: Kapitola 1 , Deň 3-4 Kúpa počítača.
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1054,8 +1052,6 @@ sk:
               name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
-            0: Kapitola , Deň 1-2 Čo je to počítač?
-            1: Kapitola , Deň 1-2 Čo je to počítač?
             Unit 1, Days 3-4 Buying a Computer:
               name: Kapitola 1 , Deň 3-4 Kúpa počítača.
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1072,8 +1068,6 @@ sk:
               name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
-            0: Kapitola , Deň 1-2 Čo je to počítač?
-            1: Kapitola , Deň 1-2 Čo je to počítač?
             Unit 1, Days 3-4 Buying a Computer:
               name: Kapitola 1 , Deň 3-4 Kúpa počítača.
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1694,8 +1688,6 @@ sk:
               name: Kapitola 1, Deň 10 Tvorenie príbehu pomocou dát.
             Unit 1, Day 11-14 Data Modeling and Design:
               name: Kapitola 1, Deň 11-14 Modelovanie dát a dizajn.
-            0: Kapitola , Deň 1-2 Čo je to počítač?
-            1: Kapitola , Deň 1-2 Čo je to počítač?
             Unit 1, Days 3-4 Buying a Computer:
               name: Kapitola 1 , Deň 3-4 Kúpa počítača.
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1858,14 +1850,12 @@ sk:
                 `displace`, `bounce`, and `bounceOff`).
             Functions:
               name: Funkcie
-              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+              description_student: V tejto lekcii si povieme o funkciách ako spôsobe
                 organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
                 sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
                 jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
                 začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
                 a pridanie funkcionality do finálnej verzie hry.
-
-'
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ
@@ -1901,19 +1891,15 @@ sk:
               name: 'Projekt: vytvor vlastnú hru'
             Programming for Entertainment:
               name: Programovanie pre zábavu
-              description_student: 'Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
+              description_student: Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
                 a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote.
                 Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  -
                 či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
-
-'
-              description_teacher: 'Na začiatku nášho kurzu sa zamyslíme nad „problémami“
+              description_teacher: Na začiatku nášho kurzu sa zamyslíme nad „problémami“
                 nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme
                 v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika
                 a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok
                 seba-vyjadrenia.
-
-'
             Plotting Shapes:
               name: Tvorba tvarov
               description_student: V tejto lekcii si precvičíme komunikáciu inštrukcií
@@ -2191,16 +2177,14 @@ sk:
                 svoje plagáty podľa novej definície.
             Input and Output:
               name: Vstup a Výstup
-              description_student: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_student: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
                 ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti,
                 ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy
                 a výstupy použité pre túto činnosť.
-
-'
-              description_teacher: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
@@ -2213,14 +2197,18 @@ sk:
                 v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné
                 činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú
                 vstupy a výstupy použité pre túto činnosť.
-
-'
             Processing:
               name: Spracovanie
-              description_teacher: |+
-                Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
-
-
+              description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
+                kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
+                a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
+                a slúži na zavedenie obecnej definície spracovania. Druhé triedenie
+                predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus,
+                ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú
+                a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie
+                sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré
+                použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu
+                na riešenie problému.
             Storage:
               name: Pamäť
             Project - Propose an App:
@@ -3001,7 +2989,7 @@ sk:
               description_teacher: "V tejto lekcii zasadíme skutočné semienko a spojíme
                 tak koncept algoritmov s aktivitami skutočného života. Cieľom tejto
                 aktivity je budovať zručnosti na preklápanie situácií zo skutočného
-                sveta do online scenárov a naopak.\r\n"
+                sveta do online scenárov a naopak.\r"
             Learn to Drag and Drop:
               name: Postupnosť krokov s blokmi
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
@@ -3194,14 +3182,14 @@ sk:
               name: 'Ak/Inak: Podmienky s kartami'
               description_student: Je čas na hru, v ktorej budeš zbierať body len
                 za určitých podmienok!
-              description_teacher: "Táto lekcia bez počítača žiakom ukazuje, ako sa
+              description_teacher: Táto lekcia bez počítača žiakom ukazuje, ako sa
                 dajú využiť podmienky na úpravu programu tak, aby reagoval na vstupné
                 informácie. Častokrát pri písaní programu nemáme všetky informácie,
                 ktoré potrebujeme. Niekedy tiež chceme, aby sa program v rôznych situáciách
                 zachoval rozdielne - a to aj vtedy, keď nevieme, ktorá situácia reálne
                 nastane v momente spustenia programu. Toto je moment, keď do hry vstupujú
                 podmienky. Podmienky umožňujú počítačom robiť rozhodnutia na základe
-                informácie pravdivej v momente spustenia kódu.\n\n"
+                informácie pravdivej v momente spustenia kódu.
             Conditionals in Bee:
               name: Podmienky s včelou
             Conditionals & Loops in Maze:
@@ -4456,19 +4444,15 @@ sk:
           lessons:
             Programming for Entertainment:
               name: Programovanie pre zábavu
-              description_student: 'Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
+              description_student: Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
                 a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote.
                 Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  -
                 či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
-
-'
-              description_teacher: 'Na začiatku nášho kurzu sa zamyslíme nad „problémami“
+              description_teacher: Na začiatku nášho kurzu sa zamyslíme nad „problémami“
                 nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme
                 v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika
                 a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok
                 seba-vyjadrenia.
-
-'
             Plotting Shapes:
               name: Tvorba tvarov
               description_student: V tejto lekcii si precvičíme komunikáciu inštrukcií
@@ -4672,14 +4656,12 @@ sk:
                 `displace`, `bounce`, and `bounceOff`).
             Functions:
               name: Funkcie
-              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+              description_student: V tejto lekcii si povieme o funkciách ako spôsobe
                 organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
                 sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
                 jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
                 začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
                 a pridanie funkcionality do finálnej verzie hry.
-
-'
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ
@@ -4765,7 +4747,7 @@ sk:
               description_teacher: "V tejto lekcii zasadíme skutočné semienko a spojíme
                 tak koncept algoritmov s aktivitami skutočného života. Cieľom tejto
                 aktivity je budovať zručnosti na preklápanie situácií zo skutočného
-                sveta do online scenárov a naopak.\r\n"
+                sveta do online scenárov a naopak.\r"
             Learn to Drag and Drop:
               name: Nauč sa presunúť a pustiť
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
@@ -5627,16 +5609,14 @@ sk:
                 svoje plagáty podľa novej definície.\r"
             Input and Output:
               name: Vstup a Výstup
-              description_student: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_student: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
                 ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti,
                 ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy
                 a výstupy použité pre túto činnosť.
-
-'
-              description_teacher: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
@@ -5649,14 +5629,18 @@ sk:
                 v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné
                 činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú
                 vstupy a výstupy použité pre túto činnosť.
-
-'
             Processing:
               name: Spracovanie
-              description_teacher: |+
-                Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
-
-
+              description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
+                kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
+                a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
+                a slúži na zavedenie obecnej definície spracovania. Druhé triedenie
+                predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus,
+                ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú
+                a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie
+                sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré
+                použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu
+                na riešenie problému.
             Storage:
               name: Pamäť
             Project - Propose an App:
@@ -6260,13 +6244,11 @@ sk:
               name: Simulácia experimentov
               description_student: Spusti simulácie na počítači a experimentuj zmenou
                 premenných.
-              description_teacher: 'Spustením jednoduchej simulácie v Sprite Lab si
+              description_teacher: Spustením jednoduchej simulácie v Sprite Lab si
                 študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
                 ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
                 budú mať študenti možnosť predpovedať, ako môže zmena premennej v
                 simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
-
-'
         dance-low:
           title: Tanečná Párty (slabé pripojenie)
           description_short: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
@@ -6849,16 +6831,14 @@ sk:
                 svoje plagáty podľa novej definície.\r"
             Input and Output:
               name: Vstup a Výstup
-              description_student: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_student: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
                 ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti,
                 ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy
                 a výstupy použité pre túto činnosť.
-
-'
-              description_teacher: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
@@ -6871,14 +6851,18 @@ sk:
                 v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné
                 činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú
                 vstupy a výstupy použité pre túto činnosť.
-
-'
             Processing:
               name: Spracovanie
-              description_teacher: |+
-                Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
-
-
+              description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
+                kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
+                a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
+                a slúži na zavedenie obecnej definície spracovania. Druhé triedenie
+                predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus,
+                ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú
+                a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie
+                sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré
+                použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu
+                na riešenie problému.
             Apps and Storage:
               name: Aplikácie a Pamäť
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a
@@ -7356,19 +7340,15 @@ sk:
           lessons:
             Programming for Entertainment:
               name: Programovanie pre zábavu
-              description_student: 'Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
+              description_student: Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
                 a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote.
                 Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  -
                 či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
-
-'
-              description_teacher: 'Na začiatku nášho kurzu sa zamyslíme nad „problémami“
+              description_teacher: Na začiatku nášho kurzu sa zamyslíme nad „problémami“
                 nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme
                 v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika
                 a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok
                 seba-vyjadrenia.
-
-'
             Plotting Shapes:
               name: Tvorba tvarov
               description_student: V tejto lekcii si precvičíme komunikáciu inštrukcií
@@ -7572,14 +7552,12 @@ sk:
                 `displace`, `bounce`, and `bounceOff`).
             Functions:
               name: Funkcie
-              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+              description_student: V tejto lekcii si povieme o funkciách ako spôsobe
                 organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
                 sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
                 jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
                 začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
                 a pridanie funkcionality do finálnej verzie hry.
-
-'
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ
@@ -7802,6 +7780,20 @@ sk:
               name: Posielanie binárnych správ s internetovým simulátorom
             Binary Numbers:
               name: Binárne čísla
+        csd-tests:
+          lessons:
+            Computers and Problem Solving:
+              name: Počítače a riešenie problémov
+            Interactive Animations and Games:
+              name: Interaktívne animácie a hry
+        csd-videos:
+          lessons:
+            Problem Solving and Computers:
+              name: Riešenie problémov a počítače
+            Data and Society:
+              name: Údaje a spoločnosť
+            Physical Computing:
+              name: Fyzické výpočty
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -8101,16 +8093,14 @@ sk:
                 svoje plagáty podľa novej definície.\r"
             Input and Output:
               name: Vstup a Výstup
-              description_student: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_student: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
                 ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti,
                 ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy
                 a výstupy použité pre túto činnosť.
-
-'
-              description_teacher: 'V tejto lekcii študenti zvážia niekoľko výpočtových
+              description_teacher: V tejto lekcii študenti zvážia niekoľko výpočtových
                 zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny
                 sú priradené k výpočtovému zariadeniu a na základe definície vstupu
                 a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov
@@ -8123,14 +8113,18 @@ sk:
                 v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné
                 činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú
                 vstupy a výstupy použité pre túto činnosť.
-
-'
             Processing:
               name: Spracovanie
-              description_teacher: |+
-                Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.
-
-
+              description_teacher: Študenti dvakrát absolvujú aktivitu - triedenie
+                kariet - bez elektronických pomôcok, aby preskúmali význam spracovania
+                a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení
+                a slúži na zavedenie obecnej definície spracovania. Druhé triedenie
+                predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus,
+                ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú
+                a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie
+                sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré
+                použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu
+                na riešenie problému.
             Apps and Storage:
               name: Aplikácie a Pamäť
               description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a
@@ -8197,19 +8191,15 @@ sk:
           lessons:
             Programming for Entertainment:
               name: Programovanie pre zábavu
-              description_student: 'Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
+              description_student: Zamyslíme sa nad „problémami“ nudy a seba-vyjadrenia
                 a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote.
                 Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  -
                 či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
-
-'
-              description_teacher: 'Na začiatku nášho kurzu sa zamyslíme nad „problémami“
+              description_teacher: Na začiatku nášho kurzu sa zamyslíme nad „problémami“
                 nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme
                 v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika
                 a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok
                 seba-vyjadrenia.
-
-'
             Plotting Shapes:
               name: Tvorba tvarov
               description_student: V tejto lekcii si precvičíme komunikáciu inštrukcií
@@ -8413,14 +8403,12 @@ sk:
                 `displace`, `bounce`, and `bounceOff`).
             Functions:
               name: Funkcie
-              description_student: 'V tejto lekcii si povieme o funkciách ako spôsobe
+              description_student: V tejto lekcii si povieme o funkciách ako spôsobe
                 organizovania a sprehľadnenia kódu, či odstránenia jeho opakujúcich
                 sa častí. Ukážeme si, že na vyššej, abstraktnejšej úrovni sa dajú
                 jednotlivé programovacie kroky ľahšie pochopiť a zdôvodniť.  Potom
                 začneme funkcie tvoriť. Na konci lekcie tieto znalosti využijeme na  zefektívnenie
                 a pridanie funkcionality do finálnej verzie hry.
-
-'
             The Game Design Process:
               name: Proces tvorby hry
               description_student: Táto lekcia ti predstaví proces, ktorý použiješ
@@ -8830,6 +8818,8 @@ sk:
               display_name: Funkcie
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -8840,12 +8830,16 @@ sk:
               display_name: Prechody
             csp_project:
               display_name: Projekt
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametre a Hodnoty návratnosti
             csp_libraries:
               display_name: Knižnice
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
         csd2-2020:
           title: CSD Lekcia 2 - Vývoj webových stránok ('20-'21)
           lesson_groups:
@@ -8905,8 +8899,8 @@ sk:
                 lekcie. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
                 s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré
                 budú riešiť po zvyšok kurzu.\r\n\r\n**K dispozícii sú aj alternatívne
-                verzie tejto lekcie** \r\n\r\n* [Stôl z novín](../4/)\r\n* [Most z
-                cestovín](../5/)\r\n* [Papierová veža](../6/)"
+                verzie tejto lekcie** \r\n\r\n\n* [Stôl z novín](../4/)\r\n\n* [Most
+                z cestovín](../5/)\r\n\n* [Papierová veža](../6/)"
             The Problem Solving Process:
               name: Proces riešenia problémov
               description_student: "**Otázka dňa: Aké všeobecné kroky môžeme použiť
@@ -9018,7 +9012,7 @@ sk:
                 vstup-výstup-pamäť -spracovanie a trieda sa zamýšľa nad tým, ako rôzne
                 aplikácie používajú jednotlivé komponenty, a aký vplyv má model na
                 to, či by sa niečo malo považovať za počítač alebo nie."
-              description_teacher: |
+              description_teacher: |-
                 ** Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu? **
                 \ r
                 Táto lekcia predstavuje posledný komponent modelu výpočtu: pamäť. Po vyskúšaní aplikácie „výber oblečenia“ študenti diskutujú o tom, aké informácie by sa mali v aplikácii ukladať, a naopak, aké by mali byť vkladané pri jej každom spustení. Potom sa pozrú na sériu aplikácií a na základe svojich rozhodnutí o tom, čo sa má uložiť, vytvoria smernice o tom, ktoré informácie by sa mali ukladať. Potom preskúmajú štyri komponenty výpočtového modelu tejto kapitoly: vstup, výstup, pamäť a spracovanie. Potom majú ešte jednu príležitosť zrevidovať svoje rozhodnutia o tom, ktoré položky, spomínané skôr v tejto kapitole, by sa mali byť klasifikované ako „počítače“. Hodina končí úvahou o ich vlastných nápadoch na aplikáciu a o tom, ako by pamäť využívali.
@@ -9041,7 +9035,7 @@ sk:
                 funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti
                 využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny,
                 a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt
-                je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.\n"
+                je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne."
             'Alternate Versions of Lesson 3: Exploring Problem Solving':
               name: 'Alternatívne Verzie Lekcie 3: Objavovanie riešenia problémov'
             'Lesson 3: Exploring Problem Solving - Games Theme':
@@ -9995,13 +9989,11 @@ sk:
               name: Simulácia experimentov
               description_student: Spusti simulácie na počítači a experimentuj zmenou
                 premenných.
-              description_teacher: 'Spustením jednoduchej simulácie v Sprite Lab si
+              description_teacher: Spustením jednoduchej simulácie v Sprite Lab si
                 študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
                 ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
                 budú mať študenti možnosť predpovedať, ako môže zmena premennej v
                 simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
-
-'
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
@@ -10243,13 +10235,34 @@ sk:
               display_name: 'Lekcia 1: Digitálne informácie'
             cspSurvey:
               display_name: Dotazník
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
           lessons:
             Binary Numbers:
               name: Binárne čísla
+        csp2-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
         csp3-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
           lessons:
             Debugging:
               name: Hľadanie a odstraňovanie chýb
+        csp6-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
+        csp9-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
+        csp10-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Hodnotenie kurzu
         csp3-virtual:
           lesson_groups:
             csp3_1_2018:
@@ -10654,6 +10667,12 @@ sk:
               name: Kurz B
             CS Discoveries:
               name: Objavujeme informatiku
+            Course E:
+              name: Kurz E
+            Course F:
+              name: Kurz F
+            csf:
+              name: Základy Informatiky
         virustest:
           title: Prebieha simulácia nákazy
           description_short: Pomocou programu Sprite Lab vytvorte simuláciu nákazy
@@ -10664,6 +10683,10 @@ sk:
               name: AI pomáha oceánom
             visualizing:
               name: Vizualizovanie dát.
+            lesson14:
+              name: Hodina 14
+            lesson15:
+              name: Hodina 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -10695,7 +10718,9 @@ sk:
             lessonGroup-3:
               display_name: Premenné
             outbreak:
-              display_name: Simulácia napadnutia
+              display_name: Simulácia nákazy
+            debugging:
+              display_name: Hľadanie a odstraňovanie chýb
         csd1-2021:
           title: CSD Lekcia 1 - Riešenie Problémov a Výpočtová Technika ('20-'21)
           description: Riešenie problémov a výpočtová technika je vysoko interaktívny
@@ -10761,7 +10786,7 @@ sk:
                 funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti
                 využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny,
                 a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt
-                je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.\n"
+                je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne."
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia
                 3)
@@ -11238,12 +11263,12 @@ sk:
             Sticker Art with Loops:
               key: Pečiatkovanie v cykloch
               name: Pečiatkovanie v cykloch
-              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
-                si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
+              description_teacher: 'Sledujte nadšenie na tvárach vašich študentov
+                ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
                 lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
                 Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
-                pre portfólio, či ako ukážku pre rodičov.
+                pre portfólio, či ako ukážku pre rodičov. '
             'Events: The Big Event':
               key: 'Udalosti: Veľká udalosť'
               name: Veľká udalosť
@@ -11341,14 +11366,14 @@ sk:
               name: Podmienky s kartami
               description_student: Je čas na hru, v ktorej budeš zbierať body len
                 za určitých podmienok!
-              description_teacher: "Táto lekcia bez počítača žiakom ukazuje, ako sa
+              description_teacher: Táto lekcia bez počítača žiakom ukazuje, ako sa
                 dajú využiť podmienky na úpravu programu tak, aby reagoval na vstupné
                 informácie. Častokrát pri písaní programu nemáme všetky informácie,
                 ktoré potrebujeme. Niekedy tiež chceme, aby sa program v rôznych situáciách
                 zachoval rozdielne - a to aj vtedy, keď nevieme, ktorá situácia reálne
                 nastane v momente spustenia programu. Toto je moment, keď do hry vstupujú
                 podmienky. Podmienky umožňujú počítačom robiť rozhodnutia na základe
-                informácie pravdivej v momente spustenia kódu.\n\n"
+                informácie pravdivej v momente spustenia kódu.
             Conditionals in Bee:
               key: Podmienky s včelou
               name: Podmienky "ak/inak" s včelou
@@ -11464,10 +11489,10 @@ sk:
             Alien Dance Party with Sprite Lab:
               key: Mimozemská tanečná párty so Sprite Labom
               name: Mimozemská tanečná párty so Sprite Labom
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
+              description_teacher: V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Private and Personal Information:
               key: Súkromné a osobné údaje
               name: Súkromné a osobné údaje
@@ -11541,6 +11566,8 @@ sk:
               display_name: Vplyv Informatiky
             end_of_course_project:
               display_name: Záverečný projekt
+            lessonGroup-7:
+              display_name: Vplyv Informatiky
           student_description: Začneš programovať s algoritmami, cyklami, podmienkami
             a udalosťami a potom sa pustíš do funkcií. V druhej časti tohto kurzu
             nadizajnuješ a vytvoríš záverečný projekt, ktorý môžeš zdieľať s kamarátmi
@@ -11571,12 +11598,12 @@ sk:
             Loops with the Artist:
               key: Cykly s umelcom
               name: Kreslenie s cyklami
-              description_teacher: 'Sledujte nadšenie na tvárach vašich študentov
-                ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
+              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
+                si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
                 lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
                 Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
-                pre portfólio, či ako ukážku pre rodičov. '
+                pre portfólio, či ako ukážku pre rodičov.
             Nested Loops in the Maze:
               name: Vnorené cykly v bludisku
             The Power of Words:
@@ -11603,13 +11630,11 @@ sk:
               name: Simulácia experimentov
               description_student: Spusti simulácie na počítači a experimentuj zmenou
                 premenných.
-              description_teacher: 'Spustením jednoduchej simulácie v Sprite Lab si
+              description_teacher: Spustením jednoduchej simulácie v Sprite Lab si
                 študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje,
                 ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie
                 budú mať študenti možnosť predpovedať, ako môže zmena premennej v
                 simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
-
-'
             AI for Oceans:
               key: AI pomáha oceánom
               name: AI pomáha oceánom
@@ -11687,7 +11712,7 @@ sk:
                 doľava alebo otočiť doprava.
             Debugging with Scrat:
               key: Odstraňovanie chýb so Scratom
-              name: Odstraňovanie chýb so Scratom
+              name: Odstraňovanie chýb v bludisku
             Collecting Treasure with Laurel:
               key: Zbieranie pokladov s Laurel
               name: Zbieranie pokladov s Laurel
@@ -11756,6 +11781,11 @@ sk:
               name: Premenné s Umelcom
               description_student: Nezabudni do triedy priniesť svoju tvorivosť! V
                 týchto úlohách pomocou premenných vytvoríš fantastické kresby.
+              description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
+                sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
+                naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
+                aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných
+                hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
             Changing Variables with Bee:
               key: Meniace sa premenné s včelou
               name: Meniace sa premenné s včelou
@@ -11791,10 +11821,10 @@ sk:
             Alien Dance Party:
               key: Mimozemská tanečná párty
               name: Mimozemská tanečná párty
-              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe,
+              description_teacher: V tejto lekcii študenti pracujú v Sprite Labe,
                 v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
                 svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
+                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Behaviors in Sprite Lab:
               key: Správania v Sprite Labe
               name: Správania v Sprite Labe
@@ -11857,11 +11887,6 @@ sk:
                 a potom pokročia k používaniu počítača na dokončenie online úloh.
             Programming in with Angry Birds:
               name: Programovanie s Angry Birds
-              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
-                sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
-                na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
-                spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť
-                doľava alebo otočiť doprava.
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
@@ -11988,6 +12013,10 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Obsah
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -12034,3 +12063,7 @@ sk:
               display_name: Ďalšie kroky
             Introduction:
               display_name: Úvod
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Dotazník

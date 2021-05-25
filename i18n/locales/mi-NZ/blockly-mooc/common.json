@@ -153,6 +153,7 @@
   "errorUnusedParam": "I tāpiritia e koe tētahi paraka tawhā engari kāore i whakamahia i tō whakamahukitanga. Me mātua whakamahi koe i tō tawhā mā te pāwhiri i te \"whakatika\" me te hoatu i te paraka tawhā ki roto i te paraka kākāriki.",
   "exampleErrorMessage": "Me whakatika i ētahi tauira o te taumahi {functionName}. Me mātua tūhono i te whakamahukitanga, me mātua whakautu hoki i te pātai.",
   "examplesFailedOnClose": "Kotahi neke atu rānei o āu tauira kāore e whai pānga ki tō whakamahukitanga. Tirohia anō ō tauira i mutu i te kati",
+  "explainRestrictedSectionLearnMore": "Ako Tonu",
   "extraTopBlocks": "He paraka herekore āu.",
   "extraTopBlocksWhenRun": "He paraka herekore āu. I meatia rānei kia whakapiri i ēnei ki te paraka \"ina whakahaerehia\"?",
   "fallbackVideoClosedCaptioningDialogClose": "Kati",

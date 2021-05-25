@@ -77,63 +77,31 @@
           "being hungry": "الشعور بالجوع"
         },
         "outbreak1": {
-          "recovering": "التعافي",
-          "wandering": "التحرك"
+          "recovering": "التعافي"
         },
         "outbreak2": {
-          "recovering": "التعافي",
-          "wandering": "التحرك"
+          "recovering": "التعافي"
         },
         "outbreak3": {
-          "recovering": "التعافي",
-          "wandering": "التحرك"
+          "recovering": "التعافي"
         },
         "outbreak4": {
           "recovering": "التعافي",
-          "wandering": "التحرك",
-          "moving east": "التحرك ناحية الشرق",
-          "spinning left": "الدوران ناحية اليسار",
-          "spinning right": "الدوران ناحية اليمين",
-          "shrinking": "الانقباض",
-          "growing": "النمو",
-          "moving south": "التحرك ناحية الجنوب",
-          "swimming left and right": "السباحة ناحية اليسار واليمين",
-          "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز",
-          "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "outbreak5": {
-          "recovering": "التعافي",
-          "wandering": "التحرك"
+          "recovering": "التعافي"
         },
         "outbreak6": {
-          "recovering": "التعافي",
-          "wandering": "التحرك"
+          "recovering": "التعافي"
         },
         "outbreak7": {
           "recovering": "التعافي",
-          "wandering": "التحرك",
-          "moving east": "التحرك ناحية الشرق",
-          "spinning left": "الدوران ناحية اليسار",
-          "spinning right": "الدوران ناحية اليمين",
-          "shrinking": "الانقباض",
-          "growing": "النمو",
-          "moving south": "التحرك ناحية الجنوب",
           "moving left and right": "تحريك إلى اليسار وإلى اليمين",
-          "moving north": "التحرك ناحية الشمال",
-          "jittering": "الاهتزاز",
-          "moving west": "التحرك ناحية الغرب",
-          "patrolling": "التجوُّل",
           "moving with arrow keys": "التحرك من خلال الأسهم"
         },
         "outbreak8": {
           "recovering": "التعافي",
-          "wandering": "التحرك",
-          "moving east": "التحرك ناحية الشرق",
-          "spinning left": "الدوران ناحية اليسار",
-          "spinning right": "الدوران ناحية اليمين",
           "moving left and right": "تحريك إلى اليسار وإلى اليمين",
           "moving with arrow keys": "التحرك من خلال الأسهم"
         },

@@ -574,12 +574,6 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -627,12 +621,6 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -642,12 +630,6 @@ eu:
           description: '2 Fasea Online: Nahasitako Uda Ikasketa'
           description_short: '2 Fasea Online: Nahasitako Uda Ikasketa'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:
@@ -889,12 +871,6 @@ eu:
               name: 'Deskonektatua: abestiak idatzi aldagaiekin'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: Ongi etorri!
             Wrap-up:

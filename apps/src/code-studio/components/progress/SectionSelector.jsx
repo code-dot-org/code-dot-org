@@ -15,7 +15,7 @@ class SectionSelector extends React.Component {
     style: PropTypes.object,
     // If false, the first option is "Select Section"
     requireSelection: PropTypes.bool,
-    // If true, we'll show even if we don't have any lockable or hidden stages
+    // If true, we'll show even if we don't have any lockable or hidden lessons
     alwaysShow: PropTypes.bool,
     // If true, changing sections results in us hitting the server
     reloadOnChange: PropTypes.bool,

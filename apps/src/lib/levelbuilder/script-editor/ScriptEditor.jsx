@@ -5,7 +5,6 @@ import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonD
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonExtrasEditor';
 import color from '@cdo/apps/util/color';
@@ -27,6 +26,7 @@ import {
   resourceShape as migratedResourceShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -146,7 +146,14 @@ class ScriptEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
-      deprecated: this.props.initialDeprecated
+      deprecated: this.props.initialDeprecated,
+      publishedState: !this.props.initialHidden
+        ? this.props.initialIsStable
+          ? 'Recommended'
+          : 'Preview'
+        : this.props.initialPilotExperiment
+        ? 'Pilot'
+        : 'Beta'
     };
   }
 
@@ -241,6 +248,16 @@ class ScriptEditor extends React.Component {
           'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
       });
       return;
+    } else if (
+      this.state.publishedState === 'Pilot' &&
+      this.state.pilotExperiment === ''
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.'
+      });
+      return;
     }
 
     let dataToSave = {
@@ -254,7 +271,7 @@ class ScriptEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      visible_to_teachers: !this.state.hidden,
+      hidden: this.state.hidden,
       is_stable: this.state.isStable,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
@@ -384,7 +401,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -394,7 +414,10 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
-            features={{imageUpload: true}}
+            features={{
+              imageUpload: true,
+              resourceLink: true
+            }}
           />
         </CollapsibleEditorSection>
 
@@ -569,141 +592,67 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
-              <label>
-                Family Name
-                <select
-                  className="familyNameSelector"
-                  value={this.state.familyName}
-                  style={styles.dropdown}
-                  disabled={this.props.hasCourse}
-                  onChange={this.handleFamilyNameChange}
-                >
-                  {!this.state.isCourse && <option value="">(None)</option>}
-                  {this.props.scriptFamilies.map(familyOption => (
-                    <option key={familyOption} value={familyOption}>
-                      {familyOption}
-                    </option>
-                  ))}
-                </select>
-                {this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      This field cannot be edited because this script belongs to
-                      a course, and redirecting to the latest version of a
-                      specific unit within a course is deprecated. Please go to
-                      the course page to edit this field.
-                    </p>
-                  </HelpTip>
-                )}
-                {!this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      The family name is used to group together scripts that are
-                      different version years of the same standalone course so
-                      that users can be redirected between different version
-                      years.
-                    </p>
-                  </HelpTip>
-                )}
-                {this.state.isCourse && (
-                  <HelpTip>
-                    <p>
-                      If you want to clear the family name you need to uncheck
-                      standalone course.
-                    </p>
-                  </HelpTip>
-                )}
-              </label>
-              <label>
-                Version Year
-                <select
-                  value={this.state.versionYear}
-                  style={styles.dropdown}
-                  disabled={this.props.hasCourse}
-                  onChange={e => this.setState({versionYear: e.target.value})}
-                >
-                  <option value="">(None)</option>
-                  {this.props.versionYearOptions.map(year => (
-                    <option key={year} value={year}>
-                      {year}
-                    </option>
-                  ))}
-                </select>
-                {this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      This field cannot be edited because this script belongs to
-                      a course, and redirecting to the latest version of a
-                      specific unit within a course is deprecated. Please go to
-                      the course page to edit this field.
-                    </p>
-                  </HelpTip>
-                )}
-              </label>
-              <label>
-                Is a Standalone Course
-                <input
-                  className="isCourseCheckbox"
-                  type="checkbox"
-                  checked={this.state.isCourse}
-                  disabled={!this.state.familyName}
-                  style={styles.checkbox}
-                  onChange={this.handleStandaloneCourseChange}
-                />
-                {this.state.familyName && !this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      (Still in development) If checked, indicates that this
-                      Unit represents a standalone course. Examples of such
-                      Units include CourseA-F, Express, and Pre-Express.
-                    </p>
-                  </HelpTip>
-                )}
-                {!this.state.familyName && !this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      You must select a family name in order to mark something
-                      as a standalone course.
-                    </p>
-                  </HelpTip>
-                )}
-                {this.props.hasCourse && (
-                  <HelpTip>
-                    <p>
-                      This unit is already part of a course so it can not be a
-                      standalone course.
-                    </p>
-                  </HelpTip>
-                )}
-              </label>
-              <label>
-                Can be recommended (aka stable)
-                <input
-                  type="checkbox"
-                  checked={this.state.isStable}
-                  style={styles.checkbox}
-                  onChange={() =>
-                    this.setState({isStable: !this.state.isStable})
-                  }
-                />
-                <HelpTip>
-                  <p>
-                    If checked, this unit will be eligible to be the recommended
-                    version of the unit. The most recent eligible version will
-                    be the recommended version.
-                  </p>
-                </HelpTip>
-              </label>
-              <VisibleAndPilotExperiment
-                visible={!this.state.hidden}
-                updateVisible={() =>
-                  this.setState({hidden: !this.state.hidden})
-                }
-                pilotExperiment={this.state.pilotExperiment}
-                updatePilotExperiment={pilotExperiment =>
-                  this.setState({pilotExperiment})
-                }
-              />
+              {this.props.hasCourse && (
+                <p>
+                  This unit is part of a course. Go to the course edit page to
+                  publish the course and its units.
+                </p>
+              )}
+              {!this.props.hasCourse && (
+                <div>
+                  <label>
+                    Is a Standalone Course
+                    <input
+                      className="isCourseCheckbox"
+                      type="checkbox"
+                      checked={this.state.isCourse}
+                      disabled={!this.state.familyName}
+                      style={styles.checkbox}
+                      onChange={this.handleStandaloneCourseChange}
+                    />
+                    {this.state.familyName && (
+                      <HelpTip>
+                        <p>
+                          If checked, indicates that this Unit represents a
+                          standalone course. Examples of such Units include
+                          CourseA-F, Express, and Pre-Express.
+                        </p>
+                      </HelpTip>
+                    )}
+                    {!this.state.familyName && (
+                      <HelpTip>
+                        <p>
+                          You must select a family name in order to mark
+                          something as a standalone course.
+                        </p>
+                      </HelpTip>
+                    )}
+                  </label>
+                  <CourseVersionPublishingEditor
+                    visible={!this.state.hidden}
+                    isStable={this.state.isStable}
+                    pilotExperiment={this.state.pilotExperiment}
+                    versionYear={this.state.versionYear}
+                    familyName={this.state.familyName}
+                    updateVisible={visible => this.setState({hidden: !visible})}
+                    updateIsStable={isStable => this.setState({isStable})}
+                    updatePilotExperiment={pilotExperiment =>
+                      this.setState({pilotExperiment})
+                    }
+                    updateFamilyName={familyName => this.setState({familyName})}
+                    updateVersionYear={versionYear =>
+                      this.setState({versionYear})
+                    }
+                    families={this.props.scriptFamilies}
+                    versionYearOptions={this.props.versionYearOptions}
+                    isCourse={this.state.isCourse}
+                    publishedState={this.state.publishedState}
+                    updatePublishedState={publishedState =>
+                      this.setState({publishedState})
+                    }
+                  />
+                </div>
+              )}
             </div>
           )}
         </CollapsibleEditorSection>

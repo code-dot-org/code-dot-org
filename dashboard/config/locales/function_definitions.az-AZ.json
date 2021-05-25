@@ -187,57 +187,90 @@
         },
         "Course 4 Artist Binary 1": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary 2": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary 3": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary 4": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary 5": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary 6": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary 7": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2a": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary Free Play 2b": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Artist Binary pre1": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "Course 4 Bee Params 1": {
@@ -282,7 +315,8 @@
           "score_points": {
             "parameters": {
               "points": "xallar"
-            }
+            },
+            "name": "score_points"
           }
         },
         "Course 4 Play Lab Params 2": {
@@ -345,7 +379,8 @@
           "score_points": {
             "parameters": {
               "points": "xallar"
-            }
+            },
+            "name": "score_points"
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -361,6 +396,9 @@
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "altıbucaqlı çək"
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
           }
         },
         "Course 4 SCF 1a": {
@@ -379,6 +417,9 @@
             "parameters": {
               "length": "uzunluq"
             }
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
           }
         },
         "Course E: Play Lab Project": {
@@ -395,7 +436,8 @@
           "score_points": {
             "parameters": {
               "points": "xallar"
-            }
+            },
+            "name": "score_points"
           }
         },
         "Geometric Sun": {
@@ -821,12 +863,18 @@
         },
         "course4_artist_binary_challenge1": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "course4_artist_binary_challenge2": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "course4_artist_functions_challenge2": {
@@ -842,6 +890,9 @@
             "parameters": {
               "sides": "tərəflər"
             }
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -918,227 +969,362 @@
         },
         "courseD_artist_binary1": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary1_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary1_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary1_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary2_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary2_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary2_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary3_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary3_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary3_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary4_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary4_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary4_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary5_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary5_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary5_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary6_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary6_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary6_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary7_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary7_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary7_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary8_predict1_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binaryFP_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binaryFP_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binaryFP_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary_challenge1_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2018": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2019": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_artist_binary_challenge2_2020": {
           "draw": {
-            "name": "çək"
+            "name": "çək",
+            "parameters": {
+              "binary": "ikilik"
+            }
           }
         },
         "courseD_autorun_binary2_2019": {
@@ -1197,11 +1383,17 @@
         "courseE_artist_concept4": {
           "draw a square": {
             "name": "kvadrat çək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_concept4_2018": {
           "draw a square": {
             "name": "kvadrat çək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1217,21 +1409,45 @@
         "courseE_artist_functions10": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
           }
         },
         "courseE_artist_functions2": {
@@ -1312,16 +1528,25 @@
         "courseE_artist_functions7": {
           "draw a house": {
             "name": "ev çək"
+          },
+          "draw a window": {
+            "name": "pəncərə çəkin"
           }
         },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "ev çək"
+          },
+          "draw a window": {
+            "name": "pəncərə çəkin"
           }
         },
         "courseE_artist_functions7_2020": {
           "draw a house": {
             "name": "ev çək"
+          },
+          "draw a window": {
+            "name": "pəncərə çəkin"
           }
         },
         "courseE_artist_functions8": {
@@ -1330,6 +1555,9 @@
           },
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -1338,6 +1566,9 @@
           },
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8_2019": {
@@ -1346,6 +1577,9 @@
           },
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8_2020": {
@@ -1354,6 +1588,9 @@
           },
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -1386,6 +1623,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8b_2019": {
@@ -1394,6 +1634,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8b_2020": {
@@ -1402,6 +1645,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -1410,6 +1656,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -1418,6 +1667,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -1426,6 +1678,9 @@
           },
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions9": {
@@ -1434,6 +1689,9 @@
           },
           "draw triangle": {
             "name": "üçbucaq çək"
+          },
+          "draw line of triangles": {
+            "name": "üçbucaqların xəttini çəkin"
           }
         },
         "courseE_artist_functions9_2018": {
@@ -1442,6 +1700,9 @@
           },
           "draw triangle": {
             "name": "üçbucaq çək"
+          },
+          "draw line of triangles": {
+            "name": "üçbucaqların xəttini çəkin"
           }
         },
         "courseE_artist_functions9_2019": {
@@ -1450,6 +1711,9 @@
           },
           "draw triangle": {
             "name": "üçbucaq çək"
+          },
+          "draw line of triangles": {
+            "name": "üçbucaqların xəttini çəkin"
           }
         },
         "courseE_artist_functions9_2020": {
@@ -1458,21 +1722,51 @@
           },
           "draw triangle": {
             "name": "üçbucaq çək"
+          },
+          "draw line of triangles": {
+            "name": "üçbucaqların xəttini çəkin"
           }
         },
         "courseE_artist_functionsProj_2018": {
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functionsProj_2019": {
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functionsProj_2020": {
           "draw square": {
             "name": "bir kvadrat çək"
+          },
+          "draw hexagon": {
+            "name": "altıbucaqlı çəkin"
+          },
+          "draw line of hexagons": {
+            "name": "altıbucaqlının xəttini çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
           }
         },
         "courseE_artist_functions_challenge1": {
@@ -1543,21 +1837,45 @@
         "courseE_artist_functions_predict2": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw line of polygons": {
+            "name": "çoxbucaqlının xəttini çəkin"
+          },
+          "draw polygon": {
+            "name": "çoxbucaqlı çəkin"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw line of polygons": {
+            "name": "çoxbucaqlının xəttini çəkin"
+          },
+          "draw polygon": {
+            "name": "çoxbucaqlı çəkin"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw line of polygons": {
+            "name": "çoxbucaqlının xəttini çəkin"
+          },
+          "draw polygon": {
+            "name": "çoxbucaqlı çəkin"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
             "name": "bir şey etmək"
+          },
+          "draw line of polygons": {
+            "name": "çoxbucaqlının xəttini çəkin"
+          },
+          "draw polygon": {
+            "name": "çoxbucaqlı çəkin"
           }
         },
         "courseE_bee_functions1": {
@@ -1804,6 +2122,9 @@
             "parameters": {
               "sides": "tərəflər"
             }
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1814,6 +2135,9 @@
             "parameters": {
               "length": "uzunluq"
             }
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
           }
         },
         "courseF_bee_functions6": {
@@ -1989,6 +2313,153 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "mənim funksiyam"
+          }
+        },
+        "4-5 Bee Debugging 8": {
+          "get 5 nectar": {
+            "name": "5 nektar əldə edin"
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "name": "5 nektar əldə edin"
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "name": "5 nektar əldə edin"
+          }
+        },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "körpü düzəldin"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "körpü düzəldin"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "körpü düzəldin"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "düzbucaqlı çəkin"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "düzbucaqlı çəkin"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "qısa körpü düzəldin"
+          },
+          "build long bridge": {
+            "name": "uzun körpü düzəldin"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "qısa körpü düzəldin"
+          },
+          "build long bridge": {
+            "name": "uzun körpü düzəldin"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "qısa körpü düzəldin"
+          },
+          "build long bridge": {
+            "name": "uzun körpü düzəldin"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          },
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+            "name": "kvadratların xəttini çəkin"
+          },
+          "draw a square 20": {
+            "name": "20 kvadratı çəkin"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"sadə\" həll"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "potensial həll"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"sadə\" həll"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "potensial həll"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "potensial həll"
+          }
+        },
+        "courseE_artist_functions7_2019": {
+          "draw a window": {
+            "name": "pəncərə çəkin"
           }
         }
       }

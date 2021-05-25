@@ -92,6 +92,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -161,8 +162,19 @@ class Section < ApplicationRecord
   # @param student [User] The student to enroll in this section.
   # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS | ADD_STUDENT_FAILURE] Whether the student was
   #   already in the section or has now been added.
-  def add_student(student)
+  def add_student(student, added_by = nil)
+    follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
     return ADD_STUDENT_FAILURE if user_id == student.id
+
+    # If the section is restricted, return a restricted error unless a user is added by
+    # the teacher (Creating a Word or Picture login-based student) or is created via an
+    # OAUTH login section (Google Classroom / clever).
+    # added_by is passed only from the sections_students_controller, used by teachers to
+    # manager their rosters.
+    unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
+      return ADD_STUDENT_RESTRICTED if restrict_section == TRUE && (!follower || follower.deleted?)
+    end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
@@ -271,6 +283,7 @@ class Section < ApplicationRecord
       providerManaged: provider_managed?,
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
+      restrict_section: restrict_section
     }
   end
 
@@ -286,13 +299,17 @@ class Section < ApplicationRecord
     false
   end
 
-  # Hide or unhide a stage for this section
-  def toggle_hidden_stage(stage, should_hide)
-    hidden_stage = SectionHiddenLesson.find_by(stage_id: stage.id, section_id: id)
-    if hidden_stage && !should_hide
-      hidden_stage.delete
-    elsif hidden_stage.nil? && should_hide
-      SectionHiddenLesson.create(stage_id: stage.id, section_id: id)
+  def restricted?
+    restrict_section
+  end
+
+  # Hide or unhide a lesson for this section
+  def toggle_hidden_lesson(lesson, should_hide)
+    hidden_lesson = SectionHiddenLesson.find_by(stage_id: lesson.id, section_id: id)
+    if hidden_lesson && !should_hide
+      hidden_lesson.delete
+    elsif hidden_lesson.nil? && should_hide
+      SectionHiddenLesson.create(stage_id: lesson.id, section_id: id)
     end
   end
 

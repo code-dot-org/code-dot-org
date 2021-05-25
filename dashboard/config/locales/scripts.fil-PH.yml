@@ -1198,12 +1198,6 @@ fil:
                 Direksyon
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Yunit 1, Day 17-19 Ano ang Kaalaman?
-            0: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
-            1: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Mga Araw na 3-4 Pagbibili ng Kompyuter
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1309,12 +1303,6 @@ fil:
                 Direksyon
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Yunit 1, Day 17-19 Ano ang Kaalaman?
-            0: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
-            1: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Mga Araw na 3-4 Pagbibili ng Kompyuter
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1336,12 +1324,6 @@ fil:
                 Direksyon
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Yunit 1, Day 17-19 Ano ang Kaalaman?
-            0: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
-            1: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Mga Araw na 3-4 Pagbibili ng Kompyuter
             Unit 1, Days 5-7 Searching and Web 2:
@@ -2835,12 +2817,6 @@ fil:
                 Direksyon
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Yunit 1, Day 17-19 Ano ang Kaalaman?
-            0: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
-            1: |-
-              Yunit 1, Mga Araw na 1-2
-              Ano ang Kompyuter?
             Unit 1, Days 3-4 Buying a Computer:
               name: Unit 1, Mga Araw na 3-4 Pagbibili ng Kompyuter
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3999,7 +3975,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -4091,19 +4067,17 @@ fil:
             Lists:
               name: Mga listahan
               description_student: Ang araling ito ay nagpapakilala sa mga ordered
-                at unordered na mga listahan at ang kaugnay na  &lt;ul&gt;, &lt;ol&gt;,
-                and &lt;li&gt;  mga HTML na tag. Ang klase ay magsasanay sa paggamit
-                ng mga tags, pagkatapos ay babalik sa proyekto na personal na pahina
-                sa web para idagdag ang bagong HTML na pahina na naglalaman ng mga
-                bagong tags.
+                at unordered na mga listahan at ang kaugnay na  <ul>, <ol>, and <li>  mga
+                HTML na tag. Ang klase ay magsasanay sa paggamit ng mga tags, pagkatapos
+                ay babalik sa proyekto na personal na pahina sa web para idagdag ang
+                bagong HTML na pahina na naglalaman ng mga bagong tags.
               description_teacher: Ang mga estudyante ay ipinakilala sa ordered at
                 unordered na mga listahan sa HTML at magtrabaho sa pagitan ng iilang
-                mga antas kung saan gagamitin nila ang  &lt;ul&gt;, &lt;ol&gt;, and
-                &lt;li&gt; na mga tags. Pagkatapos ay babalik sila sa kanilang proyekto,
-                kung saan magdadagdag sila ng bagong HTML na pahina. Sa loob ng bagong
-                pahina, sila ay magsusulat ng HTML para maipakita ang isang resipe,
-                top ten na listahan, o kahit na anong nilalaman na gumagamit ng mga
-                bagong tags na natutunan nila.
+                mga antas kung saan gagamitin nila ang  <ul>, <ol>, and <li> na mga
+                tags. Pagkatapos ay babalik sila sa kanilang proyekto, kung saan magdadagdag
+                sila ng bagong HTML na pahina. Sa loob ng bagong pahina, sila ay magsusulat
+                ng HTML para maipakita ang isang resipe, top ten na listahan, o kahit
+                na anong nilalaman na gumagamit ng mga bagong tags na natutunan nila.
             Intellectual Property and Images:
               name: Intelektwal na mga Pag-aari at mga Larawan
               description_student: Ang araling ito ay sumasaklaw sa kung paano gamitin
@@ -4122,7 +4096,7 @@ fil:
                 sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
                 pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
                 Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
-                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
+                larawan sa kanilang mga pahina sa web gamit ang <img> na tag."
             Project - Multi-Page Websites:
               name: Proyekto - Maraming-Pahina na mga Website
               description_student: 'Ang araling ito ay sumasaklaw sa mga hyperlinks,
@@ -4136,7 +4110,7 @@ fil:
                 sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
                 sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
                 sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
-                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r"
             RGB Colors and Classes:
               name: RGB na mga Kulay at mga Klase
               description_student: Ang araling ito ay sumasaklaw sa mga class at mga
@@ -4174,7 +4148,7 @@ fil:
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+                na ginawa nila para makuha ang pangwakas na disenyo.\r"
             Headings:
               name: Mga Heading
               description_student: Ang araling ito ay nagpapatuloy sa introduksyon
@@ -4283,7 +4257,7 @@ fil:
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r\n"
+                ng mga pagpapahusay sa disenyo.\r"
             Discovering Users:
               name: Pagtutuklas ng mga Gumagamit
             User-Centered Design Micro Activity:
@@ -4371,7 +4345,7 @@ fil:
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r\n"
+                para gawin ang papel na mga prototype.\r"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -6312,7 +6286,7 @@ fil:
                 na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
                 Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
                 ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
-                at ang kabaliktaran nito.\r\n"
+                at ang kabaliktaran nito.\r"
             Learn to Drag and Drop:
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante
                 ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
@@ -8210,7 +8184,7 @@ fil:
             sa csp3
           description: "Ito ay isang replika ng live na mga antas sa /s/csp3 na may
             mga bago at binagong mga yugto na idinagdag. HUWAG BAGUHIN ANG MGA LIVE
-            NA MGA ANTAS.\r\n"
+            NA MGA ANTAS.\r"
           lesson_groups:
             csp3_1:
               display_name: 'Kabanata 1: Mga Programming na Wika at mga Algoritmo'
@@ -8241,7 +8215,7 @@ fil:
               name: Yunit 3 Kabanata 1 Pagtatasa
           student_description: "Ito ay isang replika ng live na mga antas sa /s/csp3
             na may mga bago at binagong mga yugto na idinagdag. HUWAG BAGUHIN ANG
-            MGA LIVE NA MGA ANTAS.\r\n"
+            MGA LIVE NA MGA ANTAS.\r"
         pwc:
           title: Ang Access ng mga Pwc sa Iyong Potensyal na Kurikulum
           description: Sa PwC, kami ay naniniwala na lahat ng mga estudyante ay may
@@ -9242,19 +9216,17 @@ fil:
             Lists:
               name: Mga listahan
               description_student: Ang araling ito ay nagpapakilala sa mga ordered
-                at unordered na mga listahan at ang kaugnay na  &lt;ul&gt;, &lt;ol&gt;,
-                and &lt;li&gt;  mga HTML na tag. Ang klase ay magsasanay sa paggamit
-                ng mga tags, pagkatapos ay babalik sa proyekto na personal na pahina
-                sa web para idagdag ang bagong HTML na pahina na naglalaman ng mga
-                bagong tags.
+                at unordered na mga listahan at ang kaugnay na  <ul>, <ol>, and <li>  mga
+                HTML na tag. Ang klase ay magsasanay sa paggamit ng mga tags, pagkatapos
+                ay babalik sa proyekto na personal na pahina sa web para idagdag ang
+                bagong HTML na pahina na naglalaman ng mga bagong tags.
               description_teacher: Ang mga estudyante ay ipinakilala sa ordered at
                 unordered na mga listahan sa HTML at magtrabaho sa pagitan ng iilang
-                mga antas kung saan gagamitin nila ang  &lt;ul&gt;, &lt;ol&gt;, and
-                &lt;li&gt; na mga tags. Pagkatapos ay babalik sila sa kanilang proyekto,
-                kung saan magdadagdag sila ng bagong HTML na pahina. Sa loob ng bagong
-                pahina, sila ay magsusulat ng HTML para maipakita ang isang resipe,
-                top ten na listahan, o kahit na anong nilalaman na gumagamit ng mga
-                bagong tags na natutunan nila.
+                mga antas kung saan gagamitin nila ang  <ul>, <ol>, and <li> na mga
+                tags. Pagkatapos ay babalik sila sa kanilang proyekto, kung saan magdadagdag
+                sila ng bagong HTML na pahina. Sa loob ng bagong pahina, sila ay magsusulat
+                ng HTML para maipakita ang isang resipe, top ten na listahan, o kahit
+                na anong nilalaman na gumagamit ng mga bagong tags na natutunan nila.
             Intellectual Property and Images:
               name: Intelektwal na mga Pag-aari at mga Larawan
               description_student: Ang araling ito ay sumasaklaw sa kung paano gamitin
@@ -9273,7 +9245,7 @@ fil:
                 sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
                 pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
                 Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
-                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
+                larawan sa kanilang mga pahina sa web gamit ang <img> na tag."
             Clean Code and Debugging:
               name: Linisin ang Code at Pag-Debug
               description_student: Ang araling ito ay sumasaklaw sa mga karaniwang
@@ -9304,7 +9276,7 @@ fil:
                 sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
                 sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
                 sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
-                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r"
             Styling Text with CSS:
               name: Pag-style ng Teksto gamit ang CSS
               description_student: Ang araling ito ay nagpapakilala sa CSS bilang
@@ -9322,7 +9294,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -9393,7 +9365,7 @@ fil:
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+                na ginawa nila para makuha ang pangwakas na disenyo.\r"
           student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi
             ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung
             anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano
@@ -9434,7 +9406,7 @@ fil:
                 na mga gawain sa pamamagitan ng pagtatanim ng aktwal na mga buto.
                 Ang layunin dito ay para magsimulang bumuo ng mga kakayahan para isalin
                 ang tunay na buhay na mga sitwasyon sa isang online na mga sitwasyon
-                at ang kabaliktaran nito.\r\n"
+                at ang kabaliktaran nito.\r"
             Learn to Drag and Drop:
               name: Matutong Mag-Drag at Mag-Drop
               description_teacher: Ang araling ito ay magbibigay sa mga estudyante
@@ -10658,7 +10630,7 @@ fil:
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r\n"
+                ng mga pagpapahusay sa disenyo.\r"
             User-Centered Design Micro Activity:
               name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
               description_student: Sa maliliit na mga grupo, ang klase ay gagamit
@@ -10815,7 +10787,7 @@ fil:
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r\n"
+                para gawin ang papel na mga prototype.\r"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -13055,19 +13027,17 @@ fil:
             Lists:
               name: Mga listahan
               description_student: Ang araling ito ay nagpapakilala sa mga ordered
-                at unordered na mga listahan at ang kaugnay na  &lt;ul&gt;, &lt;ol&gt;,
-                and &lt;li&gt;  mga HTML na tag. Ang klase ay magsasanay sa paggamit
-                ng mga tags, pagkatapos ay babalik sa proyekto na personal na pahina
-                sa web para idagdag ang bagong HTML na pahina na naglalaman ng mga
-                bagong tags.
+                at unordered na mga listahan at ang kaugnay na  <ul>, <ol>, and <li>  mga
+                HTML na tag. Ang klase ay magsasanay sa paggamit ng mga tags, pagkatapos
+                ay babalik sa proyekto na personal na pahina sa web para idagdag ang
+                bagong HTML na pahina na naglalaman ng mga bagong tags.
               description_teacher: Ang mga estudyante ay ipinakilala sa ordered at
                 unordered na mga listahan sa HTML at magtrabaho sa pagitan ng iilang
-                mga antas kung saan gagamitin nila ang  &lt;ul&gt;, &lt;ol&gt;, and
-                &lt;li&gt; na mga tags. Pagkatapos ay babalik sila sa kanilang proyekto,
-                kung saan magdadagdag sila ng bagong HTML na pahina. Sa loob ng bagong
-                pahina, sila ay magsusulat ng HTML para maipakita ang isang resipe,
-                top ten na listahan, o kahit na anong nilalaman na gumagamit ng mga
-                bagong tags na natutunan nila.
+                mga antas kung saan gagamitin nila ang  <ul>, <ol>, and <li> na mga
+                tags. Pagkatapos ay babalik sila sa kanilang proyekto, kung saan magdadagdag
+                sila ng bagong HTML na pahina. Sa loob ng bagong pahina, sila ay magsusulat
+                ng HTML para maipakita ang isang resipe, top ten na listahan, o kahit
+                na anong nilalaman na gumagamit ng mga bagong tags na natutunan nila.
             Intellectual Property and Images:
               name: Intelektwal na mga Pag-aari at mga Larawan
               description_student: Ang araling ito ay sumasaklaw sa kung paano gamitin
@@ -13086,7 +13056,7 @@ fil:
                 sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
                 pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
                 Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
-                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
+                larawan sa kanilang mga pahina sa web gamit ang <img> na tag."
             Clean Code and Debugging:
               name: Linisin ang Code at Pag-Debug
               description_student: Ang araling ito ay sumasaklaw sa mga karaniwang
@@ -13117,7 +13087,7 @@ fil:
                 sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
                 sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
                 sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
-                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r"
             Styling Text with CSS:
               name: Pag-style ng Teksto gamit ang CSS
               description_student: Ang araling ito ay nagpapakilala sa CSS bilang
@@ -13135,7 +13105,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -13206,7 +13176,7 @@ fil:
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+                na ginawa nila para makuha ang pangwakas na disenyo.\r"
           student_description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi
             ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung
             anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano
@@ -13682,7 +13652,7 @@ fil:
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r\n"
+                ng mga pagpapahusay sa disenyo.\r"
             User-Centered Design Micro Activity:
               name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
               description_student: Sa maliliit na mga grupo, ang klase ay gagamit
@@ -13839,7 +13809,7 @@ fil:
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r\n"
+                para gawin ang papel na mga prototype.\r"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -15202,19 +15172,17 @@ fil:
             Lists:
               name: Mga listahan
               description_student: Ang araling ito ay nagpapakilala sa mga ordered
-                at unordered na mga listahan at ang kaugnay na  &lt;ul&gt;, &lt;ol&gt;,
-                and &lt;li&gt;  mga HTML na tag. Ang klase ay magsasanay sa paggamit
-                ng mga tags, pagkatapos ay babalik sa proyekto na personal na pahina
-                sa web para idagdag ang bagong HTML na pahina na naglalaman ng mga
-                bagong tags.
+                at unordered na mga listahan at ang kaugnay na  <ul>, <ol>, and <li>  mga
+                HTML na tag. Ang klase ay magsasanay sa paggamit ng mga tags, pagkatapos
+                ay babalik sa proyekto na personal na pahina sa web para idagdag ang
+                bagong HTML na pahina na naglalaman ng mga bagong tags.
               description_teacher: Ang mga estudyante ay ipinakilala sa ordered at
                 unordered na mga listahan sa HTML at magtrabaho sa pagitan ng iilang
-                mga antas kung saan gagamitin nila ang  &lt;ul&gt;, &lt;ol&gt;, and
-                &lt;li&gt; na mga tags. Pagkatapos ay babalik sila sa kanilang proyekto,
-                kung saan magdadagdag sila ng bagong HTML na pahina. Sa loob ng bagong
-                pahina, sila ay magsusulat ng HTML para maipakita ang isang resipe,
-                top ten na listahan, o kahit na anong nilalaman na gumagamit ng mga
-                bagong tags na natutunan nila.
+                mga antas kung saan gagamitin nila ang  <ul>, <ol>, and <li> na mga
+                tags. Pagkatapos ay babalik sila sa kanilang proyekto, kung saan magdadagdag
+                sila ng bagong HTML na pahina. Sa loob ng bagong pahina, sila ay magsusulat
+                ng HTML para maipakita ang isang resipe, top ten na listahan, o kahit
+                na anong nilalaman na gumagamit ng mga bagong tags na natutunan nila.
             Intellectual Property and Images:
               name: Intelektwal na mga Pag-aari at mga Larawan
               description_student: Ang araling ito ay sumasaklaw sa kung paano gamitin
@@ -15233,7 +15201,7 @@ fil:
                 sa pagpangasiwa ng copyright. \r\n\r\nSa huli, sa isang karaniwang
                 pag-uunawa sa mga pagbabawal sa iba't ibang mga lisensya ng Creative
                 Commons, ang mga estudyante ay matuto kung paano magdagdag ng mga
-                larawan sa kanilang mga pahina sa web gamit ang &lt;img&gt; na tag."
+                larawan sa kanilang mga pahina sa web gamit ang <img> na tag."
             Clean Code and Debugging:
               name: Linisin ang Code at Pag-Debug
               description_student: Ang araling ito ay sumasaklaw sa mga karaniwang
@@ -15264,7 +15232,7 @@ fil:
                 sa waka maglathala sa kanilang website na ginagawa. Sa araling ito,
                 sila ay mag-uugnay sa lahat ng naunang mga pahina na nalikha nila
                 sa isang proyekto, maglikha ng bagong pahina, at magdagdag ng nabigasyon
-                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r\n"
+                sa pagitan ng mga pahina bago ilathala ang buong site sa Web. \r\n\r"
             Styling Text with CSS:
               name: Pag-style ng Teksto gamit ang CSS
               description_student: Ang araling ito ay nagpapakilala sa CSS bilang
@@ -15282,7 +15250,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Styling Elements with CSS:
               name: Pag-istilo sa mga Elemento gamit ang CSS
               description_student: Ang araling ito ay nagpapatuloy sa pagpapakilala
@@ -15353,7 +15321,7 @@ fil:
                 mga website, pagrerepasu sa rubrik at mag-isip tungkol sa kanilang
                 proseso. Para tapusin ang yunit, sila ay magbabahagi ng kanilang mga
                 proyekto at pati na rin ang isang pangkalahatang ideya sa proseso
-                na ginawa nila para makuha ang pangwakas na disenyo.\r\n"
+                na ginawa nila para makuha ang pangwakas na disenyo.\r"
             Intellectual Property:
               name: Intelektwal na Pag-aari
             Images:
@@ -16192,7 +16160,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Intellectual Property:
               name: Intelektwal na Pag-aari
             Images:
@@ -16476,7 +16444,7 @@ fil:
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r\n"
+                ng mga pagpapahusay sa disenyo.\r"
             User-Centered Design Micro Activity:
               name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
               description_student: Sa maliliit na mga grupo, ang klase ay gagamit
@@ -16633,7 +16601,7 @@ fil:
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r\n"
+                para gawin ang papel na mga prototype.\r"
             Prototype Testing:
               name: Prototype na Pagsusuri
               description_student: Sa araling ito, ang mga koponan ay susubukan ang
@@ -18359,7 +18327,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Intellectual Property:
               name: Intelektwal na Pag-aari
             Images:
@@ -18893,6 +18861,12 @@ fil:
               name: Kursong A
             Course B:
               name: Kursong B
+            Course E:
+              name: Kursong E
+            Course F:
+              name: Kursong F
+            csf:
+              name: CS Fundamentals
         virustest:
           title: Ginagaya ang isang Pagsiklab
           description_short: 'Gumamit ng Sprite Lab upang gumawa ng isang simulasyon
@@ -18901,6 +18875,10 @@ fil:
           lessons:
             visualizing:
               name: Pagpapakita ng mga Datos
+            lesson14:
+              name: Aralin 14
+            lesson15:
+              name: Araling 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -18926,7 +18904,9 @@ fil:
             lessonGroup-3:
               display_name: Mga variable
             outbreak:
-              display_name: Simula ng Simulasyon
+              display_name: Simulator ng Pagsiklab
+            debugging:
+              display_name: Pagdedebug
         csd1-2021:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter
             para lutasan ang mga problema."
@@ -19031,7 +19011,7 @@ fil:
                 magdagdag ng kanilang sariling istilo sa binigay na pahina. Sa huling
                 antas, ang mga estudyante ay gagamit sa mga natutunan nila tungkol
                 sa mga istilo para sa mga teksto na elemento sa kanilang personal
-                na web na pahina.\r\n\r\n"
+                na web na pahina.\r\n\r"
             Intellectual Property:
               key: Intelektwal na Pag-aari
               name: Intelektwal na Pag-aari
@@ -19897,6 +19877,8 @@ fil:
               display_name: Mga function
             csf_impacts:
               display_name: Epekto ng Pag-Compute
+            lessonGroup-7:
+              display_name: Epekto ng Pag-Compute
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop,
             mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga
             function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng
@@ -19968,12 +19950,12 @@ fil:
               name: Saya sa For Loop
               description_student: Magkakaroon ka ng napakasayang pag-aaral tungkol
                 sa mga `for` loop!
-              description_teacher: 'Alam natin na ang mga loop ay nagbibigay-daan
-                sa atin para magawa ang mga bagay-bagay nang paulit-ulit, ngunit ngayon
+              description_teacher: Alam natin na ang mga loop ay nagbibigay-daan sa
+                atin para magawa ang mga bagay-bagay nang paulit-ulit, ngunit ngayon
                 ay pag-aaralan natin kung paano gumamit ng mga loop na mayroong karagdagang
                 istraktura na binuo sa loob nito. Ang mga bagong istrakturang ito
                 ay nagbibigay-daan sa mga estudyante na makalikha ng code na mas makapangyarihan
-                at mas dynamic. '
+                at mas dynamic.
             For Loops in Bee:
               key: Mga For Loops sa Bee
               name: Mga For Loops sa Bee
@@ -20044,7 +20026,7 @@ fil:
               name: Pag-Program sa Maze
             Debugging with Scrat:
               key: Pagde-debug gamit ang Scrat
-              name: Pagde-debug gamit ang Scrat
+              name: Pagde-debug sa Maze
             Collecting Treasure with Laurel:
               key: Pag-program sa Kolektor
               name: Pag-program sa Kolektor
@@ -20086,6 +20068,14 @@ fil:
               description_student: Huwag kalimutan ng magdala ng pagkamalikhain sa
                 klase! Sa mga palaisipang ito ikaw ay gagawa ng hindi kapani-paniwalang
                 mga drowing gamit ang mga variable.
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
+                sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa
+                Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang
+                mga variables maaaring gamitin para madaling isulat ang mga code at
+                madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga
+                estudyante ay magtatapos sa isang libreng laro na antas para ipakita
+                kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga
+                disenyo.
             Changing Variables with Artist:
               description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
                 sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa
@@ -20258,7 +20248,7 @@ fil:
                 mga produkto. Bawat estudyante ay may nakatalagang profile ng gumagamit
                 na naglalarawan sa tao, kung saan sila din ay pipili ng mga ankop
                 na produkto, magbigay ng kritiko sa disenyo ng mga produkto, at magmunkahi
-                ng mga pagpapahusay sa disenyo.\r\n"
+                ng mga pagpapahusay sa disenyo.\r"
             User-Centered Design Micro Activity:
               key: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
               name: Maliit na Gawain para sa Disenyo na Naka-Sentro sa Gumagamit
@@ -20423,7 +20413,7 @@ fil:
                 mga apps bilang basehan para sa sarili nilang app. Mula dito, ang
                 koponan ay magkakaroon ng oras para pag-usapan ang mga pangunahing
                 functionality ng kanilang app bago gumagamit ng 3x5 na mga index card
-                para gawin ang papel na mga prototype.\r\n"
+                para gawin ang papel na mga prototype.\r"
             Prototype Testing:
               key: Prototype na Pagsusuri
               name: Prototype na Pagsusuri
@@ -20986,3 +20976,19 @@ fil:
               display_name: Mga susunod na Hakbang
             Introduction:
               display_name: Panimula
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: Surbey Pagkatapos ng Kursong CSP
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Pagsisiyasat
+          description_audience: CSP na mga Estudyante
+          description_short: Surbey Pagkatapos ng Kurso para sa mga Estudyante ng
+            CSP
+          description: Maligawang pagdating sa Code.org na Surbey Pagkatapos ng Kurso
+            na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10 minuto
+            para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.
+          student_description: Maligawang pagdating sa Code.org na Surbey Pagkatapos
+            ng Kurso na mga Prinsipyo ng CS. Ang surbey na ito ay tatagal ng mga 10
+            minuto para makumpleto. Ang mga sagot mo ay pribado at hindi pinakilala.

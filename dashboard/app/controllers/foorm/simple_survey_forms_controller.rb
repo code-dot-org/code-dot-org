@@ -10,15 +10,23 @@ module Foorm
       form = Foorm::Form.all.detect {|f| f.key == params[:form_key]}
       return head :bad_request unless form
 
-      # Admin only page, so return any errors in plain text.
+      unless valid_survey_data?(params)
+        return render status: :bad_request, json: {error: 'Must provide a name and value for any survey variables.'}
+      end
+      survey_data = parse_survey_data(params)
+
       begin
+        # Leaving optional "kind" blank in form stores a blank string without intervention.
+        # Store nil in that case.
         Foorm::SimpleSurveyForm.create!(
-          kind: params[:kind],
+          kind: params[:kind].presence,
           path: params[:path],
           form_name: form.name,
           form_version: form.version,
-          allow_multiple_submissions: params[:allow_multiple_submissions] == '1'
+          allow_multiple_submissions: params[:allow_multiple_submissions] == '1',
+          survey_data: survey_data
         )
+      # Admin only page, so return any errors in plain text.
       rescue StandardError => e
         return render status: :bad_request, json: {error: e.message}
       end
@@ -46,7 +54,7 @@ module Foorm
 
       form_questions = ::Foorm::Form.get_questions_for_name_and_version(
         form_data[:form_name],
-        form_data[:form_version] || 0
+        form_data[:form_version]
       )
 
       return render_404 unless form_questions
@@ -86,7 +94,7 @@ module Foorm
 
       form_questions = ::Foorm::Form.get_questions_for_name_and_version(
         form_data[:form_name],
-        form_data[:form_version] || 0
+        form_data[:form_version]
       )
 
       key_params = {
@@ -115,6 +123,36 @@ module Foorm
         user_id: key_params[:user_id],
         simple_survey_form_id: key_params[:simple_survey_form_id]
       )
+    end
+
+    # Check that for any provided survey data,
+    # we have both a key and a value.
+    def valid_survey_data?(params)
+      (0..2).to_a.each do |id|
+        key = "survey_data_key_#{id}".to_sym
+        value = "survey_data_value_#{id}".to_sym
+
+        return false if params[key].blank? != params[value].blank?
+      end
+
+      true
+    end
+
+    # For any provided survey data, reshape into a single hash with the keys
+    # representing variable names and the values to be inserted into the survey.
+    # eg, if params: {survey_data_key_1: 'course', survey_data_value_1: 'CS Principles'}
+    # returns: {'course' => 'CS Principles'}
+    def parse_survey_data(params)
+      survey_data = Hash.new
+
+      (0..2).to_a.each do |id|
+        key = "survey_data_key_#{id}".to_sym
+        value = "survey_data_value_#{id}".to_sym
+
+        survey_data[params[key]] = params[value] unless params[key].blank?
+      end
+
+      survey_data
     end
   end
 end

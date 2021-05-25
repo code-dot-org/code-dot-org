@@ -1292,8 +1292,6 @@ fr:
                 instructions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?
-            0: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
-            1: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
             Unit 1, Days 3-4 Buying a Computer:
               name: Partie 1, Jours 3 à 4 - Acheter un ordinateur
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1414,8 +1412,6 @@ fr:
                 instructions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?
-            0: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
-            1: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
             Unit 1, Days 3-4 Buying a Computer:
               name: Partie 1, Jours 3 à 4 - Acheter un ordinateur
             Unit 1, Days 5-7 Searching and Web 2:
@@ -1440,8 +1436,6 @@ fr:
                 instructions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?
-            0: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
-            1: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
             Unit 1, Days 3-4 Buying a Computer:
               name: Partie 1, Jours 3 à 4 - Acheter un ordinateur
             Unit 1, Days 5-7 Searching and Web 2:
@@ -3082,8 +3076,6 @@ fr:
                 instructions
             Unit 1, Day 17-19 What Is Intelligence?:
               name: Partie 1, Jours 17 à 19 - Qu'est ce que l'intelligence ?
-            0: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
-            1: Unité 1, Jours 1 et 2 - Qu'est ce qu'un Ordinateur ?
             Unit 1, Days 3-4 Buying a Computer:
               name: Partie 1, Jours 3 à 4 - Acheter un ordinateur
             Unit 1, Days 5-7 Searching and Web 2:
@@ -4370,13 +4362,13 @@ fr:
             Lists:
               name: Listes
               description_student: Cette leçon présente les listes ordonnées et non
-                ordonnées, ainsi que les balises HTML associées &LT;ul>, <ol> et <li>.
+                ordonnées, ainsi que les balises HTML associées <ul>, <ol> et <li>.
                 La classe s'exerce à utiliser les balises, puis retourne au projet
                 de page Web personnelle pour ajouter une nouvelle page HTML qui inclut
                 les nouvelles balises.
               description_teacher: Les élèves sont initiés aux listes ordonnées et
                 non ordonnées en HTML et travaillent à travers quelques niveaux dans
-                lesquels ils utilisent les balises.&LT; ul >,< ol >et< li & gt;. Ils
+                lesquels ils utilisent les balises.< ul >,< ol >et< li & gt;. Ils
                 retournent ensuite à leur projet, où ils ajoutent une nouvelle page
                 HTML. À l'intérieur de la nouvelle page, ils écrivent le code HTML
                 pour afficher une recette, une liste des dix premiers ou tout autre
@@ -10339,13 +10331,13 @@ fr:
             Lists:
               name: Listes
               description_student: Cette leçon présente les listes ordonnées et non
-                ordonnées, ainsi que les balises HTML associées &LT;ul>, <ol> et <li>.
+                ordonnées, ainsi que les balises HTML associées <ul>, <ol> et <li>.
                 La classe s'exerce à utiliser les balises, puis retourne au projet
                 de page Web personnelle pour ajouter une nouvelle page HTML qui inclut
                 les nouvelles balises.
               description_teacher: Les élèves sont initiés aux listes ordonnées et
                 non ordonnées en HTML et travaillent à travers quelques niveaux dans
-                lesquels ils utilisent les balises.&LT; ul >,< ol >et< li & gt;. Ils
+                lesquels ils utilisent les balises.< ul >,< ol >et< li & gt;. Ils
                 retournent ensuite à leur projet, où ils ajoutent une nouvelle page
                 HTML. À l'intérieur de la nouvelle page, ils écrivent le code HTML
                 pour afficher une recette, une liste des dix premiers ou tout autre
@@ -15946,13 +15938,13 @@ fr:
             Lists:
               name: Listes
               description_student: Cette leçon présente les listes ordonnées et non
-                ordonnées, ainsi que les balises HTML associées &LT;ul>, <ol> et <li>.
+                ordonnées, ainsi que les balises HTML associées <ul>, <ol> et <li>.
                 La classe s'exerce à utiliser les balises, puis retourne au projet
                 de page Web personnelle pour ajouter une nouvelle page HTML qui inclut
                 les nouvelles balises.
               description_teacher: Les élèves sont initiés aux listes ordonnées et
                 non ordonnées en HTML et travaillent à travers quelques niveaux dans
-                lesquels ils utilisent les balises.&LT; ul >,< ol >et< li & gt;. Ils
+                lesquels ils utilisent les balises.< ul >,< ol >et< li & gt;. Ils
                 retournent ensuite à leur projet, où ils ajoutent une nouvelle page
                 HTML. À l'intérieur de la nouvelle page, ils écrivent le code HTML
                 pour afficher une recette, une liste des dix premiers ou tout autre
@@ -19126,13 +19118,13 @@ fr:
             Lists:
               name: Listes
               description_student: Cette leçon présente les listes ordonnées et non
-                ordonnées, ainsi que les balises HTML associées &LT;ul>, <ol> et <li>.
+                ordonnées, ainsi que les balises HTML associées <ul>, <ol> et <li>.
                 La classe s'exerce à utiliser les balises, puis retourne au projet
                 de page Web personnelle pour ajouter une nouvelle page HTML qui inclut
                 les nouvelles balises.
               description_teacher: Les élèves sont initiés aux listes ordonnées et
                 non ordonnées en HTML et travaillent à travers quelques niveaux dans
-                lesquels ils utilisent les balises.&LT; ul >,< ol >et< li & gt;. Ils
+                lesquels ils utilisent les balises.< ul >,< ol >et< li & gt;. Ils
                 retournent ensuite à leur projet, où ils ajoutent une nouvelle page
                 HTML. À l'intérieur de la nouvelle page, ils écrivent le code HTML
                 pour afficher une recette, une liste des dix premiers ou tout autre
@@ -20387,9 +20379,7 @@ fr:
             About Me:
               name: À Propos De Moi
             Access Ability:
-              name: 'Capacité d''Accès
-
-'
+              name: Capacité d'Accès
             Conditionals Review:
               name: Examen des Conditions
             Drawing with Loops:
@@ -20537,9 +20527,7 @@ fr:
             About Me:
               name: À Propos De Moi
             Access Ability:
-              name: 'Capacité d''Accès
-
-'
+              name: Capacité d'Accès
             Conditionals Review:
               name: Examen des Conditions
         time4cs-experiment-unit-1:
@@ -20583,9 +20571,7 @@ fr:
             About Me:
               name: À Propos De Moi
             Access Ability:
-              name: 'Capacité d''Accès
-
-'
+              name: Capacité d'Accès
             Conditionals Review:
               name: Examen des Conditions
         csp7-pilot:
@@ -20673,6 +20659,8 @@ fr:
               display_name: fonctions
             csp_project:
               display_name: Projet
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             Variables Explore:
               name: Les Variables Explorer
@@ -20704,6 +20692,8 @@ fr:
               name: Projet - Application du Décisionnaire Partie 3
             'Lesson 15: Assessment Day':
               name: 'Lesson 15 : Journée d''Évaluation'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp5-2020:
           title: Les Listes, les Boucles et les Traversées
           lesson_groups:
@@ -20715,6 +20705,8 @@ fr:
               display_name: Parcours
             csp_project:
               display_name: Projet
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             Lists Explore:
               name: Les Listes Explorer
@@ -20756,12 +20748,16 @@ fr:
               name: Unité 5 Enquête auprès des ÉTUDIANTS
             Unit 5 TEACHER Survey:
               name: Unité 5 Enquête auprès des ENSEIGNANTS
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp7-2020:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Paramètres et Valeurs de Retour
             csp_libraries:
               display_name: Bibliothèques
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             Parameters and Return Explore:
               name: Les Paramètres et les Retours Explorer
@@ -20793,6 +20789,8 @@ fr:
               name: Démonstration des Variables Faire
             'Lesson 11: Assessment Day':
               name: 'Lesson 15 : Journée d''Évaluation'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp9-pilot:
           lessons:
             new stage:
@@ -21087,7 +21085,7 @@ fr:
                 leurs affiches dans la salle et expliqueront brièvement leurs motivations
                 pour choisir certaines de leurs catégorisations les plus difficiles.
                 \ L'enseignant introduira alors une définition de l'ordinateur et
-                permettra aux élèves de réviser leurs affiches selon la nouvelle définition.\\nr\n"
+                permettra aux élèves de réviser leurs affiches selon la nouvelle définition.\\nr"
             Input and Output:
               name: Entrée et Sortie
               description_student: Dans cette classe, les élèves considèrent un certain
@@ -23720,6 +23718,8 @@ fr:
               display_name: 'Unité 1: L’Information numérique'
             cspSurvey:
               display_name: Enquête
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             new stage:
               name: nouvelle phase
@@ -23753,10 +23753,14 @@ fr:
               name: 'Lesson 15 : Journée d''Évaluation'
             CS Principles Pre-survey:
               name: CSP Pré-enquête
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp2-2020:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unité 2: L''Internet'
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             new stage:
               name: nouvelle phase
@@ -23778,10 +23782,14 @@ fr:
               name: Projet - Les Dilemmes d'Internet Partie 2
             'Lesson 9: Assessment Day':
               name: 'Lesson 15 : Journée d''Évaluation'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp3-2020:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unité 3: Introduction à la conception d''applications'
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             new stage:
               name: nouvelle phase
@@ -23805,10 +23813,14 @@ fr:
               name: 'Projet : Concevoir une Application Partie 5'
             'Lesson 11: Assessment Day':
               name: 'Lesson 15 : Journée d''Évaluation'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp6-2020:
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unité 6 : Les Algorithmes'
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             new stage:
               name: nouvelle phase
@@ -23824,6 +23836,8 @@ fr:
               name: Les Algorithmes Parallèles et Distribués
             'Lesson 6: Assessment Day':
               name: 'Lesson 15 : Journée d''Évaluation'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp8-2020:
           lessons:
             new stage:
@@ -23838,15 +23852,21 @@ fr:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unité 9 : Les Données'
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             new stage:
               name: nouvelle phase
             'Lesson 9: Assessment Day':
               name: 'Lesson 15 : Journée d''Évaluation'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp10-2020:
           lesson_groups:
             csp_unit10_2020:
               display_name: " Unité 10: Cyber sécurité et impacts mondiaux"
+            cspSurvey2020:
+              display_name: Suivi d'après cours
           lessons:
             new stage:
               name: nouvelle phase
@@ -23884,6 +23904,8 @@ fr:
               name: 'Projet : Simulation d''Innovation Partie 7'
             'Lesson 14: Unit Assessment Day':
               name: 'Leçon 14 : Journée d''Évaluation de l''Unité'
+            CS Principles Post-Course Survey:
+              name: CS PrincipPrincipleses Enquête Post-Cours
         csp-march-virtual:
           lessons:
             new stage:
@@ -24632,6 +24654,12 @@ fr:
               name: Cours B
             CS Discoveries:
               name: Découvertes de l'Informatique
+            Course E:
+              name: Cours E
+            Course F:
+              name: Cours F
+            csf:
+              name: Fondamentaux d'Informatique
         virustest:
           title: Simulation d'une épidémie
           description_short: Utilisez Sprite Lab pour créer une simulation à partir
@@ -24642,6 +24670,10 @@ fr:
               name: IA pour les Océans
             visualizing:
               name: Visualiser les Données
+            lesson14:
+              name: Leçon 14
+            lesson15:
+              name: Leçon 15
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -24671,7 +24703,9 @@ fr:
             lessonGroup-3:
               display_name: variables
             outbreak:
-              display_name: Simulation de l'épidémie
+              display_name: Simulateur d'épidémie
+            debugging:
+              display_name: Le Débogage
         csd1-2021:
           title: CSD Unité 1 - La Résolution de Problèmes et l'Informatique (2019
             - 2020)
@@ -24712,7 +24746,7 @@ fr:
                 leurs affiches dans la salle et expliqueront brièvement leurs motivations
                 pour choisir certaines de leurs catégorisations les plus difficiles.
                 \ L'enseignant introduira alors une définition de l'ordinateur et
-                permettra aux élèves de réviser leurs affiches selon la nouvelle définition.\\nr\n"
+                permettra aux élèves de réviser leurs affiches selon la nouvelle définition.\\nr"
             Input and Output:
               key: Entrée et Sortie
               name: Entrée et Sortie
@@ -26007,12 +26041,12 @@ fr:
               name: La Programmation avec la Moissonneuse
               description_student: Aide la Moissonneuse à ramasser les légumes le
                 long d'un chemin.
-              description_teacher: 'Les élèves appliqueront les concepts de programmation
-                qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant,
+              description_teacher: Les élèves appliqueront les concepts de programmation
+                qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant,
                 au lieu de simplement amener le personnage à un but, les étudiants
                 doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants
-                continueront à développer des compétences d''algorithme séquentiel
-                et commenceront à utiliser le processus de débogage. '
+                continueront à développer des compétences d'algorithme séquentiel
+                et commenceront à utiliser le processus de débogage.
             'Loops: Getting Loopy':
               key: 'Boucles : Tourner en Boucle'
               name: Tourner en Rond
@@ -26058,13 +26092,13 @@ fr:
               key: La Bonne Application
               name: La Bonne Application
               description_student: Esquisse ta propre application smartphone.
-              description_teacher: 'Cette leçon voit les élèves reconnaître que l''informatique
-                peut aider les gens dans la vie réelle. Tout d''abord, les étudiants
+              description_teacher: Cette leçon voit les élèves reconnaître que l'informatique
+                peut aider les gens dans la vie réelle. Tout d'abord, les étudiants
                 sympathisent avec plusieurs utilisateurs de smartphones fictifs afin
                 de les aider à trouver la “bonne application”, qui répond à leurs
-                besoins. Ensuite, les élèves font preuve d''empathie et de créativité
+                besoins. Ensuite, les élèves font preuve d'empathie et de créativité
                 pour dessiner leur propre application pour smartphone qui répond aux
-                besoins d''un utilisateur supplémentaire. '
+                besoins d'un utilisateur supplémentaire.
             'Events: The Big Event':
               key: 'Événements : Le Grand Événement'
               name: Le Grand Événement Jr.
@@ -26263,13 +26297,13 @@ fr:
             'End of Course Project: Create a Play Lab Game':
               description_student: Préparez ces mains pour beaucoup de codage ! Il
                 est temps de commencer à construire ton projet.
-              description_teacher: 'Cette leçon de synthèse guide les élèves à travers
+              description_teacher: Cette leçon de synthèse guide les élèves à travers
                 le processus de conception, de développement et de présentation de
                 leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement
                 de ce processus, nous avons fourni aux étudiants une structure, étape
                 par étape, à suivre, de la planification sur papier au codage sur
                 notre site web. De plus, nous offrons des idées pour aider les enseignants
-                à animer un show de clôture ! '
+                à animer un show de clôture !
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -26573,10 +26607,10 @@ fr:
               key: Jacques A Dit
               description_student: Joue à un jeu et réfléchis aux commandes nécessaires
                 pour obtenir le bon résultat.
-              description_teacher: 'Dans cette leçon, les élèves joueront à un jeu
+              description_teacher: Dans cette leçon, les élèves joueront à un jeu
                 destiné à les faire réfléchir à la façon dont les commandes doivent
                 être données pour produire le bon résultat. Cela les aidera à transporter,
-                plus facilement, au Labo des Lutins, dans les leçons à venir. '
+                plus facilement, au Labo des Lutins, dans les leçons à venir.
             Learning Sprites with Sprite Lab:
               key: Découvrir les Lutins avec le Labo des Lutins
               name: Des Poissons qui Nagent, avec le Labo des Lutins
@@ -26592,11 +26626,11 @@ fr:
               name: Soirée Dansante Extraterrestre avec le Labo des Lutins
               description_student: Crée un projet interactif qui peut être partagé
                 avec tes camarades de classe.
-              description_teacher: 'Cette leçon présente le Labo des Lutins, une plate-forme
+              description_teacher: Cette leçon présente le Labo des Lutins, une plate-forme
                 où les élèves peuvent créer leurs propres animations et jeux interactifs.
-                Aujourd''hui, en plus des comportements, les étudiants intégreront
-                les entrées de l''utilisateur en tant qu''événements pour créer une
-                « soirée dansante extraterrestre ».  '
+                Aujourd'hui, en plus des comportements, les étudiants intégreront
+                les entrées de l'utilisateur en tant qu'événements pour créer une
+                « soirée dansante extraterrestre ».
             Private and Personal Information:
               key: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
               name: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
@@ -26719,6 +26753,12 @@ fr:
                 Artiste soit dans le Labo du Jeu (c'est probablement la plus longue
                 phase du projet). Enfin, les étudiants pourront présenter leur travail
                 achevé à leurs pairs.
+            lesson-1:
+              name: Concevoir pour l'Accessibilité
+              description_teacher: 'Dans cette leçon, les élèves en apprendront davantage
+                sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges
+                et à la conception de solutions accessibles pour des applications
+                hypothétiques. '
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -26731,6 +26771,8 @@ fr:
             csf_functions:
               display_name: fonctions
             csf_impacts:
+              display_name: Les Impacts de l'Informatique
+            lessonGroup-7:
               display_name: Les Impacts de l'Informatique
           student_description: Commence à coder avec des algorithmes, des boucles,
             des conditions et des événements, puis tu passeras aux fonctions. Dans
@@ -26874,11 +26916,11 @@ fr:
               name: Jouer avec les Boucles « Pour »
               description_student: Vous allez avoir beaucoup de plaisir à découvrir
                 les boucles `for` !
-              description_teacher: 'Nous savons que les boucles nous permettent de
+              description_teacher: Nous savons que les boucles nous permettent de
                 faire des choses encore et encore, mais maintenant nous allons apprendre
                 à utiliser des boucles qui ont des structures supplémentaires intégrées.
                 Ces nouvelles structures permettront aux élèves de créer du code plus
-                puissant et plus dynamique. '
+                puissant et plus dynamique.
             For Loops in Bee:
               key: Les Boucles For dans l'Abeille
               name: Les Boucles For avec l'Abeille
@@ -27015,7 +27057,7 @@ fr:
                 tourner à droite.
             Debugging with Scrat:
               key: Déboguer avec Scrat
-              name: Déboguer avec Scrat
+              name: Déboguer dans le Labyrinthe
               description_student: Trouvez des problèmes dans les énigme et exerce
                 tes compétences de débogage.
               description_teacher: Le débogage est un élément essentiel de l'apprentissage
@@ -27177,10 +27219,11 @@ fr:
                 ! Dans ces énigmes, tu vas faire des dessins fantastiques en utilisant
                 des variables.
               description_teacher: Dans cette leçon, les élèves exploreront la création
-                de dessins répétitifs, à l'aide de variables, dans l'environnement
-                de l'Artiste. Les élèves apprendront comment les variables peuvent
-                être utilisées pour rendre le code plus facile à écrire et à lire,
-                même lorsque les valeurs ne changent pas au moment de l'exécution.
+                de dessins répétitifs à l'aide de variables dans l'environnement de
+                L'Artiste. Les élèves apprendront comment les variables peuvent être
+                utilisées pour rendre le code plus facile à écrire et à lire. Après
+                des énigmes guidées, les élèves termineront dans un niveau de jeu
+                libre pour montrer ce qu'ils ont appris et créer leurs propres conceptions.
             Changing Variables with Bee:
               key: Modifier des Variables avec l'Abeille
               name: Modifier des Variables avec l'Abeille
@@ -27235,11 +27278,11 @@ fr:
               name: Soirée Dansante des Extraterrestres
               description_student: Crée un projet interactif qui peut être partagé
                 avec tes camarades de classe.
-              description_teacher: 'Cette leçon présente le Labo des Lutins, une plate-forme
+              description_teacher: Cette leçon présente le Labo des Lutins, une plate-forme
                 où les élèves peuvent créer leurs propres animations et jeux interactifs.
-                Aujourd''hui, en plus des comportements, les étudiants intégreront
-                les entrées de l''utilisateur en tant qu''événements pour créer une
-                « soirée dansante extraterrestre ».  '
+                Aujourd'hui, en plus des comportements, les étudiants intégreront
+                les entrées de l'utilisateur en tant qu'événements pour créer une
+                « soirée dansante extraterrestre ».
             Behaviors in Sprite Lab:
               key: Les Comportements dans le Labo des Lutins
               name: Les Comportements dans le Labo des Lutins
@@ -27303,6 +27346,7 @@ fr:
             Learn to Drag and Drop:
               key: Apprends à Faire Glisser et Déposer
               name: Apprends à Faire Glisser et Déposer
+              description_student: Clique et fais glisser pour terminer les énigmes.
               description_teacher: Cette leçon donnera aux élèves une idée de ce à
                 quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
                 Elle commence par une brève discussion les initiant aux manières,
@@ -27311,6 +27355,7 @@ fr:
             Sequencing with Scrat:
               key: Séquencer avec Scrat
               name: Séquencer avec Scrat
+              description_student: Programme Scrat pour atteindre le gland.
               description_teacher: Cette leçon donnera aux élèves une idée de ce à
                 quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
                 Elle commence par une brève discussion les initiant aux manières,
@@ -27318,10 +27363,10 @@ fr:
                 d'un ordinateur pour résoudre des énigmes en ligne.
             Programming in with Angry Birds:
               name: Programmation avec Angry Birds
-              description_teacher: En utilisant des personnages du jeu Angry Birds,
+              description_teacher: En utilisant des personnages de L'Âge de Glace,
                 les élèves développeront des algorithmes séquentiels pour déplacer
-                un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour
-                ce faire, ils empileront des blocs de code ensemble, dans une séquence
+                Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce
+                faire, ils empileront des blocs de code ensemble dans une séquence
                 linéaire, les faisant se déplacer tout droit, tourner à gauche ou
                 tourner à droite.
             Programming with Rey and BB-8:
@@ -27333,6 +27378,8 @@ fr:
             Programming in Harvester:
               key: La Programmation dans la Moissonneuse
               name: La Programmation avec la Moissonneuse
+              description_student: Aide la Moissonneuse à ramasser les légumes le
+                long d'un chemin.
               description_teacher: 'Les élèves appliqueront les concepts de programmation
                 qu''ils ont appris à l''environnement de la Moissonneuse. Maintenant,
                 au lieu de simplement amener le personnage à un but, les étudiants
@@ -27342,6 +27389,8 @@ fr:
             Loops with Scrat:
               key: Les Boucles avec Scrat
               name: Les Boucles avec Scrat
+              description_student: Aide Scrat couvrir plus de terrain en utilisant
+                des boucles.
             Loops with Laurel:
               key: Les Boucles avec Laurel
               name: Les Boucles avec Laurel
@@ -27353,6 +27402,8 @@ fr:
             Ocean Scene with Loops:
               key: Scène de l'Océan avec des Boucles
               name: Scène de l'Océan avec des Boucles
+              description_student: Utilisez des boucles et des modèles pour terminer
+                les images.
               description_teacher: Revenant aux boucles, les élèves apprennent à dessiner
                 des images en bouclant de simples séquences d'instructions. Dans la
                 leçon branchée précédente, des boucles étaient utilisées pour traverser
@@ -27362,6 +27413,8 @@ fr:
             Drawing Gardens with Loops:
               key: Dessiner des Jardins avec des Boucles
               name: Dessiner des Jardins avec des Boucles
+              description_student: Utilisez des modèles et des boucles pour terminer
+                les images.
               description_teacher: De retour aux boucles, les élèves apprennent à
                 dessiner des images en bouclant de simples séquences d'instructions.
                 Dans la leçon en ligne précédente, des boucles ont été utilisées pour
@@ -27372,6 +27425,7 @@ fr:
             On the Move with Events:
               key: En Déplacement avec les Événements
               name: En Déplacement avec les Événements
+              description_student: Crée ton jeu ou ta propre histoire.
               description_teacher: Dans cette activité en ligne, les élèves auront
                 l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
@@ -27380,6 +27434,8 @@ fr:
             A Royal Battle with Events:
               key: Une Bataille Royale avec des Événements
               name: Une Bataille Royale avec des Événements
+              description_student: Utilise des événements pour créer une histoire
+                ou un jeu interactif.
               description_teacher: Dans cette activité en ligne, les élèves auront
                 l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
@@ -28135,6 +28191,13 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        csa2-pilot:
+          lessons:
+            lesson-15:
+              name: 'Lesson 15 : Journée d''Évaluation'
+          lesson_groups:
+            lesson group:
+              display_name: Contenu
         k5-onlinepd-2021:
           description: Apprenez à enseigner l'informatique en utilisant les Principes
             Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit
@@ -28208,3 +28271,28 @@ fr:
               display_name: Prochaines étapes
             Introduction:
               display_name: Introduction
+        pl-playground:
+          lessons:
+            Module 1:
+              name: Module 1
+        csp-post-survey-2020:
+          lessons:
+            CSP post-course survey:
+              name: Enquête Post-Cours CSP
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Enquête
+          description_audience: Étudiants en CSP
+          description_short: Enquête Post-Cours CSP auprès des Étudiants
+          description: Bienvenue dans l'Enquête Post-Cours CS Principles de Code.org.
+            Cette enquête prend environ 15 minutes. Tes réponses sont privées et anonymes
+            -- ton professeur peut voir des résultats agrégés anonymes pour toute
+            la classe. Les résultats sont essentiels pour ton professeur et Code.org
+            afin de maintenir et d'améliorer le cours.  Merci pour ton temps et ta
+            considération.
+          student_description: Bienvenue dans l'Enquête Post-Cours CS Principles de
+            Code.org. Cette enquête prend environ 15 minutes. Tes réponses sont privées
+            et anonymes -- ton professeur peut voir des résultats agrégés anonymes
+            pour toute la classe. Les résultats sont essentiels pour ton professeur
+            et Code.org afin de maintenir et d'améliorer le cours.  Merci pour ton
+            temps et ta considération.

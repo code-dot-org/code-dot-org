@@ -113,7 +113,7 @@ class Ability
         can :create, Pd::InternationalOptIn, user_id: user.id
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
-        can [:score_stages_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
+        can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
       end
 
       if user.facilitator?

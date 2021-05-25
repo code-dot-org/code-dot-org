@@ -3,6 +3,11 @@ az:
   data:
     script:
       category:
+        csf_2018_category_name: Kompüter Elminin Əsasları ('18-'19)
+        csf_2019_category_name: Kompüter Elminin Əsasları ('19-'20)
+        csf_2020_category_name: Kompüter Elminin Əsasları ('20-'21)
+        csf_2021_category_name: Kompüter Elminin Əsasları ('21-'22)
+        csf_international_category_name: Kompüter Elminin Əsasları Beynəlxalq
         hoc_category_name: Kod Saatı
         math_category_name: Riyaziyyat
         twenty_hour_category_name: 20-Saat
@@ -181,6 +186,8 @@ az:
               name: 'Rəssam: Parametrli funksiyalar'
             'Artist: Variables':
               name: 'Rəssam: Dəyişənlər'
+            'Bee: For Loops':
+              name: 'Arı: For Dövrləri'
             Maze and Bee:
               name: Labirint və arı
         Course4pre:
@@ -216,6 +223,8 @@ az:
               name: Məntiqi operatorlar
             'Eval: Conditionals':
               name: Şərti ifadələr
+            'Eval: Strings and Images':
+              name: Sətir və Şəkillər
         infinity:
           lessons:
             Infinity:
@@ -342,6 +351,10 @@ az:
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+        algPDmiami:
+          lessons:
+            Strings and Images:
+              name: Sətir və Şəkillər
         CSPLessonSamples:
           lessons:
             Lesson 14:
@@ -350,6 +363,8 @@ az:
               name: Dərs 15
         algebraPD3:
           lessons:
+            Strings and Images:
+              name: Sətir və Şəkillər
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
         algebraPD-NexTech:
@@ -368,6 +383,10 @@ az:
           lessons:
             The Internet:
               name: İnternet
+        algebraPD2a:
+          lessons:
+            Strings and Images:
+              name: Sətir və Şəkillər
         allthethings:
           lessons:
             Artist:
@@ -392,6 +411,8 @@ az:
               name: Studiya
         algebraPD2b:
           lessons:
+            Strings and Images:
+              name: Sətir və Şəkillər
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
         cspfacilitator:
@@ -400,12 +421,6 @@ az:
               name: Proqram Labı
         ECSPD2:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Yekun
         algebraPD2:
@@ -426,22 +441,10 @@ az:
               name: Yekun
         ECSPD2-iZone:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Yekun
         ECSPD2-NexTech:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Yekun
         CSPPD2:
@@ -584,16 +587,12 @@ az:
               name: 'Rəssam: Parametrli funksiyalar'
             'Artist: Variables':
               name: 'Rəssam: Dəyişənlər'
+            'Bee: For Loops':
+              name: 'Arı: For Dövrləri'
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Wrap-up:
               name: Yekun
         grade3:
@@ -794,6 +793,8 @@ az:
         workshop-gamelab:
           lessons:
             Introduction:
+              name: Giriş
+            Input:
               name: Giriş
         coursed-ramp:
           lessons:
@@ -1868,6 +1869,12 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        ml-playground:
+          lessons:
+            lesson14:
+              name: Dərs 14
+            lesson15:
+              name: Dərs 15
         2021drafting:
           lesson_groups:
             introduction:
@@ -2038,6 +2045,10 @@ az:
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
+              display_name: Məzmun
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
               display_name: Məzmun
         k5-onlinepd-2021:
           lessons:

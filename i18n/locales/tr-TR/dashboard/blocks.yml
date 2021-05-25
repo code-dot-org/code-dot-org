@@ -1237,6 +1237,15 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
             '"speed"': hız
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': boyut
+          SIZE:
+            '25': çok küçük
+            '50': Küçük
+            '75': orta
+            '100': Büyük
       gamelab_setSizes:
         text: "{SPRITE} {PROPERTY}‘yi % {N} olarak ayarla"
         options:
@@ -1560,6 +1569,13 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+      Mikelab_setupSim:
+        text: |-
+          ile kurulum simülasyonu
+          {SPRITE1N}{SPRITE1COSTUME}Hız{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Hız{SPRITE2SPEED}
+          Toplama
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1622,6 +1638,13 @@ tr:
         text: x {SPRITE} koordinatı
       Mikelab_yLocationOf:
         text: y koordinatı {SPRITE}
+      Outbreak_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ızgara
+            '"border"': kenarlık
+            '"row"': satır
+            '"random"': gelişigüzel
       RyanLab_moveForward:
         text: ilerle
       RyanLab_turnLeft:
@@ -1655,49 +1678,27 @@ tr:
         options:
           PROPERTY:
             "'shapeColor'": renk
-      aalab_addBehaviorForDuration:
-        text: aalab sprite {SPRITE} {BEHAVIOR} [SECONDS]saniye için[2] başlar
-      aalab_addBehaviorUntilBoolean:
-        text: sprite {SPRITE} {BEHAVIOR} [CONDITION]kadar[2] başlar
-      aalab_createNewSpriteAnonReturn2:
-        text: "{SPRITE_NAME}[ANIMATION_NAME]123_321[1]{LOCATION} adlı yeni sprite"
-      aalab_goToScene:
-        text: sahne {SCENE} gidin
+      aalab_layoutSprites:
         options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_moveInDirection:
-        text: hareket {SPRITE} {DISTANCE} piksel {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Kuzey
-            '"East"': Doğu
-            '"South"': Güney
-            '"West"': Batı
-      aalab_prompt:
-        text: soru sormak {MESSAGE}
-      aalab_scene:
-        text: sahne {SCENE}
-        options:
-          SCENE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-      aalab_setupStory:
-        text: kurulum öyküsü
-      aalab_starwars_playSound:
-        text: "{OPTION}sesinioynat"
-        options:
-          OPTION:
+          FORMAT:
+            '"grid"': ızgara
+            '"border"': kenarlık
+            '"row"': satır
             '"random"': gelişigüzel
-            '"R2-D2 random"': R2-D2 gelişigüzel
-            '"R2-D2 1"': R2-D2 1
-            '"R2-D2 2"': R2-D2 2
-            '"R2-D2 3"': R2-D2 3
-            '"R2-D2 4"': R2-D2 4
-            '"R2-D2 5"': R2-D2 5
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': tüm
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': tüm
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:
