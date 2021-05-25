@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-05-25 17:18:57 UTC",
+    "serialized_at": "2021-05-25 19:57:17 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -9400,18 +9400,6 @@
       }
     },
     {
-      "name": "Build a Star Wars Game Puzzles",
-      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/preview",
-      "key": "build_a_star_wars_game_puzzles",
-      "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_star_wars_game_puzzles"
-      }
-    },
-    {
       "name": "Common Core and NGSS Guidance",
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp",
       "key": "common_core_and_ngss_guidance",
@@ -9691,6 +9679,42 @@
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
+      "key": "open-ended_programming_levels",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
+      "key": "open-ended_programming_levels_1",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_1"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+      "key": "open-ended_programming_levels_2",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels_2"
       }
     },
     {
@@ -10066,6 +10090,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "resource.key": "pause_and_think_online"
       }
@@ -10073,7 +10103,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
-        "resource.key": "build_a_star_wars_game_puzzles"
+        "resource.key": "open-ended_programming_levels_1"
       }
     },
     {
@@ -10092,6 +10122,12 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "open-ended_programming_levels_2"
       }
     },
     {
