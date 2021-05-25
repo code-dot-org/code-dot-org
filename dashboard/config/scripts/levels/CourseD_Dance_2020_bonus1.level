@@ -52,11 +52,9 @@
     "mini_rubric": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The alternate block is in the \\\"Dancers\\\" category.\",\"hint_id\":\"alternate\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fffe867825e8420399cc980b0f3b53b8/Dance_Party_extras_alternate_2019.mp3\"}]",
     "tts_long_instructions_override": "Back and Forth!\r\n\r\nSometimes you might want to create a pattern of dance moves you choose. This new block lets you do just that.\r\n\r\nThe moves you choose above will repeat in sequence forever.\r\n\r\nCreate an alternating routine for the lead dancer at the front!\r\nUse different numbers to change the rate at which the moves alternate. Try 1 or 0.5 to alternate more quickly!",
+    "thumbnail_url": "https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

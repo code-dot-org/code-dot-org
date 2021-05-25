@@ -2,7 +2,7 @@
   "script": {
     "name": "coursef-2021",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-05-21 18:45:25 UTC",
+    "serialized_at": "2021-05-25 17:13:46 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -2638,7 +2638,7 @@
       "key": "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf",
       "position": 1,
       "properties": {
-        "description": "It might be helpful to remind students of what they know about variables so far?\n\n- How are variables like a box or container?\n- Once information is stored in a variable, how do we use it later in a program?",
+        "description": "It might be helpful to remind students of what they know about variables so far.\n\n- How are variables like a box or container?\n- Once information is stored in a variable, how do we use it later in a program?",
         "name": "Review"
       },
       "seeding_key": {
@@ -2650,8 +2650,8 @@
       "key": "13122569-6e3b-4fd1-8cbe-226e6fc82d19",
       "position": 1,
       "properties": {
-        "description": "\n\n####Online Puzzles\n\nThe latter half of this series is made up of freeplay puzzles.  Students will have the opportunity to play with variables, shape, and color to create something unique.",
-        "name": "Changing Variables with Artist",
+        "description": "Consider reviewing the Prediction level and video with the full class before moving students on to the Skill Building section.",
+        "name": "Using Variables with Artist",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2674,7 +2674,7 @@
       "key": "88c99bab-0045-4d56-a8ae-a12f32e2866e",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "88c99bab-0045-4d56-a8ae-a12f32e2866e",
@@ -5345,7 +5345,7 @@
         "level_keys": [
           "courseF_artist_variables7_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5371,7 +5371,7 @@
         "level_keys": [
           "courseF_artist_variables8_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5397,7 +5397,7 @@
         "level_keys": [
           "courseF_artist_variables9_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -5423,7 +5423,7 @@
         "level_keys": [
           "courseF_artist_variables10_2021"
         ],
-        "progression": "Practice"
+        "progression": "Skill Building"
       },
       "named_level": false,
       "bonus": false,
@@ -9185,12 +9185,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables that Change in Artist",
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Nested Loops in the Maze",
         "resource.key": "pause_and_think_online"
       }
@@ -9379,12 +9373,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "sprite_lab_documentation_1",
-        "script.name": "coursef-2021"
-      }
-    }
+
   ],
   "vocabularies": [
     {
