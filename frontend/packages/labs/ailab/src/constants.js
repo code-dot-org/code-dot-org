@@ -108,11 +108,13 @@ export const styles = {
 
   largeText: {
     fontSize: 24,
-    marginBottom: 10
+    marginBottom: 10,
+    borderBottom: "solid 1px black",
+    paddingBottom: 10
   },
 
   mediumText: {
-    fontSize: 13,
+    fontSize: 14,
     marginBottom: 8
   },
 
@@ -217,7 +219,7 @@ export const styles = {
   },
 
   rightPanel: {
-    fontSize: 13
+    fontSize: 14
   },
 
   selectDatasetItem: {
@@ -738,7 +740,7 @@ export const styles = {
   },
 
   modelCardContent: {
-    fontSize: 13,
+    fontSize: 14,
     marginBottom: 0,
     marginTop: 0
   },
