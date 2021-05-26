@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-05-25 17:13:19 UTC",
+    "serialized_at": "2021-05-26 19:27:09 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -1723,7 +1723,7 @@
       "key": "59a20536-707e-4328-88ab-71b1c533cd37",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "59a20536-707e-4328-88ab-71b1c533cd37",
@@ -2314,7 +2314,7 @@
       "key": "eedc7420-83ed-420a-8bfe-db3e70719c14",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "eedc7420-83ed-420a-8bfe-db3e70719c14",
@@ -2476,7 +2476,7 @@
       "key": "6c661991-bf9d-4271-a318-5878b3ef438c",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "6c661991-bf9d-4271-a318-5878b3ef438c",
@@ -2816,7 +2816,7 @@
       "key": "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a",
       "position": 6,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a",
@@ -3451,7 +3451,7 @@
         "level_keys": [
           "courseA_maze_seq_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -3477,7 +3477,7 @@
         "level_keys": [
           "courseA_maze_seq_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4598,7 +4598,7 @@
         "level_keys": [
           "courseB_collector_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4624,7 +4624,7 @@
         "level_keys": [
           "courseB_collector_loops_challenge2a_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4963,7 +4963,7 @@
         "level_keys": [
           "courseB_artist_loops_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -4989,7 +4989,7 @@
         "level_keys": [
           "courseB_artist_loops_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5301,7 +5301,7 @@
         "level_keys": [
           "courseB_playlab_events_challenge1_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
@@ -5327,7 +5327,7 @@
         "level_keys": [
           "courseB_playlab_events_challenge2_2021"
         ],
-        "progression": "Challenge"
+        "progression": "Lesson Extras"
       },
       "named_level": false,
       "bonus": true,
