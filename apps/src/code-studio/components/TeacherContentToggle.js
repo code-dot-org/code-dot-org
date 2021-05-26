@@ -13,7 +13,7 @@ import {isStageHiddenForSection} from '../hiddenStageRedux';
  * locked stages and hidden stages) this means hiding the main content, and
  * replacing it with something else.
  * We accomplish this by having the server render that other content to a known
- * dom element (#locked-stage, #hidden-stage). This component then creates
+ * dom element (#locked-lesson, #hidden-lesson). This component then creates
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
@@ -33,10 +33,10 @@ class TeacherContentToggle extends React.Component {
       throw new Error('Expected level-body');
     }
     // Show this element, as parent div (refs.lockMessage) now owns visibility
-    $('#locked-stage')
+    $('#locked-lesson')
       .appendTo(this.refs.lockMessage)
       .show();
-    $('#hidden-stage')
+    $('#hidden-lesson')
       .appendTo(this.refs.hiddenMessage)
       .show();
     // Server initially sets level-body visibility to hidden when viewAs=Student
@@ -126,20 +126,20 @@ export const mapStateToProps = state => {
 
   let isLockedStage = false;
   let isHiddenStage = false;
-  const {currentStageId} = state.progress;
+  const {currentLessonId} = state.progress;
   if (viewAs === ViewType.Student) {
     const {selectedSectionId} = state.teacherSections;
 
-    isLockedStage = lessonIsLockedForAllStudents(currentStageId, state);
+    isLockedStage = lessonIsLockedForAllStudents(currentLessonId, state);
     isHiddenStage = isStageHiddenForSection(
       state.hiddenStage,
       selectedSectionId,
-      currentStageId
+      currentLessonId
     );
   } else if (!state.verifiedTeacher.isVerified) {
     // if not-authorized teacher
     isLockedStage = state.progress.stages.some(
-      stage => stage.id === currentStageId && stage.lockable
+      stage => stage.id === currentLessonId && stage.lockable
     );
   }
 

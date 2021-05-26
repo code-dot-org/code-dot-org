@@ -269,6 +269,24 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
      * run `ssh -L 3000:127.0.0.1:3000 yourname-ec2` and then `~/code-dot-org/bin/dashboard-server` on your local machine. This sets up SSH port forwarding from your local machine to your ec2 dev instance for as long as your ssh connection is open.
      * navigate to http://localhost-studio.code.org:3000/ on your local machine
 
+## Piskel
+### Local Development Between code-dot-org and forked piskel repo
+If you want the Code.org repo to point to the local version of the Piskel you are working on, your apps package must be linked to a local development copy of the Piskel repository with a complete dev build. 
+
+**[You can also find the steps below in apps/Gruntfile.js of the code-dot-org repo](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/Gruntfile.js)**
+
+#### The Steps:
+1. `git clone https://github.com/code-dot-org/piskel.git <new-directory>`
+2. `cd <new-directory>`
+3. `npm install && grunt build-dev`
+4. `npm link`
+5. `cd <code-dot-org apps directory>`
+6. `npm link @code-dot-org/piskel`
+7. rerun `yarn start` in the `<code-dot-org apps directory>`
+
+#### Note: Using `grunt serve --force`
+- If you try grunt serve and it is aborted due to warnings do `grunt serve --force`
+
 ## Enabling JavaScript builds
 **Note:** the installation process now enables this by default, which is recommended. You can manually edit these values later if you want to disable local JS builds.
 
