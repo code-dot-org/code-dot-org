@@ -1,61 +1,61 @@
 {
-    "card": {
-      "description": "A random selection of popular songs with and Billboard Top 100 chart information as well as other characteristics.",
-      "source": "http://doi.org/10.5281/zenodo.3258042",
-      "lastUpdated": "2021",
-      "context": {
-        "createdBy": "Eva Zangerle",
-        "potentialUses": "Predict how big of a hit a song was based on its genre and other factors.",
-        "potentialMisuses": ""
-      }
+  "name": "songs",
+  "card": {
+    "description": "A random selection of popular songs with and Billboard Top 100 chart information as well as other characteristics.",
+    "source": "http://doi.org/10.5281/zenodo.3258042",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Eva Zangerle",
+      "potentialUses": "Predict how big of a hit a song was based on its genre and other factors.",
+      "potentialMisuses": ""
+    }
+  },
+  "defaultLabelColumn": "Billboard rank peak",
+  "fields": [
+    {
+      "id": "Genre",
+      "type": "categorical",
+      "description": "The genre of the song."
     },
-    "defaultLabelColumn": "Billboard rank peak",
-    "fields": [
-      {
-        "id": "Genre",
-        "type": "categorical",
-        "description": "The genre of the song."
-      },
-      {
-        "id": "Artist",
-        "type": "categorical",
-        "description": "The artist's name."
-      },
-      {
-        "id": "Title",
-        "type": "categorical",
-        "description": "Title of the song."
-      },
-      {
-        "id": "Loudness score",
-        "type": "numerical",
-        "description": "A scoring of the song's loudness, where low negative numbers like -13 mean relatively quiet, and high negative numbers like -5 mean relatively loud"
-      },
-      {
-        "id": "Tempo in beats per minute",
-        "type": "numerical",
-        "description": "Tempo of the song in beats per minute (BPM). Higher numbers mean faster, more energetic songs."
-      },
-      {
-        "id": "Duration in seconds",
-        "type": "numerical",
-        "description": "Length of the song in seconds."
-      },
-      {
-        "id": "Year",
-        "type": "numerical",
-        "description": "The year the song was released."
-      },
-      {
-        "id": "Weeks on the Billboard Top 100",
-        "type": "numerical",
-        "description": "The total number of weeks the songs was listed on the Billboard Top 100."
-      },
-      {
-        "id": "Billboard rank peak",
-        "type": "numerical",
-        "description": "The highest position the song reached on the Billboard Top 100."
-      }
-    ]
-  }
-  
+    {
+      "id": "Artist",
+      "type": "categorical",
+      "description": "The artist's name."
+    },
+    {
+      "id": "Title",
+      "type": "categorical",
+      "description": "Title of the song."
+    },
+    {
+      "id": "Loudness score",
+      "type": "numerical",
+      "description": "A scoring of the song's loudness, where low negative numbers like -13 mean relatively quiet, and high negative numbers like -5 mean relatively loud"
+    },
+    {
+      "id": "Tempo in beats per minute",
+      "type": "numerical",
+      "description": "Tempo of the song in beats per minute (BPM). Higher numbers mean faster, more energetic songs."
+    },
+    {
+      "id": "Duration in seconds",
+      "type": "numerical",
+      "description": "Length of the song in seconds."
+    },
+    {
+      "id": "Year",
+      "type": "numerical",
+      "description": "The year the song was released."
+    },
+    {
+      "id": "Weeks on the Billboard Top 100",
+      "type": "numerical",
+      "description": "The total number of weeks the songs was listed on the Billboard Top 100."
+    },
+    {
+      "id": "Billboard rank peak",
+      "type": "numerical",
+      "description": "The highest position the song reached on the Billboard Top 100."
+    }
+  ]
+}

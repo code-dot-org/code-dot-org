@@ -1,4 +1,5 @@
 {
+  "name": "student_alcohol_consumption",
   "card": {
     "description": "Contains individual responses to a social survey of Portuguese secondary school students, tracking social, gender, and study information.",
     "source": "Kaggle (https://www.kaggle.com/uciml/student-alcohol-consumption)",

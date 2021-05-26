@@ -1,4 +1,5 @@
 {
+  "name": "medical_priority",
   "card": {
     "description": "Data collected by a hospital on all patients who entered an emergency room over the course of one month",
     "source": "Code.org Generated Dataset",

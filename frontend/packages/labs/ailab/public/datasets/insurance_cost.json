@@ -1,4 +1,5 @@
 {
+  "name": "insurance_cost",
   "card": {
     "description": "Insurance costs along with factors like number of children, location, smoker/nonsmoker status, age, sex, BMI",
     "source": "https://www.kaggle.com/mirichoi0218/insurance",

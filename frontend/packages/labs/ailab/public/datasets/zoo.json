@@ -1,4 +1,5 @@
 {
+  "name": "zoo",
   "card": {
     "description": "A small dataset of different animal attributes (whether they have hair, feathers, teeth, and more) used for classification purposes. Almost all features are Yes/No except for Animal Name, Class, and Number of Legs.",
     "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Zoo)",

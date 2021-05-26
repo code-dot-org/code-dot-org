@@ -1,4 +1,5 @@
 {
+  "name": "auto_mpg",
   "card": {
     "description": "A small dataset of different car statistics, originally from 1983, used to predict their MPG (miles per gallon). This dataset is unlikely to get great accuracy scores on a KNN regression, but it could make a useful model nonetheless: how can you take a general pattern in the model and use that to determine which features contribute to higher miles per gallon? How might you change the dataset to get a more accurate model - for example, changing MPG from a numerical column to a categorical one with intervals of 5 MPG?",
     "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Auto+MPG)",

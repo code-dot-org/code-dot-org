@@ -1,4 +1,5 @@
 {
+  "name": "census_part",
   "card": {
     "description": "Data from the 1994 US census, with income, personal, and job data. Used to predict whether a person's income is over $50,000",
     "source": "UCI Machine Learning (https://archive.ics.uci.edu/ml/datasets/Adult)",

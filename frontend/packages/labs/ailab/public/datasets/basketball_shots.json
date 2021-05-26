@@ -1,4 +1,5 @@
 {
+  "name": "basketball_shots",
   "card": {
     "description": "This dataset contains every 3-point attempt made during the NCAA 2017 tournament. With this data it's possible to predict whether the shot was made or missed.",
     "source": "NCAA (https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=ncaa_basketball)",

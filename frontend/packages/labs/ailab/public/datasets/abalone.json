@@ -1,4 +1,5 @@
 {
+  "name": "abalone",
   "card": {
     "description": "This dataset contains various attributes of different abalone, a type of marine snails. The goal is to predict the number of rings in the abalone's shell, which is an indicator of its age.",
     "source": "UCI (archive.ics.uci.edu/ml/datasets/Abalone)",
