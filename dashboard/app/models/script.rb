@@ -1152,49 +1152,68 @@ class Script < ApplicationRecord
     end
   end
 
-  def clone_migrated_with_suffix(new_suffix, options = {})
-    destination_unit_group = options[:destination_unit_group_name] ?
-      UnitGroup.find_by_name(options[:destination_unit_group_name]) :
+  def self.clone_migrated_script(original_script, new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+    destination_unit_group = destination_unit_group_name ?
+      UnitGroup.find_by_name(destination_unit_group_name) :
       nil
     raise 'Destination unit group must have a course version' unless destination_unit_group.nil? || destination_unit_group.course_version
 
-    previous_suffix = options[:previous_suffix]
-    new_name =
-      if options[:new_name]
-        options[:new_name]
-      elsif previous_suffix
-        "#{name.chomp(previous_suffix)}-#{new_suffix}"
-      else
-        "#{base_name}-#{new_suffix}"
-      end
     ActiveRecord::Base.transaction do
-      copied_script = dup
+      copied_script = original_script.dup
       copied_script.is_stable = false
       copied_script.tts = false
       copied_script.announcements = nil
       copied_script.is_course = destination_unit_group.nil?
       copied_script.name = new_name
 
-      if /^[0-9]{4}$/ =~ (new_suffix)
-        copied_script.version_year = new_suffix
+      if version_year
+        copied_script.version_year = version_year
       end
 
       copied_script.save!
 
       if destination_unit_group
+        raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_script, position: destination_unit_group.default_scripts.length + 1)
         copied_script.reload
       else
+        copied_script.is_course = true
+        raise "Must supply version year if new script will be a standalone course" unless version_year
+        copied_script.version_year = version_year
+        raise "Must supply family name if new script will be a standalone course" unless family_name
+        copied_script.family_name = family_name
         CourseOffering.add_course_offering(copied_script)
       end
 
-      lesson_groups.each do |original_lesson_group|
-        LessonGroup.copy_to_script(original_lesson_group, copied_script, new_suffix)
+      original_script.lesson_groups.each do |original_lesson_group|
+        LessonGroup.copy_to_script(original_lesson_group, copied_script, new_level_suffix)
       end
+
+      course_version = copied_script.get_course_version
+      copied_script.resources =
+        original_script.resources.map do |original_resource|
+          persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
+          if persisted_resource
+            persisted_resource
+          else
+            copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
+            copied_resource
+          end
+        end
+      copied_script.student_resources =
+        original_script.student_resources.map do |original_resource|
+          persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
+          if persisted_resource
+            persisted_resource
+          else
+            copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
+            copied_resource
+          end
+        end
 
       # Make sure we don't modify any files in unit tests.
       if Rails.application.config.levelbuilder_mode
-        copy_and_write_i18n(new_name)
+        copied_script.copy_and_write_i18n(new_name)
         copied_script.write_script_json
         copied_script.write_script_dsl
       end
