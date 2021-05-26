@@ -33,6 +33,9 @@ class TeacherFeedback < ApplicationRecord
   belongs_to :script
   belongs_to :level
   belongs_to :teacher, class_name: 'User'
+  scope :latest, -> {find_by(id: maximum(:id))}
+  scope :latest_per_level, -> {find(group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)'))}
+  scope :by_teacher, ->(teacher_id) {where(teacher_id: teacher_id) if teacher_id.present?}
 
   REVIEW_STATES = [
     "keepWorking",
@@ -57,23 +60,45 @@ class TeacherFeedback < ApplicationRecord
     script_level
   end
 
-  def self.get_student_level_feedback(student_id, level_id, teacher_id, script_id)
+  def self.get_student_level_feedback_by_teacher(student_id, level_id, script_id, teacher_id)
     where(
       student_id: student_id,
       level_id: level_id,
-      teacher_id: teacher_id,
-      script_id: script_id
+      script_id: script_id,
+      teacher_id: teacher_id
     ).latest
   end
 
-  def self.get_all_feedback_for_section(student_ids, level_ids, teacher_id)
-    find(
-      where(
-        student_id: student_ids,
-        level_id: level_ids,
-        teacher_id: teacher_id
-      ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
-    )
+  def self.get_all_student_level_feedback(student_id, level_id, script_id)
+    where(
+      student_id: params.require(:student_id),
+      level_id: params.require(:level_id),
+      script_id: params.require(:script_id)
+    ).latest_per_teacher
+  end
+
+  def self.student_has_feedback(student_id)
+    where(student_id: student_id).count > 0
+  end
+
+  def self.get_student_unseen_feedback_count(student_id)
+    authorized_unseen_feedbacks = where(
+      student_id: current_user.id,
+      seen_on_feedback_page_at: nil,
+      student_first_visited_at: nil
+    ).select do |feedback|
+      feedback.teacher.authorized_teacher?
+    end
+
+    authorized_unseen_feedbacks.count
+  end
+
+  def self.get_student_feedbacks_for_script_by_teacher(script_id, student_ids, teacher_id = nil)
+    where(
+      script_id: script_id,
+      student_id: student_ids,
+      teacher_id: teacher_id
+    ).by_teacher(teacher_id).latest_per_level
   end
 
   def self.latest_per_teacher
@@ -84,10 +109,6 @@ class TeacherFeedback < ApplicationRecord
         group([:teacher_id, :student_id]).
         pluck('MAX(teacher_feedbacks.id)')
     )
-  end
-
-  def self.latest
-    find_by(id: maximum(:id))
   end
 
   # Increments student_visit_count and related metrics timestamps for a TeacherFeedback.
