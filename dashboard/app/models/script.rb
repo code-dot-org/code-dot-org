@@ -1190,26 +1190,8 @@ class Script < ApplicationRecord
       end
 
       course_version = copied_script.get_course_version
-      copied_script.resources =
-        original_script.resources.map do |original_resource|
-          persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
-          if persisted_resource
-            persisted_resource
-          else
-            copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
-            copied_resource
-          end
-        end
-      copied_script.student_resources =
-        original_script.student_resources.map do |original_resource|
-          persisted_resource = Resource.where(name: original_resource.name, url: original_resource.url, course_version_id: course_version.id).first
-          if persisted_resource
-            persisted_resource
-          else
-            copied_resource = Resource.create!(original_resource.attributes.slice('name', 'url', 'properties').merge({course_version_id: course_version.id}))
-            copied_resource
-          end
-        end
+      copied_script.resources = original_script.resources.map {|r| r.copy_to_course_version(course_version)}
+      copied_script.student_resources = original_script.student_resources.map {|r| r.copy_to_course_version(course_version)}
 
       # Make sure we don't modify any files in unit tests.
       if Rails.application.config.levelbuilder_mode
