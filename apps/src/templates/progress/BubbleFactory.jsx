@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
-import _ from 'lodash';
+import {uniqueId} from 'lodash';
 import queryString from 'query-string';
 import i18n from '@cdo/locale';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
@@ -16,6 +16,7 @@ import {
   tightlyConstrainedSizeStyle
 } from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+import './bubbleStyles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');
 export const BubbleShape = makeEnum('circle', 'diamond', 'pill');
@@ -104,23 +105,30 @@ BubbleLink.propTypes = {
   children: PropTypes.element.isRequired
 };
 
-export function BubbleTooltip({level, children}) {
-  let tooltipText = level.isSublevel
-    ? level.display_name
-    : level.isUnplugged
-    ? i18n.unpluggedActivity()
-    : level.name || level.progressionDisplayName || '';
+function getTooltipTextForLevel(level) {
+  let tooltipText;
+  if (level.isSublevel) {
+    tooltipText = level.display_name;
+  } else if (level.isUnplugged) {
+    tooltipText = i18n.unpluggedActivity();
+  } else {
+    tooltipText = level.name || level.progressionDisplayName || '';
+  }
   if (level.levelNumber) {
     tooltipText = `${level.levelNumber}. ${tooltipText}`;
   }
-  const tooltipId = _.uniqueId();
+  return tooltipText;
+}
+
+export function BubbleTooltip({level, children}) {
+  const tooltipId = uniqueId();
   return (
     <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
       {children}
       <TooltipWithIcon
         tooltipId={tooltipId}
         icon={getIconForLevel(level)}
-        text={tooltipText}
+        text={getTooltipTextForLevel(level)}
         includeAssessmentIcon={isLevelAssessment(level)}
       />
     </div>

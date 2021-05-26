@@ -1,6 +1,5 @@
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import styles from './styles.scss';
 
 /**
  * Note: these constants will be removed in favor of `BubbleFactory.bubbleSizes`
@@ -58,20 +57,6 @@ export const marginTopBottom = margin => {
 
 export const font = {
   fontFamily: '"Gotham 5r", sans-serif'
-};
-
-export const cellContent = {
-  padding: '0px 4px'
-};
-
-export const studentListContent = {
-  height: parseInt(styles.ROW_HEIGHT),
-  boxSizing: 'border-box',
-  padding: 10,
-  fontSize: 14,
-  textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
-  overflow: 'hidden'
 };
 
 export const hoverStyle = {

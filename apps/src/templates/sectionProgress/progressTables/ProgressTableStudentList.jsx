@@ -8,8 +8,7 @@ import {
   studentTableRowType
 } from '../sectionProgressConstants';
 import ProgressTableStudentName from './ProgressTableStudentName';
-import css from '@cdo/apps/templates/progress/styles.scss';
-import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import progressTableStyles from './progressTableStyles.scss';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -95,7 +94,7 @@ export default class ProgressTableStudentList extends React.Component {
             {
               header: {
                 label: header,
-                props: {style: progressStyles.studentListContent}
+                props: {className: 'content'}
               }
             }
           ])}
@@ -107,7 +106,7 @@ export default class ProgressTableStudentList extends React.Component {
           style={{
             overflowX: 'scroll',
             overflowY: 'hidden',
-            maxHeight: parseInt(css.MAX_BODY_HEIGHT)
+            maxHeight: parseInt(progressTableStyles.MAX_BODY_HEIGHT)
           }}
           ref={r => {
             this.body = r && r.getRef();

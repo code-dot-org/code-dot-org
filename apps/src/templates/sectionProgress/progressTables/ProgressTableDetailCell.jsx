@@ -107,10 +107,7 @@ export default class ProgressTableDetailCell extends React.Component {
       return null;
     }
     return (
-      <div
-        style={{...styles.container, ...progressStyles.cellContent}}
-        className="uitest-detail-cell"
-      >
+      <div style={styles.container} className="uitest-detail-cell cell-content">
         <div style={styles.background} />
         {this.props.levels.map(level => this.renderBubble(level))}
       </div>

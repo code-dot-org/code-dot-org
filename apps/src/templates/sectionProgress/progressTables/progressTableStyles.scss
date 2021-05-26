@@ -1,24 +1,6 @@
 @import 'color';
 @import 'style-constants';
 
-.progress-bubble {
-  &.enabled {
-    transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
-      color 0.2s ease-out;
-    &:hover {
-      text-decoration: none;
-      color: $white !important;
-      border-color: $level_current !important;
-      background-color: $level_current !important;
-    }
-  }
-}
-
-.progress-bubble-link {
-  display: inline-block;
-  text-decoration: none;
-}
-
 $scrollbar-height: 15px;
 $row-height: 42px;
 $expanded-row-height: 30px;
@@ -50,6 +32,9 @@ $content-view-width: $content-width - $student-list-width;
     &:last-child {
       border-right: 0px;
     }
+  }
+  .cell-content {
+    padding: 0px 4px;
   }
   .primary-row {
     td {
@@ -87,6 +72,15 @@ $content-view-width: $content-width - $student-list-width;
         display: block;
         width: 100%;
       }
+    }
+    .content {
+      height: $row-height;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
     .expanded-row {
       td {
