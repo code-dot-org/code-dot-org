@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 17:11:32 UTC",
+    "serialized_at": "2021-05-25 22:56:51 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -2254,6 +2254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 CSP CFU Terms_2021"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
@@ -2459,6 +2462,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L6 CFU ML Bias_2021"
+        ],
         "progression": "Check for Understanding"
       },
       "named_level": false,
@@ -2482,6 +2488,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget"
+        ],
         "progression": "Cropping Widget"
       },
       "named_level": false,
@@ -2505,6 +2514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L7 Free Response"
+        ],
         "progression": "Check For Understanding"
       },
       "named_level": false,
