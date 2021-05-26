@@ -264,11 +264,11 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const saveBarButtons = wrapper
       .find(UnconnectedFoormFormSaveBar)
       .find('button');
-    const saveButton1 = saveBarButtons.at(0);
-    const saveButton2 = saveBarButtons.at(1);
+    const saveNewVersionButton = saveBarButtons.at(0);
+    const saveButton = saveBarButtons.at(1);
 
-    expect(saveButton1.contains('Save as New Version')).to.be.true;
-    expect(saveButton2.contains('Save')).to.be.true;
+    expect(saveNewVersionButton.contains('Save as New Version')).to.be.true;
+    expect(saveButton.contains('Save')).to.be.true;
     expect(saveBarButtons.length).to.equal(2);
   });
 
@@ -281,11 +281,11 @@ describe('FoormEntityEditor in Form editing mode', () => {
     const saveBarButtons = wrapper
       .find(UnconnectedFoormFormSaveBar)
       .find('button');
-    const saveButton1 = saveBarButtons.at(0);
-    const saveButton2 = saveBarButtons.at(1);
+    const saveNewVersionButton = saveBarButtons.at(0);
+    const saveButton = saveBarButtons.at(1);
 
-    expect(saveButton1.contains('Publish')).to.be.false;
-    expect(saveButton2.contains('Save')).to.be.true;
+    expect(saveNewVersionButton.contains('Publish')).to.be.false;
+    expect(saveButton.contains('Save')).to.be.true;
     expect(saveBarButtons.length).to.equal(2);
   });
 
