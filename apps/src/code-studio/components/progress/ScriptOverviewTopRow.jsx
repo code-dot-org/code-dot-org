@@ -127,7 +127,7 @@ class ScriptOverviewTopRow extends React.Component {
     return (
       <div style={styles.buttonRow} className="script-overview-top-row">
         {!professionalLearningCourse && viewAs === ViewType.Student && (
-          <div>
+          <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
               href={`/s/${scriptName}/next`}
@@ -220,7 +220,13 @@ const styles = {
   buttonRow: {
     // ensure we have height when we only have our toggle (which is floated)
     minHeight: 50,
-    position: 'relative'
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  buttonsInRow: {
+    display: 'flex',
+    alignItems: 'center'
   },
   right: {
     position: 'absolute',

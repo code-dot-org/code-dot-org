@@ -131,7 +131,8 @@ export default class TeacherSectionSelector extends Component {
 const styles = {
   select: {
     height: 34,
-    width: 300
+    width: 300,
+    marginBottom: 0
   },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
