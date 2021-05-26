@@ -229,7 +229,7 @@ const bubbleSizes = {
 };
 
 const circleMargins = {
-  [BubbleSize.dot]: 3,
+  [BubbleSize.dot]: 2,
   [BubbleSize.letter]: 3,
   [BubbleSize.full]: 2
 };
