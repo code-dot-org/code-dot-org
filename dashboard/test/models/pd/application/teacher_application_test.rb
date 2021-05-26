@@ -75,7 +75,7 @@ module Pd::Application
           committed: 'Yes'
         }
       }.to_json
-      assert_equal Pd::Application::Teacher2122Application::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
+      assert_equal Pd::Application::TeacherApplication::REVIEWING_INCOMPLETE, teacher_application.meets_criteria
     end
 
     test 'accepted_at updates times' do
@@ -279,13 +279,13 @@ module Pd::Application
       workshop_admin = create :workshop_admin
 
       [teacher, g1_program_manager, g3_program_manager, workshop_admin].each do |user|
-        refute Teacher2122Application.can_see_locked_status?(user)
+        refute TeacherApplication.can_see_locked_status?(user)
       end
     end
 
     test 'columns_to_remove' do
       ['csp', 'csd'].each do |course|
-        columns = Teacher2122Application.columns_to_remove(course)
+        columns = TeacherApplication.columns_to_remove(course)
         columns.keys.each do |k|
           columns[k].each {|c| refute c.to_s.include?(course)}
         end
@@ -293,22 +293,22 @@ module Pd::Application
     end
 
     test 'csv_filtered_labels' do
-      csv_filtered_labels_csd = Teacher2122Application.csv_filtered_labels('csd')
+      csv_filtered_labels_csd = TeacherApplication.csv_filtered_labels('csd')
       assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
       refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
 
-      csv_filtered_labels_csp = Teacher2122Application.csv_filtered_labels('csp')
+      csv_filtered_labels_csp = TeacherApplication.csv_filtered_labels('csp')
       refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
       assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
     end
 
     test 'csv_header' do
-      csv_header_csd = CSV.parse(Teacher2122Application.csv_header('csd'))[0]
+      csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
       assert_equal 93, csv_header_csd.length
 
-      csv_header_csp = CSV.parse(Teacher2122Application.csv_header('csp'))[0]
+      csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
       assert_equal 95, csv_header_csp.length
@@ -340,7 +340,7 @@ module Pd::Application
 
       # Workshop, Session, Enrollment, School, SchoolDistrict
       assert_queries 5 do
-        Teacher2122Application.prefetch_associated_models([application])
+        TeacherApplication.prefetch_associated_models([application])
       end
 
       assert_queries 0 do
@@ -351,17 +351,17 @@ module Pd::Application
     end
 
     test 'memoized filtered_labels' do
-      Teacher2122Application::FILTERED_LABELS.clear
+      TeacherApplication::FILTERED_LABELS.clear
 
-      filtered_labels_csd = Teacher2122Application.filtered_labels('csd')
+      filtered_labels_csd = TeacherApplication.filtered_labels('csd')
       assert filtered_labels_csd.include? :csd_which_grades
       refute filtered_labels_csd.include? :csp_which_grades
-      assert_equal ['csd'], Teacher2122Application::FILTERED_LABELS.keys
+      assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
-      filtered_labels_csd = Teacher2122Application.filtered_labels('csp')
+      filtered_labels_csd = TeacherApplication.filtered_labels('csp')
       refute filtered_labels_csd.include? :csd_which_grades
       assert filtered_labels_csd.include? :csp_which_grades
-      assert_equal ['csd', 'csp'], Teacher2122Application::FILTERED_LABELS.keys
+      assert_equal ['csd', 'csp'], TeacherApplication::FILTERED_LABELS.keys
     end
 
     test 'status changes are logged' do
@@ -473,8 +473,8 @@ module Pd::Application
     end
 
     test 'autoscore with everything getting positive response for csd' do
-      options = Pd::Application::Teacher2122Application.options
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
@@ -516,8 +516,8 @@ module Pd::Application
     end
 
     test 'autoscore with everything getting a positive response for csp' do
-      options = Pd::Application::Teacher2122Application.options
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -559,7 +559,7 @@ module Pd::Application
     end
 
     test 'autoscore works before principal approval' do
-      options = Pd::Application::Teacher2122Application.options
+      options = Pd::Application::TeacherApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -590,8 +590,8 @@ module Pd::Application
     end
 
     test 'autoscore with everything getting negative response for csd' do
-      options = Pd::Application::Teacher2122Application.options
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csd],
@@ -632,8 +632,8 @@ module Pd::Application
     end
 
     test 'autoscore with everything getting negative response for csp' do
-      options = Pd::Application::Teacher2122Application.options
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -674,8 +674,8 @@ module Pd::Application
     end
 
     test 'autoscore principal responses override teacher responses' do
-      options = Pd::Application::Teacher2122Application.options
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         replace_existing: options[:replace_existing].first
@@ -701,7 +701,7 @@ module Pd::Application
     end
 
     test 'autoscore principal responses for replace_existing question' do
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       test_cases = [
         # If the answer for replace_course is 'Yes', the application does not meet requirement
@@ -744,10 +744,10 @@ module Pd::Application
       # For each test case, creates an principal approval application and re-scores the
       # teacher application.
       test_cases.each_with_index do |test_case, index|
-        principal_approval = build :pd_principal_approval2122_application,
+        principal_approval = build :pd_principal_approval_application,
           teacher_application: application,
           form_data_hash: (
-          build :pd_principal_approval2122_application_hash_common, test_case[:principal_answers]
+          build :pd_principal_approval_application_hash_common, test_case[:principal_answers]
           )
 
         # Updates the application with principal's responses and run auto_score! again
@@ -760,8 +760,8 @@ module Pd::Application
     end
 
     test 'autoscore nil results when applicable' do
-      options = Pd::Application::Teacher2122Application.options
-      principal_options = Pd::Application::PrincipalApproval2122Application.options
+      options = Pd::Application::TeacherApplication.options
+      principal_options = Pd::Application::PrincipalApprovalApplication.options
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplicationBase::PROGRAMS[:csp],
@@ -799,12 +799,12 @@ module Pd::Application
       application.emails.last.destroy
       assert_equal 'Not required', application.reload.principal_approval_state
 
-      create :pd_principal_approval2122_application, teacher_application: application, approved: 'Yes'
+      create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
       assert_equal 'Complete - Yes', application.reload.principal_approval_state
     end
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
-      statuses = Teacher2122Application::WORKSHOP_REQUIRED_STATUSES
+      statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
       workshop = create :workshop
       application = create :pd_teacher_application, {
@@ -825,7 +825,7 @@ module Pd::Application
     end
 
     test 'do not require assigned workshop for registration-related statuses if emails sent by partner' do
-      statuses = Teacher2122Application::WORKSHOP_REQUIRED_STATUSES
+      statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
       application = create :pd_teacher_application, {
         regional_partner: partner
@@ -838,7 +838,7 @@ module Pd::Application
     end
 
     test 'do not require workshop for non-registration-related statuses' do
-      statuses = Teacher2122Application.statuses - Teacher2122Application::WORKSHOP_REQUIRED_STATUSES
+      statuses = TeacherApplication.statuses - TeacherApplication::WORKSHOP_REQUIRED_STATUSES
       partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
       application = create :pd_teacher_application, {
         regional_partner: partner
@@ -910,7 +910,7 @@ module Pd::Application
       application = create :pd_teacher_application, pd_workshop_id: workshop.id
       # Workshops, Sessions, Enrollments, Schools, School districts
       assert_queries 5 do
-        Teacher2122Application.prefetch_associated_models([application])
+        TeacherApplication.prefetch_associated_models([application])
       end
 
       assert_queries 0 do
@@ -952,7 +952,7 @@ module Pd::Application
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
-      create :pd_principal_approval2122_application, teacher_application: application
+      create :pd_principal_approval_application, teacher_application: application
       refute application.allow_sending_principal_email?
 
       # If we created a principal email < 5 days ago, we can't send.
@@ -1009,7 +1009,7 @@ module Pd::Application
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
-      create :pd_principal_approval2122_application, teacher_application: application
+      create :pd_principal_approval_application, teacher_application: application
       create :pd_application_email, application: application, email_type: 'principal_approval', created_at: 6.days.ago
       refute application.allow_sending_principal_approval_teacher_reminder_email?
 
