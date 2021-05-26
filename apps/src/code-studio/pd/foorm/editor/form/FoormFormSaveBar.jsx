@@ -84,6 +84,14 @@ class FoormFormSaveBar extends Component {
     }
   };
 
+  handleSaveNewVersion = () => {
+    this.setState({
+      isSaving: true,
+      confirmationDialogBeingShownName: confirmationDialogNames.saveNewVersion
+    });
+    this.props.setSaveError(null);
+  };
+
   handlePublish = () => {
     this.setState({
       isSaving: true,
@@ -144,7 +152,8 @@ class FoormFormSaveBar extends Component {
       .done(result => {
         this.handleSaveSuccess(result);
         this.setState({
-          showNewFormSave: false
+          showNewFormSave: false,
+          confirmationDialogBeingShownName: null
         });
         // adds new form to form dropdown
         this.props.addFetchableForm({
@@ -156,7 +165,8 @@ class FoormFormSaveBar extends Component {
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          showNewFormSave: false
+          showNewFormSave: false,
+          confirmationDialogBeingShownName: null
         });
       });
   };
@@ -307,7 +317,7 @@ class FoormFormSaveBar extends Component {
               className="btn btn-primary"
               type="button"
               style={styles.button}
-              onClick={() => this.handleSave(true)}
+              onClick={() => this.handleSaveNewVersion()}
               disabled={this.state.isSaving || this.props.hasJSONError}
             >
               Save as New Version
@@ -324,6 +334,19 @@ class FoormFormSaveBar extends Component {
           </button>
         </div>
         {this.renderNewFormSaveModal()}
+        <ConfirmationDialog
+          show={
+            this.state.confirmationDialogBeingShownName ===
+            confirmationDialogNames.saveNewVersion
+          }
+          onOk={() => {
+            this.handleSave(true);
+          }}
+          okText={'Yes, save the form'}
+          onCancel={this.handleSaveCancel}
+          headerText="Save Form as New Version"
+          bodyText={saveNewVersionWarning(this.props.formVersion + 1)}
+        />
         <ConfirmationDialog
           show={
             this.state.confirmationDialogBeingShownName ===
@@ -392,6 +415,16 @@ const styles = {
   }
 };
 
+const saveNewVersionWarning = version => (
+  <div>
+    <span style={styles.warning}>Warning: </span>You are about to save version{' '}
+    {version} of this form. This version will need to be deployed separately.
+    <br />
+    <br />
+    Are you sure you want to save your changes?
+  </div>
+);
+
 const publishedSaveWarning = (
   <div>
     <span style={styles.warning}>Warning: </span>You are editing a published
@@ -425,7 +458,8 @@ const aboutToPublishWarning = (
 
 const confirmationDialogNames = {
   save: 'save',
-  publish: 'publish'
+  publish: 'publish',
+  saveNewVersion: 'saveNewVersion'
 };
 
 export const UnconnectedFoormFormSaveBar = FoormFormSaveBar;
