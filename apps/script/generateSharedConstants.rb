@@ -137,7 +137,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval2122ApplicationConstants,
+      source_module: Pd::PrincipalApprovalApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
