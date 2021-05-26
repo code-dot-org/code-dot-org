@@ -281,6 +281,11 @@
           ]
         },
         {
+          "type": "html",
+          "name": "instructional_focus_statements",
+          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Instruction and class activities should focus on maintaining high standards and rigor so that students reach the highest level of achievement, even if some students struggle with the material. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">Instruction and class activities should focus on ensuring that students with the least prior knowledge and preparation are not left behind, even if that means that less material can be covered. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
+        },
+        {
           "type": "panel",
           "name": "lead_learner_panel",
           "elements": [
@@ -298,6 +303,11 @@
               "maxRateDescription": "Strongly aligned with B"
             }
           ]
+        },
+        {
+          "type": "html",
+          "name": "lead_learner_statements",
+          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\" </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</span>\n                    \n                  </td>\n                </tr>\n              </tbody>\n</table>"
         },
         {
           "type": "matrix",
@@ -399,6 +409,11 @@
               "maxRateDescription": "Strongly aligned with B"
             }
           ]
+        },
+        {
+          "type": "html",
+          "name": "prioritize_time_statements",
+          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">It’s important that the teacher prioritize their time and resources for students who have the most need. </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">  \tThe teacher should ensure that their time, and students’ access to resources are distributed equally for all. </span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
         },
         {
           "type": "html",
