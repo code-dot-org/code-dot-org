@@ -20,6 +20,8 @@ const DEFAULT_PROPS = {
   handleInstructionTabClick: () => {},
   handleHelpTabClick: () => {},
   handleCommentTabClick: () => {},
+  handleDocumentationTabClick: () => {},
+  handleReviewTabClick: () => {},
   handleTeacherOnlyTabClick: () => {},
   handleClickCollapser: () => {},
   isMinecraft: false,
