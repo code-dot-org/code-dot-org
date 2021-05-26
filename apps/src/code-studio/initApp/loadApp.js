@@ -126,13 +126,13 @@ export function setupApp(appOptions) {
         showVideoDialog(lastServerResponse.videoInfo);
       } else if (lastServerResponse.endOfStageExperience) {
         const body = document.createElement('div');
-        const stageInfo = lastServerResponse.previousStageInfo;
-        const stageName = `${msg.stage()} ${stageInfo.position}: ${
-          stageInfo.name
+        const lessonInfo = lastServerResponse.previousStageInfo;
+        const lessonName = `${msg.stage()} ${lessonInfo.position}: ${
+          lessonInfo.name
         }`;
         ReactDOM.render(
           <PlayZone
-            lessonName={stageName}
+            lessonName={lessonName}
             onContinue={() => {
               dialog.hide();
             }}

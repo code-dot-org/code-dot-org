@@ -167,8 +167,8 @@ class ScriptLevelsController < ApplicationController
       script.get_script_level_by_chapter(params[:chapter])
     elsif params[:lesson_position]
       script.get_script_level_by_relative_position_and_puzzle_position(params[:lesson_position], params[:id], false)
-    elsif params[:lockable_stage_position]
-      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_stage_position], params[:id], true)
+    elsif params[:lockable_lesson_position]
+      script.get_script_level_by_relative_position_and_puzzle_position(params[:lockable_lesson_position], params[:id], true)
     else
       script.get_script_level_by_id(params[:id])
     end
@@ -294,7 +294,7 @@ class ScriptLevelsController < ApplicationController
       if params[:lesson_position]
         script.lesson_by_relative_position(params[:lesson_position])
       else
-        script.lesson_by_relative_position(params[:lockable_stage_position], true)
+        script.lesson_by_relative_position(params[:lockable_lesson_position], true)
       end
 
     render json: lesson.summary_for_lesson_plans
