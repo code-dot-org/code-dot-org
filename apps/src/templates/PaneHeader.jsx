@@ -186,7 +186,7 @@ export const PaneButton = Radium(function(props) {
 PaneButton.propTypes = {
   headerHasFocus: PropTypes.bool.isRequired,
   iconClass: PropTypes.string,
-  icon: PropTypes.node,
+  icon: PropTypes.element,
   label: PropTypes.string.isRequired,
   isRtl: PropTypes.bool.isRequired,
   leftJustified: PropTypes.bool,
