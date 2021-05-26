@@ -1,6 +1,6 @@
 {
-  "title": "Code.org CSP AP survey 2020-2021 school year",
-  "description": "Here's my description",
+  "title": "Code.org CSP AP survey (2020-2021)",
+  "description": "We are trying to learn more about why Code.org CS Principles students do or do not take the AP CSP exam. We will use this information to improve our support for CS Principles students and teachers. Thank you in advance for filling out the survey - it should take no more than 5-10 minutes of your time.",
   "pages": [
     {
       "name": "page1",
@@ -12,11 +12,11 @@
           "isRequired": true,
           "choices": [
             {
-              "value": "item1",
+              "value": "yes",
               "text": "Yes"
             },
             {
-              "value": "item3",
+              "value": "no",
               "text": "No"
             }
           ]
@@ -24,91 +24,65 @@
         {
           "type": "radiogroup",
           "name": "exam_mandatory",
-          "visibleIf": "{students_took_exam} = 'item1'",
-          "title": "For your students this year (2020-2021), was the AP exam...",
+          "visibleIf": "{students_took_exam} = 'yes'",
+          "title": "For your students this year (2020-2021), was the AP CSP exam...",
           "isRequired": true,
           "choices": [
             {
-              "value": "item1",
+              "value": "mandatory",
               "text": "Mandatory for all of your students?"
             },
             {
-              "value": "item2",
+              "value": "highly_recommended",
               "text": "Highly recommended for all of your students?"
             },
             {
-              "value": "item3",
+              "value": "optional",
               "text": "Optional for all of your students?"
             },
             {
-              "value": "item4",
+              "value": "recommended_for_some",
               "text": "Recommended for some of your students and not for others?"
             },
             {
-              "value": "item5",
+              "value": "not_recommended",
               "text": "Not recommended for any of your students?"
             }
           ]
         },
         {
           "type": "radiogroup",
-          "name": "who_decides_mandatory",
-          "visibleIf": "{exam_mandatory} = 'item1'",
-          "title": "Who decides whether or not the AP CSP exam is mandatory for your students?",
-          "isRequired": true,
-          "choices": [
-            {
-              "value": "item1",
-              "text": "A district administrator or other district official"
-            },
-            {
-              "value": "item2",
-              "text": "My principal"
-            },
-            {
-              "value": "item3",
-              "text": "The head of my department"
-            },
-            {
-              "value": "item4",
-              "text": "Me / the teacher of the class"
-            }
-          ],
-          "hasOther": true
-        },
-        {
-          "type": "radiogroup",
           "name": "took_multiple_choice",
-          "visibleIf": "{students_took_exam} = 'item1'",
-          "title": "What percentage of your students took the **multiple choice** portion of the CSP AP exam?",
+          "visibleIf": "{students_took_exam} = 'yes'",
+          "title": "What percentage of your students took the **multiple choice** portion of the AP CSP exam?",
           "isRequired": true,
           "choices": [
             {
-              "value": "item1",
+              "value": "all_students",
               "text": "All (100%)"
             },
             {
-              "value": "item2",
+              "value": "almost_all",
               "text": "Almost all (90-99%)"
             },
             {
-              "value": "item3",
+              "value": "majority",
               "text": "Majority of my students (60%-90%)"
             },
             {
-              "value": "item4",
+              "value": "about_half",
               "text": "About half my students (40-60%)"
             },
             {
-              "value": "item5",
+              "value": "about_third",
               "text": "About a third of my students (20-40%)"
             },
             {
-              "value": "item6",
+              "value": "only_a_few",
               "text": "Only a few of my students (<20%)"
             },
             {
-              "value": "item7",
+              "value": "no_students",
               "text": "None of my students"
             }
           ]
@@ -116,44 +90,70 @@
         {
           "type": "radiogroup",
           "name": "took_create_task",
-          "visibleIf": "{students_took_exam} = 'item1'",
-          "title": "What percentage of your students took the **Create Task** portion of the CSP AP exam?",
+          "visibleIf": "{students_took_exam} = 'yes'",
+          "title": "What percentage of your students took the **Create Task** portion of the AP CSP exam?",
           "isRequired": true,
           "choices": [
             {
-              "value": "item1",
+              "value": "all_students",
               "text": "All (100%)"
             },
             {
-              "value": "item2",
+              "value": "almost_all",
               "text": "Almost all (90-99%)"
             },
             {
-              "value": "item3",
+              "value": "majority",
               "text": "Majority of my students (60%-90%)"
             },
             {
-              "value": "item4",
+              "value": "about_half",
               "text": "About half my students (40-60%)"
             },
             {
-              "value": "item5",
+              "value": "about_third",
               "text": "About a third of my students (20-40%)"
             },
             {
-              "value": "item6",
+              "value": "only_a_few",
               "text": "Only a few of my students (<20%)"
             },
             {
-              "value": "item7",
+              "value": "no_students",
               "text": "None of my students"
             }
           ]
         },
         {
+          "type": "radiogroup",
+          "name": "who_decides_mandatory",
+          "visibleIf": "{exam_mandatory} = 'mandatory' and {students_took_exam} = 'yes'",
+          "title": "Who decides whether or not the AP CSP exam is mandatory for your students?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "district_admin",
+              "text": "A district administrator or other district official"
+            },
+            {
+              "value": "principal",
+              "text": "My principal"
+            },
+            {
+              "value": "department_head",
+              "text": "The head of my department"
+            },
+            {
+              "value": "teacher",
+              "text": "Me / the teacher of the class"
+            }
+          ],
+          "hasOther": true
+        },
+        {
           "type": "matrixdropdown",
           "name": "factors_students_took_exam",
-          "visibleIf": "{students_took_exam} = 'item1' and {exam_mandatory} anyof ['item2', 'item3', 'item4', 'item5']",
+          "visibleIf": "{students_took_exam} = 'yes' and {exam_mandatory} anyof ['other', 'item3', 'item4', 'item5', 'highly_recommended', 'optional', 'recommended_for_some', 'not_recommended']",
           "title": "For the students in your class who took the exam, how important do you think the following factors were to their decision?",
           "columns": [
             {
@@ -235,13 +235,13 @@
         {
           "type": "comment",
           "name": "how_teacher_encourage",
-          "visibleIf": "{exam_mandatory} anyof ['item4', 'item2', 'item3'] or {factors_students_took_exam.edu_encourage.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
-          "title": "What (if anything) do you do today to encourage your students to take the AP CS Principles exam? How effective is it in getting students to take the exam?"
+          "visibleIf": "{exam_mandatory} anyof ['other', 'item2', 'item3', 'highly_recommended', 'optional', 'recommended_for_some'] or {factors_students_took_exam.edu_encourage.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
+          "title": "What (if anything) do you do today to encourage your students to take the AP CSP exam? How effective is it in getting students to take the exam?"
         },
         {
           "type": "matrixdropdown",
           "name": "factors_why_not_take_exam",
-          "visibleIf": "{students_took_exam} = 'item1' and {exam_mandatory} anyof ['item2', 'item3', 'item4', 'item5']",
+          "visibleIf": "{students_took_exam} = 'yes' and {exam_mandatory} anyof ['other', 'item3', 'item4', 'item5', 'highly_recommended', 'optional', 'recommended_for_some', 'not_recommended']",
           "title": "For the students in your class that did NOT take the exam, how important do you think the following factors were to their decision?",
           "columns": [
             {
@@ -335,32 +335,32 @@
         {
           "type": "comment",
           "name": "why_discourage_students",
-          "visibleIf": "{exam_mandatory} anyof ['item4', 'item5', 'item3'] or {factors_why_not_take_exam.edu_discourage.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
+          "visibleIf": "{exam_mandatory} anyof ['other', 'item5', 'item3', 'optional', 'recommended_for_some'] or {factors_why_not_take_exam.edu_discourage.how_important} anyof ['not_very_important', 'moderately_important', 'very_important', 'most_important']",
           "title": "What circumstances or factors cause you to encourage or discourage your students from taking the AP CSP exam?"
         },
         {
           "type": "comment",
           "name": "additional_ideas",
-          "visibleIf": "{exam_mandatory} anyof ['item2', 'item3', 'item4', 'item5']",
-          "title": "What additional ideas do you have for increasing the number of students that take the AP CS Principles exam? This could be something you could do or something someone else (the school, Code.org, the college board, parents, etc.) could do."
+          "visibleIf": "{exam_mandatory} anyof ['other', 'item3', 'item4', 'item5', 'highly_recommended', 'optional', 'recommended_for_some', 'mandatory']",
+          "title": "What additional ideas do you have for increasing the number of students that take the AP CSP exam? This could be something you could do or something someone else (the school, Code.org, the college board, parents, etc.) could do."
         },
         {
           "type": "comment",
           "name": "why_exam_not_offered",
-          "visibleIf": "{students_took_exam} = 'item3' or {exam_mandatory} = 'item5'",
-          "title": "What are the reasons for the AP exam *not* being offered to your students this year?"
+          "visibleIf": "{students_took_exam} = 'no' or {exam_mandatory} = 'not_recommended'",
+          "title": "What are the reasons for the AP exam *not* being offered or recommended to your students this year?"
         },
         {
           "type": "comment",
           "name": "changes_needed",
-          "visibleIf": "{students_took_exam} = 'item3' or {exam_mandatory} = 'item5'",
-          "title": "What would need to change to enable your students to take the CS Principles AP exam? How could Code.org help?"
+          "visibleIf": "{students_took_exam} = 'no' or {exam_mandatory} = 'not_recommended'",
+          "title": "What would need to change to enable your students to take the AP CSP exam? How could Code.org help?"
         },
         {
           "type": "comment",
           "name": "any_other_comments",
-          "visibleIf": "{students_took_exam} anyof ['item1', 'item3']",
-          "title": "Is there anything else you’d like to tell us about the AP CS Principles exam and your CS Principles classroom?"
+          "visibleIf": "{students_took_exam} anyof ['other', 'item3', 'yes', 'no']",
+          "title": "Is there anything else you’d like to tell us about the AP CSP exam and your CS Principles classroom?"
         }
       ]
     }
