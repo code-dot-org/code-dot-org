@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-05-25 17:11:30 UTC",
+    "serialized_at": "2021-05-25 22:56:50 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -4189,6 +4189,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L5 CSP CFU terms_2021"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": false,
@@ -4732,6 +4735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice MOD_2021"
+        ],
         "progression": "MOD Practice"
       },
       "named_level": false,
@@ -4911,6 +4917,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L09 Defining and Calling Functions Video_2021"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "named_level": false,

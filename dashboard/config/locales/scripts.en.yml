@@ -18888,6 +18888,8 @@ en:
               name: 'Project: App with Real-World Data'
             ailab-explore:
               name: Explore AI Lab
+            videoLevels:
+              name: Video Recording Levels
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -21197,8 +21199,8 @@ en:
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
-              description_student: You can do some amazing things when you use `until` loops!
-              description_teacher: In this **skill-building** lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.
+              description_student: You can do some amazing things when you use "until" loops!
+              description_teacher: In this **skill-building** lesson, students will learn about "until" loops. Students will build programs that have the main character repeat actions "until" they reach their desired stopping point.
             Conditionals & Loops in Harvester:
               key: Conditionals & Loops in Harvester
               name: Harvesting with Conditionals " "To be Deleted"
@@ -21491,7 +21493,7 @@ en:
             For Loop Fun:
               key: For Loop Fun
               name: For Loop Fun
-              description_student: You're going to have loads of fun learning about for loops!
+              description_student: You're going to have loads of fun learning about "for loops"!
               description_teacher: In this **skill-building** lesson, students will use loops with a powerful, new structure.
             For Loops in Bee:
               key: For Loops in Bee
@@ -21660,13 +21662,13 @@ en:
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
-              description_student: You can do some amazing things when you use `until` loops!
-              description_teacher: In this **skill-building** lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions until they reach their desired stopping point.
+              description_student: You can do some amazing things when you use until loops!
+              description_teacher: In this **skill-building** lesson, students will learn about until loops. Students will build programs that have the main character repeat actions until they reach their desired stopping point.
             Harvesting with Conditionals:
               key: Harvesting with Conditionals
               name: Harvesting with Conditionals
               description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
-              description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
+              description_teacher: Students will practice while loops, until loops, and if / else statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
             Functions in Minecraft:
               key: Functions in Minecraft
               name: Functions in Minecraft
@@ -22438,6 +22440,8 @@ en:
               description_teacher: In this lesson, students write and evaluate expressions using variables and object data. Students use arithmetic operators (+, -, *, /, %) and compound assignment (+=, -=, *=, /=, %=) operators to perform calculations involving variables and object data.
             lesson-6:
               name: Minimizing Errors in Initialization
+              description_student: How can you make sure that the values given to a `Dessert` are correct? Remembering what you learned about edge cases, you add code to check for logic errors in the constructor. In this lesson, you explore where different types of variables are accessible and use these concepts to add another constructor to the `Dessert` class.
+              description_teacher: In this lesson, students implement conditionals and local variables to make decisions about object initialization and verify values passed to the constructor. Students explore the scope of local variables and parameters within a constructor and use the keyword `this` to refer to the current object. These concepts are used to add another constructor to the `Dessert` class.
             lesson-7:
               name: Writing Constructors for Hierarchies
             lesson-8:
