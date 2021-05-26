@@ -521,6 +521,7 @@ class JavalabEditor extends React.Component {
                     <span>{fileMetadata[tabKey]}</span>
 
                     <button
+                      ref={`${tabKey}-file-toggle`}
                       type="button"
                       style={{
                         ...style.fileMenuToggleButton,
