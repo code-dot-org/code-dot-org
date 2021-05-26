@@ -9,12 +9,10 @@ import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
 import i18n from '@cdo/locale';
 import sinon from 'sinon';
 import {
+  BasicBubble,
+  BubbleLink,
   BubbleSize,
   BubbleShape
-} from '@cdo/apps/templates/progress/progressStyles';
-import {
-  BasicBubble,
-  LinkWrapper
 } from '@cdo/apps/templates/progress/BubbleFactory';
 
 const TITLE = '1';
@@ -119,7 +117,7 @@ describe('ProgressTableLevelBubble', () => {
 
   it('renders a link', () => {
     const wrapper = shallow(<ProgressTableLevelBubble {...defaultProps} />);
-    expect(wrapper.find(LinkWrapper)).to.have.lengthOf(1);
+    expect(wrapper.find(BubbleLink)).to.have.lengthOf(1);
   });
 
   it('renders default bubble with circle shape', () => {

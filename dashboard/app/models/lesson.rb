@@ -742,7 +742,7 @@ class Lesson < ApplicationRecord
 
       destination_lesson_group = destination_script.lesson_groups.last
       unless destination_lesson_group
-        destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: true, display_name: 'New Lesson Group', key: 'new-lesson-group')
+        destination_lesson_group = LessonGroup.create!(script: destination_script, position: 1, user_facing: false, key: 'new-lesson-group')
         Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_script.name)
       end
       copied_lesson.lesson_group_id = destination_lesson_group.id
