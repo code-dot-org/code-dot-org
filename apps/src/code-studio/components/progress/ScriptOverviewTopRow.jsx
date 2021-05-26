@@ -177,8 +177,8 @@ class ScriptOverviewTopRow extends React.Component {
                   <a
                     key={option.key}
                     href={option.url}
-                    onClick={() =>
-                      this.recordAndNavigateToPdf(option.key, option.url)
+                    onClick={e =>
+                      this.recordAndNavigateToPdf(e, option.key, option.url)
                     }
                   >
                     {option.name}
