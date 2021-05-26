@@ -25,8 +25,8 @@ describe('EditSectionForm', () => {
         section={testSection}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -63,8 +63,8 @@ describe('EditSectionForm', () => {
         section={noStudentsSection}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -101,8 +101,8 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -139,8 +139,8 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -180,8 +180,8 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -206,8 +206,8 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -229,8 +229,8 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -255,8 +255,8 @@ describe('EditSectionForm', () => {
         }}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -278,8 +278,8 @@ describe('EditSectionForm', () => {
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />
@@ -301,8 +301,8 @@ describe('EditSectionForm', () => {
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
         textToSpeechScriptIds={[]}
-        stageExtrasAvailable={() => false}
-        hiddenStageState={{}}
+        lessonExtrasAvailable={() => false}
+        hiddenLessonState={{}}
         updateHiddenScript={() => {}}
         assignedScriptName="script name"
       />

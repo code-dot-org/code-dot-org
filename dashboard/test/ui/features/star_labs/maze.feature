@@ -41,8 +41,8 @@ Scenario: Submit a valid solution
 
   And I press "continue-button"
   Then I wait until I am on "http://studio.code.org/s/20-hour/lessons/2/levels/16"
-  Then check that level 16 on this stage is done
-  Then check that level 15 on this stage is not done
+  Then check that level 16 on this lesson is done
+  Then check that level 15 on this lesson is not done
 
   # Make sure the work on level 15 was saved.
   When I am on "http://studio.code.org/s/20-hour/lessons/2/levels/15?noautoplay=true"

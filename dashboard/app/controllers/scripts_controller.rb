@@ -140,7 +140,7 @@ class ScriptsController < ApplicationController
 
     script = Script.get_from_cache(params[:id])
 
-    render 'levels/instructions', locals: {stages: script.lessons}
+    render 'levels/instructions', locals: {lessons: script.lessons}
   end
 
   def vocab
