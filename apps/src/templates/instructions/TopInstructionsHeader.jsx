@@ -200,6 +200,7 @@ function TopInstructionsHeader(props) {
           (isCSDorCSP || hasContainedLevels) &&
           !dynamicInstructions && (
             <CollapserIcon
+              id="ui-test-collapser"
               isCollapsed={isCollapsed}
               onClick={handleClickCollapser}
               style={collapserIconStyles}
