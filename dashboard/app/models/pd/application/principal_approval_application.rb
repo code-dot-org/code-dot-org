@@ -36,10 +36,10 @@
 #
 
 module Pd::Application
-  class PrincipalApproval2122Application < PrincipalApprovalApplicationBase
+  class PrincipalApprovalApplication < PrincipalApprovalApplicationBase
     include Pd::PrincipalApproval2122ApplicationConstants
 
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher2122Application',
+    belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
 
     validates_presence_of :teacher_application
@@ -60,7 +60,7 @@ module Pd::Application
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true
 
-      Pd::Application::PrincipalApproval2122Application.create(
+      Pd::Application::PrincipalApprovalApplication.create(
         form_data: {}.to_json,
         application_guid: teacher_application.application_guid
       )
@@ -68,7 +68,7 @@ module Pd::Application
 
     # @override
     def check_idempotency
-      existing_application = Pd::Application::PrincipalApproval2122Application.find_by(application_guid: application_guid)
+      existing_application = Pd::Application::PrincipalApprovalApplication.find_by(application_guid: application_guid)
 
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
