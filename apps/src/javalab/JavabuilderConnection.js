@@ -1,6 +1,7 @@
 /* globals dashboard */
 import {WebSocketMessageType} from './constants';
 import {handleException} from './javabuilderExceptionHandler';
+const queryString = require('query-string');
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -45,7 +46,7 @@ export default class JavabuilderConnection {
 
   establishWebsocketConnection(token) {
     let url = this.javabuilderUrl;
-    const optionsStr = $.param({options: this.options});
+    const optionsStr = queryString.stringify(this.options);
     if (window.location.hostname.includes('localhost')) {
       // We're hitting the local javabuilder server. Just pass the projectUrl and levelId.
       // TODO: Enable token decryption on local javabuilder server.
