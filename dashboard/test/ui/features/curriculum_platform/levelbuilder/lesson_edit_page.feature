@@ -14,7 +14,7 @@ Feature: Using the Lesson Edit Page
 
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-open-add-level-button" is visible
-    And element ".uitest-bubble" is not visible
+    And element ".progress-bubble" is not visible
 
     And I click "button[type='submit']" to load a new page
 
@@ -56,8 +56,8 @@ Feature: Using the Lesson Edit Page
     And I view the temp lesson edit page
     And I wait until element ".uitest-activity-card" is visible
     And element ".uitest-open-add-level-button" is visible
-    And element ".uitest-bubble" contains text "1"
-    And element ".uitest-bubble" does not contain text "2"
+    And element ".progress-bubble" contains text "1"
+    And element ".progress-bubble" does not contain text "2"
 
     # Open the Add Level dialog, search for an artist level and add the first one
 
@@ -80,15 +80,15 @@ Feature: Using the Lesson Edit Page
     And I wait until element "h2" does not contain text "Add Levels"
 
     # Verify lesson editor updated
-    Then element ".uitest-bubble" contains text "1"
-    And element ".uitest-bubble" contains text "2"
+    Then element ".progress-bubble" contains text "1"
+    And element ".progress-bubble" contains text "2"
     And element ".uitest-level-token-name" contains text "Standalone_Artist_1"
 
     # Verify lesson overview updated
     When I click "button[type='submit']" to load a new page
     And I wait until element "#show-container" is visible
-    And I wait until element ".uitest-bubble" contains text "1"
-    Then element ".uitest-bubble" contains text "2"
+    And I wait until element ".progress-bubble" contains text "1"
+    Then element ".progress-bubble" contains text "2"
 
   @no_firefox
   Scenario: Update script level properties
