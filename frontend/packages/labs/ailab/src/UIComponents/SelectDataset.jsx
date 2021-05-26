@@ -83,7 +83,7 @@ class SelectDataset extends Component {
       <div id="select-dataset" style={styles.panel}>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
-            {datasets.map(dataset => {
+            {datasets.map((dataset, index) => {
               return (
                 <div
                   style={{
@@ -91,7 +91,8 @@ class SelectDataset extends Component {
                     ...(this.props.highlightDataset === dataset.name &&
                       styles.selectDatasetItemHighlighted),
                     ...(this.props.name === dataset.name &&
-                      styles.selectDatasetItemSelected)
+                      styles.selectDatasetItemSelected),
+                    ...(index % 3 === 0 && {clear: "both"})
                   }}
                   key={dataset.id}
                   onClick={() => this.handleDatasetClick(dataset.id)}
@@ -131,6 +132,7 @@ class SelectDataset extends Component {
                 name="file"
                 placeholder={null}
                 onChange={this.handleUploadSelect}
+                style={styles.csvInput}
               />
             </div>
             <div style={{ float: "left", width: "33.33%", textAlign: "right" }}>

@@ -128,8 +128,9 @@ export const styles = {
     marginBottom: 8
   },
 
-  smallTextNoMargin: {
-    fontSize: 12
+  smallTextRight: {
+    fontSize: 12,
+    textAlign: "right"
   },
 
   footerText: {
@@ -229,7 +230,7 @@ export const styles = {
   },
 
   selectDatasetItem: {
-    width: "30%",
+    width: "calc(33.33% - 8px)",
     padding: 20,
     float: "left",
     boxSizing: "border-box",
@@ -257,11 +258,16 @@ export const styles = {
     marginTop: 5
   },
 
+  csvInput: {
+    cursor: "pointer"
+  },
+
   uploadButton: {
     fontSize: 13.33,
     padding: "2px 6px",
     margin: 0,
-    border: "none"
+    border: "none",
+    border: "solid 1px black"
   },
 
   specifyColumnsItem: {
@@ -426,18 +432,17 @@ export const styles = {
 
   resultsToggle: {
     marginTop: 20,
-    marginBottom: 20,
     backgroundColor: "#f2f2f2",
     borderRadius: 5,
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white",
     padding: 10,
-    height: 36
+    height: 42
   },
   pill: {
     border: "none",
-    borderRadius: 50,
+    borderRadius: 5,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 20,
     backgroundColor: "#f2f2f2",
@@ -461,7 +466,6 @@ export const styles = {
     backgroundColor: "white",
     color: "rgb(30, 30, 30)",
     verticalAlign: "top",
-    height: 42,
     fontSize: 24
   },
 
@@ -503,6 +507,13 @@ export const styles = {
     fontSize: 24,
     marginBottom: 20,
     borderBottom: "solid 1px black",
+    paddingBottom: 10
+  },
+
+  statementWithBackground:  {
+    lineHeight: "38px",
+    fontSize: 24,
+    marginBottom: 20,
     paddingBottom: 10
   },
 

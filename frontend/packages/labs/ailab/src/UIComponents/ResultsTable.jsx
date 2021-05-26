@@ -18,6 +18,12 @@ class ResultsTable extends Component {
 
     return (
       <div style={styles.panel}>
+        {this.props.isRegression && (
+          <div style={styles.smallTextRight}>
+            {`Predictions are +/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
+          </div>
+        )}
+
         <div style={styles.tableParent}>
           <table style={styles.displayTable}>
             <thead>
@@ -38,13 +44,6 @@ class ResultsTable extends Component {
                   }}
                 >
                   Actual
-                  {/*
-                  {this.props.isRegression && (
-                    <div style={styles.smallTextNoMargin}>
-                      {`+/- ${REGRESSION_ERROR_TOLERANCE}% of range`}
-                    </div>
-                  )}
-                  */}
                 </th>
                 <th
                   style={{
@@ -54,14 +53,6 @@ class ResultsTable extends Component {
                 >
                   A.I. Prediction
                 </th>
-                <th
-                  colSpan={featureCount}
-                  style={{
-                    ...styles.largeText,
-                    ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader
-                  }}
-                />
               </tr>
               <tr>
                 {this.props.selectedFeatures.map((feature, index) => {
@@ -96,13 +87,6 @@ class ResultsTable extends Component {
                 >
                   {this.props.labelColumn}
                 </th>
-                <th
-                  style={{
-                    ...styles.tableHeader,
-                    backgroundColor: colors.label,
-                    ...styles.resultsTableSecondHeader
-                  }}
-                />
               </tr>
             </thead>
             <tbody>

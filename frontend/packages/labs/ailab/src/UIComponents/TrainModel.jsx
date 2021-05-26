@@ -112,7 +112,7 @@ class TrainModel extends Component {
           backgroundImage: "url(" + background + ")"
         }}
       >
-        <div style={styles.statement}>Training</div>
+        <div style={styles.statementWithBackground}>Training</div>
 
         <div
           style={{
